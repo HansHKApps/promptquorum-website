@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-en.webp',
     affiliateDisclosure: true,
@@ -35,15 +35,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'What hardware do I need for a local smart home with AI?',
         answer:
-          'Start with the hub: an Intel N100/N150 mini PC or a Raspberry Pi 5 runs Home Assistant. Add a Frigate accelerator for cameras — an Intel iGPU via OpenVINO covers most setups, and a Hailo-8L or Hailo-8 M.2 module adds detection capacity (the Google Coral is now legacy). Store recordings on an SSD, or a NAS for many cameras. For a local LLM, step up to a mini PC with a capable iGPU/NPU or a used RTX 3090 box. If you think you will add local AI within a year, buy the mini PC now rather than a Raspberry Pi you will replace later.',
+          'Start with the hub: an Intel N100/N150 mini PC or a Raspberry Pi 5 runs Home Assistant. Add a Frigate accelerator for cameras — an Intel iGPU via OpenVINO covers most setups, and a Hailo-8L or Hailo-8 M.2 module adds detection capacity (Frigate\'s hardware documentation lists Hailo and Intel OpenVINO options for new builds; the Google Coral still works but is described there as older hardware). Store recordings on an SSD, or a NAS for many cameras. For a local LLM, step up to a mini PC with a capable iGPU/NPU or a used RTX 3090 box. If you think you will add local AI within a year, buy the mini PC now rather than a Raspberry Pi you will replace later.',
         bullets: [
           'Hub: Intel N100/N150 mini PC or Raspberry Pi 5',
-          'Frigate: Intel iGPU (OpenVINO) or Hailo-8L M.2 — Coral is legacy',
+          'Frigate: Intel iGPU (OpenVINO) or Hailo-8L M.2 — Coral still works but is older hardware',
           'Storage: SSD, or a NAS for many cameras',
           'Local LLM step-up: mini PC iGPU/NPU or used RTX 3090',
           'Decide first: HA-only or HA + cameras + local AI — it determines whether you buy once or twice',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Hub: an Intel N100/N150 mini PC (~$190–220) or a Raspberry Pi 5 (~$180–305, up sharply on a DRAM shortage) runs Home Assistant',
-          'Frigate: an Intel iGPU (OpenVINO, built into most mini PCs), a Hailo-8L M.2 module (~$70), or a Hailo-8 M.2 (~$170–200) accelerates camera detection — the Google Coral is now legacy and no longer Frigate\'s recommendation for new builds',
+          'Frigate: an Intel iGPU (OpenVINO, built into most mini PCs), a Hailo-8L M.2 module (~$70), or a Hailo-8 M.2 (~$170–200) accelerates camera detection — Frigate\'s hardware documentation lists Hailo and Intel OpenVINO options for new builds, and the Google Coral still works but is described there as older hardware',
           'Storage: an SSD for recordings, or a NAS (Synology DS225+ ~$340, DS925+ ~$640, UGREEN NASync ~$650–730) once you run several cameras',
           'Local LLM step-up: a Ryzen mini PC (32GB RAM, ~$649) or a used RTX 3090 (~$1,400–1,550 in sold listings per the InsiderLLM tracker, 2026-10-15)',
           'Decide HA-only vs HA + cameras + local AI before buying — it changes the right box, and buying the mini PC now beats replacing a Pi later',
@@ -85,15 +85,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Which Hardware Should You Buy?',
         content:
           '**Match your goal to a box, not the other way around.** The table below maps each smart-home goal to the hardware that covers it — every row links to the fuller pick further down the page.',
-        columns: ['Your goal', 'Buy this', 'Est. price (Aug 2026)'],
+        columns: ['Your goal', 'Buy this', 'Est. price'],
         rows: [
-          { 'Your goal': 'Home Assistant only', 'Buy this': '[Home Assistant Green or Raspberry Pi 5](#raspberry-pi)', 'Est. price (Aug 2026)': '$199 (Green) / $180–305 (Pi 5)' },
-          { 'Your goal': 'HA + Frigate cameras', 'Buy this': '[Intel N100/N150 mini PC](#mini-pc)', 'Est. price (Aug 2026)': '~$190–220' },
-          { 'Your goal': 'HA + a local LLM', 'Buy this': '[Ryzen mini PC, 32GB RAM](#mini-pc)', 'Est. price (Aug 2026)': '~$649' },
-          { 'Your goal': 'HA + a larger local LLM', 'Buy this': '[Used RTX 3090 server](#server)', 'Est. price (Aug 2026)': '~$1,400–1,550 (GPU only; InsiderLLM 2026-10-15)' },
+          { 'Your goal': 'Home Assistant only', 'Buy this': '[Home Assistant Green or Raspberry Pi 5](#raspberry-pi)', 'Est. price': '$199 (Green) / $180–305 (Pi 5)' },
+          { 'Your goal': 'HA + Frigate cameras', 'Buy this': '[Intel N100/N150 mini PC](#mini-pc)', 'Est. price': '~$190–220' },
+          { 'Your goal': 'HA + a local LLM', 'Buy this': '[Ryzen mini PC, 32GB RAM](#mini-pc)', 'Est. price': '~$649' },
+          { 'Your goal': 'HA + a larger local LLM', 'Buy this': '[Used RTX 3090 server](#server)', 'Est. price': '~$1,400–1,550 (GPU only; InsiderLLM 2026-10-15)' },
         ],
         tableFormat: true,
-        note: 'Prices are rough and move — GPU and DRAM pricing especially has been volatile this year. The RTX 3090 figure is US eBay listing data from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15), not a quote. Check the linked listing before buying.',
+        note: 'Prices are rough and move — GPU and DRAM pricing especially has been volatile this year. The RTX 3090 figure is US eBay listing data from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15), not a quote. Check the linked listing before buying. Prices shown are approximate vendor-page prices at the last refresh (see the Last updated date); check the linked page for today\'s price.',
         callouts: [
           { type: 'tip', text: 'Not sure yet whether you will want local AI? See [Don\'t Overspend](#dont-overspend) before you buy the expensive box.' },
         ],
@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Home Assistant itself is lightweight and runs on modest hardware; the heavy demands come from Frigate camera detection and a local LLM.** Size the box for what you will add, not just the hub.',
         items: [
           'The hub needs little compute for device control and automations.',
-          'Frigate object detection needs an accelerator: an Intel iGPU via OpenVINO handles most setups, and a Hailo-8L or Hailo-8 M.2 module adds capacity. The Google Coral USB/M.2 TPU still works but is now legacy — Frigate no longer recommends it for new builds.',
+          'Frigate object detection needs an accelerator: an Intel iGPU via OpenVINO handles most setups, and a Hailo-8L or Hailo-8 M.2 module adds capacity. The Google Coral USB/M.2 TPU still works; Frigate\'s [hardware documentation](https://docs.frigate.video/frigate/hardware) lists Hailo and Intel OpenVINO options for new builds and describes the Coral as older hardware.',
           'Larger Whisper models and local LLM inference are the most demanding workloads — plan RAM and a GPU/NPU around those.',
           'Store camera recordings on an SSD; move to a NAS once you run several cameras continuously.',
         ],
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**A Raspberry Pi 5 is the lowest-power way to run Home Assistant for typical smart home use, but a 2026 DRAM shortage has pushed board prices up sharply — the 8GB board now runs roughly $180–220 and the 16GB board $280–305, both well above their original ~$80/$120 launch prices, with analysts not expecting normalisation before late 2027.** It struggles with LLM inference and large Whisper models.',
+          '**A Raspberry Pi 5 is the lowest-power way to run Home Assistant for typical smart home use, but a 2026 DRAM shortage has pushed board prices up sharply — the 8GB board now runs roughly $180–220 and the 16GB board $280–305, both well above their original ~$80/$120 launch prices; check the linked Raspberry Pi page for current pricing.** It struggles with LLM inference and large Whisper models.',
         items: [
           'Great for device control, automations, and a small local voice setup.',
           'LLM inference on a Pi is limited to very small, slow models — pair it with a Hailo-8L M.2 HAT if you want Frigate detection.',
@@ -133,8 +133,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A mini PC is the best single-box choice for Home Assistant plus local AI, with enough RAM and a capable iGPU or NPU to run a small LLM and accelerate Frigate.** It balances power, size, and cost, and this is the section to spend more on if you are buying one box for both jobs.',
         items: [
           'Best budget pick: a low-power Intel N100/N150 mini PC runs Home Assistant and accelerates Frigate via the Intel iGPU (OpenVINO) — the practical default for a hub-plus-cameras box. The Beelink EQ14 (Intel N150, 16GB RAM) is priced around $190–220 — good for 24/7 operation and low electricity use, but underpowered for a local LLM.',
-          'Best pick for local AI: for a local LLM on the same box, step up to a Ryzen mini PC with 32GB RAM. The Beelink SER8 (Ryzen 7 8845HS) is priced around $649 and runs a Qwen3 8B or Llama 3.1 8B model via Ollama at usable speed, alongside Home Assistant and Frigate. Prioritise RAM and a capable integrated GPU or NPU for lower latency.',
-          'If you are buying one box for Home Assistant and local AI together, the Ryzen mini PC is worth the extra cost over the N150 — it is the only one of the two that actually runs an LLM at usable speed.',
+          'Best pick for local AI: for a local LLM on the same box, step up to a Ryzen mini PC with 32GB RAM. The Beelink SER8 (Ryzen 7 8845HS) is priced around $649; it is a Ryzen 7 mini PC that can run 8B-class models such as Qwen3 8B or Llama 3.1 8B via Ollama; speed depends on quantization and context size, and PromptQuorum has not benchmarked this unit. Prioritise RAM and a capable integrated GPU or NPU for lower latency.',
+          'If you are buying one box for Home Assistant and local AI together, the Ryzen mini PC can be worth the extra cost over the N150 — it offers more headroom for an 8B-class model.',
           'For specific picks, see [best mini PCs for Home Assistant + local AI](/smart-home/best-mini-pc-home-assistant-local-ai) and the cross-cluster [best mini PCs for local LLMs](/local-llms/best-mini-pcs-local-llm).',
         ],
         affiliateLinks: [
@@ -146,13 +146,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'frigate-accelerator',
         title: 'Running Security Cameras? Choose Your Frigate Accelerator',
         content:
-          '**How many cameras and how much detection headroom you need decides the accelerator, separately from which box runs the hub.** Frigate no longer recommends the Google Coral for new builds — it now steers new users toward Hailo, alongside a host\'s built-in Intel iGPU.',
+          '**How many cameras and how much detection headroom you need decides the accelerator, separately from which box runs the hub.** Frigate\'s [hardware documentation](https://docs.frigate.video/frigate/hardware) lists Hailo and Intel OpenVINO options for new builds; the Google Coral still works but is described there as older hardware.',
         items: [
           '1–4 cameras: the Intel iGPU built into an N100/N150 mini PC, run via OpenVINO, covers most home setups at no extra hardware cost.',
           '4–10 cameras or if you want more detection headroom on non-Intel hardware: a Hailo-8L M.2 module (~$70) is Frigate\'s current low-power recommendation — it behaves like the Coral used to, as a first-class-supported add-in card.',
           '10+ cameras or heavier enrichments (face/license-plate recognition on top of detection): a Hailo-8 M.2 module (~$170–200) adds meaningfully more throughput.',
           'Already own a Coral? It still works — this is only about what to buy for a new build, not a reason to replace a working Coral setup.',
         ],
+        callouts: [{ type: 'warning', text: 'Cameras and face or licence-plate recognition are regulated. In the EU, GDPR can apply once cameras capture public space, neighbours or other people, and biometric identification has stricter rules. Check local law before installing; this is not legal advice.' }],
         affiliateLinks: [
           { label: 'Check Hailo-8L price →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '~$70' },
           { label: 'Check Hailo-8 price →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '~$170–200' },
@@ -166,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '2–4 cameras / lighter storage: the Synology DS225+ (~$340) covers Home Assistant-in-a-container plus Frigate recordings for a small camera count.',
           '4–10 cameras / more headroom: the Synology DS925+ (~$640) adds CPU/RAM headroom for more add-ons and cameras.',
-          'Storage plus local AI in one box: UGREEN NASync models (DXP4800 Plus-class, ~$650–730) ship with a built-in local-LLM option and newer hardware (DDR5, 10GbE without add-on cards) at a similar price to the DS925+.',
+          'Storage plus local AI in one box: UGREEN NASync models (DXP4800 Plus-class, ~$650–730) offer newer hardware (DDR5, 10GbE without add-on cards) at a similar price to the DS925+, and some models advertise a local-LLM option; check the vendor page.',
           'LLM inference on a NAS still depends heavily on its hardware — most NAS units lack a capable discrete GPU, so treat the built-in LLM option as a convenience feature, not a substitute for the RTX 3090 tier below if you actually want a large model.',
         ],
         affiliateLinks: [
@@ -182,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A dedicated server with a discrete GPU is the step-up for running a larger local LLM alongside many cameras.** It offers the most headroom at higher cost and power — and GPU prices moved a lot in 2026, so treat the figures below as a snapshot, not a fixed number.',
         items: [
           'A used RTX 3090 (24GB VRAM) is a common choice for local LLMs because of its VRAM. The [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15) lists used sold listings at about $1,400–1,550 — US eBay listing data, not a quote or offer. Q4-quantized models up to roughly 70B may be possible depending on quantization, context size, and offloading; treat this as a capability range, not a guarantee for every 70B model.',
-          'A used RTX 3060 (12GB) is the budget alternative for a discrete-GPU box — it handles 7B–13B models comfortably without the RTX 3090\'s VRAM headroom or price.',
+          'A used RTX 3060 (12GB) is the budget alternative for a discrete-GPU box — it can handle 7B–13B models, depending on quantization, without the RTX 3090\'s VRAM headroom or price.',
           'Best for many cameras, a larger LLM, and multiple users. Higher power draw and cost than a mini PC — see the power-consumption section below before committing to this tier.',
           'Overkill for a basic smart home — reserve for heavy local-AI use, and keep the Home Assistant hub on a separate low-power box for reliability (see One Box or Two? below).',
         ],
@@ -190,6 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Check RTX 3090 used listings →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '~$1,400–1,550' },
           { label: 'Check RTX 3060 used listings →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: 'A 350 W GPU in a continuously running server needs a correctly sized quality power supply, good ventilation and sensible placement. Used cards may carry wear and no warranty, so inspect the seller\'s terms. Follow the manufacturer\'s guidance; this is not electrical advice.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
         imageCaption: 'Local LLM capacity by hardware tier: Raspberry Pi 5 runs only tiny models, an Intel N100/N150 Mini PC handles small models, a Ryzen Mini PC (32GB RAM) runs 7B–8B models, and a used RTX 3090 (24GB VRAM) scales to about 70B at Q4 quantization depending on setup.',
       },
@@ -197,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: "Don't Overspend on Your Home Assistant Server",
         content:
-          '**More hardware than your use case needs is the single most common wasted purchase in this category — match the box to what you actually plan to run.**',
+          '**More hardware than your use case needs is a commonly wasted purchase in this category — match the box to what you actually plan to run.**',
         items: [
           'Home Assistant only? You don\'t need an RTX GPU, and you probably don\'t need a mini PC — a Raspberry Pi 5 or Home Assistant Green covers it.',
           'Home Assistant plus Frigate cameras? You don\'t need an expensive workstation — an Intel N100/N150 mini PC with its built-in iGPU is enough for most home camera counts.',
@@ -255,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**If you are choosing one box today and are not sure which tier fits, this is a reasonable default based on the trade-offs above — your actual needs may point elsewhere, and none of the picks below have been tested or reviewed by PromptQuorum.**',
         items: [
           'For a normal local smart home (Home Assistant plus a handful of Zigbee/Matter devices): an Intel N150 mini PC is a sensible default — it covers Frigate too if you add cameras later.',
-          'For Home Assistant plus cameras plus a small local AI assistant: a Ryzen mini PC with 32GB RAM is a reasonable one-box choice — it is the cheapest box that actually runs an 8B-class LLM at usable speed.',
+          'For Home Assistant plus cameras plus a small local AI assistant: a Ryzen mini PC with 32GB RAM is a reasonable one-box choice — it is a lower-cost way to run an 8B-class model.',
           'For serious local AI (32B-class models or larger): a separate RTX 3090 server, kept apart from the Home Assistant hub, is the reasonable step-up given current used-GPU pricing.',
           'A new AI-first installation is generally a weaker fit for a Raspberry Pi given 2026 Pi pricing and its LLM limitations — a mini PC is usually a closer price and a much better AI platform.',
         ],
@@ -265,23 +267,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Complete Local Smart-Home Stacks',
         content:
           '**Most buyers need more than one product — a hub, a Frigate accelerator, and storage at minimum, plus an AI box if you want local LLM inference.** These three stacks combine the picks above by scenario; every product links back to its full recommendation earlier on this page.',
-        columns: ['Stack', 'Hub', 'Frigate accelerator', 'AI', 'Est. total (Aug 2026)'],
+        columns: ['Stack', 'Hub', 'Frigate accelerator', 'AI', 'Est. total'],
         rows: [
-          { 'Stack': 'Starter (HA only)', 'Hub': '[Home Assistant Green or Pi 5](#raspberry-pi)', 'Frigate accelerator': '—', 'AI': '—', 'Est. total (Aug 2026)': '~$199–305' },
-          { 'Stack': 'HA + cameras', 'Hub': '[N150 mini PC](#mini-pc)', 'Frigate accelerator': '[Intel iGPU, or Hailo-8L if you want more headroom](#frigate-accelerator)', 'AI': '—', 'Est. total (Aug 2026)': '~$190–290' },
-          { 'Stack': 'HA + cameras + local AI', 'Hub': '[Ryzen mini PC, 32GB](#mini-pc)', 'Frigate accelerator': 'Built-in iGPU, or [Hailo-8L for more cameras](#frigate-accelerator)', 'AI': 'Runs on the same box (8B-class model)', 'Est. total (Aug 2026)': '~$649–720' },
-          { 'Stack': 'HA + cameras + large local AI', 'Hub': '[N150 mini PC (kept separate for reliability)](#mini-pc)', 'Frigate accelerator': '[Hailo-8](#frigate-accelerator)', 'AI': '[Used RTX 3090 server, run separately](#server)', 'Est. total (Aug 2026)': '~$1,760–1,970 (excl. host PC)' },
+          { 'Stack': 'Starter (HA only)', 'Hub': '[Home Assistant Green or Pi 5](#raspberry-pi)', 'Frigate accelerator': '—', 'AI': '—', 'Est. total': '~$199–305' },
+          { 'Stack': 'HA + cameras', 'Hub': '[N150 mini PC](#mini-pc)', 'Frigate accelerator': '[Intel iGPU, or Hailo-8L if you want more headroom](#frigate-accelerator)', 'AI': '—', 'Est. total': '~$190–290' },
+          { 'Stack': 'HA + cameras + local AI', 'Hub': '[Ryzen mini PC, 32GB](#mini-pc)', 'Frigate accelerator': 'Built-in iGPU, or [Hailo-8L for more cameras](#frigate-accelerator)', 'AI': 'Runs on the same box (8B-class model)', 'Est. total': '~$649–720' },
+          { 'Stack': 'HA + cameras + large local AI', 'Hub': '[N150 mini PC (kept separate for reliability)](#mini-pc)', 'Frigate accelerator': '[Hailo-8](#frigate-accelerator)', 'AI': '[Used RTX 3090 server, run separately](#server)', 'Est. total': '~$1,760–1,970 (excl. host PC)' },
         ],
         tableFormat: true,
-        note: 'The last stack keeps the Home Assistant hub on its own low-power box and runs the RTX 3090 as a separate machine — see [One Box or Two?](#one-or-two) for why. The total adds a used RTX 3090 ($1,400–1,550, InsiderLLM tracker, 2026-10-15), an N150 mini PC (~$190–220) and a Hailo-8 (~$170–200): $1,760–1,970 from low to high. It excludes the host PC (CPU, board, PSU, RAM, case) the GPU needs.',
+        note: 'The last stack keeps the Home Assistant hub on its own low-power box and runs the RTX 3090 as a separate machine — see [One Box or Two?](#one-or-two) for why. The total adds a used RTX 3090 ($1,400–1,550, InsiderLLM tracker, 2026-10-15), an N150 mini PC (~$190–220) and a Hailo-8 (~$170–200): $1,760–1,970 from low to high. It excludes the host PC (CPU, board, PSU, RAM, case) the GPU needs. Prices shown are approximate vendor-page prices at the last refresh (see the Last updated date); check the linked page for today\'s price.',
       },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What hardware does Frigate recommend?', a: 'For new builds Frigate recommends an Intel iGPU via OpenVINO, or a Hailo-8L (~$70, budget) or Hailo-8 (~$170–200, faster) M.2 module for more detection capacity. The Google Coral USB/M.2 TPU still works but is now legacy — Frigate no longer recommends it for new installations except on very low-power hardware.' },
+          { q: 'What hardware does Frigate recommend?', a: 'For new builds, Frigate\'s hardware documentation (https://docs.frigate.video/frigate/hardware) lists options including an Intel iGPU via OpenVINO, or a Hailo-8L (~$70, budget) or Hailo-8 (~$170–200, faster) M.2 module for more detection capacity. The Google Coral USB/M.2 TPU still works but is described there as older hardware.' },
           { q: 'Can a Raspberry Pi run a local LLM too?', a: 'A Pi can run only very small models, and slowly, so it is not ideal for a responsive local-LLM assistant. It handles Home Assistant and basic voice well, but for local AI a mini PC with a capable iGPU or NPU — or a used RTX 3090 box — is the better choice.' },
-          { q: 'How much RAM do I need?', a: 'Home Assistant alone runs in a couple of gigabytes. To run a small local LLM and other AI services on the same box, more RAM helps; a mini PC with 32GB RAM and a capable iGPU/NPU keeps a Qwen3 8B or Llama 3.1 8B model responsive. Match RAM to the model size you plan to run.' },
+          { q: 'How much RAM do I need?', a: 'Home Assistant alone runs in a couple of gigabytes. To run a small local LLM and other AI services on the same box, more RAM helps; a mini PC with 32GB RAM and a capable iGPU/NPU can run a Qwen3 8B or Llama 3.1 8B model; speed depends on quantization and context size. Match RAM to the model size you plan to run.' },
           { q: 'What mini PC should I get?', a: 'For HA plus cameras, an Intel N100/N150 mini PC accelerates Frigate via OpenVINO. For HA plus a local LLM, step up to a Ryzen mini PC with 32GB RAM. See the best mini PCs for Home Assistant + local AI guide for picks.' },
           { q: 'One box or two?', a: 'One box (a mini PC) is simplest and runs Home Assistant plus a small local LLM together. Split into two if you want to keep the hub ultra-reliable on a low-power box and offload heavy AI to a separate machine such as a used RTX 3090 server.' },
           { q: 'What about power consumption for a 24/7 box?', a: 'It matters more than the purchase price for hardware that never turns off. A Raspberry Pi draws a few watts, an N100/N150 mini PC around 10–15W, a Ryzen mini PC 15–35W depending on load, and NVIDIA rates a discrete GPU like the RTX 3090 at 350W board power — one reason to run a heavy GPU server as a separate box rather than always-on.' },
@@ -315,7 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'Home Assistant hardware' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: 'Local LLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -325,9 +327,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'What hardware does Frigate recommend?', acceptedAnswer: { '@type': 'Answer', text: 'For new builds Frigate recommends an Intel iGPU via OpenVINO, or a Hailo-8L (~$70) or Hailo-8 (~$170–200) M.2 module for more detection capacity. The Google Coral TPU still works but is now legacy and no longer recommended for new installations.' } },
+        { '@type': 'Question', name: 'What hardware does Frigate recommend?', acceptedAnswer: { '@type': 'Answer', text: 'For new builds, Frigate\'s hardware documentation (https://docs.frigate.video/frigate/hardware) lists options including an Intel iGPU via OpenVINO, or a Hailo-8L (~$70) or Hailo-8 (~$170–200) M.2 module for more detection capacity. The Google Coral TPU still works but is described there as older hardware.' } },
         { '@type': 'Question', name: 'Can a Raspberry Pi run a local LLM too?', acceptedAnswer: { '@type': 'Answer', text: 'A Pi can run only very small models, and slowly. It handles Home Assistant and basic voice well, but for a responsive local-LLM assistant a mini PC with a capable iGPU or NPU, or a used RTX 3090 box, is better.' } },
-        { '@type': 'Question', name: 'How much RAM do I need?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant alone runs in a couple of gigabytes. To run a small local LLM on the same box, more RAM helps; a mini PC with 32GB RAM keeps a Qwen3 8B or Llama 3.1 8B model responsive. Match RAM to the model size you plan to run.' } },
+        { '@type': 'Question', name: 'How much RAM do I need?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant alone runs in a couple of gigabytes. To run a small local LLM on the same box, more RAM helps; a mini PC with 32GB RAM can run a Qwen3 8B or Llama 3.1 8B model; speed depends on quantization and context size. Match RAM to the model size you plan to run.' } },
         { '@type': 'Question', name: 'What mini PC should I get?', acceptedAnswer: { '@type': 'Answer', text: 'For HA plus cameras, an Intel N100/N150 mini PC accelerates Frigate via OpenVINO. For HA plus a local LLM, step up to a Ryzen mini PC with 32GB RAM. See the best mini PCs for Home Assistant + local AI guide.' } },
         { '@type': 'Question', name: 'One box or two?', acceptedAnswer: { '@type': 'Answer', text: 'One mini PC runs Home Assistant plus a small local LLM together. Split into two if you want the hub ultra-reliable on a low-power box and heavy AI offloaded to a separate machine such as a used RTX 3090 server.' } },
         { '@type': 'Question', name: 'What about power consumption for a 24/7 box?', acceptedAnswer: { '@type': 'Answer', text: 'It matters more than purchase price for hardware that never turns off. A Raspberry Pi draws a few watts, an N100/N150 mini PC around 10–15W, a Ryzen mini PC 15–35W, and NVIDIA rates a discrete GPU like the RTX 3090 at 350W board power.' } },
@@ -339,8 +341,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-ar.webp',
     affiliateDisclosure: true,
@@ -369,16 +371,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'ما الأجهزة التي أحتاجها للمنزل الذكي المحلي مع الذكاء الاصطناعي؟',
         answer:
-          'ابدأ بالمركز: يشغّل mini PC بمعالج Intel N100/N150 أو Raspberry Pi 5 نظام Home Assistant. أضف مسرّع Frigate للكاميرات — يغطي iGPU من Intel عبر OpenVINO معظم الإعدادات، وتضيف وحدة Hailo-8L أو Hailo-8 بصيغة M.2 سعة كشف أكبر (أصبح Google Coral إرثًا قديمًا). خزّن التسجيلات على SSD، أو NAS لعدة كاميرات. لنموذج LLM محلي، ارتقِ إلى mini PC مع iGPU/NPU قادرة أو صندوق RTX 3090 مستعمل. إذا كنت تعتقد أنك ستضيف ذكاءً اصطناعيًا محليًا خلال عام، اشترِ mini PC الآن بدلًا من Raspberry Pi ستستبدله لاحقًا.',
+          'ابدأ بالمركز: يشغّل mini PC بمعالج Intel N100/N150 أو Raspberry Pi 5 نظام Home Assistant. أضف مسرّع Frigate للكاميرات — يغطي iGPU من Intel عبر OpenVINO معظم الإعدادات، وتضيف وحدة Hailo-8L أو Hailo-8 بصيغة M.2 سعة كشف أكبر (تذكر وثائق عتاد Frigate خيارات Hailo وIntel OpenVINO للأنظمة الجديدة؛ ولا يزال Google Coral يعمل لكنه موصوف هناك بأنه عتاد أقدم). خزّن التسجيلات على SSD، أو NAS لعدة كاميرات. لنموذج LLM محلي، ارتقِ إلى mini PC مع iGPU/NPU قادرة أو صندوق RTX 3090 مستعمل. إذا كنت تعتقد أنك ستضيف ذكاءً اصطناعيًا محليًا خلال عام، اشترِ mini PC الآن بدلًا من Raspberry Pi ستستبدله لاحقًا.',
         bullets: [
           'المركز: mini PC بمعالج Intel N100/N150 أو Raspberry Pi 5',
-          'Frigate: Intel iGPU (OpenVINO) أو Hailo-8L بصيغة M.2 — Coral إرث قديم',
+          'Frigate: Intel iGPU (OpenVINO) أو Hailo-8L بصيغة M.2 — لا يزال Coral يعمل لكنه عتاد أقدم',
           'التخزين: SSD، أو NAS لعدة كاميرات',
           'ترقية LLM محلي: mini PC بـ iGPU/NPU أو RTX 3090 مستعمل',
           'إذا كنت قد تضيف ذكاءً اصطناعيًا محليًا خلال عام، اشترِ mini PC الآن — أرخص من استبدال Raspberry Pi لاحقًا',
           'قرر أولًا: HA فقط أم HA + كاميرات + ذكاء اصطناعي محلي — هذا يحدد ما إذا كنت تشتري مرة أم مرتين',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -408,8 +410,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ملخص سريع',
         isTldr: true,
         items: [
-          'المركز: mini PC بمعالج Intel N100/N150 (بحدود ‎$190–220‎) أو Raspberry Pi 5 (بحدود ‎$180–305‎ حتى أغسطس 2026، ارتفع بشدة بسبب نقص ذاكرة DRAM) يشغّل Home Assistant',
-          'Frigate: iGPU من Intel (مدمجة في معظم أجهزة mini PC، عبر OpenVINO)، أو وحدة Hailo-8L بصيغة M.2 (بحدود ‎$70‎)، أو Hailo-8 بصيغة M.2 (بحدود ‎$170–200‎) تسرّع كشف الكاميرا — أصبح Google Coral إرثًا قديمًا ولم يعد توصية Frigate للأنظمة الجديدة',
+          'المركز: mini PC بمعالج Intel N100/N150 (بحدود ‎$190–220‎) أو Raspberry Pi 5 (بحدود ‎$180–305‎، ارتفع بشدة بسبب نقص ذاكرة DRAM) يشغّل Home Assistant',
+          'Frigate: iGPU من Intel (مدمجة في معظم أجهزة mini PC، عبر OpenVINO)، أو وحدة Hailo-8L بصيغة M.2 (بحدود ‎$70‎)، أو Hailo-8 بصيغة M.2 (بحدود ‎$170–200‎) تسرّع كشف الكاميرا — تذكر وثائق عتاد Frigate خيارات Hailo وIntel OpenVINO للأنظمة الجديدة، ولا يزال Google Coral يعمل لكنه موصوف هناك بأنه عتاد أقدم',
           'التخزين: SSD للتسجيلات، أو NAS (‎Synology DS225+‎ بحدود ‎$340‎، ‎DS925+‎ بحدود ‎$640‎، ‎UGREEN NASync‎ بحدود ‎$650–730‎) عند تشغيل عدة كاميرات',
           'ترقية LLM محلي: mini PC بمعالج Ryzen (32GB RAM، بحدود ‎$649‎) أو RTX 3090 مستعملة (نحو ‎$1,400–1,550‎ في قوائم البيع المكتملة حسب متتبّع InsiderLLM، 2026-10-15)',
           'قرر HA فقط أم HA + كاميرات + ذكاء اصطناعي محلي قبل الشراء — يغيّر ذلك الجهاز المناسب، وشراء mini PC الآن أفضل من استبدال Pi لاحقًا',
@@ -420,15 +422,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما الأجهزة التي يجب شراؤها؟',
         content:
           '**طابق هدفك مع الصندوق المناسب، وليس العكس.** يربط الجدول أدناه كل هدف من أهداف المنزل الذكي بالأجهزة التي تغطيه — كل صف يقود إلى التوصية الأكمل لاحقًا في الصفحة.',
-        columns: ['هدفك', 'اشترِ هذا', 'السعر التقديري (أغسطس 2026)'],
+        columns: ['هدفك', 'اشترِ هذا', 'السعر التقديري'],
         rows: [
-          { 'هدفك': 'Home Assistant فقط', 'اشترِ هذا': '[Home Assistant Green أو Raspberry Pi 5](#raspberry-pi)', 'السعر التقديري (أغسطس 2026)': '‎$199‎ (Green) / ‎$180–305‎ (Pi 5)' },
-          { 'هدفك': 'HA + كاميرات Frigate', 'اشترِ هذا': '[mini PC بمعالج Intel N100/N150](#mini-pc)', 'السعر التقديري (أغسطس 2026)': 'بحدود ‎$190–220‎' },
-          { 'هدفك': 'HA + نموذج LLM محلي', 'اشترِ هذا': '[mini PC بمعالج Ryzen، 32GB RAM](#mini-pc)', 'السعر التقديري (أغسطس 2026)': 'بحدود ‎$649‎' },
-          { 'هدفك': 'HA + نموذج LLM محلي أكبر', 'اشترِ هذا': '[خادم RTX 3090 مستعمل](#server)', 'السعر التقديري (أغسطس 2026)': 'بحدود ‎$1,400–1,550‎ (GPU فقط؛ InsiderLLM 2026-10-15)' },
+          { 'هدفك': 'Home Assistant فقط', 'اشترِ هذا': '[Home Assistant Green أو Raspberry Pi 5](#raspberry-pi)', 'السعر التقديري': '‎$199‎ (Green) / ‎$180–305‎ (Pi 5)' },
+          { 'هدفك': 'HA + كاميرات Frigate', 'اشترِ هذا': '[mini PC بمعالج Intel N100/N150](#mini-pc)', 'السعر التقديري': 'بحدود ‎$190–220‎' },
+          { 'هدفك': 'HA + نموذج LLM محلي', 'اشترِ هذا': '[mini PC بمعالج Ryzen، 32GB RAM](#mini-pc)', 'السعر التقديري': 'بحدود ‎$649‎' },
+          { 'هدفك': 'HA + نموذج LLM محلي أكبر', 'اشترِ هذا': '[خادم RTX 3090 مستعمل](#server)', 'السعر التقديري': 'بحدود ‎$1,400–1,550‎ (GPU فقط؛ InsiderLLM 2026-10-15)' },
         ],
         tableFormat: true,
-        note: 'الأسعار تقريبية وتتغيّر — أسعار GPU وذاكرة DRAM كانت متقلبة بشكل خاص هذا العام. رقم RTX 3090 من بيانات قوائم eBay الأمريكية في [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15)، وليس عرض سعر؛ وقد تختلف الأسعار في بلدك حسب الضرائب والرسوم الجمركية. تحقق من السعر في الإعلان المرتبط قبل الشراء.',
+        note: 'الأسعار تقريبية وتتغيّر — أسعار GPU وذاكرة DRAM كانت متقلبة بشكل خاص هذا العام. رقم RTX 3090 من بيانات قوائم eBay الأمريكية في [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15)، وليس عرض سعر؛ وقد تختلف الأسعار في بلدك حسب الضرائب والرسوم الجمركية. تحقق من السعر في الإعلان المرتبط قبل الشراء. الأسعار المعروضة هي أسعار تقريبية من صفحات البائعين عند آخر تحديث (انظر تاريخ آخر تحديث)؛ تحقق من الصفحة المرتبطة لمعرفة سعر اليوم.',
         callouts: [
           { type: 'tip', text: 'لم تحسم أمرك بعد بشأن الذكاء الاصطناعي المحلي؟ راجع [لا تُبالغ في الإنفاق](#dont-overspend) قبل شراء الصندوق الأغلى.' },
         ],
@@ -440,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Home Assistant خفيف بحد ذاته ويعمل على أجهزة متواضعة؛ الطلبات الثقيلة تأتي من كشف كاميرات Frigate ونموذج LLM محلي.** حجّم الصندوق لما ستضيفه، ليس فقط للمركز.',
         items: [
           'يحتاج المركز حسابًا ضئيلًا للتحكم في الأجهزة والأتمتة.',
-          'يحتاج كشف الأجسام في Frigate إلى مسرّع: يتعامل iGPU من Intel عبر OpenVINO مع معظم الإعدادات، وتضيف وحدة Hailo-8L أو Hailo-8 بصيغة M.2 سعة أكبر. لا يزال Google Coral (USB/M.2 TPU) يعمل لكنه أصبح إرثًا قديمًا — لم يعد Frigate يوصي به للأنظمة الجديدة.',
+          'يحتاج كشف الأجسام في Frigate إلى مسرّع: يتعامل iGPU من Intel عبر OpenVINO مع معظم الإعدادات، وتضيف وحدة Hailo-8L أو Hailo-8 بصيغة M.2 سعة أكبر. لا يزال Google Coral (USB/M.2 TPU) يعمل؛ وتذكر [وثائق عتاد Frigate](https://docs.frigate.video/frigate/hardware) خيارات Hailo وIntel OpenVINO للأنظمة الجديدة وتصف Coral بأنه عتاد أقدم.',
           'نماذج Whisper الأكبر واستنتاج نموذج LLM المحلي هي أثقل أحمال العمل — خطط لـ RAM وGPU/NPU حولها.',
           'خزّن تسجيلات الكاميرا على SSD؛ انتقل إلى NAS عند تشغيل عدة كاميرات باستمرار.',
         ],
@@ -449,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**Raspberry Pi 5 هو أقل استهلاكًا للطاقة طريقةً لتشغيل Home Assistant للاستخدام المنزلي الذكي الاعتيادي، لكن نقص ذاكرة DRAM في 2026 رفع أسعار اللوحات بشدة — أصبح سعر لوحة 8GB نحو ‎$180–220‎ ولوحة 16GB نحو ‎$280–305‎، وكلاهما أعلى بكثير من سعري الإطلاق الأصليين البالغين نحو ‎$80‎/‎$120‎، ولا يتوقع المحللون عودة الأسعار لطبيعتها قبل أواخر 2027.** لا يزال يجد صعوبة مع استنتاج النموذج اللغوي ونماذج Whisper الكبيرة.',
+          '**Raspberry Pi 5 هو أقل استهلاكًا للطاقة طريقةً لتشغيل Home Assistant للاستخدام المنزلي الذكي الاعتيادي، لكن نقص ذاكرة DRAM في 2026 رفع أسعار اللوحات بشدة — أصبح سعر لوحة 8GB نحو ‎$180–220‎ ولوحة 16GB نحو ‎$280–305‎، وكلاهما أعلى بكثير من سعري الإطلاق الأصليين البالغين نحو ‎$80‎/‎$120‎؛ تحقق من صفحة Raspberry Pi المرتبطة للاطلاع على الأسعار الحالية.** لا يزال يجد صعوبة مع استنتاج النموذج اللغوي ونماذج Whisper الكبيرة.',
         items: [
           'ممتاز للتحكم في الأجهزة والأتمتة وإعداد صوتي محلي صغير.',
           'استنتاج النموذج اللغوي على Pi محدود بنماذج صغيرة جدًا وبطيئة — أضف وحدة Hailo-8L بصيغة M.2 HAT إذا أردت كشف Frigate.',
@@ -467,9 +469,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**mini PC هو أفضل خيار بصندوق واحد لـ Home Assistant مع الذكاء الاصطناعي المحلي، بما يكفي من RAM وiGPU أو NPU قادرة لتشغيل نموذج LLM صغير وتسريع Frigate.** يوازن القدرة والحجم والتكلفة، وهذه الفئة تستحق إنفاقًا أكبر إذا كنت تشتري صندوقًا واحدًا لكلتا المهمتين.',
         items: [
-          'أفضل خيار اقتصادي: يشغّل mini PC بمعالج Intel N100/N150 منخفض الطاقة نظام Home Assistant ويسرّع Frigate عبر iGPU من Intel (OpenVINO) — الخيار العملي الافتراضي لصندوق مركز مع كاميرات. يبلغ سعر Beelink EQ14 (Intel N150، 16GB RAM) نحو ‎$190–220‎ حتى أغسطس 2026 — جيد للتشغيل على مدار الساعة واستهلاك كهرباء منخفض، لكنه ضعيف لنموذج LLM محلي.',
-          'أفضل خيار للذكاء الاصطناعي المحلي: لنموذج LLM محلي على نفس الصندوق، ارتقِ إلى mini PC بمعالج Ryzen مع 32GB RAM. يبلغ سعر Beelink SER8 (Ryzen 7 8845HS) نحو ‎$649‎ حتى أغسطس 2026 ويشغّل نموذج Qwen3 8B أو Llama 3.1 8B عبر Ollama بسرعة قابلة للاستخدام، إلى جانب Home Assistant وFrigate. أعطِ الأولوية لـ RAM وGPU متكاملة أو NPU قادرة لزمن استجابة أقل.',
-          'إذا كنت ستشتري صندوقًا واحدًا لـ Home Assistant والذكاء الاصطناعي المحلي معًا، فإن التكلفة الإضافية لـ mini PC بمعالج Ryzen مقارنة بـ N150 تستحق العناء — فهو الوحيد من الاثنين الذي يشغّل فعليًا نموذج LLM بسرعة قابلة للاستخدام.',
+          'أفضل خيار اقتصادي: يشغّل mini PC بمعالج Intel N100/N150 منخفض الطاقة نظام Home Assistant ويسرّع Frigate عبر iGPU من Intel (OpenVINO) — الخيار العملي الافتراضي لصندوق مركز مع كاميرات. يبلغ سعر Beelink EQ14 (Intel N150، 16GB RAM) نحو ‎$190–220‎ — جيد للتشغيل على مدار الساعة واستهلاك كهرباء منخفض، لكنه ضعيف لنموذج LLM محلي.',
+          'أفضل خيار للذكاء الاصطناعي المحلي: لنموذج LLM محلي على نفس الصندوق، ارتقِ إلى mini PC بمعالج Ryzen مع 32GB RAM. يبلغ سعر Beelink SER8 (Ryzen 7 8845HS) نحو ‎$649‎؛ وهو mini PC بمعالج Ryzen 7 يمكنه تشغيل نماذج من فئة 8B مثل Qwen3 8B أو Llama 3.1 8B عبر Ollama؛ وتعتمد السرعة على الترميز وحجم السياق، ولم تُجرِ PromptQuorum اختبارًا معياريًا لهذا الجهاز. أعطِ الأولوية لـ RAM وGPU متكاملة أو NPU قادرة لزمن استجابة أقل.',
+          'إذا كنت ستشتري صندوقًا واحدًا لـ Home Assistant والذكاء الاصطناعي المحلي معًا، فقد يستحق mini PC بمعالج Ryzen تكلفته الإضافية مقارنة بـ N150 — فهو يوفّر هامشًا أكبر لتشغيل نموذج من فئة 8B.',
           'للاختيارات المحددة، راجع [أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) ومتعدد العناقيد [أفضل mini PCs للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm).',
         ],
         affiliateLinks: [
@@ -481,13 +483,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'frigate-accelerator',
         title: 'هل ستشغّل كاميرات أمنية؟ اختر مسرّع Frigate الخاص بك',
         content:
-          '**عدد الكاميرات ومقدار احتياطي الكشف الذي تحتاجه هو ما يحدد المسرّع، بمعزل عن الصندوق الذي يشغّل المركز.** لم يعد Frigate يوصي بـ Google Coral للأنظمة الجديدة — أصبح يوجّه المستخدمين الجدد نحو Hailo، إلى جانب iGPU المدمجة في الجهاز المضيف.',
+          '**عدد الكاميرات ومقدار احتياطي الكشف الذي تحتاجه هو ما يحدد المسرّع، بمعزل عن الصندوق الذي يشغّل المركز.** تذكر [وثائق عتاد Frigate](https://docs.frigate.video/frigate/hardware) خيارات Hailo وIntel OpenVINO للأنظمة الجديدة؛ ولا يزال Google Coral يعمل لكنه موصوف هناك بأنه عتاد أقدم.',
         items: [
           '1–4 كاميرات: تغطي iGPU من Intel المدمجة في mini PC بمعالج N100/N150، عبر OpenVINO، معظم الإعدادات المنزلية دون أي تكلفة أجهزة إضافية.',
-          '4–10 كاميرات، أو إذا أردت احتياطي كشف أكبر على أجهزة غير Intel: وحدة Hailo-8L بصيغة M.2 (بحدود ‎$70‎ حتى أغسطس 2026) هي توصية Frigate الحالية منخفضة الطاقة — تعمل كما كان يعمل Coral سابقًا، كبطاقة إضافية مدعومة رسميًا من الدرجة الأولى.',
+          '4–10 كاميرات، أو إذا أردت احتياطي كشف أكبر على أجهزة غير Intel: وحدة Hailo-8L بصيغة M.2 (بحدود ‎$70‎) هي توصية Frigate الحالية منخفضة الطاقة — تعمل كما كان يعمل Coral سابقًا، كبطاقة إضافية مدعومة رسميًا من الدرجة الأولى.',
           '10+ كاميرات أو إثراءات أثقل (تعرّف على الوجوه/لوحات السيارات إضافة إلى الكشف): تضيف وحدة Hailo-8 بصيغة M.2 (بحدود ‎$170–200‎) قدرة معالجة أكبر بشكل ملموس.',
           'هل تملك Coral بالفعل؟ لا يزال يعمل — هذا يخص فقط ما يجب شراؤه في نظام جديد، وليس سببًا لاستبدال إعداد Coral يعمل بشكل جيد.',
         ],
+        callouts: [{ type: 'warning', text: 'الكاميرات والتعرّف على الوجوه أو لوحات السيارات خاضعة للتنظيم القانوني. في الاتحاد الأوروبي قد تنطبق اللائحة العامة لحماية البيانات (GDPR) متى التقطت الكاميرات مساحة عامة أو الجيران أو أشخاصًا آخرين، ويخضع تحديد الهوية البيومتري لقواعد أشد صرامة. راجع القانون المحلي قبل التركيب؛ هذه ليست استشارة قانونية.' }],
         affiliateLinks: [
           { label: 'تحقق من سعر Hailo-8L ←', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: 'بحدود ‎$70‎' },
           { label: 'تحقق من سعر Hailo-8 ←', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: 'بحدود ‎$170–200‎' },
@@ -499,9 +502,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**يمكن لـ NAS استضافة Home Assistant في حاوية إلى جانب التخزين وتسجيلات Frigate، إذا كان يمتلك CPU وRAM كافيين — خيار جيد إذا كنت تملك واحدًا بالفعل، لكنه ليس السبب الصحيح لشراء أول NAS لك.** لا تشترِ NAS خصيصًا لتشغيل نموذج LLM محلي: صندوق mini PC مخصص أو صندوق GPU يمثّل منصة ذكاء اصطناعي أفضل بنفس المال.',
         items: [
-          '2–4 كاميرات / تخزين أخف: يغطي Synology DS225+ (بحدود ‎$340‎ حتى أغسطس 2026) نظام Home Assistant المُحوسب في حاوية إلى جانب تسجيلات Frigate لعدد قليل من الكاميرات.',
+          '2–4 كاميرات / تخزين أخف: يغطي Synology DS225+ (بحدود ‎$340‎) نظام Home Assistant المُحوسب في حاوية إلى جانب تسجيلات Frigate لعدد قليل من الكاميرات.',
           '4–10 كاميرات / حيّز أكبر: يضيف Synology DS925+ (بحدود ‎$640‎) حيّز CPU/RAM أكبر للمزيد من الإضافات والكاميرات.',
-          'التخزين مع الذكاء الاصطناعي المحلي في صندوق واحد: تأتي طرازات UGREEN NASync (بفئة DXP4800 Plus، بحدود ‎$650–730‎) مع خيار نموذج LLM محلي مدمج وأجهزة أحدث (DDR5، وشبكة 10GbE دون بطاقات إضافية) بسعر مماثل لـ DS925+.',
+          'التخزين مع الذكاء الاصطناعي المحلي في صندوق واحد: تقدّم طرازات UGREEN NASync (بفئة DXP4800 Plus، بحدود ‎$650–730‎) أجهزة أحدث (DDR5، وشبكة 10GbE دون بطاقات إضافية) بسعر مماثل لـ DS925+، وتعلن بعض الطرازات عن خيار نموذج LLM محلي؛ راجع صفحة المورّد.',
           'يعتمد استنتاج النموذج اللغوي على NAS بشدة على أجهزته — تفتقر معظم أجهزة NAS إلى GPU منفصلة قادرة، لذا عامل خيار LLM المدمج كميزة راحة، لا كبديل لفئة RTX 3090 أدناه إذا أردت فعلًا نموذجًا كبيرًا.',
         ],
         affiliateLinks: [
@@ -517,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الخادم المخصص مع GPU منفصلة هو الترقية لتشغيل نموذج LLM محلي أكبر إلى جانب كاميرات كثيرة.** يوفر أكبر حيّز بتكلفة واستهلاك طاقة أعلى — وقد تحرّكت أسعار GPU كثيرًا في 2026، لذا اعتبر الأرقام أدناه لقطة لحظية وليست قيمة ثابتة.',
         items: [
           'RTX 3090 مستعمل (24GB VRAM) خيار شائع للنماذج اللغوية المحلية بفضل ذاكرته الكبيرة. يذكر [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15) أن قوائم بيعه المستعملة المكتملة نحو ‎$1,400–1,550‎ — بيانات eBay الأمريكية، وليست عرض سعر. قد تكون النماذج المرمّزة بـ Q4 حتى نحو 70B ممكنة حسب طريقة الترميز وحجم السياق والإفراغ إلى القرص؛ اعتبر هذا نطاق قدرة، لا ضمانًا لكل نموذج 70B.',
-          'RTX 3060 مستعمل (12GB) هو البديل الاقتصادي لصندوق GPU منفصلة — يتعامل مع نماذج 7B–13B بشكل مريح دون حيّز VRAM أو سعر RTX 3090.',
+          'RTX 3060 مستعمل (12GB) هو البديل الاقتصادي لصندوق GPU منفصلة — يمكنه التعامل مع نماذج 7B–13B حسب الترميز، دون حيّز VRAM أو سعر RTX 3090.',
           'الأفضل لكاميرات كثيرة ونموذج LLM أكبر ومستخدمين متعددين. استهلاك طاقة وتكلفة أعلى من mini PC — راجع قسم استهلاك الطاقة أدناه قبل الالتزام بهذه الفئة.',
           'مبالغة لمنزل ذكي أساسي — احتفظ به للاستخدام الكثيف للذكاء الاصطناعي المحلي، وأبقِ مركز Home Assistant على صندوق منفصل منخفض الطاقة للموثوقية (انظر صندوق واحد أم اثنان؟ أدناه).',
         ],
@@ -525,6 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'تحقق من عروض RTX 3090 المستعملة ←', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: 'بحدود ‎$1,400–1,550‎' },
           { label: 'تحقق من عروض RTX 3060 المستعملة ←', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: 'تحتاج بطاقة GPU بقدرة 350 واط في خادم يعمل باستمرار إلى مزوّد طاقة عالي الجودة بقدرة مناسبة، وتهوية جيدة، ومكان وضع مدروس. قد تكون البطاقات المستعملة متآكلة وبلا ضمان، لذا افحص شروط البائع. اتبع إرشادات الشركة المصنّعة؛ هذه ليست استشارة كهربائية.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-ar.svg',
         imageCaption: 'سعة نموذج LLM محلي حسب فئة الأجهزة: يشغّل Raspberry Pi 5 نماذج صغيرة جدًا فقط، ويتعامل mini PC بمعالج Intel N100/N150 مع نماذج صغيرة، ويشغّل mini PC بمعالج Ryzen (32GB RAM) نماذج 7B–8B، ويصل RTX 3090 مستعمل (24GB VRAM) إلى نحو 70B بترميز Q4 حسب الإعداد.',
       },
@@ -532,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: 'لا تُبالغ في الإنفاق على خادم Home Assistant',
         content:
-          '**شراء أجهزة أكثر مما تحتاجه حالتك هو أكثر عملية شراء مهدرة شيوعًا في هذه الفئة — طابق الصندوق مع ما تنوي فعلًا تشغيله.**',
+          '**شراء أجهزة أكثر مما تحتاجه حالتك هو عملية شراء مهدرة شائعة في هذه الفئة — طابق الصندوق مع ما تنوي فعلًا تشغيله.**',
         items: [
           'تشغّل Home Assistant فقط؟ لست بحاجة إلى GPU من فئة RTX، وربما لست بحاجة إلى mini PC أصلًا — يكفي Raspberry Pi 5 أو Home Assistant Green.',
           'Home Assistant مع كاميرات Frigate؟ لست بحاجة إلى محطة عمل باهظة — يكفي mini PC بمعالج Intel N100/N150 وiGPU مدمجة لمعظم أعداد الكاميرات المنزلية.',
@@ -590,7 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**إذا كنت تختار صندوقًا واحدًا اليوم ولست متأكدًا من الفئة المناسبة، فهذا افتراض معقول استنادًا إلى المقايضات أعلاه — قد تشير احتياجاتك الفعلية إلى شيء آخر، ولم يتم اختبار أي من الخيارات أدناه أو مراجعتها من قِبل PromptQuorum.**',
         items: [
           'لمنزل ذكي محلي عادي (Home Assistant مع بضعة أجهزة Zigbee/Matter): mini PC بمعالج Intel N150 خيار افتراضي منطقي — يغطي أيضًا Frigate إذا أضفت كاميرات لاحقًا.',
-          'لـ Home Assistant مع كاميرات مع مساعد ذكاء اصطناعي محلي صغير: mini PC بمعالج Ryzen و32GB RAM خيار معقول بصندوق واحد — الأرخص من بين الأجهزة التي تشغّل فعليًا نموذج LLM من فئة 8B بسرعة قابلة للاستخدام.',
+          'لـ Home Assistant مع كاميرات مع مساعد ذكاء اصطناعي محلي صغير: mini PC بمعالج Ryzen و32GB RAM خيار معقول بصندوق واحد — وسيلة أقل تكلفة لتشغيل نموذج من فئة 8B.',
           'للذكاء الاصطناعي المحلي الجاد (نماذج من فئة 32B أو أكبر): خادم RTX 3090 منفصل، بمعزل عن مركز Home Assistant، هو الترقية المعقولة نظرًا لأسعار GPU المستعملة الحالية.',
           'التركيب الجديد الذي يضع الذكاء الاصطناعي أولًا منذ البداية غالبًا ما يكون أقل ملاءمة لـ Raspberry Pi نظرًا لأسعار Pi في 2026 وقيود LLM لديه — يقترب mini PC عادةً في السعر ويكون منصة ذكاء اصطناعي أفضل بكثير.',
         ],
@@ -600,27 +604,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'تجميعات كاملة للمنزل الذكي المحلي',
         content:
           '**يحتاج معظم المشترين إلى أكثر من منتج واحد — على الأقل مركز، ومسرّع Frigate، وتخزين، بالإضافة إلى صندوق ذكاء اصطناعي إذا أردت استنتاج LLM محلي.** تجمع هذه التجميعات الثلاثة الخيارات أعلاه حسب السيناريو؛ يعيدك كل منتج إلى توصيته الكاملة سابقًا في هذه الصفحة.',
-        columns: ['التجميعة', 'المركز', 'مسرّع Frigate', 'الذكاء الاصطناعي', 'الإجمالي التقديري (أغسطس 2026)'],
+        columns: ['التجميعة', 'المركز', 'مسرّع Frigate', 'الذكاء الاصطناعي', 'الإجمالي التقديري'],
         rows: [
-          { 'التجميعة': 'البداية (HA فقط)', 'المركز': '[Home Assistant Green أو Pi 5](#raspberry-pi)', 'مسرّع Frigate': '—', 'الذكاء الاصطناعي': '—', 'الإجمالي التقديري (أغسطس 2026)': 'بحدود ‎$199–305‎' },
-          { 'التجميعة': 'HA + كاميرات', 'المركز': '[mini PC بمعالج N150](#mini-pc)', 'مسرّع Frigate': '[Intel iGPU، أو Hailo-8L لمزيد من الاحتياطي](#frigate-accelerator)', 'الذكاء الاصطناعي': '—', 'الإجمالي التقديري (أغسطس 2026)': 'بحدود ‎$190–290‎' },
-          { 'التجميعة': 'HA + كاميرات + ذكاء اصطناعي محلي', 'المركز': '[mini PC بمعالج Ryzen، 32GB](#mini-pc)', 'مسرّع Frigate': 'iGPU مدمجة، أو [Hailo-8L لعدد أكبر من الكاميرات](#frigate-accelerator)', 'الذكاء الاصطناعي': 'يعمل على نفس الصندوق (نموذج من فئة 8B)', 'الإجمالي التقديري (أغسطس 2026)': 'بحدود ‎$649–720‎' },
-          { 'التجميعة': 'HA + كاميرات + ذكاء اصطناعي محلي كبير', 'المركز': '[mini PC بمعالج N150 (يبقى منفصلًا للموثوقية)](#mini-pc)', 'مسرّع Frigate': '[Hailo-8](#frigate-accelerator)', 'الذكاء الاصطناعي': '[خادم RTX 3090 مستعمل، يعمل بشكل منفصل](#server)', 'الإجمالي التقديري (أغسطس 2026)': 'بحدود ‎$1,760–1,970‎ (دون الحاسوب المضيف)' },
+          { 'التجميعة': 'البداية (HA فقط)', 'المركز': '[Home Assistant Green أو Pi 5](#raspberry-pi)', 'مسرّع Frigate': '—', 'الذكاء الاصطناعي': '—', 'الإجمالي التقديري': 'بحدود ‎$199–305‎' },
+          { 'التجميعة': 'HA + كاميرات', 'المركز': '[mini PC بمعالج N150](#mini-pc)', 'مسرّع Frigate': '[Intel iGPU، أو Hailo-8L لمزيد من الاحتياطي](#frigate-accelerator)', 'الذكاء الاصطناعي': '—', 'الإجمالي التقديري': 'بحدود ‎$190–290‎' },
+          { 'التجميعة': 'HA + كاميرات + ذكاء اصطناعي محلي', 'المركز': '[mini PC بمعالج Ryzen، 32GB](#mini-pc)', 'مسرّع Frigate': 'iGPU مدمجة، أو [Hailo-8L لعدد أكبر من الكاميرات](#frigate-accelerator)', 'الذكاء الاصطناعي': 'يعمل على نفس الصندوق (نموذج من فئة 8B)', 'الإجمالي التقديري': 'بحدود ‎$649–720‎' },
+          { 'التجميعة': 'HA + كاميرات + ذكاء اصطناعي محلي كبير', 'المركز': '[mini PC بمعالج N150 (يبقى منفصلًا للموثوقية)](#mini-pc)', 'مسرّع Frigate': '[Hailo-8](#frigate-accelerator)', 'الذكاء الاصطناعي': '[خادم RTX 3090 مستعمل، يعمل بشكل منفصل](#server)', 'الإجمالي التقديري': 'بحدود ‎$1,760–1,970‎ (دون الحاسوب المضيف)' },
         ],
         tableFormat: true,
-        note: 'تُبقي التجميعة الأخيرة مركز Home Assistant على صندوقه الخاص منخفض الطاقة وتشغّل RTX 3090 كجهاز منفصل — راجع [صندوق واحد أم اثنان؟](#one-or-two) لمعرفة السبب. يجمع الإجمالي RTX 3090 مستعملة (‎$1,400–1,550‎، متتبّع InsiderLLM، 2026-10-15) وmini PC بمعالج N150 (بحدود ‎$190–220‎) وHailo-8 (بحدود ‎$170–200‎): من ‎$1,760‎ إلى ‎$1,970‎. ولا يشمل الحاسوب المضيف (CPU واللوحة الأم ومزوّد الطاقة وRAM والهيكل) الذي تحتاجه GPU.',
+        note: 'تُبقي التجميعة الأخيرة مركز Home Assistant على صندوقه الخاص منخفض الطاقة وتشغّل RTX 3090 كجهاز منفصل — راجع [صندوق واحد أم اثنان؟](#one-or-two) لمعرفة السبب. يجمع الإجمالي RTX 3090 مستعملة (‎$1,400–1,550‎، متتبّع InsiderLLM، 2026-10-15) وmini PC بمعالج N150 (بحدود ‎$190–220‎) وHailo-8 (بحدود ‎$170–200‎): من ‎$1,760‎ إلى ‎$1,970‎. ولا يشمل الحاسوب المضيف (CPU واللوحة الأم ومزوّد الطاقة وRAM والهيكل) الذي تحتاجه GPU. الأسعار المعروضة هي أسعار تقريبية من صفحات البائعين عند آخر تحديث (انظر تاريخ آخر تحديث)؛ تحقق من الصفحة المرتبطة لمعرفة سعر اليوم.',
       },
       faqSection: {
         id: 'faq',
         title: 'أسئلة شائعة',
         faqs: [
-          { q: 'ما الأجهزة التي يوصي بها Frigate؟', a: 'للأنظمة الجديدة يوصي Frigate بـ iGPU من Intel عبر OpenVINO، أو وحدة Hailo-8L (بحدود ‎$70‎، اقتصادية) أو Hailo-8 (بحدود ‎$170–200‎، أسرع) بصيغة M.2 لسعة كشف أكبر. لا يزال Google Coral (USB/M.2 TPU) يعمل لكنه أصبح إرثًا قديمًا — لم يعد Frigate يوصي به للأنظمة الجديدة إلا على أجهزة منخفضة الطاقة جدًا.' },
+          { q: 'ما الأجهزة التي يوصي بها Frigate؟', a: 'للأنظمة الجديدة تذكر وثائق عتاد Frigate (https://docs.frigate.video/frigate/hardware) خيارات منها iGPU من Intel عبر OpenVINO، أو وحدة Hailo-8L (بحدود ‎$70‎، اقتصادية) أو Hailo-8 (بحدود ‎$170–200‎، أسرع) بصيغة M.2 لسعة كشف أكبر. لا يزال Google Coral (USB/M.2 TPU) يعمل لكنه موصوف في تلك الوثائق بأنه عتاد أقدم.' },
           { q: 'هل يستطيع Raspberry Pi تشغيل نموذج LLM محلي أيضًا؟', a: 'يمكن لـ Pi تشغيل نماذج صغيرة جدًا فحسب وببطء، لذا فهو ليس مثاليًا لمساعد LLM محلي سريع الاستجابة. يتعامل بشكل جيد مع Home Assistant والصوت الأساسي، لكن للذكاء الاصطناعي المحلي يُعدّ mini PC مع iGPU أو NPU قادرة — أو صندوق RTX 3090 مستعمل — الخيار الأفضل.' },
-          { q: 'كم من RAM أحتاج؟', a: 'Home Assistant وحده يعمل في بضعة غيغابايت. لتشغيل نموذج LLM محلي صغير وخدمات ذكاء اصطناعي أخرى على نفس الصندوق، يساعد المزيد من RAM؛ يُبقي mini PC مع 32GB RAM وiGPU/NPU قادرة نموذج Qwen3 8B أو Llama 3.1 8B سريع الاستجابة. طابق RAM مع حجم النموذج الذي تخطط لتشغيله.' },
+          { q: 'كم من RAM أحتاج؟', a: 'Home Assistant وحده يعمل في بضعة غيغابايت. لتشغيل نموذج LLM محلي صغير وخدمات ذكاء اصطناعي أخرى على نفس الصندوق، يساعد المزيد من RAM؛ يمكن لـ mini PC مع 32GB RAM وiGPU/NPU قادرة تشغيل نموذج Qwen3 8B أو Llama 3.1 8B؛ وتعتمد السرعة على الترميز وحجم السياق. طابق RAM مع حجم النموذج الذي تخطط لتشغيله.' },
           { q: 'ما mini PC الذي يجب أن أشتريه؟', a: 'لـ HA مع الكاميرات، يسرّع mini PC بمعالج Intel N100/N150 نظام Frigate عبر OpenVINO. لـ HA مع نموذج LLM محلي، ارتقِ إلى mini PC بمعالج Ryzen مع 32GB RAM. راجع دليل أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي للاختيارات.' },
           { q: 'صندوق واحد أم اثنان؟', a: 'صندوق واحد (mini PC) هو الأبسط ويشغّل Home Assistant مع نموذج LLM محلي صغير معًا. قسّم إلى اثنين إذا أردت إبقاء المركز موثوقًا للغاية على صندوق منخفض الطاقة وتفريغ الذكاء الاصطناعي الثقيل على جهاز منفصل مثل خادم RTX 3090 مستعمل.' },
           { q: 'هل استهلاك الطاقة مهم لصندوق يعمل على مدار الساعة؟', a: 'يهم أكثر من سعر الشراء بالنسبة لأجهزة لا تُغلق أبدًا. يستهلك Raspberry Pi بضعة واطات، وmini PC بمعالج N100/N150 نحو ‎10–15W‎، وmini PC بمعالج Ryzen نحو ‎15–35W‎ حسب الحمل، وتصنّف NVIDIA قدرة لوحة GPU منفصلة مثل RTX 3090 بـ ‎350W‎ — أحد أسباب تشغيل خادم GPU ثقيل كصندوق منفصل بدلًا من تشغيله دائمًا.' },
-          { q: 'هل يستحق Raspberry Pi الشراء بعد بأسعار 2026؟', a: 'لـ Home Assistant فقط، نعم — لا يزال الخيار الأقل استهلاكًا للطاقة. لكن نقص ذاكرة DRAM في 2026 رفع أسعار Pi 5 بشدة (بحدود ‎$180–305‎ حسب سعة RAM حتى أغسطس 2026، مقابل ‎$80–120‎ الأصليين)، مما يقلّص فارق السعر مع mini PC بمعالج N100/N150. إذا كنت قد تضيف كاميرات أو نموذج LLM محلي خلال عام، فعادةً ما يكون mini PC الشراء الأفضل الآن.' },
+          { q: 'هل يستحق Raspberry Pi الشراء بعد بأسعار 2026؟', a: 'لـ Home Assistant فقط، نعم — لا يزال الخيار الأقل استهلاكًا للطاقة. لكن نقص ذاكرة DRAM في 2026 رفع أسعار Pi 5 بشدة (بحدود ‎$180–305‎ حسب سعة RAM، مقابل ‎$80–120‎ الأصليين)، مما يقلّص فارق السعر مع mini PC بمعالج N100/N150. إذا كنت قد تضيف كاميرات أو نموذج LLM محلي خلال عام، فعادةً ما يكون mini PC الشراء الأفضل الآن.' },
         ],
       },
       relatedReading: {
@@ -647,10 +651,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM.',
       url: 'https://www.promptquorum.com/ar/smart-home/best-hardware-for-local-smart-home',
       inLanguage: 'ar',
-      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'أجهزة Home Assistant' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: 'نموذج LLM محلي' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -660,9 +664,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'ما الأجهزة التي يوصي بها Frigate؟', acceptedAnswer: { '@type': 'Answer', text: 'للأنظمة الجديدة يوصي Frigate بـ iGPU من Intel عبر OpenVINO، أو وحدة Hailo-8L (بحدود ‎$70‎) أو Hailo-8 (بحدود ‎$170–200‎) بصيغة M.2 لسعة كشف أكبر. لا يزال Google Coral TPU يعمل لكنه أصبح إرثًا قديمًا ولم يعد يُوصى به للأنظمة الجديدة.' } },
+        { '@type': 'Question', name: 'ما الأجهزة التي يوصي بها Frigate؟', acceptedAnswer: { '@type': 'Answer', text: 'للأنظمة الجديدة تذكر وثائق عتاد Frigate (https://docs.frigate.video/frigate/hardware) خيارات منها iGPU من Intel عبر OpenVINO، أو وحدة Hailo-8L (بحدود ‎$70‎) أو Hailo-8 (بحدود ‎$170–200‎) بصيغة M.2 لسعة كشف أكبر. لا يزال Google Coral TPU يعمل لكنه موصوف في تلك الوثائق بأنه عتاد أقدم.' } },
         { '@type': 'Question', name: 'هل يستطيع Raspberry Pi تشغيل نموذج LLM محلي أيضًا؟', acceptedAnswer: { '@type': 'Answer', text: 'يمكن لـ Pi تشغيل نماذج صغيرة جدًا فحسب وببطء. يتعامل بشكل جيد مع Home Assistant والصوت الأساسي، لكن للذكاء الاصطناعي المحلي mini PC مع iGPU أو NPU قادرة، أو صندوق RTX 3090 مستعمل، هو الأفضل.' } },
-        { '@type': 'Question', name: 'كم من RAM أحتاج؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant وحده يعمل في بضعة غيغابايت. لتشغيل نموذج LLM محلي صغير على نفس الصندوق، يساعد المزيد من RAM؛ يُبقي mini PC مع 32GB RAM نموذج Qwen3 8B أو Llama 3.1 8B سريع الاستجابة. طابق RAM مع حجم النموذج الذي تخطط لتشغيله.' } },
+        { '@type': 'Question', name: 'كم من RAM أحتاج؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant وحده يعمل في بضعة غيغابايت. لتشغيل نموذج LLM محلي صغير على نفس الصندوق، يساعد المزيد من RAM؛ يمكن لـ mini PC مع 32GB RAM تشغيل نموذج Qwen3 8B أو Llama 3.1 8B؛ وتعتمد السرعة على الترميز وحجم السياق. طابق RAM مع حجم النموذج الذي تخطط لتشغيله.' } },
         { '@type': 'Question', name: 'ما mini PC الذي يجب أن أشتريه؟', acceptedAnswer: { '@type': 'Answer', text: 'لـ HA مع الكاميرات، يسرّع mini PC بمعالج Intel N100/N150 نظام Frigate عبر OpenVINO. لـ HA مع نموذج LLM محلي، ارتقِ إلى mini PC بمعالج Ryzen مع 32GB RAM. راجع دليل أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي.' } },
         { '@type': 'Question', name: 'صندوق واحد أم اثنان؟', acceptedAnswer: { '@type': 'Answer', text: 'mini PC واحد يشغّل Home Assistant مع نموذج LLM محلي صغير معًا. قسّم إلى اثنين إذا أردت إبقاء المركز موثوقًا للغاية على صندوق منخفض الطاقة وتفريغ الذكاء الاصطناعي الثقيل على جهاز منفصل مثل خادم RTX 3090 مستعمل.' } },
         { '@type': 'Question', name: 'هل استهلاك الطاقة مهم لصندوق يعمل على مدار الساعة؟', acceptedAnswer: { '@type': 'Answer', text: 'يهم أكثر من سعر الشراء بالنسبة لأجهزة لا تُغلق أبدًا. يستهلك Raspberry Pi بضعة واطات، وmini PC بمعالج N100/N150 نحو ‎10–15W‎، وmini PC بمعالج Ryzen نحو ‎15–35W‎، وتصنّف NVIDIA قدرة لوحة GPU منفصلة مثل RTX 3090 بـ ‎350W‎.' } },
@@ -674,8 +678,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-de.webp',
     affiliateDisclosure: true,
@@ -704,16 +708,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Welche Hardware brauche ich für ein lokales Smart Home mit KI?',
         answer:
-          'Beginnen Sie mit dem Hub: Ein Mini-PC mit Intel N100/N150 oder ein Raspberry Pi 5 betreibt Home Assistant. Fügen Sie einen Frigate-Beschleuniger für Kameras hinzu – eine Intel-iGPU über OpenVINO deckt die meisten Setups ab, und ein Hailo-8L- oder Hailo-8-M.2-Modul erhöht die Erkennungskapazität (der Google Coral ist inzwischen veraltet). Speichern Sie Aufnahmen auf einer SSD oder einem NAS für viele Kameras. Für ein lokales LLM steigen Sie auf einen Mini-PC mit leistungsfähiger iGPU/NPU oder ein gebrauchtes RTX-3090-Gerät auf. Wenn Sie glauben, innerhalb eines Jahres lokale KI hinzuzufügen, kaufen Sie den Mini-PC jetzt statt eines Raspberry Pi, den Sie später ersetzen müssten.',
+          'Beginnen Sie mit dem Hub: Ein Mini-PC mit Intel N100/N150 oder ein Raspberry Pi 5 betreibt Home Assistant. Fügen Sie einen Frigate-Beschleuniger für Kameras hinzu – eine Intel-iGPU über OpenVINO deckt die meisten Setups ab, und ein Hailo-8L- oder Hailo-8-M.2-Modul erhöht die Erkennungskapazität (die Frigate-Hardware-Dokumentation nennt für neue Builds Hailo und Intel OpenVINO; der Google Coral funktioniert weiterhin, wird dort aber als ältere Hardware beschrieben). Speichern Sie Aufnahmen auf einer SSD oder einem NAS für viele Kameras. Für ein lokales LLM steigen Sie auf einen Mini-PC mit leistungsfähiger iGPU/NPU oder ein gebrauchtes RTX-3090-Gerät auf. Wenn Sie glauben, innerhalb eines Jahres lokale KI hinzuzufügen, kaufen Sie den Mini-PC jetzt statt eines Raspberry Pi, den Sie später ersetzen müssten.',
         bullets: [
           'Hub: Intel-N100/N150-Mini-PC oder Raspberry Pi 5',
-          'Frigate: Intel-iGPU (OpenVINO) oder Hailo-8L M.2 – Coral ist veraltet',
+          'Frigate: Intel-iGPU (OpenVINO) oder Hailo-8L M.2 – Coral funktioniert weiterhin, ist aber ältere Hardware',
           'Speicher: SSD oder ein NAS für viele Kameras',
           'LLM-Aufstieg: Mini-PC-iGPU/NPU oder gebrauchte RTX 3090',
           'Wenn Sie innerhalb eines Jahres lokale KI hinzufügen könnten, kaufen Sie jetzt den Mini-PC – günstiger, als später einen Raspberry Pi zu ersetzen',
           'Zuerst entscheiden: nur HA oder HA + Kameras + lokale KI – das bestimmt, ob Sie einmal oder zweimal kaufen',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -743,10 +747,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Kurzfassung',
         isTldr: true,
         items: [
-          'Hub: Ein Mini-PC mit Intel N100/N150 (ca. 230–280 €) oder ein Raspberry Pi 5 (im August 2026 ca. 185–300 €, stark gestiegen wegen einer DRAM-Knappheit) betreibt Home Assistant',
-          'Frigate: Eine Intel-iGPU (OpenVINO, in den meisten Mini-PCs integriert), ein Hailo-8L-M.2-Modul (ca. 70–80 €) oder ein Hailo-8 M.2 (ca. 180–220 €) beschleunigt die Kameraerkennung – der Google Coral ist inzwischen veraltet und keine Frigate-Empfehlung mehr für neue Builds',
-          'Speicher: eine SSD für Aufnahmen oder ein NAS (Synology DS225+ ca. 380–420 €, DS925+ ca. 680–750 €, UGREEN NASync ca. 700–800 €), sobald Sie mehrere Kameras betreiben',
-          'LLM-Aufstieg: ein Ryzen-Mini-PC (32 GB RAM, ca. 600–650 €) oder eine gebrauchte RTX 3090 (laut InsiderLLM-Tracker, 2026-10-15, rund 1.400–1.550 $ in US-Verkaufsangeboten)',
+          'Hub: Ein Mini-PC mit Intel N100/N150 (ca. 190–220 $) oder ein Raspberry Pi 5 (ca. 180–305 $, stark gestiegen wegen einer DRAM-Knappheit) betreibt Home Assistant',
+          'Frigate: Eine Intel-iGPU (OpenVINO, in den meisten Mini-PCs integriert), ein Hailo-8L-M.2-Modul (ca. 70 $) oder ein Hailo-8 M.2 (ca. 170–200 $) beschleunigt die Kameraerkennung – die Frigate-Hardware-Dokumentation nennt für neue Builds Hailo und Intel OpenVINO; der Google Coral funktioniert weiterhin, wird dort aber als ältere Hardware beschrieben',
+          'Speicher: eine SSD für Aufnahmen oder ein NAS (Synology DS225+ ca. 340 $, DS925+ ca. 640 $, UGREEN NASync ca. 650–730 $), sobald Sie mehrere Kameras betreiben',
+          'LLM-Aufstieg: ein Ryzen-Mini-PC (32 GB RAM, ca. 649 $) oder eine gebrauchte RTX 3090 (laut InsiderLLM-Tracker, 2026-10-15, rund 1.400–1.550 $ in US-Verkaufsangeboten)',
           'Entscheiden Sie nur-HA vs HA + Kameras + lokale KI vor dem Kauf – das ändert das richtige Gerät, und den Mini-PC jetzt zu kaufen schlägt es, später einen Pi zu ersetzen',
         ],
       },
@@ -755,15 +759,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Welche Hardware sollten Sie kaufen?',
         content:
           '**Passen Sie das Gerät an Ihr Ziel an, nicht umgekehrt.** Die folgende Tabelle ordnet jedem Smart-Home-Ziel die passende Hardware zu – jede Zeile verlinkt auf die ausführlichere Empfehlung weiter unten auf der Seite.',
-        columns: ['Ihr Ziel', 'Das kaufen', 'Geschätzter Preis (Aug. 2026)'],
+        columns: ['Ihr Ziel', 'Das kaufen', 'Geschätzter Preis'],
         rows: [
-          { 'Ihr Ziel': 'Nur Home Assistant', 'Das kaufen': '[Home Assistant Green oder Raspberry Pi 5](#raspberry-pi)', 'Geschätzter Preis (Aug. 2026)': '179 € (Green) / 185–300 € (Pi 5)' },
-          { 'Ihr Ziel': 'HA + Frigate-Kameras', 'Das kaufen': '[Intel-N100/N150-Mini-PC](#mini-pc)', 'Geschätzter Preis (Aug. 2026)': 'ca. 230–280 €' },
-          { 'Ihr Ziel': 'HA + ein lokales LLM', 'Das kaufen': '[Ryzen-Mini-PC, 32 GB RAM](#mini-pc)', 'Geschätzter Preis (Aug. 2026)': 'ca. 600–650 €' },
-          { 'Ihr Ziel': 'HA + ein größeres lokales LLM', 'Das kaufen': '[Server mit gebrauchter RTX 3090](#server)', 'Geschätzter Preis (Aug. 2026)': 'ca. 1.400–1.550 $ (nur GPU; InsiderLLM 2026-10-15)' },
+          { 'Ihr Ziel': 'Nur Home Assistant', 'Das kaufen': '[Home Assistant Green oder Raspberry Pi 5](#raspberry-pi)', 'Geschätzter Preis': '199 $ (Green) / 180–305 $ (Pi 5)' },
+          { 'Ihr Ziel': 'HA + Frigate-Kameras', 'Das kaufen': '[Intel-N100/N150-Mini-PC](#mini-pc)', 'Geschätzter Preis': 'ca. 190–220 $' },
+          { 'Ihr Ziel': 'HA + ein lokales LLM', 'Das kaufen': '[Ryzen-Mini-PC, 32 GB RAM](#mini-pc)', 'Geschätzter Preis': 'ca. 649 $' },
+          { 'Ihr Ziel': 'HA + ein größeres lokales LLM', 'Das kaufen': '[Server mit gebrauchter RTX 3090](#server)', 'Geschätzter Preis': 'ca. 1.400–1.550 $ (nur GPU; InsiderLLM 2026-10-15)' },
         ],
         tableFormat: true,
-        note: 'Die Preise sind Richtwerte und ändern sich – vor allem GPU- und DRAM-Preise waren dieses Jahr sehr volatil. Der RTX-3090-Wert stammt aus US-eBay-Angebotsdaten des [GPU-Preis-Trackers von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15), nicht aus einem Angebot; in Deutschland können die Preise abweichen. Prüfen Sie den Preis im verlinkten Angebot vor dem Kauf.',
+        note: 'Die Preise sind Richtwerte und ändern sich – vor allem GPU- und DRAM-Preise waren dieses Jahr sehr volatil. Der RTX-3090-Wert stammt aus US-eBay-Angebotsdaten des [GPU-Preis-Trackers von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15), nicht aus einem Angebot; in Deutschland können die Preise abweichen. Prüfen Sie den Preis im verlinkten Angebot vor dem Kauf. Die angegebenen Preise sind ungefähre Preise von Anbieterseiten zum Zeitpunkt der letzten Aktualisierung (siehe Datum der letzten Aktualisierung); prüfen Sie den heutigen Preis auf der verlinkten Seite. Alle Preise sind US-Referenzpreise in USD und können in Ihrem Land abweichen.',
         callouts: [
           { type: 'tip', text: 'Noch unsicher, ob Sie lokale KI wollen? Lesen Sie [Nicht zu viel ausgeben](#dont-overspend), bevor Sie das teure Gerät kaufen.' },
         ],
@@ -775,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Home Assistant selbst ist leichtgewichtig und läuft auf bescheidener Hardware; die hohen Anforderungen kommen von der Frigate-Kameraerkennung und einem lokalen LLM.** Dimensionieren Sie das Gerät nach dem, was Sie hinzufügen, nicht nur nach dem Hub.',
         items: [
           'Der Hub braucht wenig Rechenleistung für Gerätesteuerung und Automatisierungen.',
-          'Die Frigate-Objekterkennung braucht einen Beschleuniger: Eine Intel-iGPU über OpenVINO deckt die meisten Setups ab, ein Hailo-8L- oder Hailo-8-M.2-Modul erhöht die Kapazität. Der Google Coral (USB/M.2 TPU) funktioniert weiterhin, ist aber inzwischen veraltet – Frigate empfiehlt ihn für neue Builds nicht mehr.',
+          'Die Frigate-Objekterkennung braucht einen Beschleuniger: Eine Intel-iGPU über OpenVINO deckt die meisten Setups ab, ein Hailo-8L- oder Hailo-8-M.2-Modul erhöht die Kapazität. Der Google Coral (USB/M.2 TPU) funktioniert weiterhin; die [Hardware-Dokumentation von Frigate](https://docs.frigate.video/frigate/hardware) nennt für neue Builds Hailo- und Intel-OpenVINO-Optionen und beschreibt den Coral als ältere Hardware.',
           'Größere Whisper-Modelle und lokale LLM-Inferenz sind die anspruchsvollsten Workloads – planen Sie RAM und eine GPU/NPU rund um diese.',
           'Speichern Sie Kameraaufnahmen auf einer SSD; wechseln Sie zu einem NAS, sobald Sie mehrere Kameras dauerhaft betreiben.',
         ],
@@ -784,16 +788,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**Ein Raspberry Pi 5 ist der stromsparendste Weg, Home Assistant für typische Smart-Home-Nutzung zu betreiben, aber eine DRAM-Knappheit 2026 hat die Board-Preise stark steigen lassen – das 8-GB-Board kostet jetzt rund 185–220 €, das 16-GB-Board rund 280–300 €, beide weit über dem ursprünglichen Startpreis von ca. 80/120 $, und Analysten erwarten vor Ende 2027 keine Normalisierung.** Mit LLM-Inferenz und großen Whisper-Modellen hat er weiterhin Schwierigkeiten.',
+          '**Ein Raspberry Pi 5 ist der stromsparendste Weg, Home Assistant für typische Smart-Home-Nutzung zu betreiben, aber eine DRAM-Knappheit 2026 hat die Board-Preise stark steigen lassen – das 8-GB-Board kostet jetzt rund 180–220 $, das 16-GB-Board rund 280–305 $, beide weit über dem ursprünglichen Startpreis von ca. 80/120 $; prüfen Sie die verlinkte Raspberry-Pi-Seite für aktuelle Preise.** Mit LLM-Inferenz und großen Whisper-Modellen hat er weiterhin Schwierigkeiten.',
         items: [
           'Hervorragend für Gerätesteuerung, Automatisierungen und ein kleines lokales Sprach-Setup.',
           'LLM-Inferenz auf einem Pi ist auf sehr kleine, langsame Modelle begrenzt – kombinieren Sie ihn mit einem Hailo-8L-M.2-HAT, wenn Sie Frigate-Erkennung wollen.',
           'Wählen Sie einen Pi 5, wenn Sie Grundlagen bei niedrigem Stromverbrauch wollen und sicher sind, dass Sie kein lokales LLM hinzufügen. Falls Sie glauben, innerhalb des nächsten Jahres lokale KI zu wollen, überspringen Sie den Pi und kaufen jetzt den Mini-PC – er kostet wenig mehr und erspart Ihnen einen Doppelkauf.',
-          'Für ein Plug-and-play-Gerät wird das Home Assistant Green betriebsbereit geliefert (2026 rund 179 €, gegenüber einem Startpreis von 99 $). Home Assistant Yellow wurde im Oktober 2025 eingestellt – Green ist jetzt der einzige offizielle Hub des Herstellers.',
+          'Für ein Plug-and-play-Gerät wird das Home Assistant Green betriebsbereit geliefert (2026 rund 199 $, gegenüber einem Startpreis von 99 $). Home Assistant Yellow wurde im Oktober 2025 eingestellt – Green ist jetzt der einzige offizielle Hub des Herstellers.',
         ],
         affiliateLinks: [
-          { label: 'Raspberry-Pi-5-Preis prüfen →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '185–300 €' },
-          { label: 'Home-Assistant-Green-Preis prüfen →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '179 €' },
+          { label: 'Raspberry-Pi-5-Preis prüfen →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '180–305 $' },
+          { label: 'Home-Assistant-Green-Preis prüfen →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 $' },
         ],
       },
       miniPc: {
@@ -802,30 +806,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Ein Mini-PC ist die beste Ein-Geräte-Wahl für Home Assistant plus lokale KI, mit genug RAM und einer leistungsfähigen iGPU oder NPU, um ein kleines LLM zu betreiben und Frigate zu beschleunigen.** Er balanciert Leistung, Größe und Kosten – und ist die Kategorie, in der sich mehr Budget lohnt, wenn Sie ein einziges Gerät für beide Aufgaben wollen.',
         items: [
-          'Beste Budget-Wahl: Ein stromsparender Mini-PC mit Intel N100/N150 betreibt Home Assistant und beschleunigt Frigate über die Intel-iGPU (OpenVINO) – der praktische Standard für ein Hub-plus-Kameras-Gerät. Der Beelink EQ14 (Intel N150, 16 GB RAM) kostet im August 2026 rund 230–280 € – gut für den 24/7-Betrieb und niedrigen Stromverbrauch, aber zu schwach für ein lokales LLM.',
-          'Beste Wahl für lokale KI: Für ein lokales LLM auf demselben Gerät steigen Sie auf einen Ryzen-Mini-PC mit 32 GB RAM auf. Der Beelink SER8 (Ryzen 7 8845HS) kostet im August 2026 rund 600–650 € und betreibt ein Qwen3-8B- oder Llama-3.1-8B-Modell über Ollama mit brauchbarer Geschwindigkeit, zusammen mit Home Assistant und Frigate. Priorisieren Sie RAM und eine leistungsfähige integrierte GPU oder NPU für geringere Latenz.',
-          'Wenn Sie ein einziges Gerät für Home Assistant und lokale KI zusammen kaufen, lohnt sich der Mehrpreis des Ryzen-Mini-PCs gegenüber dem N150 – nur er läuft ein LLM tatsächlich mit brauchbarer Geschwindigkeit.',
+          'Beste Budget-Wahl: Ein stromsparender Mini-PC mit Intel N100/N150 betreibt Home Assistant und beschleunigt Frigate über die Intel-iGPU (OpenVINO) – der praktische Standard für ein Hub-plus-Kameras-Gerät. Der Beelink EQ14 (Intel N150, 16 GB RAM) kostet rund 190–220 $ – gut für den 24/7-Betrieb und niedrigen Stromverbrauch, aber zu schwach für ein lokales LLM.',
+          'Beste Wahl für lokale KI: Für ein lokales LLM auf demselben Gerät steigen Sie auf einen Ryzen-Mini-PC mit 32 GB RAM auf. Der Beelink SER8 (Ryzen 7 8845HS) kostet rund 649 $; er ist ein Ryzen-7-Mini-PC, der Modelle der 8B-Klasse wie Qwen3 8B oder Llama 3.1 8B über Ollama betreiben kann; die Geschwindigkeit hängt von Quantisierung und Kontextgröße ab, und PromptQuorum hat dieses Gerät nicht per Benchmark getestet. Priorisieren Sie RAM und eine leistungsfähige integrierte GPU oder NPU für geringere Latenz.',
+          'Wenn Sie ein einziges Gerät für Home Assistant und lokale KI zusammen kaufen, kann sich der Mehrpreis des Ryzen-Mini-PCs gegenüber dem N150 lohnen – er bietet mehr Reserven für ein Modell der 8B-Klasse.',
           'Für konkrete Empfehlungen siehe [beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) und clusterübergreifend [beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm).',
         ],
         affiliateLinks: [
-          { label: 'EQ14-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '230–280 €' },
-          { label: 'SER8-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: 'ca. 600–650 €' },
+          { label: 'EQ14-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '190–220 $' },
+          { label: 'SER8-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: 'ca. 649 $' },
         ],
       },
       frigateAccelerator: {
         id: 'frigate-accelerator',
         title: 'Betreiben Sie Sicherheitskameras? Wählen Sie Ihren Frigate-Beschleuniger',
         content:
-          '**Wie viele Kameras und wie viel Erkennungsreserve Sie brauchen, entscheidet über den Beschleuniger – unabhängig davon, welches Gerät den Hub betreibt.** Frigate empfiehlt den Google Coral für neue Builds nicht mehr – neue Nutzer werden jetzt zu Hailo geleitet, neben der integrierten Intel-iGPU des Host-Geräts.',
+          '**Wie viele Kameras und wie viel Erkennungsreserve Sie brauchen, entscheidet über den Beschleuniger – unabhängig davon, welches Gerät den Hub betreibt.** Die [Hardware-Dokumentation von Frigate](https://docs.frigate.video/frigate/hardware) nennt für neue Builds Hailo- und Intel-OpenVINO-Optionen; der Google Coral funktioniert weiterhin, wird dort aber als ältere Hardware beschrieben.',
         items: [
           '1–4 Kameras: Die in einen N100/N150-Mini-PC integrierte Intel-iGPU, über OpenVINO betrieben, deckt die meisten Heimsetups ohne zusätzliche Hardwarekosten ab.',
-          '4–10 Kameras, oder wenn Sie auf Nicht-Intel-Hardware mehr Erkennungsreserve wollen: Ein Hailo-8L-M.2-Modul (im August 2026 ca. 70–80 €) ist Frigates aktuelle stromsparende Empfehlung – es übernimmt die Rolle, die früher der Coral hatte, als offiziell erstklassig unterstützte Zusatzkarte.',
-          '10+ Kameras oder aufwendigere Zusatzerkennungen (Gesichts-/Kennzeichenerkennung zusätzlich zur Erkennung): Ein Hailo-8-M.2-Modul (ca. 180–220 €) bringt deutlich mehr Durchsatz.',
+          '4–10 Kameras, oder wenn Sie auf Nicht-Intel-Hardware mehr Erkennungsreserve wollen: Ein Hailo-8L-M.2-Modul (ca. 70 $) ist Frigates aktuelle stromsparende Empfehlung – es übernimmt die Rolle, die früher der Coral hatte, als offiziell erstklassig unterstützte Zusatzkarte.',
+          '10+ Kameras oder aufwendigere Zusatzerkennungen (Gesichts-/Kennzeichenerkennung zusätzlich zur Erkennung): Ein Hailo-8-M.2-Modul (ca. 170–200 $) bringt deutlich mehr Durchsatz.',
           'Besitzen Sie bereits einen Coral? Er funktioniert weiterhin – es geht hier nur darum, was Sie für einen Neubau kaufen sollten, nicht darum, ein funktionierendes Coral-Setup zu ersetzen.',
         ],
+        callouts: [{ type: 'warning', text: 'Kameras sowie Gesichts- oder Kennzeichenerkennung sind rechtlich reguliert. In der EU kann die DSGVO gelten, sobald Kameras öffentlichen Raum, Nachbarn oder andere Personen erfassen; für die biometrische Identifizierung gelten strengere Regeln. Prüfen Sie vor der Installation das lokale Recht; das ist keine Rechtsberatung.' }],
         affiliateLinks: [
-          { label: 'Hailo-8L-Preis prüfen →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: 'ca. 70–80 €' },
-          { label: 'Hailo-8-Preis prüfen →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: 'ca. 180–220 €' },
+          { label: 'Hailo-8L-Preis prüfen →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: 'ca. 70 $' },
+          { label: 'Hailo-8-Preis prüfen →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: 'ca. 170–200 $' },
         ],
       },
       nas: {
@@ -834,15 +839,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Ein NAS kann Home Assistant in einem Container neben Speicher und Frigate-Aufnahmen betreiben, wenn es genug CPU und RAM hat – eine gute Option, wenn Sie bereits eines besitzen, aber nicht der richtige Grund, Ihr erstes NAS zu kaufen.** Kaufen Sie kein NAS speziell, um ein lokales LLM zu betreiben: Ein dedizierter Mini-PC oder ein GPU-Gerät ist fürs gleiche Geld die bessere KI-Plattform.',
         items: [
-          '2–4 Kameras / leichterer Speicherbedarf: Das Synology DS225+ (im August 2026 ca. 380–420 €) deckt containerisiertes Home Assistant plus Frigate-Aufnahmen für wenige Kameras ab.',
-          '4–10 Kameras / mehr Reserven: Das Synology DS925+ (ca. 680–750 €) bietet mehr CPU-/RAM-Reserven für mehr Add-ons und Kameras.',
-          'Speicher plus lokale KI in einem Gerät: UGREEN-NASync-Modelle (DXP4800-Plus-Klasse, ca. 700–800 €) kommen mit einer integrierten lokalen-LLM-Option und neuerer Hardware (DDR5, 10GbE ohne Zusatzkarten) zu einem ähnlichen Preis wie das DS925+.',
+          '2–4 Kameras / leichterer Speicherbedarf: Das Synology DS225+ (ca. 340 $) deckt containerisiertes Home Assistant plus Frigate-Aufnahmen für wenige Kameras ab.',
+          '4–10 Kameras / mehr Reserven: Das Synology DS925+ (ca. 640 $) bietet mehr CPU-/RAM-Reserven für mehr Add-ons und Kameras.',
+          'Speicher plus lokale KI in einem Gerät: UGREEN-NASync-Modelle (DXP4800-Plus-Klasse, ca. 650–730 $) bieten neuere Hardware (DDR5, 10GbE ohne Zusatzkarten) zu einem ähnlichen Preis wie das DS925+, und einige Modelle bewerben eine lokale-LLM-Option; prüfen Sie die Herstellerseite.',
           'LLM-Inferenz auf einem NAS hängt weiterhin stark von seiner Hardware ab – den meisten NAS-Geräten fehlt eine leistungsfähige diskrete GPU, betrachten Sie die integrierte LLM-Option daher als Komfortfunktion, nicht als Ersatz für die RTX-3090-Stufe unten, wenn Sie wirklich ein großes Modell wollen.',
         ],
         affiliateLinks: [
-          { label: 'DS225+-Preis prüfen →', url: 'https://www.synology.com/de-de/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: 'ca. 380–420 €' },
-          { label: 'DS925+-Preis prüfen →', url: 'https://www.synology.com/de-de/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: 'ca. 680–750 €' },
-          { label: 'UGREEN-NASync-Preis prüfen →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: 'ca. 700–800 €' },
+          { label: 'DS225+-Preis prüfen →', url: 'https://www.synology.com/de-de/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: 'ca. 340 $' },
+          { label: 'DS925+-Preis prüfen →', url: 'https://www.synology.com/de-de/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: 'ca. 640 $' },
+          { label: 'UGREEN-NASync-Preis prüfen →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: 'ca. 650–730 $' },
         ],
       },
       server: {
@@ -852,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ein dedizierter Server mit dedizierter GPU ist der Aufstieg, um ein größeres lokales LLM neben vielen Kameras zu betreiben.** Er bietet die meisten Reserven bei höheren Kosten und höherem Stromverbrauch – und GPU-Preise haben sich 2026 stark bewegt, betrachten Sie die folgenden Zahlen daher als Momentaufnahme, nicht als festen Wert.',
         items: [
           'Eine gebrauchte RTX 3090 (24 GB VRAM) ist wegen ihres VRAM eine gängige Wahl für lokale LLMs. Der [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15) nennt für gebrauchte Karten Verkaufsangebote von etwa 1.400–1.550 $ – US-eBay-Angebotsdaten, kein Preisangebot; in Deutschland können die Preise abweichen. Q4-quantisierte Modelle bis etwa 70B sind je nach Quantisierung, Kontextgröße und Offloading möglicherweise machbar; betrachten Sie das als Fähigkeitsbereich, nicht als Garantie für jedes 70B-Modell.',
-          'Eine gebrauchte RTX 3060 (12 GB) ist die günstigere Alternative für ein Gerät mit diskreter GPU – sie bewältigt 7B–13B-Modelle problemlos, ohne die VRAM-Reserven oder den Preis der RTX 3090.',
+          'Eine gebrauchte RTX 3060 (12 GB) ist die günstigere Alternative für ein Gerät mit diskreter GPU – sie kann je nach Quantisierung 7B–13B-Modelle bewältigen, ohne die VRAM-Reserven oder den Preis der RTX 3090.',
           'Am besten für viele Kameras, ein größeres LLM und mehrere Nutzer. Höherer Stromverbrauch und höhere Kosten als ein Mini-PC – lesen Sie den Abschnitt zum Stromverbrauch unten, bevor Sie sich für diese Stufe entscheiden.',
           'Überdimensioniert für ein einfaches Smart Home – reservieren Sie ihn für intensive lokale KI-Nutzung und halten Sie den Home-Assistant-Hub für Zuverlässigkeit auf einem separaten, stromsparenden Gerät (siehe Ein Gerät oder zwei? unten).',
         ],
@@ -860,6 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'RTX-3090-Gebrauchtangebote prüfen →', url: 'https://www.ebay.de/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: 'ca. 1.400–1.550 $' },
           { label: 'RTX-3060-Gebrauchtangebote prüfen →', url: 'https://www.ebay.de/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: 'Eine 350-W-GPU in einem dauerhaft laufenden Server braucht ein passend dimensioniertes Qualitätsnetzteil, gute Belüftung und einen sinnvollen Aufstellort. Gebrauchte Karten können Verschleiß aufweisen und haben keine Garantie, prüfen Sie daher die Bedingungen des Verkäufers. Befolgen Sie die Herstellerangaben; das ist keine Elektroberatung.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-de.svg',
         imageCaption: 'Lokale LLM-Kapazität je Hardware-Stufe: Ein Raspberry Pi 5 läuft nur mit winzigen Modellen, ein Intel-N100/N150-Mini-PC bewältigt kleine Modelle, ein Ryzen-Mini-PC (32 GB RAM) läuft mit 7B–8B-Modellen, und eine gebrauchte RTX 3090 (24 GB VRAM) skaliert je nach Setup auf etwa 70B bei Q4-Quantisierung.',
       },
@@ -867,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: 'Geben Sie für Ihren Home-Assistant-Server nicht zu viel aus',
         content:
-          '**Mehr Hardware, als Ihr Anwendungsfall braucht, ist der häufigste Fehlkauf in dieser Kategorie – passen Sie das Gerät an das an, was Sie tatsächlich vorhaben.**',
+          '**Mehr Hardware, als Ihr Anwendungsfall braucht, ist ein häufiger Fehlkauf in dieser Kategorie – passen Sie das Gerät an das an, was Sie tatsächlich vorhaben.**',
         items: [
           'Nur Home Assistant? Sie brauchen keine RTX-GPU und wahrscheinlich auch keinen Mini-PC – ein Raspberry Pi 5 oder ein Home Assistant Green reicht.',
           'Home Assistant plus Frigate-Kameras? Sie brauchen keine teure Workstation – ein Intel-N100/N150-Mini-PC mit integrierter iGPU reicht für die meisten Kameraanzahlen im Heimbereich.',
@@ -925,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wenn Sie heute ein einzelnes Gerät wählen und sich unsicher sind, welche Stufe passt, ist dies angesichts der obigen Abwägungen ein vertretbarer Standard – Ihr tatsächlicher Bedarf kann in eine andere Richtung zeigen, und keine der folgenden Empfehlungen wurde von PromptQuorum getestet oder geprüft.**',
         items: [
           'Für ein normales lokales Smart Home (Home Assistant plus eine Handvoll Zigbee-/Matter-Geräte): Ein Intel-N150-Mini-PC ist ein sinnvoller Standard – er deckt auch Frigate ab, falls Sie später Kameras hinzufügen.',
-          'Für Home Assistant plus Kameras plus einen kleinen lokalen KI-Assistenten: Ein Ryzen-Mini-PC mit 32 GB RAM ist eine vertretbare Ein-Geräte-Wahl – das günstigste Gerät, das ein LLM der 8B-Klasse tatsächlich mit brauchbarer Geschwindigkeit betreibt.',
+          'Für Home Assistant plus Kameras plus einen kleinen lokalen KI-Assistenten: Ein Ryzen-Mini-PC mit 32 GB RAM ist eine vertretbare Ein-Geräte-Wahl – eine kostengünstigere Möglichkeit, ein Modell der 8B-Klasse zu betreiben.',
           'Für ernsthafte lokale KI (Modelle der 32B-Klasse oder größer): Ein separater RTX-3090-Server, getrennt vom Home-Assistant-Hub, ist angesichts der aktuellen Gebraucht-GPU-Preise der vertretbare Aufstieg.',
           'Eine neue, von Anfang an KI-orientierte Installation passt angesichts der Pi-Preise 2026 und ihrer LLM-Einschränkungen generell schlechter zu einem Raspberry Pi – ein Mini-PC liegt meist preislich näher dran und ist eine deutlich bessere KI-Plattform.',
         ],
@@ -935,27 +941,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Komplette lokale Smart-Home-Setups',
         content:
           '**Die meisten Käufer brauchen mehr als ein Produkt – mindestens einen Hub, einen Frigate-Beschleuniger und Speicher, plus ein KI-Gerät, wenn Sie lokale LLM-Inferenz wollen.** Diese drei Setups kombinieren die obigen Empfehlungen nach Szenario; jedes Produkt verlinkt zurück zu seiner vollständigen Empfehlung weiter oben auf dieser Seite.',
-        columns: ['Setup', 'Hub', 'Frigate-Beschleuniger', 'KI', 'Geschätzte Gesamtkosten (Aug. 2026)'],
+        columns: ['Setup', 'Hub', 'Frigate-Beschleuniger', 'KI', 'Geschätzte Gesamtkosten'],
         rows: [
-          { 'Setup': 'Einsteiger (nur HA)', 'Hub': '[Home Assistant Green oder Pi 5](#raspberry-pi)', 'Frigate-Beschleuniger': '—', 'KI': '—', 'Geschätzte Gesamtkosten (Aug. 2026)': 'ca. 179–300 €' },
-          { 'Setup': 'HA + Kameras', 'Hub': '[N150-Mini-PC](#mini-pc)', 'Frigate-Beschleuniger': '[Intel-iGPU, oder Hailo-8L für mehr Reserve](#frigate-accelerator)', 'KI': '—', 'Geschätzte Gesamtkosten (Aug. 2026)': 'ca. 230–360 €' },
-          { 'Setup': 'HA + Kameras + lokale KI', 'Hub': '[Ryzen-Mini-PC, 32GB](#mini-pc)', 'Frigate-Beschleuniger': 'Integrierte iGPU, oder [Hailo-8L für mehr Kameras](#frigate-accelerator)', 'KI': 'Läuft auf demselben Gerät (Modell der 8B-Klasse)', 'Geschätzte Gesamtkosten (Aug. 2026)': 'ca. 600–730 €' },
-          { 'Setup': 'HA + Kameras + große lokale KI', 'Hub': '[N150-Mini-PC (für Zuverlässigkeit separat gehalten)](#mini-pc)', 'Frigate-Beschleuniger': '[Hailo-8](#frigate-accelerator)', 'KI': '[Server mit gebrauchter RTX 3090, separat betrieben](#server)', 'Geschätzte Gesamtkosten (Aug. 2026)': 'ca. 1.760–1.970 $ (ohne Host-Rechner)' },
+          { 'Setup': 'Einsteiger (nur HA)', 'Hub': '[Home Assistant Green oder Pi 5](#raspberry-pi)', 'Frigate-Beschleuniger': '—', 'KI': '—', 'Geschätzte Gesamtkosten': 'ca. 199–305 $' },
+          { 'Setup': 'HA + Kameras', 'Hub': '[N150-Mini-PC](#mini-pc)', 'Frigate-Beschleuniger': '[Intel-iGPU, oder Hailo-8L für mehr Reserve](#frigate-accelerator)', 'KI': '—', 'Geschätzte Gesamtkosten': 'ca. 190–290 $' },
+          { 'Setup': 'HA + Kameras + lokale KI', 'Hub': '[Ryzen-Mini-PC, 32GB](#mini-pc)', 'Frigate-Beschleuniger': 'Integrierte iGPU, oder [Hailo-8L für mehr Kameras](#frigate-accelerator)', 'KI': 'Läuft auf demselben Gerät (Modell der 8B-Klasse)', 'Geschätzte Gesamtkosten': 'ca. 649–720 $' },
+          { 'Setup': 'HA + Kameras + große lokale KI', 'Hub': '[N150-Mini-PC (für Zuverlässigkeit separat gehalten)](#mini-pc)', 'Frigate-Beschleuniger': '[Hailo-8](#frigate-accelerator)', 'KI': '[Server mit gebrauchter RTX 3090, separat betrieben](#server)', 'Geschätzte Gesamtkosten': 'ca. 1.760–1.970 $ (ohne Host-Rechner)' },
         ],
         tableFormat: true,
-        note: 'Das letzte Setup hält den Home-Assistant-Hub auf seinem eigenen stromsparenden Gerät und betreibt die RTX 3090 als separate Maschine – warum, steht bei [Ein Gerät oder zwei?](#one-or-two). Die Summe addiert eine gebrauchte RTX 3090 (1.400–1.550 $, InsiderLLM-Tracker, 2026-10-15), einen N150-Mini-PC (ca. 190–220 $) und ein Hailo-8 (ca. 170–200 $): 1.760 bis 1.970 $ von unten nach oben. Nicht enthalten ist der Host-Rechner (CPU, Mainboard, Netzteil, RAM, Gehäuse), den die GPU braucht.',
+        note: 'Das letzte Setup hält den Home-Assistant-Hub auf seinem eigenen stromsparenden Gerät und betreibt die RTX 3090 als separate Maschine – warum, steht bei [Ein Gerät oder zwei?](#one-or-two). Die Summe addiert eine gebrauchte RTX 3090 (1.400–1.550 $, InsiderLLM-Tracker, 2026-10-15), einen N150-Mini-PC (ca. 190–220 $) und ein Hailo-8 (ca. 170–200 $): 1.760 bis 1.970 $ von unten nach oben. Nicht enthalten ist der Host-Rechner (CPU, Mainboard, Netzteil, RAM, Gehäuse), den die GPU braucht. Die angegebenen Preise sind ungefähre Preise von Anbieterseiten zum Zeitpunkt der letzten Aktualisierung (siehe Datum der letzten Aktualisierung); prüfen Sie den heutigen Preis auf der verlinkten Seite. Alle Preise sind US-Referenzpreise in USD und können in Ihrem Land abweichen.',
       },
       faqSection: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Welche Hardware empfiehlt Frigate?', a: 'Für neue Builds empfiehlt Frigate eine Intel-iGPU über OpenVINO oder ein Hailo-8L- (ca. 70–80 €, günstig) bzw. Hailo-8-Modul (ca. 180–220 €, schneller) im M.2-Format für mehr Erkennungskapazität. Der Google Coral (USB/M.2 TPU) funktioniert weiterhin, ist aber inzwischen veraltet – Frigate empfiehlt ihn für neue Installationen außer auf sehr stromsparender Hardware nicht mehr.' },
+          { q: 'Welche Hardware empfiehlt Frigate?', a: 'Für neue Builds nennt die Frigate-Hardware-Dokumentation (https://docs.frigate.video/frigate/hardware) unter anderem eine Intel-iGPU über OpenVINO oder ein Hailo-8L- (ca. 70 $, günstig) bzw. Hailo-8-Modul (ca. 170–200 $, schneller) im M.2-Format für mehr Erkennungskapazität. Der Google Coral (USB/M.2 TPU) funktioniert weiterhin, wird in dieser Dokumentation aber als ältere Hardware beschrieben.' },
           { q: 'Kann ein Raspberry Pi auch ein lokales LLM betreiben?', a: 'Ein Pi kann nur sehr kleine Modelle betreiben, und das langsam, daher ist er für einen reaktionsschnellen lokalen LLM-Assistenten nicht ideal. Home Assistant und einfache Sprache bewältigt er gut, aber für lokale KI ist ein Mini-PC mit einer leistungsfähigen iGPU oder NPU – oder ein gebrauchtes RTX-3090-Gerät – die bessere Wahl.' },
-          { q: 'Wie viel RAM brauche ich?', a: 'Home Assistant allein läuft in ein paar Gigabyte. Um ein kleines lokales LLM und andere KI-Dienste auf demselben Gerät zu betreiben, hilft mehr RAM; ein Mini-PC mit 32 GB RAM und einer leistungsfähigen iGPU/NPU hält ein Qwen3-8B- oder Llama-3.1-8B-Modell reaktionsschnell. Passen Sie den RAM an die geplante Modellgröße an.' },
+          { q: 'Wie viel RAM brauche ich?', a: 'Home Assistant allein läuft in ein paar Gigabyte. Um ein kleines lokales LLM und andere KI-Dienste auf demselben Gerät zu betreiben, hilft mehr RAM; ein Mini-PC mit 32 GB RAM und einer leistungsfähigen iGPU/NPU kann ein Qwen3-8B- oder Llama-3.1-8B-Modell betreiben; die Geschwindigkeit hängt von Quantisierung und Kontextgröße ab. Passen Sie den RAM an die geplante Modellgröße an.' },
           { q: 'Welchen Mini-PC sollte ich kaufen?', a: 'Für HA plus Kameras beschleunigt ein Intel-N100/N150-Mini-PC Frigate über OpenVINO. Für HA plus ein lokales LLM steigen Sie auf einen Ryzen-Mini-PC mit 32 GB RAM auf. Siehe den Leitfaden zu den besten Mini-PCs für Home Assistant + lokale KI für konkrete Empfehlungen.' },
           { q: 'Ein Gerät oder zwei?', a: 'Ein Gerät (ein Mini-PC) ist am einfachsten und betreibt Home Assistant plus ein kleines lokales LLM zusammen. Teilen Sie auf zwei auf, wenn Sie den Hub auf einem stromsparenden Gerät extrem zuverlässig halten und intensive KI auf eine separate Maschine wie einen gebrauchten RTX-3090-Server auslagern wollen.' },
           { q: 'Zählt der Stromverbrauch bei einem 24/7-Gerät?', a: 'Er zählt mehr als der Kaufpreis bei Hardware, die nie ausgeschaltet wird. Ein Raspberry Pi zieht wenige Watt, ein N100/N150-Mini-PC etwa 10–15W, ein Ryzen-Mini-PC je nach Last 15–35W, und NVIDIA gibt für eine diskrete GPU wie die RTX 3090 350W Boardleistung an – ein Grund, einen leistungsstarken GPU-Server als separates Gerät statt als Dauerläufer zu betreiben.' },
-          { q: 'Lohnt sich ein Raspberry Pi bei den Preisen von 2026 noch?', a: 'Für Home Assistant allein, ja – er bleibt die stromsparendste Option. Aber eine DRAM-Knappheit 2026 hat die Pi-5-Preise stark steigen lassen (im August 2026 je nach RAM ca. 185–300 €, gegenüber ursprünglich 80–120 $), was den Preisabstand zu einem Intel-N100/N150-Mini-PC verkleinert. Wenn Sie innerhalb eines Jahres Kameras oder ein lokales LLM hinzufügen könnten, ist der Mini-PC meist jetzt schon der bessere Kauf.' },
+          { q: 'Lohnt sich ein Raspberry Pi bei den Preisen von 2026 noch?', a: 'Für Home Assistant allein, ja – er bleibt die stromsparendste Option. Aber eine DRAM-Knappheit 2026 hat die Pi-5-Preise stark steigen lassen (je nach RAM ca. 180–305 $, gegenüber ursprünglich 80–120 $), was den Preisabstand zu einem Intel-N100/N150-Mini-PC verkleinert. Wenn Sie innerhalb eines Jahres Kameras oder ein lokales LLM hinzufügen könnten, ist der Mini-PC meist jetzt schon der bessere Kauf.' },
         ],
       },
       relatedReading: {
@@ -985,7 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'Home-Assistant-Hardware' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: 'Lokales LLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -995,13 +1001,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        { '@type': 'Question', name: 'Welche Hardware empfiehlt Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Für neue Builds empfiehlt Frigate eine Intel-iGPU über OpenVINO oder ein Hailo-8L- (ca. 70–80 €) bzw. Hailo-8-Modul (ca. 180–220 €) im M.2-Format für mehr Erkennungskapazität. Der Google Coral TPU funktioniert weiterhin, ist aber inzwischen veraltet und wird für neue Installationen nicht mehr empfohlen.' } },
+        { '@type': 'Question', name: 'Welche Hardware empfiehlt Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Für neue Builds nennt die Frigate-Hardware-Dokumentation (https://docs.frigate.video/frigate/hardware) unter anderem eine Intel-iGPU über OpenVINO oder ein Hailo-8L- (ca. 70 $) bzw. Hailo-8-Modul (ca. 170–200 $) im M.2-Format für mehr Erkennungskapazität. Der Google Coral TPU funktioniert weiterhin, wird in dieser Dokumentation aber als ältere Hardware beschrieben.' } },
         { '@type': 'Question', name: 'Kann ein Raspberry Pi auch ein lokales LLM betreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Pi kann nur sehr kleine Modelle betreiben, und das langsam. Home Assistant und einfache Sprache bewältigt er gut, aber für einen reaktionsschnellen lokalen LLM-Assistenten ist ein Mini-PC mit leistungsfähiger iGPU oder NPU oder ein gebrauchtes RTX-3090-Gerät besser.' } },
-        { '@type': 'Question', name: 'Wie viel RAM brauche ich?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant allein läuft in ein paar Gigabyte. Um ein kleines lokales LLM auf demselben Gerät zu betreiben, hilft mehr RAM; ein Mini-PC mit 32 GB RAM hält ein Qwen3-8B- oder Llama-3.1-8B-Modell reaktionsschnell. Passen Sie den RAM an die geplante Modellgröße an.' } },
+        { '@type': 'Question', name: 'Wie viel RAM brauche ich?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant allein läuft in ein paar Gigabyte. Um ein kleines lokales LLM auf demselben Gerät zu betreiben, hilft mehr RAM; ein Mini-PC mit 32 GB RAM kann ein Qwen3-8B- oder Llama-3.1-8B-Modell betreiben; die Geschwindigkeit hängt von Quantisierung und Kontextgröße ab. Passen Sie den RAM an die geplante Modellgröße an.' } },
         { '@type': 'Question', name: 'Welchen Mini-PC sollte ich kaufen?', acceptedAnswer: { '@type': 'Answer', text: 'Für HA plus Kameras beschleunigt ein Intel-N100/N150-Mini-PC Frigate über OpenVINO. Für HA plus ein lokales LLM steigen Sie auf einen Ryzen-Mini-PC mit 32 GB RAM auf. Siehe den Leitfaden zu den besten Mini-PCs für Home Assistant + lokale KI.' } },
         { '@type': 'Question', name: 'Ein Gerät oder zwei?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Mini-PC betreibt Home Assistant plus ein kleines lokales LLM zusammen. Teilen Sie auf zwei auf, wenn Sie den Hub auf einem stromsparenden Gerät extrem zuverlässig halten und intensive KI auf eine separate Maschine wie einen gebrauchten RTX-3090-Server auslagern wollen.' } },
         { '@type': 'Question', name: 'Zählt der Stromverbrauch bei einem 24/7-Gerät?', acceptedAnswer: { '@type': 'Answer', text: 'Er zählt mehr als der Kaufpreis bei Hardware, die nie ausgeschaltet wird. Ein Raspberry Pi zieht wenige Watt, ein N100/N150-Mini-PC etwa 10–15W, ein Ryzen-Mini-PC etwa 15–35W, und NVIDIA gibt für eine diskrete GPU wie die RTX 3090 350W Boardleistung an.' } },
-        { '@type': 'Question', name: 'Lohnt sich ein Raspberry Pi bei den Preisen von 2026 noch?', acceptedAnswer: { '@type': 'Answer', text: 'Für Home Assistant allein, ja. Aber eine DRAM-Knappheit 2026 hat die Pi-5-Preise je nach RAM auf ca. 185–300 € steigen lassen, gegenüber ursprünglich 80–120 $, was den Abstand zu einem Intel-N100/N150-Mini-PC verkleinert – der die bessere Wahl ist, wenn Sie innerhalb eines Jahres Kameras oder ein lokales LLM hinzufügen könnten.' } },
+        { '@type': 'Question', name: 'Lohnt sich ein Raspberry Pi bei den Preisen von 2026 noch?', acceptedAnswer: { '@type': 'Answer', text: 'Für Home Assistant allein, ja. Aber eine DRAM-Knappheit 2026 hat die Pi-5-Preise je nach RAM auf ca. 180–305 $ steigen lassen, gegenüber ursprünglich 80–120 $, was den Abstand zu einem Intel-N100/N150-Mini-PC verkleinert – der die bessere Wahl ist, wenn Sie innerhalb eines Jahres Kameras oder ein lokales LLM hinzufügen könnten.' } },
       ],
     },
   },
@@ -1009,8 +1015,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-es.webp',
     affiliateDisclosure: true,
@@ -1039,16 +1045,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Qué hardware necesito para un smart home local con IA?',
         answer:
-          'Empieza por el hub: un mini PC Intel N100/N150 o una Raspberry Pi 5 ejecuta Home Assistant. Añade un acelerador de Frigate para las cámaras: una iGPU Intel vía OpenVINO cubre la mayoría de configuraciones, y un módulo Hailo-8L o Hailo-8 M.2 añade capacidad de detección (el Google Coral ya es heredado). Guarda las grabaciones en un SSD, o un NAS para muchas cámaras. Para un LLM local, sube a un mini PC con iGPU/NPU capaz o a un equipo con RTX 3090 usada. Si crees que añadirás IA local dentro de un año, compra el mini PC ahora en lugar de una Raspberry Pi que tendrás que sustituir después.',
+          'Empieza por el hub: un mini PC Intel N100/N150 o una Raspberry Pi 5 ejecuta Home Assistant. Añade un acelerador de Frigate para las cámaras: una iGPU Intel vía OpenVINO cubre la mayoría de configuraciones, y un módulo Hailo-8L o Hailo-8 M.2 añade capacidad de detección (la documentación de hardware de Frigate menciona opciones Hailo e Intel OpenVINO para equipos nuevos; el Google Coral sigue funcionando, pero allí se describe como hardware más antiguo). Guarda las grabaciones en un SSD, o un NAS para muchas cámaras. Para un LLM local, sube a un mini PC con iGPU/NPU capaz o a un equipo con RTX 3090 usada. Si crees que añadirás IA local dentro de un año, compra el mini PC ahora en lugar de una Raspberry Pi que tendrás que sustituir después.',
         bullets: [
           'Hub: mini PC Intel N100/N150 o Raspberry Pi 5',
-          'Frigate: iGPU Intel (OpenVINO) o Hailo-8L M.2 — Coral es heredado',
+          'Frigate: iGPU Intel (OpenVINO) o Hailo-8L M.2 — Coral sigue funcionando, pero es hardware más antiguo',
           'Almacenamiento: SSD, o un NAS para muchas cámaras',
           'Salto a LLM local: iGPU/NPU de mini PC o RTX 3090 usada',
           'Si podrías añadir IA local dentro de un año, compra el mini PC ya — sale más barato que sustituir una Raspberry Pi después',
           'Decide primero: solo-HA o HA + cámaras + IA local — esto determina si compras una vez o dos',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -1078,10 +1084,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumen',
         isTldr: true,
         items: [
-          'Hub: un mini PC Intel N100/N150 (~230–280 €) o una Raspberry Pi 5 (~185–300 € en agosto de 2026, muy al alza por la escasez de memoria DRAM) ejecuta Home Assistant',
-          'Frigate: una iGPU Intel (OpenVINO, integrada en la mayoría de mini PC), un módulo Hailo-8L M.2 (~70–80 €) o un Hailo-8 M.2 (~180–220 €) acelera la detección de cámaras — el Google Coral ya es heredado y ya no es la recomendación de Frigate para equipos nuevos',
-          'Almacenamiento: un SSD para grabaciones, o un NAS (Synology DS225+ ~380–420 €, DS925+ ~680–750 €, UGREEN NASync ~700–800 €) en cuanto uses varias cámaras',
-          'Salto a LLM local: un mini PC Ryzen (32 GB de RAM, ~600–650 €) o una RTX 3090 usada (~$1,400–1,550 en listados vendidos, según el rastreador de InsiderLLM, 2026-10-15)',
+          'Hub: un mini PC Intel N100/N150 (~$190–220) o una Raspberry Pi 5 (~$180–305, muy al alza por la escasez de memoria DRAM) ejecuta Home Assistant',
+          'Frigate: una iGPU Intel (OpenVINO, integrada en la mayoría de mini PC), un módulo Hailo-8L M.2 (~$70) o un Hailo-8 M.2 (~$170–200) acelera la detección de cámaras — la documentación de hardware de Frigate menciona Hailo e Intel OpenVINO para equipos nuevos, y el Google Coral sigue funcionando, pero allí se describe como hardware más antiguo',
+          'Almacenamiento: un SSD para grabaciones, o un NAS (Synology DS225+ ~$340, DS925+ ~$640, UGREEN NASync ~$650–730) en cuanto uses varias cámaras',
+          'Salto a LLM local: un mini PC Ryzen (32 GB de RAM, ~$649) o una RTX 3090 usada (~$1,400–1,550 en listados vendidos, según el rastreador de InsiderLLM, 2026-10-15)',
           'Decide entre solo-HA o HA + cámaras + IA local antes de comprar: cambia el equipo adecuado, y comprar el mini PC ahora es mejor que sustituir una Pi después',
         ],
       },
@@ -1090,15 +1096,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué Hardware Comprar?',
         content:
           '**Haz que tu objetivo determine el equipo, no al revés.** La tabla siguiente asocia cada objetivo de smart home con el hardware que lo cubre — cada fila enlaza con la recomendación más detallada más abajo en la página.',
-        columns: ['Tu objetivo', 'Compra esto', 'Precio estimado (ago 2026)'],
+        columns: ['Tu objetivo', 'Compra esto', 'Precio estimado'],
         rows: [
-          { 'Tu objetivo': 'Solo Home Assistant', 'Compra esto': '[Home Assistant Green o Raspberry Pi 5](#raspberry-pi)', 'Precio estimado (ago 2026)': '179 € (Green) / 185–300 € (Pi 5)' },
-          { 'Tu objetivo': 'HA + cámaras Frigate', 'Compra esto': '[Mini PC Intel N100/N150](#mini-pc)', 'Precio estimado (ago 2026)': '~230–280 €' },
-          { 'Tu objetivo': 'HA + un LLM local', 'Compra esto': '[Mini PC Ryzen, 32 GB de RAM](#mini-pc)', 'Precio estimado (ago 2026)': '~600–650 €' },
-          { 'Tu objetivo': 'HA + un LLM local más grande', 'Compra esto': '[Servidor con RTX 3090 usada](#server)', 'Precio estimado (ago 2026)': '~$1,400–1,550 (solo GPU; InsiderLLM 2026-10-15)' },
+          { 'Tu objetivo': 'Solo Home Assistant', 'Compra esto': '[Home Assistant Green o Raspberry Pi 5](#raspberry-pi)', 'Precio estimado': '$199 (Green) / $180–305 (Pi 5)' },
+          { 'Tu objetivo': 'HA + cámaras Frigate', 'Compra esto': '[Mini PC Intel N100/N150](#mini-pc)', 'Precio estimado': '~$190–220' },
+          { 'Tu objetivo': 'HA + un LLM local', 'Compra esto': '[Mini PC Ryzen, 32 GB de RAM](#mini-pc)', 'Precio estimado': '~$649' },
+          { 'Tu objetivo': 'HA + un LLM local más grande', 'Compra esto': '[Servidor con RTX 3090 usada](#server)', 'Precio estimado': '~$1,400–1,550 (solo GPU; InsiderLLM 2026-10-15)' },
         ],
         tableFormat: true,
-        note: 'Los precios son orientativos y cambian — los precios de GPU y DRAM han sido especialmente volátiles este año. La cifra de la RTX 3090 son datos de listados de eBay EE. UU. del [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15), no una cotización; los precios en tu país pueden variar según impuestos locales. Comprueba el precio en la publicación antes de comprar.',
+        note: 'Los precios son orientativos y cambian — los precios de GPU y DRAM han sido especialmente volátiles este año. La cifra de la RTX 3090 son datos de listados de eBay EE. UU. del [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15), no una cotización; los precios en tu país pueden variar según impuestos locales. Comprueba el precio en la publicación antes de comprar. Los precios mostrados son precios aproximados de las páginas de los fabricantes en la última actualización (consulta la fecha de última actualización); comprueba el precio de hoy en la página enlazada. Todos los precios son precios de referencia de EE. UU. en USD y pueden diferir en tu país.',
         callouts: [
           { type: 'tip', text: '¿Aún no sabes si querrás IA local? Consulta [No gastes de más](#dont-overspend) antes de comprar el equipo más caro.' },
         ],
@@ -1110,7 +1116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**El propio Home Assistant es ligero y corre en hardware modesto; las demandas fuertes vienen de la detección de cámaras de Frigate y de un LLM local.** Dimensiona el equipo para lo que vas a añadir, no solo para el hub.',
         items: [
           'El hub necesita poco cómputo para el control de dispositivos y las automatizaciones.',
-          'La detección de objetos de Frigate necesita un acelerador: una iGPU Intel vía OpenVINO cubre la mayoría de configuraciones, y un módulo Hailo-8L o Hailo-8 M.2 añade capacidad. El Google Coral USB/M.2 TPU sigue funcionando, pero ya es heredado — Frigate ya no lo recomienda para instalaciones nuevas.',
+          'La detección de objetos de Frigate necesita un acelerador: una iGPU Intel vía OpenVINO cubre la mayoría de configuraciones, y un módulo Hailo-8L o Hailo-8 M.2 añade capacidad. El Google Coral USB/M.2 TPU sigue funcionando; la [documentación de hardware de Frigate](https://docs.frigate.video/frigate/hardware) menciona opciones Hailo e Intel OpenVINO para equipos nuevos y describe el Coral como hardware más antiguo.',
           'Los modelos Whisper más grandes y la inferencia de LLM local son las cargas más exigentes: planifica la RAM y una GPU/NPU en torno a ellas.',
           'Guarda las grabaciones de las cámaras en un SSD; pasa a un NAS en cuanto uses varias cámaras de forma continua.',
         ],
@@ -1119,16 +1125,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**Una Raspberry Pi 5 es la forma de menor consumo de ejecutar Home Assistant para el uso típico de smart home, pero la escasez de DRAM de 2026 ha disparado el precio de las placas — la de 8GB ronda ahora los 185–220 €, y la de 16GB, 280–300 €, ambas muy por encima de su precio de lanzamiento de ~80/120 $, y los analistas no esperan una normalización antes de finales de 2027.** Sigue teniendo dificultades con la inferencia de LLM y los modelos Whisper grandes.',
+          '**Una Raspberry Pi 5 es la forma de menor consumo de ejecutar Home Assistant para el uso típico de smart home, pero la escasez de DRAM de 2026 ha disparado el precio de las placas — la de 8GB ronda ahora los $180–220, y la de 16GB, $280–305, ambas muy por encima de su precio de lanzamiento de ~80/120 $; consulta la página enlazada de Raspberry Pi para ver los precios actuales.** Sigue teniendo dificultades con la inferencia de LLM y los modelos Whisper grandes.',
         items: [
           'Estupenda para control de dispositivos, automatizaciones y una pequeña configuración de voz local.',
           'La inferencia de LLM en una Pi se limita a modelos muy pequeños y lentos — combínala con un HAT Hailo-8L M.2 si quieres detección con Frigate.',
           'Elige una Pi 5 si quieres lo básico con bajo consumo y tienes claro que no vas a añadir un LLM local. Si crees que querrás IA local dentro de un año, sáltate la Pi y compra ya el mini PC — cuesta poco más y te ahorra comprar dos veces.',
-          'Para un equipo listo para usar, el Home Assistant Green se envía preconfigurado (unos 179 € en 2026, frente a un precio de lanzamiento de 99 $). El Home Assistant Yellow se descontinuó en octubre de 2025 — Green es ahora el único hub oficial de la propia marca.',
+          'Para un equipo listo para usar, el Home Assistant Green se envía preconfigurado (unos $199 en 2026, frente a un precio de lanzamiento de 99 $). El Home Assistant Yellow se descontinuó en octubre de 2025 — Green es ahora el único hub oficial de la propia marca.',
         ],
         affiliateLinks: [
-          { label: 'Ver precio de la Raspberry Pi 5 →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '185–300 €' },
-          { label: 'Ver precio del Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '179 €' },
+          { label: 'Ver precio de la Raspberry Pi 5 →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '$180–305' },
+          { label: 'Ver precio del Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199' },
         ],
       },
       miniPc: {
@@ -1137,30 +1143,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un mini PC es la mejor opción de un solo equipo para Home Assistant más IA local, con suficiente RAM y una iGPU o NPU capaz para ejecutar un LLM pequeño y acelerar Frigate.** Equilibra potencia, tamaño y coste, y es la categoría en la que merece la pena gastar más si quieres un solo equipo para ambas funciones.',
         items: [
-          'Mejor opción económica: un mini PC Intel N100/N150 de bajo consumo ejecuta Home Assistant y acelera Frigate mediante la iGPU Intel (OpenVINO) — la opción práctica por defecto para un equipo de hub más cámaras. El Beelink EQ14 (Intel N150, 16 GB de RAM) cuesta unos 230–280 € en agosto de 2026 — bueno para funcionamiento 24/7 y bajo consumo, pero insuficiente para un LLM local.',
-          'Mejor opción para IA local: para un LLM local en el mismo equipo, sube a un mini PC Ryzen con 32 GB de RAM. El Beelink SER8 (Ryzen 7 8845HS) cuesta unos 600–650 € en agosto de 2026 y ejecuta un modelo Qwen3 8B o Llama 3.1 8B vía Ollama a una velocidad aprovechable, junto con Home Assistant y Frigate. Prioriza la RAM y una GPU integrada o NPU capaz para menor latencia.',
-          'Si vas a comprar un solo equipo para Home Assistant e IA local juntos, el mini PC Ryzen justifica el coste extra sobre el N150 — es el único de los dos que realmente ejecuta un LLM a una velocidad aprovechable.',
+          'Mejor opción económica: un mini PC Intel N100/N150 de bajo consumo ejecuta Home Assistant y acelera Frigate mediante la iGPU Intel (OpenVINO) — la opción práctica por defecto para un equipo de hub más cámaras. El Beelink EQ14 (Intel N150, 16 GB de RAM) cuesta unos $190–220 — bueno para funcionamiento 24/7 y bajo consumo, pero insuficiente para un LLM local.',
+          'Mejor opción para IA local: para un LLM local en el mismo equipo, sube a un mini PC Ryzen con 32 GB de RAM. El Beelink SER8 (Ryzen 7 8845HS) cuesta unos $649; es un mini PC con Ryzen 7 que puede ejecutar modelos de clase 8B como Qwen3 8B o Llama 3.1 8B vía Ollama; la velocidad depende de la cuantización y del tamaño de contexto, y PromptQuorum no ha medido el rendimiento de esta unidad. Prioriza la RAM y una GPU integrada o NPU capaz para menor latencia.',
+          'Si vas a comprar un solo equipo para Home Assistant e IA local juntos, el mini PC Ryzen puede compensar el coste extra sobre el N150 — ofrece más margen para un modelo de clase 8B.',
           'Para opciones concretas, consulta [mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) y, entre clústeres, [mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm).',
         ],
         affiliateLinks: [
-          { label: 'Ver precio del EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '230–280 €' },
-          { label: 'Ver precio del SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: '~600–650 €' },
+          { label: 'Ver precio del EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '$190–220' },
+          { label: 'Ver precio del SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: '~$649' },
         ],
       },
       frigateAccelerator: {
         id: 'frigate-accelerator',
         title: '¿Vas a usar cámaras de seguridad? Elige tu acelerador de Frigate',
         content:
-          '**El número de cámaras y cuánto margen de detección necesites determina el acelerador, algo aparte de qué equipo ejecuta el hub.** Frigate ya no recomienda el Google Coral para equipos nuevos — ahora dirige a los nuevos usuarios hacia Hailo, o hacia la iGPU Intel integrada del equipo anfitrión.',
+          '**El número de cámaras y cuánto margen de detección necesites determina el acelerador, algo aparte de qué equipo ejecuta el hub.** La [documentación de hardware de Frigate](https://docs.frigate.video/frigate/hardware) menciona opciones Hailo e Intel OpenVINO para equipos nuevos; el Google Coral sigue funcionando, pero allí se describe como hardware más antiguo.',
         items: [
           '1–4 cámaras: la iGPU Intel integrada en un mini PC N100/N150, usada vía OpenVINO, cubre la mayoría de configuraciones domésticas sin coste de hardware adicional.',
-          '4–10 cámaras, o si quieres más margen de detección en hardware que no sea Intel: un módulo Hailo-8L M.2 (~70–80 € en agosto de 2026) es la recomendación actual de bajo consumo de Frigate — funciona como antes lo hacía el Coral, como tarjeta adicional con soporte de primer nivel.',
-          '10 o más cámaras, o enriquecimientos más pesados (reconocimiento facial/de matrículas además de la detección): un módulo Hailo-8 M.2 (~180–220 €) añade bastante más rendimiento.',
+          '4–10 cámaras, o si quieres más margen de detección en hardware que no sea Intel: un módulo Hailo-8L M.2 (~$70) es la recomendación actual de bajo consumo de Frigate — funciona como antes lo hacía el Coral, como tarjeta adicional con soporte de primer nivel.',
+          '10 o más cámaras, o enriquecimientos más pesados (reconocimiento facial/de matrículas además de la detección): un módulo Hailo-8 M.2 (~$170–200) añade bastante más rendimiento.',
           '¿Ya tienes un Coral? Sigue funcionando — esto solo trata de qué comprar en un equipo nuevo, no de una razón para sustituir un Coral que ya funciona.',
         ],
+        callouts: [{ type: 'warning', text: 'Las cámaras y el reconocimiento facial o de matrículas están regulados. En la UE, el RGPD puede aplicarse cuando las cámaras captan el espacio público, a vecinos u otras personas, y la identificación biométrica tiene reglas más estrictas. Consulta la legislación local antes de instalar; esto no es asesoramiento jurídico.' }],
         affiliateLinks: [
-          { label: 'Ver precio del Hailo-8L →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '~70–80 €' },
-          { label: 'Ver precio del Hailo-8 →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '~180–220 €' },
+          { label: 'Ver precio del Hailo-8L →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '~$70' },
+          { label: 'Ver precio del Hailo-8 →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '~$170–200' },
         ],
       },
       nas: {
@@ -1169,15 +1176,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un NAS puede alojar Home Assistant en un contenedor junto al almacenamiento y las grabaciones de Frigate, si tiene suficiente CPU y RAM — es una buena opción si ya tienes uno, pero no el motivo correcto para comprar tu primer NAS.** No compres un NAS específicamente para ejecutar un LLM local: un mini PC dedicado o un equipo con GPU es una mejor plataforma de IA por el mismo dinero.',
         items: [
-          '2–4 cámaras / almacenamiento más ligero: el Synology DS225+ (~380–420 € en agosto de 2026) cubre Home Assistant en contenedor más las grabaciones de Frigate para pocas cámaras.',
-          '4–10 cámaras / más margen: el Synology DS925+ (~680–750 €) añade más margen de CPU/RAM para más complementos y cámaras.',
-          'Almacenamiento más IA local en un solo equipo: los modelos UGREEN NASync (gama DXP4800 Plus, ~700–800 €) vienen con una opción de LLM local integrada y hardware más reciente (DDR5, 10GbE sin tarjetas adicionales) a un precio similar al del DS925+.',
+          '2–4 cámaras / almacenamiento más ligero: el Synology DS225+ (~$340) cubre Home Assistant en contenedor más las grabaciones de Frigate para pocas cámaras.',
+          '4–10 cámaras / más margen: el Synology DS925+ (~$640) añade más margen de CPU/RAM para más complementos y cámaras.',
+          'Almacenamiento más IA local en un solo equipo: los modelos UGREEN NASync (gama DXP4800 Plus, ~$650–730) ofrecen hardware más reciente (DDR5, 10GbE sin tarjetas adicionales) a un precio similar al del DS925+, y algunos modelos anuncian una opción de LLM local; consulta la página del fabricante.',
           'La inferencia de LLM en un NAS sigue dependiendo mucho de su hardware — la mayoría de los NAS carecen de una GPU discreta capaz, así que trata la opción de LLM integrada como una comodidad, no como sustituto del nivel RTX 3090 de abajo si realmente quieres un modelo grande.',
         ],
         affiliateLinks: [
-          { label: 'Ver precio del DS225+ →', url: 'https://www.synology.com/es-es/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: '~380–420 €' },
-          { label: 'Ver precio del DS925+ →', url: 'https://www.synology.com/es-es/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: '~680–750 €' },
-          { label: 'Ver precio del UGREEN NASync →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: '~700–800 €' },
+          { label: 'Ver precio del DS225+ →', url: 'https://www.synology.com/es-es/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: '~$340' },
+          { label: 'Ver precio del DS925+ →', url: 'https://www.synology.com/es-es/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: '~$640' },
+          { label: 'Ver precio del UGREEN NASync →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: '~$650–730' },
         ],
       },
       server: {
@@ -1187,7 +1194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Un servidor dedicado con una GPU discreta es el salto para ejecutar un LLM local más grande junto a muchas cámaras.** Ofrece el mayor margen a mayor coste y consumo — y el precio de las GPU se ha movido mucho en 2026, así que trata las cifras siguientes como una instantánea, no como un valor fijo.',
         items: [
           'Una RTX 3090 usada (24 GB de VRAM) es una opción habitual para LLM locales por su VRAM. El [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15) recoge listados vendidos de segunda mano de unos $1,400–1,550 — datos de eBay EE. UU., no una cotización ni una oferta; los precios en tu país pueden variar según impuestos locales. Los modelos cuantizados en Q4 de hasta unos 70B pueden ser posibles según la cuantización, el tamaño de contexto y el offloading; considéralo un rango de capacidad, no una garantía para todo modelo de 70B.',
-          'Una RTX 3060 usada (12 GB) es la alternativa económica para un equipo con GPU discreta — gestiona modelos de 7B–13B sin problema, aunque sin el margen de VRAM ni el precio de la RTX 3090.',
+          'Una RTX 3060 usada (12 GB) es la alternativa económica para un equipo con GPU discreta — puede gestionar modelos de 7B–13B según la cuantización, aunque sin el margen de VRAM ni el precio de la RTX 3090.',
           'Mejor para muchas cámaras, un LLM más grande y varios usuarios. Mayor consumo y coste que un mini PC — consulta la sección de consumo eléctrico más abajo antes de comprometerte con este nivel.',
           'Excesivo para un smart home básico — resérvalo para uso intensivo de IA local, y mantén el hub de Home Assistant en un equipo aparte de bajo consumo por fiabilidad (ver ¿Un equipo o dos? más abajo).',
         ],
@@ -1195,6 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver anuncios de RTX 3090 usada →', url: 'https://www.ebay.es/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '~$1,400–1,550' },
           { label: 'Ver anuncios de RTX 3060 usada →', url: 'https://www.ebay.es/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: 'Una GPU de 350 W en un servidor que funciona de forma continua necesita una fuente de alimentación de calidad bien dimensionada, buena ventilación y una ubicación adecuada. Las tarjetas usadas pueden tener desgaste y no tener garantía, así que revisa las condiciones del vendedor. Sigue las indicaciones del fabricante; esto no es asesoramiento eléctrico.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-es.svg',
         imageCaption: 'Capacidad de LLM local por nivel de hardware: una Raspberry Pi 5 solo ejecuta modelos diminutos, un mini PC Intel N100/N150 gestiona modelos pequeños, un mini PC Ryzen (32 GB de RAM) ejecuta modelos de 7B–8B, y una RTX 3090 usada (24 GB de VRAM) escala hasta unos 70B en cuantización Q4 según la configuración.',
       },
@@ -1202,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: 'No gastes de más en tu servidor de Home Assistant',
         content:
-          '**Comprar más hardware del que necesita tu caso de uso es la compra más habitual malgastada en esta categoría — ajusta el equipo a lo que realmente vas a ejecutar.**',
+          '**Comprar más hardware del que necesita tu caso de uso es una compra malgastada habitual en esta categoría — ajusta el equipo a lo que realmente vas a ejecutar.**',
         items: [
           '¿Solo Home Assistant? No necesitas una GPU RTX, y probablemente tampoco un mini PC — una Raspberry Pi 5 o un Home Assistant Green lo cubren.',
           '¿Home Assistant más cámaras de Frigate? No necesitas una estación de trabajo cara — un mini PC Intel N100/N150 con su iGPU integrada es suficiente para la mayoría de números de cámaras domésticas.',
@@ -1219,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Hardware': 'Raspberry Pi 5', 'Rol típico': 'Solo hub', 'Consumo': 'Muy bajo (unos vatios)', 'Ideal para': 'Home Assistant' },
           { 'Hardware': 'Mini PC Intel N100/N150', 'Rol típico': 'Hub + Frigate', 'Consumo': 'Bajo (~10–15W típico)', 'Ideal para': 'Hub + cámaras 24/7' },
-          { 'Hardware': 'Mini PC Ryzen (32GB)', 'Rol típico': 'Hub + Frigate + LLM pequeño', 'Consumo': 'Moderado (~15–35W típico, más bajo carga de LLM)', 'Ideal para': 'IA local en un solo equipo' },
+          { 'Hardware': 'Mini PC Ryzen (32GB)', 'Rol típico': 'Hub + Frigate + LLM pequeño', 'Consumo': 'Moderado (~15–35W típico, más alto bajo carga de LLM)', 'Ideal para': 'IA local en un solo equipo' },
           { 'Hardware': 'Servidor RTX 3090', 'Rol típico': 'IA local pesada', 'Consumo': 'Alto (RTX 3090: 350W de potencia de placa según NVIDIA)', 'Ideal para': 'Modelos grandes, no en reposo 24/7' },
         ],
         tableFormat: true,
@@ -1260,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Si hoy estás eligiendo un equipo y no tienes claro qué nivel te conviene, esta es una base razonable teniendo en cuenta los compromisos anteriores — tus necesidades reales pueden apuntar a otra parte, y ninguna de las opciones siguientes ha sido probada ni revisada por PromptQuorum.**',
         items: [
           'Para un smart home local normal (Home Assistant más algunos dispositivos Zigbee/Matter): un mini PC Intel N150 es una opción por defecto sensata — también cubre Frigate si añades cámaras más adelante.',
-          'Para Home Assistant más cámaras más un pequeño asistente de IA local: un mini PC Ryzen con 32 GB de RAM es una opción razonable de un solo equipo — es el equipo más barato que realmente ejecuta un LLM de clase 8B a una velocidad aprovechable.',
+          'Para Home Assistant más cámaras más un pequeño asistente de IA local: un mini PC Ryzen con 32 GB de RAM es una opción razonable de un solo equipo — es una forma de menor coste de ejecutar un modelo de clase 8B.',
           'Para IA local en serio (modelos de clase 32B o mayores): un servidor RTX 3090 aparte, separado del hub de Home Assistant, es el salto razonable dado el precio actual de las GPU usadas.',
           'Una instalación nueva pensada desde el principio para IA suele encajar peor con una Raspberry Pi, dado el precio de la Pi en 2026 y sus limitaciones de LLM — un mini PC suele tener un precio parecido y es una plataforma de IA mucho mejor.',
         ],
@@ -1270,27 +1278,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configuraciones completas de smart home local',
         content:
           '**La mayoría de compradores necesita más de un producto: como mínimo un hub, un acelerador de Frigate y almacenamiento, más un equipo de IA si quieres inferencia de LLM local.** Estas tres configuraciones combinan las opciones anteriores por escenario; cada producto enlaza con su recomendación completa más arriba en esta página.',
-        columns: ['Configuración', 'Hub', 'Acelerador de Frigate', 'IA', 'Total estimado (ago 2026)'],
+        columns: ['Configuración', 'Hub', 'Acelerador de Frigate', 'IA', 'Total estimado'],
         rows: [
-          { 'Configuración': 'Inicial (solo HA)', 'Hub': '[Home Assistant Green o Pi 5](#raspberry-pi)', 'Acelerador de Frigate': '—', 'IA': '—', 'Total estimado (ago 2026)': '~179–300 €' },
-          { 'Configuración': 'HA + cámaras', 'Hub': '[Mini PC N150](#mini-pc)', 'Acelerador de Frigate': '[iGPU Intel, o Hailo-8L para más margen](#frigate-accelerator)', 'IA': '—', 'Total estimado (ago 2026)': '~230–360 €' },
-          { 'Configuración': 'HA + cámaras + IA local', 'Hub': '[Mini PC Ryzen, 32 GB](#mini-pc)', 'Acelerador de Frigate': 'iGPU integrada, o [Hailo-8L para más cámaras](#frigate-accelerator)', 'IA': 'Corre en el mismo equipo (modelo de clase 8B)', 'Total estimado (ago 2026)': '~600–730 €' },
-          { 'Configuración': 'HA + cámaras + IA local grande', 'Hub': '[Mini PC N150 (mantenido aparte por fiabilidad)](#mini-pc)', 'Acelerador de Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Servidor con RTX 3090 usada, aparte](#server)', 'Total estimado (ago 2026)': '~$1,760–1,970 (sin el PC anfitrión)' },
+          { 'Configuración': 'Inicial (solo HA)', 'Hub': '[Home Assistant Green o Pi 5](#raspberry-pi)', 'Acelerador de Frigate': '—', 'IA': '—', 'Total estimado': '~$199–305' },
+          { 'Configuración': 'HA + cámaras', 'Hub': '[Mini PC N150](#mini-pc)', 'Acelerador de Frigate': '[iGPU Intel, o Hailo-8L para más margen](#frigate-accelerator)', 'IA': '—', 'Total estimado': '~$190–290' },
+          { 'Configuración': 'HA + cámaras + IA local', 'Hub': '[Mini PC Ryzen, 32 GB](#mini-pc)', 'Acelerador de Frigate': 'iGPU integrada, o [Hailo-8L para más cámaras](#frigate-accelerator)', 'IA': 'Corre en el mismo equipo (modelo de clase 8B)', 'Total estimado': '~$649–720' },
+          { 'Configuración': 'HA + cámaras + IA local grande', 'Hub': '[Mini PC N150 (mantenido aparte por fiabilidad)](#mini-pc)', 'Acelerador de Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Servidor con RTX 3090 usada, aparte](#server)', 'Total estimado': '~$1,760–1,970 (sin el PC anfitrión)' },
         ],
         tableFormat: true,
-        note: 'La última configuración mantiene el hub de Home Assistant en su propio equipo de bajo consumo y ejecuta la RTX 3090 como una máquina aparte — consulta [¿Un equipo o dos?](#one-or-two) para saber por qué. El total suma una RTX 3090 usada ($1,400–1,550, rastreador de InsiderLLM, 2026-10-15), un mini PC N150 (~$190–220) y un Hailo-8 (~$170–200): de $1,760 a $1,970. No incluye el PC anfitrión (CPU, placa, fuente, RAM, caja) que la GPU necesita.',
+        note: 'La última configuración mantiene el hub de Home Assistant en su propio equipo de bajo consumo y ejecuta la RTX 3090 como una máquina aparte — consulta [¿Un equipo o dos?](#one-or-two) para saber por qué. El total suma una RTX 3090 usada ($1,400–1,550, rastreador de InsiderLLM, 2026-10-15), un mini PC N150 (~$190–220) y un Hailo-8 (~$170–200): de $1,760 a $1,970. No incluye el PC anfitrión (CPU, placa, fuente, RAM, caja) que la GPU necesita. Los precios mostrados son precios aproximados de las páginas de los fabricantes en la última actualización (consulta la fecha de última actualización); comprueba el precio de hoy en la página enlazada. Todos los precios son precios de referencia de EE. UU. en USD y pueden diferir en tu país.',
       },
       faqSection: {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Qué hardware recomienda Frigate?', a: 'Para equipos nuevos, Frigate recomienda una iGPU Intel vía OpenVINO, o un módulo Hailo-8L (~70–80 €, económico) o Hailo-8 (~180–220 €, más rápido) en formato M.2 para más capacidad de detección. El Google Coral USB/M.2 TPU sigue funcionando, pero ya es heredado — Frigate ya no lo recomienda para instalaciones nuevas salvo en hardware de muy bajo consumo.' },
+          { q: '¿Qué hardware recomienda Frigate?', a: 'Para equipos nuevos, la documentación de hardware de Frigate (https://docs.frigate.video/frigate/hardware) menciona, entre otras, una iGPU Intel vía OpenVINO, o un módulo Hailo-8L (~$70, económico) o Hailo-8 (~$170–200, más rápido) en formato M.2 para más capacidad de detección. El Google Coral USB/M.2 TPU sigue funcionando, pero esa documentación lo describe como hardware más antiguo.' },
           { q: '¿Puede una Raspberry Pi ejecutar también un LLM local?', a: 'Una Pi solo puede ejecutar modelos muy pequeños, y lentamente, así que no es ideal para un asistente de LLM local con buena respuesta. Maneja bien Home Assistant y la voz básica, pero para IA local un mini PC con una iGPU o NPU capaz, o un equipo con RTX 3090 usada, es la mejor opción.' },
-          { q: '¿Cuánta RAM necesito?', a: 'Home Assistant solo corre en un par de gigabytes. Para ejecutar un LLM local pequeño y otros servicios de IA en el mismo equipo, ayuda más RAM; un mini PC con 32 GB de RAM y una iGPU/NPU capaz mantiene un modelo Qwen3 8B o Llama 3.1 8B con buena respuesta. Ajusta la RAM al tamaño del modelo que planees ejecutar.' },
+          { q: '¿Cuánta RAM necesito?', a: 'Home Assistant solo corre en un par de gigabytes. Para ejecutar un LLM local pequeño y otros servicios de IA en el mismo equipo, ayuda más RAM; un mini PC con 32 GB de RAM y una iGPU/NPU capaz puede ejecutar un modelo Qwen3 8B o Llama 3.1 8B; la velocidad depende de la cuantización y del tamaño de contexto. Ajusta la RAM al tamaño del modelo que planees ejecutar.' },
           { q: '¿Qué mini PC debería comprar?', a: 'Para HA más cámaras, un mini PC Intel N100/N150 acelera Frigate vía OpenVINO. Para HA más un LLM local, sube a un mini PC Ryzen con 32 GB de RAM. Consulta la guía de mejores mini PC para Home Assistant + IA local para opciones concretas.' },
           { q: '¿Un equipo o dos?', a: 'Un equipo (un mini PC) es lo más simple y ejecuta Home Assistant más un LLM local pequeño juntos. Divide en dos si quieres mantener el hub ultrafiable en un equipo de bajo consumo y descargar la IA pesada a una máquina separada como un servidor con RTX 3090 usada.' },
           { q: '¿Importa el consumo eléctrico en un equipo 24/7?', a: 'Importa más que el precio de compra en hardware que nunca se apaga. Una Raspberry Pi consume unos vatios, un mini PC N100/N150 unos 10–15W, un mini PC Ryzen entre 15 y 35W según la carga, y NVIDIA indica 350W de potencia de placa para una GPU discreta como la RTX 3090 — un motivo para ejecutar un servidor con GPU potente como equipo aparte en lugar de siempre encendido.' },
-          { q: '¿Sigue mereciendo la pena una Raspberry Pi con los precios de 2026?', a: 'Para Home Assistant solo, sí — sigue siendo la opción de menor consumo. Pero la escasez de DRAM de 2026 ha disparado el precio de la Pi 5 (~185–300 € según la RAM en agosto de 2026, frente a un precio original de 80–120 $), reduciendo la diferencia de precio con un mini PC N100/N150. Si podrías añadir cámaras o un LLM local dentro de un año, el mini PC suele ser la mejor compra ahora mismo.' },
+          { q: '¿Sigue mereciendo la pena una Raspberry Pi con los precios de 2026?', a: 'Para Home Assistant solo, sí — sigue siendo la opción de menor consumo. Pero la escasez de DRAM de 2026 ha disparado el precio de la Pi 5 (~$180–305 según la RAM, frente a un precio original de 80–120 $), reduciendo la diferencia de precio con un mini PC N100/N150. Si podrías añadir cámaras o un LLM local dentro de un año, el mini PC suele ser la mejor compra ahora mismo.' },
         ],
       },
       relatedReading: {
@@ -1320,7 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'Hardware de Home Assistant' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: 'LLM local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1330,13 +1338,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿Qué hardware recomienda Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Para equipos nuevos, Frigate recomienda una iGPU Intel vía OpenVINO, o un módulo Hailo-8L (~70–80 €) o Hailo-8 (~180–220 €) en formato M.2 para más capacidad de detección. El Google Coral TPU sigue funcionando, pero ya es heredado y ya no se recomienda para instalaciones nuevas.' } },
+        { '@type': 'Question', name: '¿Qué hardware recomienda Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Para equipos nuevos, la documentación de hardware de Frigate (https://docs.frigate.video/frigate/hardware) menciona, entre otras, una iGPU Intel vía OpenVINO, o un módulo Hailo-8L (~$70) o Hailo-8 (~$170–200) en formato M.2 para más capacidad de detección. El Google Coral TPU sigue funcionando, pero esa documentación lo describe como hardware más antiguo.' } },
         { '@type': 'Question', name: '¿Puede una Raspberry Pi ejecutar también un LLM local?', acceptedAnswer: { '@type': 'Answer', text: 'Una Pi solo puede ejecutar modelos muy pequeños y lentamente. Maneja bien Home Assistant y la voz básica, pero para un asistente de LLM local con buena respuesta, un mini PC con iGPU o NPU capaz, o un equipo con RTX 3090 usada, es mejor.' } },
-        { '@type': 'Question', name: '¿Cuánta RAM necesito?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant solo corre en un par de gigabytes. Para ejecutar un LLM local pequeño en el mismo equipo, ayuda más RAM; un mini PC con 32 GB de RAM mantiene un modelo Qwen3 8B o Llama 3.1 8B con buena respuesta. Ajusta la RAM al tamaño del modelo que planees ejecutar.' } },
+        { '@type': 'Question', name: '¿Cuánta RAM necesito?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant solo corre en un par de gigabytes. Para ejecutar un LLM local pequeño en el mismo equipo, ayuda más RAM; un mini PC con 32 GB de RAM puede ejecutar un modelo Qwen3 8B o Llama 3.1 8B; la velocidad depende de la cuantización y del tamaño de contexto. Ajusta la RAM al tamaño del modelo que planees ejecutar.' } },
         { '@type': 'Question', name: '¿Qué mini PC debería comprar?', acceptedAnswer: { '@type': 'Answer', text: 'Para HA más cámaras, un mini PC Intel N100/N150 acelera Frigate vía OpenVINO. Para HA más un LLM local, sube a un mini PC Ryzen con 32 GB de RAM. Consulta la guía de mejores mini PC para Home Assistant + IA local.' } },
         { '@type': 'Question', name: '¿Un equipo o dos?', acceptedAnswer: { '@type': 'Answer', text: 'Un mini PC ejecuta Home Assistant más un LLM local pequeño juntos. Divide en dos si quieres el hub ultrafiable en un equipo de bajo consumo y la IA pesada en una máquina separada como un servidor con RTX 3090 usada.' } },
         { '@type': 'Question', name: '¿Importa el consumo eléctrico en un equipo 24/7?', acceptedAnswer: { '@type': 'Answer', text: 'Importa más que el precio de compra en hardware que nunca se apaga. Una Raspberry Pi consume unos vatios, un mini PC N100/N150 unos 10–15W, un mini PC Ryzen unos 15–35W, y NVIDIA indica 350W de potencia de placa para una GPU discreta como la RTX 3090.' } },
-        { '@type': 'Question', name: '¿Sigue mereciendo la pena una Raspberry Pi con los precios de 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Para Home Assistant solo, sí. Pero la escasez de DRAM de 2026 ha subido el precio de la Pi 5 a unos 185–300 € según la RAM, frente a un precio original de 80–120 $, reduciendo la diferencia con un mini PC N100/N150 — que es la mejor compra si podrías añadir cámaras o un LLM local dentro de un año.' } },
+        { '@type': 'Question', name: '¿Sigue mereciendo la pena una Raspberry Pi con los precios de 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Para Home Assistant solo, sí. Pero la escasez de DRAM de 2026 ha subido el precio de la Pi 5 a unos $180–305 según la RAM, frente a un precio original de 80–120 $, reduciendo la diferencia con un mini PC N100/N150 — que es la mejor compra si podrías añadir cámaras o un LLM local dentro de un año.' } },
       ],
     },
   },
@@ -1344,8 +1352,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-ko.webp',
     affiliateDisclosure: true,
@@ -1374,16 +1382,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: 'AI가 포함된 로컬 스마트 홈에 어떤 하드웨어가 필요합니까?',
         answer:
-          '먼저 허브부터 시작하십시오. Intel N100/N150 미니 PC 또는 Raspberry Pi 5가 Home Assistant를 실행합니다. 카메라용으로 Frigate 가속기를 추가하십시오. OpenVINO를 통한 Intel 내장 GPU가 대부분의 구성을 처리하며, Hailo-8L 또는 Hailo-8 M.2 모듈이 감지 성능을 더합니다(Google Coral은 이제 레거시입니다). 녹화 영상은 SSD에 저장하고, 카메라가 많다면 NAS를 사용하십시오. 로컬 LLM을 원한다면 고성능 내장 GPU/NPU가 있는 미니 PC나 중고 RTX 3090 서버로 업그레이드하십시오. 1년 이내에 로컬 AI를 추가할 것 같다면, 나중에 교체할 Raspberry Pi 대신 지금 미니 PC를 구매하십시오.',
+          '먼저 허브부터 시작하십시오. Intel N100/N150 미니 PC 또는 Raspberry Pi 5가 Home Assistant를 실행합니다. 카메라용으로 Frigate 가속기를 추가하십시오. OpenVINO를 통한 Intel 내장 GPU가 대부분의 구성을 처리하며, Hailo-8L 또는 Hailo-8 M.2 모듈이 감지 성능을 더합니다(Frigate 하드웨어 문서는 신규 구성에 Hailo와 Intel OpenVINO 옵션을 나열하며, Google Coral은 여전히 작동하지만 해당 문서에서는 구형 하드웨어로 설명됩니다). 녹화 영상은 SSD에 저장하고, 카메라가 많다면 NAS를 사용하십시오. 로컬 LLM을 원한다면 고성능 내장 GPU/NPU가 있는 미니 PC나 중고 RTX 3090 서버로 업그레이드하십시오. 1년 이내에 로컬 AI를 추가할 것 같다면, 나중에 교체할 Raspberry Pi 대신 지금 미니 PC를 구매하십시오.',
         bullets: [
           '허브: Intel N100/N150 미니 PC 또는 Raspberry Pi 5',
-          'Frigate: Intel 내장 GPU(OpenVINO) 또는 Hailo-8L M.2 — Coral은 레거시',
+          'Frigate: Intel 내장 GPU(OpenVINO) 또는 Hailo-8L M.2 — Coral은 여전히 작동하지만 구형 하드웨어',
           '스토리지: SSD, 카메라가 많다면 NAS',
           '로컬 LLM 업그레이드: 미니 PC 내장 GPU/NPU 또는 중고 RTX 3090',
           '1년 이내에 로컬 AI를 추가할 가능성이 있다면 지금 미니 PC를 구매하는 편이 낫습니다 — 나중에 Pi를 교체하는 것보다 저렴합니다',
           '먼저 결정하십시오: HA 단독인지 HA + 카메라 + 로컬 AI인지 — 이 선택이 한 번만 구매할지 두 번 구매할지를 결정합니다',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -1413,10 +1421,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         items: [
-          '허브: Intel N100/N150 미니 PC(약 $190–220) 또는 Raspberry Pi 5(2026년 8월 기준 약 $180–305, D램 공급 부족으로 급등)가 Home Assistant를 실행합니다',
-          'Frigate: 대부분의 미니 PC에 내장된 Intel 내장 GPU(OpenVINO), Hailo-8L M.2 모듈(약 $70), 또는 Hailo-8 M.2(약 $170–200)가 카메라 감지를 가속합니다 — Google Coral은 이제 레거시이며 신규 구성에 대한 Frigate의 권장에서 제외되었습니다',
+          '허브: Intel N100/N150 미니 PC(약 $190–220) 또는 Raspberry Pi 5(약 $180–305, D램 공급 부족으로 급등)가 Home Assistant를 실행합니다',
+          'Frigate: 대부분의 미니 PC에 내장된 Intel 내장 GPU(OpenVINO), Hailo-8L M.2 모듈(약 $70), 또는 Hailo-8 M.2(약 $170–200)가 카메라 감지를 가속합니다 — Frigate 하드웨어 문서는 신규 구성에 Hailo와 Intel OpenVINO를 나열하며, Google Coral은 여전히 작동하지만 해당 문서에서 구형 하드웨어로 설명됩니다',
           '스토리지: 녹화 영상은 SSD, 카메라가 늘어나면(Synology DS225+ 약 $340, DS925+ 약 $640, UGREEN NASync 약 $650–730) NAS',
-          '로컬 LLM 업그레이드: Ryzen 미니 PC(RAM 32GB, 약 $649) 또는 중고 RTX 3090(InsiderLLM 트래커 2026-10-15 기준 낙찰 기록 약 $1,400–1,550)',
+          '로컬 LLM 업그레이드: Ryzen 미니 PC(RAM 32GB, 약 $649) 또는 중고 RTX 3090(InsiderLLM 트래커 2026-10-15 기준 판매 완료 기록 약 $1,400–1,550)',
           '구매 전에 HA 단독인지 HA + 카메라 + 로컬 AI인지 결정하십시오. 그 선택이 적합한 기기를 바꾸며, 나중에 Pi를 교체하기보다 지금 미니 PC를 구매하는 것이 더 낫습니다',
         ],
       },
@@ -1433,7 +1441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '목표': 'HA + 더 큰 로컬 LLM', '구매할 것': '[중고 RTX 3090 서버](#server)', '예상 가격': '약 $1,400–1,550 (GPU만; InsiderLLM 2026-10-15)' },
         ],
         tableFormat: true,
-        note: '가격은 대략적인 값이며 변동됩니다 — 특히 GPU와 D램 가격은 올해 변동성이 컸습니다. RTX 3090 수치는 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)의 eBay 미국 목록 데이터이며 견적이 아닙니다. 한국에서는 가격이 다를 수 있습니다. 구매 전 링크된 매물의 실제 가격을 확인하십시오.',
+        note: '가격은 대략적인 값이며 변동됩니다 — 특히 GPU와 D램 가격은 올해 변동성이 컸습니다. RTX 3090 수치는 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)의 eBay 미국 목록 데이터이며 견적이 아닙니다. 한국에서는 가격이 다를 수 있습니다. 구매 전 링크된 매물의 실제 가격을 확인하십시오. 표시된 가격은 마지막 갱신 시점의 판매처 페이지 기준 대략적인 가격입니다(최종 업데이트 날짜 참조). 오늘의 가격은 링크된 페이지에서 확인하십시오.',
         callouts: [
           { type: 'tip', text: '로컬 AI를 원할지 아직 확실하지 않습니까? 비싼 기기를 사기 전에 [과소비하지 않기](#dont-overspend)를 참조하십시오.' },
         ],
@@ -1445,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Home Assistant 자체는 가볍고 평범한 하드웨어에서 실행됩니다. 높은 요구 사항은 Frigate 카메라 감지와 로컬 LLM에서 옵니다.** 허브만이 아니라 추가할 것을 고려하여 기기 크기를 결정하십시오.',
         items: [
           '허브는 장치 제어 및 자동화에 거의 연산이 필요하지 않습니다.',
-          'Frigate 객체 감지에는 가속기가 필요합니다. OpenVINO를 통한 Intel 내장 GPU가 대부분의 구성을 처리하며, Hailo-8L 또는 Hailo-8 M.2 모듈이 성능을 더합니다. Google Coral USB/M.2 TPU는 여전히 작동하지만 이제 레거시이며 Frigate는 신규 구성에 더 이상 권장하지 않습니다.',
+          'Frigate 객체 감지에는 가속기가 필요합니다. OpenVINO를 통한 Intel 내장 GPU가 대부분의 구성을 처리하며, Hailo-8L 또는 Hailo-8 M.2 모듈이 성능을 더합니다. Google Coral USB/M.2 TPU는 여전히 작동합니다. [Frigate 하드웨어 문서](https://docs.frigate.video/frigate/hardware)는 신규 구성에 Hailo와 Intel OpenVINO 옵션을 나열하며 Coral을 구형 하드웨어로 설명합니다.',
           '대형 Whisper 모델과 로컬 LLM 추론이 가장 까다로운 워크로드입니다. 이에 맞춰 RAM과 GPU/NPU를 계획하십시오.',
           '카메라 녹화는 SSD에 저장하고, 카메라 여러 대를 상시 운영하게 되면 NAS로 옮기십시오.',
         ],
@@ -1454,7 +1462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**Raspberry Pi 5는 일반적인 스마트 홈 용도로 Home Assistant를 실행하는 가장 저전력인 방법이지만, 2026년 D램 공급 부족으로 보드 가격이 크게 올라 8GB 보드는 약 $180–220, 16GB 보드는 약 $280–305로, 원래 출시가 약 $80/$120보다 훨씬 높아졌으며 분석가들은 2027년 하반기 이전에는 정상화되지 않을 것으로 보고 있습니다.** 여전히 LLM 추론과 대형 Whisper 모델에는 어려움을 겪습니다.',
+          '**Raspberry Pi 5는 일반적인 스마트 홈 용도로 Home Assistant를 실행하는 가장 저전력인 방법이지만, 2026년 D램 공급 부족으로 보드 가격이 크게 올라 8GB 보드는 약 $180–220, 16GB 보드는 약 $280–305로, 원래 출시가 약 $80/$120보다 훨씬 높습니다. 현재 가격은 링크된 Raspberry Pi 페이지에서 확인하십시오.** 여전히 LLM 추론과 대형 Whisper 모델에는 어려움을 겪습니다.',
         items: [
           '장치 제어, 자동화, 소형 로컬 음성 설정에 탁월합니다.',
           'Pi에서의 LLM 추론은 매우 소형이고 느린 모델에만 제한됩니다. Frigate 감지를 원한다면 Hailo-8L M.2 HAT와 함께 사용하십시오.',
@@ -1472,9 +1480,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**미니 PC는 Home Assistant와 로컬 AI를 하나의 기기에서 실행하는 최고의 선택입니다. 충분한 RAM과 고성능 내장 GPU 또는 NPU를 갖추고 있습니다.** 성능, 크기, 비용의 균형이 잡혀 있으며, 두 가지 작업을 한 기기로 처리하려면 이 항목에 더 투자할 가치가 있습니다.',
         items: [
-          '최고의 예산형 선택: 저전력 Intel N100/N150 미니 PC는 Home Assistant를 실행하고 Intel 내장 GPU(OpenVINO)로 Frigate를 가속합니다 — 허브+카메라 기기의 실용적인 기본 선택입니다. Beelink EQ14(Intel N150, RAM 16GB)는 2026년 8월 기준 약 $190–220입니다 — 24시간 운영과 낮은 전력 소비에 적합하지만 로컬 LLM에는 성능이 부족합니다.',
-          '로컬 AI를 위한 최고의 선택: 같은 기기에서 로컬 LLM을 원한다면 RAM 32GB의 Ryzen 미니 PC로 업그레이드하십시오. Beelink SER8(Ryzen 7 8845HS)은 2026년 8월 기준 약 $649이며 Ollama로 Qwen3 8B나 Llama 3.1 8B 모델을 실용적인 속도로 실행하는 동시에 Home Assistant와 Frigate도 함께 처리합니다. 낮은 지연 시간을 위해 RAM과 고성능 내장 GPU 또는 NPU를 우선시하십시오.',
-          'Home Assistant와 로컬 AI를 한 기기로 함께 구매한다면 N150 대비 Ryzen 미니 PC의 추가 비용은 그만한 가치가 있습니다 — 실용적인 속도로 실제로 LLM을 실행할 수 있는 것은 둘 중 이것뿐입니다.',
+          '최고의 예산형 선택: 저전력 Intel N100/N150 미니 PC는 Home Assistant를 실행하고 Intel 내장 GPU(OpenVINO)로 Frigate를 가속합니다 — 허브+카메라 기기의 실용적인 기본 선택입니다. Beelink EQ14(Intel N150, RAM 16GB)는 약 $190–220입니다 — 24시간 운영과 낮은 전력 소비에 적합하지만 로컬 LLM에는 성능이 부족합니다.',
+          '로컬 AI를 위한 최고의 선택: 같은 기기에서 로컬 LLM을 원한다면 RAM 32GB의 Ryzen 미니 PC로 업그레이드하십시오. Beelink SER8(Ryzen 7 8845HS)은 약 $649이며, Qwen3 8B나 Llama 3.1 8B 같은 8B급 모델을 Ollama로 실행할 수 있는 Ryzen 7 미니 PC입니다. 속도는 양자화와 컨텍스트 크기에 따라 달라지며, PromptQuorum은 이 제품을 벤치마크하지 않았습니다. 낮은 지연 시간을 위해 RAM과 고성능 내장 GPU 또는 NPU를 우선시하십시오.',
+          'Home Assistant와 로컬 AI를 한 기기로 함께 구매한다면 N150 대비 Ryzen 미니 PC의 추가 비용을 들일 만할 수 있습니다 — 8B급 모델을 위한 여유가 더 큽니다.',
           '구체적인 선택은 [Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai)와 크로스 클러스터 [로컬 LLM을 위한 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)를 참조하십시오.',
         ],
         affiliateLinks: [
@@ -1486,13 +1494,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'frigate-accelerator',
         title: '보안 카메라를 운영하십니까? Frigate 가속기를 선택하십시오',
         content:
-          '**카메라 대수와 필요한 감지 여유가 가속기를 결정하며, 이는 허브를 어떤 기기에서 실행하는지와는 별개입니다.** Frigate는 더 이상 신규 구성에 Google Coral을 권장하지 않습니다 — 이제 호스트에 내장된 Intel iGPU와 함께 신규 사용자에게 Hailo를 안내합니다.',
+          '**카메라 대수와 필요한 감지 여유가 가속기를 결정하며, 이는 허브를 어떤 기기에서 실행하는지와는 별개입니다.** [Frigate 하드웨어 문서](https://docs.frigate.video/frigate/hardware)는 신규 구성에 Hailo와 Intel OpenVINO 옵션을 나열하며, Google Coral은 여전히 작동하지만 해당 문서에서 구형 하드웨어로 설명됩니다.',
         items: [
           '1–4대: N100/N150 미니 PC에 내장된 Intel iGPU를 OpenVINO로 실행하면 추가 하드웨어 비용 없이 대부분의 가정용 구성을 처리합니다.',
-          '4–10대이거나 Intel이 아닌 하드웨어에서 감지 여유를 더 원한다면: Hailo-8L M.2 모듈(2026년 8월 기준 약 $70)이 Frigate의 현재 저전력 권장 사항입니다 — 과거의 Coral처럼 공식적으로 일급 지원되는 추가 카드 역할을 합니다.',
+          '4–10대이거나 Intel이 아닌 하드웨어에서 감지 여유를 더 원한다면: Hailo-8L M.2 모듈(약 $70)이 Frigate의 현재 저전력 권장 사항입니다 — 과거의 Coral처럼 공식적으로 일급 지원되는 추가 카드 역할을 합니다.',
           '10대 이상이거나 더 무거운 부가 처리(감지 외에 얼굴/번호판 인식)가 필요하다면: Hailo-8 M.2 모듈(약 $170–200)이 훨씬 더 높은 처리량을 제공합니다.',
           '이미 Coral을 보유하고 계십니까? 여전히 작동합니다 — 이는 신규 구성 시 무엇을 사야 하는지에 관한 것일 뿐, 정상 작동 중인 Coral 구성을 교체해야 할 이유는 아닙니다.',
         ],
+        callouts: [{ type: 'warning', text: '카메라와 얼굴 또는 번호판 인식은 법적 규제 대상입니다. EU에서는 카메라가 공공장소, 이웃 또는 다른 사람을 촬영하면 GDPR이 적용될 수 있으며, 생체 식별에는 더 엄격한 규칙이 적용됩니다. 한국에서는 개인정보 보호법이 적용될 수 있습니다. 설치 전에 현지 법률을 확인하십시오. 이는 법률 자문이 아닙니다.' }],
         affiliateLinks: [
           { label: 'Hailo-8L 가격 확인 →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '약 $70' },
           { label: 'Hailo-8 가격 확인 →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '약 $170–200' },
@@ -1504,9 +1513,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**NAS는 충분한 CPU와 RAM이 있다면 스토리지 및 Frigate 녹화와 함께 컨테이너에서 Home Assistant를 호스팅할 수 있습니다 — 이미 보유하고 있다면 좋은 선택이지만, 첫 NAS를 구매하는 이유가 되어서는 안 됩니다.** 로컬 LLM을 실행하기 위한 목적만으로는 NAS를 구매하지 마십시오 — 전용 미니 PC나 GPU 기기가 같은 비용으로 더 나은 AI 플랫폼입니다.',
         items: [
-          '2–4대 / 가벼운 스토리지: Synology DS225+(2026년 8월 기준 약 $340)는 소수 카메라를 위한 컨테이너화된 Home Assistant와 Frigate 녹화를 처리합니다.',
+          '2–4대 / 가벼운 스토리지: Synology DS225+(약 $340)는 소수 카메라를 위한 컨테이너화된 Home Assistant와 Frigate 녹화를 처리합니다.',
           '4–10대 / 더 많은 여유가 필요: Synology DS925+(약 $640)는 더 많은 애드온과 카메라를 위한 CPU/RAM 여유를 제공합니다.',
-          '스토리지와 로컬 AI를 하나의 기기로: UGREEN NASync 시리즈(DXP4800 Plus급, 약 $650–730)는 내장 로컬 LLM 옵션과 더 새로운 하드웨어(DDR5, 추가 카드 없는 10GbE)를 DS925+와 비슷한 가격에 제공합니다.',
+          '스토리지와 로컬 AI를 하나의 기기로: UGREEN NASync 시리즈(DXP4800 Plus급, 약 $650–730)는 더 새로운 하드웨어(DDR5, 추가 카드 없는 10GbE)를 DS925+와 비슷한 가격에 제공하며, 일부 모델은 로컬 LLM 옵션을 내세웁니다. 판매처 페이지를 확인하십시오.',
           'NAS에서의 LLM 추론은 여전히 하드웨어에 크게 좌우됩니다 — 대부분의 NAS는 성능 좋은 개별 GPU가 없으므로, 내장 LLM 옵션은 편의 기능으로 취급하고 진짜 대형 모델을 원한다면 아래 RTX 3090 등급의 대체재로 여기지 마십시오.',
         ],
         affiliateLinks: [
@@ -1521,8 +1530,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**개별 GPU를 갖춘 전용 서버는 많은 카메라와 함께 더 큰 로컬 LLM을 실행하기 위한 업그레이드 경로입니다.** 더 높은 비용과 전력으로 가장 많은 여유를 제공합니다 — 2026년에는 GPU 가격이 크게 변동했으므로 아래 수치는 고정값이 아니라 특정 시점의 스냅샷으로 보십시오.',
         items: [
-          '중고 RTX 3090(VRAM 24GB)은 VRAM 덕분에 로컬 LLM에 많이 쓰이는 선택입니다. [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)는 중고 낙찰 기록을 약 $1,400–1,550로 집계합니다 — eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다. 한국에서는 가격이 다를 수 있습니다. 양자화 방식, 컨텍스트 크기, 오프로딩에 따라 Q4 양자화로 최대 약 70B 모델까지 가능할 수 있습니다. 이는 모든 70B 모델을 보장하는 것이 아니라 대략적인 성능 범위로 여기십시오.',
-          '중고 RTX 3060(12GB)은 개별 GPU 기기의 예산형 대안이며, RTX 3090만큼의 VRAM 여유나 가격은 아니지만 7B–13B 모델을 무난하게 처리합니다.',
+          '중고 RTX 3090(VRAM 24GB)은 VRAM 덕분에 로컬 LLM에 많이 쓰이는 선택입니다. [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)는 중고 판매 완료 기록을 약 $1,400–1,550로 집계합니다 — eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다. 한국에서는 가격이 다를 수 있습니다. 양자화 방식, 컨텍스트 크기, 오프로딩에 따라 Q4 양자화로 최대 약 70B 모델까지 가능할 수 있습니다. 이는 모든 70B 모델을 보장하는 것이 아니라 대략적인 성능 범위로 여기십시오.',
+          '중고 RTX 3060(12GB)은 개별 GPU 기기의 예산형 대안이며, RTX 3090만큼의 VRAM 여유나 가격은 아니지만 양자화에 따라 7B–13B 모델을 처리할 수 있습니다.',
           '카메라가 많거나, 대형 LLM을 실행하거나, 여러 사용자가 있는 경우에 가장 적합합니다. 미니 PC보다 전력 소비와 비용이 높습니다 — 이 등급에 투자하기 전에 아래 전력 소비 섹션을 참조하십시오.',
           '기본적인 스마트 홈에는 과도합니다. 대용량 로컬 AI 사용에 예약하고, 안정성을 위해 Home Assistant 허브는 별도의 저전력 기기에 유지하십시오(아래 "기기 하나 대 두 개?" 참조).',
         ],
@@ -1530,6 +1539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'RTX 3090 중고 시세 확인 →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '약 $1,400–1,550' },
           { label: 'RTX 3060 중고 시세 확인 →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: '연속 가동되는 서버의 350W GPU에는 용량이 알맞은 품질 좋은 파워서플라이, 충분한 환기, 적절한 설치 위치가 필요합니다. 중고 카드는 마모가 있을 수 있고 보증이 없을 수 있으므로 판매자의 조건을 확인하십시오. 제조사의 안내를 따르십시오. 이는 전기 관련 자문이 아닙니다.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-ko.svg',
         imageCaption: '하드웨어 등급별 로컬 LLM 용량: Raspberry Pi 5는 아주 작은 모델만 실행하고, Intel N100/N150 미니 PC는 소형 모델을 처리하며, Ryzen 미니 PC(RAM 32GB)는 7B–8B 모델을 실행하고, 중고 RTX 3090(VRAM 24GB)은 구성에 따라 Q4 양자화 기준 최대 약 70B까지 확장됩니다.',
       },
@@ -1537,7 +1547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: 'Home Assistant 서버에 과소비하지 마십시오',
         content:
-          '**사용 목적보다 과한 하드웨어를 구매하는 것이 이 카테고리에서 가장 흔한 낭비입니다 — 실제로 실행할 것에 맞춰 기기를 선택하십시오.**',
+          '**사용 목적보다 과한 하드웨어를 구매하는 것이 이 카테고리에서 흔한 낭비입니다 — 실제로 실행할 것에 맞춰 기기를 선택하십시오.**',
         items: [
           'Home Assistant만 사용합니까? RTX GPU는 필요 없고, 미니 PC도 아마 필요 없습니다 — Raspberry Pi 5나 Home Assistant Green이면 충분합니다.',
           'Home Assistant와 Frigate 카메라를 함께 사용합니까? 비싼 워크스테이션은 필요 없습니다 — 내장 iGPU를 갖춘 Intel N100/N150 미니 PC로 대부분의 가정용 카메라 대수를 충분히 처리합니다.',
@@ -1595,7 +1605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**오늘 기기 하나를 선택하려는데 어느 등급이 맞는지 확신이 서지 않는다면, 위의 트레이드오프를 바탕으로 한 합리적인 기본값은 다음과 같습니다 — 실제 필요는 다른 곳을 가리킬 수 있으며, 아래 추천 중 어느 것도 PromptQuorum이 테스트하거나 검토하지 않았습니다.**',
         items: [
           '일반적인 로컬 스마트 홈(Home Assistant와 소수의 Zigbee/Matter 기기)의 경우: Intel N150 미니 PC가 합리적인 기본 선택입니다 — 나중에 카메라를 추가해도 Frigate를 처리합니다.',
-          'Home Assistant와 카메라, 소형 로컬 AI 어시스턴트를 함께 사용하려면: RAM 32GB의 Ryzen 미니 PC가 합리적인 단일 기기 선택입니다 — 실용적인 속도로 8B급 LLM을 실제로 실행하는 가장 저렴한 기기입니다.',
+          'Home Assistant와 카메라, 소형 로컬 AI 어시스턴트를 함께 사용하려면: RAM 32GB의 Ryzen 미니 PC가 합리적인 단일 기기 선택입니다 — 8B급 모델을 더 낮은 비용으로 실행하는 방법입니다.',
           '본격적인 로컬 AI(32B급 이상 모델)를 원한다면: Home Assistant 허브와 분리된 별도의 RTX 3090 서버가 현재 중고 GPU 가격을 고려할 때 합리적인 업그레이드입니다.',
           'AI를 처음부터 우선시하는 신규 구축은 2026년 Pi 가격과 LLM 한계를 고려하면 일반적으로 Raspberry Pi와 궁합이 덜 맞습니다 — 미니 PC가 대체로 가격은 비슷하면서 훨씬 나은 AI 플랫폼입니다.',
         ],
@@ -1605,27 +1615,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '완전한 로컬 스마트 홈 구성 예시',
         content:
           '**대부분의 구매자는 하나 이상의 제품이 필요합니다 — 최소한 허브, Frigate 가속기, 스토리지가 필요하며, 로컬 LLM 추론을 원한다면 AI 기기도 추가로 필요합니다.** 다음 세 가지 구성은 시나리오별로 위의 선택을 조합한 것입니다. 각 제품은 이 페이지 앞부분의 전체 추천으로 다시 연결됩니다.',
-        columns: ['구성', '허브', 'Frigate 가속기', 'AI', '예상 총액 (2026년 8월)'],
+        columns: ['구성', '허브', 'Frigate 가속기', 'AI', '예상 총액'],
         rows: [
-          { '구성': '스타터 (HA만)', '허브': '[Home Assistant Green 또는 Pi 5](#raspberry-pi)', 'Frigate 가속기': '—', 'AI': '—', '예상 총액 (2026년 8월)': '약 $199–305' },
-          { '구성': 'HA + 카메라', '허브': '[N150 미니 PC](#mini-pc)', 'Frigate 가속기': '[Intel iGPU, 여유가 더 필요하면 Hailo-8L](#frigate-accelerator)', 'AI': '—', '예상 총액 (2026년 8월)': '약 $190–290' },
-          { '구성': 'HA + 카메라 + 로컬 AI', '허브': '[Ryzen 미니 PC, 32GB](#mini-pc)', 'Frigate 가속기': '내장 iGPU, 카메라가 많으면 [Hailo-8L](#frigate-accelerator)', 'AI': '같은 기기에서 실행 (8B급 모델)', '예상 총액 (2026년 8월)': '약 $649–720' },
-          { '구성': 'HA + 카메라 + 대형 로컬 AI', '허브': '[N150 미니 PC (안정성을 위해 분리)](#mini-pc)', 'Frigate 가속기': '[Hailo-8](#frigate-accelerator)', 'AI': '[중고 RTX 3090 서버, 별도 운영](#server)', '예상 총액 (2026년 8월)': '약 $1,760–1,970 (호스트 PC 제외)' },
+          { '구성': '스타터 (HA만)', '허브': '[Home Assistant Green 또는 Pi 5](#raspberry-pi)', 'Frigate 가속기': '—', 'AI': '—', '예상 총액': '약 $199–305' },
+          { '구성': 'HA + 카메라', '허브': '[N150 미니 PC](#mini-pc)', 'Frigate 가속기': '[Intel iGPU, 여유가 더 필요하면 Hailo-8L](#frigate-accelerator)', 'AI': '—', '예상 총액': '약 $190–290' },
+          { '구성': 'HA + 카메라 + 로컬 AI', '허브': '[Ryzen 미니 PC, 32GB](#mini-pc)', 'Frigate 가속기': '내장 iGPU, 카메라가 많으면 [Hailo-8L](#frigate-accelerator)', 'AI': '같은 기기에서 실행 (8B급 모델)', '예상 총액': '약 $649–720' },
+          { '구성': 'HA + 카메라 + 대형 로컬 AI', '허브': '[N150 미니 PC (안정성을 위해 분리)](#mini-pc)', 'Frigate 가속기': '[Hailo-8](#frigate-accelerator)', 'AI': '[중고 RTX 3090 서버, 별도 운영](#server)', '예상 총액': '약 $1,760–1,970 (호스트 PC 제외)' },
         ],
         tableFormat: true,
-        note: '마지막 구성은 Home Assistant 허브를 자체 저전력 기기에 유지하고 RTX 3090을 별도 기기로 운영합니다 — 이유는 [기기 하나 대 두 개?](#one-or-two)를 참조하십시오. 이 합계는 중고 RTX 3090($1,400–1,550, InsiderLLM 트래커 2026-10-15), N150 미니 PC(약 $190–220), Hailo-8(약 $170–200)을 더한 값으로 $1,760–1,970입니다. GPU에 필요한 호스트 PC(CPU, 메인보드, 파워, RAM, 케이스)는 포함되지 않습니다.',
+        note: '마지막 구성은 Home Assistant 허브를 자체 저전력 기기에 유지하고 RTX 3090을 별도 기기로 운영합니다 — 이유는 [기기 하나 대 두 개?](#one-or-two)를 참조하십시오. 이 합계는 중고 RTX 3090($1,400–1,550, InsiderLLM 트래커 2026-10-15), N150 미니 PC(약 $190–220), Hailo-8(약 $170–200)을 더한 값으로 $1,760–1,970입니다. GPU에 필요한 호스트 PC(CPU, 메인보드, 파워, RAM, 케이스)는 포함되지 않습니다. 표시된 가격은 마지막 갱신 시점의 판매처 페이지 기준 대략적인 가격입니다(최종 업데이트 날짜 참조). 오늘의 가격은 링크된 페이지에서 확인하십시오.',
       },
       faqSection: {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'Frigate는 어떤 하드웨어를 권장합니까?', a: '신규 구성에는 OpenVINO를 통한 Intel 내장 GPU, 또는 감지 성능을 더 원한다면 Hailo-8L(약 $70, 보급형)이나 Hailo-8(약 $170–200, 고성능) M.2 모듈을 Frigate가 권장합니다. Google Coral USB/M.2 TPU는 여전히 작동하지만 이제 레거시이며, 매우 저전력 하드웨어를 제외하고는 신규 설치에 더 이상 권장되지 않습니다.' },
+          { q: 'Frigate는 어떤 하드웨어를 권장합니까?', a: '신규 구성에는 OpenVINO를 통한 Intel 내장 GPU, 또는 감지 성능을 더 원한다면 Hailo-8L(약 $70, 보급형)이나 Hailo-8(약 $170–200, 고성능) M.2 모듈 등을 Frigate 하드웨어 문서(https://docs.frigate.video/frigate/hardware)가 나열합니다. Google Coral USB/M.2 TPU는 여전히 작동하지만 해당 문서에서는 구형 하드웨어로 설명됩니다.' },
           { q: 'Raspberry Pi도 로컬 LLM을 실행할 수 있습니까?', a: 'Pi는 매우 소형 모델만 느리게 실행할 수 있으므로 반응이 빠른 로컬 LLM 어시스턴트에는 이상적이지 않습니다. Home Assistant와 기본 음성은 잘 처리하지만 로컬 AI에는 고성능 내장 GPU나 NPU가 있는 미니 PC, 또는 중고 RTX 3090 서버가 더 나은 선택입니다.' },
-          { q: 'RAM이 얼마나 필요합니까?', a: 'Home Assistant 단독은 몇 GB면 충분합니다. 같은 기기에서 소형 로컬 LLM과 다른 AI 서비스를 실행하려면 더 많은 RAM이 도움이 됩니다. RAM 32GB의 미니 PC는 Qwen3 8B나 Llama 3.1 8B 모델을 원활하게 유지합니다. 실행할 모델 크기에 맞게 RAM을 선택하십시오.' },
+          { q: 'RAM이 얼마나 필요합니까?', a: 'Home Assistant 단독은 몇 GB면 충분합니다. 같은 기기에서 소형 로컬 LLM과 다른 AI 서비스를 실행하려면 더 많은 RAM이 도움이 됩니다. RAM 32GB의 미니 PC는 Qwen3 8B나 Llama 3.1 8B 모델을 실행할 수 있으며, 속도는 양자화와 컨텍스트 크기에 따라 달라집니다. 실행할 모델 크기에 맞게 RAM을 선택하십시오.' },
           { q: '어떤 미니 PC를 구매해야 합니까?', a: 'HA + 카메라라면 Intel N100/N150 미니 PC가 OpenVINO로 Frigate를 가속합니다. HA + 로컬 LLM이라면 RAM 32GB의 Ryzen 미니 PC로 업그레이드하십시오. 구체적인 선택은 Home Assistant + 로컬 AI를 위한 최고의 미니 PC 가이드를 참조하십시오.' },
           { q: '기기 하나로 충분합니까, 두 개가 필요합니까?', a: '미니 PC 하나로 Home Assistant와 소형 로컬 LLM을 함께 실행하는 것이 가장 간단합니다. 안정성을 위해 허브를 저전력 기기에서 매우 안정적으로 유지하고 무거운 AI를 중고 RTX 3090 서버 같은 별도 기기에 오프로드하려면 두 기기로 나누십시오.' },
           { q: '24시간 운영 기기에서 전력 소비가 중요합니까?', a: '전원을 끄지 않는 하드웨어의 경우 전력 소비가 구매 가격보다 중요할 수 있습니다. Raspberry Pi는 몇 와트, N100/N150 미니 PC는 약 10–15W, Ryzen 미니 PC는 부하에 따라 약 15–35W, NVIDIA는 RTX 3090 같은 개별 GPU의 보드 전력을 350W로 밝히고 있습니다 — 이것이 고성능 GPU 서버를 항상 켜두지 않고 별도 기기로 운영해야 하는 이유 중 하나입니다.' },
-          { q: '2026년 가격을 고려할 때 Raspberry Pi는 여전히 가치가 있습니까?', a: 'Home Assistant만 사용한다면 그렇습니다 — 여전히 가장 저전력인 선택지입니다. 하지만 2026년 D램 공급 부족으로 Pi 5 가격이 크게 올라(2026년 8월 기준 RAM에 따라 약 $180–305, 원래는 $80–120) Intel N100/N150 미니 PC와의 가격 차이가 줄어들었습니다. 1년 이내에 카메라나 로컬 LLM을 추가할 가능성이 있다면 대체로 지금은 미니 PC가 더 나은 선택입니다.' },
+          { q: '2026년 가격을 고려할 때 Raspberry Pi는 여전히 가치가 있습니까?', a: 'Home Assistant만 사용한다면 그렇습니다 — 여전히 가장 저전력인 선택지입니다. 하지만 2026년 D램 공급 부족으로 Pi 5 가격이 크게 올라(RAM에 따라 약 $180–305, 원래는 $80–120) Intel N100/N150 미니 PC와의 가격 차이가 줄어들었습니다. 1년 이내에 카메라나 로컬 LLM을 추가할 가능성이 있다면 대체로 지금은 미니 PC가 더 나은 선택입니다.' },
         ],
       },
       relatedReading: {
@@ -1655,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'Home Assistant 하드웨어' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: '미니 PC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: '로컬 LLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1665,9 +1675,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: 'Frigate는 어떤 하드웨어를 권장합니까?', acceptedAnswer: { '@type': 'Answer', text: '신규 구성에는 OpenVINO를 통한 Intel 내장 GPU, 또는 감지 성능을 더 원한다면 Hailo-8L(약 $70)이나 Hailo-8(약 $170–200) M.2 모듈을 Frigate가 권장합니다. Google Coral TPU는 여전히 작동하지만 이제 레거시이며 신규 설치에는 더 이상 권장되지 않습니다.' } },
+        { '@type': 'Question', name: 'Frigate는 어떤 하드웨어를 권장합니까?', acceptedAnswer: { '@type': 'Answer', text: '신규 구성에는 OpenVINO를 통한 Intel 내장 GPU, 또는 감지 성능을 더 원한다면 Hailo-8L(약 $70)이나 Hailo-8(약 $170–200) M.2 모듈 등을 Frigate 하드웨어 문서(https://docs.frigate.video/frigate/hardware)가 나열합니다. Google Coral TPU는 여전히 작동하지만 해당 문서에서는 구형 하드웨어로 설명됩니다.' } },
         { '@type': 'Question', name: 'Raspberry Pi도 로컬 LLM을 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Pi는 매우 소형 모델만 느리게 실행할 수 있습니다. Home Assistant와 기본 음성은 잘 처리하지만 반응이 빠른 로컬 LLM 어시스턴트에는 고성능 내장 GPU나 NPU가 있는 미니 PC, 또는 중고 RTX 3090 서버가 더 적합합니다.' } },
-        { '@type': 'Question', name: 'RAM이 얼마나 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 단독은 몇 GB면 충분합니다. 같은 기기에서 소형 로컬 LLM을 실행하려면 더 많은 RAM이 도움이 됩니다. RAM 32GB의 미니 PC는 Qwen3 8B나 Llama 3.1 8B 모델을 원활하게 유지합니다. 실행할 모델 크기에 맞게 RAM을 선택하십시오.' } },
+        { '@type': 'Question', name: 'RAM이 얼마나 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 단독은 몇 GB면 충분합니다. 같은 기기에서 소형 로컬 LLM을 실행하려면 더 많은 RAM이 도움이 됩니다. RAM 32GB의 미니 PC는 Qwen3 8B나 Llama 3.1 8B 모델을 실행할 수 있으며, 속도는 양자화와 컨텍스트 크기에 따라 달라집니다. 실행할 모델 크기에 맞게 RAM을 선택하십시오.' } },
         { '@type': 'Question', name: '어떤 미니 PC를 구매해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'HA + 카메라라면 Intel N100/N150 미니 PC가 OpenVINO로 Frigate를 가속합니다. HA + 로컬 LLM이라면 RAM 32GB의 Ryzen 미니 PC로 업그레이드하십시오. Home Assistant + 로컬 AI를 위한 최고의 미니 PC 가이드를 참조하십시오.' } },
         { '@type': 'Question', name: '기기 하나로 충분합니까, 두 개가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '미니 PC 하나로 Home Assistant와 소형 로컬 LLM을 함께 실행합니다. 허브를 저전력 기기에서 매우 안정적으로 유지하고 무거운 AI를 중고 RTX 3090 서버 같은 별도 기기에 오프로드하려면 두 기기로 나누십시오.' } },
         { '@type': 'Question', name: '24시간 운영 기기에서 전력 소비가 중요합니까?', acceptedAnswer: { '@type': 'Answer', text: '전원을 끄지 않는 하드웨어의 경우 전력 소비가 구매 가격보다 중요할 수 있습니다. Raspberry Pi는 몇 와트, N100/N150 미니 PC는 약 10–15W, Ryzen 미니 PC는 약 15–35W, NVIDIA는 RTX 3090 같은 개별 GPU의 보드 전력을 350W로 밝히고 있습니다.' } },
@@ -1679,8 +1689,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-fr.webp',
     affiliateDisclosure: true,
@@ -1709,16 +1719,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Quel matériel pour une maison connectée locale avec IA ?',
         answer:
-          'Commencez par le hub : un mini-PC Intel N100/N150 ou une Raspberry Pi 5 fait tourner Home Assistant. Ajoutez un accélérateur Frigate pour les caméras — une iGPU Intel via OpenVINO couvre la plupart des configurations, et un module Hailo-8L ou Hailo-8 M.2 augmente la capacité de détection (le Google Coral est désormais obsolète). Stockez les enregistrements sur un SSD, ou un NAS pour de nombreuses caméras. Pour un LLM local, passez à un mini-PC avec une iGPU/NPU capable ou un boîtier RTX 3090 d\'occasion. Si vous pensez ajouter de l\'IA locale dans l\'année, achetez le mini-PC maintenant plutôt qu\'une Raspberry Pi que vous devrez remplacer plus tard.',
+          'Commencez par le hub : un mini-PC Intel N100/N150 ou une Raspberry Pi 5 fait tourner Home Assistant. Ajoutez un accélérateur Frigate pour les caméras — une iGPU Intel via OpenVINO couvre la plupart des configurations, et un module Hailo-8L ou Hailo-8 M.2 augmente la capacité de détection (la documentation matérielle de Frigate cite des options Hailo et Intel OpenVINO pour les nouvelles installations ; le Google Coral fonctionne toujours, mais y est décrit comme du matériel plus ancien). Stockez les enregistrements sur un SSD, ou un NAS pour de nombreuses caméras. Pour un LLM local, passez à un mini-PC avec une iGPU/NPU capable ou un boîtier RTX 3090 d\'occasion. Si vous pensez ajouter de l\'IA locale dans l\'année, achetez le mini-PC maintenant plutôt qu\'une Raspberry Pi que vous devrez remplacer plus tard.',
         bullets: [
           'Hub : mini-PC Intel N100/N150 ou Raspberry Pi 5',
-          'Frigate : iGPU Intel (OpenVINO) ou Hailo-8L M.2 — le Coral est obsolète',
+          'Frigate : iGPU Intel (OpenVINO) ou Hailo-8L M.2 — le Coral fonctionne toujours, mais c\'est du matériel plus ancien',
           'Stockage : SSD, ou un NAS pour de nombreuses caméras',
           'Montée en gamme LLM local : iGPU/NPU du mini-PC ou RTX 3090 d\'occasion',
           'Si vous pourriez ajouter de l\'IA locale dans l\'année, achetez le mini-PC dès maintenant — moins cher que remplacer une Raspberry Pi plus tard',
           'Décidez d\'abord : HA seul ou HA + caméras + IA locale — cela détermine si vous achetez une fois ou deux',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -1748,10 +1758,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'En bref',
         isTldr: true,
         items: [
-          'Hub : un mini-PC Intel N100/N150 (environ 230–280 €) ou une Raspberry Pi 5 (environ 185–300 € en août 2026, en forte hausse à cause d\'une pénurie de mémoire DRAM) fait tourner Home Assistant',
-          'Frigate : une iGPU Intel (OpenVINO, intégrée à la plupart des mini-PC), un module Hailo-8L M.2 (environ 70–80 €) ou un Hailo-8 M.2 (environ 180–220 €) accélère la détection de caméras — le Google Coral est désormais obsolète et n\'est plus la recommandation de Frigate pour les nouvelles installations',
-          'Stockage : un SSD pour les enregistrements, ou un NAS (Synology DS225+ environ 380–420 €, DS925+ environ 680–750 €, UGREEN NASync environ 700–800 €) dès que vous exploitez plusieurs caméras',
-          'Montée en gamme LLM local : un mini-PC Ryzen (32 Go de RAM, environ 600–650 €) ou une RTX 3090 d\'occasion (environ 1 400–1 550 $ en annonces vendues, selon le suivi d\'InsiderLLM, 2026-10-15)',
+          'Hub : un mini-PC Intel N100/N150 (environ 190–220 $) ou une Raspberry Pi 5 (environ 180–305 $, en forte hausse à cause d\'une pénurie de mémoire DRAM) fait tourner Home Assistant',
+          'Frigate : une iGPU Intel (OpenVINO, intégrée à la plupart des mini-PC), un module Hailo-8L M.2 (environ 70 $) ou un Hailo-8 M.2 (environ 170–200 $) accélère la détection de caméras — la documentation matérielle de Frigate cite Hailo et Intel OpenVINO pour les nouvelles installations, et le Google Coral fonctionne toujours, mais y est décrit comme du matériel plus ancien',
+          'Stockage : un SSD pour les enregistrements, ou un NAS (Synology DS225+ environ 340 $, DS925+ environ 640 $, UGREEN NASync environ 650–730 $) dès que vous exploitez plusieurs caméras',
+          'Montée en gamme LLM local : un mini-PC Ryzen (32 Go de RAM, environ 649 $) ou une RTX 3090 d\'occasion (environ 1 400–1 550 $ en annonces vendues, selon le suivi d\'InsiderLLM, 2026-10-15)',
           'Décidez HA-seul vs HA + caméras + IA locale avant d\'acheter — cela change la bonne machine, et acheter le mini-PC maintenant vaut mieux que remplacer une Pi plus tard',
         ],
       },
@@ -1760,15 +1770,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quel matériel acheter ?',
         content:
           '**Faites correspondre votre objectif à une machine, pas l\'inverse.** Le tableau ci-dessous associe chaque objectif de maison connectée au matériel qui le couvre — chaque ligne renvoie à la recommandation détaillée plus bas dans la page.',
-        columns: ['Votre objectif', 'Achetez ceci', 'Prix estimé (août 2026)'],
+        columns: ['Votre objectif', 'Achetez ceci', 'Prix estimé'],
         rows: [
-          { 'Votre objectif': 'Home Assistant seul', 'Achetez ceci': '[Home Assistant Green ou Raspberry Pi 5](#raspberry-pi)', 'Prix estimé (août 2026)': '179 € (Green) / 185–300 € (Pi 5)' },
-          { 'Votre objectif': 'HA + caméras Frigate', 'Achetez ceci': '[Mini-PC Intel N100/N150](#mini-pc)', 'Prix estimé (août 2026)': 'environ 230–280 €' },
-          { 'Votre objectif': 'HA + un LLM local', 'Achetez ceci': '[Mini-PC Ryzen, 32 Go de RAM](#mini-pc)', 'Prix estimé (août 2026)': 'environ 600–650 €' },
-          { 'Votre objectif': 'HA + un LLM local plus grand', 'Achetez ceci': '[Serveur RTX 3090 d\'occasion](#server)', 'Prix estimé (août 2026)': 'environ 1 400–1 550 $ (GPU seul ; InsiderLLM 2026-10-15)' },
+          { 'Votre objectif': 'Home Assistant seul', 'Achetez ceci': '[Home Assistant Green ou Raspberry Pi 5](#raspberry-pi)', 'Prix estimé': '199 $ (Green) / 180–305 $ (Pi 5)' },
+          { 'Votre objectif': 'HA + caméras Frigate', 'Achetez ceci': '[Mini-PC Intel N100/N150](#mini-pc)', 'Prix estimé': 'environ 190–220 $' },
+          { 'Votre objectif': 'HA + un LLM local', 'Achetez ceci': '[Mini-PC Ryzen, 32 Go de RAM](#mini-pc)', 'Prix estimé': 'environ 649 $' },
+          { 'Votre objectif': 'HA + un LLM local plus grand', 'Achetez ceci': '[Serveur RTX 3090 d\'occasion](#server)', 'Prix estimé': 'environ 1 400–1 550 $ (GPU seul ; InsiderLLM 2026-10-15)' },
         ],
         tableFormat: true,
-        note: 'Les prix sont indicatifs et évoluent — les prix des GPU et de la DRAM en particulier ont été volatils cette année. Le chiffre de la RTX 3090 provient de données d\'annonces eBay États-Unis du [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15), pas d\'un devis ; les prix en France varient selon les taxes et les frais d\'importation. Vérifiez le prix sur l\'annonce avant d\'acheter.',
+        note: 'Les prix sont indicatifs et évoluent — les prix des GPU et de la DRAM en particulier ont été volatils cette année. Le chiffre de la RTX 3090 provient de données d\'annonces eBay États-Unis du [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15), pas d\'un devis ; les prix en France varient selon les taxes et les frais d\'importation. Vérifiez le prix sur l\'annonce avant d\'acheter. Les prix indiqués sont des prix approximatifs relevés sur les pages des vendeurs lors de la dernière mise à jour (voir la date de dernière mise à jour) ; vérifiez le prix du jour sur la page liée. Tous les prix sont des prix de référence américains en USD et peuvent différer dans votre pays.',
         callouts: [
           { type: 'tip', text: 'Vous ne savez pas encore si vous voudrez de l\'IA locale ? Consultez [Ne dépensez pas trop](#dont-overspend) avant d\'acheter la machine la plus chère.' },
         ],
@@ -1780,7 +1790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Home Assistant lui-même est léger et tourne sur du matériel modeste ; les exigences lourdes viennent de la détection de caméras Frigate et d\'un LLM local.** Dimensionnez la machine pour ce que vous allez ajouter, pas seulement pour le hub.',
         items: [
           'Le hub demande peu de puissance pour le contrôle des appareils et les automatisations.',
-          'La détection d\'objets Frigate a besoin d\'un accélérateur : une iGPU Intel via OpenVINO couvre la plupart des configurations, et un module Hailo-8L ou Hailo-8 M.2 augmente la capacité. Le Google Coral (TPU USB/M.2) fonctionne toujours, mais il est désormais obsolète — Frigate ne le recommande plus pour les nouvelles installations.',
+          'La détection d\'objets Frigate a besoin d\'un accélérateur : une iGPU Intel via OpenVINO couvre la plupart des configurations, et un module Hailo-8L ou Hailo-8 M.2 augmente la capacité. Le Google Coral (TPU USB/M.2) fonctionne toujours ; la [documentation matérielle de Frigate](https://docs.frigate.video/frigate/hardware) cite des options Hailo et Intel OpenVINO pour les nouvelles installations et décrit le Coral comme du matériel plus ancien.',
           'Les modèles Whisper plus grands et l\'inférence de LLM local sont les charges les plus exigeantes — prévoyez la RAM et un GPU/NPU en conséquence.',
           'Stockez les enregistrements de caméras sur un SSD ; passez à un NAS dès que vous exploitez plusieurs caméras en continu.',
         ],
@@ -1789,16 +1799,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**Une Raspberry Pi 5 est le moyen le moins gourmand en énergie de faire tourner Home Assistant pour un usage maison connectée typique, mais une pénurie de DRAM en 2026 a fait grimper le prix des cartes bien plus fortement — la carte 8 Go coûte désormais environ 185–220 €, et la 16 Go environ 280–300 €, toutes deux bien au-dessus de leur prix de lancement d\'environ 80/120 $, et les analystes n\'anticipent pas de normalisation avant fin 2027.** Elle peine toujours avec l\'inférence de LLM et les grands modèles Whisper.',
+          '**Une Raspberry Pi 5 est le moyen le moins gourmand en énergie de faire tourner Home Assistant pour un usage maison connectée typique, mais une pénurie de DRAM en 2026 a fait grimper le prix des cartes bien plus fortement — la carte 8 Go coûte désormais environ 180–220 $, et la 16 Go environ 280–305 $, toutes deux bien au-dessus de leur prix de lancement d\'environ 80/120 $ ; consultez la page Raspberry Pi liée pour les prix actuels.** Elle peine toujours avec l\'inférence de LLM et les grands modèles Whisper.',
         items: [
           'Excellente pour le contrôle des appareils, les automatisations et une petite configuration vocale locale.',
           'L\'inférence de LLM sur une Pi se limite à des modèles très petits et lents — associez-la à un HAT Hailo-8L M.2 si vous voulez la détection Frigate.',
           'Choisissez une Pi 5 si vous voulez les bases à faible consommation et êtes certain de ne pas ajouter de LLM local. Si vous pensez vouloir de l\'IA locale dans l\'année, passez directement au mini-PC — il coûte à peine plus cher et vous évite d\'acheter deux fois.',
-          'Pour un appareil prêt à l\'emploi, le Home Assistant Green est livré opérationnel (environ 179 € en 2026, contre un prix de lancement de 99 $). Le Home Assistant Yellow a été abandonné en octobre 2025 — le Green est désormais le seul hub officiel de la marque.',
+          'Pour un appareil prêt à l\'emploi, le Home Assistant Green est livré opérationnel (environ 199 $ en 2026, contre un prix de lancement de 99 $). Le Home Assistant Yellow a été abandonné en octobre 2025 — le Green est désormais le seul hub officiel de la marque.',
         ],
         affiliateLinks: [
-          { label: 'Voir le prix de la Raspberry Pi 5 →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '185–300 €' },
-          { label: 'Voir le prix du Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '179 €' },
+          { label: 'Voir le prix de la Raspberry Pi 5 →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '180–305 $' },
+          { label: 'Voir le prix du Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 $' },
         ],
       },
       miniPc: {
@@ -1807,30 +1817,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un mini-PC est le meilleur choix en une seule machine pour Home Assistant plus l\'IA locale, avec assez de RAM et une iGPU ou NPU capable pour exécuter un petit LLM et accélérer Frigate.** Il équilibre puissance, taille et coût — c\'est la catégorie où il vaut la peine de dépenser plus si vous voulez une seule machine pour les deux usages.',
         items: [
-          'Meilleur choix économique : un mini-PC basse consommation Intel N100/N150 fait tourner Home Assistant et accélère Frigate via l\'iGPU Intel (OpenVINO) — l\'option par défaut pratique pour une machine hub-plus-caméras. Le Beelink EQ14 (Intel N150, 16 Go de RAM) coûte environ 230–280 € en août 2026 — bon pour un fonctionnement 24 h/24 et une faible consommation, mais sous-dimensionné pour un LLM local.',
-          'Meilleur choix pour l\'IA locale : pour un LLM local sur la même machine, passez à un mini-PC Ryzen avec 32 Go de RAM. Le Beelink SER8 (Ryzen 7 8845HS) coûte environ 600–650 € en août 2026 et fait tourner un modèle Qwen3 8B ou Llama 3.1 8B via Ollama à une vitesse utilisable, aux côtés de Home Assistant et Frigate. Priorisez la RAM et un GPU intégré ou NPU capable pour une latence plus faible.',
-          'Si vous achetez une seule machine pour Home Assistant et l\'IA locale ensemble, le mini-PC Ryzen justifie son surcoût par rapport au N150 — c\'est le seul des deux qui fait vraiment tourner un LLM à une vitesse utilisable.',
+          'Meilleur choix économique : un mini-PC basse consommation Intel N100/N150 fait tourner Home Assistant et accélère Frigate via l\'iGPU Intel (OpenVINO) — l\'option par défaut pratique pour une machine hub-plus-caméras. Le Beelink EQ14 (Intel N150, 16 Go de RAM) coûte environ 190–220 $ — bon pour un fonctionnement 24 h/24 et une faible consommation, mais sous-dimensionné pour un LLM local.',
+          'Meilleur choix pour l\'IA locale : pour un LLM local sur la même machine, passez à un mini-PC Ryzen avec 32 Go de RAM. Le Beelink SER8 (Ryzen 7 8845HS) coûte environ 649 $ ; c\'est un mini-PC Ryzen 7 capable d\'exécuter des modèles de classe 8B comme Qwen3 8B ou Llama 3.1 8B via Ollama ; la vitesse dépend de la quantification et de la taille de contexte, et PromptQuorum n\'a pas réalisé de benchmark de cette unité. Priorisez la RAM et un GPU intégré ou NPU capable pour une latence plus faible.',
+          'Si vous achetez une seule machine pour Home Assistant et l\'IA locale ensemble, le mini-PC Ryzen peut justifier son surcoût par rapport au N150 — il offre plus de marge pour un modèle de classe 8B.',
           'Pour des choix précis, voir [meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) et, inter-clusters, [meilleurs mini-PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm).',
         ],
         affiliateLinks: [
-          { label: 'Voir le prix de l\'EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '230–280 €' },
-          { label: 'Voir le prix du SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: 'environ 600–650 €' },
+          { label: 'Voir le prix de l\'EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '190–220 $' },
+          { label: 'Voir le prix du SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: 'environ 649 $' },
         ],
       },
       frigateAccelerator: {
         id: 'frigate-accelerator',
         title: 'Vous utilisez des caméras de sécurité ? Choisissez votre accélérateur Frigate',
         content:
-          '**Le nombre de caméras et la marge de détection nécessaire déterminent l\'accélérateur, indépendamment de la machine qui fait tourner le hub.** Frigate ne recommande plus le Google Coral pour les nouvelles installations — il oriente désormais les nouveaux utilisateurs vers Hailo, ou vers l\'iGPU Intel intégrée à la machine hôte.',
+          '**Le nombre de caméras et la marge de détection nécessaire déterminent l\'accélérateur, indépendamment de la machine qui fait tourner le hub.** La [documentation matérielle de Frigate](https://docs.frigate.video/frigate/hardware) cite des options Hailo et Intel OpenVINO pour les nouvelles installations ; le Google Coral fonctionne toujours, mais y est décrit comme du matériel plus ancien.',
         items: [
           '1 à 4 caméras : l\'iGPU Intel intégrée à un mini-PC N100/N150, utilisée via OpenVINO, couvre la plupart des configurations domestiques sans coût matériel supplémentaire.',
-          '4 à 10 caméras, ou pour davantage de marge de détection sur du matériel non Intel : un module Hailo-8L M.2 (environ 70–80 € en août 2026) est la recommandation basse consommation actuelle de Frigate — il joue le rôle que le Coral tenait autrefois, en tant que carte d\'extension officiellement bien supportée.',
-          '10 caméras et plus, ou des traitements plus lourds (reconnaissance faciale/de plaques en plus de la détection) : un module Hailo-8 M.2 (environ 180–220 €) apporte nettement plus de débit.',
+          '4 à 10 caméras, ou pour davantage de marge de détection sur du matériel non Intel : un module Hailo-8L M.2 (environ 70 $) est la recommandation basse consommation actuelle de Frigate — il joue le rôle que le Coral tenait autrefois, en tant que carte d\'extension officiellement bien supportée.',
+          '10 caméras et plus, ou des traitements plus lourds (reconnaissance faciale/de plaques en plus de la détection) : un module Hailo-8 M.2 (environ 170–200 $) apporte nettement plus de débit.',
           'Vous possédez déjà un Coral ? Il continue de fonctionner — ceci ne concerne que les achats pour une nouvelle installation, pas une raison de remplacer un Coral qui fonctionne bien.',
         ],
+        callouts: [{ type: 'warning', text: 'Les caméras et la reconnaissance faciale ou de plaques d\'immatriculation sont réglementées. Dans l\'UE, le RGPD peut s\'appliquer dès que des caméras captent l\'espace public, des voisins ou d\'autres personnes, et l\'identification biométrique est soumise à des règles plus strictes. Vérifiez la législation locale avant l\'installation ; ceci ne constitue pas un conseil juridique.' }],
         affiliateLinks: [
-          { label: 'Voir le prix du Hailo-8L →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: 'environ 70–80 €' },
-          { label: 'Voir le prix du Hailo-8 →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: 'environ 180–220 €' },
+          { label: 'Voir le prix du Hailo-8L →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: 'environ 70 $' },
+          { label: 'Voir le prix du Hailo-8 →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: 'environ 170–200 $' },
         ],
       },
       nas: {
@@ -1839,15 +1850,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un NAS peut héberger Home Assistant dans un conteneur aux côtés du stockage et des enregistrements Frigate, s\'il a assez de CPU et de RAM — une bonne option si vous en possédez déjà un, mais pas la bonne raison d\'acheter votre premier NAS.** N\'achetez pas un NAS spécifiquement pour faire tourner un LLM local : un mini-PC dédié ou une machine avec GPU constitue une meilleure plateforme d\'IA pour le même budget.',
         items: [
-          '2 à 4 caméras / stockage plus léger : le Synology DS225+ (environ 380–420 € en août 2026) couvre Home Assistant en conteneur plus les enregistrements Frigate pour un petit nombre de caméras.',
-          '4 à 10 caméras / plus de marge : le Synology DS925+ (environ 680–750 €) apporte plus de marge CPU/RAM pour davantage d\'add-ons et de caméras.',
-          'Stockage plus IA locale en une machine : les modèles UGREEN NASync (gamme DXP4800 Plus, environ 700–800 €) sont livrés avec une option de LLM local intégrée et du matériel plus récent (DDR5, 10GbE sans carte d\'extension) à un prix proche du DS925+.',
+          '2 à 4 caméras / stockage plus léger : le Synology DS225+ (environ 340 $) couvre Home Assistant en conteneur plus les enregistrements Frigate pour un petit nombre de caméras.',
+          '4 à 10 caméras / plus de marge : le Synology DS925+ (environ 640 $) apporte plus de marge CPU/RAM pour davantage d\'add-ons et de caméras.',
+          'Stockage plus IA locale en une machine : les modèles UGREEN NASync (gamme DXP4800 Plus, environ 650–730 $) proposent du matériel plus récent (DDR5, 10GbE sans carte d\'extension) à un prix proche du DS925+, et certains modèles annoncent une option de LLM local ; consultez la page du fabricant.',
           'L\'inférence de LLM sur un NAS dépend toujours fortement de son matériel — la plupart des NAS n\'ont pas de GPU dédié capable, donc considérez l\'option LLM intégrée comme un confort, pas comme un substitut au niveau RTX 3090 ci-dessous si vous voulez vraiment un modèle volumineux.',
         ],
         affiliateLinks: [
-          { label: 'Voir le prix du DS225+ →', url: 'https://www.synology.com/fr-fr/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: 'environ 380–420 €' },
-          { label: 'Voir le prix du DS925+ →', url: 'https://www.synology.com/fr-fr/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: 'environ 680–750 €' },
-          { label: 'Voir le prix de l\'UGREEN NASync →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: 'environ 700–800 €' },
+          { label: 'Voir le prix du DS225+ →', url: 'https://www.synology.com/fr-fr/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: 'environ 340 $' },
+          { label: 'Voir le prix du DS925+ →', url: 'https://www.synology.com/fr-fr/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: 'environ 640 $' },
+          { label: 'Voir le prix de l\'UGREEN NASync →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: 'environ 650–730 $' },
         ],
       },
       server: {
@@ -1857,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Un serveur dédié avec un GPU dédié constitue la montée en gamme pour exécuter un LLM local plus grand aux côtés de nombreuses caméras.** Il offre le plus de marge à un coût et une consommation supérieurs — et les prix des GPU ont beaucoup bougé en 2026, donc traitez les chiffres ci-dessous comme un instantané, pas une valeur fixe.',
         items: [
           'Une RTX 3090 d\'occasion (24 Go de VRAM) est un choix courant pour les LLM locaux grâce à sa VRAM. Le [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15) relève des annonces vendues d\'occasion d\'environ 1 400–1 550 $ — données eBay États-Unis, ni devis ni offre ; les prix en France varient selon les taxes et les frais d\'importation. Des modèles quantifiés en Q4 jusqu\'à environ 70B peuvent être possibles selon la quantification, la taille de contexte et l\'offloading ; considérez cela comme une plage de capacité, pas une garantie pour tout modèle de 70B.',
-          'Une RTX 3060 d\'occasion (12 Go) est l\'alternative économique pour une machine à GPU dédié — elle gère confortablement les modèles de 7B à 13B, sans la marge de VRAM ni le prix de la RTX 3090.',
+          'Une RTX 3060 d\'occasion (12 Go) est l\'alternative économique pour une machine à GPU dédié — elle peut gérer des modèles de 7B à 13B selon la quantification, sans la marge de VRAM ni le prix de la RTX 3090.',
           'Idéal pour de nombreuses caméras, un LLM plus grand et plusieurs utilisateurs. Consommation et coût supérieurs à un mini-PC — consultez la section sur la consommation électrique ci-dessous avant de vous engager sur ce niveau.',
           'Surdimensionné pour une maison connectée basique — réservez-le à un usage intensif d\'IA locale, et gardez le hub Home Assistant sur une machine séparée à faible consommation pour la fiabilité (voir Une machine ou deux ? ci-dessous).',
         ],
@@ -1865,6 +1876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Voir les annonces de RTX 3090 d\'occasion →', url: 'https://www.ebay.fr/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: 'environ 1 400–1 550 $' },
           { label: 'Voir les annonces de RTX 3060 d\'occasion →', url: 'https://www.ebay.fr/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: 'Un GPU de 350 W dans un serveur fonctionnant en continu nécessite une alimentation de qualité correctement dimensionnée, une bonne ventilation et un emplacement judicieux. Les cartes d\'occasion peuvent présenter de l\'usure et ne pas avoir de garantie : examinez les conditions du vendeur. Suivez les consignes du fabricant ; ceci ne constitue pas un conseil électrique.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-fr.svg',
         imageCaption: 'Capacité de LLM local par niveau de matériel : une Raspberry Pi 5 ne fait tourner que des modèles minuscules, un mini-PC Intel N100/N150 gère de petits modèles, un mini-PC Ryzen (32 Go de RAM) fait tourner des modèles de 7B à 8B, et une RTX 3090 d\'occasion (24 Go de VRAM) monte jusqu\'à environ 70B en quantification Q4 selon la configuration.',
       },
@@ -1872,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: 'Ne dépensez pas trop pour votre serveur Home Assistant',
         content:
-          '**Acheter plus de matériel que votre usage ne le nécessite est l\'achat superflu le plus courant dans cette catégorie — faites correspondre la machine à ce que vous comptez réellement faire tourner.**',
+          '**Acheter plus de matériel que votre usage ne le nécessite est un achat superflu fréquent dans cette catégorie — faites correspondre la machine à ce que vous comptez réellement faire tourner.**',
         items: [
           'Home Assistant seul ? Vous n\'avez pas besoin d\'un GPU RTX, et probablement pas non plus d\'un mini-PC — une Raspberry Pi 5 ou un Home Assistant Green suffit.',
           'Home Assistant plus caméras Frigate ? Vous n\'avez pas besoin d\'une station de travail coûteuse — un mini-PC Intel N100/N150 avec son iGPU intégrée suffit pour la plupart des nombres de caméras domestiques.',
@@ -1930,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Si vous choisissez une machine aujourd\'hui et ne savez pas quel niveau vous convient, voici une base raisonnable compte tenu des arbitrages ci-dessus — vos besoins réels peuvent pointer ailleurs, et aucun des choix ci-dessous n\'a été testé ni évalué par PromptQuorum.**',
         items: [
           'Pour une maison connectée locale classique (Home Assistant plus quelques appareils Zigbee/Matter) : un mini-PC Intel N150 est un choix par défaut sensé — il couvre aussi Frigate si vous ajoutez des caméras plus tard.',
-          'Pour Home Assistant plus caméras plus un petit assistant IA local : un mini-PC Ryzen avec 32 Go de RAM est un choix raisonnable en une seule machine — c\'est la machine la moins chère qui fait vraiment tourner un LLM de classe 8B à une vitesse utilisable.',
+          'Pour Home Assistant plus caméras plus un petit assistant IA local : un mini-PC Ryzen avec 32 Go de RAM est un choix raisonnable en une seule machine — c\'est une façon plus économique d\'exécuter un modèle de classe 8B.',
           'Pour une IA locale sérieuse (modèles de classe 32B ou plus) : un serveur RTX 3090 séparé, tenu à l\'écart du hub Home Assistant, est la montée en gamme raisonnable compte tenu des prix actuels des GPU d\'occasion.',
           'Une nouvelle installation orientée IA dès le départ convient généralement moins bien à une Raspberry Pi, compte tenu des prix de la Pi en 2026 et de ses limites en matière de LLM — un mini-PC est souvent d\'un prix proche et constitue une bien meilleure plateforme d\'IA.',
         ],
@@ -1940,27 +1952,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configurations complètes de maison connectée locale',
         content:
           '**La plupart des acheteurs ont besoin de plus d\'un produit — au minimum un hub, un accélérateur Frigate et du stockage, plus une machine IA si vous voulez de l\'inférence de LLM local.** Ces trois configurations combinent les choix ci-dessus par scénario ; chaque produit renvoie à sa recommandation complète plus haut sur cette page.',
-        columns: ['Configuration', 'Hub', 'Accélérateur Frigate', 'IA', 'Total estimé (août 2026)'],
+        columns: ['Configuration', 'Hub', 'Accélérateur Frigate', 'IA', 'Total estimé'],
         rows: [
-          { 'Configuration': 'Débutant (HA seul)', 'Hub': '[Home Assistant Green ou Pi 5](#raspberry-pi)', 'Accélérateur Frigate': '—', 'IA': '—', 'Total estimé (août 2026)': 'environ 179–300 €' },
-          { 'Configuration': 'HA + caméras', 'Hub': '[Mini-PC N150](#mini-pc)', 'Accélérateur Frigate': '[iGPU Intel, ou Hailo-8L pour plus de marge](#frigate-accelerator)', 'IA': '—', 'Total estimé (août 2026)': 'environ 230–360 €' },
-          { 'Configuration': 'HA + caméras + IA locale', 'Hub': '[Mini-PC Ryzen, 32 Go](#mini-pc)', 'Accélérateur Frigate': 'iGPU intégrée, ou [Hailo-8L pour plus de caméras](#frigate-accelerator)', 'IA': 'Tourne sur la même machine (modèle de classe 8B)', 'Total estimé (août 2026)': 'environ 600–730 €' },
-          { 'Configuration': 'HA + caméras + IA locale volumineuse', 'Hub': '[Mini-PC N150 (gardé séparé pour la fiabilité)](#mini-pc)', 'Accélérateur Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Serveur RTX 3090 d\'occasion, séparé](#server)', 'Total estimé (août 2026)': 'environ 1 760–1 970 $ (hors PC hôte)' },
+          { 'Configuration': 'Débutant (HA seul)', 'Hub': '[Home Assistant Green ou Pi 5](#raspberry-pi)', 'Accélérateur Frigate': '—', 'IA': '—', 'Total estimé': 'environ 199–305 $' },
+          { 'Configuration': 'HA + caméras', 'Hub': '[Mini-PC N150](#mini-pc)', 'Accélérateur Frigate': '[iGPU Intel, ou Hailo-8L pour plus de marge](#frigate-accelerator)', 'IA': '—', 'Total estimé': 'environ 190–290 $' },
+          { 'Configuration': 'HA + caméras + IA locale', 'Hub': '[Mini-PC Ryzen, 32 Go](#mini-pc)', 'Accélérateur Frigate': 'iGPU intégrée, ou [Hailo-8L pour plus de caméras](#frigate-accelerator)', 'IA': 'Tourne sur la même machine (modèle de classe 8B)', 'Total estimé': 'environ 649–720 $' },
+          { 'Configuration': 'HA + caméras + IA locale volumineuse', 'Hub': '[Mini-PC N150 (gardé séparé pour la fiabilité)](#mini-pc)', 'Accélérateur Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Serveur RTX 3090 d\'occasion, séparé](#server)', 'Total estimé': 'environ 1 760–1 970 $ (hors PC hôte)' },
         ],
         tableFormat: true,
-        note: 'La dernière configuration garde le hub Home Assistant sur sa propre machine basse consommation et fait tourner la RTX 3090 comme une machine séparée — voir [Une machine ou deux ?](#one-or-two) pour comprendre pourquoi. Le total additionne une RTX 3090 d\'occasion (1 400–1 550 $, suivi d\'InsiderLLM, 2026-10-15), un mini-PC N150 (environ 190–220 $) et un Hailo-8 (environ 170–200 $) : de 1 760 à 1 970 $. Il exclut le PC hôte (CPU, carte mère, alimentation, RAM, boîtier) dont le GPU a besoin.',
+        note: 'La dernière configuration garde le hub Home Assistant sur sa propre machine basse consommation et fait tourner la RTX 3090 comme une machine séparée — voir [Une machine ou deux ?](#one-or-two) pour comprendre pourquoi. Le total additionne une RTX 3090 d\'occasion (1 400–1 550 $, suivi d\'InsiderLLM, 2026-10-15), un mini-PC N150 (environ 190–220 $) et un Hailo-8 (environ 170–200 $) : de 1 760 à 1 970 $. Il exclut le PC hôte (CPU, carte mère, alimentation, RAM, boîtier) dont le GPU a besoin. Les prix indiqués sont des prix approximatifs relevés sur les pages des vendeurs lors de la dernière mise à jour (voir la date de dernière mise à jour) ; vérifiez le prix du jour sur la page liée. Tous les prix sont des prix de référence américains en USD et peuvent différer dans votre pays.',
       },
       faqSection: {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
-          { q: 'Quel matériel Frigate recommande-t-il ?', a: 'Pour les nouvelles installations, Frigate recommande une iGPU Intel via OpenVINO, ou un module Hailo-8L (environ 70–80 €, économique) ou Hailo-8 (environ 180–220 €, plus rapide) au format M.2 pour davantage de capacité de détection. Le Google Coral (TPU USB/M.2) fonctionne toujours, mais il est désormais obsolète — Frigate ne le recommande plus pour les nouvelles installations, sauf sur du matériel très basse consommation.' },
+          { q: 'Quel matériel Frigate recommande-t-il ?', a: 'Pour les nouvelles installations, la documentation matérielle de Frigate (https://docs.frigate.video/frigate/hardware) cite, entre autres, une iGPU Intel via OpenVINO, ou un module Hailo-8L (environ 70 $, économique) ou Hailo-8 (environ 170–200 $, plus rapide) au format M.2 pour davantage de capacité de détection. Le Google Coral (TPU USB/M.2) fonctionne toujours, mais cette documentation le décrit comme du matériel plus ancien.' },
           { q: 'Une Raspberry Pi peut-elle aussi exécuter un LLM local ?', a: 'Une Pi ne peut exécuter que des modèles très petits, et lentement, elle n\'est donc pas idéale pour un assistant LLM local réactif. Elle gère bien Home Assistant et la voix basique, mais pour l\'IA locale un mini-PC avec une iGPU ou NPU capable — ou un boîtier RTX 3090 d\'occasion — est le meilleur choix.' },
-          { q: 'De combien de RAM ai-je besoin ?', a: 'Home Assistant seul tourne dans quelques gigaoctets. Pour exécuter un petit LLM local et d\'autres services d\'IA sur la même machine, plus de RAM aide ; un mini-PC avec 32 Go de RAM et une iGPU/NPU capable garde un modèle Qwen3 8B ou Llama 3.1 8B réactif. Adaptez la RAM à la taille du modèle prévu.' },
+          { q: 'De combien de RAM ai-je besoin ?', a: 'Home Assistant seul tourne dans quelques gigaoctets. Pour exécuter un petit LLM local et d\'autres services d\'IA sur la même machine, plus de RAM aide ; un mini-PC avec 32 Go de RAM et une iGPU/NPU capable peut exécuter un modèle Qwen3 8B ou Llama 3.1 8B ; la vitesse dépend de la quantification et de la taille de contexte. Adaptez la RAM à la taille du modèle prévu.' },
           { q: 'Quel mini-PC choisir ?', a: 'Pour HA plus caméras, un mini-PC Intel N100/N150 accélère Frigate via OpenVINO. Pour HA plus un LLM local, passez à un mini-PC Ryzen avec 32 Go de RAM. Voir le guide des meilleurs mini-PC pour Home Assistant + IA locale pour des choix précis.' },
           { q: 'Une machine ou deux ?', a: 'Une machine (un mini-PC) est la plus simple et fait tourner Home Assistant plus un petit LLM local ensemble. Séparez en deux si vous voulez garder le hub ultra-fiable sur une machine basse consommation et déporter l\'IA lourde vers une machine séparée comme un serveur RTX 3090 d\'occasion.' },
           { q: 'La consommation électrique compte-t-elle pour une machine 24 h/24 ?', a: 'Elle compte plus que le prix d\'achat pour du matériel qui ne s\'éteint jamais. Une Raspberry Pi consomme quelques watts, un mini-PC N100/N150 environ 10–15 W, un mini-PC Ryzen entre 15 et 35 W selon la charge, et NVIDIA indique 350 W de puissance carte pour un GPU dédié comme la RTX 3090 — une raison de faire tourner un serveur GPU puissant sur une machine séparée plutôt que toujours active.' },
-          { q: 'Une Raspberry Pi vaut-elle encore le coup avec les prix de 2026 ?', a: 'Pour Home Assistant seul, oui — elle reste l\'option la moins gourmande en énergie. Mais une pénurie de DRAM en 2026 a fait grimper fortement les prix de la Pi 5 (environ 185–300 € selon la RAM en août 2026, contre un prix d\'origine de 80–120 $), réduisant l\'écart de prix avec un mini-PC N100/N150. Si vous pourriez ajouter des caméras ou un LLM local dans l\'année, le mini-PC est généralement le meilleur achat dès maintenant.' },
+          { q: 'Une Raspberry Pi vaut-elle encore le coup avec les prix de 2026 ?', a: 'Pour Home Assistant seul, oui — elle reste l\'option la moins gourmande en énergie. Mais une pénurie de DRAM en 2026 a fait grimper fortement les prix de la Pi 5 (environ 180–305 $ selon la RAM, contre un prix d\'origine de 80–120 $), réduisant l\'écart de prix avec un mini-PC N100/N150. Si vous pourriez ajouter des caméras ou un LLM local dans l\'année, le mini-PC est généralement le meilleur achat dès maintenant.' },
         ],
       },
       relatedReading: {
@@ -1990,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'Matériel Home Assistant' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: 'LLM local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -2000,13 +2012,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        { '@type': 'Question', name: 'Quel matériel Frigate recommande-t-il ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour les nouvelles installations, Frigate recommande une iGPU Intel via OpenVINO, ou un module Hailo-8L (environ 70–80 €) ou Hailo-8 (environ 180–220 €) au format M.2 pour davantage de capacité de détection. Le Google Coral fonctionne toujours, mais il est désormais obsolète et n\'est plus recommandé pour les nouvelles installations.' } },
+        { '@type': 'Question', name: 'Quel matériel Frigate recommande-t-il ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour les nouvelles installations, la documentation matérielle de Frigate (https://docs.frigate.video/frigate/hardware) cite, entre autres, une iGPU Intel via OpenVINO, ou un module Hailo-8L (environ 70 $) ou Hailo-8 (environ 170–200 $) au format M.2 pour davantage de capacité de détection. Le Google Coral fonctionne toujours, mais cette documentation le décrit comme du matériel plus ancien.' } },
         { '@type': 'Question', name: 'Une Raspberry Pi peut-elle aussi exécuter un LLM local ?', acceptedAnswer: { '@type': 'Answer', text: 'Une Pi ne peut exécuter que des modèles très petits, et lentement. Elle gère bien Home Assistant et la voix basique, mais pour un assistant LLM local réactif, un mini-PC avec iGPU ou NPU capable, ou un boîtier RTX 3090 d\'occasion, est meilleur.' } },
-        { '@type': 'Question', name: 'De combien de RAM ai-je besoin ?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant seul tourne dans quelques gigaoctets. Pour exécuter un petit LLM local sur la même machine, plus de RAM aide ; un mini-PC avec 32 Go de RAM garde un modèle Qwen3 8B ou Llama 3.1 8B réactif. Adaptez la RAM à la taille du modèle prévu.' } },
+        { '@type': 'Question', name: 'De combien de RAM ai-je besoin ?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant seul tourne dans quelques gigaoctets. Pour exécuter un petit LLM local sur la même machine, plus de RAM aide ; un mini-PC avec 32 Go de RAM peut exécuter un modèle Qwen3 8B ou Llama 3.1 8B ; la vitesse dépend de la quantification et de la taille de contexte. Adaptez la RAM à la taille du modèle prévu.' } },
         { '@type': 'Question', name: 'Quel mini-PC choisir ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour HA plus caméras, un mini-PC Intel N100/N150 accélère Frigate via OpenVINO. Pour HA plus un LLM local, passez à un mini-PC Ryzen avec 32 Go de RAM. Voir le guide des meilleurs mini-PC pour Home Assistant + IA locale.' } },
         { '@type': 'Question', name: 'Une machine ou deux ?', acceptedAnswer: { '@type': 'Answer', text: 'Un mini-PC fait tourner Home Assistant plus un petit LLM local ensemble. Séparez en deux si vous voulez le hub ultra-fiable sur une machine basse consommation et l\'IA lourde déportée vers une machine séparée comme un serveur RTX 3090 d\'occasion.' } },
         { '@type': 'Question', name: 'La consommation électrique compte-t-elle pour une machine 24 h/24 ?', acceptedAnswer: { '@type': 'Answer', text: 'Elle compte plus que le prix d\'achat pour du matériel qui ne s\'éteint jamais. Une Raspberry Pi consomme quelques watts, un mini-PC N100/N150 environ 10–15 W, un mini-PC Ryzen environ 15–35 W, et NVIDIA indique 350 W de puissance carte pour un GPU dédié comme la RTX 3090.' } },
-        { '@type': 'Question', name: 'Une Raspberry Pi vaut-elle encore le coup avec les prix de 2026 ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour Home Assistant seul, oui. Mais une pénurie de DRAM en 2026 a fait grimper les prix de la Pi 5 à environ 185–300 € selon la RAM, contre un prix d\'origine de 80–120 $, réduisant l\'écart avec un mini-PC N100/N150 — qui est le meilleur achat si vous pourriez ajouter des caméras ou un LLM local dans l\'année.' } },
+        { '@type': 'Question', name: 'Une Raspberry Pi vaut-elle encore le coup avec les prix de 2026 ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour Home Assistant seul, oui. Mais une pénurie de DRAM en 2026 a fait grimper les prix de la Pi 5 à environ 180–305 $ selon la RAM, contre un prix d\'origine de 80–120 $, réduisant l\'écart avec un mini-PC N100/N150 — qui est le meilleur achat si vous pourriez ajouter des caméras ou un LLM local dans l\'année.' } },
       ],
     },
   },
@@ -2014,8 +2026,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-ja.webp',
     affiliateDisclosure: true,
@@ -2044,16 +2056,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'AI付きのローカルスマートホームにはどんなハードウェアが必要ですか？',
         answer:
-          'まずハブから始めます。Intel N100/N150 ミニPC または Raspberry Pi 5 が Home Assistant を動かします。カメラ用に Frigate 加速器を追加——OpenVINO 経由の Intel 内蔵GPU がほとんどの構成をカバーし、Hailo-8L または Hailo-8 M.2 モジュールが検出能力を高めます（Google Coral は現在レガシー扱いです）。録画は SSD、カメラが多いなら NAS に保存します。ローカルLLM には、高性能な内蔵GPU/NPU を備えたミニPC、または中古の RTX 3090 搭載機に上げましょう。1年以内にローカルAIを追加しそうなら、あとで買い替える Raspberry Pi ではなく、今のうちにミニPCを買いましょう。',
+          'まずハブから始めます。Intel N100/N150 ミニPC または Raspberry Pi 5 が Home Assistant を動かします。カメラ用に Frigate 加速器を追加——OpenVINO 経由の Intel 内蔵GPU がほとんどの構成をカバーし、Hailo-8L または Hailo-8 M.2 モジュールが検出能力を高めます（Frigate のハードウェア文書は新規構築向けに Hailo と Intel OpenVINO の選択肢を挙げており、Google Coral は今も動作しますが、そこでは旧世代のハードウェアとして説明されています）。録画は SSD、カメラが多いなら NAS に保存します。ローカルLLM には、高性能な内蔵GPU/NPU を備えたミニPC、または中古の RTX 3090 搭載機に上げましょう。1年以内にローカルAIを追加しそうなら、あとで買い替える Raspberry Pi ではなく、今のうちにミニPCを買いましょう。',
         bullets: [
           'ハブ：Intel N100/N150 ミニPC または Raspberry Pi 5',
-          'Frigate：Intel 内蔵GPU（OpenVINO）または Hailo-8L M.2——Coral はレガシー',
+          'Frigate：Intel 内蔵GPU（OpenVINO）または Hailo-8L M.2——Coral は今も動作するが旧世代のハードウェア',
           'ストレージ：SSD、カメラが多いなら NAS',
           'ローカルLLM の上位構成：ミニPC の内蔵GPU/NPU または中古 RTX 3090',
           '1年以内にローカルAIを追加しそうなら、今すぐミニPCを買う方が得——後で Raspberry Pi を買い替えるより安上がり',
           'まず決める：HAのみか、HA＋カメラ＋ローカルAIか——これで一度で済むか二度買うかが決まる',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -2083,10 +2095,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要点まとめ',
         isTldr: true,
         items: [
-          'ハブ：Intel N100/N150 ミニPC（約22,000〜27,000円）または Raspberry Pi 5（2026年8月時点で約22,000〜38,000円、DRAM不足で大幅値上がり）が Home Assistant を動かす',
-          'Frigate：多くのミニPCに内蔵された Intel 内蔵GPU（OpenVINO 経由）、Hailo-8L M.2 モジュール（約10,000円）、または Hailo-8 M.2（約25,000〜30,000円）がカメラ検出を加速——Google Coral は現在レガシーで、新規構築での Frigate の推奨からは外れています',
-          'ストレージ：録画は SSD、カメラが増えたら（Synology DS225+ 約50,000円、DS925+ 約95,000円、UGREEN NASync 約95,000〜105,000円）NAS へ',
-          'ローカルLLM の上位構成：Ryzen ミニPC（RAM 32GB、約95,000〜100,000円）または中古 RTX 3090（InsiderLLMトラッカー、2026-10-15更新によると落札実績は約$1,400-1,550）',
+          'ハブ：Intel N100/N150 ミニPC（約$190〜220）または Raspberry Pi 5（約$180〜305、DRAM不足で大幅値上がり）が Home Assistant を動かす',
+          'Frigate：多くのミニPCに内蔵された Intel 内蔵GPU（OpenVINO 経由）、Hailo-8L M.2 モジュール（約$70）、または Hailo-8 M.2（約$170〜200）がカメラ検出を加速——Frigate のハードウェア文書は新規構築向けに Hailo と Intel OpenVINO を挙げており、Google Coral は今も動作しますが、そこでは旧世代のハードウェアとして説明されています',
+          'ストレージ：録画は SSD、カメラが増えたら（Synology DS225+ 約$340、DS925+ 約$640、UGREEN NASync 約$650〜730）NAS へ',
+          'ローカルLLM の上位構成：Ryzen ミニPC（RAM 32GB、約$649）または中古 RTX 3090（InsiderLLMトラッカー、2026-10-15更新によると販売済み出品は約$1,400-1,550）',
           '購入前に HAのみ 対 HA＋カメラ＋ローカルAI を決める——適切な機器が変わり、後で Pi を買い替えるより今ミニPCを買う方が得です',
         ],
       },
@@ -2097,13 +2109,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**目的から機器を選びましょう。逆ではありません。** 下の表はスマートホームの目的ごとに、それをカバーするハードウェアを対応させています——各行はページ後半のより詳しいおすすめにリンクしています。',
         columns: ['目的', 'これを買う', '目安価格'],
         rows: [
-          { '目的': 'Home Assistant のみ', 'これを買う': '[Home Assistant Green または Raspberry Pi 5](#raspberry-pi)', '目安価格': '約30,000円（Green）／約22,000〜38,000円（Pi 5）' },
-          { '目的': 'HA＋Frigate カメラ', 'これを買う': '[Intel N100/N150 ミニPC](#mini-pc)', '目安価格': '約22,000〜27,000円' },
-          { '目的': 'HA＋ローカルLLM', 'これを買う': '[Ryzen ミニPC、RAM 32GB](#mini-pc)', '目安価格': '約95,000〜100,000円' },
+          { '目的': 'Home Assistant のみ', 'これを買う': '[Home Assistant Green または Raspberry Pi 5](#raspberry-pi)', '目安価格': '約$199（Green）／約$180〜305（Pi 5）' },
+          { '目的': 'HA＋Frigate カメラ', 'これを買う': '[Intel N100/N150 ミニPC](#mini-pc)', '目安価格': '約$190〜220' },
+          { '目的': 'HA＋ローカルLLM', 'これを買う': '[Ryzen ミニPC、RAM 32GB](#mini-pc)', '目安価格': '約$649' },
           { '目的': 'HA＋より大きなローカルLLM', 'これを買う': '[中古 RTX 3090 サーバー](#server)', '目安価格': '約$1,400〜1,550（GPUのみ；InsiderLLM 2026-10-15）' },
         ],
         tableFormat: true,
-        note: '価格は目安で変動します——特に GPU とDRAMの価格は今年変動が大きいです。RTX 3090の数値は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（情報源の更新日：2026-10-15）にあるeBay米国の出品データで、見積もりではありません。日本での価格は税や輸入コストにより異なります。購入前にリンク先の実際の価格を確認してください。',
+        note: '価格は目安で変動します——特に GPU とDRAMの価格は今年変動が大きいです。RTX 3090の数値は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（情報源の更新日：2026-10-15）にあるeBay米国の出品データで、見積もりではありません。日本での価格は税や輸入コストにより異なります。購入前にリンク先の実際の価格を確認してください。 表示している価格は、最終更新時点の販売元ページにある概算価格です（最終更新日を参照）。当日の価格はリンク先のページで確認してください。すべての価格は米国の参考価格（USD）であり、お住まいの国では異なる場合があります。',
         callouts: [
           { type: 'tip', text: 'ローカルAIが欲しいかまだ迷っている方は、高価な機器を買う前に[買いすぎない](#dont-overspend)を確認してください。' },
         ],
@@ -2115,7 +2127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Home Assistant 自体は軽量で控えめなハードウェアで動きます；重い要求は Frigate のカメラ検出とローカルLLM から来ます。** ハブだけでなく、追加するものに合わせて機器を選びましょう。',
         items: [
           'ハブは機器制御と自動化にほとんど計算力を要しません。',
-          'Frigate の物体検出には加速器が必要です。OpenVINO 経由の Intel 内蔵GPU がほとんどの構成をカバーし、Hailo-8L または Hailo-8 M.2 モジュールが検出能力を高めます。Google Coral の USB/M.2 TPU は今も動作しますが現在はレガシー扱いで、Frigate は新規構築には推奨していません。',
+          'Frigate の物体検出には加速器が必要です。OpenVINO 経由の Intel 内蔵GPU がほとんどの構成をカバーし、Hailo-8L または Hailo-8 M.2 モジュールが検出能力を高めます。Google Coral の USB/M.2 TPU は今も動作します。[Frigate のハードウェア文書](https://docs.frigate.video/frigate/hardware)は新規構築向けに Hailo と Intel OpenVINO の選択肢を挙げ、Coral を旧世代のハードウェアとして説明しています。',
           'より大きな Whisper モデルとローカルLLM 推論が最も要求の高いワークロードです——これらを軸に RAM と GPU/NPU を計画しましょう。',
           'カメラの録画は SSD に保存し、複数台のカメラを常時運用するようになったら NAS に移行しましょう。',
         ],
@@ -2124,16 +2136,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**Raspberry Pi 5 は、一般的なスマートホーム用途で Home Assistant を動かす最も低消費電力な方法ですが、2026年の DRAM 不足でボードの価格は大きく上昇しており、8GBモデルは約22,000〜27,000円、16GBモデルは約35,000〜38,000円と、いずれも発売時の水準を大きく上回っています。正常化は2027年後半以降になると見られています。** それでも LLM推論や大きな Whisper モデルには苦労します。',
+          '**Raspberry Pi 5 は、一般的なスマートホーム用途で Home Assistant を動かす最も低消費電力な方法ですが、2026年の DRAM 不足でボードの価格は大きく上昇しており、8GBモデルは約$180〜220、16GBモデルは約$280〜305と、いずれも発売時の水準を大きく上回っています。現在の価格はリンク先の Raspberry Pi のページで確認してください。** それでも LLM推論や大きな Whisper モデルには苦労します。',
         items: [
           '機器制御、自動化、小規模なローカル音声構成に最適。',
           'Pi 上の LLM 推論は非常に小さく遅いモデルに限られます。Frigate 検出が欲しいなら Hailo-8L M.2 HAT と組み合わせましょう。',
           '低消費電力で基本が欲しく、1年以内にローカルLLMを追加しないと確信しているなら Pi 5 を選びましょう。1年以内にローカルAIが欲しくなりそうなら、Pi は飛ばして今のうちにミニPCを買うのがおすすめです——差額はわずかで、後で二度買う手間を省けます。',
-          'すぐ使える完成品としては、Home Assistant Green が組み立て済みで届きます（2026年時点で約30,000円。ただし国内での正規販売は限定的）。Home Assistant Yellow は2025年10月に生産終了しました——Green が現在唯一の公式ファーストパーティ製ハブです。',
+          'すぐ使える完成品としては、Home Assistant Green が組み立て済みで届きます（2026年時点で約$199（米国の参考価格。お住まいの国では異なる場合があります））。Home Assistant Yellow は2025年10月に生産終了しました——Green が現在唯一の公式ファーストパーティ製ハブです。',
         ],
         affiliateLinks: [
-          { label: 'Raspberry Pi 5 の価格を見る →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '約22,000〜38,000円' },
-          { label: 'Home Assistant Green の価格を見る →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '約30,000円（国内での正規販売は限定的）' },
+          { label: 'Raspberry Pi 5 の価格を見る →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '約$180〜305' },
+          { label: 'Home Assistant Green の価格を見る →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '約$199' },
         ],
       },
       miniPc: {
@@ -2142,30 +2154,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**ミニPCは、十分な RAM と高性能な内蔵GPU または NPU を備えた、Home Assistant＋ローカルAIに最適な一台の選択です。** 性能・サイズ・コストのバランスが取れており、1台で両方の役割を担わせたいなら、ここに多めに予算を割く価値があります。',
         items: [
-          '予算重視のベストな選択：低消費電力の Intel N100/N150 ミニPC は Home Assistant を動かし、Intel 内蔵GPU（OpenVINO）で Frigate を加速します——ハブ＋カメラ機の現実的な標準構成です。Beelink EQ14（Intel N150、RAM 16GB）は2026年8月時点で約28,000〜34,000円——24時間稼働と低消費電力に向きますが、ローカルLLMには非力です。',
-          'ローカルAI向けベストな選択：同じ機器でローカルLLM も動かすなら、RAM 32GB の Ryzen ミニPC に上げましょう。Beelink SER8（Ryzen 7 8845HS）は2026年8月時点で約95,000〜100,000円で、Ollama 経由で Qwen3 8B や Llama 3.1 8B モデルを実用的な速度で動かせ、Home Assistant と Frigate も同時にこなします。低レイテンシのために RAM と高性能な内蔵GPU/NPU を優先しましょう。',
-          'Home Assistant とローカルAIを1台にまとめて買うなら、N150 より高い Ryzen ミニPC の追加費用は十分見合います——実用的な速度でLLMを本当に動かせるのは2つのうちこちらだけです。',
+          '予算重視のベストな選択：低消費電力の Intel N100/N150 ミニPC は Home Assistant を動かし、Intel 内蔵GPU（OpenVINO）で Frigate を加速します——ハブ＋カメラ機の現実的な標準構成です。Beelink EQ14（Intel N150、RAM 16GB）は約$190〜220——24時間稼働と低消費電力に向きますが、ローカルLLMには非力です。',
+          'ローカルAI向けベストな選択：同じ機器でローカルLLM も動かすなら、RAM 32GB の Ryzen ミニPC に上げましょう。Beelink SER8（Ryzen 7 8845HS）は約$649で、Ryzen 7 搭載のミニPCとして、Qwen3 8B や Llama 3.1 8B などの8Bクラスのモデルを Ollama 経由で動かせます。速度は量子化とコンテキストサイズに左右され、PromptQuorum はこの機種のベンチマークを行っていません。低レイテンシのために RAM と高性能な内蔵GPU/NPU を優先しましょう。',
+          'Home Assistant とローカルAIを1台にまとめて買うなら、N150 より高い Ryzen ミニPC の追加費用は見合う場合があります——8Bクラスのモデルに対する余裕が大きいためです。',
           '具体的な候補は[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai)、クラスター横断で[ローカルLLMに最適なミニPC](/ja/local-llms/best-mini-pcs-local-llm)を参照。',
         ],
         affiliateLinks: [
-          { label: 'EQ14 の価格を見る →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '約28,000〜34,000円' },
-          { label: 'SER8 の価格を見る →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: '約95,000〜100,000円' },
+          { label: 'EQ14 の価格を見る →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '約$190〜220' },
+          { label: 'SER8 の価格を見る →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: '約$649' },
         ],
       },
       frigateAccelerator: {
         id: 'frigate-accelerator',
         title: '防犯カメラを使うなら？Frigate 加速器の選び方',
         content:
-          '**何台のカメラを使い、どれだけの検出余力が必要かで加速器を選びます。これはハブをどの機器で動かすかとは別の話です。** Frigate はもう新規構築で Google Coral を推奨していません——今は Hailo か、ホスト機に内蔵の Intel 内蔵GPU を新規ユーザーに勧めています。',
+          '**何台のカメラを使い、どれだけの検出余力が必要かで加速器を選びます。これはハブをどの機器で動かすかとは別の話です。** [Frigate のハードウェア文書](https://docs.frigate.video/frigate/hardware)は新規構築向けに Hailo と Intel OpenVINO の選択肢を挙げています。Google Coral は今も動作しますが、そこでは旧世代のハードウェアとして説明されています。',
         items: [
           '1〜4台：N100/N150 ミニPC に内蔵された Intel 内蔵GPU を OpenVINO 経由で使えば、追加ハードウェアなしでほとんどの家庭用構成をカバーできます。',
-          '4〜10台、または Intel以外のハードウェアでより多くの検出余力が欲しい場合：Hailo-8L M.2 モジュール（2026年8月時点で約10,000円）が Frigate 現在の低消費電力な推奨です——かつての Coral のように、公式に一級サポートされる追加カードとして機能します。',
-          '10台以上、またはより重い追加処理（検出に加えて顔認識・ナンバープレート認識）が必要な場合：Hailo-8 M.2 モジュール（約25,000〜30,000円）が明確に高いスループットを提供します。',
+          '4〜10台、または Intel以外のハードウェアでより多くの検出余力が欲しい場合：Hailo-8L M.2 モジュール（約$70）が Frigate 現在の低消費電力な推奨です——かつての Coral のように、公式に一級サポートされる追加カードとして機能します。',
+          '10台以上、またはより重い追加処理（検出に加えて顔認識・ナンバープレート認識）が必要な場合：Hailo-8 M.2 モジュール（約$170〜200）が明確に高いスループットを提供します。',
           'すでに Coral をお持ちですか？それは今も使えます——ここでは新規構築で何を買うべきかを扱っているだけで、正常に動いている Coral 構成を置き換える理由にはなりません。',
         ],
+        callouts: [{ type: 'warning', text: 'カメラや顔・ナンバープレートの認識は法的に規制されています。EUでは、カメラが公共の場所、近隣住民やその他の人々を撮影する場合にGDPRが適用されることがあり、生体認証による識別にはより厳しい規則があります。設置前に現地の法律を確認してください。これは法的助言ではありません。' }],
         affiliateLinks: [
-          { label: 'Hailo-8L の価格を見る →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '約10,000円' },
-          { label: 'Hailo-8 の価格を見る →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '約25,000〜30,000円' },
+          { label: 'Hailo-8L の価格を見る →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '約$70' },
+          { label: 'Hailo-8 の価格を見る →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '約$170〜200' },
         ],
       },
       nas: {
@@ -2174,15 +2187,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**NAS は、十分な CPU と RAM があれば、ストレージや Frigate の録画と並べてコンテナで Home Assistant をホストできます——すでに所有しているなら良い選択肢ですが、これだけを目的に最初の1台を買う理由にはなりません。** ローカルLLMを動かすためだけに NAS を買わないでください——専用のミニPCや GPU 機の方が、同じ予算でより良いAIプラットフォームです。',
         items: [
-          '2〜4台／比較的軽いストレージ用途：Synology DS225+（2026年8月時点で約50,000円）は少数カメラのコンテナ版 Home Assistant と Frigate の録画をカバーします。',
-          '4〜10台／より多くの余力が必要：Synology DS925+（約95,000円）はより多くのアドオンやカメラに対応する CPU/RAM の余力を提供します。',
-          'ストレージとローカルAIを1台に：UGREEN NASync シリーズ（DXP4800 Plus クラス、約95,000〜105,000円）はローカルLLMオプションを内蔵し、DS925+と同程度の価格で新しいハードウェア（DDR5、拡張カード不要の10GbE）を備えます。',
+          '2〜4台／比較的軽いストレージ用途：Synology DS225+（約$340）は少数カメラのコンテナ版 Home Assistant と Frigate の録画をカバーします。',
+          '4〜10台／より多くの余力が必要：Synology DS925+（約$640）はより多くのアドオンやカメラに対応する CPU/RAM の余力を提供します。',
+          'ストレージとローカルAIを1台に：UGREEN NASync シリーズ（DXP4800 Plus クラス、約$650〜730）は、DS925+と同程度の価格で新しいハードウェア（DDR5、拡張カード不要の10GbE）を備え、一部のモデルはローカルLLMオプションをうたっています。販売元のページで確認してください。',
           'NAS 上の LLM 推論は依然としてそのハードウェアに大きく左右されます——ほとんどの NAS は高性能なディスクリートGPUを欠くため、内蔵LLMオプションは便利機能として捉え、本格的な大型モデルが欲しい場合は下記の RTX 3090 クラスの代わりにはならないと考えてください。',
         ],
         affiliateLinks: [
-          { label: 'DS225+ の価格を見る →', url: 'https://www.synology.com/ja-jp/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: '約50,000円' },
-          { label: 'DS925+ の価格を見る →', url: 'https://www.synology.com/ja-jp/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: '約95,000円' },
-          { label: 'UGREEN NASync の価格を見る →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: '約95,000〜105,000円' },
+          { label: 'DS225+ の価格を見る →', url: 'https://www.synology.com/ja-jp/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: '約$340' },
+          { label: 'DS925+ の価格を見る →', url: 'https://www.synology.com/ja-jp/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: '約$640' },
+          { label: 'UGREEN NASync の価格を見る →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: '約$650〜730' },
         ],
       },
       server: {
@@ -2191,8 +2204,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**ディスクリートGPUを搭載した専用サーバーは、多数のカメラと並行してより大きなローカルLLM を動かすための上位構成です。** より高いコストと消費電力で最大の余裕を提供します——2026年はGPU価格の変動が大きいため、以下の数字はある時点のスナップショットとして捉えてください。',
         items: [
-          '中古の RTX 3090（VRAM 24GB）はVRAMの大きさからローカルLLMでよく選ばれています。[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（情報源の更新日：2026-10-15）は、中古の落札実績を約$1,400-1,550としています——eBay米国の出品データで、見積もりやオファーではありません。日本での価格は税や輸入コストにより異なります。量子化方式、コンテキストサイズ、オフロード次第では、Q4量子化で約70Bまでのモデルが動く可能性があります——これは目安の範囲であり、すべての70Bモデルを保証するものではありません。',
-          '中古の RTX 3060（12GB）はディスクリートGPU機の予算重視の代替で、RTX 3090ほどのVRAM余裕や価格ではありませんが、7B〜13Bモデルを問題なく扱えます。',
+          '中古の RTX 3090（VRAM 24GB）はVRAMの大きさからローカルLLMでよく選ばれています。[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（情報源の更新日：2026-10-15）は、中古の販売済み出品を約$1,400-1,550としています——eBay米国の出品データで、見積もりやオファーではありません。日本での価格は税や輸入コストにより異なります。量子化方式、コンテキストサイズ、オフロード次第では、Q4量子化で約70Bまでのモデルが動く可能性があります——これは目安の範囲であり、すべての70Bモデルを保証するものではありません。',
+          '中古の RTX 3060（12GB）はディスクリートGPU機の予算重視の代替で、RTX 3090ほどのVRAM余裕や価格ではありませんが、量子化方式によっては7B〜13Bモデルを扱えます。',
           '多数のカメラ、より大きな LLM、複数ユーザーに最適。ミニPCより消費電力もコストも高くなります——この構成に踏み切る前に、下記の消費電力のセクションを確認してください。',
           '基本的なスマートホームには過剰——重いローカルAI用途に取っておき、信頼性のために Home Assistant のハブは別の低消費電力機に分けましょう（下記「一台か二台か？」を参照）。',
         ],
@@ -2200,6 +2213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'RTX 3090 の中古相場を見る →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '約$1,400〜1,550' },
           { label: 'RTX 3060 の中古相場を見る →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: '連続稼働するサーバーの350W GPUには、容量が適切で品質の良い電源ユニット、十分な換気、適切な設置場所が必要です。中古カードは消耗している可能性があり保証もないことがあるため、販売者の条件を確認してください。メーカーの指示に従ってください。これは電気工事に関する助言ではありません。' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-ja.svg',
         imageCaption: 'ハードウェア階層別のローカルLLM容量：Raspberry Pi 5 は極小モデルのみ、Intel N100/N150 ミニPC は小型モデルを処理、Ryzen ミニPC（RAM 32GB）は 7B〜8B モデルを実行、中古 RTX 3090（VRAM 24GB）は構成次第で Q4 量子化で約70Bまで対応します。',
       },
@@ -2207,7 +2221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: 'Home Assistant サーバーに買いすぎない',
         content:
-          '**用途以上のハードウェアを買ってしまうことが、このカテゴリーで最もよくある無駄な出費です——実際に動かす予定のものに機器を合わせましょう。**',
+          '**用途以上のハードウェアを買ってしまうことが、このカテゴリーでよくある無駄な出費です——実際に動かす予定のものに機器を合わせましょう。**',
         items: [
           'Home Assistant のみ？RTX GPUは不要ですし、おそらくミニPCも不要です——Raspberry Pi 5 か Home Assistant Green で十分です。',
           'Home Assistant＋Frigate カメラ？高価なワークステーションは不要です——内蔵GPUを備えた Intel N100/N150 ミニPCで、多くの家庭のカメラ台数には十分です。',
@@ -2265,7 +2279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**今日一台の機器を選ぶ際にどの階層が合うか迷っているなら、上記のトレードオフを踏まえた一つの妥当な目安として、以下を紹介します——実際の必要性によっては別の答えが正しいこともあり、以下のいずれも PromptQuorum によるテストやレビューは行っていません。**',
         items: [
           '一般的なローカルスマートホーム（Home Assistant と少数の Zigbee/Matter デバイス）：Intel N150 ミニPC が無難な既定の選択です——後でカメラを追加しても Frigate をカバーできます。',
-          'Home Assistant＋カメラ＋小型のローカルAIアシスタント：RAM 32GB の Ryzen ミニPC が妥当な一台構成です——実用的な速度で8Bクラスの LLM を実際に動かせる最も安い選択肢です。',
+          'Home Assistant＋カメラ＋小型のローカルAIアシスタント：RAM 32GB の Ryzen ミニPC が妥当な一台構成です——8Bクラスのモデルをより低コストで動かす方法です。',
           '本格的なローカルAI（32Bクラス以上のモデル）：Home Assistant のハブとは切り離した独立の RTX 3090 サーバーが、現在の中古GPU価格を踏まえた妥当な上位構成です。',
           '新規のAI優先の構築は、2026年の Pi の価格とLLM性能の限界を踏まえると、Raspberry Pi との相性が総じて弱くなります——価格差はミニPCの方が近く、AIプラットフォームとしてはずっと優れているのが通常です。',
         ],
@@ -2275,27 +2289,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ローカルスマートホームの完全な構成例',
         content:
           '**多くの購入者には複数の製品が必要です——最低でもハブ、Frigate 加速器、ストレージ、そしてローカルLLM推論をしたいなら追加でAI機。** 以下の3つの構成は、上記のおすすめをシナリオ別にまとめたものです。各製品はページ前半のより詳しいおすすめにリンクしています。',
-        columns: ['構成', 'ハブ', 'Frigate 加速器', 'AI', '目安合計（2026年8月）'],
+        columns: ['構成', 'ハブ', 'Frigate 加速器', 'AI', '目安合計'],
         rows: [
-          { '構成': 'スターター（HAのみ）', 'ハブ': '[Home Assistant Green または Pi 5](#raspberry-pi)', 'Frigate 加速器': '—', 'AI': '—', '目安合計（2026年8月）': '約30,000〜38,000円' },
-          { '構成': 'HA＋カメラ', 'ハブ': '[N150 ミニPC](#mini-pc)', 'Frigate 加速器': '[Intel 内蔵GPU、より余力が欲しいなら Hailo-8L](#frigate-accelerator)', 'AI': '—', '目安合計（2026年8月）': '約22,000〜37,000円' },
-          { '構成': 'HA＋カメラ＋ローカルAI', 'ハブ': '[Ryzen ミニPC、32GB](#mini-pc)', 'Frigate 加速器': '内蔵GPU、カメラが多いなら[Hailo-8L](#frigate-accelerator)', 'AI': '同じ機器で稼働（8Bクラスモデル）', '目安合計（2026年8月）': '約95,000〜110,000円' },
-          { '構成': 'HA＋カメラ＋大型ローカルAI', 'ハブ': '[N150 ミニPC（信頼性のため分離）](#mini-pc)', 'Frigate 加速器': '[Hailo-8](#frigate-accelerator)', 'AI': '[中古 RTX 3090 サーバー、別稼働](#server)', '目安合計（2026年8月）': '約$1,760〜1,970（ホストPC除く）' },
+          { '構成': 'スターター（HAのみ）', 'ハブ': '[Home Assistant Green または Pi 5](#raspberry-pi)', 'Frigate 加速器': '—', 'AI': '—', '目安合計': '約$199〜305' },
+          { '構成': 'HA＋カメラ', 'ハブ': '[N150 ミニPC](#mini-pc)', 'Frigate 加速器': '[Intel 内蔵GPU、より余力が欲しいなら Hailo-8L](#frigate-accelerator)', 'AI': '—', '目安合計': '約$190〜290' },
+          { '構成': 'HA＋カメラ＋ローカルAI', 'ハブ': '[Ryzen ミニPC、32GB](#mini-pc)', 'Frigate 加速器': '内蔵GPU、カメラが多いなら[Hailo-8L](#frigate-accelerator)', 'AI': '同じ機器で稼働（8Bクラスモデル）', '目安合計': '約$649〜720' },
+          { '構成': 'HA＋カメラ＋大型ローカルAI', 'ハブ': '[N150 ミニPC（信頼性のため分離）](#mini-pc)', 'Frigate 加速器': '[Hailo-8](#frigate-accelerator)', 'AI': '[中古 RTX 3090 サーバー、別稼働](#server)', '目安合計': '約$1,760〜1,970（ホストPC除く）' },
         ],
         tableFormat: true,
-        note: '最後の構成では、Home Assistant のハブを専用の低消費電力機に残し、RTX 3090 は別マシンとして稼働させます——理由は[一台か二台か？](#one-or-two)を参照。この合計は、中古RTX 3090（$1,400-1,550、InsiderLLMトラッカー、2026-10-15）、N150ミニPC（約$190-220）、Hailo-8（約$170-200）の合算で、$1,760-1,970です。GPUに必要なホストPC（CPU、マザーボード、電源、RAM、ケース）は含みません。',
+        note: '最後の構成では、Home Assistant のハブを専用の低消費電力機に残し、RTX 3090 は別マシンとして稼働させます——理由は[一台か二台か？](#one-or-two)を参照。この合計は、中古RTX 3090（$1,400-1,550、InsiderLLMトラッカー、2026-10-15）、N150ミニPC（約$190-220）、Hailo-8（約$170-200）の合算で、$1,760-1,970です。GPUに必要なホストPC（CPU、マザーボード、電源、RAM、ケース）は含みません。 表示している価格は、最終更新時点の販売元ページにある概算価格です（最終更新日を参照）。当日の価格はリンク先のページで確認してください。すべての価格は米国の参考価格（USD）であり、お住まいの国では異なる場合があります。',
       },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'Frigate はどんなハードウェアを推奨していますか？', a: '新規構築では、OpenVINO 経由の Intel 内蔵GPU、または検出能力を高める Hailo-8L（約10,000円、低価格）や Hailo-8（約25,000〜30,000円、高速）の M.2 モジュールが推奨されます。Google Coral の USB/M.2 TPU は今も動作しますが現在はレガシー扱いで、非常に低消費電力な構成を除き Frigate は新規インストールには推奨していません。' },
+          { q: 'Frigate はどんなハードウェアを推奨していますか？', a: '新規構築向けに、Frigate のハードウェア文書（https://docs.frigate.video/frigate/hardware）は、OpenVINO 経由の Intel 内蔵GPU、または検出能力を高める Hailo-8L（約$70、低価格）や Hailo-8（約$170〜200、高速）の M.2 モジュールなどを挙げています。Google Coral の USB/M.2 TPU は今も動作しますが、その文書では旧世代のハードウェアとして説明されています。' },
           { q: 'Raspberry Pi でもローカルLLMを動かせますか？', a: 'Pi は非常に小型のモデルを遅く動かせるだけなので、反応の良いローカルLLMアシスタントには不向きです。Home Assistant と基本的な音声はよく動かしますが、ローカルAIには高性能な内蔵GPU または NPU 付きのミニPC、または中古 RTX 3090 搭載機がより良い選択です。' },
-          { q: 'RAM はどれくらい必要ですか？', a: 'Home Assistant 単体なら数ギガバイトで動きます。同じ機器で小型のローカルLLMや他のAIサービスを動かすには RAM が多いほど助かります；RAM 32GB で高性能な内蔵GPU/NPU を備えたミニPCは Qwen3 8B や Llama 3.1 8B モデルを反応良く保ちます。動かす予定のモデルサイズに RAM を合わせましょう。' },
+          { q: 'RAM はどれくらい必要ですか？', a: 'Home Assistant 単体なら数ギガバイトで動きます。同じ機器で小型のローカルLLMや他のAIサービスを動かすには RAM が多いほど助かります；RAM 32GB で高性能な内蔵GPU/NPU を備えたミニPCは Qwen3 8B や Llama 3.1 8B モデルを動かせます。速度は量子化とコンテキストサイズ次第です。動かす予定のモデルサイズに RAM を合わせましょう。' },
           { q: 'どのミニPCを買うべきですか？', a: 'HA＋カメラなら、Intel N100/N150 ミニPC が OpenVINO 経由で Frigate を加速します。HA＋ローカルLLM なら、RAM 32GB の Ryzen ミニPC に上げましょう。候補は Home Assistant＋ローカルAIに最適なミニPCのガイドを参照してください。' },
           { q: '一台ですか、二台ですか？', a: '一台（ミニPC）が最もシンプルで、Home Assistant と小型のローカルLLMを一緒に動かせます。ハブを極めて安定させ、重いAIを中古 RTX 3090 サーバーのような別マシンに任せたい場合は二台に分けましょう。' },
           { q: '24時間稼働の機器で消費電力は重要ですか？', a: '電源を切らないハードウェアでは、消費電力が購入価格より重要になることがあります。Raspberry Pi は数ワット、N100/N150 ミニPC は約10〜15W、Ryzen ミニPC は負荷次第で約15〜35W、RTX 3090 のようなディスクリートGPUのボード電力はNVIDIAが350Wと公表しています——これが重いGPUサーバーを常時稼働機ではなく別機にしておくべき理由の一つです。' },
-          { q: '2026年の価格でも Raspberry Pi はまだ買う価値がありますか？', a: 'Home Assistant のみなら、はい——今も最も低消費電力な選択肢です。ただし2026年のDRAM不足で Pi 5 の価格は大きく上昇し（2026年8月時点でRAM構成により約22,000〜38,000円、発売時は当時の水準ではるかに安価でした）、Intel N100/N150 ミニPCとの価格差は縮まっています。1年以内にカメラやローカルLLMを追加する可能性があるなら、今はミニPCの方が良い買い物であることが多いです。' },
+          { q: '2026年の価格でも Raspberry Pi はまだ買う価値がありますか？', a: 'Home Assistant のみなら、はい——今も最も低消費電力な選択肢です。ただし2026年のDRAM不足で Pi 5 の価格は大きく上昇し（RAM構成により約$180〜305、発売時は当時の水準ではるかに安価でした）、Intel N100/N150 ミニPCとの価格差は縮まっています。1年以内にカメラやローカルLLMを追加する可能性があるなら、今はミニPCの方が良い買い物であることが多いです。' },
         ],
       },
       relatedReading: {
@@ -2325,7 +2339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'Home Assistant ハードウェア' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'ミニPC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: 'ローカルLLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -2335,21 +2349,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        { '@type': 'Question', name: 'Frigate はどんなハードウェアを推奨していますか？', acceptedAnswer: { '@type': 'Answer', text: '新規構築では OpenVINO 経由の Intel 内蔵GPU、または Hailo-8L（約10,000円）や Hailo-8（約25,000〜30,000円）の M.2 モジュールが検出能力を高めます。Google Coral の TPU は今も動作しますが現在はレガシー扱いで、新規インストールには推奨されません。' } },
+        { '@type': 'Question', name: 'Frigate はどんなハードウェアを推奨していますか？', acceptedAnswer: { '@type': 'Answer', text: '新規構築向けに、Frigate のハードウェア文書（https://docs.frigate.video/frigate/hardware）は OpenVINO 経由の Intel 内蔵GPU、または Hailo-8L（約$70）や Hailo-8（約$170〜200）の M.2 モジュールなどを挙げています。Google Coral の TPU は今も動作しますが、その文書では旧世代のハードウェアとして説明されています。' } },
         { '@type': 'Question', name: 'Raspberry Pi でもローカルLLMを動かせますか？', acceptedAnswer: { '@type': 'Answer', text: 'Pi は非常に小型のモデルを遅く動かせるだけです。Home Assistant と基本的な音声はよく動かしますが、反応の良いローカルLLMアシスタントには高性能な内蔵GPU または NPU 付きのミニPC、または中古 RTX 3090 搭載機が良いです。' } },
-        { '@type': 'Question', name: 'RAM はどれくらい必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 単体なら数ギガバイトで動きます。同じ機器で小型のローカルLLMを動かすには RAM が多いほど助かります；RAM 32GB のミニPCは Qwen3 8B や Llama 3.1 8B モデルを反応良く保ちます。動かす予定のモデルサイズに RAM を合わせましょう。' } },
+        { '@type': 'Question', name: 'RAM はどれくらい必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 単体なら数ギガバイトで動きます。同じ機器で小型のローカルLLMを動かすには RAM が多いほど助かります；RAM 32GB のミニPCは Qwen3 8B や Llama 3.1 8B モデルを動かせます。速度は量子化とコンテキストサイズ次第です。動かす予定のモデルサイズに RAM を合わせましょう。' } },
         { '@type': 'Question', name: 'どのミニPCを買うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'HA＋カメラなら Intel N100/N150 ミニPC が OpenVINO 経由で Frigate を加速します。HA＋ローカルLLM なら RAM 32GB の Ryzen ミニPC に上げましょう。Home Assistant＋ローカルAIに最適なミニPCのガイドを参照してください。' } },
         { '@type': 'Question', name: '一台ですか、二台ですか？', acceptedAnswer: { '@type': 'Answer', text: 'ミニPC一台で Home Assistant と小型のローカルLLMを一緒に動かせます。ハブを極めて安定させ、重いAIを中古 RTX 3090 サーバーのような別マシンに任せたいなら二台に分けましょう。' } },
         { '@type': 'Question', name: '24時間稼働の機器で消費電力は重要ですか？', acceptedAnswer: { '@type': 'Answer', text: '電源を切らないハードウェアでは、消費電力が購入価格より重要になることがあります。Raspberry Pi は数ワット、N100/N150 ミニPC は約10〜15W、Ryzen ミニPC は約15〜35W、RTX 3090 のようなディスクリートGPUのボード電力はNVIDIAが350Wと公表しています。' } },
-        { '@type': 'Question', name: '2026年の価格でも Raspberry Pi はまだ買う価値がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant のみなら、はい。ただし2026年のDRAM不足で Pi 5 の価格はRAM構成により約22,000〜38,000円まで上昇し、発売時よりはるかに高く、Intel N100/N150 ミニPCとの価格差は縮まっています——1年以内にカメラやローカルLLMを追加する可能性があるなら、ミニPCの方が良い選択であることが多いです。' } },
+        { '@type': 'Question', name: '2026年の価格でも Raspberry Pi はまだ買う価値がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant のみなら、はい。ただし2026年のDRAM不足で Pi 5 の価格はRAM構成により約$180〜305まで上昇し、発売時よりはるかに高く、Intel N100/N150 ミニPCとの価格差は縮まっています——1年以内にカメラやローカルLLMを追加する可能性があるなら、ミニPCの方が良い選択であることが多いです。' } },
       ],
     },
   },
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-pt.webp',
     affiliateDisclosure: true,
@@ -2378,16 +2392,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'Qual hardware preciso para uma casa inteligente local com IA?',
         answer:
-          'Comece pelo hub: um mini PC Intel N100/N150 ou uma Raspberry Pi 5 roda o Home Assistant. Adicione um acelerador para o Frigate cuidar das câmeras — uma iGPU Intel via OpenVINO cobre a maioria das configurações, e um módulo Hailo-8L ou Hailo-8 M.2 adiciona capacidade de detecção (o Google Coral já é legado). Armazene as gravações em um SSD, ou em um NAS para muitas câmeras. Para um LLM local, suba para um mini PC com iGPU/NPU capaz ou um servidor com RTX 3090 usada. Se você acha que vai adicionar IA local dentro de um ano, compre o mini PC agora em vez de uma Raspberry Pi que você vai substituir depois.',
+          'Comece pelo hub: um mini PC Intel N100/N150 ou uma Raspberry Pi 5 roda o Home Assistant. Adicione um acelerador para o Frigate cuidar das câmeras — uma iGPU Intel via OpenVINO cobre a maioria das configurações, e um módulo Hailo-8L ou Hailo-8 M.2 adiciona capacidade de detecção (a documentação de hardware do Frigate lista opções Hailo e Intel OpenVINO para novas montagens; o Google Coral ainda funciona, mas é descrito ali como hardware mais antigo). Armazene as gravações em um SSD, ou em um NAS para muitas câmeras. Para um LLM local, suba para um mini PC com iGPU/NPU capaz ou um servidor com RTX 3090 usada. Se você acha que vai adicionar IA local dentro de um ano, compre o mini PC agora em vez de uma Raspberry Pi que você vai substituir depois.',
         bullets: [
           'Hub: mini PC Intel N100/N150 ou Raspberry Pi 5',
-          'Frigate: iGPU Intel (OpenVINO) ou Hailo-8L M.2 — o Coral já é legado',
+          'Frigate: iGPU Intel (OpenVINO) ou Hailo-8L M.2 — o Coral ainda funciona, mas é hardware mais antigo',
           'Armazenamento: SSD, ou um NAS para muitas câmeras',
           'Passo seguinte para LLM local: iGPU/NPU do mini PC ou RTX 3090 usada',
           'Se você pode adicionar IA local dentro de um ano, compre o mini PC agora — sai mais barato do que comprar uma Raspberry Pi e trocar depois',
           'Decida primeiro: só-HA ou HA + câmeras + IA local — isso define se você compra uma vez ou duas',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -2417,10 +2431,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumo',
         isTldr: true,
         items: [
-          'Hub: um mini PC Intel N100/N150 (~R$ 2.000–2.300) ou uma Raspberry Pi 5 (~R$ 1.900–3.250 em agosto de 2026, em alta forte por causa de uma escassez de memória DRAM) roda o Home Assistant',
-          'Frigate: uma iGPU Intel (OpenVINO, embutida na maioria dos mini PCs), um módulo Hailo-8L M.2 (~R$ 750) ou Hailo-8 M.2 (~R$ 1.800–2.100) acelera a detecção de câmeras — o Google Coral já é legado e não é mais a recomendação do Frigate para novas montagens',
-          'Armazenamento: um SSD para as gravações, ou um NAS (Synology DS225+ ~R$ 3.600, DS925+ ~R$ 6.800, UGREEN NASync ~R$ 6.900–7.800) a partir de várias câmeras',
-          'Passo seguinte para LLM local: um mini PC Ryzen (32GB de RAM, ~R$ 6.900) ou uma RTX 3090 usada (~$1.400–1.550 em listagens vendidas, segundo o monitor da InsiderLLM, 2026-10-15)',
+          'Hub: um mini PC Intel N100/N150 (~$190–220) ou uma Raspberry Pi 5 (~$180–305, em alta forte por causa de uma escassez de memória DRAM) roda o Home Assistant',
+          'Frigate: uma iGPU Intel (OpenVINO, embutida na maioria dos mini PCs), um módulo Hailo-8L M.2 (~$70) ou Hailo-8 M.2 (~$170–200) acelera a detecção de câmeras — a documentação de hardware do Frigate lista Hailo e Intel OpenVINO para novas montagens, e o Google Coral ainda funciona, mas é descrito ali como hardware mais antigo',
+          'Armazenamento: um SSD para as gravações, ou um NAS (Synology DS225+ ~$340, DS925+ ~$640, UGREEN NASync ~$650–730) a partir de várias câmeras',
+          'Passo seguinte para LLM local: um mini PC Ryzen (32GB de RAM, ~$649) ou uma RTX 3090 usada (~$1.400–1.550 em listagens vendidas, segundo o monitor da InsiderLLM, 2026-10-15)',
           'Decida só-HA vs HA + câmeras + IA local antes de comprar — isso muda o equipamento certo, e comprar o mini PC agora é melhor do que trocar a Pi depois',
         ],
       },
@@ -2429,15 +2443,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qual Hardware Comprar?',
         content:
           '**Combine seu objetivo com um equipamento, não o contrário.** A tabela abaixo mapeia cada objetivo de casa inteligente ao hardware que atende — cada linha leva à recomendação completa mais abaixo na página.',
-        columns: ['Seu objetivo', 'Compre isto', 'Preço estimado (ago/2026)'],
+        columns: ['Seu objetivo', 'Compre isto', 'Preço estimado'],
         rows: [
-          { 'Seu objetivo': 'Só Home Assistant', 'Compre isto': '[Home Assistant Green ou Raspberry Pi 5](#raspberry-pi)', 'Preço estimado (ago/2026)': 'R$ 2.100 (Green) / R$ 1.900–3.250 (Pi 5)' },
-          { 'Seu objetivo': 'HA + câmeras Frigate', 'Compre isto': '[Mini PC Intel N100/N150](#mini-pc)', 'Preço estimado (ago/2026)': '~R$ 2.000–2.300' },
-          { 'Seu objetivo': 'HA + um LLM local', 'Compre isto': '[Mini PC Ryzen, 32GB de RAM](#mini-pc)', 'Preço estimado (ago/2026)': '~R$ 6.900' },
-          { 'Seu objetivo': 'HA + um LLM local maior', 'Compre isto': '[Servidor com RTX 3090 usada](#server)', 'Preço estimado (ago/2026)': '~$1.400–1.550 (só a GPU; InsiderLLM 2026-10-15)' },
+          { 'Seu objetivo': 'Só Home Assistant', 'Compre isto': '[Home Assistant Green ou Raspberry Pi 5](#raspberry-pi)', 'Preço estimado': '$199 (Green) / $180–305 (Pi 5)' },
+          { 'Seu objetivo': 'HA + câmeras Frigate', 'Compre isto': '[Mini PC Intel N100/N150](#mini-pc)', 'Preço estimado': '~$190–220' },
+          { 'Seu objetivo': 'HA + um LLM local', 'Compre isto': '[Mini PC Ryzen, 32GB de RAM](#mini-pc)', 'Preço estimado': '~$649' },
+          { 'Seu objetivo': 'HA + um LLM local maior', 'Compre isto': '[Servidor com RTX 3090 usada](#server)', 'Preço estimado': '~$1.400–1.550 (só a GPU; InsiderLLM 2026-10-15)' },
         ],
         tableFormat: true,
-        note: 'Os preços são aproximados e mudam — GPU e memória DRAM têm oscilado bastante este ano. O valor da RTX 3090 vem de dados de listagens do eBay EUA no [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15), não de uma cotação; os preços no Brasil podem variar bastante devido a impostos de importação. Confira o preço no anúncio antes de comprar.',
+        note: 'Os preços são aproximados e mudam — GPU e memória DRAM têm oscilado bastante este ano. O valor da RTX 3090 vem de dados de listagens do eBay EUA no [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15), não de uma cotação; os preços no Brasil podem variar bastante devido a impostos de importação. Confira o preço no anúncio antes de comprar. Os preços exibidos são preços aproximados das páginas dos fabricantes na última atualização (veja a data de última atualização); confira o preço de hoje na página vinculada. Todos os preços são preços de referência dos EUA em USD e podem ser diferentes no seu país.',
         callouts: [
           { type: 'tip', text: 'Ainda não sabe se vai querer IA local? Veja [Não gaste demais](#dont-overspend) antes de comprar o equipamento mais caro.' },
         ],
@@ -2449,7 +2463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O próprio Home Assistant é leve e roda em hardware modesto; as demandas pesadas vêm da detecção de câmeras do Frigate e de um LLM local.** Dimensione o equipamento para o que você vai adicionar, não só para o hub.',
         items: [
           'O hub precisa de pouco processamento para o controle de dispositivos e as automações.',
-          'A detecção de objetos do Frigate precisa de um acelerador: uma iGPU Intel via OpenVINO cobre a maioria das configurações, e um módulo Hailo-8L ou Hailo-8 M.2 adiciona capacidade. O TPU Google Coral USB/M.2 ainda funciona, mas já é legado — o Frigate não recomenda mais para novas montagens.',
+          'A detecção de objetos do Frigate precisa de um acelerador: uma iGPU Intel via OpenVINO cobre a maioria das configurações, e um módulo Hailo-8L ou Hailo-8 M.2 adiciona capacidade. O TPU Google Coral USB/M.2 ainda funciona; a [documentação de hardware do Frigate](https://docs.frigate.video/frigate/hardware) lista opções Hailo e Intel OpenVINO para novas montagens e descreve o Coral como hardware mais antigo.',
           'Modelos Whisper maiores e a inferência de LLM local são as cargas mais exigentes — planeje a RAM e uma GPU/NPU em torno delas.',
           'Armazene as gravações de câmera em um SSD; migre para um NAS quando você rodar várias câmeras continuamente.',
         ],
@@ -2458,16 +2472,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**Uma Raspberry Pi 5 é a forma de menor consumo de rodar o Home Assistant para o uso típico de casa inteligente, mas uma escassez de DRAM em 2026 empurrou os preços das placas para cima com força — a placa de 8GB agora custa cerca de R$ 1.900–2.300 e a de 16GB, R$ 3.000–3.250, ambas bem acima do preço de lançamento original de cerca de R$ 650/R$ 950, e analistas não esperam normalização antes do fim de 2027.** Ela ainda tem dificuldade com inferência de LLM e modelos Whisper grandes.',
+          '**Uma Raspberry Pi 5 é a forma de menor consumo de rodar o Home Assistant para o uso típico de casa inteligente, mas uma escassez de DRAM em 2026 empurrou os preços das placas para cima com força — a placa de 8GB agora custa cerca de $180–220 e a de 16GB, $280–305, ambas bem acima do preço de lançamento original de cerca de $80/$120; confira a página vinculada da Raspberry Pi para os preços atuais.** Ela ainda tem dificuldade com inferência de LLM e modelos Whisper grandes.',
         items: [
           'Ótima para controle de dispositivos, automações e uma pequena configuração de voz local.',
           'A inferência de LLM em uma Pi se limita a modelos muito pequenos e lentos — combine com um HAT Hailo-8L M.2 se quiser detecção do Frigate.',
           'Escolha uma Pi 5 se você quer o básico com baixo consumo e tem certeza de que não vai adicionar um LLM local. Se você acha que vai querer IA local no próximo ano, pule a Pi e compre o mini PC agora — custa pouco mais e evita comprar duas vezes.',
-          'Para um aparelho pronto para usar, o Home Assistant Green já vem configurado (cerca de R$ 2.100 em 2026, contra um preço de lançamento de R$ 650). O Home Assistant Yellow foi descontinuado em outubro de 2025 — o Green agora é o único hub oficial da própria empresa.',
+          'Para um aparelho pronto para usar, o Home Assistant Green já vem configurado (cerca de $199 em 2026, contra um preço de lançamento de $99). O Home Assistant Yellow foi descontinuado em outubro de 2025 — o Green agora é o único hub oficial da própria empresa.',
         ],
         affiliateLinks: [
-          { label: 'Ver preço da Raspberry Pi 5 →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: 'R$ 1.900–3.250' },
-          { label: 'Ver preço do Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: 'R$ 2.100' },
+          { label: 'Ver preço da Raspberry Pi 5 →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '$180–305' },
+          { label: 'Ver preço do Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199' },
         ],
       },
       miniPc: {
@@ -2476,30 +2490,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Um mini PC é a melhor escolha de equipamento único para Home Assistant mais IA local, com RAM suficiente e uma iGPU ou NPU capaz para rodar um LLM pequeno e acelerar o Frigate.** Ele equilibra potência, tamanho e custo, e é a categoria em que vale a pena gastar mais se você quer um único equipamento para as duas funções.',
         items: [
-          'Melhor escolha econômica: um mini PC Intel N100/N150 de baixo consumo roda o Home Assistant e acelera o Frigate via iGPU Intel (OpenVINO) — a escolha padrão prática para um equipamento de hub mais câmeras. O Beelink EQ14 (Intel N150, 16GB de RAM) custa em torno de R$ 2.000–2.300 em agosto de 2026 — bom para operação 24 horas e baixo consumo de energia, mas fraco demais para um LLM local.',
-          'Melhor escolha para IA local: para um LLM local no mesmo equipamento, suba para um mini PC Ryzen com 32GB de RAM. O Beelink SER8 (Ryzen 7 8845HS) custa em torno de R$ 6.900 em agosto de 2026 e roda um modelo Qwen3 8B ou Llama 3.1 8B via Ollama em velocidade utilizável, junto com Home Assistant e Frigate. Priorize RAM e uma GPU integrada ou NPU capaz para menor latência.',
-          'Se você vai comprar um único equipamento para Home Assistant e IA local juntos, o mini PC Ryzen compensa o custo extra em relação ao N150 — é o único dos dois que de fato roda um LLM em velocidade utilizável.',
+          'Melhor escolha econômica: um mini PC Intel N100/N150 de baixo consumo roda o Home Assistant e acelera o Frigate via iGPU Intel (OpenVINO) — a escolha padrão prática para um equipamento de hub mais câmeras. O Beelink EQ14 (Intel N150, 16GB de RAM) custa em torno de $190–220 — bom para operação 24 horas e baixo consumo de energia, mas fraco demais para um LLM local.',
+          'Melhor escolha para IA local: para um LLM local no mesmo equipamento, suba para um mini PC Ryzen com 32GB de RAM. O Beelink SER8 (Ryzen 7 8845HS) custa em torno de $649; é um mini PC Ryzen 7 que pode rodar modelos classe 8B, como Qwen3 8B ou Llama 3.1 8B, via Ollama; a velocidade depende da quantização e do tamanho de contexto, e a PromptQuorum não fez benchmark desta unidade. Priorize RAM e uma GPU integrada ou NPU capaz para menor latência.',
+          'Se você vai comprar um único equipamento para Home Assistant e IA local juntos, o mini PC Ryzen pode compensar o custo extra em relação ao N150 — ele oferece mais folga para um modelo classe 8B.',
           'Para escolhas específicas, veja [melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) e, entre clusters, [melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm).',
         ],
         affiliateLinks: [
-          { label: 'Ver preço do EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: 'R$ 2.000–2.300' },
-          { label: 'Ver preço do SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: '~R$ 6.900' },
+          { label: 'Ver preço do EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14 (Intel N150)', productCategory: 'Mini PC', priceRange: '$190–220' },
+          { label: 'Ver preço do SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 (Ryzen 7 8845HS)', productCategory: 'Mini PC', priceRange: '~$649' },
         ],
       },
       frigateAccelerator: {
         id: 'frigate-accelerator',
         title: 'Vai rodar câmeras de segurança? Escolha seu acelerador do Frigate',
         content:
-          '**O número de câmeras e quanta folga de detecção você precisa é o que decide o acelerador, separadamente de qual equipamento roda o hub.** O Frigate não recomenda mais o Google Coral para novas montagens — agora direciona novos usuários para o Hailo, além da iGPU Intel embutida no host.',
+          '**O número de câmeras e quanta folga de detecção você precisa é o que decide o acelerador, separadamente de qual equipamento roda o hub.** A [documentação de hardware do Frigate](https://docs.frigate.video/frigate/hardware) lista opções Hailo e Intel OpenVINO para novas montagens; o Google Coral ainda funciona, mas é descrito ali como hardware mais antigo.',
         items: [
           '1–4 câmeras: a iGPU Intel embutida em um mini PC N100/N150, usada via OpenVINO, cobre a maioria das configurações domésticas sem custo extra de hardware.',
-          '4–10 câmeras, ou se você quiser mais folga de detecção em hardware não-Intel: um módulo Hailo-8L M.2 (~R$ 750 em agosto de 2026) é a recomendação atual de baixo consumo do Frigate — funciona como o Coral funcionava antes, como uma placa adicional com suporte de primeira linha.',
-          '10+ câmeras ou reconhecimentos adicionais mais pesados (reconhecimento facial/de placas além da detecção): um módulo Hailo-8 M.2 (~R$ 1.800–2.100) acrescenta bastante mais throughput.',
+          '4–10 câmeras, ou se você quiser mais folga de detecção em hardware não-Intel: um módulo Hailo-8L M.2 (~$70) é a recomendação atual de baixo consumo do Frigate — funciona como o Coral funcionava antes, como uma placa adicional com suporte de primeira linha.',
+          '10+ câmeras ou reconhecimentos adicionais mais pesados (reconhecimento facial/de placas além da detecção): um módulo Hailo-8 M.2 (~$170–200) acrescenta bastante mais throughput.',
           'Já tem um Coral? Ele continua funcionando — isso é só sobre o que comprar em uma montagem nova, não um motivo para trocar um Coral que já funciona.',
         ],
+        callouts: [{ type: 'warning', text: 'Câmeras e reconhecimento facial ou de placas são regulamentados. Na UE, o GDPR pode se aplicar quando as câmeras captam espaço público, vizinhos ou outras pessoas, e a identificação biométrica tem regras mais rígidas. No Brasil, a LGPD também pode se aplicar. Verifique a legislação local antes de instalar; isto não é aconselhamento jurídico.' }],
         affiliateLinks: [
-          { label: 'Ver preço do Hailo-8L →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '~R$ 750' },
-          { label: 'Ver preço do Hailo-8 →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '~R$ 1.800–2.100' },
+          { label: 'Ver preço do Hailo-8L →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '~$70' },
+          { label: 'Ver preço do Hailo-8 →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '~$170–200' },
         ],
       },
       nas: {
@@ -2508,15 +2523,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Um NAS pode hospedar o Home Assistant em um contêiner ao lado do armazenamento e das gravações do Frigate, se tiver CPU e RAM suficientes — uma boa opção se você já tem um, mas não é o motivo certo para comprar seu primeiro NAS.** Não compre um NAS especificamente para rodar um LLM local: um mini PC dedicado ou um equipamento com GPU é uma plataforma de IA melhor pelo mesmo dinheiro.',
         items: [
-          '2–4 câmeras / armazenamento mais leve: o Synology DS225+ (~R$ 3.600 em agosto de 2026) cobre Home Assistant em contêiner mais gravações do Frigate para poucas câmeras.',
-          '4–10 câmeras / mais folga: o Synology DS925+ (~R$ 6.800) acrescenta folga de CPU/RAM para mais complementos e câmeras.',
-          'Armazenamento mais IA local em um único equipamento: os modelos UGREEN NASync (classe DXP4800 Plus, ~R$ 6.900–7.800) vêm com uma opção de LLM local integrada e hardware mais novo (DDR5, 10GbE sem placa adicional) por um preço parecido com o do DS925+.',
+          '2–4 câmeras / armazenamento mais leve: o Synology DS225+ (~$340) cobre Home Assistant em contêiner mais gravações do Frigate para poucas câmeras.',
+          '4–10 câmeras / mais folga: o Synology DS925+ (~$640) acrescenta folga de CPU/RAM para mais complementos e câmeras.',
+          'Armazenamento mais IA local em um único equipamento: os modelos UGREEN NASync (classe DXP4800 Plus, ~$650–730) oferecem hardware mais novo (DDR5, 10GbE sem placa adicional) por um preço parecido com o do DS925+, e alguns modelos anunciam uma opção de LLM local; confira a página do fabricante.',
           'A inferência de LLM em um NAS ainda depende muito do hardware dele — a maioria dos NAS não tem uma GPU dedicada capaz, então trate a opção de LLM integrada como um recurso de conveniência, não como substituto do nível RTX 3090 abaixo se você realmente quer um modelo grande.',
         ],
         affiliateLinks: [
-          { label: 'Ver preço do DS225+ →', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: '~R$ 3.600' },
-          { label: 'Ver preço do DS925+ →', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: '~R$ 6.800' },
-          { label: 'Ver preço do UGREEN NASync →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: '~R$ 6.900–7.800' },
+          { label: 'Ver preço do DS225+ →', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS', priceRange: '~$340' },
+          { label: 'Ver preço do DS925+ →', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS', priceRange: '~$640' },
+          { label: 'Ver preço do UGREEN NASync →', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS', priceRange: '~$650–730' },
         ],
       },
       server: {
@@ -2526,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Um servidor dedicado com GPU dedicada é o passo seguinte para rodar um LLM local maior ao lado de muitas câmeras.** Ele oferece a maior folga a maior custo e consumo — e o preço das GPUs mudou bastante em 2026, então trate os números abaixo como um retrato do momento, não um valor fixo.',
         items: [
           'Uma RTX 3090 usada (24GB de VRAM) é uma escolha comum para LLMs locais por causa da VRAM. O [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15) registra listagens usadas vendidas de cerca de $1.400–1.550 — dados do eBay EUA, sem ser cotação nem oferta; os preços no Brasil podem variar bastante devido a impostos de importação. Modelos com quantização Q4 de até cerca de 70B podem ser possíveis dependendo da quantização, do tamanho de contexto e do offloading; trate isso como uma faixa de capacidade, não uma garantia para todo modelo de 70B.',
-          'Uma RTX 3060 usada (12GB) é a alternativa econômica para um equipamento com GPU dedicada — dá conta bem de modelos de 7B–13B, sem a folga de VRAM (nem o preço) da RTX 3090.',
+          'Uma RTX 3060 usada (12GB) é a alternativa econômica para um equipamento com GPU dedicada — pode lidar com modelos de 7B–13B, dependendo da quantização, sem a folga de VRAM (nem o preço) da RTX 3090.',
           'Melhor para muitas câmeras, um LLM maior e vários usuários. Maior consumo e custo que um mini PC — veja a seção de consumo de energia abaixo antes de investir nesse nível.',
           'Exagero para uma casa inteligente básica — reserve para uso intenso de IA local, e mantenha o hub do Home Assistant em um equipamento separado de baixo consumo para mais confiabilidade (veja Um equipamento ou dois? abaixo).',
         ],
@@ -2534,6 +2549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver anúncios de RTX 3090 usada →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '~$1.400–1.550' },
           { label: 'Ver anúncios de RTX 3060 usada →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: 'Uma GPU de 350 W em um servidor que roda continuamente precisa de uma fonte de qualidade com dimensionamento correto, boa ventilação e um local de instalação adequado. Placas usadas podem ter desgaste e não ter garantia, então confira as condições do vendedor. Siga as orientações do fabricante; isto não é aconselhamento elétrico.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-pt.svg',
         imageCaption: 'Capacidade de LLM local por nível de hardware: um Raspberry Pi 5 só roda modelos minúsculos, um mini PC Intel N100/N150 lida com modelos pequenos, um mini PC Ryzen (32GB de RAM) roda modelos de 7B–8B, e uma RTX 3090 usada (24GB de VRAM) chega a cerca de 70B em quantização Q4 dependendo da configuração.',
       },
@@ -2541,7 +2557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: 'Não gaste demais no seu servidor do Home Assistant',
         content:
-          '**Comprar mais hardware do que o seu caso de uso precisa é a compra desperdiçada mais comum nessa categoria — combine o equipamento com o que você realmente pretende rodar.**',
+          '**Comprar mais hardware do que o seu caso de uso precisa é uma compra desperdiçada comum nessa categoria — combine o equipamento com o que você realmente pretende rodar.**',
         items: [
           'Só Home Assistant? Você não precisa de uma GPU RTX, e provavelmente nem de um mini PC — uma Raspberry Pi 5 ou um Home Assistant Green já dá conta.',
           'Home Assistant mais câmeras do Frigate? Você não precisa de uma estação de trabalho cara — um mini PC Intel N100/N150 com a iGPU embutida já basta para a maioria das quantidades de câmeras domésticas.',
@@ -2599,7 +2615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Se você está escolhendo um único equipamento hoje e não tem certeza de qual nível se encaixa, esta é uma base razoável considerando as trocas acima — sua necessidade real pode apontar para outro lado, e nenhuma das indicações abaixo foi testada ou avaliada pela PromptQuorum.**',
         items: [
           'Para uma casa inteligente local comum (Home Assistant mais alguns dispositivos Zigbee/Matter): um mini PC Intel N150 é um padrão sensato — ele também cobre o Frigate se você adicionar câmeras depois.',
-          'Para Home Assistant mais câmeras mais um pequeno assistente de IA local: um mini PC Ryzen com 32GB de RAM é uma escolha razoável de equipamento único — é o mais barato que de fato roda um LLM classe 8B em velocidade utilizável.',
+          'Para Home Assistant mais câmeras mais um pequeno assistente de IA local: um mini PC Ryzen com 32GB de RAM é uma escolha razoável de equipamento único — é uma forma de menor custo de rodar um modelo classe 8B.',
           'Para IA local a sério (modelos classe 32B ou maiores): um servidor RTX 3090 separado, mantido à parte do hub do Home Assistant, é o passo seguinte razoável dado o preço atual de GPUs usadas.',
           'Uma instalação nova voltada para IA em geral combina menos com uma Raspberry Pi, considerando os preços da Pi em 2026 e suas limitações de LLM — um mini PC costuma ter preço parecido e ser uma plataforma de IA muito melhor.',
         ],
@@ -2609,27 +2625,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configurações completas de casa inteligente local',
         content:
           '**A maioria dos compradores precisa de mais de um produto — no mínimo um hub, um acelerador do Frigate e armazenamento, mais um equipamento de IA se você quiser inferência de LLM local.** Estas três configurações combinam as indicações acima por cenário; cada produto leva de volta à sua recomendação completa mais acima nesta página.',
-        columns: ['Configuração', 'Hub', 'Acelerador do Frigate', 'IA', 'Total estimado (ago/2026)'],
+        columns: ['Configuração', 'Hub', 'Acelerador do Frigate', 'IA', 'Total estimado'],
         rows: [
-          { 'Configuração': 'Iniciante (só HA)', 'Hub': '[Home Assistant Green ou Pi 5](#raspberry-pi)', 'Acelerador do Frigate': '—', 'IA': '—', 'Total estimado (ago/2026)': '~R$ 2.100–3.250' },
-          { 'Configuração': 'HA + câmeras', 'Hub': '[Mini PC N150](#mini-pc)', 'Acelerador do Frigate': '[iGPU Intel, ou Hailo-8L para mais folga](#frigate-accelerator)', 'IA': '—', 'Total estimado (ago/2026)': '~R$ 2.000–3.100' },
-          { 'Configuração': 'HA + câmeras + IA local', 'Hub': '[Mini PC Ryzen, 32GB](#mini-pc)', 'Acelerador do Frigate': 'iGPU embutida, ou [Hailo-8L para mais câmeras](#frigate-accelerator)', 'IA': 'Roda no mesmo equipamento (modelo classe 8B)', 'Total estimado (ago/2026)': '~R$ 6.900–7.700' },
-          { 'Configuração': 'HA + câmeras + IA local grande', 'Hub': '[Mini PC N150 (mantido separado por confiabilidade)](#mini-pc)', 'Acelerador do Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Servidor com RTX 3090 usada, rodando separado](#server)', 'Total estimado (ago/2026)': '~$1.760–1.970 (sem o PC anfitrião)' },
+          { 'Configuração': 'Iniciante (só HA)', 'Hub': '[Home Assistant Green ou Pi 5](#raspberry-pi)', 'Acelerador do Frigate': '—', 'IA': '—', 'Total estimado': '~$199–305' },
+          { 'Configuração': 'HA + câmeras', 'Hub': '[Mini PC N150](#mini-pc)', 'Acelerador do Frigate': '[iGPU Intel, ou Hailo-8L para mais folga](#frigate-accelerator)', 'IA': '—', 'Total estimado': '~$190–290' },
+          { 'Configuração': 'HA + câmeras + IA local', 'Hub': '[Mini PC Ryzen, 32GB](#mini-pc)', 'Acelerador do Frigate': 'iGPU embutida, ou [Hailo-8L para mais câmeras](#frigate-accelerator)', 'IA': 'Roda no mesmo equipamento (modelo classe 8B)', 'Total estimado': '~$649–720' },
+          { 'Configuração': 'HA + câmeras + IA local grande', 'Hub': '[Mini PC N150 (mantido separado por confiabilidade)](#mini-pc)', 'Acelerador do Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Servidor com RTX 3090 usada, rodando separado](#server)', 'Total estimado': '~$1.760–1.970 (sem o PC anfitrião)' },
         ],
         tableFormat: true,
-        note: 'A última configuração mantém o hub do Home Assistant em seu próprio equipamento de baixo consumo e roda a RTX 3090 como uma máquina separada — veja [Um equipamento ou dois?](#one-or-two) para entender o motivo. O total soma uma RTX 3090 usada ($1.400–1.550, monitor da InsiderLLM, 2026-10-15), um mini PC N150 (~$190–220) e um Hailo-8 (~$170–200): de $1.760 a $1.970. Não inclui o PC anfitrião (CPU, placa-mãe, fonte, RAM, gabinete) de que a GPU precisa.',
+        note: 'A última configuração mantém o hub do Home Assistant em seu próprio equipamento de baixo consumo e roda a RTX 3090 como uma máquina separada — veja [Um equipamento ou dois?](#one-or-two) para entender o motivo. O total soma uma RTX 3090 usada ($1.400–1.550, monitor da InsiderLLM, 2026-10-15), um mini PC N150 (~$190–220) e um Hailo-8 (~$170–200): de $1.760 a $1.970. Não inclui o PC anfitrião (CPU, placa-mãe, fonte, RAM, gabinete) de que a GPU precisa. Os preços exibidos são preços aproximados das páginas dos fabricantes na última atualização (veja a data de última atualização); confira o preço de hoje na página vinculada. Todos os preços são preços de referência dos EUA em USD e podem ser diferentes no seu país.',
       },
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Qual hardware o Frigate recomenda?', a: 'Para novas montagens, o Frigate recomenda uma iGPU Intel via OpenVINO, ou um módulo Hailo-8L (~R$ 750, econômico) ou Hailo-8 (~R$ 1.800–2.100, mais rápido) M.2 para mais capacidade de detecção. O TPU Google Coral USB/M.2 ainda funciona, mas já é legado — o Frigate não recomenda mais para novas instalações, exceto em hardware de consumo muito baixo.' },
+          { q: 'Qual hardware o Frigate recomenda?', a: 'Para novas montagens, a documentação de hardware do Frigate (https://docs.frigate.video/frigate/hardware) lista, entre outras, uma iGPU Intel via OpenVINO, ou um módulo Hailo-8L (~$70, econômico) ou Hailo-8 (~$170–200, mais rápido) M.2 para mais capacidade de detecção. O TPU Google Coral USB/M.2 ainda funciona, mas essa documentação o descreve como hardware mais antigo.' },
           { q: 'Uma Raspberry Pi também pode rodar um LLM local?', a: 'Uma Pi só consegue rodar modelos muito pequenos, e devagar, então não é ideal para um assistente de LLM local responsivo. Ela dá conta bem do Home Assistant e da voz básica, mas para IA local um mini PC com uma iGPU ou NPU capaz — ou um servidor com RTX 3090 usada — é a melhor escolha.' },
-          { q: 'De quanta RAM eu preciso?', a: 'O Home Assistant sozinho roda em poucos gigabytes. Para rodar um LLM local pequeno e outros serviços de IA no mesmo equipamento, mais RAM ajuda; um mini PC com 32GB de RAM e uma iGPU/NPU capaz mantém um modelo Qwen3 8B ou Llama 3.1 8B responsivo. Ajuste a RAM ao tamanho do modelo que você planeja rodar.' },
+          { q: 'De quanta RAM eu preciso?', a: 'O Home Assistant sozinho roda em poucos gigabytes. Para rodar um LLM local pequeno e outros serviços de IA no mesmo equipamento, mais RAM ajuda; um mini PC com 32GB de RAM e uma iGPU/NPU capaz pode rodar um modelo Qwen3 8B ou Llama 3.1 8B; a velocidade depende da quantização e do tamanho de contexto. Ajuste a RAM ao tamanho do modelo que você planeja rodar.' },
           { q: 'Qual mini PC eu deveria comprar?', a: 'Para HA mais câmeras, um mini PC Intel N100/N150 acelera o Frigate via OpenVINO. Para HA mais um LLM local, suba para um mini PC Ryzen com 32GB de RAM. Veja o guia dos melhores mini PCs para Home Assistant + IA local para escolhas específicas.' },
           { q: 'Um equipamento ou dois?', a: 'Um equipamento (um mini PC) é o mais simples e roda o Home Assistant mais um LLM local pequeno juntos. Divida em dois se você quiser manter o hub ultraconfiável em um equipamento de baixo consumo e descarregar a IA pesada para uma máquina separada, como um servidor com RTX 3090 usada.' },
           { q: 'O consumo de energia importa para um equipamento 24 horas?', a: 'Importa mais do que o preço de compra para hardware que nunca desliga. Uma Raspberry Pi consome poucos watts, um mini PC N100/N150 cerca de 10–15W, um mini PC Ryzen entre 15–35W dependendo da carga, e a NVIDIA informa 350W de potência da placa para uma GPU dedicada como a RTX 3090 — um motivo para rodar um servidor com GPU pesada como um equipamento separado, em vez de sempre ligado.' },
-          { q: 'Uma Raspberry Pi ainda vale a pena com os preços de 2026?', a: 'Só para Home Assistant, sim — ainda é a opção de menor consumo. Mas uma escassez de DRAM em 2026 empurrou os preços da Pi 5 para cima (cerca de R$ 1.900–3.250 dependendo da RAM, em agosto de 2026, contra um valor original de R$ 650–950), diminuindo a diferença de preço para um mini PC N100/N150. Se você pode adicionar câmeras ou um LLM local dentro de um ano, o mini PC costuma ser a compra melhor agora.' },
+          { q: 'Uma Raspberry Pi ainda vale a pena com os preços de 2026?', a: 'Só para Home Assistant, sim — ainda é a opção de menor consumo. Mas uma escassez de DRAM em 2026 empurrou os preços da Pi 5 para cima (cerca de $180–305 dependendo da RAM, contra um valor original de $80–120), diminuindo a diferença de preço para um mini PC N100/N150. Se você pode adicionar câmeras ou um LLM local dentro de um ano, o mini PC costuma ser a compra melhor agora.' },
         ],
       },
       relatedReading: {
@@ -2659,7 +2675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'Hardware do Home Assistant' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: 'LLM local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -2669,21 +2685,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt',
       mainEntity: [
-        { '@type': 'Question', name: 'Qual hardware o Frigate recomenda?', acceptedAnswer: { '@type': 'Answer', text: 'Para novas montagens, o Frigate recomenda uma iGPU Intel via OpenVINO, ou um módulo Hailo-8L (~R$ 750) ou Hailo-8 (~R$ 1.800–2.100) M.2 para mais capacidade de detecção. O TPU Google Coral ainda funciona, mas já é legado e não é mais recomendado para novas instalações.' } },
+        { '@type': 'Question', name: 'Qual hardware o Frigate recomenda?', acceptedAnswer: { '@type': 'Answer', text: 'Para novas montagens, a documentação de hardware do Frigate (https://docs.frigate.video/frigate/hardware) lista, entre outras, uma iGPU Intel via OpenVINO, ou um módulo Hailo-8L (~$70) ou Hailo-8 (~$170–200) M.2 para mais capacidade de detecção. O TPU Google Coral ainda funciona, mas essa documentação o descreve como hardware mais antigo.' } },
         { '@type': 'Question', name: 'Uma Raspberry Pi também pode rodar um LLM local?', acceptedAnswer: { '@type': 'Answer', text: 'Uma Pi só consegue rodar modelos muito pequenos e devagar. Ela dá conta bem do Home Assistant e da voz básica, mas para um assistente de LLM local responsivo um mini PC com iGPU ou NPU capaz, ou um servidor com RTX 3090 usada, é melhor.' } },
-        { '@type': 'Question', name: 'De quanta RAM eu preciso?', acceptedAnswer: { '@type': 'Answer', text: 'O Home Assistant sozinho roda em poucos gigabytes. Para rodar um LLM local pequeno no mesmo equipamento, mais RAM ajuda; um mini PC com 32GB de RAM mantém um modelo Qwen3 8B ou Llama 3.1 8B responsivo. Ajuste a RAM ao tamanho do modelo que você planeja rodar.' } },
+        { '@type': 'Question', name: 'De quanta RAM eu preciso?', acceptedAnswer: { '@type': 'Answer', text: 'O Home Assistant sozinho roda em poucos gigabytes. Para rodar um LLM local pequeno no mesmo equipamento, mais RAM ajuda; um mini PC com 32GB de RAM pode rodar um modelo Qwen3 8B ou Llama 3.1 8B; a velocidade depende da quantização e do tamanho de contexto. Ajuste a RAM ao tamanho do modelo que você planeja rodar.' } },
         { '@type': 'Question', name: 'Qual mini PC eu deveria comprar?', acceptedAnswer: { '@type': 'Answer', text: 'Para HA mais câmeras, um mini PC Intel N100/N150 acelera o Frigate via OpenVINO. Para HA mais um LLM local, suba para um mini PC Ryzen com 32GB de RAM. Veja o guia dos melhores mini PCs para Home Assistant + IA local.' } },
         { '@type': 'Question', name: 'Um equipamento ou dois?', acceptedAnswer: { '@type': 'Answer', text: 'Um mini PC roda o Home Assistant mais um LLM local pequeno juntos. Divida em dois se quiser o hub ultraconfiável em um equipamento de baixo consumo e a IA pesada descarregada para uma máquina separada, como um servidor com RTX 3090 usada.' } },
         { '@type': 'Question', name: 'O consumo de energia importa para um equipamento 24 horas?', acceptedAnswer: { '@type': 'Answer', text: 'Importa mais do que o preço de compra para hardware que nunca desliga. Uma Raspberry Pi consome poucos watts, um mini PC N100/N150 cerca de 10–15W, um mini PC Ryzen cerca de 15–35W, e a NVIDIA informa 350W de potência da placa para uma GPU dedicada como a RTX 3090.' } },
-        { '@type': 'Question', name: 'Uma Raspberry Pi ainda vale a pena com os preços de 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Só para Home Assistant, sim. Mas uma escassez de DRAM em 2026 empurrou os preços da Pi 5 para cerca de R$ 1.900–3.250 dependendo da RAM, contra um valor original de R$ 650–950, diminuindo a diferença para um mini PC N100/N150 — que é a melhor compra se você pode adicionar câmeras ou um LLM local dentro de um ano.' } },
+        { '@type': 'Question', name: 'Uma Raspberry Pi ainda vale a pena com os preços de 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Só para Home Assistant, sim. Mas uma escassez de DRAM em 2026 empurrou os preços da Pi 5 para cerca de $180–305 dependendo da RAM, contra um valor original de $80–120, diminuindo a diferença para um mini PC N100/N150 — que é a melhor compra se você pode adicionar câmeras ou um LLM local dentro de um ano.' } },
       ],
     },
   },
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-11-22',
-    next_refresh_due: '2027-05-22',
+    dateModified: '2026-11-23',
+    next_refresh_due: '2027-05-23',
     theme: 'Local-First Smart Home',
     heroImage: '/images/best-hardware-for-local-smart-home-overview-hero-zh.webp',
     affiliateDisclosure: true,
@@ -2712,16 +2728,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '带 AI 的本地智能家居需要什么硬件？',
         answer:
-          '先从中枢开始：Intel N100/N150 迷你 PC 或 Raspberry Pi 5 运行 Home Assistant。再为摄像头加一个 Frigate 加速器——经由 OpenVINO 的 Intel 集成显卡能覆盖大多数配置，Hailo-8L 或 Hailo-8 M.2 模块可提升检测容量（Google Coral 现已过时）。录像存到 SSD，摄像头多的话用 NAS。要跑本地 LLM，就升级到带强力集成显卡/NPU 的迷你 PC，或一台二手 RTX 3090 主机。如果你觉得一年内会加入本地 AI，现在就直接买迷你 PC，而不是买 Raspberry Pi 以后再换。',
+          '先从中枢开始：Intel N100/N150 迷你 PC 或 Raspberry Pi 5 运行 Home Assistant。再为摄像头加一个 Frigate 加速器——经由 OpenVINO 的 Intel 集成显卡能覆盖大多数配置，Hailo-8L 或 Hailo-8 M.2 模块可提升检测容量（Frigate 硬件文档为新搭建列出了 Hailo 和 Intel OpenVINO 方案；Google Coral 仍能使用，但在文档中被描述为较旧的硬件）。录像存到 SSD，摄像头多的话用 NAS。要跑本地 LLM，就升级到带强力集成显卡/NPU 的迷你 PC，或一台二手 RTX 3090 主机。如果你觉得一年内会加入本地 AI，现在就直接买迷你 PC，而不是买 Raspberry Pi 以后再换。',
         bullets: [
           '中枢：Intel N100/N150 迷你 PC 或 Raspberry Pi 5',
-          'Frigate：Intel 集成显卡（OpenVINO）或 Hailo-8L M.2——Coral 已过时',
+          'Frigate：Intel 集成显卡（OpenVINO）或 Hailo-8L M.2——Coral 仍能使用，但属于较旧的硬件',
           '存储：SSD，摄像头多则用 NAS',
           '本地 LLM 升级：迷你 PC 集成显卡/NPU 或二手 RTX 3090',
           '如果一年内可能加装本地 AI，现在直接买迷你 PC——比买 Raspberry Pi 之后再换划算',
           '先决定：仅-HA 还是 HA + 摄像头 + 本地 AI——这决定你是买一次还是买两次',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11-23',
       },
     },
     toc: [
@@ -2751,8 +2767,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要点速览',
         isTldr: true,
         items: [
-          '中枢：Intel N100/N150 迷你 PC（约 190–220 美元）或 Raspberry Pi 5（截至 2026 年 8 月约 180–305 美元，受内存芯片短缺影响大幅涨价）运行 Home Assistant',
-          'Frigate：Intel 集成显卡（内置于大多数迷你 PC，经由 OpenVINO）、Hailo-8L M.2 模块（约 70 美元）或 Hailo-8 M.2（约 170–200 美元）加速摄像头检测——Google Coral 现已过时，不再是 Frigate 对新搭建的推荐',
+          '中枢：Intel N100/N150 迷你 PC（约 190–220 美元）或 Raspberry Pi 5（约 180–305 美元，受内存芯片短缺影响大幅涨价）运行 Home Assistant',
+          'Frigate：Intel 集成显卡（内置于大多数迷你 PC，经由 OpenVINO）、Hailo-8L M.2 模块（约 70 美元）或 Hailo-8 M.2（约 170–200 美元）加速摄像头检测——Frigate 硬件文档为新搭建列出了 Hailo 和 Intel OpenVINO 方案，Google Coral 仍能使用，但在文档中被描述为较旧的硬件',
           '存储：录像用 SSD，摄像头多起来（Synology DS225+ 约 340 美元、DS925+ 约 640 美元、UGREEN NASync 约 650–730 美元）后再上 NAS',
           '本地 LLM 升级：Ryzen 迷你 PC（32GB 内存，约 649 美元）或二手 RTX 3090（InsiderLLM 追踪页 2026-10-15 的成交记录约 1,400–1,550 美元）',
           '购买前先决定仅-HA 还是 HA + 摄像头 + 本地 AI——这会改变合适的设备，现在直接买迷你 PC 比以后换掉 Pi 更划算',
@@ -2771,7 +2787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的目标': 'HA + 更大的本地 LLM', '该买': '[二手 RTX 3090 服务器](#server)', '预估价格': '约 1,400–1,550 美元（仅 GPU；InsiderLLM 2026-10-15）' },
         ],
         tableFormat: true,
-        note: '以上价格为大致水平，会持续变化——尤其是 GPU 和内存芯片价格今年波动很大。RTX 3090 的数字来自 [InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于 2026-10-15）的 eBay 美国挂牌数据，并非报价；不同地区的价格可能有差异。下单前请核对链接页面的实际价格。',
+        note: '以上价格为大致水平，会持续变化——尤其是 GPU 和内存芯片价格今年波动很大。RTX 3090 的数字来自 [InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于 2026-10-15）的 eBay 美国挂牌数据，并非报价；不同地区的价格可能有差异。下单前请核对链接页面的实际价格。 所示价格为上次更新时厂商页面上的大致价格（见最后更新日期）；请到链接页面核对当日价格。',
         callouts: [
           { type: 'tip', text: '还不确定要不要上本地 AI？买贵的设备之前，先看看[别买多了](#dont-overspend)。' },
         ],
@@ -2783,7 +2799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Home Assistant 本身很轻量，在普通硬件上即可运行；繁重需求来自 Frigate 摄像头检测和本地 LLM。** 按你要添加的内容来选设备，而不仅是中枢本身。',
         items: [
           '中枢在设备控制和自动化上几乎不需要算力。',
-          'Frigate 物体检测需要加速器：经由 OpenVINO 的 Intel 集成显卡能处理大多数配置，Hailo-8L 或 Hailo-8 M.2 模块可提升容量。Google Coral USB/M.2 TPU 仍能用，但现已过时——Frigate 不再为新搭建推荐它。',
+          'Frigate 物体检测需要加速器：经由 OpenVINO 的 Intel 集成显卡能处理大多数配置，Hailo-8L 或 Hailo-8 M.2 模块可提升容量。Google Coral USB/M.2 TPU 仍能使用；[Frigate 硬件文档](https://docs.frigate.video/frigate/hardware)为新搭建列出了 Hailo 和 Intel OpenVINO 方案，并将 Coral 描述为较旧的硬件。',
           '更大的 Whisper 模型和本地 LLM 推理是最吃力的工作负载——围绕它们规划内存和 GPU/NPU。',
           '录像存到 SSD；连续运行多个摄像头后再迁移到 NAS。',
         ],
@@ -2792,12 +2808,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'raspberry-pi',
         title: 'Raspberry Pi',
         content:
-          '**对典型智能家居用途而言，Raspberry Pi 5 是运行 Home Assistant 最省电的方式，但 2026 年的内存芯片短缺已让开发板价格大幅上涨——8GB 版本现在约 180–220 美元，16GB 版本约 280–305 美元，都远高于原先约 80/120 美元的首发价，分析师预计要到 2027 年末才会恢复正常。** 它在 LLM 推理和大型 Whisper 模型上仍然吃力。',
+          '**对典型智能家居用途而言，Raspberry Pi 5 是运行 Home Assistant 最省电的方式，但 2026 年的内存芯片短缺已让开发板价格大幅上涨——8GB 版本现在约 180–220 美元，16GB 版本约 280–305 美元，都远高于原先约 80/120 美元的首发价；当前价格请查看链接的 Raspberry Pi 页面。** 它在 LLM 推理和大型 Whisper 模型上仍然吃力。',
         items: [
           '非常适合设备控制、自动化以及小规模本地语音配置。',
           'Pi 上的 LLM 推理仅限非常小且缓慢的模型——如果想要 Frigate 检测，可搭配 Hailo-8L M.2 HAT。',
           '若想以低功耗实现基础功能，且确定不会加装本地 LLM，就选 Pi 5。如果你觉得一年内可能想要本地 AI，直接跳过 Pi，现在就买迷你 PC——只多花一点钱，却能省下以后再买一次的成本。',
-          '想要即插即用的成品，Home Assistant Green 出厂即可运行（2026 年约 199 美元，高于 99 美元的首发价）。Home Assistant Yellow 已于 2026 年 10 月停产——Green 现在是唯一的官方原厂中枢。',
+          '想要即插即用的成品，Home Assistant Green 出厂即可运行（2026 年约 199 美元，高于 99 美元的首发价）。Home Assistant Yellow 已于 2025 年 10 月停产——Green 现在是唯一的官方原厂中枢。',
         ],
         affiliateLinks: [
           { label: '查看 Raspberry Pi 5 价格 →', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer', priceRange: '180–305 美元' },
@@ -2810,9 +2826,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**迷你 PC 是 Home Assistant 加本地 AI 的最佳单机选择，拥有足够内存以及可运行小型 LLM、加速 Frigate 的强力集成显卡或 NPU。** 它在性能、体积和成本之间取得平衡，如果你打算用一台设备同时干两件事，这一档就是值得多花钱的地方。',
         items: [
-          '最佳预算之选：低功耗的 Intel N100/N150 迷你 PC 可运行 Home Assistant，并经由 Intel 集成显卡（OpenVINO）加速 Frigate——是中枢加摄像头这类配置的实用首选。Beelink EQ14（Intel N150，16GB 内存）截至 2026 年 8 月价格约 190–220 美元——适合 24 小时运行且耗电低，但跑本地 LLM 力不从心。',
-          '本地 AI 首选：若想在同一台设备上跑本地 LLM，升级到带 32GB 内存的 Ryzen 迷你 PC。Beelink SER8（Ryzen 7 8845HS）截至 2026 年 8 月价格约 649 美元，可经由 Ollama 以可用速度运行 Qwen3 8B 或 Llama 3.1 8B 模型，同时兼顾 Home Assistant 和 Frigate。优先考虑内存和强力集成显卡或 NPU 以降低延迟。',
-          '如果你打算用一台设备同时跑 Home Assistant 和本地 AI，Ryzen 迷你 PC 比 N150 多花的钱是值得的——它是两者中唯一能以可用速度真正跑起 LLM 的。',
+          '最佳预算之选：低功耗的 Intel N100/N150 迷你 PC 可运行 Home Assistant，并经由 Intel 集成显卡（OpenVINO）加速 Frigate——是中枢加摄像头这类配置的实用首选。Beelink EQ14（Intel N150，16GB 内存）价格约 190–220 美元——适合 24 小时运行且耗电低，但跑本地 LLM 力不从心。',
+          '本地 AI 首选：若想在同一台设备上跑本地 LLM，升级到带 32GB 内存的 Ryzen 迷你 PC。Beelink SER8（Ryzen 7 8845HS）价格约 649 美元，它是一台 Ryzen 7 迷你 PC，可经由 Ollama 运行 Qwen3 8B 或 Llama 3.1 8B 等 8B 级模型；速度取决于量化方式和上下文长度，PromptQuorum 未对该机型做过基准测试。优先考虑内存和强力集成显卡或 NPU 以降低延迟。',
+          '如果你打算用一台设备同时跑 Home Assistant 和本地 AI，Ryzen 迷你 PC 比 N150 多花的钱可能值得——它为 8B 级模型提供了更大的余量。',
           '具体选择参见[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)，以及跨集群的[本地 LLM 的最佳迷你 PC](/zh/local-llms/best-mini-pcs-local-llm)。',
         ],
         affiliateLinks: [
@@ -2824,13 +2840,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'frigate-accelerator',
         title: '要跑安防摄像头？挑选你的 Frigate 加速器',
         content:
-          '**摄像头数量和你需要多少检测余量决定加速器该选哪一档，这与中枢跑在哪台设备上是分开的两件事。** Frigate 已不再为新搭建推荐 Google Coral——现在会引导新用户使用 Hailo，或直接用主机自带的 Intel 集成显卡。',
+          '**摄像头数量和你需要多少检测余量决定加速器该选哪一档，这与中枢跑在哪台设备上是分开的两件事。** [Frigate 硬件文档](https://docs.frigate.video/frigate/hardware)为新搭建列出了 Hailo 和 Intel OpenVINO 方案；Google Coral 仍能使用，但在文档中被描述为较旧的硬件。',
         items: [
           '1–4 个摄像头：N100/N150 迷你 PC 内置的 Intel 集成显卡，经由 OpenVINO 运行，无需额外硬件成本即可覆盖大多数家庭配置。',
-          '4–10 个摄像头，或想在非 Intel 硬件上获得更多检测余量：Hailo-8L M.2 模块（截至 2026 年 8 月约 70 美元）是 Frigate 目前的低功耗首选——它像当年的 Coral 一样，是被官方一线支持的扩展卡。',
+          '4–10 个摄像头，或想在非 Intel 硬件上获得更多检测余量：Hailo-8L M.2 模块（约 70 美元）是 Frigate 目前的低功耗首选——它像当年的 Coral 一样，是被官方一线支持的扩展卡。',
           '10 个以上摄像头，或需要更强的附加检测（在物体检测之上做人脸/车牌识别）：Hailo-8 M.2 模块（约 170–200 美元）能带来明显更高的吞吐量。',
           '已经有一块 Coral 了？它依然能用——这里只是讨论新搭建该买什么，不是说要换掉一套正常运作的 Coral 方案。',
         ],
+        callouts: [{ type: 'warning', text: '摄像头以及人脸或车牌识别受到法律监管。在欧盟，当摄像头拍摄到公共空间、邻居或其他人时，可能适用 GDPR，生物识别有更严格的规定；在中国大陆，可能适用《个人信息保护法》。安装前请核对当地法律；这不构成法律建议。' }],
         affiliateLinks: [
           { label: '查看 Hailo-8L 价格 →', url: 'https://hailo.ai/products/ai-accelerators/hailo-8l-m-2-ai-acceleration-module-for-ai-light-applications/', productName: 'Hailo-8L M.2', productCategory: 'AI accelerator', priceRange: '约 70 美元' },
           { label: '查看 Hailo-8 价格 →', url: 'https://www.waveshare.com/hailo-8.htm', productName: 'Hailo-8 M.2', productCategory: 'AI accelerator', priceRange: '约 170–200 美元' },
@@ -2842,9 +2859,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**若 NAS 有足够的 CPU 和内存，它可以在容器中运行 Home Assistant，同时兼顾存储和 Frigate 录像——如果你已经有一台，是个不错的选择，但不该只为此专门买一台 NAS。** 不要为了跑本地 LLM 专门买 NAS：专用的迷你 PC 或 GPU 主机在这笔钱上是更好的 AI 平台。',
         items: [
-          '2–4 个摄像头 / 存储需求较轻：Synology DS225+（截至 2026 年 8 月约 340 美元）能覆盖容器化 Home Assistant 加上少量摄像头的 Frigate 录像。',
+          '2–4 个摄像头 / 存储需求较轻：Synology DS225+（约 340 美元）能覆盖容器化 Home Assistant 加上少量摄像头的 Frigate 录像。',
           '4–10 个摄像头 / 需要更多余量：Synology DS925+（约 640 美元）提供更多 CPU/内存余量，支持更多附加项和摄像头。',
-          '存储加本地 AI 一体化：UGREEN NASync 系列（DXP4800 Plus 级别，约 650–730 美元）自带本地 LLM 选项，硬件更新（DDR5、无需扩展卡的 10GbE），价格与 DS925+ 接近。',
+          '存储加本地 AI 一体化：UGREEN NASync 系列（DXP4800 Plus 级别，约 650–730 美元），硬件较新（DDR5、无需扩展卡的 10GbE），价格与 DS925+ 接近，部分型号宣传提供本地 LLM 选项；请查看厂商页面。',
           'NAS 上的 LLM 推理仍然高度依赖其硬件——大多数 NAS 缺少强力独立 GPU，所以把内置 LLM 选项当作一项便利功能，而不是想跑大模型时替代下方 RTX 3090 那一档的方案。',
         ],
         affiliateLinks: [
@@ -2860,7 +2877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**搭配独立 GPU 的专用服务器，是在运行大量摄像头的同时运行更大本地 LLM 的升级方案。** 它以更高的成本和功耗提供最大的余量——2026 年 GPU 价格波动很大，所以下面的数字只是一个快照，不是固定值。',
         items: [
           '二手 RTX 3090（24GB 显存）是本地 LLM 的常见选择，因为显存大。[InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于 2026-10-15）列出的二手成交记录约为 1,400–1,550 美元——eBay 美国挂牌数据，并非报价或要约；不同地区的价格可能有差异。视量化方式、上下文长度和卸载策略而定，Q4 量化下最高约 70B 的模型或许可行；把这理解为一个能力区间，而不是对每个 70B 模型的保证。',
-          '二手 RTX 3060（12GB）是独立 GPU 主机的预算之选——能轻松处理 7B–13B 模型，只是没有 RTX 3090 那样的显存余量或对应的高价。',
+          '二手 RTX 3060（12GB）是独立 GPU 主机的预算之选——视量化方式而定可处理 7B–13B 模型，只是没有 RTX 3090 那样的显存余量或对应的高价。',
           '最适合大量摄像头、更大的 LLM 和多个用户的场景。功耗和成本都高于迷你 PC——投入这一档之前请先看下面的功耗部分。',
           '对基础智能家居而言过于强大——留给繁重的本地 AI 用途，并把 Home Assistant 中枢放在单独的低功耗设备上以保证可靠性（见下方"一台还是两台？"）。',
         ],
@@ -2868,6 +2885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '查看 RTX 3090 二手行情 →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '约 1,400–1,550 美元' },
           { label: '查看 RTX 3060 二手行情 →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU' },
         ],
+        callouts: [{ type: 'warning', text: '在持续运行的服务器中使用 350W GPU，需要容量合适的优质电源、良好的通风和合理的摆放位置。二手显卡可能存在损耗且无保修，请查看卖家条款。请遵循制造商的指引；这不构成电气方面的建议。' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-zh.svg',
         imageCaption: '各硬件等级的本地 LLM 容量：Raspberry Pi 5 只能运行极小模型，Intel N100/N150 迷你 PC 可处理小型模型，Ryzen 迷你 PC（32GB 内存）可运行 7B–8B 模型，二手 RTX 3090（24GB 显存）在 Q4 量化下视配置可扩展到约 70B。',
       },
@@ -2875,7 +2893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dont-overspend',
         title: '别为你的 Home Assistant 服务器买多了',
         content:
-          '**超出实际需求的硬件，是这个品类里最常见的浪费性购买——让设备匹配你实际打算跑的东西。**',
+          '**超出实际需求的硬件，是这个品类里常见的浪费性购买——让设备匹配你实际打算跑的东西。**',
         items: [
           '只跑 Home Assistant？你不需要 RTX 显卡，甚至可能不需要迷你 PC——一台 Raspberry Pi 5 或 Home Assistant Green 就够了。',
           'Home Assistant 加 Frigate 摄像头？你不需要昂贵的工作站——一台带内置集成显卡的 Intel N100/N150 迷你 PC，对大多数家庭摄像头数量已经足够。',
@@ -2933,7 +2951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**如果你今天要选一台设备，又不确定该选哪一档，基于以上权衡，这是一个合理的默认建议——你的实际需求可能指向别的方向，而且以下推荐均未经 PromptQuorum 测试或评测。**',
         items: [
           '普通本地智能家居（Home Assistant 加少量 Zigbee/Matter 设备）：Intel N150 迷你 PC 是明智的默认选择——以后加摄像头时它也能覆盖 Frigate。',
-          'Home Assistant 加摄像头加一个小型本地 AI 助手：一台 32GB 内存的 Ryzen 迷你 PC 是合理的单机之选——它是唯一能以可用速度真正跑起 8B 级 LLM 的最便宜设备。',
+          'Home Assistant 加摄像头加一个小型本地 AI 助手：一台 32GB 内存的 Ryzen 迷你 PC 是合理的单机之选——它是运行 8B 级模型成本较低的一种方式。',
           '认真做本地 AI（32B 级及以上模型）：一台独立的 RTX 3090 服务器，与 Home Assistant 中枢分开放置，考虑到当前二手 GPU 价格，是合理的升级方案。',
           '一个全新的、以 AI 为先的搭建，通常不太适合选 Raspberry Pi——鉴于 2026 年的 Pi 定价及其 LLM 局限，迷你 PC 的价格通常相差不大，却是明显更好的 AI 平台。',
         ],
@@ -2943,27 +2961,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '完整的本地智能家居方案组合',
         content:
           '**多数买家需要不止一件产品——至少是中枢、Frigate 加速器和存储，若想跑本地 LLM 推理还要加一台 AI 主机。** 以下三套组合按场景把上面的推荐搭配在一起；每个产品都链接回本页前面的完整推荐。',
-        columns: ['组合', '中枢', 'Frigate 加速器', 'AI', '预估总价（2026年8月）'],
+        columns: ['组合', '中枢', 'Frigate 加速器', 'AI', '预估总价'],
         rows: [
-          { '组合': '入门（仅 HA）', '中枢': '[Home Assistant Green 或 Pi 5](#raspberry-pi)', 'Frigate 加速器': '—', 'AI': '—', '预估总价（2026年8月）': '约 199–305 美元' },
-          { '组合': 'HA + 摄像头', '中枢': '[N150 迷你 PC](#mini-pc)', 'Frigate 加速器': '[Intel 集成显卡，需要更多余量就上 Hailo-8L](#frigate-accelerator)', 'AI': '—', '预估总价（2026年8月）': '约 190–290 美元' },
-          { '组合': 'HA + 摄像头 + 本地 AI', '中枢': '[Ryzen 迷你 PC，32GB](#mini-pc)', 'Frigate 加速器': '内置集成显卡，摄像头多就用[Hailo-8L](#frigate-accelerator)', 'AI': '在同一台设备上运行（8B 级模型）', '预估总价（2026年8月）': '约 649–720 美元' },
-          { '组合': 'HA + 摄像头 + 大型本地 AI', '中枢': '[N150 迷你 PC（为可靠性单独运行）](#mini-pc)', 'Frigate 加速器': '[Hailo-8](#frigate-accelerator)', 'AI': '[二手 RTX 3090 服务器，单独运行](#server)', '预估总价（2026年8月）': '约 1,760–1,970 美元（不含主机）' },
+          { '组合': '入门（仅 HA）', '中枢': '[Home Assistant Green 或 Pi 5](#raspberry-pi)', 'Frigate 加速器': '—', 'AI': '—', '预估总价': '约 199–305 美元' },
+          { '组合': 'HA + 摄像头', '中枢': '[N150 迷你 PC](#mini-pc)', 'Frigate 加速器': '[Intel 集成显卡，需要更多余量就上 Hailo-8L](#frigate-accelerator)', 'AI': '—', '预估总价': '约 190–290 美元' },
+          { '组合': 'HA + 摄像头 + 本地 AI', '中枢': '[Ryzen 迷你 PC，32GB](#mini-pc)', 'Frigate 加速器': '内置集成显卡，摄像头多就用[Hailo-8L](#frigate-accelerator)', 'AI': '在同一台设备上运行（8B 级模型）', '预估总价': '约 649–720 美元' },
+          { '组合': 'HA + 摄像头 + 大型本地 AI', '中枢': '[N150 迷你 PC（为可靠性单独运行）](#mini-pc)', 'Frigate 加速器': '[Hailo-8](#frigate-accelerator)', 'AI': '[二手 RTX 3090 服务器，单独运行](#server)', '预估总价': '约 1,760–1,970 美元（不含主机）' },
         ],
         tableFormat: true,
-        note: '最后一套组合把 Home Assistant 中枢留在自己的低功耗设备上，把 RTX 3090 当作一台独立机器运行——原因见[一台还是两台？](#one-or-two)。该总价为二手 RTX 3090（1,400–1,550 美元，InsiderLLM 追踪页 2026-10-15）、N150 迷你 PC（约 190–220 美元）与 Hailo-8（约 170–200 美元）之和：1,760–1,970 美元；不含 GPU 所需的主机（CPU、主板、电源、内存、机箱）。',
+        note: '最后一套组合把 Home Assistant 中枢留在自己的低功耗设备上，把 RTX 3090 当作一台独立机器运行——原因见[一台还是两台？](#one-or-two)。该总价为二手 RTX 3090（1,400–1,550 美元，InsiderLLM 追踪页 2026-10-15）、N150 迷你 PC（约 190–220 美元）与 Hailo-8（约 170–200 美元）之和：1,760–1,970 美元；不含 GPU 所需的主机（CPU、主板、电源、内存、机箱）。 所示价格为上次更新时厂商页面上的大致价格（见最后更新日期）；请到链接页面核对当日价格。',
       },
       faqSection: {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'Frigate 推荐用什么硬件？', a: '对于新搭建，Frigate 推荐经由 OpenVINO 的 Intel 集成显卡，或 Hailo-8L（约 70 美元，入门级）或 Hailo-8（约 170–200 美元，更快）M.2 模块以获得更强检测能力。Google Coral USB/M.2 TPU 仍能用，但现已过时——除非是非常低功耗的硬件，Frigate 不再为新安装推荐它。' },
+          { q: 'Frigate 推荐用什么硬件？', a: '对于新搭建，Frigate 硬件文档（https://docs.frigate.video/frigate/hardware）列出了经由 OpenVINO 的 Intel 集成显卡，或 Hailo-8L（约 70 美元，入门级）或 Hailo-8（约 170–200 美元，更快）M.2 模块以获得更强检测能力。Google Coral USB/M.2 TPU 仍能使用，但该文档将其描述为较旧的硬件。' },
           { q: 'Raspberry Pi 也能运行本地 LLM 吗？', a: 'Pi 只能运行非常小的模型，而且很慢，因此不适合做响应灵敏的本地 LLM 助手。它能很好地处理 Home Assistant 和基础语音，但对本地 AI 而言，带强力集成显卡或 NPU 的迷你 PC，或一台二手 RTX 3090 主机，是更好的选择。' },
-          { q: '我需要多少内存？', a: '仅 Home Assistant 用几个 GB 就能运行。要在同一台设备上运行小型本地 LLM 和其他 AI 服务，更多内存会有帮助；一台带 32GB 内存和强力集成显卡/NPU 的迷你 PC 能让 Qwen3 8B 或 Llama 3.1 8B 模型保持响应。把内存匹配到你计划运行的模型大小。' },
+          { q: '我需要多少内存？', a: '仅 Home Assistant 用几个 GB 就能运行。要在同一台设备上运行小型本地 LLM 和其他 AI 服务，更多内存会有帮助；一台带 32GB 内存和强力集成显卡/NPU 的迷你 PC 可以运行 Qwen3 8B 或 Llama 3.1 8B 模型；速度取决于量化方式和上下文长度。把内存匹配到你计划运行的模型大小。' },
           { q: '我该买哪台迷你 PC？', a: '要跑 HA 加摄像头，Intel N100/N150 迷你 PC 经由 OpenVINO 加速 Frigate。要跑 HA 加本地 LLM，升级到带 32GB 内存的 Ryzen 迷你 PC。参见 Home Assistant + 本地 AI 的最佳迷你 PC 指南获取具体选择。' },
           { q: '一台还是两台？', a: '一台（迷你 PC）最简单，可同时运行 Home Assistant 和一个小型本地 LLM。如果你想让中枢在低功耗设备上保持极高可靠性，并把繁重 AI 卸载到另一台机器，例如二手 RTX 3090 服务器，就分成两台。' },
           { q: '24小时运行的设备，功耗要考虑吗？', a: '对于从不关机的硬件来说，功耗有时比购买价格更重要。Raspberry Pi 耗电几瓦，N100/N150 迷你 PC 约 10–15W，Ryzen 迷你 PC 视负载约 15–35W，而 NVIDIA 标注 RTX 3090 这样的独立 GPU 板卡功耗为 350W——这也是为什么重负载 GPU 服务器最好做成独立设备，而不是常开设备。' },
-          { q: '按 2026 年的价格，Raspberry Pi 还值得买吗？', a: '如果只跑 Home Assistant，仍然值得——它依然是功耗最低的选项。但 2026 年的内存芯片短缺让 Pi 5 价格大幅上涨（截至 2026 年 8 月，视内存大小约 180–305 美元，相比最初的 80–120 美元），与 N100/N150 迷你 PC 的价差正在缩小。如果你一年内可能会加摄像头或本地 LLM，现在通常直接买迷你 PC更划算。' },
+          { q: '按 2026 年的价格，Raspberry Pi 还值得买吗？', a: '如果只跑 Home Assistant，仍然值得——它依然是功耗最低的选项。但 2026 年的内存芯片短缺让 Pi 5 价格大幅上涨（视内存大小约 180–305 美元，相比最初的 80–120 美元），与 N100/N150 迷你 PC 的价差正在缩小。如果你一年内可能会加摄像头或本地 LLM，现在通常直接买迷你 PC更划算。' },
         ],
       },
       relatedReading: {
@@ -2993,7 +3011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-23',
       about: [{ '@type': 'Thing', name: 'Home Assistant 硬件' }, { '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: '迷你 PC' }, { '@type': 'Thing', name: 'Hailo M.2 accelerator' }, { '@type': 'Thing', name: '本地 LLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -3003,9 +3021,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        { '@type': 'Question', name: 'Frigate 推荐用什么硬件？', acceptedAnswer: { '@type': 'Answer', text: '对于新搭建，Frigate 推荐经由 OpenVINO 的 Intel 集成显卡，或 Hailo-8L（约 70 美元）或 Hailo-8（约 170–200 美元）M.2 模块以获得更强检测能力。Google Coral TPU 仍能用，但现已过时，不再为新安装推荐。' } },
+        { '@type': 'Question', name: 'Frigate 推荐用什么硬件？', acceptedAnswer: { '@type': 'Answer', text: '对于新搭建，Frigate 硬件文档（https://docs.frigate.video/frigate/hardware）列出了经由 OpenVINO 的 Intel 集成显卡，或 Hailo-8L（约 70 美元）或 Hailo-8（约 170–200 美元）M.2 模块以获得更强检测能力。Google Coral TPU 仍能使用，但该文档将其描述为较旧的硬件。' } },
         { '@type': 'Question', name: 'Raspberry Pi 也能运行本地 LLM 吗？', acceptedAnswer: { '@type': 'Answer', text: 'Pi 只能运行非常小的模型，而且很慢。它能很好地处理 Home Assistant 和基础语音，但对响应灵敏的本地 LLM 助手而言，带强力集成显卡或 NPU 的迷你 PC，或一台二手 RTX 3090 主机更好。' } },
-        { '@type': 'Question', name: '我需要多少内存？', acceptedAnswer: { '@type': 'Answer', text: '仅 Home Assistant 用几个 GB 就能运行。要在同一台设备上运行小型本地 LLM，更多内存会有帮助；带 32GB 内存的迷你 PC 能让 Qwen3 8B 或 Llama 3.1 8B 模型保持响应。把内存匹配到你计划运行的模型大小。' } },
+        { '@type': 'Question', name: '我需要多少内存？', acceptedAnswer: { '@type': 'Answer', text: '仅 Home Assistant 用几个 GB 就能运行。要在同一台设备上运行小型本地 LLM，更多内存会有帮助；带 32GB 内存的迷你 PC 可以运行 Qwen3 8B 或 Llama 3.1 8B 模型；速度取决于量化方式和上下文长度。把内存匹配到你计划运行的模型大小。' } },
         { '@type': 'Question', name: '我该买哪台迷你 PC？', acceptedAnswer: { '@type': 'Answer', text: '要跑 HA 加摄像头，Intel N100/N150 迷你 PC 经由 OpenVINO 加速 Frigate。要跑 HA 加本地 LLM，升级到带 32GB 内存的 Ryzen 迷你 PC。参见 Home Assistant + 本地 AI 的最佳迷你 PC 指南。' } },
         { '@type': 'Question', name: '一台还是两台？', acceptedAnswer: { '@type': 'Answer', text: '一台迷你 PC 可同时运行 Home Assistant 和一个小型本地 LLM。若想让中枢在低功耗设备上保持极高可靠，并把繁重 AI 卸载到另一台机器，例如二手 RTX 3090 服务器，就分成两台。' } },
         { '@type': 'Question', name: '24小时运行的设备，功耗要考虑吗？', acceptedAnswer: { '@type': 'Answer', text: '对于从不关机的硬件，功耗有时比购买价格更重要。Raspberry Pi 耗电几瓦，N100/N150 迷你 PC 约 10–15W，Ryzen 迷你 PC 约 15–35W，而 NVIDIA 标注 RTX 3090 这样的独立 GPU 板卡功耗为 350W。' } },
