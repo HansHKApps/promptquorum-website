@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
-    title: 'Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other From $17/mo',
+    title: 'Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other From $17/mo (Billed Annually)',
     seoTitle: 'Cloud vs Local AI Video 2026: invideo vs Wan 2.2 & LTX-2',
     intro:
       'There are two doors into AI video in 2026. Door one is local: free, open video models running on your own GPU — unlimited generations, with inference running on your own hardware (model downloads and update checks still use the network), no subscription, but you build the entire workflow yourself. Door two is cloud: invideo, where one prompt in gets you a finished narrated video out — script, stock footage, voiceover, music, and subtitles included, straight from your browser. Neither door is "better." This guide gives you the license fine print most comparisons skip, the real hardware requirements, and a decision tool that maps your situation to a recommendation.',
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ar.webp',
-    title: 'Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: خيار بلا تكلفة يستهلك عطلتك مقابل خيار يبدأ من 17 دولارًا شهريًا',
+    title: 'Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: خيار بلا تكلفة يستهلك عطلتك مقابل خيار يبدأ من 17 دولارًا شهريًا (بفوترة سنوية)',
     seoTitle: 'الفيديو السحابي مقابل المحلي بالذكاء الاصطناعي 2026: invideo مقابل Wan 2.2 وLTX-2',
     intro:
       'هناك بابان للدخول إلى عالم الفيديو بالذكاء الاصطناعي في 2026. الباب الأول محلي: نماذج فيديو مفتوحة ومجانية تعمل على معالج الرسومات (GPU) الخاص بك — توليد غير محدود، مع تشغيل الاستدلال على عتادك الخاص (تنزيلات النماذج وفحوصات التحديث لا تزال تستخدم الشبكة)، بلا اشتراك، لكنك تبني سير العمل بأكمله بنفسك. الباب الثاني سحابي: invideo، حيث يكفي إدخال أمر نصي واحد للحصول على فيديو سردي جاهز — نص، لقطات أرشيفية، تعليق صوتي، موسيقى، وترجمة نصية، كل ذلك مباشرة من المتصفح. لا يوجد باب "أفضل" من الآخر. يقدّم هذا الدليل تفاصيل التراخيص الدقيقة التي تتجاهلها معظم المقارنات، ومتطلبات العتاد الحقيقية، وأداة قرار تربط وضعك بتوصية محددة.',
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-de.webp',
-    title: 'Invideo vs. lokale KI-Videogenerierung: Die eine kostet 0 $ plus Ihr Wochenende – die andere ab 17 $/Monat',
+    title: 'Invideo vs. lokale KI-Videogenerierung: Die eine kostet 0 $ plus Ihr Wochenende – die andere ab 17 $/Monat (jährliche Abrechnung)',
     seoTitle: 'Cloud vs. lokale KI-Videos 2026: invideo vs. Wan 2.2 & LTX-2',
     intro:
       'Es gibt zwei Türen in die KI-Videogenerierung des Jahres 2026. Tür eins ist lokal: kostenlose, offene Videomodelle, die auf Ihrer eigenen GPU laufen – unbegrenzte Generierungen, Inferenz auf Ihrer eigenen Hardware (Modell-Downloads und Update-Prüfungen nutzen weiterhin das Netz), kein Abonnement, aber Sie bauen den gesamten Workflow selbst auf. Tür zwei ist die Cloud: invideo, wo ein einzelner Prompt am Ende ein fertiges, erzähltes Video ergibt – Skript, Stock-Footage, Voiceover, Musik und Untertitel inklusive, direkt aus dem Browser. Keine der beiden Türen ist grundsätzlich "besser". Dieser Leitfaden liefert das Kleingedruckte der Lizenzen, das die meisten Vergleiche auslassen, die tatsächlichen Hardware-Anforderungen und ein Entscheidungswerkzeug, das Ihre Situation auf eine Empfehlung abbildet.',
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-es.webp',
-    title: 'Invideo vs. IA de Video Local: Una Opción Cuesta $0 Más Tu Fin de Semana — la Otra, Desde $17/mes',
+    title: 'Invideo vs. IA de Video Local: Una Opción Cuesta $0 Más Tu Fin de Semana — la Otra, Desde $17/mes (pago anual)',
     seoTitle: 'IA de Video en la Nube vs Local 2026: invideo vs Wan 2.2 y LTX-2',
     intro:
       'Hay dos puertas de entrada a la IA de video en 2026. La puerta uno es local: modelos de video abiertos y gratuitos que corren en tu propia GPU — generaciones ilimitadas, con la inferencia corriendo en tu propio hardware (las descargas de modelos y las comprobaciones de actualizaciones siguen usando la red), sin suscripción, pero tienes que construir todo el flujo de trabajo tú mismo. La puerta dos es la nube: invideo, donde con un solo prompt obtienes un video narrado terminado — guion, imágenes de stock, locución, música y subtítulos incluidos, directo desde tu navegador. Ninguna puerta es "mejor". Esta guía te da la letra pequeña de las licencias que la mayoría de las comparaciones omiten, los requisitos reales de hardware y una herramienta de decisión que asocia tu situación con una recomendación.',
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-fr.webp',
-    title: 'Invideo vs vidéo IA locale : une option ne coûte rien (plus votre week-end), l\'autre dès 17 $/mois',
+    title: 'Invideo vs vidéo IA locale : une option ne coûte rien (plus votre week-end), l\'autre dès 17 $/mois (paiement annuel)',
     seoTitle: 'Vidéo IA cloud vs locale 2026 : invideo vs Wan 2.2 & LTX-2',
     intro:
       'Deux portes s\'ouvrent sur la vidéo IA en 2026. Porte une : le local — des modèles vidéo ouverts et gratuits tournant sur votre propre GPU, générations illimitées, inférence sur votre propre matériel (les téléchargements de modèles et les vérifications de mises à jour utilisent toujours le réseau), aucun abonnement, mais vous construisez tout le pipeline vous-même. Porte deux : le cloud — invideo, où un simple prompt donne une vidéo narrée finie : script, images d\'archives, voix off, musique et sous-titres inclus, directement depuis votre navigateur. Aucune des deux n\'est « meilleure ». Ce guide donne les clauses de licence que la plupart des comparatifs ignorent, les vraies exigences matérielles, et un outil de décision qui associe votre situation à une recommandation.',
@@ -1778,7 +1778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ja.webp',
-    title: 'Invideo vs ローカルAI動画生成：一方は$0＋週末の時間、もう一方は月額$17から',
+    title: 'Invideo vs ローカルAI動画生成：一方は$0＋週末の時間、もう一方は月額$17から（年払い）',
     seoTitle: 'クラウドvsローカルAI動画2026：invideo vs Wan 2.2＆LTX-2',
     intro:
       '2026年のAI動画には、2つの入り口があります。1つ目はローカルです。無料でオープンな動画モデルを自分のGPUで動かします。生成回数は無制限、推論は自分のハードウェア上で実行され（モデルのダウンロードや更新確認では引き続きネットワークを使用します）、サブスクリプション不要です。ただし、ワークフロー全体を自分で組み立てる必要があります。2つ目はクラウドです。Invideoでは、プロンプトを1つ入れるだけで、完成したナレーション付き動画が出来上がります。台本、ストック映像、ナレーション、音楽、字幕まで、すべてブラウザだけで揃います。どちらの入り口が「優れている」ということはありません。本ガイドでは、多くの比較記事が見落としがちなライセンスの細則、実際に必要なハードウェア要件、そしてあなたの状況に合った選択肢を示す判断ツールを紹介します。',
@@ -2129,7 +2129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ko.webp',
-    title: 'Invideo vs 로컬 AI 비디오: 한쪽은 $0에 주말 시간, 다른 한쪽은 월 $17부터',
+    title: 'Invideo vs 로컬 AI 비디오: 한쪽은 $0에 주말 시간, 다른 한쪽은 월 $17부터(연간 결제)',
     seoTitle: '클라우드 vs 로컬 AI 비디오 2026: invideo vs Wan 2.2 & LTX-2',
     intro:
       '2026년 AI 비디오로 들어가는 문은 두 개입니다. 첫 번째 문은 로컬입니다. 무료이며 개방형인 비디오 모델을 자신의 GPU에서 실행합니다 — 생성 횟수 제한 없음, 추론은 자신의 하드웨어에서 실행됨(모델 다운로드와 업데이트 확인에는 여전히 네트워크를 사용합니다), 구독료 없음, 하지만 전체 워크플로우를 직접 구축해야 합니다. 두 번째 문은 클라우드입니다. Invideo는 프롬프트 하나만 입력하면 완성된 내레이션 비디오가 나옵니다 — 스크립트, 스톡 영상, 음성, 음악, 자막이 모두 포함되어 브라우저에서 바로 완성됩니다. 어느 쪽 문도 "더 낫다"고 할 수 없습니다. 이 가이드는 대부분의 비교 글이 건너뛰는 라이선스 세부 조항, 실제 하드웨어 요구사항, 그리고 여러분의 상황을 추천으로 연결해주는 의사결정 도구를 제공합니다.',
@@ -2480,7 +2480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-pt.webp',
-    title: 'Invideo vs Vídeo IA Local: Uma Opção Custa $0 Mais o Seu Fim de Semana — a Outra a Partir de $17/mês',
+    title: 'Invideo vs Vídeo IA Local: Uma Opção Custa $0 Mais o Seu Fim de Semana — a Outra a Partir de $17/mês (plano anual)',
     seoTitle: 'IA de Vídeo na Nuvem vs Local 2026: invideo vs Wan 2.2 e LTX-2',
     intro:
       'Existem duas portas de entrada para o vídeo com IA em 2026. A primeira porta é local: modelos de vídeo abertos e gratuitos rodando na sua própria GPU — gerações ilimitadas, com a inferência rodando no seu próprio hardware (downloads de modelos e verificações de atualização ainda usam a rede), sem assinatura, mas você monta todo o fluxo de trabalho sozinho. A segunda porta é a nuvem: o invideo, onde um único prompt gera um vídeo narrado e finalizado — roteiro, imagens de banco, locução, música e legendas incluídos, direto do seu navegador. Nenhuma das portas é "melhor". Este guia traz as letras miúdas de licenciamento que a maioria das comparações ignora, os requisitos reais de hardware e uma ferramenta de decisão que mapeia sua situação para uma recomendação.',
@@ -2831,7 +2831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-zh.webp',
-    title: 'Invideo 与本地 AI 视频对比：一个 0 美元加你的周末，另一个每月 17 美元起',
+    title: 'Invideo 与本地 AI 视频对比：一个 0 美元加你的周末，另一个每月 17 美元起（按年付费）',
     seoTitle: '云端 vs 本地 AI 视频 2026：invideo 对比 Wan 2.2 与 LTX-2',
     intro:
       '2026 年,通往 AI 视频有两扇门。第一扇是本地:免费、开放的视频模型运行在你自己的 GPU 上——无限次生成、推理在你自己的硬件上运行(模型下载和更新检查仍会使用网络)、无需订阅,但整个工作流程要你自己搭建。第二扇是云端:invideo,输入一个提示词,输出的就是一段带旁白的完整视频——脚本、素材片段、配音、音乐和字幕全部包含在内,直接在浏览器里完成。没有哪扇门"更好"。本指南提供大多数对比文章都会跳过的许可证细则、真实的硬件要求,以及一个能把你的实际情况映射到具体建议的决策工具。',
