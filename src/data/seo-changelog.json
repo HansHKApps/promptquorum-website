@@ -31144,5 +31144,32 @@
       "t14": "2026-12-06",
       "t28": "2026-12-20"
     }
+  },
+  {
+    "id": "feffdb66-4774-444c-8f65-202da1fe110d",
+    "slug": "/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-23T05:14:50.248Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "Unattributed 'zero egress fees' sentences; Lambda SXM 'sold only in 8-GPU configurations'; unsourced hyperscaler egress rates",
+        "new": "Vendor-attributed and dated egress claims; Lambda H100 SXM in 1/2/4/8-GPU instances; sourced egress rates; scoped CoreWeave claims"
+      }
+    ],
+    "reason": "Claim-accuracy pass (all 9 locales): egress statements attributed to vendor pages and dated, Lambda GPU-count and CoreWeave 8-GPU claims corrected and scoped, hyperscaler egress rates sourced, FAQ ranking answers marked as our assessment. No title/meta change.",
+    "queries": [
+      "aws vs coreweave",
+      "best gpu cloud providers in 2026",
+      "best gpu cloud for ai startups 2026",
+      "best gpu cloud services for startups"
+    ],
+    "baseline": {
+      "position": 6.39,
+      "impressions": 969,
+      "clicks": 2,
+      "ctr": 0.0020639834881320948,
+      "period": "28d 2026-10-26 to 2026-11-22"
+    },
+    "deployedAt": null
   }
 ]
