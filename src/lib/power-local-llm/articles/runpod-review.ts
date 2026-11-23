@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'RunPod rents NVIDIA GPUs by the second, either as Pods (a GPU container you control) or as Serverless endpoints (workers that scale to zero). If you are comparing the [best cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) for running open-weight models, RunPod publishes a wide GPU list, from the RTX 3090 up to the B300. Its pricing page, checked 2026-11-22, lists the RTX 4090 at $0.89 per hour on Secure Cloud and $0.34 per hour on Community Cloud. This review covers the two billing products, how Secure and Community Cloud differ, what the docs say about data handling, and the costs that are easy to miss, such as idle storage and what happens when credits run out.',
     metaDescription:
-      'RunPod review 2026: Pods vs Serverless, Secure vs Community Cloud, per-second billing, RTX 4090 from $0.34/hr, storage costs and data-handling facts.',
+      'RunPod review: Pods vs Serverless, Secure vs Community Cloud, per-second billing, RTX 4090 from $0.34/hr (RunPod pricing page, 2026-11-22), storage and data handling.',
     twitterDescription:
       'RunPod (2026): per-second GPU billing, Pods and Serverless, Secure vs Community Cloud. Checked prices, scorecard, and the costs that surprise first-time renters.',
     readTime: '10 min read',
@@ -38,12 +38,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'is runpod worth it',
     ],
     leadAnswerBlock:
-      '**RunPod is a per-second GPU rental service with two products: Pods (a persistent GPU container) and Serverless (autoscaling workers that scale to zero); the pricing page, checked 2026-11-22, lists an RTX 4090 at $0.89/hr on Secure Cloud and $0.34/hr on Community Cloud.** PromptQuorum\'s assessment, built from RunPod\'s own pricing page and documentation rather than a hands-on lab test: 8.5/10 overall. Strengths are GPU range and billing flexibility; weak points are idle-storage charges, non-refundable prepaid credits, and Community Cloud hardware that RunPod does not describe in security terms. → [Check RunPod GPU pricing](https://www.runpod.io/pricing)',
+      '**RunPod is a per-second GPU rental service with two products: Pods (a persistent GPU container) and Serverless (autoscaling workers that scale to zero); the pricing page, checked 2026-11-22, lists an RTX 4090 at $0.89/hr on Secure Cloud and $0.34/hr on Community Cloud.** PromptQuorum\'s assessment, built from RunPod\'s own pricing page and documentation rather than a hands-on lab test: 8.5/10 overall. Strengths are GPU range and billing flexibility; weak points are idle-storage charges, non-refundable prepaid credits, and Community Cloud, whose security the documentation pages reviewed (checked 2026-11-22) describe only as container isolation. → [Check RunPod GPU pricing](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       en: {
         question: 'Is RunPod good for running open-weight LLMs?',
         answer:
-          'Yes for renting GPUs by the hour or second without a contract, with caveats on cost control and data sensitivity. Pods give you a GPU container for interactive work, fine-tuning, or a long-running server. Serverless runs workers that scale to zero and offers a documented vLLM worker with an OpenAI-compatible API. RunPod lists billing per second with no ingress or egress fees. Secure Cloud runs in T3/T4 data centers; Community Cloud uses vetted individual compute providers at lower prices. Prices below are from RunPod\'s pricing page, checked 2026-11-22.',
+          'Yes for renting GPUs by the hour or second without a contract, with caveats on cost control and data sensitivity. Pods give you a GPU container for interactive work, fine-tuning, or a long-running server. Serverless runs workers that scale to zero and offers a documented vLLM worker with an OpenAI-compatible API. RunPod lists billing per second with no ingress or egress fees. Secure Cloud runs in T3/T4 data centers; Community Cloud connects individual compute providers that RunPod describes as vetted, at lower prices. Prices below are from RunPod\'s pricing page, checked 2026-11-22.',
         bullets: [
           'Pods: RTX 4090 at $0.89/hr (Secure Cloud) or $0.34/hr (Community Cloud)',
           'Serverless: 24 GB GPUs from $0.75/hr and H100 80 GB at $5.89/hr, scaling to zero when idle',
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Serverless is priced per hour on the page, for example 24 GB GPUs at $0.75/hr and H100 80 GB at $5.89/hr',
           'Storage is separate: network storage $0.07/GB/month under 1 TB, volume disk $0.20/GB/month while idle',
           'Prepaid credits start at $10, are non-refundable, and a Pod with no network volume is terminated if the balance reaches zero',
-          'Secure Cloud runs in T3/T4 data centers; Community Cloud security is not described in the docs',
+          'Secure Cloud runs in T3/T4 data centers; for Community Cloud, the documentation pages reviewed (checked 2026-11-22) give no security description beyond container isolation',
           'Best for: developers renting 24 GB to 80 GB GPUs for inference and fine-tuning without a contract',
         ],
       },
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Option: 'Pod', 'What it is': 'GPU container you control; billed while it runs' },
           { Option: 'Serverless', 'What it is': 'Workers that scale to zero; billed while workers run' },
           { Option: 'Secure Cloud', 'What it is': 'T3/T4 data centers, aimed at production use' },
-          { Option: 'Community Cloud', 'What it is': 'Vetted individual compute providers, lower prices' },
+          { Option: 'Community Cloud', 'What it is': 'Individual providers (RunPod: "vetted"), lower prices' },
           { Option: 'Container disk', 'What it is': 'Temporary; lost when the Pod stops or is deleted' },
           { Option: 'Volume disk', 'What it is': 'Persists across stop/reboot; mounted at /workspace' },
           { Option: 'Network volume', 'What it is': 'Independent storage attachable to Pods or endpoints' },
@@ -248,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Prepaid credits are non-refundable',
           'Idle volume disk costs $0.20/GB/month; network storage accrues even with no Pod running',
           'A Pod without a network volume is terminated at zero balance and its data cannot be recovered',
-          'Community Cloud security is not described in the docs; data-center locations are not listed',
+          'The documentation pages reviewed give no Community Cloud security description beyond container isolation; data-center locations are not listed there',
           'FlashBoot has no published timing numbers',
         ],
       },
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Pick by billing model and data sensitivity, not by headline price alone.**',
         items: [
           '**Peer-to-peer marketplace with on-demand and interruptible pricing →** [Vast.ai review](/power-local-llm/vast-ai-review).',
-          '**Crypto-denominated GPU marketplace →** [Clore.ai review](/power-local-llm/clore-ai-review); read its risk section before deciding what data to send.',
+          '**Crypto-denominated GPU marketplace →** [Clore.ai review](/power-local-llm/clore-ai-review); its review has a risk section covering data handling.',
           '**Large-provider GPU instances →** see [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/) and [Lambda](https://lambda.ai/) directly; prices were not compared here.',
           '**Own the hardware instead →** compare with a local card using the cost calculator linked above, since steady daily use can favor owning.',
         ],
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'What is RunPod?', a: 'RunPod is a cloud service that rents NVIDIA GPUs billed per second. It offers Pods (a GPU container you control) and Serverless (autoscaling workers that scale to zero), on Secure Cloud and Community Cloud tiers.' },
           { q: 'How much does an RTX 4090 cost on RunPod?', a: 'The RunPod pricing page, checked 2026-11-22, lists the RTX 4090 at $0.89 per hour on Secure Cloud and $0.34 per hour on Community Cloud. Serverless lists 24 GB class GPUs separately; the 4090 is $1.34 per hour there. Prices can change, so check the live page.' },
-          { q: 'What is the difference between Secure Cloud and Community Cloud?', a: 'Per RunPod\'s docs, Secure Cloud runs in T3/T4 data centers aimed at production use, while Community Cloud connects individual compute providers to users through a vetted, peer-to-peer system at lower prices. The docs do not describe Community Cloud security, so keep sensitive data off it.' },
+          { q: 'What is the difference between Secure Cloud and Community Cloud?', a: 'Per RunPod\'s docs, Secure Cloud runs in T3/T4 data centers aimed at production use, while Community Cloud connects individual compute providers to users through what RunPod describes as a vetted, peer-to-peer system at lower prices. The documentation pages reviewed give no Community Cloud security description beyond container isolation, and list no data-center locations, so keep sensitive data off it.' },
           { q: 'How does RunPod bill?', a: 'Compute and storage are billed per second from prepaid credits, with no ingress or egress fees. The billing docs say you can start with as little as $10, prepaid cards must deposit at least $100 per transaction, and credits are non-refundable.' },
           { q: 'What happens when my RunPod balance reaches zero?', a: 'Running Pods are stopped. A Pod with a network volume keeps its data; a Pod without one is terminated and its data cannot be recovered. Network volume storage keeps accruing while Pods are stopped, so set a low-balance alert.' },
           { q: 'Does RunPod Serverless support vLLM?', a: 'Yes. RunPod documents a vLLM worker you can deploy from the RunPod Hub or customize from the worker-vllm repository. The docs describe it as a drop-in replacement for the OpenAI API: change the endpoint URL and API key.' },
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'RunPod vermietet NVIDIA-GPUs sekundengenau, entweder als Pods (ein GPU-Container, den Sie selbst steuern) oder als Serverless-Endpoints (Worker, die auf null herunterskalieren). Wenn Sie die [besten Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) für den Betrieb von Open-Weight-Modellen vergleichen: RunPod veröffentlicht eine breite GPU-Liste, von der RTX 3090 bis zur B300. Die Preisseite, geprüft am 2026-11-22, nennt für die RTX 4090 0,89 US-Dollar pro Stunde in der Secure Cloud und 0,34 US-Dollar pro Stunde in der Community Cloud. Diese Rezension behandelt die beiden Abrechnungsprodukte, den Unterschied zwischen Secure und Community Cloud, die Angaben der Dokumentation zum Umgang mit Daten und die leicht übersehenen Kosten, etwa für ungenutzten Speicher und das Verhalten bei aufgebrauchtem Guthaben.',
     metaDescription:
-      'RunPod Review 2026: Pods vs. Serverless, Secure vs. Community Cloud, Abrechnung pro Sekunde, RTX 4090 ab 0,34 $/Std., Speicherkosten und Datenschutzfakten.',
+      'RunPod Review: Pods vs. Serverless, Secure vs. Community Cloud, Abrechnung pro Sekunde, RTX 4090 ab 0,34 $/Std. (RunPod-Preisseite, 2026-11-22), Speicher und Datenumgang.',
     twitterDescription:
       'RunPod (2026): GPU-Abrechnung pro Sekunde, Pods und Serverless, Secure vs. Community Cloud. Geprüfte Preise, Scorecard und die Kosten, die Erstmieter überraschen.',
     readTime: '10 Min. Lesezeit',
@@ -387,12 +387,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lohnt sich runpod',
     ],
     leadAnswerBlock:
-      '**RunPod ist ein sekundengenauer GPU-Mietservice mit zwei Produkten: Pods (ein dauerhafter GPU-Container) und Serverless (autoskalierende Worker, die auf null herunterskalieren); die Preisseite, geprüft am 2026-11-22, nennt für eine RTX 4090 0,89 $/Std. in der Secure Cloud und 0,34 $/Std. in der Community Cloud.** Einschätzung von PromptQuorum, erstellt aus RunPods eigener Preisseite und Dokumentation statt aus einem praktischen Labortest: 8,5/10 insgesamt. Stärken sind die GPU-Auswahl und die flexible Abrechnung; Schwächen sind Gebühren für ungenutzten Speicher, nicht erstattbares Prepaid-Guthaben und Community-Cloud-Hardware, die RunPod nicht in Sicherheitsbegriffen beschreibt. → [RunPod-GPU-Preise prüfen](https://www.runpod.io/pricing)',
+      '**RunPod ist ein sekundengenauer GPU-Mietservice mit zwei Produkten: Pods (ein dauerhafter GPU-Container) und Serverless (autoskalierende Worker, die auf null herunterskalieren); die Preisseite, geprüft am 2026-11-22, nennt für eine RTX 4090 0,89 $/Std. in der Secure Cloud und 0,34 $/Std. in der Community Cloud.** Einschätzung von PromptQuorum, erstellt aus RunPods eigener Preisseite und Dokumentation statt aus einem praktischen Labortest: 8,5/10 insgesamt. Stärken sind die GPU-Auswahl und die flexible Abrechnung; Schwächen sind Gebühren für ungenutzten Speicher, nicht erstattbares Prepaid-Guthaben und die Community Cloud, zu der die geprüften Dokumentationsseiten (geprüft am 2026-11-22) über die Container-Isolierung hinaus keine Sicherheitsbeschreibung enthalten. → [RunPod-GPU-Preise prüfen](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       de: {
         question: 'Eignet sich RunPod für den Betrieb von Open-Weight-LLMs?',
         answer:
-          'Ja, um GPUs ohne Vertrag stundenweise oder sekundengenau zu mieten, mit Einschränkungen bei Kostenkontrolle und Datensensibilität. Pods geben Ihnen einen GPU-Container für interaktive Arbeit, Fine-Tuning oder einen dauerhaft laufenden Server. Serverless führt Worker aus, die auf null herunterskalieren, und bietet einen dokumentierten vLLM-Worker mit OpenAI-kompatibler API. RunPod nennt Abrechnung pro Sekunde ohne Ingress- oder Egress-Gebühren. Die Secure Cloud läuft in T3/T4-Rechenzentren; die Community Cloud nutzt geprüfte einzelne Compute-Anbieter zu niedrigeren Preisen. Die Preise unten stammen von RunPods Preisseite, geprüft am 2026-11-22.',
+          'Ja, um GPUs ohne Vertrag stundenweise oder sekundengenau zu mieten, mit Einschränkungen bei Kostenkontrolle und Datensensibilität. Pods geben Ihnen einen GPU-Container für interaktive Arbeit, Fine-Tuning oder einen dauerhaft laufenden Server. Serverless führt Worker aus, die auf null herunterskalieren, und bietet einen dokumentierten vLLM-Worker mit OpenAI-kompatibler API. RunPod nennt Abrechnung pro Sekunde ohne Ingress- oder Egress-Gebühren. Die Secure Cloud läuft in T3/T4-Rechenzentren; die Community Cloud verbindet einzelne Compute-Anbieter, die RunPod als geprüft beschreibt, zu niedrigeren Preisen. Die Preise unten stammen von RunPods Preisseite, geprüft am 2026-11-22.',
         bullets: [
           'Pods: RTX 4090 für 0,89 $/Std. (Secure Cloud) oder 0,34 $/Std. (Community Cloud)',
           'Serverless: 24-GB-GPUs ab 0,75 $/Std. und H100 80 GB für 5,89 $/Std., skaliert bei Leerlauf auf null',
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Serverless wird auf der Seite pro Stunde ausgewiesen, zum Beispiel 24-GB-GPUs für 0,75 $/Std. und H100 80 GB für 5,89 $/Std.',
           'Speicher kommt separat dazu: Netzwerkspeicher 0,07 $/GB/Monat unter 1 TB, Volume-Disk 0,20 $/GB/Monat im Leerlauf',
           'Prepaid-Guthaben beginnt bei 10 $, ist nicht erstattbar, und ein Pod ohne Netzwerk-Volume wird beendet, wenn das Guthaben null erreicht',
-          'Die Secure Cloud läuft in T3/T4-Rechenzentren; die Sicherheit der Community Cloud wird in der Dokumentation nicht beschrieben',
+          'Die Secure Cloud läuft in T3/T4-Rechenzentren; zur Community Cloud enthalten die geprüften Dokumentationsseiten (geprüft am 2026-11-22) über die Container-Isolierung hinaus keine Sicherheitsbeschreibung',
           'Am besten für: Entwickler, die 24-GB- bis 80-GB-GPUs für Inferenz und Fine-Tuning ohne Vertrag mieten',
         ],
       },
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Option: 'Pod', 'Was es ist': 'GPU-Container unter Ihrer Kontrolle; Laufzeit abgerechnet' },
           { Option: 'Serverless', 'Was es ist': 'Worker skalieren auf null; Abrechnung bei Laufzeit' },
           { Option: 'Secure Cloud', 'Was es ist': 'T3/T4-Rechenzentren, auf Produktionseinsatz ausgelegt' },
-          { Option: 'Community Cloud', 'Was es ist': 'Geprüfte einzelne Compute-Anbieter, niedrigere Preise' },
+          { Option: 'Community Cloud', 'Was es ist': 'Einzelne Anbieter (RunPod: „geprüft“), niedrigere Preise' },
           { Option: 'Container-Disk', 'Was es ist': 'Temporär; weg, wenn der Pod stoppt oder gelöscht wird' },
           { Option: 'Volume-Disk', 'Was es ist': 'Bleibt bei Stopp/Neustart; eingebunden unter /workspace' },
           { Option: 'Netzwerk-Volume', 'Was es ist': 'Unabhängiger Speicher, an Pods oder Endpoints anhängbar' },
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Prepaid-Guthaben ist nicht erstattbar',
           'Ungenutzte Volume-Disk kostet 0,20 $/GB/Monat; Netzwerkspeicher läuft auch ohne laufenden Pod auf',
           'Ein Pod ohne Netzwerk-Volume wird bei Guthaben null beendet, und seine Daten sind nicht wiederherstellbar',
-          'Die Sicherheit der Community Cloud wird in der Dokumentation nicht beschrieben; Rechenzentrumsstandorte sind nicht aufgeführt',
+          'Die geprüften Dokumentationsseiten enthalten über die Container-Isolierung hinaus keine Sicherheitsbeschreibung der Community Cloud; Rechenzentrumsstandorte sind dort nicht aufgeführt',
           'Für FlashBoot gibt es keine veröffentlichten Zeitwerte',
         ],
       },
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Wählen Sie nach Abrechnungsmodell und Datensensibilität, nicht allein nach dem Listenpreis.**',
         items: [
           '**Peer-to-Peer-Marktplatz mit On-Demand- und unterbrechbarer Preisgestaltung →** [Vast.ai-Review](/de/power-local-llm/vast-ai-review).',
-          '**Krypto-denominierter GPU-Marktplatz →** [Clore.ai-Review](/de/power-local-llm/clore-ai-review); lesen Sie den Risikoabschnitt, bevor Sie entscheiden, welche Daten Sie senden.',
+          '**Krypto-denominierter GPU-Marktplatz →** [Clore.ai-Review](/de/power-local-llm/clore-ai-review); die Review enthält einen Risikoabschnitt zum Umgang mit Daten.',
           '**GPU-Instanzen großer Anbieter →** siehe direkt [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/) und [Lambda](https://lambda.ai/); Preise wurden hier nicht verglichen.',
           '**Stattdessen Hardware kaufen →** Vergleichen Sie mit einer lokalen Karte über den oben verlinkten Kostenrechner, denn bei stetiger täglicher Nutzung kann Besitzen günstiger sein.',
         ],
@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Was ist RunPod?', a: 'RunPod ist ein Cloud-Dienst, der NVIDIA-GPUs mit sekundengenauer Abrechnung vermietet. Er bietet Pods (einen GPU-Container unter Ihrer Kontrolle) und Serverless (autoskalierende Worker, die auf null herunterskalieren), in den Stufen Secure Cloud und Community Cloud.' },
           { q: 'Was kostet eine RTX 4090 bei RunPod?', a: 'Die RunPod-Preisseite, geprüft am 2026-11-22, nennt für die RTX 4090 0,89 US-Dollar pro Stunde in der Secure Cloud und 0,34 US-Dollar pro Stunde in der Community Cloud. Serverless führt GPUs der 24-GB-Klasse separat auf; die 4090 kostet dort 1,34 US-Dollar pro Stunde. Preise können sich ändern, prüfen Sie daher die aktuelle Seite.' },
-          { q: 'Was ist der Unterschied zwischen Secure Cloud und Community Cloud?', a: 'Laut RunPods Dokumentation läuft die Secure Cloud in T3/T4-Rechenzentren, die auf Produktionseinsatz ausgelegt sind, während die Community Cloud einzelne Compute-Anbieter über ein geprüftes Peer-to-Peer-System zu niedrigeren Preisen mit Nutzern verbindet. Die Dokumentation beschreibt die Sicherheit der Community Cloud nicht, halten Sie sensible Daten daher fern.' },
+          { q: 'Was ist der Unterschied zwischen Secure Cloud und Community Cloud?', a: 'Laut RunPods Dokumentation läuft die Secure Cloud in T3/T4-Rechenzentren, die auf Produktionseinsatz ausgelegt sind, während die Community Cloud einzelne Compute-Anbieter über ein von RunPod als geprüft beschriebenes Peer-to-Peer-System zu niedrigeren Preisen mit Nutzern verbindet. Die geprüften Dokumentationsseiten enthalten über die Container-Isolierung hinaus keine Sicherheitsbeschreibung der Community Cloud und nennen keine Rechenzentrumsstandorte; halten Sie sensible Daten daher fern.' },
           { q: 'Wie rechnet RunPod ab?', a: 'Compute und Speicher werden pro Sekunde aus Prepaid-Guthaben abgerechnet, ohne Ingress- oder Egress-Gebühren. Laut Abrechnungsdokumentation können Sie mit nur 10 US-Dollar starten, Prepaid-Karten müssen mindestens 100 US-Dollar pro Transaktion einzahlen, und Guthaben ist nicht erstattbar.' },
           { q: 'Was passiert, wenn mein RunPod-Guthaben null erreicht?', a: 'Laufende Pods werden gestoppt. Ein Pod mit Netzwerk-Volume behält seine Daten; ein Pod ohne Netzwerk-Volume wird beendet, und seine Daten sind nicht wiederherstellbar. Der Netzwerk-Volume-Speicher läuft weiter auf, während Pods gestoppt sind; richten Sie daher eine Warnung für niedriges Guthaben ein.' },
           { q: 'Unterstützt RunPod Serverless vLLM?', a: 'Ja. RunPod dokumentiert einen vLLM-Worker, den Sie über den RunPod Hub bereitstellen oder aus dem worker-vllm-Repository anpassen können. Die Dokumentation beschreibt ihn als Drop-in-Ersatz für die OpenAI-API: Endpoint-URL und API-Schlüssel ändern.' },
@@ -714,12 +714,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     heroImage: '/images/runpod-review-overview-hero-fr.webp',
     affiliateDisclosure: true,
-    title: 'Test de RunPod (2026) : Pods, Serverless et coûts réels',
-    seoTitle: 'Test RunPod 2026 : Pods, Serverless et coûts réels',
+    title: 'Avis sur RunPod (2026) : Pods, Serverless et coûts réels',
+    seoTitle: 'Avis sur RunPod 2026 : Pods, Serverless et coûts réels',
     intro:
-      'RunPod loue des GPU NVIDIA à la seconde, sous forme de Pods (un conteneur GPU que vous contrôlez) ou d\'endpoints Serverless (des workers qui redescendent à zéro). Si vous comparez les [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) pour exécuter des modèles à poids ouverts, RunPod publie une large liste de GPU, de la RTX 3090 jusqu\'au B300. Sa page de tarifs, consultée le 2026-11-22, affiche la RTX 4090 à 0.89 $ par heure sur Secure Cloud et à 0.34 $ par heure sur Community Cloud. Ce test présente les deux produits de facturation, les différences entre Secure et Community Cloud, ce que la documentation dit du traitement des données, et les coûts faciles à oublier, comme le stockage inactif et ce qui se passe quand les crédits s\'épuisent.',
+      'RunPod loue des GPU NVIDIA à la seconde, sous forme de Pods (un conteneur GPU que vous contrôlez) ou d\'endpoints Serverless (des workers qui redescendent à zéro). Si vous comparez les [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) pour exécuter des modèles à poids ouverts, RunPod publie une large liste de GPU, de la RTX 3090 jusqu\'au B300. Sa page de tarifs, consultée le 2026-11-22, affiche la RTX 4090 à 0.89 $ par heure sur Secure Cloud et à 0.34 $ par heure sur Community Cloud. Cet avis présente les deux produits de facturation, les différences entre Secure et Community Cloud, ce que la documentation dit du traitement des données, et les coûts faciles à oublier, comme le stockage inactif et ce qui se passe quand les crédits s\'épuisent.',
     metaDescription:
-      'Test RunPod 2026 : Pods vs Serverless, Secure vs Community Cloud, facturation à la seconde, RTX 4090 dès 0.34 $/h, stockage et traitement des données.',
+      'Avis sur RunPod : Pods vs Serverless, Secure vs Community Cloud, facturation à la seconde, RTX 4090 dès 0.34 $/h (page de tarifs RunPod, 2026-11-22), stockage et données.',
     twitterDescription:
       'RunPod (2026) : GPU facturés à la seconde, Pods et Serverless, Secure vs Community Cloud. Prix vérifiés, notation et les coûts qui surprennent les nouveaux utilisateurs.',
     readTime: '10 min de lecture',
@@ -736,12 +736,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'runpod avis',
     ],
     leadAnswerBlock:
-      '**RunPod est un service de location de GPU facturé à la seconde, avec deux produits : les Pods (un conteneur GPU persistant) et Serverless (des workers à mise à l\'échelle automatique qui redescendent à zéro) ; la page de tarifs, consultée le 2026-11-22, affiche une RTX 4090 à 0.89 $/h sur Secure Cloud et à 0.34 $/h sur Community Cloud.** Évaluation de PromptQuorum, fondée sur la page de tarifs et la documentation de RunPod, et non sur un test en laboratoire : 8.5/10 au global. Ses points forts sont l\'étendue des GPU et la souplesse de facturation ; ses points faibles sont les frais de stockage inactif, les crédits prépayés non remboursables et un matériel Community Cloud que RunPod ne décrit pas en termes de sécurité. → [Vérifier les tarifs GPU de RunPod](https://www.runpod.io/pricing)',
+      '**RunPod est un service de location de GPU facturé à la seconde, avec deux produits : les Pods (un conteneur GPU persistant) et Serverless (des workers à mise à l\'échelle automatique qui redescendent à zéro) ; la page de tarifs, consultée le 2026-11-22, affiche une RTX 4090 à 0.89 $/h sur Secure Cloud et à 0.34 $/h sur Community Cloud.** Évaluation de PromptQuorum, fondée sur la page de tarifs et la documentation de RunPod, et non sur un test en laboratoire : 8.5/10 au global. Ses points forts sont l\'étendue des GPU et la souplesse de facturation ; ses points faibles sont les frais de stockage inactif, les crédits prépayés non remboursables et Community Cloud, dont les pages de documentation consultées (vérifiées le 2026-11-22) ne donnent aucune description de sécurité au-delà de l\'isolation des conteneurs. → [Vérifier les tarifs GPU de RunPod](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       fr: {
         question: 'RunPod convient-il pour exécuter des LLM à poids ouverts ?',
         answer:
-          'Oui, pour louer des GPU à l\'heure ou à la seconde sans engagement, avec des réserves sur la maîtrise des coûts et la sensibilité des données. Les Pods offrent un conteneur GPU pour le travail interactif, le fine-tuning ou un serveur de longue durée. Serverless exécute des workers qui redescendent à zéro et propose un worker vLLM documenté avec une API compatible OpenAI. RunPod indique une facturation à la seconde, sans frais d\'entrée ni de sortie de données. Secure Cloud tourne dans des centres de données T3/T4 ; Community Cloud s\'appuie sur des fournisseurs de calcul individuels sélectionnés, à des prix plus bas. Les prix ci-dessous proviennent de la page de tarifs de RunPod, consultée le 2026-11-22.',
+          'Oui, pour louer des GPU à l\'heure ou à la seconde sans engagement, avec des réserves sur la maîtrise des coûts et la sensibilité des données. Les Pods offrent un conteneur GPU pour le travail interactif, le fine-tuning ou un serveur de longue durée. Serverless exécute des workers qui redescendent à zéro et propose un worker vLLM documenté avec une API compatible OpenAI. RunPod indique une facturation à la seconde, sans frais d\'entrée ni de sortie de données. Secure Cloud tourne dans des centres de données T3/T4 ; Community Cloud met en relation des fournisseurs de calcul individuels que RunPod décrit comme sélectionnés, à des prix plus bas. Les prix ci-dessous proviennent de la page de tarifs de RunPod, consultée le 2026-11-22.',
         bullets: [
           'Pods : RTX 4090 à 0.89 $/h (Secure Cloud) ou 0.34 $/h (Community Cloud)',
           'Serverless : GPU de 24 Go dès 0.75 $/h et H100 80 Go à 5.89 $/h, avec retour à zéro à l\'inactivité',
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Serverless est tarifé à l\'heure sur la page, par exemple 0.75 $/h pour les GPU de 24 Go et 5.89 $/h pour le H100 80 Go',
           'Le stockage est à part : stockage réseau 0.07 $/Go/mois sous 1 To, disque de volume 0.20 $/Go/mois à l\'inactivité',
           'Les crédits prépayés démarrent à 10 $, ne sont pas remboursables, et un Pod sans volume réseau est supprimé si le solde tombe à zéro',
-          'Secure Cloud tourne dans des centres de données T3/T4 ; la sécurité de Community Cloud n\'est pas décrite dans la documentation',
+          'Secure Cloud tourne dans des centres de données T3/T4 ; pour Community Cloud, les pages de documentation consultées (vérifiées le 2026-11-22) ne donnent aucune description de sécurité au-delà de l\'isolation des conteneurs',
           'Idéal pour : les développeurs qui louent des GPU de 24 à 80 Go pour l\'inférence et le fine-tuning sans contrat',
         ],
       },
@@ -842,7 +842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Option': 'Pod', 'Description': 'Conteneur GPU que vous contrôlez ; facturé pendant l\'exécution' },
           { 'Option': 'Serverless', 'Description': 'Workers qui redescendent à zéro ; facturés pendant l\'exécution' },
           { 'Option': 'Secure Cloud', 'Description': 'Centres de données T3/T4, destinés à la production' },
-          { 'Option': 'Community Cloud', 'Description': 'Fournisseurs individuels sélectionnés, prix plus bas' },
+          { 'Option': 'Community Cloud', 'Description': 'Fournisseurs individuels (RunPod : « sélectionnés »), prix plus bas' },
           { 'Option': 'Disque de conteneur', 'Description': 'Temporaire ; perdu à l\'arrêt ou à la suppression du Pod' },
           { 'Option': 'Disque de volume', 'Description': 'Persiste après arrêt/redémarrage ; monté sur /workspace' },
           { 'Option': 'Volume réseau', 'Description': 'Stockage indépendant rattachable aux Pods ou endpoints' },
@@ -946,7 +946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Crédits prépayés non remboursables',
           'Le disque de volume inactif coûte 0.20 $/Go/mois ; le stockage réseau continue d\'être facturé même sans Pod en marche',
           'Un Pod sans volume réseau est supprimé à solde nul et ses données sont irrécupérables',
-          'La sécurité de Community Cloud n\'est pas décrite dans la documentation ; les emplacements des centres de données ne sont pas listés',
+          'Les pages de documentation consultées ne donnent aucune description de sécurité de Community Cloud au-delà de l\'isolation des conteneurs ; les emplacements des centres de données n\'y sont pas listés',
           'FlashBoot n\'a pas de durées publiées',
         ],
       },
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Choisissez selon le modèle de facturation et la sensibilité des données, pas seulement selon le prix affiché.**',
         items: [
           '**Place de marché pair à pair avec tarifs à la demande et interruptibles →** [test de Vast.ai](/fr/power-local-llm/vast-ai-review).',
-          '**Place de marché de GPU libellée en crypto →** [test de Clore.ai](/fr/power-local-llm/clore-ai-review) ; lisez sa section sur les risques avant de décider quelles données envoyer.',
+          '**Place de marché de GPU libellée en crypto →** [test de Clore.ai](/fr/power-local-llm/clore-ai-review) ; son test comporte une section sur les risques qui couvre le traitement des données.',
           '**Instances GPU de grands fournisseurs →** voir directement [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/) et [Lambda](https://lambda.ai/) ; leurs prix n\'ont pas été comparés ici.',
           '**Posséder le matériel →** comparez avec une carte locale grâce au calculateur de coûts cité plus haut, car un usage quotidien régulier peut favoriser l\'achat.',
         ],
@@ -996,7 +996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Qu\'est-ce que RunPod ?', a: 'RunPod est un service cloud qui loue des GPU NVIDIA facturés à la seconde. Il propose des Pods (un conteneur GPU que vous contrôlez) et Serverless (des workers à mise à l\'échelle automatique qui redescendent à zéro), sur les niveaux Secure Cloud et Community Cloud.' },
           { q: 'Combien coûte une RTX 4090 sur RunPod ?', a: 'La page de tarifs de RunPod, consultée le 2026-11-22, affiche la RTX 4090 à 0.89 $ par heure sur Secure Cloud et à 0.34 $ par heure sur Community Cloud. Serverless liste séparément les GPU de la classe 24 Go ; la 4090 y est à 1.34 $ par heure. Les prix peuvent changer : consultez la page en ligne.' },
-          { q: 'Quelle est la différence entre Secure Cloud et Community Cloud ?', a: 'Selon la documentation de RunPod, Secure Cloud tourne dans des centres de données T3/T4 destinés à la production, tandis que Community Cloud met en relation des fournisseurs de calcul individuels et des utilisateurs via un système pair à pair sélectionné, à des prix plus bas. La documentation ne décrit pas la sécurité de Community Cloud : gardez-y les données sensibles à l\'écart.' },
+          { q: 'Quelle est la différence entre Secure Cloud et Community Cloud ?', a: 'Selon la documentation de RunPod, Secure Cloud tourne dans des centres de données T3/T4 destinés à la production, tandis que Community Cloud met en relation des fournisseurs de calcul individuels et des utilisateurs via un système pair à pair que RunPod décrit comme sélectionné, à des prix plus bas. Les pages de documentation consultées ne donnent aucune description de sécurité de Community Cloud au-delà de l\'isolation des conteneurs et n\'y listent pas les emplacements des centres de données : gardez-y les données sensibles à l\'écart.' },
           { q: 'Comment RunPod facture-t-il ?', a: 'Le calcul et le stockage sont facturés à la seconde à partir de crédits prépayés, sans frais d\'entrée ni de sortie. La documentation de facturation indique que vous pouvez commencer dès 10 $, que les cartes prépayées doivent déposer au moins 100 $ par transaction et que les crédits ne sont pas remboursables.' },
           { q: 'Que se passe-t-il quand mon solde RunPod atteint zéro ?', a: 'Les Pods en cours sont arrêtés. Un Pod avec volume réseau conserve ses données ; un Pod sans volume réseau est supprimé et ses données sont irrécupérables. Le stockage du volume réseau continue d\'être facturé pendant que les Pods sont arrêtés : définissez donc une alerte de solde bas.' },
           { q: 'RunPod Serverless prend-il en charge vLLM ?', a: 'Oui. RunPod documente un worker vLLM que vous pouvez déployer depuis le RunPod Hub ou personnaliser à partir du dépôt worker-vllm. La documentation le décrit comme un remplacement direct de l\'API OpenAI : il suffit de changer l\'URL de l\'endpoint et la clé d\'API.' },
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'Test de RunPod (2026) : Pods, Serverless et coûts réels',
+      name: 'Avis sur RunPod (2026) : Pods, Serverless et coûts réels',
       reviewBody:
         'RunPod loue des GPU NVIDIA facturés à la seconde, en Pods ou en endpoints Serverless, sur Secure Cloud et Community Cloud. Sa page de tarifs, consultée le 2026-11-22, affiche une RTX 4090 à 0.89 $/h (Secure) et 0.34 $/h (Community). Les crédits sont prépayés et non remboursables. L\'évaluation de PromptQuorum lui attribue 8.5/10 au global, d\'après la page de tarifs et la documentation de RunPod, et non d\'après un test pratique.',
       datePublished: '2026-11-22',
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'RunPod alquila GPUs de NVIDIA por segundos, ya sea como Pods (un contenedor con GPU que controlas tú) o como endpoints Serverless (workers que escalan a cero). Si estás comparando los [mejores proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers) para ejecutar modelos de pesos abiertos, RunPod publica una lista amplia de GPUs, desde la RTX 3090 hasta la B300. Su página de precios, consultada el 2026-11-22, lista la RTX 4090 a $0.89 por hora en Secure Cloud y a $0.34 por hora en Community Cloud. Este análisis cubre los dos productos de facturación, en qué se diferencian Secure y Community Cloud, qué dicen los docs sobre el tratamiento de datos y los costes fáciles de pasar por alto, como el almacenamiento inactivo y lo que ocurre cuando se agotan los créditos.',
     metaDescription:
-      'Análisis de RunPod 2026: Pods vs Serverless, Secure vs Community Cloud, facturación por segundo, RTX 4090 desde $0.34/h, almacenamiento y datos.',
+      'Análisis de RunPod: Pods vs Serverless, Secure vs Community Cloud, facturación por segundo, RTX 4090 desde $0.34/h (página de precios de RunPod, 2026-11-22), almacenamiento y datos.',
     twitterDescription:
       'RunPod (2026): GPU facturada por segundo, Pods y Serverless, Secure vs Community Cloud. Precios consultados, puntuación y los costes que sorprenden a quien alquila por primera vez.',
     readTime: '10 min de lectura',
@@ -1085,12 +1085,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vale la pena runpod',
     ],
     leadAnswerBlock:
-      '**RunPod es un servicio de alquiler de GPUs por segundo con dos productos: Pods (un contenedor con GPU persistente) y Serverless (workers con autoescalado que escalan a cero); la página de precios, consultada el 2026-11-22, lista una RTX 4090 a $0.89/h en Secure Cloud y a $0.34/h en Community Cloud.** Valoración de PromptQuorum, basada en la página de precios y la documentación de RunPod y no en una prueba práctica de laboratorio: 8.5/10 en conjunto. Sus puntos fuertes son la variedad de GPUs y la flexibilidad de facturación; los débiles, los cargos por almacenamiento inactivo, los créditos prepagados no reembolsables y un hardware de Community Cloud que RunPod no describe en términos de seguridad. → [Consulta los precios de GPU de RunPod](https://www.runpod.io/pricing)',
+      '**RunPod es un servicio de alquiler de GPUs por segundo con dos productos: Pods (un contenedor con GPU persistente) y Serverless (workers con autoescalado que escalan a cero); la página de precios, consultada el 2026-11-22, lista una RTX 4090 a $0.89/h en Secure Cloud y a $0.34/h en Community Cloud.** Valoración de PromptQuorum, basada en la página de precios y la documentación de RunPod y no en una prueba práctica de laboratorio: 8.5/10 en conjunto. Sus puntos fuertes son la variedad de GPUs y la flexibilidad de facturación; los débiles, los cargos por almacenamiento inactivo, los créditos prepagados no reembolsables y Community Cloud, cuya seguridad las páginas de documentación revisadas (consultadas el 2026-11-22) no describen más allá del aislamiento de contenedores. → [Consulta los precios de GPU de RunPod](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       es: {
         question: '¿Es RunPod una buena opción para ejecutar LLMs de pesos abiertos?',
         answer:
-          'Sí, para alquilar GPUs por horas o segundos sin contrato, con reservas en el control de costes y en la sensibilidad de los datos. Los Pods te dan un contenedor con GPU para trabajo interactivo, fine-tuning o un servidor de larga duración. Serverless ejecuta workers que escalan a cero y ofrece un worker de vLLM documentado con una API compatible con OpenAI. RunPod indica facturación por segundo sin cargos de entrada ni de salida de datos. Secure Cloud funciona en centros de datos T3/T4; Community Cloud usa proveedores de cómputo individuales verificados a precios más bajos. Los precios de abajo proceden de la página de precios de RunPod, consultada el 2026-11-22.',
+          'Sí, para alquilar GPUs por horas o segundos sin contrato, con reservas en el control de costes y en la sensibilidad de los datos. Los Pods te dan un contenedor con GPU para trabajo interactivo, fine-tuning o un servidor de larga duración. Serverless ejecuta workers que escalan a cero y ofrece un worker de vLLM documentado con una API compatible con OpenAI. RunPod indica facturación por segundo sin cargos de entrada ni de salida de datos. Secure Cloud funciona en centros de datos T3/T4; Community Cloud conecta proveedores de cómputo individuales que RunPod describe como verificados, a precios más bajos. Los precios de abajo proceden de la página de precios de RunPod, consultada el 2026-11-22.',
         bullets: [
           'Pods: RTX 4090 a $0.89/h (Secure Cloud) o $0.34/h (Community Cloud)',
           'Serverless: GPUs de 24 GB desde $0.75/h y H100 de 80 GB a $5.89/h, con escalado a cero en reposo',
@@ -1171,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Serverless se muestra por hora en la página, por ejemplo GPUs de 24 GB a $0.75/h y H100 de 80 GB a $5.89/h',
           'El almacenamiento va aparte: almacenamiento en red $0.07/GB/mes por debajo de 1 TB, disco de volumen $0.20/GB/mes mientras está inactivo',
           'Los créditos prepagados empiezan en $10, no son reembolsables, y un Pod sin volumen de red se termina si el saldo llega a cero',
-          'Secure Cloud funciona en centros de datos T3/T4; la seguridad de Community Cloud no se describe en los docs',
+          'Secure Cloud funciona en centros de datos T3/T4; para Community Cloud, las páginas de documentación revisadas (consultadas el 2026-11-22) no dan una descripción de seguridad más allá del aislamiento de contenedores',
           'Ideal para: desarrolladores que alquilan GPUs de 24 GB a 80 GB para inferencia y fine-tuning sin contrato',
         ],
       },
@@ -1191,7 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Opción': 'Pod', 'Qué es': 'Contenedor con GPU que controlas; facturado en uso' },
           { 'Opción': 'Serverless', 'Qué es': 'Workers que escalan a cero; se factura mientras trabajan' },
           { 'Opción': 'Secure Cloud', 'Qué es': 'Centros de datos T3/T4, orientado a producción' },
-          { 'Opción': 'Community Cloud', 'Qué es': 'Proveedores individuales verificados, precios más bajos' },
+          { 'Opción': 'Community Cloud', 'Qué es': 'Proveedores individuales (RunPod: «verificados»), precios más bajos' },
           { 'Opción': 'Disco de contenedor', 'Qué es': 'Temporal; se pierde al detener o eliminar el Pod' },
           { 'Opción': 'Disco de volumen', 'Qué es': 'Persiste al detener/reiniciar; montado en /workspace' },
           { 'Opción': 'Volumen de red', 'Qué es': 'Almacenamiento independiente conectable a Pods o endpoints' },
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los créditos prepagados no son reembolsables',
           'El disco de volumen inactivo cuesta $0.20/GB/mes; el almacenamiento en red se acumula aunque no haya Pod en marcha',
           'Un Pod sin volumen de red se termina con saldo cero y sus datos no se pueden recuperar',
-          'La seguridad de Community Cloud no se describe en los docs; no se listan ubicaciones de centros de datos',
+          'Las páginas de documentación revisadas no dan una descripción de seguridad de Community Cloud más allá del aislamiento de contenedores; no se listan allí ubicaciones de centros de datos',
           'FlashBoot no tiene cifras de tiempo publicadas',
         ],
       },
@@ -1322,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Elige según el modelo de facturación y la sensibilidad de los datos, no solo por el precio de portada.**',
         items: [
           '**Marketplace entre pares con precios on-demand e interrumpibles →** [análisis de Vast.ai](/es/power-local-llm/vast-ai-review).',
-          '**Marketplace de GPUs denominado en cripto →** [análisis de Clore.ai](/es/power-local-llm/clore-ai-review); lee su sección de riesgos antes de decidir qué datos enviar.',
+          '**Marketplace de GPUs denominado en cripto →** [análisis de Clore.ai](/es/power-local-llm/clore-ai-review); su análisis tiene una sección de riesgos sobre el tratamiento de datos.',
           '**Instancias de GPU de grandes proveedores →** consulta directamente [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/) y [Lambda](https://lambda.ai/); aquí no se compararon sus precios.',
           '**Tener el hardware propio →** compáralo con una tarjeta local usando la calculadora de costes enlazada arriba, ya que el uso diario constante puede favorecer comprar.',
         ],
@@ -1345,7 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '¿Qué es RunPod?', a: 'RunPod es un servicio en la nube que alquila GPUs de NVIDIA facturadas por segundo. Ofrece Pods (un contenedor con GPU que controlas) y Serverless (workers con autoescalado que escalan a cero), en los niveles Secure Cloud y Community Cloud.' },
           { q: '¿Cuánto cuesta una RTX 4090 en RunPod?', a: 'La página de precios de RunPod, consultada el 2026-11-22, lista la RTX 4090 a $0.89 por hora en Secure Cloud y a $0.34 por hora en Community Cloud. Serverless lista aparte las GPUs de clase 24 GB; la 4090 cuesta allí $1.34 por hora. Los precios pueden cambiar, así que consulta la página actual.' },
-          { q: '¿Cuál es la diferencia entre Secure Cloud y Community Cloud?', a: 'Según los docs de RunPod, Secure Cloud funciona en centros de datos T3/T4 orientados a producción, mientras que Community Cloud conecta a proveedores de cómputo individuales con los usuarios mediante un sistema entre pares verificado y a precios más bajos. Los docs no describen la seguridad de Community Cloud, así que mantén los datos sensibles fuera.' },
+          { q: '¿Cuál es la diferencia entre Secure Cloud y Community Cloud?', a: 'Según los docs de RunPod, Secure Cloud funciona en centros de datos T3/T4 orientados a producción, mientras que Community Cloud conecta a proveedores de cómputo individuales con los usuarios mediante un sistema entre pares que RunPod describe como verificado y a precios más bajos. Las páginas de documentación revisadas no dan una descripción de seguridad de Community Cloud más allá del aislamiento de contenedores ni listan ubicaciones de centros de datos, así que mantén los datos sensibles fuera.' },
           { q: '¿Cómo factura RunPod?', a: 'El cómputo y el almacenamiento se facturan por segundo con créditos prepagados, sin cargos de entrada ni salida. Los docs de facturación dicen que puedes empezar con solo $10, que las tarjetas prepago deben ingresar al menos $100 por transacción y que los créditos no son reembolsables.' },
           { q: '¿Qué pasa cuando mi saldo de RunPod llega a cero?', a: 'Los Pods en ejecución se detienen. Un Pod con volumen de red conserva sus datos; uno sin volumen se termina y sus datos no se pueden recuperar. El almacenamiento del volumen de red sigue acumulando cargos mientras los Pods están detenidos, así que configura una alerta de saldo bajo.' },
           { q: '¿Serverless de RunPod admite vLLM?', a: 'Sí. RunPod documenta un worker de vLLM que puedes desplegar desde RunPod Hub o personalizar desde el repositorio worker-vllm. Los docs lo describen como un sustituto directo de la API de OpenAI: cambia la URL del endpoint y la clave de API.' },
@@ -1417,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'RunPodは、NVIDIA GPUを秒単位で借りられるサービスです。自分で操作できるGPUコンテナの「Pod」と、ゼロまでスケールダウンする「Serverless」エンドポイントの2種類があります。オープンウェイトモデルを動かす[おすすめクラウドGPUプロバイダー](/ja/power-local-llm/best-cloud-gpu-providers)を比較している方に向けて、RunPodはRTX 3090からB300まで幅広いGPUを掲載しています。料金ページ（2026-11-22確認）では、RTX 4090がSecure Cloudで1時間あたり0.89ドル、Community Cloudで0.34ドルです。このレビューでは、2つの課金製品、Secure CloudとCommunity Cloudの違い、公式ドキュメントが述べるデータの扱い、アイドル中のストレージ料金やクレジット残高がゼロになったときの挙動など、見落としやすいコストを解説します。',
     metaDescription:
-      'RunPodレビュー2026：PodとServerless、Secure CloudとCommunity Cloudの違い、秒単位課金、RTX 4090は1時間0.34ドルから、ストレージ料金とデータの扱いを解説。',
+      'RunPodレビュー：PodとServerless、Secure CloudとCommunity Cloudの違い、秒単位課金、RTX 4090は1時間0.34ドルから（RunPod料金ページ、2026-11-22）、ストレージ料金とデータの扱い。',
     twitterDescription:
       'RunPod（2026）：秒単位のGPU課金、PodとServerless、Secure CloudとCommunity Cloudの違い。確認済みの料金、スコアカード、初めて借りる人が驚きやすいコストを解説。',
     readTime: '10分で読める',
@@ -1434,12 +1434,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'runpod おすすめ',
     ],
     leadAnswerBlock:
-      '**RunPodは秒単位でGPUを借りるサービスで、Pod（常駐するGPUコンテナ）とServerless（ゼロまでスケールダウンする自動スケーリングのワーカー）の2製品があります。料金ページ（2026-11-22確認）では、RTX 4090がSecure Cloudで1時間0.89ドル、Community Cloudで0.34ドルです。** PromptQuorumの評価（RunPod公式の料金ページとドキュメントに基づくもので、実機ラボテストではありません）：総合8.5/10。強みはGPUの種類の多さと課金の柔軟性、弱みはアイドル中のストレージ料金、返金不可のプリペイドクレジット、セキュリティ面の説明がないCommunity Cloudのハードウェアです。→ [RunPodのGPU料金を確認](https://www.runpod.io/pricing)',
+      '**RunPodは秒単位でGPUを借りるサービスで、Pod（常駐するGPUコンテナ）とServerless（ゼロまでスケールダウンする自動スケーリングのワーカー）の2製品があります。料金ページ（2026-11-22確認）では、RTX 4090がSecure Cloudで1時間0.89ドル、Community Cloudで0.34ドルです。** PromptQuorumの評価（RunPod公式の料金ページとドキュメントに基づくもので、実機ラボテストではありません）：総合8.5/10。強みはGPUの種類の多さと課金の柔軟性、弱みはアイドル中のストレージ料金、返金不可のプリペイドクレジット、そしてCommunity Cloud（確認したドキュメントページには、2026-11-22時点でコンテナ分離以外のセキュリティ説明がありません）です。→ [RunPodのGPU料金を確認](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       ja: {
         question: 'RunPodはオープンウェイトLLMの実行に向いていますか？',
         answer:
-          '契約なしでGPUを時間単位・秒単位で借りたい場合には向いています。ただしコスト管理とデータの機密性には注意が必要です。Podは対話的な作業、ファインチューニング、長時間稼働のサーバー向けのGPUコンテナです。Serverlessはゼロまでスケールダウンするワーカーで、OpenAI互換APIを備えた公式のvLLMワーカーが用意されています。RunPodは秒単位課金で、ingressとegressの料金はないと記載しています。Secure CloudはT3/T4データセンターで稼働し、Community Cloudは審査済みの個人のコンピュート提供者を低価格で利用する仕組みです。以下の料金はRunPodの料金ページ（2026-11-22確認）によるものです。',
+          '契約なしでGPUを時間単位・秒単位で借りたい場合には向いています。ただしコスト管理とデータの機密性には注意が必要です。Podは対話的な作業、ファインチューニング、長時間稼働のサーバー向けのGPUコンテナです。Serverlessはゼロまでスケールダウンするワーカーで、ドキュメントで案内されているOpenAI互換APIのvLLMワーカーが用意されています。RunPodは秒単位課金で、ingressとegressの料金はないと記載しています。Secure CloudはT3/T4データセンターで稼働し、Community Cloudは、RunPodが審査済みと説明する個人のコンピュート提供者を低価格で利用する仕組みです。以下の料金はRunPodの料金ページ（2026-11-22確認）によるものです。',
         bullets: [
           'Pod：RTX 4090は1時間0.89ドル（Secure Cloud）または0.34ドル（Community Cloud）',
           'Serverless：24GB GPUは1時間0.75ドルから、H100 80GBは5.89ドル。アイドル時はゼロまでスケールダウン',
@@ -1520,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Serverlessはページ上で1時間単位の料金表示。例：24GB GPUは0.75ドル、H100 80GBは5.89ドル',
           'ストレージは別料金：ネットワークストレージは1TB未満で月額GBあたり0.07ドル、ボリュームディスクはアイドル中に月額GBあたり0.20ドル',
           'プリペイドクレジットは10ドルから、返金不可。ネットワークボリュームのないPodは、残高がゼロになると終了されます',
-          'Secure CloudはT3/T4データセンターで稼働。Community Cloudのセキュリティはドキュメントに説明がありません',
+          'Secure CloudはT3/T4データセンターで稼働。Community Cloudについては、確認したドキュメントページ（2026-11-22確認）にコンテナ分離以外のセキュリティ説明がありません',
           '向いている人：契約なしで24GB〜80GBのGPUを推論やファインチューニングのために借りる開発者',
         ],
       },
@@ -1540,7 +1540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'Pod', '内容': '自分で操作するGPUコンテナ。稼働中に課金' },
           { '項目': 'Serverless', '内容': 'ゼロまでスケールダウンするワーカー。稼働中に課金' },
           { '項目': 'Secure Cloud', '内容': 'T3/T4データセンター。本番利用向け' },
-          { '項目': 'Community Cloud', '内容': '審査済みの個人提供者。低価格' },
+          { '項目': 'Community Cloud', '内容': '個人提供者（RunPod説明：「審査済み」）。低価格' },
           { '項目': 'コンテナディスク', '内容': '一時的。Pod停止・削除で消える' },
           { '項目': 'ボリュームディスク', '内容': '停止・再起動後も残る。/workspaceにマウント' },
           { '項目': 'ネットワークボリューム', '内容': '独立したストレージ。Podやエンドポイントに接続可能' },
@@ -1573,7 +1573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Serverless（1時間あたり、同じページ）：** 24GB GPU（L4、A5000、3090）は0.75ドル、4090は1.34ドル、48GBのL40/L40S/6000 Adaは1.89ドル、A100 80GBは2.99ドル、H100 80GBは5.89ドル。このページには、フレックスとアクティブの秒単位の個別料金は表示されていません。',
           '**ストレージ：** コンテナディスクは月額GBあたり0.10ドル。ボリュームディスクは稼働中0.10ドル、アイドル中0.20ドル。ネットワークストレージは1TB未満で月額GBあたり0.07ドル、1TB以上で0.05ドル（高性能版は0.14ドル）。',
           '**見積もりではなく計算例：** RTX 4090を8時間使うと、Secure Cloudでは8 × 0.89ドル = 7.12ドル、Community Cloudでは8 × 0.34ドル = 2.72ドルです。100GBのネットワークボリュームは、Podが動いているかどうかにかかわらず月額7.00ドル（0.07ドル換算）かかります。',
-          '**クレジット：** プリペイド制です。課金ドキュメントによると、最少10ドルから始められ、プリペイドカードは1回の入金で100ドル以上が必要、新しいPodには少なくとも1時間分のクレジットが必要です。クレジットは返金不可で、引き出しもできません。このページの価格は米ドルで記載しています。お使いのカードが米ドル建てでない場合、カード会社が海外事務手数料を請求することがあります。',
+          '**クレジット：** プリペイド制です。課金ドキュメントによると、最少10ドルから始められ、プリペイドカードは1回の入金で100ドル以上が必要、新しいPodには少なくとも1時間分のクレジットが必要です。クレジットは返金不可で、引き出しもできません。このページの価格は米ドルで記載しています。',
           '**残高ゼロ：** 稼働中のPodは停止されます。ネットワークボリュームのあるPodはデータが残りますが、ないPodは終了され、データは復元できません。ネットワークボリュームのストレージ料金は、Podが停止中でも発生し続けます。',
           '**トラフィックと上限：** ドキュメントにはingressとegressの料金はないと記載されています。既定の支出上限は、全リソース合計で1時間80ドルで、アカウントの利用実績に応じて引き上げられます。',
           'プロバイダー間の時間単価は、[クラウドGPUの1時間あたりコスト](/ja/prompt-bites/cloud-gpu-cost-per-hour)をご覧ください。',
@@ -1644,7 +1644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プリペイドクレジットは返金不可',
           'アイドル中のボリュームディスクは月額GBあたり0.20ドル。ネットワークストレージはPodがなくても発生',
           'ネットワークボリュームのないPodは、残高ゼロで終了され、データを復元できない',
-          'Community Cloudのセキュリティはドキュメントに説明がなく、データセンターの所在地も記載されていない',
+          '確認したドキュメントページには、Community Cloudについてコンテナ分離以外のセキュリティ説明がなく、データセンターの所在地も記載されていない',
           'FlashBootには公開された所要時間の数値がない',
         ],
       },
@@ -1654,7 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**[runpod.io](https://www.runpod.io/)でアカウントを作成し、プリペイドクレジットを追加してから、Podテンプレートを選ぶか、Serverlessエンドポイントをデプロイします。** 申し込む前に最新の料金を確認してください。ここに記載した数値は2026-11-22に確認したものです。',
         items: [
-          'ステップ1：RunPodアカウントを作成し、クレジットを追加します（ドキュメントによると最少10ドルから。プリペイドカードは1回の入金で100ドルが必要）。このページの価格は米ドルで記載しています。お使いのカードが米ドル建てでない場合、カード会社が海外事務手数料を請求することがあります。',
+          'ステップ1：RunPodアカウントを作成し、クレジットを追加します（ドキュメントによると最少10ドルから。プリペイドカードは1回の入金で100ドルが必要）。このページの価格は米ドルで記載しています。',
           'ステップ2：データの機密性に応じてSecure CloudかCommunity Cloudかを決め、上のモデル適合表からGPUを選びます。',
           'ステップ3：Podを停止または終了しても重みやチェックポイントを残したい場合は、ネットワークボリュームを接続します。',
           'ステップ4：残高ゼロでPodが突然止まらないように、課金設定で残高不足のメール通知を設定します。',
@@ -1671,7 +1671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**表面的な価格だけでなく、課金モデルとデータの機密性で選びましょう。**',
         items: [
           '**オンデマンドと中断可能な料金を備えたピアツーピア型マーケットプレイス →** [Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)。',
-          '**暗号資産建てのGPUマーケットプレイス →** [Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)。どのデータを送るか決める前にリスクの項目をお読みください。',
+          '**暗号資産建てのGPUマーケットプレイス →** [Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)。レビューにはデータの取り扱いに関するリスクの項目があります。',
           '**大手プロバイダーのGPUインスタンス →** [AWS](https://aws.amazon.com/)、[Google Cloud](https://cloud.google.com/)、[Lambda](https://lambda.ai/)を直接ご覧ください。ここでは料金を比較していません。',
           '**ハードウェアを所有する →** 上記のコスト計算ツールで手元のカードと比較してください。毎日安定して使う場合は、所有のほうが有利なことがあります。',
         ],
@@ -1694,8 +1694,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'RunPodとは何ですか？', a: 'RunPodは、NVIDIA GPUを秒単位課金で貸し出すクラウドサービスです。自分で操作するGPUコンテナの「Pod」と、ゼロまでスケールダウンする自動スケーリングのワーカー「Serverless」を、Secure CloudとCommunity Cloudの階層で提供しています。' },
           { q: 'RunPodでRTX 4090はいくらですか？', a: 'RunPodの料金ページ（2026-11-22確認）では、RTX 4090はSecure Cloudで1時間0.89ドル、Community Cloudで0.34ドルです。Serverlessでは24GBクラスのGPUが別に掲載されており、4090は1時間1.34ドルです。料金は変更される可能性があるため、最新のページをご確認ください。' },
-          { q: 'Secure CloudとCommunity Cloudの違いは何ですか？', a: 'RunPodのドキュメントによると、Secure Cloudは本番利用向けのT3/T4データセンターで稼働し、Community Cloudは審査済みのピアツーピアシステムで個人のコンピュート提供者とユーザーをつなぎ、より低価格で提供されます。Community Cloudのセキュリティはドキュメントに説明がないため、機微なデータは置かないでください。' },
-          { q: 'RunPodの課金はどのように行われますか？', a: 'コンピュートとストレージは、プリペイドクレジットから秒単位で課金され、ingressとegressの料金はありません。課金ドキュメントによると、最少10ドルから始められ、プリペイドカードは1回の入金で100ドル以上が必要で、クレジットは返金不可です。このページの価格は米ドルで記載しています。お使いのカードが米ドル建てでない場合、カード会社が海外事務手数料を請求することがあります。' },
+          { q: 'Secure CloudとCommunity Cloudの違いは何ですか？', a: 'RunPodのドキュメントによると、Secure Cloudは本番利用向けのT3/T4データセンターで稼働し、Community CloudはRunPodが審査済みと説明するピアツーピアシステムで個人のコンピュート提供者とユーザーをつなぎ、より低価格で提供されます。確認したドキュメントページにはCommunity Cloudについてコンテナ分離以外のセキュリティ説明がなく、データセンターの所在地も記載されていないため、機微なデータは置かないでください。' },
+          { q: 'RunPodの課金はどのように行われますか？', a: 'コンピュートとストレージは、プリペイドクレジットから秒単位で課金され、ingressとegressの料金はありません。課金ドキュメントによると、最少10ドルから始められ、プリペイドカードは1回の入金で100ドル以上が必要で、クレジットは返金不可です。このページの価格は米ドルで記載しています。' },
           { q: 'RunPodの残高がゼロになるとどうなりますか？', a: '稼働中のPodは停止されます。ネットワークボリュームのあるPodはデータが残りますが、ないPodは終了され、データは復元できません。ネットワークボリュームのストレージ料金はPodが停止中でも発生し続けるため、残高不足の通知を設定してください。' },
           { q: 'RunPod ServerlessはvLLMに対応していますか？', a: 'はい。RunPodは、RunPod Hubからデプロイできる、またはworker-vllmリポジトリからカスタマイズできるvLLMワーカーを案内しています。ドキュメントでは、OpenAI APIの置き換えとして使える（エンドポイントURLとAPIキーを変更するだけ）と説明されています。' },
           { q: 'FlashBootは何をしますか？', a: 'ドキュメントによると、FlashBootはスピンダウン後にワーカーの状態を保持することでコールドスタートを減らし、通常の起動よりも速く復帰できるようにします。一定のトラフィックがあるエンドポイントで効果が高いとされています。RunPodは所要時間の数値を公開しておらず、PromptQuorumも測定していません。' },
@@ -1766,7 +1766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'RunPod 按秒出租 NVIDIA GPU，形式有两种：Pod（由你控制的 GPU 容器）和 Serverless 端点（可缩减到零的工作节点）。如果你正在对比运行开源权重模型的[最佳云 GPU 服务商](/zh/power-local-llm/best-cloud-gpu-providers)，RunPod 公布的 GPU 清单很宽，从 RTX 3090 一直到 B300。其定价页（核实于 2026-11-22）列出 RTX 4090 在 Secure Cloud 为每小时 $0.89，在 Community Cloud 为每小时 $0.34。本评测涵盖两种计费产品、Secure Cloud 与 Community Cloud 的区别、官方文档对数据处理的说明，以及容易被忽略的成本，例如闲置存储费用和额度用完后会发生什么。',
     metaDescription:
-      'RunPod 评测 2026：Pod 与 Serverless、Secure 与 Community Cloud、按秒计费，RTX 4090 低至 $0.34/小时，另含存储成本与数据处理说明。',
+      'RunPod 评测：Pod 与 Serverless、Secure 与 Community Cloud、按秒计费，RTX 4090 低至 $0.34/小时（RunPod 定价页，2026-11-22），另含存储成本与数据处理说明。',
     twitterDescription:
       'RunPod（2026）：GPU 按秒计费，Pod 与 Serverless，Secure 与 Community Cloud。已核实的价格、评分卡，以及让首次租用者意外的成本。',
     readTime: '阅读约10分钟',
@@ -1783,12 +1783,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'runpod 值得用吗',
     ],
     leadAnswerBlock:
-      '**RunPod 是按秒计费的 GPU 租用服务，有两种产品：Pod（持久的 GPU 容器）和 Serverless（可缩减到零的自动扩缩工作节点）；其定价页（核实于 2026-11-22）列出 RTX 4090 在 Secure Cloud 为 $0.89/小时，在 Community Cloud 为 $0.34/小时。** PromptQuorum 的评估基于 RunPod 自己的定价页和文档，而非实机测试：综合 8.5/10。优势是 GPU 选择范围和计费灵活性；弱点是闲置存储收费、预付额度不可退款，以及 RunPod 没有从安全角度描述 Community Cloud 的硬件。→ [查看 RunPod GPU 价格](https://www.runpod.io/pricing)',
+      '**RunPod 是按秒计费的 GPU 租用服务，有两种产品：Pod（持久的 GPU 容器）和 Serverless（可缩减到零的自动扩缩工作节点）；其定价页（核实于 2026-11-22）列出 RTX 4090 在 Secure Cloud 为 $0.89/小时，在 Community Cloud 为 $0.34/小时。** PromptQuorum 的评估基于 RunPod 自己的定价页和文档，而非实机测试：综合 8.5/10。优势是 GPU 选择范围和计费灵活性；弱点是闲置存储收费、预付额度不可退款，以及 Community Cloud（已查阅的文档页面除容器隔离外没有安全方面的描述，核实于 2026-11-22）。→ [查看 RunPod GPU 价格](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       zh: {
         question: 'RunPod 适合运行开源权重 LLM 吗？',
         answer:
-          '适合：无需合同，按小时或按秒租用 GPU，但要注意成本控制和数据敏感性。Pod 提供 GPU 容器，适合交互式工作、微调或长期运行的服务。Serverless 运行可缩减到零的工作节点，并提供有文档说明的 vLLM 工作节点和兼容 OpenAI 的 API。RunPod 标明按秒计费，不收入站或出站流量费。Secure Cloud 运行在 T3/T4 数据中心；Community Cloud 使用经审核的个人算力提供者，价格更低。以下价格来自 RunPod 定价页，核实于 2026-11-22。',
+          '适合：无需合同，按小时或按秒租用 GPU，但要注意成本控制和数据敏感性。Pod 提供 GPU 容器，适合交互式工作、微调或长期运行的服务。Serverless 运行可缩减到零的工作节点，并提供有文档说明的 vLLM 工作节点和兼容 OpenAI 的 API。RunPod 标明按秒计费，不收入站或出站流量费。Secure Cloud 运行在 T3/T4 数据中心；Community Cloud 连接 RunPod 描述为经审核的个人算力提供者，价格更低。以下价格来自 RunPod 定价页，核实于 2026-11-22。',
         bullets: [
           'Pod：RTX 4090 为 $0.89/小时（Secure Cloud）或 $0.34/小时（Community Cloud）',
           'Serverless：24 GB GPU 起价 $0.75/小时，H100 80 GB 为 $5.89/小时，空闲时缩减到零',
@@ -1869,7 +1869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Serverless 在页面上按小时标价，例如 24 GB GPU 为 $0.75/小时，H100 80 GB 为 $5.89/小时',
           '存储另计：网络存储在 1 TB 以下每月每 GB $0.07，卷磁盘闲置时每月每 GB $0.20',
           '预付额度 $10 起，不可退款；余额归零时，没有网络卷的 Pod 会被终止',
-          'Secure Cloud 运行在 T3/T4 数据中心；文档没有描述 Community Cloud 的安全性',
+          'Secure Cloud 运行在 T3/T4 数据中心；关于 Community Cloud，已查阅的文档页面（核实于 2026-11-22）除容器隔离外没有安全方面的描述',
           '最适合：无需合同、租用 24 GB 至 80 GB GPU 做推理和微调的开发者',
         ],
       },
@@ -1889,7 +1889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '选项': 'Pod', '说明': '由你控制的 GPU 容器；运行期间计费' },
           { '选项': 'Serverless', '说明': '可缩减到零的工作节点；节点运行时计费' },
           { '选项': 'Secure Cloud', '说明': 'T3/T4 数据中心，面向生产使用' },
-          { '选项': 'Community Cloud', '说明': '经审核的个人算力提供者，价格更低' },
+          { '选项': 'Community Cloud', '说明': '个人提供者（RunPod：“经审核”），价格更低' },
           { '选项': '容器磁盘', '说明': '临时；Pod 停止或删除后丢失' },
           { '选项': '卷磁盘', '说明': '停止或重启后保留；挂载在 /workspace' },
           { '选项': '网络卷', '说明': '独立存储，可挂载到 Pod 或端点' },
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '预付额度不可退款',
           '闲置卷磁盘每月每 GB $0.20；即使没有 Pod 运行，网络存储也会持续计费',
           '没有网络卷的 Pod 在余额归零时被终止，数据无法恢复',
-          '文档没有描述 Community Cloud 的安全性，也没有列出数据中心位置',
+          '已查阅的文档页面除容器隔离外没有 Community Cloud 的安全描述，也没有列出数据中心位置',
           'FlashBoot 没有公布时间数据',
         ],
       },
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**请根据计费模式和数据敏感性来选择，而不要只看标价。**',
         items: [
           '**提供按需与可中断定价的点对点市场 →** [Vast.ai 评测](/zh/power-local-llm/vast-ai-review)。',
-          '**以加密货币计价的 GPU 市场 →** [Clore.ai 评测](/zh/power-local-llm/clore-ai-review)；在决定发送哪些数据之前请先阅读其风险部分。',
+          '**以加密货币计价的 GPU 市场 →** [Clore.ai 评测](/zh/power-local-llm/clore-ai-review)；该评测设有涉及数据处理的风险部分。',
           '**大型服务商的 GPU 实例 →** 请直接查看 [AWS](https://aws.amazon.com/)、[Google Cloud](https://cloud.google.com/) 和 [Lambda](https://lambda.ai/)；这里没有比较它们的价格。',
           '**改为自购硬件 →** 用上面链接的成本计算器与本地显卡对比，因为每天稳定使用时，自购可能更划算。',
         ],
@@ -2043,7 +2043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'RunPod 是什么？', a: 'RunPod 是一项按秒计费的 NVIDIA GPU 云租用服务。它提供 Pod（由你控制的 GPU 容器）和 Serverless（可缩减到零的自动扩缩工作节点），分为 Secure Cloud 和 Community Cloud 两个层级。' },
           { q: 'RunPod 上的 RTX 4090 多少钱？', a: 'RunPod 定价页（核实于 2026-11-22）列出 RTX 4090 在 Secure Cloud 为每小时 $0.89，在 Community Cloud 为每小时 $0.34。Serverless 单独列出 24 GB 级 GPU；4090 在那里为每小时 $1.34。价格可能变动，请查看最新页面。' },
-          { q: 'Secure Cloud 和 Community Cloud 有什么区别？', a: '据 RunPod 文档，Secure Cloud 运行在面向生产使用的 T3/T4 数据中心，而 Community Cloud 通过经审核的点对点系统把个人算力提供者与用户连接起来，价格更低。文档没有描述 Community Cloud 的安全性，因此敏感数据不要放在上面。' },
+          { q: 'Secure Cloud 和 Community Cloud 有什么区别？', a: '据 RunPod 文档，Secure Cloud 运行在面向生产使用的 T3/T4 数据中心，而 Community Cloud 通过 RunPod 所称经审核的点对点系统把个人算力提供者与用户连接起来，价格更低。已查阅的文档页面除容器隔离外没有 Community Cloud 的安全描述，也没有列出数据中心位置，因此敏感数据不要放在上面。' },
           { q: 'RunPod 如何计费？', a: '计算和存储均按秒从预付额度中扣费，不收入站或出站流量费。计费文档称最低 $10 即可开始，预付卡每笔至少充值 $100，额度不可退款。' },
           { q: '我的 RunPod 余额归零会怎样？', a: '运行中的 Pod 会被停止。带网络卷的 Pod 保留数据；没有网络卷的 Pod 会被终止，数据无法恢复。Pod 停止期间，网络卷存储仍会继续计费，因此请设置低余额提醒。' },
           { q: 'RunPod Serverless 支持 vLLM 吗？', a: '支持。RunPod 文档介绍了一个 vLLM 工作节点，可从 RunPod Hub 部署，也可基于 worker-vllm 仓库自定义。文档称它可直接替换 OpenAI API：更改端点 URL 和 API 密钥即可。' },
@@ -2115,7 +2115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'RunPod는 NVIDIA GPU를 초 단위로 대여하는 서비스로, 직접 제어하는 GPU 컨테이너인 Pod와 사용량이 없으면 0으로 줄어드는 Serverless 엔드포인트 두 가지 방식을 제공합니다. 오픈 웨이트 모델을 돌릴 [최고의 클라우드 GPU 제공업체](/ko/power-local-llm/best-cloud-gpu-providers)를 비교 중이라면, RunPod는 RTX 3090부터 B300까지 폭넓은 GPU 목록을 공개하고 있습니다. 2026-11-22에 확인한 가격 페이지에는 RTX 4090이 Secure Cloud에서 시간당 $0.89, Community Cloud에서 시간당 $0.34로 표시되어 있습니다. 이 리뷰는 두 가지 과금 제품, Secure Cloud와 Community Cloud의 차이, 문서에 나온 데이터 처리 방식, 그리고 유휴 스토리지와 크레딧 소진 시 동작처럼 놓치기 쉬운 비용을 다룹니다.',
     metaDescription:
-      'RunPod 리뷰 2026: Pod와 Serverless, Secure·Community Cloud 차이, 초 단위 과금, RTX 4090 시간당 $0.34부터, 스토리지 비용과 데이터 처리 사실.',
+      'RunPod 리뷰: Pod와 Serverless, Secure·Community Cloud 차이, 초 단위 과금, RTX 4090 시간당 $0.34부터(RunPod 가격 페이지, 2026-11-22), 스토리지 비용과 데이터 처리.',
     twitterDescription:
       'RunPod(2026): 초 단위 GPU 과금, Pod와 Serverless, Secure Cloud와 Community Cloud 비교. 확인한 가격, 평가 점수표, 처음 대여할 때 놀라기 쉬운 비용을 정리했습니다.',
     readTime: '10분 읽기',
@@ -2132,12 +2132,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'runpod 쓸만한가',
     ],
     leadAnswerBlock:
-      '**RunPod는 Pod(지속되는 GPU 컨테이너)와 Serverless(0까지 줄어드는 자동 확장 워커) 두 제품을 제공하는 초 단위 GPU 대여 서비스이며, 2026-11-22에 확인한 가격 페이지에는 RTX 4090이 Secure Cloud 시간당 $0.89, Community Cloud 시간당 $0.34로 표시되어 있습니다.** PromptQuorum의 평가는 직접 실험실에서 테스트한 결과가 아니라 RunPod의 공식 가격 페이지와 문서를 근거로 하며, 종합 8.5/10점입니다. 강점은 GPU 선택 폭과 과금의 유연성이고, 약점은 유휴 스토리지 요금, 환불되지 않는 선불 크레딧, 보안 측면에서 설명되지 않은 Community Cloud 하드웨어입니다. → [RunPod GPU 가격 확인](https://www.runpod.io/pricing)',
+      '**RunPod는 Pod(지속되는 GPU 컨테이너)와 Serverless(0까지 줄어드는 자동 확장 워커) 두 제품을 제공하는 초 단위 GPU 대여 서비스이며, 2026-11-22에 확인한 가격 페이지에는 RTX 4090이 Secure Cloud 시간당 $0.89, Community Cloud 시간당 $0.34로 표시되어 있습니다.** PromptQuorum의 평가는 직접 실험실에서 테스트한 결과가 아니라 RunPod의 공식 가격 페이지와 문서를 근거로 하며, 종합 8.5/10점입니다. 강점은 GPU 선택 폭과 과금의 유연성이고, 약점은 유휴 스토리지 요금, 환불되지 않는 선불 크레딧, 문서 페이지에서 컨테이너 격리 외의 보안 설명을 찾을 수 없었던(2026-11-22 확인) Community Cloud입니다. → [RunPod GPU 가격 확인](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       ko: {
         question: 'RunPod는 오픈 웨이트 LLM을 실행하기에 적합합니까?',
         answer:
-          '계약 없이 시간 단위 또는 초 단위로 GPU를 빌리는 용도에는 적합하지만, 비용 관리와 데이터 민감도에는 주의가 필요합니다. Pod는 대화형 작업, 파인튜닝, 장시간 서버용 GPU 컨테이너를 제공합니다. Serverless는 0까지 줄어드는 워커를 실행하며, OpenAI 호환 API를 갖춘 문서화된 vLLM 워커를 제공합니다. RunPod는 초 단위 과금이며 수신·송신 트래픽 요금이 없다고 밝힙니다. Secure Cloud는 T3/T4 데이터 센터에서 운영되고, Community Cloud는 검증된 개인 컴퓨팅 제공자를 더 낮은 가격으로 이용합니다. 아래 가격은 2026-11-22에 확인한 RunPod 가격 페이지 기준입니다.',
+          '계약 없이 시간 단위 또는 초 단위로 GPU를 빌리는 용도에는 적합하지만, 비용 관리와 데이터 민감도에는 주의가 필요합니다. Pod는 대화형 작업, 파인튜닝, 장시간 서버용 GPU 컨테이너를 제공합니다. Serverless는 0까지 줄어드는 워커를 실행하며, OpenAI 호환 API를 갖춘 문서화된 vLLM 워커를 제공합니다. RunPod는 초 단위 과금이며 수신·송신 트래픽 요금이 없다고 밝힙니다. Secure Cloud는 T3/T4 데이터 센터에서 운영되고, Community Cloud는 RunPod가 검증되었다고 설명하는 개인 컴퓨팅 제공자를 더 낮은 가격으로 연결합니다. 아래 가격은 2026-11-22에 확인한 RunPod 가격 페이지 기준입니다.',
         bullets: [
           'Pod: RTX 4090 시간당 $0.89(Secure Cloud) 또는 $0.34(Community Cloud)',
           'Serverless: 24 GB GPU 시간당 $0.75부터, H100 80 GB 시간당 $5.89, 유휴 시 0으로 축소',
@@ -2218,7 +2218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Serverless는 페이지에 시간당으로 표시됩니다. 예를 들어 24 GB GPU는 $0.75, H100 80 GB는 $5.89',
           '스토리지는 별도: 네트워크 스토리지 1 TB 미만 월 GB당 $0.07, 볼륨 디스크는 유휴 시 월 GB당 $0.20',
           '선불 크레딧은 $10부터 시작하고 환불되지 않으며, 네트워크 볼륨이 없는 Pod는 잔액이 0이 되면 종료됩니다',
-          'Secure Cloud는 T3/T4 데이터 센터에서 운영되며, Community Cloud의 보안은 문서에 설명되어 있지 않습니다',
+          'Secure Cloud는 T3/T4 데이터 센터에서 운영되며, Community Cloud에 대해서는 확인한 문서 페이지(2026-11-22 확인)에 컨테이너 격리 외의 보안 설명이 없습니다',
           '추천 대상: 계약 없이 추론과 파인튜닝용으로 24 GB–80 GB GPU를 빌리는 개발자',
         ],
       },
@@ -2238,7 +2238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '옵션': 'Pod', '설명': '직접 제어하는 GPU 컨테이너, 실행 중에만 과금' },
           { '옵션': 'Serverless', '설명': '0까지 줄어드는 워커, 워커 실행 중에만 과금' },
           { '옵션': 'Secure Cloud', '설명': 'T3/T4 데이터 센터, 프로덕션 용도 겨냥' },
-          { '옵션': 'Community Cloud', '설명': '검증된 개인 컴퓨팅 제공자, 더 낮은 가격' },
+          { '옵션': 'Community Cloud', '설명': '개인 제공자(RunPod 설명: "검증됨"), 더 낮은 가격' },
           { '옵션': '컨테이너 디스크', '설명': '임시, Pod 중지 또는 삭제 시 사라짐' },
           { '옵션': '볼륨 디스크', '설명': '중지·재부팅 후에도 유지, /workspace에 마운트' },
           { '옵션': '네트워크 볼륨', '설명': 'Pod나 엔드포인트에 연결 가능한 독립 스토리지' },
@@ -2271,7 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Serverless(시간당, 같은 페이지):** 24 GB GPU(L4, A5000, 3090) $0.75, 4090 $1.34, 48 GB L40/L40S/6000 Ada $1.89, A100 80 GB $2.99, H100 80 GB $5.89. 이 페이지에는 flex와 active의 초 단위 요금이 따로 표시되지 않습니다.',
           '**스토리지:** 컨테이너 디스크 월 GB당 $0.10, 볼륨 디스크는 실행 중 $0.10, 유휴 시 $0.20, 네트워크 스토리지는 1 TB 미만 월 GB당 $0.07, 초과분 $0.05(고성능 $0.14).',
           '**견적이 아닌 산술 예시:** RTX 4090으로 8시간 세션은 Secure Cloud에서 8 × $0.89 = $7.12, Community Cloud에서 8 × $0.34 = $2.72입니다. 월 GB당 $0.07인 100 GB 네트워크 볼륨은 Pod 실행 여부와 관계없이 월 $7.00입니다.',
-          '**크레딧:** 선불이며, 과금 문서에는 최소 $10부터 시작할 수 있고, 선불 카드는 거래당 최소 $100를 충전해야 하며, 새 Pod를 시작하려면 최소 1시간 분량의 크레딧이 필요하다고 나와 있습니다. 크레딧은 환불되지 않고 인출할 수 없습니다. 이 페이지의 가격은 USD로 표기했습니다. 카드가 USD 카드가 아니라면 카드 발급사가 해외 결제 수수료를 부과할 수 있습니다.',
+          '**크레딧:** 선불이며, 과금 문서에는 최소 $10부터 시작할 수 있고, 선불 카드는 거래당 최소 $100를 충전해야 하며, 새 Pod를 시작하려면 최소 1시간 분량의 크레딧이 필요하다고 나와 있습니다. 크레딧은 환불되지 않고 인출할 수 없습니다. 이 페이지의 가격은 USD로 표기했습니다.',
           '**잔액 0:** 실행 중인 Pod가 중지됩니다. 네트워크 볼륨이 있는 Pod는 데이터가 유지되고, 없는 Pod는 종료되어 데이터를 복구할 수 없습니다. 네트워크 볼륨 스토리지는 Pod가 중지된 동안에도 계속 요금이 발생합니다.',
           '**트래픽과 한도:** 문서에는 수신·송신 트래픽 요금이 없다고 명시되어 있습니다. 기본 지출 한도는 전체 리소스 합산 시간당 $80이며 계정 이력에 따라 올라갑니다.',
           '제공업체별 시간당 요금은 [클라우드 GPU 시간당 비용](/ko/prompt-bites/cloud-gpu-cost-per-hour)을 참고하십시오.',
@@ -2342,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '선불 크레딧은 환불되지 않음',
           '유휴 볼륨 디스크는 월 GB당 $0.20, 네트워크 스토리지는 Pod가 없어도 요금 발생',
           '네트워크 볼륨이 없는 Pod는 잔액 0에서 종료되며 데이터를 복구할 수 없음',
-          'Community Cloud 보안이 문서에 설명되지 않았고 데이터 센터 위치도 공개되지 않음',
+          '확인한 문서 페이지에는 Community Cloud에 대해 컨테이너 격리 외의 보안 설명이 없고 데이터 센터 위치도 나와 있지 않음',
           'FlashBoot에는 공개된 시간 수치가 없음',
         ],
       },
@@ -2369,7 +2369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**헤드라인 가격만 보지 말고 과금 방식과 데이터 민감도로 고르십시오.**',
         items: [
           '**온디맨드와 인터럽터블 가격을 갖춘 피어 투 피어 마켓플레이스 →** [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review).',
-          '**암호화폐로 결제하는 GPU 마켓플레이스 →** [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review). 어떤 데이터를 보낼지 결정하기 전에 위험 섹션을 읽으십시오.',
+          '**암호화폐로 결제하는 GPU 마켓플레이스 →** [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review). 해당 리뷰에는 데이터 처리를 다루는 위험 섹션이 있습니다.',
           '**대형 제공업체의 GPU 인스턴스 →** [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/), [Lambda](https://lambda.ai/)를 직접 확인하십시오. 여기서는 가격을 비교하지 않았습니다.',
           '**하드웨어를 직접 소유 →** 위에 링크한 비용 계산기로 로컬 카드와 비교하십시오. 매일 꾸준히 사용한다면 소유가 유리할 수 있습니다.',
         ],
@@ -2392,7 +2392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'RunPod란 무엇입니까?', a: 'RunPod는 NVIDIA GPU를 초 단위로 과금해 대여하는 클라우드 서비스입니다. Secure Cloud와 Community Cloud 등급에서 Pod(직접 제어하는 GPU 컨테이너)와 Serverless(0까지 줄어드는 자동 확장 워커)를 제공합니다.' },
           { q: 'RunPod에서 RTX 4090은 얼마입니까?', a: '2026-11-22에 확인한 RunPod 가격 페이지에는 RTX 4090이 Secure Cloud에서 시간당 $0.89, Community Cloud에서 시간당 $0.34로 표시되어 있습니다. Serverless는 24 GB급 GPU를 따로 표시하며, 4090은 시간당 $1.34입니다. 가격은 변경될 수 있으므로 실시간 페이지를 확인하십시오.' },
-          { q: 'Secure Cloud와 Community Cloud는 어떻게 다릅니까?', a: 'RunPod 문서에 따르면 Secure Cloud는 프로덕션 용도를 겨냥한 T3/T4 데이터 센터에서 운영되고, Community Cloud는 검증된 피어 투 피어 시스템으로 개인 컴퓨팅 제공자와 사용자를 더 낮은 가격에 연결합니다. 문서에 Community Cloud 보안에 대한 설명이 없으므로 민감한 데이터는 올리지 마십시오.' },
+          { q: 'Secure Cloud와 Community Cloud는 어떻게 다릅니까?', a: 'RunPod 문서에 따르면 Secure Cloud는 프로덕션 용도를 겨냥한 T3/T4 데이터 센터에서 운영되고, Community Cloud는 RunPod가 검증되었다고 설명하는 피어 투 피어 시스템으로 개인 컴퓨팅 제공자와 사용자를 더 낮은 가격에 연결합니다. 확인한 문서 페이지에는 Community Cloud에 대해 컨테이너 격리 외의 보안 설명과 데이터 센터 위치가 없으므로 민감한 데이터는 올리지 마십시오.' },
           { q: 'RunPod는 어떻게 과금합니까?', a: '컴퓨팅과 스토리지는 선불 크레딧에서 초 단위로 과금되며 수신·송신 트래픽 요금은 없습니다. 과금 문서에는 최소 $10부터 시작할 수 있고, 선불 카드는 거래당 최소 $100를 충전해야 하며, 크레딧은 환불되지 않는다고 나와 있습니다.' },
           { q: 'RunPod 잔액이 0이 되면 어떻게 됩니까?', a: '실행 중인 Pod가 중지됩니다. 네트워크 볼륨이 있는 Pod는 데이터가 유지되고, 없는 Pod는 종료되어 데이터를 복구할 수 없습니다. 네트워크 볼륨 스토리지는 Pod가 중지된 동안에도 계속 요금이 발생하므로 잔액 부족 알림을 설정하십시오.' },
           { q: 'RunPod Serverless는 vLLM을 지원합니까?', a: '네. RunPod는 RunPod Hub에서 배포하거나 worker-vllm 저장소에서 커스터마이즈할 수 있는 vLLM 워커를 문서로 안내합니다. 문서는 이를 OpenAI API의 대체품으로 설명하며, 엔드포인트 URL과 API 키만 바꾸면 됩니다.' },
@@ -2464,7 +2464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'A RunPod aluga GPUs NVIDIA por segundo, como Pods (um contêiner com GPU que você controla) ou como endpoints Serverless (workers que escalam até zero). Se você está comparando os [melhores provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) para rodar modelos de pesos abertos, a RunPod publica uma lista ampla de GPUs, da RTX 3090 até a B300. A página de preços, conferida em 2026-11-22, lista a RTX 4090 a US$ 0.89 por hora no Secure Cloud e a US$ 0.34 por hora no Community Cloud. Esta análise cobre os dois produtos de cobrança, a diferença entre Secure e Community Cloud, o que a documentação diz sobre o tratamento de dados e os custos fáceis de passar despercebidos, como armazenamento ocioso e o que acontece quando os créditos acabam.',
     metaDescription:
-      'Análise RunPod 2026: Pods vs Serverless, Secure vs Community Cloud, cobrança por segundo, RTX 4090 a partir de US$ 0.34/h, armazenamento e dados.',
+      'Análise RunPod: Pods vs Serverless, Secure vs Community Cloud, cobrança por segundo, RTX 4090 a partir de US$ 0.34/h (página de preços da RunPod, 2026-11-22), armazenamento e dados.',
     twitterDescription:
       'RunPod (2026): GPU cobrada por segundo, Pods e Serverless, Secure vs Community Cloud. Preços conferidos, scorecard e os custos que surpreendem quem aluga pela primeira vez.',
     readTime: '10 min de leitura',
@@ -2481,12 +2481,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'runpod vale a pena',
     ],
     leadAnswerBlock:
-      '**A RunPod é um serviço de aluguel de GPU cobrado por segundo, com dois produtos: Pods (um contêiner de GPU persistente) e Serverless (workers com autoescala que vão a zero); a página de preços, conferida em 2026-11-22, lista a RTX 4090 a US$ 0.89/h no Secure Cloud e a US$ 0.34/h no Community Cloud.** Avaliação do PromptQuorum, feita a partir da página de preços e da documentação da própria RunPod, e não de um teste prático em laboratório: 8.5/10 no geral. Os pontos fortes são a variedade de GPUs e a flexibilidade de cobrança; os pontos fracos são as cobranças de armazenamento ocioso, os créditos pré-pagos não reembolsáveis e o hardware do Community Cloud, que a RunPod não descreve em termos de segurança. → [Ver preços de GPU da RunPod](https://www.runpod.io/pricing)',
+      '**A RunPod é um serviço de aluguel de GPU cobrado por segundo, com dois produtos: Pods (um contêiner de GPU persistente) e Serverless (workers com autoescala que vão a zero); a página de preços, conferida em 2026-11-22, lista a RTX 4090 a US$ 0.89/h no Secure Cloud e a US$ 0.34/h no Community Cloud.** Avaliação do PromptQuorum, feita a partir da página de preços e da documentação da própria RunPod, e não de um teste prático em laboratório: 8.5/10 no geral. Os pontos fortes são a variedade de GPUs e a flexibilidade de cobrança; os pontos fracos são as cobranças de armazenamento ocioso, os créditos pré-pagos não reembolsáveis e o Community Cloud, cuja segurança as páginas de documentação consultadas (conferidas em 2026-11-22) não descrevem além do isolamento de contêineres. → [Ver preços de GPU da RunPod](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       pt: {
         question: 'A RunPod é boa para rodar LLMs de pesos abertos?',
         answer:
-          'Sim, para alugar GPUs por hora ou por segundo sem contrato, com ressalvas sobre controle de custos e sensibilidade dos dados. Os Pods oferecem um contêiner com GPU para trabalho interativo, fine-tuning ou um servidor de longa duração. O Serverless roda workers que escalam até zero e tem um worker vLLM documentado com API compatível com a da OpenAI. A RunPod informa cobrança por segundo, sem taxas de entrada ou saída de dados. O Secure Cloud roda em data centers T3/T4; o Community Cloud usa provedores individuais de computação selecionados, a preços menores. Os preços abaixo vêm da página de preços da RunPod, conferida em 2026-11-22.',
+          'Sim, para alugar GPUs por hora ou por segundo sem contrato, com ressalvas sobre controle de custos e sensibilidade dos dados. Os Pods oferecem um contêiner com GPU para trabalho interativo, fine-tuning ou um servidor de longa duração. O Serverless roda workers que escalam até zero e tem um worker vLLM documentado com API compatível com a da OpenAI. A RunPod informa cobrança por segundo, sem taxas de entrada ou saída de dados. O Secure Cloud roda em data centers T3/T4; o Community Cloud conecta provedores individuais de computação que a RunPod descreve como selecionados, a preços menores. Os preços abaixo vêm da página de preços da RunPod, conferida em 2026-11-22.',
         bullets: [
           'Pods: RTX 4090 a US$ 0.89/h (Secure Cloud) ou US$ 0.34/h (Community Cloud)',
           'Serverless: GPUs de 24 GB a partir de US$ 0.75/h e H100 de 80 GB a US$ 5.89/h, escalando a zero quando ociosas',
@@ -2567,7 +2567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Serverless é precificado por hora na página, por exemplo GPUs de 24 GB a US$ 0.75/h e H100 de 80 GB a US$ 5.89/h',
           'O armazenamento é separado: armazenamento em rede a US$ 0.07/GB/mês abaixo de 1 TB, disco de volume a US$ 0.20/GB/mês quando ocioso',
           'Os créditos pré-pagos começam em US$ 10, não são reembolsáveis, e um Pod sem volume de rede é encerrado se o saldo chegar a zero',
-          'O Secure Cloud roda em data centers T3/T4; a segurança do Community Cloud não é descrita na documentação',
+          'O Secure Cloud roda em data centers T3/T4; para o Community Cloud, as páginas de documentação consultadas (conferidas em 2026-11-22) não trazem descrição de segurança além do isolamento de contêineres',
           'Ideal para: desenvolvedores que alugam GPUs de 24 GB a 80 GB para inferência e fine-tuning sem contrato',
         ],
       },
@@ -2587,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Opção': 'Pod', 'O que é': 'Contêiner de GPU que você controla; cobrado enquanto roda' },
           { 'Opção': 'Serverless', 'O que é': 'Workers que escalam a zero; cobrado enquanto rodam' },
           { 'Opção': 'Secure Cloud', 'O que é': 'Data centers T3/T4, voltado para uso em produção' },
-          { 'Opção': 'Community Cloud', 'O que é': 'Provedores individuais selecionados, preços menores' },
+          { 'Opção': 'Community Cloud', 'O que é': 'Provedores individuais (RunPod: "selecionados"), preços menores' },
           { 'Opção': 'Disco do contêiner', 'O que é': 'Temporário; perdido quando o Pod para ou é excluído' },
           { 'Opção': 'Disco de volume', 'O que é': 'Persiste após parar/reiniciar; montado em /workspace' },
           { 'Opção': 'Volume de rede', 'O que é': 'Armazenamento independente, anexável a Pods ou endpoints' },
@@ -2691,7 +2691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os créditos pré-pagos não são reembolsáveis',
           'O disco de volume ocioso custa US$ 0.20/GB/mês; o armazenamento em rede continua sendo cobrado mesmo sem Pod em execução',
           'Um Pod sem volume de rede é encerrado com saldo zero e seus dados não podem ser recuperados',
-          'A segurança do Community Cloud não é descrita na documentação; os locais dos data centers não são listados',
+          'As páginas de documentação consultadas não trazem descrição de segurança do Community Cloud além do isolamento de contêineres; os locais dos data centers não são listados nelas',
           'O FlashBoot não tem números de tempo publicados',
         ],
       },
@@ -2718,7 +2718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Escolha pelo modelo de cobrança e pela sensibilidade dos dados, não apenas pelo preço de vitrine.**',
         items: [
           '**Marketplace peer-to-peer com preços sob demanda e interruptíveis →** [análise da Vast.ai](/pt/power-local-llm/vast-ai-review).',
-          '**Marketplace de GPU denominado em cripto →** [análise da Clore.ai](/pt/power-local-llm/clore-ai-review); leia a seção de riscos antes de decidir quais dados enviar.',
+          '**Marketplace de GPU denominado em cripto →** [análise da Clore.ai](/pt/power-local-llm/clore-ai-review); a análise tem uma seção de riscos sobre o tratamento de dados.',
           '**Instâncias de GPU de grandes provedores →** veja diretamente [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/) e [Lambda](https://lambda.ai/); os preços não foram comparados aqui.',
           '**Ter o próprio hardware →** compare com uma placa local usando a calculadora de custo linkada acima, já que o uso diário constante pode favorecer a compra.',
         ],
@@ -2741,7 +2741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'O que é a RunPod?', a: 'A RunPod é um serviço de nuvem que aluga GPUs NVIDIA cobradas por segundo. Oferece Pods (um contêiner com GPU que você controla) e Serverless (workers com autoescala que vão a zero), nos níveis Secure Cloud e Community Cloud.' },
           { q: 'Quanto custa uma RTX 4090 na RunPod?', a: 'A página de preços da RunPod, conferida em 2026-11-22, lista a RTX 4090 a US$ 0.89 por hora no Secure Cloud e a US$ 0.34 por hora no Community Cloud. O Serverless lista as GPUs da classe de 24 GB separadamente; a 4090 custa US$ 1.34 por hora ali. Os preços podem mudar, então consulte a página atual.' },
-          { q: 'Qual é a diferença entre Secure Cloud e Community Cloud?', a: 'Segundo a documentação da RunPod, o Secure Cloud roda em data centers T3/T4 voltados para produção, enquanto o Community Cloud conecta provedores individuais de computação aos usuários por meio de um sistema peer-to-peer selecionado, a preços menores. A documentação não descreve a segurança do Community Cloud, então mantenha dados sensíveis fora dele.' },
+          { q: 'Qual é a diferença entre Secure Cloud e Community Cloud?', a: 'Segundo a documentação da RunPod, o Secure Cloud roda em data centers T3/T4 voltados para produção, enquanto o Community Cloud conecta provedores individuais de computação aos usuários por meio de um sistema peer-to-peer que a RunPod descreve como selecionado, a preços menores. As páginas de documentação consultadas não trazem descrição de segurança do Community Cloud além do isolamento de contêineres nem listam os locais dos data centers, então mantenha dados sensíveis fora dele.' },
           { q: 'Como a RunPod cobra?', a: 'Computação e armazenamento são cobrados por segundo a partir de créditos pré-pagos, sem taxas de entrada ou saída. A documentação de cobrança diz que você pode começar com apenas US$ 10, cartões pré-pagos devem depositar pelo menos US$ 100 por transação e os créditos não são reembolsáveis.' },
           { q: 'O que acontece quando meu saldo na RunPod chega a zero?', a: 'Os Pods em execução são parados. Um Pod com volume de rede mantém seus dados; um Pod sem volume é encerrado e seus dados não podem ser recuperados. O armazenamento em volume de rede continua sendo cobrado enquanto os Pods estão parados, então configure um alerta de saldo baixo.' },
           { q: 'O Serverless da RunPod suporta vLLM?', a: 'Sim. A RunPod documenta um worker vLLM que você pode implantar pelo RunPod Hub ou personalizar a partir do repositório worker-vllm. A documentação o descreve como um substituto direto da API da OpenAI: basta trocar a URL do endpoint e a chave de API.' },
@@ -2813,7 +2813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'تؤجّر RunPod وحدات NVIDIA GPU بالثانية، إمّا في صورة Pods (حاوية GPU تتحكم بها) أو نقاط نهاية Serverless (عمّال يتقلص عددهم إلى الصفر). إذا كنت تقارن [أفضل مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) لتشغيل النماذج مفتوحة الأوزان، فإن RunPod تنشر قائمة واسعة من وحدات GPU، من RTX 3090 حتى B300. وتُدرج صفحة أسعارها، التي جرى التحقق منها بتاريخ 2026-11-22، RTX 4090 بسعر $0.89 للساعة في Secure Cloud و$0.34 للساعة في Community Cloud. تغطي هذه المراجعة منتجَي الفوترة، والفرق بين Secure Cloud وCommunity Cloud، وما تقوله الوثائق عن التعامل مع البيانات، والتكاليف التي يسهل إغفالها، مثل رسوم التخزين الخامل وما يحدث عند نفاد الرصيد.',
     metaDescription:
-      'مراجعة RunPod 2026: Pods مقابل Serverless، وSecure Cloud مقابل Community Cloud، فوترة بالثانية، وRTX 4090 من $0.34/ساعة، وتكاليف التخزين.',
+      'مراجعة RunPod: Pods مقابل Serverless، وSecure Cloud مقابل Community Cloud، فوترة بالثانية، وRTX 4090 من $0.34/ساعة (صفحة أسعار RunPod، 2026-11-22)، وتكاليف التخزين.',
     twitterDescription:
       'RunPod (2026): فوترة GPU بالثانية، وPods وServerless، وSecure Cloud مقابل Community Cloud. أسعار مُتحقَّق منها، وبطاقة تقييم، والتكاليف التي تفاجئ مستأجري GPU الجدد.',
     readTime: '10 دقائق للقراءة',
@@ -2830,12 +2830,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'هل runpod يستحق',
     ],
     leadAnswerBlock:
-      '**RunPod خدمة لتأجير GPU بالثانية بمنتجين: Pods (حاوية GPU دائمة) وServerless (عمّال يتغير عددهم تلقائيًا ويتقلص إلى الصفر)؛ وتُدرج صفحة الأسعار، التي جرى التحقق منها بتاريخ 2026-11-22، RTX 4090 بسعر $0.89/ساعة في Secure Cloud و$0.34/ساعة في Community Cloud.** تقييم PromptQuorum، المبني على صفحة أسعار RunPod ووثائقها لا على اختبار عملي في مختبر: 8.5/10 إجمالًا. تتمثل نقاط القوة في تنوع وحدات GPU ومرونة الفوترة؛ أما نقاط الضعف فهي رسوم التخزين الخامل، والرصيد المدفوع مسبقًا غير القابل للاسترداد، وعتاد Community Cloud الذي لا تصفه RunPod من زاوية الأمان. → [تحقق من أسعار GPU في RunPod](https://www.runpod.io/pricing)',
+      '**RunPod خدمة لتأجير GPU بالثانية بمنتجين: Pods (حاوية GPU دائمة) وServerless (عمّال يتغير عددهم تلقائيًا ويتقلص إلى الصفر)؛ وتُدرج صفحة الأسعار، التي جرى التحقق منها بتاريخ 2026-11-22، RTX 4090 بسعر $0.89/ساعة في Secure Cloud و$0.34/ساعة في Community Cloud.** تقييم PromptQuorum، المبني على صفحة أسعار RunPod ووثائقها لا على اختبار عملي في مختبر: 8.5/10 إجمالًا. تتمثل نقاط القوة في تنوع وحدات GPU ومرونة الفوترة؛ أما نقاط الضعف فهي رسوم التخزين الخامل، والرصيد المدفوع مسبقًا غير القابل للاسترداد، وCommunity Cloud الذي لا تتضمن صفحات الوثائق التي جرت مراجعتها (بتاريخ 2026-11-22) وصفًا أمنيًا له يتجاوز عزل الحاويات. → [تحقق من أسعار GPU في RunPod](https://www.runpod.io/pricing)',
     quickAnswerTop: {
       ar: {
         question: 'هل RunPod مناسبة لتشغيل نماذج LLM مفتوحة الأوزان؟',
         answer:
-          'نعم لاستئجار GPU بالساعة أو بالثانية دون عقد، مع تحفظات تخص ضبط التكلفة وحساسية البيانات. تمنحك Pods حاوية GPU للعمل التفاعلي أو الضبط الدقيق أو خادم طويل التشغيل. وتشغّل Serverless عمّالًا يتقلص عددهم إلى الصفر، وتوفر عاملًا موثقًا لـ vLLM بواجهة API متوافقة مع OpenAI. وتذكر RunPod أن الفوترة بالثانية دون رسوم دخول أو خروج للبيانات. يعمل Secure Cloud في مراكز بيانات T3/T4، بينما يستخدم Community Cloud مزودي حوسبة أفرادًا تم فحصهم بأسعار أقل. الأسعار أدناه من صفحة أسعار RunPod، وقد جرى التحقق منها بتاريخ 2026-11-22.',
+          'نعم لاستئجار GPU بالساعة أو بالثانية دون عقد، مع تحفظات تخص ضبط التكلفة وحساسية البيانات. تمنحك Pods حاوية GPU للعمل التفاعلي أو الضبط الدقيق أو خادم طويل التشغيل. وتشغّل Serverless عمّالًا يتقلص عددهم إلى الصفر، وتوفر عاملًا موثقًا لـ vLLM بواجهة API متوافقة مع OpenAI. وتذكر RunPod أن الفوترة بالثانية دون رسوم دخول أو خروج للبيانات. يعمل Secure Cloud في مراكز بيانات T3/T4، بينما يربط Community Cloud مزودي حوسبة أفرادًا تصفهم RunPod بأنهم خضعوا للفحص، بأسعار أقل. الأسعار أدناه من صفحة أسعار RunPod، وقد جرى التحقق منها بتاريخ 2026-11-22.',
         bullets: [
           'Pods: ‏RTX 4090 بسعر $0.89/ساعة (Secure Cloud) أو $0.34/ساعة (Community Cloud)',
           'Serverless: وحدات GPU بسعة 24 GB من $0.75/ساعة وH100 80 GB بسعر $5.89/ساعة، مع التقلص إلى الصفر عند الخمول',
@@ -2916,7 +2916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تُسعَّر Serverless بالساعة في الصفحة، مثل وحدات GPU بسعة 24 GB بسعر $0.75/ساعة وH100 80 GB بسعر $5.89/ساعة',
           'التخزين منفصل: التخزين الشبكي $0.07/GB/شهر لما دون 1 TB، وقرص الحجم $0.20/GB/شهر أثناء الخمول',
           'يبدأ الرصيد المدفوع مسبقًا من $10، وهو غير قابل للاسترداد، ويُنهى الـ Pod الذي لا يملك حجمًا شبكيًا إذا وصل الرصيد إلى الصفر',
-          'يعمل Secure Cloud في مراكز بيانات T3/T4؛ أما أمان Community Cloud فلا تصفه الوثائق',
+          'يعمل Secure Cloud في مراكز بيانات T3/T4؛ أما Community Cloud فلا تتضمن صفحات الوثائق التي جرت مراجعتها (بتاريخ 2026-11-22) وصفًا أمنيًا له يتجاوز عزل الحاويات',
           'الأنسب لـ: المطورين الذين يستأجرون وحدات GPU من 24 GB إلى 80 GB للاستدلال والضبط الدقيق دون عقد',
         ],
       },
@@ -2936,7 +2936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الخيار': 'Pod', 'ما هو': 'حاوية GPU تتحكم بها؛ تُفوتر أثناء تشغيلها' },
           { 'الخيار': 'Serverless', 'ما هو': 'عمّال يتقلصون إلى الصفر؛ تُفوتر أثناء عملهم' },
           { 'الخيار': 'Secure Cloud', 'ما هو': 'مراكز بيانات T3/T4، موجهة للإنتاج' },
-          { 'الخيار': 'Community Cloud', 'ما هو': 'مزودو حوسبة أفراد تم فحصهم، بأسعار أقل' },
+          { 'الخيار': 'Community Cloud', 'ما هو': 'مزودون أفراد (RunPod: "تم فحصهم")، بأسعار أقل' },
           { 'الخيار': 'قرص الحاوية', 'ما هو': 'مؤقت؛ يُفقد عند إيقاف الـ Pod أو حذفه' },
           { 'الخيار': 'قرص الحجم', 'ما هو': 'يبقى بعد الإيقاف/إعادة التشغيل؛ مركّب في /workspace' },
           { 'الخيار': 'الحجم الشبكي', 'ما هو': 'تخزين مستقل يمكن إرفاقه بـ Pods أو نقاط النهاية' },
@@ -3040,7 +3040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الرصيد المدفوع مسبقًا غير قابل للاسترداد',
           'قرص الحجم الخامل يكلّف $0.20/GB/شهر؛ والتخزين الشبكي يتراكم حتى دون Pod يعمل',
           'الـ Pod الذي لا يملك حجمًا شبكيًا يُنهى عند الرصيد الصفري ولا يمكن استرداد بياناته',
-          'أمان Community Cloud غير موصوف في الوثائق؛ ومواقع مراكز البيانات غير مدرجة',
+          'لا تتضمن صفحات الوثائق التي جرت مراجعتها وصفًا أمنيًا لـ Community Cloud يتجاوز عزل الحاويات؛ ومواقع مراكز البيانات غير مدرجة فيها',
           'ليست لـ FlashBoot أزمنة منشورة',
         ],
       },
@@ -3067,7 +3067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**اختر بحسب نموذج الفوترة وحساسية البيانات، لا بحسب السعر المعلن وحده.**',
         items: [
           '**سوق نظير إلى نظير بتسعير عند الطلب وتسعير قابل للمقاطعة →** [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review).',
-          '**سوق GPU مقوّم بالعملات المشفرة →** [مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)؛ اقرأ قسم المخاطر فيه قبل أن تقرر أي بيانات سترسل.',
+          '**سوق GPU مقوّم بالعملات المشفرة →** [مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)؛ تتضمن مراجعته قسمًا للمخاطر يتناول التعامل مع البيانات.',
           '**نُسخ GPU لدى المزودين الكبار →** راجع [AWS](https://aws.amazon.com/) و[Google Cloud](https://cloud.google.com/) و[Lambda](https://lambda.ai/) مباشرة؛ ولم تُقارن أسعارهم هنا.',
           '**امتلاك العتاد بدلًا من ذلك →** قارن مع بطاقة محلية باستخدام حاسبة التكلفة المرتبطة أعلاه، فالاستخدام اليومي المنتظم قد يرجّح الامتلاك.',
         ],
@@ -3090,7 +3090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'ما هي RunPod؟', a: 'RunPod خدمة سحابية تؤجّر وحدات NVIDIA GPU بفوترة بالثانية. وتقدّم Pods (حاوية GPU تتحكم بها) وServerless (عمّال يتغير عددهم تلقائيًا ويتقلص إلى الصفر)، على مستويي Secure Cloud وCommunity Cloud.' },
           { q: 'كم تكلّف RTX 4090 على RunPod؟', a: 'تُدرج صفحة أسعار RunPod، التي جرى التحقق منها بتاريخ 2026-11-22، RTX 4090 بسعر $0.89 للساعة في Secure Cloud و$0.34 للساعة في Community Cloud. وتُدرج Serverless وحدات GPU من فئة 24 GB بشكل منفصل؛ وسعر 4090 هناك $1.34 للساعة. قد تتغير الأسعار، فتحقق من الصفحة الحالية.' },
-          { q: 'ما الفرق بين Secure Cloud وCommunity Cloud؟', a: 'بحسب وثائق RunPod، يعمل Secure Cloud في مراكز بيانات T3/T4 موجهة للإنتاج، بينما يربط Community Cloud مزودي حوسبة أفرادًا بالمستخدمين عبر نظام نظير إلى نظير يخضع للفحص بأسعار أقل. ولا تصف الوثائق أمان Community Cloud، لذا أبقِ البيانات الحساسة بعيدًا عنه.' },
+          { q: 'ما الفرق بين Secure Cloud وCommunity Cloud؟', a: 'بحسب وثائق RunPod، يعمل Secure Cloud في مراكز بيانات T3/T4 موجهة للإنتاج، بينما يربط Community Cloud مزودي حوسبة أفرادًا بالمستخدمين عبر نظام نظير إلى نظير تصفه RunPod بأنه خضع للفحص، بأسعار أقل. ولا تتضمن صفحات الوثائق التي جرت مراجعتها وصفًا أمنيًا لـ Community Cloud يتجاوز عزل الحاويات ولا تدرج مواقع مراكز البيانات، لذا أبقِ البيانات الحساسة بعيدًا عنه.' },
           { q: 'كيف تعمل الفوترة في RunPod؟', a: 'تُفوتر الحوسبة والتخزين بالثانية من رصيد مدفوع مسبقًا، دون رسوم دخول أو خروج. وتذكر وثائق الفوترة أن بإمكانك البدء بمبلغ لا يقل عن $10، وأن البطاقات مسبقة الدفع يجب أن تودع $100 على الأقل في كل معاملة، وأن الرصيد غير قابل للاسترداد.' },
           { q: 'ماذا يحدث عندما يصل رصيدي في RunPod إلى الصفر؟', a: 'تُوقف الـ Pods العاملة. الـ Pod الذي يملك حجمًا شبكيًا يحتفظ ببياناته؛ أما الذي لا يملكه فيُنهى ولا يمكن استرداد بياناته. ويستمر تراكم رسوم تخزين الحجم الشبكي أثناء توقف الـ Pods، لذا اضبط تنبيهًا لانخفاض الرصيد.' },
           { q: 'هل تدعم RunPod Serverless محرك vLLM؟', a: 'نعم. توثّق RunPod عاملًا لـ vLLM يمكنك نشره من RunPod Hub أو تخصيصه من مستودع worker-vllm. وتصفه الوثائق بأنه بديل مباشر لواجهة OpenAI API: غيّر عنوان نقطة النهاية ومفتاح API.' },

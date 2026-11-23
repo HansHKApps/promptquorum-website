@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Is Clore.ai a good way to rent GPUs for LLM work?',
         answer:
-          'Yes for budget experiments and fault-tolerant jobs, no for sensitive data. Clore.ai lists GPUs supplied by independent community hosts and takes a base fee of 10% (On-Demand) or 2.5% (Spot), per its docs (checked 2026-11-22). Payments and balances are crypto-denominated: CLORE, Bitcoin, or USDT/USDC stablecoins on Ethereum or BNB Chain. On-Demand rentals cannot be interrupted; Spot rentals end if another renter outbids you. Container data is lost when an order ends, and the docs offer no formal dispute process.',
+          'Yes for experiments and fault-tolerant jobs, no for sensitive data. Clore.ai lists GPUs supplied by independent community hosts and takes a base fee of 10% (On-Demand) or 2.5% (Spot), per its docs (checked 2026-11-22). Payments and balances are crypto-denominated: CLORE, Bitcoin, or USDT/USDC stablecoins on Ethereum or BNB Chain. On-Demand rentals cannot be interrupted; Spot rentals end if another renter outbids you. Container data is lost when an order ends, and the docs offer no formal dispute process.',
         bullets: [
           'Model: peer-to-peer marketplace, hosts set prices, per the Clore.ai docs',
           'Fees: 10% On-Demand / 2.5% Spot base fee, split 50/50 between renter and host',
@@ -101,12 +101,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**PromptQuorum assessment based on Clore.ai\'s official documentation, not a hands-on lab test.** Scores reflect fit for LLM inference and fine-tuning work specifically.',
         columns: ['Category', 'Score', 'Why'],
         rows: [
-          { Category: 'Price', Score: '7.5/10', Why: 'Host-set prices plus a documented 10% / 2.5% base fee; live prices not verified' },
+          { Category: 'Price', Score: '7.5/10', Why: 'Fee structure documented (10% / 2.5%); no GPU prices checked, so scored on fees only' },
           { Category: 'Reliability', Score: '5.5/10', Why: 'Independent hosts; docs say reliability varies and compensation is not guaranteed' },
           { Category: 'Ease of setup', Score: '6/10', Why: 'SSH and Jupyter documented; crypto funding adds steps' },
           { Category: 'GPU choice', Score: '8/10', Why: 'Marketplace filters by GPU model, price, disk, CPU, network' },
-          { Category: 'Support & docs', Score: '6.5/10', Why: 'Clear docs; support via portal, email and Discord, no formal disputes' },
-          { Category: 'Overall', Score: '6.8/10', Why: 'Flexible and cheap-to-start, but unsuited to sensitive data' },
+          { Category: 'Support & docs', Score: '6.5/10', Why: 'Clear docs; support via portal, email and Discord; no formal dispute process in the docs' },
+          { Category: 'Overall', Score: '6.8/10', Why: 'Flexible to start, but unsuited to sensitive data' },
         ],
         note: 'PromptQuorum assessment derived from Clore.ai\'s official pages (see "How We Evaluate"). PromptQuorum did not rent or benchmark GPUs on Clore.ai for this review.',
       },
@@ -181,7 +181,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Which model fits depends on the VRAM of the GPU you rent, not on Clore.ai.** Use the VRAM facts from our cheatsheets: at Q4_K_M, a 7B model needs about 5.5 GB, 14B about 9.5 GB, 32B about 20.5 GB and 70B about 44 GB, so 70B needs a 48 GB card or two GPUs ([DeepSeek-R1 distill VRAM cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Because Clore.ai\'s marketplace is host-listed and live, check which cards are actually available before planning.',
         columns: ['Model size (Q4_K_M)', 'VRAM needed', 'GPU class'],
         rows: [
-          { 'Model size (Q4_K_M)': '7B / 8B', 'VRAM needed': '~5.5 GB', 'GPU class': '8 GB+ card' },
+          { 'Model size (Q4_K_M)': '7B', 'VRAM needed': '~5.5 GB', 'GPU class': '8 GB+ card' },
+          { 'Model size (Q4_K_M)': '8B', 'VRAM needed': '~6 GB', 'GPU class': '8 GB+ card' },
           { 'Model size (Q4_K_M)': '14B', 'VRAM needed': '~9.5 GB', 'GPU class': '16 GB card' },
           { 'Model size (Q4_K_M)': '32B', 'VRAM needed': '~20.5 GB', 'GPU class': '24 GB card (tight)' },
           { 'Model size (Q4_K_M)': '70B', 'VRAM needed': '~44 GB', 'GPU class': '48 GB or dual GPU' },
@@ -281,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is Proof-of-Holding?', a: 'Proof-of-Holding (PoH) means holding CLORE in the platform. The docs give a base-fee reduction from 5% at 200,000 CLORE to 50% at 2,000,000 CLORE or more, with no lockups or penalties. It does not reduce extra currency fees, and holding CLORE carries token-price risk.' },
           { q: 'Which currencies can I deposit on Clore.ai?', a: 'CLORE (ERC-20, minimum 2,000), Bitcoin (no minimum), and USDT or USDC on Ethereum or BNB Chain (minimum $10). Tokens sent on other networks cannot be recovered, per the docs.' },
           { q: 'Can I pay Clore.ai with a credit card?', a: 'The documentation PromptQuorum reviewed lists only crypto deposits: CLORE, BTC, USDT and USDC. No card option is documented there.' },
-          { q: 'Is Clore.ai safe for sensitive or private data?', a: 'No. Servers are operated by independent community hosts, and the docs make no data-protection guarantee. Container data is lost when an order ends. Use it only for non-sensitive workloads.' },
+          { q: 'Is Clore.ai safe for sensitive or private data?', a: 'Not recommended. Servers are operated by independent community hosts, and the Clore.ai docs make no data-protection or confidentiality guarantee. Container data is lost when an order ends. Use it only for non-sensitive workloads.' },
           { q: 'Can I run Ollama or vLLM on Clore.ai?', a: 'You connect to rented servers over SSH and can install your own software, but the docs PromptQuorum reviewed do not mention Ollama or vLLM images. Check the available images on the marketplace first.' },
           { q: 'What happens if a Clore.ai host goes offline?', a: 'The FAQ says the platform "may provide partial compensation depending on circumstances", so compensation is not guaranteed. For uninterruptible work the docs recommend On-Demand rentals.' },
           { q: 'How does Clore.ai compare with Vast.ai?', a: 'Both are marketplaces with host-supplied GPUs. Clore.ai is built around crypto payments and a CLORE token with Proof-of-Holding discounts. See the [Vast.ai review](/power-local-llm/vast-ai-review) for its model and pricing.' },
@@ -369,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Ist Clore.ai ein guter Weg, GPUs für LLM-Arbeit zu mieten?',
         answer:
-          'Ja für Budget-Experimente und fehlertolerante Jobs, nein für sensible Daten. Clore.ai listet GPUs, die von unabhängigen Community-Hosts bereitgestellt werden, und erhebt laut Doku eine Basisgebühr von 10 % (On-Demand) oder 2,5 % (Spot) (geprüft am 2026-11-22). Zahlungen und Guthaben lauten auf Krypto: CLORE, Bitcoin oder USDT/USDC-Stablecoins auf Ethereum oder BNB Chain. On-Demand-Mieten können nicht unterbrochen werden; Spot-Mieten enden, wenn ein anderer Mieter Sie überbietet. Container-Daten gehen verloren, wenn ein Auftrag endet, und die Doku bietet kein formales Streitbeilegungsverfahren.',
+          'Ja für Experimente und fehlertolerante Jobs, nein für sensible Daten. Clore.ai listet GPUs, die von unabhängigen Community-Hosts bereitgestellt werden, und erhebt laut Doku eine Basisgebühr von 10 % (On-Demand) oder 2,5 % (Spot) (geprüft am 2026-11-22). Zahlungen und Guthaben lauten auf Krypto: CLORE, Bitcoin oder USDT/USDC-Stablecoins auf Ethereum oder BNB Chain. On-Demand-Mieten können nicht unterbrochen werden; Spot-Mieten enden, wenn ein anderer Mieter Sie überbietet. Container-Daten gehen verloren, wenn ein Auftrag endet, und die Doku bietet kein formales Streitbeilegungsverfahren.',
         bullets: [
           'Modell: Peer-to-Peer-Marktplatz, Hosts legen die Preise fest, laut Clore.ai-Doku',
           'Gebühren: 10 % On-Demand / 2,5 % Spot Basisgebühr, 50/50 zwischen Mieter und Host geteilt',
@@ -428,12 +429,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Einschätzung von PromptQuorum auf Basis der offiziellen Clore.ai-Dokumentation, kein praktischer Labortest.** Die Bewertungen spiegeln die Eignung speziell für LLM-Inferenz und Fine-Tuning wider.',
         columns: ['Kategorie', 'Bewertung', 'Begründung'],
         rows: [
-          { Kategorie: 'Preis', Bewertung: '7,5/10', Begründung: 'Host-Preise plus 10 % / 2,5 % Basisgebühr; Live-Preise offen' },
+          { Kategorie: 'Preis', Bewertung: '7,5/10', Begründung: 'Gebührenstruktur dokumentiert (10 % / 2,5 %); keine GPU-Preise geprüft, daher nur nach Gebühren bewertet' },
           { Kategorie: 'Zuverlässigkeit', Bewertung: '5,5/10', Begründung: 'Unabhängige Hosts; laut Doku schwankende Zuverlässigkeit, Entschädigung nicht garantiert' },
           { Kategorie: 'Einrichtungsaufwand', Bewertung: '6/10', Begründung: 'SSH, Jupyter dokumentiert; Krypto-Einzahlung kostet Schritte' },
           { Kategorie: 'GPU-Auswahl', Bewertung: '8/10', Begründung: 'Marktplatzfilter nach GPU-Modell, Preis, Disk, CPU, Netzwerk' },
           { Kategorie: 'Support und Doku', Bewertung: '6,5/10', Begründung: 'Klare Doku; Support per Portal, E-Mail, Discord' },
-          { Kategorie: 'Gesamt', Bewertung: '6,8/10', Begründung: 'Flexibel, günstiger Einstieg; ungeeignet für sensible Daten' },
+          { Kategorie: 'Gesamt', Bewertung: '6,8/10', Begründung: 'Flexibel im Einstieg; ungeeignet für sensible Daten' },
         ],
         note: 'Einschätzung von PromptQuorum, abgeleitet aus offiziellen Clore.ai-Seiten (siehe „Wie wir bewerten“). PromptQuorum hat für diese Rezension keine GPUs auf Clore.ai gemietet oder gebenchmarkt.',
       },
@@ -508,7 +509,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Welches Modell passt, hängt vom VRAM der gemieteten GPU ab, nicht von Clore.ai.** Nutzen Sie die VRAM-Fakten aus unseren Spickzetteln: mit Q4_K_M braucht ein 7B-Modell etwa 5,5 GB, 14B etwa 9,5 GB, 32B etwa 20,5 GB und 70B etwa 44 GB; 70B braucht also eine 48-GB-Karte oder zwei GPUs ([VRAM-Spickzettel für DeepSeek-R1-Distill](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Da der Marktplatz von Clore.ai von Hosts gelistet und live ist, prüfen Sie vor der Planung, welche Karten tatsächlich verfügbar sind.',
         columns: ['Modellgröße (Q4_K_M)', 'Benötigter VRAM', 'GPU-Klasse'],
         rows: [
-          { 'Modellgröße (Q4_K_M)': '7B / 8B', 'Benötigter VRAM': '~5,5 GB', 'GPU-Klasse': 'Karte ab 8 GB' },
+          { 'Modellgröße (Q4_K_M)': '7B', 'Benötigter VRAM': '~5,5 GB', 'GPU-Klasse': 'Karte ab 8 GB' },
+          { 'Modellgröße (Q4_K_M)': '8B', 'Benötigter VRAM': '~6 GB', 'GPU-Klasse': 'Karte ab 8 GB' },
           { 'Modellgröße (Q4_K_M)': '14B', 'Benötigter VRAM': '~9,5 GB', 'GPU-Klasse': '16-GB-Karte' },
           { 'Modellgröße (Q4_K_M)': '32B', 'Benötigter VRAM': '~20,5 GB', 'GPU-Klasse': '24-GB-Karte (knapp)' },
           { 'Modellgröße (Q4_K_M)': '70B', 'Benötigter VRAM': '~44 GB', 'GPU-Klasse': '48 GB oder Dual-GPU' },
@@ -525,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Marktplatz-GPUs passen zu Jobs, die neu starten können; sie passen schlecht, wo ein Host-Ausfall echtes Geld kostet oder Daten preisgibt.**',
         items: [
           '**Gut geeignet:** Batch-Inferenz, Evaluierungsläufe, Benchmarking einer Quantisierung, Fine-Tuning mit Checkpoints auf Spot, Test eines Modells vor dem Hardwarekauf (siehe [RTX 3090 kaufen oder mieten](/de/power-local-llm/rtx-3090-local-llm-buy-or-rent)).',
-          '**Mit On-Demand möglich:** längere Trainingsläufe, die die Doku als „nicht unterbrechbar“ beschreibt, mit eigenen Backups auf externem Speicher.',
+          '**Mit On-Demand möglich:** längere Trainingsläufe, die die Doku als „can\'t be interrupted“ (nicht unterbrechbar) beschreibt, mit eigenen Backups auf externem Speicher.',
           '**Schlecht geeignet:** Kundendaten, personenbezogene Daten, regulierte Workloads, dauerhaft laufende Produktions-Endpoints ohne Failover.',
           '**Kostencheck:** Vergleichen Sie Marktplatzpreise mit eigener Hardware über den [Kostenrechner Kaufen vs. Mieten](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         ],
@@ -537,9 +539,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Zahlungen und der Marktplatz lauten auf Krypto (CLORE und BTC, mit USD-Bezug über die Stablecoins USDT und USDC, laut Doku), die Hardware wird von Community-Hosts gestellt, und sensible Daten sollten dort nicht laufen.** Die folgenden Punkte stammen aus Clore.ai-eigener Dokumentation, geprüft am 2026-11-22.',
         items: [
           '**Zahlungen:** CLORE, Bitcoin, USDT und USDC werden akzeptiert. Stablecoins teilen sich ein USD-Guthaben. CLORE ist ein volatiler Token, und eine Sendung über das falsche Netzwerk führt zum Verlust der Mittel.',
-          '**Woher die Hardware kommt:** Server sind „im Besitz und Betrieb einzelner Hosts weltweit“; die Zuverlässigkeit schwankt und ist in einer Host-Bewertung zusammengefasst.',
+          '**Woher die Hardware kommt:** Server sind „owned and operated by individual hosts around the world“ (im Besitz und Betrieb einzelner Hosts weltweit); die Zuverlässigkeit schwankt und ist in einer Host-Bewertung zusammengefasst.',
           '**Umgang mit Daten:** Die FAQ gibt an, dass Container-Daten verloren gehen, wenn der Auftrag abläuft oder storniert wird, und rät Mietern zu externen Backups. Die Doku macht keine Zusage zu Datenschutz oder Vertraulichkeit bei Hosts. Behandeln Sie jede Miete als nicht vertrauenswürdige Hardware.',
-          '**Erstattungen und Entschädigung:** Wenn ein Server mitten in der Miete offline geht, „kann die Plattform je nach Umständen eine teilweise Entschädigung gewähren“. Die Doku beschreibt kein formales Streitbeilegungsverfahren; ihr zufolge können Stornierungen eine Problembeschreibung enthalten, die das Team prüft.',
+          '**Erstattungen und Entschädigung:** Wenn ein Server mitten in der Miete offline geht, kann die Plattform laut Doku je nach Umständen eine teilweise Entschädigung gewähren. Die Doku beschreibt kein formales Streitbeilegungsverfahren; ihr zufolge können Stornierungen eine Problembeschreibung enthalten, die das Team prüft.',
           '**Kontosicherheit:** Die Doku empfiehlt dringend 2FA und sagt, der API-Schlüssel gewähre vollen Kontozugriff.',
         ],
       },
@@ -608,9 +610,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist Proof-of-Holding?', a: 'Proof-of-Holding (PoH) bedeutet, CLORE auf der Plattform zu halten. Die Doku nennt eine Senkung der Basisgebühr von 5 % bei 200.000 CLORE bis 50 % bei 2.000.000 CLORE oder mehr, ohne Sperrfristen oder Strafen. Zusatzgebühren für Währungen werden nicht gesenkt, und das Halten von CLORE birgt ein Kursrisiko.' },
           { q: 'Welche Währungen kann ich bei Clore.ai einzahlen?', a: 'CLORE (ERC-20, Minimum 2.000), Bitcoin (kein Minimum) sowie USDT oder USDC auf Ethereum oder BNB Chain (Minimum 10 US-Dollar). Token, die über andere Netzwerke gesendet werden, sind laut Doku nicht wiederherstellbar.' },
           { q: 'Kann ich Clore.ai mit Kreditkarte bezahlen?', a: 'Die von PromptQuorum geprüfte Dokumentation nennt nur Krypto-Einzahlungen: CLORE, BTC, USDT und USDC. Eine Kartenoption ist dort nicht dokumentiert.' },
-          { q: 'Ist Clore.ai für sensible oder private Daten sicher?', a: 'Nein. Server werden von unabhängigen Community-Hosts betrieben, und die Doku macht keine Datenschutzzusage. Container-Daten gehen verloren, wenn ein Auftrag endet. Nutzen Sie es nur für nicht sensible Workloads.' },
+          { q: 'Ist Clore.ai für sensible oder private Daten sicher?', a: 'Nicht empfohlen. Server werden von unabhängigen Community-Hosts betrieben, und die Clore.ai-Doku macht keine Datenschutz- oder Vertraulichkeitszusage. Container-Daten gehen verloren, wenn ein Auftrag endet. Nutzen Sie es nur für nicht sensible Workloads.' },
           { q: 'Kann ich Ollama oder vLLM auf Clore.ai ausführen?', a: 'Sie verbinden sich per SSH mit gemieteten Servern und können eigene Software installieren, doch die von PromptQuorum geprüfte Doku erwähnt keine Ollama- oder vLLM-Images. Prüfen Sie zuerst die verfügbaren Images auf dem Marktplatz.' },
-          { q: 'Was passiert, wenn ein Clore.ai-Host offline geht?', a: 'Die FAQ sagt, die Plattform „kann je nach Umständen eine teilweise Entschädigung gewähren“, eine Entschädigung ist also nicht garantiert. Für Arbeit, die nicht unterbrochen werden darf, empfiehlt die Doku On-Demand-Mieten.' },
+          { q: 'Was passiert, wenn ein Clore.ai-Host offline geht?', a: 'Die FAQ sagt, die Plattform kann je nach Umständen eine teilweise Entschädigung gewähren, eine Entschädigung ist also nicht garantiert. Für Arbeit, die nicht unterbrochen werden darf, empfiehlt die Doku On-Demand-Mieten.' },
           { q: 'Wie schneidet Clore.ai im Vergleich zu Vast.ai ab?', a: 'Beide sind Marktplätze mit von Hosts bereitgestellten GPUs. Clore.ai ist auf Krypto-Zahlungen und einen CLORE-Token mit Proof-of-Holding-Rabatten ausgelegt. Modell und Preise von Vast.ai finden Sie im [Vast.ai-Review](/de/power-local-llm/vast-ai-review).' },
         ],
       },
@@ -672,11 +674,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Test de Clore.ai (2026) : place de marché de GPU payée en crypto pour les LLM',
     seoTitle: 'Test Clore.ai 2026 : place de marché GPU payée en crypto',
     intro:
-      'Clore.ai est une place de marché décentralisée de GPU : des hôtes communautaires y listent leurs propres GPU, les locataires paient en crypto et la plateforme prélève une commission. C\'est l\'une des options de notre guide des [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), et le fournisseur de ce groupe construit autour des paiements en crypto (CLORE, Bitcoin ou stablecoins). La documentation officielle ([docs.clore.ai](https://docs.clore.ai)) indique des frais de base de 10 % pour les commandes On-Demand et de 2.5 % pour les commandes Spot, la Proof-of-Holding (PoH) pouvant les réduire jusqu\'à 50 %. Ce test explique le fonctionnement des frais, des dépôts et des types de location, ce que cela implique pour l\'inférence et le fine-tuning de LLM, et quels sont les risques. Les faits proviennent des pages de Clore.ai, consultées le 2026-11-22 ; ce n\'est pas un test en laboratoire.',
+      'Clore.ai est une place de marché décentralisée de GPU : des hôtes communautaires y listent leurs propres GPU, les locataires paient en crypto et la plateforme prélève une commission. C\'est l\'une des options de notre guide des [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), et le fournisseur de ce groupe construit autour des paiements en crypto (CLORE, Bitcoin ou stablecoins). La documentation officielle ([docs.clore.ai](https://docs.clore.ai)) indique des frais de base de 10 % pour les commandes On-Demand et de 2,5 % pour les commandes Spot, la Proof-of-Holding (PoH) pouvant les réduire jusqu\'à 50 %. Ce test explique le fonctionnement des frais, des dépôts et des types de location, ce que cela implique pour l\'inférence et le fine-tuning de LLM, et quels sont les risques. Les faits proviennent des pages de Clore.ai, consultées le 2026-11-22 ; ce n\'est pas un test en laboratoire.',
     metaDescription:
-      'Test Clore.ai 2026 : GPU communautaires payés en crypto. Frais On-Demand vs Spot (10 % / 2.5 %), Proof-of-Holding, dépôts et risques pour les LLM.',
+      'Test Clore.ai 2026 : GPU communautaires payés en crypto. Frais On-Demand vs Spot (10 % / 2,5 %), Proof-of-Holding, dépôts et risques pour les LLM.',
     twitterDescription:
-      'Clore.ai (2026) : place de marché de GPU payée en crypto. Frais de base 10 % On-Demand / 2.5 % Spot, jusqu\'à 50 % de remise avec la Proof-of-Holding. Notation, dépôts, et pourquoi les données sensibles n\'ont pas leur place chez des hôtes communautaires.',
+      'Clore.ai (2026) : place de marché de GPU payée en crypto. Frais de base 10 % On-Demand / 2,5 % Spot, jusqu\'à 50 % de remise avec la Proof-of-Holding. Notation, dépôts, et pourquoi les données sensibles n\'ont pas leur place chez des hôtes communautaires.',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs qui louent des GPU pour l\'inférence ou le fine-tuning de LLM et sont à l\'aise avec le paiement en crypto',
@@ -691,16 +693,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'place de marché gpu décentralisée',
     ],
     leadAnswerBlock:
-      '**Clore.ai est une place de marché de GPU communautaires où les paiements se font en crypto (CLORE, Bitcoin, USDT, USDC) et dont la documentation indique des frais de base de 10 % sur les commandes On-Demand et de 2.5 % sur les commandes Spot, réductibles jusqu\'à 50 % avec la Proof-of-Holding (consulté le 2026-11-22).** Évaluation de PromptQuorum, fondée sur la documentation officielle de Clore.ai et non sur un test pratique : 6.8/10 au global. Elle convient aux expériences LLM tolérantes aux pannes et aux traitements par lots menés par des développeurs qui utilisent déjà la crypto. Elle ne convient pas aux données sensibles, car le matériel appartient à des hôtes indépendants. → [Voir Clore.ai](https://clore.ai/)',
+      '**Clore.ai est une place de marché de GPU communautaires où les paiements se font en crypto (CLORE, Bitcoin, USDT, USDC) et dont la documentation indique des frais de base de 10 % sur les commandes On-Demand et de 2,5 % sur les commandes Spot, réductibles jusqu\'à 50 % avec la Proof-of-Holding (consulté le 2026-11-22).** Évaluation de PromptQuorum, fondée sur la documentation officielle de Clore.ai et non sur un test pratique : 6,8/10 au global. Elle convient aux expériences LLM tolérantes aux pannes et aux traitements par lots menés par des développeurs qui utilisent déjà la crypto. Elle ne convient pas aux données sensibles, car le matériel appartient à des hôtes indépendants. → [Voir Clore.ai](https://clore.ai/)',
     quickAnswerTop: {
       fr: {
         question: 'Clore.ai est-il un bon moyen de louer des GPU pour des travaux LLM ?',
         answer:
-          'Oui pour les expériences à petit budget et les travaux tolérants aux pannes, non pour les données sensibles. Clore.ai liste des GPU fournis par des hôtes communautaires indépendants et prélève des frais de base de 10 % (On-Demand) ou de 2.5 % (Spot), selon sa documentation (consultée le 2026-11-22). Les paiements et soldes sont libellés en crypto : CLORE, Bitcoin, ou stablecoins USDT/USDC sur Ethereum ou BNB Chain. Les locations On-Demand ne peuvent pas être interrompues ; les locations Spot prennent fin si un autre locataire surenchérit. Les données du conteneur sont perdues à la fin d\'une commande, et la documentation ne prévoit aucune procédure formelle de litige.',
+          'Oui pour les expériences et les travaux tolérants aux pannes, non pour les données sensibles. Clore.ai liste des GPU fournis par des hôtes communautaires indépendants et prélève des frais de base de 10 % (On-Demand) ou de 2,5 % (Spot), selon sa documentation (consultée le 2026-11-22). Les paiements et soldes sont libellés en crypto : CLORE, Bitcoin, ou stablecoins USDT/USDC sur Ethereum ou BNB Chain. Les locations On-Demand ne peuvent pas être interrompues ; les locations Spot prennent fin si un autre locataire surenchérit. Les données du conteneur sont perdues à la fin d\'une commande, et la documentation ne prévoit aucune procédure formelle de litige.',
         bullets: [
           'Modèle : place de marché pair à pair, les hôtes fixent les prix, selon la documentation de Clore.ai',
-          'Frais : frais de base de 10 % On-Demand / 2.5 % Spot, répartis 50/50 entre locataire et hôte',
-          'Proof-of-Holding : jusqu\'à 50 % de remise sur les frais de base avec 2,000,000 CLORE détenus',
+          'Frais : frais de base de 10 % On-Demand / 2,5 % Spot, répartis 50/50 entre locataire et hôte',
+          'Proof-of-Holding : jusqu\'à 50 % de remise sur les frais de base avec 2 000 000 CLORE détenus',
           'Paiements : CLORE, BTC, USDT, USDC ; stablecoins uniquement sur Ethereum ou BNB Chain',
           'Risque : hôtes communautaires, aucune garantie de protection des données indiquée, aucune procédure formelle de litige dans la documentation',
         ],
@@ -724,8 +726,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Clore.ai est une place de marché décentralisée de GPU où des hôtes communautaires louent des GPU et où les locataires paient en crypto, avec des frais de base documentés de 10 % (On-Demand) et de 2.5 % (Spot).' },
-      { type: 'plain-terms', content: 'Voyez Clore.ai comme un site de petites annonces pour GPU. Des particuliers listent leurs cartes graphiques inutilisées, vous en choisissez une et payez en crypto, et le site garde une petite part. C\'est souple et peu coûteux pour démarrer, mais les machines appartiennent à des inconnus : c\'est fait pour les expériences, pas pour les données privées.' },
+      { type: 'one-sentence', content: 'Clore.ai est une place de marché décentralisée de GPU où des hôtes communautaires louent des GPU et où les locataires paient en crypto, avec des frais de base documentés de 10 % (On-Demand) et de 2,5 % (Spot).' },
+      { type: 'plain-terms', content: 'Voyez Clore.ai comme un site de petites annonces pour GPU. Des particuliers listent leurs cartes graphiques inutilisées, vous en choisissez une et payez en crypto, et le site garde une petite part. Cela peut être souple et peu coûteux pour démarrer, mais les machines appartiennent à des inconnus : c\'est fait pour les expériences, pas pour les données privées.' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -755,12 +757,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Évaluation de PromptQuorum fondée sur la documentation officielle de Clore.ai, et non sur un test en laboratoire.** Les notes reflètent l\'adéquation aux travaux d\'inférence et de fine-tuning de LLM en particulier.',
         columns: ['Catégorie', 'Note', 'Pourquoi'],
         rows: [
-          { 'Catégorie': 'Prix', 'Note': '7.5/10', 'Pourquoi': 'Prix fixés par les hôtes + frais de base documentés 10 % / 2.5 % ; prix en direct non vérifiés' },
-          { 'Catégorie': 'Fiabilité', 'Note': '5.5/10', 'Pourquoi': 'Hôtes indépendants ; la doc dit que la fiabilité varie, compensation non garantie' },
+          { 'Catégorie': 'Prix', 'Note': '7,5/10', 'Pourquoi': 'Structure de frais documentée (10 % / 2,5 %) ; aucun prix de GPU vérifié, noté uniquement sur les frais' },
+          { 'Catégorie': 'Fiabilité', 'Note': '5,5/10', 'Pourquoi': 'Hôtes indépendants ; la doc dit que la fiabilité varie, compensation non garantie' },
           { 'Catégorie': 'Facilité de mise en place', 'Note': '6/10', 'Pourquoi': 'SSH et Jupyter documentés ; le financement en crypto ajoute des étapes' },
           { 'Catégorie': 'Choix de GPU', 'Note': '8/10', 'Pourquoi': 'Filtres par modèle de GPU, prix, disque, CPU, réseau' },
-          { 'Catégorie': 'Support et documentation', 'Note': '6.5/10', 'Pourquoi': 'Documentation claire ; support par portail, e-mail et Discord, pas de litiges formels' },
-          { 'Catégorie': 'Global', 'Note': '6.8/10', 'Pourquoi': 'Souple et peu coûteux pour démarrer, mais inadapté aux données sensibles' },
+          { 'Catégorie': 'Support et documentation', 'Note': '6,5/10', 'Pourquoi': 'Documentation claire ; support par portail, e-mail et Discord, pas de procédure formelle de litige dans la documentation' },
+          { 'Catégorie': 'Global', 'Note': '6,8/10', 'Pourquoi': 'Souple pour démarrer, mais inadapté aux données sensibles' },
         ],
         note: 'Évaluation de PromptQuorum déduite des pages officielles de Clore.ai (voir « Notre méthode d\'évaluation »). PromptQuorum n\'a ni loué ni testé de GPU sur Clore.ai pour ce test.',
       },
@@ -770,8 +772,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Clore.ai est une place de marché de GPU pair à pair ; les hôtes fixent les prix, selon sa documentation (consultée le 2026-11-22)',
-          'Frais de base : 10 % On-Demand, 2.5 % Spot, répartis 50/50 entre locataire et hôte',
-          'La Proof-of-Holding réduit les frais de base jusqu\'à 50 % (avec 2,000,000 CLORE détenus) ; aucun blocage indiqué',
+          'Frais de base : 10 % On-Demand, 2,5 % Spot, répartis 50/50 entre locataire et hôte',
+          'La Proof-of-Holding réduit les frais de base jusqu\'à 50 % (avec 2 000 000 CLORE détenus) ; aucun blocage indiqué',
           'Paiements : CLORE, Bitcoin, USDT et USDC ; stablecoins uniquement sur Ethereum ou BNB Chain',
           'On-Demand ne peut pas être interrompu ; Spot prend fin si vous êtes surenchéri',
           'Le matériel appartient à des hôtes communautaires : n\'y exécutez pas de données sensibles',
@@ -782,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict : qui devrait utiliser Clore.ai',
         content:
-          '**Utilisez Clore.ai si vous êtes à l\'aise avec les paiements en crypto et que votre travail LLM peut survivre à la mise hors ligne d\'un hôte.** Son modèle de frais documenté est transparent : des frais de base de 10 % sur les commandes On-Demand et de 2.5 % sur les commandes Spot, avec des remises Proof-of-Holding en sus. Le compromis porte sur la confiance. Les hôtes sont des opérateurs indépendants, la documentation indique qu\'une compensation après une panne n\'est pas garantie, et les données du conteneur disparaissent à la fin d\'une commande.\n\n**Clore.ai n\'est pas l\'endroit pour des données privées, des charges réglementées ou tout ce qui exige un accord de service formel.** Dans ces cas, utilisez un fournisseur doté d\'une infrastructure exploitée par l\'entreprise. Pour une comparaison plus proche entre places de marché, lisez le [test de Vast.ai](/fr/power-local-llm/vast-ai-review), puis le [test de RunPod](/fr/power-local-llm/runpod-review).',
+          '**Utilisez Clore.ai si vous êtes à l\'aise avec les paiements en crypto et que votre travail LLM peut survivre à la mise hors ligne d\'un hôte.** Son modèle de frais documenté est transparent : des frais de base de 10 % sur les commandes On-Demand et de 2,5 % sur les commandes Spot, avec des remises Proof-of-Holding en sus. Le compromis porte sur la confiance. Les hôtes sont des opérateurs indépendants, la documentation indique qu\'une compensation après une panne n\'est pas garantie, et les données du conteneur disparaissent à la fin d\'une commande.\n\n**Clore.ai n\'est pas l\'endroit pour des données privées, des charges réglementées ou tout ce qui exige un accord de service formel.** Dans ces cas, utilisez un fournisseur doté d\'une infrastructure exploitée par l\'entreprise. Pour une comparaison plus proche entre places de marché, lisez le [test de Vast.ai](/fr/power-local-llm/vast-ai-review), puis le [test de RunPod](/fr/power-local-llm/runpod-review).',
         affiliateLinks: [
           { label: 'Voir Clore.ai →', url: 'https://clore.ai/', productName: 'Clore.ai GPU marketplace', productCategory: 'GPU Cloud' },
         ],
@@ -795,7 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Aspect', 'On-Demand', 'Spot'],
         rows: [
           { 'Aspect': 'Interruption', 'On-Demand': 'Ne peut pas être repris', 'Spot': 'Surenchère possible à tout moment' },
-          { 'Aspect': 'Frais de base', 'On-Demand': '10 %', 'Spot': '2.5 %' },
+          { 'Aspect': 'Frais de base', 'On-Demand': '10 %', 'Spot': '2,5 %' },
           { 'Aspect': 'Tarification', 'On-Demand': 'Prix hôte fixe par durée', 'Spot': 'Enchère, +1 % au-dessus de la meilleure' },
           { 'Aspect': 'Si surenchéri', 'On-Demand': 'Sans objet', 'Spot': 'Location terminée, facturation arrêtée' },
           { 'Aspect': 'Recommandé par la doc', 'On-Demand': 'Entraînement, production', 'Spot': 'Lots, tests, travaux avec checkpoints' },
@@ -814,17 +816,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Élément', 'Valeur documentée', 'Source'],
         rows: [
           { 'Élément': 'Frais de base On-Demand', 'Valeur documentée': '10 % (répartis 50/50 locataire/hôte)', 'Source': '[Structure des frais](https://docs.clore.ai/for-renters/fee-structure)' },
-          { 'Élément': 'Frais de base Spot', 'Valeur documentée': '2.5 % (répartis 50/50)', 'Source': '[Structure des frais](https://docs.clore.ai/for-renters/fee-structure)' },
+          { 'Élément': 'Frais de base Spot', 'Valeur documentée': '2,5 % (répartis 50/50)', 'Source': '[Structure des frais](https://docs.clore.ai/for-renters/fee-structure)' },
           { 'Élément': 'Frais suppl. du locataire', 'Valeur documentée': '0 % en CLORE, BTC, USDT, USDC', 'Source': '[Structure des frais](https://docs.clore.ai/for-renters/fee-structure)' },
           { 'Élément': 'Réduction PoH', 'Valeur documentée': '5 % à 200k jusqu\'à 50 % à 2M CLORE', 'Source': '[Présentation PoH](https://docs.clore.ai/proof-of-holding/overview)' },
-          { 'Élément': 'Dépôt CLORE', 'Valeur documentée': 'Min 2,000 CLORE (ERC-20)', 'Source': '[Dépôts](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
+          { 'Élément': 'Dépôt CLORE', 'Valeur documentée': 'Min 2 000 CLORE (ERC-20)', 'Source': '[Dépôts](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
           { 'Élément': 'Dépôt USDT/USDC', 'Valeur documentée': 'Min 10 $ ; Ethereum ou BNB Chain', 'Source': '[Dépôts](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
           { 'Élément': 'Dépôt Bitcoin', 'Valeur documentée': 'Pas de minimum ; 3 confirmations', 'Source': '[Dépôts](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
         ],
         items: [
           '**Exemple chiffré de la documentation :** une location On-Demand de 100 CLORE/jour payée en CLORE sans PoH coûte 105 CLORE au locataire (prix affiché plus une part de 5 % des frais de base de 10 %).',
-          '**Proof-of-Holding :** la documentation donne la réduction par la formule `round(min(PoH / 2,000,000, 1) × 50)%` : 200,000 CLORE donnent 5 %, 1,000,000 donnent 25 %, 2,000,000 ou plus donnent 50 %. La documentation décrit la PoH comme sans blocage ni pénalité. Elle ne réduit pas les frais supplémentaires liés aux devises. Détenir du CLORE comporte un risque de variation du cours du jeton que la remise sur les frais ne compense pas. Cet avis décrit le modèle de frais documenté de Clore.ai ; il ne constitue pas un conseil financier ou en investissement. Les crypto-actifs sont volatils : ne détenez pas plus de CLORE que vous ne pouvez vous permettre de perdre, et vérifiez les règles qui s\'appliquent à vous.',
-          '**Retraits :** CLORE minimum 200 (environ 0.50 $ de frais de réseau) ; USDT/USDC minimum 10 $, maximum 1,000 $ par retrait, 1 $ de frais ; Bitcoin minimum 0.0001 BTC. Les jetons envoyés sur un réseau autre qu\'Ethereum ou BNB Chain sont irrécupérables.',
+          '**Proof-of-Holding :** la documentation donne la réduction par la formule `round(min(PoH / 2,000,000, 1) × 50)%` : 200 000 CLORE donnent 5 %, 1 000 000 donnent 25 %, 2 000 000 ou plus donnent 50 %. La documentation décrit la PoH comme sans blocage ni pénalité. Elle ne réduit pas les frais supplémentaires liés aux devises. Détenir du CLORE comporte un risque de variation du cours du jeton que la remise sur les frais ne compense pas. Cet avis décrit le modèle de frais documenté de Clore.ai ; il ne constitue pas un conseil financier ou en investissement. Les crypto-actifs sont volatils : ne détenez pas plus de CLORE que vous ne pouvez vous permettre de perdre, et vérifiez les règles qui s\'appliquent à vous.',
+          '**Retraits :** CLORE minimum 200 (environ 0,50 $ de frais de réseau) ; USDT/USDC minimum 10 $, maximum 1 000 $ par retrait, 1 $ de frais ; Bitcoin minimum 0,0001 BTC. Les jetons envoyés sur un réseau autre qu\'Ethereum ou BNB Chain sont irrécupérables.',
           '**Remboursements :** la page des dépôts ne couvre pas les règles de remboursement ; voir « Risques et confiance » ci-dessous.',
         ],
       },
@@ -832,12 +834,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: 'Adéquation à l\'inférence et au fine-tuning de LLM',
         content:
-          '**Le modèle qui tient dépend de la VRAM du GPU loué, pas de Clore.ai.** Utilisez les données de VRAM de nos aide-mémoire : en Q4_K_M, un modèle 7B demande environ 5.5 Go, un 14B environ 9.5 Go, un 32B environ 20.5 Go et un 70B environ 44 Go ; un 70B exige donc une carte de 48 Go ou deux GPU ([aide-mémoire VRAM des distillations DeepSeek-R1](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Comme la place de marché de Clore.ai est alimentée par les hôtes et change en direct, vérifiez quelles cartes sont réellement disponibles avant de planifier.',
+          '**Le modèle qui tient dépend de la VRAM du GPU loué, pas de Clore.ai.** Utilisez les données de VRAM de nos aide-mémoire : en Q4_K_M, un modèle 7B demande environ 5,5 Go, un 14B environ 9,5 Go, un 32B environ 20,5 Go et un 70B environ 44 Go ; un 70B exige donc une carte de 48 Go ou deux GPU ([aide-mémoire VRAM des distillations DeepSeek-R1](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Comme la place de marché de Clore.ai est alimentée par les hôtes et change en direct, vérifiez quelles cartes sont réellement disponibles avant de planifier.',
         columns: ['Taille du modèle (Q4_K_M)', 'VRAM requise', 'Classe de GPU'],
         rows: [
-          { 'Taille du modèle (Q4_K_M)': '7B / 8B', 'VRAM requise': '~5.5 Go', 'Classe de GPU': 'Carte de 8 Go ou plus' },
-          { 'Taille du modèle (Q4_K_M)': '14B', 'VRAM requise': '~9.5 Go', 'Classe de GPU': 'Carte de 16 Go' },
-          { 'Taille du modèle (Q4_K_M)': '32B', 'VRAM requise': '~20.5 Go', 'Classe de GPU': 'Carte de 24 Go (juste)' },
+          { 'Taille du modèle (Q4_K_M)': '7B', 'VRAM requise': '~5,5 Go', 'Classe de GPU': 'Carte de 8 Go ou plus' },
+          { 'Taille du modèle (Q4_K_M)': '8B', 'VRAM requise': '~6 Go', 'Classe de GPU': 'Carte de 8 Go ou plus' },
+          { 'Taille du modèle (Q4_K_M)': '14B', 'VRAM requise': '~9,5 Go', 'Classe de GPU': 'Carte de 16 Go' },
+          { 'Taille du modèle (Q4_K_M)': '32B', 'VRAM requise': '~20,5 Go', 'Classe de GPU': 'Carte de 24 Go (juste)' },
           { 'Taille du modèle (Q4_K_M)': '70B', 'VRAM requise': '~44 Go', 'Classe de GPU': '48 Go ou double GPU' },
         ],
         items: [
@@ -852,7 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Les GPU de place de marché conviennent aux travaux qui peuvent redémarrer ; ils conviennent mal là où la panne d\'un hôte coûte de l\'argent ou expose des données.**',
         items: [
           '**Bon choix :** inférence par lots, évaluations, benchmark d\'une quantification, fine-tuning avec checkpoints sur Spot, essai d\'un modèle avant d\'acheter du matériel (voir [acheter ou louer une RTX 3090](/fr/power-local-llm/rtx-3090-local-llm-buy-or-rent)).',
-          '**Possible avec On-Demand :** entraînements plus longs que la documentation décrit comme « ne pouvant pas être interrompus », avec vos propres sauvegardes sur un stockage externe.',
+          '**Possible avec On-Demand :** entraînements plus longs que la documentation décrit comme « can\'t be interrupted » (ne pouvant pas être interrompus), avec vos propres sauvegardes sur un stockage externe.',
           '**Mauvais choix :** données clients, données personnelles, charges réglementées, endpoints de production toujours actifs sans basculement.',
           '**Contrôle des coûts :** comparez les tarifs de la place de marché avec votre propre matériel grâce au [calculateur achat ou location](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         ],
@@ -864,9 +867,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les paiements et la place de marché sont libellés en crypto (CLORE et BTC, avec une exposition au dollar via les stablecoins USDT et USDC, selon sa documentation), le matériel est fourni par des hôtes communautaires, et les données sensibles ne doivent pas y être exécutées.** Les points ci-dessous proviennent de la documentation de Clore.ai, consultée le 2026-11-22.',
         items: [
           '**Paiements :** CLORE, Bitcoin, USDT et USDC sont acceptés. Les stablecoins partagent un seul solde en USD. CLORE est un jeton volatil, et un envoi sur le mauvais réseau fait perdre les fonds.',
-          '**Origine du matériel :** les serveurs sont « détenus et exploités par des hôtes individuels dans le monde entier » ; la fiabilité varie et se résume dans une note d\'hôte.',
+          '**Origine du matériel :** les serveurs sont « owned and operated by individual hosts around the world » (détenus et exploités par des hôtes individuels dans le monde entier) ; la fiabilité varie et se résume dans une note d\'hôte.',
           '**Traitement des données :** la FAQ indique que les données du conteneur sont perdues quand la commande expire ou est annulée, et demande aux locataires de sauvegarder à l\'extérieur. La documentation ne donne aucune garantie de protection des données ni de confidentialité concernant les hôtes. Considérez chaque location comme du matériel non fiable.',
-          '**Remboursements et compensation :** si un serveur passe hors ligne en cours de location, la plateforme « peut accorder une compensation partielle selon les circonstances ». La documentation ne décrit aucune procédure formelle de litige ; elle indique que les annulations peuvent inclure une description du problème que l\'équipe examine.',
+          '**Remboursements et compensation :** si un serveur passe hors ligne en cours de location, la plateforme peut accorder, d\'après la documentation, une compensation partielle selon les circonstances. La documentation ne décrit aucune procédure formelle de litige ; elle indique que les annulations peuvent inclure une description du problème que l\'équipe examine.',
           '**Sécurité du compte :** la documentation recommande vivement la 2FA et précise que la clé d\'API donne un accès complet au compte.',
         ],
       },
@@ -876,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Une place de marché souple et native de la crypto, avec des règles de frais claires et un vrai déficit de confiance.**',
         items: [
           '**Avantages**',
-          'Structure de frais documentée, avec des frais de base de 2.5 % seulement sur Spot',
+          'Structure de frais documentée, avec des frais de base de 2,5 % seulement sur Spot',
           'Jusqu\'à 50 % de réduction des frais via la Proof-of-Holding, sans blocage selon la documentation',
           'Quatre devises de paiement et un flux SSH et Jupyter documenté',
           'Filtres de la place de marché par modèle de GPU, prix, disque, CPU, réseau et note du serveur',
@@ -930,14 +933,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qu\'est-ce que Clore.ai ?', a: 'Clore.ai est une place de marché décentralisée de GPU où les propriétaires de GPU listent du matériel et où les locataires paient pour l\'utiliser. Selon sa documentation, les hôtes fixent leurs propres prix et les paiements se font en crypto (CLORE, Bitcoin, USDT, USDC).' },
-          { q: 'Quels sont les frais de Clore.ai ?', a: 'La documentation indique des frais de base de 10 % sur les commandes On-Demand et de 2.5 % sur les commandes Spot, répartis 50/50 entre locataire et hôte (consultée le 2026-11-22). Les locataires ne paient aucun frais de devise supplémentaire en CLORE, BTC, USDT ou USDC. La Proof-of-Holding peut réduire les frais de base jusqu\'à 50 %.' },
+          { q: 'Quels sont les frais de Clore.ai ?', a: 'La documentation indique des frais de base de 10 % sur les commandes On-Demand et de 2,5 % sur les commandes Spot, répartis 50/50 entre locataire et hôte (consultée le 2026-11-22). Les locataires ne paient aucun frais de devise supplémentaire en CLORE, BTC, USDT ou USDC. La Proof-of-Holding peut réduire les frais de base jusqu\'à 50 %.' },
           { q: 'Quelle différence entre On-Demand et Spot sur Clore.ai ?', a: 'Les locations On-Demand ne peuvent pas être interrompues et reposent sur un prix hôte fixe par durée. Les locations Spot fonctionnent par enchères, et votre location prend fin si un autre locataire surenchérit. La documentation recommande Spot pour les travaux par lots, les tests et les travaux avec checkpoints.' },
-          { q: 'Qu\'est-ce que la Proof-of-Holding ?', a: 'La Proof-of-Holding (PoH) consiste à détenir du CLORE sur la plateforme. La documentation donne une réduction des frais de base de 5 % à 200,000 CLORE jusqu\'à 50 % à 2,000,000 CLORE ou plus, sans blocage ni pénalité. Elle ne réduit pas les frais supplémentaires liés aux devises, et détenir du CLORE comporte un risque de variation du cours du jeton.' },
-          { q: 'Quelles devises puis-je déposer sur Clore.ai ?', a: 'CLORE (ERC-20, minimum 2,000), Bitcoin (pas de minimum), et USDT ou USDC sur Ethereum ou BNB Chain (minimum 10 $). Les jetons envoyés sur d\'autres réseaux sont irrécupérables, selon la documentation.' },
+          { q: 'Qu\'est-ce que la Proof-of-Holding ?', a: 'La Proof-of-Holding (PoH) consiste à détenir du CLORE sur la plateforme. La documentation donne une réduction des frais de base de 5 % à 200 000 CLORE jusqu\'à 50 % à 2 000 000 CLORE ou plus, sans blocage ni pénalité. Elle ne réduit pas les frais supplémentaires liés aux devises, et détenir du CLORE comporte un risque de variation du cours du jeton.' },
+          { q: 'Quelles devises puis-je déposer sur Clore.ai ?', a: 'CLORE (ERC-20, minimum 2 000), Bitcoin (pas de minimum), et USDT ou USDC sur Ethereum ou BNB Chain (minimum 10 $). Les jetons envoyés sur d\'autres réseaux sont irrécupérables, selon la documentation.' },
           { q: 'Puis-je payer Clore.ai par carte bancaire ?', a: 'La documentation examinée par PromptQuorum ne liste que des dépôts en crypto : CLORE, BTC, USDT et USDC. Aucune option de carte n\'y est documentée.' },
-          { q: 'Clore.ai est-il sûr pour des données sensibles ou privées ?', a: 'Non. Les serveurs sont exploités par des hôtes communautaires indépendants et la documentation ne donne aucune garantie de protection des données. Les données du conteneur sont perdues à la fin d\'une commande. Réservez-le aux charges non sensibles.' },
+          { q: 'Clore.ai est-il sûr pour des données sensibles ou privées ?', a: 'Déconseillé. Les serveurs sont exploités par des hôtes communautaires indépendants et la documentation de Clore.ai ne donne aucune garantie de protection des données ni de confidentialité. Les données du conteneur sont perdues à la fin d\'une commande. Réservez-le aux charges non sensibles.' },
           { q: 'Puis-je exécuter Ollama ou vLLM sur Clore.ai ?', a: 'Vous vous connectez aux serveurs loués en SSH et pouvez installer vos propres logiciels, mais la documentation examinée par PromptQuorum ne mentionne pas d\'images Ollama ou vLLM. Consultez d\'abord les images disponibles sur la place de marché.' },
-          { q: 'Que se passe-t-il si un hôte Clore.ai passe hors ligne ?', a: 'La FAQ indique que la plateforme « peut accorder une compensation partielle selon les circonstances » : la compensation n\'est donc pas garantie. Pour les travaux qui ne doivent pas être interrompus, la documentation recommande les locations On-Demand.' },
+          { q: 'Que se passe-t-il si un hôte Clore.ai passe hors ligne ?', a: 'La FAQ indique que la plateforme peut accorder une compensation partielle selon les circonstances : la compensation n\'est donc pas garantie. Pour les travaux qui ne doivent pas être interrompus, la documentation recommande les locations On-Demand.' },
           { q: 'Comment Clore.ai se compare-t-il à Vast.ai ?', a: 'Les deux sont des places de marché avec des GPU fournis par des hôtes. Clore.ai est bâti autour des paiements en crypto et d\'un jeton CLORE avec des remises Proof-of-Holding. Voir le [test de Vast.ai](/fr/power-local-llm/vast-ai-review) pour son modèle et ses tarifs.' },
         ],
       },
@@ -964,7 +967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Test de Clore.ai (2026) : place de marché de GPU payée en crypto pour les LLM',
       reviewBody:
-        'Clore.ai est une place de marché décentralisée de GPU avec des prix fixés par les hôtes et des paiements en crypto (CLORE, BTC, USDT, USDC). Sa documentation indique des frais de base de 10 % On-Demand et de 2.5 % Spot, réductibles jusqu\'à 50 % avec la Proof-of-Holding. Le matériel appartient à des hôtes indépendants : les données sensibles ne doivent donc pas y être exécutées. L\'évaluation de PromptQuorum lui attribue 6.8/10 au global, d\'après la documentation officielle, et non d\'après un test pratique.',
+        'Clore.ai est une place de marché décentralisée de GPU avec des prix fixés par les hôtes et des paiements en crypto (CLORE, BTC, USDT, USDC). Sa documentation indique des frais de base de 10 % On-Demand et de 2,5 % Spot, réductibles jusqu\'à 50 % avec la Proof-of-Holding. Le matériel appartient à des hôtes indépendants : les données sensibles ne doivent donc pas y être exécutées. L\'évaluation de PromptQuorum lui attribue 6,8/10 au global, d\'après la documentation officielle, et non d\'après un test pratique.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -999,11 +1002,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análisis de Clore.ai (2026): marketplace de GPUs con pago en cripto para LLMs',
     seoTitle: 'Análisis de Clore.ai 2026: marketplace de GPUs en cripto',
     intro:
-      'Clore.ai es un marketplace descentralizado de GPUs: hosts de la comunidad listan sus propias GPUs, los inquilinos pagan en cripto y la plataforma cobra una comisión. Es una de varias opciones de nuestra guía de los [mejores proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers), y el proveedor de ese grupo construido en torno a los pagos en cripto (CLORE, Bitcoin o stablecoins). Los docs oficiales ([docs.clore.ai](https://docs.clore.ai)) indican comisiones base del 10% para On-Demand y del 2.5% para pedidos Spot, y Proof-of-Holding (PoH) las reduce hasta un 50%. Este análisis cubre cómo funcionan las comisiones, los depósitos y los tipos de alquiler, qué significa eso para la inferencia y el fine-tuning de LLMs y cuáles son los riesgos. Los hechos proceden de las propias páginas de Clore.ai, consultadas el 2026-11-22; no es una prueba práctica de laboratorio.',
+      'Clore.ai es un marketplace descentralizado de GPUs: hosts de la comunidad listan sus propias GPUs, los inquilinos pagan en cripto y la plataforma cobra una comisión. Es una de varias opciones de nuestra guía de los [mejores proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers), y el proveedor de ese grupo construido en torno a los pagos en cripto (CLORE, Bitcoin o stablecoins). Los docs oficiales ([docs.clore.ai](https://docs.clore.ai)) indican comisiones base del 10% para On-Demand y del 2,5% para pedidos Spot, y Proof-of-Holding (PoH) las reduce hasta un 50%. Este análisis cubre cómo funcionan las comisiones, los depósitos y los tipos de alquiler, qué significa eso para la inferencia y el fine-tuning de LLMs y cuáles son los riesgos. Los hechos proceden de las propias páginas de Clore.ai, consultadas el 2026-11-22; no es una prueba práctica de laboratorio.',
     metaDescription:
-      'Análisis de Clore.ai 2026: marketplace de GPUs de la comunidad con pago en cripto. Comisiones On-Demand vs Spot (10% / 2.5%), Proof-of-Holding y riesgos.',
+      'Análisis de Clore.ai 2026: marketplace de GPUs de la comunidad con pago en cripto. Comisiones On-Demand vs Spot (10% / 2,5%), Proof-of-Holding y riesgos.',
     twitterDescription:
-      'Clore.ai (2026): marketplace de GPUs con pago en cripto. Comisión base 10% On-Demand / 2.5% Spot, hasta 50% menos con Proof-of-Holding. Puntuación, depósitos y por qué los datos sensibles no van en hosts de la comunidad.',
+      'Clore.ai (2026): marketplace de GPUs con pago en cripto. Comisión base 10% On-Demand / 2,5% Spot, hasta 50% menos con Proof-of-Holding. Puntuación, depósitos y por qué los datos sensibles no van en hosts de la comunidad.',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que alquilan GPUs para inferencia o fine-tuning de LLMs y se sienten cómodos pagando en cripto',
@@ -1018,16 +1021,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'marketplace descentralizado de gpu',
     ],
     leadAnswerBlock:
-      '**Clore.ai es un marketplace de GPUs de la comunidad donde los pagos funcionan en cripto (CLORE, Bitcoin, USDT, USDC) y los docs indican una comisión base del 10% en pedidos On-Demand y del 2.5% en pedidos Spot, reducible hasta un 50% con Proof-of-Holding (consultado el 2026-11-22).** Valoración de PromptQuorum, basada en la documentación oficial de Clore.ai y no en una prueba práctica: 6.8/10 en conjunto. Encaja en experimentos con LLMs y trabajos por lotes tolerantes a fallos de desarrolladores que ya usan cripto. No encaja con datos sensibles, porque el hardware pertenece a hosts independientes. → [Consulta Clore.ai](https://clore.ai/)',
+      '**Clore.ai es un marketplace de GPUs de la comunidad donde los pagos funcionan en cripto (CLORE, Bitcoin, USDT, USDC) y los docs indican una comisión base del 10% en pedidos On-Demand y del 2,5% en pedidos Spot, reducible hasta un 50% con Proof-of-Holding (consultado el 2026-11-22).** Valoración de PromptQuorum, basada en la documentación oficial de Clore.ai y no en una prueba práctica: 6,8/10 en conjunto. Encaja en experimentos con LLMs y trabajos por lotes tolerantes a fallos de desarrolladores que ya usan cripto. No encaja con datos sensibles, porque el hardware pertenece a hosts independientes. → [Consulta Clore.ai](https://clore.ai/)',
     quickAnswerTop: {
       es: {
         question: '¿Es Clore.ai una buena forma de alquilar GPUs para trabajo con LLMs?',
         answer:
-          'Sí para experimentos con poco presupuesto y trabajos tolerantes a fallos, no para datos sensibles. Clore.ai lista GPUs aportadas por hosts independientes de la comunidad y cobra una comisión base del 10% (On-Demand) o del 2.5% (Spot), según sus docs (consultado el 2026-11-22). Los pagos y saldos están denominados en cripto: CLORE, Bitcoin o las stablecoins USDT/USDC en Ethereum o BNB Chain. Los alquileres On-Demand no se pueden interrumpir; los Spot terminan si otro inquilino puja más que tú. Los datos del contenedor se pierden al terminar un pedido y los docs no ofrecen un proceso formal de disputas.',
+          'Sí para experimentos y trabajos tolerantes a fallos, no para datos sensibles. Clore.ai lista GPUs aportadas por hosts independientes de la comunidad y cobra una comisión base del 10% (On-Demand) o del 2,5% (Spot), según sus docs (consultado el 2026-11-22). Los pagos y saldos están denominados en cripto: CLORE, Bitcoin o las stablecoins USDT/USDC en Ethereum o BNB Chain. Los alquileres On-Demand no se pueden interrumpir; los Spot terminan si otro inquilino puja más que tú. Los datos del contenedor se pierden al terminar un pedido y los docs no ofrecen un proceso formal de disputas.',
         bullets: [
           'Modelo: marketplace entre pares, los hosts fijan los precios, según los docs de Clore.ai',
-          'Comisiones: comisión base 10% On-Demand / 2.5% Spot, repartida 50/50 entre inquilino y host',
-          'Proof-of-Holding: hasta 50% menos en las comisiones base con 2,000,000 CLORE en posesión',
+          'Comisiones: comisión base 10% On-Demand / 2,5% Spot, repartida 50/50 entre inquilino y host',
+          'Proof-of-Holding: hasta 50% menos en las comisiones base con 2.000.000 CLORE en posesión',
           'Pagos: CLORE, BTC, USDT, USDC; las stablecoins solo en Ethereum o BNB Chain',
           'Riesgo: hosts de la comunidad, sin garantía declarada de protección de datos, sin proceso formal de disputas en los docs',
         ],
@@ -1051,7 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Clore.ai es un marketplace descentralizado de GPUs donde hosts de la comunidad alquilan GPUs y los inquilinos pagan en cripto, con comisiones base documentadas del 10% (On-Demand) y del 2.5% (Spot).' },
+      { type: 'one-sentence', content: 'Clore.ai es un marketplace descentralizado de GPUs donde hosts de la comunidad alquilan GPUs y los inquilinos pagan en cripto, con comisiones base documentadas del 10% (On-Demand) y del 2,5% (Spot).' },
       { type: 'plain-terms', content: 'Piensa en Clore.ai como un sitio de anuncios clasificados de GPUs. Quien tiene tarjetas gráficas de sobra las lista, tú eliges una y pagas con cripto, y el sitio se queda con una pequeña parte. Puede ser barato y flexible, pero las máquinas son de desconocidos, así que sirve para experimentos, no para datos privados.' },
     ],
     sections: {
@@ -1082,12 +1085,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Valoración de PromptQuorum basada en la documentación oficial de Clore.ai, no en una prueba práctica de laboratorio.** Las puntuaciones reflejan la idoneidad específicamente para inferencia y fine-tuning de LLMs.',
         columns: ['Categoría', 'Puntuación', 'Motivo'],
         rows: [
-          { 'Categoría': 'Precio', 'Puntuación': '7.5/10', 'Motivo': 'Precios fijados por hosts y comisión base 10% / 2.5%; sin verificar precios en vivo' },
-          { 'Categoría': 'Fiabilidad', 'Puntuación': '5.5/10', 'Motivo': 'Hosts independientes; los docs dicen que varía y que no se garantiza compensación' },
+          { 'Categoría': 'Precio', 'Puntuación': '7,5/10', 'Motivo': 'Estructura de comisiones documentada (10% / 2,5%); sin precios de GPU revisados, puntuado solo por comisiones' },
+          { 'Categoría': 'Fiabilidad', 'Puntuación': '5,5/10', 'Motivo': 'Hosts independientes; los docs dicen que varía y que no se garantiza compensación' },
           { 'Categoría': 'Facilidad de configuración', 'Puntuación': '6/10', 'Motivo': 'SSH y Jupyter documentados; financiar en cripto añade pasos' },
           { 'Categoría': 'Variedad de GPUs', 'Puntuación': '8/10', 'Motivo': 'Filtros por modelo de GPU, precio, disco, CPU y red' },
-          { 'Categoría': 'Soporte y docs', 'Puntuación': '6.5/10', 'Motivo': 'Docs claros; soporte por portal, correo y Discord, sin disputas formales' },
-          { 'Categoría': 'Global', 'Puntuación': '6.8/10', 'Motivo': 'Flexible y barato para empezar, pero no apto para datos sensibles' },
+          { 'Categoría': 'Soporte y docs', 'Puntuación': '6,5/10', 'Motivo': 'Docs claros; soporte por portal, correo y Discord, sin proceso formal de disputas en los docs' },
+          { 'Categoría': 'Global', 'Puntuación': '6,8/10', 'Motivo': 'Flexible para empezar, pero no apto para datos sensibles' },
         ],
         note: 'Valoración de PromptQuorum derivada de las páginas oficiales de Clore.ai (consulta "Cómo evaluamos"). PromptQuorum no alquiló ni hizo benchmarks de GPUs en Clore.ai para este análisis.',
       },
@@ -1097,8 +1100,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Clore.ai es un marketplace de GPUs entre pares; los hosts fijan los precios, según sus docs (consultado el 2026-11-22)',
-          'Comisión base: 10% On-Demand, 2.5% Spot, repartida 50/50 entre inquilino y host',
-          'Proof-of-Holding reduce las comisiones base hasta un 50% (con 2,000,000 CLORE en posesión); no se indica bloqueo',
+          'Comisión base: 10% On-Demand, 2,5% Spot, repartida 50/50 entre inquilino y host',
+          'Proof-of-Holding reduce las comisiones base hasta un 50% (con 2.000.000 CLORE en posesión); no se indica bloqueo',
           'Pagos: CLORE, Bitcoin, USDT y USDC; las stablecoins solo en Ethereum o BNB Chain',
           'On-Demand no se puede interrumpir; Spot termina si te superan en la puja',
           'El hardware pertenece a hosts de la comunidad: no ejecutes datos sensibles ahí',
@@ -1109,7 +1112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto: quién debería usar Clore.ai',
         content:
-          '**Usa Clore.ai si te sientes cómodo con los pagos en cripto y tu trabajo con LLMs puede sobrevivir a que un host se desconecte.** Su modelo de comisiones documentado es transparente: una comisión base del 10% en pedidos On-Demand y del 2.5% en pedidos Spot, con descuentos de Proof-of-Holding encima. La contrapartida es la confianza. Los hosts son operadores independientes, los docs indican que la compensación tras una caída no está garantizada y los datos del contenedor desaparecen al terminar un pedido.\n\n**Clore.ai no es el lugar para datos privados, cargas reguladas ni nada que requiera un acuerdo de servicio formal.** Para eso, usa un proveedor con infraestructura operada por una empresa. Para una comparación de marketplace más cercana, lee el [análisis de Vast.ai](/es/power-local-llm/vast-ai-review) y después el [análisis de RunPod](/es/power-local-llm/runpod-review).',
+          '**Usa Clore.ai si te sientes cómodo con los pagos en cripto y tu trabajo con LLMs puede sobrevivir a que un host se desconecte.** Su modelo de comisiones documentado es transparente: una comisión base del 10% en pedidos On-Demand y del 2,5% en pedidos Spot, con descuentos de Proof-of-Holding encima. La contrapartida es la confianza. Los hosts son operadores independientes, los docs indican que la compensación tras una caída no está garantizada y los datos del contenedor desaparecen al terminar un pedido.\n\n**Clore.ai no es el lugar para datos privados, cargas reguladas ni nada que requiera un acuerdo de servicio formal.** Para eso, usa un proveedor con infraestructura operada por una empresa. Para una comparación de marketplace más cercana, lee el [análisis de Vast.ai](/es/power-local-llm/vast-ai-review) y después el [análisis de RunPod](/es/power-local-llm/runpod-review).',
         affiliateLinks: [
           { label: 'Consulta Clore.ai →', url: 'https://clore.ai/', productName: 'Clore.ai GPU marketplace', productCategory: 'GPU Cloud' },
         ],
@@ -1122,7 +1125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Aspecto', 'On-Demand', 'Spot'],
         rows: [
           { 'Aspecto': 'Interrupción', 'On-Demand': 'No se puede quitar', 'Spot': 'Te pueden superar en cualquier momento' },
-          { 'Aspecto': 'Comisión base', 'On-Demand': '10%', 'Spot': '2.5%' },
+          { 'Aspecto': 'Comisión base', 'On-Demand': '10%', 'Spot': '2,5%' },
           { 'Aspecto': 'Precio', 'On-Demand': 'Precio fijo del host por plazo', 'Spot': 'Puja, +1% sobre la mayor' },
           { 'Aspecto': 'Si te superan', 'On-Demand': 'No aplica', 'Spot': 'El alquiler termina, cesa la facturación' },
           { 'Aspecto': 'Los docs sugieren', 'On-Demand': 'Entrenamiento, producción', 'Spot': 'Lotes, pruebas, trabajos con checkpoints' },
@@ -1141,17 +1144,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Concepto', 'Valor documentado', 'Fuente'],
         rows: [
           { 'Concepto': 'Comisión base On-Demand', 'Valor documentado': '10% (50/50 inquilino/host)', 'Fuente': '[Estructura de comisiones](https://docs.clore.ai/for-renters/fee-structure)' },
-          { 'Concepto': 'Comisión base Spot', 'Valor documentado': '2.5% (50/50)', 'Fuente': '[Estructura de comisiones](https://docs.clore.ai/for-renters/fee-structure)' },
+          { 'Concepto': 'Comisión base Spot', 'Valor documentado': '2,5% (50/50)', 'Fuente': '[Estructura de comisiones](https://docs.clore.ai/for-renters/fee-structure)' },
           { 'Concepto': 'Comisión extra del inquilino', 'Valor documentado': '0% en CLORE, BTC, USDT, USDC', 'Fuente': '[Estructura de comisiones](https://docs.clore.ai/for-renters/fee-structure)' },
           { 'Concepto': 'Reducción PoH', 'Valor documentado': '5% con 200k hasta 50% con 2M CLORE', 'Fuente': '[Resumen de PoH](https://docs.clore.ai/proof-of-holding/overview)' },
-          { 'Concepto': 'Depósito en CLORE', 'Valor documentado': 'Mín. 2,000 CLORE (ERC-20)', 'Fuente': '[Depósitos](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
+          { 'Concepto': 'Depósito en CLORE', 'Valor documentado': 'Mín. 2.000 CLORE (ERC-20)', 'Fuente': '[Depósitos](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
           { 'Concepto': 'Depósito en USDT/USDC', 'Valor documentado': 'Mín. $10; Ethereum o BNB Chain', 'Fuente': '[Depósitos](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
           { 'Concepto': 'Depósito en Bitcoin', 'Valor documentado': 'Sin mínimo; 3 confirmaciones', 'Fuente': '[Depósitos](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
         ],
         items: [
           '**Ejemplo práctico de los docs:** un alquiler On-Demand de 100 CLORE/día pagado en CLORE sin PoH le cuesta al inquilino 105 CLORE (el precio listado más una parte del 5% de la comisión base del 10%).',
-          '**Proof-of-Holding:** los docs dan la reducción como `round(min(PoH / 2,000,000, 1) × 50)%`: 200,000 CLORE dan un 5%, 1,000,000 dan un 25%, 2,000,000 o más dan un 50%. Los docs describen PoH como sin bloqueos ni penalizaciones. No reduce las comisiones extra de divisa. Poseer CLORE conlleva riesgo de precio del token que el descuento en comisiones no compensa. Esta reseña describe el modelo de comisiones documentado de Clore.ai; no es asesoramiento financiero ni de inversión. Los criptoactivos son volátiles, así que no poseas más CLORE del que puedas permitirte perder y comprueba las normas que te apliquen.',
-          '**Retiradas:** CLORE mínimo 200 (unos $0.50 de comisión de red); USDT/USDC mínimo $10, máximo $1,000 por retirada, comisión de $1; Bitcoin mínimo 0.0001 BTC. Los tokens enviados a una red distinta de Ethereum o BNB Chain no se pueden recuperar.',
+          '**Proof-of-Holding:** los docs dan la reducción como `round(min(PoH / 2,000,000, 1) × 50)%`: 200.000 CLORE dan un 5%, 1.000.000 dan un 25%, 2.000.000 o más dan un 50%. Los docs describen PoH como sin bloqueos ni penalizaciones. No reduce las comisiones extra de divisa. Poseer CLORE conlleva riesgo de precio del token que el descuento en comisiones no compensa. Esta reseña describe el modelo de comisiones documentado de Clore.ai; no es asesoramiento financiero ni de inversión. Los criptoactivos son volátiles, así que no poseas más CLORE del que puedas permitirte perder y comprueba las normas que te apliquen.',
+          '**Retiradas:** CLORE mínimo 200 (unos $0,50 de comisión de red); USDT/USDC mínimo $10, máximo $1.000 por retirada, comisión de $1; Bitcoin mínimo 0,0001 BTC. Los tokens enviados a una red distinta de Ethereum o BNB Chain no se pueden recuperar.',
           '**Reembolsos:** la página de depósitos no cubre las reglas de reembolso; consulta Riesgo y confianza más abajo.',
         ],
       },
@@ -1159,12 +1162,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: 'Idoneidad para inferencia y fine-tuning de LLMs',
         content:
-          '**Qué modelo cabe depende de la VRAM de la GPU que alquiles, no de Clore.ai.** Usa los datos de VRAM de nuestras hojas de referencia: en Q4_K_M, un modelo de 7B necesita unos 5.5 GB, 14B unos 9.5 GB, 32B unos 20.5 GB y 70B unos 44 GB, así que 70B necesita una tarjeta de 48 GB o dos GPUs ([hoja de referencia de VRAM de los destilados de DeepSeek-R1](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Como el marketplace de Clore.ai lo listan los hosts y está en vivo, comprueba qué tarjetas hay realmente disponibles antes de planificar.',
+          '**Qué modelo cabe depende de la VRAM de la GPU que alquiles, no de Clore.ai.** Usa los datos de VRAM de nuestras hojas de referencia: en Q4_K_M, un modelo de 7B necesita unos 5,5 GB, 14B unos 9,5 GB, 32B unos 20,5 GB y 70B unos 44 GB, así que 70B necesita una tarjeta de 48 GB o dos GPUs ([hoja de referencia de VRAM de los destilados de DeepSeek-R1](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Como el marketplace de Clore.ai lo listan los hosts y está en vivo, comprueba qué tarjetas hay realmente disponibles antes de planificar.',
         columns: ['Tamaño (Q4_K_M)', 'VRAM necesaria', 'Clase de GPU'],
         rows: [
-          { 'Tamaño (Q4_K_M)': '7B / 8B', 'VRAM necesaria': '~5.5 GB', 'Clase de GPU': 'Tarjeta de 8 GB o más' },
-          { 'Tamaño (Q4_K_M)': '14B', 'VRAM necesaria': '~9.5 GB', 'Clase de GPU': 'Tarjeta de 16 GB' },
-          { 'Tamaño (Q4_K_M)': '32B', 'VRAM necesaria': '~20.5 GB', 'Clase de GPU': 'Tarjeta de 24 GB (justa)' },
+          { 'Tamaño (Q4_K_M)': '7B', 'VRAM necesaria': '~5,5 GB', 'Clase de GPU': 'Tarjeta de 8 GB o más' },
+          { 'Tamaño (Q4_K_M)': '8B', 'VRAM necesaria': '~6 GB', 'Clase de GPU': 'Tarjeta de 8 GB o más' },
+          { 'Tamaño (Q4_K_M)': '14B', 'VRAM necesaria': '~9,5 GB', 'Clase de GPU': 'Tarjeta de 16 GB' },
+          { 'Tamaño (Q4_K_M)': '32B', 'VRAM necesaria': '~20,5 GB', 'Clase de GPU': 'Tarjeta de 24 GB (justa)' },
           { 'Tamaño (Q4_K_M)': '70B', 'VRAM necesaria': '~44 GB', 'Clase de GPU': '48 GB o doble GPU' },
         ],
         items: [
@@ -1203,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Un marketplace flexible y nativo de cripto con reglas de comisiones claras y una brecha real de confianza.**',
         items: [
           '**Pros**',
-          'Estructura de comisiones documentada con una comisión base baja del 2.5% en Spot',
+          'Estructura de comisiones documentada con una comisión base baja del 2,5% en Spot',
           'Hasta 50% de reducción de comisiones con Proof-of-Holding, sin bloqueo según los docs',
           'Cuatro divisas de pago y un flujo SSH y Jupyter documentado',
           'El marketplace filtra por modelo de GPU, precio, disco, CPU, red y valoración del servidor',
@@ -1257,12 +1261,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es Clore.ai?', a: 'Clore.ai es un marketplace descentralizado de GPUs donde los propietarios listan hardware y los inquilinos pagan por usarlo. Según sus docs, los hosts fijan sus propios precios y los pagos funcionan en cripto (CLORE, Bitcoin, USDT, USDC).' },
-          { q: '¿Cuáles son las comisiones de Clore.ai?', a: 'Los docs indican una comisión base del 10% en pedidos On-Demand y del 2.5% en pedidos Spot, repartida 50/50 entre inquilino y host (consultado el 2026-11-22). Los inquilinos no pagan comisión extra de divisa en CLORE, BTC, USDT ni USDC. Proof-of-Holding puede reducir la comisión base hasta un 50%.' },
+          { q: '¿Cuáles son las comisiones de Clore.ai?', a: 'Los docs indican una comisión base del 10% en pedidos On-Demand y del 2,5% en pedidos Spot, repartida 50/50 entre inquilino y host (consultado el 2026-11-22). Los inquilinos no pagan comisión extra de divisa en CLORE, BTC, USDT ni USDC. Proof-of-Holding puede reducir la comisión base hasta un 50%.' },
           { q: '¿Cuál es la diferencia entre On-Demand y Spot en Clore.ai?', a: 'Los alquileres On-Demand no se pueden interrumpir y usan un precio fijo del host por plazo. Los alquileres Spot se basan en pujas, y tu alquiler termina si otro inquilino puja más que tú. Los docs sugieren Spot para trabajos por lotes, pruebas y trabajo con checkpoints.' },
-          { q: '¿Qué es Proof-of-Holding?', a: 'Proof-of-Holding (PoH) consiste en poseer CLORE en la plataforma. Los docs dan una reducción de la comisión base desde un 5% con 200,000 CLORE hasta un 50% con 2,000,000 CLORE o más, sin bloqueos ni penalizaciones. No reduce las comisiones extra de divisa, y poseer CLORE conlleva riesgo de precio del token.' },
-          { q: '¿Qué divisas puedo depositar en Clore.ai?', a: 'CLORE (ERC-20, mínimo 2,000), Bitcoin (sin mínimo), y USDT o USDC en Ethereum o BNB Chain (mínimo $10). Los tokens enviados a otras redes no se pueden recuperar, según los docs.' },
+          { q: '¿Qué es Proof-of-Holding?', a: 'Proof-of-Holding (PoH) consiste en poseer CLORE en la plataforma. Los docs dan una reducción de la comisión base desde un 5% con 200.000 CLORE hasta un 50% con 2.000.000 CLORE o más, sin bloqueos ni penalizaciones. No reduce las comisiones extra de divisa, y poseer CLORE conlleva riesgo de precio del token.' },
+          { q: '¿Qué divisas puedo depositar en Clore.ai?', a: 'CLORE (ERC-20, mínimo 2.000), Bitcoin (sin mínimo), y USDT o USDC en Ethereum o BNB Chain (mínimo $10). Los tokens enviados a otras redes no se pueden recuperar, según los docs.' },
           { q: '¿Puedo pagar Clore.ai con tarjeta de crédito?', a: 'La documentación que PromptQuorum revisó lista solo depósitos en cripto: CLORE, BTC, USDT y USDC. No se documenta allí ninguna opción de tarjeta.' },
-          { q: '¿Es Clore.ai seguro para datos sensibles o privados?', a: 'No. Los servidores los operan hosts independientes de la comunidad y los docs no dan ninguna garantía de protección de datos. Los datos del contenedor se pierden al terminar un pedido. Úsalo solo para cargas no sensibles.' },
+          { q: '¿Es Clore.ai seguro para datos sensibles o privados?', a: 'No recomendado. Los servidores los operan hosts independientes de la comunidad y los docs de Clore.ai no dan ninguna garantía de protección de datos ni de confidencialidad. Los datos del contenedor se pierden al terminar un pedido. Úsalo solo para cargas no sensibles.' },
           { q: '¿Puedo ejecutar Ollama o vLLM en Clore.ai?', a: 'Te conectas a los servidores alquilados por SSH y puedes instalar tu propio software, pero los docs que PromptQuorum revisó no mencionan imágenes de Ollama ni de vLLM. Comprueba antes las imágenes disponibles en el marketplace.' },
           { q: '¿Qué pasa si un host de Clore.ai se desconecta?', a: 'La FAQ dice que la plataforma "may provide partial compensation depending on circumstances", así que la compensación no está garantizada. Para trabajo que no se puede interrumpir, los docs recomiendan alquileres On-Demand.' },
           { q: '¿Cómo se compara Clore.ai con Vast.ai?', a: 'Ambos son marketplaces con GPUs aportadas por hosts. Clore.ai está construido en torno a los pagos en cripto y un token CLORE con descuentos de Proof-of-Holding. Consulta el [análisis de Vast.ai](/es/power-local-llm/vast-ai-review) para ver su modelo y sus precios.' },
@@ -1291,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Análisis de Clore.ai (2026): marketplace de GPUs con pago en cripto para LLMs',
       reviewBody:
-        'Clore.ai es un marketplace descentralizado de GPUs con precios fijados por los hosts y pagos en cripto (CLORE, BTC, USDT, USDC). Sus docs indican comisiones base del 10% On-Demand y del 2.5% Spot, reducibles hasta un 50% con Proof-of-Holding. El hardware pertenece a hosts independientes, así que los datos sensibles no deben ejecutarse ahí. La valoración de PromptQuorum le da 6.8/10 en conjunto según la documentación oficial, no una prueba práctica.',
+        'Clore.ai es un marketplace descentralizado de GPUs con precios fijados por los hosts y pagos en cripto (CLORE, BTC, USDT, USDC). Sus docs indican comisiones base del 10% On-Demand y del 2,5% Spot, reducibles hasta un 50% con Proof-of-Holding. El hardware pertenece a hosts independientes, así que los datos sensibles no deben ejecutarse ahí. La valoración de PromptQuorum le da 6,8/10 en conjunto según la documentación oficial, no una prueba práctica.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -1350,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'Clore.aiはLLM作業用にGPUを借りる方法として適していますか？',
         answer:
-          '予算重視の実験や障害に強いジョブには適していますが、機微なデータには向きません。Clore.aiは独立したコミュニティホストが提供するGPUを掲載し、ドキュメント（2026-11-22確認）によると、基本手数料はオンデマンドで10%、スポットで2.5%です。支払いと残高は暗号資産建てで、CLORE、ビットコイン、またはEthereumかBNB Chain上のUSDT/USDCステーブルコインです。オンデマンドのレンタルは中断されませんが、スポットのレンタルは他の利用者に高い入札で上回られると終了します。注文が終了するとコンテナのデータは失われ、ドキュメントには正式な紛争処理の仕組みがありません。',
+          '実験や障害に強いジョブには適していますが、機微なデータには向きません。Clore.aiは独立したコミュニティホストが提供するGPUを掲載し、ドキュメント（2026-11-22確認）によると、基本手数料はオンデマンドで10%、スポットで2.5%です。支払いと残高は暗号資産建てで、CLORE、ビットコイン、またはEthereumかBNB Chain上のUSDT/USDCステーブルコインです。オンデマンドのレンタルは中断されませんが、スポットのレンタルは他の利用者に高い入札で上回られると終了します。注文が終了するとコンテナのデータは失われ、ドキュメントには正式な紛争処理の仕組みがありません。',
         bullets: [
           'モデル：ピアツーピアのマーケットプレイス。Clore.aiのドキュメントによると、価格はホストが設定',
           '手数料：基本手数料はオンデマンド10%／スポット2.5%。利用者とホストで50/50に分担',
@@ -1379,7 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Clore.aiは、コミュニティホストがGPUを貸し出し、利用者が暗号資産で支払う分散型のGPUマーケットプレイスで、基本手数料はオンデマンド10%、スポット2.5%とドキュメントに記載されています。' },
-      { type: 'plain-terms', content: 'Clore.aiは、GPUの掲示板サイトのようなものです。余っているグラフィックスカードを持つ人が出品し、利用者は1台を選んで暗号資産で支払い、サイトが少額を手数料として受け取ります。安く柔軟に使えますが、マシンは見知らぬ人の所有物なので、実験向けで、プライベートなデータには向きません。' },
+      { type: 'plain-terms', content: 'Clore.aiは、GPUの掲示板サイトのようなものです。余っているグラフィックスカードを持つ人が出品し、利用者は1台を選んで暗号資産で支払い、サイトが少額を手数料として受け取ります。安く柔軟に使える場合もありますが、マシンは見知らぬ人の所有物なので、実験向けで、プライベートなデータには向きません。' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -1409,11 +1413,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**PromptQuorumの評価です。Clore.aiの公式ドキュメントに基づくもので、実機ラボテストではありません。** スコアは、LLMの推論とファインチューニング作業への適合度に絞って示しています。',
         columns: ['項目', 'スコア', '理由'],
         rows: [
-          { '項目': '価格', 'スコア': '7.5/10', '理由': 'ホスト設定の価格と10%／2.5%の基本手数料。リアルタイム価格は未確認' },
+          { '項目': '価格', 'スコア': '7.5/10', '理由': '手数料体系は文書化済み（10%／2.5%）。GPU価格は未確認のため、手数料のみで評価' },
           { '項目': '信頼性', 'スコア': '5.5/10', '理由': '独立ホスト。信頼性は変動し、補償は保証されないと記載' },
           { '項目': '導入のしやすさ', 'スコア': '6/10', '理由': 'SSHとJupyterの資料あり。暗号資産の入金で手順が増える' },
           { '項目': 'GPUの選択肢', 'スコア': '8/10', '理由': 'GPUモデル、価格、ディスク、CPU、ネットワークで絞り込める' },
-          { '項目': 'サポートとドキュメント', 'スコア': '6.5/10', '理由': '資料は明確。サポートはポータル、メール、Discord。正式な紛争処理なし' },
+          { '項目': 'サポートとドキュメント', 'スコア': '6.5/10', '理由': '資料は明確。サポートはポータル、メール、Discord。正式な紛争処理はドキュメントに記載なし' },
           { '項目': '総合', 'スコア': '6.8/10', '理由': '柔軟で始めやすいが、機微なデータには不向き' },
         ],
         note: 'PromptQuorumの評価で、Clore.aiの公式ページ（「評価方法」を参照）に基づきます。PromptQuorumは、このレビューのためにClore.ai上でGPUを借りたりベンチマークしたりしていません。',
@@ -1489,7 +1493,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**どのモデルが動くかは、Clore.aiではなく、借りるGPUのVRAMで決まります。** PromptQuorumのチートシートのVRAM情報を使います。Q4_K_Mでは、7Bモデルは約5.5GB、14Bは約9.5GB、32Bは約20.5GB、70Bは約44GBが必要なため、70Bには48GBカードか2枚のGPUが必要です（[DeepSeek-R1蒸留モデルのVRAMチートシート](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet)）。Clore.aiのマーケットプレイスはホストが出品するリアルタイムのため、計画前に実際に借りられるカードを確認してください。',
         columns: ['モデルサイズ（Q4_K_M）', '必要なVRAM', 'GPUクラス'],
         rows: [
-          { 'モデルサイズ（Q4_K_M）': '7B / 8B', '必要なVRAM': '~5.5 GB', 'GPUクラス': '8GB以上のカード' },
+          { 'モデルサイズ（Q4_K_M）': '7B', '必要なVRAM': '~5.5 GB', 'GPUクラス': '8GB以上のカード' },
+          { 'モデルサイズ（Q4_K_M）': '8B', '必要なVRAM': '~6 GB', 'GPUクラス': '8GB以上のカード' },
           { 'モデルサイズ（Q4_K_M）': '14B', '必要なVRAM': '~9.5 GB', 'GPUクラス': '16GBカード' },
           { 'モデルサイズ（Q4_K_M）': '32B', '必要なVRAM': '~20.5 GB', 'GPUクラス': '24GBカード（ぎりぎり）' },
           { 'モデルサイズ（Q4_K_M）': '70B', '必要なVRAM': '~44 GB', 'GPUクラス': '48GBまたはGPU 2枚' },
@@ -1589,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Proof-of-Holdingとは何ですか？', a: 'Proof-of-Holding（PoH）は、プラットフォームでCLOREを保有することです。ドキュメントでは、200,000 CLOREで5%、2,000,000 CLORE以上で50%の基本手数料の割引があり、ロックアップやペナルティはありません。通貨ごとの追加手数料は減額されず、CLOREの保有にはトークン価格のリスクがあります。' },
           { q: 'Clore.aiにはどの通貨で入金できますか？', a: 'CLORE（ERC-20、最低2,000）、ビットコイン（最低額なし）、そしてEthereumかBNB Chain上のUSDTまたはUSDC（最低10ドル）です。ドキュメントによると、他のネットワークに送ったトークンは回収できません。' },
           { q: 'Clore.aiにクレジットカードで支払えますか？', a: 'PromptQuorumが確認したドキュメントには、暗号資産（CLORE、BTC、USDT、USDC）での入金のみが記載されています。カードの選択肢は、そこには記載されていません。' },
-          { q: 'Clore.aiは機微なデータや私的なデータに安全ですか？', a: 'いいえ。サーバーは独立したコミュニティホストが運営しており、ドキュメントにデータ保護の保証はありません。注文が終了するとコンテナのデータは失われます。機微でないワークロードにのみ使ってください。' },
+          { q: 'Clore.aiは機微なデータや私的なデータに安全ですか？', a: 'おすすめしません。サーバーは独立したコミュニティホストが運営しており、Clore.aiのドキュメントにはデータ保護や機密性の保証はありません。注文が終了するとコンテナのデータは失われます。機微でないワークロードにのみ使ってください。' },
           { q: 'Clore.aiでOllamaやvLLMを動かせますか？', a: 'レンタルしたサーバーにはSSHで接続して自分のソフトウェアをインストールできますが、PromptQuorumが確認したドキュメントにOllamaやvLLMのイメージの記載はありません。まずマーケットプレイスで利用可能なイメージを確認してください。' },
           { q: 'Clore.aiのホストがオフラインになったらどうなりますか？', a: 'FAQには、プラットフォームが「may provide partial compensation depending on circumstances」とあり、補償は保証されません。中断できない作業には、ドキュメントはオンデマンドのレンタルを推奨しています。' },
           { q: 'Clore.aiはVast.aiとどう違いますか？', a: 'どちらもホストがGPUを提供するマーケットプレイスです。Clore.aiは暗号資産払いと、Proof-of-Holdingによる割引があるCLOREトークンを軸にしています。Vast.aiのモデルと料金は、[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)をご覧ください。' },
@@ -1677,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: 'Clore.ai 适合租用 GPU 来做 LLM 工作吗？',
         answer:
-          '适合预算有限的实验和能容忍中断的任务，不适合敏感数据。据其文档（核实于 2026-11-22），Clore.ai 列出由独立社区主机方提供的 GPU，并收取 10%（按需）或 2.5%（Spot）的基础手续费。付款和余额以加密货币计价：CLORE、比特币，或以太坊或 BNB Chain 上的 USDT/USDC 稳定币。按需租用不会被打断；Spot 租用在其他租用者出价更高时会结束。订单结束后容器数据会丢失，文档也没有提供正式的争议处理流程。',
+          '适合实验和能容忍中断的任务，不适合敏感数据。据其文档（核实于 2026-11-22），Clore.ai 列出由独立社区主机方提供的 GPU，并收取 10%（按需）或 2.5%（Spot）的基础手续费。付款和余额以加密货币计价：CLORE、比特币，或以太坊或 BNB Chain 上的 USDT/USDC 稳定币。按需租用不会被打断；Spot 租用在其他租用者出价更高时会结束。订单结束后容器数据会丢失，文档也没有提供正式的争议处理流程。',
         bullets: [
           '模式：点对点市场，价格由主机方设定，据 Clore.ai 文档',
           '手续费：按需 10% / Spot 2.5% 基础手续费，由租用者和主机方各承担一半',
@@ -1736,12 +1741,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**PromptQuorum 评估，依据 Clore.ai 官方文档，并非实机测试。** 评分专门反映其用于 LLM 推理和微调工作的适配程度。',
         columns: ['类别', '评分', '原因'],
         rows: [
-          { '类别': '价格', '评分': '7.5/10', '原因': '主机方定价加文档标明的 10% / 2.5% 基础手续费；实时价格未核实' },
+          { '类别': '价格', '评分': '7.5/10', '原因': '文档标明手续费结构（10% / 2.5%）；未核实 GPU 价格，仅按手续费评分' },
           { '类别': '可靠性', '评分': '5.5/10', '原因': '独立主机方；文档称可靠性不一，且不保证补偿' },
           { '类别': '上手难度', '评分': '6/10', '原因': '有 SSH 和 Jupyter 文档；加密货币充值增加步骤' },
           { '类别': 'GPU 选择', '评分': '8/10', '原因': '市场可按 GPU 型号、价格、磁盘、CPU、网络筛选' },
-          { '类别': '支持与文档', '评分': '6.5/10', '原因': '文档清晰；通过门户、邮件和 Discord 支持，无正式争议流程' },
-          { '类别': '综合', '评分': '6.8/10', '原因': '灵活且起步便宜，但不适合敏感数据' },
+          { '类别': '支持与文档', '评分': '6.5/10', '原因': '文档清晰；通过门户、邮件和 Discord 支持，文档中无正式争议流程' },
+          { '类别': '综合', '评分': '6.8/10', '原因': '灵活、易于起步，但不适合敏感数据' },
         ],
         note: 'PromptQuorum 评估，依据 Clore.ai 官方页面（见“我们的评测方法”）。PromptQuorum 没有为本评测在 Clore.ai 上租用或测试 GPU。',
       },
@@ -1816,7 +1821,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**能放下哪个模型取决于你所租 GPU 的显存，而不是 Clore.ai。** 请使用我们速查表中的显存数据：Q4_K_M 下，7B 模型约需 5.5 GB，14B 约 9.5 GB，32B 约 20.5 GB，70B 约 44 GB，因此 70B 需要 48 GB 显卡或两张 GPU（[DeepSeek-R1 蒸馏模型显存速查表](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet)）。由于 Clore.ai 的市场由主机方挂出且实时变化，规划之前请先查看实际有哪些显卡可用。',
         columns: ['模型规模（Q4_K_M）', '所需显存', 'GPU 级别'],
         rows: [
-          { '模型规模（Q4_K_M）': '7B / 8B', '所需显存': '~5.5 GB', 'GPU 级别': '8 GB 以上显卡' },
+          { '模型规模（Q4_K_M）': '7B', '所需显存': '~5.5 GB', 'GPU 级别': '8 GB 以上显卡' },
+          { '模型规模（Q4_K_M）': '8B', '所需显存': '~6 GB', 'GPU 级别': '8 GB 以上显卡' },
           { '模型规模（Q4_K_M）': '14B', '所需显存': '~9.5 GB', 'GPU 级别': '16 GB 显卡' },
           { '模型规模（Q4_K_M）': '32B', '所需显存': '~20.5 GB', 'GPU 级别': '24 GB 显卡（较紧）' },
           { '模型规模（Q4_K_M）': '70B', '所需显存': '~44 GB', 'GPU 级别': '48 GB 或双 GPU' },
@@ -1833,7 +1839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**市场型 GPU 适合可以重启的任务；若主机故障会造成实际损失或暴露数据，就不适合。**',
         items: [
           '**适合：** 批量推理、评估运行、对某种量化做基准测试、在 Spot 上带检查点的微调，以及在购买硬件前测试模型（参见[买还是租 RTX 3090](/zh/power-local-llm/rtx-3090-local-llm-buy-or-rent)）。',
-          '**可用按需完成：** 文档称“不可中断”的较长训练任务，并自行把备份保存到外部存储。',
+          '**可用按需完成：** 文档称“can\'t be interrupted”（不可中断）的较长训练任务，并自行把备份保存到外部存储。',
           '**不适合：** 客户数据、个人数据、受监管的工作负载，以及没有故障切换的常驻生产端点。',
           '**成本核对：** 用[自建与租用计算器](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026)把市场价格与自有硬件做比较。',
         ],
@@ -1845,9 +1851,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**付款和市场都以加密货币计价（据其文档，使用 CLORE 和 BTC，并通过 USDT 和 USDC 稳定币获得美元敞口），硬件由社区主机方提供，敏感数据不应在上面运行。** 以下各点来自 Clore.ai 自己的文档，核实于 2026-11-22。',
         items: [
           '**付款：** 接受 CLORE、比特币、USDT 和 USDC。稳定币共用一个美元余额。CLORE 是波动较大的代币，转到错误网络会损失资金。',
-          '**硬件来源：** 服务器“由世界各地的个人主机方拥有和运营”；可靠性不一，并以主机评分概括。',
+          '**硬件来源：** 服务器“owned and operated by individual hosts around the world”（由世界各地的个人主机方拥有和运营）；可靠性不一，并以主机评分概括。',
           '**数据处理：** FAQ 称订单到期或取消后容器数据会丢失，并要求租用者在外部备份。文档没有对主机方作出任何数据保护或保密保证。请把每次租用都视为不可信硬件。',
-          '**退款与补偿：** 如果服务器在租用期间下线，平台“视情况可能提供部分补偿”。文档中没有描述正式的争议处理流程；文档称取消订单时可附上问题说明，由团队调查。',
+          '**退款与补偿：** 如果服务器在租用期间下线，平台据文档称可能视情况提供部分补偿。文档中没有描述正式的争议处理流程；文档称取消订单时可附上问题说明，由团队调查。',
           '**账户安全：** 文档强烈建议启用 2FA，并称 API 密钥拥有完整的账户权限。',
         ],
       },
@@ -1916,9 +1922,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '什么是持币证明？', a: '持币证明（PoH）指在平台中持有 CLORE。文档给出的基础手续费减免从 200,000 CLORE 时的 5% 到 2,000,000 CLORE 或以上时的 50%，没有锁定期或罚款。它不减免额外的币种费用，且持有 CLORE 带有代币价格风险。' },
           { q: '在 Clore.ai 上可以用哪些币种充值？', a: 'CLORE（ERC-20，最低 2,000）、比特币（无最低额），以及以太坊或 BNB Chain 上的 USDT 或 USDC（最低 $10）。据文档，发送到其他网络的代币无法找回。' },
           { q: '可以用信用卡向 Clore.ai 付款吗？', a: 'PromptQuorum 查阅的文档只列出加密货币充值：CLORE、BTC、USDT 和 USDC。其中没有记载银行卡选项。' },
-          { q: 'Clore.ai 适合敏感或私密数据吗？', a: '不适合。服务器由独立的社区主机方运营，文档没有作出数据保护保证。订单结束后容器数据会丢失。请只用于非敏感工作负载。' },
+          { q: 'Clore.ai 适合敏感或私密数据吗？', a: '不推荐。服务器由独立的社区主机方运营，Clore.ai 的文档没有作出数据保护或保密性保证。订单结束后容器数据会丢失。请只用于非敏感工作负载。' },
           { q: '能在 Clore.ai 上运行 Ollama 或 vLLM 吗？', a: '你通过 SSH 连接租用的服务器，可以自行安装软件，但 PromptQuorum 查阅的文档没有提到 Ollama 或 vLLM 镜像。请先在市场上查看可用镜像。' },
-          { q: 'Clore.ai 的主机下线了会怎样？', a: 'FAQ 称平台“视情况可能提供部分补偿”，因此不保证补偿。对于不能中断的工作，文档建议使用按需租用。' },
+          { q: 'Clore.ai 的主机下线了会怎样？', a: 'FAQ 称平台可能视情况提供部分补偿，因此不保证补偿。对于不能中断的工作，文档建议使用按需租用。' },
           { q: 'Clore.ai 与 Vast.ai 相比如何？', a: '两者都是由主机方供应 GPU 的市场。Clore.ai 围绕加密货币支付和带持币证明折扣的 CLORE 代币构建。其模式和价格请参阅 [Vast.ai 评测](/zh/power-local-llm/vast-ai-review)。' },
         ],
       },
@@ -2004,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: 'Clore.ai는 LLM 작업용 GPU를 빌리기에 좋은 방법입니까?',
         answer:
-          '예산이 제한된 실험과 장애에 강한 작업에는 적합하지만, 민감한 데이터에는 적합하지 않습니다. Clore.ai는 독립 커뮤니티 호스트가 제공하는 GPU를 등록해 두며, 문서에 따라 기본 수수료 10%(온디맨드) 또는 2.5%(스팟)를 가져갑니다(2026-11-22 확인). 결제와 잔액은 암호화폐 단위입니다. CLORE, 비트코인, 또는 이더리움이나 BNB 체인의 USDT/USDC 스테이블코인입니다. 온디맨드 대여는 중단되지 않고, 스팟 대여는 다른 사용자가 더 높게 입찰하면 종료됩니다. 컨테이너 데이터는 주문이 끝나면 사라지며, 문서에는 공식적인 분쟁 처리 절차가 없습니다.',
+          '실험과 장애에 강한 작업에는 적합하지만, 민감한 데이터에는 적합하지 않습니다. Clore.ai는 독립 커뮤니티 호스트가 제공하는 GPU를 등록해 두며, 문서에 따라 기본 수수료 10%(온디맨드) 또는 2.5%(스팟)를 가져갑니다(2026-11-22 확인). 결제와 잔액은 암호화폐 단위입니다. CLORE, 비트코인, 또는 이더리움이나 BNB 체인의 USDT/USDC 스테이블코인입니다. 온디맨드 대여는 중단되지 않고, 스팟 대여는 다른 사용자가 더 높게 입찰하면 종료됩니다. 컨테이너 데이터는 주문이 끝나면 사라지며, 문서에는 공식적인 분쟁 처리 절차가 없습니다.',
         bullets: [
           '모델: 피어 투 피어 마켓플레이스, Clore.ai 문서에 따라 호스트가 가격을 설정',
           '수수료: 온디맨드 10% / 스팟 2.5% 기본 수수료, 사용자와 호스트가 50:50 분담',
@@ -2063,12 +2069,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**PromptQuorum 평가이며, Clore.ai의 공식 문서를 근거로 합니다. 직접 실험실에서 테스트한 결과가 아닙니다.** 점수는 특히 LLM 추론과 파인튜닝 작업에 대한 적합도를 반영합니다.',
         columns: ['항목', '점수', '근거'],
         rows: [
-          { '항목': '가격', '점수': '7.5/10', '근거': '호스트가 정한 가격에 문서화된 10%/2.5% 기본 수수료, 실시간 가격 미확인' },
+          { '항목': '가격', '점수': '7.5/10', '근거': '수수료 구조는 문서화됨(10%/2.5%), GPU 가격은 확인하지 않아 수수료만으로 평가' },
           { '항목': '안정성', '점수': '5.5/10', '근거': '독립 호스트, 문서상 안정성은 다르며 보상은 보장되지 않음' },
           { '항목': '설정 용이성', '점수': '6/10', '근거': 'SSH와 Jupyter 문서화, 암호화폐 충전 단계 추가' },
           { '항목': 'GPU 선택폭', '점수': '8/10', '근거': 'GPU 모델, 가격, 디스크, CPU, 네트워크로 필터링' },
-          { '항목': '지원 및 문서', '점수': '6.5/10', '근거': '명확한 문서, 포털·이메일·Discord 지원, 공식 분쟁 절차 없음' },
-          { '항목': '종합', '점수': '6.8/10', '근거': '유연하고 시작 비용이 낮지만 민감한 데이터에는 부적합' },
+          { '항목': '지원 및 문서', '점수': '6.5/10', '근거': '명확한 문서, 포털·이메일·Discord 지원, 문서에 공식 분쟁 절차 없음' },
+          { '항목': '종합', '점수': '6.8/10', '근거': '유연하게 시작할 수 있지만 민감한 데이터에는 부적합' },
         ],
         note: 'PromptQuorum 평가이며, Clore.ai 공식 페이지에서 도출했습니다("평가 방법" 참조). PromptQuorum은 이 리뷰를 위해 Clore.ai에서 GPU를 대여하거나 벤치마크하지 않았습니다.',
       },
@@ -2143,7 +2149,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**어떤 모델이 맞는지는 Clore.ai가 아니라 대여하는 GPU의 VRAM에 달려 있습니다.** PromptQuorum 치트시트의 VRAM 수치를 사용하십시오. Q4_K_M 기준 7B 모델은 약 5.5 GB, 14B는 약 9.5 GB, 32B는 약 20.5 GB, 70B는 약 44 GB가 필요하므로 70B는 48 GB 카드나 GPU 두 장이 필요합니다([DeepSeek-R1 distill VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Clore.ai의 마켓플레이스는 호스트가 등록하는 실시간 방식이므로, 계획하기 전에 실제로 이용 가능한 카드를 확인하십시오.',
         columns: ['모델 크기 (Q4_K_M)', '필요 VRAM', 'GPU 등급'],
         rows: [
-          { '모델 크기 (Q4_K_M)': '7B / 8B', '필요 VRAM': '~5.5 GB', 'GPU 등급': '8 GB 이상 카드' },
+          { '모델 크기 (Q4_K_M)': '7B', '필요 VRAM': '~5.5 GB', 'GPU 등급': '8 GB 이상 카드' },
+          { '모델 크기 (Q4_K_M)': '8B', '필요 VRAM': '~6 GB', 'GPU 등급': '8 GB 이상 카드' },
           { '모델 크기 (Q4_K_M)': '14B', '필요 VRAM': '~9.5 GB', 'GPU 등급': '16 GB 카드' },
           { '모델 크기 (Q4_K_M)': '32B', '필요 VRAM': '~20.5 GB', 'GPU 등급': '24 GB 카드 (빠듯함)' },
           { '모델 크기 (Q4_K_M)': '70B', '필요 VRAM': '~44 GB', 'GPU 등급': '48 GB 또는 GPU 2장' },
@@ -2160,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**마켓플레이스 GPU는 다시 시작할 수 있는 작업에 맞고, 호스트 장애가 실제 손실을 입히거나 데이터를 노출하는 작업에는 맞지 않습니다.**',
         items: [
           '**적합:** 배치 추론, 평가 실행, 양자화 벤치마킹, 스팟에서 체크포인트를 저장하는 파인튜닝, 하드웨어를 사기 전 모델 테스트([RTX 3090 구매 vs 대여](/ko/power-local-llm/rtx-3090-local-llm-buy-or-rent) 참고).',
-          '**온디맨드로 가능:** 문서가 "중단될 수 없다"고 설명하는 더 긴 학습 실행. 외부 스토리지에 직접 백업해야 합니다.',
+          '**온디맨드로 가능:** 문서가 "can\'t be interrupted"(중단될 수 없다)고 설명하는 더 긴 학습 실행. 외부 스토리지에 직접 백업해야 합니다.',
           '**부적합:** 고객 데이터, 개인정보, 규제 대상 워크로드, 장애 조치가 없는 상시 가동 프로덕션 엔드포인트.',
           '**비용 확인:** [구매 vs 대여 계산기](/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026)로 마켓플레이스 가격과 직접 보유한 하드웨어를 비교하십시오.',
         ],
@@ -2172,9 +2179,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**결제와 마켓플레이스는 암호화폐 단위(문서에 따라 CLORE와 BTC, USDT와 USDC 스테이블코인을 통한 USD 노출)이고, 하드웨어는 커뮤니티 호스트가 제공하며, 민감한 데이터는 그곳에서 실행하면 안 됩니다.** 아래 항목은 2026-11-22에 확인한 Clore.ai 자체 문서에서 가져왔습니다.',
         items: [
           '**결제:** CLORE, 비트코인, USDT, USDC를 받습니다. 스테이블코인은 하나의 USD 잔액을 공유합니다. CLORE는 변동성이 큰 토큰이며, 잘못된 네트워크로 보내면 자금을 잃습니다.',
-          '**하드웨어 출처:** 서버는 "전 세계 개별 호스트가 소유하고 운영"하며, 안정성은 다르고 호스트 등급으로 요약됩니다.',
+          '**하드웨어 출처:** 서버는 "owned and operated by individual hosts around the world"(전 세계 개별 호스트가 소유하고 운영)하며, 안정성은 다르고 호스트 등급으로 요약됩니다.',
           '**데이터 처리:** FAQ에는 주문이 만료되거나 취소되면 컨테이너 데이터가 사라진다고 나와 있으며, 사용자에게 외부에 백업하라고 안내합니다. 문서에는 호스트에 대한 데이터 보호나 기밀 유지 보장이 없습니다. 모든 대여를 신뢰할 수 없는 하드웨어로 취급하십시오.',
-          '**환불과 보상:** 대여 중 서버가 오프라인이 되면 플랫폼은 "상황에 따라 부분 보상을 제공할 수 있습니다". 문서에는 공식적인 분쟁 처리 절차가 나와 있지 않으며, 취소 시 문제 설명을 첨부하면 팀이 조사한다고 되어 있습니다.',
+          '**환불과 보상:** 대여 중 서버가 오프라인이 되면 문서에 따르면 플랫폼은 상황에 따라 부분 보상을 제공할 수 있습니다. 문서에는 공식적인 분쟁 처리 절차가 나와 있지 않으며, 취소 시 문제 설명을 첨부하면 팀이 조사한다고 되어 있습니다.',
           '**계정 보안:** 문서는 2FA를 강력히 권장하며 API 키가 계정 전체 접근 권한을 준다고 안내합니다.',
         ],
       },
@@ -2243,9 +2250,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Proof-of-Holding이란 무엇입니까?', a: 'Proof-of-Holding(PoH)은 플랫폼에 CLORE를 보유하는 것을 말합니다. 문서는 기본 수수료 할인율을 200,000 CLORE의 5%에서 2,000,000 CLORE 이상의 50%까지로 제시하며 락업이나 페널티는 없습니다. 추가 통화 수수료는 줄여 주지 않으며, CLORE를 보유하면 토큰 가격 위험이 따릅니다.' },
           { q: 'Clore.ai에는 어떤 통화로 입금할 수 있습니까?', a: 'CLORE(ERC-20, 최소 2,000개), 비트코인(최소 금액 없음), 이더리움 또는 BNB 체인의 USDT와 USDC(최소 $10)입니다. 문서에 따르면 다른 네트워크로 보낸 토큰은 복구할 수 없습니다.' },
           { q: 'Clore.ai에 신용카드로 결제할 수 있습니까?', a: 'PromptQuorum이 검토한 문서에는 CLORE, BTC, USDT, USDC 암호화폐 입금만 나와 있습니다. 카드 결제 옵션은 해당 문서에 나와 있지 않습니다.' },
-          { q: 'Clore.ai는 민감하거나 개인적인 데이터에 안전합니까?', a: '아닙니다. 서버는 독립 커뮤니티 호스트가 운영하며, 문서에는 데이터 보호 보장이 없습니다. 컨테이너 데이터는 주문이 끝나면 사라집니다. 민감하지 않은 워크로드에만 사용하십시오.' },
+          { q: 'Clore.ai는 민감하거나 개인적인 데이터에 안전합니까?', a: '권장하지 않습니다. 서버는 독립 커뮤니티 호스트가 운영하며, Clore.ai 문서에는 데이터 보호나 기밀성 보장이 없습니다. 컨테이너 데이터는 주문이 끝나면 사라집니다. 민감하지 않은 워크로드에만 사용하십시오.' },
           { q: 'Clore.ai에서 Ollama나 vLLM을 실행할 수 있습니까?', a: 'SSH로 대여한 서버에 접속해 자체 소프트웨어를 설치할 수 있지만, PromptQuorum이 검토한 문서에는 Ollama나 vLLM 이미지에 대한 언급이 없습니다. 먼저 마켓플레이스에서 제공되는 이미지를 확인하십시오.' },
-          { q: 'Clore.ai 호스트가 오프라인이 되면 어떻게 됩니까?', a: 'FAQ에는 플랫폼이 "상황에 따라 부분 보상을 제공할 수 있다"고 나와 있으므로 보상은 보장되지 않습니다. 중단되면 안 되는 작업에는 문서가 온디맨드 대여를 권장합니다.' },
+          { q: 'Clore.ai 호스트가 오프라인이 되면 어떻게 됩니까?', a: 'FAQ에는 플랫폼이 상황에 따라 부분 보상을 제공할 수 있다고 나와 있으므로 보상은 보장되지 않습니다. 중단되면 안 되는 작업에는 문서가 온디맨드 대여를 권장합니다.' },
           { q: 'Clore.ai는 Vast.ai와 어떻게 비교됩니까?', a: '둘 다 호스트가 GPU를 제공하는 마켓플레이스입니다. Clore.ai는 암호화폐 결제와 Proof-of-Holding 할인이 있는 CLORE 토큰을 중심으로 만들어졌습니다. Vast.ai의 모델과 가격은 [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review)를 참고하십시오.' },
         ],
       },
@@ -2307,11 +2314,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análise da Clore.ai (2026): Marketplace de GPU Pago em Cripto para LLMs',
     seoTitle: 'Análise Clore.ai 2026: Marketplace de GPU Pago em Cripto',
     intro:
-      'A Clore.ai é um marketplace descentralizado de GPUs: hosts da comunidade listam suas próprias GPUs, os locatários pagam em cripto e a plataforma cobra uma taxa. É uma das várias opções do nosso guia dos [melhores provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) e o provedor desse grupo construído em torno de pagamentos em cripto (CLORE, Bitcoin ou stablecoins). A documentação oficial ([docs.clore.ai](https://docs.clore.ai)) informa taxas-base de 10% para On-Demand e 2.5% para pedidos Spot, com o Proof-of-Holding (PoH) reduzindo essas taxas em até 50%. Esta análise cobre como funcionam as taxas, os depósitos e os tipos de aluguel, o que isso significa para inferência e fine-tuning de LLMs e quais são os riscos. Os fatos vêm das páginas da própria Clore.ai, conferidas em 2026-11-22; não é um teste prático em laboratório.',
+      'A Clore.ai é um marketplace descentralizado de GPUs: hosts da comunidade listam suas próprias GPUs, os locatários pagam em cripto e a plataforma cobra uma taxa. É uma das várias opções do nosso guia dos [melhores provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) e o provedor desse grupo construído em torno de pagamentos em cripto (CLORE, Bitcoin ou stablecoins). A documentação oficial ([docs.clore.ai](https://docs.clore.ai)) informa taxas-base de 10% para On-Demand e 2,5% para pedidos Spot, com o Proof-of-Holding (PoH) reduzindo essas taxas em até 50%. Esta análise cobre como funcionam as taxas, os depósitos e os tipos de aluguel, o que isso significa para inferência e fine-tuning de LLMs e quais são os riscos. Os fatos vêm das páginas da própria Clore.ai, conferidas em 2026-11-22; não é um teste prático em laboratório.',
     metaDescription:
-      'Análise Clore.ai 2026: marketplace de GPU da comunidade pago em cripto. Taxas On-Demand vs Spot (10% / 2.5%), Proof-of-Holding, depósitos e riscos.',
+      'Análise Clore.ai 2026: marketplace de GPU da comunidade pago em cripto. Taxas On-Demand vs Spot (10% / 2,5%), Proof-of-Holding, depósitos e riscos.',
     twitterDescription:
-      'Clore.ai (2026): marketplace de GPU pago em cripto. Taxas-base de 10% On-Demand / 2.5% Spot, até 50% de redução com Proof-of-Holding. Scorecard, depósitos e por que dados sensíveis não devem ir para hosts da comunidade.',
+      'Clore.ai (2026): marketplace de GPU pago em cripto. Taxas-base de 10% On-Demand / 2,5% Spot, até 50% de redução com Proof-of-Holding. Scorecard, depósitos e por que dados sensíveis não devem ir para hosts da comunidade.',
     readTime: '9 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores que alugam GPUs para inferência ou fine-tuning de LLMs e se sentem à vontade para pagar em cripto',
@@ -2326,16 +2333,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'marketplace descentralizado de gpu',
     ],
     leadAnswerBlock:
-      '**A Clore.ai é um marketplace de GPUs da comunidade em que os pagamentos acontecem em cripto (CLORE, Bitcoin, USDT, USDC) e a documentação informa uma taxa-base de 10% em pedidos On-Demand e 2.5% em pedidos Spot, redutível em até 50% com o Proof-of-Holding (conferido em 2026-11-22).** Avaliação do PromptQuorum, baseada na documentação oficial da Clore.ai e não em um teste prático: 6.8/10 no geral. Serve para experimentos de LLM tolerantes a falhas e jobs em lote de desenvolvedores que já usam cripto. Não serve para dados sensíveis, porque o hardware pertence a hosts independentes. → [Conhecer a Clore.ai](https://clore.ai/)',
+      '**A Clore.ai é um marketplace de GPUs da comunidade em que os pagamentos acontecem em cripto (CLORE, Bitcoin, USDT, USDC) e a documentação informa uma taxa-base de 10% em pedidos On-Demand e 2,5% em pedidos Spot, redutível em até 50% com o Proof-of-Holding (conferido em 2026-11-22).** Avaliação do PromptQuorum, baseada na documentação oficial da Clore.ai e não em um teste prático: 6,8/10 no geral. Serve para experimentos de LLM tolerantes a falhas e jobs em lote de desenvolvedores que já usam cripto. Não serve para dados sensíveis, porque o hardware pertence a hosts independentes. → [Conhecer a Clore.ai](https://clore.ai/)',
     quickAnswerTop: {
       pt: {
         question: 'A Clore.ai é uma boa forma de alugar GPUs para trabalho com LLMs?',
         answer:
-          'Sim, para experimentos de baixo custo e jobs tolerantes a falhas; não, para dados sensíveis. A Clore.ai lista GPUs fornecidas por hosts independentes da comunidade e cobra uma taxa-base de 10% (On-Demand) ou 2.5% (Spot), segundo sua documentação (conferida em 2026-11-22). Pagamentos e saldos são denominados em cripto: CLORE, Bitcoin ou stablecoins USDT/USDC na Ethereum ou na BNB Chain. Aluguéis On-Demand não podem ser interrompidos; aluguéis Spot terminam se outro locatário cobrir sua oferta. Os dados do contêiner são perdidos quando um pedido termina, e a documentação não oferece um processo formal de disputa.',
+          'Sim, para experimentos e jobs tolerantes a falhas; não, para dados sensíveis. A Clore.ai lista GPUs fornecidas por hosts independentes da comunidade e cobra uma taxa-base de 10% (On-Demand) ou 2,5% (Spot), segundo sua documentação (conferida em 2026-11-22). Pagamentos e saldos são denominados em cripto: CLORE, Bitcoin ou stablecoins USDT/USDC na Ethereum ou na BNB Chain. Aluguéis On-Demand não podem ser interrompidos; aluguéis Spot terminam se outro locatário cobrir sua oferta. Os dados do contêiner são perdidos quando um pedido termina, e a documentação não oferece um processo formal de disputa.',
         bullets: [
           'Modelo: marketplace peer-to-peer, os hosts definem os preços, segundo a documentação da Clore.ai',
-          'Taxas: taxa-base de 10% On-Demand / 2.5% Spot, dividida 50/50 entre locatário e host',
-          'Proof-of-Holding: até 50% de desconto nas taxas-base com 2,000,000 CLORE mantidos',
+          'Taxas: taxa-base de 10% On-Demand / 2,5% Spot, dividida 50/50 entre locatário e host',
+          'Proof-of-Holding: até 50% de desconto nas taxas-base com 2.000.000 CLORE mantidos',
           'Pagamentos: CLORE, BTC, USDT, USDC; stablecoins apenas na Ethereum ou na BNB Chain',
           'Risco: hosts da comunidade, sem garantia declarada de proteção de dados, sem processo formal de disputa na documentação',
         ],
@@ -2359,7 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Perguntas Frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'A Clore.ai é um marketplace descentralizado de GPUs em que hosts da comunidade alugam GPUs e os locatários pagam em cripto, com taxas-base documentadas de 10% (On-Demand) e 2.5% (Spot).' },
+      { type: 'one-sentence', content: 'A Clore.ai é um marketplace descentralizado de GPUs em que hosts da comunidade alugam GPUs e os locatários pagam em cripto, com taxas-base documentadas de 10% (On-Demand) e 2,5% (Spot).' },
       { type: 'plain-terms', content: 'Pense na Clore.ai como um site de classificados de GPUs. Pessoas com placas de vídeo sobrando as listam, você escolhe uma e paga em cripto, e o site fica com uma pequena parte. Pode ser barato e flexível, mas as máquinas pertencem a desconhecidos, então serve para experimentos, não para dados privados.' },
     ],
     sections: {
@@ -2390,12 +2397,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Avaliação do PromptQuorum baseada na documentação oficial da Clore.ai, e não em um teste prático em laboratório.** As notas refletem a adequação especificamente para inferência e fine-tuning de LLMs.',
         columns: ['Categoria', 'Nota', 'Por quê'],
         rows: [
-          { Categoria: 'Preço', Nota: '7.5/10', 'Por quê': 'Preço do host mais taxa-base; preços ao vivo não verificados' },
-          { Categoria: 'Confiabilidade', Nota: '5.5/10', 'Por quê': 'Hosts independentes; segundo a documentação, a confiabilidade varia e a compensação não é garantida' },
+          { Categoria: 'Preço', Nota: '7,5/10', 'Por quê': 'Estrutura de taxas documentada (10% / 2,5%); preços de GPU não verificados, nota baseada só nas taxas' },
+          { Categoria: 'Confiabilidade', Nota: '5,5/10', 'Por quê': 'Hosts independentes; segundo a documentação, a confiabilidade varia e a compensação não é garantida' },
           { Categoria: 'Facilidade de configuração', Nota: '6/10', 'Por quê': 'SSH e Jupyter documentados; cripto acrescenta passos' },
           { Categoria: 'Escolha de GPU', Nota: '8/10', 'Por quê': 'Filtros por GPU, preço, disco, CPU e rede' },
-          { Categoria: 'Suporte e documentação', Nota: '6.5/10', 'Por quê': 'Docs claras; suporte por portal, e-mail e Discord' },
-          { Categoria: 'Geral', Nota: '6.8/10', 'Por quê': 'Flexível e barata, mas inadequada para dados sensíveis' },
+          { Categoria: 'Suporte e documentação', Nota: '6,5/10', 'Por quê': 'Docs claras; suporte por portal, e-mail e Discord' },
+          { Categoria: 'Geral', Nota: '6,8/10', 'Por quê': 'Flexível para começar, mas inadequada para dados sensíveis' },
         ],
         note: 'Avaliação do PromptQuorum derivada das páginas oficiais da Clore.ai (veja "Como Avaliamos"). O PromptQuorum não alugou nem fez benchmark de GPUs na Clore.ai para esta análise.',
       },
@@ -2405,8 +2412,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'A Clore.ai é um marketplace de GPUs peer-to-peer; os hosts definem os preços, segundo sua documentação (conferida em 2026-11-22)',
-          'Taxa-base: 10% On-Demand, 2.5% Spot, dividida 50/50 entre locatário e host',
-          'O Proof-of-Holding reduz as taxas-base em até 50% (com 2,000,000 CLORE mantidos); nenhum bloqueio declarado',
+          'Taxa-base: 10% On-Demand, 2,5% Spot, dividida 50/50 entre locatário e host',
+          'O Proof-of-Holding reduz as taxas-base em até 50% (com 2.000.000 CLORE mantidos); nenhum bloqueio declarado',
           'Pagamentos: CLORE, Bitcoin, USDT e USDC; stablecoins apenas na Ethereum ou na BNB Chain',
           'O On-Demand não pode ser interrompido; o Spot termina se você for superado em oferta',
           'O hardware pertence a hosts da comunidade: não rode dados sensíveis ali',
@@ -2417,7 +2424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito: Quem Deve Usar a Clore.ai',
         content:
-          '**Use a Clore.ai se você se sente à vontade com pagamentos em cripto e seu trabalho com LLMs consegue sobreviver a um host que sai do ar.** O modelo de taxas documentado é transparente: uma taxa-base de 10% em pedidos On-Demand e 2.5% em pedidos Spot, com descontos do Proof-of-Holding por cima. O custo da troca é a confiança. Os hosts são operadores independentes, a documentação afirma que a compensação após uma queda não é garantida, e os dados do contêiner desaparecem quando um pedido termina.\n\n**A Clore.ai não é o lugar para dados privados, cargas regulamentadas ou qualquer coisa que exija um contrato de serviço formal.** Para esses casos, use um provedor com infraestrutura operada pela própria empresa. Para uma comparação mais próxima entre marketplaces, leia a [análise da Vast.ai](/pt/power-local-llm/vast-ai-review) e depois a [análise da RunPod](/pt/power-local-llm/runpod-review).',
+          '**Use a Clore.ai se você se sente à vontade com pagamentos em cripto e seu trabalho com LLMs consegue sobreviver a um host que sai do ar.** O modelo de taxas documentado é transparente: uma taxa-base de 10% em pedidos On-Demand e 2,5% em pedidos Spot, com descontos do Proof-of-Holding por cima. O custo da troca é a confiança. Os hosts são operadores independentes, a documentação afirma que a compensação após uma queda não é garantida, e os dados do contêiner desaparecem quando um pedido termina.\n\n**A Clore.ai não é o lugar para dados privados, cargas regulamentadas ou qualquer coisa que exija um contrato de serviço formal.** Para esses casos, use um provedor com infraestrutura operada pela própria empresa. Para uma comparação mais próxima entre marketplaces, leia a [análise da Vast.ai](/pt/power-local-llm/vast-ai-review) e depois a [análise da RunPod](/pt/power-local-llm/runpod-review).',
         affiliateLinks: [
           { label: 'Conhecer a Clore.ai →', url: 'https://clore.ai/', productName: 'Clore.ai GPU marketplace', productCategory: 'GPU Cloud' },
         ],
@@ -2430,7 +2437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Aspecto', 'On-Demand', 'Spot'],
         rows: [
           { Aspecto: 'Interrupção', 'On-Demand': 'Não pode ser tomado', Spot: 'Superado a qualquer momento' },
-          { Aspecto: 'Taxa-base', 'On-Demand': '10%', Spot: '2.5%' },
+          { Aspecto: 'Taxa-base', 'On-Demand': '10%', Spot: '2,5%' },
           { Aspecto: 'Preço', 'On-Demand': 'Preço fixo do host por prazo', Spot: 'Lance, +1% sobre o maior' },
           { Aspecto: 'Se superado', 'On-Demand': 'Não se aplica', Spot: 'Aluguel termina, cobrança para' },
           { Aspecto: 'Docs sugerem', 'On-Demand': 'Treino, produção', Spot: 'Lote, testes, jobs com checkpoints' },
@@ -2449,17 +2456,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Item', 'Valor documentado', 'Fonte'],
         rows: [
           { Item: 'Taxa-base On-Demand', 'Valor documentado': '10% (dividida 50/50 locatário/host)', Fonte: '[Estrutura de taxas](https://docs.clore.ai/for-renters/fee-structure)' },
-          { Item: 'Taxa-base Spot', 'Valor documentado': '2.5% (dividida 50/50)', Fonte: '[Estrutura de taxas](https://docs.clore.ai/for-renters/fee-structure)' },
+          { Item: 'Taxa-base Spot', 'Valor documentado': '2,5% (dividida 50/50)', Fonte: '[Estrutura de taxas](https://docs.clore.ai/for-renters/fee-structure)' },
           { Item: 'Taxa extra do locatário', 'Valor documentado': '0% em CLORE, BTC, USDT, USDC', Fonte: '[Estrutura de taxas](https://docs.clore.ai/for-renters/fee-structure)' },
           { Item: 'Redução do PoH', 'Valor documentado': '5% com 200k até 50% com 2M CLORE', Fonte: '[Visão geral do PoH](https://docs.clore.ai/proof-of-holding/overview)' },
-          { Item: 'Depósito em CLORE', 'Valor documentado': 'Mín. 2,000 CLORE (ERC-20)', Fonte: '[Depósitos](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
+          { Item: 'Depósito em CLORE', 'Valor documentado': 'Mín. 2.000 CLORE (ERC-20)', Fonte: '[Depósitos](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
           { Item: 'Depósito em USDT/USDC', 'Valor documentado': 'Mín. $10; Ethereum ou BNB Chain', Fonte: '[Depósitos](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
           { Item: 'Depósito em Bitcoin', 'Valor documentado': 'Sem mínimo; 3 confirmações', Fonte: '[Depósitos](https://docs.clore.ai/getting-started/deposit-withdrawal)' },
         ],
         items: [
           '**Exemplo prático da documentação:** um aluguel On-Demand de 100 CLORE/dia pago em CLORE, sem PoH, custa ao locatário 105 CLORE (preço listado mais 5% de parte do locatário na taxa-base de 10%).',
-          '**Proof-of-Holding:** a documentação dá a redução como `round(min(PoH / 2,000,000, 1) × 50)%`: 200,000 CLORE dão 5%, 1,000,000 dão 25%, 2,000,000 ou mais dão 50%. A documentação descreve o PoH como sem bloqueios nem penalidades. Ele não reduz taxas extras de moeda. Manter CLORE traz risco de preço do token que o desconto de taxa não compensa. Esta análise descreve o modelo de taxas documentado da Clore.ai; não é aconselhamento financeiro nem de investimento. Criptoativos são voláteis, então não mantenha mais CLORE do que você pode se dar ao luxo de perder e verifique as regras que se aplicam a você.',
-          '**Saques:** CLORE mínimo de 200 (cerca de $0.50 de taxa de rede); USDT/USDC mínimo de $10, máximo de $1,000 por saque, taxa de $1; Bitcoin mínimo de 0.0001 BTC. Tokens enviados por uma rede diferente de Ethereum ou BNB Chain não podem ser recuperados.',
+          '**Proof-of-Holding:** a documentação dá a redução como `round(min(PoH / 2,000,000, 1) × 50)%`: 200.000 CLORE dão 5%, 1.000.000 dão 25%, 2.000.000 ou mais dão 50%. A documentação descreve o PoH como sem bloqueios nem penalidades. Ele não reduz taxas extras de moeda. Manter CLORE traz risco de preço do token que o desconto de taxa não compensa. Esta análise descreve o modelo de taxas documentado da Clore.ai; não é aconselhamento financeiro nem de investimento. Criptoativos são voláteis, então não mantenha mais CLORE do que você pode se dar ao luxo de perder e verifique as regras que se aplicam a você.',
+          '**Saques:** CLORE mínimo de 200 (cerca de $0,50 de taxa de rede); USDT/USDC mínimo de $10, máximo de $1.000 por saque, taxa de $1; Bitcoin mínimo de 0,0001 BTC. Tokens enviados por uma rede diferente de Ethereum ou BNB Chain não podem ser recuperados.',
           '**Reembolsos:** a página de depósitos não trata das regras de reembolso; veja Riscos e Confiança abaixo.',
         ],
       },
@@ -2467,12 +2474,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: 'Adequação para Inferência e Fine-Tuning de LLMs',
         content:
-          '**Qual modelo cabe depende da VRAM da GPU que você aluga, e não da Clore.ai.** Use os fatos de VRAM das nossas tabelas: em Q4_K_M, um modelo de 7B precisa de cerca de 5.5 GB, 14B de cerca de 9.5 GB, 32B de cerca de 20.5 GB e 70B de cerca de 44 GB, então 70B exige uma placa de 48 GB ou duas GPUs ([tabela de VRAM dos modelos DeepSeek-R1 distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Como o marketplace da Clore.ai é listado pelos hosts e muda ao vivo, confira quais placas estão realmente disponíveis antes de planejar.',
+          '**Qual modelo cabe depende da VRAM da GPU que você aluga, e não da Clore.ai.** Use os fatos de VRAM das nossas tabelas: em Q4_K_M, um modelo de 7B precisa de cerca de 5,5 GB, 14B de cerca de 9,5 GB, 32B de cerca de 20,5 GB e 70B de cerca de 44 GB, então 70B exige uma placa de 48 GB ou duas GPUs ([tabela de VRAM dos modelos DeepSeek-R1 distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). Como o marketplace da Clore.ai é listado pelos hosts e muda ao vivo, confira quais placas estão realmente disponíveis antes de planejar.',
         columns: ['Tamanho do modelo (Q4_K_M)', 'VRAM necessária', 'Classe de GPU'],
         rows: [
-          { 'Tamanho do modelo (Q4_K_M)': '7B / 8B', 'VRAM necessária': '~5.5 GB', 'Classe de GPU': 'Placa de 8 GB+' },
-          { 'Tamanho do modelo (Q4_K_M)': '14B', 'VRAM necessária': '~9.5 GB', 'Classe de GPU': 'Placa de 16 GB' },
-          { 'Tamanho do modelo (Q4_K_M)': '32B', 'VRAM necessária': '~20.5 GB', 'Classe de GPU': 'Placa de 24 GB (justo)' },
+          { 'Tamanho do modelo (Q4_K_M)': '7B', 'VRAM necessária': '~5,5 GB', 'Classe de GPU': 'Placa de 8 GB+' },
+          { 'Tamanho do modelo (Q4_K_M)': '8B', 'VRAM necessária': '~6 GB', 'Classe de GPU': 'Placa de 8 GB+' },
+          { 'Tamanho do modelo (Q4_K_M)': '14B', 'VRAM necessária': '~9,5 GB', 'Classe de GPU': 'Placa de 16 GB' },
+          { 'Tamanho do modelo (Q4_K_M)': '32B', 'VRAM necessária': '~20,5 GB', 'Classe de GPU': 'Placa de 24 GB (justo)' },
           { 'Tamanho do modelo (Q4_K_M)': '70B', 'VRAM necessária': '~44 GB', 'Classe de GPU': '48 GB ou GPU dupla' },
         ],
         items: [
@@ -2487,7 +2495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**GPUs de marketplace servem para jobs que podem reiniciar; servem mal onde a queda de um host custa dinheiro de verdade ou expõe dados.**',
         items: [
           '**Boa opção:** inferência em lote, rodadas de avaliação, benchmark de uma quantização, fine-tuning com checkpoints no Spot, teste de um modelo antes de comprar hardware (veja [comprar ou alugar uma RTX 3090](/pt/power-local-llm/rtx-3090-local-llm-buy-or-rent)).',
-          '**Possível com On-Demand:** treinos mais longos que a documentação descreve como "não podem ser interrompidos", com backups próprios em armazenamento externo.',
+          '**Possível com On-Demand:** treinos mais longos que a documentação descreve como "can\'t be interrupted" (não podem ser interrompidos), com backups próprios em armazenamento externo.',
           '**Opção ruim:** dados de clientes, dados pessoais, cargas regulamentadas, endpoints de produção sempre ativos sem failover.',
           '**Checagem de custo:** compare os preços do marketplace com o seu próprio hardware usando a [calculadora comprar vs alugar](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         ],
@@ -2499,9 +2507,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pagamentos e o marketplace são denominados em cripto (CLORE e BTC, com exposição ao USD via stablecoins USDT e USDC, segundo sua documentação), o hardware é fornecido por hosts da comunidade, e dados sensíveis não devem rodar ali.** Os pontos abaixo vêm da documentação da própria Clore.ai, conferida em 2026-11-22.',
         items: [
           '**Pagamentos:** CLORE, Bitcoin, USDT e USDC são aceitos. As stablecoins compartilham um único saldo em USD. O CLORE é um token volátil, e enviar pela rede errada faz perder os fundos.',
-          '**De onde vem o hardware:** os servidores são "de propriedade e operados por hosts individuais ao redor do mundo"; a confiabilidade varia e é resumida em uma avaliação do host.',
+          '**De onde vem o hardware:** os servidores são "owned and operated by individual hosts around the world" (de propriedade e operados por hosts individuais ao redor do mundo); a confiabilidade varia e é resumida em uma avaliação do host.',
           '**Tratamento de dados:** o FAQ afirma que os dados do contêiner são perdidos quando o pedido expira ou é cancelado, e orienta os locatários a fazer backup externo. A documentação não dá nenhuma garantia de proteção de dados ou confidencialidade sobre os hosts. Trate todo aluguel como hardware não confiável.',
-          '**Reembolsos e compensação:** se um servidor sai do ar durante o aluguel, a plataforma "pode oferecer compensação parcial dependendo das circunstâncias". A documentação não descreve nenhum processo formal de disputa; ela diz que os cancelamentos podem incluir uma descrição do problema que a equipe investiga.',
+          '**Reembolsos e compensação:** se um servidor sai do ar durante o aluguel, a plataforma, segundo a documentação, pode oferecer compensação parcial dependendo das circunstâncias. A documentação não descreve nenhum processo formal de disputa; ela diz que os cancelamentos podem incluir uma descrição do problema que a equipe investiga.',
           '**Segurança da conta:** a documentação recomenda fortemente 2FA e diz que a chave de API dá acesso total à conta.',
         ],
       },
@@ -2511,7 +2519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Um marketplace flexível e nativo de cripto, com regras de taxas claras e uma lacuna real de confiança.**',
         items: [
           '**Prós**',
-          'Estrutura de taxas documentada, com uma taxa-base baixa de 2.5% no Spot',
+          'Estrutura de taxas documentada, com uma taxa-base baixa de 2,5% no Spot',
           'Até 50% de redução de taxa pelo Proof-of-Holding, sem bloqueio segundo a documentação',
           'Quatro moedas de pagamento e um fluxo documentado de SSH e Jupyter',
           'O marketplace filtra por modelo de GPU, preço, disco, CPU, rede e avaliação do servidor',
@@ -2565,14 +2573,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas Frequentes',
         faqs: [
           { q: 'O que é a Clore.ai?', a: 'A Clore.ai é um marketplace descentralizado de GPUs em que donos de GPU listam hardware e locatários pagam para usá-lo. Segundo sua documentação, os hosts definem seus próprios preços e os pagamentos acontecem em cripto (CLORE, Bitcoin, USDT, USDC).' },
-          { q: 'Quais são as taxas da Clore.ai?', a: 'A documentação informa uma taxa-base de 10% em pedidos On-Demand e 2.5% em pedidos Spot, dividida 50/50 entre locatário e host (conferido em 2026-11-22). Os locatários não pagam taxa extra de moeda em CLORE, BTC, USDT ou USDC. O Proof-of-Holding pode reduzir a taxa-base em até 50%.' },
+          { q: 'Quais são as taxas da Clore.ai?', a: 'A documentação informa uma taxa-base de 10% em pedidos On-Demand e 2,5% em pedidos Spot, dividida 50/50 entre locatário e host (conferido em 2026-11-22). Os locatários não pagam taxa extra de moeda em CLORE, BTC, USDT ou USDC. O Proof-of-Holding pode reduzir a taxa-base em até 50%.' },
           { q: 'Qual é a diferença entre On-Demand e Spot na Clore.ai?', a: 'Aluguéis On-Demand não podem ser interrompidos e usam um preço fixo do host por prazo. Aluguéis Spot funcionam por lances, e seu aluguel termina se outro locatário cobrir sua oferta. A documentação sugere o Spot para jobs em lote, testes e trabalho com checkpoints.' },
-          { q: 'O que é o Proof-of-Holding?', a: 'O Proof-of-Holding (PoH) consiste em manter CLORE na plataforma. A documentação dá uma redução da taxa-base de 5% com 200,000 CLORE até 50% com 2,000,000 CLORE ou mais, sem bloqueios nem penalidades. Ele não reduz taxas extras de moeda, e manter CLORE traz risco de preço do token.' },
-          { q: 'Quais moedas posso depositar na Clore.ai?', a: 'CLORE (ERC-20, mínimo de 2,000), Bitcoin (sem mínimo) e USDT ou USDC na Ethereum ou na BNB Chain (mínimo de $10). Tokens enviados por outras redes não podem ser recuperados, segundo a documentação.' },
+          { q: 'O que é o Proof-of-Holding?', a: 'O Proof-of-Holding (PoH) consiste em manter CLORE na plataforma. A documentação dá uma redução da taxa-base de 5% com 200.000 CLORE até 50% com 2.000.000 CLORE ou mais, sem bloqueios nem penalidades. Ele não reduz taxas extras de moeda, e manter CLORE traz risco de preço do token.' },
+          { q: 'Quais moedas posso depositar na Clore.ai?', a: 'CLORE (ERC-20, mínimo de 2.000), Bitcoin (sem mínimo) e USDT ou USDC na Ethereum ou na BNB Chain (mínimo de $10). Tokens enviados por outras redes não podem ser recuperados, segundo a documentação.' },
           { q: 'Posso pagar a Clore.ai com cartão de crédito?', a: 'A documentação que o PromptQuorum consultou lista apenas depósitos em cripto: CLORE, BTC, USDT e USDC. Nenhuma opção de cartão está documentada ali.' },
-          { q: 'A Clore.ai é segura para dados sensíveis ou privados?', a: 'Não. Os servidores são operados por hosts independentes da comunidade, e a documentação não dá nenhuma garantia de proteção de dados. Os dados do contêiner são perdidos quando um pedido termina. Use apenas para cargas não sensíveis.' },
+          { q: 'A Clore.ai é segura para dados sensíveis ou privados?', a: 'Não recomendado. Os servidores são operados por hosts independentes da comunidade, e a documentação da Clore.ai não dá nenhuma garantia de proteção de dados nem de confidencialidade. Os dados do contêiner são perdidos quando um pedido termina. Use apenas para cargas não sensíveis.' },
           { q: 'Posso rodar Ollama ou vLLM na Clore.ai?', a: 'Você se conecta aos servidores alugados por SSH e pode instalar seu próprio software, mas a documentação que o PromptQuorum consultou não menciona imagens de Ollama ou vLLM. Confira primeiro as imagens disponíveis no marketplace.' },
-          { q: 'O que acontece se um host da Clore.ai sair do ar?', a: 'O FAQ diz que a plataforma "pode oferecer compensação parcial dependendo das circunstâncias", então a compensação não é garantida. Para trabalho que não pode ser interrompido, a documentação recomenda aluguéis On-Demand.' },
+          { q: 'O que acontece se um host da Clore.ai sair do ar?', a: 'O FAQ diz que a plataforma pode oferecer compensação parcial dependendo das circunstâncias, então a compensação não é garantida. Para trabalho que não pode ser interrompido, a documentação recomenda aluguéis On-Demand.' },
           { q: 'Como a Clore.ai se compara com a Vast.ai?', a: 'Ambos são marketplaces com GPUs fornecidas por hosts. A Clore.ai é construída em torno de pagamentos em cripto e de um token CLORE com descontos do Proof-of-Holding. Veja a [análise da Vast.ai](/pt/power-local-llm/vast-ai-review) para o modelo e os preços dela.' },
         ],
       },
@@ -2599,7 +2607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Análise da Clore.ai (2026): Marketplace de GPU Pago em Cripto para LLMs',
       reviewBody:
-        'A Clore.ai é um marketplace descentralizado de GPUs com preços definidos pelos hosts e pagamentos em cripto (CLORE, BTC, USDT, USDC). Sua documentação informa taxas-base de 10% On-Demand e 2.5% Spot, redutíveis em até 50% com o Proof-of-Holding. O hardware pertence a hosts independentes, então dados sensíveis não devem rodar ali. A avaliação do PromptQuorum dá nota 6.8/10 no geral, com base na documentação oficial e não em um teste prático.',
+        'A Clore.ai é um marketplace descentralizado de GPUs com preços definidos pelos hosts e pagamentos em cripto (CLORE, BTC, USDT, USDC). Sua documentação informa taxas-base de 10% On-Demand e 2,5% Spot, redutíveis em até 50% com o Proof-of-Holding. O hardware pertence a hosts independentes, então dados sensíveis não devem rodar ali. A avaliação do PromptQuorum dá nota 6,8/10 no geral, com base na documentação oficial e não em um teste prático.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -2658,7 +2666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'هل Clore.ai وسيلة جيدة لاستئجار GPU لأعمال LLM؟',
         answer:
-          'نعم لتجارب الميزانية المحدودة والمهام التي تتحمل الأعطال، ولا للبيانات الحساسة. تُدرج Clore.ai وحدات GPU يوفرها مضيفون مستقلون من المجتمع، وتأخذ رسومًا أساسية قدرها 10% (On-Demand) أو 2.5% (Spot)، بحسب وثائقها (جرى التحقق بتاريخ 2026-11-22). المدفوعات والأرصدة مقوّمة بالعملات المشفرة: CLORE أو Bitcoin أو العملات المستقرة USDT/USDC على Ethereum أو BNB Chain. لا يمكن مقاطعة إيجارات On-Demand؛ أما إيجارات Spot فتنتهي إذا تفوّق عليك مستأجر آخر في المزايدة. وتُفقد بيانات الحاوية عند انتهاء الطلب، ولا تقدم الوثائق عملية رسمية لتسوية النزاعات.',
+          'نعم للتجارب والمهام التي تتحمل الأعطال، ولا للبيانات الحساسة. تُدرج Clore.ai وحدات GPU يوفرها مضيفون مستقلون من المجتمع، وتأخذ رسومًا أساسية قدرها 10% (On-Demand) أو 2.5% (Spot)، بحسب وثائقها (جرى التحقق بتاريخ 2026-11-22). المدفوعات والأرصدة مقوّمة بالعملات المشفرة: CLORE أو Bitcoin أو العملات المستقرة USDT/USDC على Ethereum أو BNB Chain. لا يمكن مقاطعة إيجارات On-Demand؛ أما إيجارات Spot فتنتهي إذا تفوّق عليك مستأجر آخر في المزايدة. وتُفقد بيانات الحاوية عند انتهاء الطلب، ولا تقدم الوثائق عملية رسمية لتسوية النزاعات.',
         bullets: [
           'النموذج: سوق من نظير إلى نظير، والمضيفون يحددون الأسعار، بحسب وثائق Clore.ai',
           'الرسوم: رسم أساسي 10% On-Demand / 2.5% Spot، يُقسَّم مناصفة بين المستأجر والمضيف',
@@ -2717,12 +2725,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تقييم PromptQuorum مبني على وثائق Clore.ai الرسمية، وليس اختبارًا عمليًا في مختبر.** تعكس الدرجات الملاءمة لأعمال استدلال LLM وضبطه الدقيق تحديدًا.',
         columns: ['الفئة', 'الدرجة', 'السبب'],
         rows: [
-          { 'الفئة': 'السعر', 'الدرجة': '7.5/10', 'السبب': 'أسعار المضيف مع رسم موثق 10% / 2.5%؛ الأسعار الحية لم تُتحقق' },
-          { 'الفئة': 'الموثوقية', 'الدرجة': '5.5/10', 'السبب': 'مضيفون مستقلون؛ الموثوقية تتفاوت والتعويض غير مضمون' },
+          { 'الفئة': 'السعر', 'الدرجة': '7.5/10', 'السبب': 'هيكل الرسوم موثق (10% / 2.5%)؛ لم تُفحص أسعار GPU، فالدرجة مبنية على الرسوم فقط' },
+          { 'الفئة': 'الموثوقية', 'الدرجة': '5.5/10', 'السبب': 'مضيفون مستقلون؛ تذكر الوثائق أن الموثوقية تتفاوت وأن التعويض غير مضمون' },
           { 'الفئة': 'سهولة الإعداد', 'الدرجة': '6/10', 'السبب': 'SSH وJupyter موثقان؛ والتمويل بالعملات المشفرة يضيف خطوات' },
           { 'الفئة': 'تنوع GPU', 'الدرجة': '8/10', 'السبب': 'السوق يرشّح بحسب طراز GPU والسعر والقرص وCPU والشبكة' },
-          { 'الفئة': 'الدعم والوثائق', 'الدرجة': '6.5/10', 'السبب': 'وثائق واضحة؛ دعم بالبوابة والبريد وDiscord، بلا عملية رسمية لتسوية النزاعات' },
-          { 'الفئة': 'الإجمالي', 'الدرجة': '6.8/10', 'السبب': 'مرنة ورخيصة البدء، لكنها غير مناسبة للبيانات الحساسة' },
+          { 'الفئة': 'الدعم والوثائق', 'الدرجة': '6.5/10', 'السبب': 'وثائق واضحة؛ دعم بالبوابة والبريد وDiscord، ولا عملية رسمية لتسوية النزاعات في الوثائق' },
+          { 'الفئة': 'الإجمالي', 'الدرجة': '6.8/10', 'السبب': 'مرنة في البدء، لكنها غير مناسبة للبيانات الحساسة' },
         ],
         note: 'تقييم PromptQuorum مستمد من صفحات Clore.ai الرسمية (راجع «كيف نقيّم»). لم تستأجر PromptQuorum وحدات GPU على Clore.ai ولم تُجرِ عليها اختبارات أداء لهذه المراجعة.',
       },
@@ -2797,7 +2805,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**يعتمد النموذج المناسب على VRAM في وحدة GPU التي تستأجرها، لا على Clore.ai.** استخدم حقائق VRAM من أوراقنا المرجعية: بتكميم Q4_K_M يحتاج نموذج 7B نحو 5.5 GB، و14B نحو 9.5 GB، و32B نحو 20.5 GB، و70B نحو 44 GB، فيحتاج 70B بطاقة 48 GB أو وحدتي GPU ([ورقة VRAM المرجعية لنماذج DeepSeek-R1 المقطَّرة](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet)). ولأن سوق Clore.ai تدرجه المضيفون وهو حي، تحقق من البطاقات المتاحة فعلًا قبل التخطيط.',
         columns: ['حجم النموذج (Q4_K_M)', 'VRAM المطلوبة', 'فئة GPU'],
         rows: [
-          { 'حجم النموذج (Q4_K_M)': '7B / 8B', 'VRAM المطلوبة': '~5.5 GB', 'فئة GPU': 'بطاقة 8 GB أو أكثر' },
+          { 'حجم النموذج (Q4_K_M)': '7B', 'VRAM المطلوبة': '~5.5 GB', 'فئة GPU': 'بطاقة 8 GB أو أكثر' },
+          { 'حجم النموذج (Q4_K_M)': '8B', 'VRAM المطلوبة': '~6 GB', 'فئة GPU': 'بطاقة 8 GB أو أكثر' },
           { 'حجم النموذج (Q4_K_M)': '14B', 'VRAM المطلوبة': '~9.5 GB', 'فئة GPU': 'بطاقة 16 GB' },
           { 'حجم النموذج (Q4_K_M)': '32B', 'VRAM المطلوبة': '~20.5 GB', 'فئة GPU': 'بطاقة 24 GB (بالكاد)' },
           { 'حجم النموذج (Q4_K_M)': '70B', 'VRAM المطلوبة': '~44 GB', 'فئة GPU': '48 GB أو وحدتا GPU' },
@@ -2897,7 +2906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هو Proof-of-Holding؟', a: 'Proof-of-Holding (PoH) يعني الاحتفاظ بعملة CLORE في المنصة. وتعطي الوثائق خفضًا للرسم الأساسي من 5% عند 200,000 CLORE إلى 50% عند 2,000,000 CLORE أو أكثر، دون قفل للأصول ولا غرامات. ولا يخفض رسوم العملات الإضافية، والاحتفاظ بعملة CLORE يحمل مخاطر تقلب سعر العملة.' },
           { q: 'ما العملات التي يمكنني إيداعها في Clore.ai؟', a: 'CLORE (ERC-20، حد أدنى 2,000)، وBitcoin (بلا حد أدنى)، وUSDT أو USDC على Ethereum أو BNB Chain (حد أدنى $10). والعملات المرسلة على شبكات أخرى لا يمكن استردادها، بحسب الوثائق.' },
           { q: 'هل يمكنني الدفع لـ Clore.ai ببطاقة ائتمان؟', a: 'الوثائق التي راجعتها PromptQuorum تُدرج الإيداعات المشفرة فقط: CLORE وBTC وUSDT وUSDC. ولا يوجد خيار للبطاقة موثق فيها.' },
-          { q: 'هل Clore.ai آمنة للبيانات الحساسة أو الخاصة؟', a: 'لا. تشغّل الخوادم مضيفون مستقلون من المجتمع، ولا تقدّم الوثائق ضمانًا لحماية البيانات. وتُفقد بيانات الحاوية عند انتهاء الطلب. استخدمها فقط للأعمال غير الحساسة.' },
+          { q: 'هل Clore.ai آمنة للبيانات الحساسة أو الخاصة؟', a: 'لا يُنصح بذلك. تشغّل الخوادم مضيفون مستقلون من المجتمع، ولا تقدّم وثائق Clore.ai ضمانًا لحماية البيانات أو لسريتها. وتُفقد بيانات الحاوية عند انتهاء الطلب. استخدمها فقط للأعمال غير الحساسة.' },
           { q: 'هل يمكنني تشغيل Ollama أو vLLM على Clore.ai؟', a: 'تتصل بالخوادم المستأجرة عبر SSH ويمكنك تثبيت برامجك الخاصة، لكن الوثائق التي راجعتها PromptQuorum لا تذكر صور Ollama أو vLLM. تحقق من الصور المتاحة في السوق أولًا.' },
           { q: 'ماذا يحدث إذا توقف مضيف في Clore.ai عن العمل؟', a: 'تقول الأسئلة الشائعة إن المنصة «may provide partial compensation depending on circumstances» (قد تقدّم تعويضًا جزئيًا بحسب الظروف)، فالتعويض غير مضمون. وللأعمال التي لا تحتمل المقاطعة توصي الوثائق بإيجارات On-Demand.' },
           { q: 'كيف تقارَن Clore.ai بـ Vast.ai؟', a: 'كلتاهما سوق يوفر المضيفون فيه وحدات GPU. وClore.ai مبنية حول الدفع بالعملات المشفرة وعملة CLORE مع خصومات Proof-of-Holding. راجع [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review) لمعرفة نموذجها وأسعارها.' },
