@@ -31171,5 +31171,31 @@
       "period": "28d 2026-10-26 to 2026-11-22"
     },
     "deployedAt": null
+  },
+  {
+    "id": "b66039de-b631-46f3-9b81-62cf1369c111",
+    "slug": "/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-23T05:39:02.192Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "Undated AWS/Google egress tiers in TL;DR; 730-hour table labelled single-GPU; unscoped CoreWeave cell; unsourced InfiniBand/market-position wording",
+        "new": "Dated and hedged egress tiers; per-GPU shares of 8-GPU nodes explained; scoped CoreWeave cell; attributed or assessment-marked claims"
+      }
+    ],
+    "reason": "Follow-up claim-accuracy pass (all 9 locales): hyperscaler egress read-dates in TL;DR, 730-hour table scoped (CoreWeave/Oracle 8-GPU shares), CoreWeave Multi-GPU cell scoped, unsourced capability/ranking claims attributed or marked as our assessment. No title/meta change.",
+    "queries": [
+      "aws vs coreweave",
+      "best gpu cloud providers in 2026",
+      "best gpu cloud for ai startups 2026"
+    ],
+    "baseline": {
+      "position": 6.39,
+      "impressions": 969,
+      "clicks": 2,
+      "ctr": 0.0020639834881320948,
+      "period": "28d 2026-10-26 to 2026-11-22"
+    },
+    "deployedAt": null
   }
 ]
