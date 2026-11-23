@@ -131,8 +131,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Used vs. new RTX 3090: used sold listings were about $1,400–1,550 per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15); new-old-stock units, if any, are not tracked here, and a used card comes with an unknown warranty. Buy from a seller with return acceptance and check for mining wear (fan noise, thermal paste residue) before committing.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
-        imageCaption: 'Three local-AI workstation tiers compared by hardware: Budget uses an RTX 3090 (24 GB VRAM) with CPU offload for 70B models, Recommended uses an RTX 4090 (24 GB VRAM), and Professional uses dual RTX 3090 GPUs (48 GB VRAM) that hold a 70B Q4 model in VRAM.',
       },
       tier2: {
         title: 'Tier 2: Recommended AI Workstation',
@@ -200,8 +198,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'The 2026 DRAM shortage hit ECC/RDIMM server memory hardest — 256 GB DDR5 ECC kits are both scarce and volatile in price, and RAM prices are not tracked on this page (DDR5 prices rose about 500% in 12 months to August 2026 — [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399)). Get a live quote from your motherboard vendor\'s QVL-listed RAM before ordering.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
-        imageCaption: 'Decision tree for choosing a local-AI workstation tier by largest model size: builds up to 30B route to the Budget (RTX 3090) or Recommended (RTX 4090) tier, while 70B builds route to Recommended via CPU offload or Professional with dual RTX 3090 GPUs that hold the model in VRAM.',
       },
       dontBuy: {
         title: 'Hardware We Would Not Buy for This Use Case',
@@ -547,8 +543,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Gebraucht vs. neu: Gebraucht verkaufte RTX 3090 lagen laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert 2026-10-15) bei etwa $1.400–1.550; Neuware-Restbestände, falls vorhanden, werden hier nicht erfasst, und eine gebrauchte Karte hat eine unbekannte Garantie. Käufer mit Rückgaberecht wählen und auf Mining-Verschleiß (Lüftergeräusche, Wärmeleitpaste-Reste) prüfen.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-de.svg',
-        imageCaption: 'Vergleich der drei lokalen KI-Workstation-Stufen nach Hardware: Budget nutzt eine RTX 3090 (24 GB VRAM) mit CPU-Offloading für 70B-Modelle, Empfohlen nutzt eine RTX 4090 (24 GB VRAM), und Profi nutzt zwei RTX 3090 GPUs (48 GB VRAM), die ein 70B-Q4-Modell im VRAM halten.',
       },
       tier2: {
         title: 'Stufe 2: Empfohlene KI-Workstation',
@@ -609,8 +603,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'Der DDR5-Engpass 2026 traf ECC/RDIMM-Server-RAM am härtesten — 256-GB-DDR5-ECC-Kits sind knapp und preislich volatil, und RAM-Preise werden auf dieser Seite nicht erfasst (die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet)). Vor der Bestellung ein Live-Angebot für auf der QVL des Mainboards gelistetes RAM einholen.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-de.svg',
-        imageCaption: 'Entscheidungsbaum zur Wahl der lokalen KI-Workstation-Stufe nach maximaler Modellgröße: Builds bis 30B führen zur Budget-Stufe (RTX 3090) oder Empfohlenen Stufe (RTX 4090), während 70B-Builds entweder über CPU-Offloading zur Empfohlenen Stufe oder zur Profi-Stufe mit zwei RTX 3090 GPUs führen, die das Modell im VRAM halten.',
       },
       dontBuy: {
         title: 'Hardware, die wir für diesen Einsatzzweck NICHT kaufen würden',
@@ -906,8 +898,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Occasion vs neuf : les RTX 3090 vendues d\'occasion se situaient autour de $1,400–1,550 selon le [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15) ; le neuf restant, s\'il y en a, n\'est pas suivi ici, et une carte d\'occasion a une garantie incertaine. Privilégiez un vendeur acceptant les retours et vérifiez l\'absence d\'usure minage.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-fr.svg',
-        imageCaption: 'Comparaison des trois niveaux de workstation IA locale par matériel : Budget utilise une RTX 3090 (24 Go VRAM) avec déchargement CPU pour les modèles 70B, Recommandé utilise une RTX 4090 (24 Go VRAM), et Professionnel utilise deux RTX 3090 (48 Go VRAM) qui contiennent un modèle 70B Q4 en VRAM.',
       },
       tier2: {
         title: 'Niveau 2 : Workstation IA recommandée',
@@ -967,8 +957,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'La pénurie DDR5 2026 a le plus touché la RAM serveur ECC/RDIMM — les kits DDR5 ECC 256 Go sont rares et volatils, et les prix de la RAM ne sont pas suivis sur cette page (les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399)). Obtenez un devis en direct pour de la RAM listée QVL par votre carte mère avant de commander.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-fr.svg',
-        imageCaption: 'Arbre de décision pour choisir un niveau de workstation IA locale selon la taille maximale du modèle : les builds jusqu\'à 30B mènent au niveau Budget (RTX 3090) ou Recommandé (RTX 4090), tandis que les builds 70B mènent au niveau Recommandé via déchargement CPU ou Professionnel avec deux RTX 3090 qui contiennent le modèle en VRAM.',
       },
       dontBuy: {
         title: 'Le matériel que nous n\'achèterions pas pour cet usage',
@@ -1260,8 +1248,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: '中古 vs 新品：中古RTX 3090の成約は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（情報源の更新日2026-10-15）によると約$1,400〜1,550。残りの新品在庫があってもここでは追跡しておらず、中古は保証が不確実。返品可能な販売者を選び、マイニング使用の痕跡（ファン異音など）を確認すること。' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-ja.svg',
-        imageCaption: 'ハードウェアで比較する3段階のローカルAIワークステーション:予算重視はRTX 3090(24GB VRAM)でCPUオフロードにより70Bモデルを実行、推奨構成はRTX 4090(24GB VRAM)、プロフェッショナル構成はRTX 3090を2基(合計48GB VRAM)搭載し70B Q4をVRAMに収容。',
       },
       tier2: {
         title: '第2段階：推奨AIワークステーション',
@@ -1321,8 +1307,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: '2026年のDDR5不足はECC/RDIMMサーバーメモリに最も強く影響——256GB DDR5 ECCキットは希少かつ価格変動が激しい。注文前にマザーボードのQVL掲載RAMのリアルタイム見積もりを取得すること。上記は確認済みの推定値であり保証価格ではない。' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-ja.svg',
-        imageCaption: '最大モデルサイズでローカルAIワークステーションの段階を選ぶ決定木:30B以下の構成は予算重視(RTX 3090)または推奨構成(RTX 4090)へ、70B構成はCPUオフロードで推奨構成か、RTX 3090を2基搭載しモデルをVRAMに収容するプロフェッショナル構成へ分岐する。',
       },
       dontBuy: {
         title: 'この用途では買わないハードウェア',
@@ -1618,8 +1602,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: '二手 vs 全新：二手RTX 3090的成交价约$1,400–1,550（[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）；所剩的全新库存若有，本页未追踪，且二手卡保修不确定。选择支持退货的卖家，并检查是否有挖矿磨损痕迹（风扇噪音异常等）。' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-zh.svg',
-        imageCaption: '按硬件对比三种本地AI主机配置:入门级使用RTX 3090(24GB显存),通过CPU卸载运行70B模型;推荐级使用RTX 4090(24GB显存);专业级使用双RTX 3090(共48GB显存),可将70B Q4装入显存。',
       },
       tier2: {
         title: '第二档：推荐AI工作站',
@@ -1679,8 +1661,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: '2026年DDR5短缺对ECC/RDIMM服务器内存冲击最大——256GB DDR5 ECC套装既稀缺又价格波动剧烈。下单前请向主板QVL列表内的内存获取实时报价，上表为核实估算值，非保证价格。' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-zh.svg',
-        imageCaption: '按最大模型规模选择本地AI主机配置等级的决策树:30B及以下配置对应入门级(RTX 3090)或推荐级(RTX 4090),70B配置则通过CPU卸载对应推荐级,或使用可将模型装入显存的双RTX 3090对应专业级。',
       },
       dontBuy: {
         title: '不建议购买的硬件',
@@ -1985,8 +1965,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Usada vs. nueva: las RTX 3090 vendidas de segunda mano rondaban los $1.400–1.550 según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15); el stock nuevo que quede, si lo hay, no se rastrea aquí, y una tarjeta usada tiene una garantía incierta. Elige un vendedor con devoluciones y revisa señales de desgaste por minería (ruido de ventilador, olor a quemado bajo carga).' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-es.svg',
-        imageCaption: 'Comparación de las tres configuraciones de estación de trabajo de IA local por hardware: la económica usa una RTX 3090 (24 GB VRAM) con descarga a CPU para modelos 70B, la recomendada usa una RTX 4090 (24 GB VRAM), y la profesional usa dos RTX 3090 (48 GB VRAM) que contienen un modelo 70B Q4 en VRAM.',
       },
       tier2: {
         title: 'Nivel 2: workstation de IA recomendada',
@@ -2047,8 +2025,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'La escasez de DDR5 de 2026 golpeó con más fuerza a la RAM de servidor ECC/RDIMM — los kits DDR5 ECC de 256 GB son escasos y con precio volátil, y los precios de la RAM no se rastrean en esta página (los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399)). Consigue un presupuesto en tiempo real de RAM listada en la QVL de tu placa antes de pedir.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-es.svg',
-        imageCaption: 'Árbol de decisión para elegir el nivel de estación de trabajo de IA local según el tamaño máximo del modelo: las configuraciones de hasta 30B llevan al nivel Económico (RTX 3090) o Recomendado (RTX 4090), mientras que las de 70B llevan al nivel Recomendado mediante descarga a CPU o al Profesional con dos RTX 3090 que contienen el modelo en VRAM.',
       },
       dontBuy: {
         title: 'Hardware que no compraríamos para este uso',
@@ -2360,8 +2336,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: '중고 vs 신품: 중고 RTX 3090 체결은 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)에 따르면 약 $1,400–1,550입니다. 남은 신품 재고가 있더라도 여기서 추적하지 않으며, 중고는 보증이 불확실합니다. 반품 가능한 판매자를 선택하고, 채굴 사용 흔적(팬 소음 등)을 확인하세요.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-ko.svg',
-        imageCaption: '하드웨어 기준 3단계 로컬 AI 워크스테이션 비교: 경제형은 RTX 3090(24GB VRAM)으로 CPU 오프로딩을 통해 70B 모델을 실행하고, 추천형은 RTX 4090(24GB VRAM), 전문가형은 RTX 3090 2개(총 48GB VRAM)로 70B Q4를 VRAM에 수용합니다.',
       },
       tier2: {
         title: '2단계: 추천형 AI 워크스테이션',
@@ -2421,8 +2395,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: '2026년 DDR5 부족은 ECC/RDIMM 서버 메모리에 가장 큰 타격을 주었습니다 — 256GB DDR5 ECC 키트는 희소하고 가격 변동이 심하며, RAM 가격은 이 페이지에서 추적하지 않습니다. DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록)를 참고하세요. 주문 전 마더보드 QVL에 등재된 RAM의 실시간 견적을 받으세요.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-ko.svg',
-        imageCaption: '최대 모델 크기 기준 로컬 AI 워크스테이션 등급 선택 결정 트리: 30B 이하 구성은 경제형(RTX 3090) 또는 추천형(RTX 4090)으로, 70B 구성은 CPU 오프로딩을 사용하는 추천형 또는 모델을 VRAM에 수용하는 RTX 3090 2개 전문가형으로 연결됩니다.',
       },
       dontBuy: {
         title: '이 용도로는 사지 않을 하드웨어',
@@ -2734,8 +2706,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Usada vs. nova: as RTX 3090 usadas custam bem menos que o pouco estoque novo restante, ao custo de uma garantia incerta. Prefira um vendedor com boa reputação e política de devolução, e verifique sinais de desgaste por mineração (ruído do cooler, cheiro de queimado sob carga).' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-pt.svg',
-        imageCaption: 'Comparação das três configurações de workstation de IA local por hardware: a econômica usa uma RTX 3090 (24 GB VRAM) com offload de CPU para modelos 70B, a recomendada usa uma RTX 4090 (24 GB VRAM), e a profissional usa duas RTX 3090 (48 GB VRAM) que mantêm um modelo 70B Q4 na VRAM.',
       },
       tier2: {
         title: 'Nível 2: workstation de IA recomendada',
@@ -2795,8 +2765,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'A escassez de DDR5 de 2026 atingiu com mais força a memória de servidor ECC/RDIMM — kits DDR5 ECC de 256 GB são escassos e com preço volátil, e os preços de RAM não são rastreados nesta página (os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399)). Consiga uma cotação atualizada de RAM listada na QVL da sua placa-mãe antes de comprar.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-pt.svg',
-        imageCaption: 'Árvore de decisão para escolher o nível de workstation de IA local pelo tamanho máximo do modelo: configurações até 30B levam ao nível Econômico (RTX 3090) ou Recomendado (RTX 4090), enquanto configurações de 70B levam ao Recomendado via offload de CPU ou ao Profissional com duas RTX 3090 que mantêm o modelo na VRAM.',
       },
       dontBuy: {
         title: 'Hardware que não compraríamos para esse uso',
@@ -3109,8 +3077,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'مستعملة مقابل جديدة: بطاقات RTX 3090 المستعملة بلغت أسعار الإعلانات المستعملة المباعة نحو $1,400–1,550 وفق [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15)؛ والمخزون الجديد المتبقي، إن وُجد، غير متتبَّع هنا، والبطاقة المستعملة بضمان غير مؤكد. اختر بائعاً يقبل الإرجاع وتحقّق من علامات استخدامها في التعدين (ضوضاء المروحة، رائحة احتراق تحت الحِمل).' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-ar.svg',
-        imageCaption: 'مقارنة بين ثلاث فئات من محطات عمل الذكاء الاصطناعي المحلي حسب العتاد: الفئة الاقتصادية تستخدم RTX 3090 (24 جيجابايت VRAM) مع تفريغ المعالج لنماذج 70B، الفئة الموصى بها تستخدم RTX 4090 (24 جيجابايت VRAM)، والفئة الاحترافية تستخدم بطاقتي RTX 3090 (48 جيجابايت VRAM إجمالاً) تحتويان نموذج 70B Q4 في VRAM.',
       },
       tier2: {
         title: 'المستوى 2: محطة عمل ذكاء اصطناعي موصى بها',
@@ -3170,8 +3136,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'نقص DDR5 في 2026 أثّر بأشد قوة على ذاكرة الخوادم ECC/RDIMM — عبوات DDR5 ECC سعة 256 جيجابايت نادرة ومتقلبة السعر. احصل على عرض سعر مباشر لذاكرة مدرجة في قائمة QVL الخاصة باللوحة الأم قبل الطلب.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-ar.svg',
-        imageCaption: 'شجرة قرار لاختيار فئة محطة عمل الذكاء الاصطناعي المحلي حسب أكبر حجم نموذج: الإعدادات حتى 30B تقود إلى الفئة الاقتصادية (RTX 3090) أو الموصى بها (RTX 4090)، بينما إعدادات 70B تقود إلى الفئة الموصى بها عبر تفريغ المعالج أو إلى الفئة الاحترافية ببطاقتي RTX 3090 تحتويان النموذج في VRAM.',
       },
       dontBuy: {
         title: 'عتاد لن نشتريه لهذا الاستخدام',

@@ -407,7 +407,6 @@ docker run --gpus all \\
             'Qwen2.5-72B occasional: RunPod A40 48 GB ($0.44/hr)',
           ],
         },
-        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
           'Self-hosted vs cloud decision tree for Qwen: self-host when usage is sustained (Minisforum UM890 Pro $429 for Qwen3 8B; a used RTX 4090 for Qwen3 32B, GPU alone $2,575–3,010 in used sold listings per the InsiderLLM tracker, 2026-10-15); use cloud like RunPod A40 48 GB at $0.44/hr for occasional Qwen2.5-72B runs.',
       },
@@ -1582,7 +1581,6 @@ docker run --gpus all \\
             'Qwen2.5-72B ocasional: RunPod A40 48 GB ($0,44/hr)',
           ],
         },
-        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
           'Árbol de decisión autoalojado vs nube para Qwen: autoaloja si el uso es sostenido (Minisforum UM890 Pro $429 para Qwen3 8B; una RTX 4090 de segunda mano para Qwen3 32B, solo la GPU a $2.575–3.010 vendida según el rastreador de InsiderLLM, 2026-10-15); usa la nube como RunPod A40 48 GB a $0,44/hr para Qwen2.5-72B ocasional.',
       },
@@ -2145,7 +2143,6 @@ docker run --gpus all \\
             'Qwen2.5-72B ocasional: RunPod A40 48 GB (US$ 0,44/h)',
           ],
         },
-        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
           'Árvore de decisão auto-hospedado vs nuvem para o Qwen: auto-hospede se o uso for sustentado (Minisforum UM890 Pro US$ 429 para o Qwen3 8B; uma RTX 4090 usada para o Qwen3 32B, só a GPU a US$ 2.575–3.010 vendida segundo o rastreador da InsiderLLM, 2026-10-15); use a nuvem como a RunPod A40 48 GB a US$ 0,44/h para o Qwen2.5-72B ocasional.',
       },
@@ -2558,7 +2555,6 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             'نسبة قيمة/أداء جيدة في تقديرنا: RTX 4060 Ti 16 جيجابايت + Qwen3 14B',
           ],
         },
-        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
           'شجرة قرار الاستضافة الذاتية مقابل السحابة لـQwen: استضف محليًا إذا كان الاستخدام متواصلًا (Minisforum UM890 Pro بسعر 429 دولارًا لـQwen3 8B، أو RTX 4090 مستعملة لـQwen3 32B بسعر البطاقة وحدها 2,575–3,010 دولارًا للمستعملة المباعة وفق متتبع InsiderLLM، 2026-10-15)؛ استخدم السحابة مثل RunPod A40 48 جيجابايت بسعر 0.44 دولار/ساعة لاستخدام Qwen2.5-72B العرضي.',
       },
@@ -3110,7 +3106,6 @@ docker run --gpus all \
             '비정기 Qwen2.5-72B: RunPod A40 48 GB ($0.44/시간)',
           ],
         },
-        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
           'Qwen 자체 호스팅 vs 클라우드 결정 트리: 지속적으로 사용한다면 자체 호스팅(Qwen3 8B는 Minisforum UM890 Pro $429, Qwen3 32B는 중고 RTX 4090, GPU만 중고 판매가 $2,575~$3,010, InsiderLLM 트래커 2026-10-15); 간헐적인 Qwen2.5-72B 사용은 RunPod A40 48GB($0.44/시간) 같은 클라우드를 사용하세요.',
       },

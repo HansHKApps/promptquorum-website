@@ -100,8 +100,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: 'Architecture Differences That Change Everything',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-en.svg',
-        imageCaption: 'Apple Silicon unified memory vs NVIDIA discrete GPU: CPU, GPU, Neural Engine share 128GB at 614 GB/s vs dedicated 24GB GDDR6X at 1,008 GB/s, separated by a PCIe bus.',
         content: 'Apple Silicon and NVIDIA GPUs are built around fundamentally different memory architectures. This single difference — shared versus dedicated memory — determines which models you can run and at what speed.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple Silicon uses unified memory shared between CPU, GPU, and Neural Engine; NVIDIA uses separate GDDR7 VRAM on the GPU card connected via PCIe bus.' },
@@ -725,8 +723,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: 'Architektur-Unterschiede, die alles verändern',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-de.svg',
-        imageCaption: 'Apple Silicon Unified Memory vs NVIDIA Discrete GPU: CPU, GPU, Neural Engine teilen 128GB bei 614 GB/s vs dedizierte 24GB GDDR6X bei 1.008 GB/s, getrennt durch PCIe-Bus.',
         content: 'Apple Silicon und NVIDIA GPUs sind um fundamental unterschiedliche Speicher-Architekturen aufgebaut. Dieser eine Unterschied — geteilt vs. dediziert — bestimmt, welche Modelle Sie ausführen können und mit welcher Geschwindigkeit.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple Silicon nutzt Unified Memory, geteilt zwischen CPU, GPU und Neural Engine; NVIDIA nutzt separates GDDR7 VRAM auf der GPU-Karte, verbunden über PCIe-Bus.' },
@@ -980,8 +976,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Entscheidungstabelle: Apple vs NVIDIA Faktor für Faktor',
-        image: '/images/apple-mlx-vs-nvidia-cuda-verdict-de.svg',
-        imageCaption: 'Apple gewinnt 5 von 11 Faktoren; NVIDIA gewinnt 5; 1 Unentschieden.',
         content: 'Nutzen Sie diese Tabelle für eine direkte Entscheidung basierend darauf, was für Ihren Workflow am wichtigsten ist.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple gewinnt 5 von 11 Faktoren (große Modelle, Kosten auf 70B-Ebene, Energieeffizienz, Lärm, Portabilität); NVIDIA gewinnt 5 (kleine Modell-Geschwindigkeit, Kosten unter 1.000 €, Software, Training, plattformübergreifend); 1 Unentschieden (Zukunftssicherheit).' },
@@ -1225,8 +1219,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: 'Différences d\'architecture qui changent tout',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-fr.svg',
-        imageCaption: 'Mémoire unifiée Apple Silicon vs GPU discret NVIDIA : CPU, GPU, Neural Engine partagent 128Go à 614 Go/s vs 24Go GDDR6X dédié à 1 008 Go/s, séparés par le bus PCIe.',
         content: 'Apple Silicon et les GPU NVIDIA sont construits autour d\'architectures mémoire fondamentalement différentes. Cette seule différence — partagée vs dédiée — détermine quels modèles vous pouvez faire tourner et à quelle vitesse.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple Silicon utilise une mémoire unifiée partagée entre CPU, GPU et Neural Engine ; NVIDIA utilise une VRAM GDDR7 séparée sur la carte GPU connectée via le bus PCIe.' },
@@ -1480,8 +1472,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Tableau de verdict : Apple vs NVIDIA facteur par facteur',
-        image: '/images/apple-mlx-vs-nvidia-cuda-verdict-fr.svg',
-        imageCaption: 'Apple gagne 5 des 11 facteurs ; NVIDIA gagne 5 ; 1 égalité.',
         content: 'Utilisez ce tableau pour prendre une décision directe basée sur ce qui compte le plus dans votre flux de travail.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple gagne 5 des 11 facteurs (grands modèles, coût au niveau 70B, efficacité énergétique, bruit, portabilité) ; NVIDIA gagne 5 (vitesse petits modèles, coût sous 1 000 €, logiciels, entraînement, multiplateforme) ; 1 égalité (pérennité).' },
@@ -1801,8 +1791,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: 'すべてを変えるアーキテクチャの違い',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-ja.svg',
-        imageCaption: 'Apple Siliconユニファイドメモリ vs NVIDIA Discrete GPU：CPU、GPU、Neural Engineが128GBを614GB/sで共有 vs 専用24GB GDDR6Xが1,008GB/s、PCIeバスで分離。',
         content: 'Apple SiliconとNVIDIA GPUは根本的に異なるメモリアーキテクチャを中心に構築されています。この単一の違い—共有か専用か—が実行できるモデルとその速度を決定します。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple SiliconはCPU、GPU、Neural Engine間で共有されるユニファイドメモリを使用；NVIDIAはPCIeバスで接続されたGPUカード上の専用GDDR7 VRAMを使用。' },
@@ -2057,8 +2045,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '判定表：Apple vs NVIDIA 各要素別',
-        image: '/images/apple-mlx-vs-nvidia-cuda-verdict-ja.svg',
-        imageCaption: 'Appleは11要素中5で勝利；NVIDIAは5で勝利；1引き分け。',
         content: 'この表を使用して、あなたのワークフローで最も重要なことに基づいて直接決定してください。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Appleは11要素中5で勝利（大型モデル、70Bレベルのコスト、電力効率、騒音、ポータビリティ）；NVIDIAは5で勝利（小型モデル速度、15万円以下のコスト、ソフトウェア、トレーニング、クロスプラットフォーム）；1引き分け（将来性）。' },
@@ -2454,8 +2440,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: '改变一切的架构差异',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-zh.svg',
-        imageCaption: 'Apple Silicon统一内存 vs NVIDIA独立GPU：CPU、GPU、神经引擎以614 GB/s共享128GB vs 专用24GB GDDR6X以1,008 GB/s，通过PCIe总线分隔。',
         content: 'Apple Silicon和NVIDIA GPU围绕根本不同的内存架构构建。这个单一差异——共享vs专用——决定了您能运行哪些模型以及速度如何。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple Silicon使用CPU、GPU和神经引擎共享的统一内存；NVIDIA使用通过PCIe总线连接的GPU卡上的专用GDDR7 VRAM。' },
@@ -2709,8 +2693,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '对比总结：Apple vs NVIDIA各因素评判',
-        image: '/images/apple-mlx-vs-nvidia-cuda-verdict-zh.svg',
-        imageCaption: 'Apple在11个因素中赢得5个；NVIDIA赢得5个；1个平局。',
         content: '使用此表格根据您工作流中最重要的内容做出直接决定。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple在11个因素中赢得5个（大型模型、70B级别成本、能效、噪音、便携性）；NVIDIA赢得5个（小模型速度、1万元以下成本、软件、训练、跨平台）；1个平局（未来保值性）。' },
@@ -2954,8 +2936,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: 'Diferencias de arquitectura que lo cambian todo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-es.svg',
-        imageCaption: 'Memoria unificada de Apple Silicon vs GPU discreta NVIDIA: CPU, GPU y Neural Engine comparten 128GB a 614 GB/s vs 24GB GDDR6X dedicados a 1,008 GB/s, separados por el bus PCIe.',
         content: 'Apple Silicon y las GPU NVIDIA están construidas en torno a arquitecturas de memoria fundamentalmente diferentes. Esta única diferencia — memoria compartida frente a dedicada — determina qué modelos puedes correr y a qué velocidad.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple Silicon usa memoria unificada compartida entre CPU, GPU y Neural Engine; NVIDIA usa VRAM GDDR7 dedicada en la tarjeta GPU conectada mediante el bus PCIe.' },
@@ -3571,8 +3551,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: 'Diferenças de arquitetura que mudam tudo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-en.svg',
-        imageCaption: 'Memória unificada do Apple Silicon vs GPU discreta NVIDIA: CPU, GPU e Neural Engine compartilham 128GB a 614 GB/s vs 24GB GDDR6X dedicados a 1.008 GB/s, separados pelo barramento PCIe.',
         content: 'O Apple Silicon e as GPUs NVIDIA são construídos em torno de arquiteturas de memória fundamentalmente diferentes. Essa única diferença — memória compartilhada versus dedicada — determina quais modelos você pode rodar e a que velocidade.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'O Apple Silicon usa memória unificada compartilhada entre CPU, GPU e Neural Engine; a NVIDIA usa VRAM GDDR7 dedicada na placa da GPU, conectada pelo barramento PCIe.' },
@@ -4188,8 +4166,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: 'الفروق المعمارية التي تغيّر كل شيء',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-en.svg',
-        imageCaption: 'الذاكرة الموحّدة لـApple Silicon مقابل GPU منفصلة من NVIDIA: CPU وGPU والمحرك العصبي يتشاركون 128GB بسرعة 614 GB/s مقابل 24GB GDDR6X مخصصة بسرعة 1,008 GB/s مفصولة بحافلة PCIe.',
         content: 'بُنيت Apple Silicon وحدات GPU NVIDIA حول معماريتَي ذاكرة مختلفتَين جوهريًا. هذا الفارق الوحيد — الذاكرة المشتركة مقابل المخصصة — يحدد أي النماذج تستطيع تشغيلها وبأي سرعة.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'يستخدم Apple Silicon ذاكرة موحّدة مشتركة بين CPU وGPU والمحرك العصبي؛ أما NVIDIA فتستخدم VRAM GDDR7 مخصصة في لوحة GPU متصلة بحافلة PCIe.' },
@@ -4806,8 +4782,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: '모든 것을 바꾸는 아키텍처 차이점',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-en.svg',
-        imageCaption: 'Apple Silicon 통합 메모리 vs NVIDIA 이산 GPU: CPU, GPU, Neural Engine이 614 GB/s로 128GB 공유 vs PCIe 버스로 분리된 1,008 GB/s의 전용 24GB GDDR6X.',
         content: 'Apple Silicon과 NVIDIA GPU는 근본적으로 다른 메모리 아키텍처를 기반으로 구축되었습니다. 이 단일한 차이점 — 공유 메모리 대 전용 메모리 — 이 어떤 모델을 실행할 수 있는지와 그 속도를 결정합니다.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple Silicon은 CPU, GPU, Neural Engine 간에 공유된 통합 메모리를 사용하며, NVIDIA는 PCIe 버스로 연결된 GPU 카드의 전용 GDDR7 VRAM을 사용합니다.' },

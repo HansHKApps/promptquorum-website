@@ -149,8 +149,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How the Three Build Tiers Compare in 2026',
         content:
           'GPU VRAM and power figures are manufacturer specifications. Inference speeds are rough, typical figures for each tier\'s GPU class (not measured by PromptQuorum); real speed varies with quantization, runtime and context length. Build totals are not tracked: only the RTX 5090 price carries a source and date (see the enthusiast build), and RAM and other parts are not tracked on this page. Compare new and used GPU listings: used no longer always costs less.',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: 'Local AI PC build tiers compared: RTX 4060 Ti 16GB budget build runs 7B-13B models, RTX 4070 Ti Super 16GB mid build runs 14B-33B models, RTX 5090 32GB enthusiast build runs 33B-70B models.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -368,8 +366,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision Flowchart: Pick Your Build in Four Questions',
         content:
           '**Four questions, in order, route most builders to one tier.**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: 'Decision tree for choosing a local-AI PC build by largest model size: 7B-13B models route to the budget build, 14B-33B models to the mid build, and 70B models to the enthusiast build.',
         items: [
           '**1. What is the largest model you want to run?** 7B-13B: budget build. 14B-33B: mid build. 70B: enthusiast build.',
           '**2. What is your hard budget ceiling?** Budget build for the lowest cost, mid build for the middle, enthusiast build for the highest — the RTX 5090 alone lists at around $4,500–4,700 new ([InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15).',
@@ -652,8 +648,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie die drei Build-Stufen 2026 abschneiden',
         content:
           'GPU-VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenzgeschwindigkeiten sind grobe, typische Richtwerte für die GPU-Klasse der jeweiligen Stufe (nicht von PromptQuorum gemessen); die tatsächliche Geschwindigkeit hängt von Quantisierung, Laufzeitumgebung und Kontextlänge ab. Build-Summen werden nicht erfasst: Nur der Preis der RTX 5090 trägt Quelle und Datum (siehe Enthusiasten-Build); RAM und übrige Teile werden auf dieser Seite nicht erfasst. Vergleichen Sie neue und gebrauchte GPU-Angebote: gebraucht ist nicht mehr immer günstiger.',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: 'Vergleich der Local-AI-PC-Build-Stufen 2026: RTX 4060 Ti 16 GB Budget-Build für 7B-13B-Modelle, RTX 4070 Ti Super 16 GB Mittelklasse-Build für 14B-33B-Modelle, RTX 5090 32 GB Enthusiasten-Build für 33B-70B-Modelle.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -871,8 +865,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Entscheidungsdiagramm: Wählen Sie Ihren Build in vier Fragen',
         content:
           '**Vier Fragen, der Reihe nach, leiten die meisten Bauenden zu einer Stufe.**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: 'Entscheidungsbaum für den Local-AI-PC-Build nach Modellgröße: 7B-13B-Modelle führen zum Budget-Build, 14B-33B-Modelle zum Mittelklasse-Build, 70B-Modelle zum Enthusiasten-Build.',
         items: [
           '**1. Was ist das größte Modell, das Sie ausführen möchten?** 7B-13B: Budget-Build. 14B-33B: Mittelklasse-Build. 70B: Enthusiasten-Build.',
           '**2. Was ist Ihre harte Budget-Obergrenze?** Budget-Build für die niedrigsten Kosten, Mittelklasse-Build für die Mitte, Enthusiasten-Build für die höchsten — allein die RTX 5090 wird im Neuhandel bei rund $4.500–4.700 gelistet ([InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert 2026-10-15).',
@@ -1154,8 +1146,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comment se comparent les trois niveaux en 2026',
         content:
           'Les chiffres de VRAM et de puissance du GPU sont des spécifications constructeur. Les vitesses d\'inférence sont des ordres de grandeur typiques pour la classe de GPU de chaque niveau (non mesurées par PromptQuorum) ; la vitesse réelle dépend de la quantification, du moteur d\'exécution et de la longueur de contexte. Les totaux ne sont pas suivis : seul le prix de la RTX 5090 porte une source et une date (voir la configuration enthousiaste), et la RAM et les autres pièces ne sont pas suivies sur cette page. Comparez les annonces de GPU neufs et d\'occasion : l\'occasion ne coûte plus toujours moins cher.',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: 'Comparatif des configurations PC IA locale 2026 : configuration économique RTX 4060 Ti 16 Go pour modèles 7B-13B, configuration intermédiaire RTX 4070 Ti Super 16 Go pour modèles 14B-33B, configuration enthousiaste RTX 5090 32 Go pour modèles 33B-70B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1373,8 +1363,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Logigramme de décision : choisissez votre configuration en quatre questions',
         content:
           '**Quatre questions, dans l\'ordre, orientent la plupart des monteurs vers un niveau.**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: 'Arbre de décision pour choisir une configuration PC IA locale selon la taille du modèle : les modèles 7B-13B orientent vers la configuration économique, les modèles 14B-33B vers la configuration intermédiaire, les modèles 70B vers la configuration enthousiaste.',
         items: [
           '**1. Quel est le plus grand modèle que vous voulez exécuter ?** 7B-13B : configuration budget. 14B-33B : configuration intermédiaire. 70B : configuration enthousiaste.',
           '**2. Quel est votre plafond de budget ferme ?** Configuration budget pour le coût le plus bas, intermédiaire pour le milieu, enthousiaste pour le plus élevé — la RTX 5090 seule est affichée neuve autour de $4,500–4,700 (suivi InsiderLLM, source mise à jour le 2026-10-15).',
@@ -1656,8 +1644,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026年の3構成ティアの比較',
         content:
           'GPUのVRAMと電力の数値はメーカー仕様です。推論速度は、各ティアのGPUクラスにおける一般的な目安（PromptQuorumによる測定ではありません）で、実際の速度は量子化、ランタイム、コンテキスト長によって変わります。構成の合計は追跡していません。価格に情報源と日付を付けているのはRTX 5090のみ（ハイエンド構成を参照）で、RAMなどの部品はこのページでは追跡していません。新品と中古のGPUを比較してください。中古が常に安いとは限りません。',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: '2026年ローカルAI PC構成比較:RTX 4060 Ti 16GB予算構成は7B-13Bモデル、RTX 4070 Ti Super 16GBミドル構成は14B-33Bモデル、RTX 5090 32GBエンスージアスト構成は33B-70Bモデルに対応。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1875,8 +1861,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '判断フローチャート：4つの質問で構成を選ぶ',
         content:
           '**順を追った4つの質問が、ほとんどの自作者を1つのティアへ導きます。**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: 'モデルサイズで選ぶローカルAI PC構成の決定木:7B-13Bモデルは予算構成、14B-33Bモデルはミドル構成、70Bモデルはエンスージアスト構成に対応。',
         items: [
           '**1. 実行したい最大のモデルは何ですか？** 7B〜13B：エントリー構成。14B〜33B：ミドル構成。70B：ハイエンド構成。',
           '**2. 譲れない予算の上限は？** 最も安いのはエントリー構成、中間はミドル構成、最も高いのはハイエンド構成です——RTX 5090だけで新品販売価格は約$4,500〜4,700です（[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、情報源の更新日2026-10-15）。',
@@ -2158,8 +2142,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026 年三档配置如何对比',
         content:
           'GPU 显存和功耗数字为厂商规格。推理速度是各档 GPU 所属级别的大致典型值(并非 PromptQuorum 实测),实际速度取决于量化方式、运行时和上下文长度。配置总价未追踪：只有 RTX 5090 的价格注明来源和日期（见发烧配置），内存和其他配件在本页未追踪。请对比全新与二手 GPU 的挂牌价:二手不再必然更便宜。',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: '2026年本地AI主机配置对比:RTX 4060 Ti 16GB入门配置运行7B-13B模型,RTX 4070 Ti Super 16GB中端配置运行14B-33B模型,RTX 5090 32GB发烧级配置运行33B-70B模型。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2377,8 +2359,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '决策流程图:用四个问题选定你的配置',
         content:
           '**按顺序回答的四个问题,会把大多数装机者引向某一档。**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: '按模型规模选择本地AI主机配置的决策树:7B-13B模型对应入门配置,14B-33B模型对应中端配置,70B模型对应发烧级配置。',
         items: [
           '**1. 你想运行的最大模型是多大？** 7B-13B:入门配置。14B-33B:中端配置。70B:发烧配置。',
           '**2. 你的硬性预算上限是多少？** 入门配置成本最低，中端配置居中，发烧配置最高——仅 RTX 5090 的新品零售价就约 $4,500–4,700（[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于 2026-10-15）。',
@@ -2660,8 +2640,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo se comparan los tres niveles de configuración en 2026',
         content:
           'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son cifras aproximadas y típicas de la clase de GPU de cada nivel (no medidos por PromptQuorum); la velocidad real depende de la cuantización, el entorno de ejecución y la longitud de contexto. Los totales de configuración no se rastrean: solo el precio de la RTX 5090 lleva fuente y fecha (ver la configuración entusiasta), y la RAM y el resto de piezas no se rastrean en esta página. Compara listados de GPU nuevas y usadas: lo usado ya no siempre cuesta menos. En Latinoamérica, los precios pueden variar según impuestos locales.',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: 'Comparativa de niveles de PC para IA local 2026: configuración económica RTX 4060 Ti 16 GB para modelos 7B-13B, configuración media RTX 4070 Ti Super 16 GB para modelos 14B-33B, configuración entusiasta RTX 5090 32 GB para modelos 33B-70B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2879,8 +2857,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Diagrama de decisión: elige tu configuración en cuatro preguntas',
         content:
           '**Cuatro preguntas, en orden, llevan a la mayoría de los armadores a un nivel.**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: 'Árbol de decisión para elegir una configuración de PC para IA local según el tamaño del modelo: los modelos 7B-13B llevan a la configuración económica, los modelos 14B-33B a la configuración media, los modelos 70B a la configuración entusiasta.',
         items: [
           '**1. ¿Cuál es el modelo más grande que quieres ejecutar?** 7B-13B: configuración económica. 14B-33B: configuración media. 70B: configuración entusiasta.',
           '**2. ¿Cuál es tu techo de presupuesto estricto?** Configuración económica para el costo más bajo, media para el intermedio, entusiasta para el más alto — solo la RTX 5090 se lista nueva en unos $4.500–4.700 ([rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15).',
@@ -3175,8 +3151,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como os três níveis de configuração se comparam em 2026',
         content:
           'As cifras de VRAM e potência da GPU são especificações do fabricante. As velocidades de inferência são valores aproximados e típicos para a classe de GPU de cada nível (não medidas pelo PromptQuorum); a velocidade real depende da quantização, do runtime e do tamanho do contexto. Os totais de configuração não são rastreados: só o preço da RTX 5090 traz fonte e data (veja a configuração entusiasta), e a RAM e as demais peças não são rastreadas nesta página. Compare anúncios novos e usados de GPU: o usado já não custa sempre menos. Os preços no Brasil podem variar bastante devido a impostos de importação.',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: 'Comparação dos níveis de PC para IA local em 2026: configuração econômica RTX 4060 Ti 16 GB (~US$ 2.000) para modelos 7B-13B, configuração intermediária RTX 4070 Ti Super 16 GB (~US$ 3.100) para modelos 14B-33B, configuração entusiasta RTX 5090 32 GB (~US$ 9.600) para modelos 33B-70B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3394,8 +3368,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fluxograma de decisão: escolha sua configuração em quatro perguntas',
         content:
           '**Quatro perguntas, em ordem, levam a maioria dos montadores a um nível.**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: 'Árvore de decisão para escolher uma configuração de PC para IA local pelo tamanho do modelo: modelos 7B-13B levam à configuração econômica (~US$ 2.000), modelos 14B-33B à configuração intermediária (~US$ 3.100), modelos 70B à configuração entusiasta (~US$ 9.600).',
         items: [
           '**1. Qual é o maior modelo que você quer executar?** 7B–13B: configuração econômica. 14B–33B: configuração intermediária. 70B: configuração entusiasta.',
           '**2. Qual é o seu teto de orçamento estrito?** Configuração econômica para o menor custo, intermediária para o meio, entusiasta para o mais alto — só a RTX 5090 é anunciada nova por cerca de $4.500–4.700 ([rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15).',
@@ -3690,8 +3662,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيف تتقاطع المستويات الثلاثة في 2026',
         content:
           'أرقام VRAM وطاقة الـGPU هي مواصفات الشركة المصنّعة. سرعات الاستدلال أرقام تقريبية نموذجية لفئة GPU في كل مستوى (لم تقسها PromptQuorum)؛ والسرعة الفعلية تتوقف على التكميم وبيئة التشغيل وطول السياق. إجماليات البناء غير متتبَّعة: سعر RTX 5090 فقط يحمل المصدر والتاريخ (انظر الإعداد المتحمس)، وRAM وبقية القطع غير متتبَّعة في هذه الصفحة. قارن إعلانات GPU الجديدة والمستعملة: المستعمل لم يعد أرخص دائماً.',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: 'مقارنة مستويات أجهزة الذكاء الاصطناعي المحلي لعام 2026: الإعداد الاقتصادي RTX 4060 Ti بذاكرة 16 جيجابايت لنماذج 7B-13B، الإعداد المتوسط RTX 4070 Ti Super بذاكرة 16 جيجابايت لنماذج 14B-33B، إعداد الهواة RTX 5090 بذاكرة 32 جيجابايت لنماذج 33B-70B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3909,8 +3879,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مخطط قرار الاختيار: اختر إعدادك في أربعة أسئلة',
         content:
           '**أربعة أسئلة بالترتيب تقود معظم من يبنون إلى مستوى.**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: 'شجرة قرار لاختيار إعداد جهاز الذكاء الاصطناعي المحلي حسب حجم النموذج: نماذج 7B-13B تقود إلى الإعداد الاقتصادي، نماذج 14B-33B إلى الإعداد المتوسط، نماذج 70B إلى إعداد الهواة.',
         items: [
           '**1. ما أكبر نموذج تريد تشغيله؟** 7B–13B: الاقتصادي. 14B–33B: المتوسط. 70B: المتحمس.',
           '**2. ما سقف ميزانيتك الصارم؟** الإعداد الاقتصادي لأقل تكلفة، والمتوسط للمستوى الوسط، والمتحمس للأعلى — تُعرض RTX 5090 وحدها جديدة بنحو $4,500–4,700 ([متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15).',
@@ -4205,8 +4173,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026년 세 가지 구성 단계 비교',
         content:
           'VRAM 및 GPU 전력 수치는 제조사 사양입니다. 추론 속도는 각 단계 GPU 등급의 대략적인 일반 수치(PromptQuorum이 측정한 값이 아님)이고, 실제 속도는 양자화, 런타임, 컨텍스트 길이에 따라 달라집니다. 구성 총액은 추적하지 않습니다. 가격에 출처와 날짜를 표기한 것은 RTX 5090뿐이며(고급형 구성 참조), RAM 등 부품은 이 페이지에서 추적하지 않습니다. 신품과 중고 GPU 목록을 비교하십시오. 중고가 더 이상 항상 저렴하지는 않습니다.',
-        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
-        imageCaption: '2026년 로컬 AI PC 구성 단계 비교: RTX 4060 Ti 16GB 보급형 구성은 7B-13B 모델, RTX 4070 Ti Super 16GB 중급형 구성은 14B-33B 모델, RTX 5090 32GB 고급형 구성은 33B-70B 모델을 실행합니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4424,8 +4390,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결정 순서도: 네 가지 질문으로 구성 선택',
         content:
           '**네 가지 질문에 순서대로 답하면 대부분의 구성자가 단계에 도달합니다.**',
-        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
-        imageCaption: '모델 크기별 로컬 AI PC 구성 선택 결정 트리: 7B-13B 모델은 보급형 구성, 14B-33B 모델은 중급형 구성, 70B 모델은 고급형 구성으로 연결됩니다.',
         items: [
           '**1. 실행하려는 가장 큰 모델은 무엇입니까?** 7B–13B: 보급형 구성. 14B–33B: 중급형 구성. 70B: 고급형 구성.',
           '**2. 엄격한 예산 상한은 얼마입니까?** 보급형 구성이 비용이 가장 낮고, 중급형이 중간, 고급형이 가장 높습니다. RTX 5090 한 장만으로도 신품 소매가가 약 $4,500–4,700입니다([InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15).',
