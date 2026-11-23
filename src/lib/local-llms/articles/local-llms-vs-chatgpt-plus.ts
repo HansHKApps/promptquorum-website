@@ -54,8 +54,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'ChatGPT Plus advantage: GPT-5.2 Thinking mode, multimodal (image/audio/video), no setup, instant start',
             'Pro $100 offers strong value for power users — 5× Plus limits, GPT-5.4 Pro access at $100/month',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
-          imageCaption: 'macOS vs Windows vs Linux for local LLMs: macOS offers a particularly simple setup; Windows delivers peak GPU performance; Linux is the usual low-software-cost option.'
         },
         'quickFacts': {
           id: 'quick-facts',
@@ -337,8 +335,6 @@ schema: {
             'ChatGPT Plus-Vorteil: GPT-5.2 Thinking-Modus, Multimodal (Bild/Audio/Video), kein Setup, sofort einsatzbereit',
             'Pro €100 bietet starkes Preis-Leistungs-Verhältnis für Powernutzer — 5× Plus-Limits, GPT-5.4 Pro Zugriff für 100 $/Monat',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
-          imageCaption: 'macOS vs Windows vs Linux für lokale LLMs: macOS bietet ein besonders einfaches Setup ab ca. 1.199€; Windows liefert maximale GPU-Leistung; Linux bietet das beste Kosten-Leistungs-Verhältnis ab ca. 810€ Gesamtkosten.'
         },
         'quickFacts': {
           id: 'quick-facts',
@@ -628,8 +624,6 @@ schema: {
             'Avantage ChatGPT Plus : mode GPT-5.2 Thinking, multimodal (image/audio/vidéo), pas de configuration, utilisation instantanée',
             'Pro 100€ offre un bon rapport qualité-prix pour les utilisateurs intensifs — 5× les limites de Plus, accès GPT-5.4 Pro à 100 $/mois',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
-          imageCaption: 'macOS vs Windows vs Linux pour LLMs locaux : macOS offre une configuration particulièrement simple ; Windows délivre les performances GPU maximales ; Linux est l\'option habituelle à faible coût logiciel.'
         },
         'quickFacts': {
           id: 'quick-facts',
@@ -908,8 +902,6 @@ schema: {
             'ChatGPT Plus の利点：GPT-5.2 Thinking モード、マルチモーダル（画像/音声/ビデオ）、セットアップなし、即座に利用可能',
             'Pro 100€ はパワーユーザーに高い価値を提供 — Plus の 5 倍の制限、月100€で GPT-5.4 Pro アクセス',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
-          imageCaption: 'macOS vs Windows vs Linux ローカル LLM：macOS は特にシンプルなセットアップを提供；Windows は最高の GPU パフォーマンスを配信；Linux はソフトウェアコストが低い一般的な選択肢です。'
         },
         'quickFacts': {
           id: 'quick-facts',
@@ -1188,8 +1180,6 @@ schema: {
             'ChatGPT Plus优势：GPT-5.2 Thinking模式、多模态（图像/音频/视频）、无需设置、即用',
             'Pro 100€为高级用户提供强大价值——Plus限制的5倍，每月100€获得GPT-5.4 Pro访问权限',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
-          imageCaption: 'macOS vs Windows vs Linux本地LLM：macOS提供特别简便的设置；Windows提供峰值GPU性能；Linux通常是软件成本最低的选择。'
         },
         'quickFacts': {
           id: 'quick-facts',
@@ -1467,8 +1457,6 @@ schema: {
             'Ventaja de ChatGPT Plus: modo GPT-5.2 Thinking, multimodal (imagen/audio/video), sin configuración, inicio inmediato',
             'Pro $100 ofrece un gran valor para usuarios avanzados — 5× los límites de Plus, acceso a GPT-5.4 Pro por $100/mes',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-es.svg',
-          imageCaption: 'macOS vs Windows vs Linux para LLMs locales: macOS ofrece una configuración especialmente sencilla; Windows entrega el mayor rendimiento de GPU; Linux es la opción habitual de bajo costo en software.'
         },
         'quickFacts': {
           id: 'quick-facts',
@@ -1749,8 +1737,6 @@ schema: {
             'ميزة ChatGPT Plus: وضع GPT-5.2 Thinking، متعدد الوسائط (صورة/صوت/فيديو)، بلا إعداد، بدء فوري',
             'Pro 100$ يوفّر قيمة قوية للمستخدمين المتقدمين — 5× حدود Plus، وصول إلى GPT-5.4 Pro بـ100$/شهر',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
-          imageCaption: 'macOS مقابل Windows مقابل Linux لنماذج LLM المحلية: يقدّم macOS أبسط إعداد؛ يوفّر Windows أعلى أداء GPU؛ ويُعد Linux الخيار المعتاد منخفض التكلفة برمجيًا.'
         },
         'quickFacts': {
           id: 'quick-facts',
@@ -2031,8 +2017,6 @@ schema: {
             'Vantagem do ChatGPT Plus: modo GPT-5.2 Thinking, multimodal (imagem/áudio/vídeo), sem configuração, início imediato',
             'Pro $100 oferece excelente custo-benefício para usuários avançados — 5× os limites do Plus, acesso ao GPT-5.4 Pro por $100/mês',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
-          imageCaption: 'macOS vs Windows vs Linux para LLMs locais: macOS oferece uma configuração particularmente simples; Windows entrega o máximo desempenho de GPU; Linux é a opção habitual de baixo custo em software.',
         },
         'quickFacts': {
           id: 'quick-facts',
@@ -2314,8 +2298,6 @@ schema: {
             'ChatGPT Plus 장점: GPT-5.2 Thinking 모드, 멀티모달(이미지/음성/동영상), 별도 설치 불필요, 즉시 시작 가능',
             'Pro $100은 파워 유저에게 높은 가성비 제공 — Plus 한도의 5배, $100/월에 GPT-5.4 Pro 이용 가능',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
-          imageCaption: '로컬 LLM을 위한 macOS vs Windows vs Linux: macOS는 가장 간편한 설정 제공, Windows는 최고의 GPU 성능 제공, Linux는 소프트웨어 비용이 낮은 일반적인 선택지.'
         },
         'quickFacts': {
           id: 'quick-facts',
