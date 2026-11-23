@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Private Local AI For Business | PromptQuorum</title>
-  <meta name="description" content="On-premises AI breaks even at 200M tokens/month. GDPR, HIPAA, SOC2 compliant. Deploy Llama 3.3 70B locally." />
+  <meta name="description" content="On-premises AI breaks even near 41M tokens/month. GDPR, HIPAA, SOC2 compliant. Deploy Llama 3.3 70B locally." />
   <meta property="og:title" content="Private Local AI For Business — PromptQuorum" />
-  <meta property="og:description" content="On-premises AI breaks even at 200M tokens/month — $83/month hardware vs $1,000/month cloud API." />
+  <meta property="og:description" content="On-premises AI breaks even near 41M tokens/month — about $205/month for an RTX 5090 setup vs $1,000/month cloud API at 200M tokens." />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://www.promptquorum.com/local-llms/private-local-ai-for-business" />
 
@@ -392,7 +392,7 @@
           {
             type: 'title',
             h1: 'Private Local AI For Business',
-            subtitle: 'On-Premises Deployment Without Cloud. Break-even at 200M tokens/month.',
+            subtitle: 'On-Premises Deployment Without Cloud. Break-even near 41M tokens/month.',
             link: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business'
           },
           {
@@ -422,21 +422,21 @@
             h2: 'Cost Break-Even: On-Premises vs Cloud',
             columns: ['Volume', 'Cloud API/Month', 'On-Premises/Month', 'Savings'],
             rows: [
-              { 'Volume': '10M tokens/month', 'Cloud API/Month': '$50', 'On-Premises/Month': '$133', 'Savings': 'Cloud cheaper' },
-              { 'Volume': '50M tokens/month', 'Cloud API/Month': '$250', 'On-Premises/Month': '$133', 'Savings': '47% cheaper' },
-              { 'Volume': '200M tokens/month', 'Cloud API/Month': '$1,000', 'On-Premises/Month': '$133', 'Savings': '87% cheaper' },
-              { 'Volume': '500M tokens/month', 'Cloud API/Month': '$2,500', 'On-Premises/Month': '$183', 'Savings': '93% cheaper' },
-              { 'Volume': '1B tokens/month', 'Cloud API/Month': '$5,000', 'On-Premises/Month': '$233', 'Savings': '95% cheaper' }
+              { 'Volume': '10M tokens/month', 'Cloud API/Month': '$50', 'On-Premises/Month': '$202–208', 'Savings': 'Cloud cheaper' },
+              { 'Volume': '50M tokens/month', 'Cloud API/Month': '$250', 'On-Premises/Month': '$202–208', 'Savings': '17–19% cheaper' },
+              { 'Volume': '200M tokens/month', 'Cloud API/Month': '$1,000', 'On-Premises/Month': '$202–208', 'Savings': '79–80% cheaper' },
+              { 'Volume': '500M tokens/month', 'Cloud API/Month': '$2,500', 'On-Premises/Month': '$252–258', 'Savings': 'about 90% cheaper' },
+              { 'Volume': '1B tokens/month', 'Cloud API/Month': '$5,000', 'On-Premises/Month': '$302–308', 'Savings': 'about 94% cheaper' }
             ]
           },
           {
             type: 'list',
             h2: 'Hardware Requirements by Scale',
             items: [
-              '<strong>Small:</strong> 1× RTX 5090 ($2,000)',
-              '<strong>Production:</strong> 2× RTX 5090 ($4,000)',
-              '<strong>Enterprise:</strong> 4× RTX 5090 or 2× A100 ($8k–$30k)',
-              '<strong>Mac:</strong> M5 Max ($3,499) at 25–35 tok/sec'
+              '<strong>Small:</strong> 1× RTX 5090 (~$4,500–4,700, InsiderLLM listing data, 2026-10-15)',
+              '<strong>Production:</strong> 2× RTX 5090 (~$9,000–9,400)',
+              '<strong>Enterprise:</strong> 4× RTX 5090 (~$18,000–18,800) or 2× A100',
+              '<strong>Mac:</strong> M5 Max ($3,499) can run 70B from unified memory'
             ]
           },
           {
@@ -488,7 +488,7 @@
             faqs: [
               {
                 q: 'When does on-premises become cheaper?',
-                a: 'At ~200M tokens/month. RTX 5090 costs $133/month (amortized + electricity). Cloud: $1,000/month. Pays for itself in 1–2 months.'
+                a: 'Break-even near 41M tokens/month. At 200M tokens: RTX 5090 setup about $205/month (amortized + electricity + cooling), cloud $1,000/month; the card pays for itself in about 5 months.'
               }
             ]
           },
@@ -502,7 +502,7 @@
               },
               {
                 q: 'What hardware do I need?',
-                a: 'Small: 1× RTX 5090 ($2k). Prod: 2× RTX 5090 ($4k). Enterprise: 4× RTX 5090 ($8k–$30k).'
+                a: 'Small: 1× RTX 5090 (~$4.5–4.7k). Prod: 2× RTX 5090 (~$9–9.4k). Enterprise: 4× RTX 5090 (~$18–18.8k). Prices: InsiderLLM listing data, 2026-10-15.'
               }
             ]
           },
@@ -553,7 +553,7 @@
             h2: 'Wichtigste Erkenntnisse',
             items: [
               '<strong>Datenschutz:</strong> Daten verlassen Ihre Infrastruktur nie. Entscheidend für HIPAA, DSGVO, Finanzdienstleistungen.',
-              '<strong>Kosten:</strong> Keine API-Gebühren pro Token. Einmalige Hardwareinvestition (3.000–50.000 €), dann kostenlose Anfragen.',
+              '<strong>Kosten:</strong> Keine API-Gebühren pro Token. Einmalige Hardwareinvestition (ab ca. 4.500–4.700 $ für eine RTX 5090, InsiderLLM, 2026-10-15), dann kostenlose Anfragen.',
               '<strong>Compliance:</strong> Vollständige Audit-Trails, Kontrolle über Datenresidenz, keine Herstellerbindung.',
               '<strong>Geschwindigkeit:</strong> 50–150ms Latenz gegenüber 200–500ms bei Cloud-APIs.',
               'On-Premises-KI ist wirtschaftlich sinnvoll für 100+ Millionen Tokens pro Monat.'
@@ -575,21 +575,21 @@
             h2: 'Kostenvergleich: On-Premises vs Cloud',
             columns: ['Volumen', 'Cloud API/Monat', 'On-Premises/Monat', 'Ersparnis'],
             rows: [
-              { 'Volumen': '10M Tokens/Monat', 'Cloud API/Monat': '50 €', 'On-Premises/Monat': '133 €', 'Ersparnis': 'Cloud billiger' },
-              { 'Volumen': '50M Tokens/Monat', 'Cloud API/Monat': '250 €', 'On-Premises/Monat': '133 €', 'Ersparnis': '47% billiger' },
-              { 'Volumen': '200M Tokens/Monat', 'Cloud API/Monat': '1.000 €', 'On-Premises/Monat': '133 €', 'Ersparnis': '87% billiger' },
-              { 'Volumen': '500M Tokens/Monat', 'Cloud API/Monat': '2.500 €', 'On-Premises/Monat': '183 €', 'Ersparnis': '93% billiger' },
-              { 'Volumen': '1B Tokens/Monat', 'Cloud API/Monat': '5.000 €', 'On-Premises/Monat': '233 €', 'Ersparnis': '95% billiger' }
+              { 'Volumen': '10M Tokens/Monat', 'Cloud API/Monat': '50 $', 'On-Premises/Monat': '202–208 $', 'Ersparnis': 'Cloud billiger' },
+              { 'Volumen': '50M Tokens/Monat', 'Cloud API/Monat': '250 $', 'On-Premises/Monat': '202–208 $', 'Ersparnis': '17–19 % billiger' },
+              { 'Volumen': '200M Tokens/Monat', 'Cloud API/Monat': '1.000 $', 'On-Premises/Monat': '202–208 $', 'Ersparnis': '79–80 % billiger' },
+              { 'Volumen': '500M Tokens/Monat', 'Cloud API/Monat': '2.500 $', 'On-Premises/Monat': '252–258 $', 'Ersparnis': 'etwa 90 % billiger' },
+              { 'Volumen': '1B Tokens/Monat', 'Cloud API/Monat': '5.000 $', 'On-Premises/Monat': '302–308 $', 'Ersparnis': 'etwa 94 % billiger' }
             ]
           },
           {
             type: 'list',
             h2: 'Hardware-Anforderungen nach Skalierung',
             items: [
-              '<strong>Kleine Teams (5–20 Nutzer):</strong> 1× RTX 5090 (32 GB, 2.000 €) für Llama 3.1 8B.',
-              '<strong>Produktion (20–100 Nutzer):</strong> 2× RTX 5090 (64 GB, 4.000 €) für Llama 3.3 70B.',
-              '<strong>Enterprise (100+ Nutzer):</strong> 4× RTX 5090 oder 2× A100 80GB (8.000–30.000 €).',
-              '<strong>Cloud-Alternative:</strong> Mac M5 Max (3.499 €) führt 70B mit 25–35 tok/s leise aus.',
+              '<strong>Kleine Teams (5–20 Nutzer):</strong> 1× RTX 5090 (32 GB, ca. 4.500–4.700 $, InsiderLLM, 2026-10-15) für Llama 3.1 8B.',
+              '<strong>Produktion (20–100 Nutzer):</strong> 2× RTX 5090 (64 GB, ca. 9.000–9.400 $) für Llama 3.3 70B.',
+              '<strong>Enterprise (100+ Nutzer):</strong> 4× RTX 5090 (ca. 18.000–18.800 $) oder 2× A100 80GB.',
+              '<strong>Cloud-Alternative:</strong> Mac M5 Max (3.499 €) kann 70B aus dem Unified Memory ausführen.',
               'Budget für Netzwerk, Kühlung und redundante Stromversorgung erforderlich.'
             ]
           },
@@ -643,7 +643,7 @@
             faqs: [
               {
                 q: 'Wann wird On-Premises-KI billiger als Cloud-APIs?',
-                a: 'Break-Even bei ~200 Millionen Tokens pro Monat. Eine RTX 5090 (2.000 €) amortisiert über 36 Monate kostet ~56 €/Monat Hardware. Strom (50 €/Monat) und Kühlung (27 €/Monat) = 133 €/Monat insgesamt. Bei 200+ Millionen Tokens amortisiert sie sich in 1–2 Monaten.'
+                a: 'Break-Even bei ~41 Millionen Tokens pro Monat. Eine RTX 5090 (ca. 4.500–4.700 $, InsiderLLM, 2026-10-15) amortisiert über 36 Monate kostet ~125–131 $/Monat Hardware. Strom (50 $/Monat) und Kühlung (27 $/Monat) = 202–208 $/Monat insgesamt. Bei 200 Millionen Tokens amortisiert sich die Karte in rund 5 Monaten.'
               }
             ]
           },
@@ -657,7 +657,7 @@
               },
               {
                 q: 'Welche Hardware brauche ich?',
-                a: 'Kleine Teams: 1× RTX 5090 (2.000 €). Produktion: 2× RTX 5090 (4.000 €). Enterprise: 4× RTX 5090 oder 2× A100 (8.000–30.000 €). Mac M5 Max (3.499 €) läuft 70B mit 25–35 tok/s für kleine Teams.'
+                a: 'Kleine Teams: 1× RTX 5090 (ca. 4.500–4.700 $). Produktion: 2× RTX 5090 (ca. 9.000–9.400 $). Enterprise: 4× RTX 5090 (ca. 18.000–18.800 $) oder 2× A100. Mac M5 Max (3.499 €) kann 70B für kleine Teams ausführen. Preise: InsiderLLM-Angebotsdaten, 2026-10-15.'
               }
             ]
           },
@@ -709,7 +709,7 @@
             h2: 'Points Clés',
             items: [
               '<strong>Confidentialité :</strong> Les données ne quittent jamais votre infrastructure. Critique pour HIPAA, RGPD, services financiers.',
-              '<strong>Coût :</strong> Pas de frais par token. Investissement matériel unique (3 000–50 000 €), puis requêtes gratuites.',
+              '<strong>Coût :</strong> Pas de frais par token. Investissement matériel unique (à partir d\'environ 4 500–4 700 $ pour une RTX 5090, InsiderLLM, 2026-10-15), puis requêtes gratuites.',
               '<strong>Conformité :</strong> Logs d\'audit complets, contrôle de résidence des données, pas de verrouillage.',
               '<strong>Vitesse :</strong> 50–150 ms de latence vs 200–500 ms sur cloud.',
               'L\'IA on-premises est économiquement viable pour 100+ millions de tokens par mois.'
@@ -731,21 +731,21 @@
             h2: 'Comparaison Coûts : On-Premises vs Cloud',
             columns: ['Volume', 'Cloud API/Mois', 'On-Premises/Mois', 'Économies'],
             rows: [
-              { 'Volume': '10M tokens/mois', 'Cloud API/Mois': '50 €', 'On-Premises/Mois': '133 €', 'Économies': 'Cloud moins cher' },
-              { 'Volume': '50M tokens/mois', 'Cloud API/Mois': '250 €', 'On-Premises/Mois': '133 €', 'Économies': '47% moins cher' },
-              { 'Volume': '200M tokens/mois', 'Cloud API/Mois': '1 000 €', 'On-Premises/Mois': '133 €', 'Économies': '87% moins cher' },
-              { 'Volume': '500M tokens/mois', 'Cloud API/Mois': '2 500 €', 'On-Premises/Mois': '183 €', 'Économies': '93% moins cher' },
-              { 'Volume': '1B tokens/mois', 'Cloud API/Mois': '5 000 €', 'On-Premises/Mois': '233 €', 'Économies': '95% moins cher' }
+              { 'Volume': '10M tokens/mois', 'Cloud API/Mois': '50 $', 'On-Premises/Mois': '202–208 $', 'Économies': 'Cloud moins cher' },
+              { 'Volume': '50M tokens/mois', 'Cloud API/Mois': '250 $', 'On-Premises/Mois': '202–208 $', 'Économies': '17–19 % moins cher' },
+              { 'Volume': '200M tokens/mois', 'Cloud API/Mois': '1 000 $', 'On-Premises/Mois': '202–208 $', 'Économies': '79–80 % moins cher' },
+              { 'Volume': '500M tokens/mois', 'Cloud API/Mois': '2 500 $', 'On-Premises/Mois': '252–258 $', 'Économies': 'environ 90 % moins cher' },
+              { 'Volume': '1B tokens/mois', 'Cloud API/Mois': '5 000 $', 'On-Premises/Mois': '302–308 $', 'Économies': 'environ 94 % moins cher' }
             ]
           },
           {
             type: 'list',
             h2: 'Configuration Matérielle par Échelle',
             items: [
-              '<strong>Petites équipes (5–20 utilisateurs) :</strong> 1× RTX 5090 (32 GB, 2 000 €) pour Llama 3.1 8B.',
-              '<strong>Production (20–100 utilisateurs) :</strong> 2× RTX 5090 (64 GB, 4 000 €) pour Llama 3.3 70B.',
-              '<strong>Entreprise (100+ utilisateurs) :</strong> 4× RTX 5090 ou 2× A100 80GB (8 000–30 000 €).',
-              '<strong>Alternative cloud :</strong> Mac M5 Max (3 499 €) exécute 70B à 25–35 tok/s silencieusement.',
+              '<strong>Petites équipes (5–20 utilisateurs) :</strong> 1× RTX 5090 (32 GB, environ 4 500–4 700 $, InsiderLLM, 2026-10-15) pour Llama 3.1 8B.',
+              '<strong>Production (20–100 utilisateurs) :</strong> 2× RTX 5090 (64 GB, environ 9 000–9 400 $) pour Llama 3.3 70B.',
+              '<strong>Entreprise (100+ utilisateurs) :</strong> 4× RTX 5090 (environ 18 000–18 800 $) ou 2× A100 80GB.',
+              '<strong>Alternative cloud :</strong> Mac M5 Max (3 499 €) peut exécuter 70B depuis sa mémoire unifiée.',
               'Budget pour réseau, refroidissement et alimentation redondante également nécessaire.'
             ]
           },
@@ -799,7 +799,7 @@
             faqs: [
               {
                 q: 'Quand l\'IA on-premises devient-elle moins chère que cloud ?',
-                a: 'Point mort autour de 200 millions tokens/mois. Une RTX 5090 (2 000 €) amortie sur 36 mois coûte ~56 €/mois hardware. Électricité (50 €/mois) et refroidissement (27 €/mois) = 133 €/mois total. À 200+ millions tokens, elle se rembourse en 1–2 mois.'
+                a: 'Point mort autour de 41 millions tokens/mois. Une RTX 5090 (environ 4 500–4 700 $, InsiderLLM, 2026-10-15) amortie sur 36 mois coûte ~125–131 $/mois hardware. Électricité (50 $/mois) et refroidissement (27 $/mois) = 202–208 $/mois total. À 200 millions tokens, la carte se rembourse en environ 5 mois.'
               }
             ]
           },
@@ -813,7 +813,7 @@
               },
               {
                 q: 'Quel matériel me faut-il ?',
-                a: 'Petites équipes : 1× RTX 5090 (2 000 €). Production : 2× RTX 5090 (4 000 €). Entreprise : 4× RTX 5090 ou 2× A100 (8 000–30 000 €). Mac M5 Max (3 499 €) exécute 70B à 25–35 tok/s pour petites équipes.'
+                a: 'Petites équipes : 1× RTX 5090 (environ 4 500–4 700 $). Production : 2× RTX 5090 (environ 9 000–9 400 $). Entreprise : 4× RTX 5090 (environ 18 000–18 800 $) ou 2× A100. Mac M5 Max (3 499 €) peut exécuter 70B pour petites équipes. Prix : données d\'annonces InsiderLLM, 2026-10-15.'
               }
             ]
           },
@@ -887,21 +887,21 @@
             h2: 'コスト比較：オンプレミス対クラウド',
             columns: ['ボリューム', 'クラウドAPI/月', 'オンプレミス/月', '節約'],
             rows: [
-              { 'ボリューム': '1000万トークン/月', 'クラウドAPI/月': '$50', 'オンプレミス/月': '$133', '節約': 'クラウド安い' },
-              { 'ボリューム': '5000万トークン/月', 'クラウドAPI/月': '$250', 'オンプレミス/月': '$133', '節約': '47%安い' },
-              { 'ボリューム': '2億トークン/月', 'クラウドAPI/月': '$1,000', 'オンプレミス/月': '$133', '節約': '87%安い' },
-              { 'ボリューム': '5億トークン/月', 'クラウドAPI/月': '$2,500', 'オンプレミス/月': '$183', '節約': '93%安い' },
-              { 'ボリューム': '10億トークン/月', 'クラウドAPI/月': '$5,000', 'オンプレミス/月': '$233', '節約': '95%安い' }
+              { 'ボリューム': '1000万トークン/月', 'クラウドAPI/月': '$50', 'オンプレミス/月': '$202〜208', '節約': 'クラウド安い' },
+              { 'ボリューム': '5000万トークン/月', 'クラウドAPI/月': '$250', 'オンプレミス/月': '$202〜208', '節約': '17〜19%安い' },
+              { 'ボリューム': '2億トークン/月', 'クラウドAPI/月': '$1,000', 'オンプレミス/月': '$202〜208', '節約': '79〜80%安い' },
+              { 'ボリューム': '5億トークン/月', 'クラウドAPI/月': '$2,500', 'オンプレミス/月': '$252〜258', '節約': '約90%安い' },
+              { 'ボリューム': '10億トークン/月', 'クラウドAPI/月': '$5,000', 'オンプレミス/月': '$302〜308', '節約': '約94%安い' }
             ]
           },
           {
             type: 'list',
             h2: 'スケール別ハードウェア要件',
             items: [
-              '<strong>小規模チーム（5～20ユーザー）:</strong> 1× RTX 5090（32GB、$2,000）でLlama 3.1 8B対応。',
-              '<strong>本番環境（20～100ユーザー）:</strong> 2× RTX 5090（64GB、$4,000）でLlama 3.3 70B対応。',
-              '<strong>エンタープライズ（100+ユーザー）:</strong> 4× RTX 5090または2× A100 80GB（$8,000～$30,000）。',
-              '<strong>クラウド代替:</strong> Mac M5 Max（$3,499）は70Bを25～35 tok/s静かに実行。',
+              '<strong>小規模チーム（5～20ユーザー）:</strong> 1× RTX 5090（32GB、約$4,500〜4,700、InsiderLLM、2026-10-15）でLlama 3.1 8B対応。',
+              '<strong>本番環境（20～100ユーザー）:</strong> 2× RTX 5090（64GB、約$9,000〜9,400）でLlama 3.3 70B対応。',
+              '<strong>エンタープライズ（100+ユーザー）:</strong> 4× RTX 5090（約$18,000〜18,800）または2× A100 80GB。',
+              '<strong>クラウド代替:</strong> Mac M5 Max（$3,499）は統合メモリで70Bを実行可能。',
               'ネットワーク、冷却、冗長電源もバジェット化してください。'
             ]
           },
@@ -955,7 +955,7 @@
             faqs: [
               {
                 q: 'オンプレミスAIはいつクラウドより安くなりますか？',
-                a: '月2億トークン付近で損益分岐点。RTX 5090（$2,000）を36ヶ月で償却すると~$56/月ハードウェア。電気代（$50/月）と冷却（$27/月）を加えると合計$133/月。2億トークン以上なら1～2ヶ月で回収できます。'
+                a: '月約4,100万トークンで損益分岐点。RTX 5090（約$4,500〜4,700、InsiderLLM、2026-10-15）を36ヶ月で償却すると約$125〜131/月ハードウェア。電気代（$50/月）と冷却（$27/月）を加えると合計約$202〜208/月。月2億トークンならカード代は約5ヶ月で回収できます。'
               }
             ]
           },
@@ -969,7 +969,7 @@
               },
               {
                 q: 'どのハードウェアが必要ですか？',
-                a: '小規模チーム：1× RTX 5090（$2,000）。本番：2× RTX 5090（$4,000）。エンタープライズ：4× RTX 5090または2× A100（$8,000～$30,000）。Mac M5 Max（$3,499）は小規模チーム向けに70Bを25～35 tok/s実行。'
+                a: '小規模チーム：1× RTX 5090（約$4,500〜4,700）。本番：2× RTX 5090（約$9,000〜9,400）。エンタープライズ：4× RTX 5090（約$18,000〜18,800）または2× A100。Mac M5 Max（$3,499）は小規模チーム向けに70Bを実行可能。価格：InsiderLLM出品データ、2026-10-15。'
               }
             ]
           },
@@ -1043,21 +1043,21 @@
             h2: '成本对比：本地 vs 云端',
             columns: ['数量', '云API/月', '本地/月', '节省'],
             rows: [
-              { '数量': '1000万token/月', '云API/月': '$50', '本地/月': '$133', '节省': '云端更便宜' },
-              { '数量': '5000万token/月', '云API/月': '$250', '本地/月': '$133', '节省': '便宜47%' },
-              { '数量': '2亿token/月', '云API/月': '$1,000', '本地/月': '$133', '节省': '便宜87%' },
-              { '数量': '5亿token/月', '云API/月': '$2,500', '本地/月': '$183', '节省': '便宜93%' },
-              { '数量': '10亿token/月', '云API/月': '$5,000', '本地/月': '$233', '节省': '便宜95%' }
+              { '数量': '1000万token/月', '云API/月': '$50', '本地/月': '$202–208', '节省': '云端更便宜' },
+              { '数量': '5000万token/月', '云API/月': '$250', '本地/月': '$202–208', '节省': '便宜17–19%' },
+              { '数量': '2亿token/月', '云API/月': '$1,000', '本地/月': '$202–208', '节省': '便宜79–80%' },
+              { '数量': '5亿token/月', '云API/月': '$2,500', '本地/月': '$252–258', '节省': '便宜约90%' },
+              { '数量': '10亿token/月', '云API/月': '$5,000', '本地/月': '$302–308', '节省': '便宜约94%' }
             ]
           },
           {
             type: 'list',
             h2: '按规模的硬件需求',
             items: [
-              '<strong>小团队（5-20用户）:</strong> 1× RTX 5090（32GB、$2,000）运行Llama 3.1 8B。',
-              '<strong>生产环境（20-100用户）:</strong> 2× RTX 5090（64GB、$4,000）运行Llama 3.3 70B。',
-              '<strong>企业级（100+用户）:</strong> 4× RTX 5090或2× A100 80GB（$8,000-$30,000）。',
-              '<strong>云端替代:</strong> Mac M5 Max（$3,499）静默运行70B，25-35 tok/秒。',
+              '<strong>小团队（5-20用户）:</strong> 1× RTX 5090（32GB、约$4,500–4,700，InsiderLLM，2026-10-15）运行Llama 3.1 8B。',
+              '<strong>生产环境（20-100用户）:</strong> 2× RTX 5090（64GB、约$9,000–9,400）运行Llama 3.3 70B。',
+              '<strong>企业级（100+用户）:</strong> 4× RTX 5090（约$18,000–18,800）或2× A100 80GB。',
+              '<strong>云端替代:</strong> Mac M5 Max（$3,499）可通过统一内存运行70B。',
               '也需要预算网络、冷却和冗余电源。'
             ]
           },
@@ -1111,7 +1111,7 @@
             faqs: [
               {
                 q: '本地AI何时比云API更便宜？',
-                a: '在月2亿token附近达到平衡点。RTX 5090（$2,000）在36个月内摊销约$56/月硬件。加上电力（$50/月）和冷却（$27/月）= 总计$133/月。月2亿+ token时，在1-2个月内收回成本。'
+                a: '在月约4,100万token附近达到平衡点。RTX 5090（约$4,500–4,700，InsiderLLM，2026-10-15）在36个月内摊销约$125–131/月硬件。加上电力（$50/月）和冷却（$27/月）= 总计约$202–208/月。月2亿token时，约5个月收回显卡成本。'
               }
             ]
           },
@@ -1125,7 +1125,7 @@
               },
               {
                 q: '需要什么硬件？',
-                a: '小团队：1× RTX 5090（$2,000）。生产环境：2× RTX 5090（$4,000）。企业：4× RTX 5090或2× A100（$8,000-$30,000）。Mac M5 Max（$3,499）为小团队运行70B，25-35 tok/秒。'
+                a: '小团队：1× RTX 5090（约$4,500–4,700）。生产环境：2× RTX 5090（约$9,000–9,400）。企业：4× RTX 5090（约$18,000–18,800）或2× A100。Mac M5 Max（$3,499）可为小团队运行70B。价格：InsiderLLM挂牌数据，2026-10-15。'
               }
             ]
           },
