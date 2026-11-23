@@ -76,8 +76,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**SOC2 (Enterprise):** Local deployment gives you direct control over the controls an auditor will test (audit trails, encryption, access controls), but SOC2 is an attestation of your organisation, not a property of the software.',
             'Document your deployment: encryption at rest/in transit, access logs, data retention policies.',
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-en.svg',
-          imageCaption: 'On-premises AI compliance topics: GDPR (data residency and processing agreements), HIPAA (AES-256 encryption and audit logging safeguards), SOC2 (access controls and incident response plans). General information, not legal advice.',
           callouts: [{ type: 'note', text: 'This is general information, not legal advice; consult qualified counsel.' }],
         },
         architecture: {
@@ -300,8 +298,6 @@ de: {
             '**BSI IT-Grundschutz (Deutschland):** Der BSI IT-Grundschutz ist ein freiwilliger Standard, an dem sich Organisationen orientieren können; die Bausteine für Server und Netze lassen sich auch auf lokale KI-Systeme anwenden.',
             'Dokumentieren Sie Ihre Bereitstellung: Verschlüsselung im Ruhezustand/in Übertragung, Zugriffsprotokolle, Datenspeicherungsrichtlinien.',
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-en.svg',
-          imageCaption: 'Compliance-Themen für On-Premises-KI: DSGVO (Datenspeicherort und Auftragsverarbeitungsverträge), HIPAA (AES-256-Verschlüsselung und Audit-Logging als Schutzmaßnahmen), SOC2 (Zugriffskontrolle und Reaktionspläne für Vorfälle). Allgemeine Information, keine Rechtsberatung.',
           callouts: [{ type: 'note', text: 'Dies ist eine allgemeine Information und keine Rechtsberatung; ziehen Sie qualifizierten Rechtsrat hinzu.' }],
         },
         architecture: {
@@ -541,8 +537,6 @@ de: {
             '**SOC2 (Entreprise) :** Un déploiement local vous donne un contrôle direct sur les contrôles qu\'un auditeur testera (journaux d\'audit, chiffrement, contrôles d\'accès), mais SOC2 est une attestation de votre organisation, pas une propriété du logiciel.',
             'Documentez votre déploiement : chiffrement au repos/en transit, journaux d\'accès, politiques de rétention des données.'
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-en.svg',
-          imageCaption: "Sujets de conformité de l'IA on-premises : RGPD (résidence des données et accords de traitement), HIPAA (chiffrement AES-256 et journalisation d'audit comme mesures de protection), SOC2 (contrôles d'accès et plans de réponse aux incidents). Information générale, pas un conseil juridique.",
           callouts: [{ type: 'note', text: "Ceci est une information générale et ne constitue pas un conseil juridique ; consultez un conseil qualifié." }],
         },
         architecture: {
@@ -830,8 +824,6 @@ de: {
             '**SOC2（エンタープライズ） :** ローカル展開では、監査人が検証する統制（監査ログ、暗号化、アクセス制御）を直接管理できますが、SOC2はソフトウェアの特性ではなく、組織に対する保証報告書です。',
             'デプロイメントを文書化します ： 保存時/転送中の暗号化、アクセスログ、データ保持ポリシー。'
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-en.svg',
-          imageCaption: 'オンプレミスAIのコンプライアンス上の論点 ： 個人情報保護法（国外への提供と安全管理）、HIPAA（暗号化と監査ログによる保護措置）、SOC2（アクセス制御とインシデント対応計画）。一般的な情報であり、法的助言ではありません。',
           callouts: [{ type: 'note', text: '本内容は一般的な情報であり、法的助言ではありません。資格のある専門家にご相談ください。' }],
         },
         architecture: {
@@ -1091,8 +1083,6 @@ de: {
             '**医疗数据：** 医疗信息属于个人敏感信息，需加密存储和传输。本地部署可以减少患者数据暴露给第三方API的环节。',
             '记录部署：静态和传输中的加密、访问日志、数据保留政策。'
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-en.svg',
-          imageCaption: '本地AI的合规议题：数据安全法与数据出境、个人信息保护法（加密和访问控制等安全措施）、金融行业规则（审计日志和事件响应计划）。一般性信息，不构成法律建议。',
           callouts: [{ type: 'note', text: '本文为一般性信息，不构成法律建议；请咨询合格的法律专业人士。' }],
         },
         architecture: {
@@ -1292,8 +1282,6 @@ de: {
             '**SOC2 (Empresarial):** El despliegue local te da control directo sobre los controles que probará un auditor (registros de auditoría, cifrado, controles de acceso), pero SOC2 es una atestación de tu organización, no una propiedad del software.',
             'Documenta tu despliegue: cifrado en reposo y en tránsito, registros de acceso, políticas de retención de datos.',
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-es.svg',
-          imageCaption: 'Temas de cumplimiento de la IA on-premises: GDPR (residencia de datos y acuerdos de tratamiento), HIPAA (cifrado AES-256 y registro de auditoría como salvaguardas), SOC2 (controles de acceso y planes de respuesta a incidentes). Información general, no asesoramiento legal.',
           callouts: [{ type: 'note', text: 'Esto es información general y no constituye asesoramiento legal; consulta a un profesional cualificado.' }],
         },
         architecture: {
@@ -1514,8 +1502,6 @@ de: {
             '**ISO/IEC 27001 (المؤسسات):** معيار لنظام إدارة أمن المعلومات. يمنحك النشر المحلي تحكمًا مباشرًا في الضوابط التي سيختبرها المدقق (سجلات تدقيق، تشفير، ضوابط وصول)، لكن شهادة ISO 27001 تخص مؤسستك لا البرنامج.',
             'وثّق نشرك: تشفير أثناء السكون وأثناء النقل، سجلات وصول، سياسات احتفاظ بالبيانات.',
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-es.svg',
-          imageCaption: 'محاور الامتثال للذكاء الاصطناعي في الموقع: لوائح حماية البيانات (إقامة البيانات واتفاقيات المعالجة)، وتشفير AES-256 وتسجيل التدقيق كضمانات، وضوابط الوصول وخطط الاستجابة للحوادث. معلومات عامة وليست استشارة قانونية؛ استشر مختصًا قانونيًا مؤهلًا.',
           callouts: [{ type: 'note', text: 'هذه معلومات عامة وليست استشارة قانونية؛ استشر مختصًا قانونيًا مؤهلًا.' }],
         },
         architecture: {
@@ -1903,8 +1889,6 @@ de: {
             '**SOC2 (엔터프라이즈):** 로컬 배포는 감사인이 점검할 통제(감사 추적, 암호화, 접근 제어)를 직접 관리할 수 있게 해 주지만, SOC2는 소프트웨어의 속성이 아니라 조직에 대한 인증 보고서입니다.',
             '배포를 문서화하십시오: 저장 중/전송 중 암호화, 접근 로그, 데이터 보존 정책.',
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-en.svg',
-          imageCaption: '온프레미스 AI 컴플라이언스 주제: GDPR(데이터 레지던시 및 데이터 처리 계약), HIPAA(AES-256 암호화 및 감사 로깅 등 보호 조치), SOC2(접근 제어 및 인시던트 대응 계획). 일반적인 정보이며 법률 자문이 아닙니다.',
           callouts: [{ type: 'note', text: '이 내용은 일반적인 정보이며 법률 자문이 아닙니다. 자격을 갖춘 전문가와 상담하십시오.' }],
         },
         architecture: {
