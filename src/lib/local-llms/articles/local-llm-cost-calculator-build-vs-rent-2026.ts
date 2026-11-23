@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ hr/month or 24/7: local usually wins on total cost of ownership',
         'Full TCO = hardware price + electricity − resale value, not just purchase price ÷ cloud rate',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the cheapest way to run a local LLM?',
-            a: 'For the lowest upfront cost, a Ryzen mini PC (an example $500–1,000 class) running a 7B–14B quantized model is the least expensive dedicated local setup. For the lowest cost at low volume, cloud GPU rental with no hardware purchase at all costs less.',
+            a: 'For the lowest upfront cost, a small mini PC (an N150 class under $500 for light 7B use, or a Ryzen class at an example $500–1,000 for 7B–14B models) is usually the least expensive dedicated local setup. For the lowest cost at low volume, cloud GPU rental with no hardware purchase at all costs less.',
           },
           {
             q: 'Does running AI locally mean my data never leaves my computer?',
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-de.webp',
     title: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026',
     seoTitle: 'Lokale KI vs. Cloud-KI: Kostenrechner Kaufen vs. Mieten',
-    metaDescription: 'Lokale GPU kaufen oder Cloud-GPU mieten? Break-even-Beispiel, RunPod- und Vast.ai-Preise vom 22. November 2026 und ein Rechner für Ihre eigenen Zahlen.',
+    metaDescription: 'Lokale GPU kaufen oder Cloud-GPU mieten? Rechenbeispiel zum Break-even, RunPod- und Vast.ai-Preise sowie ein Rechner für Ihre eigenen Zahlen.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ Std./Monat oder Dauerbetrieb: lokal gewinnt meist bei Gesamtkosten',
         'Vollständige TCO = Hardwarepreis + Strom − Wiederverkaufswert, nicht nur Kaufpreis ÷ Cloud-Rate',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist der günstigste Weg, ein lokales LLM zu betreiben?',
-            a: 'Bei den niedrigsten Anfangskosten ist ein Ryzen-Mini-PC (eine beispielhafte Klasse von 500–1.000 $) mit einem quantisierten 7B–14B-Modell das günstigste dedizierte lokale Setup. Bei geringem Volumen kostet Cloud-GPU-Miete ganz ohne Hardwarekauf weniger.',
+            a: 'Bei den niedrigsten Anfangskosten ist meist ein kleiner Mini-PC das günstigste dedizierte lokale Setup (N150-Klasse unter 500 $ für leichte 7B-Nutzung, Ryzen-Klasse mit einer beispielhaften Spanne von 500–1.000 $ für 7B–14B-Modelle). Bei geringem Volumen kostet Cloud-GPU-Miete ganz ohne Hardwarekauf weniger.',
           },
           {
             q: 'Bedeutet lokale KI, dass meine Daten den Rechner nie verlassen?',
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-fr.webp',
     title: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026',
     seoTitle: 'IA locale vs cloud : calculateur de coût, acheter ou louer',
-    metaDescription: 'Acheter un GPU local ou louer un GPU cloud ? Exemple de seuil de rentabilité, prix RunPod et Vast.ai du 22 novembre 2026 et calculateur pour vos chiffres.',
+    metaDescription: 'Acheter un GPU local ou louer un GPU cloud ? Exemple de seuil de rentabilité, prix RunPod et Vast.ai et calculateur pour vos propres chiffres.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mois ou usage continu : le local gagne généralement en coût total',
         'TCO complet = prix du matériel + électricité − revente, pas seulement prix ÷ tarif cloud',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel est le moyen le moins cher d\'exécuter un LLM local ?',
-            a: 'Pour le coût initial le plus bas, un mini PC Ryzen (une gamme d\'exemple de 500–1 000 $) exécutant un modèle 7B–14B quantifié est la configuration locale dédiée la moins chère. À faible volume, la location de GPU cloud sans aucun achat de matériel coûte moins.',
+            a: 'Pour le coût initial le plus bas, un petit mini PC est généralement la configuration locale dédiée la moins chère (classe N150 à moins de 500 $ pour un usage 7B léger, ou classe Ryzen dans une gamme d\'exemple de 500–1 000 $ pour des modèles 7B–14B). À faible volume, la location de GPU cloud sans aucun achat de matériel coûte moins.',
           },
           {
             q: 'Exécuter l\'IA en local signifie-t-il que mes données ne quittent jamais mon ordinateur ?',
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-ja.webp',
     title: 'ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版',
     seoTitle: 'ローカルAI vs クラウドAI：コスト計算機 2026',
-    metaDescription: 'ローカルGPUを買うかクラウドGPUを借りるか。損益分岐の計算例、RunPodとVast.aiの2026年11月22日時点の料金、自分の数値で試せる計算機。',
+    metaDescription: 'ローカルGPUを買うかクラウドGPUを借りるか。損益分岐の計算例、RunPodとVast.aiの料金、自分の数値で試せる計算機をまとめました。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '月500時間以上または常時稼働：総所有コストではローカルが有利になることが多い',
         '完全なTCO＝ハードウェア価格＋電気代−売却価値。購入価格÷クラウド料金だけでは不十分',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -949,7 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MacはローカルLLMに向いていますか？',
-            a: '大容量の統合メモリを持つMacは、大きなモデル（70B級）を低消費電力で動かせるため、特に電気料金が高い国では所有コストの面で有利になります。詳しくは上のApple Siliconガイドを参照してください。',
+            a: '大容量の統合メモリを持つMacは、大きなモデル（70B級）を低消費電力で動かせるため、特に電気料金が高い国では所有コストの面で有利になることがあります。詳しくは上のApple Siliconガイドを参照してください。',
           },
           {
             q: '24GBのVRAMはローカルLLMに十分ですか？',
@@ -961,7 +961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルLLMを動かす最も安い方法は何ですか？',
-            a: '初期費用を最も抑えるなら、量子化した7B〜14BモデルのためのRyzenミニPC（例の価格帯500〜1,000ドル）が最も安価な専用ローカル構成です。利用量が少ない場合は、ハードウェアを買わないクラウドGPUレンタルの方が安くなります。',
+            a: '初期費用を最も抑えるなら、小型のミニPCが通常は最も安価な専用ローカル構成です（軽い7B利用ならN150クラスで500ドル未満、7B〜14Bモデルなら例の価格帯500〜1,000ドルのRyzenクラス）。利用量が少ない場合は、ハードウェアを買わないクラウドGPUレンタルの方が安くなります。',
           },
           {
             q: 'AIをローカルで動かせば、データはパソコンの外に出ませんか？',
@@ -1002,7 +1002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-es.webp',
     title: 'IA Local vs IA en la Nube: Calculadora de Costos (Comprar vs Rentar) 2026',
     seoTitle: 'IA local vs nube: calculadora de costos, comprar o rentar',
-    metaDescription: '¿Comprar una GPU local o alquilar una en la nube? Ejemplo de punto de equilibrio, precios de RunPod y Vast.ai del 22 de noviembre de 2026 y calculadora.',
+    metaDescription: '¿Comprar una GPU local o alquilar una en la nube? Ejemplo de punto de equilibrio, precios de RunPod y Vast.ai y una calculadora para tus propias cifras.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1019,7 +1019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ hr/mes o continuo: lo local suele ganar en costo total',
         'TCO completo = precio del hardware + electricidad − reventa, no solo precio ÷ tarifa cloud',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es la forma más barata de ejecutar un LLM local?',
-            a: 'Para el menor coste inicial, un mini PC Ryzen (una clase de ejemplo de 500–1.000 $) que ejecute un modelo cuantizado de 7B–14B es la configuración local dedicada más económica. Con poco volumen, alquilar GPU en la nube sin comprar hardware cuesta menos.',
+            a: 'Para el menor coste inicial, un mini PC pequeño suele ser la configuración local dedicada más económica (clase N150 por menos de 500 $ para un uso ligero de 7B, o clase Ryzen en una gama de ejemplo de 500–1.000 $ para modelos de 7B–14B). Con poco volumen, alquilar GPU en la nube sin comprar hardware cuesta menos.',
           },
           {
             q: '¿Ejecutar IA en local significa que mis datos nunca salen de mi ordenador?',
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-ar.webp',
     title: 'الذكاء الاصطناعي المحلي مقابل السحابي: حاسبة التكلفة (شراء مقابل استئجار) 2026',
     seoTitle: 'حاسبة تكلفة الذكاء الاصطناعي: محلي مقابل سحابي 2026',
-    metaDescription: 'هل تشتري GPU محلية أم تستأجر GPU سحابية؟ مثال حساب نقطة التعادل وأسعار RunPod وVast.ai المقروءة في 22 نوفمبر 2026 وحاسبة لأرقامك الخاصة.',
+    metaDescription: 'هل تشتري GPU محلية أم تستأجر GPU سحابية؟ مثال حساب نقطة التعادل، وأسعار RunPod وVast.ai، وحاسبة لأرقامك الخاصة.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ ساعة/شهر أو تشغيل مستمر: يتفوق المحلي عادةً في التكلفة الإجمالية',
         'التكلفة الإجمالية الكاملة = سعر الأجهزة + الكهرباء − إعادة البيع، وليس فقط السعر ÷ تعرفة السحابة',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['المزوّد', 'RTX 4090', 'الفوترة', 'ملاحظة'],
         rows: [
           { 'المزوّد': 'RunPod', 'RTX 4090': '0.34–0.89 دولار/ساعة (Community–Secure)', 'الفوترة': 'بالثانية', 'ملاحظة': 'بطاقات استهلاكية ومراكز بيانات في قائمة واحدة' },
-          { 'المزوّد': 'Vast.ai', 'RTX 4090': '0.26–0.60 دولار/ساعة قابل للمقاطعة، 0.38–2.34 عند الطلب', 'الفوترة': 'بالثانية', 'ملاحظة': 'سوق؛ تختلف جودة المضيف حسب العرض' },
+          { 'المزوّد': 'Vast.ai', 'RTX 4090': '0.26–0.60 دولار/ساعة قابل للمقاطعة، 0.38–2.34 دولار/ساعة عند الطلب', 'الفوترة': 'بالثانية', 'ملاحظة': 'سوق؛ تختلف جودة المضيف حسب العرض' },
           { 'المزوّد': 'Lambda', 'RTX 4090': 'غير مدرجة', 'الفوترة': 'بالدقيقة', 'ملاحظة': 'H100 3.79–4.89 دولار/ساعة، A100 40 GB 1.99 دولار/ساعة' },
         ],
       },
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أرخص طريقة لتشغيل LLM محلي؟',
-            a: 'لأقل تكلفة أولية، يُعد حاسوب Ryzen مصغّر (فئة مثال 500–1,000 دولار) يشغّل نموذجاً مكمّماً بحجم 7B–14B أرخص إعداد محلي مخصص. وعند الحجم المنخفض يكلف استئجار GPU سحابية دون شراء أي عتاد أقل.',
+            a: 'لأقل تكلفة أولية، يُعد حاسوب مصغّر صغير عادةً أرخص إعداد محلي مخصص (فئة N150 بأقل من 500 دولار للاستخدام الخفيف مع 7B، أو فئة Ryzen بنطاق مثال 500–1,000 دولار لنماذج 7B–14B). وعند الحجم المنخفض يكلف استئجار GPU سحابية دون شراء أي عتاد أقل.',
           },
           {
             q: 'هل تشغيل الذكاء الاصطناعي محلياً يعني ألا تغادر بياناتي حاسوبي؟',
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-zh.webp',
     title: '本地AI vs 云端AI：成本计算器（自建 vs 租用）2026',
     seoTitle: '本地AI vs 云端AI：成本计算器（自建 vs 租用）2026',
-    metaDescription: '购买本地GPU还是租用云GPU？含盈亏平衡计算示例、2026年11月22日读取的RunPod和Vast.ai价格，以及可输入自己数据的计算器。',
+    metaDescription: '购买本地GPU还是租用云GPU？含盈亏平衡计算示例、RunPod和Vast.ai的价格对比，以及可输入自己数据的计算器，帮你算清哪种方式更划算。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1507,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '每月500小时以上或全天候：总成本上本地通常更划算',
         '完整TCO＝硬件价格＋电费−转售价值，而非仅用购买价格÷云端费率',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -1693,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '运行本地LLM最便宜的方式是什么？',
-            a: '前期成本最低的是Ryzen迷你主机（示例档位500–1,000美元）运行量化的7B–14B模型，这是最便宜的专用本地方案。使用量很低时，完全不买硬件的云GPU租赁更省钱。',
+            a: '前期成本最低的通常是小型迷你主机，这是最便宜的专用本地方案（轻量7B使用选N150档，低于500美元；7B–14B模型选Ryzen档，示例档位500–1,000美元）。使用量很低时，完全不买硬件的云GPU租赁更省钱。',
           },
           {
             q: '在本地运行AI就意味着数据永远不会离开我的电脑吗？',
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-pt.webp',
     title: 'IA Local vs IA na Nuvem: Calculadora de Custo (Montar vs Alugar) 2026',
     seoTitle: 'IA local vs nuvem: calculadora de custo (montar vs alugar)',
-    metaDescription: 'Comprar uma GPU local ou alugar uma na nuvem? Exemplo de ponto de equilíbrio, preços da RunPod e Vast.ai de 22 de novembro de 2026 e calculadora.',
+    metaDescription: 'Comprar uma GPU local ou alugar uma na nuvem? Exemplo de ponto de equilíbrio, preços da RunPod e Vast.ai e uma calculadora para seus próprios números.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mês ou contínuo: o local costuma vencer no custo total',
         'TCO completo = preço do hardware + eletricidade − revenda, não apenas preço ÷ tarifa da nuvem',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -1937,7 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual é a forma mais barata de rodar um LLM local?',
-            a: 'Para o menor custo inicial, um mini PC Ryzen (uma faixa de exemplo de US$ 500–1.000) rodando um modelo quantizado de 7B–14B é a configuração local dedicada mais econômica. Com pouco volume, alugar GPU na nuvem sem comprar hardware custa menos.',
+            a: 'Para o menor custo inicial, um mini PC pequeno costuma ser a configuração local dedicada mais econômica (classe N150 por menos de US$ 500 para uso leve de 7B, ou classe Ryzen em uma faixa de exemplo de US$ 500–1.000 para modelos de 7B–14B). Com pouco volume, alugar GPU na nuvem sem comprar hardware custa menos.',
           },
           {
             q: 'Rodar IA localmente significa que meus dados nunca saem do meu computador?',
@@ -1978,7 +1978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-ko.webp',
     title: '로컬 AI vs 클라우드 AI: 비용 계산기(구매 vs 렌탈) 2026',
     seoTitle: '로컬 AI vs 클라우드 AI: 비용 계산기(구매 vs 렌탈)',
-    metaDescription: '로컬 GPU 구매와 클라우드 GPU 임대 비용 비교: 손익분기 계산 예시, 2026년 11월 22일 확인한 RunPod·Vast.ai 가격, 직접 입력하는 계산기.',
+    metaDescription: '로컬 GPU 구매와 클라우드 GPU 임대 비용 비교: 손익분기 계산 예시, RunPod·Vast.ai 가격, 직접 입력하는 계산기.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '월 500시간 이상 또는 상시 가동: 총비용 기준으로 로컬이 보통 유리',
         '완전한 TCO = 하드웨어 가격 + 전기 요금 − 재판매 가치, 단순히 가격 ÷ 클라우드 요금이 아님',
       ],
-      updatedDate: '2026-11',
+      updatedDate: '2026-11-22',
     },
     snippetBlocks: [
       {
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac은 로컬 LLM에 적합합니까?',
-            a: '대용량 통합 메모리 Mac은 큰 모델(70B급)을 낮은 전력으로 실행할 수 있어 특히 전기 요금이 높은 나라에서 소유 비용 측면에서 유리합니다. 자세한 내용은 위에 링크한 Apple Silicon 가이드를 참고하십시오.',
+            a: '대용량 통합 메모리 Mac은 큰 모델(70B급)을 낮은 전력으로 실행할 수 있어 특히 전기 요금이 높은 나라에서 소유 비용 측면에서 유리할 수 있습니다. 자세한 내용은 위에 링크한 Apple Silicon 가이드를 참고하십시오.',
           },
           {
             q: '로컬 LLM에 VRAM 24GB로 충분합니까?',
@@ -2181,7 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 LLM을 돌리는 가장 저렴한 방법은 무엇입니까?',
-            a: '초기 비용이 가장 낮은 것은 양자화된 7B~14B 모델을 실행하는 Ryzen 미니 PC(예시 가격대 500~1,000달러)로, 가장 저렴한 전용 로컬 구성입니다. 사용량이 적다면 하드웨어를 전혀 사지 않는 클라우드 GPU 임대가 더 저렴합니다.',
+            a: '초기 비용을 가장 낮추려면 보통 소형 미니 PC가 가장 저렴한 전용 로컬 구성입니다(가벼운 7B 사용에는 500달러 미만의 N150급, 7B~14B 모델에는 예시 가격대 500~1,000달러의 Ryzen급). 사용량이 적다면 하드웨어를 전혀 사지 않는 클라우드 GPU 임대가 더 저렴합니다.',
           },
           {
             q: 'AI를 로컬에서 실행하면 데이터가 내 컴퓨터 밖으로 나가지 않습니까?',
