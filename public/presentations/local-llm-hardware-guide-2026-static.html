@@ -418,7 +418,7 @@
                             '<strong>24 GB VRAM:</strong> 70B models don\'t fit at Q4_K_M (~39 GB). Use 27–32B models instead.',
                             '<strong>CPU-only (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) or Llama 3.2 3B (20 tok/sec)',
                             '<strong>llama.cpp speed:</strong> Set --n-gpu-layers 99 to double RTX 4070 Ti performance',
-                            '<strong>GPU matters most:</strong> Used RTX 3060 12GB (~$200) is 5–8× faster than CPU'
+                            '<strong>GPU matters most:</strong> Used RTX 3060 12GB is 5–8× faster than CPU'
                         ]
                     },
                     {
@@ -433,9 +433,9 @@
                         h2: 'GPU Tier Overview',
                         columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Speed'],
                         rows: [
-                            { 'Tier': 'Budget (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best For': '7–13B models', 'Speed': '~60 tok/sec' },
+                            { 'Tier': 'Budget ($679+)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best For': '7–13B models', 'Speed': '~60 tok/sec' },
                             { 'Tier': 'Mid (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'Best For': '14–32B models', 'Speed': '~110 tok/sec' },
-                            { 'Tier': 'High (~$4,300–5,000+)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Best For': '70B (Q4, light offload)', 'Speed': '~200 tok/sec' },
+                            { 'Tier': 'High (~$4,500–4,700)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Best For': '70B (Q4, light offload)', 'Speed': '290.0 tok/s (7B Q4_0)' },
                             { 'Tier': 'Server ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'Best For': '70B+ models', 'Speed': 'Production-grade' }
                         ]
                     },
@@ -509,7 +509,7 @@
                         rows: [
                             { 'Budget': '$1500 entry', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Best Models': '7–13B' },
                             { 'Budget': '$2500 solid', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Best Models': '13–30B' },
-                            { 'Budget': '$4000 high-end', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', 'Best Models': 'Any (70B+)' }
+                            { 'Budget': '$8,550+ high-end', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', 'Best Models': 'Any (70B+)' }
                         ]
                     },
                     {
@@ -525,7 +525,7 @@
                         type: 'list',
                         h2: 'Server vs Consumer Hardware',
                         items: [
-                            '<strong>Consumer (RTX 5090):</strong> ~$2,000 MSRP (~$4,300–5,000+ street), 32 GB VRAM, single-user, prone to thermal throttling',
+                            '<strong>Consumer (RTX 5090):</strong> $1,999 MSRP (~$4,500–4,700 new retail), 32 GB VRAM, single-user, prone to thermal throttling',
                             '<strong>Server (RTX 6000 Ada):</strong> ~$7,000, 48 GB VRAM, designed for 24/7 use with better cooling',
                             '<strong>Recommendation:</strong> Start with RTX 5090. Upgrade to dual A100 or RTX 6000 Ada for 24/7 70B+ use'
                         ]
@@ -534,10 +534,10 @@
                         type: 'numbered',
                         h2: '5 Common Hardware Mistakes',
                         items: [
-                            'Buying CPU-only when GPU is available. A $600 RTX 4070 Ti outperforms a $2000 CPU.',
+                            'Buying CPU-only when GPU is available. A mid-range GPU such as the RTX 4070 Ti usually outperforms a CPU-only setup.',
                             'Not accounting for VRAM overhead. Model file size + system overhead + context = total VRAM used.',
                             'Assuming all 70B models fit in 40 GB VRAM. They do barely in Q4 only; Q5 requires 45+ GB.',
-                            'Ignoring power supply and cooling. RTX 4090 draws 575W; need 1200W PSU and good airflow.',
+                            'Ignoring power supply and cooling. NVIDIA lists 450 W board power (850 W required system power) for the RTX 4090 and 575 W (1,000 W) for the RTX 5090; check the card maker\'s PSU guidance. Not electrical-safety advice.',
                             'Thinking old GPUs work. RTX 2080 is 10× slower than RTX 4070 Ti. Modern architecture matters.'
                         ]
                     },
@@ -584,9 +584,9 @@
                         h2: 'GPU-Tier Übersicht',
                         columns: ['Tier', 'GPU', 'VRAM', 'Best für', 'Geschwindigkeit'],
                         rows: [
-                            { 'Tier': 'Budget (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best für': '7–13B-Modelle', 'Geschwindigkeit': '~60 tok/Sek.' },
+                            { 'Tier': 'Budget ($679+)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best für': '7–13B-Modelle', 'Geschwindigkeit': '~60 tok/Sek.' },
                             { 'Tier': 'Mittel (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'Best für': '14–32B-Modelle', 'Geschwindigkeit': '~110 tok/Sek.' },
-                            { 'Tier': 'High (~$4.300–5.000+)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Best für': '70B (Q4, leichtes Offload)', 'Geschwindigkeit': '~200 tok/Sek.' },
+                            { 'Tier': 'High (~$4.500–4.700)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Best für': '70B (Q4, leichtes Offload)', 'Geschwindigkeit': '290,0 tok/s (7B Q4_0)' },
                             { 'Tier': 'Server ($7.000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'Best für': '70B+ Modelle', 'Geschwindigkeit': 'Production-ready' }
                         ]
                     },
@@ -660,7 +660,7 @@
                         rows: [
                             { 'Budget': '€1200 Einstieg', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Beste Modelle': '7–13B' },
                             { 'Budget': '€2000 Solide', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Beste Modelle': '13–30B' },
-                            { 'Budget': '€3200 High-End', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', 'Beste Modelle': 'Alle (70B+)' }
+                            { 'Budget': '$8,550+ High-End', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', 'Beste Modelle': 'Alle (70B+)' }
                         ]
                     },
                     {
@@ -676,7 +676,7 @@
                         type: 'list',
                         h2: 'Server vs. Consumer-Hardware',
                         items: [
-                            '<strong>Consumer (RTX 5090):</strong> ~2.000 $ UVP (~4.300–5.000+ $ Straßenpreis), 32 GB VRAM, Single-User, anfällig für Thermal-Drosselung',
+                            '<strong>Consumer (RTX 5090):</strong> 1.999 $ UVP (~4.500–4.700 $ Neuhandel), 32 GB VRAM, Single-User, anfällig für Thermal-Drosselung',
                             '<strong>Server (RTX 6000 Ada):</strong> ~7.000 $, 48 GB VRAM, für 24/7-Nutzung mit besserer Kühlung',
                             '<strong>Empfehlung:</strong> Starten Sie mit RTX 5090. Upgraden Sie auf Dual-A100 oder RTX 6000 Ada für 24/7 70B+ Nutzung'
                         ]
@@ -685,10 +685,10 @@
                         type: 'numbered',
                         h2: '5 Häufige Hardware-Fehler',
                         items: [
-                            'CPU-only kaufen, wenn GPU vorhanden ist. Eine €500 RTX 4070 Ti schlägt eine €1600 CPU.',
+                            'CPU-only kaufen, wenn GPU vorhanden ist. Eine Mittelklasse-GPU wie die RTX 4070 Ti schlägt in der Regel ein reines CPU-Setup.',
                             'VRAM-Overhead nicht berücksichtigen. Modelldateigröße + System-Overhead + Context = VRAM benötigt.',
                             'Annehmen, dass alle 70B-Modelle in 40 GB VRAM passen. Sie passen knapp in Q4 nur; Q5 braucht 45+ GB.',
-                            'Stromversorgung und Kühlung ignorieren. RTX 4090 zieht 575W; benötigt 1200W PSU und gute Lüftung.',
+                            'Stromversorgung und Kühlung ignorieren. NVIDIA nennt für die RTX 4090 450 W Board-Leistung (850 W Systemleistung), für die RTX 5090 575 W (1.000 W); Netzteilvorgaben des Herstellers beachten. Keine Beratung zur elektrischen Sicherheit.',
                             'Denken, dass alte GPUs funktionieren. RTX 2080 ist 10× langsamer als RTX 4070 Ti. Moderne Architektur zählt.'
                         ]
                     },
@@ -720,7 +720,7 @@
                             '<strong>24 GB VRAM:</strong> Les modèles 70B ne rentrent pas en Q4_K_M (~39 GB). Utilisez 27–32B à la place.',
                             '<strong>CPU-only (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) ou Llama 3.2 3B (20 tok/sec)',
                             '<strong>Vitesse llama.cpp:</strong> Mettez --n-gpu-layers 99 pour doubler RTX 4070 Ti',
-                            '<strong>GPU prime:</strong> RTX 3060 12GB d\'occasion (~$200) est 5–8× plus rapide que CPU'
+                            '<strong>GPU prime:</strong> RTX 3060 12GB d\'occasion est 5–8× plus rapide que CPU'
                         ]
                     },
                     {
@@ -735,9 +735,9 @@
                         h2: 'Vue d\'ensemble des niveaux GPU',
                         columns: ['Niveau', 'GPU', 'VRAM', 'Meilleur pour', 'Vitesse'],
                         rows: [
-                            { 'Niveau': 'Budget (~394 $)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 7–13B', 'Vitesse': '~60 tok/sec' },
+                            { 'Niveau': 'Budget (dès 679 $)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 7–13B', 'Vitesse': '~60 tok/sec' },
                             { 'Niveau': 'Milieu (~979 $)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 14–32B', 'Vitesse': '~110 tok/sec' },
-                            { 'Niveau': 'Haut (~4 300–5 000+ $)', 'GPU': 'RTX 5090', 'VRAM': '32 Go', 'Meilleur pour': '70B (Q4, offload léger)', 'Vitesse': '~200 tok/sec' },
+                            { 'Niveau': 'Haut (~4 500–4 700 $)', 'GPU': 'RTX 5090', 'VRAM': '32 Go', 'Meilleur pour': '70B (Q4, offload léger)', 'Vitesse': '290.0 tok/s (7B Q4_0)' },
                             { 'Niveau': 'Serveur (7 000+ $)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 Go', 'Meilleur pour': 'Modèles 70B+', 'Vitesse': 'Niveau production' }
                         ]
                     },
@@ -811,7 +811,7 @@
                         rows: [
                             { 'Budget': '€1200 entrée', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 Go', 'Meilleurs modèles': '7–13B' },
                             { 'Budget': '€2000 solide', 'GPU': 'RTX 4080', 'VRAM': '16 Go', 'Meilleurs modèles': '13–30B' },
-                            { 'Budget': '3200 $ haut-fin', 'GPU': '2× RTX 4090', 'VRAM': '24 Go', 'Meilleurs modèles': 'Tous (70B+)' }
+                            { 'Budget': '8 550 $+ haut de gamme', 'GPU': '2× RTX 4090', 'VRAM': '24 Go', 'Meilleurs modèles': 'Tous (70B+)' }
                         ]
                     },
                     {
@@ -827,7 +827,7 @@
                         type: 'list',
                         h2: 'Serveur vs matériel grand public',
                         items: [
-                            '<strong>Grand public (RTX 5090):</strong> ~2 000 $ PDSF (~4 300–5 000+ $ au détail), 32 Go VRAM, mono-utilisateur, throttling thermique',
+                            '<strong>Grand public (RTX 5090):</strong> 1 999 $ PDSF (~4 500–4 700 $ neuf), 32 Go VRAM, mono-utilisateur, throttling thermique',
                             '<strong>Serveur (RTX 6000 Ada):</strong> ~7 000 $, 48 Go VRAM, conçu 24/7 avec meilleur refroidissement',
                             '<strong>Recommandation:</strong> Commencez avec RTX 5090. Passez à double A100 ou RTX 6000 Ada pour 24/7 70B+ utilisation'
                         ]
@@ -836,10 +836,10 @@
                         type: 'numbered',
                         h2: '5 Erreurs Courantes',
                         items: [
-                            'Acheter CPU-only quand GPU est disponible. Une €600 RTX 4070 Ti surpasse une €2000 CPU.',
+                            'Acheter CPU-only quand GPU est disponible. Une carte milieu de gamme comme la RTX 4070 Ti surpasse généralement une configuration CPU seul.',
                             'Ne pas tenir compte du surcoût VRAM. Taille fichier + overhead système + contexte = VRAM total.',
                             'Supposer tous modèles 70B rentrent dans 40 Go VRAM. Rentrent à peine en Q4 seul; Q5 demande 45+ Go.',
-                            'Ignorer alimentation et refroidissement. RTX 4090 consume 575W; besoin PSU 1200W et airflow bon.',
+                            'Ignorer alimentation et refroidissement. NVIDIA indique 450 W pour la RTX 4090 (850 W système requis) et 575 W (1 000 W) pour la RTX 5090 ; suivre les recommandations d\'alimentation du fabricant. Pas un conseil de sécurité électrique.',
                             'Penser vieilles GPUs fonctionnent. RTX 2080 est 10× plus lente que RTX 4070 Ti. Architecture moderne compte.'
                         ]
                     },
@@ -871,7 +871,7 @@
                             '<strong>24 GB VRAM:</strong> 70Bモデルは Q4_K_M では収まらない (~39 GB)。27–32B を代わりに使用。',
                             '<strong>CPUのみ (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) または Llama 3.2 3B (20 tok/sec)',
                             '<strong>llama.cpp速度:</strong> --n-gpu-layers 99 で RTX 4070 Ti を倍にする',
-                            '<strong>GPUが最優先:</strong> 中古RTX 3060 12GB (~$200) はCPUより5–8倍高速'
+                            '<strong>GPUが最優先:</strong> 中古RTX 3060 12GBはCPUより5–8倍高速'
                         ]
                     },
                     {
@@ -886,9 +886,9 @@
                         h2: 'GPU階層の概要',
                         columns: ['階層', 'GPU', 'VRAM', 'ベスト', '速度'],
                         rows: [
-                            { '階層': 'バジェット (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'ベスト': '7–13Bモデル', '速度': '~60 tok/秒' },
+                            { '階層': 'バジェット ($679+)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'ベスト': '7–13Bモデル', '速度': '~60 tok/秒' },
                             { '階層': 'ミッド (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'ベスト': '14–32Bモデル', '速度': '~110 tok/秒' },
-                            { '階層': 'ハイ (~$4,300–5,000+)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'ベスト': '70B（Q4、軽いオフロード）', '速度': '~200 tok/秒' },
+                            { '階層': 'ハイ (~$4,500–4,700)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'ベスト': '70B（Q4、軽いオフロード）', '速度': '290.0 tok/s (7B Q4_0)' },
                             { '階層': 'サーバー ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'ベスト': '70B+モデル', '速度': 'Production級' }
                         ]
                     },
@@ -962,7 +962,7 @@
                         rows: [
                             { '予算': '$1500 入門', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '最良モデル': '7–13B' },
                             { '予算': '$2500 堅実', 'GPU': 'RTX 4080', 'VRAM': '16 GB', '最良モデル': '13–30B' },
-                            { '予算': '$4000 ハイエンド', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', '最良モデル': 'すべて (70B+)' }
+                            { '予算': '$8,550+ ハイエンド', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', '最良モデル': 'すべて (70B+)' }
                         ]
                     },
                     {
@@ -978,7 +978,7 @@
                         type: 'list',
                         h2: 'サーバー vs. コンシューマーハードウェア',
                         items: [
-                            '<strong>コンシューマー (RTX 5090):</strong> ~$2,000 MSRP（~$4,300–5,000+ 実勢価格）、32 GB VRAM、シングルユーザー、サーマルスロットリング',
+                            '<strong>コンシューマー (RTX 5090):</strong> $1,999 MSRP（~$4,500–4,700 新品販売価格）、32 GB VRAM、シングルユーザー、サーマルスロットリング',
                             '<strong>サーバー (RTX 6000 Ada):</strong> ~$7,000、48 GB VRAM、24/7 利用向け、良好な冷却',
                             '<strong>推奨:</strong> RTX 5090 から開始。24/7 70B+ は Dual A100 または RTX 6000 Ada にアップグレード'
                         ]
@@ -987,10 +987,10 @@
                         type: 'numbered',
                         h2: 'よくある5つのミス',
                         items: [
-                            'GPUが利用可能なのにCPUのみ購入。$600 RTX 4070 Ti は $2000 CPU に勝る。',
+                            'GPUが利用可能なのにCPUのみ購入。RTX 4070 Ti のようなミドルレンジGPUは通常CPUのみの構成に勝る。',
                             'VRAM オーバーヘッドを考慮しない。モデルファイル + システムオーバーヘッド + コンテキスト = VRAM合計。',
                             '70Bすべてが40GB VRAMに収まると仮定。Q4 のみでかろうじて収まり、Q5 は45+ GB 必要。',
-                            '電源とクーリングを無視。RTX 4090 は 575W 消費、1200W PSU と良好なエアフロー必要。',
+                            '電源とクーリングを無視。NVIDIAはRTX 4090を450W（必要システム電力850W）、RTX 5090を575W（1,000W）と記載。メーカー推奨のPSU容量を確認。電気安全に関する助言ではありません。',
                             '古いGPUが機能すると思う。RTX 2080 は RTX 4070 Ti の 10倍遅い。モダン アーキテクチャが重要。'
                         ]
                     },
@@ -1022,7 +1022,7 @@
                             '<strong>24 GB VRAM:</strong> 70B模型在Q4_K_M处不适合 (~39 GB)。改用27–32B模型。',
                             '<strong>仅CPU (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/秒) 或 Llama 3.2 3B (20 tok/秒)',
                             '<strong>llama.cpp速度:</strong> 设置 --n-gpu-layers 99 使RTX 4070 Ti 加倍',
-                            '<strong>GPU至关重要:</strong> 二手RTX 3060 12GB (~$200) 比CPU快5–8倍'
+                            '<strong>GPU至关重要:</strong> 二手RTX 3060 12GB比CPU快5–8倍'
                         ]
                     },
                     {
@@ -1037,9 +1037,9 @@
                         h2: 'GPU 层级概览',
                         columns: ['层级', 'GPU', 'VRAM', '最佳用途', '速度'],
                         rows: [
-                            { '层级': '预算型 (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最佳用途': '7–13B模型', '速度': '~60 tok/秒' },
+                            { '层级': '预算型 ($679+)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最佳用途': '7–13B模型', '速度': '~60 tok/秒' },
                             { '层级': '中端 (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', '最佳用途': '14–32B模型', '速度': '~110 tok/秒' },
-                            { '层级': '高端 (~$4,300–5,000+)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', '最佳用途': '70B（Q4，轻度卸载）', '速度': '~200 tok/秒' },
+                            { '层级': '高端 (~$4,500–4,700)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', '最佳用途': '70B（Q4，轻度卸载）', '速度': '290.0 tok/s (7B Q4_0)' },
                             { '层级': '服务器 ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', '最佳用途': '70B+模型', '速度': '生产级' }
                         ]
                     },
@@ -1113,7 +1113,7 @@
                         rows: [
                             { '预算': '$1500 入门', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '最佳模型': '7–13B' },
                             { '预算': '$2500 稳定', 'GPU': 'RTX 4080', 'VRAM': '16 GB', '最佳模型': '13–30B' },
-                            { '预算': '$4000 高端', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', '最佳模型': '任意 (70B+)' }
+                            { '预算': '$8,550+ 高端', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', '最佳模型': '任意 (70B+)' }
                         ]
                     },
                     {
@@ -1129,7 +1129,7 @@
                         type: 'list',
                         h2: '服务器 vs 消费级硬件',
                         items: [
-                            '<strong>消费级 (RTX 5090):</strong> ~$2,000建议零售价（~$4,300–5,000+市场价）、32 GB VRAM、单用户、易发热节流',
+                            '<strong>消费级 (RTX 5090):</strong> $1,999建议零售价（~$4,500–4,700新品零售价）、32 GB VRAM、单用户、易发热节流',
                             '<strong>服务器 (RTX 6000 Ada):</strong> ~$7,000、48 GB VRAM、设计用于24/7、冷却更佳',
                             '<strong>推荐:</strong> 从RTX 5090开始。24/7运行70B+升级至双A100或RTX 6000 Ada'
                         ]
@@ -1138,10 +1138,10 @@
                         type: 'numbered',
                         h2: '5个常见错误',
                         items: [
-                            '当GPU可用时购买仅CPU。$600 RTX 4070 Ti胜过$2000 CPU。',
+                            '当GPU可用时购买仅CPU。RTX 4070 Ti这类中端GPU通常胜过仅CPU配置。',
                             '不计入VRAM开销。模型文件大小 + 系统开销 + 上下文 = VRAM总量。',
                             '假设所有70B模型在40 GB VRAM中适配。仅在Q4时勉强适配；Q5需要45+ GB。',
-                            '忽视电源和冷却。RTX 4090消耗575W；需要1200W PSU和良好气流。',
+                            '忽视电源和冷却。NVIDIA标注RTX 4090为450W（所需系统功率850W），RTX 5090为575W（1,000W）；请查看厂商推荐的电源功率。这不是电气安全建议。',
                             '认为旧GPU能用。RTX 2080比RTX 4070 Ti慢10倍。现代架构至关重要。'
                         ]
                     },
