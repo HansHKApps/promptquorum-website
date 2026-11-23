@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-11-22',
-    next_refresh_due: '2027-02-27',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'Qwen3 Local Deployment: Complete Production Guide (2026)',
     seoTitle: 'Self-Host Qwen3 2026: 8B, 14B, 32B + Docker API',
@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Self-host Qwen3 locally: 8B, 14B and 32B via Ollama/vLLM, hardware requirements, Docker API, and multi-GPU setup. Qwen3 has no 7B — use the 8B (qwen3:8b).',
     heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-en.webp',
     twitterDescription:
-      'Qwen3 8B runs at 25 tok/s on an RTX 3060. Qwen2.5-72B needs dual RTX 4090s or a cloud GPU. Full Docker, API server, and multi-GPU setup guide for 2026.',
+      'Qwen3 8B fits an RTX 3060 12 GB. Qwen2.5-72B needs dual RTX 4090s or a cloud GPU. Docker, API server and multi-GPU setup guide for 2026.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -46,21 +46,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
       'NVIDIA RTX 4060 Ti 16 GB',
-      'NVIDIA RTX 4090 24 GB (EOL, used-market)',
+      'NVIDIA RTX 4090 24 GB',
       'Minisforum UM890 Pro',
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**Qwen3 (the previous Qwen generation, still widely deployed) dense sizes are 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B model. The closest is Qwen3-8B (pull `qwen3:8b`); if you searched "Qwen3 8B", you want the 8B. Qwen3\'s largest dense model is 32B; for a 72B-class model use Qwen2.5-72B. Qwen3 8B and 14B run reliably on consumer GPUs via Ollama or vLLM with a Docker Compose API server. Qwen 32B needs an RTX 4090 24 GB — note the RTX 4090 is now EOL (NVIDIA discontinued the RTX 40-series in 2026); every unit for sale is used, at roughly $2,000–2,600, well above its former $1,599–1,999 launch MSRP. Qwen 3.6 is the newer Qwen generation, published as a 27B dense model (pull `qwen3.6:27b`) and a 35B-A3B mixture-of-experts model (`qwen3.6:35b`); the 27B fits the same 24 GB VRAM tier as Qwen3 32B and is worth evaluating alongside it. Qwen2.5-72B requires dual GPUs, high-RAM CPU inference, or a cloud fallback — self-hosting it costs $0.05–0.12 per day depending on hardware amortization, versus $0.50–1.20/hr on RunPod.**',
+      '**Qwen3 (the previous Qwen generation, still widely deployed) dense sizes are 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B model. The closest is Qwen3-8B (pull `qwen3:8b`); if you searched "Qwen3 8B", you want the 8B. Qwen3\'s largest dense model is 32B; for a 72B-class model use Qwen2.5-72B. Qwen3 8B and 14B run reliably on consumer GPUs via Ollama or vLLM with a Docker Compose API server. Qwen 32B needs an RTX 4090 24 GB — RTX 4090 used sold listings were $2,575–3,010 (median $2,860) against a $1,599 MSRP, per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15; listing data, not a quote). Qwen 3.6 is the newer Qwen generation, published as a 27B dense model (pull `qwen3.6:27b`) and a 35B-A3B mixture-of-experts model (`qwen3.6:35b`); the 27B fits the same 24 GB VRAM tier as Qwen3 32B and is worth evaluating alongside it. Qwen2.5-72B requires dual GPUs, high-RAM CPU inference, or a cloud fallback — two RTX 4090s cost about $5.22 per day in GPU amortization alone (2 × $2,860 median used listing ÷ 1,095 days over 3 years, excluding electricity and other parts), versus $0.50–1.20/hr on RunPod.**',
     quickAnswerTop: {
       en: {
         question: 'How do I deploy Qwen models in production locally?',
         answer:
           'Run Qwen via a Docker Compose stack exposing an OpenAI-compatible API: Ollama handles GPU inference, Open WebUI provides the front-end, and Nginx reverse-proxies both. Qwen3 8B runs on ~6 GB VRAM; Qwen2.5-72B needs dual RTX 4090s or cloud GPU rental.',
         bullets: [
-          'Qwen3 8B: RTX 3060 12 GB, ~25 tok/s, $150–350 used GPU',
-          'Qwen3 14B: RTX 4060 Ti 16 GB, ~18 tok/s, ~$424 new',
-          'Qwen3 32B: RTX 4090 24 GB (EOL, used only), ~12 tok/s, ~$2,000–2,600',
+          'Qwen3 8B: RTX 3060 12 GB (about 6 GB VRAM needed); used price not tracked here',
+          'Qwen3 14B: RTX 4060 Ti 16 GB; price not tracked here',
+          'Qwen3 32B: RTX 4090 24 GB, used sold listings $2,575–3,010 (InsiderLLM tracker, 2026-10-15)',
           'Qwen 3.6 27B: newer generation, same 24 GB tier as Qwen3 32B (`qwen3.6:27b`)',
           'Qwen2.5-72B: dual RTX 4090 or RunPod A100 80 GB ($1.64/hr)',
           'Always-on mini PC server: Minisforum UM890 Pro, $429, runs Qwen3 8B 24/7',
@@ -86,11 +86,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Key Takeaways',
         items: [
           'Qwen3 (previous generation, still widely deployed) 8B and 14B are consumer GPU targets — ~6 GB and 16 GB VRAM respectively, running via Ollama in Docker',
-          'Qwen3 32B needs an RTX 4090 24 GB — the RTX 4090 is now EOL (discontinued by NVIDIA in 2026), so every card is used, at ~$2,000–2,600',
+          'Qwen3 32B needs an RTX 4090 24 GB — used sold listings were $2,575–3,010 (median $2,860) per the InsiderLLM tracker (source updated 2026-10-15)',
           'Qwen 3.6 is the newer Qwen generation (27B dense as `qwen3.6:27b`, plus a 35B-A3B mixture-of-experts model); the 27B fits the same 24 GB VRAM tier as Qwen3 32B — evaluate it alongside Qwen3 32B before buying hardware',
-          'Qwen2.5-72B requires dual RTX 4090s, a high-RAM CPU build (128+ GB DDR5), or cloud rental — self-hosting costs ~$0.05–0.12/day amortized',
+          'Qwen2.5-72B requires dual RTX 4090s, a high-RAM CPU build (128+ GB DDR5), or cloud rental — two RTX 4090s cost about $5.22/day in GPU amortization alone (2 × $2,860 ÷ 1,095 days)',
           'A Docker Compose stack with Ollama + Open WebUI + Nginx exposes an OpenAI-compatible API in under 10 minutes',
-          'Always-on Qwen servers: Minisforum UM890 Pro ($429, Qwen3 8B on CPU) or AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 GB (~$800 total)',
+          'Always-on Qwen servers: Minisforum UM890 Pro ($429, Qwen3 8B on CPU) or AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 GB (GPU price not tracked here)',
           'Cloud fallback: RunPod A40 48 GB at $0.44/hr handles Qwen2.5-72B — cheaper than buying dual RTX 4090s for occasional use',
           'This guide covers production deployment; for basic Ollama setup see the Qwen beginner guide',
         ],
@@ -112,14 +112,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmark-table',
         title: 'Qwen Model Performance by Hardware',
         content:
-          '**Choose your hardware based on model size, not GPU brand.** VRAM is the hard constraint: if the model does not fit, it will not run at GPU speed. The table below shows indicative inference speeds at Q4_K_M quantization (not PromptQuorum measurements; they vary with GPU, driver, context length and Ollama version) (the best quality-to-size ratio for Ollama deployments). Note: the RTX 4090 is EOL (NVIDIA discontinued it in 2026) — every card below is now used-market only, at ~$2,000–2,600.',
+          '**Choose your hardware based on model size, not GPU brand.** VRAM is the hard constraint: if the model does not fit, it will not run at GPU speed. The table below shows VRAM fit at Q4_K_M quantization (the best quality-to-size ratio for Ollama deployments); per-model speeds are not tracked here. For reference, the [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013) lists developer-reported 7B Q4_0 generation speeds of 158.2 tok/s (RTX 3090), 186.2 tok/s (RTX 4090) and 290.0 tok/s (RTX 5090). RTX 4090 used sold listings were $2,575–3,010 (median $2,860) against a $1,599 MSRP, per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15; listing data, not a quote).',
         columns: ['Model', 'VRAM (Q4_K_M)', 'Min GPU', 'Speed (tok/s)', 'CPU fallback', 'Production-ready?'],
         rows: [
           {
             '0': 'Qwen3 8B',
             '1': '5.2 GB',
             '2': 'RTX 3060 12 GB',
-            '3': '22–28 tok/s',
+            '3': 'Not tracked',
             '4': 'Yes (32 GB RAM, ~4 tok/s)',
             '5': 'Yes — single GPU',
           },
@@ -127,22 +127,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '0': 'Qwen3 14B',
             '1': '9.4 GB',
             '2': 'RTX 4060 Ti 16 GB',
-            '3': '15–20 tok/s',
+            '3': 'Not tracked',
             '4': 'Yes (64 GB RAM, ~2.5 tok/s)',
             '5': 'Yes — single GPU',
           },
           {
             '0': 'Qwen3 32B (previous generation)',
             '1': '20.1 GB',
-            '2': 'RTX 4090 24 GB (EOL, used)',
-            '3': '10–14 tok/s',
+            '2': 'RTX 4090 24 GB',
+            '3': 'Not tracked',
             '4': 'Marginal (128 GB RAM, ~1.2 tok/s)',
             '5': 'Yes — single GPU',
           },
           {
             '0': 'Qwen 3.6 27B',
             '1': '~17 GB',
-            '2': 'RTX 4090 24 GB (EOL, used)',
+            '2': 'RTX 4090 24 GB',
             '3': 'See comparison guide',
             '4': 'Marginal (128 GB RAM)',
             '5': 'Yes — single GPU',
@@ -150,24 +150,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '0': 'Qwen2.5-Coder 32B',
             '1': '19.8 GB',
-            '2': 'RTX 4090 24 GB (EOL, used)',
-            '3': '10–13 tok/s',
+            '2': 'RTX 4090 24 GB',
+            '3': 'Not tracked',
             '4': 'Marginal (128 GB RAM)',
             '5': 'Yes — single GPU',
           },
           {
             '0': 'Qwen2.5-72B',
             '1': '43.5 GB',
-            '2': 'Dual RTX 4090 (EOL, used, 48 GB)',
-            '3': '5–8 tok/s',
+            '2': 'Dual RTX 4090 (48 GB)',
+            '3': 'Not tracked',
             '4': 'Slow (128 GB RAM, ~0.6 tok/s)',
             '5': 'Multi-GPU or cloud only',
           },
         ],
-        note: 'Speeds are indicative values for PCIe Gen 4 systems, not PromptQuorum measurements. The RTX 4090 has no NVLink connector, so two RTX 4090s communicate over PCIe only; NVLink exists on some cards such as the RTX 3090. Qwen2.5-72B at Q4_K_M on a single A100 80 GB on RunPod: roughly 18–22 tok/s (indicative). Qwen 3.6 27B (`ollama pull qwen3.6:27b`) is a newer release from Alibaba that also ships a coding variant (`qwen3.6:27b-coding`); see the Qwen model comparison guide for benchmark data.',
+        note: 'Per-model speeds are not tracked here; CPU fallback values are indicative for PCIe Gen 4 systems, not PromptQuorum measurements. The RTX 4090 has no NVLink connector, so two RTX 4090s communicate over PCIe only; NVLink exists on some cards such as the RTX 3090. Qwen 3.6 27B (`ollama pull qwen3.6:27b`) is a newer release from Alibaba that also ships a coding variant (`qwen3.6:27b-coding`); see the Qwen model comparison guide for benchmark data.',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
-          'Qwen model VRAM requirements at Q4_K_M quantization: Qwen3 8B needs 5.2 GB (RTX 3060 12 GB), Qwen3 32B needs 20.1 GB (RTX 4090 24 GB, now EOL/used-only), and Qwen2.5-72B needs 43.5 GB (dual RTX 4090s, EOL/used-only).',
+          'Qwen model VRAM requirements at Q4_K_M quantization: Qwen3 8B needs 5.2 GB (RTX 3060 12 GB), Qwen3 32B needs 20.1 GB (RTX 4090 24 GB), and Qwen2.5-72B needs 43.5 GB (dual RTX 4090s).',
       },
       dockerSetup: {
         id: 'docker-setup',
@@ -249,13 +249,13 @@ volumes:
         id: 'multi-gpu',
         title: 'Multi-GPU Configuration for Qwen2.5-72B',
         content:
-          '**Qwen2.5-72B at Q4_K_M requires 43.5 GB VRAM — one RTX 4090 (24 GB) is not enough. You need dual RTX 4090s (48 GB combined) or a single professional card (A100 80 GB, H100 80 GB).** Note: the RTX 4090 is EOL (discontinued by NVIDIA in 2026) — every card is now used, at ~$2,000–2,600. Ollama handles multi-GPU splitting natively; no code changes are needed.',
+          '**Qwen2.5-72B at Q4_K_M requires 43.5 GB VRAM — one RTX 4090 (24 GB) is not enough. You need dual RTX 4090s (48 GB combined) or a single professional card (A100 80 GB, H100 80 GB).** RTX 4090 used sold listings were $2,575–3,010 (median $2,860) per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15), so two cards cost about $5,720 at the median. Ollama handles multi-GPU splitting natively; no code changes are needed.',
         items: [
           'Ollama automatically splits the model across all available GPUs — set CUDA_VISIBLE_DEVICES=0,1 in the compose environment to target specific cards',
           'For dual RTX 4090s, both must be in the same PCIe bandwidth tier — a B650 or Z790 board with two PCIe Gen 4 x8 slots is the minimum',
           'The RTX 4090 has no NVLink connector, so two RTX 4090s communicate over PCIe only; NVLink bridges exist for some earlier cards such as the RTX 3090',
           'vLLM is an alternative inference engine that uses tensor parallelism for more efficient multi-GPU utilization — use vLLM instead of Ollama for sustained 70B inference loads above 100 concurrent requests',
-          'For occasional Qwen2.5-72B use, RunPod A40 48 GB at $0.44/hr is cheaper than a dual-RTX-4090 build ($4,600+ at current EOL used pricing)',
+          'For occasional Qwen2.5-72B use, RunPod A40 48 GB at $0.44/hr is cheaper than a dual-RTX-4090 build (two cards alone about $5,720 at the median used sold listing, per the InsiderLLM tracker, 2026-10-15)',
         ],
         codeBlock: `# vLLM multi-GPU alternative (better for high-traffic 72B)
 docker run --gpus all \\
@@ -291,28 +291,28 @@ docker run --gpus all \\
         id: 'cost-comparison',
         title: 'Cost Comparison: Self-Hosted vs Alibaba Cloud vs RunPod',
         content:
-          '**Self-hosting beats cloud for sustained inference loads above 4 hours per day. Below 4 hours per day, cloud GPU rental is cheaper after hardware amortization.** The table below uses a 3-year hardware amortization for self-hosted builds.',
+          '**Self-hosting pays off only under sustained load; for occasional use, cloud GPU rental is cheaper than buying.** The table below amortizes the GPU price alone over 3 years (illustrative; electricity and other parts are not tracked). At the median used RTX 4090 listing of $2,860 that is $2.61 per day ($2,860 ÷ 1,095 days), equal to about 5.9 hours per day of a $0.44/hr RunPod A40 rental ($2.61 ÷ $0.44).',
         columns: ['Option', 'Qwen3 8B cost/day', 'Qwen2.5-72B cost/day', 'Upfront cost', 'Best for'],
         rows: [
           {
             '0': 'Self-hosted: RTX 3060 12 GB mini PC',
-            '1': '$0.03 (electricity only)',
+            '1': 'Not tracked',
             '2': 'N/A (does not fit)',
-            '3': '$600–900 total build',
+            '3': 'Not tracked (used GPU price not tracked)',
             '4': 'Always-on 7B inference, home/office server',
           },
           {
             '0': 'Self-hosted: RTX 4090 workstation',
-            '1': '$0.05',
+            '1': '$2.61 (GPU amortization alone, 3 years)',
             '2': 'N/A (single GPU)',
-            '3': '$2,900–4,500 total build (EOL, used GPU)',
+            '3': 'GPU alone: $2,575–3,010 used sold listings (median $2,860); other parts not tracked',
             '4': 'Up to 32B inference, full workstation use',
           },
           {
             '0': 'Self-hosted: Dual RTX 4090',
-            '1': '$0.08',
-            '2': '$0.12',
-            '3': '$5,800–7,800 total build (EOL, used GPUs)',
+            '1': '$5.22 (GPU amortization alone: 2 × $2,860 ÷ 1,095 days)',
+            '2': '$5.22 (same GPU amortization alone)',
+            '3': 'GPUs alone: 2 × $2,860 = $5,720 at the median; other parts not tracked',
             '4': '72B always-on with other workstation use',
           },
           {
@@ -361,8 +361,8 @@ docker run --gpus all \\
           '**A mini PC running Qwen3 8B as a 24/7 API server costs $0.50–1.50/month in electricity — usually cheaper than a comparable cloud instance running all month.** Two mini PC builds cover most always-on Qwen use cases:',
         items: [
           'Budget (Qwen3 8B CPU inference): Minisforum UM890 Pro — AMD Ryzen 9 8945HS, 32 GB DDR5, 512 GB NVMe. ~$429 new. Qwen3 8B runs via Ollama CPU backend at 3–5 tok/s. Adequate for personal assistants and document summarization. 12W idle, 45W peak. Very quiet. Ships from US/EU warehouse.',
-          'Recommended (Qwen3 14B GPU): AOOSTAR GEM12 Pro OCuLink — supports external GPU via OCuLink port. Pair with an RTX 4060 Ti 16 GB eGPU enclosure (~$340 GPU + $100 enclosure). Total ~$800. Runs Qwen3 14B at 16–18 tok/s. Significantly better than CPU fallback for interactive use.',
-          'Power user (Qwen3 32B): Compact ATX desktop with a used RTX 4090 — the RTX 4090 is EOL (NVIDIA discontinued it in 2026), so every unit is used, at ~$2,000–2,600. Examples: Fractal Node 804 case ($90), RTX 4090 (~$2,300 used), Ryzen 9 7950X (~$600), 64 GB DDR5 (~$180). Total ~$3,200. Runs Qwen3 32B at 10–14 tok/s indefinitely. Qwen 3.6 27B (`qwen3.6:27b`) fits the same card and is worth benchmarking against Qwen3 32B before committing to a model.',
+          'Recommended (Qwen3 14B GPU): AOOSTAR GEM12 Pro OCuLink — supports external GPU via OCuLink port. Pair with an RTX 4060 Ti 16 GB eGPU enclosure (GPU and enclosure prices are not tracked here, so no total is given). Qwen3 14B fits the 16 GB card in VRAM, which is significantly better than CPU fallback for interactive use.',
+          'Power user (Qwen3 32B): Compact ATX desktop with a used RTX 4090 (used sold listings $2,575–3,010, median $2,860, per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15). Case, CPU and RAM prices are not tracked here, so no build total is given. Qwen3 32B at Q4_K_M (20.1 GB) fits the 24 GB card with headroom. Qwen 3.6 27B (`qwen3.6:27b`) fits the same card and is worth benchmarking against Qwen3 32B before committing to a model.',
         ],
         affiliateLinks: [
           {
@@ -402,14 +402,14 @@ docker run --gpus all \\
           ],
           quick: [
             'Qwen3 8B daily: Minisforum UM890 Pro ($429)',
-            'Qwen3 14B daily: AOOSTAR + RTX 4060 Ti (~$800)',
-            'Qwen3 32B daily: compact ATX + used RTX 4090 (~$3,200, EOL)',
+            'Qwen3 14B daily: AOOSTAR + RTX 4060 Ti (GPU price not tracked here)',
+            'Qwen3 32B daily: compact ATX + used RTX 4090 (used sold listings $2,575–3,010; build total not tracked)',
             'Qwen2.5-72B occasional: RunPod A40 48 GB ($0.44/hr)',
           ],
         },
         image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
-          'Self-hosted vs cloud decision tree for Qwen: self-host if using 4+ hours/day (Minisforum UM890 Pro $429 for Qwen3 8B, used RTX 4090 build ~$3,200 for Qwen3 32B — the RTX 4090 is EOL and used-market only); use cloud like RunPod A40 48 GB at $0.44/hr for occasional Qwen2.5-72B runs under 4 hours/day.',
+          'Self-hosted vs cloud decision tree for Qwen: self-host when usage is sustained (Minisforum UM890 Pro $429 for Qwen3 8B; a used RTX 4090 for Qwen3 32B, GPU alone $2,575–3,010 in used sold listings per the InsiderLLM tracker, 2026-10-15); use cloud like RunPod A40 48 GB at $0.44/hr for occasional Qwen2.5-72B runs.',
       },
       internalLinks: {
         id: 'see-also',
@@ -427,7 +427,7 @@ docker run --gpus all \\
         faqs: [
           {
             q: 'Is there a Qwen3 8B model?',
-            a: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 8B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and runs about 25 tok/s on an RTX 3060 12 GB. For a 72B-class model, use Qwen2.5-72B.',
+            a: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 8B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and fits an RTX 3060 12 GB with headroom. For a 72B-class model, use Qwen2.5-72B.',
           },
           {
             q: 'Is there a Qwen 3.8 model?',
@@ -435,7 +435,7 @@ docker run --gpus all \\
           },
           {
             q: 'Can I run Qwen2.5-72B on a single RTX 4090?',
-            a: 'No. Qwen2.5-72B at Q4_K_M quantization requires 43.5 GB VRAM. A single RTX 4090 has 24 GB. You need dual RTX 4090s (48 GB combined), an A100 80 GB, or cloud GPU rental. Note the RTX 4090 is now EOL (discontinued by NVIDIA in 2026) — every unit is used, at ~$2,000–2,600. A single RTX 4090 can run Qwen3 32B at Q4_K_M (20.1 GB) with headroom.',
+            a: 'No. Qwen2.5-72B at Q4_K_M quantization requires 43.5 GB VRAM. A single RTX 4090 has 24 GB. You need dual RTX 4090s (48 GB combined), an A100 80 GB, or cloud GPU rental. RTX 4090 used sold listings were $2,575–3,010 (median $2,860) per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15). A single RTX 4090 can run Qwen3 32B at Q4_K_M (20.1 GB) with headroom.',
           },
           {
             q: 'What is the difference between Ollama and vLLM for production Qwen deployment?',
@@ -443,7 +443,7 @@ docker run --gpus all \\
           },
           {
             q: 'Does Ollama support multi-GPU inference for Qwen natively?',
-            a: 'Yes, since Ollama 0.3.0 (2025). Set CUDA_VISIBLE_DEVICES=0,1 to specify which GPUs to use. Ollama splits the model automatically. For Qwen2.5-72B on dual RTX 4090, expect 5–8 tok/s — lower than a single A100 80 GB because the model must split across PCIe rather than NVLink in consumer configurations.',
+            a: 'Yes, since Ollama 0.3.0 (2025). Set CUDA_VISIBLE_DEVICES=0,1 to specify which GPUs to use. Ollama splits the model automatically. For Qwen2.5-72B on dual RTX 4090, expect it to run slower than on a single 80 GB card because the model must split across PCIe rather than NVLink in consumer configurations; no sourced tok/s figure exists for this setup, so none is given.',
           },
           {
             q: 'Is Alibaba Cloud cheaper than RunPod for Qwen inference?',
@@ -464,9 +464,10 @@ docker run --gpus all \\
         title: 'Update Log',
         items: [
           '2026-05-26: Initial publication. Prices and speeds are indicative ranges, not PromptQuorum measurements; check current listings.',
-          '2026-08-27: RTX 4090 reframed as EOL/used-market only (NVIDIA discontinued the RTX 40-series in 2026); prices updated from ~$1,900 new to ~$2,000–2,600 used across all builds and tables. Added Qwen 3.6 27B as a newer same-tier alternative to Qwen3 32B.',
+          '2026-08-27: Added Qwen 3.6 27B as a newer same-tier alternative to Qwen3 32B.',
           '2026-10-19: Qwen3 is now labelled as the previous Qwen generation (still widely deployed) and Qwen 3.6 (27B dense, 35B-A3B mixture-of-experts) as the newer generation; the Qwen 3.6 27B memory figure in the table now matches the companion deployment guide.',
-          'Next review scheduled: 2027-02-27',
+          '2026-11-22: GPU prices, per-day cost and build totals cite dated listing sources (InsiderLLM tracker, 2026-10-15); per-model GPU speeds are listed as not tracked.',
+          'Next review scheduled: 2027-05-22',
         ],
       },
     },
@@ -479,7 +480,7 @@ docker run --gpus all \\
           name: 'Is there a Qwen3 8B model?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 8B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and runs about 25 tok/s on an RTX 3060 12 GB. For a 72B-class model, use Qwen2.5-72B.',
+            text: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 8B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and fits an RTX 3060 12 GB with headroom. For a 72B-class model, use Qwen2.5-72B.',
           },
         },
         {
@@ -487,7 +488,7 @@ docker run --gpus all \\
           name: 'Can I run Qwen2.5-72B on a single RTX 4090?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No. Qwen2.5-72B at Q4_K_M quantization requires 43.5 GB VRAM. A single RTX 4090 has 24 GB. You need dual RTX 4090s (48 GB combined), an A100 80 GB, or cloud GPU rental. Note the RTX 4090 is now EOL (discontinued by NVIDIA in 2026) — every unit is used, at ~$2,000–2,600. A single RTX 4090 can run Qwen3 32B at Q4_K_M (20.1 GB) with headroom.',
+            text: 'No. Qwen2.5-72B at Q4_K_M quantization requires 43.5 GB VRAM. A single RTX 4090 has 24 GB. You need dual RTX 4090s (48 GB combined), an A100 80 GB, or cloud GPU rental. RTX 4090 used sold listings were $2,575–3,010 (median $2,860) per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15). A single RTX 4090 can run Qwen3 32B at Q4_K_M (20.1 GB) with headroom.',
           },
         },
         {
@@ -503,7 +504,7 @@ docker run --gpus all \\
           name: 'Does Ollama support multi-GPU inference for Qwen natively?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, since Ollama 0.3.0 (2025). Set CUDA_VISIBLE_DEVICES=0,1 to specify which GPUs to use. Ollama splits the model automatically. For Qwen2.5-72B on dual RTX 4090, expect 5–8 tok/s.',
+            text: 'Yes, since Ollama 0.3.0 (2025). Set CUDA_VISIBLE_DEVICES=0,1 to specify which GPUs to use. Ollama splits the model automatically. For Qwen2.5-72B on dual RTX 4090, no sourced tok/s figure exists, so none is given.',
           },
         },
         {
@@ -583,8 +584,8 @@ docker run --gpus all \\
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-19',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-22',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'Qwen3 Lokales Deployment: Vollständiger Produktionsleitfaden (2026)',
     seoTitle: 'Qwen3 Lokales Deployment 2026: 8B, 14B, 32B + Docker-API',
@@ -596,16 +597,16 @@ docker run --gpus all \\
     audience:
       'Entwickler und Self-Hoster, die Qwen-Modelle produktiv betreiben möchten — mit persistentem API-Server, Multi-GPU-Build oder Always-On-Miniserver.',
     leadAnswerBlock:
-      '**Die Dense-Größen von Qwen3 (Vorgängergeneration, weiterhin stark verbreitet) sind 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B-Modell. Am nächsten kommt Qwen3-8B (Pull `qwen3:8b`); wer nach "Qwen3 8B" gesucht hat, meint das 8B. Das größte Qwen3-Dense-Modell ist 32B; für ein 72B-Klasse-Modell nimm Qwen2.5-72B. Qwen3 8B und 14B laufen zuverlässig auf Consumer-GPUs via Ollama oder vLLM in einem Docker-Compose-API-Server. Qwen 32B benötigt eine RTX 4090 24 GB. Qwen 3.6 ist die neuere Qwen-Generation, erhältlich als dichtes 27B-Modell (`qwen3.6:27b`) und als Mixture-of-Experts-Modell 35B-A3B (`qwen3.6:35b`); das 27B passt in dieselbe 24-GB-VRAM-Stufe wie Qwen3 32B und ist einen Vergleich wert. Qwen2.5-72B braucht dual GPUs, CPU-Inferenz mit 128+ GB RAM oder Cloud-Fallback — Self-Hosting kostet 0,04–0,11 Euro/Tag (amortisiert), RunPod A100 kostet ~1,50 Euro/Stunde.**',
+      '**Die Dense-Größen von Qwen3 (Vorgängergeneration, weiterhin stark verbreitet) sind 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B-Modell. Am nächsten kommt Qwen3-8B (Pull `qwen3:8b`); wer nach "Qwen3 8B" gesucht hat, meint das 8B. Das größte Qwen3-Dense-Modell ist 32B; für ein 72B-Klasse-Modell nimm Qwen2.5-72B. Qwen3 8B und 14B laufen zuverlässig auf Consumer-GPUs via Ollama oder vLLM in einem Docker-Compose-API-Server. Qwen 32B benötigt eine RTX 4090 24 GB. Gebrauchte RTX 4090 wurden laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert 2026-10-15) für 2.575–3.010 US-Dollar verkauft (Median 2.860 US-Dollar), bei einer UVP von 1.599 US-Dollar (Listendaten, kein Zitat; US-Preise in USD). Qwen 3.6 ist die neuere Qwen-Generation, erhältlich als dichtes 27B-Modell (`qwen3.6:27b`) und als Mixture-of-Experts-Modell 35B-A3B (`qwen3.6:35b`); das 27B passt in dieselbe 24-GB-VRAM-Stufe wie Qwen3 32B und ist einen Vergleich wert. Qwen2.5-72B braucht dual GPUs, CPU-Inferenz mit 128+ GB RAM oder Cloud-Fallback — zwei RTX 4090 kosten allein an GPU-Abschreibung rund 5,22 US-Dollar pro Tag (2 × 2.860 US-Dollar Median-Gebrauchtpreis ÷ 1.095 Tage bei 3 Jahren, ohne Strom und übrige Teile), RunPod A100 kostet ~1,50 Euro/Stunde.**',
     quickAnswerTop: {
       de: {
         question: 'Wie setze ich Qwen-Modelle lokal produktiv ein?',
         answer:
           'Docker-Compose-Stack mit Ollama (GPU-Inferenz), Open WebUI (Frontend) und Nginx (Reverse-Proxy) — dieser Stack läuft in unter 10 Minuten und exponiert eine OpenAI-kompatible API. Qwen3 8B läuft auf ~6 GB VRAM; Qwen2.5-72B benötigt dual RTX 4090s oder Cloud-GPU.',
         bullets: [
-          'Qwen3 8B: RTX 3060 12 GB, ~25 tok/s, 150–350 US-Dollar gebraucht (ca. 280–650 Euro)',
-          'Qwen3 14B: RTX 4060 Ti 16 GB, ~18 tok/s, ca. 400 Euro neu',
-          'Qwen3 32B: RTX 4090 24 GB, ~12 tok/s, ca. 1.800–2.100 Euro (Vorgängergeneration; neuer: Qwen 3.6 27B, `qwen3.6:27b`, gleiche 24-GB-Stufe)',
+          'Qwen3 8B: RTX 3060 12 GB (rund 6 GB VRAM nötig); Gebrauchtpreis hier nicht erfasst',
+          'Qwen3 14B: RTX 4060 Ti 16 GB; Preis hier nicht erfasst',
+          'Qwen3 32B: RTX 4090 24 GB, gebraucht verkauft 2.575–3.010 US-Dollar (InsiderLLM-Tracker, 2026-10-15) (Vorgängergeneration; neuer: Qwen 3.6 27B, `qwen3.6:27b`, gleiche 24-GB-Stufe)',
           'Qwen2.5-72B: dual RTX 4090 oder RunPod A100 80 GB (ca. 1,55 Euro/Stunde)',
           'Always-On-Server: Minisforum UM890 Pro, ca. 400 Euro, läuft Qwen3 8B 24/7',
         ],
@@ -643,14 +644,14 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'Qwen-Modell-Performance nach Hardware',
         content:
-          '**Hardware nach Modellgröße wählen, nicht nach GPU-Marke.** VRAM ist die harte Grenze: Passt das Modell nicht, läuft es nicht mit GPU-Geschwindigkeit. Die Tabelle zeigt Richtwerte für die Inferenzgeschwindigkeit bei Q4_K_M-Quantisierung (keine Messungen von PromptQuorum; sie hängen von GPU, Treiber, Kontextlänge und Ollama-Version ab).',
+          '**Hardware nach Modellgröße wählen, nicht nach GPU-Marke.** VRAM ist die harte Grenze: Passt das Modell nicht, läuft es nicht mit GPU-Geschwindigkeit. Die Tabelle zeigt den VRAM-Bedarf bei Q4_K_M-Quantisierung; Geschwindigkeiten je Modell werden hier nicht erfasst. Zum Vergleich nennt das [llama.cpp-CUDA-Scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013) von Entwicklern gemeldete Generierungsgeschwindigkeiten für 7B Q4_0: 158,2 tok/s (RTX 3090), 186,2 tok/s (RTX 4090) und 290,0 tok/s (RTX 5090). Gebrauchte RTX 4090 wurden laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert 2026-10-15) für 2.575–3.010 US-Dollar verkauft (Median 2.860 US-Dollar), bei einer UVP von 1.599 US-Dollar (Listendaten, kein Zitat; US-Preise in USD).',
         columns: ['Modell', 'VRAM (Q4_K_M)', 'Min. GPU', 'Geschwindigkeit (tok/s)', 'CPU-Fallback', 'Produktionstauglich?'],
         rows: [
-          { '0': 'Qwen3 8B', '1': '5,2 GB', '2': 'RTX 3060 12 GB', '3': '22–28 tok/s', '4': 'Ja (32 GB RAM, ~4 tok/s)', '5': 'Ja — Single GPU' },
-          { '0': 'Qwen3 14B', '1': '9,4 GB', '2': 'RTX 4060 Ti 16 GB', '3': '15–20 tok/s', '4': 'Ja (64 GB RAM, ~2,5 tok/s)', '5': 'Ja — Single GPU' },
-          { '0': 'Qwen3 32B (Vorgängergeneration)', '1': '20,1 GB', '2': 'RTX 4090 24 GB', '3': '10–14 tok/s', '4': 'Grenzwertig (128 GB RAM)', '5': 'Ja — Single GPU' },
+          { '0': 'Qwen3 8B', '1': '5,2 GB', '2': 'RTX 3060 12 GB', '3': 'Nicht erfasst', '4': 'Ja (32 GB RAM, ~4 tok/s)', '5': 'Ja — Single GPU' },
+          { '0': 'Qwen3 14B', '1': '9,4 GB', '2': 'RTX 4060 Ti 16 GB', '3': 'Nicht erfasst', '4': 'Ja (64 GB RAM, ~2,5 tok/s)', '5': 'Ja — Single GPU' },
+          { '0': 'Qwen3 32B (Vorgängergeneration)', '1': '20,1 GB', '2': 'RTX 4090 24 GB', '3': 'Nicht erfasst', '4': 'Grenzwertig (128 GB RAM)', '5': 'Ja — Single GPU' },
           { '0': 'Qwen 3.6 27B', '1': '~17 GB', '2': 'RTX 4090 24 GB', '3': 'Siehe Vergleichsleitfaden', '4': 'Grenzwertig (128 GB RAM)', '5': 'Ja — Single GPU' },
-          { '0': 'Qwen2.5-72B', '1': '43,5 GB', '2': 'Dual RTX 4090 (48 GB)', '3': '5–8 tok/s', '4': 'Langsam (128 GB RAM)', '5': 'Nur Multi-GPU oder Cloud' },
+          { '0': 'Qwen2.5-72B', '1': '43,5 GB', '2': 'Dual RTX 4090 (48 GB)', '3': 'Nicht erfasst', '4': 'Langsam (128 GB RAM)', '5': 'Nur Multi-GPU oder Cloud' },
         ],
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
@@ -686,7 +687,7 @@ docker run --gpus all \\
           },
           {
             q: 'Gibt es ein Qwen3 8B Modell?',
-            a: 'Nein. Die Qwen3-Dense-Reihe umfasst 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B. Wer nach "Qwen3 8B" gesucht hat, findet als nächstliegendes Modell Qwen3-8B (`ollama pull qwen3:8b`), das bei Q4_K_M ~5–6 GB VRAM belegt und auf einer RTX 3060 12 GB rund 25 tok/s erreicht. Für ein 72B-Klasse-Modell nutzen Sie Qwen2.5-72B.',
+            a: 'Nein. Die Qwen3-Dense-Reihe umfasst 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B. Wer nach "Qwen3 8B" gesucht hat, findet als nächstliegendes Modell Qwen3-8B (`ollama pull qwen3:8b`), das bei Q4_K_M ~5–6 GB VRAM belegt und auf eine RTX 3060 12 GB mit Spielraum passt. Für ein 72B-Klasse-Modell nutzen Sie Qwen2.5-72B.',
           },
           {
             q: 'Kann ich Qwen2.5-72B auf einer einzelnen RTX 4090 betreiben?',
@@ -731,7 +732,7 @@ docker run --gpus all \\
       url: 'https://www.promptquorum.com/de/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'de',
       datePublished: '2026-05-26',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -748,8 +749,8 @@ docker run --gpus all \\
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-19',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-22',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'Déploiement Local de Qwen3 : Guide Complet de Production (2026)',
     seoTitle: 'Qwen3 Déploiement Local 2026 : 8B, 14B, 32B + API Docker',
@@ -761,16 +762,16 @@ docker run --gpus all \\
     audience:
       'Développeurs et auto-hébergeurs déployant des modèles Qwen en production — serveurs API persistants, builds multi-GPU ou mini-serveurs toujours actifs.',
     leadAnswerBlock:
-      '**Les tailles denses de Qwen3 (génération précédente, encore très déployée) sont 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'existe pas de modèle 7B. Le plus proche est Qwen3-8B (pull `qwen3:8b`) ; si vous avez cherché « Qwen3 8B », c\'est le 8B qu\'il vous faut. Le plus grand modèle dense de Qwen3 est le 32B ; pour un modèle de classe 72B, utilisez Qwen2.5-72B. Qwen3 8B et 14B fonctionnent de manière fiable sur des GPU grand public via Ollama ou vLLM avec un serveur API Docker Compose. Qwen 32B nécessite un RTX 4090 24 Go. Qwen 3.6 est la génération Qwen plus récente, disponible en modèle dense 27B (`qwen3.6:27b`) et en modèle à mélange d\'experts 35B-A3B (`qwen3.6:35b`) ; le 27B tient dans le même palier de 24 Go de VRAM que Qwen3 32B et mérite d\'être comparé. Qwen2.5-72B exige des GPU multiples, de l\'inférence CPU avec 128+ Go de RAM, ou un cloud de secours — l\'auto-hébergement coûte 0,04–0,11 €/jour amorti, contre 0,40–1,20 $/heure sur RunPod.**',
+      '**Les tailles denses de Qwen3 (génération précédente, encore très déployée) sont 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'existe pas de modèle 7B. Le plus proche est Qwen3-8B (pull `qwen3:8b`) ; si vous avez cherché « Qwen3 8B », c\'est le 8B qu\'il vous faut. Le plus grand modèle dense de Qwen3 est le 32B ; pour un modèle de classe 72B, utilisez Qwen2.5-72B. Qwen3 8B et 14B fonctionnent de manière fiable sur des GPU grand public via Ollama ou vLLM avec un serveur API Docker Compose. Qwen 32B nécessite un RTX 4090 24 Go. Les RTX 4090 d\'occasion se sont vendues entre 2 575 et 3 010 $ (médiane 2 860 $) pour un prix public de 1 599 $, selon le [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15 ; données d\'annonces, pas une citation ; prix américains en USD). Qwen 3.6 est la génération Qwen plus récente, disponible en modèle dense 27B (`qwen3.6:27b`) et en modèle à mélange d\'experts 35B-A3B (`qwen3.6:35b`) ; le 27B tient dans le même palier de 24 Go de VRAM que Qwen3 32B et mérite d\'être comparé. Qwen2.5-72B exige des GPU multiples, de l\'inférence CPU avec 128+ Go de RAM, ou un cloud de secours — deux RTX 4090 coûtent environ 5,22 $ par jour en amortissement du seul GPU (2 × 2 860 $ de médiane d\'occasion ÷ 1 095 jours sur 3 ans, hors électricité et autres composants), contre 0,50–1,20 $/heure sur RunPod.**',
     quickAnswerTop: {
       fr: {
         question: 'Comment déployer des modèles Qwen en production localement ?',
         answer:
           'Utilisez un stack Docker Compose avec Ollama (inférence GPU), Open WebUI (interface) et Nginx (reverse-proxy + auth) — ce stack est opérationnel en moins de 10 minutes et expose une API compatible OpenAI. Qwen3 8B fonctionne avec ~6 Go de VRAM ; Qwen2.5-72B nécessite deux RTX 4090 ou un GPU cloud.',
         bullets: [
-          'Qwen3 8B : RTX 3060 12 Go, ~25 tok/s, 150–350 $ GPU d\'occasion',
-          'Qwen3 14B : RTX 4060 Ti 16 Go, ~18 tok/s, ~400 € neuf',
-          'Qwen3 32B : RTX 4090 24 Go, ~12 tok/s, ~1 800–2 200 € (génération précédente ; plus récent : Qwen 3.6 27B, `qwen3.6:27b`, même palier de 24 Go)',
+          'Qwen3 8B : RTX 3060 12 Go (environ 6 Go de VRAM requis) ; prix d\'occasion non suivi ici',
+          'Qwen3 14B : RTX 4060 Ti 16 Go ; prix non suivi ici',
+          'Qwen3 32B : RTX 4090 24 Go, occasion vendue 2 575–3 010 $ (suivi InsiderLLM, 2026-10-15) (génération précédente ; plus récent : Qwen 3.6 27B, `qwen3.6:27b`, même palier de 24 Go)',
           'Qwen2.5-72B : double RTX 4090 ou RunPod A100 80 Go (1,64 $/heure)',
           'Serveur toujours actif : Minisforum UM890 Pro, ~430 €, fait tourner Qwen3 8B 24h/24',
         ],
@@ -787,7 +788,7 @@ docker run --gpus all \\
           'Qwen3 32B nécessite un RTX 4090 24 Go — le plus grand déploiement monoGPU pour la plupart des équipes (Qwen3 est la génération précédente ; le plus récent Qwen 3.6 27B, `qwen3.6:27b`, tient dans le même palier de 24 Go)',
           'Qwen2.5-72B : double RTX 4090, build CPU avec 128+ Go DDR5, ou location cloud',
           'Un stack Docker Compose avec Ollama + Open WebUI + Nginx est opérationnel en moins de 10 minutes',
-          'Serveur toujours actif : Minisforum UM890 Pro (~430 €) ou AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti (~750 € au total)',
+          'Serveur toujours actif : Minisforum UM890 Pro (~430 €) ou AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti (prix du GPU non suivi ici)',
           'Cloud de secours : RunPod A40 48 Go à 0,44 $/heure — moins cher qu\'un build double RTX 4090 pour une utilisation occasionnelle',
         ],
       },
@@ -814,7 +815,7 @@ docker run --gpus all \\
           },
           {
             q: 'Existe-t-il un modèle Qwen3 8B ?',
-            a: 'Non. La gamme dense de Qwen3 comprend 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'y a pas de 7B. Si vous avez cherché « Qwen3 8B », le modèle le plus proche est Qwen3-8B (`ollama pull qwen3:8b`), qui occupe ~5–6 Go de VRAM en Q4_K_M et atteint environ 25 tok/s sur une RTX 3060 12 Go. Pour un modèle de classe 72B, utilisez Qwen2.5-72B.',
+            a: 'Non. La gamme dense de Qwen3 comprend 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'y a pas de 7B. Si vous avez cherché « Qwen3 8B », le modèle le plus proche est Qwen3-8B (`ollama pull qwen3:8b`), qui occupe ~5–6 Go de VRAM en Q4_K_M et tient dans une RTX 3060 12 Go avec de la marge. Pour un modèle de classe 72B, utilisez Qwen2.5-72B.',
           },
           {
             q: 'Puis-je faire tourner Qwen2.5-72B sur un seul RTX 4090 ?',
@@ -867,7 +868,7 @@ docker run --gpus all \\
       url: 'https://www.promptquorum.com/fr/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'fr',
       datePublished: '2026-05-26',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -884,8 +885,8 @@ docker run --gpus all \\
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-19',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-22',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'Qwen3ローカルデプロイ完全ガイド（2026）：本番運用',
     seoTitle: 'Qwen3ローカルデプロイ2026：8B・14B・32B＋Docker API',
@@ -897,16 +898,16 @@ docker run --gpus all \\
     audience:
       'Qwenモデルを本番環境でデプロイする開発者・セルフホスター。永続的なAPIサーバー、マルチGPUビルド、常時稼働ミニPCサーバーを構築する方。',
     leadAnswerBlock:
-      '**Qwen3（前世代で今も広く使われている）のdenseモデルは0.6B・1.7B・4B・8B・14B・32Bで、7Bモデルは存在しません。最も近いのはQwen3-8B（`qwen3:8b`をpull）で、「Qwen3 8B」を探していた場合はこの8Bが該当します。Qwen3の最大denseモデルは32Bで、72Bクラスが必要な場合はQwen2.5-72Bを使用します。Qwen3 8BおよびQwen 14BはOllamaまたはvLLMを使ったDocker Compose APIサーバーで、コンシューマーGPU上で安定稼働します。Qwen 32BはRTX 4090 24GBが必要。Qwen 3.6はより新しいQwen世代で、27Bのdenseモデル（`qwen3.6:27b`）と35B-A3BのMoEモデル（`qwen3.6:35b`）として提供されています。27BはQwen3 32Bと同じ24GB VRAM階層に収まり、比較する価値があります。Qwen2.5-72BはデュアルGPU・高RAMのCPU推論、またはクラウドが必要です。自己ホスティングのコストは1日あたり約6〜16円（ハードウェア償却込み）、RunPodのA100は約65円/時間です。**',
+      '**Qwen3（前世代で今も広く使われている）のdenseモデルは0.6B・1.7B・4B・8B・14B・32Bで、7Bモデルは存在しません。最も近いのはQwen3-8B（`qwen3:8b`をpull）で、「Qwen3 8B」を探していた場合はこの8Bが該当します。Qwen3の最大denseモデルは32Bで、72Bクラスが必要な場合はQwen2.5-72Bを使用します。Qwen3 8BおよびQwen 14BはOllamaまたはvLLMを使ったDocker Compose APIサーバーで、コンシューマーGPU上で安定稼働します。Qwen 32BはRTX 4090 24GBが必要です。中古のRTX 4090の販売実績は、[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（出典更新日2026-10-15）によると$2,575〜3,010（中央値$2,860）で、メーカー希望価格は$1,599でした（掲載データであり引用ではありません。米国価格・USD表記で、日本の価格は異なる場合があります）。Qwen 3.6はより新しいQwen世代で、27Bのdenseモデル（`qwen3.6:27b`）と35B-A3BのMoEモデル（`qwen3.6:35b`）として提供されています。27BはQwen3 32Bと同じ24GB VRAM階層に収まり、比較する価値があります。Qwen2.5-72BはデュアルGPU・高RAMのCPU推論、またはクラウドが必要です。RTX 4090を2枚使う場合、GPUの償却だけで1日あたり約$5.22です（中古中央値$2,860 × 2 ÷ 1,095日、3年換算、電気代とその他の部品は除く）。RunPodのA100は約65円/時間です。**',
     quickAnswerTop: {
       ja: {
         question: 'Qwenモデルをローカルで本番運用するには？',
         answer:
           'Docker ComposeスタックでOllama（GPU推論）、Open WebUI（フロントエンド）、Nginx（リバースプロキシ）を組み合わせます。10分以内でOpenAI互換APIが起動します。Qwen3 8Bは約6GB VRAM、Qwen2.5-72BはデュアルRTX 4090またはクラウドGPUが必要です。',
         bullets: [
-          'Qwen3 8B：RTX 3060 12GB、約25tok/s、中古2〜5万円',
-          'Qwen3 14B：RTX 4060 Ti 16GB、約18tok/s、新品約6万円',
-          'Qwen3 32B：RTX 4090 24GB、約12tok/s、新品約28〜32万円（前世代。より新しいQwen 3.6 27B（`qwen3.6:27b`）も同じ24GB階層）',
+          'Qwen3 8B：RTX 3060 12GB（VRAM約6GB必要）、中古価格はここでは未追跡',
+          'Qwen3 14B：RTX 4060 Ti 16GB、価格はここでは未追跡',
+          'Qwen3 32B：RTX 4090 24GB、中古販売実績$2,575〜3,010（InsiderLLMトラッカー、2026-10-15）（前世代。より新しいQwen 3.6 27B（`qwen3.6:27b`）も同じ24GB階層）',
           'Qwen2.5-72B：デュアルRTX 4090またはRunPod A100 80GB（約240円/時間）',
           '常時稼働サーバー：Minisforum UM890 Pro、約6万5千円、Qwen3 8Bを24時間稼働',
         ],
@@ -923,7 +924,7 @@ docker run --gpus all \\
           'Qwen3 32BはRTX 4090 24GBが必要 — ほとんどのチームにとって最大のシングルGPUデプロイ（Qwen3は前世代で、より新しいQwen 3.6 27B（`qwen3.6:27b`）が同じ24GB階層に収まります）',
           'Qwen2.5-72Bはデュアルカード、128GB+ DDR5のCPUビルド、またはクラウドが必要',
           'Docker ComposeスタックはOllama + Open WebUI + Nginxで10分以内に起動',
-          '常時稼働サーバー：Minisforum UM890 Pro（約6万5千円）またはAOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti（合計約12万円）',
+          '常時稼働サーバー：Minisforum UM890 Pro（約6万5千円）またはAOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti（GPU価格はここでは未追跡）',
           'クラウド代替：RunPod A40 48GBで約65円/時間 — 単発のQwen2.5-72B用途ではデュアルRTX 4090購入より安価',
         ],
       },
@@ -950,7 +951,7 @@ docker run --gpus all \\
           },
           {
             q: 'Qwen3 8Bモデルは存在しますか？',
-            a: 'いいえ。Qwen3のdenseラインナップは0.6B・1.7B・4B・8B・14B・32Bで、7Bはありません。「Qwen3 8B」を探していた場合、最も近いモデルはQwen3-8B（`ollama pull qwen3:8b`）で、Q4_K_Mで約5〜6GBのVRAMに収まり、RTX 3060 12GBで約25 tok/sで動作します。72Bクラスが必要な場合はQwen2.5-72Bを使用してください。',
+            a: 'いいえ。Qwen3のdenseラインナップは0.6B・1.7B・4B・8B・14B・32Bで、7Bはありません。「Qwen3 8B」を探していた場合、最も近いモデルはQwen3-8B（`ollama pull qwen3:8b`）で、Q4_K_Mで約5〜6GBのVRAMに収まり、RTX 3060 12GBに余裕を持って収まります。72Bクラスが必要な場合はQwen2.5-72Bを使用してください。',
           },
           {
             q: 'Qwen2.5-72BをRTX 4090 1枚で動かせますか？',
@@ -1008,7 +1009,7 @@ docker run --gpus all \\
       url: 'https://www.promptquorum.com/ja/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'ja',
       datePublished: '2026-05-26',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -1025,8 +1026,8 @@ docker run --gpus all \\
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-19',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-22',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'Qwen3本地部署完整指南（2026）：生产环境',
     seoTitle: 'Qwen3本地部署2026：8B、14B、32B + Docker API',
@@ -1038,16 +1039,16 @@ docker run --gpus all \\
     audience:
       '在生产环境中部署Qwen模型的开发者和自托管用户——包括持久API服务器、多GPU构建或全天候运行的迷你PC服务器。',
     leadAnswerBlock:
-      '**Qwen3（上一代，仍被广泛部署）的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B型号。最接近的是Qwen3-8B（拉取`qwen3:8b`）；如果你搜索的是"Qwen3 8B"，你要的其实是8B。Qwen3最大的dense型号是32B；如需72B级别的模型，请使用Qwen2.5-72B。Qwen3 8B和14B可通过Ollama或vLLM在消费级GPU上稳定运行Docker Compose API服务器。Qwen 32B需要RTX 4090 24GB。Qwen 3.6是更新的Qwen世代，提供27B dense模型（`qwen3.6:27b`）和35B-A3B混合专家模型（`qwen3.6:35b`）；27B与Qwen3 32B处于同一24GB显存档位，值得一并评估。Qwen2.5-72B需要双GPU、128GB+ RAM的CPU推理或云端备选——自托管成本约为每天0.3至0.8元人民币（含硬件摊销），RunPod A100约为11元人民币/小时。**',
+      '**Qwen3（上一代，仍被广泛部署）的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B型号。最接近的是Qwen3-8B（拉取`qwen3:8b`）；如果你搜索的是"Qwen3 8B"，你要的其实是8B。Qwen3最大的dense型号是32B；如需72B级别的模型，请使用Qwen2.5-72B。Qwen3 8B和14B可通过Ollama或vLLM在消费级GPU上稳定运行Docker Compose API服务器。Qwen 32B需要RTX 4090 24GB。据 [InsiderLLM 追踪器](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于 2026-10-15），二手 RTX 4090 的成交挂牌价为 $2,575–3,010（中位数 $2,860），官方建议零售价为 $1,599（挂牌数据，非报价引用；美国价格，USD 计价）。Qwen 3.6是更新的Qwen世代，提供27B dense模型（`qwen3.6:27b`）和35B-A3B混合专家模型（`qwen3.6:35b`）；27B与Qwen3 32B处于同一24GB显存档位，值得一并评估。Qwen2.5-72B需要双GPU、128GB+ RAM的CPU推理或云端备选——两张 RTX 4090 仅 GPU 摊销每天约 $5.22（二手中位数 $2,860 × 2 ÷ 1,095 天，按 3 年计，不含电费和其他部件），RunPod A100约为$1.64/小时。**',
     quickAnswerTop: {
       zh: {
         question: '如何在本地生产环境中部署Qwen模型？',
         answer:
           '使用Docker Compose堆栈：Ollama（GPU推理）+ Open WebUI（前端）+ Nginx（反向代理）。10分钟内启动OpenAI兼容API。Qwen3 8B需要约6GB显存；Qwen2.5-72B需要双RTX 4090或云端GPU。',
         bullets: [
-          'Qwen3 8B：RTX 3060 12GB，约25 tok/s，二手GPU约1000-2500元',
-          'Qwen3 14B：RTX 4060 Ti 16GB，约18 tok/s，新品约3000元',
-          'Qwen3 32B：RTX 4090 24GB，约12 tok/s，新品约14000元（上一代；更新的Qwen 3.6 27B（`qwen3.6:27b`）同属24GB档位）',
+          'Qwen3 8B：RTX 3060 12GB（约需6GB显存），二手价格此处未跟踪',
+          'Qwen3 14B：RTX 4060 Ti 16GB，价格此处未跟踪',
+          'Qwen3 32B：RTX 4090 24GB，二手成交挂牌价 $2,575–3,010（InsiderLLM 追踪器，2026-10-15）（上一代；更新的Qwen 3.6 27B（`qwen3.6:27b`）同属24GB档位）',
           'Qwen2.5-72B：双RTX 4090或阿里云PAI A100（约12元/小时）',
           '全天候服务器：Minisforum UM890 Pro，约3000元，24小时运行Qwen3 8B',
         ],
@@ -1064,7 +1065,7 @@ docker run --gpus all \\
           'Qwen3 32B需要RTX 4090 24GB——是大多数团队最大的单GPU生产部署（Qwen3是上一代；更新的Qwen 3.6 27B（`qwen3.6:27b`）处于同一24GB档位）',
           'Qwen2.5-72B需要双GPU、128GB+ DDR5 CPU构建或云端租用',
           'Docker Compose堆栈（Ollama + Open WebUI + Nginx）10分钟内即可部署',
-          '全天候服务器：Minisforum UM890 Pro（约3000元，CPU运行Qwen3 8B）或AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti（总计约5500元）',
+          '全天候服务器：Minisforum UM890 Pro（约3000元，CPU运行Qwen3 8B）或AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti（GPU 价格此处未跟踪）',
           '云端备选：RunPod A40 48GB约3元/小时——偶尔使用Qwen2.5-72B比购买双RTX 4090更划算',
           '本指南涵盖生产环境部署；基础Ollama配置请参见Qwen入门指南',
         ],
@@ -1086,14 +1087,14 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'Qwen模型性能对比（按硬件分类）',
         content:
-          '**根据模型大小选择硬件，而非GPU品牌。** 显存是硬性约束：模型放不进去就无法以GPU速度运行。下表展示Q4_K_M量化（Ollama部署的最佳质量-体积比）下的参考推理速度（并非PromptQuorum的实测结果，会随GPU、驱动、上下文长度和Ollama版本变化）。',
+          '**根据模型大小选择硬件，而非GPU品牌。** 显存是硬性约束：模型放不进去就无法以GPU速度运行。下表展示Q4_K_M量化（Ollama部署的最佳质量-体积比）下的显存需求，各模型的速度此处未跟踪。作为参考，[llama.cpp CUDA 排行榜](https://github.com/ggml-org/llama.cpp/discussions/15013)列出开发者上报的 7B Q4_0 生成速度：RTX 3090 为 158.2 tok/s，RTX 4090 为 186.2 tok/s，RTX 5090 为 290.0 tok/s。据 [InsiderLLM 追踪器](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于 2026-10-15），二手 RTX 4090 的成交挂牌价为 $2,575–3,010（中位数 $2,860），官方建议零售价为 $1,599（挂牌数据，非报价引用；美国价格，USD 计价）。',
         columns: ['模型', '显存（Q4_K_M）', '最低GPU', '速度（tok/s）', 'CPU备选', '是否适合生产？'],
         rows: [
-          { '0': 'Qwen3 8B', '1': '5.2 GB', '2': 'RTX 3060 12GB', '3': '22–28 tok/s', '4': '是（32GB RAM，约4 tok/s）', '5': '是——单GPU' },
-          { '0': 'Qwen3 14B', '1': '9.4 GB', '2': 'RTX 4060 Ti 16GB', '3': '15–20 tok/s', '4': '是（64GB RAM，约2.5 tok/s）', '5': '是——单GPU' },
-          { '0': 'Qwen3 32B（上一代）', '1': '20.1 GB', '2': 'RTX 4090 24GB', '3': '10–14 tok/s', '4': '勉强（128GB RAM）', '5': '是——单GPU' },
+          { '0': 'Qwen3 8B', '1': '5.2 GB', '2': 'RTX 3060 12GB', '3': '未跟踪', '4': '是（32GB RAM，约4 tok/s）', '5': '是——单GPU' },
+          { '0': 'Qwen3 14B', '1': '9.4 GB', '2': 'RTX 4060 Ti 16GB', '3': '未跟踪', '4': '是（64GB RAM，约2.5 tok/s）', '5': '是——单GPU' },
+          { '0': 'Qwen3 32B（上一代）', '1': '20.1 GB', '2': 'RTX 4090 24GB', '3': '未跟踪', '4': '勉强（128GB RAM）', '5': '是——单GPU' },
           { '0': 'Qwen 3.6 27B', '1': '~17 GB', '2': 'RTX 4090 24GB', '3': '见对比指南', '4': '勉强（128GB RAM）', '5': '是——单GPU' },
-          { '0': 'Qwen2.5-72B', '1': '43.5 GB', '2': '双RTX 4090（合计48GB）', '3': '5–8 tok/s', '4': '慢（128GB RAM）', '5': '仅多GPU或云端' },
+          { '0': 'Qwen2.5-72B', '1': '43.5 GB', '2': '双RTX 4090（合计48GB）', '3': '未跟踪', '4': '慢（128GB RAM）', '5': '仅多GPU或云端' },
         ],
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
@@ -1109,7 +1110,7 @@ docker run --gpus all \\
           },
           {
             q: '有Qwen3 8B型号吗？',
-            a: '没有。Qwen3的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B。如果你搜索的是"Qwen3 8B"，最接近的型号是Qwen3-8B（`ollama pull qwen3:8b`），在Q4_K_M下约占用5–6GB显存，在RTX 3060 12GB上约为25 tok/s。如需72B级别的模型，请使用Qwen2.5-72B。',
+            a: '没有。Qwen3的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B。如果你搜索的是"Qwen3 8B"，最接近的型号是Qwen3-8B（`ollama pull qwen3:8b`），在Q4_K_M下约占用5–6GB显存，可轻松放入RTX 3060 12GB。如需72B级别的模型，请使用Qwen2.5-72B。',
           },
           {
             q: '能用单张RTX 4090运行Qwen2.5-72B吗？',
@@ -1171,7 +1172,7 @@ docker run --gpus all \\
       url: 'https://www.promptquorum.com/zh/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'zh',
       datePublished: '2026-05-26',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -1189,7 +1190,7 @@ docker run --gpus all \\
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-11-22',
-    next_refresh_due: '2027-02-27',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'Despliegue Local de Qwen3: Guía Completa de Producción (2026)',
     seoTitle: 'Qwen3 Despliegue Local 2026: 8B, 14B, 32B + API Docker',
@@ -1197,7 +1198,7 @@ docker run --gpus all \\
       'Despliega Qwen3 en local: 8B, 14B y 32B con Ollama/vLLM y un servidor API Docker, elección de hardware y multi-GPU. Nota — Qwen3 no tiene 7B; usa el 8B (qwen3:8b). Guía 2026.',
     heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-es.webp',
     twitterDescription:
-      'Qwen3 8B alcanza 25 tok/s en una RTX 3060. Qwen2.5-72B necesita dos RTX 4090 o una GPU en la nube. Guía completa de Docker, servidor API y multi-GPU para 2026.',
+      'Qwen3 8B cabe en una RTX 3060 de 12 GB. Qwen2.5-72B necesita dos RTX 4090 o una GPU en la nube. Guía de Docker, servidor API y multi-GPU para 2026.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -1222,21 +1223,21 @@ docker run --gpus all \\
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
       'NVIDIA RTX 4060 Ti 16 GB',
-      'NVIDIA RTX 4090 24 GB (EOL, used-only)',
+      'NVIDIA RTX 4090 24 GB',
       'Minisforum UM890 Pro',
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**Los tamaños densos de Qwen3 (generación anterior, aún muy desplegada) son 0,6B, 1,7B, 4B, 8B, 14B y 32B — no existe un modelo 7B. El más cercano es Qwen3-8B (haz pull de `qwen3:8b`); si buscabas "Qwen3 8B", lo que quieres es el 8B. El mayor modelo denso de Qwen3 es el 32B; para un modelo de clase 72B usa Qwen2.5-72B. Qwen3 8B y 14B funcionan de forma fiable en GPUs de consumo mediante Ollama o vLLM con un servidor API Docker Compose. Qwen 32B necesita una RTX 4090 de 24 GB. Qwen 3.6 es la generación Qwen más reciente, disponible como modelo denso de 27B (`qwen3.6:27b`) y como modelo de mezcla de expertos 35B-A3B (`qwen3.6:35b`); el 27B cabe en el mismo nivel de 24 GB de VRAM que Qwen3 32B y merece una comparación. Qwen2.5-72B requiere GPUs duales, inferencia CPU con 128+ GB de RAM o una alternativa en la nube — el self-hosting cuesta entre $0,05 y $0,12 por día según la amortización del hardware, frente a $0,50–1,20/hr en RunPod.**',
+      '**Los tamaños densos de Qwen3 (generación anterior, aún muy desplegada) son 0,6B, 1,7B, 4B, 8B, 14B y 32B — no existe un modelo 7B. El más cercano es Qwen3-8B (haz pull de `qwen3:8b`); si buscabas "Qwen3 8B", lo que quieres es el 8B. El mayor modelo denso de Qwen3 es el 32B; para un modelo de clase 72B usa Qwen2.5-72B. Qwen3 8B y 14B funcionan de forma fiable en GPUs de consumo mediante Ollama o vLLM con un servidor API Docker Compose. Qwen 32B necesita una RTX 4090 de 24 GB. Las RTX 4090 de segunda mano se vendieron entre $2.575 y $3.010 (mediana $2.860) frente a un PVP de $1.599, según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15; datos de anuncios, no una cita; precios de EE. UU. en USD; los precios en tu país pueden variar según impuestos locales). Qwen 3.6 es la generación Qwen más reciente, disponible como modelo denso de 27B (`qwen3.6:27b`) y como modelo de mezcla de expertos 35B-A3B (`qwen3.6:35b`); el 27B cabe en el mismo nivel de 24 GB de VRAM que Qwen3 32B y merece una comparación. Qwen2.5-72B requiere GPUs duales, inferencia CPU con 128+ GB de RAM o una alternativa en la nube — dos RTX 4090 cuestan unos $5,22 por día solo en amortización de las GPU (2 × $2.860 de mediana de segunda mano ÷ 1.095 días en 3 años, sin electricidad ni otras piezas), frente a $0,50–1,20/hr en RunPod.**',
     quickAnswerTop: {
       es: {
         question: '¿Cómo despliego modelos Qwen en producción localmente?',
         answer:
           'Ejecuta Qwen mediante un stack Docker Compose que expone una API compatible con OpenAI: Ollama gestiona la inferencia GPU, Open WebUI proporciona el frontend y Nginx actúa como reverse proxy. Qwen3 8B funciona con ~6 GB de VRAM; Qwen2.5-72B necesita dos RTX 4090 o una GPU en la nube.',
         bullets: [
-          'Qwen3 8B: RTX 3060 12 GB, ~25 tok/s, $150–350 GPU de segunda mano',
-          'Qwen3 14B: RTX 4060 Ti 16 GB, ~18 tok/s, ~$424 nuevo',
-          'Qwen3 32B: RTX 4090 24 GB, ~12 tok/s, ~$1.900 nuevo (generación anterior; más reciente: Qwen 3.6 27B, `qwen3.6:27b`, mismo nivel de 24 GB)',
+          'Qwen3 8B: RTX 3060 12 GB (unos 6 GB de VRAM); precio de segunda mano no registrado aquí',
+          'Qwen3 14B: RTX 4060 Ti 16 GB; precio no registrado aquí',
+          'Qwen3 32B: RTX 4090 24 GB, segunda mano vendida $2.575–3.010 (rastreador InsiderLLM, 2026-10-15) (generación anterior; más reciente: Qwen 3.6 27B, `qwen3.6:27b`, mismo nivel de 24 GB)',
           'Qwen2.5-72B: dos RTX 4090 o RunPod A100 80 GB ($1,64/hr)',
           'Servidor siempre activo: Minisforum UM890 Pro, $429, ejecuta Qwen3 8B 24/7',
         ],
@@ -1262,9 +1263,9 @@ docker run --gpus all \\
         items: [
           'Qwen3 8B y 14B son objetivos para GPUs de consumo — ~6 GB y 16 GB de VRAM respectivamente, ejecutándose mediante Ollama en Docker',
           'Qwen3 32B necesita una RTX 4090 de 24 GB; es el despliegue en producción con una sola tarjeta más grande para la mayoría de los equipos (Qwen3 es la generación anterior; el más reciente Qwen 3.6 27B, `qwen3.6:27b`, cabe en el mismo nivel de 24 GB)',
-          'Qwen2.5-72B requiere dos RTX 4090, un build CPU con mucha RAM (128+ GB DDR5) o alquiler en la nube — el self-hosting cuesta ~$0,05–0,12/día amortizado',
+          'Qwen2.5-72B requiere dos RTX 4090, un build CPU con mucha RAM (128+ GB DDR5) o alquiler en la nube — dos RTX 4090 cuestan unos $5,22/día solo en amortización de las GPU (2 × $2.860 ÷ 1.095 días)',
           'Un stack Docker Compose con Ollama + Open WebUI + Nginx expone una API compatible con OpenAI en menos de 10 minutos',
-          'Servidores Qwen siempre activos: Minisforum UM890 Pro ($429, Qwen3 8B en CPU) o AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 GB (~$800 en total)',
+          'Servidores Qwen siempre activos: Minisforum UM890 Pro ($429, Qwen3 8B en CPU) o AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 GB (precio de la GPU no registrado aquí)',
           'Alternativa en la nube: RunPod A40 48 GB a $0,44/hr gestiona Qwen2.5-72B — más barato que comprar dos RTX 4090 para uso ocasional',
           'Esta guía cubre el despliegue en producción; para la configuración básica con Ollama consulta la guía para principiantes de Qwen',
         ],
@@ -1286,14 +1287,14 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'Rendimiento de modelos Qwen por hardware',
         content:
-          '**Elige el hardware según el tamaño del modelo, no por la marca de GPU.** La VRAM es la restricción principal: si el modelo no cabe, no se ejecutará a velocidad de GPU. La tabla muestra velocidades de inferencia orientativas (no son mediciones de PromptQuorum; varían según GPU, controlador, longitud de contexto y versión de Ollama) con cuantización Q4_K_M (la mejor relación calidad-tamaño para despliegues con Ollama).',
+          '**Elige el hardware según el tamaño del modelo, no por la marca de GPU.** La VRAM es la restricción principal: si el modelo no cabe, no se ejecutará a velocidad de GPU. La tabla muestra la VRAM necesaria con cuantización Q4_K_M (la mejor relación calidad-tamaño para despliegues con Ollama); las velocidades por modelo no se registran aquí. Como referencia, el [marcador CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) recoge velocidades de generación 7B Q4_0 reportadas por desarrolladores: 158,2 tok/s (RTX 3090), 186,2 tok/s (RTX 4090) y 290,0 tok/s (RTX 5090). Las RTX 4090 de segunda mano se vendieron entre $2.575 y $3.010 (mediana $2.860) frente a un PVP de $1.599, según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15; datos de anuncios, no una cita; precios de EE. UU. en USD; los precios en tu país pueden variar según impuestos locales).',
         columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Velocidad (tok/s)', 'Fallback CPU', '¿Listo para producción?'],
         rows: [
           {
             '0': 'Qwen3 8B',
             '1': '5,2 GB',
             '2': 'RTX 3060 12 GB',
-            '3': '22–28 tok/s',
+            '3': 'No registrado',
             '4': 'Sí (32 GB RAM, ~4 tok/s)',
             '5': 'Sí — GPU única',
           },
@@ -1301,7 +1302,7 @@ docker run --gpus all \\
             '0': 'Qwen3 14B',
             '1': '9,4 GB',
             '2': 'RTX 4060 Ti 16 GB',
-            '3': '15–20 tok/s',
+            '3': 'No registrado',
             '4': 'Sí (64 GB RAM, ~2,5 tok/s)',
             '5': 'Sí — GPU única',
           },
@@ -1309,7 +1310,7 @@ docker run --gpus all \\
             '0': 'Qwen3 32B (generación anterior)',
             '1': '20,1 GB',
             '2': 'RTX 4090 24 GB',
-            '3': '10–14 tok/s',
+            '3': 'No registrado',
             '4': 'Marginal (128 GB RAM, ~1,2 tok/s)',
             '5': 'Sí — GPU única',
           },
@@ -1325,7 +1326,7 @@ docker run --gpus all \\
             '0': 'Qwen2.5-Coder 32B',
             '1': '19,8 GB',
             '2': 'RTX 4090 24 GB',
-            '3': '10–13 tok/s',
+            '3': 'No registrado',
             '4': 'Marginal (128 GB RAM)',
             '5': 'Sí — GPU única',
           },
@@ -1333,12 +1334,12 @@ docker run --gpus all \\
             '0': 'Qwen2.5-72B',
             '1': '43,5 GB',
             '2': 'Dos RTX 4090 (48 GB en total)',
-            '3': '5–8 tok/s',
+            '3': 'No registrado',
             '4': 'Lento (128 GB RAM, ~0,6 tok/s)',
             '5': 'Solo multi-GPU o nube',
           },
         ],
-        note: 'Velocidades orientativas para sistemas PCIe Gen 4, no mediciones de PromptQuorum. La RTX 4090 no tiene conector NVLink, por lo que dos RTX 4090 se comunican solo por PCIe; NVLink existe en algunas tarjetas como la RTX 3090. Qwen2.5-72B con Q4_K_M en un A100 80 GB único en RunPod: aproximadamente 18–22 tok/s (orientativo).',
+        note: 'Las velocidades por modelo no se registran aquí; los valores de fallback CPU son orientativos para sistemas PCIe Gen 4, no mediciones de PromptQuorum. La RTX 4090 no tiene conector NVLink, por lo que dos RTX 4090 se comunican solo por PCIe; NVLink existe en algunas tarjetas como la RTX 3090.',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'Requisitos de VRAM de los modelos Qwen con cuantización Q4_K_M: Qwen3 8B necesita 5,2 GB (RTX 3060 12 GB), Qwen3 32B necesita 20,1 GB (RTX 4090 24 GB) y Qwen2.5-72B necesita 43,5 GB (dos RTX 4090).',
@@ -1429,7 +1430,7 @@ volumes:
           'Para dos RTX 4090, ambas deben estar en el mismo nivel de ancho de banda PCIe — una placa B650 o Z790 con dos ranuras PCIe Gen 4 x8 es el mínimo',
           'La RTX 4090 no tiene conector NVLink, así que dos RTX 4090 se comunican solo por PCIe; los puentes NVLink existen para algunas tarjetas anteriores, como la RTX 3090',
           'vLLM es un motor de inferencia alternativo que usa paralelismo tensorial para una utilización multi-GPU más eficiente — usa vLLM en lugar de Ollama para cargas sostenidas de inferencia 70B por encima de 100 solicitudes concurrentes',
-          'Para uso ocasional de Qwen2.5-72B, RunPod A40 48 GB a $0,44/hr es más barato que un build con dos RTX 4090 ($3.800+)',
+          'Para uso ocasional de Qwen2.5-72B, RunPod A40 48 GB a $0,44/hr es más barato que un build con dos RTX 4090 (solo las dos tarjetas, unos $5.720 con la mediana de segunda mano, según el rastreador de InsiderLLM, 2026-10-15)',
         ],
         codeBlock: `# vLLM multi-GPU alternative (better for high-traffic 72B)
 docker run --gpus all \\
@@ -1465,28 +1466,28 @@ docker run --gpus all \\
         id: 'cost-comparison',
         title: 'Comparación de costes: self-hosted vs Alibaba Cloud vs RunPod',
         content:
-          '**El self-hosting supera a la nube para cargas de inferencia sostenidas superiores a 4 horas al día. Por debajo de 4 horas diarias, el alquiler de GPU en la nube es más barato tras la amortización del hardware.** La tabla usa una amortización del hardware a 3 años para los builds self-hosted.',
+          '**El self-hosting compensa solo con carga sostenida; para uso ocasional, alquilar GPU en la nube es más barato que comprar.** La tabla amortiza solo el precio de la GPU en 3 años (ilustrativo; la electricidad y las demás piezas no se registran). Con la mediana de la RTX 4090 de segunda mano ($2.860) son $2,61 por día ($2.860 ÷ 1.095 días), equivalentes a unas 5,9 horas diarias de alquiler de una RunPod A40 a $0,44/hr ($2,61 ÷ $0,44).',
         columns: ['Opción', 'Coste Qwen3 8B/día', 'Coste Qwen2.5-72B/día', 'Coste inicial', 'Mejor para'],
         rows: [
           {
             '0': 'Self-hosted: mini PC RTX 3060 12 GB',
-            '1': '$0,03 (solo electricidad)',
+            '1': 'No registrado',
             '2': 'N/A (no cabe)',
-            '3': '$600–900 build completo',
+            '3': 'No registrado (precio de la GPU de segunda mano no registrado)',
             '4': 'Inferencia 7B siempre activa, servidor doméstico/oficina',
           },
           {
             '0': 'Self-hosted: workstation RTX 4090',
-            '1': '$0,05',
+            '1': '$2,61 (solo amortización de la GPU, 3 años)',
             '2': 'N/A (GPU única)',
-            '3': '$2.500–4.000 build completo',
+            '3': 'Solo la GPU: $2.575–3.010 vendida de segunda mano (mediana $2.860); otras piezas no registradas',
             '4': 'Inferencia hasta 32B, uso completo de workstation',
           },
           {
             '0': 'Self-hosted: dos RTX 4090',
-            '1': '$0,08',
-            '2': '$0,12',
-            '3': '$5.000–7.000 build completo',
+            '1': '$5,22 (solo amortización de las GPU: 2 × $2.860 ÷ 1.095 días)',
+            '2': '$5,22 (misma amortización de las GPU)',
+            '3': 'Solo las GPU: 2 × $2.860 = $5.720 con la mediana; otras piezas no registradas',
             '4': '72B siempre activo con otro uso de workstation',
           },
           {
@@ -1535,8 +1536,8 @@ docker run --gpus all \\
           '**Un mini PC ejecutando Qwen3 8B como servidor API 24/7 cuesta $0,50–1,50/mes en electricidad — normalmente más barato que una instancia en la nube equivalente encendida todo el mes.** Dos builds de mini PC cubren la mayoría de los casos de uso de Qwen siempre activo:',
         items: [
           'Económico (inferencia CPU con Qwen3 8B): Minisforum UM890 Pro — AMD Ryzen 9 8945HS, 32 GB DDR5, 512 GB NVMe. ~$429 nuevo. Qwen3 8B se ejecuta mediante el backend CPU de Ollama a 3–5 tok/s. Adecuado para asistentes personales y resumen de documentos. 12W en reposo, 45W en carga. Muy silencioso. Se envía desde almacenes en EE.UU./UE.',
-          'Recomendado (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — admite GPU externa mediante puerto OCuLink. Combina con una RTX 4060 Ti 16 GB en enclosure eGPU (~$340 GPU + $100 enclosure). Total ~$800. Ejecuta Qwen3 14B a 16–18 tok/s. Significativamente mejor que el fallback CPU para uso interactivo.',
-          'Usuario avanzado (Qwen3 32B): PC de sobremesa compacto ATX con RTX 4090 — ejemplos: caja Fractal Node 804 ($90), RTX 4090 (~$1.900 precio actual), Ryzen 9 7950X (~$600), 64 GB DDR5 (~$180). Total ~$2.800. Ejecuta Qwen3 32B a 10–14 tok/s de forma indefinida.',
+          'Recomendado (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — admite GPU externa mediante puerto OCuLink. Combina con una RTX 4060 Ti 16 GB en enclosure eGPU (precios de la GPU y del enclosure no registrados aquí, por lo que no se indica un total). Qwen3 14B cabe en la tarjeta de 16 GB en VRAM, lo que es significativamente mejor que el fallback CPU para uso interactivo.',
+          'Usuario avanzado (Qwen3 32B): PC de sobremesa compacto ATX con RTX 4090 de segunda mano (vendida a $2.575–3.010, mediana $2.860, según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15). Los precios de caja, CPU y RAM no se registran aquí, por lo que no se indica un total. Qwen3 32B con Q4_K_M (20,1 GB) cabe en la tarjeta de 24 GB con margen.',
         ],
         affiliateLinks: [
           {
@@ -1576,14 +1577,14 @@ docker run --gpus all \\
           ],
           quick: [
             'Qwen3 8B a diario: Minisforum UM890 Pro ($429)',
-            'Qwen3 14B a diario: AOOSTAR + RTX 4060 Ti (~$800)',
-            'Qwen3 32B a diario: ATX compacto + RTX 4090 (~$2.800)',
+            'Qwen3 14B a diario: AOOSTAR + RTX 4060 Ti (precio de la GPU no registrado aquí)',
+            'Qwen3 32B a diario: ATX compacto + RTX 4090 (segunda mano vendida $2.575–3.010; total del build no registrado)',
             'Qwen2.5-72B ocasional: RunPod A40 48 GB ($0,44/hr)',
           ],
         },
         image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
-          'Árbol de decisión autoalojado vs nube para Qwen: autoaloja si usas 4+ horas/día (Minisforum UM890 Pro $429 para Qwen3 8B, build RTX 4090 ~$2.800 para Qwen3 32B); usa la nube como RunPod A40 48 GB a $0,44/hr para Qwen2.5-72B ocasional, menos de 4 horas/día.',
+          'Árbol de decisión autoalojado vs nube para Qwen: autoaloja si el uso es sostenido (Minisforum UM890 Pro $429 para Qwen3 8B; una RTX 4090 de segunda mano para Qwen3 32B, solo la GPU a $2.575–3.010 vendida según el rastreador de InsiderLLM, 2026-10-15); usa la nube como RunPod A40 48 GB a $0,44/hr para Qwen2.5-72B ocasional.',
       },
       internalLinks: {
         id: 'see-also',
@@ -1605,7 +1606,7 @@ docker run --gpus all \\
           },
           {
             q: '¿Existe un modelo Qwen3 8B?',
-            a: 'No. La gama densa de Qwen3 es 0,6B, 1,7B, 4B, 8B, 14B y 32B — no hay 7B. Si buscabas "Qwen3 8B", el modelo más cercano es Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM en Q4_K_M y alcanza unos 25 tok/s en una RTX 3060 12 GB. Para un modelo de clase 72B, usa Qwen2.5-72B.',
+            a: 'No. La gama densa de Qwen3 es 0,6B, 1,7B, 4B, 8B, 14B y 32B — no hay 7B. Si buscabas "Qwen3 8B", el modelo más cercano es Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM en Q4_K_M y cabe en una RTX 3060 12 GB con margen. Para un modelo de clase 72B, usa Qwen2.5-72B.',
           },
           {
             q: '¿Puedo ejecutar Qwen2.5-72B en una sola RTX 4090?',
@@ -1617,7 +1618,7 @@ docker run --gpus all \\
           },
           {
             q: '¿Ollama admite inferencia multi-GPU para Qwen de forma nativa?',
-            a: 'Sí, desde Ollama 0.3.0 (2025). Establece CUDA_VISIBLE_DEVICES=0,1 para especificar qué GPUs usar. Ollama divide el modelo automáticamente. Para Qwen2.5-72B en dos RTX 4090, espera 5–8 tok/s — menos que en un A100 80 GB único porque el modelo debe dividirse a través de PCIe en lugar de NVLink en configuraciones de consumo.',
+            a: 'Sí, desde Ollama 0.3.0 (2025). Establece CUDA_VISIBLE_DEVICES=0,1 para especificar qué GPUs usar. Ollama divide el modelo automáticamente. Para Qwen2.5-72B en dos RTX 4090, espera una velocidad menor que en una sola tarjeta de 80 GB porque el modelo debe dividirse a través de PCIe en lugar de NVLink en configuraciones de consumo; no existe una cifra de tok/s con fuente para esta configuración, así que no se indica ninguna.',
           },
           {
             q: '¿Es Alibaba Cloud más barato que RunPod para la inferencia de Qwen?',
@@ -1639,7 +1640,8 @@ docker run --gpus all \\
         items: [
           '2026-05-26: Publicación inicial. Precios y velocidades orientativos, no mediciones de PromptQuorum; consulta los anuncios actuales.',
           '2026-10-19: Qwen3 se presenta ahora como la generación anterior de Qwen (aún muy desplegada) y Qwen 3.6 (27B denso, 35B-A3B mezcla de expertos) como la generación más reciente.',
-          'Próxima revisión programada: 2026-11-26',
+          '2026-11-22: Los precios de GPU, el coste por día y los totales de los builds citan fuentes de anuncios con fecha (rastreador de InsiderLLM, 2026-10-15); las velocidades por modelo figuran como no registradas.',
+          'Próxima revisión programada: 2027-05-22',
         ],
       },
     },
@@ -1669,7 +1671,7 @@ docker run --gpus all \\
           name: '¿Ollama admite inferencia multi-GPU para Qwen de forma nativa?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sí, desde Ollama 0.3.0 (2025). Establece CUDA_VISIBLE_DEVICES=0,1 para especificar qué GPUs usar. Ollama divide el modelo automáticamente. Para Qwen2.5-72B en dos RTX 4090, espera 5–8 tok/s.',
+            text: 'Sí, desde Ollama 0.3.0 (2025). Establece CUDA_VISIBLE_DEVICES=0,1 para especificar qué GPUs usar. Ollama divide el modelo automáticamente. Para Qwen2.5-72B en dos RTX 4090, no existe una cifra de tok/s con fuente, así que no se indica ninguna.',
           },
         },
         {
@@ -1751,7 +1753,7 @@ docker run --gpus all \\
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-11-22',
-    next_refresh_due: '2027-02-27',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'Implantação Local do Qwen3: Guia Completo de Produção (2026)',
     seoTitle: 'Qwen3 Implantação Local 2026: 8B, 14B, 32B + API Docker',
@@ -1759,7 +1761,7 @@ docker run --gpus all \\
       'Implante o Qwen3 localmente: 8B, 14B e 32B via Ollama/vLLM com servidor API Docker, escolha de hardware e multi-GPU. Nota — o Qwen3 não tem 7B; use o 8B (qwen3:8b). Guia 2026.',
     heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-pt.webp',
     twitterDescription:
-      'Qwen3 8B atinge 25 tok/s em uma RTX 3060. Qwen2.5-72B precisa de duas RTX 4090 ou uma GPU na nuvem. Guia completo de Docker, servidor API e multi-GPU para 2026.',
+      'Qwen3 8B cabe em uma RTX 3060 de 12 GB. Qwen2.5-72B precisa de duas RTX 4090 ou uma GPU na nuvem. Guia de Docker, servidor API e multi-GPU para 2026.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -1784,21 +1786,21 @@ docker run --gpus all \\
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
       'NVIDIA RTX 4060 Ti 16 GB',
-      'NVIDIA RTX 4090 24 GB (EOL, used-only)',
+      'NVIDIA RTX 4090 24 GB',
       'Minisforum UM890 Pro',
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**Os tamanhos densos do Qwen3 (geração anterior, ainda muito usada) são 0,6B, 1,7B, 4B, 8B, 14B e 32B — não existe um modelo 7B. O mais próximo é o Qwen3-8B (faça pull de `qwen3:8b`); se você buscou "Qwen3 8B", é o 8B que você quer. O maior modelo denso do Qwen3 é o 32B; para um modelo da classe 72B use o Qwen2.5-72B. Qwen3 8B e 14B funcionam de forma confiável em GPUs de consumo via Ollama ou vLLM com um servidor API Docker Compose. Qwen 32B precisa de uma RTX 4090 de 24 GB. O Qwen 3.6 é a geração Qwen mais recente, disponível como modelo denso de 27B (`qwen3.6:27b`) e como modelo de mistura de especialistas 35B-A3B (`qwen3.6:35b`); o 27B cabe na mesma faixa de 24 GB de VRAM do Qwen3 32B e vale a comparação. Qwen2.5-72B requer GPUs duplas, inferência em CPU com 128+ GB de RAM ou uma alternativa na nuvem — o self-hosting custa entre US$ 0,05 e US$ 0,12 por dia conforme a amortização do hardware, contra US$ 0,50–1,20/h na RunPod.**',
+      '**Os tamanhos densos do Qwen3 (geração anterior, ainda muito usada) são 0,6B, 1,7B, 4B, 8B, 14B e 32B — não existe um modelo 7B. O mais próximo é o Qwen3-8B (faça pull de `qwen3:8b`); se você buscou "Qwen3 8B", é o 8B que você quer. O maior modelo denso do Qwen3 é o 32B; para um modelo da classe 72B use o Qwen2.5-72B. Qwen3 8B e 14B funcionam de forma confiável em GPUs de consumo via Ollama ou vLLM com um servidor API Docker Compose. Qwen 32B precisa de uma RTX 4090 de 24 GB. As RTX 4090 usadas foram vendidas entre US$ 2.575 e US$ 3.010 (mediana US$ 2.860) contra um preço sugerido de US$ 1.599, segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15; dados de anúncios, não uma citação; os preços no Brasil podem variar bastante devido a impostos de importação). O Qwen 3.6 é a geração Qwen mais recente, disponível como modelo denso de 27B (`qwen3.6:27b`) e como modelo de mistura de especialistas 35B-A3B (`qwen3.6:35b`); o 27B cabe na mesma faixa de 24 GB de VRAM do Qwen3 32B e vale a comparação. Qwen2.5-72B requer GPUs duplas, inferência em CPU com 128+ GB de RAM ou uma alternativa na nuvem — duas RTX 4090 custam cerca de US$ 5,22 por dia só em amortização das GPUs (2 × US$ 2.860 de mediana de usadas ÷ 1.095 dias em 3 anos, sem eletricidade e outras peças), contra US$ 0,50–1,20/h na RunPod.**',
     quickAnswerTop: {
       pt: {
         question: 'Como implanto modelos Qwen em produção localmente?',
         answer:
           'Execute o Qwen por meio de um stack Docker Compose que expõe uma API compatível com OpenAI: o Ollama cuida da inferência na GPU, o Open WebUI fornece o front-end e o Nginx faz o reverse proxy de ambos. O Qwen3 8B roda com ~6 GB de VRAM; o Qwen2.5-72B precisa de duas RTX 4090 ou de uma GPU na nuvem.',
         bullets: [
-          'Qwen3 8B: RTX 3060 12 GB, ~25 tok/s, US$ 150–350 GPU usada',
-          'Qwen3 14B: RTX 4060 Ti 16 GB, ~18 tok/s, ~US$ 424 nova',
-          'Qwen3 32B: RTX 4090 24 GB, ~12 tok/s, ~US$ 1.900 nova (geração anterior; mais recente: Qwen 3.6 27B, `qwen3.6:27b`, mesma faixa de 24 GB)',
+          'Qwen3 8B: RTX 3060 12 GB (cerca de 6 GB de VRAM); preço de usada não rastreado aqui',
+          'Qwen3 14B: RTX 4060 Ti 16 GB; preço não rastreado aqui',
+          'Qwen3 32B: RTX 4090 24 GB, usada vendida US$ 2.575–3.010 (rastreador InsiderLLM, 2026-10-15) (geração anterior; mais recente: Qwen 3.6 27B, `qwen3.6:27b`, mesma faixa de 24 GB)',
           'Qwen2.5-72B: duas RTX 4090 ou RunPod A100 80 GB (US$ 1,64/h)',
           'Servidor mini PC sempre ativo: Minisforum UM890 Pro, US$ 429, roda o Qwen3 8B 24/7',
         ],
@@ -1824,9 +1826,9 @@ docker run --gpus all \\
         items: [
           'Qwen3 8B e 14B são alvos para GPUs de consumo — ~6 GB e 16 GB de VRAM respectivamente, rodando via Ollama no Docker',
           'Qwen3 32B precisa de uma RTX 4090 de 24 GB; é a maior implantação em produção com uma única placa para a maioria dos times (o Qwen3 é a geração anterior; o Qwen 3.6 27B, mais recente, `qwen3.6:27b`, cabe na mesma faixa de 24 GB)',
-          'Qwen2.5-72B requer duas RTX 4090, um build de CPU com muita RAM (128+ GB DDR5) ou aluguel na nuvem — o self-hosting custa ~US$ 0,05–0,12/dia amortizado',
+          'Qwen2.5-72B requer duas RTX 4090, um build de CPU com muita RAM (128+ GB DDR5) ou aluguel na nuvem — duas RTX 4090 custam cerca de US$ 5,22/dia só em amortização das GPUs (2 × US$ 2.860 ÷ 1.095 dias)',
           'Um stack Docker Compose com Ollama + Open WebUI + Nginx expõe uma API compatível com OpenAI em menos de 10 minutos',
-          'Servidores Qwen sempre ativos: Minisforum UM890 Pro (US$ 429, Qwen3 8B em CPU) ou AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 GB (~US$ 800 no total)',
+          'Servidores Qwen sempre ativos: Minisforum UM890 Pro (US$ 429, Qwen3 8B em CPU) ou AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 GB (preço da GPU não rastreado aqui)',
           'Alternativa na nuvem: RunPod A40 48 GB a US$ 0,44/h gerencia o Qwen2.5-72B — mais barato do que comprar duas RTX 4090 para uso ocasional',
           'Este guia cobre a implantação em produção; para a configuração básica com Ollama consulte o guia para iniciantes do Qwen',
         ],
@@ -1848,14 +1850,14 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'Desempenho dos modelos Qwen por hardware',
         content:
-          '**Escolha o hardware pelo tamanho do modelo, não pela marca da GPU.** A VRAM é a restrição principal: se o modelo não couber, ele não rodará na velocidade da GPU. A tabela abaixo mostra velocidades de inferência indicativas (não são medições do PromptQuorum; variam conforme GPU, driver, tamanho do contexto e versão do Ollama) com quantização Q4_K_M (a melhor relação qualidade-tamanho para implantações com Ollama).',
+          '**Escolha o hardware pelo tamanho do modelo, não pela marca da GPU.** A VRAM é a restrição principal: se o modelo não couber, ele não rodará na velocidade da GPU. A tabela abaixo mostra a VRAM necessária com quantização Q4_K_M (a melhor relação qualidade-tamanho para implantações com Ollama); as velocidades por modelo não são rastreadas aqui. Como referência, o [placar CUDA do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) lista velocidades de geração 7B Q4_0 relatadas por desenvolvedores: 158,2 tok/s (RTX 3090), 186,2 tok/s (RTX 4090) e 290,0 tok/s (RTX 5090). As RTX 4090 usadas foram vendidas entre US$ 2.575 e US$ 3.010 (mediana US$ 2.860) contra um preço sugerido de US$ 1.599, segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15; dados de anúncios, não uma citação; os preços no Brasil podem variar bastante devido a impostos de importação).',
         columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Velocidade (tok/s)', 'Fallback de CPU', 'Pronto para produção?'],
         rows: [
           {
             '0': 'Qwen3 8B',
             '1': '5,2 GB',
             '2': 'RTX 3060 12 GB',
-            '3': '22–28 tok/s',
+            '3': 'Não rastreado',
             '4': 'Sim (32 GB RAM, ~4 tok/s)',
             '5': 'Sim — GPU única',
           },
@@ -1863,7 +1865,7 @@ docker run --gpus all \\
             '0': 'Qwen3 14B',
             '1': '9,4 GB',
             '2': 'RTX 4060 Ti 16 GB',
-            '3': '15–20 tok/s',
+            '3': 'Não rastreado',
             '4': 'Sim (64 GB RAM, ~2,5 tok/s)',
             '5': 'Sim — GPU única',
           },
@@ -1871,7 +1873,7 @@ docker run --gpus all \\
             '0': 'Qwen3 32B (geração anterior)',
             '1': '20,1 GB',
             '2': 'RTX 4090 24 GB',
-            '3': '10–14 tok/s',
+            '3': 'Não rastreado',
             '4': 'Marginal (128 GB RAM, ~1,2 tok/s)',
             '5': 'Sim — GPU única',
           },
@@ -1887,7 +1889,7 @@ docker run --gpus all \\
             '0': 'Qwen2.5-Coder 32B',
             '1': '19,8 GB',
             '2': 'RTX 4090 24 GB',
-            '3': '10–13 tok/s',
+            '3': 'Não rastreado',
             '4': 'Marginal (128 GB RAM)',
             '5': 'Sim — GPU única',
           },
@@ -1895,12 +1897,12 @@ docker run --gpus all \\
             '0': 'Qwen2.5-72B',
             '1': '43,5 GB',
             '2': 'Duas RTX 4090 (48 GB no total)',
-            '3': '5–8 tok/s',
+            '3': 'Não rastreado',
             '4': 'Lento (128 GB RAM, ~0,6 tok/s)',
             '5': 'Apenas multi-GPU ou nuvem',
           },
         ],
-        note: 'Velocidades indicativas para sistemas PCIe Gen 4, não medições do PromptQuorum. A RTX 4090 não tem conector NVLink, então duas RTX 4090 se comunicam apenas por PCIe; o NVLink existe em algumas placas, como a RTX 3090. Qwen2.5-72B com Q4_K_M em um A100 80 GB único na RunPod: aproximadamente 18–22 tok/s (indicativo).',
+        note: 'As velocidades por modelo não são rastreadas aqui; os valores de fallback de CPU são indicativos para sistemas PCIe Gen 4, não medições do PromptQuorum. A RTX 4090 não tem conector NVLink, então duas RTX 4090 se comunicam apenas por PCIe; o NVLink existe em algumas placas, como a RTX 3090.',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'Requisitos de VRAM dos modelos Qwen com quantização Q4_K_M: Qwen3 8B precisa de 5,2 GB (RTX 3060 12 GB), Qwen3 32B precisa de 20,1 GB (RTX 4090 24 GB) e Qwen2.5-72B precisa de 43,5 GB (duas RTX 4090).',
@@ -1991,7 +1993,7 @@ volumes:
           'Para duas RTX 4090, ambas devem estar no mesmo nível de largura de banda PCIe — uma placa B650 ou Z790 com dois slots PCIe Gen 4 x8 é o mínimo',
           'A RTX 4090 não tem conector NVLink, então duas RTX 4090 se comunicam apenas por PCIe; as pontes NVLink existem para algumas placas anteriores, como a RTX 3090',
           'O vLLM é um motor de inferência alternativo que usa paralelismo tensorial para uma utilização multi-GPU mais eficiente — use o vLLM em vez do Ollama para cargas sustentadas de inferência 70B acima de 100 requisições simultâneas',
-          'Para uso ocasional do Qwen2.5-72B, a RunPod A40 48 GB a US$ 0,44/h é mais barata do que um build com duas RTX 4090 (US$ 3.800+)',
+          'Para uso ocasional do Qwen2.5-72B, a RunPod A40 48 GB a US$ 0,44/h é mais barata do que um build com duas RTX 4090 (só as duas placas, cerca de US$ 5.720 pela mediana de usadas, segundo o rastreador da InsiderLLM, 2026-10-15)',
         ],
         codeBlock: `# vLLM multi-GPU alternative (better for high-traffic 72B)
 docker run --gpus all \\
@@ -2027,28 +2029,28 @@ docker run --gpus all \\
         id: 'cost-comparison',
         title: 'Comparação de custos: self-hosted vs Alibaba Cloud vs RunPod',
         content:
-          '**O self-hosting supera a nuvem para cargas de inferência sustentadas acima de 4 horas por dia. Abaixo de 4 horas diárias, o aluguel de GPU na nuvem é mais barato após a amortização do hardware.** A tabela usa uma amortização de hardware em 3 anos para os builds self-hosted.',
+          '**O self-hosting compensa só com carga sustentada; para uso ocasional, alugar GPU na nuvem é mais barato do que comprar.** A tabela amortiza apenas o preço da GPU em 3 anos (ilustrativo; eletricidade e demais peças não são rastreadas). Com a mediana da RTX 4090 usada (US$ 2.860) são US$ 2,61 por dia (US$ 2.860 ÷ 1.095 dias), equivalentes a cerca de 5,9 horas por dia de aluguel de uma RunPod A40 a US$ 0,44/h (US$ 2,61 ÷ US$ 0,44).',
         columns: ['Opção', 'Custo Qwen3 8B/dia', 'Custo Qwen2.5-72B/dia', 'Custo inicial', 'Melhor para'],
         rows: [
           {
             '0': 'Self-hosted: mini PC RTX 3060 12 GB',
-            '1': 'US$ 0,03 (só eletricidade)',
+            '1': 'Não rastreado',
             '2': 'N/A (não cabe)',
-            '3': 'US$ 600–900 build completo',
+            '3': 'Não rastreado (preço da GPU usada não rastreado)',
             '4': 'Inferência 7B sempre ativa, servidor doméstico/escritório',
           },
           {
             '0': 'Self-hosted: workstation RTX 4090',
-            '1': 'US$ 0,05',
+            '1': 'US$ 2,61 (só amortização da GPU, 3 anos)',
             '2': 'N/A (GPU única)',
-            '3': 'US$ 2.500–4.000 build completo',
+            '3': 'Só a GPU: US$ 2.575–3.010 usada vendida (mediana US$ 2.860); demais peças não rastreadas',
             '4': 'Inferência até 32B, uso completo de workstation',
           },
           {
             '0': 'Self-hosted: duas RTX 4090',
-            '1': 'US$ 0,08',
-            '2': 'US$ 0,12',
-            '3': 'US$ 5.000–7.000 build completo',
+            '1': 'US$ 5,22 (só amortização das GPUs: 2 × US$ 2.860 ÷ 1.095 dias)',
+            '2': 'US$ 5,22 (mesma amortização das GPUs)',
+            '3': 'Só as GPUs: 2 × US$ 2.860 = US$ 5.720 pela mediana; demais peças não rastreadas',
             '4': '72B sempre ativo com outro uso de workstation',
           },
           {
@@ -2097,8 +2099,8 @@ docker run --gpus all \\
           '**Um mini PC rodando o Qwen3 8B como servidor API 24/7 custa US$ 0,50–1,50/mês em eletricidade — normalmente mais barato do que uma instância equivalente na nuvem ligada o mês todo.** Dois builds de mini PC cobrem a maioria dos casos de uso do Qwen sempre ativo:',
         items: [
           'Econômico (inferência em CPU com Qwen3 8B): Minisforum UM890 Pro — AMD Ryzen 9 8945HS, 32 GB DDR5, 512 GB NVMe. ~US$ 429 novo. O Qwen3 8B roda pelo backend de CPU do Ollama a 3–5 tok/s. Adequado para assistentes pessoais e resumo de documentos. 12W em repouso, 45W em carga. Muito silencioso. Enviado de armazéns nos EUA/UE.',
-          'Recomendado (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — suporta GPU externa pela porta OCuLink. Combine com uma RTX 4060 Ti 16 GB em enclosure eGPU (~US$ 340 GPU + US$ 100 enclosure). Total ~US$ 800. Roda o Qwen3 14B a 16–18 tok/s. Significativamente melhor do que o fallback de CPU para uso interativo.',
-          'Usuário avançado (Qwen3 32B): desktop compacto ATX com RTX 4090 — exemplos: gabinete Fractal Node 804 (US$ 90), RTX 4090 (~US$ 1.900 preço atual), Ryzen 9 7950X (~US$ 600), 64 GB DDR5 (~US$ 180). Total ~US$ 2.800. Roda o Qwen3 32B a 10–14 tok/s de forma indefinida.',
+          'Recomendado (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — suporta GPU externa pela porta OCuLink. Combine com uma RTX 4060 Ti 16 GB em enclosure eGPU (preços da GPU e do enclosure não rastreados aqui, então nenhum total é informado). O Qwen3 14B cabe na placa de 16 GB em VRAM, o que é significativamente melhor do que o fallback de CPU para uso interativo.',
+          'Usuário avançado (Qwen3 32B): desktop compacto ATX com RTX 4090 usada (vendida a US$ 2.575–3.010, mediana US$ 2.860, segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15). Os preços de gabinete, CPU e RAM não são rastreados aqui, então nenhum total é informado. O Qwen3 32B com Q4_K_M (20,1 GB) cabe na placa de 24 GB com folga.',
         ],
         affiliateLinks: [
           {
@@ -2138,14 +2140,14 @@ docker run --gpus all \\
           ],
           quick: [
             'Qwen3 8B diariamente: Minisforum UM890 Pro (US$ 429)',
-            'Qwen3 14B diariamente: AOOSTAR + RTX 4060 Ti (~US$ 800)',
-            'Qwen3 32B diariamente: ATX compacto + RTX 4090 (~US$ 2.800)',
+            'Qwen3 14B diariamente: AOOSTAR + RTX 4060 Ti (preço da GPU não rastreado aqui)',
+            'Qwen3 32B diariamente: ATX compacto + RTX 4090 (usada vendida US$ 2.575–3.010; total do build não rastreado)',
             'Qwen2.5-72B ocasional: RunPod A40 48 GB (US$ 0,44/h)',
           ],
         },
         image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
-          'Árvore de decisão auto-hospedado vs nuvem para o Qwen: auto-hospede se usar 4+ horas/dia (Minisforum UM890 Pro US$ 429 para o Qwen3 8B, build RTX 4090 ~US$ 2.800 para o Qwen3 32B); use a nuvem como a RunPod A40 48 GB a US$ 0,44/h para o Qwen2.5-72B ocasional, abaixo de 4 horas/dia.',
+          'Árvore de decisão auto-hospedado vs nuvem para o Qwen: auto-hospede se o uso for sustentado (Minisforum UM890 Pro US$ 429 para o Qwen3 8B; uma RTX 4090 usada para o Qwen3 32B, só a GPU a US$ 2.575–3.010 vendida segundo o rastreador da InsiderLLM, 2026-10-15); use a nuvem como a RunPod A40 48 GB a US$ 0,44/h para o Qwen2.5-72B ocasional.',
       },
       internalLinks: {
         id: 'see-also',
@@ -2167,7 +2169,7 @@ docker run --gpus all \\
           },
           {
             q: 'Existe um modelo Qwen3 8B?',
-            a: 'Não. A linha densa do Qwen3 é 0,6B, 1,7B, 4B, 8B, 14B e 32B — não há 7B. Se você buscou "Qwen3 8B", o modelo mais próximo é o Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM em Q4_K_M e roda cerca de 25 tok/s em uma RTX 3060 12 GB. Para um modelo da classe 72B, use o Qwen2.5-72B.',
+            a: 'Não. A linha densa do Qwen3 é 0,6B, 1,7B, 4B, 8B, 14B e 32B — não há 7B. Se você buscou "Qwen3 8B", o modelo mais próximo é o Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM em Q4_K_M e cabe em uma RTX 3060 12 GB com folga. Para um modelo da classe 72B, use o Qwen2.5-72B.',
           },
           {
             q: 'Posso rodar o Qwen2.5-72B em uma única RTX 4090?',
@@ -2179,7 +2181,7 @@ docker run --gpus all \\
           },
           {
             q: 'O Ollama suporta inferência multi-GPU para o Qwen de forma nativa?',
-            a: 'Sim, desde o Ollama 0.3.0 (2025). Defina CUDA_VISIBLE_DEVICES=0,1 para especificar quais GPUs usar. O Ollama divide o modelo automaticamente. Para o Qwen2.5-72B em duas RTX 4090, espere 5–8 tok/s — menos do que em um A100 80 GB único porque o modelo deve ser dividido por PCIe em vez de NVLink em configurações de consumo.',
+            a: 'Sim, desde o Ollama 0.3.0 (2025). Defina CUDA_VISIBLE_DEVICES=0,1 para especificar quais GPUs usar. O Ollama divide o modelo automaticamente. Para o Qwen2.5-72B em duas RTX 4090, espere uma velocidade menor do que em uma única placa de 80 GB porque o modelo deve ser dividido por PCIe em vez de NVLink em configurações de consumo; não existe um valor de tok/s com fonte para essa configuração, então nenhum é informado.',
           },
           {
             q: 'A Alibaba Cloud é mais barata do que a RunPod para a inferência do Qwen?',
@@ -2201,7 +2203,8 @@ docker run --gpus all \\
         items: [
           '2026-05-26: Publicação inicial. Preços e velocidades indicativos, não medições do PromptQuorum; confira os anúncios atuais.',
           '2026-10-19: O Qwen3 agora é apresentado como a geração anterior do Qwen (ainda muito usada) e o Qwen 3.6 (27B denso, 35B-A3B mistura de especialistas) como a geração mais recente.',
-          'Próxima revisão programada: 2026-11-26',
+          '2026-11-22: Os preços de GPU, o custo por dia e os totais dos builds citam fontes de anúncios com data (rastreador da InsiderLLM, 2026-10-15); as velocidades por modelo constam como não rastreadas.',
+          'Próxima revisão programada: 2027-05-22',
         ],
       },
     },
@@ -2231,7 +2234,7 @@ docker run --gpus all \\
           name: 'O Ollama suporta inferência multi-GPU para o Qwen de forma nativa?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sim, desde o Ollama 0.3.0 (2025). Defina CUDA_VISIBLE_DEVICES=0,1 para especificar quais GPUs usar. O Ollama divide o modelo automaticamente. Para o Qwen2.5-72B em duas RTX 4090, espere 5–8 tok/s.',
+            text: 'Sim, desde o Ollama 0.3.0 (2025). Defina CUDA_VISIBLE_DEVICES=0,1 para especificar quais GPUs usar. O Ollama divide o modelo automaticamente. Para o Qwen2.5-72B em duas RTX 4090, não existe um valor de tok/s com fonte, então nenhum é informado.',
           },
         },
         {
@@ -2313,8 +2316,8 @@ docker run --gpus all \\
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-19',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-22',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'نشر ⁨Qwen3⁩ محليًا: الدليل الكامل للإنتاج ⁨2026⁩',
     seoTitle: 'نشر ⁨Qwen3⁩ محليًا ⁨2026⁩: ⁨8B⁩ و⁨14B⁩ و⁨32B⁩ + واجهة ⁨Docker⁩ API',
@@ -2322,7 +2325,7 @@ docker run --gpus all \\
       'انشر Qwen3 محليًا: نماذج 8B و14B و32B عبر Ollama/vLLM مع خادم Docker API، واختيار الأجهزة، وتعدد GPU. ملاحظة — لا يوجد Qwen3 بحجم 7B؛ استخدم 8B (qwen3:8b). دليل 2026.',
     heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-ar.webp',
     twitterDescription:
-      'Qwen3 8B يصل إلى 25 رمز/ثانية على RTX 3060. Qwen2.5-72B يتطلب GPU مزدوج أو سحابة. دليل كامل لـ Docker وخادم API وتعدد GPU لعام 2026.',
+      'Qwen3 8B يتسع في RTX 3060 بسعة 12 جيجابايت. Qwen2.5-72B يتطلب GPU مزدوجًا أو سحابة. دليل Docker وخادم API وتعدد GPU لعام 2026.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -2347,21 +2350,21 @@ docker run --gpus all \\
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
       'NVIDIA RTX 4060 Ti 16 GB',
-      'NVIDIA RTX 4090 24 GB (EOL, used-only)',
+      'NVIDIA RTX 4090 24 GB',
       'Minisforum UM890 Pro',
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**أحجام Qwen3 الكثيفة (الجيل السابق، ولا يزال منتشرًا على نطاق واسع) هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد نموذج 7B. الأقرب هو Qwen3-8B (نفّذ `qwen3:8b` عبر pull)؛ إذا بحثت عن "Qwen3 8B" فأنت تريد نموذج 8B. أكبر نموذج كثيف في Qwen3 هو 32B؛ ولنموذج من فئة 72B استخدم Qwen2.5-72B. Qwen3 8B و14B يعملان بشكل موثوق على وحدات GPU استهلاكية عبر Ollama أو vLLM مع خادم API بـ Docker Compose. Qwen 32B يتطلب RTX 4090 بـ 24 جيجابايت من VRAM. Qwen 3.6 هو جيل Qwen الأحدث، ويصدر كنموذج كثيف بحجم 27B (`qwen3.6:27b`) وكنموذج مزيج خبراء 35B-A3B (`qwen3.6:35b`)؛ ويتسع نموذج 27B في فئة 24 جيجابايت من VRAM نفسها مثل Qwen3 32B ويستحق المقارنة. Qwen2.5-72B يحتاج GPU مزدوجًا أو استدلالًا على المعالج بـ 128+ جيجابايت من RAM أو بديلًا سحابيًا — التكلفة الذاتية تتراوح بين $0.05 و$0.12 يوميًا حسب إهلاك الجهاز، مقارنةً بـ $0.50–1.20 للساعة على RunPod.**',
+      '**أحجام Qwen3 الكثيفة (الجيل السابق، ولا يزال منتشرًا على نطاق واسع) هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد نموذج 7B. الأقرب هو Qwen3-8B (نفّذ `qwen3:8b` عبر pull)؛ إذا بحثت عن "Qwen3 8B" فأنت تريد نموذج 8B. أكبر نموذج كثيف في Qwen3 هو 32B؛ ولنموذج من فئة 72B استخدم Qwen2.5-72B. Qwen3 8B و14B يعملان بشكل موثوق على وحدات GPU استهلاكية عبر Ollama أو vLLM مع خادم API بـ Docker Compose. Qwen 32B يتطلب RTX 4090 بـ 24 جيجابايت من VRAM. بيعت بطاقات RTX 4090 المستعملة بين $2,575 و$3,010 (الوسيط $2,860) مقابل السعر الرسمي المقترح $1,599، وفق [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15؛ بيانات إعلانات وليست اقتباسًا؛ الأسعار بالدولار الأمريكي وقد تختلف حسب السوق والرسوم الجمركية). Qwen 3.6 هو جيل Qwen الأحدث، ويصدر كنموذج كثيف بحجم 27B (`qwen3.6:27b`) وكنموذج مزيج خبراء 35B-A3B (`qwen3.6:35b`)؛ ويتسع نموذج 27B في فئة 24 جيجابايت من VRAM نفسها مثل Qwen3 32B ويستحق المقارنة. Qwen2.5-72B يحتاج GPU مزدوجًا أو استدلالًا على المعالج بـ 128+ جيجابايت من RAM أو بديلًا سحابيًا — بطاقتا RTX 4090 تكلفان نحو $5.22 يوميًا كإهلاك للبطاقات وحدها (2 × $2,860 وسيط سعر المستعمل ÷ 1,095 يومًا على 3 سنوات، دون الكهرباء والقطع الأخرى)، مقارنةً بـ $0.50–1.20 للساعة على RunPod.**',
     quickAnswerTop: {
       ar: {
         question: 'كيف أنشر نماذج Qwen في الإنتاج محليًا؟',
         answer:
           'شغّل Qwen عبر حزمة Docker Compose التي تعرض API متوافقة مع OpenAI: Ollama يدير الاستدلال على GPU، وOpen WebUI يوفر الواجهة الأمامية، وNginx يعمل كبروكسي عكسي. Qwen3 8B يعمل بـحوالي 6 جيجابايت VRAM؛ Qwen2.5-72B يحتاج RTX 4090 مزدوجًا أو GPU سحابيًا.',
         bullets: [
-          'Qwen3 8B: RTX 3060 12 جيجابايت، ~25 رمز/ثانية، $150–350 GPU مستعمل',
-          'Qwen3 14B: RTX 4060 Ti 16 جيجابايت، ~18 رمز/ثانية، ~$424 جديد',
-          'Qwen3 32B: RTX 4090 24 جيجابايت، ~12 رمز/ثانية، ~$2,000–2,600 مستعملة (البطاقة متوقفة عن الإنتاج) (الجيل السابق؛ الأحدث: Qwen 3.6 27B، `qwen3.6:27b`، فئة 24 جيجابايت نفسها)',
+          'Qwen3 8B: RTX 3060 12 جيجابايت (يحتاج نحو 6 جيجابايت VRAM)؛ سعر المستعمل غير متتبَّع هنا',
+          'Qwen3 14B: RTX 4060 Ti 16 جيجابايت؛ السعر غير متتبَّع هنا',
+          'Qwen3 32B: RTX 4090 24 جيجابايت، مستعملة مباعة $2,575–3,010 (متتبع InsiderLLM، 2026-10-15) (الجيل السابق؛ الأحدث: Qwen 3.6 27B، `qwen3.6:27b`، فئة 24 جيجابايت نفسها)',
           'Qwen2.5-72B: RTX 4090 مزدوج أو RunPod A100 80 جيجابايت ($1.64/ساعة)',
           'خادم دائم التشغيل: Minisforum UM890 Pro، $429، يشغّل Qwen3 8B 24/7',
         ],
@@ -2387,9 +2390,9 @@ docker run --gpus all \\
         items: [
           'Qwen3 8B و14B مناسبان لوحدات GPU الاستهلاكية — حوالي 6 جيجابايت و16 جيجابايت VRAM على التوالي، يعملان عبر Ollama في Docker',
           'Qwen3 32B يتطلب RTX 4090 بـ 24 جيجابايت؛ هو أكبر نشر بطاقة واحدة في الإنتاج لمعظم الفرق (Qwen3 هو الجيل السابق، أما Qwen 3.6 27B الأحدث `qwen3.6:27b` فيناسب فئة 24 جيجابايت نفسها)',
-          'Qwen2.5-72B يحتاج RTX 4090 مزدوجًا، أو بناءً على المعالج بذاكرة RAM كبيرة (128+ جيجابايت DDR5)، أو استئجارًا سحابيًا — التكلفة الذاتية ~$0.05–0.12/يوم مُهلَكة',
+          'Qwen2.5-72B يحتاج RTX 4090 مزدوجًا، أو بناءً على المعالج بذاكرة RAM كبيرة (128+ جيجابايت DDR5)، أو استئجارًا سحابيًا — بطاقتا RTX 4090 تكلفان نحو $5.22/يوم كإهلاك للبطاقات وحدها (2 × $2,860 ÷ 1,095 يومًا)',
           'حزمة Docker Compose مع Ollama + Open WebUI + Nginx تعرض API متوافقة مع OpenAI في أقل من 10 دقائق',
-          'خوادم Qwen الدائمة التشغيل: Minisforum UM890 Pro ($429، Qwen3 8B على المعالج) أو AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 جيجابايت (~$800 إجمالًا)',
+          'خوادم Qwen الدائمة التشغيل: Minisforum UM890 Pro ($429، Qwen3 8B على المعالج) أو AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 جيجابايت (سعر GPU غير متتبَّع هنا)',
           'البديل السحابي: RunPod A40 48 جيجابايت بـ $0.44/ساعة يتعامل مع Qwen2.5-72B — أرخص من شراء RTX 4090 مزدوج للاستخدام العرضي',
           'هذا الدليل يغطي النشر في الإنتاج؛ للإعداد الأساسي مع Ollama راجع دليل Qwen للمبتدئين',
         ],
@@ -2411,16 +2414,16 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'أداء نماذج Qwen حسب الجهاز',
         content:
-          '**اختر الجهاز بحسب حجم النموذج لا بحسب ماركة GPU.** VRAM هو القيد الرئيسي: إذا لم يتسع النموذج، لن يعمل بسرعة GPU. يُظهر الجدول سرعات استدلال تقريبية (ليست قياسات أجرتها PromptQuorum؛ وتختلف حسب GPU وبرنامج التشغيل وطول السياق وإصدار Ollama) مع تكميم Q4_K_M (أفضل نسبة جودة إلى حجم لنشر Ollama).',
+          '**اختر الجهاز بحسب حجم النموذج لا بحسب ماركة GPU.** VRAM هو القيد الرئيسي: إذا لم يتسع النموذج، لن يعمل بسرعة GPU. يُظهر الجدول حجم VRAM المطلوب مع تكميم Q4_K_M (أفضل نسبة جودة إلى حجم لنشر Ollama)؛ سرعات كل نموذج غير متتبَّعة هنا. وللمرجعية، يسرد [لوحة نتائج llama.cpp CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) سرعات توليد 7B Q4_0 أبلغ عنها المطورون: 158.2 رمز/ثانية (RTX 3090) و186.2 رمز/ثانية (RTX 4090) و290.0 رمز/ثانية (RTX 5090). بيعت بطاقات RTX 4090 المستعملة بين $2,575 و$3,010 (الوسيط $2,860) مقابل السعر الرسمي المقترح $1,599، وفق [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15؛ بيانات إعلانات وليست اقتباسًا؛ الأسعار بالدولار الأمريكي وقد تختلف حسب السوق والرسوم الجمركية).',
         columns: ['النموذج', 'VRAM المطلوبة', 'الجهاز الموصى به', 'السرعة (Q4_K_M)', 'تكلفة GPU (USD)'],
         rows: [
-          { 'النموذج': 'Qwen3 8B', 'VRAM المطلوبة': '~6 جيجابايت', 'الجهاز الموصى به': 'RTX 3060 12 جيجابايت', 'السرعة (Q4_K_M)': '~25 رمز/ثانية', 'تكلفة GPU (USD)': '$150–350 مستعمل' },
-          { 'النموذج': 'Qwen3 14B', 'VRAM المطلوبة': '12 جيجابايت', 'الجهاز الموصى به': 'RTX 4060 Ti 16 جيجابايت', 'السرعة (Q4_K_M)': '~18 رمز/ثانية', 'تكلفة GPU (USD)': '~$424 جديد' },
-          { 'النموذج': 'Qwen3 32B (الجيل السابق)', 'VRAM المطلوبة': '20+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': '~12 رمز/ثانية', 'تكلفة GPU (USD)': '~$2,000–2,600 مستعملة (البطاقة متوقفة عن الإنتاج)' },
-          { 'النموذج': 'Qwen 3.6 27B', 'VRAM المطلوبة': '~17 جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': 'انظر دليل المقارنة', 'تكلفة GPU (USD)': '~$2,000–2,600 مستعملة (البطاقة متوقفة عن الإنتاج)' },
-          { 'النموذج': 'Qwen2.5-72B', 'VRAM المطلوبة': '48+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 × 2 أو GPU سحابي', 'السرعة (Q4_K_M)': '~5–8 رمز/ثانية', 'تكلفة GPU (USD)': '$3,800+ أو $0.44/ساعة' },
+          { 'النموذج': 'Qwen3 8B', 'VRAM المطلوبة': '~6 جيجابايت', 'الجهاز الموصى به': 'RTX 3060 12 جيجابايت', 'السرعة (Q4_K_M)': 'غير متتبَّعة', 'تكلفة GPU (USD)': 'السعر غير متتبَّع هنا' },
+          { 'النموذج': 'Qwen3 14B', 'VRAM المطلوبة': '12 جيجابايت', 'الجهاز الموصى به': 'RTX 4060 Ti 16 جيجابايت', 'السرعة (Q4_K_M)': 'غير متتبَّعة', 'تكلفة GPU (USD)': 'السعر غير متتبَّع هنا' },
+          { 'النموذج': 'Qwen3 32B (الجيل السابق)', 'VRAM المطلوبة': '20+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': 'غير متتبَّعة', 'تكلفة GPU (USD)': '$2,575–3,010 مستعملة مباعة (InsiderLLM، 2026-10-15)' },
+          { 'النموذج': 'Qwen 3.6 27B', 'VRAM المطلوبة': '~17 جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': 'انظر دليل المقارنة', 'تكلفة GPU (USD)': '$2,575–3,010 مستعملة مباعة (InsiderLLM، 2026-10-15)' },
+          { 'النموذج': 'Qwen2.5-72B', 'VRAM المطلوبة': '48+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 × 2 أو GPU سحابي', 'السرعة (Q4_K_M)': 'غير متتبَّعة', 'تكلفة GPU (USD)': '2 × $2,860 = $5,720 (الوسيط) أو $0.44/ساعة' },
         ],
-        note: 'أرقام السرعة قيم تقريبية وليست قياسات أجرتها PromptQuorum، وتختلف حسب الجهاز وبرنامج التشغيل وطول السياق وإصدار Ollama.',
+        note: 'سرعات كل نموذج غير متتبَّعة هنا؛ وتختلف السرعات الفعلية حسب الجهاز وبرنامج التشغيل وطول السياق وإصدار Ollama.',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'متطلبات VRAM لنماذج Qwen بتكميم Q4_K_M: يحتاج Qwen3 8B إلى 5.2 جيجابايت (RTX 3060 12 جيجابايت)، ويحتاج Qwen3 32B إلى 20.1 جيجابايت (RTX 4090 24 جيجابايت)، ويحتاج Qwen2.5-72B إلى 43.5 جيجابايت (RTX 4090 × 2).',
@@ -2505,13 +2508,13 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         columns: ['الخيار', 'تكلفة الجهاز', 'تكلفة الكهرباء', 'التكلفة اليومية المُهلَكة', 'أفضل لـ'],
         rows: [
           { 'الخيار': 'UM890 Pro (Qwen3 8B، معالج)', 'تكلفة الجهاز': '$429', 'تكلفة الكهرباء': '~$0.05/يوم', 'التكلفة اليومية المُهلَكة': '~$0.05', 'أفضل لـ': 'الاستخدام المنخفض، دائم التشغيل' },
-          { 'الخيار': 'RTX 3060 (Qwen3 8B، GPU)', 'تكلفة الجهاز': '$150–350', 'تكلفة الكهرباء': '~$0.06/يوم', 'التكلفة اليومية المُهلَكة': '~$0.12', 'أفضل لـ': 'الاستخدام المتوسط، استجابة أسرع' },
-          { 'الخيار': 'RTX 4090 (Qwen3 32B)', 'تكلفة الجهاز': '$1,900', 'تكلفة الكهرباء': '~$0.15/يوم', 'التكلفة اليومية المُهلَكة': '~$1.90', 'أفضل لـ': 'الاستخدام الكثيف، نماذج كبيرة' },
+          { 'الخيار': 'RTX 3060 (Qwen3 8B، GPU)', 'تكلفة الجهاز': 'غير متتبَّعة', 'تكلفة الكهرباء': 'غير متتبَّعة', 'التكلفة اليومية المُهلَكة': 'غير متتبَّعة', 'أفضل لـ': 'الاستخدام المتوسط، استجابة أسرع' },
+          { 'الخيار': 'RTX 4090 (Qwen3 32B)', 'تكلفة الجهاز': '$2,575–3,010 (البطاقة وحدها)', 'تكلفة الكهرباء': 'غير متتبَّعة', 'التكلفة اليومية المُهلَكة': '~$2.61 (البطاقة وحدها: $2,860 ÷ 1,095 يومًا)', 'أفضل لـ': 'الاستخدام الكثيف، نماذج كبيرة' },
           { 'الخيار': 'RunPod A40 48 جيجابايت (Qwen2.5-72B)', 'تكلفة الجهاز': '$0 (مستأجر)', 'تكلفة الكهرباء': 'مدرجة', 'التكلفة اليومية المُهلَكة': '$0.44/ساعة', 'أفضل لـ': 'الاستخدام العرضي، نماذج 72B' },
         ],
         affiliateLinks: [
           { url: 'https://www.amazon.com/s?k=minisforum+um890+pro', productName: 'Minisforum UM890 Pro', productCategory: 'mini-pc', priceRange: '$429', label: 'Minisforum UM890 Pro على Amazon' },
-          { url: 'https://www.amazon.com/s?k=rtx+4060+ti+16gb', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '$340', label: 'RTX 4060 Ti 16 جيجابايت على Amazon' },
+          { url: 'https://www.amazon.com/s?k=rtx+4060+ti+16gb', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: 'غير متتبَّع', label: 'RTX 4060 Ti 16 جيجابايت على Amazon' },
         ],
       },
       alwaysOnServer: {
@@ -2519,7 +2522,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         title: 'أجهزة الخادم الدائم التشغيل',
         content: [
           '**Minisforum UM890 Pro ($429):** AMD Ryzen 9 8945HS، 32–64 جيجابايت DDR5، iGPU Radeon 780M. يشغّل Qwen3 8B على المعالج بـ ~8 رمز/ثانية. الاستهلاك: ~35 واط في وضع الخمول، ~65 واط أثناء الاستدلال. الخيار الأقل تكلفةً للخادم دائم التشغيل.',
-          '**AOOSTAR GEM12 Pro OCuLink (~$350) + RTX 4060 Ti 16 جيجابايت (~$424):** يربط GPU الخارجي عبر OCuLink. Qwen3 14B يعمل بـ ~18 رمز/ثانية. إجمالي ~$800. الخيار الأفضل إذا كنت تريد سرعة GPU مع هيكل mini PC.',
+          '**AOOSTAR GEM12 Pro OCuLink (~$350) + RTX 4060 Ti 16 جيجابايت (السعر غير متتبَّع هنا):** يربط GPU الخارجي عبر OCuLink. Qwen3 14B يتسع في بطاقة 16 جيجابايت. لا يُذكر إجمالي لأن سعر GPU غير متتبَّع. الخيار الأفضل إذا كنت تريد سرعة GPU مع هيكل mini PC.',
         ],
         items: [
           'كلا الخيارين: فعّل `systemd` أو مجدول مهام Windows لبدء Ollama تلقائيًا عند التشغيل',
@@ -2557,7 +2560,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         },
         image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
-          'شجرة قرار الاستضافة الذاتية مقابل السحابة لـQwen: استضف محليًا إذا كان الاستخدام 4+ ساعات/يوم (Minisforum UM890 Pro بسعر 429 دولارًا لـQwen3 8B، أو جهاز RTX 4090 بحوالي 2,800 دولار لـQwen3 32B)؛ استخدم السحابة مثل RunPod A40 48 جيجابايت بسعر 0.44 دولار/ساعة لاستخدام Qwen2.5-72B العرضي أقل من 4 ساعات يوميًا.',
+          'شجرة قرار الاستضافة الذاتية مقابل السحابة لـQwen: استضف محليًا إذا كان الاستخدام متواصلًا (Minisforum UM890 Pro بسعر 429 دولارًا لـQwen3 8B، أو RTX 4090 مستعملة لـQwen3 32B بسعر البطاقة وحدها 2,575–3,010 دولارًا للمستعملة المباعة وفق متتبع InsiderLLM، 2026-10-15)؛ استخدم السحابة مثل RunPod A40 48 جيجابايت بسعر 0.44 دولار/ساعة لاستخدام Qwen2.5-72B العرضي.',
       },
       internalLinks: {
         id: 'internal-links',
@@ -2573,9 +2576,9 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         title: 'الأسئلة الشائعة',
         faqs: [
             { q: 'هل يوجد نموذج Qwen 3.8؟', a: 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث من Alibaba يتوفر أيضًا بمتغير للبرمجة يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.' },
-            { q: 'هل يوجد نموذج Qwen3 8B؟', a: 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 8B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.' },
+            { q: 'هل يوجد نموذج Qwen3 8B؟', a: 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 8B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويتسع في RTX 3060 بـ 12 جيجابايت بهامش جيد. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.' },
             { q: 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟', a: 'حوالي 6 جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.' },
-            { q: 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟', a: 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه إلى ~2–4 رموز/ثانية. للإنتاج، استخدم GPU مزدوجًا أو سحابة.' },
+            { q: 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟', a: 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه كثيرًا. للإنتاج، استخدم GPU مزدوجًا أو سحابة.' },
             { q: 'هل Qwen self-hosted متوافق مع أدوات OpenAI؟', a: 'نعم. يعرض Ollama API متوافقة مع OpenAI على `http://خادمك:11434/v1`. اضبط `OPENAI_API_BASE` و`OPENAI_API_KEY` في أداتك — تعمل Continue.dev وLangChain وAutoGen بدون تعديل.' },
             { q: 'كم تكلفة تشغيل خادم Qwen دائم التشغيل؟', a: 'UM890 Pro مع Qwen3 8B على المعالج يستهلك ~12 واط في وضع الخمول و~45 واط أثناء الاستدلال. بـ $0.16/كيلوواط·ساعة، التشغيل 24/7 يكلف ~$0.70–1.80/شهرًا.' },
             { q: 'ما الفرق بين استخدام Ollama وvLLM لنشر Qwen؟', a: 'Ollama: أسهل في الإعداد، مناسب للاستخدام الفردي وبيئات التطوير. vLLM: أعلى إنتاجية لأحمال الطلبات المتزامنة، مناسب للإنتاج مع عدة مستخدمين.' },
@@ -2588,6 +2591,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         items: [
           '**2026-05-26:** إصدار مبدئي — تغطي Qwen3 8B/14B/32B/72B وDockerfile الكامل وأسعار السحابة التقريبية.',
           '**2026-10-19:** أصبح Qwen3 يُعرض بوصفه الجيل السابق من Qwen (ولا يزال منتشرًا على نطاق واسع)، وQwen 3.6 (27B كثيف، 35B-A3B مزيج خبراء) بوصفه الجيل الأحدث.',
+          '**2026-11-22:** أسعار GPU والتكلفة اليومية وإجماليات البناء تستند إلى مصادر إعلانات مؤرخة (متتبع InsiderLLM، 2026-10-15)، وسرعات كل نموذج مدرجة كغير متتبَّعة.',
         ],
       },
     },
@@ -2609,7 +2613,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             'name': 'هل يوجد نموذج Qwen3 8B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 8B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.',
+              'text': 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 8B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويتسع في RTX 3060 بـ 12 جيجابايت بهامش جيد. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.',
             },
           },
           {
@@ -2625,7 +2629,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             'name': 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه إلى ~2–4 رموز/ثانية. للإنتاج، استخدم GPU مزدوجًا أو سحابة.',
+              'text': 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه كثيرًا. للإنتاج، استخدم GPU مزدوجًا أو سحابة.',
             },
           },
           {
@@ -2670,7 +2674,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
       url: 'https://www.promptquorum.com/ar/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-26',
-      dateModified: '2026-10-19',
+      dateModified: '2026-11-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -2714,7 +2718,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-11-22',
-    next_refresh_due: '2027-02-27',
+    next_refresh_due: '2027-05-22',
     theme: 'Overview & Reference',
     title: 'Qwen3 로컬 배포 완전 가이드 (2026): 프로덕션',
     seoTitle: 'Qwen3 로컬 배포 2026: 8B, 14B, 32B + Docker API',
@@ -2722,7 +2726,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
       'Qwen3 로컬 배포: 8B, 14B, 32B를 Ollama/vLLM과 Docker API 서버로 실행, 하드웨어 선택과 Multi-GPU 포함. 참고 — Qwen3에는 7B가 없으니 8B(qwen3:8b)를 사용하세요. 2026년 가이드.',
     heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-ko.webp',
     twitterDescription:
-      'Qwen3 8B는 RTX 3060에서 초당 25토큰 달성. Qwen2.5-72B는 RTX 4090 두 장 또는 클라우드 GPU 필요. Docker, API 서버, Multi-GPU 완전 가이드 2026.',
+      'Qwen3 8B는 RTX 3060 12 GB에 들어갑니다. Qwen2.5-72B는 RTX 4090 두 장 또는 클라우드 GPU가 필요합니다. Docker, API 서버, Multi-GPU 가이드 2026.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -2747,21 +2751,21 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
       'NVIDIA RTX 4060 Ti 16 GB',
-      'NVIDIA RTX 4090 24 GB (EOL, used-only)',
+      'NVIDIA RTX 4090 24 GB',
       'Minisforum UM890 Pro',
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**Qwen3(이전 세대, 여전히 널리 배포됨) dense 모델은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 — 7B 모델은 없습니다. 가장 가까운 것은 Qwen3-8B(`qwen3:8b` pull)이며, "Qwen3 8B"를 검색했다면 8B를 원하는 것입니다. Qwen3의 최대 dense 모델은 32B이고, 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요. Qwen3 8B 및 14B는 Ollama 또는 vLLM과 Docker Compose API 서버를 통해 소비자용 GPU에서 안정적으로 동작합니다. Qwen 32B는 RTX 4090 24 GB가 필요합니다. Qwen 3.6은 더 새로운 Qwen 세대로, 27B dense 모델(`qwen3.6:27b`)과 35B-A3B 전문가 혼합 모델(`qwen3.6:35b`)로 제공됩니다. 27B는 Qwen3 32B와 같은 24 GB VRAM 티어에 들어가므로 함께 비교해 볼 만합니다. Qwen2.5-72B는 듀얼 GPU, 128 GB 이상 RAM의 CPU 추론, 또는 클라우드 대안이 필요합니다 — self-hosting 비용은 하드웨어 감가상각 기준 하루 $0.05~$0.12이며, RunPod는 시간당 $0.50~$1.20입니다.**',
+      '**Qwen3(이전 세대, 여전히 널리 배포됨) dense 모델은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 — 7B 모델은 없습니다. 가장 가까운 것은 Qwen3-8B(`qwen3:8b` pull)이며, "Qwen3 8B"를 검색했다면 8B를 원하는 것입니다. Qwen3의 최대 dense 모델은 32B이고, 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요. Qwen3 8B 및 14B는 Ollama 또는 vLLM과 Docker Compose API 서버를 통해 소비자용 GPU에서 안정적으로 동작합니다. Qwen 32B는 RTX 4090 24 GB가 필요합니다. 중고 RTX 4090은 [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)에 따르면 $2,575~$3,010(중앙값 $2,860)에 판매되었으며 권장 소비자가는 $1,599입니다(목록 데이터이며 인용이 아닙니다. 미국 가격이며 USD 기준이고 지역별로 다를 수 있습니다). Qwen 3.6은 더 새로운 Qwen 세대로, 27B dense 모델(`qwen3.6:27b`)과 35B-A3B 전문가 혼합 모델(`qwen3.6:35b`)로 제공됩니다. 27B는 Qwen3 32B와 같은 24 GB VRAM 티어에 들어가므로 함께 비교해 볼 만합니다. Qwen2.5-72B는 듀얼 GPU, 128 GB 이상 RAM의 CPU 추론, 또는 클라우드 대안이 필요합니다 — RTX 4090 두 장은 GPU 감가상각만으로 하루 약 $5.22이며(중고 중앙값 $2,860 × 2 ÷ 1,095일, 3년 기준, 전기료와 다른 부품 제외), RunPod는 시간당 $0.50~$1.20입니다.**',
     quickAnswerTop: {
       ko: {
         question: 'Qwen 모델을 로컬 프로덕션 환경에 어떻게 배포합니까?',
         answer:
           'Docker Compose 스택으로 Qwen을 실행하면 OpenAI 호환 API가 노출됩니다. Ollama가 GPU 추론을 담당하고, Open WebUI가 프런트엔드를 제공하며, Nginx가 리버스 프록시 역할을 합니다. Qwen3 8B는 VRAM 약 6 GB로 동작하며, Qwen2.5-72B는 RTX 4090 두 장 또는 클라우드 GPU가 필요합니다.',
         bullets: [
-          'Qwen3 8B: RTX 3060 12 GB, 약 25 tok/s, 중고 GPU $150~350',
-          'Qwen3 14B: RTX 4060 Ti 16 GB, 약 18 tok/s, 신품 약 $424',
-          'Qwen3 32B: RTX 4090 24 GB, 약 12 tok/s, 신품 약 $1,900 (이전 세대. 더 새로운 Qwen 3.6 27B, `qwen3.6:27b`, 같은 24 GB 티어)',
+          'Qwen3 8B: RTX 3060 12 GB (VRAM 약 6 GB 필요), 중고 가격은 여기서 추적하지 않음',
+          'Qwen3 14B: RTX 4060 Ti 16 GB, 가격은 여기서 추적하지 않음',
+          'Qwen3 32B: RTX 4090 24 GB, 중고 판매가 $2,575~$3,010 (InsiderLLM 트래커, 2026-10-15) (이전 세대. 더 새로운 Qwen 3.6 27B, `qwen3.6:27b`, 같은 24 GB 티어)',
           'Qwen2.5-72B: RTX 4090 두 장 또는 RunPod A100 80 GB ($1.64/시간)',
           '상시 가동 mini PC 서버: Minisforum UM890 Pro, $429, Qwen3 8B를 24/7 실행',
         ],
@@ -2787,9 +2791,9 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         items: [
           'Qwen3 8B와 14B는 소비자용 GPU 목표 — VRAM 각각 약 6 GB, 16 GB, Docker에서 Ollama로 실행 가능',
           'Qwen3 32B는 RTX 4090 24 GB가 필요하며, 대부분의 팀에서 단일 카드 프로덕션 배포 최대 규모입니다 (Qwen3는 이전 세대이며, 더 새로운 Qwen 3.6 27B(`qwen3.6:27b`)가 같은 24 GB 티어에 들어갑니다)',
-          'Qwen2.5-72B는 RTX 4090 두 장, 대용량 RAM(128 GB 이상 DDR5)의 CPU 빌드, 또는 클라우드 대여가 필요합니다 — self-hosting 비용은 감가상각 기준 하루 약 $0.05~0.12',
+          'Qwen2.5-72B는 RTX 4090 두 장, 대용량 RAM(128 GB 이상 DDR5)의 CPU 빌드, 또는 클라우드 대여가 필요합니다 — RTX 4090 두 장은 GPU 감가상각만으로 하루 약 $5.22(2 × $2,860 ÷ 1,095일)',
           'Ollama + Open WebUI + Nginx로 구성된 Docker Compose 스택은 10분 이내에 OpenAI 호환 API를 노출합니다',
-          'Qwen 상시 가동 서버: Minisforum UM890 Pro ($429, Qwen3 8B CPU 실행) 또는 AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 GB (총 약 $800)',
+          'Qwen 상시 가동 서버: Minisforum UM890 Pro ($429, Qwen3 8B CPU 실행) 또는 AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 GB (GPU 가격은 여기서 추적하지 않음)',
           '클라우드 대안: RunPod A40 48 GB ($0.44/시간)으로 Qwen2.5-72B 처리 가능 — RTX 4090 두 장 구매보다 비정기 사용 시 저렴',
           '이 가이드는 프로덕션 배포를 다루며, Ollama 기초 설정은 Qwen 입문 가이드를 참조하십시오',
         ],
@@ -2811,14 +2815,14 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         id: 'benchmark-table',
         title: 'Qwen 모델별 하드웨어 성능',
         content:
-          '**GPU 브랜드가 아니라 모델 크기에 맞는 하드웨어를 선택하십시오.** VRAM이 주요 제약입니다. 모델이 맞지 않으면 GPU 속도로 실행되지 않습니다. 아래 표는 Ollama 배포에 최적 품질-크기 비율인 Q4_K_M 양자화 기준의 참고용 추론 속도를 나타냅니다(PromptQuorum의 실측 결과가 아니며 GPU, 드라이버, 컨텍스트 길이, Ollama 버전에 따라 달라집니다).',
+          '**GPU 브랜드가 아니라 모델 크기에 맞는 하드웨어를 선택하십시오.** VRAM이 주요 제약입니다. 모델이 맞지 않으면 GPU 속도로 실행되지 않습니다. 아래 표는 Ollama 배포에 최적 품질-크기 비율인 Q4_K_M 양자화 기준의 필요 VRAM을 나타내며, 모델별 속도는 여기서 추적하지 않습니다. 참고로 [llama.cpp CUDA 스코어보드](https://github.com/ggml-org/llama.cpp/discussions/15013)에는 개발자가 보고한 7B Q4_0 생성 속도가 RTX 3090 158.2 tok/s, RTX 4090 186.2 tok/s, RTX 5090 290.0 tok/s로 올라와 있습니다. 중고 RTX 4090은 [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)에 따르면 $2,575~$3,010(중앙값 $2,860)에 판매되었으며 권장 소비자가는 $1,599입니다(목록 데이터이며 인용이 아닙니다. 미국 가격이며 USD 기준이고 지역별로 다를 수 있습니다).',
         columns: ['모델', 'VRAM (Q4_K_M)', '최소 GPU', '속도 (tok/s)', 'CPU 대체', '프로덕션 준비'],
         rows: [
           {
             '0': 'Qwen3 8B',
             '1': '5.2 GB',
             '2': 'RTX 3060 12 GB',
-            '3': '22–28 tok/s',
+            '3': '추적하지 않음',
             '4': '가능 (RAM 32 GB, 약 4 tok/s)',
             '5': '가능 — 단일 GPU',
           },
@@ -2826,7 +2830,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             '0': 'Qwen3 14B',
             '1': '9.4 GB',
             '2': 'RTX 4060 Ti 16 GB',
-            '3': '15–20 tok/s',
+            '3': '추적하지 않음',
             '4': '가능 (RAM 64 GB, 약 2.5 tok/s)',
             '5': '가능 — 단일 GPU',
           },
@@ -2834,7 +2838,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             '0': 'Qwen3 32B (이전 세대)',
             '1': '20.1 GB',
             '2': 'RTX 4090 24 GB',
-            '3': '10–14 tok/s',
+            '3': '추적하지 않음',
             '4': '제한적 (RAM 128 GB, 약 1.2 tok/s)',
             '5': '가능 — 단일 GPU',
           },
@@ -2850,7 +2854,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             '0': 'Qwen2.5-Coder 32B',
             '1': '19.8 GB',
             '2': 'RTX 4090 24 GB',
-            '3': '10–13 tok/s',
+            '3': '추적하지 않음',
             '4': '제한적 (RAM 128 GB)',
             '5': '가능 — 단일 GPU',
           },
@@ -2858,12 +2862,12 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             '0': 'Qwen2.5-72B',
             '1': '43.5 GB',
             '2': 'RTX 4090 두 장 (합계 48 GB)',
-            '3': '5–8 tok/s',
+            '3': '추적하지 않음',
             '4': '느림 (RAM 128 GB, 약 0.6 tok/s)',
             '5': 'Multi-GPU 또는 클라우드만 가능',
           },
         ],
-        note: 'PCIe Gen 4 시스템 기준의 참고용 속도이며 PromptQuorum의 실측 결과가 아닙니다. RTX 4090에는 NVLink 커넥터가 없어 RTX 4090 두 장은 PCIe로만 통신하며, NVLink는 RTX 3090 같은 일부 카드에 있습니다. RunPod A100 80 GB 단일 카드에서 Qwen2.5-72B Q4_K_M: 약 18–22 tok/s(참고용).',
+        note: '모델별 속도는 여기서 추적하지 않으며, CPU 대체 수치는 PCIe Gen 4 시스템 기준의 참고용이고 PromptQuorum의 실측 결과가 아닙니다. RTX 4090에는 NVLink 커넥터가 없어 RTX 4090 두 장은 PCIe로만 통신하며, NVLink는 RTX 3090 같은 일부 카드에 있습니다.',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'Q4_K_M 양자화 기준 Qwen 모델 VRAM 요구량: Qwen3 8B는 5.2GB(RTX 3060 12GB), Qwen3 32B는 20.1GB(RTX 4090 24GB), Qwen2.5-72B는 43.5GB(RTX 4090 두 장)가 필요합니다.',
@@ -2954,7 +2958,7 @@ volumes:
           'RTX 4090 두 장의 경우, 두 카드 모두 동일한 PCIe 대역폭 레벨에 있어야 합니다 — PCIe Gen 4 x8 슬롯 두 개가 있는 B650 또는 Z790 메인보드가 최소 요구사항입니다',
           'RTX 4090에는 NVLink 커넥터가 없어 RTX 4090 두 장은 PCIe로만 통신하며, NVLink 브리지는 RTX 3090 같은 일부 이전 카드에 있습니다',
           'vLLM은 텐서 병렬성을 사용하는 대체 추론 엔진으로, Multi-GPU 활용 효율이 더 높습니다 — 동시 요청 100개 이상의 지속 70B 추론 부하에서는 Ollama 대신 vLLM을 사용하십시오',
-          'Qwen2.5-72B를 비정기적으로 사용하는 경우, RunPod A40 48 GB($0.44/시간)가 RTX 4090 두 장 빌드($3,800+)보다 저렴합니다',
+          'Qwen2.5-72B를 비정기적으로 사용하는 경우, RunPod A40 48 GB($0.44/시간)가 RTX 4090 두 장 빌드(카드만 중앙값 기준 약 $5,720, InsiderLLM 트래커 2026-10-15)보다 저렴합니다',
         ],
         codeBlock: `# vLLM multi-GPU alternative (better for high-traffic 72B)
 docker run --gpus all \
@@ -2990,28 +2994,28 @@ docker run --gpus all \
         id: 'cost-comparison',
         title: '비용 비교: self-hosted vs Alibaba Cloud vs RunPod',
         content:
-          '**하루 4시간 이상의 지속적인 추론 부하에서는 self-hosting이 클라우드보다 유리합니다. 하루 4시간 미만에서는 하드웨어 감가상각 후 클라우드 GPU 대여가 더 저렴합니다.** 아래 표는 self-hosted 빌드에 3년 하드웨어 감가상각을 적용합니다.',
+          '**self-hosting은 지속적인 부하에서만 이득이며, 비정기 사용에는 클라우드 GPU 대여가 구매보다 저렴합니다.** 아래 표는 GPU 가격만 3년으로 감가상각합니다(예시이며 전기료와 다른 부품은 추적하지 않음). 중고 RTX 4090 중앙값 $2,860 기준으로 하루 $2.61($2,860 ÷ 1,095일)이며, 이는 $0.44/시간 RunPod A40 대여 하루 약 5.9시간($2.61 ÷ $0.44)에 해당합니다.',
         columns: ['옵션', 'Qwen3 8B 하루 비용', 'Qwen2.5-72B 하루 비용', '초기 비용', '최적 용도'],
         rows: [
           {
             '0': 'Self-hosted: mini PC RTX 3060 12 GB',
-            '1': '$0.03 (전기료만)',
+            '1': '추적하지 않음',
             '2': '해당 없음 (용량 부족)',
-            '3': '완전한 빌드 $600–900',
+            '3': '추적하지 않음 (중고 GPU 가격 미추적)',
             '4': '상시 7B 추론, 가정/사무실 서버',
           },
           {
             '0': 'Self-hosted: 워크스테이션 RTX 4090',
-            '1': '$0.05',
+            '1': '$2.61 (GPU 감가상각만, 3년)',
             '2': '해당 없음 (단일 GPU)',
-            '3': '완전한 빌드 $2,500–4,000',
+            '3': 'GPU만: 중고 판매가 $2,575~$3,010 (중앙값 $2,860), 다른 부품은 추적하지 않음',
             '4': '최대 32B 추론, 워크스테이션 전용 사용',
           },
           {
             '0': 'Self-hosted: RTX 4090 두 장',
-            '1': '$0.08',
-            '2': '$0.12',
-            '3': '완전한 빌드 $5,000–7,000',
+            '1': '$5.22 (GPU 감가상각만: 2 × $2,860 ÷ 1,095일)',
+            '2': '$5.22 (동일한 GPU 감가상각만)',
+            '3': 'GPU만: 2 × $2,860 = $5,720 (중앙값), 다른 부품은 추적하지 않음',
             '4': '72B 상시 가동, 워크스테이션 병행 사용',
           },
           {
@@ -3060,8 +3064,8 @@ docker run --gpus all \
           '**API 서버로 Qwen3 8B를 24/7 실행하는 mini PC는 전기료가 월 $0.50–1.50 — 같은 기간 켜 둔 비슷한 클라우드 인스턴스보다 대체로 저렴합니다.** 두 가지 mini PC 빌드가 대부분의 Qwen 상시 가동 사용 사례를 커버합니다:',
         items: [
           '저렴한 옵션 (Qwen3 8B CPU 추론): Minisforum UM890 Pro — AMD Ryzen 9 8945HS, 32 GB DDR5, 512 GB NVMe. 신품 약 $429. Qwen3 8B는 Ollama CPU 백엔드로 3–5 tok/s 실행. 개인 어시스턴트 및 문서 요약에 적합. 유휴 시 12W, 부하 시 45W. 매우 조용함. 미국/EU 창고에서 배송 가능.',
-          '추천 옵션 (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — OCuLink 포트를 통해 외부 GPU 지원. eGPU 인클로저의 RTX 4060 Ti 16 GB와 결합 (GPU 약 $340 + 인클로저 $100). 총 약 $800. Qwen3 14B를 16–18 tok/s로 실행. 인터랙티브 사용 시 CPU 대체보다 현저히 우수.',
-          '고급 사용자 (Qwen3 32B): RTX 4090이 장착된 컴팩트 ATX 데스크톱 PC — 예시: Fractal Node 804 케이스 ($90), RTX 4090 (현재 가격 약 $1,900), Ryzen 9 7950X (약 $600), DDR5 64 GB (약 $180). 총 약 $2,800. Qwen3 32B를 무기한 10–14 tok/s로 실행.',
+          '추천 옵션 (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — OCuLink 포트를 통해 외부 GPU 지원. eGPU 인클로저의 RTX 4060 Ti 16 GB와 결합 (GPU와 인클로저 가격은 여기서 추적하지 않아 총액은 제시하지 않습니다). Qwen3 14B는 16 GB 카드의 VRAM에 들어가므로 인터랙티브 사용 시 CPU 대체보다 현저히 우수합니다.',
+          '고급 사용자 (Qwen3 32B): 중고 RTX 4090이 장착된 컴팩트 ATX 데스크톱 PC (중고 판매가 $2,575~$3,010, 중앙값 $2,860, [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15). 케이스, CPU, RAM 가격은 여기서 추적하지 않아 빌드 총액은 제시하지 않습니다. Q4_K_M의 Qwen3 32B(20.1 GB)는 24 GB 카드에 여유 있게 들어갑니다.',
         ],
         affiliateLinks: [
           {
@@ -3101,14 +3105,14 @@ docker run --gpus all \
           ],
           quick: [
             '매일 Qwen3 8B: Minisforum UM890 Pro ($429)',
-            '매일 Qwen3 14B: AOOSTAR + RTX 4060 Ti (약 $800)',
-            '매일 Qwen3 32B: 컴팩트 ATX + RTX 4090 (약 $2,800)',
+            '매일 Qwen3 14B: AOOSTAR + RTX 4060 Ti (GPU 가격은 여기서 추적하지 않음)',
+            '매일 Qwen3 32B: 컴팩트 ATX + RTX 4090 (중고 판매가 $2,575~$3,010, 빌드 총액은 추적하지 않음)',
             '비정기 Qwen2.5-72B: RunPod A40 48 GB ($0.44/시간)',
           ],
         },
         image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
         imageCaption:
-          'Qwen 자체 호스팅 vs 클라우드 결정 트리: 하루 4시간 이상 사용 시 자체 호스팅(Qwen3 8B는 Minisforum UM890 Pro $429, Qwen3 32B는 RTX 4090 빌드 약 $2,800); 하루 4시간 미만의 간헐적 Qwen2.5-72B 사용은 RunPod A40 48GB($0.44/시간) 같은 클라우드를 사용하세요.',
+          'Qwen 자체 호스팅 vs 클라우드 결정 트리: 지속적으로 사용한다면 자체 호스팅(Qwen3 8B는 Minisforum UM890 Pro $429, Qwen3 32B는 중고 RTX 4090, GPU만 중고 판매가 $2,575~$3,010, InsiderLLM 트래커 2026-10-15); 간헐적인 Qwen2.5-72B 사용은 RunPod A40 48GB($0.44/시간) 같은 클라우드를 사용하세요.',
       },
       internalLinks: {
         id: 'see-also',
@@ -3130,7 +3134,7 @@ docker run --gpus all \
           },
           {
             q: 'Qwen3 8B 모델이 있습니까?',
-            a: '없습니다. Qwen3 dense 라인업은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 7B는 없습니다. "Qwen3 8B"를 검색했다면 가장 가까운 모델은 Qwen3-8B(`ollama pull qwen3:8b`)이며, Q4_K_M에서 VRAM 약 5~6 GB에 맞고 RTX 3060 12 GB에서 약 25 tok/s로 동작합니다. 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요.',
+            a: '없습니다. Qwen3 dense 라인업은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 7B는 없습니다. "Qwen3 8B"를 검색했다면 가장 가까운 모델은 Qwen3-8B(`ollama pull qwen3:8b`)이며, Q4_K_M에서 VRAM 약 5~6 GB에 맞고 RTX 3060 12 GB에 여유 있게 들어갑니다. 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요.',
           },
           {
             q: 'RTX 4090 한 장으로 Qwen2.5-72B를 실행할 수 있습니까?',
@@ -3142,7 +3146,7 @@ docker run --gpus all \
           },
           {
             q: 'Ollama는 Qwen의 Multi-GPU 추론을 네이티브로 지원합니까?',
-            a: '예, Ollama 0.3.0(2025)부터 지원합니다. CUDA_VISIBLE_DEVICES=0,1로 사용할 GPU를 지정하십시오. Ollama가 자동으로 모델을 분산합니다. RTX 4090 두 장의 Qwen2.5-72B에서 5–8 tok/s를 예상하십시오 — 소비자 구성에서는 NVLink 대신 PCIe를 통해 모델이 분산되므로 A100 80 GB 단일 카드보다 느립니다.',
+            a: '예, Ollama 0.3.0(2025)부터 지원합니다. CUDA_VISIBLE_DEVICES=0,1로 사용할 GPU를 지정하십시오. Ollama가 자동으로 모델을 분산합니다. RTX 4090 두 장의 Qwen2.5-72B는 소비자 구성에서 NVLink 대신 PCIe를 통해 모델이 분산되므로 80 GB 단일 카드보다 느릴 것으로 예상하십시오. 이 구성에 대해 출처가 있는 tok/s 수치가 없어 제시하지 않습니다.',
           },
           {
             q: 'Qwen 추론에서 Alibaba Cloud가 RunPod보다 저렴합니까?',
@@ -3164,7 +3168,8 @@ docker run --gpus all \
         items: [
           '2026-05-26: 최초 게시. 가격과 속도는 참고용 범위이며 PromptQuorum의 실측 결과가 아닙니다. 현재 판매 정보를 확인하십시오.',
           '2026-10-19: Qwen3를 Qwen의 이전 세대(여전히 널리 배포됨)로, Qwen 3.6(27B dense, 35B-A3B 전문가 혼합)을 더 새로운 세대로 표기하도록 변경.',
-          '다음 검토 예정: 2026-11-26',
+          '2026-11-22: GPU 가격, 일일 비용, 빌드 총액은 날짜가 명시된 목록 출처(InsiderLLM 트래커, 2026-10-15)를 인용하며, 모델별 속도는 추적하지 않음으로 표기합니다.',
+          '다음 검토 예정: 2027-05-22',
         ],
       },
     },
@@ -3194,7 +3199,7 @@ docker run --gpus all \
           name: 'Ollama는 Qwen의 Multi-GPU 추론을 네이티브로 지원합니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '예, Ollama 0.3.0(2025)부터 지원합니다. CUDA_VISIBLE_DEVICES=0,1로 사용할 GPU를 지정하십시오. Ollama가 자동으로 모델을 분산합니다. RTX 4090 두 장의 Qwen2.5-72B에서 5–8 tok/s를 예상하십시오.',
+            text: '예, Ollama 0.3.0(2025)부터 지원합니다. CUDA_VISIBLE_DEVICES=0,1로 사용할 GPU를 지정하십시오. Ollama가 자동으로 모델을 분산합니다. RTX 4090 두 장의 Qwen2.5-72B에 대해서는 출처가 있는 tok/s 수치가 없어 제시하지 않습니다.',
           },
         },
         {
