@@ -34,8 +34,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'FAQ', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: 'The slide deck below covers: on-premises cost break-even (break-even near 41M tokens/month; about $205/month vs $1,000/month cloud at 200M tokens), GDPR/HIPAA considerations, hardware deployment (1× RTX 5090 for small teams to 4× RTX 5090 for enterprise), architecture with Kubernetes + vLLM, and common deployment mistakes. Download the PDF as a private local AI for business reference card.',
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -256,8 +254,6 @@ de: {
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Verwandte Lektüre', anchor: '#related-reading' },
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: 'Das Foliendeck behandelt: On-Premises-Kosteneffizienz (Break-even bei ca. 41 Mio. Token/Monat; ca. 205 $/Monat vs. 1.000 $/Monat Cloud bei 200 Mio. Token), DSGVO-/HIPAA-Überlegungen, Hardware-Bereitstellung (1× RTX 5090 für kleine Teams bis 4× RTX 5090 für Unternehmen), Architektur mit Kubernetes + vLLM und häufige Bereitstellungsfehler. PDF als Referenzkarte für private lokale KI im Unternehmen herunterladen.',
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -464,8 +460,6 @@ de: {
           anchor: '#related-reading'
         }
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: 'Le diaporama couvre : rentabilité on-premises (point mort vers 41 M tokens/mois ; ~205 $/mois vs 1 000 $/mois cloud à 200 M tokens), points d\'attention RGPD/HIPAA, déploiement matériel (1× RTX 5090 pour petites équipes à 4× RTX 5090 pour entreprise), architecture avec Kubernetes + vLLM et erreurs courantes. Téléchargez le PDF comme carte de référence pour l\'IA locale en entreprise.',
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -751,8 +745,6 @@ de: {
           anchor: '#related-reading'
         }
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: 'スライドデックで以下をカバーしています：ローカルAI採算性（月約4,100万トークン以上で損益分岐、約$205/月 vs 月2億トークン時のクラウド$1,000/月）、個人情報保護法などの検討ポイント、ハードウェア構成（小規模チーム向け RTX 5090 1台 から エンタープライズ向け RTX 5090 4台またはA100クラスター）、Kubernetes + vLLMアーキテクチャ、および一般的な展開誤りです。PDFをダウンロードして、ビジネス向けローカルAIリファレンスカードとして使用できます。',
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1009,8 +1001,6 @@ de: {
           anchor: '#related-reading'
         }
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: '演示涵盖以下内容：本地AI经济性分析（月约4,100万token以上盈亏平衡，约$205/月 vs 月2亿token时云端$1,000/月），数据安全法/个人信息保护法等合规考量，硬件配置（小型团队单RTX 5090，企业级多GPU或A100集群），Kubernetes + vLLM架构及常见部署错误。下载PDF作为企业本地AI部署参考卡。',
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1241,8 +1231,6 @@ de: {
         { label: 'FAQ', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: 'El deck de diapositivas cubre: rentabilidad on-premises (punto de equilibrio cerca de 41M tokens/mes; ~$205/mes frente a $1.000/mes en la nube a 200M tokens), consideraciones sobre GDPR/HIPAA, configuración de hardware (1× RTX 5090 para equipos pequeños hasta 4× RTX 5090 para empresa), arquitectura con Kubernetes + vLLM y errores habituales de despliegue. Descarga el PDF como tarjeta de referencia de IA local privada para empresas.',
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1461,8 +1449,6 @@ de: {
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: 'تغطي الشرائح: الجدوى الاقتصادية في الموقع (التعادل قرب 41 مليون token/شهر؛ نحو 205 دولارات/شهر مقابل 1,000 دولار/شهر في السحابة عند 200 مليون token)، اعتبارات حماية البيانات، تهيئة العتاد (1× RTX 5090 للفِرق الصغيرة حتى 4× RTX 5090 للمؤسسات)، بنية مع Kubernetes + vLLM، وأخطاء نشر شائعة. نزّل ملف PDF كبطاقة مرجعية للذكاء الاصطناعي المحلي الخاص للشركات.',
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1680,8 +1666,6 @@ de: {
         { label: 'FAQ', anchor: '#faq' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: 'A apresentação cobre: viabilidade financeira on-premises (ponto de equilíbrio perto de 41M tokens/mês; ~$205/mês vs $1.000/mês na nuvem a 200M tokens), considerações sobre LGPD/HIPAA, configuração de hardware (1× RTX 5090 para equipes pequenas até 4× RTX 5090 para empresa), arquitetura com Kubernetes + vLLM e erros comuns de implantação. Baixe o PDF como cartão de referência de IA local privada para empresas.',
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1848,8 +1832,6 @@ de: {
         { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 자료', anchor: '#related-reading' },
       ],
-      gammaEmbedUrl: '/presentations/private-local-ai-for-business-static.html',
-      gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: 온프레미스 비용 손익분기점(월 약 4,100만 토큰 이상에서 손익분기, 월 약 $205 vs 월 2억 토큰 기준 클라우드 월 $1,000), GDPR/HIPAA 컴플라이언스 고려 사항, 하드웨어 배포(소규모 팀용 RTX 5090 1대부터 엔터프라이즈용 RTX 5090 4대까지), Kubernetes + vLLM 아키텍처, 그리고 흔한 배포 실수. PDF를 다운로드하여 비즈니스용 프라이빗 로컬 AI 참고 카드로 활용하십시오.',
       sections: {
         tldr: {
           id: 'key-takeaways',
