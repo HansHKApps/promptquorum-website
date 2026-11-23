@@ -6,7 +6,7 @@
     <title>Mac vs Windows vs Linux for Local LLMs 2026 | PromptQuorum</title>
     <meta name="description" content="Choose the best OS for local LLMs: macOS M5, Windows RTX 5090, or Linux servers. Compare speed, cost, and setup complexity." />
     <meta property="og:title" content="Mac vs Windows vs Linux for Local LLMs 2026 — PromptQuorum" />
-    <meta property="og:description" content="M5 at 25–35 tok/s, RTX 5090 at 40–50 tok/s, Linux from $810 3-year TCO." />
+    <meta property="og:description" content="RTX 5090 at 290.0 tok/s on a 7B model (developer-reported); GPU-only 3-year cost from $769." />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm" />
 
@@ -414,9 +414,9 @@
                         type: 'list',
                         h2: 'Key Metrics at a Glance',
                         items: [
-                            '<strong>macOS M5 Max (128GB):</strong> 70B at 25–35 tok/sec, $3,499, silent',
-                            '<strong>Windows RTX 5090 (32GB):</strong> 70B at 40–50 tok/sec, $2,500, fastest',
-                            '<strong>Linux RTX 5090 (32GB):</strong> 70B at 42–53 tok/sec, 1–5% faster than Windows'
+                            '<strong>macOS M5 Max (128GB):</strong> holds 70B at Q8, $3,499, silent',
+                            '<strong>Windows RTX 5090 (32GB):</strong> 290.0 tok/s on a 7B Q4_0 model (developer-reported), about $4,500–4,700 new (InsiderLLM, 2026-10-15)',
+                            '<strong>Linux RTX 5090 (32GB):</strong> same GPU, same speed class as Windows; setup differs'
                         ]
                     },
                     {
@@ -425,7 +425,7 @@
                         items: [
                             'macOS: Zero GPU cost, simplest setup (6 min), if you own a Mac',
                             'Windows: Industry standard GPU support, NVIDIA CUDA ecosystem mature',
-                            'Linux: Lowest cost of ownership ($810 3-year), best for 24/7 servers'
+                            'Linux: Lowest overhead, best for 24/7 servers'
                         ]
                     },
                     {
@@ -441,9 +441,9 @@
                         type: 'list',
                         h2: 'Inference Speed Breakdown',
                         items: [
-                            'M5 Pro (64GB): 70B Q4 at 15–20 tok/sec',
-                            'M5 Max (128GB): 70B Q8 at 25–35 tok/sec (4× better than M4 Max)',
-                            'RTX 5090: 70B at 40–50 tok/sec on Windows, 42–53 on Linux'
+                            'M5 Pro (64GB): holds 70B at Q4; no sourced tok/s figure',
+                            'M5 Max (128GB): holds 70B at Q8; no sourced tok/s figure',
+                            'RTX 5090: 290.0 · RTX 4090: 186.2 · RTX 3090: 158.2 tok/s (7B Q4_0, developer-reported)'
                         ]
                     },
                     {
@@ -452,16 +452,16 @@
                         items: [
                             'MacBook Pro M5 Pro 64GB: $2,499',
                             'MacBook Pro M5 Max 128GB: $3,499',
-                            'RTX 5090 + base system: $2,500',
-                            'RTX 5060 Ti + base system: $800–1,000'
+                            'RTX 5090 (GPU only): about $4,500–4,700 new (InsiderLLM, 2026-10-15)',
+                            'RTX 5060 Ti (GPU only): from $679 (Wccftech, 2026-01-27)'
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: 'M5 Max vs RTX 5090 Trade-off',
                         line1: 'M5 Max: 4× more memory, silent, turnkey',
-                        line2: 'RTX 5090: 1.3–1.5× faster inference speed',
-                        tip: '💡 Choose M5 for quality + convenience. Choose RTX for raw speed.'
+                        line2: 'RTX 5090: 575 W board power, needs a desktop PC',
+                        tip: '💡 Choose M5 for 70B capacity + convenience. Choose RTX for speed on smaller models.'
                     },
                     {
                         type: 'list',
@@ -476,8 +476,8 @@
                         type: 'faq',
                         h2: 'Common Questions',
                         faqs: [
-                            { q: 'Can I run 70B on macOS?', a: 'Yes. M5 Pro (64GB) runs 70B Q4 at 15–20 tok/sec. M5 Max (128GB) runs 70B Q8 at 25–35 tok/sec.' },
-                            { q: 'Does Linux use less power?', a: 'Linux 1–5% faster due to lower OS overhead. M5 draws ~30–40W; RTX 5090 draws ~450W.' }
+                            { q: 'Can I run 70B on macOS?', a: 'Yes. M5 Pro (64GB) can hold 70B at Q4 (about 35GB). M5 Max (128GB) can hold 70B at Q8 (about 70GB).' },
+                            { q: 'How much power does an RTX 5090 draw?', a: 'NVIDIA rates it at 575 W board power (1,000 W system requirement). M5 draws ~30–40W.' }
                         ]
                     },
                     {
@@ -494,7 +494,7 @@
                         items: [
                             'Assuming macOS can\'t run big models. It can — just slower.',
                             'Buying Windows specifically for LLMs. If you have a Mac, use it; GPU cost dominates.',
-                            'Thinking Linux is only for servers. Linux has lowest 3-year TCO ($810).',
+                            'Thinking Linux is only for servers. Linux suits home servers and mini PCs.',
                             'Forgetting NVIDIA dominance. CUDA is the standard; alternatives are smaller ecosystems.'
                         ]
                     },
@@ -503,9 +503,9 @@
                         h2: '3-Year Total Cost of Ownership',
                         items: [
                             'Mac mini M5 Pro 64GB: $1,699 (70B benchmark not yet published)',
-                            'Linux + RTX 5060 Ti: $810 (cheapest option)',
-                            'Linux + RTX 5090: $1,500 (fastest Linux option)',
-                            'Windows + RTX 5090: $2,620 (includes drivers, OS overhead)'
+                            'RTX 5060 Ti (GPU only): $769 over 3 years',
+                            'RTX 4090 used (GPU only, median): $3,136',
+                            'RTX 5090 new (GPU only): $4,853–5,053'
                         ]
                     },
                     {
@@ -539,9 +539,9 @@
                         type: 'list',
                         h2: 'Wichtigste Metriken auf einen Blick',
                         items: [
-                            '<strong>macOS M5 Max (128 GB):</strong> 70B bei 25–35 Token/Sec, 3.499 €, lautlos',
-                            '<strong>Windows RTX 5090 (32 GB):</strong> 70B bei 40–50 Token/Sec, 1.999 €, schnellste',
-                            '<strong>Linux RTX 5090 (32 GB):</strong> 70B bei 42–53 Token/Sec, 1–5% schneller als Windows'
+                            '<strong>macOS M5 Max (128 GB):</strong> hält 70B in Q8, 3.499 €, lautlos',
+                            '<strong>Windows RTX 5090 (32 GB):</strong> 290,0 tok/s bei 7B Q4_0 (von Entwicklern gemeldet), neu etwa 4.500–4.700 $ (InsiderLLM, 2026-10-15)',
+                            '<strong>Linux RTX 5090 (32 GB):</strong> gleiche GPU, gleiche Geschwindigkeitsklasse wie Windows; Setup unterscheidet sich'
                         ]
                     },
                     {
@@ -550,7 +550,7 @@
                         items: [
                             'macOS: Null GPU-Kosten, einfachste Einrichtung (6 Min), falls Sie einen Mac haben',
                             'Windows: Industrie-Standard-GPU-Unterstützung, reifer NVIDIA CUDA-Ökosystem',
-                            'Linux: Niedrigste Gesamtkosten (500 € 3 Jahre), beste für 24/7-Server'
+                            'Linux: Geringster Overhead, beste Wahl für 24/7-Server'
                         ]
                     },
                     {
@@ -566,9 +566,9 @@
                         type: 'list',
                         h2: 'Inferenzgeschwindigkeit',
                         items: [
-                            'M5 Pro (64 GB): 70B Q4 bei 15–20 Token/Sec',
-                            'M5 Max (128 GB): 70B Q8 bei 25–35 Token/Sec (4× besser als M4 Max)',
-                            'RTX 5090: 70B bei 40–50 Token/Sec auf Windows, 42–53 auf Linux'
+                            'M5 Pro (64 GB): hält 70B in Q4; keine belegte tok/s-Zahl',
+                            'M5 Max (128 GB): hält 70B in Q8; keine belegte tok/s-Zahl',
+                            'RTX 5090: 290,0 · RTX 4090: 186,2 · RTX 3090: 158,2 tok/s (7B Q4_0, von Entwicklern gemeldet)'
                         ]
                     },
                     {
@@ -577,16 +577,16 @@
                         items: [
                             'MacBook Pro M5 Pro 64 GB: 1.649 €',
                             'MacBook Pro M5 Max 128 GB: 2.299 €',
-                            'RTX 5090 + Basissystem: 1.666 €',
-                            'RTX 5060 Ti + Basissystem: 533–666 €'
+                            'RTX 5090 (nur GPU): neu etwa 4.500–4.700 $ (InsiderLLM, 2026-10-15)',
+                            'RTX 5060 Ti (nur GPU): ab 679 $ (Wccftech, 2026-01-27)'
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: 'M5 Max vs RTX 5090 Kompromiss',
                         line1: 'M5 Max: 4× mehr Speicher, lautlos, schlüsselfertig',
-                        line2: 'RTX 5090: 1,3–1,5× schnellere Inferenzgeschwindigkeit',
-                        tip: '💡 Wählen Sie M5 für Qualität + Komfort. Wählen Sie RTX für pure Geschwindigkeit.'
+                        line2: 'RTX 5090: 575 W Boardleistung, Desktop-PC nötig',
+                        tip: '💡 Wählen Sie M5 für 70B-Kapazität + Komfort. Wählen Sie RTX für Tempo bei kleineren Modellen.'
                     },
                     {
                         type: 'list',
@@ -601,8 +601,8 @@
                         type: 'faq',
                         h2: 'Häufig gestellte Fragen',
                         faqs: [
-                            { q: 'Kann ich 70B auf macOS ausführen?', a: 'Ja. M5 Pro (64 GB) führt 70B Q4 bei 15–20 Token/Sec aus. M5 Max (128 GB) führt 70B Q8 bei 25–35 Token/Sec aus.' },
-                            { q: 'Verbraucht Linux weniger Strom?', a: 'Linux 1–5% schneller aufgrund geringerer OS-Overhead. M5 verbraucht ~30–40 W; RTX 5090 verbraucht ~450 W.' }
+                            { q: 'Kann ich 70B auf macOS ausführen?', a: 'Ja. M5 Pro (64 GB) hält 70B in Q4 (ca. 35 GB). M5 Max (128 GB) hält 70B in Q8 (ca. 70 GB).' },
+                            { q: 'Wie viel Strom zieht eine RTX 5090?', a: 'NVIDIA gibt 575 W Boardleistung an (1.000 W Systemanforderung). M5 verbraucht ~30–40 W.' }
                         ]
                     },
                     {
@@ -619,7 +619,7 @@
                         items: [
                             'Annahme, dass macOS große Modelle nicht ausführen kann. Es kann — nur langsamer.',
                             'Windows speziell für LLMs kaufen. Falls Sie einen Mac haben, verwenden Sie ihn; GPU-Kosten dominieren.',
-                            'Denken Sie, Linux ist nur für Server. Linux hat niedrigste 3-Jahres-TCO (500 €).',
+                            'Denken Sie, Linux ist nur für Server. Linux eignet sich auch für Heimserver und Mini-PCs.',
                             'NVIDIA-Dominanz vergessen. CUDA ist der Standard; Alternativen sind kleinere Ökosysteme.'
                         ]
                     },
@@ -628,9 +628,9 @@
                         h2: '3-Jahres-Gesamtkostenanalyse',
                         items: [
                             'Mac mini M5 Pro 64 GB: 1.999 € (70B-Benchmark noch nicht veröffentlicht)',
-                            'Linux + RTX 5060 Ti: 500 € (günstigste Option)',
-                            'Linux + RTX 5090: 933 € (schnellste Linux-Option)',
-                            'Windows + RTX 5090: 1.666 € (inkl. Treiber, OS-Overhead)'
+                            'RTX 5060 Ti (nur GPU): 769 $ über 3 Jahre',
+                            'RTX 4090 gebraucht (nur GPU, Median): 3.136 $',
+                            'RTX 5090 neu (nur GPU): 4.853–5.053 $'
                         ]
                     },
                     {
@@ -664,9 +664,9 @@
                         type: 'list',
                         h2: 'Métriques clés en un coup d\'œil',
                         items: [
-                            '<strong>macOS M5 Max (128 Go) :</strong> 70B à 25–35 jetons/s, 2 299 €, silencieux',
-                            '<strong>Windows RTX 5090 (32 Go) :</strong> 70B à 40–50 jetons/s, 1 666 €, plus rapide',
-                            '<strong>Linux RTX 5090 (32 Go) :</strong> 70B à 42–53 jetons/s, 1–5% plus rapide que Windows'
+                            '<strong>macOS M5 Max (128 Go) :</strong> accueille le 70B en Q8, 2 299 €, silencieux',
+                            '<strong>Windows RTX 5090 (32 Go) :</strong> 290,0 jetons/s sur 7B Q4_0 (rapporté par des développeurs), environ 4 500–4 700 $ neuve (InsiderLLM, 2026-10-15)',
+                            '<strong>Linux RTX 5090 (32 Go) :</strong> même GPU, même classe de vitesse que Windows ; la configuration diffère'
                         ]
                     },
                     {
@@ -675,7 +675,7 @@
                         items: [
                             'macOS : Zéro coût GPU, configuration plus simple (6 min), si vous avez un Mac',
                             'Windows : Support GPU standard industriel, écosystème NVIDIA CUDA mature',
-                            'Linux : Coût total de possession le plus bas (500 € 3 ans), meilleur pour serveurs 24/7'
+                            'Linux : Surcharge la plus faible, idéal pour serveurs 24/7'
                         ]
                     },
                     {
@@ -691,9 +691,9 @@
                         type: 'list',
                         h2: 'Vitesse d\'inférence',
                         items: [
-                            'M5 Pro (64 Go) : 70B Q4 à 15–20 jetons/s',
-                            'M5 Max (128 Go) : 70B Q8 à 25–35 jetons/s (4× mieux que M4 Max)',
-                            'RTX 5090 : 70B à 40–50 jetons/s sur Windows, 42–53 sur Linux'
+                            'M5 Pro (64 Go) : accueille le 70B en Q4 ; pas de chiffre de jetons/s sourcé',
+                            'M5 Max (128 Go) : accueille le 70B en Q8 ; pas de chiffre de jetons/s sourcé',
+                            'RTX 5090 : 290,0 · RTX 4090 : 186,2 · RTX 3090 : 158,2 jetons/s (7B Q4_0, rapporté par des développeurs)'
                         ]
                     },
                     {
@@ -702,16 +702,16 @@
                         items: [
                             'MacBook Pro M5 Pro 64 Go : 1 649 €',
                             'MacBook Pro M5 Max 128 Go : 2 299 €',
-                            'RTX 5090 + système de base : 1 666 €',
-                            'RTX 5060 Ti + système de base : 533–666 €'
+                            'RTX 5090 (GPU seul) : environ 4 500–4 700 $ neuve (InsiderLLM, 2026-10-15)',
+                            'RTX 5060 Ti (GPU seul) : à partir de 679 $ (Wccftech, 2026-01-27)'
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: 'Compromis M5 Max vs RTX 5090',
                         line1: 'M5 Max : 4× plus de mémoire, silencieux, clé en main',
-                        line2: 'RTX 5090 : 1,3–1,5× vitesse d\'inférence plus rapide',
-                        tip: '💡 Choisissez M5 pour qualité + commodité. Choisissez RTX pour pure vitesse.'
+                        line2: 'RTX 5090 : 575 W de puissance carte, PC de bureau requis',
+                        tip: '💡 Choisissez M5 pour la capacité 70B + le confort. Choisissez RTX pour la vitesse sur de plus petits modèles.'
                     },
                     {
                         type: 'list',
@@ -726,8 +726,8 @@
                         type: 'faq',
                         h2: 'Questions courantes',
                         faqs: [
-                            { q: 'Puis-je exécuter 70B sur macOS ?', a: 'Oui. M5 Pro (64 Go) exécute 70B Q4 à 15–20 jetons/s. M5 Max (128 Go) exécute 70B Q8 à 25–35 jetons/s.' },
-                            { q: 'Linux consomme-t-il moins d\'énergie ?', a: 'Linux 1–5% plus rapide en raison d\'une surcharge OS réduite. M5 consomme ~30–40 W ; RTX 5090 consomme ~450 W.' }
+                            { q: 'Puis-je exécuter 70B sur macOS ?', a: 'Oui. M5 Pro (64 Go) accueille le 70B en Q4 (environ 35 Go). M5 Max (128 Go) accueille le 70B en Q8 (environ 70 Go).' },
+                            { q: 'Quelle puissance consomme une RTX 5090 ?', a: 'NVIDIA indique 575 W de puissance carte (1 000 W requis pour le système). M5 consomme ~30–40 W.' }
                         ]
                     },
                     {
@@ -744,7 +744,7 @@
                         items: [
                             'Supposer que macOS ne peut pas exécuter de grands modèles. Cela peut — juste plus lentement.',
                             'Acheter Windows spécifiquement pour les LLM. Si vous avez un Mac, utilisez-le ; les coûts GPU dominent.',
-                            'Penser que Linux est uniquement pour les serveurs. Linux a coût total propriété 3 ans le plus bas (500 €).',
+                            'Penser que Linux est uniquement pour les serveurs. Linux convient aussi aux serveurs domestiques et mini-PC.',
                             'Oublier la domination NVIDIA. CUDA est la norme ; les alternatives sont des écosystèmes plus petits.'
                         ]
                     },
@@ -753,9 +753,9 @@
                         h2: 'Coût total de propriété 3 ans',
                         items: [
                             'Mac mini M5 Pro 64 Go : 1 999 € (benchmark 70B pas encore publié)',
-                            'Linux + RTX 5060 Ti : 500 € (option la moins chère)',
-                            'Linux + RTX 5090 : 933 € (option Linux la plus rapide)',
-                            'Windows + RTX 5090 : 1 666 € (comprend pilotes, surcharge OS)'
+                            'RTX 5060 Ti (GPU seul) : 769 $ sur 3 ans',
+                            'RTX 4090 d\'occasion (GPU seul, médiane) : 3 136 $',
+                            'RTX 5090 neuve (GPU seul) : 4 853–5 053 $'
                         ]
                     },
                     {
@@ -789,9 +789,9 @@
                         type: 'list',
                         h2: '主要メトリクス一覧',
                         items: [
-                            '<strong>macOS M5 Max (128GB):</strong> 70B時 25–35 トークン/秒、¥330,000、無音',
-                            '<strong>Windows RTX 5090 (32GB):</strong> 70B時 40–50 トークン/秒、¥265,000、最速',
-                            '<strong>Linux RTX 5090 (32GB):</strong> 70B時 42–53 トークン/秒、Windows比 1–5% 高速'
+                            '<strong>macOS M5 Max (128GB):</strong> 70Bを Q8 で保持可能、¥330,000、無音',
+                            '<strong>Windows RTX 5090 (32GB):</strong> 7B Q4_0 で 290.0 tok/s（開発者報告値）、新品は約 $4,500～4,700（InsiderLLM、2026-10-15）',
+                            '<strong>Linux RTX 5090 (32GB):</strong> 同じ GPU で Windows と同じ速度帯、セットアップが異なる'
                         ]
                     },
                     {
@@ -800,7 +800,7 @@
                         items: [
                             'macOS: GPU追加費用ゼロ、最も簡単なセットアップ (6分)、既にMacを所有している場合',
                             'Windows: 業界標準のGPUサポート、成熟したNVIDIA CUDAエコシステム',
-                            'Linux: 最低3年総所有コスト (¥66,000)、24/7サーバー向けに最適'
+                            'Linux: オーバーヘッドが最小、24/7サーバー向けに最適'
                         ]
                     },
                     {
@@ -816,9 +816,9 @@
                         type: 'list',
                         h2: '推論速度の比較',
                         items: [
-                            'M5 Pro (64GB): 70B Q4時 15–20 トークン/秒',
-                            'M5 Max (128GB): 70B Q8時 25–35 トークン/秒 (M4 Max比 4倍向上)',
-                            'RTX 5090: Windows時 70B 40–50 トークン/秒、Linux時 42–53 トークン/秒'
+                            'M5 Pro (64GB): 70B を Q4 で保持可能、出典付き tok/s 値なし',
+                            'M5 Max (128GB): 70B を Q8 で保持可能、出典付き tok/s 値なし',
+                            'RTX 5090: 290.0・RTX 4090: 186.2・RTX 3090: 158.2 tok/s（7B Q4_0、開発者報告値）'
                         ]
                     },
                     {
@@ -827,16 +827,16 @@
                         items: [
                             'MacBook Pro M5 Pro 64GB: ¥331,600',
                             'MacBook Pro M5 Max 128GB: ¥463,400',
-                            'RTX 5090 + ベースシステム: ¥277,000',
-                            'RTX 5060 Ti + ベースシステム: ¥88,000–133,000'
+                            'RTX 5090（GPUのみ）: 新品は約 $4,500～4,700（InsiderLLM、2026-10-15）',
+                            'RTX 5060 Ti（GPUのみ）: $679から（Wccftech、2026-01-27）'
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: 'M5 Max vs RTX 5090 トレードオフ',
                         line1: 'M5 Max: メモリ 4倍、無音、ターンキー',
-                        line2: 'RTX 5090: 推論速度 1.3–1.5倍高速',
-                        tip: '💡 品質+利便性を選ぶなら M5。純粋な速度を選ぶなら RTX。'
+                        line2: 'RTX 5090: ボード電力 575 W、デスクトップ PC が必要',
+                        tip: '💡 70Bの容量と手軽さなら M5、小さなモデルを高速で動かすなら RTX。'
                     },
                     {
                         type: 'list',
@@ -851,8 +851,8 @@
                         type: 'faq',
                         h2: 'よくある質問',
                         faqs: [
-                            { q: 'macOS で 70B を実行できますか？', a: 'はい。M5 Pro (64GB) は 70B Q4 を 15–20 トークン/秒で実行。M5 Max (128GB) は 70B Q8 を 25–35 トークン/秒で実行。' },
-                            { q: 'Linux は消費電力が少ない？', a: 'Linux は OS オーバーヘッド減少で 1–5% 高速。M5 は ~30–40W；RTX 5090 は ~450W。' }
+                            { q: 'macOS で 70B を実行できますか？', a: 'はい。M5 Pro (64GB) は 70B を Q4（約35GB）で保持できます。M5 Max (128GB) は 70B を Q8（約70GB）で保持できます。' },
+                            { q: 'RTX 5090 の消費電力はどのくらいですか？', a: 'NVIDIA はボード電力を 575 W（システム要件 1,000 W）としています。M5 は ~30–40W です。' }
                         ]
                     },
                     {
@@ -869,7 +869,7 @@
                         items: [
                             'macOS は大規模モデルを実行できないと思い込む。実行できる — ただし遅い。',
                             'LLM 用に Windows を購入する。Mac を所持している場合は使用；GPU コストが支配的。',
-                            'Linux はサーバー専用だと思う。Linux は最低 3年総所有コスト (¥66,000)。',
+                            'Linux はサーバー専用だと思う。Linux は自宅サーバーやミニ PC にも向いています。',
                             'NVIDIA の市場支配力を忘れる。CUDA が標準；代替手段は小さいエコシステム。'
                         ]
                     },
@@ -878,9 +878,9 @@
                         h2: '3年総所有コスト分析',
                         items: [
                             'Mac mini M5 Pro 64GB: ¥299,800 (70Bベンチマークは未公表)',
-                            'Linux + RTX 5060 Ti: ¥66,000 (最も安い選択肢)',
-                            'Linux + RTX 5090: ¥155,000 (最速 Linux 選択肢)',
-                            'Windows + RTX 5090: ¥277,000 (ドライバ、OS オーバーヘッド含む)'
+                            'RTX 5060 Ti（GPUのみ）: 3年で $769',
+                            'RTX 4090 中古（GPUのみ、中央値）: $3,136',
+                            'RTX 5090 新品（GPUのみ）: $4,853～5,053'
                         ]
                     },
                     {
@@ -914,9 +914,9 @@
                         type: 'list',
                         h2: '关键指标概览',
                         items: [
-                            '<strong>macOS M5 Max (128GB):</strong> 70B时 25–35 令牌/秒，$3,499，无声',
-                            '<strong>Windows RTX 5090 (32GB):</strong> 70B时 40–50 令牌/秒，$2,500，最快',
-                            '<strong>Linux RTX 5090 (32GB):</strong> 70B时 42–53 令牌/秒，比Windows快 1–5%'
+                            '<strong>macOS M5 Max (128GB):</strong> 可容纳 Q8 的 70B，$3,499，无声',
+                            '<strong>Windows RTX 5090 (32GB):</strong> 7B Q4_0 上 290.0 tok/s（开发者报告值），新品约 $4,500–4,700（InsiderLLM，2026-10-15）',
+                            '<strong>Linux RTX 5090 (32GB):</strong> 同一块 GPU，速度档位与 Windows 相同；配置方式不同'
                         ]
                     },
                     {
@@ -925,7 +925,7 @@
                         items: [
                             'macOS：GPU成本为零、设置最简单 (6分钟)、如果已经拥有Mac',
                             'Windows：行业标准GPU支持、成熟的NVIDIA CUDA生态系统',
-                            'Linux：3年总拥有成本最低 ($810)、最适合24/7服务器'
+                            'Linux：系统开销最低、最适合24/7服务器'
                         ]
                     },
                     {
@@ -941,9 +941,9 @@
                         type: 'list',
                         h2: '推理速度比较',
                         items: [
-                            'M5 Pro (64GB)：70B Q4时 15–20 令牌/秒',
-                            'M5 Max (128GB)：70B Q8时 25–35 令牌/秒 (比M4 Max快4倍)',
-                            'RTX 5090：Windows时 70B 40–50 令牌/秒，Linux时 42–53 令牌/秒'
+                            'M5 Pro (64GB)：可容纳 Q4 的 70B；无带来源的 tok/s 数据',
+                            'M5 Max (128GB)：可容纳 Q8 的 70B；无带来源的 tok/s 数据',
+                            'RTX 5090：290.0 · RTX 4090：186.2 · RTX 3090：158.2 tok/s（7B Q4_0，开发者报告值）'
                         ]
                     },
                     {
@@ -952,16 +952,16 @@
                         items: [
                             'MacBook Pro M5 Pro 64GB：$2,499',
                             'MacBook Pro M5 Max 128GB：$3,499',
-                            'RTX 5090 + 基础系统：$2,500',
-                            'RTX 5060 Ti + 基础系统：$800–1,000'
+                            'RTX 5090（仅GPU）：新品约 $4,500–4,700（InsiderLLM，2026-10-15）',
+                            'RTX 5060 Ti（仅GPU）：$679 起（Wccftech，2026-01-27）'
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: 'M5 Max vs RTX 5090 权衡',
                         line1: 'M5 Max：内存多4倍、无声、即插即用',
-                        line2: 'RTX 5090：推理速度快 1.3–1.5倍',
-                        tip: '💡 选择M5获得质量+便利。选择RTX获得纯粹速度。'
+                        line2: 'RTX 5090：板卡功耗 575 W，需要台式机',
+                        tip: '💡 看重70B容量+便利选M5；想在较小模型上追求速度选RTX。'
                     },
                     {
                         type: 'list',
@@ -976,8 +976,8 @@
                         type: 'faq',
                         h2: '常见问题',
                         faqs: [
-                            { q: '我能在macOS上运行70B吗？', a: '能。M5 Pro (64GB)在15–20令牌/秒下运行70B Q4。M5 Max (128GB)在25–35令牌/秒下运行70B Q8。' },
-                            { q: 'Linux消耗更少的电力吗？', a: 'Linux由于OS开销降低快1–5%。M5消耗~30–40W；RTX 5090消耗~450W。' }
+                            { q: '我能在macOS上运行70B吗？', a: '能。M5 Pro (64GB)可容纳 Q4 的 70B（约35GB）。M5 Max (128GB)可容纳 Q8 的 70B（约70GB）。' },
+                            { q: 'RTX 5090 的功耗是多少？', a: 'NVIDIA 标注板卡功耗为 575 W（整机电源要求 1,000 W）。M5 消耗~30–40W。' }
                         ]
                     },
                     {
@@ -994,7 +994,7 @@
                         items: [
                             '假设macOS无法运行大型模型。它能 — 只是速度慢。',
                             '专门为LLM购买Windows。如果你拥有Mac，就使用它；GPU成本占主导。',
-                            '认为Linux仅用于服务器。Linux的3年总拥有成本最低 ($810)。',
+                            '认为Linux仅用于服务器。Linux也适合家用服务器和迷你PC。',
                             '忘记NVIDIA的市场主导地位。CUDA是标准；替代品是较小的生态系统。'
                         ]
                     },
@@ -1003,9 +1003,9 @@
                         h2: '3年总拥有成本分析',
                         items: [
                             'Mac mini M5 Pro 64GB：$1,699（70B基准测试尚未公布）',
-                            'Linux + RTX 5060 Ti：$810 (最便宜的选择)',
-                            'Linux + RTX 5090：$1,500 (最快的Linux选择)',
-                            'Windows + RTX 5090：$2,620 (包括驱动程序、OS开销)'
+                            'RTX 5060 Ti（仅GPU）：3年 $769',
+                            'RTX 4090 二手（仅GPU，中位数）：$3,136',
+                            'RTX 5090 新品（仅GPU）：$4,853–5,053'
                         ]
                     },
                     {
