@@ -88,8 +88,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': 'Desktop RTX 5090', 'Model': 'Llama 2 7B Q4_0 (llama-bench)', 'Speed': '290.0 tok/sec (developer-reported)', 'Throttle': 'None (24/7)' },
           ],
           columns: ['Hardware', 'Model', 'Speed', 'Throttle'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg',
-          imageCaption: 'Laptop vs desktop performance: MacBook Pro M4 Max reaches 35 tok/sec before throttling, while desktop RTX 4070 Ti sustains 80 tok/sec 24/7 — a 2.3× speed difference. Cost efficiency: $140 per tok/sec (laptop) vs $19 per tok/sec (desktop).',
         },
         thermals: {
           id: 'thermals',
@@ -113,8 +111,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Option': 'Desktop RTX 5090 (32 GB)', 'Cost': '$4,500-4,700 (card only)', 'LLM Speed': '290.0 tok/sec (7B Q4_0)', 'Cost/tok/sec': '$15.5-16.2' },
           ],
           columns: ['Option', 'Cost', 'LLM Speed', 'Cost/tok/sec'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg',
-          imageCaption: 'Cost per token/sec comparison: MacBook Pro M4 Max (~$100/tok/sec) is 5.3× more expensive than desktop RTX 4070 Ti ($19/tok/sec). Desktop RTX 4090 (about $13.8–16.2/tok/sec for the card alone: $2,575–3,010 in used sold listings ÷ 186.2 tok/sec on a 7B Q4_0 test).',
         },
         whenToChoose: {
           id: 'when-to-choose',
@@ -136,8 +132,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'You prioritize cost efficiency.',
             'You want to avoid thermal throttling.',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-en.svg',
-          imageCaption: 'Decision framework: Choose laptop if you need daily portability (15-25 tok/sec, $140/tok/sec). Choose desktop if you need 70B models, sustained speed (80+ tok/sec), or cost efficiency ($19/tok/sec).',
         },
         buyingGuide: {
           id: 'buying-guide',
@@ -446,8 +440,6 @@ schema: {
             { 'Hardware': 'Escritorio RTX 5090', 'Modelo': 'Llama 2 7B Q4_0 (llama-bench)', 'Velocidad': '290.0 tok/seg (reportado por desarrolladores)', 'Throttle': 'Ninguno (24/7)' },
           ],
           columns: ['Hardware', 'Modelo', 'Velocidad', 'Throttle'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-es.svg',
-          imageCaption: 'Rendimiento laptop vs escritorio: MacBook Pro M4 Max alcanza 35 tok/seg antes del throttling, mientras el escritorio RTX 4070 Ti sostiene 80 tok/seg 24/7 — una diferencia de velocidad de 2.3×. Eficiencia de costo: $140 por tok/seg (laptop) vs $19 por tok/seg (escritorio).',
         },
         thermals: {
           id: 'thermals',
@@ -471,8 +463,6 @@ schema: {
             { 'Opción': 'Escritorio RTX 5090 (32 GB)', 'Costo': '$4,500-4,700 (solo tarjeta)', 'Velocidad LLM': '290.0 tok/seg (7B Q4_0)', 'Costo/tok/seg': '$15.5-16.2' },
           ],
           columns: ['Opción', 'Costo', 'Velocidad LLM', 'Costo/tok/seg'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-es.svg',
-          imageCaption: 'Comparación de costo por token/seg: MacBook Pro M4 Max (~$100/tok/seg) es 5.3× más caro que el escritorio RTX 4070 Ti ($19/tok/seg). El escritorio RTX 4090 (unos $13.8–16.2/tok/seg solo por la tarjeta: $2,575–3,010 en anuncios usados vendidos ÷ 186.2 tok/seg en una prueba 7B Q4_0).',
         },
         whenToChoose: {
           id: 'when-to-choose',
@@ -494,8 +484,6 @@ schema: {
             'Priorizas la eficiencia de costo.',
             'Quieres evitar el throttling térmico.',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-es.svg',
-          imageCaption: 'Marco de decisión: Elige laptop si necesitas portabilidad diaria (15-25 tok/seg, $140/tok/seg). Elige escritorio si necesitas modelos 70B, velocidad sostenida (80+ tok/seg) o eficiencia de costo ($19/tok/seg).',
         },
         buyingGuide: {
           id: 'buying-guide',
@@ -804,8 +792,6 @@ schema: {
             { 'الجهاز': 'مكتبي RTX 5090', 'النموذج': 'Llama 2 7B Q4_0 (llama-bench)', 'السرعة': '290.0 tok/sec (أفاد بها مطوّرون)', 'الاختناق': 'لا شيء (24/7)' },
           ],
           columns: ['الجهاز', 'النموذج', 'السرعة', 'الاختناق'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg',
-          imageCaption: 'أداء المحمول مقابل المكتبي: يبلغ MacBook Pro M4 Max 35 tok/sec قبل الاختناق، بينما يحافظ مكتبي RTX 4070 Ti على 80 tok/sec على مدار الساعة — فارق سرعة 2.3×. كفاءة التكلفة: 140$ لكل tok/sec (محمول) مقابل 19$ لكل tok/sec (مكتبي).',
         },
         thermals: {
           id: 'thermals',
@@ -829,8 +815,6 @@ schema: {
             { 'الخيار': 'مكتبي RTX 5090 (32 GB)', 'التكلفة': '4500$-4700$ (البطاقة وحدها)', 'سرعة LLM': '290.0 tok/sec (7B Q4_0)', 'التكلفة/tok/sec': '15.5$-16.2$' },
           ],
           columns: ['الخيار', 'التكلفة', 'سرعة LLM', 'التكلفة/tok/sec'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg',
-          imageCaption: 'مقارنة التكلفة لكل token/sec: MacBook Pro M4 Max (~100$/tok/sec) أغلى بـ 5.3× من مكتبي RTX 4070 Ti (19$/tok/sec). ويبلغ مكتبي RTX 4090 نحو 13.8$-16.2$/tok/sec للبطاقة وحدها (2575$-3010$ في الإعلانات المستعملة المباعة ÷ 186.2 tok/sec في اختبار 7B Q4_0).',
         },
         whenToChoose: {
           id: 'when-to-choose',
@@ -852,8 +836,6 @@ schema: {
             'تعطي الأولوية لكفاءة التكلفة.',
             'تريد تجنّب الاختناق الحراري.',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-en.svg',
-          imageCaption: 'إطار القرار: اختر المحمول إذا احتجت قابلية حمل يومية (15-25 tok/sec، 140$/tok/sec). واختر المكتبي إذا احتجت نماذج 70B أو سرعة مستدامة (80+ tok/sec) أو كفاءة تكلفة (19$/tok/sec).',
         },
         buyingGuide: {
           id: 'buying-guide',
@@ -1309,8 +1291,6 @@ schema: {
             { 'Hardware': 'Desktop RTX 4090', 'Modell': 'Llama 2 7B Q4_0 (llama-bench)', 'Geschwindigkeit': '186,2 Tok/Sek (von Entwicklern gemeldet)', 'Throttling': 'Keines (24/7)' },
           ],
           columns: ['Hardware', 'Modell', 'Geschwindigkeit', 'Throttling'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg',
-          imageCaption: 'Leistungsvergleich Laptop vs. Desktop: MacBook Pro M4 Max erreicht 35 Tok/Sek, bevor es drosselt; Desktop RTX 4070 Ti hält dauerhaft 80 Tok/Sek aufrecht — ein 2,3-facher Geschwindigkeitsunterschied. Kosteneffizienz: 160 € pro Tok/Sek (Laptop) vs. 21 € pro Tok/Sek (Desktop).',
         },
         thermals: {
           id: 'thermals',
@@ -1334,8 +1314,6 @@ schema: {
             { 'Option': 'Desktop RTX 4090', 'Kosten': '2.575–3.010 $ gebraucht, 2.000–3.000 $ neu (nur Karte)', 'LLM-Geschwindigkeit': '186,2 Tok/Sek (7B Q4_0)', 'Kosten/Tok/Sek': '13,8–16,2 $' },
           ],
           columns: ['Option', 'Kosten', 'LLM-Geschwindigkeit', 'Kosten/Tok/Sek'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg',
-          imageCaption: 'Kosten pro Token/Sek im Vergleich: MacBook Pro M4 Max (~114 €/Tok/Sek) ist 5,3-mal teurer als Desktop RTX 4070 Ti (21 €/Tok/Sek). Desktop RTX 4090 (etwa 13,8–16,2 $/Tok/Sek nur für die Karte: 2.575–3.010 $ in verkauften gebrauchten Angeboten laut InsiderLLM, Quelle aktualisiert am 2026-10-15, geteilt durch 186,2 Tok/Sek bei einem 7B-Q4_0-Test).',
         },
         whenToChoose: {
           id: 'when-to-choose',
@@ -1357,8 +1335,6 @@ schema: {
             'Ihnen Kosteneffizienz wichtig ist.',
             'Sie thermisches Throttling vermeiden möchten.',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-en.svg',
-          imageCaption: 'Entscheidungsrahmen: Laptop wählen für tägliche Mobilität (15–25 Tok/Sek, 160 €/Tok/Sek). Desktop wählen für 70B-Modelle, dauerhafte Geschwindigkeit (80+ Tok/Sek) oder Kosteneffizienz (21 €/Tok/Sek).',
         },
         buyingGuide: {
           id: 'buying-guide',
@@ -1641,8 +1617,6 @@ schema: {
             { 'Matériel': 'Desktop RTX 4090', 'Modèle': 'Llama 2 7B Q4_0 (llama-bench)', 'Vitesse': '186.2 tok/s (rapporté par des développeurs)', 'Throttling': 'Aucun (24/7)' },
           ],
           columns: ['Matériel', 'Modèle', 'Vitesse', 'Throttling'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg',
-          imageCaption: 'Comparaison laptop vs bureau : MacBook Pro M4 Max atteint 35 tok/s avant throttling ; Desktop RTX 4070 Ti maintient 80 tok/s en continu — écart de 2.3×. Efficacité coût : 160 €/tok/s (laptop) vs 21 €/tok/s (bureau).',
         },
         thermals: {
           id: 'thermals',
@@ -1666,8 +1640,6 @@ schema: {
             { 'Option': 'Desktop RTX 4090', 'Prix': '2 575–3 010 $ d\'occasion, 2 000–3 000 $ neuve (carte seule)', 'Vitesse LLM': '186.2 tok/s (7B Q4_0)', 'Coût/tok/s': '13.8–16.2 $' },
           ],
           columns: ['Option', 'Prix', 'Vitesse LLM', 'Coût/tok/s'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg',
-          imageCaption: 'Coût par token/s : MacBook Pro M4 Max (~114 €/tok/s) est 5.3× plus cher que Desktop RTX 4070 Ti (21 €/tok/s). Desktop RTX 4090 (environ 13.8–16.2 $/tok/s pour la carte seule : 2 575–3 010 $ en annonces d\'occasion vendues selon InsiderLLM, source mise à jour le 2026-10-15, divisé par 186.2 tok/s sur un test 7B Q4_0).',
         },
         whenToChoose: {
           id: 'when-to-choose',
@@ -1689,8 +1661,6 @@ schema: {
             'Vous privilégiez l\'efficacité coût.',
             'Vous voulez éviter le throttling thermique.',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-en.svg',
-          imageCaption: 'Cadre décisionnel : laptop pour la mobilité quotidienne (15–25 tok/s, 160 €/tok/s). Bureau pour les modèles 70B, vitesse soutenue (80+ tok/s) ou efficacité coût (21 €/tok/s).',
         },
         buyingGuide: {
           id: 'buying-guide',
@@ -1954,8 +1924,6 @@ schema: {
             { 'ハードウェア': 'デスクトップ RTX 4090', 'モデル': 'Llama 2 7B Q4_0 (llama-bench)', '速度': '186.2トークン/秒（開発者報告）', 'スロットリング': 'なし（24時間365日）' },
           ],
           columns: ['ハードウェア', 'モデル', '速度', 'スロットリング'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg',
-          imageCaption: 'ラップトップ vs デスクトップ パフォーマンス：MacBook Pro M4 Maxはスロットリング前に35トークン/秒に達し、デスクトップRTX 4070 Tiは24時間365日80トークン/秒を維持 — 2.3倍の速度差。コスト効率：ラップトップで140ドル/トークン/秒 vs デスクトップで19ドル/トークン/秒。',
         },
         thermals: {
           id: 'thermals',
@@ -1979,8 +1947,6 @@ schema: {
             { 'オプション': 'デスクトップ RTX 4090', '価格': '中古2,575〜3,010ドル、新品2,000〜3,000ドル（カード単体）', 'LLM速度': '186.2トークン/秒（7B Q4_0）', 'コスト/トークン/秒': '13.8〜16.2ドル' },
           ],
           columns: ['オプション', '価格', 'LLM速度', 'コスト/トークン/秒'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg',
-          imageCaption: 'トークン/秒あたりコスト比較：MacBook Pro M4 Max（約100ドル/トークン/秒）はデスクトップRTX 4070 Ti（19ドル/トークン/秒）より5.3倍高コスト。デスクトップRTX 4090はカード単体で約13.8〜16.2ドル/トークン/秒（InsiderLLMの中古売却済み出品2,575〜3,010ドル、出典更新日2026-10-15 ÷ 7B Q4_0テストの186.2トークン/秒）。',
         },
         whenToChoose: {
           id: 'when-to-choose',
@@ -2002,8 +1968,6 @@ schema: {
             'コスト効率を優先する場合。',
             '熱的スロットリングを回避したい場合。',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-en.svg',
-          imageCaption: '判断フレームワーク：日常の携帯性が必要な場合はラップトップを選択（15〜25トークン/秒、140ドル/トークン/秒）。70Bモデル、持続速度（80トークン/秒以上）、またはコスト効率（19ドル/トークン/秒）が必要な場合はデスクトップを選択。',
         },
         buyingGuide: {
           id: 'buying-guide',
@@ -2267,8 +2231,6 @@ schema: {
             { '硬件': '台式机 RTX 4090', '模型': 'Llama 2 7B Q4_0 (llama-bench)', '速度': '186.2令牌/秒（开发者报告）', '降频': '无（全天候）' },
           ],
           columns: ['硬件', '模型', '速度', '降频'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg',
-          imageCaption: '笔记本 vs 台式机性能：MacBook Pro M4 Max在降频前达到35令牌/秒，台式机RTX 4070 Ti全天候维持80令牌/秒 — 速度差2.3倍。成本效率：笔记本140美元/令牌/秒 vs 台式机19美元/令牌/秒。',
         },
         thermals: {
           id: 'thermals',
@@ -2292,8 +2254,6 @@ schema: {
             { '选项': '台式机 RTX 4090', '价格': '二手2,575–3,010美元，新品2,000–3,000美元（仅显卡）', 'LLM速度': '186.2令牌/秒（7B Q4_0）', '成本/令牌/秒': '13.8–16.2美元' },
           ],
           columns: ['选项', '价格', 'LLM速度', '成本/令牌/秒'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg',
-          imageCaption: '每令牌/秒成本对比：MacBook Pro M4 Max（约100美元/令牌/秒）比台式机RTX 4070 Ti（19美元/令牌/秒）贵5.3倍。台式机RTX 4090仅显卡约13.8–16.2美元/令牌/秒（InsiderLLM二手已售出挂牌价2,575–3,010美元，来源更新于2026-10-15，除以7B Q4_0测试的186.2令牌/秒）。',
         },
         whenToChoose: {
           id: 'when-to-choose',
@@ -2315,8 +2275,6 @@ schema: {
             '优先考虑成本效率。',
             '希望避免散热降频。',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-en.svg',
-          imageCaption: '决策框架：需要日常便携性选笔记本（15~25令牌/秒，140美元/令牌/秒）。需要70B模型、持续速度（80令牌/秒以上）或成本效率（19美元/令牌/秒）选台式机。',
         },
         buyingGuide: {
           id: 'buying-guide',
@@ -2586,8 +2544,6 @@ schema: {
             { 'Hardware': '데스크톱 RTX 5090', 'Model': 'Llama 2 7B Q4_0 (llama-bench)', 'Speed': '290.0 tok/sec (개발자 보고)', 'Throttle': '없음 (24/7)' },
           ],
           columns: ['Hardware', 'Model', 'Speed', 'Throttle'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg',
-          imageCaption: '노트북 vs 데스크톱 성능: MacBook Pro M4 Max는 스로틀링 전까지 35 tok/sec에 도달하는 반면, 데스크톱 RTX 4070 Ti는 24/7 동안 80 tok/sec를 지속합니다 — 2.3배의 속도 차이. 비용 효율성: 노트북 tok/sec당 $140 vs 데스크톱 tok/sec당 $19.',
         },
         thermals: {
           id: 'thermals',
@@ -2611,8 +2567,6 @@ schema: {
             { 'Option': '데스크톱 RTX 5090 (32 GB)', 'Cost': '$4,500-4,700 (카드 단품)', 'LLM Speed': '290.0 tok/sec (7B Q4_0)', 'Cost/tok/sec': '$15.5-16.2' },
           ],
           columns: ['Option', 'Cost', 'LLM Speed', 'Cost/tok/sec'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg',
-          imageCaption: 'tok/sec당 비용 비교: MacBook Pro M4 Max(~$100/tok/sec)는 데스크톱 RTX 4070 Ti($19/tok/sec)보다 5.3배 더 비쌉니다. 데스크톱 RTX 4090은 카드 단품 기준 tok/sec당 약 $13.8-16.2입니다(중고 판매 완료 매물 $2,575-3,010 ÷ 7B Q4_0 테스트 186.2 tok/sec).',
         },
         whenToChoose: {
           id: 'when-to-choose',
@@ -2634,8 +2588,6 @@ schema: {
             '비용 효율성을 우선시하는 경우.',
             '열 스로틀링을 피하고 싶은 경우.',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-en.svg',
-          imageCaption: '결정 프레임워크: 일상적인 이동성이 필요하면 노트북을 선택하십시오(15-25 tok/sec, tok/sec당 $140). 70B 모델, 지속적인 속도(80+ tok/sec), 또는 비용 효율성($19/tok/sec)이 필요하면 데스크톱을 선택하십시오.',
         },
         buyingGuide: {
           id: 'buying-guide',

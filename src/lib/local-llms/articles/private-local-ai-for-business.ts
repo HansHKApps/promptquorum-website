@@ -66,8 +66,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Factor': 'Vendor lock-in', 'Cloud API (GPT-5.6)': 'High — API format changes, pricing changes', 'On-Premises AI': 'None — switch models/frameworks freely' },
           ],
           columns: ['Factor', 'Cloud API (GPT-5.6)', 'On-Premises AI'],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg',
-          imageCaption: 'Cloud APIs expose data to external servers with 200–500ms latency and $20,000+ annual costs, while on-premises infrastructure keeps data local with 50–150ms latency and about $3,000–3,100 in amortized annual costs.',
         },
         compliance: {
           id: 'compliance',
@@ -90,14 +88,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           codeBlock: '# Example: Kubernetes deployment (August 2026)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 per pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-en.svg',
-          imageCaption: 'On-premises infrastructure achieves 50–150ms first-token latency compared to 200–500ms on cloud APIs, with no network round-trip, no cloud queuing, predictable performance, and unlimited concurrent requests.',
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: 'Hardware Requirements by Deployment Scale',
-          image: '/images/private-local-ai-for-business-hardware-requirements-en.svg',
-          imageCaption: 'Hardware requirements by deployment scale: Small teams need 1× RTX 5090 (about $4,500–4,700, InsiderLLM listing data, 2026-10-15), production deployments require 2–4× RTX 5090s ($9,000–18,800, cards only), enterprise scale requires A100 clusters or multi-node RTX 5090 setups.',
           content: [
             'Scale your deployment based on concurrency and token throughput needs. Start with a single GPU for testing, then add more GPUs for production workloads.',
           ],
@@ -116,8 +110,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             'On-premises cost assumes: 1× RTX 5090 (about $4,500–4,700 new, [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) listing data, source updated 2026-10-15) amortized over 36 months = $125–131/month hardware (4,500 ÷ 36 = 125.0; 4,700 ÷ 36 = 130.6). Add $50/month electricity (US avg) and $27/month cooling/networking, which are this page\'s own assumptions; NVIDIA lists 575 W board power for the RTX 5090 ([NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)). Total: about $202–208/month fixed regardless of volume. Cloud API pricing based on a ~$0.005/1K blended input/output estimate for GPT-5.6 Terra (OpenAI\'s own published rates: $2/1M input, $12/1M output, August 2026) -- your actual blend depends on your input:output token ratio. Break-even: about 40–42M tokens/month ($202–208 ÷ $5 per 1M tokens).',
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-en.svg',
-          imageCaption: 'Cost break-even analysis: On-premises infrastructure becomes cost-effective from roughly 40M tokens per month, paying for the card in about 5 months at 200M tokens per month (cloud: $12,000 per year at $1,000 per month).',
         },
         useCases: {
           id: 'use-cases',
@@ -142,8 +134,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Poor security posture.** Network isolation, encryption, and access controls are critical. Audit regularly.',
             '**Using old open-source models.** Models from 2023 are outdated. Retrain or fine-tune regularly as new base models emerge.',
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-en.svg',
-          imageCaption: 'Four critical mistakes when deploying on-premises AI: underestimating total cost of ownership (plan 3–5× hardware cost), poor scaling design (single GPU cannot handle production), neglecting disaster recovery, and weak security posture.',
         },
         faqSection: {
           id: 'faq',
@@ -346,8 +336,6 @@ de: {
             { 'Faktor': 'Herstellerbindung', 'Cloud-API (GPT-5.6)': 'Hoch — API-Format-Änderungen, Preisänderungen', 'On-Premises-KI': 'Keine — wechseln Sie frei zwischen Modellen/Frameworks' },
           ],
           columns: ['Faktor', 'Cloud-API (GPT-5.6)', 'On-Premises-KI'],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg',
-          imageCaption: 'Cloud-APIs offenbaren Daten mit 200–500 ms Latenz und 20.000+ $ jährlichen Kosten, während On-Premises-Infrastruktur Daten lokal mit 50–150 ms Latenz und rund 3.000–3.100 $ amortisierten jährlichen Kosten hält.',
         },
         compliance: {
           id: 'compliance',
@@ -371,14 +359,10 @@ de: {
           ],
           codeBlock: '# Beispiel: Kubernetes-Bereitstellung (August 2026)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 pro Pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-en.svg',
-          imageCaption: 'On-Premises-Infrastruktur erreicht 50–150 ms Latenz beim ersten Token im Vergleich zu 200–500 ms auf Cloud-APIs, mit keinem Netzwerk-Round-Trip, keinem Cloud-Queuing, vorhersehbarer Performance und unbegrenzten gleichzeitigen Anfragen.',
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: 'Hardwareanforderungen nach Bereitstellungsumfang',
-          image: '/images/private-local-ai-for-business-hardware-requirements-en.svg',
-          imageCaption: 'Hardwareanforderungen nach Umfang: Kleine Teams benötigen 1× RTX 5090 (rund 4.500–4.700 $, Angebotsdaten von InsiderLLM, 2026-10-15), Produktionsbereitstellungen erfordern 2–4× RTX 5090 (9.000–18.800 $, nur Karten), Enterprise-Umfang erfordert A100-Cluster oder Multi-Node-RTX-5090-Setups.',
           content: [
             'Skalieren Sie Ihre Bereitstellung basierend auf Parallelitäts- und Token-Durchsatzanforderungen. Beginnen Sie mit einer einzelnen GPU zum Testen, dann fügen Sie mehr GPUs für Produktions-Workloads hinzu.',
           ],
@@ -397,8 +381,6 @@ de: {
           content: [
             'On-Premises-Kosten setzen voraus: 1× RTX 5090 (rund 4.500–4.700 $ neu, Angebotsdaten von [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert am 2026-10-15; in USD, nicht in EUR umgerechnet) amortisiert über 36 Monate = 125–131 $/Monat Hardware (4.500 ÷ 36 = 125,0; 4.700 ÷ 36 = 130,6). Addieren Sie 50 $/Monat Strom und 27 $/Monat Kühlung/Netzwerk (eigene Annahmen dieser Seite); NVIDIA nennt für die RTX 5090 eine Boardleistung von 575 W ([NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)). Gesamtbudget: ca. 202–208 $/Monat unabhängig vom Volumen. Cloud-API-Preisgestaltung basiert auf GPT-5.6 mit 0,005 $/1K-Token (August 2026). Break-Even-Punkt: ca. 40–42 Mio. Token/Monat (202–208 $ ÷ 5 $ pro 1 Mio. Token).',
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-en.svg',
-          imageCaption: 'Break-Even-Analyse: On-Premises-Infrastruktur wird ab etwa 40 Mio. Token/Monat rentabel und amortisiert die Karte bei 200 Mio. Token/Monat in rund 5 Monaten (Cloud: 12.000 $ pro Jahr bei 1.000 $ pro Monat).',
         },
         useCases: {
           id: 'use-cases',
@@ -423,8 +405,6 @@ de: {
             '**Schwache Sicherheitslage.** Netzwerkisolierung, Verschlüsselung und Zugriffskontrolle sind entscheidend. Regelmäßig auditen.',
             '**Alte Open-Source-Modelle verwenden.** 2023er-Modelle sind veraltet. Regelmäßig neu trainieren oder anpassen, wenn neue Basis-Modelle erscheinen.',
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-en.svg',
-          imageCaption: 'Vier kritische Fehler bei Private-lokaler-KI-Bereitstellung: Unterschätzung der Gesamtbetriebskosten (3–5× Hardware-Kosten planen), schlechte Skalierungskonzeption (Single-GPU kann nicht produktion), Disaster-Recovery-Vernachlässigung, schwache Sicherheitslage.',
         },
         faqSection: {
           id: 'faq',
@@ -722,8 +702,6 @@ schema: {
             'API Cloud (GPT-5.6)',
             'IA On-Premises'
           ],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg',
-          imageCaption: 'Les APIs cloud exposent les données avec latence 200–500ms et coûts de 30 000–60 000 $ par an, tandis que l\'infrastructure on-premises garde les données locales avec latence 50–150ms et environ 3 000–3 100 $ de coûts amortis par an.'
         },
         compliance: {
           id: 'compliance',
@@ -746,14 +724,10 @@ schema: {
           ],
           codeBlock: '# Exemple : déploiement Kubernetes (avril 2026)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 par pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-en.svg',
-          imageCaption: 'L\'infrastructure on-premises atteint latence 1er token 50–150ms comparée à 200–500ms sur APIs cloud, sans RTT réseau, pas d\'attente cloud, performance prévisible et requêtes concurrentes illimitées.'
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: 'Ressources Matérielles Par Échelle de Déploiement',
-          image: '/images/private-local-ai-for-business-hardware-requirements-en.svg',
-          imageCaption: 'Ressources par échelle : petites équipes besoin 1× RTX 5090 (environ 4 500–4 700 $, données d\'annonces InsiderLLM, 2026-10-15), déploiements production besoin 2–4× RTX 5090 (9 000–18 800 $, cartes seules), échelle entreprise besoin clusters A100 ou setups multi-nœud RTX 5090.',
           content: [
             'Adaptez votre déploiement selon concurrence et besoins débit token. Commencez avec GPU unique pour test, puis ajoutez GPUs pour workloads production.'
           ]
@@ -775,8 +749,6 @@ schema: {
           content: [
             'Coûts on-premises supposent : 1× RTX 5090 (environ 4 500–4 700 $ neuve, données d\'annonces [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15 ; en USD, non converti en EUR) amorti sur 36 mois = 125–131 $/mois matériel (4 500 ÷ 36 = 125,0 ; 4 700 ÷ 36 = 130,6). Ajoutez 50 $/mois électricité et 27 $/mois refroidissement/réseau (hypothèses propres à cette page) ; NVIDIA indique 575 W de puissance de carte pour la RTX 5090 ([NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)). Total : ~202–208 $/mois fixes indépendamment du volume. Tarification API cloud basée GPT-5.6 à 0,005 $/1K tokens (avril 2026). Point mort : ~40–42 M tokens/mois (202–208 $ ÷ 5 $ par million de tokens).'
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-en.svg',
-          imageCaption: 'Analyse point mort : infrastructure on-premises devient rentable dès ~40 M tokens/mois et amortit la carte en environ 5 mois à 200 M tokens/mois (cloud : 12 000 $ par an à 1 000 $ par mois).'
         },
         useCases: {
           id: 'use-cases',
@@ -801,8 +773,6 @@ schema: {
             '**Posture sécurité faible.** Isolation réseau, chiffrement et contrôles accès critiques. Auditer régulièrement.',
             '**Utiliser anciens modèles open-source.** Modèles 2023 obsolètes. Reretrainer ou ajuster régulièrement selon nouveaux modèles base.'
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-en.svg',
-          imageCaption: 'Quatre erreurs critiques en déploiement IA on-premises : sous-estimation coût total possession (plan 3–5× coûts matériel), mauvaise conception évolutivité (GPU unique ne peut pas production), négligence récupération sinistre et faible posture sécurité.'
         },
         faqSection: {
           id: 'faq',
@@ -1108,8 +1078,6 @@ schema: {
             'クラウドAPI（GPT-5.6)',
             'オンプレミスAI'
           ],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg',
-          imageCaption: 'クラウドAPIはデータ露出、200–500msレイテンシ、年間$30,000〜60,000のコストを引き起こし、一方オンプレミスインフラストラクチャはデータをローカルに保持、50–150msレイテンシ、減価償却ハードウェアコスト年間約$3,000〜3,100を実現します。'
         },
         compliance: {
           id: 'compliance',
@@ -1132,14 +1100,10 @@ schema: {
           ],
           codeBlock: '# 例 ： Kubernetesデプロイメント（2026年4月）\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 per pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-en.svg',
-          imageCaption: 'オンプレミスインフラストラクチャは初期トークンレイテンシ 50–150ms を実現、クラウドAPI 200–500ms と比較して、ネットワークRTT なし、クラウド待機なし、予測可能なパフォーマンス、無制限の同時リクエスト。'
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: 'デプロイメント規模別のハードウェアリソース',
-          image: '/images/private-local-ai-for-business-hardware-requirements-en.svg',
-          imageCaption: 'スケール別リソース ： 小規模チーム RTX 5090 1台（約$4,500〜4,700、InsiderLLM出品データ、2026-10-15）必要、本番展開 RTX 5090 2–4台（$9,000〜18,800、カードのみ）必要、エンタープライズスケール A100またはマルチノードRTX 5090セットアップ必要です。',
           content: [
             '同時実行数とスループット要件に応じてデプロイメントを調整します。テスト用に単一GPUで開始し、本番ワークロードの場合はGPUを追加します。'
           ]
@@ -1161,8 +1125,6 @@ schema: {
           content: [
             'オンプレミスコストは以下を想定 ： RTX 5090（新品 約$4,500〜4,700、[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)の出品データ、出典更新日2026-10-15。米ドル表記）36ヶ月減価償却 = 月$125〜131ハードウェア（4,500 ÷ 36 = 125.0、4,700 ÷ 36 = 130.6）。月$50電気代、月$27冷却/ネットワークを追加（本ページ独自の想定）。NVIDIAはRTX 5090のボード電力を575 Wと記載しています（[NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)）。合計 ： ボリュームに関係なく月約$202〜208固定。クラウド API価格 GPT-5.6（2026年4月）$0.005/1Kトークン。採算分岐点 ： 月約4,000万〜4,200万トークン（$202〜208 ÷ 100万トークンあたり$5）。'
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-en.svg',
-          imageCaption: '採算分析 ： オンプレミスインフラストラクチャは月約4,000万トークン以上で採算性が高くなり、月2億トークンならカード代を約5ヶ月で回収します（クラウドは月$1,000、年$12,000）。'
         },
         useCases: {
           id: 'use-cases',
@@ -1187,8 +1149,6 @@ schema: {
             '**セキュリティ対策が弱い。** ネットワーク分離、暗号化、アクセス制御が重要。定期的に監査します。',
             '**古いオープンソースモデルを使用する。** 2023モデルは廃止予定。新しいベースモデルに合わせて定期的に再トレーニングまたは調整します。'
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-en.svg',
-          imageCaption: 'オンプレミスAI展開の4つの重大な誤り ： 総所有コスト過小評価（ハードウェアコストの 3–5倍を予算化）、スケーラビリティ設計が不十分（単一GPUは本番環境に対応不可）、ディザスタリカバリ無視、弱いセキュリティ対策。'
         },
         faqSection: {
           id: 'faq',
@@ -1516,8 +1476,6 @@ schema: {
             '云API (GPT-5.6)',
             '本地AI'
           ],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg',
-          imageCaption: '云API暴露数据于外部服务器，延迟200–500ms，年成本$20,000+，而本地基础设施保持数据本地化，延迟50–150ms，年摊销成本约$3,000–3,100。'
         },
         compliance: {
           id: 'compliance',
@@ -1541,14 +1499,10 @@ schema: {
           ],
           codeBlock: '# 示例：Kubernetes部署（2026年4月）\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 per pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-en.svg',
-          imageCaption: '本地基础设施实现首token延迟50–150ms，相比云API的200–500ms，无网络往返、无云排队、可预测性能、无限并发请求。'
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: '按部署规模的硬件需求',
-          image: '/images/private-local-ai-for-business-hardware-requirements-en.svg',
-          imageCaption: '按规模的硬件需求：小型团队需要1× RTX 5090（约$4,500–4,700，InsiderLLM挂牌数据，2026-10-15），生产部署需要2–4× RTX 5090（$9,000–18,800，仅显卡），企业规模需要A100集群或多节点RTX 5090设置。',
           content: [
             '根据并发性和吞吐量需求调整部署。从单个GPU开始进行测试，然后为生产工作负载添加GPU。'
           ]
@@ -1570,8 +1524,6 @@ schema: {
           content: [
             '本地成本假设：RTX 5090（新品约$4,500–4,700，[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)挂牌数据，来源更新于2026-10-15）在36个月内摊销 = 月硬件成本$125–131（4,500 ÷ 36 = 125.0；4,700 ÷ 36 = 130.6）。加上月电力成本$50、月冷却/网络$27（本页自行假设）；NVIDIA标注RTX 5090板卡功耗为575 W（[NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)）。总计：月固定约$202–208，与量无关。云API定价基于GPT-5.6（2026年4月）$0.005/1K token。损益平衡点：约月4,000万–4,200万token（$202–208 ÷ 每百万token $5）。'
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-en.svg',
-          imageCaption: '成本分析：本地基础设施在月约4,000万token以上变得经济高效，月2亿token时约5个月收回显卡成本（云端为每月$1,000，每年$12,000）。'
         },
         useCases: {
           id: 'use-cases',
@@ -1596,8 +1548,6 @@ schema: {
             '**安全态势薄弱。** 网络隔离、加密和访问控制至关重要。定期审计。',
             '**使用旧的开源模型。** 2023年模型已过时。随着新基础模型的出现，定期重新训练或微调。'
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-en.svg',
-          imageCaption: '本地AI部署的四个关键错误：低估总成本（预算硬件成本的3–5倍）、规模设计不当（单GPU无法处理生产）、忽视灾难恢复、安全态势薄弱。'
         },
         faqSection: {
           id: 'faq',
@@ -1856,8 +1806,6 @@ schema: {
             { 'Factor': 'Dependencia del proveedor', 'API en la nube (GPT-5.6)': 'Alta — cambios de formato de API, cambios de precio', 'IA on-premises': 'Ninguna — cambia modelos/frameworks libremente' },
           ],
           columns: ['Factor', 'API en la nube (GPT-5.6)', 'IA on-premises'],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-es.svg',
-          imageCaption: 'Las APIs en la nube exponen los datos a servidores externos con latencia de 200–500ms y costes anuales de $20.000+, mientras que la infraestructura on-premises mantiene los datos localmente con latencia de 50–150ms y costes anuales amortizados de unos $3.000–3.100.',
         },
         compliance: {
           id: 'compliance',
@@ -1880,14 +1828,10 @@ schema: {
           ],
           codeBlock: '# Ejemplo: despliegue en Kubernetes (abril de 2026)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 por pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-es.svg',
-          imageCaption: 'La infraestructura on-premises alcanza una latencia de primer token de 50–150ms frente a los 200–500ms de las APIs en la nube, sin RTT de red, sin colas en la nube, rendimiento predecible y solicitudes concurrentes ilimitadas.',
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: 'Requisitos de hardware según la escala de despliegue',
-          image: '/images/private-local-ai-for-business-hardware-requirements-es.svg',
-          imageCaption: 'Requisitos de hardware según la escala: los equipos pequeños necesitan 1× RTX 5090 (unos $4.500–4.700, datos de anuncios de InsiderLLM, 2026-10-15), los despliegues en producción requieren 2–4× RTX 5090 ($9.000–18.800, solo tarjetas), la escala empresarial requiere clústeres A100 o configuraciones multinodo RTX 5090.',
           content: [
             'Ajusta tu despliegue según las necesidades de concurrencia y rendimiento de tokens. Comienza con una sola GPU para pruebas y añade más GPUs para cargas de trabajo en producción.',
           ],
@@ -1906,8 +1850,6 @@ schema: {
           content: [
             'El coste on-premises asume: 1× RTX 5090 (unos $4.500–4.700 nueva, datos de anuncios de [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15) amortizado en 36 meses = $125–131/mes en hardware (4.500 ÷ 36 = 125,0; 4.700 ÷ 36 = 130,6). Añade $50/mes de electricidad (media EE. UU.) y $27/mes de refrigeración/red, supuestos propios de esta página; NVIDIA indica 575 W de potencia de placa para la RTX 5090 ([NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)). Total: ~$202–208/mes fijos independientemente del volumen. Precio de API en la nube basado en GPT-5.6 a $0,005/1K tokens (abril de 2026). Punto de equilibrio: ~40–42M tokens/mes ($202–208 ÷ $5 por 1M de tokens). Los precios en tu país pueden variar según impuestos locales.',
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-es.svg',
-          imageCaption: 'Análisis del punto de equilibrio: la infraestructura on-premises resulta rentable desde unos 40M tokens/mes, amortizando la tarjeta en unos 5 meses a 200M tokens/mes (nube: $12.000 al año a $1.000 al mes).',
         },
         useCases: {
           id: 'use-cases',
@@ -1932,8 +1874,6 @@ schema: {
             '**Postura de seguridad deficiente.** El aislamiento de red, el cifrado y los controles de acceso son críticos. Realiza auditorías periódicas.',
             '**Usar modelos open-source antiguos.** Los modelos de 2023 están desactualizados. Vuelve a entrenar o ajusta de forma periódica a medida que surjan nuevos modelos base.',
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-es.svg',
-          imageCaption: 'Cuatro errores críticos en el despliegue de IA on-premises: subestimar el coste total de propiedad (presupuesta 3–5 veces el coste del hardware), diseño de escalado deficiente (una GPU única no puede manejar producción), descuido de la recuperación ante desastres y postura de seguridad débil.',
         },
         faqSection: {
           id: 'faq',
@@ -2135,8 +2075,6 @@ schema: {
             { 'Factor': 'الارتباط بالمزوّد', 'API en la nube (GPT-5.6)': 'عالٍ — تغييرات صيغة API، تغييرات السعر', 'IA on-premises': 'لا شيء — بدّل النماذج/أطر العمل بحرية' },
           ],
           columns: ['Factor', 'API en la nube (GPT-5.6)', 'IA on-premises'],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-es.svg',
-          imageCaption: 'تعرّض واجهات API السحابية البيانات لخوادم خارجية بزمن استجابة 200–500 مللي ثانية وتكاليف سنوية 20,000+ دولار، بينما تبقي البنية التحتية في الموقع البيانات محليًا بزمن استجابة 50–150 مللي ثانية وتكاليف سنوية مُستهلَكة بنحو 3,000–3,100 دولار.',
         },
         compliance: {
           id: 'compliance',
@@ -2159,14 +2097,10 @@ schema: {
           ],
           codeBlock: '# Ejemplo: despliegue en Kubernetes (abril de 2026)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 por pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-es.svg',
-          imageCaption: 'تبلغ البنية التحتية في الموقع زمن استجابة لأول token 50–150 مللي ثانية مقابل 200–500 مللي ثانية لواجهات API السحابية، بلا RTT شبكة، بلا طوابير سحابية، أداء متوقّع، وطلبات متزامنة غير محدودة.',
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: 'متطلبات العتاد حسب نطاق النشر',
-          image: '/images/private-local-ai-for-business-hardware-requirements-es.svg',
-          imageCaption: 'متطلبات العتاد حسب النطاق: تحتاج الفِرق الصغيرة 1× RTX 5090 (نحو 4,500–4,700 دولار، بيانات إعلانات InsiderLLM، 2026-10-15)، عمليات النشر الإنتاجية تتطلب 2–4× RTX 5090 (9,000–18,800 دولار، للبطاقات فقط)، النطاق المؤسسي يتطلب عناقيد A100 أو تهيئات RTX 5090 متعددة العقد.',
           content: [
             'اضبط نشرك حسب احتياجات التزامن ومعدل tokens. ابدأ بـ GPU واحدة للاختبار وأضف مزيدًا من وحدات GPU لأحمال العمل الإنتاجية.',
           ],
@@ -2185,8 +2119,6 @@ schema: {
           content: [
             'تفترض تكلفة الموقع: 1× RTX 5090 (نحو 4,500–4,700 دولار جديدة، بيانات إعلانات [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15) مُستهلَكة على 36 شهرًا = 125–131 دولارًا/شهر للعتاد (4,500 ÷ 36 = 125.0؛ 4,700 ÷ 36 = 130.6). أضف 50 دولارًا/شهر للكهرباء (متوسط الولايات المتحدة) و27 دولارًا/شهر للتبريد/الشبكة، وهي افتراضات هذه الصفحة؛ وتذكر NVIDIA قدرة لوحة 575 W لبطاقة RTX 5090 ([NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)). الإجمالي: نحو 202–208 دولارات/شهر ثابتة بغض النظر عن الحجم. سعر API السحابي مبني على GPT-5.6 بـ 0.005 دولار/1K token (أبريل 2026). نقطة التعادل: نحو 40–42 مليون token/شهر (202–208 ÷ 5 دولارات لكل مليون token). الأسعار بالدولار الأمريكي وقد تختلف في بلدك.',
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-es.svg',
-          imageCaption: 'تحليل نقطة التعادل: تصبح البنية التحتية في الموقع فعّالة من حيث التكلفة بدءًا من نحو 40 مليون token/شهر، مُستردةً تكلفة البطاقة في نحو 5 أشهر عند 200 مليون token/شهر (السحابة: 12,000 دولار سنويًا بواقع 1,000 دولار شهريًا).',
         },
         useCases: {
           id: 'use-cases',
@@ -2211,8 +2143,6 @@ schema: {
             '**وضع أمني ضعيف.** عزل الشبكة والتشفير وضوابط الوصول حاسمة. أجرِ تدقيقات دورية.',
             '**استخدام نماذج مفتوحة المصدر قديمة.** نماذج 2023 قديمة. أعد التدريب أو اضبط دوريًا مع ظهور نماذج أساسية جديدة.',
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-es.svg',
-          imageCaption: 'أربعة أخطاء حاسمة في نشر الذكاء الاصطناعي في الموقع: التقليل من تقدير التكلفة الإجمالية للملكية (خصّص 3–5 أضعاف تكلفة العتاد)، تصميم توسع ضعيف (GPU واحدة لا يمكنها التعامل مع الإنتاج)، إهمال التعافي من الكوارث، ووضع أمني ضعيف.',
         },
         faqSection: {
           id: 'faq',
@@ -2414,8 +2344,6 @@ schema: {
             { 'Fator': 'Dependência de fornecedor', 'API na nuvem (GPT-5.6)': 'Alta — mudanças de formato de API, mudanças de preço', 'IA on-premises': 'Nenhuma — troque modelos/frameworks livremente' },
           ],
           columns: ['Fator', 'API na nuvem (GPT-5.6)', 'IA on-premises'],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-es.svg',
-          imageCaption: 'APIs na nuvem expõem os dados a servidores externos com latência de 200–500ms e custos anuais de $20.000+, enquanto a infraestrutura on-premises mantém os dados localmente com latência de 50–150ms e custos anuais amortizados de cerca de $3.000–3.100.',
         },
         compliance: {
           id: 'compliance',
@@ -2597,8 +2525,6 @@ schema: {
             { 'Factor': '벤더 종속', 'Cloud API (GPT-5.6)': '높음 — API 형식 변경, 가격 변경', 'On-Premises AI': '없음 — 모델/프레임워크 자유롭게 전환 가능' },
           ],
           columns: ['Factor', 'Cloud API (GPT-5.6)', 'On-Premises AI'],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg',
-          imageCaption: '클라우드 API는 200~500ms 지연 시간과 연간 $20,000 이상의 비용으로 외부 서버에 데이터를 노출하는 반면, 온프레미스 인프라는 50~150ms 지연 시간과 연간 약 $3,000~3,100의 상각 비용으로 데이터를 로컬에 유지합니다.',
         },
         compliance: {
           id: 'compliance',
@@ -2621,14 +2547,10 @@ schema: {
           ],
           codeBlock: '# Example: Kubernetes deployment (August 2026)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 per pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-en.svg',
-          imageCaption: '온프레미스 인프라는 클라우드 API의 200~500ms 대비 50~150ms의 첫 번째 토큰 지연 시간을 달성하며, 네트워크 왕복 없음, 클라우드 큐잉 없음, 예측 가능한 성능, 무제한 동시 요청을 제공합니다.',
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: '배포 규모별 하드웨어 요건',
-          image: '/images/private-local-ai-for-business-hardware-requirements-en.svg',
-          imageCaption: '배포 규모별 하드웨어 요건: 소규모 팀은 RTX 5090 1대(약 $4,500~4,700, InsiderLLM 매물 데이터, 2026-10-15) 필요, 프로덕션 배포는 RTX 5090 2~4대($9,000~18,800, 카드만) 필요, 엔터프라이즈 규모는 A100 클러스터 또는 멀티 노드 RTX 5090 구성 필요.',
           content: [
             '동시 접속 수와 토큰 처리량 요구에 따라 배포를 확장하십시오. 테스트는 단일 GPU로 시작한 후 프로덕션 워크로드에 맞게 GPU를 추가하십시오.',
           ],
@@ -2647,8 +2569,6 @@ schema: {
           content: [
             '온프레미스 비용 가정: RTX 5090 1대(신품 약 $4,500~4,700, [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) 매물 데이터, 출처 갱신일 2026-10-15)를 36개월 상각 = 월 하드웨어 $125~131(4,500 ÷ 36 = 125.0, 4,700 ÷ 36 = 130.6). 전기료(미국 평균) 월 $50, 냉각/네트워킹 월 $27은 이 페이지의 자체 가정이며, NVIDIA는 RTX 5090의 보드 전력을 575 W로 명시합니다([NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)). 합계: 볼륨과 무관하게 월 고정 약 $202~208. 클라우드 API 가격은 2026년 4월 기준 GPT-5.6 1K 토큰당 $0.005. 손익분기점: 월 약 4,000만~4,200만 토큰($202~208 ÷ 100만 토큰당 $5).',
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-en.svg',
-          imageCaption: '비용 손익분기점 분석: 온프레미스 인프라는 월 약 4,000만 토큰 이상에서 비용 효율적이 되며, 월 2억 토큰 기준 약 5개월 내 카드 비용을 회수합니다(클라우드: 월 $1,000, 연 $12,000).',
         },
         useCases: {
           id: 'use-cases',
@@ -2673,8 +2593,6 @@ schema: {
             '**취약한 보안 태세.** 네트워크 격리, 암호화, 접근 제어가 필수입니다. 정기적으로 감사를 실시하십시오.',
             '**오래된 오픈소스 모델 사용.** 2023년 모델은 구식입니다. 새로운 베이스 모델이 나올 때마다 정기적으로 재학습하거나 파인튜닝하십시오.',
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-en.svg',
-          imageCaption: '온프레미스 AI 배포 시 4가지 치명적 실수: 총 소유 비용 과소 추정(하드웨어 비용의 3~5배 계획), 잘못된 확장 설계(단일 GPU로는 프로덕션 처리 불가), 재해 복구 소홀, 취약한 보안 태세.',
         },
         faqSection: {
           id: 'faq',
