@@ -191,7 +191,7 @@
   {
     "lang": "ja",
     "title": "プロンプトエンジニアリングとは？",
-    "excerpt": "プロンプトエンジニアリングはAI出力の品質を左右する技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。",
+    "excerpt": "プロンプトエンジニアリングはAI出力の品質を左右する技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で読めます。",
     "publishDate": "2026-03-01",
     "dateModified": "2026-11-27",
     "url": "/ja/prompt-engineering/what-is-prompt-engineering",
@@ -2270,81 +2270,81 @@
   {
     "lang": "en",
     "title": "The Single Step Prompt Method",
-    "excerpt": "Learn the Single Step Prompt Method: pack role, objective, context, constraints, and output format into one message. Structured prompts outperform vague instructions.",
+    "excerpt": "Learn the Single Step Prompt Method: pack role, objective, context, constraints, and output format into one message you can test, save, and reuse.",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "de",
     "title": "Die Single Step Prompt Methode",
-    "excerpt": "Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen. Strukturierte Prompts liefern konsistente Ergebnisse ohne Mehrfachdialog.",
+    "excerpt": "Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen: so schreiben, testen und speichern Sie wiederverwendbare Prompts.",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/de/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "fr",
     "title": "La Méthode Single Step Prompt",
-    "excerpt": "Intégrez rôle, objectif, contexte, contraintes et format dans une seule invite précise. Approche simplifiée et reproductible pour tous les modèles de langage.",
+    "excerpt": "Réunissez rôle, objectif, contexte, contraintes et format de sortie dans un seul prompt que vous pouvez tester, enregistrer et réutiliser.",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/fr/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ja",
     "title": "シングルステップ・プロンプト手法",
-    "excerpt": "ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトに統合する手法。複数ターン対話を削減し、すべてのモデルで一貫した結果を実現するための構造的アプローチです。",
+    "excerpt": "ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトにまとめる手法です。書き方、テスト、テンプレート化の手順と、ほかのフレームワークとの違いを解説します。",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/ja/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "zh",
     "title": "单步提示法",
-    "excerpt": "单步提示法将角色、目标、上下文、约束和输出格式合并为完整的提示。简化多轮对话，实现跨模型的一致结果。所有大语言模型都适用。",
+    "excerpt": "单步提示法把角色、目标、上下文、约束条件和输出格式写进一条提示词。了解如何编写、测试、保存为模板并重复使用，以及它与其他提示框架的区别。",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/zh/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "es",
     "title": "El Método de Prompt de Un Solo Paso",
-    "excerpt": "Aprende el Método de Prompt de Un Solo Paso: incluye rol, objetivo, contexto, restricciones y formato de output en un solo mensaje. Los prompts estructurados superan las instrucciones vagas.",
+    "excerpt": "Aprende el Método de Prompt de Un Solo Paso: reúne rol, objetivo, contexto, restricciones y formato de output en un mensaje que puedes probar y reutilizar.",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/es/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "pt",
     "title": "O Método de Prompt de Passo Único",
-    "excerpt": "Aprenda o Método de Prompt de Passo Único: inclua papel, objetivo, contexto, restrições e formato de saída em uma única mensagem. Prompts estruturados superam instruções vagas.",
+    "excerpt": "Aprenda o Método de Prompt de Passo Único: reúna papel, objetivo, contexto, restrições e formato de saída em uma mensagem que você testa e reutiliza.",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/pt/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ar",
     "title": "طريقة البرومبت في خطوة واحدة",
-    "excerpt": "⁨95%⁩ دقة تنسيق في اختبارات ⁨PromptQuorum⁩. أدرج الدور والهدف والسياق والقيود في رسالة واحدة وأعد استخدامها عبر ⁨GPT⁩ و⁨Claude⁩ و⁨Ollama⁩.",
+    "excerpt": "اجمع الدور والهدف والسياق والقيود وتنسيق المخرج في رسالة واحدة يمكنك اختبارها وحفظها وإعادة استخدامها مع نماذج مثل ⁨GPT⁩ و⁨Claude⁩ و⁨Ollama⁩.",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/ar/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ko",
     "title": "단일 단계 프롬프트 방법론",
-    "excerpt": "단일 단계 프롬프트 방법론을 학습하십시오. 역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담아 전달합니다. 구조화된 프롬프트는 모호한 지시보다 훨씬 우수한 결과를 제공합니다.",
+    "excerpt": "역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담아, 테스트하고 저장해 다시 쓸 수 있는 단일 단계 프롬프트를 작성하는 방법입니다.",
     "publishDate": "2026-03-24",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-27",
     "url": "/ko/prompt-engineering/the-single-step-prompt-method",
     "cluster": "prompt-engineering"
   },
