@@ -20,7 +20,8 @@ for (const [slug, file] of Object.entries(PAGES)) {
   new Function('exports', 'module', 'require', js)(mod.exports, mod, () => ({}))
   const article = Object.values(mod.exports).find((v) => v && v.en)
   for (const [lang, footer] of Object.entries(FOOTER)) {
-    const res = await fetch(`${BASE}/api/hero-image`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ lang, title: lang === 'ar' ? article[lang].title.replace(/ و(?=[A-Z])/g, '، ') : article[lang].title, footer }) })
+    if ((process.env.ONLY && process.env.ONLY !== lang) || (process.env.PAGE && process.env.PAGE !== slug)) continue
+    const res = await fetch(`${BASE}/api/hero-image`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ lang, title: lang === 'ar' ? article[lang].title.split(':')[0].trim() : article[lang].title, footer }) })
     if (!res.ok) throw new Error(`${slug} ${lang}: HTTP ${res.status} ${await res.text()}`)
     await sharp(Buffer.from(await res.arrayBuffer())).webp({ lossless: true, effort: 6 }).toFile(path.join('public/images', `${slug}-hero-${lang}.webp`))
   }
