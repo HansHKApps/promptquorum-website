@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -31652,7 +31652,11 @@
       "ctr": 0,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "5d8155f7-015a-4e99-8b8e-8c6ccafad502",
@@ -31679,7 +31683,11 @@
       "ctr": 0.00964630225080386,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "da261223-51c0-4c1e-91ab-6d5c5fc09736",
@@ -31700,7 +31708,11 @@
       "ctr": 0,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "295931c9-c9b4-4f0d-ab9f-1b9df4d703ac",
@@ -31726,7 +31738,11 @@
       "ctr": 0.003236245954692557,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "545e3ef5-f7c2-48ce-a46c-d56dcba97aa8",
@@ -31752,7 +31768,11 @@
       "ctr": 0.0013908205841446453,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "20d5655f-aca4-4616-852b-7f66f331d892",
@@ -31773,6 +31793,160 @@
       "ctr": 0,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "f0515528-5534-4619-aa2e-06df3202aa5a",
+    "slug": "/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:16.183Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Learn the Single Step Prompt Method: pack role, objective, context, constraints, and output format into one message. Structured prompts outperform vague instructions.",
+        "new": "Learn the Single Step Prompt Method: pack role, objective, context, constraints, and output format into one message you can test, save, and reuse."
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3276b875-563b-4366-9326-92b31a8e1135",
+    "slug": "/de/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:16.295Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen. Strukturierte Prompts liefern konsistente Ergebnisse ohne Mehrfachdialog.",
+        "new": "Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen: so schreiben, testen und speichern Sie wiederverwendbare Prompts."
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d5f71151-b74d-4eec-b51c-b22a61e6294d",
+    "slug": "/es/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:16.410Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Aprende el Método de Prompt de Un Solo Paso: incluye rol, objetivo, contexto, restricciones y formato de output en un solo mensaje. Los prompts estructurados superan las instrucciones vagas.",
+        "new": "Aprende el Método de Prompt de Un Solo Paso: reúne rol, objetivo, contexto, restricciones y formato de output en un mensaje que puedes probar y reutilizar."
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "eecd8b4f-0439-449d-96ec-e5b1b509cb55",
+    "slug": "/ar/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:16.522Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "⁨95%⁩ دقة تنسيق في اختبارات ⁨PromptQuorum⁩. أدرج الدور والهدف والسياق والقيود في رسالة واحدة وأعد استخدامها عبر ⁨GPT⁩ و⁨Claude⁩ و⁨Ollama⁩.",
+        "new": "اجمع الدور والهدف والسياق والقيود وتنسيق المخرج في رسالة واحدة يمكنك اختبارها وحفظها وإعادة استخدامها مع نماذج مثل ⁨GPT⁩ و⁨Claude⁩ و⁨Ollama⁩."
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "55c6dc81-dcb8-4599-b26a-b50980b7670f",
+    "slug": "/pt/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:16.633Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Aprenda o Método de Prompt de Passo Único: inclua papel, objetivo, contexto, restrições e formato de saída em uma única mensagem. Prompts estruturados superam instruções vagas.",
+        "new": "Aprenda o Método de Prompt de Passo Único: reúna papel, objetivo, contexto, restrições e formato de saída em uma mensagem que você testa e reutiliza."
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7ab68089-85b5-406a-9e53-bd849cffa21d",
+    "slug": "/fr/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:16.743Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Intégrez rôle, objectif, contexte, contraintes et format dans une seule invite précise. Approche simplifiée et reproductible pour tous les modèles de langage.",
+        "new": "Réunissez rôle, objectif, contexte, contraintes et format de sortie dans un seul prompt que vous pouvez tester, enregistrer et réutiliser."
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0cf35129-f613-4b00-9e0f-ec2ca2eb4d0f",
+    "slug": "/ja/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:16.856Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトに統合する手法。複数ターン対話を削減し、すべてのモデルで一貫した結果を実現するための構造的アプローチです。",
+        "new": "ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトにまとめる手法です。書き方、テスト、テンプレート化の手順と、ほかのフレームワークとの違いを解説します。"
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e3cfe3fb-8cf2-43bf-b35c-74a8af6230a2",
+    "slug": "/zh/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:16.964Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "单步提示法将角色、目标、上下文、约束和输出格式合并为完整的提示。简化多轮对话，实现跨模型的一致结果。所有大语言模型都适用。",
+        "new": "单步提示法把角色、目标、上下文、约束条件和输出格式写进一条提示词。了解如何编写、测试、保存为模板并重复使用，以及它与其他提示框架的区别。"
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7fb34148-61a0-4e4a-81b1-1065e880f86c",
+    "slug": "/ko/prompt-engineering/the-single-step-prompt-method",
+    "date": "2026-11-27T11:37:17.073Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "단일 단계 프롬프트 방법론을 학습하십시오. 역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담아 전달합니다. 구조화된 프롬프트는 모호한 지시보다 훨씬 우수한 결과를 제공합니다.",
+        "new": "역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담아, 테스트하고 저장해 다시 쓸 수 있는 단일 단계 프롬프트를 작성하는 방법입니다."
+      }
+    ],
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1b5c5071-ba90-4b61-a3ca-b485ac12188b",
+    "slug": "/ja/prompt-engineering/what-is-prompt-engineering",
+    "date": "2026-11-27T11:37:17.254Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "プロンプトエンジニアリングはAI出力の品質を左右する技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。",
+        "new": "プロンプトエンジニアリングはAI出力の品質を左右する技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で読めます。"
+      }
+    ],
+    "reason": "Risk gate: replaced a mastery promise with reading time.",
+    "baseline": null,
     "deployedAt": null
   }
 ]
