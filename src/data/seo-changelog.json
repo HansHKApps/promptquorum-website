@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -31229,7 +31229,11 @@
       "ctr": 0.00564652738565782,
       "period": "90d to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "37c5be1e-226a-4cfa-8569-b91928da3734",
@@ -31258,7 +31262,11 @@
       "ctr": 0.01289134438305709,
       "period": "28d to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "b6d91d60-55e2-413f-bbfb-4a0157dbbb41",
@@ -31287,7 +31295,11 @@
       "ctr": 0.0075,
       "period": "28d to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "823db06f-c84c-4f8b-ad0b-1d1888b701de",
@@ -31302,7 +31314,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "440ff1ed-f5f0-4e54-9151-c4022bd83c44",
@@ -31317,7 +31333,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "f3d14268-3852-47e1-8ab0-54a686876aa6",
@@ -31332,7 +31352,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "d88ee39a-ebb5-48cd-9713-508f7ebc317d",
@@ -31347,7 +31371,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "3f39402a-a544-4094-a648-0265b3552365",
@@ -31362,7 +31390,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "fcc776e0-886b-46cd-a0fa-bee444b2584c",
@@ -31382,7 +31414,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "b28152f3-4628-4cf2-8e18-f144080f82be",
@@ -31402,7 +31438,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "8148e7a2-8448-44ef-be4b-d3cacc190ee9",
@@ -31417,7 +31457,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "a3a0b717-a90a-4742-ac0d-6337fbc726b5",
@@ -31432,7 +31476,11 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "628c2dc5-3394-49a7-952b-54e944faa553",
@@ -31459,7 +31507,11 @@
       "ctr": 0.023715415019762844,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "aeff6a75-32d2-4bba-a8e0-46f8849ffb2d",
@@ -31485,6 +31537,95 @@
       "ctr": 0.01652892561983471,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "5a24e95e-02e8-4200-bf2b-68accebebf26",
+    "slug": "/pt/prompt-engineering/fundamentals-of-prompt-optimization",
+    "date": "2026-11-27T07:19:03.004Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Melhore a qualidade da IA em 20–40% com 6 alavancas e um processo de 6 etapas. Exemplos antes/depois para GPT-5.6, Claude e Gemini: funciona em todos os modelos.",
+        "new": "Como otimizar prompts com 6 alavancas e um processo de 6 etapas. Veja exemplos antes e depois para GPT-5.6, Claude e Gemini e 7 erros comuns a evitar."
+      }
+    ],
+    "reason": "Locale meta fix: bring field into the per-locale length budget in natural wording (merge only, not yet deployed). Dropped the 20-40% figure from the PT description.",
+    "queries": [
+      "tutorial de ajuste de prompt"
+    ],
+    "baseline": {
+      "position": 8.1,
+      "impressions": 79,
+      "clicks": 2,
+      "ctr": 0.02531645569620253,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "e9109877-dfd9-4bac-9ca0-23312830eba2",
+    "slug": "/zh/prompt-engineering/prompt-building-blocks",
+    "date": "2026-11-27T07:19:03.071Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。缺少任何一个都会降低输出质量。包含所有模型通用的可复制模板。",
+        "new": "高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。了解每个部分如何提升输出结果质量，并获取适用于不同AI模型的可复制模板。"
+      }
+    ],
+    "reason": "Locale meta fix: bring field into the per-locale length budget in natural wording (merge only, not yet deployed).",
+    "baseline": null,
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "3c20a0d6-e6e9-49b5-bd27-f8e198ee11ea",
+    "slug": "/prompt-engineering/fundamentals-of-prompt-optimization",
+    "date": "2026-11-27T07:36:12.175Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Improve AI output quality by 20–40% using 6 levers and a 6-step process. Before/after examples for GPT-5.6, Claude, and Gemini — works on all major models.",
+        "new": "How to optimize prompts with 6 levers and a 6-step process. Before/after examples for GPT-5.6, Claude and Gemini, plus 7 common mistakes to avoid."
+      }
+    ],
+    "reason": "Risk-gate pass, 9 locales: removed or hedged unsupported statistics, test and compliance claims; new meta descriptions in 8 locales (EN shown). Not yet deployed.",
+    "baseline": null,
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "846df0dd-e2fe-4134-b4d6-35706d9baaeb",
+    "slug": "/prompt-engineering/prompt-building-blocks",
+    "date": "2026-11-27T07:36:12.209Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "Compliance guarantees and unsourced absolute claims",
+        "new": "Removed or hedged"
+      }
+    ],
+    "reason": "Risk-gate pass, 9 locales: removed unsupported compliance FAQs (de, fr, ja) and hedged absolute and statistical claims. No further title/meta change. Not yet deployed.",
+    "baseline": null,
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   }
 ]
