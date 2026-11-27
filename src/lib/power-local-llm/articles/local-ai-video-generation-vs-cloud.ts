@@ -15,14 +15,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
-    title: 'Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other From $17/mo (Billed Annually)',
+    title: 'Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription',
     seoTitle: 'Cloud vs Local AI Video 2026: invideo vs Wan 2.2 & LTX-2',
     intro:
-      'There are two doors into AI video in 2026. Door one is local: free, open video models running on your own GPU — unlimited generations, with inference running on your own hardware (model downloads and update checks still use the network), no subscription, but you build the entire workflow yourself. Door two is cloud: invideo, where one prompt in gets you a finished narrated video out — script, stock footage, voiceover, music, and subtitles included, straight from your browser. Neither door is "better." This guide gives you the license fine print most comparisons skip, the real hardware requirements, and a decision tool that maps your situation to a recommendation.',
+      'There are two doors into AI video in 2026. Door one is local: free, open video models running on your own GPU — unlimited generations, with inference running on your own hardware (model downloads and update checks still use the network), no subscription, but you build the entire workflow yourself. Door two is cloud: invideo, a hosted service that markets an agent-driven route from a script or idea to an edited video, straight from your browser. Neither door is "better." This guide gives you the license fine print most comparisons skip, the real hardware requirements, and a decision tool that maps your situation to a recommendation.',
     metaDescription:
-      'Local AI video models (Wan 2.2, LTX-2, HunyuanVideo) are free if your GPU can run them. Invideo\'s cloud does everything from $17/mo (billed annually).',
+      'Local AI video models (Wan 2.2, LTX-2, HunyuanVideo) are free to download if your GPU can run them. How they compare with invideo\'s cloud service.',
     twitterDescription:
-      'Cloud vs local AI video in 2026: invideo bundles everything from $17/mo (billed annually). Wan 2.2, LTX-2, HunyuanVideo run free on your own GPU — if it\'s big enough. Honest comparison.',
+      'Cloud vs local AI video in 2026: invideo is a hosted subscription service. Wan 2.2, LTX-2, HunyuanVideo are free to download for your own GPU — if it\'s big enough.',
     audience:
       'Creators and developers deciding between free local video generation on their own GPU and invideo\'s all-in-one cloud pipeline — covers hardware requirements, licensing fine print, and workflow tradeoffs.',
     readTime: '10 min read',
@@ -50,18 +50,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**For most people with a 12GB+ GPU, Wan 2.2 is a strong local AI video model in 2026** — Apache 2.0 licensed with no revenue caps or territory restrictions, with a VBench quality score of ~84.7% on the public leaderboard, completely free. **Invideo is the better choice if you don\'t have that GPU, or want a finished narrated video rather than a raw clip** — its Plus plan, starting at $17/month (billed annually), bundles 200+ models (per invideo) (including Kling 3, Veo 3.1, and Seedance 2.5) into a single browser-based pipeline with script, voiceover, music, and subtitles included. **HunyuanVideo 1.5 has the most cinematic local look but its license excludes the EU, UK, and South Korea entirely** — skip it if you\'re in those regions.',
+      '**For most people with a 12GB+ GPU, Wan 2.2 is a strong local AI video model in 2026** — Apache 2.0 licensed with no revenue caps or territory restrictions, and free to download (hardware and electricity still cost money). **Invideo is the better choice if you don\'t have that GPU, or want a finished narrated video rather than a raw clip** — it is a browser-based hosted service whose paid plans (Starter, Plus, Max) differ in model access; check its live pricing page. **HunyuanVideo 1.5 is a community favorite for a cinematic look, but its license excludes the EU, UK, and South Korea entirely** — skip it if you\'re in those regions.',
     quickAnswerTop: {
       en: {
         question: 'Should I generate AI video locally or use invideo\'s cloud pipeline?',
         answer:
-          'Generate locally if you have a 12GB+ GPU, want unlimited $0 generations, and value privacy — Wan 2.2 (Apache 2.0, permissive commercial use — check the model card) is a sensible starting point. Use invideo if you don\'t have suitable hardware, don\'t want to manage the setup, or need a complete finished video (script, voiceover, music, subtitles) rather than a raw clip — its Plus plan starts at $17/month (billed annually).',
+          'Generate locally if you have a 12GB+ GPU, want to generate without per-clip fees, and value privacy — Wan 2.2 (Apache 2.0, permissive commercial use — check the model card) is a sensible starting point. Use invideo if you don\'t have suitable hardware, don\'t want to manage the setup, or need a complete finished video (script, voiceover, music, subtitles) rather than a raw clip — it is a hosted subscription service with a free plan; check current prices on its pricing page.',
         bullets: [
           'Under 12 GB VRAM → invideo is the practical choice; local models are unusable below this tier for serious quality.',
           '12 GB VRAM → LTX-Video 0.9.5, a practical local option at this tier.',
           '16–24 GB+ VRAM → Wan 2.2 (top quality, Apache 2.0 — permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card)) or LTX-2 (speed + synchronized audio).',
           'In the EU, UK, or South Korea → HunyuanVideo 1.5\'s license excludes you; use Wan 2.2 or LTX-2 instead.',
-          'Need a finished narrated video, not a raw clip → local models only generate silent (LTX excepted) 5–20 second clips; invideo handles the full production pipeline, starting at $17/month (billed annually).',
+          'Need a finished narrated video, not a raw clip → local models only generate silent (LTX excepted) 5–20 second clips; invideo offers a hosted workflow around the clip; check its pricing page for what each plan includes.',
         ],
         updatedDate: '2026-11-23',
       },
@@ -91,38 +91,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 is a top-tier local video model under the permissive Apache 2.0 license.** Permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card) — and a VBench quality score of ~84.7% on the public leaderboard.',
-          '**Invideo bundles 200+ models (per invideo) — including Kling 3, Veo 3.1, and Seedance 2.5 — into one browser-based pipeline** starting at $17/month (Plus plan, billed annually), with script, voiceover, music, and subtitles handled automatically.',
+          '**Wan 2.2 is a top-tier local video model under the permissive Apache 2.0 license.** Permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card).',
+          '**Invideo is a hosted alternative** with a free plan and paid Starter, Plus, and Max plans; its pricing page lists access to all models, including all Seedance models, for Plus and Max. Prices vary — check the live page.',
           '**HunyuanVideo 1.5\'s license explicitly excludes the EU, UK, and South Korea** — for both the model and its outputs. Readers in those regions should use Wan 2.2 or LTX-2 instead.',
-          '**LTX-2 is the fastest of the local trio and the only one with built-in synchronized audio**, free commercially for companies under $10M annual revenue.',
+          '**LTX-2 is positioned as a speed-focused model and is the only one of this local trio with built-in synchronized audio**, free commercially for companies under $10M annual revenue.',
           '**12GB VRAM is the realistic floor for serious local video generation.** Below that, invideo becomes the more practical option.',
-          '**Local models generate raw silent clips of 5–20 seconds, not finished videos.** Script, voiceover, music, subtitles, and editing are separate tools you assemble yourself — invideo does all of this in one pass.',
-          '**No official "Wan 2.7" release was known when this page was last refreshed.** Be cautious with download pages offering it — the official Wan repositories list releases up to 2.2.',
+          '**Local models generate raw silent clips of 5–20 seconds, not finished videos.** Script, voiceover, music, subtitles, and editing are separate tools you assemble yourself — invideo aims to bring these steps into one hosted workflow.',
+          '**No open-weights "Wan 2.7" repository appeared on the official Wan GitHub page when checked on 27 November 2026.** Alibaba announced [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) in April 2026 as a model available on Alibaba Cloud. Be cautious with third-party pages offering "Wan 2.7 weights".',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Why 2026 Is a Strange Moment for AI Video',
         content:
-          'The proprietary video market has been chaotic, according to press reports that PromptQuorum has not independently verified. ByteDance\'s Seedance 2.0 ran into legal threats from Hollywood studios (cease-and-desist letters from Disney, Paramount, and Warner Bros. were reported) and a paused global rollout — it reportedly remains accessible in China, and its legal position for international commercial use is unclear.\n\nThat chaos is exactly what makes both doors attractive. Open local models make you independent of vendor drama. And invideo absorbs the drama for you: its subscription bundles access to 200+ models (per invideo) — including Kling 3, Veo 3.1, and Seedance 2.5 — so when one model disappears or gets sued, your workflow doesn\'t notice.',
+          'The proprietary video market has been turbulent. In March 2026, [Engadget reported](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html), citing The Information, that ByteDance had paused the global rollout of Seedance 2.0 after cease-and-desist letters from Disney and Paramount Skydance. PromptQuorum has not independently verified that report, and availability has changed since: invideo\'s pricing page now lists Seedance 2.0 and 2.5.\n\nThat kind of churn is what makes both doors attractive. Open models you have already downloaded keep running regardless of vendor changes. A multi-model service such as invideo offers several models in one account, but which models it offers can change, so your workflow is not guaranteed to stay unaffected.',
       },
       localModels: {
         id: 'local-models',
         title: 'The Local Door: Three Free Models on Your Own GPU',
         content:
-          'Three open-weights systems dominate local video generation right now, measured by downloads, community activity, and benchmark results. All three run through ComfyUI, a node-based interface installed on your own machine — not a chat-style tool like Ollama. These are diffusion models, not LLMs.',
+          'This guide compares three widely used open-weights systems for local video generation. All three run through ComfyUI, a node-based interface installed on your own machine — not a chat-style tool like Ollama. These are diffusion models, not LLMs.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Wan 2.2 is a strong all-around local video model in 2026 — Apache 2.0, high quality, no territory restrictions — while LTX-2 wins on speed and synchronized audio, and HunyuanVideo 1.5 offers the most cinematic look but excludes EU/UK/South Korea users by license.' },
+          { type: 'one-sentence', text: 'Wan 2.2 is a strong all-around local video model in 2026 — Apache 2.0, high quality, no territory restrictions — while LTX-2 focuses on speed and adds synchronized audio, and HunyuanVideo 1.5 is a community favorite for a cinematic look but excludes EU/UK/South Korea users by license.' },
           { type: 'plain-terms', text: 'If you just want one answer: get a 12GB+ GPU and run Wan 2.2. It has high quality and a permissive Apache 2.0 license.' },
         ],
         columns: ['Model', 'License', 'VRAM', 'Output', 'Standout feature'],
         rows: [
-          { 'Model': 'Wan 2.2 (Alibaba)', 'License': 'Apache 2.0 — permissive, no revenue threshold or territory exclusion', 'VRAM': '6–8GB (5B) / 15–25GB (14B)', 'Output': '480p/720p, ~5s clips', 'Standout feature': 'VBench quality ~84.7% (public leaderboard)' },
-          { 'Model': 'LTX-2 (Lightricks)', 'License': 'LTX Community License — free under $10M revenue', 'VRAM': '18–20GB quantized, 32GB+ full', 'Output': '480p–1080p, 5–20s, with audio', 'Standout feature': 'Only model with synchronized audio+video in one pass' },
-          { 'Model': 'HunyuanVideo 1.5 (Tencent)', 'License': 'Tencent Community License — excludes EU/UK/South Korea', 'VRAM': '14GB minimum, 24GB comfortable', 'Output': '480p/720p, up to 10s', 'Standout feature': 'Community favorite for cinematic lighting; lightest on VRAM' },
+          { 'Model': 'Wan 2.2 (Alibaba)', 'License': 'Apache 2.0 — permissive, no revenue threshold or territory exclusion', 'VRAM': '6–8GB (5B) / 15–25GB (14B)', 'Output': '480p/720p, ~5s clips', 'Standout feature': '14B and compact 5B variants' },
+          { 'Model': 'LTX-2 (Lightricks)', 'License': 'LTX Community License — free under $10M revenue', 'VRAM': '18–20GB quantized, 32GB+ full', 'Output': '480p–1080p, 5–20s, with audio', 'Standout feature': 'Synced audio+video (only one of these three)' },
+          { 'Model': 'HunyuanVideo 1.5 (Tencent)', 'License': 'Tencent Community License — excludes EU/UK/South Korea', 'VRAM': '14GB minimum, 24GB comfortable', 'Output': '480p/720p, up to 10s', 'Standout feature': 'Cinematic lighting; 14GB minimum with offloading' },
         ],
         note:
-          '⚠️ Caution: no official "Wan 2.7" release was known at the last refresh. Be cautious with pages claiming to offer "Wan 2.7 open weights". The official Wan repositories list releases up to 2.2 — only download from the official GitHub or Hugging Face repositories linked below.',
+          '⚠️ Caution: no open-weights "Wan 2.7" repository appeared on the [official Wan GitHub page](https://github.com/Wan-Video) when checked on 27 November 2026; Alibaba announced [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) as available on Alibaba Cloud. Be cautious with pages offering "Wan 2.7 open weights" and download only from official GitHub or Hugging Face repositories.',
       },
       wan22: {
         id: 'wan-2-2',
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2 (Lightricks) — speed plus synchronized sound',
         content:
-          'LTX-2 is the only open model in this trio that generates synchronized audio and video in a single pass — footsteps, ambience, and effects arrive with the picture. It is also the fastest of the three and the most forgiving on hardware. The architecture is a 22B diffusion transformer; LTX-2.3 (March 2026) remains fully supported alongside the current LTX-2.5 release. The license is the LTX Community License — free for commercial use if your company\'s total revenue is under $10M per year, with a paid commercial license required above that threshold. (Some third-party write-ups incorrectly call it Apache 2.0 — the [official license page](https://ltx.io/model/license) is the only reliable source.) Hardware needs run 18–20GB VRAM quantized, 32GB+ at full precision; on 12GB cards, the older LTX-Video 0.9.5 remains the practical choice.\n\n**Speed, concretely:** LTX-2 is qualitatively the fastest of the trio, with near-real-time previews on high-end consumer cards — but no independently verified minutes-per-clip figure on an RTX 4090 exists as of this writing, so we won\'t invent one. The one hard number available is from Lightricks\' own benchmark on datacenter-class "Nvidia superchips" (not a consumer GPU): a 10-second clip in about 6.8 seconds. Treat that as a ceiling for what the architecture can do on serious hardware, not what your home rig will see.',
+          'LTX-2 is the only open model in this trio that generates synchronized audio and video in a single pass — footsteps, ambience, and effects arrive with the picture. It is also positioned as a fast model, though it is not the lightest on VRAM (see the figures below). The architecture is a 22B diffusion transformer; LTX-2.3 (March 2026) remains fully supported alongside the current LTX-2.5 release. The license is the LTX Community License — free for commercial use if your company\'s total revenue is under $10M per year, with a paid commercial license required above that threshold. (Some third-party write-ups incorrectly call it Apache 2.0 — the [official license page](https://ltx.io/model/license) is the only reliable source.) Hardware needs run 18–20GB VRAM quantized, 32GB+ at full precision; on 12GB cards, the older LTX-Video 0.9.5 remains the practical choice.\n\n**Speed, concretely:** LTX-2 is often described as fast — but no independently verified minutes-per-clip figure on an RTX 4090 exists as of this writing, so we won\'t invent one. The one hard number available is from Lightricks\' own benchmark on datacenter-class "Nvidia superchips" (not a consumer GPU): a 10-second clip in about 6.8 seconds. Treat that as a ceiling for what the architecture can do on serious hardware, not what your home rig will see.',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 on GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 on Hugging Face' },
@@ -148,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5 (Tencent) — the cinematic look, with a legal catch',
         content:
-          'Tencent\'s 8.3B model, released November 2025, is a community favorite for cinematic lighting and texture, and the lightest of the trio on VRAM: 14GB minimum with offloading, 24GB comfortable, at roughly 75 seconds per 480p clip on an RTX 4090 (a reported figure that PromptQuorum has not verified). It generates 480p/720p natively, up to 1080p via built-in super-resolution, clips up to 10 seconds.\n\n**Speed, concretely:** at ~75 seconds per 5-second 480p clip, that\'s roughly 15 seconds of render time per second of video. Its native max clip length is 10 seconds, so a 20-second sequence means two generations at max length — extrapolating the per-second rate, call it roughly 5 minutes of raw generation for 20 seconds of footage, before stitching. This is an extrapolation from a reported, unverified 5-second figure, not a measured 10-second or 20-second benchmark.',
+          'Tencent\'s 8.3B model, released November 2025, is a community favorite for cinematic lighting and texture, with modest VRAM needs: 14GB minimum with offloading, 24GB comfortable, at roughly 75 seconds per 480p clip on an RTX 4090 (a reported figure that PromptQuorum has not verified). It generates 480p/720p natively, up to 1080p via built-in super-resolution, clips up to 10 seconds.\n\n**Speed, concretely:** at ~75 seconds per 5-second 480p clip, that\'s roughly 15 seconds of render time per second of video. Its native max clip length is 10 seconds, so a 20-second sequence means two generations at max length — extrapolating the per-second rate, call it roughly 5 minutes of raw generation for 20 seconds of footage, before stitching. This is an extrapolation from a reported, unverified 5-second figure, not a measured 10-second or 20-second benchmark.',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on Hugging Face' },
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'License warning — read before downloading. HunyuanVideo 1.5 uses the Tencent Hunyuan Community License, not Apache 2.0. The license does not apply in the European Union, the United Kingdom, or South Korea — per the license text, users in those regions are not authorized to use the model or its outputs. It also caps use at 100 million monthly active users and prohibits training competing models on its outputs. If you\'re in the EU, UK, or South Korea, skip this model: Wan 2.2 (Apache 2.0, permissive commercial use with no territory exclusion) covers the same quality tier.',
+            text: 'License warning — read before downloading. HunyuanVideo 1.5 uses the Tencent Hunyuan Community License, not Apache 2.0. The license does not apply in the European Union, the United Kingdom, or South Korea — per the license text, users in those regions are not authorized to use the model or its outputs. It also requires a separate license from Tencent if your products had more than 100 million monthly active users in the month before the model\'s release date, and it bars using the model or its outputs to improve other AI models (other than Tencent Hunyuan and its derivatives). If you\'re in the EU, UK, or South Korea, skip this model and consider Wan 2.2 (Apache 2.0, permissive commercial use with no territory exclusion) instead.',
           },
         ],
       },
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: 'One to Watch: MiniMax H3',
         content:
-          'Released August 3, 2026, MiniMax H3 is a 33.1B omni-modal model with native stereo audio, day-one ComfyUI support, and quantized versions that run on an RTX 3060. Two caveats before treating it as a fourth pick: the local release caps at 768p (the full 2K pipeline stays hosted-only), and its Community License reportedly carries its own geographic restrictions and a $20M revenue threshold — check the official model card before committing. Early signs are strong, but a recent release and production-ready are different things.',
+          'Released August 3, 2026, MiniMax H3 is a 33.1B omni-modal model with native stereo audio, day-one ComfyUI support, and quantized versions that run on an RTX 3060. Two caveats before treating it as a fourth pick: the local release caps at 768p (the full 2K pipeline stays hosted-only), and its [Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) excludes the EU, the UK, South Korea, and the US from its licensed territory and requires separate authorization above $20M in yearly revenue — read it before committing (this is not legal advice). Early signs are strong, but a recent release and production-ready are different things.',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 on GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 on Hugging Face' },
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your GPU': '24GB+ VRAM', 'What you can run': 'Everything: Wan 2.2 14B at high quality, LTX-2 quantized' },
         ],
         note:
-          'Rough GPU cost, from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15; US eBay listing data, not a quote or offer): used RTX 3090 sold listings are about $1,400–1,550 and used RTX 4090 sold listings $2,575–3,010 (median $2,860). GPU prices move — verify current pricing before buying rather than trusting these figures past a few months.',
+          'Rough GPU cost, from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15; US eBay listing data, not a quote or offer): used RTX 3090 sold listings are about $1,400–1,550 and used RTX 4090 sold listings $2,575–3,010 (median $2,860). The tracker has since raised its used RTX 3090 figure to $1,500–1,725 (median $1,650; 225 sold listings, 13–23 November 2026). GPU prices move — verify current pricing before buying rather than trusting these figures past a few months.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -205,19 +205,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'Invideo is one example of the cloud door — not the only one, and it\'s worth knowing how it differs from the others before assuming "cloud" means one thing. Per their public descriptions (PromptQuorum has not tested any of these three services), Runway integrates directly into professional editors (Premiere Pro, Final Cut, DaVinci Resolve), aimed at hybrid AI-plus-editor workflows rather than a finished, assembled video. Per the same descriptions, Luma AI\'s Dream Machine specializes in native 16-bit HDR output for VFX compositing pipelines (After Effects, Nuke) — a different audience entirely. Pika stays lightweight: fast raw clip generation with no built-in script, voiceover, or stock-footage assembly, so you still need separate tools for everything around the clip — the same DIY-pipeline problem as running a local model, just without the GPU requirement. What sets invideo apart from all three is that it isn\'t primarily a raw-generation tool: it\'s a script-to-finished-video assembler that also gives you access to raw generation models (Kling, Veo, Seedance) when you need them.\n\nInvideo is not a video model but a complete production pipeline offered as a service. You can type a topic or paste a script into [invideo Agent](https://invideo.io/), which plans and creates the video by bringing together the script, scenes, generated or stock visuals, voiceover, music, subtitles, and brand styling in one workflow. It runs in the browser — your GPU is irrelevant.\n\nFor anyone who wants to start making videos today rather than researching GPUs and quantization formats, invideo is the practical choice: no local hardware requirement, no ComfyUI installation or CUDA troubleshooting, and a single workflow that already includes the script, voiceover, music, and subtitles most people actually need. It\'s particularly well suited to creators who care more about the finished video than about controlling the underlying generation model — and since the free tier exists, you can find out whether that fits before spending anything.\n\nThree things stand out for this comparison:\n\n- **Model chaos, absorbed.** All paid plans include access to 200+ models (per invideo) — Seedance 2.5, Veo 3.1, and Kling 3 among them. When a model gets sued or shut down, invideo swaps it; your workflow continues.\n- **Automation is built in, not bolted on.** There\'s an official MCP server, so the entire prompt → script → footage → subtitles pipeline can be triggered programmatically — the kind of harness you\'d otherwise build yourself around ComfyUI.\n- **The free tier is a real test drive.** Watermarked and minute-limited, but enough to judge output quality before paying.\n\n**Speed, concretely — and the honest catch:** a single raw generation is fast, typically minutes. But invideo\'s own FAQ puts full end-to-end production of a short film at 2–5 days, not minutes — because choosing and assembling among multiple generated options, not the generation itself, is what takes the time. Treat "2 days as a realistic floor" for a 1–3 minute finished film as the fair comparison point against the local door\'s 16–36 minutes of raw generation for 20 seconds of unedited footage: invideo trades your setup and editing time for its own production time, it doesn\'t eliminate time entirely.\n\nCurrent plans, starting at $17/month (Plus plan, billed annually; see [invideo\'s pricing page](https://invideo.io/pricing/) for live figures):',
+          'Invideo is one example of the cloud door — not the only one, and it\'s worth knowing how it differs from the others before assuming "cloud" means one thing. Per their public descriptions (PromptQuorum has not tested any of these three services), Runway integrates directly into professional editors (Premiere Pro, Final Cut, DaVinci Resolve), aimed at hybrid AI-plus-editor workflows rather than a finished, assembled video. Per the same descriptions, Luma AI\'s Dream Machine specializes in native 16-bit HDR output for VFX compositing pipelines (After Effects, Nuke) — a different audience entirely. Per the same descriptions, Pika focuses on fast raw clip generation; PromptQuorum has not verified whether it offers script, voiceover, or stock-footage assembly, so check that before relying on it for the work around the clip. In its own description, invideo combines storyboarding, script writing, and timeline editing with access to generation models such as Kling, Veo, and Seedance.\n\nInvideo is not a single video model but a hosted service. When checked on 27 November 2026, [its homepage](https://invideo.io/) presented an agent-driven video editor with storyboarding from a script or idea, script writing, and a multitrack timeline, and its site also lists AI voice and music tools. PromptQuorum has not tested it, so check that voiceover and subtitles work the way you need. It runs in the browser — your GPU is irrelevant.\n\nFor anyone who wants to start making videos today rather than researching GPUs and quantization formats, invideo is the practical choice: no local hardware requirement, no ComfyUI installation or CUDA troubleshooting, and one hosted workspace for the steps around the clip. It\'s particularly well suited to creators who care more about the finished video than about controlling the underlying generation model — and since a free plan exists, you can find out whether that fits before spending anything.\n\nThree things stand out for this comparison:\n\n- **Several models, one account.** invideo\'s pricing page lists access to all models, including all Seedance models, for Plus and Max; Starter covers selected models and not Seedance 2.5. The line-up can change.\n- **Agent access is built in.** invideo offers an [MCP server](https://invideo.io/ai/mcp) that lets AI agents work in its timeline editor.\n- **There is a free plan.** invideo\'s [plan-limits page](https://invideo.io/help/billing/plan-limits/) describes a weekly limit for it; check the export and watermark rules before relying on it.\n\n**Speed, concretely — and the honest catch:** invideo says raw generation is fast. But invideo\'s own FAQ puts full end-to-end production of a short film at 2–5 days, not minutes — because choosing and assembling among multiple generated options, not the generation itself, is what takes the time. Treat "2 days as a realistic floor" for a 1–3 minute finished film as the fair comparison point against the local door\'s 16–36 minutes of raw generation for 20 seconds of unedited footage: invideo trades your setup and editing time for its own production time, it doesn\'t eliminate time entirely.\n\nPlans listed by invideo (for prices, see [invideo\'s pricing page](https://invideo.io/pricing/)):',
         blockquote:
           '**Want to create AI videos without the local setup?** If you don\'t have a powerful GPU — or simply don\'t want to spend hours installing and configuring local AI video tools — invideo is worth trying. [Try invideo\'s free version →](https://invideo.io/pricing/)',
-        columns: ['Plan', 'Price', 'Credits/mo', 'Best for'],
+        columns: ['Plan', 'Credits per seat/mo', 'Model access'],
         rows: [
-          { 'Plan': 'Free', 'Price': '$0', 'Credits/mo': 'limited', 'Best for': 'Testing the waters (watermarked)' },
-          { 'Plan': 'Plus', 'Price': '$17/mo ($200/yr)', 'Credits/mo': '75', 'Best for': 'Regular creators — all AI models, 4 avatars & voice clones, 100 iStock assets, unlimited watermark-free exports' },
-          { 'Plan': 'Max', 'Price': '$85/mo ($1,000/yr)', 'Credits/mo': '390', 'Best for': 'High-volume channels, 16 avatars' },
-          { 'Plan': 'Generative', 'Price': '$170/mo ($2,000/yr)', 'Credits/mo': '800+', 'Best for': 'Short-film / production volume' },
-          { 'Plan': 'Elite', 'Price': '$900/mo ($10,800/yr)', 'Credits/mo': '4,250+', 'Best for': 'Episodic and commercial scale' },
+          { 'Plan': 'Free', 'Credits per seat/mo': 'Weekly limit', 'Model access': 'Check the pricing page' },
+          { 'Plan': 'Starter', 'Credits per seat/mo': '400', 'Model access': 'Selected models; no Seedance 2.5' },
+          { 'Plan': 'Plus', 'Credits per seat/mo': '2,000', 'Model access': 'All models, per invideo' },
+          { 'Plan': 'Max', 'Credits per seat/mo': 'From 5,000', 'Model access': 'All models, per invideo' },
         ],
         note:
-          'All prices above are annual-billing rates listed by invideo — paying month-to-month costs more (invideo\'s own FAQ cites Plus $20, Max $100, Generative $200, Elite $1,000 per month). Check invideo\'s live pricing page before relying on any figure here; plans and prices change. The $/mo figures are invideo\'s rounded annual-plan equivalents; annual totals as listed by invideo at the time of the last refresh (see the Last updated date).',
+          'Plan names, credits, and model access as shown on invideo\'s [pricing](https://invideo.io/pricing/) and [plan-limits](https://invideo.io/help/billing/plan-limits/) pages when checked on 27 November 2026. No prices are quoted here: the page showed a limited-time sale when viewed from Europe, and the plans differ from those this guide listed earlier. Check the live page before relying on any detail.',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Try invideo\'s Free Version →' },
         ],
@@ -282,15 +281,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What\'s the actual catch with "free" local AI video?',
-            a: 'Hardware cost (a capable GPU), setup time (ComfyUI and its dependencies), and the DIY pipeline required around the raw output clips. The model weights themselves genuinely cost $0 per generation, forever.',
+            a: 'Hardware cost (a capable GPU), setup time (ComfyUI and its dependencies), and the DIY pipeline required around the raw output clips. The model weights carry no per-generation fee; hardware and electricity still cost money.',
           },
           {
             q: 'Is there a Wan 2.7 or newer Wan model?',
-            a: 'Not as of this page\'s last refresh: the official Wan repositories list releases up to 2.2. Be cautious with any site offering "Wan 2.7 weights" — download only from the official GitHub or Hugging Face repositories.',
+            a: 'No newer open-weights Wan repository appeared on the official Wan GitHub page when checked on 27 November 2026. Alibaba announced [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) in April 2026 as available on Alibaba Cloud. Be cautious with any other site offering "Wan 2.7 weights" — download only from the official GitHub or Hugging Face repositories.',
           },
           {
             q: 'I\'m a complete beginner. Where should I start?',
-            a: 'Invideo\'s free tier — you\'ll have a finished, narrated video in minutes and can judge whether AI video serves your goals at all. If you later buy a capable GPU and want full control and privacy, the local door stays open.',
+            a: 'Invideo\'s free plan is a way to try the cloud workflow without buying hardware and to judge whether AI video serves your goals; the plan has limits. If you later buy a capable GPU and want full control and privacy, the local door stays open.',
           },
           {
             q: 'What\'s different about running these local models on Mac vs Windows?',
@@ -314,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'The Verdict',
         content:
-          'Go local if you have (or will buy) a 12GB+ GPU, enjoy building your own tools, and value privacy and unlimited $0 generations over convenience. Wan 2.2 is a solid foundation — high quality, Apache 2.0 — with LTX-2 as the speed-and-sound specialist.\n\nGo cloud if you don\'t have the hardware, don\'t want the setup, or need finished videos rather than raw clips. For most people who simply want to make AI-generated videos, the cloud route is the easier starting point: if you don\'t already have the hardware and technical interest local generation requires, invideo removes most of that complexity in one prompt, with every model and asset bundled and automation included — starting at $0 to test and $17/month (billed annually) to remove the watermark. The simplest way to find out whether it fits your workflow is to try the free version.\n\nBoth doors lead to AI video. The question was never which technology is better — it\'s which workflow fits your machine, your patience, and your goals.',
+          'Go local if you have (or will buy) a 12GB+ GPU, enjoy building your own tools, and value privacy and generating without per-clip fees over convenience. Wan 2.2 is a solid foundation — high quality, Apache 2.0 — with LTX-2 as the speed-and-sound specialist.\n\nGo cloud if you don\'t have the hardware, don\'t want the setup, or need finished videos rather than raw clips. For most people who simply want to make AI-generated videos, the cloud route is the easier starting point: if you don\'t already have the hardware and technical interest local generation requires, a hosted service such as invideo takes the local setup off your hands. There is a free plan to test with; paid plans and their limits are listed on invideo\'s pricing page. The simplest way to find out whether it fits your workflow is to try the free version.\n\nBoth doors lead to AI video. The question was never which technology is better — it\'s which workflow fits your machine, your patience, and your goals.',
       },
       sources: {
         id: 'sources',
@@ -325,7 +324,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LTX model license](https://ltx.io/model/license) — official LTX Community License terms.',
           '[LTX-2 model page](https://ltx.io/model/ltx-2-3) — official architecture and release details.',
           '[HunyuanVideo 1.5 on GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) — official repository and LICENSE file, including the EU/UK/South Korea exclusion.',
-          '[VBench-2.0 leaderboard](https://github.com/Vchitect/VBench) — independent benchmark used for quality and physics-faithfulness figures.',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) — press report from March 2026.',
+          '[Alibaba Cloud Community: Wan2.7-Video announcement](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) — April 2026.',
+          '[invideo plan limits](https://invideo.io/help/billing/plan-limits/) — official plan and credit limits.',
           '[Invideo pricing](https://invideo.io/pricing/) — official plan and pricing details.',
           '[Invideo MCP server](https://invideo.io/ai/mcp) — official automation documentation.',
           '[MiniMax H3 on GitHub](https://github.com/MiniMax-AI/MiniMax-H3) — official repository.',
@@ -366,14 +367,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ar.webp',
-    title: 'Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: خيار بلا تكلفة يستهلك عطلتك مقابل خيار يبدأ من 17 دولارًا شهريًا (بفوترة سنوية)',
+    title: 'Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: أحدهما يكلّفك معالج رسومات وعطلتك، والآخر اشتراكًا سحابيًا',
     seoTitle: 'الفيديو السحابي مقابل المحلي بالذكاء الاصطناعي 2026: invideo مقابل Wan 2.2 وLTX-2',
     intro:
-      'هناك بابان للدخول إلى عالم الفيديو بالذكاء الاصطناعي في 2026. الباب الأول محلي: نماذج فيديو مفتوحة ومجانية تعمل على معالج الرسومات (GPU) الخاص بك — توليد غير محدود، مع تشغيل الاستدلال على عتادك الخاص (تنزيلات النماذج وفحوصات التحديث لا تزال تستخدم الشبكة)، بلا اشتراك، لكنك تبني سير العمل بأكمله بنفسك. الباب الثاني سحابي: invideo، حيث يكفي إدخال أمر نصي واحد للحصول على فيديو سردي جاهز — نص، لقطات أرشيفية، تعليق صوتي، موسيقى، وترجمة نصية، كل ذلك مباشرة من المتصفح. لا يوجد باب "أفضل" من الآخر. يقدّم هذا الدليل تفاصيل التراخيص الدقيقة التي تتجاهلها معظم المقارنات، ومتطلبات العتاد الحقيقية، وأداة قرار تربط وضعك بتوصية محددة.',
+      'هناك بابان للدخول إلى عالم الفيديو بالذكاء الاصطناعي في 2026. الباب الأول محلي: نماذج فيديو مفتوحة ومجانية تعمل على معالج الرسومات (GPU) الخاص بك — توليد غير محدود، مع تشغيل الاستدلال على عتادك الخاص (تنزيلات النماذج وفحوصات التحديث لا تزال تستخدم الشبكة)، بلا اشتراك، لكنك تبني سير العمل بأكمله بنفسك. الباب الثاني سحابي: invideo، خدمة مستضافة تعرض مسارًا بمساعدة وكلاء الذكاء الاصطناعي من نص أو فكرة إلى فيديو بعد المونتاج، مباشرة من المتصفح. لا يوجد باب "أفضل" من الآخر. يقدّم هذا الدليل تفاصيل التراخيص الدقيقة التي تتجاهلها معظم المقارنات، ومتطلبات العتاد الحقيقية، وأداة قرار تربط وضعك بتوصية محددة.',
     metaDescription:
-      'نماذج الفيديو المحلية (Wan 2.2 وLTX-2 وHunyuanVideo) مجانية إن دعمها معالجك. تتولى invideo السحابية كل شيء من 17 دولارًا شهريًا (بفوترة سنوية).',
+      'نماذج الفيديو المحلية (Wan 2.2 وLTX-2 وHunyuanVideo) مجانية التنزيل إن كان معالج رسوماتك يشغّلها. إليك مقارنتها بخدمة invideo السحابية.',
     twitterDescription:
-      'الفيديو السحابي مقابل المحلي بالذكاء الاصطناعي في 2026: تجمع invideo كل شيء بدءًا من 17 دولارًا شهريًا (بفوترة سنوية). تعمل Wan 2.2 وLTX-2 وHunyuanVideo مجانًا على معالج الرسومات الخاص بك — إن كان قويًا بما يكفي. مقارنة صادقة.',
+      'الفيديو السحابي مقابل المحلي في 2026: invideo خدمة مستضافة باشتراك. يمكن تنزيل Wan 2.2 وLTX-2 وHunyuanVideo مجانًا لمعالج رسوماتك — إن كان قويًا بما يكفي.',
     audience:
       'المبدعون والمطورون الذين يترددون بين توليد الفيديو المحلي المجاني على معالج الرسومات الخاص بهم وخط إنتاج invideo السحابي المتكامل — يغطي متطلبات العتاد، وتفاصيل التراخيص، والمفاضلات في سير العمل.',
     readTime: '10 دقائق للقراءة',
@@ -401,18 +402,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**بالنسبة لمعظم من يملكون معالج رسومات بذاكرة 12 جيجابايت فأكثر، يُعد Wan 2.2 نموذج فيديو محلياً قوياً بالذكاء الاصطناعي في 2026** — مرخّص بموجب Apache 2.0 بلا سقف إيرادات أو قيود جغرافية، ويسجّل نحو 84.7% في تصنيف VBench العلني، وهو مجاني بالكامل. **يُعد invideo الخيار الأفضل إذا لم يتوفر لديك ذلك المعالج، أو إذا أردت فيديو سرديًا جاهزًا بدلًا من مقطع خام** — تبدأ خطته Plus من 17 دولارًا شهريًا (بفوترة سنوية)، وتجمع أكثر من 200 نموذج (بحسب invideo) (بما فيها Kling 3 وVeo 3.1 وSeedance 2.5) في خط إنتاج واحد يعمل عبر المتصفح، يتضمن النص والتعليق الصوتي والموسيقى والترجمة النصية. **يمتلك HunyuanVideo 1.5 المظهر السينمائي الأكثر جمالًا محليًا، لكن ترخيصه يستبعد الاتحاد الأوروبي والمملكة المتحدة وكوريا الجنوبية تمامًا** — تجنّبه إذا كنت في هذه المناطق.',
+      '**بالنسبة لمعظم من يملكون معالج رسومات بذاكرة 12 جيجابايت فأكثر، يُعد Wan 2.2 نموذج فيديو محلياً قوياً بالذكاء الاصطناعي في 2026** — مرخّص بموجب Apache 2.0 بلا سقف إيرادات أو قيود جغرافية، وتنزيله مجاني (ويبقى للعتاد والكهرباء تكلفتهما). **يُعد invideo الخيار الأفضل إذا لم يتوفر لديك ذلك المعالج، أو إذا أردت فيديو سرديًا جاهزًا بدلًا من مقطع خام** — وهو خدمة مستضافة عبر المتصفح تختلف خططها المدفوعة (Starter وPlus وMax) في الوصول إلى النماذج؛ راجع صفحة الأسعار الحالية. **يحظى HunyuanVideo 1.5 بشعبية في المجتمع بسبب مظهره السينمائي، لكن ترخيصه يستبعد الاتحاد الأوروبي والمملكة المتحدة وكوريا الجنوبية تمامًا** — تجنّبه إذا كنت في هذه المناطق.',
     quickAnswerTop: {
       ar: {
         question: 'هل يجب أن أولّد الفيديو بالذكاء الاصطناعي محليًا أم أستخدم خط إنتاج invideo السحابي؟',
         answer:
-          'ولّد الفيديو محليًا إذا كنت تملك معالج رسومات بذاكرة 12 جيجابايت فأكثر، وتريد توليدًا غير محدود بتكلفة صفر دولار، وتُقدّر الخصوصية — يُعد Wan 2.2 (مرخّص بموجب Apache 2.0 — استخدام تجاري متساهل؛ راجع بطاقة النموذج) نقطة بداية معقولة. استخدم invideo إذا لم يتوفر لديك العتاد المناسب، أو لا تريد إدارة الإعداد، أو تحتاج فيديو كاملًا وجاهزًا (نص، تعليق صوتي، موسيقى، ترجمة نصية) بدلًا من مقطع خام — تبدأ خطته Plus من 17 دولارًا شهريًا (بفوترة سنوية).',
+          'ولّد الفيديو محليًا إذا كنت تملك معالج رسومات بذاكرة 12 جيجابايت فأكثر، وتريد التوليد بلا رسوم لكل مقطع، وتُقدّر الخصوصية — يُعد Wan 2.2 (مرخّص بموجب Apache 2.0 — استخدام تجاري متساهل؛ راجع بطاقة النموذج) نقطة بداية معقولة. استخدم invideo إذا لم يتوفر لديك العتاد المناسب، أو لا تريد إدارة الإعداد، أو تحتاج فيديو كاملًا وجاهزًا (نص، تعليق صوتي، موسيقى، ترجمة نصية) بدلًا من مقطع خام — فهو خدمة مستضافة باشتراك ولديها خطة مجانية؛ راجع الأسعار الحالية في صفحة الأسعار.',
         bullets: [
           'أقل من 12 جيجابايت VRAM ← يُعد invideo الخيار العملي؛ النماذج المحلية غير قابلة للاستخدام بجودة جادة دون هذا المستوى.',
           '12 جيجابايت VRAM ← LTX-Video 0.9.5، خيار محلي عملي في هذا المستوى.',
           '16 إلى 24+ جيجابايت VRAM ← Wan 2.2 (أعلى جودة، Apache 2.0 — استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي؛ تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد، راجع بطاقة النموذج) أو LTX-2 (سرعة + صوت متزامن).',
           'إذا كنت في الاتحاد الأوروبي أو المملكة المتحدة أو كوريا الجنوبية ← ترخيص HunyuanVideo 1.5 يستبعدك؛ استخدم Wan 2.2 أو LTX-2 بدلًا منه.',
-          'تحتاج فيديو سرديًا جاهزًا، لا مقطعًا خامًا ← النماذج المحلية تولّد فقط مقاطع صامتة (باستثناء LTX) مدتها 5 إلى 20 ثانية؛ يتولى invideo خط الإنتاج الكامل، بدءًا من 17 دولارًا شهريًا (بفوترة سنوية).',
+          'تحتاج فيديو سرديًا جاهزًا، لا مقطعًا خامًا ← النماذج المحلية تولّد فقط مقاطع صامتة (باستثناء LTX) مدتها 5 إلى 20 ثانية؛ يقدّم invideo سير عمل مستضافًا حول المقطع؛ راجع صفحة الأسعار لمعرفة ما تتضمنه كل خطة.',
         ],
         updatedDate: '2026-11-23',
       },
@@ -442,38 +443,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**يُعد Wan 2.2 نموذج فيديو محلياً من الفئة الأولى برخصة Apache 2.0 المتساهلة.** استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي (تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد؛ راجع بطاقة النموذج) — ودرجة جودة VBench تبلغ نحو 84.7% في التصنيف العلني.',
-          '**تجمع invideo أكثر من 200 نموذج (بحسب invideo) — بما فيها Kling 3 وVeo 3.1 وSeedance 2.5 — في خط إنتاج واحد يعمل عبر المتصفح** بدءًا من 17 دولارًا شهريًا (خطة Plus، بفوترة سنوية)، مع نص وتعليق صوتي وموسيقى وترجمة نصية تُدار تلقائيًا.',
+          '**يُعد Wan 2.2 نموذج فيديو محلياً من الفئة الأولى برخصة Apache 2.0 المتساهلة.** استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي (تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد؛ راجع بطاقة النموذج).',
+          '**invideo بديل مستضاف** لديه خطة مجانية وخطط مدفوعة هي Starter وPlus وMax؛ وتذكر صفحة أسعاره أن Plus وMax تتيحان الوصول إلى جميع النماذج، بما فيها جميع نماذج Seedance. الأسعار متفاوتة — راجع الصفحة الحالية.',
           '**يستبعد ترخيص HunyuanVideo 1.5 صراحةً الاتحاد الأوروبي والمملكة المتحدة وكوريا الجنوبية** — يشمل ذلك النموذج نفسه ومخرجاته. يجب على القراء في هذه المناطق استخدام Wan 2.2 أو LTX-2 بدلًا منه.',
-          '**LTX-2 هو الأسرع بين الثلاثي المحلي والوحيد الذي يتضمن صوتًا متزامنًا مدمجًا**، وهو مجاني تجاريًا للشركات التي تقل إيراداتها السنوية عن 10 ملايين دولار.',
+          '**يُقدَّم LTX-2 بوصفه نموذجًا يركّز على السرعة، وهو الوحيد بين هذا الثلاثي المحلي الذي يتضمن صوتًا متزامنًا مدمجًا**، وهو مجاني تجاريًا للشركات التي تقل إيراداتها السنوية عن 10 ملايين دولار.',
           '**12 جيجابايت VRAM هو الحد الأدنى الواقعي لتوليد الفيديو المحلي الجاد.** دون ذلك، يصبح invideo الخيار الأكثر عملية.',
-          '**تولّد النماذج المحلية مقاطع خامًا صامتة مدتها 5 إلى 20 ثانية، لا فيديوهات جاهزة.** النص، والتعليق الصوتي، والموسيقى، والترجمة النصية، والمونتاج أدوات منفصلة تجمّعها بنفسك — بينما تنجز invideo كل ذلك في خطوة واحدة.',
-          '**لم يكن هناك إصدار رسمي باسم "Wan 2.7" عند آخر تحديث لهذه الصفحة.** توخَّ الحذر من صفحات التحميل التي تعرضه — تتوقف إصدارات Wan الرسمية المدرجة في مستودعاتها عند 2.2.',
+          '**تولّد النماذج المحلية مقاطع خامًا صامتة مدتها 5 إلى 20 ثانية، لا فيديوهات جاهزة.** النص، والتعليق الصوتي، والموسيقى، والترجمة النصية، والمونتاج أدوات منفصلة تجمّعها بنفسك — بينما تسعى invideo إلى جمع هذه الخطوات في سير عمل مستضاف واحد.',
+          '**عند التحقق في 27 نوفمبر 2026، لم تعرض صفحة Wan الرسمية على GitHub أي مستودع بأوزان مفتوحة باسم "Wan 2.7".** وقد أعلنت Alibaba في أبريل 2026 عن [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) بوصفه نموذجًا متاحًا على Alibaba Cloud. توخَّ الحذر من صفحات الجهات الخارجية التي تعرض "أوزان Wan 2.7".',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'لماذا يمثل عام 2026 لحظة غريبة لفيديو الذكاء الاصطناعي',
         content:
-          'شهدت سوق الفيديو الاحتكارية فوضى عارمة، بحسب تقارير صحفية لم تتحقق PromptQuorum منها بشكل مستقل. واجه نموذج Seedance 2.0 التابع لـ ByteDance تهديدات قانونية من استوديوهات هوليوود (أُفيد بإرسال خطابات إنذار بالتوقف عن المخالفة من Disney وParamount وWarner Bros.) وتوقفًا مؤقتًا للطرح العالمي — يُذكر أنه لا يزال متاحًا في الصين، بينما وضعه القانوني للاستخدام التجاري الدولي غير واضح.\n\nهذه الفوضى بالذات هي ما يجعل كلا البابين جذابين. تمنحك النماذج المحلية المفتوحة استقلالًا عن دراما الموردين. أما invideo فتمتصّ هذه الدراما نيابة عنك: يمنح اشتراكها الوصول إلى أكثر من 200 نموذج (بحسب invideo) — بما فيها Kling 3 وVeo 3.1 وSeedance 2.5 — بحيث لا يتأثر سير عملك عندما يختفي نموذج ما أو يتعرض لدعوى قضائية.',
+          'شهدت سوق الفيديو الاحتكارية اضطرابًا. في مارس 2026 [أفاد موقع Engadget](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) نقلًا عن The Information بأن ByteDance أوقفت مؤقتًا الطرح العالمي لنموذج Seedance 2.0 بعد خطابات إنذار بالتوقف عن المخالفة من Disney وParamount Skydance. لم تتحقق PromptQuorum من هذا التقرير بشكل مستقل، وقد تغيّر التوافر منذ ذلك الحين: تدرج صفحة أسعار invideo الآن Seedance 2.0 و2.5.\n\nمثل هذه التقلبات هي ما يجعل كلا البابين جذابين. تظل النماذج المفتوحة التي نزّلتها بالفعل تعمل مهما تغيّر الموردون. وتوفّر خدمة متعددة النماذج مثل invideo عدة نماذج في حساب واحد، لكن قائمة النماذج المتاحة قد تتغير، لذا لا ضمان بأن سير عملك لن يتأثر.',
       },
       localModels: {
         id: 'local-models',
         title: 'الباب المحلي: ثلاثة نماذج مجانية على معالج الرسومات الخاص بك',
         content:
-          'تهيمن ثلاثة أنظمة مفتوحة الأوزان على توليد الفيديو المحلي حاليًا، قياسًا بعدد التنزيلات ونشاط المجتمع ونتائج المقاييس. تعمل الأنظمة الثلاثة عبر ComfyUI، واجهة قائمة على العُقد تُثبّت على جهازك الخاص — وليست أداة محادثة مثل Ollama. هذه نماذج انتشار (diffusion)، وليست نماذج لغوية كبيرة (LLM).',
+          'يقارن هذا الدليل ثلاثة أنظمة مفتوحة الأوزان واسعة الاستخدام لتوليد الفيديو المحلي. تعمل الأنظمة الثلاثة عبر ComfyUI، واجهة قائمة على العُقد تُثبّت على جهازك الخاص — وليست أداة محادثة مثل Ollama. هذه نماذج انتشار (diffusion)، وليست نماذج لغوية كبيرة (LLM).',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'يُعد Wan 2.2 نموذج فيديو محلياً قوياً وشاملاً في 2026 — مرخّص بموجب Apache 2.0، بجودة عالية، بلا قيود جغرافية — بينما يتفوق LTX-2 في السرعة والصوت المتزامن، ويقدّم HunyuanVideo 1.5 المظهر السينمائي الأكثر جمالًا لكن ترخيصه يستبعد مستخدمي الاتحاد الأوروبي والمملكة المتحدة وكوريا الجنوبية.' },
+          { type: 'one-sentence', text: 'يُعد Wan 2.2 نموذج فيديو محلياً قوياً وشاملاً في 2026 — مرخّص بموجب Apache 2.0، بجودة عالية، بلا قيود جغرافية — بينما يركّز LTX-2 على السرعة ويضيف الصوت المتزامن، ويحظى HunyuanVideo 1.5 بشعبية في المجتمع لمظهره السينمائي لكن ترخيصه يستبعد مستخدمي الاتحاد الأوروبي والمملكة المتحدة وكوريا الجنوبية.' },
           { type: 'plain-terms', text: 'إذا أردت إجابة واحدة فقط: احصل على معالج رسومات بذاكرة 12 جيجابايت فأكثر وشغّل Wan 2.2. فهو يمتلك جودة عالية وترخيص Apache 2.0 المتساهل.' },
         ],
         columns: ['النموذج', 'الترخيص', 'VRAM', 'المخرجات', 'الميزة البارزة'],
         rows: [
-          { 'النموذج': 'Wan 2.2 (Alibaba)', 'الترخيص': 'Apache 2.0 — متساهل، بلا حد أدنى للإيرادات ولا استبعاد جغرافي', 'VRAM': '6–8GB (5B) / 15–25GB (14B)', 'المخرجات': '480p/720p، مقاطع ~5 ثوانٍ', 'الميزة البارزة': 'جودة VBench ~84.7% (التصنيف العلني)' },
-          { 'النموذج': 'LTX-2 (Lightricks)', 'الترخيص': 'LTX Community License — مجاني لمن تقل إيراداته عن 10 ملايين دولار', 'VRAM': '18–20GB مُكمَّم، 32GB+ بدقة كاملة', 'المخرجات': '480p–1080p، 5–20 ثانية، مع صوت', 'الميزة البارزة': 'النموذج الوحيد بصوت وفيديو متزامنين في خطوة واحدة' },
-          { 'النموذج': 'HunyuanVideo 1.5 (Tencent)', 'الترخيص': 'Tencent Community License — يستبعد الاتحاد الأوروبي/المملكة المتحدة/كوريا الجنوبية', 'VRAM': '14GB كحد أدنى، 24GB بشكل مريح', 'المخرجات': '480p/720p، حتى 10 ثوانٍ', 'الميزة البارزة': 'مفضّل المجتمع للإضاءة السينمائية؛ الأخف استهلاكًا لـ VRAM' },
+          { 'النموذج': 'Wan 2.2 (Alibaba)', 'الترخيص': 'Apache 2.0 — متساهل، بلا حد أدنى للإيرادات ولا استبعاد جغرافي', 'VRAM': '6–8GB (5B) / 15–25GB (14B)', 'المخرجات': '480p/720p، مقاطع ~5 ثوانٍ', 'الميزة البارزة': 'إصدارا 14B و5B المدمج' },
+          { 'النموذج': 'LTX-2 (Lightricks)', 'الترخيص': 'LTX Community License — مجاني لمن تقل إيراداته عن 10 ملايين دولار', 'VRAM': '18–20GB مُكمَّم، 32GB+ بدقة كاملة', 'المخرجات': '480p–1080p، 5–20 ثانية، مع صوت', 'الميزة البارزة': 'صوت وفيديو متزامنان (وحده بين الثلاثة)' },
+          { 'النموذج': 'HunyuanVideo 1.5 (Tencent)', 'الترخيص': 'Tencent Community License — يستبعد الاتحاد الأوروبي/المملكة المتحدة/كوريا الجنوبية', 'VRAM': '14GB كحد أدنى، 24GB بشكل مريح', 'المخرجات': '480p/720p، حتى 10 ثوانٍ', 'الميزة البارزة': 'إضاءة سينمائية؛ 14GB كحد أدنى مع التفريغ' },
         ],
         note:
-          '⚠️ تنبيه: لم يكن هناك إصدار رسمي باسم "Wan 2.7" عند آخر تحديث. توخَّ الحذر من صفحات التحميل التي تدّعي تقديم "أوزان Wan 2.7 المفتوحة". تتوقف إصدارات Wan الرسمية المدرجة في مستودعاتها عند 2.2 — لا تُحمّل إلا من مستودعات GitHub أو Hugging Face الرسمية المرتبطة أدناه.',
+          '⚠️ تنبيه: عند التحقق في 27 نوفمبر 2026، لم تعرض [صفحة Wan الرسمية على GitHub](https://github.com/Wan-Video) أي مستودع بأوزان مفتوحة باسم "Wan 2.7"؛ وقد أعلنت Alibaba أن [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) متاح على Alibaba Cloud. توخَّ الحذر من الصفحات التي تعرض "أوزان Wan 2.7 المفتوحة" ولا تُحمّل إلا من مستودعات GitHub أو Hugging Face الرسمية.',
       },
       wan22: {
         id: 'wan-2-2',
@@ -489,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2 (Lightricks) — سرعة مع صوت متزامن',
         content:
-          'LTX-2 هو النموذج المفتوح الوحيد بين الثلاثة الذي يولّد صوتًا وفيديو متزامنين في خطوة واحدة — تصل خطى الأقدام والأصوات المحيطة والمؤثرات مع الصورة نفسها. وهو أيضًا الأسرع بينها والأكثر تسامحًا مع العتاد. البنية عبارة عن محوّل انتشار (diffusion transformer) بحجم 22B؛ يبقى LTX-2.3 (مارس 2026) مدعومًا بالكامل جنبًا إلى جنب مع إصدار LTX-2.5 الحالي. الترخيص هو LTX Community License — مجاني للاستخدام التجاري إذا كان إجمالي إيرادات شركتك أقل من 10 ملايين دولار سنويًا، مع الحاجة إلى ترخيص تجاري مدفوع فوق هذا الحد. (تصفه بعض المقالات الخارجية خطأً بأنه Apache 2.0 — [صفحة الترخيص الرسمية](https://ltx.io/model/license) هي المصدر الموثوق الوحيد.) تحتاج متطلبات العتاد ما بين 18–20 جيجابايت VRAM مُكمَّمًا، و32 جيجابايت فأكثر بالدقة الكاملة؛ وعلى بطاقات 12 جيجابايت، يبقى الإصدار الأقدم LTX-Video 0.9.5 الخيار العملي.\n\n**السرعة، بالأرقام:** يُعد LTX-2 نوعيًا الأسرع بين الثلاثة، بمعاينات شبه فورية على البطاقات الاستهلاكية عالية الأداء — لكن لا يوجد حتى وقت كتابة هذا المقال رقم موثّق بشكل مستقل بالدقائق لكل مقطع على معالج RTX 4090، لذا لن نخترع واحدًا. الرقم الثابت الوحيد المتاح هو من قياس أداء Lightricks نفسها على "معالجات Nvidia الفائقة" (superchips) من فئة مراكز البيانات (وليست بطاقة استهلاكية): مقطع مدته 10 ثوانٍ في نحو 6.8 ثوانٍ. اعتبر هذا الرقم سقفًا لما يمكن أن تحققه البنية على عتاد احترافي جاد، وليس ما سيراه جهازك المنزلي.',
+          'LTX-2 هو النموذج المفتوح الوحيد بين الثلاثة الذي يولّد صوتًا وفيديو متزامنين في خطوة واحدة — تصل خطى الأقدام والأصوات المحيطة والمؤثرات مع الصورة نفسها. ويُقدَّم أيضًا بوصفه نموذجًا سريعًا، لكنه ليس الأخف استهلاكًا لـ VRAM (راجع الأرقام أدناه). البنية عبارة عن محوّل انتشار (diffusion transformer) بحجم 22B؛ يبقى LTX-2.3 (مارس 2026) مدعومًا بالكامل جنبًا إلى جنب مع إصدار LTX-2.5 الحالي. الترخيص هو LTX Community License — مجاني للاستخدام التجاري إذا كان إجمالي إيرادات شركتك أقل من 10 ملايين دولار سنويًا، مع الحاجة إلى ترخيص تجاري مدفوع فوق هذا الحد. (تصفه بعض المقالات الخارجية خطأً بأنه Apache 2.0 — [صفحة الترخيص الرسمية](https://ltx.io/model/license) هي المصدر الموثوق الوحيد.) تحتاج متطلبات العتاد ما بين 18–20 جيجابايت VRAM مُكمَّمًا، و32 جيجابايت فأكثر بالدقة الكاملة؛ وعلى بطاقات 12 جيجابايت، يبقى الإصدار الأقدم LTX-Video 0.9.5 الخيار العملي.\n\n**السرعة، بالأرقام:** كثيرًا ما يوصف LTX-2 بأنه سريع — لكن لا يوجد حتى وقت كتابة هذا المقال رقم موثّق بشكل مستقل بالدقائق لكل مقطع على معالج RTX 4090، لذا لن نخترع واحدًا. الرقم الثابت الوحيد المتاح هو من قياس أداء Lightricks نفسها على "معالجات Nvidia الفائقة" (superchips) من فئة مراكز البيانات (وليست بطاقة استهلاكية): مقطع مدته 10 ثوانٍ في نحو 6.8 ثوانٍ. اعتبر هذا الرقم سقفًا لما يمكن أن تحققه البنية على عتاد احترافي جاد، وليس ما سيراه جهازك المنزلي.',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 on GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 on Hugging Face' },
@@ -499,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5 (Tencent) — المظهر السينمائي، مع عائق قانوني',
         content:
-          'نموذج Tencent بحجم 8.3B، الصادر في نوفمبر 2025، هو المفضل لدى المجتمع للإضاءة والملمس السينمائيين، وهو الأخف بين الثلاثة استهلاكًا لـ VRAM: 14 جيجابايت كحد أدنى مع التفريغ (offloading)، و24 جيجابايت بشكل مريح، بمعدل نحو 75 ثانية لكل مقطع 480p على معالج RTX 4090 (رقم مُبلَّغ عنه لم تتحقق منه PromptQuorum). يولّد بدقة 480p/720p أصليًا، وحتى 1080p عبر تقنية دقة فائقة مدمجة، بمقاطع تصل إلى 10 ثوانٍ.\n\n**السرعة، بالأرقام:** بمعدل ~75 ثانية لكل مقطع 480p مدته 5 ثوانٍ، فهذا يعادل نحو 15 ثانية من زمن التصيير لكل ثانية فيديو. أقصى طول أصلي للمقطع هو 10 ثوانٍ، لذا فإن تسلسلًا مدته 20 ثانية يعني توليدين بأقصى طول — وباستقراء المعدل لكل ثانية، فإن ذلك يعادل نحو 5 دقائق من زمن التوليد الخام لـ 20 ثانية من اللقطات، قبل الدمج. هذا استقراء من رقم الـ5 ثوانٍ المُبلَّغ عنه وغير المتحقق منه، وليس قياسًا مباشرًا لمقطع 10 أو 20 ثانية.',
+          'نموذج Tencent بحجم 8.3B، الصادر في نوفمبر 2025، هو المفضل لدى المجتمع للإضاءة والملمس السينمائيين، واحتياجه من VRAM متوسط: 14 جيجابايت كحد أدنى مع التفريغ (offloading)، و24 جيجابايت بشكل مريح، بمعدل نحو 75 ثانية لكل مقطع 480p على معالج RTX 4090 (رقم مُبلَّغ عنه لم تتحقق منه PromptQuorum). يولّد بدقة 480p/720p أصليًا، وحتى 1080p عبر تقنية دقة فائقة مدمجة، بمقاطع تصل إلى 10 ثوانٍ.\n\n**السرعة، بالأرقام:** بمعدل ~75 ثانية لكل مقطع 480p مدته 5 ثوانٍ، فهذا يعادل نحو 15 ثانية من زمن التصيير لكل ثانية فيديو. أقصى طول أصلي للمقطع هو 10 ثوانٍ، لذا فإن تسلسلًا مدته 20 ثانية يعني توليدين بأقصى طول — وباستقراء المعدل لكل ثانية، فإن ذلك يعادل نحو 5 دقائق من زمن التوليد الخام لـ 20 ثانية من اللقطات، قبل الدمج. هذا استقراء من رقم الـ5 ثوانٍ المُبلَّغ عنه وغير المتحقق منه، وليس قياسًا مباشرًا لمقطع 10 أو 20 ثانية.',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on Hugging Face' },
@@ -507,7 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'تحذير بشأن الترخيص — اقرأ قبل التحميل. يستخدم HunyuanVideo 1.5 ترخيص Tencent Hunyuan Community License، وليس Apache 2.0. لا ينطبق هذا الترخيص في الاتحاد الأوروبي أو المملكة المتحدة أو كوريا الجنوبية — بحسب نص الترخيص، لا يُخوَّل مستخدمو هذه المناطق استخدام النموذج أو مخرجاته. كما يحدّ الترخيص الاستخدام بسقف 100 مليون مستخدم نشط شهريًا، ويحظر تدريب نماذج منافسة على مخرجاته. إذا كنت في الاتحاد الأوروبي أو المملكة المتحدة أو كوريا الجنوبية، تجنّب هذا النموذج: يوفّر Wan 2.2 (Apache 2.0، استخدام تجاري متساهل بلا استبعاد جغرافي) مستوى الجودة نفسه.',
+            text: 'تحذير بشأن الترخيص — اقرأ قبل التحميل. يستخدم HunyuanVideo 1.5 ترخيص Tencent Hunyuan Community License، وليس Apache 2.0. لا ينطبق هذا الترخيص في الاتحاد الأوروبي أو المملكة المتحدة أو كوريا الجنوبية — بحسب نص الترخيص، لا يُخوَّل مستخدمو هذه المناطق استخدام النموذج أو مخرجاته. كما يشترط ترخيصًا منفصلًا من Tencent إذا تجاوز عدد المستخدمين النشطين شهريًا لمنتجاتك 100 مليون في الشهر السابق لتاريخ إصدار النموذج، ويحظر استخدام النموذج أو مخرجاته لتحسين نماذج ذكاء اصطناعي أخرى (باستثناء Tencent Hunyuan ومشتقاته). إذا كنت في الاتحاد الأوروبي أو المملكة المتحدة أو كوريا الجنوبية، تجنّب هذا النموذج وفكّر في Wan 2.2 (Apache 2.0، استخدام تجاري متساهل بلا استبعاد جغرافي).',
           },
         ],
       },
@@ -515,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: 'نموذج يستحق المتابعة: MiniMax H3',
         content:
-          'صدر في 3 أغسطس 2026، وMiniMax H3 هو نموذج شامل الوسائط (omni-modal) بحجم 33.1B، يدعم صوتًا مجسّمًا (stereo) أصليًا، ودعمًا فوريًا لـ ComfyUI منذ اليوم الأول، وإصدارات مُكمَّمة تعمل على معالج RTX 3060. هناك تحفظان قبل اعتباره خيارًا رابعًا: يقتصر الإصدار المحلي على دقة 768p (يبقى خط الأنابيب الكامل بدقة 2K حصريًا للنسخة السحابية)، ويحمل ترخيصه المجتمعي — بحسب ما يُذكر — قيودًا جغرافية خاصة به وحدًا أدنى للإيرادات قدره 20 مليون دولار — تحقق من بطاقة النموذج الرسمية قبل الالتزام به. المؤشرات الأولية قوية، لكن الإصدار الحديث لا يعني الجاهزية للإنتاج.',
+          'صدر في 3 أغسطس 2026، وMiniMax H3 هو نموذج شامل الوسائط (omni-modal) بحجم 33.1B، يدعم صوتًا مجسّمًا (stereo) أصليًا، ودعمًا فوريًا لـ ComfyUI منذ اليوم الأول، وإصدارات مُكمَّمة تعمل على معالج RTX 3060. هناك تحفظان قبل اعتباره خيارًا رابعًا: يقتصر الإصدار المحلي على دقة 768p (يبقى خط الأنابيب الكامل بدقة 2K حصريًا للنسخة السحابية)، ويستثني [ترخيصه المجتمعي](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) الاتحاد الأوروبي والمملكة المتحدة وكوريا الجنوبية والولايات المتحدة من النطاق المرخّص، ويشترط تصريحًا منفصلًا إذا تجاوزت الإيرادات السنوية 20 مليون دولار — اقرأه قبل الالتزام به (هذا ليس استشارة قانونية). المؤشرات الأولية قوية، لكن الإصدار الحديث لا يعني الجاهزية للإنتاج.',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 on GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 on Hugging Face' },
@@ -536,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'معالج الرسومات لديك': '24GB+ VRAM', 'ما يمكنك تشغيله': 'كل شيء: Wan 2.2 14B بجودة عالية، LTX-2 مُكمَّم' },
         ],
         note:
-          'تكلفة تقريبية لبطاقات الرسومات، من [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15؛ بيانات قوائم eBay الأمريكية، وليست عرض سعر): قوائم بيع RTX 3090 المستعملة نحو 1,400–1,550$ وقوائم بيع RTX 4090 المستعملة 2,575–3,010$ (الوسيط 2,860$). أسعار بلدك قد تختلف حسب الضرائب والرسوم الجمركية. أسعار معالجات الرسومات متغيرة — تحقق من الأسعار الحالية قبل الشراء بدلًا من الاعتماد على هذه الأرقام بعد مرور أشهر قليلة.',
+          'تكلفة تقريبية لبطاقات الرسومات، من [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15؛ بيانات قوائم eBay الأمريكية، وليست عرض سعر): قوائم بيع RTX 3090 المستعملة نحو 1,400–1,550$ وقوائم بيع RTX 4090 المستعملة 2,575–3,010$ (الوسيط 2,860$). وقد رفع المتتبّع لاحقًا رقم RTX 3090 المستعملة إلى 1,500–1,725$ (الوسيط 1,650$؛ 225 عملية بيع، 13–23 نوفمبر 2026). أسعار بلدك قد تختلف حسب الضرائب والرسوم الجمركية. أسعار معالجات الرسومات متغيرة — تحقق من الأسعار الحالية قبل الشراء بدلًا من الاعتماد على هذه الأرقام بعد مرور أشهر قليلة.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -556,19 +557,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'Invideo مجرد مثال واحد على الباب السحابي — وليس المثال الوحيد، ومن المفيد معرفة كيف يختلف عن غيره قبل افتراض أن كلمة "سحابي" تعني شيئًا واحدًا. بحسب أوصافها العامة (ولم تختبر PromptQuorum أياً من هذه الخدمات الثلاث)، يندمج Runway مباشرة في محرّرات احترافية (Premiere Pro، Final Cut، DaVinci Resolve)، ويستهدف سير عمل هجينًا بين الذكاء الاصطناعي والمحرّر لا فيديو جاهزًا ومُجمَّعًا. بحسب الأوصاف نفسها، تتخصص Dream Machine من Luma AI في مخرجات HDR أصلية بعمق 16 بت لخطوط أنابيب تركيب المؤثرات البصرية (After Effects، Nuke) — جمهور مختلف تمامًا. تبقى Pika خفيفة الوزن: توليد مقاطع خام سريع بلا نص أو تعليق صوتي أو تجميع لقطات أرشيفية مدمج، ما يعني أنك ما زلت بحاجة لأدوات منفصلة لكل ما يحيط بالمقطع — مشكلة خط الإنتاج اليدوي نفسها التي تواجهها مع تشغيل نموذج محلي، لكن دون الحاجة إلى معالج رسومات. ما يميّز invideo عن الثلاثة جميعًا هو أنها ليست أداة توليد خام بالدرجة الأولى: إنها مُجمِّع يحوّل النص إلى فيديو جاهز، ويمنحك أيضًا الوصول إلى نماذج توليد خام (Kling، Veo، Seedance) عند الحاجة إليها.\n\nInvideo ليس نموذج فيديو، بل خط إنتاج كامل يُقدَّم كخدمة. يمكنك كتابة موضوع أو لصق نص في [invideo Agent](https://invideo.io/)، الذي يخطط للفيديو ويُنشئه عبر جمع النص والمشاهد والعناصر المرئية المولَّدة أو الأرشيفية والتعليق الصوتي والموسيقى والترجمة النصية وتنسيق العلامة التجارية في سير عمل واحد. يعمل عبر المتصفح — معالج الرسومات لديك غير ذي صلة.\n\nلكل من يريد البدء في صناعة الفيديوهات اليوم بدلًا من البحث عن معالجات الرسومات وصيغ التكميم، يُعد invideo الخيار العملي: بلا حاجة لعتاد محلي، بلا تثبيت لـ ComfyUI أو استكشاف أخطاء CUDA، وسير عمل واحد يتضمن بالفعل النص والتعليق الصوتي والموسيقى والترجمة النصية التي يحتاجها معظم الناس فعليًا. وهو مناسب بوجه خاص للمبدعين الذين يهتمون بالفيديو الجاهز أكثر من اهتمامهم بالتحكم في نموذج التوليد الأساسي — وبما أن الفئة المجانية موجودة، يمكنك معرفة ما إذا كانت تناسبك قبل إنفاق أي مبلغ.\n\nتبرز ثلاثة أمور في هذه المقارنة:\n\n- **فوضى النماذج، مُمتصة.** تشمل جميع الخطط المدفوعة الوصول إلى أكثر من 200 نموذج (بحسب invideo) — من بينها Seedance 2.5 وVeo 3.1 وKling 3. عندما يتعرض نموذج ما لدعوى قضائية أو يُغلَق، تستبدله invideo؛ ويستمر سير عملك دون توقف.\n- **الأتمتة مدمجة، لا مُضافة لاحقًا.** يوجد خادم MCP رسمي، بحيث يمكن تشغيل خط الإنتاج الكامل من الأمر النصي إلى النص إلى اللقطات إلى الترجمة النصية برمجيًا — وهو نوع الإطار الذي كنت ستبنيه بنفسك حول ComfyUI.\n- **الفئة المجانية اختبار حقيقي.** موسومة بعلامة مائية ومحدودة بالدقائق، لكنها كافية للحكم على جودة المخرجات قبل الدفع.\n\n**السرعة، بالأرقام — والملاحظة الصادقة:** التوليد الخام الواحد سريع، عادة في حدود دقائق. لكن الأسئلة الشائعة الرسمية لـ invideo تضع الإنتاج الكامل من البداية للنهاية لفيلم قصير عند 2 إلى 5 أيام، لا دقائق — لأن اختيار وتجميع الخيارات المولَّدة المتعددة، لا التوليد نفسه، هو ما يستغرق الوقت. اعتبر "يومين كحد أدنى واقعي" لفيلم جاهز مدته 1 إلى 3 دقائق نقطة المقارنة العادلة مقابل 16 إلى 36 دقيقة من التوليد الخام للباب المحلي لـ 20 ثانية من اللقطات غير المُحرَّرة: تستبدل invideo وقت الإعداد والمونتاج لديك بوقت إنتاجها الخاص، ولا تُلغي الوقت بالكامل.\n\nالخطط الحالية، بدءًا من 17 دولارًا شهريًا (خطة Plus، بفوترة سنوية؛ راجع [صفحة أسعار invideo](https://invideo.io/pricing/) للأرقام الحية):',
+          'Invideo مجرد مثال واحد على الباب السحابي — وليس المثال الوحيد، ومن المفيد معرفة كيف يختلف عن غيره قبل افتراض أن كلمة "سحابي" تعني شيئًا واحدًا. بحسب أوصافها العامة (ولم تختبر PromptQuorum أياً من هذه الخدمات الثلاث)، يندمج Runway مباشرة في محرّرات احترافية (Premiere Pro، Final Cut، DaVinci Resolve)، ويستهدف سير عمل هجينًا بين الذكاء الاصطناعي والمحرّر لا فيديو جاهزًا ومُجمَّعًا. بحسب الأوصاف نفسها، تتخصص Dream Machine من Luma AI في مخرجات HDR أصلية بعمق 16 بت لخطوط أنابيب تركيب المؤثرات البصرية (After Effects، Nuke) — جمهور مختلف تمامًا. وبحسب الأوصاف نفسها، تركّز Pika على التوليد السريع للمقاطع الخام؛ ولم تتحقق PromptQuorum مما إذا كانت تقدّم كتابة النص أو التعليق الصوتي أو تجميع اللقطات الأرشيفية، فتحقق من ذلك قبل الاعتماد عليها في العمل المحيط بالمقطع. وبحسب وصف invideo لنفسها، فهي تجمع بين لوحة القصة وكتابة النص والمونتاج على الخط الزمني مع الوصول إلى نماذج توليد مثل Kling وVeo وSeedance.\n\nInvideo ليس نموذج فيديو واحدًا، بل خدمة مستضافة. عند التحقق في 27 نوفمبر 2026، كانت [صفحتها الرئيسية](https://invideo.io/) تعرض محرّر فيديو يعتمد على الوكلاء، مع لوحة قصة من نص أو فكرة، وكتابة النصوص، وخط زمني متعدد المسارات، كما يدرج الموقع أدوات صوت وموسيقى بالذكاء الاصطناعي. لم تختبرها PromptQuorum، لذا تحقق من أن التعليق الصوتي والترجمة النصية يعملان بالشكل الذي تحتاجه. تعمل عبر المتصفح — معالج الرسومات لديك غير ذي صلة.\n\nلكل من يريد البدء في صناعة الفيديوهات اليوم بدلًا من البحث عن معالجات الرسومات وصيغ التكميم، يُعد invideo الخيار العملي: بلا حاجة لعتاد محلي، بلا تثبيت لـ ComfyUI أو استكشاف أخطاء CUDA، ومساحة عمل مستضافة للخطوات المحيطة بالمقطع. وهو مناسب بوجه خاص للمبدعين الذين يهتمون بالفيديو الجاهز أكثر من اهتمامهم بالتحكم في نموذج التوليد الأساسي — وبما أن هناك خطة مجانية، يمكنك معرفة ما إذا كانت تناسبك قبل إنفاق أي مبلغ.\n\nتبرز ثلاثة أمور في هذه المقارنة:\n\n- **عدة نماذج في حساب واحد.** تذكر صفحة أسعار invideo أن Plus وMax تتيحان الوصول إلى جميع النماذج، بما فيها جميع نماذج Seedance؛ أما Starter فتشمل نماذج مختارة دون Seedance 2.5. وقد تتغير القائمة.\n- **وصول الوكلاء مدمج.** توفّر invideo [خادم MCP](https://invideo.io/ai/mcp) يتيح لوكلاء الذكاء الاصطناعي العمل في محرّر الخط الزمني.\n- **هناك خطة مجانية.** تصف [صفحة حدود الخطط](https://invideo.io/help/billing/plan-limits/) لدى invideo حدًا أسبوعيًا لها؛ تحقق من قواعد التصدير والعلامة المائية قبل الاعتماد عليها.\n\n**السرعة، بالأرقام — والملاحظة الصادقة:** تقول invideo إن التوليد الخام سريع. لكن الأسئلة الشائعة الرسمية لـ invideo تضع الإنتاج الكامل من البداية للنهاية لفيلم قصير عند 2 إلى 5 أيام، لا دقائق — لأن اختيار وتجميع الخيارات المولَّدة المتعددة، لا التوليد نفسه، هو ما يستغرق الوقت. اعتبر "يومين كحد أدنى واقعي" لفيلم جاهز مدته 1 إلى 3 دقائق نقطة المقارنة العادلة مقابل 16 إلى 36 دقيقة من التوليد الخام للباب المحلي لـ 20 ثانية من اللقطات غير المُحرَّرة: تستبدل invideo وقت الإعداد والمونتاج لديك بوقت إنتاجها الخاص، ولا تُلغي الوقت بالكامل.\n\nالخطط التي تدرجها invideo (لمعرفة الأسعار راجع [صفحة أسعار invideo](https://invideo.io/pricing/)):',
         blockquote:
           '**تريد إنشاء فيديوهات بالذكاء الاصطناعي دون إعداد محلي؟** إذا لم يتوفر لديك معالج رسومات قوي — أو ببساطة لا تريد قضاء ساعات في تثبيت أدوات الفيديو المحلية بالذكاء الاصطناعي وضبطها — تستحق invideo التجربة. [جرّب النسخة المجانية من invideo ←](https://invideo.io/pricing/)',
-        columns: ['الخطة', 'السعر', 'الرصيد شهريًا', 'الأنسب لـ'],
+        columns: ['الخطة', 'الرصيد للمقعد شهريًا', 'الوصول إلى النماذج'],
         rows: [
-          { 'الخطة': 'Free', 'السعر': '$0', 'الرصيد شهريًا': 'محدود', 'الأنسب لـ': 'اختبار الأداة (بعلامة مائية)' },
-          { 'الخطة': 'Plus', 'السعر': '$17/mo ($200/yr)', 'الرصيد شهريًا': '75', 'الأنسب لـ': 'المبدعون المنتظمون — جميع نماذج الذكاء الاصطناعي، 4 صور رمزية واستنساخات صوتية، 100 عنصر من iStock، تصدير غير محدود بلا علامة مائية' },
-          { 'الخطة': 'Max', 'السعر': '$85/mo ($1,000/yr)', 'الرصيد شهريًا': '390', 'الأنسب لـ': 'القنوات عالية الحجم، 16 صورة رمزية' },
-          { 'الخطة': 'Generative', 'السعر': '$170/mo ($2,000/yr)', 'الرصيد شهريًا': '800+', 'الأنسب لـ': 'أحجام الأفلام القصيرة / الإنتاج' },
-          { 'الخطة': 'Elite', 'السعر': '$900/mo ($10,800/yr)', 'الرصيد شهريًا': '4,250+', 'الأنسب لـ': 'الإنتاج الحلقي والتجاري الواسع' },
+          { 'الخطة': 'Free', 'الرصيد للمقعد شهريًا': 'حد أسبوعي', 'الوصول إلى النماذج': 'راجع صفحة الأسعار' },
+          { 'الخطة': 'Starter', 'الرصيد للمقعد شهريًا': '400', 'الوصول إلى النماذج': 'نماذج مختارة؛ دون Seedance 2.5' },
+          { 'الخطة': 'Plus', 'الرصيد للمقعد شهريًا': '2,000', 'الوصول إلى النماذج': 'جميع النماذج بحسب invideo' },
+          { 'الخطة': 'Max', 'الرصيد للمقعد شهريًا': 'من 5,000', 'الوصول إلى النماذج': 'جميع النماذج بحسب invideo' },
         ],
         note:
-          'جميع الأسعار أعلاه هي أسعار الفوترة السنوية كما يعرضها invideo — الدفع الشهري أعلى تكلفة (تذكر الأسئلة الشائعة الرسمية لـ invideo أن Plus بـ 20 دولارًا، وMax بـ 100 دولار، وGenerative بـ 200 دولار، وElite بـ 1,000 دولار شهريًا). راجع صفحة أسعار invideo الحية قبل الاعتماد على أي رقم هنا؛ الخطط والأسعار تتغير. أرقام $/mo هي ما يعادل خطط الفوترة السنوية لدى invideo بعد التقريب؛ والإجماليات السنوية كما أدرجتها invideo عند آخر تحديث (راجع تاريخ آخر تحديث).',
+          'أسماء الخطط والرصيد والوصول إلى النماذج كما وردت في صفحتي [الأسعار](https://invideo.io/pricing/) و[حدود الخطط](https://invideo.io/help/billing/plan-limits/) لدى invideo عند التحقق في 27 نوفمبر 2026. لا نذكر هنا أي أسعار: فعند العرض من أوروبا كانت الصفحة تعرض تخفيضًا لفترة محدودة، كما تختلف الخطط عمّا أدرجه هذا الدليل سابقًا. راجع الصفحة الحية قبل الاعتماد على أي تفصيل.',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'جرّب النسخة المجانية من invideo ←' },
         ],
@@ -633,15 +633,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما هو العائق الحقيقي وراء "مجانية" الفيديو المحلي بالذكاء الاصطناعي؟',
-            a: 'تكلفة العتاد (معالج رسومات قادر)، ووقت الإعداد (ComfyUI وتبعياته)، وخط الإنتاج اليدوي المطلوب حول المقاطع الخام. أوزان النموذج نفسها لا تكلّف فعليًا شيئًا لكل توليد، إلى الأبد.',
+            a: 'تكلفة العتاد (معالج رسومات قادر)، ووقت الإعداد (ComfyUI وتبعياته)، وخط الإنتاج اليدوي المطلوب حول المقاطع الخام. لا توجد رسوم لكل توليد على أوزان النموذج؛ لكن العتاد والكهرباء يظلان مكلفين.',
           },
           {
             q: 'هل يوجد Wan 2.7 أو نموذج Wan أحدث؟',
-            a: 'ليس حتى آخر تحديث لهذه الصفحة: تتوقف إصدارات Wan الرسمية المدرجة في مستودعاتها عند 2.2. توخَّ الحذر من أي موقع يعرض "أوزان Wan 2.7" — لا تُحمّل إلا من مستودعات GitHub أو Hugging Face الرسمية.',
+            a: 'عند التحقق في 27 نوفمبر 2026، لم تعرض صفحة Wan الرسمية على GitHub أي مستودع أحدث بأوزان مفتوحة. وقد أعلنت Alibaba في أبريل 2026 أن [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) متاح على Alibaba Cloud. توخَّ الحذر من أي موقع آخر يعرض "أوزان Wan 2.7" — لا تُحمّل إلا من مستودعات GitHub أو Hugging Face الرسمية.',
           },
           {
             q: 'أنا مبتدئ تمامًا. من أين أبدأ؟',
-            a: 'الفئة المجانية من invideo — ستحصل على فيديو جاهز وسردي في دقائق ويمكنك الحكم على ما إذا كان الفيديو بالذكاء الاصطناعي يخدم أهدافك أصلًا. إذا اشتريت لاحقًا معالج رسومات قادرًا وأردت تحكمًا كاملًا وخصوصية، يبقى الباب المحلي مفتوحًا.',
+            a: 'تتيح لك الخطة المجانية من invideo تجربة سير العمل السحابي دون شراء عتاد، والحكم على ما إذا كان الفيديو بالذكاء الاصطناعي يخدم أهدافك؛ ولهذه الخطة حدود. إذا اشتريت لاحقًا معالج رسومات قادرًا وأردت تحكمًا كاملًا وخصوصية، يبقى الباب المحلي مفتوحًا.',
           },
           {
             q: 'ما الفرق في تشغيل هذه النماذج المحلية على Mac مقابل Windows؟',
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'اختر المسار المحلي إذا كنت تملك (أو ستشتري) معالج رسومات بذاكرة 12 جيجابايت فأكثر، وتستمتع ببناء أدواتك الخاصة، وتُقدّر الخصوصية والتوليد غير المحدود بتكلفة صفر دولار على الراحة. يُعد Wan 2.2 أساساً متيناً — جودة عالية، Apache 2.0 — مع LTX-2 كمتخصص في السرعة والصوت.\n\nاختر المسار السحابي إذا لم يتوفر لديك العتاد، أو لا تريد الإعداد، أو تحتاج فيديوهات جاهزة بدلًا من مقاطع خام. بالنسبة لمعظم من يريدون فقط صناعة فيديوهات مولَّدة بالذكاء الاصطناعي، يُعد المسار السحابي نقطة البداية الأسهل: إذا لم يتوفر لديك بالفعل العتاد والاهتمام التقني اللذان يتطلبهما التوليد المحلي، تُزيل invideo معظم هذا التعقيد في أمر نصي واحد، مع كل نموذج وأصل مُجمَّع والأتمتة مُضمَّنة — بدءًا من 0 دولار للتجربة و17 دولارًا شهريًا (بفوترة سنوية) لإزالة العلامة المائية. أبسط طريقة لمعرفة ما إذا كانت تناسب سير عملك هي تجربة النسخة المجانية.\n\nكلا البابين يؤديان إلى فيديو الذكاء الاصطناعي. لم يكن السؤال يومًا أي تقنية أفضل — بل أي سير عمل يناسب جهازك، وصبرك، وأهدافك.',
+          'اختر المسار المحلي إذا كنت تملك (أو ستشتري) معالج رسومات بذاكرة 12 جيجابايت فأكثر، وتستمتع ببناء أدواتك الخاصة، وتُقدّم الخصوصية والتوليد بلا رسوم لكل مقطع على الراحة. يُعد Wan 2.2 أساساً متيناً — جودة عالية، Apache 2.0 — مع LTX-2 كمتخصص في السرعة والصوت.\n\nاختر المسار السحابي إذا لم يتوفر لديك العتاد، أو لا تريد الإعداد، أو تحتاج فيديوهات جاهزة بدلًا من مقاطع خام. بالنسبة لمعظم من يريدون فقط صناعة فيديوهات مولَّدة بالذكاء الاصطناعي، يُعد المسار السحابي نقطة البداية الأسهل: إذا لم يتوفر لديك بالفعل العتاد والاهتمام التقني اللذان يتطلبهما التوليد المحلي، فإن خدمة مستضافة مثل invideo تعفيك من الإعداد المحلي. توجد خطة مجانية للتجربة؛ أما الخطط المدفوعة وحدودها فمذكورة في صفحة أسعار invideo. أبسط طريقة لمعرفة ما إذا كانت تناسب سير عملك هي تجربة النسخة المجانية.\n\nكلا البابين يؤديان إلى فيديو الذكاء الاصطناعي. لم يكن السؤال يومًا أي تقنية أفضل — بل أي سير عمل يناسب جهازك، وصبرك، وأهدافك.',
       },
       sources: {
         id: 'sources',
@@ -676,7 +676,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LTX model license](https://ltx.io/model/license) — شروط ترخيص LTX Community License الرسمية.',
           '[LTX-2 model page](https://ltx.io/model/ltx-2-3) — تفاصيل البنية والإصدار الرسمية.',
           '[HunyuanVideo 1.5 on GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) — المستودع الرسمي وملف الترخيص، بما فيه استبعاد الاتحاد الأوروبي/المملكة المتحدة/كوريا الجنوبية.',
-          '[VBench-2.0 leaderboard](https://github.com/Vchitect/VBench) — مقياس مستقل يُستخدم لأرقام الجودة ومطابقة الفيزياء.',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) — تقرير صحفي من مارس 2026 (بالإنجليزية).',
+          '[Alibaba Cloud Community: إعلان Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) — أبريل 2026 (بالإنجليزية).',
+          '[حدود خطط invideo](https://invideo.io/help/billing/plan-limits/) — الحدود الرسمية للخطط والرصيد.',
           '[Invideo pricing](https://invideo.io/pricing/) — تفاصيل الخطط والأسعار الرسمية.',
           '[Invideo MCP server](https://invideo.io/ai/mcp) — توثيق الأتمتة الرسمي.',
           '[MiniMax H3 on GitHub](https://github.com/MiniMax-AI/MiniMax-H3) — المستودع الرسمي.',
@@ -717,14 +719,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-de.webp',
-    title: 'Invideo vs. lokale KI-Videogenerierung: Die eine kostet 0 $ plus Ihr Wochenende – die andere ab 17 $/Monat (jährliche Abrechnung)',
+    title: 'Invideo vs. lokale KI-Videogenerierung: Die eine kostet eine GPU plus Ihr Wochenende – die andere ein Cloud-Abo',
     seoTitle: 'Cloud vs. lokale KI-Videos 2026: invideo vs. Wan 2.2 & LTX-2',
     intro:
-      'Es gibt zwei Türen in die KI-Videogenerierung des Jahres 2026. Tür eins ist lokal: kostenlose, offene Videomodelle, die auf Ihrer eigenen GPU laufen – unbegrenzte Generierungen, Inferenz auf Ihrer eigenen Hardware (Modell-Downloads und Update-Prüfungen nutzen weiterhin das Netz), kein Abonnement, aber Sie bauen den gesamten Workflow selbst auf. Tür zwei ist die Cloud: invideo, wo ein einzelner Prompt am Ende ein fertiges, erzähltes Video ergibt – Skript, Stock-Footage, Voiceover, Musik und Untertitel inklusive, direkt aus dem Browser. Keine der beiden Türen ist grundsätzlich "besser". Dieser Leitfaden liefert das Kleingedruckte der Lizenzen, das die meisten Vergleiche auslassen, die tatsächlichen Hardware-Anforderungen und ein Entscheidungswerkzeug, das Ihre Situation auf eine Empfehlung abbildet.',
+      'Es gibt zwei Türen in die KI-Videogenerierung des Jahres 2026. Tür eins ist lokal: kostenlose, offene Videomodelle, die auf Ihrer eigenen GPU laufen – unbegrenzte Generierungen, Inferenz auf Ihrer eigenen Hardware (Modell-Downloads und Update-Prüfungen nutzen weiterhin das Netz), kein Abonnement, aber Sie bauen den gesamten Workflow selbst auf. Tür zwei ist die Cloud: invideo, ein gehosteter Dienst, der laut eigener Darstellung agentengestützt vom Skript oder von der Idee zum geschnittenen Video führt, direkt im Browser. Keine der beiden Türen ist grundsätzlich "besser". Dieser Leitfaden liefert das Kleingedruckte der Lizenzen, das die meisten Vergleiche auslassen, die tatsächlichen Hardware-Anforderungen und ein Entscheidungswerkzeug, das Ihre Situation auf eine Empfehlung abbildet.',
     metaDescription:
-      'Lokale KI-Videomodelle (Wan 2.2, LTX-2, HunyuanVideo) sind gratis, wenn Ihre GPU sie schafft. Invideos Cloud macht alles ab 17 $/Monat (Jahresabrechnung).',
+      'Lokale KI-Videomodelle (Wan 2.2, LTX-2, HunyuanVideo) sind gratis ladbar, wenn Ihre GPU sie schafft. So unterscheiden sie sich von invideos Cloud-Dienst.',
     twitterDescription:
-      'Cloud vs. lokale KI-Videos 2026: invideo bündelt alles ab 17 $/Monat (jährlich abgerechnet). Wan 2.2, LTX-2, HunyuanVideo laufen kostenlos auf Ihrer eigenen GPU – wenn sie groß genug ist. Ehrlicher Vergleich.',
+      'Cloud vs. lokale KI-Videos 2026: invideo ist ein gehosteter Abo-Dienst. Wan 2.2, LTX-2 und HunyuanVideo lassen sich kostenlos für die eigene GPU laden – wenn sie groß genug ist.',
     audience:
       'Kreative und Entwickler, die zwischen kostenloser lokaler Videogenerierung auf der eigenen GPU und invideos Rundum-Cloud-Pipeline entscheiden – behandelt Hardware-Anforderungen, Lizenz-Kleingedrucktes und Workflow-Abwägungen.',
     readTime: '10 Min. Lesezeit',
@@ -752,18 +754,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**Für die meisten Menschen mit einer GPU ab 12 GB ist Wan 2.2 ein starkes lokales KI-Videomodell im Jahr 2026** – Apache-2.0-lizenziert, ohne Umsatzgrenzen oder Gebietsbeschränkungen, mit einem VBench-Qualitätswert von ~84,7 % im öffentlichen Leaderboard, vollständig kostenlos. **Invideo ist die bessere Wahl, wenn Sie diese GPU nicht besitzen oder ein fertiges, erzähltes Video statt eines rohen Clips wollen** – der Plus-Plan ab 17 $/Monat (jährliche Abrechnung) bündelt über 200 Modelle (laut invideo) (darunter Kling 3, Veo 3.1 und Seedance 2.5) in einer einzigen browserbasierten Pipeline mit Skript, Voiceover, Musik und Untertiteln. **HunyuanVideo 1.5 hat den filmischsten lokalen Look, aber seine Lizenz schließt die EU, das Vereinigte Königreich und Südkorea vollständig aus** – überspringen Sie es, wenn Sie in diesen Regionen ansässig sind.',
+      '**Für die meisten Menschen mit einer GPU ab 12 GB ist Wan 2.2 ein starkes lokales KI-Videomodell im Jahr 2026** – Apache-2.0-lizenziert, ohne Umsatzgrenzen oder Gebietsbeschränkungen, kostenlos herunterladbar (Hardware und Strom kosten weiterhin Geld). **Invideo ist die bessere Wahl, wenn Sie diese GPU nicht besitzen oder ein fertiges, erzähltes Video statt eines rohen Clips wollen** – ein gehosteter Dienst im Browser, dessen kostenpflichtige Pläne (Starter, Plus, Max) sich beim Modellzugang unterscheiden; prüfen Sie die aktuelle Preisseite. **HunyuanVideo 1.5 ist in der Community für seinen filmischen Look beliebt, aber seine Lizenz schließt die EU, das Vereinigte Königreich und Südkorea vollständig aus** – überspringen Sie es, wenn Sie in diesen Regionen ansässig sind.',
     quickAnswerTop: {
       de: {
         question: 'Sollte ich KI-Videos lokal generieren oder invideos Cloud-Pipeline nutzen?',
         answer:
-          'Generieren Sie lokal, wenn Sie eine GPU ab 12 GB haben, unbegrenzte Generierungen für 0 $ wollen und Wert auf Privatsphäre legen – Wan 2.2 (Apache 2.0, freizügige kommerzielle Nutzung – prüfen Sie die Modellkarte) ist ein sinnvoller Einstieg. Nutzen Sie invideo, wenn Sie keine passende Hardware haben, das Setup nicht selbst verwalten wollen oder ein vollständig fertiges Video (Skript, Voiceover, Musik, Untertitel) statt eines rohen Clips brauchen – der Plus-Plan startet bei 17 $/Monat (jährliche Abrechnung).',
+          'Generieren Sie lokal, wenn Sie eine GPU ab 12 GB haben, ohne Gebühren pro Clip generieren wollen und Wert auf Privatsphäre legen – Wan 2.2 (Apache 2.0, freizügige kommerzielle Nutzung – prüfen Sie die Modellkarte) ist ein sinnvoller Einstieg. Nutzen Sie invideo, wenn Sie keine passende Hardware haben, das Setup nicht selbst verwalten wollen oder ein vollständig fertiges Video (Skript, Voiceover, Musik, Untertitel) statt eines rohen Clips brauchen – es ist ein gehosteter Abo-Dienst mit kostenlosem Plan; aktuelle Preise stehen auf der Preisseite.',
         bullets: [
           'Unter 12 GB VRAM → invideo ist die praktische Wahl; lokale Modelle sind unterhalb dieser Stufe für ernsthafte Qualität unbrauchbar.',
           '12 GB VRAM → LTX-Video 0.9.5, eine praktikable lokale Option auf dieser Stufe.',
           '16–24 GB+ VRAM → Wan 2.2 (Top-Qualität, Apache 2.0 – freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss; übliche Apache-Bedingungen wie Namensnennungshinweise gelten, prüfen Sie die Modellkarte) oder LTX-2 (Geschwindigkeit + synchronisierter Ton).',
           'In der EU, im Vereinigten Königreich oder in Südkorea → HunyuanVideo 1.5s Lizenz schließt Sie aus; nutzen Sie stattdessen Wan 2.2 oder LTX-2.',
-          'Brauchen Sie ein fertiges, erzähltes Video statt eines rohen Clips → lokale Modelle generieren nur stumme (Ausnahme: LTX) Clips von 5–20 Sekunden; invideo übernimmt die gesamte Produktionspipeline, ab 17 $/Monat (jährliche Abrechnung).',
+          'Brauchen Sie ein fertiges, erzähltes Video statt eines rohen Clips → lokale Modelle generieren nur stumme (Ausnahme: LTX) Clips von 5–20 Sekunden; invideo bietet einen gehosteten Workflow rund um den Clip; was die Pläne enthalten, steht auf der Preisseite.',
         ],
         updatedDate: '2026-11-23',
       },
@@ -793,38 +795,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 ist ein lokales Top-Videomodell unter der freizügigen Apache-2.0-Lizenz.** Freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss (übliche Apache-Bedingungen wie Namensnennungshinweise gelten; prüfen Sie die Modellkarte) – und ein VBench-Qualitätswert von ~84,7 % im öffentlichen Leaderboard.',
-          '**Invideo bündelt über 200 Modelle (laut invideo) – darunter Kling 3, Veo 3.1 und Seedance 2.5 – in einer browserbasierten Pipeline**, ab 17 $/Monat (Plus-Plan, jährliche Abrechnung), mit automatisch erledigtem Skript, Voiceover, Musik und Untertiteln.',
+          '**Wan 2.2 ist ein lokales Top-Videomodell unter der freizügigen Apache-2.0-Lizenz.** Freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss (übliche Apache-Bedingungen wie Namensnennungshinweise gelten; prüfen Sie die Modellkarte).',
+          '**Invideo ist eine gehostete Alternative** mit einem kostenlosen Plan sowie den kostenpflichtigen Plänen Starter, Plus und Max; laut Preisseite haben Plus und Max Zugang zu allen Modellen, einschließlich aller Seedance-Modelle. Die Preise variieren – prüfen Sie die aktuelle Seite.',
           '**HunyuanVideo 1.5s Lizenz schließt die EU, das Vereinigte Königreich und Südkorea ausdrücklich aus** – das betrifft sowohl das Modell als auch seine Ausgaben. Leser in diesen Regionen sollten stattdessen Wan 2.2 oder LTX-2 nutzen.',
-          '**LTX-2 ist das schnellste der lokalen drei und das einzige mit eingebautem synchronisiertem Ton**, kommerziell kostenlos für Unternehmen mit weniger als 10 Mio. $ Jahresumsatz.',
+          '**LTX-2 ist als auf Geschwindigkeit ausgelegtes Modell positioniert und als einziges dieser drei lokalen Modelle mit eingebautem synchronisiertem Ton ausgestattet**, kommerziell kostenlos für Unternehmen mit weniger als 10 Mio. $ Jahresumsatz.',
           '**12 GB VRAM sind die realistische Untergrenze für ernsthafte lokale Videogenerierung.** Darunter wird invideo zur praktischeren Option.',
-          '**Lokale Modelle erzeugen rohe, stumme Clips von 5–20 Sekunden, keine fertigen Videos.** Skript, Voiceover, Musik, Untertitel und Schnitt sind separate Werkzeuge, die Sie selbst zusammenstellen – invideo erledigt all das in einem Durchgang.',
-          '**Beim letzten Update dieser Seite war kein offizielles "Wan 2.7" bekannt.** Seien Sie vorsichtig bei Download-Seiten, die es anbieten – die offiziellen Wan-Repositories listen Releases bis 2.2.',
+          '**Lokale Modelle erzeugen rohe, stumme Clips von 5–20 Sekunden, keine fertigen Videos.** Skript, Voiceover, Musik, Untertitel und Schnitt sind separate Werkzeuge, die Sie selbst zusammenstellen – invideo will diese Schritte in einem gehosteten Workflow bündeln.',
+          '**Bei der Prüfung am 27. November 2026 fand sich auf der offiziellen Wan-Seite bei GitHub kein Repository mit offenen Gewichten für "Wan 2.7".** Alibaba hat [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) im April 2026 als in der Alibaba Cloud verfügbares Modell angekündigt. Seien Sie vorsichtig bei Drittseiten, die "Wan-2.7-Gewichte" anbieten.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Warum 2026 ein merkwürdiger Moment für KI-Video ist',
         content:
-          'Der proprietäre Videomarkt war chaotisch – so jedenfalls laut Presseberichten, die PromptQuorum nicht unabhängig überprüft hat. ByteDances Seedance 2.0 sah sich rechtlichen Drohungen von Hollywood-Studios ausgesetzt (Unterlassungsschreiben von Disney, Paramount und Warner Bros. wurden berichtet) und einem pausierten globalen Rollout – es bleibt Berichten zufolge in China zugänglich, die Rechtslage für die internationale kommerzielle Nutzung ist jedoch unklar.\n\nGenau dieses Chaos macht beide Türen attraktiv. Offene lokale Modelle machen Sie unabhängig vom Anbieter-Drama. Und invideo nimmt Ihnen das Drama ab: Das Abonnement bündelt Zugang zu über 200 Modellen (laut invideo) – darunter Kling 3, Veo 3.1 und Seedance 2.5 –, sodass Ihr Workflow nichts davon bemerkt, wenn ein Modell verschwindet oder verklagt wird.',
+          'Der proprietäre Videomarkt war turbulent. Im März 2026 [berichtete Engadget](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) unter Berufung auf The Information, ByteDance habe den weltweiten Rollout von Seedance 2.0 nach Unterlassungsschreiben von Disney und Paramount Skydance pausiert. PromptQuorum hat diesen Bericht nicht unabhängig überprüft, und die Verfügbarkeit hat sich seither geändert: invideos Preisseite führt inzwischen Seedance 2.0 und 2.5 auf.\n\nSolche Umbrüche machen beide Türen attraktiv. Bereits heruntergeladene offene Modelle laufen unabhängig von Änderungen eines Anbieters weiter. Ein Multi-Modell-Dienst wie invideo bietet mehrere Modelle in einem Konto, doch das Angebot kann sich ändern – dass Ihr Workflow davon unberührt bleibt, ist nicht garantiert.',
       },
       localModels: {
         id: 'local-models',
         title: 'Die lokale Tür: Drei kostenlose Modelle auf Ihrer eigenen GPU',
         content:
-          'Drei Open-Weights-Systeme dominieren derzeit die lokale Videogenerierung, gemessen an Downloads, Community-Aktivität und Benchmark-Ergebnissen. Alle drei laufen über ComfyUI, eine knotenbasierte Oberfläche, die auf Ihrem eigenen Rechner installiert wird – kein Chat-Tool wie Ollama. Es handelt sich um Diffusionsmodelle, nicht um LLMs.',
+          'Dieser Leitfaden vergleicht drei weit verbreitete Open-Weights-Systeme für die lokale Videogenerierung. Alle drei laufen über ComfyUI, eine knotenbasierte Oberfläche, die auf Ihrem eigenen Rechner installiert wird – kein Chat-Tool wie Ollama. Es handelt sich um Diffusionsmodelle, nicht um LLMs.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Wan 2.2 ist 2026 ein starkes lokales Allround-Videomodell – Apache 2.0, hohe Qualität, keine Gebietsbeschränkungen –, während LTX-2 bei Geschwindigkeit und synchronisiertem Ton gewinnt und HunyuanVideo 1.5 den filmischsten Look bietet, per Lizenz aber Nutzer aus der EU/UK/Südkorea ausschließt.' },
+          { type: 'one-sentence', text: 'Wan 2.2 ist 2026 ein starkes lokales Allround-Videomodell – Apache 2.0, hohe Qualität, keine Gebietsbeschränkungen –, während LTX-2 auf Geschwindigkeit setzt und synchronisierten Ton liefert und HunyuanVideo 1.5 in der Community für seinen filmischen Look beliebt ist, per Lizenz aber Nutzer aus der EU/UK/Südkorea ausschließt.' },
           { type: 'plain-terms', text: 'Wenn Sie nur eine Antwort wollen: Besorgen Sie sich eine GPU ab 12 GB und nutzen Sie Wan 2.2. Es bietet hohe Qualität und eine freizügige Apache-2.0-Lizenz.' },
         ],
         columns: ['Modell', 'Lizenz', 'VRAM', 'Ausgabe', 'Besonderes Merkmal'],
         rows: [
-          { 'Modell': 'Wan 2.2 (Alibaba)', 'Lizenz': 'Apache 2.0 – freizügig, ohne Umsatzschwelle und Gebietsausschluss', 'VRAM': '6–8 GB (5B) / 15–25 GB (14B)', 'Ausgabe': '480p/720p, ~5-Sekunden-Clips', 'Besonderes Merkmal': 'VBench-Qualität ~84,7 % (öffentliches Leaderboard)' },
-          { 'Modell': 'LTX-2 (Lightricks)', 'Lizenz': 'LTX Community License – kostenlos unter 10 Mio. $ Umsatz', 'VRAM': '18–20 GB quantisiert, 32 GB+ voll', 'Ausgabe': '480p–1080p, 5–20 s, mit Ton', 'Besonderes Merkmal': 'Einziges Modell mit synchronisiertem Audio+Video in einem Durchgang' },
-          { 'Modell': 'HunyuanVideo 1.5 (Tencent)', 'Lizenz': 'Tencent Community License – schließt EU/UK/Südkorea aus', 'VRAM': 'mind. 14 GB, 24 GB komfortabel', 'Ausgabe': '480p/720p, bis zu 10 s', 'Besonderes Merkmal': 'Community-Favorit für filmische Beleuchtung; sparsamster VRAM-Bedarf' },
+          { 'Modell': 'Wan 2.2 (Alibaba)', 'Lizenz': 'Apache 2.0 – freizügig, ohne Umsatzschwelle und Gebietsausschluss', 'VRAM': '6–8 GB (5B) / 15–25 GB (14B)', 'Ausgabe': '480p/720p, ~5-Sekunden-Clips', 'Besonderes Merkmal': '14B- und kompakte 5B-Variante' },
+          { 'Modell': 'LTX-2 (Lightricks)', 'Lizenz': 'LTX Community License – kostenlos unter 10 Mio. $ Umsatz', 'VRAM': '18–20 GB quantisiert, 32 GB+ voll', 'Ausgabe': '480p–1080p, 5–20 s, mit Ton', 'Besonderes Merkmal': 'Audio+Video synchron (nur eines dieser drei)' },
+          { 'Modell': 'HunyuanVideo 1.5 (Tencent)', 'Lizenz': 'Tencent Community License – schließt EU/UK/Südkorea aus', 'VRAM': 'mind. 14 GB, 24 GB komfortabel', 'Ausgabe': '480p/720p, bis zu 10 s', 'Besonderes Merkmal': 'Filmisches Licht; ab 14 GB mit Offloading' },
         ],
         note:
-          '⚠️ Hinweis: Beim letzten Update war kein offizielles "Wan 2.7" bekannt. Seien Sie vorsichtig bei Seiten, die "Wan 2.7 Open Weights" anbieten. Die offiziellen Wan-Repositories listen Releases bis 2.2 – laden Sie nur aus den offiziellen GitHub- oder Hugging-Face-Repositories herunter, die unten verlinkt sind.',
+          '⚠️ Hinweis: Bei der Prüfung am 27. November 2026 fand sich auf der [offiziellen Wan-Seite bei GitHub](https://github.com/Wan-Video) kein Repository mit offenen Gewichten für "Wan 2.7"; Alibaba hat [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) als in der Alibaba Cloud verfügbar angekündigt. Seien Sie vorsichtig bei Seiten, die "Wan 2.7 Open Weights" anbieten, und laden Sie nur aus offiziellen GitHub- oder Hugging-Face-Repositories.',
       },
       wan22: {
         id: 'wan-2-2',
@@ -840,7 +842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2 (Lightricks) – Geschwindigkeit plus synchronisierter Ton',
         content:
-          'LTX-2 ist das einzige offene Modell dieses Trios, das synchronisierten Ton und Bild in einem einzigen Durchgang generiert – Schritte, Umgebungsgeräusche und Effekte kommen zusammen mit dem Bild. Es ist außerdem das schnellste der drei und das nachsichtigste bei der Hardware. Die Architektur ist ein 22B-Diffusions-Transformer; LTX-2.3 (März 2026) wird weiterhin vollständig unterstützt, parallel zur aktuellen LTX-2.5-Version. Die Lizenz ist die LTX Community License – kostenlos für kommerzielle Nutzung, wenn der Gesamtumsatz Ihres Unternehmens unter 10 Mio. $ pro Jahr liegt, darüber ist eine kostenpflichtige kommerzielle Lizenz erforderlich. (Einige Drittanbieter-Artikel nennen es fälschlich Apache 2.0 – die [offizielle Lizenzseite](https://ltx.io/model/license) ist die einzig verlässliche Quelle.) Der Hardware-Bedarf liegt bei 18–20 GB VRAM quantisiert, 32 GB+ bei voller Präzision; auf 12-GB-Karten bleibt das ältere LTX-Video 0.9.5 die praktische Wahl.\n\n**Geschwindigkeit, konkret:** LTX-2 ist qualitativ das schnellste des Trios, mit nahezu Echtzeit-Vorschauen auf High-End-Consumer-Karten – aber es existiert bislang keine unabhängig verifizierte Minuten-pro-Clip-Zahl auf einer RTX 4090, weshalb wir keine erfinden. Die einzige belastbare Zahl stammt aus Lightricks\' eigenem Benchmark auf Rechenzentrums-Hardware der Klasse "Nvidia-Superchips" (keine Consumer-GPU): ein 10-Sekunden-Clip in etwa 6,8 Sekunden. Betrachten Sie das als Obergrenze dessen, was die Architektur auf ernsthafter Hardware leisten kann – nicht als das, was Ihr Heim-Rig zeigen wird.',
+          'LTX-2 ist das einzige offene Modell dieses Trios, das synchronisierten Ton und Bild in einem einzigen Durchgang generiert – Schritte, Umgebungsgeräusche und Effekte kommen zusammen mit dem Bild. Es ist außerdem als schnelles Modell positioniert, beim VRAM-Bedarf aber nicht das sparsamste (siehe die Zahlen unten). Die Architektur ist ein 22B-Diffusions-Transformer; LTX-2.3 (März 2026) wird weiterhin vollständig unterstützt, parallel zur aktuellen LTX-2.5-Version. Die Lizenz ist die LTX Community License – kostenlos für kommerzielle Nutzung, wenn der Gesamtumsatz Ihres Unternehmens unter 10 Mio. $ pro Jahr liegt, darüber ist eine kostenpflichtige kommerzielle Lizenz erforderlich. (Einige Drittanbieter-Artikel nennen es fälschlich Apache 2.0 – die [offizielle Lizenzseite](https://ltx.io/model/license) ist die einzig verlässliche Quelle.) Der Hardware-Bedarf liegt bei 18–20 GB VRAM quantisiert, 32 GB+ bei voller Präzision; auf 12-GB-Karten bleibt das ältere LTX-Video 0.9.5 die praktische Wahl.\n\n**Geschwindigkeit, konkret:** LTX-2 wird oft als schnell beschrieben – aber es existiert bislang keine unabhängig verifizierte Minuten-pro-Clip-Zahl auf einer RTX 4090, weshalb wir keine erfinden. Die einzige belastbare Zahl stammt aus Lightricks\' eigenem Benchmark auf Rechenzentrums-Hardware der Klasse "Nvidia-Superchips" (keine Consumer-GPU): ein 10-Sekunden-Clip in etwa 6,8 Sekunden. Betrachten Sie das als Obergrenze dessen, was die Architektur auf ernsthafter Hardware leisten kann – nicht als das, was Ihr Heim-Rig zeigen wird.',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 on GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 on Hugging Face' },
@@ -850,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5 (Tencent) – der filmische Look, mit einem juristischen Haken',
         content:
-          'Tencents 8,3B-Modell, veröffentlicht im November 2025, ist ein Community-Favorit für filmische Beleuchtung und Textur und das VRAM-sparsamste des Trios: 14 GB Minimum mit Offloading, 24 GB komfortabel, bei rund 75 Sekunden pro 480p-Clip auf einer RTX 4090 (eine berichtete Zahl, die PromptQuorum nicht überprüft hat). Es generiert nativ 480p/720p, über eingebaute Super-Resolution bis zu 1080p, Clips bis zu 10 Sekunden.\n\n**Geschwindigkeit, konkret:** Bei ~75 Sekunden pro 5-Sekunden-480p-Clip sind das rund 15 Sekunden Renderzeit pro Sekunde Video. Die native maximale Cliplänge liegt bei 10 Sekunden, sodass eine 20-Sekunden-Sequenz zwei Generierungen mit maximaler Länge bedeutet – hochgerechnet aus der Pro-Sekunde-Rate sind das rund 5 Minuten reine Generierungszeit für 20 Sekunden Filmmaterial, vor dem Zusammenfügen. Dies ist eine Hochrechnung aus einer berichteten, nicht überprüften 5-Sekunden-Zahl, kein gemessener 10- oder 20-Sekunden-Benchmark.',
+          'Tencents 8,3B-Modell, veröffentlicht im November 2025, ist ein Community-Favorit für filmische Beleuchtung und Textur mit moderatem VRAM-Bedarf: 14 GB Minimum mit Offloading, 24 GB komfortabel, bei rund 75 Sekunden pro 480p-Clip auf einer RTX 4090 (eine berichtete Zahl, die PromptQuorum nicht überprüft hat). Es generiert nativ 480p/720p, über eingebaute Super-Resolution bis zu 1080p, Clips bis zu 10 Sekunden.\n\n**Geschwindigkeit, konkret:** Bei ~75 Sekunden pro 5-Sekunden-480p-Clip sind das rund 15 Sekunden Renderzeit pro Sekunde Video. Die native maximale Cliplänge liegt bei 10 Sekunden, sodass eine 20-Sekunden-Sequenz zwei Generierungen mit maximaler Länge bedeutet – hochgerechnet aus der Pro-Sekunde-Rate sind das rund 5 Minuten reine Generierungszeit für 20 Sekunden Filmmaterial, vor dem Zusammenfügen. Dies ist eine Hochrechnung aus einer berichteten, nicht überprüften 5-Sekunden-Zahl, kein gemessener 10- oder 20-Sekunden-Benchmark.',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on Hugging Face' },
@@ -858,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Lizenzwarnung – vor dem Download lesen. HunyuanVideo 1.5 nutzt die Tencent Hunyuan Community License, nicht Apache 2.0. Die Lizenz gilt nicht in der Europäischen Union, im Vereinigten Königreich oder in Südkorea – laut Lizenztext sind Nutzer in diesen Regionen nicht berechtigt, das Modell oder seine Ausgaben zu verwenden. Sie begrenzt die Nutzung außerdem auf 100 Millionen monatlich aktive Nutzer und untersagt das Trainieren konkurrierender Modelle auf Basis ihrer Ausgaben. Wenn Sie in der EU, im UK oder in Südkorea sind, überspringen Sie dieses Modell: Wan 2.2 (Apache 2.0, freizügige kommerzielle Nutzung ohne Gebietsausschluss) deckt dieselbe Qualitätsstufe ab.',
+            text: 'Lizenzwarnung – vor dem Download lesen. HunyuanVideo 1.5 nutzt die Tencent Hunyuan Community License, nicht Apache 2.0. Die Lizenz gilt nicht in der Europäischen Union, im Vereinigten Königreich oder in Südkorea – laut Lizenztext sind Nutzer in diesen Regionen nicht berechtigt, das Modell oder seine Ausgaben zu verwenden. Außerdem ist eine separate Lizenz von Tencent erforderlich, wenn Ihre Produkte im Monat vor dem Release-Datum des Modells mehr als 100 Millionen monatlich aktive Nutzer hatten, und das Modell oder seine Ausgaben dürfen nicht zur Verbesserung anderer KI-Modelle verwendet werden (ausgenommen Tencent Hunyuan und dessen Derivate). Wenn Sie in der EU, im UK oder in Südkorea sind, überspringen Sie dieses Modell und erwägen Sie stattdessen Wan 2.2 (Apache 2.0, freizügige kommerzielle Nutzung ohne Gebietsausschluss).',
           },
         ],
       },
@@ -866,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: 'Einer zum Beobachten: MiniMax H3',
         content:
-          'Veröffentlicht am 3. August 2026, ist MiniMax H3 ein 33,1B-Omni-Modal-Modell mit nativem Stereo-Ton, ComfyUI-Unterstützung ab dem ersten Tag und quantisierten Versionen, die auf einer RTX 3060 laufen. Zwei Vorbehalte, bevor Sie es als vierte Wahl behandeln: Das lokale Release deckelt bei 768p (die vollständige 2K-Pipeline bleibt nur gehostet verfügbar), und seine Community License trägt Berichten zufolge eigene geografische Einschränkungen sowie eine Umsatzschwelle von 20 Mio. $ – prüfen Sie die offizielle Modellkarte, bevor Sie sich festlegen. Die ersten Anzeichen sind stark, aber ein aktuelles Release und Produktionsreife sind zwei verschiedene Dinge.',
+          'Veröffentlicht am 3. August 2026, ist MiniMax H3 ein 33,1B-Omni-Modal-Modell mit nativem Stereo-Ton, ComfyUI-Unterstützung ab dem ersten Tag und quantisierten Versionen, die auf einer RTX 3060 laufen. Zwei Vorbehalte, bevor Sie es als vierte Wahl behandeln: Das lokale Release deckelt bei 768p (die vollständige 2K-Pipeline bleibt nur gehostet verfügbar), und seine [Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) nimmt die EU, das Vereinigte Königreich, Südkorea und die USA vom Lizenzgebiet aus und verlangt ab mehr als 20 Mio. $ Jahresumsatz eine gesonderte Genehmigung – lesen Sie sie, bevor Sie sich festlegen (dies ist keine Rechtsberatung). Die ersten Anzeichen sind stark, aber ein aktuelles Release und Produktionsreife sind zwei verschiedene Dinge.',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 on GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 on Hugging Face' },
@@ -887,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre GPU': '24 GB+ VRAM', 'Was Sie ausführen können': 'Alles: Wan 2.2 14B in hoher Qualität, LTX-2 quantisiert' },
         ],
         note:
-          'Grobe GPU-Kosten laut [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15; US-eBay-Angebotsdaten, kein Preisangebot): Gebrauchte RTX 3090 wurden zuletzt für etwa 1.400–1.550 $ verkauft, gebrauchte RTX 4090 für 2.575–3.010 $ (Median 2.860 $). Preise in Deutschland weichen wegen Steuern und Importkosten ab. GPU-Preise bewegen sich – prüfen Sie die aktuelle Preislage, statt sich über mehr als ein paar Monate hinweg auf diese Zahlen zu verlassen.',
+          'Grobe GPU-Kosten laut [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15; US-eBay-Angebotsdaten, kein Preisangebot): Gebrauchte RTX 3090 wurden zuletzt für etwa 1.400–1.550 $ verkauft, gebrauchte RTX 4090 für 2.575–3.010 $ (Median 2.860 $). Inzwischen hat der Tracker seinen Wert für gebrauchte RTX 3090 auf 1.500–1.725 $ angehoben (Median 1.650 $; 225 Verkäufe, 13.–23. November 2026). Preise in Deutschland weichen wegen Steuern und Importkosten ab. GPU-Preise bewegen sich – prüfen Sie die aktuelle Preislage, statt sich über mehr als ein paar Monate hinweg auf diese Zahlen zu verlassen.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -907,19 +909,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'Invideo ist ein Beispiel für die Cloud-Tür – nicht das einzige, und es lohnt sich zu wissen, wie es sich von den anderen unterscheidet, bevor Sie annehmen, "Cloud" bedeute nur eine Sache. Laut ihren öffentlichen Beschreibungen (PromptQuorum hat keinen dieser drei Dienste getestet) integriert sich Runway direkt in professionelle Editoren (Premiere Pro, Final Cut, DaVinci Resolve) und zielt auf hybride KI-plus-Editor-Workflows statt auf ein fertiges, zusammengesetztes Video. Laut denselben Beschreibungen spezialisiert sich Luma AIs Dream Machine auf natives 16-Bit-HDR-Output für VFX-Compositing-Pipelines (After Effects, Nuke) – ein völlig anderes Publikum. Pika bleibt schlank: schnelle Roh-Clip-Generierung ohne eingebautes Skript, Voiceover oder Stock-Footage-Zusammenstellung, sodass Sie weiterhin separate Werkzeuge für alles rund um den Clip brauchen – dasselbe DIY-Pipeline-Problem wie beim lokalen Modell, nur ohne GPU-Anforderung. Was invideo von allen dreien unterscheidet: Es ist nicht primär ein Roh-Generierungstool, sondern ein Skript-zu-fertigem-Video-Assembler, der Ihnen bei Bedarf zusätzlich Zugang zu Roh-Generierungsmodellen (Kling, Veo, Seedance) gibt.\n\nInvideo ist kein Videomodell, sondern eine komplette Produktionspipeline als Dienstleistung. Sie geben ein Thema ein oder fügen ein Skript in [invideo Agent](https://invideo.io/) ein, der das Video plant und erstellt, indem er Skript, Szenen, generierte oder Stock-Visuals, Voiceover, Musik, Untertitel und Branding in einem einzigen Workflow zusammenführt. Es läuft im Browser – Ihre GPU spielt keine Rolle.\n\nFür alle, die heute mit dem Videomachen anfangen wollen, statt GPUs und Quantisierungsformate zu recherchieren, ist invideo die praktische Wahl: keine lokale Hardware-Anforderung, keine ComfyUI-Installation oder CUDA-Fehlersuche, und ein einziger Workflow, der bereits Skript, Voiceover, Musik und Untertitel enthält, die die meisten Menschen tatsächlich brauchen. Es eignet sich besonders für Kreative, denen das fertige Video wichtiger ist als die Kontrolle über das zugrunde liegende Generierungsmodell – und da es eine kostenlose Stufe gibt, können Sie herausfinden, ob das zu Ihnen passt, bevor Sie etwas ausgeben.\n\nDrei Dinge stechen für diesen Vergleich hervor:\n\n- **Modell-Chaos, abgefedert.** Alle kostenpflichtigen Pläne beinhalten Zugang zu über 200 Modellen (laut invideo) – darunter Seedance 2.5, Veo 3.1 und Kling 3. Wenn ein Modell verklagt oder abgeschaltet wird, tauscht invideo es aus; Ihr Workflow läuft weiter.\n- **Automatisierung ist eingebaut, nicht nachgerüstet.** Es gibt einen offiziellen MCP-Server, sodass die gesamte Pipeline Prompt → Skript → Filmmaterial → Untertitel programmatisch ausgelöst werden kann – die Art von Harness, die Sie sich sonst selbst um ComfyUI herum bauen müssten.\n- **Die kostenlose Stufe ist eine echte Probefahrt.** Mit Wasserzeichen und Minutenlimit, aber genug, um die Ausgabequalität zu beurteilen, bevor Sie zahlen.\n\n**Geschwindigkeit, konkret – und der ehrliche Haken:** Eine einzelne Roh-Generierung ist schnell, typischerweise Minuten. Aber invideos eigene FAQ nennt für die vollständige End-to-End-Produktion eines Kurzfilms 2–5 Tage, nicht Minuten – denn nicht die Generierung selbst kostet Zeit, sondern das Auswählen und Zusammenstellen aus mehreren generierten Optionen. Betrachten Sie "2 Tage als realistische Untergrenze" für einen 1–3-minütigen fertigen Film als fairen Vergleichspunkt zu den 16–36 Minuten reiner Generierungszeit der lokalen Tür für 20 Sekunden ungeschnittenes Filmmaterial: invideo tauscht Ihre Setup- und Schnittzeit gegen die eigene Produktionszeit – es eliminiert Zeit nicht vollständig.\n\nAktuelle Pläne, ab 17 $/Monat (Plus-Plan, jährliche Abrechnung; siehe [invideos Preisseite](https://invideo.io/pricing/) für aktuelle Zahlen):',
+          'Invideo ist ein Beispiel für die Cloud-Tür – nicht das einzige, und es lohnt sich zu wissen, wie es sich von den anderen unterscheidet, bevor Sie annehmen, "Cloud" bedeute nur eine Sache. Laut ihren öffentlichen Beschreibungen (PromptQuorum hat keinen dieser drei Dienste getestet) integriert sich Runway direkt in professionelle Editoren (Premiere Pro, Final Cut, DaVinci Resolve) und zielt auf hybride KI-plus-Editor-Workflows statt auf ein fertiges, zusammengesetztes Video. Laut denselben Beschreibungen spezialisiert sich Luma AIs Dream Machine auf natives 16-Bit-HDR-Output für VFX-Compositing-Pipelines (After Effects, Nuke) – ein völlig anderes Publikum. Laut denselben Beschreibungen konzentriert sich Pika auf die schnelle Generierung roher Clips; ob der Dienst Skript, Voiceover oder Stock-Footage-Zusammenstellung bietet, hat PromptQuorum nicht geprüft – klären Sie das, bevor Sie sich für die Arbeit rund um den Clip darauf verlassen. In der eigenen Darstellung verbindet invideo Storyboarding, Skripterstellung und Timeline-Schnitt mit Zugang zu Generierungsmodellen wie Kling, Veo und Seedance.\n\nInvideo ist kein einzelnes Videomodell, sondern ein gehosteter Dienst. Bei der Prüfung am 27. November 2026 zeigte [die Startseite](https://invideo.io/) einen agentengestützten Videoeditor mit Storyboarding aus Skript oder Idee, Skripterstellung und Mehrspur-Timeline; die Website führt außerdem KI-Werkzeuge für Stimme und Musik auf. PromptQuorum hat den Dienst nicht getestet – prüfen Sie also, ob Voiceover und Untertitel so funktionieren, wie Sie es brauchen. Er läuft im Browser – Ihre GPU spielt keine Rolle.\n\nFür alle, die heute mit dem Videomachen anfangen wollen, statt GPUs und Quantisierungsformate zu recherchieren, ist invideo die praktische Wahl: keine lokale Hardware-Anforderung, keine ComfyUI-Installation oder CUDA-Fehlersuche, und ein gehosteter Arbeitsbereich für die Schritte rund um den Clip. Es eignet sich besonders für Kreative, denen das fertige Video wichtiger ist als die Kontrolle über das zugrunde liegende Generierungsmodell – und da es einen kostenlosen Plan gibt, können Sie herausfinden, ob das zu Ihnen passt, bevor Sie etwas ausgeben.\n\nDrei Dinge stechen für diesen Vergleich hervor:\n\n- **Mehrere Modelle, ein Konto.** Laut invideos Preisseite haben Plus und Max Zugang zu allen Modellen, einschließlich aller Seedance-Modelle; Starter umfasst ausgewählte Modelle ohne Seedance 2.5. Das Angebot kann sich ändern.\n- **Agentenzugang ist eingebaut.** invideo bietet einen [MCP-Server](https://invideo.io/ai/mcp), über den KI-Agenten im Timeline-Editor arbeiten können.\n- **Es gibt einen kostenlosen Plan.** invideos [Seite zu den Planlimits](https://invideo.io/help/billing/plan-limits/) beschreibt dafür ein Wochenlimit; prüfen Sie die Regeln zu Export und Wasserzeichen, bevor Sie sich darauf verlassen.\n\n**Geschwindigkeit, konkret – und der ehrliche Haken:** Laut invideo ist die Roh-Generierung schnell. Aber invideos eigene FAQ nennt für die vollständige End-to-End-Produktion eines Kurzfilms 2–5 Tage, nicht Minuten – denn nicht die Generierung selbst kostet Zeit, sondern das Auswählen und Zusammenstellen aus mehreren generierten Optionen. Betrachten Sie "2 Tage als realistische Untergrenze" für einen 1–3-minütigen fertigen Film als fairen Vergleichspunkt zu den 16–36 Minuten reiner Generierungszeit der lokalen Tür für 20 Sekunden ungeschnittenes Filmmaterial: invideo tauscht Ihre Setup- und Schnittzeit gegen die eigene Produktionszeit – es eliminiert Zeit nicht vollständig.\n\nVon invideo aufgeführte Pläne (Preise siehe [invideos Preisseite](https://invideo.io/pricing/)):',
         blockquote:
           '**Möchten Sie KI-Videos ohne lokales Setup erstellen?** Wenn Sie keine leistungsstarke GPU besitzen – oder schlicht keine Stunden mit der Installation und Konfiguration lokaler KI-Videotools verbringen wollen – lohnt sich ein Test von invideo. [Invideos kostenlose Version testen →](https://invideo.io/pricing/)',
-        columns: ['Plan', 'Preis', 'Credits/Monat', 'Am besten für'],
+        columns: ['Plan', 'Credits pro Platz/Monat', 'Modellzugang'],
         rows: [
-          { 'Plan': 'Free', 'Preis': '0 $', 'Credits/Monat': 'begrenzt', 'Am besten für': 'Erste Tests (mit Wasserzeichen)' },
-          { 'Plan': 'Plus', 'Preis': '17 $/Monat (200 $/Jahr)', 'Credits/Monat': '75', 'Am besten für': 'Regelmäßige Creator – alle KI-Modelle, 4 Avatare & Stimmenklone, 100 iStock-Assets, unbegrenzte wasserzeichenfreie Exporte' },
-          { 'Plan': 'Max', 'Preis': '85 $/Monat (1.000 $/Jahr)', 'Credits/Monat': '390', 'Am besten für': 'Vielproduzierende Kanäle, 16 Avatare' },
-          { 'Plan': 'Generative', 'Preis': '170 $/Monat (2.000 $/Jahr)', 'Credits/Monat': '800+', 'Am besten für': 'Kurzfilm-/Produktionsvolumen' },
-          { 'Plan': 'Elite', 'Preis': '900 $/Monat (10.800 $/Jahr)', 'Credits/Monat': '4.250+', 'Am besten für': 'Episodische und kommerzielle Skalierung' },
+          { 'Plan': 'Free', 'Credits pro Platz/Monat': 'Wochenlimit', 'Modellzugang': 'Siehe Preisseite' },
+          { 'Plan': 'Starter', 'Credits pro Platz/Monat': '400', 'Modellzugang': 'Ausgewählte Modelle; ohne Seedance 2.5' },
+          { 'Plan': 'Plus', 'Credits pro Platz/Monat': '2.000', 'Modellzugang': 'Alle Modelle, laut invideo' },
+          { 'Plan': 'Max', 'Credits pro Platz/Monat': 'ab 5.000', 'Modellzugang': 'Alle Modelle, laut invideo' },
         ],
         note:
-          'Alle oben genannten Preise sind Jahresabrechnungstarife laut invideo – monatliche Zahlung kostet mehr (invideos eigene FAQ nennt Plus 20 $, Max 100 $, Generative 200 $, Elite 1.000 $ pro Monat). Prüfen Sie invideos aktuelle Preisseite, bevor Sie sich auf eine Zahl hier verlassen; Pläne und Preise ändern sich. Die $/Monat-Angaben sind die gerundeten Jahresplan-Äquivalente von invideo; Jahressummen wie von invideo zum Zeitpunkt der letzten Aktualisierung aufgeführt (siehe Datum der letzten Aktualisierung).',
+          'Plannamen, Credits und Modellzugang laut invideos [Preisseite](https://invideo.io/pricing/) und [Seite zu den Planlimits](https://invideo.io/help/billing/plan-limits/), geprüft am 27. November 2026. Hier werden keine Preise genannt: Beim Abruf aus Europa zeigte die Seite eine zeitlich begrenzte Rabattaktion, und die Pläne weichen von den früher in diesem Leitfaden aufgeführten ab. Prüfen Sie die aktuelle Seite, bevor Sie sich auf eine Angabe verlassen.',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Invideos kostenlose Version testen →' },
         ],
@@ -984,15 +985,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist der tatsächliche Haken bei "kostenlosen" lokalen KI-Videos?',
-            a: 'Hardware-Kosten (eine leistungsfähige GPU), Setup-Zeit (ComfyUI und seine Abhängigkeiten) und die DIY-Pipeline rund um die rohen Ausgabe-Clips. Die Modellgewichte selbst kosten tatsächlich 0 $ pro Generierung, für immer.',
+            a: 'Hardware-Kosten (eine leistungsfähige GPU), Setup-Zeit (ComfyUI und seine Abhängigkeiten) und die DIY-Pipeline rund um die rohen Ausgabe-Clips. Für die Modellgewichte fällt keine Gebühr pro Generierung an; Hardware und Strom kosten weiterhin Geld.',
           },
           {
             q: 'Gibt es ein Wan 2.7 oder ein neueres Wan-Modell?',
-            a: 'Nicht beim letzten Update dieser Seite: Die offiziellen Wan-Repositories listen Releases bis 2.2. Seien Sie vorsichtig bei jeder Seite, die "Wan-2.7-Gewichte" anbietet – laden Sie nur aus den offiziellen GitHub- oder Hugging-Face-Repositories herunter.',
+            a: 'Bei der Prüfung am 27. November 2026 fand sich auf der offiziellen Wan-Seite bei GitHub kein neueres Wan-Repository mit offenen Gewichten. Alibaba hat [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) im April 2026 als in der Alibaba Cloud verfügbar angekündigt. Seien Sie vorsichtig bei anderen Seiten, die "Wan-2.7-Gewichte" anbieten – laden Sie nur aus den offiziellen GitHub- oder Hugging-Face-Repositories herunter.',
           },
           {
             q: 'Ich bin kompletter Anfänger. Wo sollte ich anfangen?',
-            a: 'Mit invideos kostenloser Stufe – Sie haben in Minuten ein fertiges, erzähltes Video und können beurteilen, ob KI-Video Ihren Zielen überhaupt dient. Wenn Sie später eine leistungsfähige GPU kaufen und volle Kontrolle sowie Privatsphäre wollen, bleibt die lokale Tür offen.',
+            a: 'Mit invideos kostenlosem Plan können Sie den Cloud-Workflow ohne Hardwarekauf ausprobieren und beurteilen, ob KI-Video Ihren Zielen dient; der Plan hat Limits. Wenn Sie später eine leistungsfähige GPU kaufen und volle Kontrolle sowie Privatsphäre wollen, bleibt die lokale Tür offen.',
           },
           {
             q: 'Was ist beim Ausführen dieser lokalen Modelle auf Mac vs. Windows anders?',
@@ -1008,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Eignet sich diese Vergleichsentscheidung für den deutschen Mittelstand?',
-            a: 'Ja, mit unterschiedlichen Schwerpunkten je nach Ressourcen. Kleinere Mittelstandsunternehmen ohne eigene GPU-Infrastruktur oder IT-Abteilung für ComfyUI-Wartung profitieren meist von invideo: kein Hardware-Investment, planbare Kosten ab 17 $/Monat bei jährlicher Abrechnung (bei monatlicher Zahlung laut invideo-FAQ 20 $), und die Cloud-Pipeline übernimmt Skript, Voiceover und Untertitel ohne internes Know-how. Unternehmen mit vorhandener GPU-Hardware (z. B. aus anderen KI-Projekten) und Interesse an voller Datenkontrolle sollten Wan 2.2 prüfen – Apache 2.0 ohne Umsatzgrenzen passt zu praktisch jeder Unternehmensgröße und erlaubt unbegrenzte Generierungen ohne laufende Kosten pro Video.',
+            a: 'Ja, mit unterschiedlichen Schwerpunkten je nach Ressourcen. Für kleinere Mittelstandsunternehmen ohne eigene GPU-Infrastruktur oder IT-Abteilung für die ComfyUI-Wartung kann ein gehosteter Dienst wie invideo näherliegen: Es ist keine Hardware-Investition nötig; Kosten, Planlimits und die Eignung der Funktionen für Skript, Voiceover und Untertitel sollten Sie vorab auf den aktuellen Anbieterseiten prüfen. Unternehmen mit vorhandener GPU-Hardware (z. B. aus anderen KI-Projekten) und Interesse an voller Datenkontrolle sollten Wan 2.2 prüfen – Apache 2.0 sieht keine Umsatzschwelle vor, und es fallen keine Gebühren pro Video an (Hardware, Strom und Betrieb kosten weiterhin Geld).',
           },
         ],
       },
@@ -1024,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Das Fazit',
         content:
-          'Gehen Sie lokal, wenn Sie eine GPU ab 12 GB haben (oder kaufen werden), gerne eigene Werkzeuge aufbauen und Privatsphäre sowie unbegrenzte Generierungen für 0 $ höher gewichten als Bequemlichkeit. Wan 2.2 ist eine solide Grundlage – hohe Qualität, Apache 2.0 –, mit LTX-2 als Spezialist für Geschwindigkeit und Ton.\n\nGehen Sie in die Cloud, wenn Sie die Hardware nicht haben, das Setup nicht wollen oder fertige Videos statt roher Clips brauchen. Für die meisten Menschen, die einfach nur KI-generierte Videos machen wollen, ist die Cloud-Route der einfachere Einstieg: Wenn Sie nicht bereits die Hardware und das technische Interesse mitbringen, die lokale Generierung erfordert, nimmt Ihnen invideo den Großteil dieser Komplexität in einem einzigen Prompt ab, mit gebündeltem Modell, Assets und Automatisierung – ab 0 $ zum Testen und 17 $/Monat (jährliche Abrechnung), um das Wasserzeichen zu entfernen. Der einfachste Weg herauszufinden, ob es zu Ihrem Workflow passt, ist, die kostenlose Version zu testen.\n\nBeide Türen führen zu KI-Video. Die Frage war nie, welche Technologie besser ist – sondern welcher Workflow zu Ihrer Maschine, Ihrer Geduld und Ihren Zielen passt.',
+          'Gehen Sie lokal, wenn Sie eine GPU ab 12 GB haben (oder kaufen werden), gerne eigene Werkzeuge aufbauen und Privatsphäre sowie das Generieren ohne Gebühren pro Clip höher gewichten als Bequemlichkeit. Wan 2.2 ist eine solide Grundlage – hohe Qualität, Apache 2.0 –, mit LTX-2 als Spezialist für Geschwindigkeit und Ton.\n\nGehen Sie in die Cloud, wenn Sie die Hardware nicht haben, das Setup nicht wollen oder fertige Videos statt roher Clips brauchen. Für die meisten Menschen, die einfach nur KI-generierte Videos machen wollen, ist die Cloud-Route der einfachere Einstieg: Wenn Sie nicht bereits die Hardware und das technische Interesse mitbringen, die lokale Generierung erfordert, nimmt Ihnen ein gehosteter Dienst wie invideo das lokale Setup ab. Zum Testen gibt es einen kostenlosen Plan; kostenpflichtige Pläne und ihre Limits stehen auf invideos Preisseite. Der einfachste Weg herauszufinden, ob es zu Ihrem Workflow passt, ist, die kostenlose Version zu testen.\n\nBeide Türen führen zu KI-Video. Die Frage war nie, welche Technologie besser ist – sondern welcher Workflow zu Ihrer Maschine, Ihrer Geduld und Ihren Zielen passt.',
       },
       sources: {
         id: 'sources',
@@ -1035,7 +1036,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LTX-Modelllizenz](https://ltx.io/model/license) – offizielle Bedingungen der LTX Community License.',
           '[LTX-2-Modellseite](https://ltx.io/model/ltx-2-3) – offizielle Architektur- und Release-Details.',
           '[HunyuanVideo 1.5 auf GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) – offizielles Repository und LICENSE-Datei, inklusive des EU/UK/Südkorea-Ausschlusses.',
-          '[VBench-2.0-Rangliste](https://github.com/Vchitect/VBench) – unabhängiger Benchmark, verwendet für Qualitäts- und Physik-Treue-Werte.',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) – Pressebericht vom März 2026 (Englisch).',
+          '[Alibaba Cloud Community: Ankündigung von Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) – April 2026 (Englisch).',
+          '[invideo Planlimits](https://invideo.io/help/billing/plan-limits/) – offizielle Plan- und Credit-Limits.',
           '[Invideo-Preise](https://invideo.io/pricing/) – offizielle Plan- und Preisdetails.',
           '[Invideo-MCP-Server](https://invideo.io/ai/mcp) – offizielle Automatisierungsdokumentation.',
           '[MiniMax H3 auf GitHub](https://github.com/MiniMax-AI/MiniMax-H3) – offizielles Repository.',
@@ -1076,14 +1079,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-es.webp',
-    title: 'Invideo vs. IA de Video Local: Una Opción Cuesta $0 Más Tu Fin de Semana — la Otra, Desde $17/mes (pago anual)',
+    title: 'Invideo vs. IA de Video Local: Una Cuesta una GPU Más Tu Fin de Semana — la Otra, una Suscripción en la Nube',
     seoTitle: 'IA de Video en la Nube vs Local 2026: invideo vs Wan 2.2 y LTX-2',
     intro:
-      'Hay dos puertas de entrada a la IA de video en 2026. La puerta uno es local: modelos de video abiertos y gratuitos que corren en tu propia GPU — generaciones ilimitadas, con la inferencia corriendo en tu propio hardware (las descargas de modelos y las comprobaciones de actualizaciones siguen usando la red), sin suscripción, pero tienes que construir todo el flujo de trabajo tú mismo. La puerta dos es la nube: invideo, donde con un solo prompt obtienes un video narrado terminado — guion, imágenes de stock, locución, música y subtítulos incluidos, directo desde tu navegador. Ninguna puerta es "mejor". Esta guía te da la letra pequeña de las licencias que la mayoría de las comparaciones omiten, los requisitos reales de hardware y una herramienta de decisión que asocia tu situación con una recomendación.',
+      'Hay dos puertas de entrada a la IA de video en 2026. La puerta uno es local: modelos de video abiertos y gratuitos que corren en tu propia GPU — generaciones ilimitadas, con la inferencia corriendo en tu propio hardware (las descargas de modelos y las comprobaciones de actualizaciones siguen usando la red), sin suscripción, pero tienes que construir todo el flujo de trabajo tú mismo. La puerta dos es la nube: invideo, un servicio alojado que anuncia un recorrido asistido por agentes desde un guion o una idea hasta un video editado, directo desde tu navegador. Ninguna puerta es "mejor". Esta guía te da la letra pequeña de las licencias que la mayoría de las comparaciones omiten, los requisitos reales de hardware y una herramienta de decisión que asocia tu situación con una recomendación.',
     metaDescription:
-      'Los modelos de video IA local (Wan 2.2, LTX-2, HunyuanVideo) son gratis si tu GPU los corre. Invideo en la nube lo hace todo desde $17/mes (pago anual).',
+      'Los modelos de video IA local (Wan 2.2, LTX-2, HunyuanVideo) se descargan gratis si tu GPU puede con ellos. Así se comparan con la nube de invideo.',
     twitterDescription:
-      'IA de video: nube vs local en 2026. Invideo lo integra todo desde $17/mes (facturado anualmente). Wan 2.2, LTX-2 y HunyuanVideo corren gratis en tu propia GPU — si es lo bastante potente. Comparación honesta.',
+      'IA de video, nube vs. local en 2026: invideo es un servicio alojado por suscripción. Wan 2.2, LTX-2 y HunyuanVideo se descargan gratis para tu GPU, si es lo bastante potente.',
     audience:
       'Creadores y desarrolladores que deciden entre la generación de video local gratuita en su propia GPU y el pipeline todo-en-uno en la nube de invideo — cubre requisitos de hardware, letra pequeña de licencias y compensaciones de flujo de trabajo.',
     readTime: '10 min de lectura',
@@ -1111,18 +1114,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**Para la mayoría de las personas con una GPU de 12 GB o más, Wan 2.2 es un modelo de video con IA local sólido en 2026** — con licencia Apache 2.0, sin límites de ingresos ni restricciones territoriales, y con una puntuación VBench de ~84.7% en la clasificación pública, totalmente gratis. **Invideo es la mejor opción si no tienes esa GPU, o quieres un video narrado terminado en lugar de un clip en bruto** — su plan Plus, desde $17/mes (facturado anualmente), integra más de 200 modelos (según invideo) (incluyendo Kling 3, Veo 3.1 y Seedance 2.5) en un solo pipeline basado en navegador, con guion, locución, música y subtítulos incluidos. **HunyuanVideo 1.5 tiene el look cinematográfico local más logrado, pero su licencia excluye por completo a la UE, el Reino Unido y Corea del Sur** — evítalo si estás en esas regiones.',
+      '**Para la mayoría de las personas con una GPU de 12 GB o más, Wan 2.2 es un modelo de video con IA local sólido en 2026** — con licencia Apache 2.0, sin límites de ingresos ni restricciones territoriales, y de descarga gratuita (el hardware y la electricidad siguen costando dinero). **Invideo es la mejor opción si no tienes esa GPU, o quieres un video narrado terminado en lugar de un clip en bruto** — es un servicio alojado en el navegador cuyos planes de pago (Starter, Plus, Max) difieren en el acceso a modelos; consulta su página de precios actual. **HunyuanVideo 1.5 es muy apreciado en la comunidad por su look cinematográfico, pero su licencia excluye por completo a la UE, el Reino Unido y Corea del Sur** — evítalo si estás en esas regiones.',
     quickAnswerTop: {
       es: {
         question: '¿Debería generar video con IA de forma local o usar el pipeline en la nube de invideo?',
         answer:
-          'Genera de forma local si tienes una GPU de 12 GB o más, quieres generaciones ilimitadas a $0 y valoras la privacidad — Wan 2.2 (Apache 2.0, uso comercial permisivo — revisa la ficha del modelo) es un punto de partida razonable. Usa invideo si no tienes el hardware adecuado, no quieres gestionar la configuración, o necesitas un video completo terminado (guion, locución, música, subtítulos) en lugar de un clip en bruto — su plan Plus empieza en $17/mes (facturado anualmente).',
+          'Genera de forma local si tienes una GPU de 12 GB o más, quieres generar sin tarifas por clip y valoras la privacidad — Wan 2.2 (Apache 2.0, uso comercial permisivo — revisa la ficha del modelo) es un punto de partida razonable. Usa invideo si no tienes el hardware adecuado, no quieres gestionar la configuración, o necesitas un video completo terminado (guion, locución, música, subtítulos) en lugar de un clip en bruto — es un servicio alojado por suscripción con un plan gratuito; consulta los precios actuales en su página de precios.',
         bullets: [
           'Menos de 12 GB de VRAM → invideo es la opción práctica; los modelos locales son inutilizables por debajo de este nivel para calidad seria.',
           '12 GB de VRAM → LTX-Video 0.9.5, una opción local práctica en este nivel.',
           '16–24 GB+ de VRAM → Wan 2.2 (máxima calidad, Apache 2.0 — uso comercial permisivo sin umbral de ingresos ni exclusión territorial; se aplican los términos estándar de Apache, como los avisos de atribución, revisa la ficha del modelo) o LTX-2 (velocidad + audio sincronizado).',
           'En la UE, el Reino Unido o Corea del Sur → la licencia de HunyuanVideo 1.5 te excluye; usa Wan 2.2 o LTX-2 en su lugar.',
-          'Necesitas un video narrado terminado, no un clip en bruto → los modelos locales solo generan clips silenciosos (excepto LTX) de 5 a 20 segundos; invideo gestiona todo el pipeline de producción, desde $17/mes (facturado anualmente).',
+          'Necesitas un video narrado terminado, no un clip en bruto → los modelos locales solo generan clips silenciosos (excepto LTX) de 5 a 20 segundos; invideo ofrece un flujo de trabajo alojado alrededor del clip; consulta en su página de precios qué incluye cada plan.',
         ],
         updatedDate: '2026-11-23',
       },
@@ -1152,38 +1155,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 es un modelo de video local de primer nivel bajo la licencia permisiva Apache 2.0.** Uso comercial permisivo sin umbral de ingresos ni exclusión territorial (se aplican los términos estándar de Apache, como los avisos de atribución; revisa la ficha del modelo) — y una puntuación de calidad VBench de ~84.7% en la clasificación pública.',
-          '**Invideo integra más de 200 modelos (según invideo) — incluyendo Kling 3, Veo 3.1 y Seedance 2.5 — en un solo pipeline basado en navegador**, desde $17/mes (plan Plus, facturado anualmente), con guion, locución, música y subtítulos gestionados automáticamente.',
+          '**Wan 2.2 es un modelo de video local de primer nivel bajo la licencia permisiva Apache 2.0.** Uso comercial permisivo sin umbral de ingresos ni exclusión territorial (se aplican los términos estándar de Apache, como los avisos de atribución; revisa la ficha del modelo).',
+          '**Invideo es una alternativa alojada** con un plan gratuito y los planes de pago Starter, Plus y Max; su página de precios indica que Plus y Max tienen acceso a todos los modelos, incluidos todos los Seedance. Los precios varían: consulta la página actual.',
           '**La licencia de HunyuanVideo 1.5 excluye explícitamente a la UE, el Reino Unido y Corea del Sur** — tanto para el modelo como para sus resultados. Los lectores en esas regiones deben usar Wan 2.2 o LTX-2 en su lugar.',
-          '**LTX-2 es el más rápido del trío local y el único con audio sincronizado integrado**, gratuito para uso comercial en empresas con ingresos anuales inferiores a $10M.',
+          '**LTX-2 se presenta como un modelo orientado a la velocidad y es el único de este trío local con audio sincronizado integrado**, gratuito para uso comercial en empresas con ingresos anuales inferiores a $10M.',
           '**12 GB de VRAM es el piso realista para generación de video local en serio.** Por debajo de eso, invideo se vuelve la opción más práctica.',
-          '**Los modelos locales generan clips silenciosos en bruto de 5 a 20 segundos, no videos terminados.** Guion, locución, música, subtítulos y edición son herramientas separadas que tú mismo ensamblas — invideo hace todo esto en un solo paso.',
-          '**En la última actualización de esta página no se conocía ningún "Wan 2.7" oficial.** Ten cuidado con las páginas de descarga que lo ofrecen — los repositorios oficiales de Wan listan lanzamientos que se detienen en 2.2.',
+          '**Los modelos locales generan clips silenciosos en bruto de 5 a 20 segundos, no videos terminados.** Guion, locución, música, subtítulos y edición son herramientas separadas que tú mismo ensamblas — invideo busca reunir estos pasos en un solo flujo de trabajo alojado.',
+          '**Al comprobarlo el 27 de noviembre de 2026, la página oficial de Wan en GitHub no mostraba ningún repositorio con pesos abiertos de "Wan 2.7".** Alibaba anunció [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) en abril de 2026 como modelo disponible en Alibaba Cloud. Ten cuidado con las páginas de terceros que ofrecen "pesos de Wan 2.7".',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Por qué 2026 es un momento extraño para la IA de video',
         content:
-          'El mercado propietario de video ha sido caótico, según informes de prensa que PromptQuorum no ha verificado de forma independiente. Seedance 2.0 de ByteDance se topó con amenazas legales de estudios de Hollywood (se informó de cartas de cese y desista de Disney, Paramount y Warner Bros.) y con un lanzamiento global pausado — según se informa sigue siendo accesible en China, pero su situación legal para el uso comercial internacional no está clara.\n\nEse caos es exactamente lo que hace atractivas a ambas puertas. Los modelos locales abiertos te hacen independiente del drama de los proveedores. E invideo absorbe ese drama por ti: su suscripción integra acceso a más de 200 modelos (según invideo) — incluyendo Kling 3, Veo 3.1 y Seedance 2.5 — así que cuando un modelo desaparece o es demandado, tu flujo de trabajo ni se entera.',
+          'El mercado propietario de video ha sido turbulento. En marzo de 2026, [Engadget informó](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html), citando a The Information, de que ByteDance había pausado el lanzamiento global de Seedance 2.0 tras cartas de cese y desista de Disney y Paramount Skydance. PromptQuorum no ha verificado esa información de forma independiente, y la disponibilidad ha cambiado desde entonces: la página de precios de invideo ya incluye Seedance 2.0 y 2.5.\n\nEse tipo de vaivenes es lo que hace atractivas ambas puertas. Los modelos abiertos que ya has descargado siguen funcionando aunque cambie un proveedor. Un servicio multimodelo como invideo ofrece varios modelos en una sola cuenta, pero su oferta puede cambiar, así que no está garantizado que tu flujo de trabajo no se vea afectado.',
       },
       localModels: {
         id: 'local-models',
         title: 'La puerta local: tres modelos gratuitos en tu propia GPU',
         content:
-          'Tres sistemas de pesos abiertos dominan la generación de video local ahora mismo, medido por descargas, actividad de la comunidad y resultados de benchmarks. Los tres corren a través de ComfyUI, una interfaz basada en nodos que instalas en tu propia máquina — no una herramienta tipo chat como Ollama. Son modelos de difusión, no LLMs.',
+          'Esta guía compara tres sistemas de pesos abiertos muy utilizados para generar video en local. Los tres corren a través de ComfyUI, una interfaz basada en nodos que instalas en tu propia máquina — no una herramienta tipo chat como Ollama. Son modelos de difusión, no LLMs.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Wan 2.2 es un modelo de video local sólido en general en 2026 — Apache 2.0, alta calidad, sin restricciones territoriales — mientras que LTX-2 gana en velocidad y audio sincronizado, y HunyuanVideo 1.5 ofrece el look más cinematográfico pero excluye por licencia a los usuarios de la UE/Reino Unido/Corea del Sur.' },
+          { type: 'one-sentence', text: 'Wan 2.2 es un modelo de video local sólido en general en 2026 — Apache 2.0, alta calidad, sin restricciones territoriales — mientras que LTX-2 se centra en la velocidad y añade audio sincronizado, y HunyuanVideo 1.5 es apreciado en la comunidad por su look cinematográfico pero excluye por licencia a los usuarios de la UE/Reino Unido/Corea del Sur.' },
           { type: 'plain-terms', text: 'Si solo quieres una respuesta: consigue una GPU de 12 GB o más y corre Wan 2.2. Ofrece alta calidad y una licencia permisiva Apache 2.0.' },
         ],
         columns: ['Modelo', 'Licencia', 'VRAM', 'Salida', 'Característica destacada'],
         rows: [
-          { 'Modelo': 'Wan 2.2 (Alibaba)', 'Licencia': 'Apache 2.0 — permisiva, sin umbral de ingresos ni exclusión territorial', 'VRAM': '6–8GB (5B) / 15–25GB (14B)', 'Salida': '480p/720p, clips de ~5s', 'Característica destacada': 'Calidad VBench ~84.7% (clasificación pública)' },
-          { 'Modelo': 'LTX-2 (Lightricks)', 'Licencia': 'LTX Community License — gratis por debajo de $10M en ingresos', 'VRAM': '18–20GB cuantizado, 32GB+ completo', 'Salida': '480p–1080p, 5–20s, con audio', 'Característica destacada': 'Único modelo con audio y video sincronizados en un solo paso' },
-          { 'Modelo': 'HunyuanVideo 1.5 (Tencent)', 'Licencia': 'Tencent Community License — excluye a UE/Reino Unido/Corea del Sur', 'VRAM': '14GB mínimo, 24GB cómodo', 'Salida': '480p/720p, hasta 10s', 'Característica destacada': 'Favorito de la comunidad por su iluminación cinematográfica; el más ligero en VRAM' },
+          { 'Modelo': 'Wan 2.2 (Alibaba)', 'Licencia': 'Apache 2.0 — permisiva, sin umbral de ingresos ni exclusión territorial', 'VRAM': '6–8GB (5B) / 15–25GB (14B)', 'Salida': '480p/720p, clips de ~5s', 'Característica destacada': 'Variantes 14B y 5B compacta' },
+          { 'Modelo': 'LTX-2 (Lightricks)', 'Licencia': 'LTX Community License — gratis por debajo de $10M en ingresos', 'VRAM': '18–20GB cuantizado, 32GB+ completo', 'Salida': '480p–1080p, 5–20s, con audio', 'Característica destacada': 'Audio y video sincronizados (solo uno de estos tres)' },
+          { 'Modelo': 'HunyuanVideo 1.5 (Tencent)', 'Licencia': 'Tencent Community License — excluye a UE/Reino Unido/Corea del Sur', 'VRAM': '14GB mínimo, 24GB cómodo', 'Salida': '480p/720p, hasta 10s', 'Característica destacada': 'Luz cinematográfica; mínimo 14GB con offloading' },
         ],
         note:
-          '⚠️ Precaución: en la última actualización no se conocía ningún "Wan 2.7" oficial. Ten cuidado con las páginas que afirman ofrecer "pesos abiertos de Wan 2.7". Los repositorios oficiales de Wan listan lanzamientos que se detienen en 2.2 — descarga solo desde los repositorios oficiales de GitHub o Hugging Face enlazados abajo.',
+          '⚠️ Precaución: al comprobarlo el 27 de noviembre de 2026, la [página oficial de Wan en GitHub](https://github.com/Wan-Video) no mostraba ningún repositorio con pesos abiertos de "Wan 2.7"; Alibaba anunció [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) como disponible en Alibaba Cloud. Ten cuidado con las páginas que ofrecen "pesos abiertos de Wan 2.7" y descarga solo desde repositorios oficiales de GitHub o Hugging Face.',
       },
       wan22: {
         id: 'wan-2-2',
@@ -1199,7 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2 (Lightricks) — velocidad más sonido sincronizado',
         content:
-          'LTX-2 es el único modelo abierto de este trío que genera audio y video sincronizados en un solo paso — pasos, ambiente y efectos llegan junto con la imagen. También es el más rápido de los tres y el más flexible en cuanto a hardware. La arquitectura es un transformador de difusión de 22B; LTX-2.3 (marzo de 2026) sigue siendo totalmente compatible junto al actual LTX-2.5. La licencia es la LTX Community License — gratuita para uso comercial si los ingresos totales de tu empresa son inferiores a $10M al año, con una licencia comercial de pago requerida por encima de ese umbral. (Algunos análisis de terceros la llaman incorrectamente Apache 2.0 — la [página oficial de la licencia](https://ltx.io/model/license) es la única fuente fiable.) Los requisitos de hardware van de 18–20GB de VRAM cuantizado a 32GB+ a precisión completa; en tarjetas de 12GB, el más antiguo LTX-Video 0.9.5 sigue siendo la opción práctica.\n\n**Velocidad, en concreto:** LTX-2 es cualitativamente el más rápido del trío, con vistas previas casi en tiempo real en tarjetas de consumo de gama alta — pero no existe una cifra de minutos por clip verificada de forma independiente en una RTX 4090 al momento de escribir esto, así que no vamos a inventar una. La única cifra concreta disponible proviene del propio benchmark de Lightricks en "superchips de Nvidia" de nivel datacenter (no una GPU de consumo): un clip de 10 segundos en unos 6.8 segundos. Trátalo como un techo de lo que la arquitectura puede hacer en hardware serio, no como lo que verá tu equipo en casa.',
+          'LTX-2 es el único modelo abierto de este trío que genera audio y video sincronizados en un solo paso — pasos, ambiente y efectos llegan junto con la imagen. También se presenta como un modelo rápido, aunque no es el más ligero en VRAM (consulta las cifras más abajo). La arquitectura es un transformador de difusión de 22B; LTX-2.3 (marzo de 2026) sigue siendo totalmente compatible junto al actual LTX-2.5. La licencia es la LTX Community License — gratuita para uso comercial si los ingresos totales de tu empresa son inferiores a $10M al año, con una licencia comercial de pago requerida por encima de ese umbral. (Algunos análisis de terceros la llaman incorrectamente Apache 2.0 — la [página oficial de la licencia](https://ltx.io/model/license) es la única fuente fiable.) Los requisitos de hardware van de 18–20GB de VRAM cuantizado a 32GB+ a precisión completa; en tarjetas de 12GB, el más antiguo LTX-Video 0.9.5 sigue siendo la opción práctica.\n\n**Velocidad, en concreto:** LTX-2 suele describirse como rápido — pero no existe una cifra de minutos por clip verificada de forma independiente en una RTX 4090 al momento de escribir esto, así que no vamos a inventar una. La única cifra concreta disponible proviene del propio benchmark de Lightricks en "superchips de Nvidia" de nivel datacenter (no una GPU de consumo): un clip de 10 segundos en unos 6.8 segundos. Trátalo como un techo de lo que la arquitectura puede hacer en hardware serio, no como lo que verá tu equipo en casa.',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 on GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 on Hugging Face' },
@@ -1209,7 +1212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5 (Tencent) — el look cinematográfico, con una trampa legal',
         content:
-          'El modelo de 8.3B de Tencent, lanzado en noviembre de 2025, es el favorito de la comunidad por su iluminación y textura cinematográficas, y el más ligero del trío en VRAM: 14GB mínimo con offloading, 24GB cómodo, a razón de unos 75 segundos por clip de 480p en una RTX 4090 (una cifra reportada que PromptQuorum no ha verificado). Genera de forma nativa 480p/720p, hasta 1080p mediante superresolución integrada, con clips de hasta 10 segundos.\n\n**Velocidad, en concreto:** con ~75 segundos por clip de 480p de 5 segundos, eso son unos 15 segundos de renderizado por cada segundo de video. Su duración máxima nativa por clip es de 10 segundos, así que una secuencia de 20 segundos requiere dos generaciones al máximo de duración — extrapolando la tasa por segundo, calcula unos 5 minutos de generación en bruto para 20 segundos de metraje, antes de unirlos. Esto es una extrapolación de una cifra reportada y no verificada de 5 segundos, no un benchmark de 10 o 20 segundos medido.',
+          'El modelo de 8.3B de Tencent, lanzado en noviembre de 2025, es el favorito de la comunidad por su iluminación y textura cinematográficas, con necesidades moderadas de VRAM: 14GB mínimo con offloading, 24GB cómodo, a razón de unos 75 segundos por clip de 480p en una RTX 4090 (una cifra reportada que PromptQuorum no ha verificado). Genera de forma nativa 480p/720p, hasta 1080p mediante superresolución integrada, con clips de hasta 10 segundos.\n\n**Velocidad, en concreto:** con ~75 segundos por clip de 480p de 5 segundos, eso son unos 15 segundos de renderizado por cada segundo de video. Su duración máxima nativa por clip es de 10 segundos, así que una secuencia de 20 segundos requiere dos generaciones al máximo de duración — extrapolando la tasa por segundo, calcula unos 5 minutos de generación en bruto para 20 segundos de metraje, antes de unirlos. Esto es una extrapolación de una cifra reportada y no verificada de 5 segundos, no un benchmark de 10 o 20 segundos medido.',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on Hugging Face' },
@@ -1217,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Advertencia de licencia — lee antes de descargar. HunyuanVideo 1.5 usa la Tencent Hunyuan Community License, no Apache 2.0. La licencia no aplica en la Unión Europea, el Reino Unido ni Corea del Sur — según el texto de la licencia, los usuarios en esas regiones no están autorizados a usar el modelo ni sus resultados. También limita el uso a 100 millones de usuarios activos mensuales y prohíbe entrenar modelos competidores con sus resultados. Si estás en la UE, el Reino Unido o Corea del Sur, evita este modelo: Wan 2.2 (Apache 2.0, uso comercial permisivo sin exclusión territorial) cubre el mismo nivel de calidad.',
+            text: 'Advertencia de licencia — lee antes de descargar. HunyuanVideo 1.5 usa la Tencent Hunyuan Community License, no Apache 2.0. La licencia no aplica en la Unión Europea, el Reino Unido ni Corea del Sur — según el texto de la licencia, los usuarios en esas regiones no están autorizados a usar el modelo ni sus resultados. Además, requiere una licencia aparte de Tencent si tus productos tuvieron más de 100 millones de usuarios activos mensuales en el mes anterior a la fecha de lanzamiento del modelo, y prohíbe usar el modelo o sus resultados para mejorar otros modelos de IA (salvo Tencent Hunyuan y sus derivados). Si estás en la UE, el Reino Unido o Corea del Sur, evita este modelo y considera Wan 2.2 (Apache 2.0, uso comercial permisivo sin exclusión territorial).',
           },
         ],
       },
@@ -1225,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: 'Uno para vigilar: MiniMax H3',
         content:
-          'Lanzado el 3 de agosto de 2026, MiniMax H3 es un modelo omni-modal de 33.1B con audio estéreo nativo, compatibilidad con ComfyUI desde el primer día y versiones cuantizadas que corren en una RTX 3060. Dos advertencias antes de tratarlo como una cuarta opción: el lanzamiento local se limita a 768p (el pipeline completo de 2K sigue siendo solo alojado), y su Community License, según se informa, incluye sus propias restricciones geográficas y un umbral de ingresos de $20M — revisa la ficha oficial del modelo antes de comprometerte. Las señales iniciales son sólidas, pero un lanzamiento reciente y estar listo para producción son cosas distintas.',
+          'Lanzado el 3 de agosto de 2026, MiniMax H3 es un modelo omni-modal de 33.1B con audio estéreo nativo, compatibilidad con ComfyUI desde el primer día y versiones cuantizadas que corren en una RTX 3060. Dos advertencias antes de tratarlo como una cuarta opción: el lanzamiento local se limita a 768p (el pipeline completo de 2K sigue siendo solo alojado), y su [Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) excluye del territorio licenciado a la UE, el Reino Unido, Corea del Sur y EE. UU., y exige una autorización aparte por encima de $20M de ingresos anuales — léela antes de comprometerte (esto no es asesoramiento legal). Las señales iniciales son sólidas, pero un lanzamiento reciente y estar listo para producción son cosas distintas.',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 on GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 on Hugging Face' },
@@ -1246,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu GPU': '24GB+ VRAM', 'Qué puedes correr': 'Todo: Wan 2.2 14B en alta calidad, LTX-2 cuantizado' },
         ],
         note:
-          'Costo aproximado de GPU, según el [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15; datos de listados de eBay EE. UU., no una cotización ni una oferta): los listados vendidos de RTX 3090 usadas rondan los $1,400–1,550 y los de RTX 4090 usadas $2,575–3,010 (mediana $2,860). Los precios de GPU varían — verifica el precio actual antes de comprar en lugar de confiar en estas cifras pasados unos meses. Los precios en tu país pueden variar según impuestos locales.',
+          'Costo aproximado de GPU, según el [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15; datos de listados de eBay EE. UU., no una cotización ni una oferta): los listados vendidos de RTX 3090 usadas rondan los $1,400–1,550 y los de RTX 4090 usadas $2,575–3,010 (mediana $2,860). Desde entonces, el rastreador ha subido su cifra para la RTX 3090 usada a $1,500–1,725 (mediana $1,650; 225 ventas, 13–23 de noviembre de 2026). Los precios de GPU varían — verifica el precio actual antes de comprar en lugar de confiar en estas cifras pasados unos meses. Los precios en tu país pueden variar según impuestos locales.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1266,19 +1269,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'Invideo es un ejemplo de la puerta de la nube — no el único, y vale la pena saber en qué se diferencia de los demás antes de asumir que "nube" significa una sola cosa. Según sus descripciones públicas (PromptQuorum no ha probado ninguno de estos tres servicios), Runway se integra directamente en editores profesionales (Premiere Pro, Final Cut, DaVinci Resolve), orientado a flujos de trabajo híbridos de IA más editor en lugar de un video terminado y ensamblado. Según las mismas descripciones, Dream Machine de Luma AI se especializa en salida HDR nativa de 16 bits para pipelines de composición VFX (After Effects, Nuke) — una audiencia completamente distinta. Pika se mantiene ligero: generación rápida de clips en bruto sin guion, locución ni ensamblaje de imágenes de stock integrados, así que igual necesitas herramientas separadas para todo lo que rodea al clip — el mismo problema de pipeline DIY que correr un modelo local, solo que sin el requisito de GPU. Lo que distingue a invideo de los tres es que no es principalmente una herramienta de generación en bruto: es un ensamblador de guion-a-video-terminado que además te da acceso a modelos de generación en bruto (Kling, Veo, Seedance) cuando los necesitas.\n\nInvideo no es un modelo de video, sino un pipeline de producción completo ofrecido como servicio. Puedes escribir un tema o pegar un guion en [invideo Agent](https://invideo.io/), que planifica y crea el video reuniendo guion, escenas, visuales generados o de stock, locución, música, subtítulos y estilo de marca en un solo flujo de trabajo. Corre en el navegador — tu GPU es irrelevante.\n\nTres cosas destacan para esta comparación:\n\n- **El caos de los modelos, absorbido.** Todos los planes de pago incluyen acceso a más de 200 modelos (según invideo) — Seedance 2.5, Veo 3.1 y Kling 3 entre ellos. Cuando un modelo es demandado o cerrado, invideo lo sustituye; tu flujo de trabajo continúa.\n- **La automatización viene integrada, no añadida.** Hay un servidor MCP oficial, así que todo el pipeline prompt → guion → metraje → subtítulos se puede activar de forma programática — el tipo de infraestructura que de otro modo tendrías que construir tú mismo alrededor de ComfyUI.\n- **El nivel gratuito es una prueba real.** Con marca de agua y minutos limitados, pero suficiente para juzgar la calidad del resultado antes de pagar.\n\n**Velocidad, en concreto — y la trampa honesta:** una sola generación en bruto es rápida, típicamente minutos. Pero el propio FAQ de invideo sitúa la producción completa de extremo a extremo de un cortometraje en 2 a 5 días, no minutos — porque elegir y ensamblar entre múltiples opciones generadas, no la generación en sí, es lo que consume el tiempo. Trata "2 días como un piso realista" para un cortometraje terminado de 1 a 3 minutos como el punto de comparación justo frente a los 16–36 minutos de generación en bruto de la puerta local para 20 segundos de metraje sin editar: invideo cambia tu tiempo de configuración y edición por su propio tiempo de producción, no elimina el tiempo por completo.\n\nPlanes actuales, desde $17/mes (plan Plus, facturado anualmente; consulta la [página de precios de invideo](https://invideo.io/pricing/) para cifras actualizadas):',
+          'Invideo es un ejemplo de la puerta de la nube — no el único, y vale la pena saber en qué se diferencia de los demás antes de asumir que "nube" significa una sola cosa. Según sus descripciones públicas (PromptQuorum no ha probado ninguno de estos tres servicios), Runway se integra directamente en editores profesionales (Premiere Pro, Final Cut, DaVinci Resolve), orientado a flujos de trabajo híbridos de IA más editor en lugar de un video terminado y ensamblado. Según las mismas descripciones, Dream Machine de Luma AI se especializa en salida HDR nativa de 16 bits para pipelines de composición VFX (After Effects, Nuke) — una audiencia completamente distinta. Según las mismas descripciones, Pika se centra en la generación rápida de clips en bruto; PromptQuorum no ha verificado si ofrece guion, locución o montaje de imágenes de stock, así que compruébalo antes de contar con él para el trabajo alrededor del clip. Según su propia descripción, invideo combina storyboard, redacción de guiones y edición en línea de tiempo con acceso a modelos de generación como Kling, Veo y Seedance.\n\nInvideo no es un único modelo de video, sino un servicio alojado. Al comprobarlo el 27 de noviembre de 2026, [su página de inicio](https://invideo.io/) presentaba un editor de video con agentes, con storyboard a partir de un guion o una idea, redacción de guiones y una línea de tiempo multipista; el sitio también ofrece herramientas de voz y música con IA. PromptQuorum no lo ha probado, así que comprueba que la locución y los subtítulos funcionen como necesitas. Corre en el navegador — tu GPU es irrelevante.\n\nTres cosas destacan para esta comparación:\n\n- **Varios modelos, una cuenta.** La página de precios de invideo indica que Plus y Max tienen acceso a todos los modelos, incluidos todos los Seedance; Starter cubre modelos seleccionados, sin Seedance 2.5. La oferta puede cambiar.\n- **El acceso para agentes viene integrado.** invideo ofrece un [servidor MCP](https://invideo.io/ai/mcp) que permite a agentes de IA trabajar en su editor de línea de tiempo.\n- **Hay un plan gratuito.** La [página de límites de planes](https://invideo.io/help/billing/plan-limits/) de invideo describe un límite semanal; revisa las reglas de exportación y marca de agua antes de contar con él.\n\n**Velocidad, en concreto — y la trampa honesta:** según invideo, la generación en bruto es rápida. Pero el propio FAQ de invideo sitúa la producción completa de extremo a extremo de un cortometraje en 2 a 5 días, no minutos — porque elegir y ensamblar entre múltiples opciones generadas, no la generación en sí, es lo que consume el tiempo. Trata "2 días como un piso realista" para un cortometraje terminado de 1 a 3 minutos como el punto de comparación justo frente a los 16–36 minutos de generación en bruto de la puerta local para 20 segundos de metraje sin editar: invideo cambia tu tiempo de configuración y edición por su propio tiempo de producción, no elimina el tiempo por completo.\n\nPlanes que lista invideo (para los precios, consulta la [página de precios de invideo](https://invideo.io/pricing/)):',
         blockquote:
           '**¿Quieres crear videos con IA sin la configuración local?** Si no tienes una GPU potente — o simplemente no quieres pasar horas instalando y configurando herramientas locales de IA de video — vale la pena probar invideo. [Prueba la versión gratuita de invideo →](https://invideo.io/pricing/)',
-        columns: ['Plan', 'Precio', 'Créditos/mes', 'Ideal para'],
+        columns: ['Plan', 'Créditos por puesto/mes', 'Acceso a modelos'],
         rows: [
-          { 'Plan': 'Free', 'Precio': '$0', 'Créditos/mes': 'limitados', 'Ideal para': 'Probar el terreno (con marca de agua)' },
-          { 'Plan': 'Plus', 'Precio': '$17/mes ($200/año)', 'Créditos/mes': '75', 'Ideal para': 'Creadores habituales — todos los modelos de IA, 4 avatares y clonaciones de voz, 100 activos de iStock, exportaciones ilimitadas sin marca de agua' },
-          { 'Plan': 'Max', 'Precio': '$85/mes ($1,000/año)', 'Créditos/mes': '390', 'Ideal para': 'Canales de alto volumen, 16 avatares' },
-          { 'Plan': 'Generative', 'Precio': '$170/mes ($2,000/año)', 'Créditos/mes': '800+', 'Ideal para': 'Volumen de cortometrajes / producción' },
-          { 'Plan': 'Elite', 'Precio': '$900/mes ($10,800/año)', 'Créditos/mes': '4,250+', 'Ideal para': 'Escala episódica y comercial' },
+          { 'Plan': 'Free', 'Créditos por puesto/mes': 'Límite semanal', 'Acceso a modelos': 'Ver la página de precios' },
+          { 'Plan': 'Starter', 'Créditos por puesto/mes': '400', 'Acceso a modelos': 'Modelos seleccionados; sin Seedance 2.5' },
+          { 'Plan': 'Plus', 'Créditos por puesto/mes': '2,000', 'Acceso a modelos': 'Todos los modelos, según invideo' },
+          { 'Plan': 'Max', 'Créditos por puesto/mes': 'Desde 5,000', 'Acceso a modelos': 'Todos los modelos, según invideo' },
         ],
         note:
-          'Todos los precios anteriores son tarifas de facturación anual según invideo — pagar mes a mes cuesta más (el propio FAQ de invideo cita Plus $20, Max $100, Generative $200, Elite $1,000 al mes). Consulta la página de precios en vivo de invideo antes de confiar en cualquier cifra aquí; los planes y precios cambian. Las cifras $/mes son los equivalentes redondeados de los planes anuales de invideo; los totales anuales son los que invideo listaba en el momento de la última actualización (consulta la fecha de última actualización).',
+          'Nombres de planes, créditos y acceso a modelos según las páginas de [precios](https://invideo.io/pricing/) y de [límites de planes](https://invideo.io/help/billing/plan-limits/) de invideo, comprobadas el 27 de noviembre de 2026. Aquí no se citan precios: vista desde Europa, la página mostraba una oferta por tiempo limitado, y los planes difieren de los que esta guía listaba antes. Consulta la página actual antes de fiarte de cualquier dato.',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Prueba la versión gratuita de invideo →' },
         ],
@@ -1343,15 +1345,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es la trampa real de la IA de video local "gratuita"?',
-            a: 'El costo del hardware (una GPU capaz), el tiempo de configuración (ComfyUI y sus dependencias), y el pipeline DIY necesario alrededor de los clips de salida en bruto. Los pesos del modelo en sí realmente cuestan $0 por generación, para siempre.',
+            a: 'El costo del hardware (una GPU capaz), el tiempo de configuración (ComfyUI y sus dependencias), y el pipeline DIY necesario alrededor de los clips de salida en bruto. Los pesos del modelo no tienen tarifa por generación; el hardware y la electricidad siguen costando dinero.',
           },
           {
             q: '¿Existe un Wan 2.7 o un modelo Wan más reciente?',
-            a: 'No en la última actualización de esta página: los repositorios oficiales de Wan listan lanzamientos hasta 2.2. Ten cuidado con cualquier sitio que ofrezca "pesos de Wan 2.7" — descarga solo desde los repositorios oficiales de GitHub o Hugging Face.',
+            a: 'Al comprobarlo el 27 de noviembre de 2026, la página oficial de Wan en GitHub no mostraba ningún repositorio más reciente con pesos abiertos. Alibaba anunció [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) en abril de 2026 como disponible en Alibaba Cloud. Ten cuidado con cualquier otro sitio que ofrezca "pesos de Wan 2.7": descarga solo desde los repositorios oficiales de GitHub o Hugging Face.',
           },
           {
             q: 'Soy un principiante total. ¿Por dónde debería empezar?',
-            a: 'El nivel gratuito de invideo — tendrás un video terminado y narrado en minutos y podrás juzgar si la IA de video sirve a tus objetivos. Si más adelante compras una GPU capaz y quieres control total y privacidad, la puerta local sigue abierta.',
+            a: 'El plan gratuito de invideo permite probar el flujo de trabajo en la nube sin comprar hardware y juzgar si la IA de video sirve a tus objetivos; tiene límites. Si más adelante compras una GPU capaz y quieres control total y privacidad, la puerta local sigue abierta.',
           },
           {
             q: '¿Qué diferencia hay al correr estos modelos locales en Mac vs Windows?',
@@ -1375,7 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'El veredicto',
         content:
-          'Ve por lo local si tienes (o vas a comprar) una GPU de 12GB o más, disfrutas construir tus propias herramientas y valoras la privacidad y las generaciones ilimitadas a $0 por encima de la comodidad. Wan 2.2 es una base sólida — alta calidad, Apache 2.0 — con LTX-2 como el especialista en velocidad y sonido.\n\nVe por la nube si no tienes el hardware, no quieres la configuración, o necesitas videos terminados en lugar de clips en bruto. Para la mayoría de las personas que simplemente quieren hacer videos generados con IA, la ruta en la nube es el punto de partida más fácil: si no tienes ya el hardware y el interés técnico que requiere la generación local, invideo elimina la mayor parte de esa complejidad en un solo prompt, con cada modelo y activo integrado y automatización incluida — desde $0 para probar y $17/mes (facturado anualmente) para quitar la marca de agua. La forma más sencilla de averiguar si te encaja es probar la versión gratuita.\n\nAmbas puertas llevan a la IA de video. La pregunta nunca fue cuál tecnología es mejor — sino qué flujo de trabajo se ajusta a tu equipo, tu paciencia y tus objetivos.',
+          'Ve por lo local si tienes (o vas a comprar) una GPU de 12GB o más, disfrutas construir tus propias herramientas y valoras la privacidad y generar sin tarifas por clip por encima de la comodidad. Wan 2.2 es una base sólida — alta calidad, Apache 2.0 — con LTX-2 como el especialista en velocidad y sonido.\n\nVe por la nube si no tienes el hardware, no quieres la configuración, o necesitas videos terminados en lugar de clips en bruto. Para la mayoría de las personas que simplemente quieren hacer videos generados con IA, la ruta en la nube es el punto de partida más fácil: si no tienes ya el hardware y el interés técnico que requiere la generación local, un servicio alojado como invideo te ahorra la configuración local. Hay un plan gratuito para probar; los planes de pago y sus límites figuran en la página de precios de invideo. La forma más sencilla de averiguar si te encaja es probar la versión gratuita.\n\nAmbas puertas llevan a la IA de video. La pregunta nunca fue cuál tecnología es mejor — sino qué flujo de trabajo se ajusta a tu equipo, tu paciencia y tus objetivos.',
       },
       sources: {
         id: 'sources',
@@ -1386,7 +1388,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Licencia del modelo LTX](https://ltx.io/model/license) — términos oficiales de la LTX Community License.',
           '[Página del modelo LTX-2](https://ltx.io/model/ltx-2-3) — arquitectura oficial y detalles de lanzamiento.',
           '[HunyuanVideo 1.5 en GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) — repositorio oficial y archivo LICENSE, incluyendo la exclusión de UE/Reino Unido/Corea del Sur.',
-          '[Tabla de posiciones VBench-2.0](https://github.com/Vchitect/VBench) — benchmark independiente usado para las cifras de calidad y fidelidad física.',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) — noticia de marzo de 2026 (en inglés).',
+          '[Alibaba Cloud Community: anuncio de Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) — abril de 2026 (en inglés).',
+          '[Límites de planes de invideo](https://invideo.io/help/billing/plan-limits/) — límites oficiales de planes y créditos.',
           '[Precios de invideo](https://invideo.io/pricing/) — detalles oficiales de planes y precios.',
           '[Servidor MCP de invideo](https://invideo.io/ai/mcp) — documentación oficial de automatización.',
           '[MiniMax H3 en GitHub](https://github.com/MiniMax-AI/MiniMax-H3) — repositorio oficial.',
@@ -1427,14 +1431,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-fr.webp',
-    title: 'Invideo vs vidéo IA locale : une option ne coûte rien (plus votre week-end), l\'autre dès 17 $/mois (paiement annuel)',
+    title: 'Invideo vs vidéo IA locale : l\'une coûte un GPU et votre week-end, l\'autre un abonnement cloud',
     seoTitle: 'Vidéo IA cloud vs locale 2026 : invideo vs Wan 2.2 & LTX-2',
     intro:
-      'Deux portes s\'ouvrent sur la vidéo IA en 2026. Porte une : le local — des modèles vidéo ouverts et gratuits tournant sur votre propre GPU, générations illimitées, inférence sur votre propre matériel (les téléchargements de modèles et les vérifications de mises à jour utilisent toujours le réseau), aucun abonnement, mais vous construisez tout le pipeline vous-même. Porte deux : le cloud — invideo, où un simple prompt donne une vidéo narrée finie : script, images d\'archives, voix off, musique et sous-titres inclus, directement depuis votre navigateur. Aucune des deux n\'est « meilleure ». Ce guide donne les clauses de licence que la plupart des comparatifs ignorent, les vraies exigences matérielles, et un outil de décision qui associe votre situation à une recommandation.',
+      'Deux portes s\'ouvrent sur la vidéo IA en 2026. Porte une : le local — des modèles vidéo ouverts et gratuits tournant sur votre propre GPU, générations illimitées, inférence sur votre propre matériel (les téléchargements de modèles et les vérifications de mises à jour utilisent toujours le réseau), aucun abonnement, mais vous construisez tout le pipeline vous-même. Porte deux : le cloud — invideo, un service hébergé qui met en avant un parcours assisté par agents, du script ou de l\'idée à la vidéo montée, directement dans votre navigateur. Aucune des deux n\'est « meilleure ». Ce guide donne les clauses de licence que la plupart des comparatifs ignorent, les vraies exigences matérielles, et un outil de décision qui associe votre situation à une recommandation.',
     metaDescription:
-      'Les modèles de vidéo IA locale (Wan 2.2, LTX-2, HunyuanVideo) sont gratuits si votre GPU suit. Le cloud invideo fait tout dès 17 $/mois (paiement annuel).',
+      'Les modèles de vidéo IA locale (Wan 2.2, LTX-2, HunyuanVideo) se téléchargent gratuitement si votre GPU suit. Comparaison avec le cloud d\'invideo.',
     twitterDescription:
-      'Vidéo IA cloud vs locale en 2026 : invideo regroupe tout dès 17 $/mois (facturation annuelle). Wan 2.2, LTX-2, HunyuanVideo tournent gratuitement sur votre GPU — s\'il est assez puissant. Comparatif honnête.',
+      'Vidéo IA cloud vs locale en 2026 : invideo est un service hébergé par abonnement. Wan 2.2, LTX-2 et HunyuanVideo se téléchargent gratuitement pour votre GPU, s\'il est assez puissant.',
     audience:
       'Créateurs et développeurs hésitant entre la génération vidéo locale gratuite sur leur propre GPU et le pipeline cloud tout-en-un d\'invideo — matériel requis, clauses de licence et compromis de workflow.',
     readTime: '9 min de lecture',
@@ -1462,18 +1466,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**Pour la majorité des utilisateurs avec un GPU 12 Go+, Wan 2.2 est un modèle de vidéo IA locale solide en 2026** — licence Apache 2.0 sans plafond de revenus ni restriction territoriale, avec un score VBench de ~84,7 % au classement public, entièrement gratuit. **Invideo est le meilleur choix si vous n\'avez pas ce GPU, ou si vous voulez une vidéo narrée finie plutôt qu\'un clip brut** — son offre Plus, à partir de 17 $/mois (facturation annuelle), regroupe plus de 200 modèles (selon invideo) (dont Kling 3, Veo 3.1 et Seedance 2.5) dans un pipeline unique dans le navigateur, avec script, voix off, musique et sous-titres inclus. **HunyuanVideo 1.5 offre le rendu local le plus cinématographique, mais sa licence exclut totalement l\'UE, le Royaume-Uni et la Corée du Sud** — évitez ce modèle si vous êtes dans ces régions.',
+      '**Pour la majorité des utilisateurs avec un GPU 12 Go+, Wan 2.2 est un modèle de vidéo IA locale solide en 2026** — licence Apache 2.0 sans plafond de revenus ni restriction territoriale, et téléchargeable gratuitement (le matériel et l\'électricité restent à votre charge). **Invideo est le meilleur choix si vous n\'avez pas ce GPU, ou si vous voulez une vidéo narrée finie plutôt qu\'un clip brut** — c\'est un service hébergé dans le navigateur dont les offres payantes (Starter, Plus, Max) diffèrent par l\'accès aux modèles ; consultez sa page tarifs actuelle. **HunyuanVideo 1.5 est apprécié de la communauté pour son rendu cinématographique, mais sa licence exclut totalement l\'UE, le Royaume-Uni et la Corée du Sud** — évitez ce modèle si vous êtes dans ces régions.',
     quickAnswerTop: {
       fr: {
         question: 'Dois-je générer mes vidéos IA en local ou utiliser le pipeline cloud d\'invideo ?',
         answer:
-          'Générez en local si vous avez un GPU 12 Go+, voulez des générations illimitées à 0 $ et privilégiez la confidentialité — Wan 2.2 (Apache 2.0, usage commercial permissif — consultez la fiche du modèle) est un point de départ raisonnable. Utilisez invideo si vous n\'avez pas le matériel adapté, ne voulez pas gérer l\'installation, ou avez besoin d\'une vidéo complète et finie (script, voix off, musique, sous-titres) plutôt que d\'un clip brut — son offre Plus démarre à 17 $/mois (facturation annuelle).',
+          'Générez en local si vous avez un GPU 12 Go+, voulez générer sans frais par clip et privilégiez la confidentialité — Wan 2.2 (Apache 2.0, usage commercial permissif — consultez la fiche du modèle) est un point de départ raisonnable. Utilisez invideo si vous n\'avez pas le matériel adapté, ne voulez pas gérer l\'installation, ou avez besoin d\'une vidéo complète et finie (script, voix off, musique, sous-titres) plutôt que d\'un clip brut — c\'est un service hébergé par abonnement avec une offre gratuite ; consultez les tarifs actuels sur sa page tarifs.',
         bullets: [
           'Moins de 12 Go de VRAM → invideo est le choix pratique ; les modèles locaux sont inutilisables en dessous de ce seuil pour une qualité sérieuse.',
           '12 Go de VRAM → LTX-Video 0.9.5, une option locale pratique à ce niveau.',
           '16–24 Go+ de VRAM → Wan 2.2 (meilleure qualité, Apache 2.0 — usage commercial permissif sans seuil de revenus ni exclusion territoriale ; les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent, consultez la fiche du modèle) ou LTX-2 (vitesse + audio synchronisé).',
           'Dans l\'UE, au Royaume-Uni ou en Corée du Sud → la licence de HunyuanVideo 1.5 vous exclut ; utilisez plutôt Wan 2.2 ou LTX-2.',
-          'Besoin d\'une vidéo narrée finie, pas d\'un clip brut → les modèles locaux ne génèrent que des clips silencieux (LTX excepté) de 5 à 20 secondes ; invideo gère tout le pipeline de production, à partir de 17 $/mois (facturation annuelle).',
+          'Besoin d\'une vidéo narrée finie, pas d\'un clip brut → les modèles locaux ne génèrent que des clips silencieux (LTX excepté) de 5 à 20 secondes ; invideo propose un workflow hébergé autour du clip ; le contenu de chaque offre figure sur sa page tarifs.',
         ],
         updatedDate: '2026-11-23',
       },
@@ -1503,38 +1507,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 est un modèle vidéo local haut de gamme sous licence permissive Apache 2.0.** Usage commercial permissif sans seuil de revenus ni exclusion territoriale (les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent ; consultez la fiche du modèle) — et un score de qualité VBench de ~84,7 % au classement public.',
-          '**Invideo regroupe plus de 200 modèles (selon invideo) — dont Kling 3, Veo 3.1 et Seedance 2.5 — dans un pipeline unique dans le navigateur**, à partir de 17 $/mois (offre Plus, facturation annuelle), avec script, voix off, musique et sous-titres gérés automatiquement.',
+          '**Wan 2.2 est un modèle vidéo local haut de gamme sous licence permissive Apache 2.0.** Usage commercial permissif sans seuil de revenus ni exclusion territoriale (les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent ; consultez la fiche du modèle).',
+          '**Invideo est une alternative hébergée** avec une offre gratuite et les offres payantes Starter, Plus et Max ; sa page tarifs indique que Plus et Max donnent accès à tous les modèles, dont tous les modèles Seedance. Les prix varient : consultez la page actuelle.',
           '**La licence de HunyuanVideo 1.5 exclut explicitement l\'UE, le Royaume-Uni et la Corée du Sud** — pour le modèle comme pour ses sorties. Les lecteurs de ces régions doivent utiliser Wan 2.2 ou LTX-2.',
-          '**LTX-2 est le plus rapide du trio local et le seul avec audio synchronisé intégré**, gratuit commercialement pour les entreprises générant moins de 10 M$ de revenus annuels.',
+          '**LTX-2 est présenté comme un modèle axé sur la vitesse et c\'est le seul de ce trio local avec audio synchronisé intégré**, gratuit commercialement pour les entreprises générant moins de 10 M$ de revenus annuels.',
           '**12 Go de VRAM est le plancher réaliste pour une génération vidéo locale sérieuse.** En dessous, invideo devient l\'option la plus pratique.',
-          '**Les modèles locaux génèrent des clips bruts et silencieux de 5 à 20 secondes, pas des vidéos finies.** Script, voix off, musique, sous-titres et montage sont des outils séparés que vous assemblez vous-même — invideo fait tout cela en une seule passe.',
-          '**Aucun « Wan 2.7 » officiel n\'était connu lors de la dernière mise à jour de cette page.** Méfiez-vous des pages proposant ce téléchargement — les dépôts officiels de Wan listent des versions qui s\'arrêtent à 2.2.',
+          '**Les modèles locaux génèrent des clips bruts et silencieux de 5 à 20 secondes, pas des vidéos finies.** Script, voix off, musique, sous-titres et montage sont des outils séparés que vous assemblez vous-même — invideo vise à réunir ces étapes dans un seul workflow hébergé.',
+          '**Lors de la vérification du 27 novembre 2026, la page officielle de Wan sur GitHub ne montrait aucun dépôt de poids ouverts « Wan 2.7 ».** Alibaba a annoncé [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) en avril 2026 comme modèle disponible sur Alibaba Cloud. Méfiez-vous des pages tierces proposant des « poids Wan 2.7 ».',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Pourquoi 2026 est un moment étrange pour la vidéo IA',
         content:
-          'Le marché de la vidéo propriétaire a été chaotique, selon des articles de presse que PromptQuorum n\'a pas vérifiés de manière indépendante. Seedance 2.0 de ByteDance a fait face à des menaces juridiques de studios hollywoodiens (des mises en demeure de Disney, Paramount et Warner Bros. auraient été envoyées) et à un déploiement mondial suspendu — il resterait accessible en Chine, mais sa situation juridique pour un usage commercial international est incertaine.\n\nCe chaos est précisément ce qui rend les deux portes attrayantes. Les modèles ouverts locaux vous rendent indépendant des drames des éditeurs. Et invideo absorbe ce drame à votre place : son abonnement donne accès à plus de 200 modèles (selon invideo) — dont Kling 3, Veo 3.1 et Seedance 2.5 — donc quand un modèle disparaît ou est poursuivi en justice, votre workflow n\'en souffre pas.',
+          'Le marché de la vidéo propriétaire a été agité. En mars 2026, [Engadget a rapporté](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html), en citant The Information, que ByteDance avait suspendu le déploiement mondial de Seedance 2.0 après des mises en demeure de Disney et Paramount Skydance. PromptQuorum n\'a pas vérifié cette information de manière indépendante, et la disponibilité a changé depuis : la page tarifs d\'invideo mentionne désormais Seedance 2.0 et 2.5.\n\nCe type de bouleversement rend les deux portes attrayantes. Les modèles ouverts déjà téléchargés continuent de fonctionner quels que soient les changements d\'un fournisseur. Un service multimodèle comme invideo propose plusieurs modèles dans un seul compte, mais son catalogue peut évoluer : rien ne garantit que votre workflow ne sera pas affecté.',
       },
       localModels: {
         id: 'local-models',
         title: 'La porte locale : trois modèles gratuits sur votre GPU',
         content:
-          'Trois systèmes à poids ouverts dominent actuellement la génération vidéo locale, mesurés par téléchargements, activité communautaire et résultats de benchmarks. Tous trois fonctionnent via ComfyUI, une interface à nœuds installée sur votre machine — pas un outil conversationnel comme Ollama. Ce sont des modèles de diffusion, pas des LLM.',
+          'Ce guide compare trois systèmes à poids ouverts très utilisés pour la génération vidéo locale. Tous trois fonctionnent via ComfyUI, une interface à nœuds installée sur votre machine — pas un outil conversationnel comme Ollama. Ce sont des modèles de diffusion, pas des LLM.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Wan 2.2 est un modèle vidéo local polyvalent solide en 2026 — Apache 2.0, haute qualité, aucune restriction territoriale — tandis que LTX-2 gagne sur la vitesse et l\'audio synchronisé, et HunyuanVideo 1.5 offre le rendu le plus cinématographique mais exclut par licence les utilisateurs de l\'UE, du Royaume-Uni et de Corée du Sud.' },
+          { type: 'one-sentence', text: 'Wan 2.2 est un modèle vidéo local polyvalent solide en 2026 — Apache 2.0, haute qualité, aucune restriction territoriale — tandis que LTX-2 mise sur la vitesse et ajoute l\'audio synchronisé, et HunyuanVideo 1.5 est apprécié de la communauté pour son rendu cinématographique mais exclut par licence les utilisateurs de l\'UE, du Royaume-Uni et de Corée du Sud.' },
           { type: 'plain-terms', text: 'Pour une réponse unique : prenez un GPU 12 Go+ et utilisez Wan 2.2. Haute qualité et licence permissive Apache 2.0.' },
         ],
         columns: ['Modèle', 'Licence', 'VRAM', 'Sortie', 'Point fort'],
         rows: [
-          { 'Modèle': 'Wan 2.2 (Alibaba)', 'Licence': 'Apache 2.0 — permissive, sans seuil de revenus ni exclusion territoriale', 'VRAM': '6–8 Go (5B) / 15–25 Go (14B)', 'Sortie': '480p/720p, clips ~5 s', 'Point fort': 'Qualité VBench ~84,7 % (classement public)' },
-          { 'Modèle': 'LTX-2 (Lightricks)', 'Licence': 'LTX Community License — gratuit sous 10 M$ de revenus', 'VRAM': '18–20 Go quantifié, 32 Go+ en pleine précision', 'Sortie': '480p–1080p, 5–20 s, avec audio', 'Point fort': 'Seul modèle avec audio+vidéo synchronisés en une passe' },
-          { 'Modèle': 'HunyuanVideo 1.5 (Tencent)', 'Licence': 'Tencent Community License — exclut UE/Royaume-Uni/Corée du Sud', 'VRAM': '14 Go minimum, 24 Go confortable', 'Sortie': '480p/720p, jusqu\'à 10 s', 'Point fort': 'Favori communautaire pour l\'éclairage cinématographique ; le plus léger en VRAM' },
+          { 'Modèle': 'Wan 2.2 (Alibaba)', 'Licence': 'Apache 2.0 — permissive, sans seuil de revenus ni exclusion territoriale', 'VRAM': '6–8 Go (5B) / 15–25 Go (14B)', 'Sortie': '480p/720p, clips ~5 s', 'Point fort': 'Variantes 14B et 5B compacte' },
+          { 'Modèle': 'LTX-2 (Lightricks)', 'Licence': 'LTX Community License — gratuit sous 10 M$ de revenus', 'VRAM': '18–20 Go quantifié, 32 Go+ en pleine précision', 'Sortie': '480p–1080p, 5–20 s, avec audio', 'Point fort': 'Audio+vidéo synchronisés (un seul de ces trois)' },
+          { 'Modèle': 'HunyuanVideo 1.5 (Tencent)', 'Licence': 'Tencent Community License — exclut UE/Royaume-Uni/Corée du Sud', 'VRAM': '14 Go minimum, 24 Go confortable', 'Sortie': '480p/720p, jusqu\'à 10 s', 'Point fort': 'Éclairage cinéma ; 14 Go min. avec déchargement' },
         ],
         note:
-          '⚠️ Prudence : aucun « Wan 2.7 » officiel n\'était connu lors de la dernière mise à jour. Méfiez-vous des pages proposant des « poids ouverts Wan 2.7 ». Les dépôts officiels de Wan listent des versions qui s\'arrêtent à 2.2 — ne téléchargez que depuis les dépôts officiels GitHub ou Hugging Face liés ci-dessous.',
+          '⚠️ Prudence : lors de la vérification du 27 novembre 2026, la [page officielle de Wan sur GitHub](https://github.com/Wan-Video) ne montrait aucun dépôt de poids ouverts « Wan 2.7 » ; Alibaba a annoncé [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) comme disponible sur Alibaba Cloud. Méfiez-vous des pages proposant des « poids ouverts Wan 2.7 » et ne téléchargez que depuis des dépôts officiels GitHub ou Hugging Face.',
       },
       wan22: {
         id: 'wan-2-2',
@@ -1550,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2 (Lightricks) — vitesse et son synchronisé',
         content:
-          'LTX-2 est le seul modèle ouvert de ce trio à générer audio et vidéo synchronisés en une seule passe — pas, ambiance et effets arrivent avec l\'image. C\'est aussi le plus rapide des trois et le plus accessible côté matériel. L\'architecture est un transformeur de diffusion 22B ; LTX-2.3 (mars 2026) reste pleinement pris en charge aux côtés de la version actuelle LTX-2.5. La licence est la LTX Community License — gratuite pour un usage commercial si le revenu total de votre entreprise est inférieur à 10 M$ par an, une licence commerciale payante étant requise au-delà. (Certains articles tiers la qualifient à tort d\'Apache 2.0 — la [page de licence officielle](https://ltx.io/model/license) est la seule source fiable.) Le besoin matériel va de 18–20 Go de VRAM quantifiée à 32 Go+ en pleine précision ; sur les cartes 12 Go, l\'ancien LTX-Video 0.9.5 reste le choix pratique.\n\n**Vitesse, concrètement :** LTX-2 est qualitativement le plus rapide du trio, avec des aperçus quasi temps réel sur les cartes haut de gamme — mais aucun chiffre minutes-par-clip vérifié indépendamment sur RTX 4090 n\'existe à ce jour, nous n\'en inventerons donc pas. Le seul chiffre solide disponible vient du benchmark de Lightricks lui-même sur des « superpuces Nvidia » de classe datacenter (pas un GPU grand public) : un clip de 10 secondes en environ 6,8 secondes. Considérez cela comme un plafond de ce que l\'architecture peut faire sur du matériel professionnel, pas ce que verra votre machine personnelle.',
+          'LTX-2 est le seul modèle ouvert de ce trio à générer audio et vidéo synchronisés en une seule passe — pas, ambiance et effets arrivent avec l\'image. Il est aussi présenté comme un modèle rapide, sans être le plus léger en VRAM (voir les chiffres plus bas). L\'architecture est un transformeur de diffusion 22B ; LTX-2.3 (mars 2026) reste pleinement pris en charge aux côtés de la version actuelle LTX-2.5. La licence est la LTX Community License — gratuite pour un usage commercial si le revenu total de votre entreprise est inférieur à 10 M$ par an, une licence commerciale payante étant requise au-delà. (Certains articles tiers la qualifient à tort d\'Apache 2.0 — la [page de licence officielle](https://ltx.io/model/license) est la seule source fiable.) Le besoin matériel va de 18–20 Go de VRAM quantifiée à 32 Go+ en pleine précision ; sur les cartes 12 Go, l\'ancien LTX-Video 0.9.5 reste le choix pratique.\n\n**Vitesse, concrètement :** LTX-2 est souvent décrit comme rapide — mais aucun chiffre minutes-par-clip vérifié indépendamment sur RTX 4090 n\'existe à ce jour, nous n\'en inventerons donc pas. Le seul chiffre solide disponible vient du benchmark de Lightricks lui-même sur des « superpuces Nvidia » de classe datacenter (pas un GPU grand public) : un clip de 10 secondes en environ 6,8 secondes. Considérez cela comme un plafond de ce que l\'architecture peut faire sur du matériel professionnel, pas ce que verra votre machine personnelle.',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 sur GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 sur Hugging Face' },
@@ -1560,7 +1564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5 (Tencent) — le rendu cinématographique, avec un piège juridique',
         content:
-          'Le modèle 8,3B de Tencent, sorti en novembre 2025, est un favori communautaire pour l\'éclairage et les textures cinématographiques, et le plus léger des trois en VRAM : 14 Go minimum avec déchargement, 24 Go confortable, pour environ 75 secondes par clip 480p sur une RTX 4090 (chiffre rapporté, non vérifié par PromptQuorum). Il génère nativement en 480p/720p, jusqu\'à 1080p via super-résolution intégrée, des clips jusqu\'à 10 secondes.\n\n**Vitesse, concrètement :** à ~75 secondes pour un clip 480p de 5 secondes, cela représente environ 15 secondes de rendu par seconde de vidéo. Sa longueur de clip maximale native est de 10 secondes, donc une séquence de 20 secondes nécessite deux générations à la longueur maximale — en extrapolant le taux par seconde, comptez environ 5 minutes de génération brute pour 20 secondes de séquence, avant montage. Il s\'agit d\'une extrapolation d\'un chiffre rapporté et non vérifié pour 5 secondes, pas d\'un benchmark mesuré à 10 ou 20 secondes.',
+          'Le modèle 8,3B de Tencent, sorti en novembre 2025, est un favori communautaire pour l\'éclairage et les textures cinématographiques, avec des besoins modérés en VRAM : 14 Go minimum avec déchargement, 24 Go confortable, pour environ 75 secondes par clip 480p sur une RTX 4090 (chiffre rapporté, non vérifié par PromptQuorum). Il génère nativement en 480p/720p, jusqu\'à 1080p via super-résolution intégrée, des clips jusqu\'à 10 secondes.\n\n**Vitesse, concrètement :** à ~75 secondes pour un clip 480p de 5 secondes, cela représente environ 15 secondes de rendu par seconde de vidéo. Sa longueur de clip maximale native est de 10 secondes, donc une séquence de 20 secondes nécessite deux générations à la longueur maximale — en extrapolant le taux par seconde, comptez environ 5 minutes de génération brute pour 20 secondes de séquence, avant montage. Il s\'agit d\'une extrapolation d\'un chiffre rapporté et non vérifié pour 5 secondes, pas d\'un benchmark mesuré à 10 ou 20 secondes.',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 sur GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 sur Hugging Face' },
@@ -1568,7 +1572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Avertissement de licence — à lire avant de télécharger. HunyuanVideo 1.5 utilise la Tencent Hunyuan Community License, pas Apache 2.0. Cette licence ne s\'applique pas dans l\'Union européenne, au Royaume-Uni ou en Corée du Sud — d\'après le texte de la licence, les utilisateurs de ces régions ne sont pas autorisés à utiliser le modèle ni ses sorties. Elle plafonne aussi l\'usage à 100 millions d\'utilisateurs actifs mensuels et interdit d\'entraîner des modèles concurrents sur ses sorties. Si vous êtes dans l\'UE, au Royaume-Uni ou en Corée du Sud, évitez ce modèle : Wan 2.2 (Apache 2.0, usage commercial permissif sans exclusion territoriale) couvre le même niveau de qualité.',
+            text: 'Avertissement de licence — à lire avant de télécharger. HunyuanVideo 1.5 utilise la Tencent Hunyuan Community License, pas Apache 2.0. Cette licence ne s\'applique pas dans l\'Union européenne, au Royaume-Uni ou en Corée du Sud — d\'après le texte de la licence, les utilisateurs de ces régions ne sont pas autorisés à utiliser le modèle ni ses sorties. Elle exige aussi une licence distincte de Tencent si vos produits comptaient plus de 100 millions d\'utilisateurs actifs mensuels le mois précédant la date de sortie du modèle, et interdit d\'utiliser le modèle ou ses sorties pour améliorer d\'autres modèles d\'IA (hors Tencent Hunyuan et ses dérivés). Si vous êtes dans l\'UE, au Royaume-Uni ou en Corée du Sud, évitez ce modèle et envisagez Wan 2.2 (Apache 2.0, usage commercial permissif sans exclusion territoriale).',
           },
         ],
       },
@@ -1576,7 +1580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: 'À surveiller : MiniMax H3',
         content:
-          'Sorti le 3 août 2026, MiniMax H3 est un modèle omni-modal de 33,1B avec audio stéréo natif, prise en charge ComfyUI dès le premier jour, et des versions quantifiées tournant sur une RTX 3060. Deux réserves avant d\'en faire un quatrième choix : la version locale plafonne à 768p (le pipeline complet 2K reste réservé à l\'hébergement cloud), et sa Community License comporterait ses propres restrictions géographiques ainsi qu\'un seuil de revenus de 20 M$ — vérifiez la fiche modèle officielle avant de vous engager. Les premiers signaux sont encourageants, mais une version récente et une maturité de production sont deux choses différentes.',
+          'Sorti le 3 août 2026, MiniMax H3 est un modèle omni-modal de 33,1B avec audio stéréo natif, prise en charge ComfyUI dès le premier jour, et des versions quantifiées tournant sur une RTX 3060. Deux réserves avant d\'en faire un quatrième choix : la version locale plafonne à 768p (le pipeline complet 2K reste réservé à l\'hébergement cloud), et sa [Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) exclut du territoire concédé l\'UE, le Royaume-Uni, la Corée du Sud et les États-Unis, et exige une autorisation distincte au-delà de 20 M$ de revenus annuels — lisez-la avant de vous engager (ceci n\'est pas un conseil juridique). Les premiers signaux sont encourageants, mais une version récente et une maturité de production sont deux choses différentes.',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 sur GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 sur Hugging Face' },
@@ -1597,7 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre GPU': '24 Go+ VRAM', 'Ce que vous pouvez exécuter': 'Tout : Wan 2.2 14B en haute qualité, LTX-2 quantifié' },
         ],
         note:
-          'Coût approximatif des GPU, d\'après le [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15 ; données d\'annonces eBay États-Unis, ni devis ni offre) : les annonces vendues de RTX 3090 d\'occasion tournent autour de 1 400–1 550 $ et celles de RTX 4090 d\'occasion 2 575–3 010 $ (médiane 2 860 $). Les prix en France varient selon les taxes et les frais d\'importation. Les prix des GPU évoluent — vérifiez les tarifs actuels avant d\'acheter plutôt que de vous fier à ces chiffres au-delà de quelques mois.',
+          'Coût approximatif des GPU, d\'après le [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15 ; données d\'annonces eBay États-Unis, ni devis ni offre) : les annonces vendues de RTX 3090 d\'occasion tournent autour de 1 400–1 550 $ et celles de RTX 4090 d\'occasion 2 575–3 010 $ (médiane 2 860 $). Le suivi a depuis relevé son chiffre pour la RTX 3090 d\'occasion à 1 500–1 725 $ (médiane 1 650 $ ; 225 ventes, 13–23 novembre 2026). Les prix en France varient selon les taxes et les frais d\'importation. Les prix des GPU évoluent — vérifiez les tarifs actuels avant d\'acheter plutôt que de vous fier à ces chiffres au-delà de quelques mois.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1617,19 +1621,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'Invideo est un exemple de porte cloud — pas le seul, et il vaut la peine de comprendre en quoi il diffère des autres avant de supposer que « cloud » désigne une seule chose. D\'après leurs descriptions publiques (PromptQuorum n\'a testé aucun de ces trois services), Runway s\'intègre directement dans les logiciels de montage professionnels (Premiere Pro, Final Cut, DaVinci Resolve), visant des workflows hybrides IA-plus-monteur plutôt qu\'une vidéo assemblée et finie. D\'après les mêmes descriptions, Dream Machine de Luma AI se spécialise dans la sortie HDR native 16 bits pour les pipelines de compositing VFX (After Effects, Nuke) — un public entièrement différent. Pika reste léger : génération rapide de clips bruts, sans script, voix off ou assemblage d\'images d\'archives intégré, donc vous avez toujours besoin d\'outils séparés pour tout ce qui entoure le clip — le même problème de pipeline DIY que la génération locale, mais sans l\'exigence de GPU. Ce qui distingue invideo de ces trois-là, c\'est qu\'il n\'est pas d\'abord un outil de génération brute : c\'est un assembleur script-vers-vidéo-finie qui donne aussi accès à des modèles de génération brute (Kling, Veo, Seedance) quand vous en avez besoin.\n\nInvideo n\'est pas un modèle vidéo, mais un pipeline de production complet proposé en tant que service. Vous pouvez saisir un sujet ou coller un script dans [invideo Agent](https://invideo.io/), qui planifie et crée la vidéo en réunissant script, scènes, visuels générés ou de stock, voix off, musique, sous-titres et habillage de marque dans un seul flux de travail. Il tourne dans le navigateur — votre GPU n\'a aucune importance.\n\nPour qui veut commencer à faire des vidéos aujourd\'hui plutôt que de rechercher GPU et formats de quantification, invideo est le choix pratique : aucune exigence matérielle locale, aucune installation ComfyUI ni dépannage CUDA, et un workflow unique qui inclut déjà le script, la voix off, la musique et les sous-titres dont la plupart des gens ont réellement besoin. Il convient particulièrement aux créateurs qui se soucient davantage de la vidéo finie que du contrôle du modèle de génération sous-jacent — et comme l\'offre gratuite existe, vous pouvez vérifier si cela vous convient avant de dépenser quoi que ce soit.\n\nTrois éléments ressortent pour ce comparatif :\n\n- **Le chaos des modèles, absorbé.** Tous les plans payants incluent l\'accès à plus de 200 modèles (selon invideo) — dont Seedance 2.5, Veo 3.1 et Kling 3. Quand un modèle est poursuivi en justice ou fermé, invideo le remplace ; votre workflow continue.\n- **L\'automatisation est intégrée, pas ajoutée après coup.** Il existe un serveur MCP officiel, donc tout le pipeline prompt → script → images → sous-titres peut être déclenché de façon programmatique — le genre de harnais que vous devriez sinon construire vous-même autour de ComfyUI.\n- **L\'offre gratuite est un vrai essai.** Filigranée et limitée en minutes, mais suffisante pour juger la qualité avant de payer.\n\n**Vitesse, concrètement — et le piège honnête :** une génération brute unique est rapide, typiquement en quelques minutes. Mais la propre FAQ d\'invideo situe la production complète de bout en bout d\'un court-métrage entre 2 et 5 jours, pas quelques minutes — car choisir et assembler parmi plusieurs options générées, pas la génération elle-même, est ce qui prend du temps. Considérez « 2 jours comme plancher réaliste » pour un film fini de 1 à 3 minutes comme le point de comparaison équitable face aux 16–36 minutes de génération brute de la porte locale pour 20 secondes de séquence non montée : invideo échange votre temps de configuration et de montage contre son propre temps de production, il ne supprime pas le temps entièrement.\n\nOffres actuelles, à partir de 17 $/mois (offre Plus, facturation annuelle, consultez la [page tarifs d\'invideo](https://invideo.io/pricing/) pour les chiffres à jour) :',
+          'Invideo est un exemple de porte cloud — pas le seul, et il vaut la peine de comprendre en quoi il diffère des autres avant de supposer que « cloud » désigne une seule chose. D\'après leurs descriptions publiques (PromptQuorum n\'a testé aucun de ces trois services), Runway s\'intègre directement dans les logiciels de montage professionnels (Premiere Pro, Final Cut, DaVinci Resolve), visant des workflows hybrides IA-plus-monteur plutôt qu\'une vidéo assemblée et finie. D\'après les mêmes descriptions, Dream Machine de Luma AI se spécialise dans la sortie HDR native 16 bits pour les pipelines de compositing VFX (After Effects, Nuke) — un public entièrement différent. D\'après les mêmes descriptions, Pika se concentre sur la génération rapide de clips bruts ; PromptQuorum n\'a pas vérifié s\'il propose script, voix off ou assemblage d\'images d\'archives : vérifiez-le avant de compter dessus pour le travail autour du clip. Selon sa propre description, invideo associe storyboard, écriture de script et montage sur timeline à l\'accès à des modèles de génération comme Kling, Veo et Seedance.\n\nInvideo n\'est pas un modèle vidéo unique, mais un service hébergé. Lors de la vérification du 27 novembre 2026, [sa page d\'accueil](https://invideo.io/) présentait un éditeur vidéo piloté par agents, avec storyboard à partir d\'un script ou d\'une idée, écriture de script et timeline multipiste ; le site répertorie aussi des outils IA de voix et de musique. PromptQuorum ne l\'a pas testé : vérifiez que la voix off et les sous-titres répondent à vos besoins. Il tourne dans le navigateur — votre GPU n\'a aucune importance.\n\nPour qui veut commencer à faire des vidéos aujourd\'hui plutôt que de rechercher GPU et formats de quantification, invideo est le choix pratique : aucune exigence matérielle locale, aucune installation ComfyUI ni dépannage CUDA, et un espace de travail hébergé pour les étapes autour du clip. Il convient particulièrement aux créateurs qui se soucient davantage de la vidéo finie que du contrôle du modèle de génération sous-jacent — et comme il existe une offre gratuite, vous pouvez vérifier si cela vous convient avant de dépenser quoi que ce soit.\n\nTrois éléments ressortent pour ce comparatif :\n\n- **Plusieurs modèles, un seul compte.** La page tarifs d\'invideo indique que Plus et Max donnent accès à tous les modèles, dont tous les modèles Seedance ; Starter couvre une sélection, sans Seedance 2.5. Le catalogue peut évoluer.\n- **L\'accès pour les agents est intégré.** invideo propose un [serveur MCP](https://invideo.io/ai/mcp) qui permet à des agents IA de travailler dans son éditeur à timeline.\n- **Il existe une offre gratuite.** La [page des limites des offres](https://invideo.io/help/billing/plan-limits/) d\'invideo décrit une limite hebdomadaire ; vérifiez les règles d\'export et de filigrane avant de compter dessus.\n\n**Vitesse, concrètement — et le piège honnête :** selon invideo, la génération brute est rapide. Mais la propre FAQ d\'invideo situe la production complète de bout en bout d\'un court-métrage entre 2 et 5 jours, pas quelques minutes — car choisir et assembler parmi plusieurs options générées, pas la génération elle-même, est ce qui prend du temps. Considérez « 2 jours comme plancher réaliste » pour un film fini de 1 à 3 minutes comme le point de comparaison équitable face aux 16–36 minutes de génération brute de la porte locale pour 20 secondes de séquence non montée : invideo échange votre temps de configuration et de montage contre son propre temps de production, il ne supprime pas le temps entièrement.\n\nOffres répertoriées par invideo (pour les prix, consultez la [page tarifs d\'invideo](https://invideo.io/pricing/)) :',
         blockquote:
           '**Envie de créer des vidéos IA sans installation locale ?** Si vous n\'avez pas de GPU puissant — ou si vous ne voulez tout simplement pas passer des heures à installer et configurer des outils vidéo IA locaux — invideo mérite d\'être essayé. [Essayer la version gratuite d\'invideo →](https://invideo.io/pricing/)',
-        columns: ['Offre', 'Prix', 'Crédits/mois', 'Idéal pour'],
+        columns: ['Offre', 'Crédits par siège/mois', 'Accès aux modèles'],
         rows: [
-          { 'Offre': 'Gratuite', 'Prix': '0 $', 'Crédits/mois': 'limités', 'Idéal pour': 'Tester le terrain (filigrané)' },
-          { 'Offre': 'Plus', 'Prix': '17 $/mois (200 $/an)', 'Crédits/mois': '75', 'Idéal pour': 'Créateurs réguliers — tous les modèles IA, 4 avatars et clones de voix, 100 assets iStock, exports illimités sans filigrane' },
-          { 'Offre': 'Max', 'Prix': '85 $/mois (1 000 $/an)', 'Crédits/mois': '390', 'Idéal pour': 'Chaînes à fort volume, 16 avatars' },
-          { 'Offre': 'Generative', 'Prix': '170 $/mois (2 000 $/an)', 'Crédits/mois': '800+', 'Idéal pour': 'Volume de production / courts-métrages' },
-          { 'Offre': 'Elite', 'Prix': '900 $/mois (10 800 $/an)', 'Crédits/mois': '4 250+', 'Idéal pour': 'Échelle épisodique et commerciale' },
+          { 'Offre': 'Gratuite', 'Crédits par siège/mois': 'Limite hebdo', 'Accès aux modèles': 'Voir la page tarifs' },
+          { 'Offre': 'Starter', 'Crédits par siège/mois': '400', 'Accès aux modèles': 'Sélection ; sans Seedance 2.5' },
+          { 'Offre': 'Plus', 'Crédits par siège/mois': '2 000', 'Accès aux modèles': 'Tous les modèles, selon invideo' },
+          { 'Offre': 'Max', 'Crédits par siège/mois': 'Dès 5 000', 'Accès aux modèles': 'Tous les modèles, selon invideo' },
         ],
         note:
-          'Tous les prix ci-dessus sont des tarifs en facturation annuelle selon invideo — le paiement mensuel coûte plus cher (la propre FAQ d\'invideo cite Plus à 20 $, Max à 100 $, Generative à 200 $, Elite à 1 000 $ par mois). Consultez la page tarifs en direct d\'invideo avant de vous fier à un chiffre ici ; les offres et prix changent. Les montants $/mois sont les équivalents arrondis des offres annuelles d\'invideo ; les totaux annuels sont ceux listés par invideo lors de la dernière actualisation (voir la date de dernière mise à jour).',
+          'Noms des offres, crédits et accès aux modèles d\'après les pages [tarifs](https://invideo.io/pricing/) et [limites des offres](https://invideo.io/help/billing/plan-limits/) d\'invideo, vérifiées le 27 novembre 2026. Aucun prix n\'est cité ici : consultée depuis l\'Europe, la page affichait une promotion à durée limitée, et les offres diffèrent de celles que ce guide listait auparavant. Consultez la page en ligne avant de vous fier à un détail.',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Essayer la version gratuite d\'invideo →' },
         ],
@@ -1694,15 +1697,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel est le vrai piège de la vidéo IA locale « gratuite » ?',
-            a: 'Le coût matériel (un GPU capable), le temps de configuration (ComfyUI et ses dépendances), et le pipeline DIY nécessaire autour des clips bruts produits. Les poids du modèle eux-mêmes coûtent vraiment 0 $ par génération, pour toujours.',
+            a: 'Le coût matériel (un GPU capable), le temps de configuration (ComfyUI et ses dépendances), et le pipeline DIY nécessaire autour des clips bruts produits. Les poids du modèle n\'entraînent aucun frais par génération ; le matériel et l\'électricité restent payants.',
           },
           {
             q: 'Existe-t-il un Wan 2.7 ou un modèle Wan plus récent ?',
-            a: 'Pas lors de la dernière mise à jour de cette page : les dépôts officiels de Wan listent des versions jusqu\'à 2.2. Méfiez-vous de tout site proposant des « poids Wan 2.7 » — ne téléchargez que depuis les dépôts officiels GitHub ou Hugging Face.',
+            a: 'Lors de la vérification du 27 novembre 2026, la page officielle de Wan sur GitHub ne montrait aucun dépôt plus récent à poids ouverts. Alibaba a annoncé [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) en avril 2026 comme disponible sur Alibaba Cloud. Méfiez-vous de tout autre site proposant des « poids Wan 2.7 » : ne téléchargez que depuis les dépôts officiels GitHub ou Hugging Face.',
           },
           {
             q: 'Je suis totalement débutant. Par où commencer ?',
-            a: 'L\'offre gratuite d\'invideo — vous aurez une vidéo narrée finie en quelques minutes et pourrez juger si la vidéo IA répond à vos objectifs. Si vous achetez plus tard un GPU capable et voulez un contrôle et une confidentialité totaux, la porte locale reste ouverte.',
+            a: 'L\'offre gratuite d\'invideo permet d\'essayer le workflow cloud sans acheter de matériel et de juger si la vidéo IA répond à vos objectifs ; elle comporte des limites. Si vous achetez plus tard un GPU capable et voulez un contrôle et une confidentialité totaux, la porte locale reste ouverte.',
           },
           {
             q: 'Quelle différence pour faire tourner ces modèles locaux sur Mac vs Windows ?',
@@ -1726,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Le verdict',
         content:
-          'Choisissez le local si vous avez (ou allez acheter) un GPU 12 Go+, aimez construire vos propres outils, et privilégiez la confidentialité et les générations illimitées à 0 $ plutôt que la commodité. Wan 2.2 est une base solide — haute qualité, Apache 2.0 — avec LTX-2 comme spécialiste vitesse et son.\n\nChoisissez le cloud si vous n\'avez pas le matériel, ne voulez pas de la configuration, ou avez besoin de vidéos finies plutôt que de clips bruts. Pour la plupart des gens qui veulent simplement créer des vidéos générées par IA, la voie cloud est le point de départ le plus simple : si vous n\'avez pas déjà le matériel et l\'intérêt technique que demande la génération locale, invideo élimine l\'essentiel de cette complexité en un prompt, avec tous les modèles et assets regroupés et l\'automatisation incluse — à partir de 0 $ pour tester et 17 $/mois (facturation annuelle) pour retirer le filigrane. Le moyen le plus simple de savoir si cela convient à votre workflow est d\'essayer la version gratuite.\n\nLes deux portes mènent à la vidéo IA. La question n\'a jamais été quelle technologie est meilleure — mais quel workflow correspond à votre machine, votre patience et vos objectifs.',
+          'Choisissez le local si vous avez (ou allez acheter) un GPU 12 Go+, aimez construire vos propres outils, et privilégiez la confidentialité et la génération sans frais par clip plutôt que la commodité. Wan 2.2 est une base solide — haute qualité, Apache 2.0 — avec LTX-2 comme spécialiste vitesse et son.\n\nChoisissez le cloud si vous n\'avez pas le matériel, ne voulez pas de la configuration, ou avez besoin de vidéos finies plutôt que de clips bruts. Pour la plupart des gens qui veulent simplement créer des vidéos générées par IA, la voie cloud est le point de départ le plus simple : si vous n\'avez pas déjà le matériel et l\'intérêt technique que demande la génération locale, un service hébergé comme invideo vous épargne l\'installation locale. Une offre gratuite permet de tester ; les offres payantes et leurs limites figurent sur la page tarifs d\'invideo. Le moyen le plus simple de savoir si cela convient à votre workflow est d\'essayer la version gratuite.\n\nLes deux portes mènent à la vidéo IA. La question n\'a jamais été quelle technologie est meilleure — mais quel workflow correspond à votre machine, votre patience et vos objectifs.',
       },
       sources: {
         id: 'sources',
@@ -1737,7 +1740,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Licence du modèle LTX](https://ltx.io/model/license) — conditions officielles de la LTX Community License.',
           '[Page du modèle LTX-2](https://ltx.io/model/ltx-2-3) — architecture officielle et détails de la sortie.',
           '[HunyuanVideo 1.5 sur GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) — dépôt officiel et fichier LICENSE, incluant l\'exclusion UE/Royaume-Uni/Corée du Sud.',
-          '[Classement VBench-2.0](https://github.com/Vchitect/VBench) — benchmark indépendant utilisé pour les chiffres de qualité et de fidélité physique.',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) — article de presse de mars 2026 (en anglais).',
+          '[Alibaba Cloud Community : annonce de Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) — avril 2026 (en anglais).',
+          '[Limites des offres invideo](https://invideo.io/help/billing/plan-limits/) — limites officielles des offres et crédits.',
           '[Tarifs invideo](https://invideo.io/pricing/) — détails officiels des offres et prix.',
           '[Serveur MCP invideo](https://invideo.io/ai/mcp) — documentation officielle d\'automatisation.',
           '[MiniMax H3 sur GitHub](https://github.com/MiniMax-AI/MiniMax-H3) — dépôt officiel.',
@@ -1778,14 +1783,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ja.webp',
-    title: 'Invideo vs ローカルAI動画生成：一方は$0＋週末の時間、もう一方は月額$17から（年払い）',
+    title: 'Invideo vs ローカルAI動画生成：一方はGPUと週末の時間、もう一方はクラウドの定額契約',
     seoTitle: 'クラウドvsローカルAI動画2026：invideo vs Wan 2.2＆LTX-2',
     intro:
-      '2026年のAI動画には、2つの入り口があります。1つ目はローカルです。無料でオープンな動画モデルを自分のGPUで動かします。生成回数は無制限、推論は自分のハードウェア上で実行され（モデルのダウンロードや更新確認では引き続きネットワークを使用します）、サブスクリプション不要です。ただし、ワークフロー全体を自分で組み立てる必要があります。2つ目はクラウドです。Invideoでは、プロンプトを1つ入れるだけで、完成したナレーション付き動画が出来上がります。台本、ストック映像、ナレーション、音楽、字幕まで、すべてブラウザだけで揃います。どちらの入り口が「優れている」ということはありません。本ガイドでは、多くの比較記事が見落としがちなライセンスの細則、実際に必要なハードウェア要件、そしてあなたの状況に合った選択肢を示す判断ツールを紹介します。',
+      '2026年のAI動画には、2つの入り口があります。1つ目はローカルです。無料でオープンな動画モデルを自分のGPUで動かします。生成回数は無制限、推論は自分のハードウェア上で実行され（モデルのダウンロードや更新確認では引き続きネットワークを使用します）、サブスクリプション不要です。ただし、ワークフロー全体を自分で組み立てる必要があります。2つ目はクラウドです。invideoはホスト型サービスで、台本やアイデアから編集済みの動画まで、AIエージェントが支援する流れを打ち出しています。ブラウザから利用できます。どちらの入り口が「優れている」ということはありません。本ガイドでは、多くの比較記事が見落としがちなライセンスの細則、実際に必要なハードウェア要件、そしてあなたの状況に合った選択肢を示す判断ツールを紹介します。',
     metaDescription:
-      'ローカルAI動画モデル（Wan 2.2、LTX-2、HunyuanVideo）はGPUが対応していれば無料。Invideoのクラウドは月額$17から（年払い）で完結。VRAM・ライセンスを比較します。',
+      'ローカルAI動画モデル（Wan 2.2、LTX-2、HunyuanVideo）は、対応GPUがあれば無料でダウンロードして使えます。invideoのクラウドサービスとの違いを、VRAMとライセンスの面から比較します。',
     twitterDescription:
-      '2026年のクラウド vs ローカルAI動画：invideoは月額$17から（年払い）ですべてをまとめて提供。Wan 2.2、LTX-2、HunyuanVideoは十分なGPUがあれば自分のマシンで無料で動きます。正直な比較。',
+      '2026年のクラウド vs ローカルAI動画：invideoは定額制のホスト型サービスです。Wan 2.2、LTX-2、HunyuanVideoは十分なGPUがあれば、無料でダウンロードできます。',
     audience:
       '自分のGPUで無料のローカル動画生成を行うか、invideoのオールインワン型クラウドパイプラインを使うかを検討しているクリエイターと開発者向け。ハードウェア要件、ライセンスの細則、ワークフロー上のトレードオフを扱います。',
     readTime: '10分で読める',
@@ -1813,18 +1818,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**12GB以上のGPUを持つほとんどの人にとって、2026年時点で有力なローカルAI動画モデルのひとつがWan 2.2です。** Apache 2.0ライセンスで、収益上限も地域制限もなく、公開リーダーボードでVBench約84.7%のスコアを記録しており、完全無料です。**そのGPUがない場合、あるいは生の映像クリップではなく完成したナレーション付き動画が欲しい場合は、invideoの方が良い選択です。** Plusプランは月額$17から（年間契約）で、Kling 3、Veo 3.1、Seedance 2.5を含む200以上のモデル（invideoによる）を1つのブラウザベースのパイプラインにまとめ、台本・ナレーション・音楽・字幕まで含まれます。**HunyuanVideo 1.5はローカルモデルの中で最も映画的な見た目ですが、そのライセンスはEU、英国、韓国を完全に除外しています。** これらの地域にお住まいの方は避けてください。',
+      '**12GB以上のGPUを持つほとんどの人にとって、2026年時点で有力なローカルAI動画モデルのひとつがWan 2.2です。** Apache 2.0ライセンスで、収益上限も地域制限もなく、無料でダウンロードできます（ハードウェアと電気代は別途かかります）。**そのGPUがない場合、あるいは生の映像クリップではなく完成したナレーション付き動画が欲しい場合は、invideoの方が良い選択です。** invideoはブラウザで使うホスト型サービスで、有料プラン（Starter、Plus、Max）は利用できるモデルが異なります。最新の料金ページを確認してください。**HunyuanVideo 1.5は映画的な見た目でコミュニティの人気がありますが、そのライセンスはEU、英国、韓国を完全に除外しています。** これらの地域にお住まいの方は避けてください。',
     quickAnswerTop: {
       ja: {
         question: 'AI動画はローカルで生成すべきか、invideoのクラウドパイプラインを使うべきか？',
         answer:
-          '12GB以上のGPUを持ち、無制限で$0の生成とプライバシーを重視するならローカル生成がおすすめです。Wan 2.2（Apache 2.0、寛容な商用利用。モデルカードを確認）が無難な出発点です。適切なハードウェアがない、セットアップを管理したくない、あるいは生のクリップではなく完成した動画（台本・ナレーション・音楽・字幕付き）が必要な場合はinvideoを使ってください。Plusプランは月額$17から（年間契約）です。',
+          '12GB以上のGPUを持ち、クリップごとの料金なしの生成とプライバシーを重視するならローカル生成がおすすめです。Wan 2.2（Apache 2.0、寛容な商用利用。モデルカードを確認）が無難な出発点です。適切なハードウェアがない、セットアップを管理したくない、あるいは生のクリップではなく完成した動画（台本・ナレーション・音楽・字幕付き）が必要な場合はinvideoを使ってください。invideoは無料プランもある定額制のホスト型サービスです。最新の料金は料金ページで確認してください。',
         bullets: [
           'VRAM 12GB未満 → invideoが現実的な選択です。このクラス以下ではローカルモデルは本格的な品質では使い物になりません。',
           'VRAM 12GB → LTX-Video 0.9.5が、このクラスで実用的なローカル選択肢のひとつです。',
           'VRAM 16〜24GB以上 → Wan 2.2（最高品質、Apache 2.0 — 収益しきい値や地域による除外のない寛容な商用利用。帰属表示など標準的なApacheの条件は適用されるため、モデルカードを確認）またはLTX-2（速度＋同期音声）。',
           'EU、英国、韓国にお住まいの場合 → HunyuanVideo 1.5の対象外です。代わりにWan 2.2かLTX-2を使ってください。',
-          '生のクリップではなく完成したナレーション付き動画が必要な場合 → ローカルモデルは無音（LTXを除く）の5〜20秒のクリップしか生成できません。Invideoなら制作パイプライン全体を月額$17から（年間契約）でカバーします。',
+          '生のクリップではなく完成したナレーション付き動画が必要な場合 → ローカルモデルは無音（LTXを除く）の5〜20秒のクリップしか生成できません。invideoはクリップ周辺の作業向けのホスト型ワークフローを提供しています。各プランの内容は料金ページで確認してください。',
         ],
         updatedDate: '2026-11-23',
       },
@@ -1854,38 +1859,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2は、寛容なApache 2.0ライセンスで提供されるトップクラスのローカル動画モデルです。** 収益しきい値や地域による除外のない寛容な商用利用が可能です（帰属表示など標準的なApacheの条件は適用されます。モデルカードを確認してください）。公開リーダーボードではVBench品質スコア約84.7%を記録しています。',
-          '**Invideoは、Kling 3、Veo 3.1、Seedance 2.5を含む200以上のモデル（invideoによる）を、1つのブラウザベースのパイプラインにまとめています。** 月額$17から（Plusプラン、年間契約）で、台本・ナレーション・音楽・字幕は自動で処理されます。',
+          '**Wan 2.2は、寛容なApache 2.0ライセンスで提供されるトップクラスのローカル動画モデルです。** 収益しきい値や地域による除外のない寛容な商用利用が可能です（帰属表示など標準的なApacheの条件は適用されます。モデルカードを確認してください）。',
+          '**invideoはホスト型の選択肢です。** 無料プランと有料のStarter、Plus、Maxプランがあり、料金ページによるとPlusとMaxではすべてのSeedanceモデルを含む全モデルを利用できます。料金は条件により異なるため、最新のページを確認してください。',
           '**HunyuanVideo 1.5のライセンスは、EU、英国、韓国を明確に除外しています。** モデル本体だけでなく、その出力にも適用されます。これらの地域の読者は代わりにWan 2.2かLTX-2を使ってください。',
-          '**LTX-2はローカル3モデルの中で最速で、唯一組み込みの同期音声を持ちます。** 年間売上高$10M未満の企業なら商用利用も無料です。',
+          '**LTX-2は速度重視のモデルと位置づけられており、このローカル3モデルの中で唯一、組み込みの同期音声を持ちます。** 年間売上高$10M未満の企業なら商用利用も無料です。',
           '**本格的なローカル動画生成の現実的な最低ラインはVRAM 12GBです。** それ未満では、invideoの方が実用的な選択肢になります。',
-          '**ローカルモデルが生成するのは5〜20秒の無音の生クリップであり、完成した動画ではありません。** 台本、ナレーション、音楽、字幕、編集はそれぞれ別のツールで自分で組み立てる必要があります。Invideoはこれをすべて一度に処理します。',
-          '**このページの最終更新時点で、公式の「Wan 2.7」は確認されていません。** それを提供すると謳うダウンロードページには注意してください。公式のWanリポジトリに載っているリリースは2.2までです。',
+          '**ローカルモデルが生成するのは5〜20秒の無音の生クリップであり、完成した動画ではありません。** 台本、ナレーション、音楽、字幕、編集はそれぞれ別のツールで自分で組み立てる必要があります。invideoは、こうした工程を1つのホスト型ワークフローにまとめることを目指しています。',
+          '**2026年11月27日の確認時点で、Wanの公式GitHubページに「Wan 2.7」のオープンウェイトのリポジトリはありませんでした。** Alibabaは2026年4月に[Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)をAlibaba Cloudで利用できるモデルとして発表しています。「Wan 2.7のウェイト」を提供する第三者のページには注意してください。',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'なぜ2026年はAI動画にとって奇妙な時期なのか',
         content:
-          'プロプライエタリな動画市場は混乱を続けていると報じられています（PromptQuorumは独自には検証していません）。ByteDanceのSeedance 2.0は、ハリウッドのスタジオからの法的な警告（Disney、Paramount、Warner Bros.からの停止要求書が報じられています）に直面し、グローバル展開を一時停止しました。中国国内では引き続き利用可能と報じられていますが、国際的な商用利用における法的な位置づけは不明確です。\n\nこの混乱こそが、両方の入り口を魅力的なものにしています。オープンなローカルモデルは、ベンダーの騒動から独立した存在です。そしてinvideoは、その混乱をあなたの代わりに吸収します。サブスクリプションには、Kling 3、Veo 3.1、Seedance 2.5を含む200以上のモデル（invideoによる）へのアクセスが含まれているため、あるモデルが消えたり訴訟を起こされたりしても、あなたのワークフローは影響を受けません。',
+          'プロプライエタリな動画市場は揺れ動いてきました。2026年3月、[Engadgetは](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html)The Informationを引用し、DisneyとParamount Skydanceからの停止要求書を受けて、ByteDanceがSeedance 2.0のグローバル展開を一時停止したと報じました。PromptQuorumはこの報道を独自には検証していません。その後、提供状況は変わっており、現在invideoの料金ページにはSeedance 2.0と2.5が掲載されています。\n\nこうした変化があるからこそ、両方の入り口に魅力があります。ダウンロード済みのオープンモデルは、提供元の変化に関係なく動き続けます。invideoのようなマルチモデルサービスは1つのアカウントで複数のモデルを提供しますが、ラインナップは変わる可能性があり、ワークフローに影響がないとは保証できません。',
       },
       localModels: {
         id: 'local-models',
         title: 'ローカルという入り口：自分のGPUで動く3つの無料モデル',
         content:
-          'ダウンロード数、コミュニティの活動、ベンチマーク結果で見ると、現時点でローカル動画生成を主導しているのは3つのオープンウェイトシステムです。3つとも、ComfyUIというノードベースのインターフェース上で動作します。これは自分のマシンにインストールするもので、Ollamaのようなチャット形式のツールではありません。これらは拡散モデル（diffusion model）であり、LLMではありません。',
+          'このガイドでは、ローカル動画生成で広く使われている3つのオープンウェイトシステムを比較します。3つとも、ComfyUIというノードベースのインターフェース上で動作します。これは自分のマシンにインストールするもので、Ollamaのようなチャット形式のツールではありません。これらは拡散モデル（diffusion model）であり、LLMではありません。',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Wan 2.2は2026年時点でバランスの取れた有力なローカル動画モデルです。Apache 2.0で高品質、地域制限なし。一方LTX-2は速度と同期音声で優れ、HunyuanVideo 1.5は最も映画的な見た目を持ちますが、ライセンス上EU/英国/韓国のユーザーは利用できません。' },
+          { type: 'one-sentence', text: 'Wan 2.2は2026年時点でバランスの取れた有力なローカル動画モデルです。Apache 2.0で高品質、地域制限なし。一方LTX-2は速度を重視して同期音声にも対応し、HunyuanVideo 1.5は映画的な見た目で人気がありますが、ライセンス上EU/英国/韓国のユーザーは利用できません。' },
           { type: 'plain-terms', text: '一つだけ答えが欲しいなら、VRAM 12GB以上のGPUを用意してWan 2.2を使ってください。品質が高く、ライセンスも寛容なApache 2.0です。' },
         ],
         columns: ['モデル', 'ライセンス', 'VRAM', '出力', '特長'],
         rows: [
-          { 'モデル': 'Wan 2.2（Alibaba）', 'ライセンス': 'Apache 2.0 — 寛容、収益しきい値・地域除外なし', 'VRAM': '6〜8GB（5B）／15〜25GB（14B）', '出力': '480p/720p、約5秒のクリップ', '特長': 'VBench品質スコア約84.7%（公開リーダーボード）' },
-          { 'モデル': 'LTX-2（Lightricks）', 'ライセンス': 'LTXコミュニティライセンス — 年間売上$10M未満は無料', 'VRAM': '量子化で18〜20GB、フル精度で32GB以上', '出力': '480p〜1080p、5〜20秒、音声付き', '特長': '映像と音声を同時に同期生成できる唯一のモデル' },
-          { 'モデル': 'HunyuanVideo 1.5（Tencent）', 'ライセンス': 'Tencentコミュニティライセンス — EU/英国/韓国を除外', 'VRAM': '最低14GB、快適には24GB', '出力': '480p/720p、最長10秒', '特長': '映画的なライティングでコミュニティの人気が高く、VRAM消費も最も軽い' },
+          { 'モデル': 'Wan 2.2（Alibaba）', 'ライセンス': 'Apache 2.0 — 寛容、収益しきい値・地域除外なし', 'VRAM': '6〜8GB（5B）／15〜25GB（14B）', '出力': '480p/720p、約5秒のクリップ', '特長': '14Bと軽量な5Bの構成' },
+          { 'モデル': 'LTX-2（Lightricks）', 'ライセンス': 'LTXコミュニティライセンス — 年間売上$10M未満は無料', 'VRAM': '量子化で18〜20GB、フル精度で32GB以上', '出力': '480p〜1080p、5〜20秒、音声付き', '特長': '映像と音声を同期生成（3モデルで唯一）' },
+          { 'モデル': 'HunyuanVideo 1.5（Tencent）', 'ライセンス': 'Tencentコミュニティライセンス — EU/英国/韓国を除外', 'VRAM': '最低14GB、快適には24GB', '出力': '480p/720p、最長10秒', '特長': '映画的な光の表現。オフロード時は最低14GB' },
         ],
         note:
-          '⚠️ ご注意：最終更新時点で、公式の「Wan 2.7」は確認されていません。「Wan 2.7のオープンウェイトを提供する」と謳うダウンロードページには注意してください。公式のWanリポジトリに載っているリリースは2.2までです。下記の公式GitHubまたはHugging Faceリポジトリからのみダウンロードしてください。',
+          '⚠️ ご注意：2026年11月27日の確認時点で、[Wanの公式GitHubページ](https://github.com/Wan-Video)に「Wan 2.7」のオープンウェイトのリポジトリはありませんでした。Alibabaは[Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)をAlibaba Cloudで利用できると発表しています。「Wan 2.7のオープンウェイト」を提供すると謳うページには注意し、公式のGitHubまたはHugging Faceリポジトリからのみダウンロードしてください。',
       },
       wan22: {
         id: 'wan-2-2',
@@ -1901,7 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2（Lightricks）— 速度と同期サウンド',
         content:
-          'LTX-2は、この3つの中で唯一、1回のパスで同期した音声と映像を生成するモデルです。足音、環境音、効果音が映像と同時に生成されます。また3つの中で最速であり、ハードウェアへの要求も最も緩やかです。アーキテクチャは22Bの拡散トランスフォーマーで、LTX-2.3（2026年3月）は現行のLTX-2.5リリースと並んで引き続き完全サポートされています。ライセンスはLTXコミュニティライセンスで、会社の年間総売上が$10M未満であれば商用利用は無料、それを超える場合は有料の商用ライセンスが必要です（一部のサードパーティ記事はApache 2.0だと誤って記載していますが、[公式ライセンスページ](https://ltx.io/model/license)のみが信頼できる情報源です）。ハードウェア要件は量子化で18〜20GB、フル精度で32GB以上のVRAMです。12GBのカードでは、旧世代のLTX-Video 0.9.5が現実的な選択肢として残ります。\n\n**速度について具体的に：** LTX-2は定性的には3つの中で最速で、ハイエンドなコンシューマーカードではほぼリアルタイムのプレビューが可能です。ただし、本記事執筆時点でRTX 4090上での独立検証済みの「1クリップあたり何分」という数値は存在しないため、ここでは推測を書きません。唯一入手できる確かな数値は、Lightricks自身によるデータセンター級「NVIDIAスーパーチップ」（コンシューマー向けGPUではありません）でのベンチマークで、10秒のクリップを約6.8秒で生成したというものです。これは本格的なハードウェアでこのアーキテクチャが達成できる上限値として捉えるべきであり、自宅のマシンで得られる数値ではありません。',
+          'LTX-2は、この3つの中で唯一、1回のパスで同期した音声と映像を生成するモデルです。足音、環境音、効果音が映像と同時に生成されます。高速なモデルとも位置づけられていますが、VRAM消費が最も軽いわけではありません（後述の数値を参照）。アーキテクチャは22Bの拡散トランスフォーマーで、LTX-2.3（2026年3月）は現行のLTX-2.5リリースと並んで引き続き完全サポートされています。ライセンスはLTXコミュニティライセンスで、会社の年間総売上が$10M未満であれば商用利用は無料、それを超える場合は有料の商用ライセンスが必要です（一部のサードパーティ記事はApache 2.0だと誤って記載していますが、[公式ライセンスページ](https://ltx.io/model/license)のみが信頼できる情報源です）。ハードウェア要件は量子化で18〜20GB、フル精度で32GB以上のVRAMです。12GBのカードでは、旧世代のLTX-Video 0.9.5が現実的な選択肢として残ります。\n\n**速度について具体的に：** LTX-2は高速だとよく言われます。ただし、本記事執筆時点でRTX 4090上での独立検証済みの「1クリップあたり何分」という数値は存在しないため、ここでは推測を書きません。唯一入手できる確かな数値は、Lightricks自身によるデータセンター級「NVIDIAスーパーチップ」（コンシューマー向けGPUではありません）でのベンチマークで、10秒のクリップを約6.8秒で生成したというものです。これは本格的なハードウェアでこのアーキテクチャが達成できる上限値として捉えるべきであり、自宅のマシンで得られる数値ではありません。',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 on GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 on Hugging Face' },
@@ -1911,7 +1916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5（Tencent）— 映画的な見た目、ただし法的な注意点あり',
         content:
-          '2025年11月にリリースされたTencentの8.3Bモデルは、映画的なライティングと質感でコミュニティの人気を集めており、3つの中でVRAM消費が最も軽いモデルです。オフロードを使えば最低14GB、快適に使うなら24GBで、RTX 4090では480pのクリップ1本あたり約75秒かかります（報告値であり、PromptQuorumは検証していません）。ネイティブで480p/720pを生成し、内蔵の超解像機能で1080pまで対応、クリップ長は最長10秒です。\n\n**速度について具体的に：** 480pの5秒クリップ1本あたり約75秒ということは、動画1秒あたり約15秒のレンダリング時間がかかる計算です。ネイティブの最大クリップ長は10秒のため、20秒のシーケンスを作るには最大長での生成を2回行う必要があります。1秒あたりのレートから外挿すると、20秒分の映像を生成する生の時間はおよそ5分、これにつなぎ合わせの作業が加わります。これは報告された未検証の5秒クリップの値からの外挿であり、10秒や20秒を直接計測したベンチマークではありません。',
+          '2025年11月にリリースされたTencentの8.3Bモデルは、映画的なライティングと質感でコミュニティの人気を集めており、VRAM要件は比較的控えめです。オフロードを使えば最低14GB、快適に使うなら24GBで、RTX 4090では480pのクリップ1本あたり約75秒かかります（報告値であり、PromptQuorumは検証していません）。ネイティブで480p/720pを生成し、内蔵の超解像機能で1080pまで対応、クリップ長は最長10秒です。\n\n**速度について具体的に：** 480pの5秒クリップ1本あたり約75秒ということは、動画1秒あたり約15秒のレンダリング時間がかかる計算です。ネイティブの最大クリップ長は10秒のため、20秒のシーケンスを作るには最大長での生成を2回行う必要があります。1秒あたりのレートから外挿すると、20秒分の映像を生成する生の時間はおよそ5分、これにつなぎ合わせの作業が加わります。これは報告された未検証の5秒クリップの値からの外挿であり、10秒や20秒を直接計測したベンチマークではありません。',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on Hugging Face' },
@@ -1919,7 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'ライセンスに関する警告 — ダウンロード前にお読みください。HunyuanVideo 1.5はTencent Hunyuanコミュニティライセンスを採用しており、Apache 2.0ではありません。このライセンスは欧州連合、英国、韓国には適用されません。ライセンス文面によると、これらの地域のユーザーは、モデル本体もその出力も利用する権限がありません。また、月間アクティブユーザー数1億人という上限があり、その出力を使って競合モデルを学習させることも禁止されています。EU、英国、韓国にお住まいの場合は、このモデルを避けてください。Wan 2.2（Apache 2.0、地域による除外のない寛容な商用利用）なら同等の品質クラスを利用できます。',
+            text: 'ライセンスに関する警告 — ダウンロード前にお読みください。HunyuanVideo 1.5はTencent Hunyuanコミュニティライセンスを採用しており、Apache 2.0ではありません。このライセンスは欧州連合、英国、韓国には適用されません。ライセンス文面によると、これらの地域のユーザーは、モデル本体もその出力も利用する権限がありません。また、モデルのリリース日の前月に自社製品の月間アクティブユーザーが1億人を超えていた場合は、Tencentから別途ライセンスを取得する必要があります。モデルやその出力を、他のAIモデル（Tencent Hunyuanとその派生物を除く）の改善に使うことも禁止されています。EU、英国、韓国にお住まいの場合はこのモデルを避け、Wan 2.2（Apache 2.0、地域による除外のない寛容な商用利用）をご検討ください。',
           },
         ],
       },
@@ -1927,7 +1932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: '注目株：MiniMax H3',
         content:
-          '2026年8月3日にリリースされたMiniMax H3は、ネイティブなステレオ音声、リリース初日からのComfyUIサポート、そしてRTX 3060でも動く量子化バージョンを備えた33.1Bのオムニモーダルモデルです。これを4つ目の選択肢として扱う前に、2つの注意点があります。ローカル版の解像度は768pが上限で（フル2Kパイプラインはホスト型のみ）、そのコミュニティライセンスには独自の地域制限と$20Mの売上しきい値があると報告されています。決定する前に必ず公式のモデルカードを確認してください。初期の評判は良好ですが、最近公開されたことと本番運用に耐えることは別の話です。',
+          '2026年8月3日にリリースされたMiniMax H3は、ネイティブなステレオ音声、リリース初日からのComfyUIサポート、そしてRTX 3060でも動く量子化バージョンを備えた33.1Bのオムニモーダルモデルです。これを4つ目の選択肢として扱う前に、2つの注意点があります。ローカル版の解像度は768pが上限で（フル2Kパイプラインはホスト型のみ）、その[コミュニティライセンス](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE)はEU、英国、韓国、米国を許諾地域から除外し、年間売上が$20Mを超える場合は別途の許可を求めています。決定する前に本文を確認してください（法的助言ではありません）。初期の評判は良好ですが、最近公開されたことと本番運用に耐えることは別の話です。',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 on GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 on Hugging Face' },
@@ -1948,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'お使いのGPU': 'VRAM 24GB以上', '実行可能なモデル': 'すべて対応：高品質のWan 2.2 14B、量子化LTX-2' },
         ],
         note:
-          'GPUのおおよその費用（[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)より。情報源の更新日は2026-10-15、eBay米国の出品データであり、見積もりやオファーではありません）：中古RTX 3090の落札実績は約$1,400-1,550、中古RTX 4090の落札実績は$2,575-3,010（中央値$2,860）です。日本での価格は税や輸入コストにより異なります。GPU価格は変動が大きいため、数か月以上前のこの数字を鵜呑みにせず、購入前に必ず最新価格を確認してください。',
+          'GPUのおおよその費用（[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)より。情報源の更新日は2026-10-15、eBay米国の出品データであり、見積もりやオファーではありません）：中古RTX 3090の落札実績は約$1,400-1,550、中古RTX 4090の落札実績は$2,575-3,010（中央値$2,860）です。その後、同トラッカーは中古RTX 3090の数値を$1,500-1,725に引き上げています（中央値$1,650、落札225件、2026年11月13〜23日）。日本での価格は税や輸入コストにより異なります。GPU価格は変動が大きいため、数か月以上前のこの数字を鵜呑みにせず、購入前に必ず最新価格を確認してください。',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1968,19 +1973,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'Invideoはクラウドという入り口の一例であり、唯一の選択肢ではありません。「クラウド」がすべて同じ意味だと思い込む前に、他のサービスとどう違うのか知っておく価値があります。公開されている説明によると（PromptQuorumはこの3サービスをいずれもテストしていません）、Runwayはプロ向け編集ソフト（Premiere Pro、Final Cut、DaVinci Resolve）に直接統合されており、完成した1本の動画を組み立てるというより、AIと編集者を組み合わせたハイブリッドワークフローを想定しています。同じ説明によれば、Luma AIのDream Machineは、VFX合成パイプライン（After Effects、Nuke）向けのネイティブ16ビットHDR出力に特化しており、まったく異なる層のユーザーを対象としています。Pikaは軽量さを維持しており、高速な生クリップ生成に特化する一方、台本・ナレーション・ストック映像の組み立て機能は内蔵していません。つまり、クリップの周辺にあるすべてのために別のツールが必要になる点は、ローカルモデルを動かすのと同じDIYパイプラインの問題であり、違いはGPUが不要という点だけです。この3つと比べてinvideoが際立っているのは、invideoが主に生成専用ツールではないという点です。台本から完成動画までを組み立てるアセンブラーであり、必要なときにはKling、Veo、Seedanceといった生成モデルへのアクセスも提供します。\n\nInvideoは動画モデルではなく、サービスとして提供される完全な制作パイプラインです。トピックを入力するか、台本を[invideo Agent](https://invideo.io/)に貼り付けるだけで、台本、シーン、生成またはストックの映像、ナレーション、音楽、字幕、ブランドスタイリングを1つのワークフローにまとめて、動画を設計し生成します。すべてブラウザ上で動作するため、自分のGPU性能は関係ありません。\n\nGPUの調査や量子化フォーマットの勉強ではなく、今すぐ動画作りを始めたい人にとって、invideoは現実的な選択肢です。ローカルハードウェアも、ComfyUIのインストールも、CUDAのトラブルシューティングも不要で、台本・ナレーション・音楽・字幕まで、ほとんどの人が実際に必要とする要素を1つのワークフローで完結できます。生成モデルそのものを細かく制御することより、完成した動画を重視するクリエイターに特に向いています。無料プランがあるため、何かを支払う前にそれが自分に合うかどうかを確かめられます。\n\nこの比較において特に際立つ点が3つあります。\n\n- **モデルの混乱を吸収してくれる。** すべての有料プランには、Seedance 2.5、Veo 3.1、Kling 3を含む200以上のモデル（invideoによる）へのアクセスが含まれます。あるモデルが訴訟を起こされたり停止したりしても、invideoが差し替えてくれるため、あなたのワークフローは続行できます。\n- **自動化が後付けではなく組み込まれている。** 公式のMCPサーバーがあるため、プロンプト→台本→映像→字幕という一連のパイプライン全体をプログラムから起動できます。本来ComfyUIの周りに自分で構築するようなハーネスが、最初から用意されています。\n- **無料プランは本物の試乗になる。** 透かしと分数制限はありますが、支払う前に出力品質を判断するには十分です。\n\n**速度について具体的に、そして正直な注意点：** 1回の生成自体は速く、通常は数分です。しかし、invideo自身のFAQによれば、ショートフィルムのエンドツーエンドの制作全体には数分ではなく2〜5日かかるとされています。時間がかかるのは生成そのものではなく、複数の生成候補の中から選び、組み立てる作業だからです。1〜3分の完成した映像に対して「現実的な最低ラインとして2日」という数字を、ローカルの入り口で20秒の未編集映像を作るのにかかる16〜36分の生の生成時間と公平に比較すべきです。Invideoは、あなた自身のセットアップ時間と編集時間を、invideo側の制作時間と引き換えているのであり、時間そのものをゼロにするわけではありません。\n\n現在のプランは月額$17から（Plusプラン、年間契約。最新の数字は[invideoの料金ページ](https://invideo.io/pricing/)で確認してください）：',
+          'Invideoはクラウドという入り口の一例であり、唯一の選択肢ではありません。「クラウド」がすべて同じ意味だと思い込む前に、他のサービスとどう違うのか知っておく価値があります。公開されている説明によると（PromptQuorumはこの3サービスをいずれもテストしていません）、Runwayはプロ向け編集ソフト（Premiere Pro、Final Cut、DaVinci Resolve）に直接統合されており、完成した1本の動画を組み立てるというより、AIと編集者を組み合わせたハイブリッドワークフローを想定しています。同じ説明によれば、Luma AIのDream Machineは、VFX合成パイプライン（After Effects、Nuke）向けのネイティブ16ビットHDR出力に特化しており、まったく異なる層のユーザーを対象としています。同じ説明によれば、Pikaは高速な生クリップ生成を中心としています。台本、ナレーション、ストック映像の組み立てに対応するかどうかはPromptQuorumでは確認していないため、クリップ周辺の作業に使う前にご確認ください。invideo自身の説明では、絵コンテ作成、台本作成、タイムライン編集と、Kling、Veo、Seedanceなどの生成モデルへのアクセスを組み合わせています。\n\ninvideoは単一の動画モデルではなく、ホスト型サービスです。2026年11月27日の確認時点で、[公式トップページ](https://invideo.io/)は、台本やアイデアからの絵コンテ作成、台本作成、マルチトラックのタイムラインを備えたエージェント型の動画エディターを紹介していました。サイトにはAI音声・音楽ツールも掲載されています。PromptQuorumはこのサービスをテストしていないため、ナレーションや字幕が必要な形で使えるか確認してください。ブラウザ上で動作するため、自分のGPU性能は関係ありません。\n\nGPUの調査や量子化フォーマットの勉強ではなく、今すぐ動画作りを始めたい人にとって、invideoは現実的な選択肢です。ローカルハードウェアも、ComfyUIのインストールも、CUDAのトラブルシューティングも不要で、クリップ周辺の工程を扱うホスト型の作業環境があります。生成モデルそのものを細かく制御することより、完成した動画を重視するクリエイターに特に向いています。無料プランがあるため、何かを支払う前にそれが自分に合うかどうかを確かめられます。\n\nこの比較において特に際立つ点が3つあります。\n\n- **1つのアカウントで複数のモデル。** invideoの料金ページによると、PlusとMaxではすべてのSeedanceモデルを含む全モデルを利用できます。Starterは一部のモデルのみで、Seedance 2.5は含まれません。ラインナップは変わる可能性があります。\n- **エージェント連携が組み込まれている。** invideoは、AIエージェントがタイムラインエディターで作業できる[MCPサーバー](https://invideo.io/ai/mcp)を提供しています。\n- **無料プランがある。** invideoの[プラン上限ページ](https://invideo.io/help/billing/plan-limits/)には週単位の上限が記載されています。利用前に、書き出しや透かしの条件を確認してください。\n\n**速度について具体的に、そして正直な注意点：** invideoによれば、生の生成は高速です。しかし、invideo自身のFAQによれば、ショートフィルムのエンドツーエンドの制作全体には数分ではなく2〜5日かかるとされています。時間がかかるのは生成そのものではなく、複数の生成候補の中から選び、組み立てる作業だからです。1〜3分の完成した映像に対して「現実的な最低ラインとして2日」という数字を、ローカルの入り口で20秒の未編集映像を作るのにかかる16〜36分の生の生成時間と公平に比較すべきです。Invideoは、あなた自身のセットアップ時間と編集時間を、invideo側の制作時間と引き換えているのであり、時間そのものをゼロにするわけではありません。\n\ninvideoが掲載しているプラン（料金は[invideoの料金ページ](https://invideo.io/pricing/)を参照）：',
         blockquote:
           '**ローカルセットアップなしでAI動画を作りたいですか？** パワフルなGPUを持っていない、あるいはローカルAI動画ツールのインストールと設定に何時間もかけたくないなら、invideoを試してみる価値があります。[Invideoの無料版を試す →](https://invideo.io/pricing/)',
-        columns: ['プラン', '価格', '月間クレジット', '最適な用途'],
+        columns: ['プラン', '席あたり月間クレジット', '利用できるモデル'],
         rows: [
-          { 'プラン': 'Free', '価格': '$0', '月間クレジット': '制限あり', '最適な用途': 'お試し利用（透かしあり）' },
-          { 'プラン': 'Plus', '価格': '$17/月（$200/年）', '月間クレジット': '75', '最適な用途': '定期的に制作するクリエイター向け — 全AIモデル、アバター4体＋音声クローン、iStock素材100点、透かしなしの無制限エクスポート' },
-          { 'プラン': 'Max', '価格': '$85/月（$1,000/年）', '月間クレジット': '390', '最適な用途': '大量制作のチャンネル向け、アバター16体' },
-          { 'プラン': 'Generative', '価格': '$170/月（$2,000/年）', '月間クレジット': '800以上', '最適な用途': 'ショートフィルム／制作ボリューム向け' },
-          { 'プラン': 'Elite', '価格': '$900/月（$10,800/年）', '月間クレジット': '4,250以上', '最適な用途': 'シリーズ制作・商業規模向け' },
+          { 'プラン': 'Free', '席あたり月間クレジット': '週単位の上限あり', '利用できるモデル': '料金ページを確認' },
+          { 'プラン': 'Starter', '席あたり月間クレジット': '400', '利用できるモデル': '一部モデル（Seedance 2.5を除く）' },
+          { 'プラン': 'Plus', '席あたり月間クレジット': '2,000', '利用できるモデル': '全モデル（invideoによる）' },
+          { 'プラン': 'Max', '席あたり月間クレジット': '5,000から', '利用できるモデル': '全モデル（invideoによる）' },
         ],
         note:
-          '上記の価格はすべてinvideoが掲載している年間契約レートです。月払いの場合はさらに高くなります（invideo自身のFAQによると、Plus $20、Max $100、Generative $200、Elite $1,000／月）。プランと価格は変更されるため、依存する前に必ずinvideoの最新の料金ページを確認してください。「$/月」の金額はinvideoの年間プランを月額換算して丸めた数字で、年額の合計は最終更新時点でinvideoが掲載していた金額です（最終更新日を参照）。',
+          'プラン名、クレジット、利用できるモデルは、2026年11月27日に確認したinvideoの[料金ページ](https://invideo.io/pricing/)と[プラン上限ページ](https://invideo.io/help/billing/plan-limits/)に基づきます。ここでは料金を掲載しません。欧州からの閲覧では期間限定セールが表示されており、プラン内容も本ガイドが以前掲載したものと異なるためです。利用前に必ず最新のページを確認してください。',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'invideoの無料版を試す →' },
         ],
@@ -2045,15 +2049,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '「無料」のローカルAI動画には、実際どんな落とし穴がありますか？',
-            a: 'ハードウェア費用（対応可能なGPU）、セットアップにかかる時間（ComfyUIとその依存関係）、そして生の出力クリップの周りに必要なDIYパイプラインです。モデルの重み自体は、生成1回あたり本当に永久に$0です。',
+            a: 'ハードウェア費用（対応可能なGPU）、セットアップにかかる時間（ComfyUIとその依存関係）、そして生の出力クリップの周りに必要なDIYパイプラインです。モデルの重みには生成ごとの料金はありませんが、ハードウェアと電気代はかかります。',
           },
           {
             q: 'Wan 2.7や、それより新しいWanモデルはありますか？',
-            a: 'このページの最終更新時点ではありません。公式のWanリポジトリに載っているリリースは2.2までです。「Wan 2.7のウェイト」を提供すると謳うサイトには注意してください。公式のGitHubかHugging Faceリポジトリからのみダウンロードしてください。',
+            a: '2026年11月27日の確認時点で、Wanの公式GitHubページに、より新しいオープンウェイトのリポジトリはありませんでした。Alibabaは2026年4月に[Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)をAlibaba Cloudで利用できると発表しています。「Wan 2.7のウェイト」を提供すると謳うほかのサイトには注意し、公式のGitHubかHugging Faceリポジトリからのみダウンロードしてください。',
           },
           {
             q: '完全な初心者です。何から始めればいいですか？',
-            a: 'Invideoの無料プランから始めてください。数分でナレーション付きの完成した動画が手に入り、AI動画がそもそも自分の目的に合うかどうかを判断できます。後から対応可能なGPUを購入し、フルコントロールとプライバシーが欲しくなったら、ローカルという入り口はいつでも開いています。',
+            a: 'invideoの無料プランなら、ハードウェアを購入せずにクラウドのワークフローを試し、AI動画が自分の目的に合うかを判断できます（プランには上限があります）。後から対応可能なGPUを購入し、フルコントロールとプライバシーが欲しくなったら、ローカルという入り口はいつでも開いています。',
           },
           {
             q: 'これらのローカルモデルをMacとWindowsで動かす場合、何が違いますか？',
@@ -2077,7 +2081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'VRAM 12GB以上のGPUを持っている（あるいはこれから購入する予定がある）、自分のツールを組み立てるのが好き、そしてプライバシーと無制限で$0の生成を利便性より重視するなら、ローカルを選んでください。Wan 2.2は堅実な土台です。高品質、Apache 2.0。速度と音声を重視するならLTX-2が専門です。\n\nハードウェアがない、セットアップをしたくない、あるいは生のクリップではなく完成した動画が必要なら、クラウドを選んでください。単にAI生成の動画を作りたいだけのほとんどの人にとって、クラウドの方が入り口として簡単です。ローカル生成に必要なハードウェアと技術的な関心がまだないなら、invideoはそのほとんどの複雑さを1つのプロンプトで取り除いてくれます。すべてのモデルと素材がまとめられ、自動化も含まれており、お試しは$0から、透かしを外すには月額$17（年間契約）からです。自分のワークフローに合うかどうかを知る一番簡単な方法は、無料版を試してみることです。\n\nどちらの入り口も、AI動画へとつながっています。問われるべきなのは、どちらの技術が優れているかではなく、どちらのワークフローが自分のマシン、忍耐力、目的に合っているかです。',
+          'VRAM 12GB以上のGPUを持っている（あるいはこれから購入する予定がある）、自分のツールを組み立てるのが好き、そしてプライバシーとクリップごとの料金がかからない生成を利便性より重視するなら、ローカルを選んでください。Wan 2.2は堅実な土台です。高品質、Apache 2.0。速度と音声を重視するならLTX-2が専門です。\n\nハードウェアがない、セットアップをしたくない、あるいは生のクリップではなく完成した動画が必要なら、クラウドを選んでください。単にAI生成の動画を作りたいだけのほとんどの人にとって、クラウドの方が入り口として簡単です。ローカル生成に必要なハードウェアと技術的な関心がまだないなら、invideoのようなホスト型サービスを使えば、ローカル環境の構築は不要です。試用には無料プランがあり、有料プランとその上限はinvideoの料金ページに掲載されています。自分のワークフローに合うかどうかを知る一番簡単な方法は、無料版を試してみることです。\n\nどちらの入り口も、AI動画へとつながっています。問われるべきなのは、どちらの技術が優れているかではなく、どちらのワークフローが自分のマシン、忍耐力、目的に合っているかです。',
       },
       sources: {
         id: 'sources',
@@ -2088,7 +2092,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LTX model license](https://ltx.io/model/license) — 公式のLTXコミュニティライセンス条項。',
           '[LTX-2 model page](https://ltx.io/model/ltx-2-3) — 公式のアーキテクチャとリリース詳細。',
           '[HunyuanVideo 1.5 on GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) — 公式リポジトリとLICENSEファイル。EU/英国/韓国の除外を含む。',
-          '[VBench-2.0 leaderboard](https://github.com/Vchitect/VBench) — 品質と物理的整合性の数値に使用された独立ベンチマーク。',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) — 2026年3月の報道（英語）。',
+          '[Alibaba Cloud Community：Wan2.7-Videoの発表](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) — 2026年4月（英語）。',
+          '[invideoのプラン上限](https://invideo.io/help/billing/plan-limits/) — プランとクレジットの公式な上限。',
           '[Invideo pricing](https://invideo.io/pricing/) — 公式プランと料金の詳細。',
           '[Invideo MCP server](https://invideo.io/ai/mcp) — 公式の自動化ドキュメント。',
           '[MiniMax H3 on GitHub](https://github.com/MiniMax-AI/MiniMax-H3) — 公式リポジトリ。',
@@ -2129,14 +2135,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ko.webp',
-    title: 'Invideo vs 로컬 AI 비디오: 한쪽은 $0에 주말 시간, 다른 한쪽은 월 $17부터(연간 결제)',
+    title: 'Invideo vs 로컬 AI 비디오: 한쪽은 GPU와 주말 시간, 다른 한쪽은 클라우드 구독',
     seoTitle: '클라우드 vs 로컬 AI 비디오 2026: invideo vs Wan 2.2 & LTX-2',
     intro:
-      '2026년 AI 비디오로 들어가는 문은 두 개입니다. 첫 번째 문은 로컬입니다. 무료이며 개방형인 비디오 모델을 자신의 GPU에서 실행합니다 — 생성 횟수 제한 없음, 추론은 자신의 하드웨어에서 실행됨(모델 다운로드와 업데이트 확인에는 여전히 네트워크를 사용합니다), 구독료 없음, 하지만 전체 워크플로우를 직접 구축해야 합니다. 두 번째 문은 클라우드입니다. Invideo는 프롬프트 하나만 입력하면 완성된 내레이션 비디오가 나옵니다 — 스크립트, 스톡 영상, 음성, 음악, 자막이 모두 포함되어 브라우저에서 바로 완성됩니다. 어느 쪽 문도 "더 낫다"고 할 수 없습니다. 이 가이드는 대부분의 비교 글이 건너뛰는 라이선스 세부 조항, 실제 하드웨어 요구사항, 그리고 여러분의 상황을 추천으로 연결해주는 의사결정 도구를 제공합니다.',
+      '2026년 AI 비디오로 들어가는 문은 두 개입니다. 첫 번째 문은 로컬입니다. 무료이며 개방형인 비디오 모델을 자신의 GPU에서 실행합니다 — 생성 횟수 제한 없음, 추론은 자신의 하드웨어에서 실행됨(모델 다운로드와 업데이트 확인에는 여전히 네트워크를 사용합니다), 구독료 없음, 하지만 전체 워크플로우를 직접 구축해야 합니다. 두 번째 문은 클라우드입니다. Invideo는 스크립트나 아이디어에서 편집된 비디오까지 AI 에이전트가 돕는 흐름을 내세우는 호스티드 서비스이며, 브라우저에서 바로 사용합니다. 어느 쪽 문도 "더 낫다"고 할 수 없습니다. 이 가이드는 대부분의 비교 글이 건너뛰는 라이선스 세부 조항, 실제 하드웨어 요구사항, 그리고 여러분의 상황을 추천으로 연결해주는 의사결정 도구를 제공합니다.',
     metaDescription:
-      '로컬 AI 비디오 모델(Wan 2.2, LTX-2, HunyuanVideo)은 GPU만 있으면 무료입니다. Invideo 클라우드는 월 $17부터(연간 결제) 모든 것을 해결합니다.',
+      '로컬 AI 비디오 모델(Wan 2.2, LTX-2, HunyuanVideo)은 GPU가 지원하면 무료로 내려받을 수 있습니다. invideo 클라우드 서비스와 비교합니다.',
     twitterDescription:
-      '2026년 클라우드 vs 로컬 AI 비디오: invideo는 모든 것을 월 $17부터(연간 결제) 번들로 제공합니다. Wan 2.2, LTX-2, HunyuanVideo는 자신의 GPU에서 무료로 실행됩니다 — GPU가 충분히 강력하다면요. 정직한 비교입니다.',
+      '2026년 클라우드 vs 로컬 AI 비디오: invideo는 구독형 호스티드 서비스입니다. Wan 2.2, LTX-2, HunyuanVideo는 GPU가 충분하다면 무료로 내려받을 수 있습니다.',
     audience:
       '자신의 GPU에서 무료로 로컬 비디오를 생성할지, invideo의 올인원 클라우드 파이프라인을 사용할지 결정하려는 창작자와 개발자를 위한 글입니다 — 하드웨어 요구사항, 라이선스 세부 조항, 워크플로우 절충점을 다룹니다.',
     readTime: '10분 읽기',
@@ -2164,18 +2170,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**12GB 이상의 GPU를 보유한 대부분의 사용자에게는 Wan 2.2가 2026년 유력한 로컬 AI 비디오 모델입니다** — Apache 2.0 라이선스로 매출 상한이나 지역 제한이 전혀 없으며, 공개 리더보드에서 VBench 약 84.7%의 점수를 기록했고 완전 무료로 제공됩니다. **해당 GPU가 없거나, 원시 클립이 아닌 완성된 내레이션 비디오를 원한다면 invideo가 더 나은 선택입니다** — 월 $17(연간 결제)부터 시작하는 Plus 플랜은 Kling 3, Veo 3.1, Seedance 2.5를 포함한 200개 이상의 모델(invideo 기준)을 브라우저 기반의 단일 파이프라인으로 묶어 스크립트, 음성, 음악, 자막까지 포함합니다. **HunyuanVideo 1.5는 가장 영화적인 로컬 화질을 제공하지만 라이선스가 EU, 영국, 대한민국을 완전히 제외합니다** — 이들 지역에 거주한다면 이 모델은 건너뛰어야 합니다.',
+      '**12GB 이상의 GPU를 보유한 대부분의 사용자에게는 Wan 2.2가 2026년 유력한 로컬 AI 비디오 모델입니다** — Apache 2.0 라이선스로 매출 상한이나 지역 제한이 전혀 없으며, 무료로 내려받을 수 있습니다(하드웨어와 전기 비용은 별도입니다). **해당 GPU가 없거나, 원시 클립이 아닌 완성된 내레이션 비디오를 원한다면 invideo가 더 나은 선택입니다** — 브라우저 기반 호스티드 서비스이며, 유료 플랜(Starter, Plus, Max)에 따라 이용할 수 있는 모델이 다릅니다. 최신 요금 페이지를 확인하십시오. **HunyuanVideo 1.5는 영화적인 화질로 커뮤니티에서 인기가 있지만 라이선스가 EU, 영국, 대한민국을 완전히 제외합니다** — 이들 지역에 거주한다면 이 모델은 건너뛰어야 합니다.',
     quickAnswerTop: {
       ko: {
         question: 'AI 비디오를 로컬에서 생성해야 할까요, invideo의 클라우드 파이프라인을 사용해야 할까요?',
         answer:
-          '12GB 이상의 GPU가 있고, 무제한 $0 생성과 프라이버시를 중시한다면 로컬에서 생성하십시오 — Wan 2.2(Apache 2.0, 상업적 사용 허용 — 모델 카드 확인)가 무난한 출발점입니다. 적합한 하드웨어가 없거나 직접 설정을 관리하고 싶지 않거나 원시 클립이 아닌 완성된 비디오(스크립트, 음성, 음악, 자막)가 필요하다면 invideo를 사용하십시오 — Plus 플랜은 월 $17(연간 결제)부터 시작합니다.',
+          '12GB 이상의 GPU가 있고, 클립당 요금 없는 생성과 프라이버시를 중시한다면 로컬에서 생성하십시오 — Wan 2.2(Apache 2.0, 상업적 사용 허용 — 모델 카드 확인)가 무난한 출발점입니다. 적합한 하드웨어가 없거나 직접 설정을 관리하고 싶지 않거나 원시 클립이 아닌 완성된 비디오(스크립트, 음성, 음악, 자막)가 필요하다면 invideo를 사용하십시오 — 무료 플랜이 있는 구독형 호스티드 서비스이며, 현재 요금은 요금 페이지에서 확인하십시오.',
         bullets: [
           'VRAM 12GB 미만 → invideo가 현실적인 선택입니다. 이 등급 이하에서는 로컬 모델이 진지한 품질을 내기 어렵습니다.',
           'VRAM 12GB → LTX-Video 0.9.5가 이 등급에서 실용적인 로컬 옵션입니다.',
           'VRAM 16~24GB 이상 → Wan 2.2(최고 품질, Apache 2.0 — 매출 기준이나 지역 제외 없는 상업적 사용 허용, 귀속 표시 등 Apache 표준 조건 적용, 모델 카드 확인) 또는 LTX-2(속도 + 동기화된 오디오).',
           'EU, 영국, 대한민국 거주 → HunyuanVideo 1.5의 라이선스가 여러분을 제외합니다. 대신 Wan 2.2나 LTX-2를 사용하십시오.',
-          '원시 클립이 아닌 완성된 내레이션 비디오가 필요한 경우 → 로컬 모델은 5~20초 길이의 무음(LTX 제외) 클립만 생성합니다. Invideo는 월 $17(연간 결제)부터 전체 제작 파이프라인을 처리합니다.',
+          '원시 클립이 아닌 완성된 내레이션 비디오가 필요한 경우 → 로컬 모델은 5~20초 길이의 무음(LTX 제외) 클립만 생성합니다. Invideo는 클립 주변 작업을 위한 호스티드 워크플로우를 제공합니다. 플랜별 구성은 요금 페이지에서 확인하십시오.',
         ],
         updatedDate: '2026-11-23',
       },
@@ -2205,38 +2211,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2는 관대한 Apache 2.0 라이선스로 제공되는 최상위급 로컬 비디오 모델입니다.** 매출 기준이나 지역 제외 없이 상업적 사용이 허용됩니다(귀속 표시 등 Apache의 표준 조건은 적용되므로 모델 카드를 확인하십시오) — 그리고 공개 리더보드에서 VBench 품질 점수 약 84.7%를 기록했습니다.',
-          '**Invideo는 Kling 3, Veo 3.1, Seedance 2.5를 포함한 200개 이상의 모델(invideo 기준)을 하나의 브라우저 기반 파이프라인으로 묶습니다.** 월 $17(Plus 플랜, 연간 결제)부터 시작하며 스크립트, 음성, 음악, 자막이 자동으로 처리됩니다.',
+          '**Wan 2.2는 관대한 Apache 2.0 라이선스로 제공되는 최상위급 로컬 비디오 모델입니다.** 매출 기준이나 지역 제외 없이 상업적 사용이 허용됩니다(귀속 표시 등 Apache의 표준 조건은 적용되므로 모델 카드를 확인하십시오)',
+          '**Invideo는 호스티드 방식의 대안입니다.** 무료 플랜과 유료 Starter, Plus, Max 플랜이 있으며, 요금 페이지에 따르면 Plus와 Max는 모든 Seedance 모델을 포함한 전체 모델을 이용할 수 있습니다. 가격은 조건에 따라 다르므로 최신 페이지를 확인하십시오.',
           '**HunyuanVideo 1.5의 라이선스는 EU, 영국, 대한민국을 명시적으로 제외합니다** — 모델 자체와 그 결과물 모두에 적용됩니다. 해당 지역의 독자는 대신 Wan 2.2나 LTX-2를 사용해야 합니다.',
-          '**LTX-2는 로컬 3종 중 가장 빠르며, 동기화된 오디오를 내장한 유일한 모델입니다.** 연 매출 $10M 미만의 기업에는 상업적으로 무료입니다.',
+          '**LTX-2는 속도에 중점을 둔 모델로 소개되며, 이 로컬 3종 중 동기화된 오디오를 내장한 유일한 모델입니다.** 연 매출 $10M 미만의 기업에는 상업적으로 무료입니다.',
           '**진지한 로컬 비디오 생성의 현실적인 최저 기준은 VRAM 12GB입니다.** 그 이하에서는 invideo가 더 실용적인 선택이 됩니다.',
-          '**로컬 모델은 완성된 비디오가 아니라 5~20초 길이의 원시 무음 클립을 생성합니다.** 스크립트, 음성, 음악, 자막, 편집은 각각 별도의 도구를 직접 조합해야 합니다 — invideo는 이 모든 것을 한 번에 처리합니다.',
-          '**이 페이지의 마지막 업데이트 시점에는 공식 "Wan 2.7"이 확인되지 않았습니다.** 이를 제공한다는 다운로드 페이지는 주의하십시오 — 공식 Wan 저장소에 나열된 릴리스는 2.2까지입니다.',
+          '**로컬 모델은 완성된 비디오가 아니라 5~20초 길이의 원시 무음 클립을 생성합니다.** 스크립트, 음성, 음악, 자막, 편집은 각각 별도의 도구를 직접 조합해야 합니다 — invideo는 이러한 단계를 하나의 호스티드 워크플로우로 묶는 것을 지향합니다.',
+          '**2026년 11월 27일 확인 시점에 Wan 공식 GitHub 페이지에는 "Wan 2.7" 오픈 웨이트 저장소가 없었습니다.** Alibaba는 2026년 4월 [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)를 Alibaba Cloud에서 이용할 수 있는 모델로 발표했습니다. "Wan 2.7 가중치"를 제공한다는 제3자 페이지는 주의하십시오.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: '2026년이 AI 비디오에 있어 이례적인 시기인 이유',
         content:
-          '독점(proprietary) 비디오 시장은 혼란스러웠다고 언론에서 보도했으며, PromptQuorum이 독자적으로 검증한 내용은 아닙니다. ByteDance의 Seedance 2.0은 할리우드 스튜디오의 법적 위협(Disney, Paramount, Warner Bros.의 중지 요청서(cease-and-desist letter)가 있었다고 보도되었습니다)에 직면했고 글로벌 출시가 중단되었습니다 — 중국 내에서는 계속 이용 가능하다고 알려져 있으나, 국제 상업적 사용의 법적 지위는 불분명합니다.\n\n바로 이런 혼란이 두 문 모두를 매력적으로 만듭니다. 개방형 로컬 모델은 여러분을 벤더의 드라마로부터 자유롭게 합니다. 그리고 invideo는 그 드라마를 대신 흡수합니다. 이 구독 서비스는 Kling 3, Veo 3.1, Seedance 2.5를 포함한 200개 이상의 모델(invideo 기준)에 대한 접근을 번들로 제공하므로, 어떤 모델이 사라지거나 소송을 당해도 여러분의 워크플로우는 영향을 받지 않습니다.',
+          '독점(proprietary) 비디오 시장은 변동이 컸습니다. 2026년 3월 [Engadget은](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) The Information을 인용해, Disney와 Paramount Skydance의 중지 요청서(cease-and-desist letter) 이후 ByteDance가 Seedance 2.0의 글로벌 출시를 일시 중단했다고 보도했습니다. PromptQuorum은 이 보도를 독자적으로 검증하지 않았으며, 이후 제공 상황은 달라졌습니다. 현재 invideo 요금 페이지에는 Seedance 2.0과 2.5가 올라 있습니다.\n\n이런 변화 때문에 두 문 모두 매력이 있습니다. 이미 내려받은 오픈 모델은 공급사의 변화와 관계없이 계속 실행됩니다. invideo 같은 멀티 모델 서비스는 한 계정에서 여러 모델을 제공하지만, 제공 목록은 바뀔 수 있으므로 워크플로우에 영향이 없다고 보장할 수는 없습니다.',
       },
       localModels: {
         id: 'local-models',
         title: '로컬 문: 자신의 GPU에서 실행하는 무료 모델 3종',
         content:
-          '현재 다운로드 수, 커뮤니티 활동, 벤치마크 결과를 기준으로 로컬 비디오 생성 분야를 지배하는 오픈 웨이트 시스템은 세 가지입니다. 세 모델 모두 자신의 컴퓨터에 설치하는 노드 기반 인터페이스인 ComfyUI를 통해 실행됩니다 — Ollama 같은 채팅형 도구가 아닙니다. 이들은 LLM이 아니라 디퓨전(diffusion) 모델입니다.',
+          '이 가이드는 로컬 비디오 생성에 널리 쓰이는 오픈 웨이트 시스템 세 가지를 비교합니다. 세 모델 모두 자신의 컴퓨터에 설치하는 노드 기반 인터페이스인 ComfyUI를 통해 실행됩니다 — Ollama 같은 채팅형 도구가 아닙니다. 이들은 LLM이 아니라 디퓨전(diffusion) 모델입니다.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Wan 2.2는 2026년 전반적으로 우수한 로컬 비디오 모델입니다 — Apache 2.0, 높은 품질, 지역 제한 없음 — LTX-2는 속도와 동기화된 오디오에서 앞서며, HunyuanVideo 1.5는 가장 영화적인 화질을 제공하지만 라이선스상 EU/영국/대한민국 사용자를 제외합니다.' },
+          { type: 'one-sentence', text: 'Wan 2.2는 2026년 전반적으로 우수한 로컬 비디오 모델입니다 — Apache 2.0, 높은 품질, 지역 제한 없음 — LTX-2는 속도에 중점을 두고 동기화된 오디오를 더하며, HunyuanVideo 1.5는 영화적인 화질로 인기가 있지만 라이선스상 EU/영국/대한민국 사용자를 제외합니다.' },
           { type: 'plain-terms', text: '하나의 답만 원한다면: 12GB 이상의 GPU를 마련하고 Wan 2.2를 실행하십시오. 높은 품질에 관대한 Apache 2.0 라이선스입니다.' },
         ],
         columns: ['모델', '라이선스', 'VRAM', '출력', '특징'],
         rows: [
-          { '모델': 'Wan 2.2 (Alibaba)', '라이선스': 'Apache 2.0 — 허용적, 매출 기준·지역 제외 없음', 'VRAM': '6~8GB (5B) / 15~25GB (14B)', '출력': '480p/720p, 약 5초 클립', '특징': 'VBench 품질 점수 약 84.7% (공개 리더보드)' },
-          { '모델': 'LTX-2 (Lightricks)', '라이선스': 'LTX 커뮤니티 라이선스 — 매출 $10M 미만은 무료', 'VRAM': '18~20GB 양자화, 32GB 이상(풀 정밀도)', '출력': '480p~1080p, 5~20초, 오디오 포함', '특징': '한 번에 동기화된 오디오+비디오를 생성하는 유일한 모델' },
-          { '모델': 'HunyuanVideo 1.5 (Tencent)', '라이선스': 'Tencent 커뮤니티 라이선스 — EU/영국/대한민국 제외', 'VRAM': '최소 14GB, 24GB 권장', '출력': '480p/720p, 최대 10초', '특징': '영화적인 조명 표현으로 커뮤니티에서 인기; VRAM 요구량이 가장 낮음' },
+          { '모델': 'Wan 2.2 (Alibaba)', '라이선스': 'Apache 2.0 — 허용적, 매출 기준·지역 제외 없음', 'VRAM': '6~8GB (5B) / 15~25GB (14B)', '출력': '480p/720p, 약 5초 클립', '특징': '14B와 소형 5B 구성' },
+          { '모델': 'LTX-2 (Lightricks)', '라이선스': 'LTX 커뮤니티 라이선스 — 매출 $10M 미만은 무료', 'VRAM': '18~20GB 양자화, 32GB 이상(풀 정밀도)', '출력': '480p~1080p, 5~20초, 오디오 포함', '특징': '오디오+비디오 동기 생성(3종 중 유일)' },
+          { '모델': 'HunyuanVideo 1.5 (Tencent)', '라이선스': 'Tencent 커뮤니티 라이선스 — EU/영국/대한민국 제외', 'VRAM': '최소 14GB, 24GB 권장', '출력': '480p/720p, 최대 10초', '특징': '영화적인 조명; 오프로딩 시 최소 14GB' },
         ],
         note:
-          '⚠️ 주의: 마지막 업데이트 시점에는 공식 "Wan 2.7"이 확인되지 않았습니다. "Wan 2.7 오픈 웨이트"를 제공한다는 다운로드 페이지는 주의하십시오. 공식 Wan 저장소에 나열된 릴리스는 2.2까지입니다 — 아래 링크된 공식 GitHub 또는 Hugging Face 저장소에서만 다운로드하십시오.',
+          '⚠️ 주의: 2026년 11월 27일 확인 시점에 [Wan 공식 GitHub 페이지](https://github.com/Wan-Video)에는 "Wan 2.7" 오픈 웨이트 저장소가 없었습니다. Alibaba는 [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)를 Alibaba Cloud에서 이용할 수 있다고 발표했습니다. "Wan 2.7 오픈 웨이트"를 제공한다는 페이지는 주의하고, 공식 GitHub 또는 Hugging Face 저장소에서만 다운로드하십시오.',
       },
       wan22: {
         id: 'wan-2-2',
@@ -2252,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2 (Lightricks) — 속도와 동기화된 사운드',
         content:
-          'LTX-2는 이 3종 중 유일하게 동기화된 오디오와 비디오를 한 번에 생성하는 모델입니다 — 발소리, 주변음, 효과음이 영상과 함께 도착합니다. 세 모델 중 가장 빠르며 하드웨어 요구사항도 가장 관대합니다. 아키텍처는 22B 디퓨전 트랜스포머이며, 현재의 LTX-2.5 릴리스와 함께 LTX-2.3(2026년 3월)도 계속 지원됩니다. 라이선스는 LTX 커뮤니티 라이선스로, 회사의 연간 총매출이 $10M 미만이면 상업적 사용이 무료이며 그 이상이면 유료 상업 라이선스가 필요합니다. (일부 서드파티 자료는 이를 Apache 2.0으로 잘못 표기하고 있습니다 — [공식 라이선스 페이지](https://ltx.io/model/license)만이 신뢰할 수 있는 출처입니다.) 하드웨어 요구사항은 양자화 시 18~20GB VRAM, 풀 정밀도에서는 32GB 이상입니다. 12GB 카드에서는 이전 버전인 LTX-Video 0.9.5가 현실적인 선택입니다.\n\n**구체적인 속도:** LTX-2는 정성적으로 3종 중 가장 빠르며, 고급 소비자용 카드에서 거의 실시간에 가까운 미리보기를 제공합니다 — 다만 이 글 작성 시점 기준 RTX 4090에서의 독립적으로 검증된 클립당 소요 시간 수치는 존재하지 않으므로 임의로 만들어내지 않겠습니다. 확인 가능한 유일한 확정 수치는 Lightricks 자체가 데이터센터급 "Nvidia 슈퍼칩"(소비자용 GPU가 아님)에서 진행한 벤치마크로, 10초 클립을 약 6.8초 만에 생성했습니다. 이는 진지한 하드웨어에서 이 아키텍처가 낼 수 있는 상한선으로 봐야 하며, 가정용 장비에서 체감할 성능이 아닙니다.',
+          'LTX-2는 이 3종 중 유일하게 동기화된 오디오와 비디오를 한 번에 생성하는 모델입니다 — 발소리, 주변음, 효과음이 영상과 함께 도착합니다. 빠른 모델로도 소개되지만, VRAM 요구량이 가장 낮은 것은 아닙니다(아래 수치 참조). 아키텍처는 22B 디퓨전 트랜스포머이며, 현재의 LTX-2.5 릴리스와 함께 LTX-2.3(2026년 3월)도 계속 지원됩니다. 라이선스는 LTX 커뮤니티 라이선스로, 회사의 연간 총매출이 $10M 미만이면 상업적 사용이 무료이며 그 이상이면 유료 상업 라이선스가 필요합니다. (일부 서드파티 자료는 이를 Apache 2.0으로 잘못 표기하고 있습니다 — [공식 라이선스 페이지](https://ltx.io/model/license)만이 신뢰할 수 있는 출처입니다.) 하드웨어 요구사항은 양자화 시 18~20GB VRAM, 풀 정밀도에서는 32GB 이상입니다. 12GB 카드에서는 이전 버전인 LTX-Video 0.9.5가 현실적인 선택입니다.\n\n**구체적인 속도:** LTX-2는 흔히 빠르다고 평가됩니다 — 다만 이 글 작성 시점 기준 RTX 4090에서의 독립적으로 검증된 클립당 소요 시간 수치는 존재하지 않으므로 임의로 만들어내지 않겠습니다. 확인 가능한 유일한 확정 수치는 Lightricks 자체가 데이터센터급 "Nvidia 슈퍼칩"(소비자용 GPU가 아님)에서 진행한 벤치마크로, 10초 클립을 약 6.8초 만에 생성했습니다. 이는 진지한 하드웨어에서 이 아키텍처가 낼 수 있는 상한선으로 봐야 하며, 가정용 장비에서 체감할 성능이 아닙니다.',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 on GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 on Hugging Face' },
@@ -2262,7 +2268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5 (Tencent) — 영화적인 화질과 법적인 함정',
         content:
-          '2025년 11월 출시된 Tencent의 8.3B 모델은 영화적인 조명과 질감 표현으로 커뮤니티의 사랑을 받고 있으며, VRAM 요구량이 3종 중 가장 낮습니다: 오프로딩 시 최소 14GB, 24GB에서 쾌적하게 동작하며 RTX 4090 기준 480p 클립 하나당 약 75초가 걸립니다(보고된 수치이며 PromptQuorum이 검증하지 않았습니다). 480p/720p를 기본으로 생성하며, 내장된 초해상도(super-resolution) 기능으로 최대 1080p까지, 클립 길이는 최대 10초까지 지원합니다.\n\n**구체적인 속도:** 5초 480p 클립 하나당 약 75초라면, 영상 1초당 렌더링 시간은 약 15초입니다. 네이티브 최대 클립 길이가 10초이므로, 20초 시퀀스를 만들려면 최대 길이로 두 번 생성해야 합니다 — 초당 속도를 그대로 확장하면 20초 분량의 영상을 생성하는 데 원시 생성 시간만 약 5분이 걸리며, 이어붙이기 작업은 별도입니다. 이는 보고되었으나 검증되지 않은 5초 수치로부터의 추정치이며, 10초나 20초를 직접 측정한 벤치마크가 아닙니다.',
+          '2025년 11월 출시된 Tencent의 8.3B 모델은 영화적인 조명과 질감 표현으로 커뮤니티의 사랑을 받고 있으며, VRAM 요구량은 비교적 낮은 편입니다: 오프로딩 시 최소 14GB, 24GB에서 쾌적하게 동작하며 RTX 4090 기준 480p 클립 하나당 약 75초가 걸립니다(보고된 수치이며 PromptQuorum이 검증하지 않았습니다). 480p/720p를 기본으로 생성하며, 내장된 초해상도(super-resolution) 기능으로 최대 1080p까지, 클립 길이는 최대 10초까지 지원합니다.\n\n**구체적인 속도:** 5초 480p 클립 하나당 약 75초라면, 영상 1초당 렌더링 시간은 약 15초입니다. 네이티브 최대 클립 길이가 10초이므로, 20초 시퀀스를 만들려면 최대 길이로 두 번 생성해야 합니다 — 초당 속도를 그대로 확장하면 20초 분량의 영상을 생성하는 데 원시 생성 시간만 약 5분이 걸리며, 이어붙이기 작업은 별도입니다. 이는 보고되었으나 검증되지 않은 5초 수치로부터의 추정치이며, 10초나 20초를 직접 측정한 벤치마크가 아닙니다.',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on Hugging Face' },
@@ -2270,7 +2276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '라이선스 경고 — 다운로드하기 전에 반드시 읽으십시오. HunyuanVideo 1.5는 Apache 2.0이 아니라 Tencent Hunyuan 커뮤니티 라이선스를 사용합니다. 이 라이선스는 유럽연합(EU), 영국, 대한민국에는 적용되지 않습니다 — 라이선스 문구에 따르면 해당 지역의 사용자는 이 모델이나 그 결과물을 사용할 권한이 없습니다. 또한 월간 활성 사용자 1억 명을 상한으로 설정하고 있으며, 그 결과물로 경쟁 모델을 학습시키는 것을 금지합니다. EU, 영국, 대한민국에 거주한다면 이 모델은 건너뛰십시오. Wan 2.2(Apache 2.0, 지역 제외 없는 상업적 사용 허용)가 동일한 품질 등급을 제공합니다.',
+            text: '라이선스 경고 — 다운로드하기 전에 반드시 읽으십시오. HunyuanVideo 1.5는 Apache 2.0이 아니라 Tencent Hunyuan 커뮤니티 라이선스를 사용합니다. 이 라이선스는 유럽연합(EU), 영국, 대한민국에는 적용되지 않습니다 — 라이선스 문구에 따르면 해당 지역의 사용자는 이 모델이나 그 결과물을 사용할 권한이 없습니다. 또한 모델 출시일 직전 달에 귀하의 제품 월간 활성 사용자가 1억 명을 넘었다면 Tencent로부터 별도 라이선스를 받아야 하며, 모델이나 그 결과물을 다른 AI 모델(Tencent Hunyuan 및 그 파생 모델 제외)을 개선하는 데 사용하는 것은 금지됩니다. EU, 영국, 대한민국에 거주한다면 이 모델은 건너뛰고 Wan 2.2(Apache 2.0, 지역 제외 없는 상업적 사용 허용)를 검토하십시오.',
           },
         ],
       },
@@ -2278,7 +2284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: '주목할 모델: MiniMax H3',
         content:
-          '2026년 8월 3일 출시된 MiniMax H3는 네이티브 스테레오 오디오, 출시 첫날부터의 ComfyUI 지원, RTX 3060에서도 실행 가능한 양자화 버전을 갖춘 331억 파라미터 규모의 옴니모달 모델입니다. 네 번째 선택지로 다루기 전에 두 가지 유의점이 있습니다. 로컬 릴리스는 768p로 상한이 설정되어 있으며(완전한 2K 파이프라인은 호스티드 버전에서만 제공됩니다), 커뮤니티 라이선스에는 자체적인 지역 제한과 $20M 매출 기준이 포함되어 있다고 알려져 있으므로 사용 전에 공식 모델 카드를 확인해야 합니다. 초기 반응은 좋지만, 최근 출시되었다는 것과 실무에 바로 투입 가능하다는 것은 별개의 문제입니다.',
+          '2026년 8월 3일 출시된 MiniMax H3는 네이티브 스테레오 오디오, 출시 첫날부터의 ComfyUI 지원, RTX 3060에서도 실행 가능한 양자화 버전을 갖춘 331억 파라미터 규모의 옴니모달 모델입니다. 네 번째 선택지로 다루기 전에 두 가지 유의점이 있습니다. 로컬 릴리스는 768p로 상한이 설정되어 있으며(완전한 2K 파이프라인은 호스티드 버전에서만 제공됩니다), [커뮤니티 라이선스](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE)는 EU, 영국, 대한민국, 미국을 허가 지역에서 제외하며, 연 매출이 $20M를 넘으면 별도 승인을 요구합니다. 사용 전에 라이선스를 직접 확인하십시오(법률 자문이 아닙니다). 초기 반응은 좋지만, 최근 출시되었다는 것과 실무에 바로 투입 가능하다는 것은 별개의 문제입니다.',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 on GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 on Hugging Face' },
@@ -2299,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '보유 GPU': 'VRAM 24GB 이상', '실행 가능한 것': '모든 것 가능: Wan 2.2 14B 고품질, LTX-2 양자화' },
         ],
         note:
-          'GPU 대략적인 비용([InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) 기준, 출처 갱신일 2026-10-15, eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다): 중고 RTX 3090 낙찰 기록은 약 $1,400~1,550, 중고 RTX 4090 낙찰 기록은 $2,575~3,010(중앙값 $2,860)입니다. 한국에서는 가격이 다를 수 있습니다. GPU 가격은 변동하므로, 몇 달이 지난 이 수치를 그대로 믿기보다 구매 전 현재 시세를 확인하십시오.',
+          'GPU 대략적인 비용([InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) 기준, 출처 갱신일 2026-10-15, eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다): 중고 RTX 3090 낙찰 기록은 약 $1,400~1,550, 중고 RTX 4090 낙찰 기록은 $2,575~3,010(중앙값 $2,860)입니다. 이후 이 트래커는 중고 RTX 3090 수치를 $1,500~1,725로 올렸습니다(중앙값 $1,650, 낙찰 225건, 2026년 11월 13~23일). 한국에서는 가격이 다를 수 있습니다. GPU 가격은 변동하므로, 몇 달이 지난 이 수치를 그대로 믿기보다 구매 전 현재 시세를 확인하십시오.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -2319,19 +2325,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'Invideo는 클라우드 문의 한 예시일 뿐, 유일한 선택지는 아닙니다. "클라우드"가 하나의 방식만을 의미한다고 단정하기 전에, 다른 서비스들과 어떻게 다른지 알아둘 가치가 있습니다. 공개된 설명에 따르면(PromptQuorum은 이 세 서비스를 테스트하지 않았습니다) Runway는 완성된 조립 비디오보다는 AI와 편집기를 결합한 하이브리드 워크플로우를 지향하며 전문 편집 도구(Premiere Pro, Final Cut, DaVinci Resolve)에 직접 통합됩니다. 같은 설명에 따르면 Luma AI의 Dream Machine은 VFX 합성 파이프라인(After Effects, Nuke)을 위한 네이티브 16비트 HDR 출력을 전문으로 합니다 — 완전히 다른 대상 사용자층입니다. Pika는 가볍게 유지됩니다. 스크립트, 음성, 스톡 영상 조립 기능이 내장되어 있지 않은 빠른 원시 클립 생성에 집중하므로, 클립 주변의 모든 것에 여전히 별도 도구가 필요합니다 — GPU가 필요 없다는 점만 빼면 로컬 모델을 실행하는 것과 동일한 DIY 파이프라인 문제입니다. 이 세 서비스와 invideo를 구분 짓는 지점은, invideo가 원시 생성 도구를 우선하지 않는다는 점입니다. 이는 스크립트에서 완성된 비디오까지 조립해주는 서비스이며, 필요할 때 원시 생성 모델(Kling, Veo, Seedance)에도 접근할 수 있게 해줍니다.\n\nInvideo는 비디오 모델이 아니라 서비스로 제공되는 완전한 제작 파이프라인입니다. 주제를 입력하거나 스크립트를 [invideo Agent](https://invideo.io/)에 붙여넣으면, 스크립트, 장면, 생성 또는 스톡 비주얼, 음성, 음악, 자막, 브랜드 스타일링을 하나의 워크플로우로 묶어 비디오를 기획하고 생성합니다. 브라우저에서 실행되므로 여러분의 GPU는 무관합니다.\n\nGPU와 양자화 방식을 조사하기보다 오늘 당장 비디오 제작을 시작하고 싶은 사람에게는 invideo가 현실적인 선택입니다. 로컬 하드웨어 요구사항이 없고, ComfyUI 설치나 CUDA 문제 해결이 필요 없으며, 대부분의 사람이 실제로 필요로 하는 스크립트, 음성, 음악, 자막이 이미 포함된 하나의 워크플로우를 제공합니다. 기반 생성 모델을 직접 제어하는 것보다 완성된 비디오 자체를 더 중시하는 창작자에게 특히 적합합니다 — 무료 티어가 존재하므로 비용을 들이기 전에 이것이 맞는지 확인할 수 있습니다.\n\n이 비교에서 눈에 띄는 세 가지가 있습니다:\n\n- **모델의 혼란을 대신 흡수합니다.** 모든 유료 플랜은 Seedance 2.5, Veo 3.1, Kling 3를 포함해 200개 이상의 모델(invideo 기준)에 대한 접근을 포함합니다. 어떤 모델이 소송을 당하거나 서비스가 중단되어도 invideo가 이를 교체해주므로 여러분의 워크플로우는 계속됩니다.\n- **자동화가 나중에 덧붙은 것이 아니라 기본으로 내장되어 있습니다.** 공식 MCP 서버가 있어 프롬프트 → 스크립트 → 영상 → 자막에 이르는 전체 파이프라인을 프로그래밍 방식으로 실행할 수 있습니다 — 그렇지 않으면 ComfyUI를 중심으로 직접 구축해야 할 종류의 하네스입니다.\n- **무료 티어는 실질적인 시험판입니다.** 워터마크가 있고 분량 제한이 있지만, 비용을 지불하기 전에 결과물 품질을 판단하기에는 충분합니다.\n\n**구체적인 속도 — 그리고 솔직한 함정:** 원시 생성 한 건은 보통 몇 분이면 끝날 만큼 빠릅니다. 하지만 invideo 자체 FAQ에 따르면 단편 영상의 완전한 엔드투엔드 제작에는 몇 분이 아니라 2~5일이 걸립니다 — 생성 자체가 아니라 여러 생성 결과 중에서 선택하고 조립하는 과정이 시간이 걸리는 지점이기 때문입니다. 1~3분 길이의 완성된 영상에 대해 "현실적인 최저 기준은 2일"이라는 수치를, 편집되지 않은 20초 분량 영상의 원시 생성에 16~36분이 걸리는 로컬 문과 공정하게 비교할 기준점으로 삼으십시오. Invideo는 여러분의 설정 및 편집 시간을 자체 제작 시간으로 맞바꾸는 것이지, 시간 자체를 없애주는 것이 아닙니다.\n\n현재 요금제는 월 $17(Plus 플랜, 연간 결제 — 실시간 수치는 [invideo 요금제 페이지](https://invideo.io/pricing/)에서 확인하십시오)부터 시작합니다:',
+          'Invideo는 클라우드 문의 한 예시일 뿐, 유일한 선택지는 아닙니다. "클라우드"가 하나의 방식만을 의미한다고 단정하기 전에, 다른 서비스들과 어떻게 다른지 알아둘 가치가 있습니다. 공개된 설명에 따르면(PromptQuorum은 이 세 서비스를 테스트하지 않았습니다) Runway는 완성된 조립 비디오보다는 AI와 편집기를 결합한 하이브리드 워크플로우를 지향하며 전문 편집 도구(Premiere Pro, Final Cut, DaVinci Resolve)에 직접 통합됩니다. 같은 설명에 따르면 Luma AI의 Dream Machine은 VFX 합성 파이프라인(After Effects, Nuke)을 위한 네이티브 16비트 HDR 출력을 전문으로 합니다 — 완전히 다른 대상 사용자층입니다. 같은 설명에 따르면 Pika는 빠른 원시 클립 생성에 중점을 둡니다. 스크립트, 음성, 스톡 영상 조립 기능을 제공하는지는 PromptQuorum이 확인하지 않았으므로, 클립 주변 작업에 사용하기 전에 확인하십시오. invideo 자체 설명에 따르면 이 서비스는 스토리보드, 스크립트 작성, 타임라인 편집을 Kling, Veo, Seedance 같은 생성 모델 이용과 결합합니다.\n\nInvideo는 단일 비디오 모델이 아니라 호스티드 서비스입니다. 2026년 11월 27일 확인 시점에 [공식 홈페이지](https://invideo.io/)는 스크립트나 아이디어 기반 스토리보드, 스크립트 작성, 멀티트랙 타임라인을 갖춘 에이전트형 비디오 편집기를 소개했으며, 사이트에는 AI 음성·음악 도구도 올라 있습니다. PromptQuorum은 이 서비스를 테스트하지 않았으므로 음성과 자막이 필요한 방식으로 작동하는지 확인하십시오. 브라우저에서 실행되므로 여러분의 GPU는 무관합니다.\n\nGPU와 양자화 방식을 조사하기보다 오늘 당장 비디오 제작을 시작하고 싶은 사람에게는 invideo가 현실적인 선택입니다. 로컬 하드웨어 요구사항이 없고, ComfyUI 설치나 CUDA 문제 해결이 필요 없으며, 클립 주변 단계를 위한 호스티드 작업 공간을 제공합니다. 기반 생성 모델을 직접 제어하는 것보다 완성된 비디오 자체를 더 중시하는 창작자에게 특히 적합합니다 — 무료 플랜이 있으므로 비용을 들이기 전에 이것이 맞는지 확인할 수 있습니다.\n\n이 비교에서 눈에 띄는 세 가지가 있습니다:\n\n- **한 계정, 여러 모델.** invideo 요금 페이지에 따르면 Plus와 Max는 모든 Seedance 모델을 포함한 전체 모델을 이용할 수 있고, Starter는 일부 모델만 포함하며 Seedance 2.5는 제외됩니다. 제공 목록은 바뀔 수 있습니다.\n- **에이전트 연동이 내장되어 있습니다.** invideo는 AI 에이전트가 타임라인 편집기에서 작업할 수 있는 [MCP 서버](https://invideo.io/ai/mcp)를 제공합니다.\n- **무료 플랜이 있습니다.** invideo의 [플랜 한도 페이지](https://invideo.io/help/billing/plan-limits/)에는 주간 한도가 설명되어 있습니다. 사용하기 전에 내보내기와 워터마크 규정을 확인하십시오.\n\n**구체적인 속도 — 그리고 솔직한 함정:** invideo에 따르면 원시 생성은 빠릅니다. 하지만 invideo 자체 FAQ에 따르면 단편 영상의 완전한 엔드투엔드 제작에는 몇 분이 아니라 2~5일이 걸립니다 — 생성 자체가 아니라 여러 생성 결과 중에서 선택하고 조립하는 과정이 시간이 걸리는 지점이기 때문입니다. 1~3분 길이의 완성된 영상에 대해 "현실적인 최저 기준은 2일"이라는 수치를, 편집되지 않은 20초 분량 영상의 원시 생성에 16~36분이 걸리는 로컬 문과 공정하게 비교할 기준점으로 삼으십시오. Invideo는 여러분의 설정 및 편집 시간을 자체 제작 시간으로 맞바꾸는 것이지, 시간 자체를 없애주는 것이 아닙니다.\n\ninvideo가 안내하는 플랜(가격은 [invideo 요금제 페이지](https://invideo.io/pricing/) 참조):',
         blockquote:
           '**로컬 설정 없이 AI 비디오를 만들고 싶으신가요?** 강력한 GPU가 없거나, 로컬 AI 비디오 도구를 설치하고 설정하는 데 시간을 쓰고 싶지 않다면 invideo를 시도해볼 만합니다. [Invideo 무료 버전 사용해보기 →](https://invideo.io/pricing/)',
-        columns: ['플랜', '가격', '월간 크레딧', '적합한 대상'],
+        columns: ['플랜', '좌석당 월간 크레딧', '이용 가능 모델'],
         rows: [
-          { '플랜': 'Free', '가격': '$0', '월간 크레딧': '제한적', '적합한 대상': '테스트용(워터마크 있음)' },
-          { '플랜': 'Plus', '가격': '$17/월 ($200/년)', '월간 크레딧': '75', '적합한 대상': '일반 창작자 — 모든 AI 모델, 아바타 및 음성 클론 4개, iStock 자산 100개, 무제한 워터마크 없는 내보내기' },
-          { '플랜': 'Max', '가격': '$85/월 ($1,000/년)', '월간 크레딧': '390', '적합한 대상': '대량 제작 채널, 아바타 16개' },
-          { '플랜': 'Generative', '가격': '$170/월 ($2,000/년)', '월간 크레딧': '800+', '적합한 대상': '단편 영화 / 제작 물량' },
-          { '플랜': 'Elite', '가격': '$900/월 ($10,800/년)', '월간 크레딧': '4,250+', '적합한 대상': '에피소드 및 상업적 규모' },
+          { '플랜': 'Free', '좌석당 월간 크레딧': '주간 한도', '이용 가능 모델': '요금 페이지 확인' },
+          { '플랜': 'Starter', '좌석당 월간 크레딧': '400', '이용 가능 모델': '일부 모델(Seedance 2.5 제외)' },
+          { '플랜': 'Plus', '좌석당 월간 크레딧': '2,000', '이용 가능 모델': '전체 모델(invideo 기준)' },
+          { '플랜': 'Max', '좌석당 월간 크레딧': '5,000부터', '이용 가능 모델': '전체 모델(invideo 기준)' },
         ],
         note:
-          '위 가격은 모두 invideo가 게시한 연간 결제 요율입니다 — 월별 결제는 더 비쌉니다(invideo 자체 FAQ는 Plus $20, Max $100, Generative $200, Elite $1,000의 월별 요금을 명시합니다). 이 수치를 그대로 신뢰하기보다 invideo의 실시간 요금제 페이지를 확인하십시오. 플랜과 가격은 변경될 수 있습니다. $/월 수치는 invideo 연간 플랜의 월 환산 반올림 값이며, 연간 총액은 마지막 갱신 시점에 invideo가 게시한 금액입니다(최종 업데이트 날짜 참조).',
+          '플랜 이름, 크레딧, 이용 가능 모델은 2026년 11월 27일에 확인한 invideo의 [요금 페이지](https://invideo.io/pricing/)와 [플랜 한도 페이지](https://invideo.io/help/billing/plan-limits/) 기준입니다. 여기서는 가격을 적지 않습니다. 유럽에서 접속했을 때 기간 한정 할인이 표시되었고, 플랜 구성도 이 가이드가 이전에 안내한 내용과 다르기 때문입니다. 어떤 세부 사항이든 믿기 전에 실시간 페이지를 확인하십시오.',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'invideo 무료 버전 사용해보기 →' },
         ],
@@ -2396,15 +2401,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '"무료" 로컬 AI 비디오의 진짜 함정은 무엇인가요?',
-            a: '하드웨어 비용(성능 좋은 GPU), 설정 시간(ComfyUI와 그 의존성), 그리고 원시 출력 클립 주변에 필요한 DIY 파이프라인입니다. 모델 가중치 자체는 생성당 정말로 $0이며 앞으로도 그렇습니다.',
+            a: '하드웨어 비용(성능 좋은 GPU), 설정 시간(ComfyUI와 그 의존성), 그리고 원시 출력 클립 주변에 필요한 DIY 파이프라인입니다. 모델 가중치에는 생성당 요금이 없지만, 하드웨어와 전기 비용은 듭니다.',
           },
           {
             q: 'Wan 2.7이나 더 새로운 Wan 모델이 있나요?',
-            a: '이 페이지의 마지막 업데이트 시점에는 확인되지 않았습니다. 공식 Wan 저장소에 나열된 릴리스는 2.2까지입니다. "Wan 2.7 가중치"를 제공한다는 사이트는 주의해야 하며, 공식 GitHub나 Hugging Face 저장소에서만 다운로드해야 합니다.',
+            a: '2026년 11월 27일 확인 시점에 Wan 공식 GitHub 페이지에는 더 새로운 오픈 웨이트 저장소가 없었습니다. Alibaba는 2026년 4월 [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)를 Alibaba Cloud에서 이용할 수 있다고 발표했습니다. "Wan 2.7 가중치"를 제공한다는 다른 사이트는 주의하고, 공식 GitHub나 Hugging Face 저장소에서만 다운로드하십시오.',
           },
           {
             q: '완전 초보자입니다. 어디서 시작해야 할까요?',
-            a: 'Invideo의 무료 티어로 시작하십시오 — 몇 분 안에 완성된 내레이션 비디오를 얻을 수 있으며, AI 비디오가 자신의 목표에 애초에 부합하는지 판단할 수 있습니다. 이후에 성능 좋은 GPU를 구매해 완전한 통제권과 프라이버시를 원한다면 로컬 문은 언제든 열려 있습니다.',
+            a: 'Invideo의 무료 플랜으로는 하드웨어를 사지 않고 클라우드 워크플로우를 시험해 보고 AI 비디오가 자신의 목표에 맞는지 판단할 수 있습니다. 이 플랜에는 한도가 있습니다. 이후에 성능 좋은 GPU를 구매해 완전한 통제권과 프라이버시를 원한다면 로컬 문은 언제든 열려 있습니다.',
           },
           {
             q: 'Mac과 Windows에서 이 로컬 모델을 실행하는 것은 무엇이 다른가요?',
@@ -2428,7 +2433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          '12GB 이상의 GPU를 이미 보유했거나 구매할 계획이 있고, 직접 도구를 구축하는 것을 즐기며, 편의성보다 프라이버시와 무제한 $0 생성을 더 중시한다면 로컬을 선택하십시오. Wan 2.2가 탄탄한 토대입니다 — 높은 품질, Apache 2.0 — 속도와 사운드에 특화된 LTX-2도 함께 고려하십시오.\n\n하드웨어가 없거나, 설정을 원하지 않거나, 원시 클립이 아닌 완성된 비디오가 필요하다면 클라우드를 선택하십시오. 단순히 AI로 비디오를 만들고 싶은 대부분의 사람에게는 클라우드 경로가 더 쉬운 출발점입니다. 로컬 생성에 필요한 하드웨어와 기술적 관심이 이미 없다면, invideo는 프롬프트 하나로 그 복잡함의 대부분을 없애줍니다. 모든 모델과 자산이 번들로 제공되고 자동화까지 포함되어 있으며, 테스트는 $0부터, 워터마크 제거는 월 $17(연간 결제)부터 시작합니다. 자신의 워크플로우에 맞는지 알아보는 가장 간단한 방법은 무료 버전을 먼저 시도해보는 것입니다.\n\n두 문 모두 AI 비디오로 이어집니다. 애초에 질문은 어느 기술이 더 나은가가 아니라, 어느 워크플로우가 여러분의 컴퓨터, 인내심, 목표에 맞는가였습니다.',
+          '12GB 이상의 GPU를 이미 보유했거나 구매할 계획이 있고, 직접 도구를 구축하는 것을 즐기며, 편의성보다 프라이버시와 클립당 요금 없는 생성을 더 중시한다면 로컬을 선택하십시오. Wan 2.2가 탄탄한 토대입니다 — 높은 품질, Apache 2.0 — 속도와 사운드에 특화된 LTX-2도 함께 고려하십시오.\n\n하드웨어가 없거나, 설정을 원하지 않거나, 원시 클립이 아닌 완성된 비디오가 필요하다면 클라우드를 선택하십시오. 단순히 AI로 비디오를 만들고 싶은 대부분의 사람에게는 클라우드 경로가 더 쉬운 출발점입니다. 로컬 생성에 필요한 하드웨어와 기술적 관심이 이미 없다면, invideo 같은 호스티드 서비스를 쓰면 로컬 설정이 필요 없습니다. 시험용 무료 플랜이 있으며, 유료 플랜과 한도는 invideo 요금 페이지에 안내되어 있습니다. 자신의 워크플로우에 맞는지 알아보는 가장 간단한 방법은 무료 버전을 먼저 시도해보는 것입니다.\n\n두 문 모두 AI 비디오로 이어집니다. 애초에 질문은 어느 기술이 더 나은가가 아니라, 어느 워크플로우가 여러분의 컴퓨터, 인내심, 목표에 맞는가였습니다.',
       },
       sources: {
         id: 'sources',
@@ -2439,7 +2444,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LTX 모델 라이선스](https://ltx.io/model/license) — 공식 LTX 커뮤니티 라이선스 조항.',
           '[LTX-2 모델 페이지](https://ltx.io/model/ltx-2-3) — 공식 아키텍처 및 출시 세부정보.',
           '[HunyuanVideo 1.5 GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) — EU/영국/대한민국 제외 조항을 포함한 공식 저장소 및 LICENSE 파일.',
-          '[VBench-2.0 리더보드](https://github.com/Vchitect/VBench) — 품질 및 물리적 사실성 수치에 사용된 독립 벤치마크.',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) — 2026년 3월 언론 보도(영문).',
+          '[Alibaba Cloud Community: Wan2.7-Video 발표](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) — 2026년 4월(영문).',
+          '[invideo 플랜 한도](https://invideo.io/help/billing/plan-limits/) — 플랜 및 크레딧 공식 한도.',
           '[Invideo 요금제](https://invideo.io/pricing/) — 공식 플랜 및 가격 세부정보.',
           '[Invideo MCP 서버](https://invideo.io/ai/mcp) — 공식 자동화 문서.',
           '[MiniMax H3 GitHub](https://github.com/MiniMax-AI/MiniMax-H3) — 공식 저장소.',
@@ -2480,14 +2487,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-pt.webp',
-    title: 'Invideo vs Vídeo IA Local: Uma Opção Custa $0 Mais o Seu Fim de Semana — a Outra a Partir de $17/mês (plano anual)',
+    title: 'Invideo vs Vídeo IA Local: Um Custa uma GPU Mais o Seu Fim de Semana — o Outro, uma Assinatura na Nuvem',
     seoTitle: 'IA de Vídeo na Nuvem vs Local 2026: invideo vs Wan 2.2 e LTX-2',
     intro:
-      'Existem duas portas de entrada para o vídeo com IA em 2026. A primeira porta é local: modelos de vídeo abertos e gratuitos rodando na sua própria GPU — gerações ilimitadas, com a inferência rodando no seu próprio hardware (downloads de modelos e verificações de atualização ainda usam a rede), sem assinatura, mas você monta todo o fluxo de trabalho sozinho. A segunda porta é a nuvem: o invideo, onde um único prompt gera um vídeo narrado e finalizado — roteiro, imagens de banco, locução, música e legendas incluídos, direto do seu navegador. Nenhuma das portas é "melhor". Este guia traz as letras miúdas de licenciamento que a maioria das comparações ignora, os requisitos reais de hardware e uma ferramenta de decisão que mapeia sua situação para uma recomendação.',
+      'Existem duas portas de entrada para o vídeo com IA em 2026. A primeira porta é local: modelos de vídeo abertos e gratuitos rodando na sua própria GPU — gerações ilimitadas, com a inferência rodando no seu próprio hardware (downloads de modelos e verificações de atualização ainda usam a rede), sem assinatura, mas você monta todo o fluxo de trabalho sozinho. A segunda porta é a nuvem: o invideo, um serviço hospedado que anuncia um caminho assistido por agentes, do roteiro ou da ideia até o vídeo editado, direto do seu navegador. Nenhuma das portas é "melhor". Este guia traz as letras miúdas de licenciamento que a maioria das comparações ignora, os requisitos reais de hardware e uma ferramenta de decisão que mapeia sua situação para uma recomendação.',
     metaDescription:
-      'Modelos de vídeo IA locais (Wan 2.2, LTX-2, HunyuanVideo) são gratuitos se sua GPU aguentar. O invideo na nuvem faz tudo a partir de $17/mês (plano anual).',
+      'Modelos de vídeo IA locais (Wan 2.2, LTX-2, HunyuanVideo) podem ser baixados de graça se sua GPU aguentar. Veja a comparação com a nuvem do invideo.',
     twitterDescription:
-      'IA de vídeo na nuvem vs local em 2026: o invideo reúne tudo a partir de $17/mês (cobrança anual). Wan 2.2, LTX-2 e HunyuanVideo rodam de graça na sua própria GPU — se ela for grande o suficiente. Comparação honesta.',
+      'IA de vídeo na nuvem vs local em 2026: o invideo é um serviço hospedado por assinatura. Wan 2.2, LTX-2 e HunyuanVideo podem ser baixados de graça para a sua GPU, se ela for potente o bastante.',
     audience:
       'Criadores e desenvolvedores decidindo entre a geração de vídeo local gratuita na própria GPU e o pipeline tudo-em-um na nuvem do invideo — cobre requisitos de hardware, letras miúdas de licenciamento e trade-offs de fluxo de trabalho.',
     readTime: '10 min de leitura',
@@ -2515,18 +2522,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**Para a maioria das pessoas com uma GPU de 12GB+, o Wan 2.2 é um modelo de vídeo IA local sólido em 2026** — licenciado sob Apache 2.0, sem limite de receita ou restrição territorial, e com pontuação VBench de ~84,7% no ranking público, totalmente gratuito. **O invideo é a escolha melhor se você não tem essa GPU, ou quer um vídeo narrado e finalizado em vez de um clipe bruto** — seu plano Plus, a partir de $17/mês (cobrado anualmente), reúne mais de 200 modelos (segundo a invideo) (incluindo Kling 3, Veo 3.1 e Seedance 2.5) em um único pipeline pelo navegador, com roteiro, locução, música e legendas incluídos. **O HunyuanVideo 1.5 tem o visual local mais cinematográfico, mas sua licença exclui completamente a União Europeia, o Reino Unido e a Coreia do Sul** — evite-o se você estiver nessas regiões.',
+      '**Para a maioria das pessoas com uma GPU de 12GB+, o Wan 2.2 é um modelo de vídeo IA local sólido em 2026** — licenciado sob Apache 2.0, sem limite de receita ou restrição territorial, e pode ser baixado gratuitamente (hardware e energia continuam custando dinheiro). **O invideo é a escolha melhor se você não tem essa GPU, ou quer um vídeo narrado e finalizado em vez de um clipe bruto** — é um serviço hospedado no navegador cujos planos pagos (Starter, Plus, Max) diferem no acesso a modelos; confira a página de preços atual. **O HunyuanVideo 1.5 é querido na comunidade pelo visual cinematográfico, mas sua licença exclui completamente a União Europeia, o Reino Unido e a Coreia do Sul** — evite-o se você estiver nessas regiões.',
     quickAnswerTop: {
       pt: {
         question: 'Devo gerar vídeo com IA localmente ou usar o pipeline na nuvem do invideo?',
         answer:
-          'Gere localmente se você tem uma GPU de 12GB+, quer gerações ilimitadas por $0 e valoriza privacidade — o Wan 2.2 (Apache 2.0, uso comercial permissivo — confira o model card) é um ponto de partida razoável. Use o invideo se você não tem o hardware adequado, não quer gerenciar a configuração, ou precisa de um vídeo completo e finalizado (roteiro, locução, música, legendas) em vez de um clipe bruto — seu plano Plus começa em $17/mês (cobrado anualmente).',
+          'Gere localmente se você tem uma GPU de 12GB+, quer gerar sem taxa por clipe e valoriza privacidade — o Wan 2.2 (Apache 2.0, uso comercial permissivo — confira o model card) é um ponto de partida razoável. Use o invideo se você não tem o hardware adequado, não quer gerenciar a configuração, ou precisa de um vídeo completo e finalizado (roteiro, locução, música, legendas) em vez de um clipe bruto — é um serviço hospedado por assinatura com um plano gratuito; confira os preços atuais na página de preços.',
         bullets: [
           'Menos de 12 GB de VRAM → o invideo é a escolha prática; modelos locais são inviáveis abaixo desse patamar para qualidade séria.',
           '12 GB de VRAM → LTX-Video 0.9.5, uma opção local prática nesse patamar.',
           '16–24 GB+ de VRAM → Wan 2.2 (melhor qualidade, Apache 2.0 — uso comercial permissivo sem limite de receita nem exclusão territorial; aplicam-se os termos padrão da Apache, como avisos de atribuição, confira o model card) ou LTX-2 (velocidade + áudio sincronizado).',
           'Na União Europeia, Reino Unido ou Coreia do Sul → a licença do HunyuanVideo 1.5 exclui você; use o Wan 2.2 ou o LTX-2 em vez disso.',
-          'Precisa de um vídeo narrado e finalizado, não de um clipe bruto → modelos locais só geram clipes silenciosos (exceto o LTX) de 5–20 segundos; o invideo cuida do pipeline de produção completo, a partir de $17/mês (cobrado anualmente).',
+          'Precisa de um vídeo narrado e finalizado, não de um clipe bruto → modelos locais só geram clipes silenciosos (exceto o LTX) de 5–20 segundos; o invideo oferece um fluxo de trabalho hospedado em torno do clipe; veja na página de preços o que cada plano inclui.',
         ],
         updatedDate: '2026-11-23',
       },
@@ -2556,38 +2563,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**O Wan 2.2 é um modelo de vídeo local de ponta sob a licença permissiva Apache 2.0.** Uso comercial permissivo sem limite de receita nem exclusão territorial (aplicam-se os termos padrão da Apache, como avisos de atribuição; confira o model card) — e pontuação de qualidade VBench de ~84,7% no ranking público.',
-          '**O invideo reúne mais de 200 modelos (segundo a invideo) — incluindo Kling 3, Veo 3.1 e Seedance 2.5 — em um único pipeline pelo navegador**, a partir de $17/mês (plano Plus, cobrado anualmente), com roteiro, locução, música e legendas geridos automaticamente.',
+          '**O Wan 2.2 é um modelo de vídeo local de ponta sob a licença permissiva Apache 2.0.** Uso comercial permissivo sem limite de receita nem exclusão territorial (aplicam-se os termos padrão da Apache, como avisos de atribuição; confira o model card).',
+          '**O invideo é uma alternativa hospedada** com um plano gratuito e os planos pagos Starter, Plus e Max; a página de preços informa que Plus e Max têm acesso a todos os modelos, incluindo todos os Seedance. Os preços variam — confira a página atual.',
           '**A licença do HunyuanVideo 1.5 exclui explicitamente a União Europeia, o Reino Unido e a Coreia do Sul** — tanto para o modelo quanto para seus resultados. Leitores nessas regiões devem usar o Wan 2.2 ou o LTX-2.',
-          '**O LTX-2 é o mais rápido do trio local e o único com áudio sincronizado embutido**, gratuito comercialmente para empresas com receita anual abaixo de $10 milhões.',
+          '**O LTX-2 é posicionado como um modelo focado em velocidade e é o único deste trio local com áudio sincronizado embutido**, gratuito comercialmente para empresas com receita anual abaixo de $10 milhões.',
           '**12GB de VRAM é o piso realista para geração de vídeo local séria.** Abaixo disso, o invideo se torna a opção mais prática.',
-          '**Modelos locais geram clipes brutos e silenciosos de 5 a 20 segundos, não vídeos finalizados.** Roteiro, locução, música, legendas e edição são ferramentas separadas que você mesmo monta — o invideo faz tudo isso em uma única passagem.',
-          '**Nenhum "Wan 2.7" oficial era conhecido na última atualização desta página.** Tenha cuidado com páginas de download que o oferecem — os repositórios oficiais do Wan listam lançamentos até o 2.2.',
+          '**Modelos locais geram clipes brutos e silenciosos de 5 a 20 segundos, não vídeos finalizados.** Roteiro, locução, música, legendas e edição são ferramentas separadas que você mesmo monta — o invideo busca reunir essas etapas em um único fluxo de trabalho hospedado.',
+          '**Na verificação de 27 de novembro de 2026, a página oficial do Wan no GitHub não mostrava nenhum repositório com pesos abertos do "Wan 2.7".** A Alibaba anunciou o [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) em abril de 2026 como modelo disponível na Alibaba Cloud. Tenha cuidado com páginas de terceiros que oferecem "pesos do Wan 2.7".',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Por Que 2026 É um Momento Estranho para Vídeo IA',
         content:
-          'O mercado de vídeo proprietário tem sido caótico, segundo reportagens que a PromptQuorum não verificou de forma independente. O Seedance 2.0 da ByteDance enfrentou ameaças legais de estúdios de Hollywood (foram noticiadas cartas de cessar-e-desistir da Disney, Paramount e Warner Bros.) e teve o lançamento global pausado — segundo relatos permanece acessível na China, mas sua situação jurídica para uso comercial internacional é incerta.\n\nEsse caos é exatamente o que torna as duas portas atraentes. Modelos locais abertos tornam você independente do drama dos fornecedores. E o invideo absorve o drama para você: sua assinatura reúne acesso a mais de 200 modelos (segundo a invideo) — incluindo Kling 3, Veo 3.1 e Seedance 2.5 — para que, quando um modelo desaparecer ou for processado, seu fluxo de trabalho nem perceba.',
+          'O mercado de vídeo proprietário tem sido turbulento. Em março de 2026, o [Engadget noticiou](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html), citando o The Information, que a ByteDance havia pausado o lançamento global do Seedance 2.0 após cartas de cessar-e-desistir da Disney e da Paramount Skydance. A PromptQuorum não verificou essa informação de forma independente, e a disponibilidade mudou desde então: a página de preços do invideo agora lista o Seedance 2.0 e o 2.5.\n\nEsse tipo de reviravolta é o que torna as duas portas atraentes. Modelos abertos que você já baixou continuam rodando independentemente de mudanças de um fornecedor. Um serviço multimodelo como o invideo oferece vários modelos em uma só conta, mas o catálogo pode mudar, então não há garantia de que seu fluxo de trabalho não será afetado.',
       },
       localModels: {
         id: 'local-models',
         title: 'A Porta Local: Três Modelos Gratuitos na Sua Própria GPU',
         content:
-          'Três sistemas de pesos abertos dominam a geração de vídeo local hoje, medidos por downloads, atividade da comunidade e resultados de benchmark. Todos os três rodam pelo ComfyUI, uma interface baseada em nós instalada na sua própria máquina — não uma ferramenta de chat como o Ollama. São modelos de difusão, não LLMs.',
+          'Este guia compara três sistemas de pesos abertos muito usados para geração de vídeo local. Todos os três rodam pelo ComfyUI, uma interface baseada em nós instalada na sua própria máquina — não uma ferramenta de chat como o Ollama. São modelos de difusão, não LLMs.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'O Wan 2.2 é um modelo de vídeo local de uso geral sólido em 2026 — Apache 2.0, alta qualidade, sem restrições territoriais — enquanto o LTX-2 vence em velocidade e áudio sincronizado, e o HunyuanVideo 1.5 oferece o visual mais cinematográfico, mas exclui por licença os usuários da UE/Reino Unido/Coreia do Sul.' },
+          { type: 'one-sentence', text: 'O Wan 2.2 é um modelo de vídeo local de uso geral sólido em 2026 — Apache 2.0, alta qualidade, sem restrições territoriais — enquanto o LTX-2 foca em velocidade e traz áudio sincronizado, e o HunyuanVideo 1.5 é querido na comunidade pelo visual cinematográfico, mas exclui por licença os usuários da UE/Reino Unido/Coreia do Sul.' },
           { type: 'plain-terms', text: 'Se você quer só uma resposta: consiga uma GPU de 12GB+ e rode o Wan 2.2. Tem alta qualidade e a licença permissiva Apache 2.0.' },
         ],
         columns: ['Modelo', 'Licença', 'VRAM', 'Saída', 'Diferencial'],
         rows: [
-          { 'Modelo': 'Wan 2.2 (Alibaba)', 'Licença': 'Apache 2.0 — permissiva, sem limite de receita nem exclusão territorial', 'VRAM': '6–8GB (5B) / 15–25GB (14B)', 'Saída': '480p/720p, clipes de ~5s', 'Diferencial': 'Qualidade VBench ~84,7% (ranking público)' },
-          { 'Modelo': 'LTX-2 (Lightricks)', 'Licença': 'LTX Community License — gratuita abaixo de $10M de receita', 'VRAM': '18–20GB quantizado, 32GB+ full', 'Saída': '480p–1080p, 5–20s, com áudio', 'Diferencial': 'Único modelo com áudio+vídeo sincronizados em uma única passagem' },
-          { 'Modelo': 'HunyuanVideo 1.5 (Tencent)', 'Licença': 'Tencent Community License — exclui UE/Reino Unido/Coreia do Sul', 'VRAM': '14GB mínimo, 24GB confortável', 'Saída': '480p/720p, até 10s', 'Diferencial': 'Favorito da comunidade pela iluminação cinematográfica; mais leve em VRAM' },
+          { 'Modelo': 'Wan 2.2 (Alibaba)', 'Licença': 'Apache 2.0 — permissiva, sem limite de receita nem exclusão territorial', 'VRAM': '6–8GB (5B) / 15–25GB (14B)', 'Saída': '480p/720p, clipes de ~5s', 'Diferencial': 'Variantes 14B e 5B compacta' },
+          { 'Modelo': 'LTX-2 (Lightricks)', 'Licença': 'LTX Community License — gratuita abaixo de $10M de receita', 'VRAM': '18–20GB quantizado, 32GB+ full', 'Saída': '480p–1080p, 5–20s, com áudio', 'Diferencial': 'Áudio+vídeo sincronizados (só um destes três)' },
+          { 'Modelo': 'HunyuanVideo 1.5 (Tencent)', 'Licença': 'Tencent Community License — exclui UE/Reino Unido/Coreia do Sul', 'VRAM': '14GB mínimo, 24GB confortável', 'Saída': '480p/720p, até 10s', 'Diferencial': 'Luz cinematográfica; mínimo 14GB com offloading' },
         ],
         note:
-          '⚠️ Cuidado: nenhum "Wan 2.7" oficial era conhecido na última atualização. Tenha cuidado com páginas que afirmam oferecer "pesos abertos do Wan 2.7". Os repositórios oficiais do Wan listam lançamentos até o 2.2 — baixe apenas dos repositórios oficiais no GitHub ou Hugging Face indicados abaixo.',
+          '⚠️ Cuidado: na verificação de 27 de novembro de 2026, a [página oficial do Wan no GitHub](https://github.com/Wan-Video) não mostrava nenhum repositório com pesos abertos do "Wan 2.7"; a Alibaba anunciou o [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) como disponível na Alibaba Cloud. Tenha cuidado com páginas que oferecem "pesos abertos do Wan 2.7" e baixe apenas de repositórios oficiais no GitHub ou Hugging Face.',
       },
       wan22: {
         id: 'wan-2-2',
@@ -2603,7 +2610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2 (Lightricks) — velocidade mais som sincronizado',
         content:
-          'O LTX-2 é o único modelo aberto deste trio que gera áudio e vídeo sincronizados em uma única passagem — passos, ambiente e efeitos chegam junto com a imagem. Também é o mais rápido dos três e o mais tolerante em relação ao hardware. A arquitetura é um transformer de difusão de 22B; o LTX-2.3 (março de 2026) continua totalmente suportado ao lado do lançamento atual, o LTX-2.5. A licença é a LTX Community License — gratuita para uso comercial se a receita total da sua empresa for inferior a $10 milhões por ano, com licença comercial paga exigida acima desse limite. (Alguns textos de terceiros a chamam incorretamente de Apache 2.0 — a [página oficial de licença](https://ltx.io/model/license) é a única fonte confiável.) As necessidades de hardware ficam em 18–20GB de VRAM quantizado, 32GB+ em precisão completa; em placas de 12GB, o LTX-Video 0.9.5 mais antigo continua sendo a escolha prática.\n\n**Velocidade, na prática:** o LTX-2 é qualitativamente o mais rápido do trio, com pré-visualizações quase em tempo real em placas de consumo de ponta — mas não existe até o momento um número de minutos por clipe verificado de forma independente em uma RTX 4090, então não vamos inventar um. O único número concreto disponível vem do próprio benchmark da Lightricks em "superchips Nvidia" de nível datacenter (não uma GPU de consumo): um clipe de 10 segundos em cerca de 6,8 segundos. Trate isso como um teto do que a arquitetura consegue em hardware sério, não como o que a sua máquina em casa vai ver.',
+          'O LTX-2 é o único modelo aberto deste trio que gera áudio e vídeo sincronizados em uma única passagem — passos, ambiente e efeitos chegam junto com a imagem. Também é posicionado como um modelo rápido, embora não seja o mais leve em VRAM (veja os números abaixo). A arquitetura é um transformer de difusão de 22B; o LTX-2.3 (março de 2026) continua totalmente suportado ao lado do lançamento atual, o LTX-2.5. A licença é a LTX Community License — gratuita para uso comercial se a receita total da sua empresa for inferior a $10 milhões por ano, com licença comercial paga exigida acima desse limite. (Alguns textos de terceiros a chamam incorretamente de Apache 2.0 — a [página oficial de licença](https://ltx.io/model/license) é a única fonte confiável.) As necessidades de hardware ficam em 18–20GB de VRAM quantizado, 32GB+ em precisão completa; em placas de 12GB, o LTX-Video 0.9.5 mais antigo continua sendo a escolha prática.\n\n**Velocidade, na prática:** o LTX-2 costuma ser descrito como rápido — mas não existe até o momento um número de minutos por clipe verificado de forma independente em uma RTX 4090, então não vamos inventar um. O único número concreto disponível vem do próprio benchmark da Lightricks em "superchips Nvidia" de nível datacenter (não uma GPU de consumo): um clipe de 10 segundos em cerca de 6,8 segundos. Trate isso como um teto do que a arquitetura consegue em hardware sério, não como o que a sua máquina em casa vai ver.',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 on GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 on Hugging Face' },
@@ -2613,7 +2620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5 (Tencent) — o visual cinematográfico, com uma pegadinha jurídica',
         content:
-          'O modelo de 8,3B da Tencent, lançado em novembro de 2025, é um favorito da comunidade pela iluminação e textura cinematográficas, e o mais leve dos três em VRAM: 14GB mínimo com offloading, 24GB confortável, a cerca de 75 segundos por clipe de 480p em uma RTX 4090 (número relatado, não verificado pela PromptQuorum). Ele gera nativamente em 480p/720p, até 1080p via super-resolução embutida, clipes de até 10 segundos.\n\n**Velocidade, na prática:** a ~75 segundos por clipe de 480p de 5 segundos, isso é aproximadamente 15 segundos de renderização por segundo de vídeo. Seu comprimento máximo nativo de clipe é 10 segundos, então uma sequência de 20 segundos exige duas gerações no comprimento máximo — extrapolando a taxa por segundo, seriam aproximadamente 5 minutos de geração bruta para 20 segundos de material, antes da costura. Isso é uma extrapolação a partir de um número de 5 segundos relatado e não verificado, não um benchmark medido diretamente para 10 ou 20 segundos.',
+          'O modelo de 8,3B da Tencent, lançado em novembro de 2025, é um favorito da comunidade pela iluminação e textura cinematográficas, com exigência moderada de VRAM: 14GB mínimo com offloading, 24GB confortável, a cerca de 75 segundos por clipe de 480p em uma RTX 4090 (número relatado, não verificado pela PromptQuorum). Ele gera nativamente em 480p/720p, até 1080p via super-resolução embutida, clipes de até 10 segundos.\n\n**Velocidade, na prática:** a ~75 segundos por clipe de 480p de 5 segundos, isso é aproximadamente 15 segundos de renderização por segundo de vídeo. Seu comprimento máximo nativo de clipe é 10 segundos, então uma sequência de 20 segundos exige duas gerações no comprimento máximo — extrapolando a taxa por segundo, seriam aproximadamente 5 minutos de geração bruta para 20 segundos de material, antes da costura. Isso é uma extrapolação a partir de um número de 5 segundos relatado e não verificado, não um benchmark medido diretamente para 10 ou 20 segundos.',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on Hugging Face' },
@@ -2621,7 +2628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Aviso de licença — leia antes de baixar. O HunyuanVideo 1.5 usa a Tencent Hunyuan Community License, não a Apache 2.0. A licença não se aplica na União Europeia, no Reino Unido ou na Coreia do Sul — conforme o texto da licença, usuários nessas regiões não estão autorizados a usar o modelo ou seus resultados. Também limita o uso a 100 milhões de usuários ativos mensais e proíbe treinar modelos concorrentes com seus resultados. Se você está na UE, Reino Unido ou Coreia do Sul, evite este modelo: o Wan 2.2 (Apache 2.0, uso comercial permissivo sem exclusão territorial) cobre o mesmo patamar de qualidade.',
+            text: 'Aviso de licença — leia antes de baixar. O HunyuanVideo 1.5 usa a Tencent Hunyuan Community License, não a Apache 2.0. A licença não se aplica na União Europeia, no Reino Unido ou na Coreia do Sul — conforme o texto da licença, usuários nessas regiões não estão autorizados a usar o modelo ou seus resultados. Também exige uma licença separada da Tencent se seus produtos tiveram mais de 100 milhões de usuários ativos mensais no mês anterior à data de lançamento do modelo, e proíbe usar o modelo ou seus resultados para melhorar outros modelos de IA (exceto o Tencent Hunyuan e seus derivados). Se você está na UE, no Reino Unido ou na Coreia do Sul, evite este modelo e considere o Wan 2.2 (Apache 2.0, uso comercial permissivo sem exclusão territorial).',
           },
         ],
       },
@@ -2629,7 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: 'Um Para Ficar de Olho: MiniMax H3',
         content:
-          'Lançado em 3 de agosto de 2026, o MiniMax H3 é um modelo omni-modal de 33,1B com áudio estéreo nativo, suporte ao ComfyUI desde o primeiro dia, e versões quantizadas que rodam em uma RTX 3060. Duas ressalvas antes de tratá-lo como uma quarta opção: o lançamento local tem teto de 768p (o pipeline completo em 2K permanece hospedado apenas na nuvem), e sua Community License reportedamente carrega suas próprias restrições geográficas e um limite de receita de $20 milhões — confira a ficha oficial do modelo antes de se comprometer. Os primeiros sinais são fortes, mas um lançamento recente e estar pronto para produção são coisas diferentes.',
+          'Lançado em 3 de agosto de 2026, o MiniMax H3 é um modelo omni-modal de 33,1B com áudio estéreo nativo, suporte ao ComfyUI desde o primeiro dia, e versões quantizadas que rodam em uma RTX 3060. Duas ressalvas antes de tratá-lo como uma quarta opção: o lançamento local tem teto de 768p (o pipeline completo em 2K permanece hospedado apenas na nuvem), e sua [Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) exclui do território licenciado a UE, o Reino Unido, a Coreia do Sul e os EUA e exige autorização separada acima de $20 milhões de receita anual — leia antes de se comprometer (isto não é aconselhamento jurídico). Os primeiros sinais são fortes, mas um lançamento recente e estar pronto para produção são coisas diferentes.',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 on GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 on Hugging Face' },
@@ -2650,7 +2657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua GPU': '24GB+ VRAM', 'O que você consegue rodar': 'Tudo: Wan 2.2 14B em alta qualidade, LTX-2 quantizado' },
         ],
         note:
-          'Custo aproximado de GPU, segundo o [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15; dados de listagens do eBay EUA, sem ser cotação nem oferta): as listagens vendidas de RTX 3090 usadas ficam em cerca de $1.400–1.550 e as de RTX 4090 usadas em $2.575–3.010 (mediana $2.860). Os preços no Brasil podem variar bastante devido a impostos de importação — verifique o preço atual antes de comprar em vez de confiar nesses números depois de alguns meses.',
+          'Custo aproximado de GPU, segundo o [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15; dados de listagens do eBay EUA, sem ser cotação nem oferta): as listagens vendidas de RTX 3090 usadas ficam em cerca de $1.400–1.550 e as de RTX 4090 usadas em $2.575–3.010 (mediana $2.860). Desde então, o monitor elevou o valor da RTX 3090 usada para $1.500–1.725 (mediana $1.650; 225 vendas, 13–23 de novembro de 2026). Os preços no Brasil podem variar bastante devido a impostos de importação — verifique o preço atual antes de comprar em vez de confiar nesses números depois de alguns meses.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -2670,19 +2677,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'O invideo é um exemplo da porta da nuvem — não o único, e vale a pena entender como ele difere dos outros antes de assumir que "nuvem" significa uma coisa só. Segundo as descrições públicas desses serviços (a PromptQuorum não testou nenhum dos três), o Runway se integra diretamente a editores profissionais (Premiere Pro, Final Cut, DaVinci Resolve), voltado para fluxos híbridos de IA mais editor em vez de um vídeo finalizado e montado. Segundo as mesmas descrições, o Dream Machine, da Luma AI, é especializado em saída nativa HDR de 16 bits para pipelines de composição de VFX (After Effects, Nuke) — um público totalmente diferente. O Pika permanece leve: geração de clipes brutos rápida sem roteiro embutido, locução ou montagem de imagens de banco, então você ainda precisa de ferramentas separadas para tudo ao redor do clipe — o mesmo problema de pipeline DIY de rodar um modelo local, só que sem a exigência de GPU. O que diferencia o invideo desses três é que ele não é primariamente uma ferramenta de geração bruta: é um montador de roteiro-para-vídeo-finalizado que também te dá acesso a modelos de geração bruta (Kling, Veo, Seedance) quando você precisa deles.\n\nO invideo não é um modelo de vídeo, mas um pipeline de produção completo oferecido como serviço. Você pode digitar um tema ou colar um roteiro no [invideo Agent](https://invideo.io/), que planeja e cria o vídeo reunindo roteiro, cenas, visuais gerados ou de banco, locução, música, legendas e estilização de marca em um único fluxo de trabalho. Ele roda no navegador — sua GPU é irrelevante.\n\nPara quem quer começar a fazer vídeos hoje em vez de pesquisar GPUs e formatos de quantização, o invideo é a escolha prática: nenhum requisito de hardware local, nenhuma instalação do ComfyUI ou solução de problemas de CUDA, e um único fluxo de trabalho que já inclui o roteiro, a locução, a música e as legendas que a maioria das pessoas realmente precisa. É especialmente adequado para criadores que se importam mais com o vídeo finalizado do que em controlar o modelo de geração subjacente — e como existe um plano gratuito, você pode descobrir se ele se encaixa antes de gastar qualquer coisa.\n\nTrês coisas se destacam nesta comparação:\n\n- **O caos dos modelos, absorvido.** Todos os planos pagos incluem acesso a mais de 200 modelos (segundo a invideo) — Seedance 2.5, Veo 3.1 e Kling 3 entre eles. Quando um modelo é processado ou desativado, o invideo o substitui; seu fluxo de trabalho continua.\n- **A automação vem embutida, não parafusada depois.** Existe um servidor MCP oficial, então todo o pipeline prompt → roteiro → material → legendas pode ser acionado programaticamente — o tipo de arcabouço que você teria que montar sozinho ao redor do ComfyUI.\n- **O plano gratuito é um test-drive de verdade.** Com marca d\'água e limite de minutos, mas suficiente para avaliar a qualidade da saída antes de pagar.\n\n**Velocidade, na prática — e a pegadinha honesta:** uma única geração bruta é rápida, tipicamente minutos. Mas o próprio FAQ do invideo coloca a produção completa de ponta a ponta de um curta em 2 a 5 dias, não minutos — porque escolher e montar entre múltiplas opções geradas, não a geração em si, é o que consome tempo. Trate "2 dias como piso realista" para um filme finalizado de 1 a 3 minutos como o ponto de comparação justo contra os 16–36 minutos de geração bruta da porta local para 20 segundos de material bruto: o invideo troca seu tempo de configuração e edição pelo próprio tempo de produção, ele não elimina tempo completamente.\n\nPlanos atuais, a partir de $17/mês (plano Plus, cobrado anualmente; confira a [página de preços do invideo](https://invideo.io/pricing/) para números atualizados):',
+          'O invideo é um exemplo da porta da nuvem — não o único, e vale a pena entender como ele difere dos outros antes de assumir que "nuvem" significa uma coisa só. Segundo as descrições públicas desses serviços (a PromptQuorum não testou nenhum dos três), o Runway se integra diretamente a editores profissionais (Premiere Pro, Final Cut, DaVinci Resolve), voltado para fluxos híbridos de IA mais editor em vez de um vídeo finalizado e montado. Segundo as mesmas descrições, o Dream Machine, da Luma AI, é especializado em saída nativa HDR de 16 bits para pipelines de composição de VFX (After Effects, Nuke) — um público totalmente diferente. Segundo as mesmas descrições, o Pika se concentra na geração rápida de clipes brutos; a PromptQuorum não verificou se ele oferece roteiro, locução ou montagem de imagens de banco, então confira antes de contar com ele para o trabalho ao redor do clipe. Na descrição do próprio serviço, o invideo combina storyboard, escrita de roteiro e edição em linha do tempo com acesso a modelos de geração como Kling, Veo e Seedance.\n\nO invideo não é um único modelo de vídeo, mas um serviço hospedado. Na verificação de 27 de novembro de 2026, [a página inicial](https://invideo.io/) apresentava um editor de vídeo com agentes, com storyboard a partir de um roteiro ou ideia, escrita de roteiro e linha do tempo multipista; o site também lista ferramentas de voz e música com IA. A PromptQuorum não testou o serviço, então confira se a locução e as legendas funcionam como você precisa. Ele roda no navegador — sua GPU é irrelevante.\n\nPara quem quer começar a fazer vídeos hoje em vez de pesquisar GPUs e formatos de quantização, o invideo é a escolha prática: nenhum requisito de hardware local, nenhuma instalação do ComfyUI ou solução de problemas de CUDA, e um ambiente hospedado para as etapas ao redor do clipe. É especialmente adequado para criadores que se importam mais com o vídeo finalizado do que em controlar o modelo de geração subjacente — e como existe um plano gratuito, você pode descobrir se ele se encaixa antes de gastar qualquer coisa.\n\nTrês coisas se destacam nesta comparação:\n\n- **Vários modelos, uma conta.** A página de preços do invideo informa que Plus e Max têm acesso a todos os modelos, incluindo todos os Seedance; o Starter cobre modelos selecionados, sem o Seedance 2.5. O catálogo pode mudar.\n- **O acesso para agentes vem embutido.** O invideo oferece um [servidor MCP](https://invideo.io/ai/mcp) que permite que agentes de IA trabalhem no editor de linha do tempo.\n- **Existe um plano gratuito.** A [página de limites dos planos](https://invideo.io/help/billing/plan-limits/) do invideo descreve um limite semanal; confira as regras de exportação e marca d\'água antes de contar com ele.\n\n**Velocidade, na prática — e a pegadinha honesta:** segundo o invideo, a geração bruta é rápida. Mas o próprio FAQ do invideo coloca a produção completa de ponta a ponta de um curta em 2 a 5 dias, não minutos — porque escolher e montar entre múltiplas opções geradas, não a geração em si, é o que consome tempo. Trate "2 dias como piso realista" para um filme finalizado de 1 a 3 minutos como o ponto de comparação justo contra os 16–36 minutos de geração bruta da porta local para 20 segundos de material bruto: o invideo troca seu tempo de configuração e edição pelo próprio tempo de produção, ele não elimina tempo completamente.\n\nPlanos listados pelo invideo (para preços, veja a [página de preços do invideo](https://invideo.io/pricing/)):',
         blockquote:
           '**Quer criar vídeos com IA sem a configuração local?** Se você não tem uma GPU potente — ou simplesmente não quer passar horas instalando e configurando ferramentas de vídeo IA locais — vale a pena experimentar o invideo. [Experimente a versão gratuita do invideo →](https://invideo.io/pricing/)',
-        columns: ['Plano', 'Preço', 'Créditos/mês', 'Melhor para'],
+        columns: ['Plano', 'Créditos por assento/mês', 'Acesso a modelos'],
         rows: [
-          { 'Plano': 'Free', 'Preço': '$0', 'Créditos/mês': 'limitado', 'Melhor para': 'Testar as águas (com marca d\'água)' },
-          { 'Plano': 'Plus', 'Preço': '$17/mês ($200/ano)', 'Créditos/mês': '75', 'Melhor para': 'Criadores regulares — todos os modelos de IA, 4 avatares e clones de voz, 100 ativos do iStock, exportações ilimitadas sem marca d\'água' },
-          { 'Plano': 'Max', 'Preço': '$85/mês ($1.000/ano)', 'Créditos/mês': '390', 'Melhor para': 'Canais de alto volume, 16 avatares' },
-          { 'Plano': 'Generative', 'Preço': '$170/mês ($2.000/ano)', 'Créditos/mês': '800+', 'Melhor para': 'Volume de curta-metragem / produção' },
-          { 'Plano': 'Elite', 'Preço': '$900/mês ($10.800/ano)', 'Créditos/mês': '4.250+', 'Melhor para': 'Escala episódica e comercial' },
+          { 'Plano': 'Free', 'Créditos por assento/mês': 'Limite semanal', 'Acesso a modelos': 'Veja a página de preços' },
+          { 'Plano': 'Starter', 'Créditos por assento/mês': '400', 'Acesso a modelos': 'Modelos selecionados; sem Seedance 2.5' },
+          { 'Plano': 'Plus', 'Créditos por assento/mês': '2.000', 'Acesso a modelos': 'Todos os modelos, segundo o invideo' },
+          { 'Plano': 'Max', 'Créditos por assento/mês': 'A partir de 5.000', 'Acesso a modelos': 'Todos os modelos, segundo o invideo' },
         ],
         note:
-          'Todos os preços acima são taxas de cobrança anual divulgadas pelo invideo — pagar mês a mês custa mais (o próprio FAQ do invideo cita Plus $20, Max $100, Generative $200, Elite $1.000 por mês). Confira a página de preços ao vivo do invideo antes de confiar em qualquer número aqui; planos e preços mudam. Os valores $/mês são os equivalentes arredondados dos planos anuais do invideo; os totais anuais são os listados pelo invideo na época da última atualização (veja a data de última atualização).',
+          'Nomes dos planos, créditos e acesso a modelos conforme as páginas de [preços](https://invideo.io/pricing/) e de [limites dos planos](https://invideo.io/help/billing/plan-limits/) do invideo, verificadas em 27 de novembro de 2026. Nenhum preço é citado aqui: vista da Europa, a página exibia uma promoção por tempo limitado, e os planos diferem dos que este guia listava antes. Confira a página ao vivo antes de confiar em qualquer detalhe.',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Experimente a versão gratuita do invideo →' },
         ],
@@ -2747,15 +2753,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual é a pegadinha real do vídeo IA local "gratuito"?',
-            a: 'O custo do hardware (uma GPU capaz), o tempo de configuração (ComfyUI e suas dependências), e o pipeline DIY necessário ao redor dos clipes de saída bruta. Os pesos do modelo em si genuinamente custam $0 por geração, para sempre.',
+            a: 'O custo do hardware (uma GPU capaz), o tempo de configuração (ComfyUI e suas dependências), e o pipeline DIY necessário ao redor dos clipes de saída bruta. Os pesos do modelo não têm taxa por geração; hardware e energia continuam custando dinheiro.',
           },
           {
             q: 'Existe um Wan 2.7 ou um modelo Wan mais novo?',
-            a: 'Não na última atualização desta página: os repositórios oficiais do Wan listam lançamentos até o 2.2. Tenha cuidado com qualquer site oferecendo "pesos do Wan 2.7" — baixe apenas dos repositórios oficiais no GitHub ou Hugging Face.',
+            a: 'Na verificação de 27 de novembro de 2026, a página oficial do Wan no GitHub não mostrava nenhum repositório mais novo com pesos abertos. A Alibaba anunciou o [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) em abril de 2026 como disponível na Alibaba Cloud. Tenha cuidado com qualquer outro site que ofereça "pesos do Wan 2.7" — baixe apenas dos repositórios oficiais no GitHub ou Hugging Face.',
           },
           {
             q: 'Sou totalmente iniciante. Por onde devo começar?',
-            a: 'Pelo plano gratuito do invideo — você terá um vídeo narrado e finalizado em minutos e poderá julgar se o vídeo IA atende aos seus objetivos. Se depois você comprar uma GPU capaz e quiser controle total e privacidade, a porta local continua aberta.',
+            a: 'O plano gratuito do invideo permite testar o fluxo de trabalho na nuvem sem comprar hardware e avaliar se o vídeo com IA atende aos seus objetivos; ele tem limites. Se depois você comprar uma GPU capaz e quiser controle total e privacidade, a porta local continua aberta.',
           },
           {
             q: 'Qual a diferença de rodar esses modelos locais no Mac vs Windows?',
@@ -2779,7 +2785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'O Veredito',
         content:
-          'Vá pelo caminho local se você tem (ou vai comprar) uma GPU de 12GB+, gosta de construir suas próprias ferramentas, e valoriza privacidade e gerações ilimitadas por $0 acima da conveniência. O Wan 2.2 é uma base sólida — alta qualidade, Apache 2.0 — com o LTX-2 como o especialista em velocidade e som.\n\nVá pela nuvem se você não tem o hardware, não quer a configuração, ou precisa de vídeos finalizados em vez de clipes brutos. Para a maioria das pessoas que simplesmente quer fazer vídeos gerados por IA, o caminho da nuvem é o ponto de partida mais fácil: se você ainda não tem o hardware e o interesse técnico que a geração local exige, o invideo remove a maior parte dessa complexidade em um único prompt, com todos os modelos e ativos reunidos e a automação incluída — a partir de $0 para testar e $17/mês (cobrado anualmente) para remover a marca d\'água. A forma mais simples de descobrir se ele se encaixa no seu fluxo de trabalho é experimentar a versão gratuita.\n\nAs duas portas levam ao vídeo com IA. A pergunta nunca foi qual tecnologia é melhor — é qual fluxo de trabalho se encaixa na sua máquina, na sua paciência e nos seus objetivos.',
+          'Vá pelo caminho local se você tem (ou vai comprar) uma GPU de 12GB+, gosta de construir suas próprias ferramentas, e valoriza privacidade e gerar sem taxa por clipe acima da conveniência. O Wan 2.2 é uma base sólida — alta qualidade, Apache 2.0 — com o LTX-2 como o especialista em velocidade e som.\n\nVá pela nuvem se você não tem o hardware, não quer a configuração, ou precisa de vídeos finalizados em vez de clipes brutos. Para a maioria das pessoas que simplesmente quer fazer vídeos gerados por IA, o caminho da nuvem é o ponto de partida mais fácil: se você ainda não tem o hardware e o interesse técnico que a geração local exige, um serviço hospedado como o invideo poupa você da configuração local. Há um plano gratuito para testar; os planos pagos e seus limites estão na página de preços do invideo. A forma mais simples de descobrir se ele se encaixa no seu fluxo de trabalho é experimentar a versão gratuita.\n\nAs duas portas levam ao vídeo com IA. A pergunta nunca foi qual tecnologia é melhor — é qual fluxo de trabalho se encaixa na sua máquina, na sua paciência e nos seus objetivos.',
       },
       sources: {
         id: 'sources',
@@ -2790,7 +2796,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Licença do modelo LTX](https://ltx.io/model/license) — termos oficiais da LTX Community License.',
           '[Página do modelo LTX-2](https://ltx.io/model/ltx-2-3) — arquitetura oficial e detalhes de lançamento.',
           '[HunyuanVideo 1.5 no GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) — repositório oficial e arquivo LICENSE, incluindo a exclusão de UE/Reino Unido/Coreia do Sul.',
-          '[Ranking VBench-2.0](https://github.com/Vchitect/VBench) — benchmark independente usado para os números de qualidade e fidelidade física.',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) — reportagem de março de 2026 (em inglês).',
+          '[Alibaba Cloud Community: anúncio do Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) — abril de 2026 (em inglês).',
+          '[Limites dos planos do invideo](https://invideo.io/help/billing/plan-limits/) — limites oficiais de planos e créditos.',
           '[Preços do invideo](https://invideo.io/pricing/) — detalhes oficiais de planos e preços.',
           '[Servidor MCP do invideo](https://invideo.io/ai/mcp) — documentação oficial de automação.',
           '[MiniMax H3 no GitHub](https://github.com/MiniMax-AI/MiniMax-H3) — repositório oficial.',
@@ -2831,14 +2839,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-video-generation-vs-cloud-hero-zh.webp',
-    title: 'Invideo 与本地 AI 视频对比：一个 0 美元加你的周末，另一个每月 17 美元起（按年付费）',
+    title: 'Invideo 与本地 AI 视频对比：一个要付出 GPU 加你的周末，另一个是云端订阅',
     seoTitle: '云端 vs 本地 AI 视频 2026：invideo 对比 Wan 2.2 与 LTX-2',
     intro:
-      '2026 年,通往 AI 视频有两扇门。第一扇是本地:免费、开放的视频模型运行在你自己的 GPU 上——无限次生成、推理在你自己的硬件上运行(模型下载和更新检查仍会使用网络)、无需订阅,但整个工作流程要你自己搭建。第二扇是云端:invideo,输入一个提示词,输出的就是一段带旁白的完整视频——脚本、素材片段、配音、音乐和字幕全部包含在内,直接在浏览器里完成。没有哪扇门"更好"。本指南提供大多数对比文章都会跳过的许可证细则、真实的硬件要求,以及一个能把你的实际情况映射到具体建议的决策工具。',
+      '2026 年,通往 AI 视频有两扇门。第一扇是本地:免费、开放的视频模型运行在你自己的 GPU 上——无限次生成、推理在你自己的硬件上运行(模型下载和更新检查仍会使用网络)、无需订阅,但整个工作流程要你自己搭建。第二扇是云端:invideo,一项托管服务,主打由 AI 代理协助、从脚本或创意到剪辑成片的流程,直接在浏览器里使用。没有哪扇门"更好"。本指南提供大多数对比文章都会跳过的许可证细则、真实的硬件要求,以及一个能把你的实际情况映射到具体建议的决策工具。',
     metaDescription:
-      '本地 AI 视频模型(Wan 2.2、LTX-2、HunyuanVideo)只要 GPU 够用就免费。Invideo 云端方案每月 17 美元起(按年付费)包办一切。对比 VRAM、许可证。',
+      '本地 AI 视频模型(Wan 2.2、LTX-2、HunyuanVideo)只要 GPU 够用就能免费下载。本文从显存、许可证和工作流角度对比它们与 invideo 云端服务。',
     twitterDescription:
-      '2026 年云端 vs 本地 AI 视频对比:invideo 每月 17 美元起(按年付费)打包一切。Wan 2.2、LTX-2、HunyuanVideo 在自己的 GPU 上免费运行——前提是显卡够强。诚实对比。',
+      '2026 年云端 vs 本地 AI 视频对比:invideo 是订阅制托管服务。Wan 2.2、LTX-2、HunyuanVideo 可免费下载到自己的 GPU 上运行——前提是显卡够强。',
     audience:
       '面向在自己 GPU 上免费本地生成视频、与 invideo 一体化云端流水线之间做选择的创作者和开发者——涵盖硬件要求、许可证细则和工作流权衡。',
     readTime: '阅读约10分钟',
@@ -2866,18 +2874,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**对大多数拥有 12GB 以上显存 GPU 的用户来说,Wan 2.2 是 2026 年表现出色的本地 AI 视频模型**——采用 Apache 2.0 许可,无营收上限、无地区限制,在公开榜单上的 VBench 分数约为 84.7%,完全免费。**如果你没有这样的 GPU,或者想要一段成品旁白视频而不是一段原始片段,invideo 是更好的选择**——其 Plus 套餐起价为每月 17 美元(按年计费),将 200 多个模型(据 invideo)(包括 Kling 3、Veo 3.1 和 Seedance 2.5)打包进一个基于浏览器的流水线,脚本、配音、音乐和字幕全部包含在内。**HunyuanVideo 1.5 拥有最具电影感的本地画面效果,但其许可证完全排除了欧盟、英国和韩国**——如果你身处这些地区,请跳过这个模型。',
+      '**对大多数拥有 12GB 以上显存 GPU 的用户来说,Wan 2.2 是 2026 年表现出色的本地 AI 视频模型**——采用 Apache 2.0 许可,无营收上限、无地区限制,可免费下载(硬件和电费仍需自付)。**如果你没有这样的 GPU,或者想要一段成品旁白视频而不是一段原始片段,invideo 是更好的选择**——它是一项基于浏览器的托管服务,付费套餐(Starter、Plus、Max)可用的模型不同;请查看其最新定价页面。**HunyuanVideo 1.5 的电影感画面受社区喜爱,但其许可证完全排除了欧盟、英国和韩国**——如果你身处这些地区,请跳过这个模型。',
     quickAnswerTop: {
       zh: {
         question: '我应该本地生成 AI 视频,还是使用 invideo 的云端流水线?',
         answer:
-          '如果你拥有 12GB 以上显存的 GPU,想要无限次 0 美元生成,并且看重隐私,就本地生成——Wan 2.2(Apache 2.0,商业用途宽松——请查看模型卡)是合理的起点。如果你没有合适的硬件、不想折腾配置,或者需要一段完整的成品视频(脚本、配音、音乐、字幕)而不是一段原始片段,就用 invideo——其 Plus 套餐起价为每月 17 美元(按年计费)。',
+          '如果你拥有 12GB 以上显存的 GPU,想要不按片段收费地生成,并且看重隐私,就本地生成——Wan 2.2(Apache 2.0,商业用途宽松——请查看模型卡)是合理的起点。如果你没有合适的硬件、不想折腾配置,或者需要一段完整的成品视频(脚本、配音、音乐、字幕)而不是一段原始片段,就用 invideo——它是订阅制托管服务,设有免费套餐;当前价格请查看其定价页面。',
         bullets: [
           '显存低于 12 GB → invideo 是更实际的选择;这个档位以下本地模型无法产出可用质量。',
           '12 GB 显存 → LTX-Video 0.9.5,这个档位实用的本地选择。',
           '16–24 GB 以上显存 → Wan 2.2(顶级质量、Apache 2.0——商业用途宽松,无营收门槛、无地区排除;适用 Apache 的标准条款,如署名声明,请查看模型卡)或 LTX-2(速度快 + 同步音频)。',
           '身处欧盟、英国或韩国 → HunyuanVideo 1.5 的许可证将你排除在外;改用 Wan 2.2 或 LTX-2。',
-          '需要一段带旁白的成品视频,而不是原始片段 → 本地模型只能生成 5–20 秒的无声片段(LTX 除外);invideo 处理完整制作流程,起价为每月 17 美元(按年计费)。',
+          '需要一段带旁白的成品视频,而不是原始片段 → 本地模型只能生成 5–20 秒的无声片段(LTX 除外);invideo 提供围绕片段后续工作的托管工作流;各套餐包含的内容请查看其定价页面。',
         ],
         updatedDate: '2026-11-23',
       },
@@ -2907,38 +2915,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 是采用宽松 Apache 2.0 许可的顶级本地视频模型。** 商业用途宽松,无营收门槛、无地区排除(适用 Apache 的标准条款,如署名声明;请查看模型卡)——在公开榜单上的 VBench 质量分数约为 84.7%。',
-          '**Invideo 将 200 多个模型(据 invideo)——包括 Kling 3、Veo 3.1 和 Seedance 2.5——打包进一个基于浏览器的流水线**,起价为每月 17 美元(Plus 套餐,按年计费),脚本、配音、音乐和字幕全部自动处理。',
+          '**Wan 2.2 是采用宽松 Apache 2.0 许可的顶级本地视频模型。** 商业用途宽松,无营收门槛、无地区排除(适用 Apache 的标准条款,如署名声明;请查看模型卡)。',
+          '**Invideo 是一个托管型替代方案**,设有免费套餐以及付费的 Starter、Plus 和 Max 套餐;其定价页面称 Plus 和 Max 可使用全部模型,包括所有 Seedance 模型。价格不一——请查看实时页面。',
           '**HunyuanVideo 1.5 的许可证明确排除欧盟、英国和韩国**——模型本身和其输出内容均受限。这些地区的读者应改用 Wan 2.2 或 LTX-2。',
-          '**LTX-2 是三者中速度最快、唯一内置同步音频的模型**,年营收低于 1000 万美元的公司可免费商用。',
+          '**LTX-2 定位为侧重速度的模型,也是这三个本地模型中唯一内置同步音频的**,年营收低于 1000 万美元的公司可免费商用。',
           '**12GB 显存是认真进行本地视频生成的现实底线。** 低于这个数字,invideo 是更实际的选择。',
-          '**本地模型生成的是 5–20 秒的原始无声片段,而不是成品视频。** 脚本、配音、音乐、字幕和剪辑都是需要你自己组装的独立工具——invideo 一次性完成所有这些工作。',
-          '**本页最近更新时未发现官方的"Wan 2.7"。** 请谨慎对待提供该版本下载的页面——Wan 官方仓库列出的发布到 2.2 为止。',
+          '**本地模型生成的是 5–20 秒的原始无声片段,而不是成品视频。** 脚本、配音、音乐、字幕和剪辑都是需要你自己组装的独立工具——invideo 则致力于把这些步骤整合进一个托管工作流。',
+          '**在 2026 年 11 月 27 日核查时,Wan 官方 GitHub 页面上没有"Wan 2.7"开放权重仓库。** 阿里巴巴于 2026 年 4 月发布了 [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009),称其可在阿里云上使用。请谨慎对待提供"Wan 2.7 权重"的第三方页面。',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: '为什么 2026 年是 AI 视频领域的一个奇怪时刻',
         content:
-          '据媒体报道,专有视频市场一直处于混乱状态(PromptQuorum 未独立核实)。字节跳动的 Seedance 2.0 面临好莱坞制片公司的法律威胁(据报道收到迪士尼、派拉蒙和华纳兄弟发出的停止侵权函)并暂停了全球推广——据称该模型在中国仍可使用,但其用于国际商业用途的法律地位并不明确。\n\n这种混乱正是两扇门都吸引人的原因。开放的本地模型让你不受供应商风波的影响。而 invideo 替你承担了这种混乱:它的订阅打包了 200 多个模型(据 invideo)的访问权限——包括 Kling 3、Veo 3.1 和 Seedance 2.5——这样当某个模型消失或被起诉时,你的工作流程不会受到影响。',
+          '专有视频市场一直动荡不安。2026 年 3 月,[Engadget 援引](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html) The Information 报道称,在收到迪士尼和 Paramount Skydance 的停止侵权函后,字节跳动暂停了 Seedance 2.0 的全球推广。PromptQuorum 未独立核实该报道,而且此后可用情况已发生变化:invideo 的定价页面现已列出 Seedance 2.0 和 2.5。\n\n正是这类变动让两扇门都有吸引力。已经下载的开放模型不受供应商变化影响,可以继续运行。像 invideo 这样的多模型服务在一个账户内提供多个模型,但其模型阵容可能调整,因此无法保证你的工作流程不受影响。',
       },
       localModels: {
         id: 'local-models',
         title: '本地这扇门:你自己 GPU 上的三个免费模型',
         content:
-          '目前有三个开放权重系统主导着本地视频生成领域,以下载量、社区活跃度和基准测试结果衡量。三者都通过 ComfyUI 运行,这是一个安装在你自己机器上的基于节点的界面——不是像 Ollama 那样的聊天式工具。这些是扩散模型,不是大语言模型。',
+          '本指南对比三个在本地视频生成中广泛使用的开放权重系统。三者都通过 ComfyUI 运行,这是一个安装在你自己机器上的基于节点的界面——不是像 Ollama 那样的聊天式工具。这些是扩散模型,不是大语言模型。',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Wan 2.2 是 2026 年综合表现出色的本地视频模型——Apache 2.0、质量高、无地区限制——而 LTX-2 在速度和同步音频上胜出,HunyuanVideo 1.5 画面最具电影感,但许可证将欧盟/英国/韩国用户排除在外。' },
+          { type: 'one-sentence', text: 'Wan 2.2 是 2026 年综合表现出色的本地视频模型——Apache 2.0、质量高、无地区限制——而 LTX-2 侧重速度并支持同步音频,HunyuanVideo 1.5 的电影感画面受社区喜爱,但许可证将欧盟/英国/韩国用户排除在外。' },
           { type: 'plain-terms', text: '如果你只想要一个答案:准备一块 12GB 以上显存的 GPU,运行 Wan 2.2。它质量高,采用宽松的 Apache 2.0 许可证。' },
         ],
         columns: ['模型', '许可证', '显存', '输出', '突出特点'],
         rows: [
-          { '模型': 'Wan 2.2(阿里巴巴)', '许可证': 'Apache 2.0——宽松,无营收门槛、无地区排除', '显存': '6–8GB(5B)/ 15–25GB(14B)', '输出': '480p/720p,约 5 秒片段', '突出特点': 'VBench 质量分数约 84.7%(公开榜单)' },
-          { '模型': 'LTX-2(Lightricks)', '许可证': 'LTX 社区许可证——年营收低于 1000 万美元可免费使用', '显存': '量化版 18–20GB,完整精度 32GB 以上', '输出': '480p–1080p,5–20 秒,带音频', '突出特点': '唯一能在单次生成中同步输出音视频的模型' },
-          { '模型': 'HunyuanVideo 1.5(腾讯)', '许可证': '腾讯社区许可证——排除欧盟/英国/韩国', '显存': '最低 14GB,24GB 更舒适', '输出': '480p/720p,最长 10 秒', '突出特点': '社区偏爱的电影感光影效果;显存占用最轻' },
+          { '模型': 'Wan 2.2(阿里巴巴)', '许可证': 'Apache 2.0——宽松,无营收门槛、无地区排除', '显存': '6–8GB(5B)/ 15–25GB(14B)', '输出': '480p/720p,约 5 秒片段', '突出特点': '提供 14B 和轻量 5B 版本' },
+          { '模型': 'LTX-2(Lightricks)', '许可证': 'LTX 社区许可证——年营收低于 1000 万美元可免费使用', '显存': '量化版 18–20GB,完整精度 32GB 以上', '输出': '480p–1080p,5–20 秒,带音频', '突出特点': '音视频同步生成(三者中仅此一个)' },
+          { '模型': 'HunyuanVideo 1.5(腾讯)', '许可证': '腾讯社区许可证——排除欧盟/英国/韩国', '显存': '最低 14GB,24GB 更舒适', '输出': '480p/720p,最长 10 秒', '突出特点': '电影感光影;卸载模式下最低 14GB' },
         ],
         note:
-          '⚠️ 提醒:最近更新时未发现官方的"Wan 2.7"。请谨慎对待声称提供"Wan 2.7 开放权重"下载的页面。Wan 官方仓库列出的发布到 2.2 为止——只从下方链接的官方 GitHub 或 Hugging Face 仓库下载。',
+          '⚠️ 提醒:在 2026 年 11 月 27 日核查时,[Wan 官方 GitHub 页面](https://github.com/Wan-Video)上没有"Wan 2.7"开放权重仓库;阿里巴巴已发布 [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009),称其可在阿里云上使用。请谨慎对待声称提供"Wan 2.7 开放权重"的页面,只从官方 GitHub 或 Hugging Face 仓库下载。',
       },
       wan22: {
         id: 'wan-2-2',
@@ -2954,7 +2962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ltx-2',
         title: 'LTX-2(Lightricks)——速度加同步声音',
         content:
-          'LTX-2 是这三者中唯一能在单次生成中同步输出音视频的开放模型——脚步声、环境音和特效都随画面一起生成。它也是三者中最快、对硬件最宽容的。其架构是一个 22B 扩散 Transformer;LTX-2.3(2026 年 3 月发布)与当前的 LTX-2.5 版本并行获得完整支持。许可证是 LTX 社区许可证——如果你公司的总营收低于每年 1000 万美元,可免费商用,超过该门槛需要付费商业许可证。(部分第三方文章错误地称其为 Apache 2.0——[官方许可证页面](https://ltx.io/model/license)才是唯一可靠的来源。)硬件需求为量化版 18–20GB 显存,完整精度 32GB 以上;在 12GB 显卡上,更老的 LTX-Video 0.9.5 仍是实际可行的选择。\n\n**具体速度:** LTX-2 在定性层面是三者中最快的,在高端消费级显卡上能实现接近实时的预览——但截至本文撰写时,并不存在经独立验证的 RTX 4090 每片段耗时分钟数,因此我们不会编造一个。目前唯一确切的数据来自 Lightricks 自己在数据中心级"Nvidia superchips"(而非消费级 GPU)上的基准测试:一个 10 秒片段大约耗时 6.8 秒。请将其视为这套架构在专业级硬件上能达到的上限,而非你家用设备实际会看到的速度。',
+          'LTX-2 是这三者中唯一能在单次生成中同步输出音视频的开放模型——脚步声、环境音和特效都随画面一起生成。它也定位为速度较快的模型,但显存占用并非最低(见下文数据)。其架构是一个 22B 扩散 Transformer;LTX-2.3(2026 年 3 月发布)与当前的 LTX-2.5 版本并行获得完整支持。许可证是 LTX 社区许可证——如果你公司的总营收低于每年 1000 万美元,可免费商用,超过该门槛需要付费商业许可证。(部分第三方文章错误地称其为 Apache 2.0——[官方许可证页面](https://ltx.io/model/license)才是唯一可靠的来源。)硬件需求为量化版 18–20GB 显存,完整精度 32GB 以上;在 12GB 显卡上,更老的 LTX-Video 0.9.5 仍是实际可行的选择。\n\n**具体速度:** LTX-2 常被认为速度快——但截至本文撰写时,并不存在经独立验证的 RTX 4090 每片段耗时分钟数,因此我们不会编造一个。目前唯一确切的数据来自 Lightricks 自己在数据中心级"Nvidia superchips"(而非消费级 GPU)上的基准测试:一个 10 秒片段大约耗时 6.8 秒。请将其视为这套架构在专业级硬件上能达到的上限,而非你家用设备实际会看到的速度。',
         affiliateLinks: [
           { url: 'https://github.com/Lightricks/LTX-2', productName: 'LTX-2 on GitHub', productCategory: 'video-model', label: 'LTX-2 on GitHub' },
           { url: 'https://huggingface.co/Lightricks/LTX-2', productName: 'LTX-2 on Hugging Face', productCategory: 'video-model', label: 'LTX-2 on Hugging Face' },
@@ -2964,7 +2972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hunyuanvideo',
         title: 'HunyuanVideo 1.5(腾讯)——电影感画面,但有法律隐患',
         content:
-          '腾讯的这个 8.3B 模型于 2025 年 11 月发布,以电影感的光影和质感受到社区青睐,也是三者中显存占用最轻的:通过卸载最低需要 14GB,24GB 更舒适,在 RTX 4090 上生成一个 480p 片段约需 75 秒(报告值,PromptQuorum 未核实)。它原生生成 480p/720p,通过内置超分辨率可达 1080p,片段最长 10 秒。\n\n**具体速度:** 以每个 5 秒 480p 片段约 75 秒计算,大约相当于每秒视频需要 15 秒渲染时间。它原生最大片段长度为 10 秒,所以一段 20 秒的序列需要两次最大长度的生成——按每秒速率推算,大约需要 5 分钟的原始生成时间才能得到 20 秒的画面,还不算拼接。这是从已报告但未核实的 5 秒数据推算出的结果,不是直接测量的 10 秒或 20 秒基准测试。',
+          '腾讯的这个 8.3B 模型于 2025 年 11 月发布,以电影感的光影和质感受到社区青睐,显存需求也比较适中:通过卸载最低需要 14GB,24GB 更舒适,在 RTX 4090 上生成一个 480p 片段约需 75 秒(报告值,PromptQuorum 未核实)。它原生生成 480p/720p,通过内置超分辨率可达 1080p,片段最长 10 秒。\n\n**具体速度:** 以每个 5 秒 480p 片段约 75 秒计算,大约相当于每秒视频需要 15 秒渲染时间。它原生最大片段长度为 10 秒,所以一段 20 秒的序列需要两次最大长度的生成——按每秒速率推算,大约需要 5 分钟的原始生成时间才能得到 20 秒的画面,还不算拼接。这是从已报告但未核实的 5 秒数据推算出的结果,不是直接测量的 10 秒或 20 秒基准测试。',
         affiliateLinks: [
           { url: 'https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on GitHub', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on GitHub' },
           { url: 'https://huggingface.co/tencent/HunyuanVideo-1.5', productName: 'HunyuanVideo 1.5 on Hugging Face', productCategory: 'video-model', label: 'HunyuanVideo 1.5 on Hugging Face' },
@@ -2972,7 +2980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '许可证警告——下载前请先阅读。HunyuanVideo 1.5 使用的是腾讯混元社区许可证,不是 Apache 2.0。该许可证不适用于欧盟、英国或韩国——根据许可证文本,这些地区的用户无权使用该模型或其输出内容。它还将使用规模上限设定为月活跃用户 1 亿,并禁止使用其输出内容训练竞争模型。如果你身处欧盟、英国或韩国,请跳过这个模型:Wan 2.2(Apache 2.0,商业用途宽松且无地区排除)能提供同等质量档位。',
+            text: '许可证警告——下载前请先阅读。HunyuanVideo 1.5 使用的是腾讯混元社区许可证,不是 Apache 2.0。该许可证不适用于欧盟、英国或韩国——根据许可证文本,这些地区的用户无权使用该模型或其输出内容。此外,如果在模型发布日期的前一个月,你的产品月活跃用户超过 1 亿,则需向腾讯另行申请许可;并且禁止使用该模型或其输出内容改进其他 AI 模型(腾讯混元及其衍生模型除外)。如果你身处欧盟、英国或韩国,请跳过这个模型,考虑改用 Wan 2.2(Apache 2.0,商业用途宽松且无地区排除)。',
           },
         ],
       },
@@ -2980,7 +2988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'one-to-watch',
         title: '值得关注:MiniMax H3',
         content:
-          'MiniMax H3 于 2026 年 8 月 3 日发布,是一个 33.1B 全模态模型,原生支持立体声音频,首日就获得 ComfyUI 支持,还提供可在 RTX 3060 上运行的量化版本。在把它当作第四选择之前有两点需要注意:本地版本上限为 768p(完整 2K 流水线仍仅限托管使用),而且据报道其社区许可证附带自己的地区限制和 2000 万美元营收门槛——在使用前请查看官方模型卡。早期迹象良好,但近期发布和真正可用于生产环境是两回事。',
+          'MiniMax H3 于 2026 年 8 月 3 日发布,是一个 33.1B 全模态模型,原生支持立体声音频,首日就获得 ComfyUI 支持,还提供可在 RTX 3060 上运行的量化版本。在把它当作第四选择之前有两点需要注意:本地版本上限为 768p(完整 2K 流水线仍仅限托管使用),而且其[社区许可证](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE)将欧盟、英国、韩国和美国排除在许可地区之外,年营收超过 2000 万美元还需另行授权——使用前请阅读原文(这不构成法律建议)。早期迹象良好,但近期发布和真正可用于生产环境是两回事。',
         affiliateLinks: [
           { url: 'https://github.com/MiniMax-AI/MiniMax-H3', productName: 'MiniMax H3 on GitHub', productCategory: 'video-model', label: 'MiniMax H3 on GitHub' },
           { url: 'https://huggingface.co/MiniMaxAI/MiniMax-H3', productName: 'MiniMax H3 on Hugging Face', productCategory: 'video-model', label: 'MiniMax H3 on Hugging Face' },
@@ -3001,7 +3009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的 GPU': '24GB 以上显存', '你能运行什么': '全部选项:高质量的 Wan 2.2 14B、量化版 LTX-2' },
         ],
         note:
-          'GPU 大致成本,来自 [InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(来源更新于 2026-10-15;eBay 美国挂牌数据,并非报价或要约):二手 RTX 3090 成交记录约 $1,400–1,550,二手 RTX 4090 成交记录 $2,575–3,010(中位数 $2,860)。不同地区的价格可能有差异。GPU 价格会波动——购买前请核实当前价格,不要在几个月后仍相信这些数字。',
+          'GPU 大致成本,来自 [InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(来源更新于 2026-10-15;eBay 美国挂牌数据,并非报价或要约):二手 RTX 3090 成交记录约 $1,400–1,550,二手 RTX 4090 成交记录 $2,575–3,010(中位数 $2,860)。此后该追踪页已将二手 RTX 3090 的数据上调至 $1,500–1,725(中位数 $1,650;225 笔成交,2026 年 11 月 13–23 日)。不同地区的价格可能有差异。GPU 价格会波动——购买前请核实当前价格,不要在几个月后仍相信这些数字。',
       },
       diyReality: {
         id: 'diy-reality',
@@ -3021,19 +3029,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         highlight: true,
         itemHeadings: true,
         content:
-          'Invideo 只是云端这扇门的一个例子——不是唯一的一个,在假设"云端"就代表某一种固定形式之前,值得先了解它与其他方案的区别。据其公开描述(PromptQuorum 未测试这三项服务中的任何一项),Runway 直接集成进专业剪辑软件(Premiere Pro、Final Cut、DaVinci Resolve),面向的是 AI 加剪辑师混合工作流,而不是一段成品的完整视频。同样据其公开描述,Luma AI 的 Dream Machine 专攻原生 16 位 HDR 输出,面向视效合成流水线(After Effects、Nuke)——完全是另一批受众。Pika 保持轻量:快速生成原始片段,不内置脚本、配音或素材库组装,所以片段之外的一切你仍需要单独的工具——这与运行本地模型面临的 DIY 流水线问题相同,只是不需要 GPU。Invideo 与这三者的不同之处在于,它并非主要是一个原始生成工具:它是一个把脚本变成成品视频的组装器,同时在你需要时也提供原始生成模型(Kling、Veo、Seedance)的访问权限。\n\nInvideo 不是一个视频模型,而是把完整的生产流水线作为服务提供。你可以输入一个主题,或把脚本粘贴到 [invideo Agent](https://invideo.io/) 中,它会把脚本、场景、生成或素材库画面、配音、音乐、字幕和品牌样式整合到一个工作流中,规划并生成视频。它在浏览器中运行——你的 GPU 无关紧要。\n\n对于想今天就开始制作视频、而不是研究 GPU 和量化格式的人来说,invideo 是实际的选择:不需要本地硬件,不需要安装 ComfyUI 或排查 CUDA 问题,一套工作流就已经包含大多数人真正需要的脚本、配音、音乐和字幕。它尤其适合那些更在意成品视频、而不在意控制底层生成模型的创作者——由于存在免费套餐,你可以先弄清楚它是否适合你,再决定是否付费。\n\n就本文的对比而言,有三点值得关注:\n\n- **模型乱局,由 invideo 承担。** 所有付费套餐都包含对 200 多个模型(据 invideo)的访问权限——其中包括 Seedance 2.5、Veo 3.1 和 Kling 3。当某个模型被起诉或下线,invideo 会替换它;你的工作流程照常继续。\n- **自动化是内置的,不是后加的。** 它提供官方 MCP 服务器,因此从提示词 → 脚本 → 素材 → 字幕的整条流水线都可以通过程序触发——这正是你原本需要围绕 ComfyUI 自己搭建的那种框架。\n- **免费套餐是真正的试驾。** 带水印且有分钟数限制,但足以在付费之前判断输出质量。\n\n**具体速度——以及诚实的隐患:** 单次原始生成很快,通常只需几分钟。但 invideo 自己的 FAQ 指出,一部短片的完整端到端制作需要 2–5 天,而不是几分钟——因为真正耗时的是在多个生成选项中挑选和组装,而不是生成本身。将"2 天作为现实下限"用于一部 1–3 分钟的成品短片,作为与本地这扇门"20 秒未剪辑素材需要 16–36 分钟原始生成时间"的公平对比:invideo 用它自己的制作时间换掉了你的搭建和剪辑时间,而不是彻底消除时间成本。\n\n当前套餐起价为每月 17 美元(Plus 套餐,按年计费——具体数字请查看 [invideo 的定价页面](https://invideo.io/pricing/)):',
+          'Invideo 只是云端这扇门的一个例子——不是唯一的一个,在假设"云端"就代表某一种固定形式之前,值得先了解它与其他方案的区别。据其公开描述(PromptQuorum 未测试这三项服务中的任何一项),Runway 直接集成进专业剪辑软件(Premiere Pro、Final Cut、DaVinci Resolve),面向的是 AI 加剪辑师混合工作流,而不是一段成品的完整视频。同样据其公开描述,Luma AI 的 Dream Machine 专攻原生 16 位 HDR 输出,面向视效合成流水线(After Effects、Nuke)——完全是另一批受众。同样据公开描述,Pika 侧重快速生成原始片段;PromptQuorum 未核实它是否提供脚本、配音或素材库组装功能,因此在依赖它完成片段之外的工作前请先确认。按 invideo 自己的介绍,它把分镜、脚本撰写和时间线剪辑与 Kling、Veo、Seedance 等生成模型的使用结合在一起。\n\nInvideo 并非单一的视频模型,而是一项托管服务。在 2026 年 11 月 27 日核查时,[其首页](https://invideo.io/)展示的是一款 AI 代理驱动的视频编辑器,支持根据脚本或创意生成分镜、撰写脚本,并提供多轨时间线;网站还列出了 AI 语音和音乐工具。PromptQuorum 未测试该服务,请自行确认配音和字幕功能能否满足你的需要。它在浏览器中运行——你的 GPU 无关紧要。\n\n对于想今天就开始制作视频、而不是研究 GPU 和量化格式的人来说,invideo 是实际的选择:不需要本地硬件,不需要安装 ComfyUI 或排查 CUDA 问题,还为片段之外的各个步骤提供托管工作空间。它尤其适合那些更在意成品视频、而不在意控制底层生成模型的创作者——由于存在免费套餐,你可以先弄清楚它是否适合你,再决定是否付费。\n\n就本文的对比而言,有三点值得关注:\n\n- **一个账户,多个模型。** invideo 定价页面称 Plus 和 Max 可使用全部模型,包括所有 Seedance 模型;Starter 仅含部分模型,不含 Seedance 2.5。模型阵容可能调整。\n- **内置代理接入。** invideo 提供 [MCP 服务器](https://invideo.io/ai/mcp),让 AI 代理可以在其时间线编辑器中工作。\n- **设有免费套餐。** invideo 的[套餐限制页面](https://invideo.io/help/billing/plan-limits/)说明该套餐有每周额度限制;使用前请核实导出和水印规则。\n\n**具体速度——以及诚实的隐患:** invideo 称原始生成速度很快。但 invideo 自己的 FAQ 指出,一部短片的完整端到端制作需要 2–5 天,而不是几分钟——因为真正耗时的是在多个生成选项中挑选和组装,而不是生成本身。将"2 天作为现实下限"用于一部 1–3 分钟的成品短片,作为与本地这扇门"20 秒未剪辑素材需要 16–36 分钟原始生成时间"的公平对比:invideo 用它自己的制作时间换掉了你的搭建和剪辑时间,而不是彻底消除时间成本。\n\ninvideo 列出的套餐(价格见 [invideo 定价页面](https://invideo.io/pricing/)):',
         blockquote:
           '**想在没有本地搭建的情况下制作 AI 视频?** 如果你没有强大的 GPU——或者只是不想花几个小时安装和配置本地 AI 视频工具——invideo 值得一试。[试用 invideo 免费版 →](https://invideo.io/pricing/)',
-        columns: ['套餐', '价格', '每月额度', '适合人群'],
+        columns: ['套餐', '每席位每月额度', '可用模型'],
         rows: [
-          { '套餐': 'Free', '价格': '$0', '每月额度': '有限', '适合人群': '先试试水(带水印)' },
-          { '套餐': 'Plus', '价格': '$17/月($200/年)', '每月额度': '75', '适合人群': '常规创作者——所有 AI 模型、4 个数字人及声音克隆、100 个 iStock 素材、无限次去水印导出' },
-          { '套餐': 'Max', '价格': '$85/月($1,000/年)', '每月额度': '390', '适合人群': '高产量频道,16 个数字人' },
-          { '套餐': 'Generative', '价格': '$170/月($2,000/年)', '每月额度': '800+', '适合人群': '短片/制作级产量' },
-          { '套餐': 'Elite', '价格': '$900/月($10,800/年)', '每月额度': '4,250+', '适合人群': '系列剧和商业级规模' },
+          { '套餐': 'Free', '每席位每月额度': '每周限额', '可用模型': '见定价页面' },
+          { '套餐': 'Starter', '每席位每月额度': '400', '可用模型': '部分模型;不含 Seedance 2.5' },
+          { '套餐': 'Plus', '每席位每月额度': '2,000', '可用模型': '全部模型(据 invideo)' },
+          { '套餐': 'Max', '每席位每月额度': '5,000 起', '可用模型': '全部模型(据 invideo)' },
         ],
         note:
-          '以上所有价格均为 invideo 公布的按年计费价——按月付费的成本更高(invideo 自己的 FAQ 显示 Plus 为每月 20 美元、Max 为 100 美元、Generative 为 200 美元、Elite 为 1,000 美元)。在依赖此处任何数字之前,请查看 invideo 的实时定价页面;套餐和价格会变动。$/月 数字是 invideo 年度套餐折算后的四舍五入月均值;年度总额为 invideo 在最近一次更新时列出的金额(见最后更新日期)。',
+          '套餐名称、额度和可用模型依据 2026 年 11 月 27 日核查的 invideo [定价页面](https://invideo.io/pricing/)和[套餐限制页面](https://invideo.io/help/billing/plan-limits/)。本文不列出价格:从欧洲访问时该页面显示限时优惠,而且套餐已与本指南此前列出的不同。在依赖任何细节之前,请查看实时页面。',
         affiliateLinks: [
           { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: '试用 invideo 免费版 →' },
         ],
@@ -3098,15 +3105,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '"免费"的本地 AI 视频实际的代价是什么?',
-            a: '硬件成本(一块够强的 GPU)、搭建时间(ComfyUI 及其各种依赖),以及围绕原始输出片段所需的 DIY 流水线。模型权重本身确实每次生成都是 0 美元,永远如此。',
+            a: '硬件成本(一块够强的 GPU)、搭建时间(ComfyUI 及其各种依赖),以及围绕原始输出片段所需的 DIY 流水线。模型权重不按生成次数收费;但硬件和电费仍需花钱。',
           },
           {
             q: '有 Wan 2.7 或更新的 Wan 模型吗?',
-            a: '本页最近更新时没有。Wan 官方仓库列出的发布到 2.2 为止。请谨慎对待任何提供"Wan 2.7 权重"的网站——只从官方 GitHub 或 Hugging Face 仓库下载。',
+            a: '在 2026 年 11 月 27 日核查时,Wan 官方 GitHub 页面上没有更新的开放权重仓库。阿里巴巴于 2026 年 4 月发布了 [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009),称其可在阿里云上使用。请谨慎对待其他提供"Wan 2.7 权重"的网站——只从官方 GitHub 或 Hugging Face 仓库下载。',
           },
           {
             q: '我是完全的新手,应该从哪里开始?',
-            a: 'Invideo 的免费套餐——几分钟内你就能拿到一段带旁白的成品视频,并判断 AI 视频是否真的对你有用。如果之后你买了一块够强的 GPU,想要完全的控制权和隐私,本地这扇门依然敞开。',
+            a: '借助 Invideo 的免费套餐,你无需购买硬件就能试用云端工作流,判断 AI 视频是否符合你的目标;该套餐有使用限制。如果之后你买了一块够强的 GPU,想要完全的控制权和隐私,本地这扇门依然敞开。',
           },
           {
             q: '在 Mac 和 Windows 上运行这些本地模型有什么区别?',
@@ -3130,7 +3137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          '如果你拥有(或打算购买)12GB 以上显存的 GPU,喜欢自己搭建工具,并且看重隐私和无限次 0 美元生成胜过便利性,那就选本地。Wan 2.2 是稳妥的基础选项——高质量、Apache 2.0——LTX-2 则是速度与音频方面的专才。\n\n如果你没有硬件、不想折腾搭建,或者需要成品视频而不是原始片段,那就选云端。对大多数只是想制作 AI 生成视频的人来说,云端路线是更轻松的起点:如果你本来就没有本地生成所需的硬件和技术兴趣,invideo 用一个提示词就能替你消除大部分复杂性,所有模型和素材都已打包,还包含自动化功能——测试起价为 0 美元,去水印起价为每月 17 美元(按年计费)。判断它是否适合你工作流最简单的方法,就是先试用免费版本。\n\n两扇门都通向 AI 视频。问题从来不是哪种技术更好——而是哪种工作流适合你的设备、你的耐心和你的目标。',
+          '如果你拥有(或打算购买)12GB 以上显存的 GPU,喜欢自己搭建工具,并且看重隐私和不按片段收费的生成胜过便利性,那就选本地。Wan 2.2 是稳妥的基础选项——高质量、Apache 2.0——LTX-2 则是速度与音频方面的专才。\n\n如果你没有硬件、不想折腾搭建,或者需要成品视频而不是原始片段,那就选云端。对大多数只是想制作 AI 生成视频的人来说,云端路线是更轻松的起点:如果你本来就没有本地生成所需的硬件和技术兴趣,invideo 这类托管服务可以免去本地搭建。有免费套餐可供测试;付费套餐及其限制见 invideo 定价页面。判断它是否适合你工作流最简单的方法,就是先试用免费版本。\n\n两扇门都通向 AI 视频。问题从来不是哪种技术更好——而是哪种工作流适合你的设备、你的耐心和你的目标。',
       },
       sources: {
         id: 'sources',
@@ -3141,7 +3148,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LTX model license](https://ltx.io/model/license)——LTX 社区许可证官方条款。',
           '[LTX-2 model page](https://ltx.io/model/ltx-2-3)——官方架构和发布详情。',
           '[HunyuanVideo 1.5 on GitHub](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5)——官方仓库和 LICENSE 文件,包含欧盟/英国/韩国排除条款。',
-          '[VBench-2.0 leaderboard](https://github.com/Vchitect/VBench)——独立基准测试,用于质量和物理真实性数据。',
+          '[Engadget: ByteDance has reportedly suspended the global rollout of its new AI video generator](https://www.engadget.com/ai/bytedance-has-reportedly-suspended-the-global-rollout-of-its-new-ai-video-generator-212326112.html)——2026 年 3 月的媒体报道(英文)。',
+          '[Alibaba Cloud Community:Wan2.7-Video 发布公告](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)——2026 年 4 月(英文)。',
+          '[invideo 套餐限制](https://invideo.io/help/billing/plan-limits/)——官方套餐及额度限制。',
           '[Invideo pricing](https://invideo.io/pricing/)——官方套餐及定价详情。',
           '[Invideo MCP server](https://invideo.io/ai/mcp)——官方自动化文档。',
           '[MiniMax H3 on GitHub](https://github.com/MiniMax-AI/MiniMax-H3)——官方仓库。',
