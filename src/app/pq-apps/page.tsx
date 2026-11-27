@@ -673,7 +673,7 @@ export default function PQAppsPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
-                <span className="text-text-secondary">Privacy-first: full offline execution, zero registration required, nothing leaves your device</span>
+                <span className="text-text-secondary">Local option: run prompts on local LLMs without registration; prompts sent to cloud models go to those providers</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>

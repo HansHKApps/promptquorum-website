@@ -104,7 +104,7 @@ export default async function FeaturesPage({ searchParams }: PageProps) {
                 {
                   '@type': 'Question',
                   'name': 'Can I use PromptQuorum offline with local LLMs?',
-                  'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. PromptQuorum supports all major local LLM runtimes: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, KoboldCpp, and any OpenAI-compatible endpoint. Run entirely in your browser—nothing leaves your device.' },
+                  'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. PromptQuorum supports all major local LLM runtimes: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, KoboldCpp, and any OpenAI-compatible endpoint. A local model processes your prompts on your own hardware; check your runtime’s network settings. Prompts you also send to cloud models go to those providers.' },
                 },
               ],
             },

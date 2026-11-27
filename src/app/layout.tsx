@@ -171,7 +171,7 @@ export default function RootLayout({
                     "caption": "PromptQuorum"
                   },
                   "image": { "@id": "https://www.promptquorum.com/#logo" },
-                  "description": "PromptQuorum is a multi-model AI dispatch and consensus tool. Write structured prompts with 9 frameworks, optimize with any LLM, dispatch simultaneously to 25+ AI providers, and run consensus analysis. 100% private — no data leaves your device.",
+                  "description": "PromptQuorum is a multi-model AI dispatch and consensus tool. Write structured prompts with 9 frameworks, optimize with any LLM, dispatch simultaneously to 25+ AI providers, and run consensus analysis. Use your own API keys or a local LLM. Prompts sent to a cloud AI provider are processed by that provider.",
                   "founder": authorRef(),
                   "sameAs": [
                     "https://github.com/HansHKApps",
@@ -188,7 +188,7 @@ export default function RootLayout({
                   "@id": "https://www.promptquorum.com/#website",
                   "name": "PromptQuorum",
                   "url": "https://www.promptquorum.com",
-                  "description": "Dispatch one prompt to ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Write structured prompts with 9 frameworks, run consensus analysis, detect hallucinations. 100% private.",
+                  "description": "Dispatch one prompt to ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Write structured prompts with 9 frameworks, run consensus analysis, detect hallucinations. Works with your own API keys or local LLMs.",
                   "publisher": { "@id": "https://www.promptquorum.com/#organization" },
                   "inLanguage": ["en", "de", "fr", "ja", "zh", "es", "pt", "ar", "ko"],
                   "potentialAction": {
