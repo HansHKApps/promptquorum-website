@@ -414,9 +414,9 @@
                         type: 'list',
                         h2: 'Key Metrics at a Glance',
                         items: [
-                            '<strong>macOS M5 Max (128GB):</strong> holds 70B at Q8, $3,499, silent',
-                            '<strong>Windows RTX 5090 (32GB):</strong> 290.0 tok/s on a 7B Q4_0 model (developer-reported), about $4,500–4,700 new (InsiderLLM, 2026-10-15)',
-                            '<strong>Linux RTX 5090 (32GB):</strong> same GPU, same speed class as Windows; setup differs'
+                            '<strong>macOS M5 Max (128GB):</strong> holds 70B at Q8, silent',
+                            '<strong>RTX 5090 (32GB):</strong> 290.0 tok/s on a 7B Q4_0 model (developer-reported, not Windows-specific), about $4,500–4,700 new (InsiderLLM, 2026-10-15)',
+                            '<strong>Windows and Linux:</strong> same GPU options; no sourced speed comparison here'
                         ]
                     },
                     {
@@ -425,12 +425,12 @@
                         items: [
                             'macOS: Zero GPU cost, simplest setup (6 min), if you own a Mac',
                             'Windows: Industry standard GPU support, NVIDIA CUDA ecosystem mature',
-                            'Linux: Lowest overhead, best for 24/7 servers'
+                            'Linux: A common choice for 24/7 servers'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: 'Setup Complexity Comparison',
+                        h2: 'Setup Complexity (rough estimates)',
                         items: [
                             'macOS: Download Ollama → select model = 6 minutes, zero terminal',
                             'Windows: Install drivers → download Ollama = 15–20 minutes, GUI only',
@@ -450,8 +450,8 @@
                         type: 'list',
                         h2: 'Hardware Cost Snapshot',
                         items: [
-                            'MacBook Pro M5 Pro 64GB: $2,499',
-                            'MacBook Pro M5 Max 128GB: $3,499',
+                            'Mac mini M5 Pro 64GB: $2,700 (US list, per Daring Fireball)',
+                            'Mac Studio M5 Max 128GB: $5,100 (US list, per Daring Fireball)',
                             'RTX 5090 (GPU only): about $4,500–4,700 new (InsiderLLM, 2026-10-15)',
                             'RTX 5060 Ti (GPU only): from $679 (Wccftech, 2026-01-27)'
                         ]
@@ -468,7 +468,7 @@
                         h2: 'CUDA, ROCm & Apple Metal',
                         items: [
                             'CUDA: Available Windows/Linux only, not macOS. Industry standard.',
-                            'ROCm: AMD support; better on Linux, immature on Windows (3–6 months behind)',
+                            'ROCm: AMD support; supported cards differ between Linux and Windows',
                             'Apple Metal: macOS only, newer, fewer libraries than CUDA'
                         ]
                     },
@@ -477,22 +477,22 @@
                         h2: 'Common Questions',
                         faqs: [
                             { q: 'Can I run 70B on macOS?', a: 'Yes. M5 Pro (64GB) can hold 70B at Q4 (about 35GB). M5 Max (128GB) can hold 70B at Q8 (about 70GB).' },
-                            { q: 'How much power does an RTX 5090 draw?', a: 'NVIDIA rates it at 575 W board power (1,000 W system requirement). M5 draws ~30–40W.' }
+                            { q: 'How much power does an RTX 5090 draw?', a: 'NVIDIA rates it at 575 W board power (1,000 W system requirement). For an M5 Max we assume 30–40 W (estimate).' }
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Fine-tuning & Support',
                         faqs: [
-                            { q: 'Which OS is best for fine-tuning?', a: 'Linux > Windows > macOS. Linux has best CUDA + DeepSpeed support for production.' },
-                            { q: 'Can I use AMD GPUs?', a: 'Linux: Excellent ROCm support. Windows: 3–6 months behind. AMD 10–20% slower than NVIDIA.' }
+                            { q: 'Which OS is best for fine-tuning?', a: 'In our view: Linux first for CUDA-based fine-tuning, then Windows, then macOS.' },
+                            { q: 'Can I use AMD GPUs?', a: 'Depends on the card. Check the supported list in Ollama’s GPU documentation for Windows or Linux.' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Common Mistakes to Avoid',
                         items: [
-                            'Assuming macOS can\'t run big models. It can — just slower.',
+                            'Assuming macOS can’t run big models. It depends on unified memory: 64GB can hold 70B at Q4.',
                             'Buying Windows specifically for LLMs. If you have a Mac, use it; GPU cost dominates.',
                             'Thinking Linux is only for servers. Linux suits home servers and mini PCs.',
                             'Forgetting NVIDIA dominance. CUDA is the standard; alternatives are smaller ecosystems.'
@@ -502,7 +502,7 @@
                         type: 'list',
                         h2: '3-Year Total Cost of Ownership',
                         items: [
-                            'Mac mini M5 Pro 64GB: $1,699 (70B benchmark not yet published)',
+                            'Mac mini M5 Pro 64GB: $2,720 (US list $2,700 plus estimated electricity)',
                             'RTX 5060 Ti (GPU only): $769 over 3 years',
                             'RTX 4090 used (GPU only, median): $3,136',
                             'RTX 5090 new (GPU only): $4,853–5,053'
@@ -510,17 +510,17 @@
                     },
                     {
                         type: 'list',
-                        h2: 'Regional Compliance Notes',
+                        h2: 'Privacy Notes (not legal advice)',
                         items: [
-                            'EU (GDPR): All three OS support local data processing.',
-                            'Japan (APPI): Apple Silicon Macs handle data locally. Windows/Linux require user consent.',
-                            'Global: Electricity costs vary (EU $0.20–0.30/kWh vs China $0.08–0.12/kWh).'
+                            'Local inference can keep data on your machine on all three OS.',
+                            'No OS makes a setup compliant with GDPR or APPI on its own.',
+                            'Electricity tariffs differ by country and contract.'
                         ]
                     },
                     {
                         type: 'cta',
                         h2: 'Ready to Choose?',
-                        body: 'Visit the full article for detailed benchmarks, TCO tables, and setup guides for each OS.',
+                        body: 'Visit the full article for sourced speed figures, the TCO table and setup guides for each OS.',
                         cta: 'Read Full Guide',
                         href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm'
                     }
@@ -539,9 +539,9 @@
                         type: 'list',
                         h2: 'Wichtigste Metriken auf einen Blick',
                         items: [
-                            '<strong>macOS M5 Max (128 GB):</strong> hält 70B in Q8, 3.499 €, lautlos',
-                            '<strong>Windows RTX 5090 (32 GB):</strong> 290,0 tok/s bei 7B Q4_0 (von Entwicklern gemeldet), neu etwa 4.500–4.700 $ (InsiderLLM, 2026-10-15)',
-                            '<strong>Linux RTX 5090 (32 GB):</strong> gleiche GPU, gleiche Geschwindigkeitsklasse wie Windows; Setup unterscheidet sich'
+                            '<strong>macOS M5 Max (128 GB):</strong> hält 70B in Q8, lautlos',
+                            '<strong>RTX 5090 (32 GB):</strong> 290,0 tok/s bei 7B Q4_0 (von Entwicklern gemeldet, nicht Windows-spezifisch), neu etwa 4.500–4.700 $ (InsiderLLM, 2026-10-15)',
+                            '<strong>Windows und Linux:</strong> gleiche GPU-Auswahl; hier kein belegter Tempovergleich'
                         ]
                     },
                     {
@@ -550,12 +550,12 @@
                         items: [
                             'macOS: Null GPU-Kosten, einfachste Einrichtung (6 Min), falls Sie einen Mac haben',
                             'Windows: Industrie-Standard-GPU-Unterstützung, reifer NVIDIA CUDA-Ökosystem',
-                            'Linux: Geringster Overhead, beste Wahl für 24/7-Server'
+                            'Linux: Eine gängige Wahl für 24/7-Server'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: 'Einrichtungskomplexität',
+                        h2: 'Einrichtungsaufwand (grobe Schätzungen)',
                         items: [
                             'macOS: Ollama herunterladen → Modell auswählen = 6 Minuten, kein Terminal',
                             'Windows: Treiber installieren → Ollama herunterladen = 15–20 Minuten, nur GUI',
@@ -575,8 +575,8 @@
                         type: 'list',
                         h2: 'Hardware-Kostenübersicht',
                         items: [
-                            'MacBook Pro M5 Pro 64 GB: 1.649 €',
-                            'MacBook Pro M5 Max 128 GB: 2.299 €',
+                            'Mac mini M5 Pro 64 GB: 2.700 $ (US-Liste laut Daring Fireball)',
+                            'Mac Studio M5 Max 128 GB: 5.100 $ (US-Liste laut Daring Fireball)',
                             'RTX 5090 (nur GPU): neu etwa 4.500–4.700 $ (InsiderLLM, 2026-10-15)',
                             'RTX 5060 Ti (nur GPU): ab 679 $ (Wccftech, 2026-01-27)'
                         ]
@@ -593,7 +593,7 @@
                         h2: 'CUDA, ROCm & Apple Metal',
                         items: [
                             'CUDA: Nur Windows/Linux verfügbar, nicht macOS. Branchenstandard.',
-                            'ROCm: AMD-Unterstützung; besser auf Linux, unreif auf Windows (3–6 Monate hinterher)',
+                            'ROCm: AMD-Unterstützung; unterstützte Karten unterscheiden sich zwischen Linux und Windows',
                             'Apple Metal: Nur macOS, neu, weniger Bibliotheken als CUDA'
                         ]
                     },
@@ -602,22 +602,22 @@
                         h2: 'Häufig gestellte Fragen',
                         faqs: [
                             { q: 'Kann ich 70B auf macOS ausführen?', a: 'Ja. M5 Pro (64 GB) hält 70B in Q4 (ca. 35 GB). M5 Max (128 GB) hält 70B in Q8 (ca. 70 GB).' },
-                            { q: 'Wie viel Strom zieht eine RTX 5090?', a: 'NVIDIA gibt 575 W Boardleistung an (1.000 W Systemanforderung). M5 verbraucht ~30–40 W.' }
+                            { q: 'Wie viel Strom zieht eine RTX 5090?', a: 'NVIDIA gibt 575 W Boardleistung an (1.000 W Systemanforderung). Für einen M5 Max nehmen wir 30–40 W an (Schätzung).' }
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Fine-Tuning & Unterstützung',
                         faqs: [
-                            { q: 'Welches Betriebssystem ist am besten zum Fine-Tuning?', a: 'Linux > Windows > macOS. Linux hat beste CUDA + DeepSpeed-Unterstützung für Produktion.' },
-                            { q: 'Kann ich AMD-GPUs verwenden?', a: 'Linux: Hervorragende ROCm-Unterstützung. Windows: 3–6 Monate hinterher. AMD 10–20% langsamer als NVIDIA.' }
+                            { q: 'Welches Betriebssystem ist am besten zum Fine-Tuning?', a: 'Unsere Einschätzung: für CUDA-Fine-Tuning zuerst Linux, dann Windows, dann macOS.' },
+                            { q: 'Kann ich AMD-GPUs verwenden?', a: 'Das hängt von der Karte ab. Prüfen Sie die Liste in der GPU-Dokumentation von Ollama für Windows oder Linux.' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Häufige Fehler vermeiden',
                         items: [
-                            'Annahme, dass macOS große Modelle nicht ausführen kann. Es kann — nur langsamer.',
+                            'Annehmen, dass macOS keine großen Modelle ausführt. Es hängt vom Unified Memory ab: 64 GB fassen 70B in Q4.',
                             'Windows speziell für LLMs kaufen. Falls Sie einen Mac haben, verwenden Sie ihn; GPU-Kosten dominieren.',
                             'Denken Sie, Linux ist nur für Server. Linux eignet sich auch für Heimserver und Mini-PCs.',
                             'NVIDIA-Dominanz vergessen. CUDA ist der Standard; Alternativen sind kleinere Ökosysteme.'
@@ -627,7 +627,7 @@
                         type: 'list',
                         h2: '3-Jahres-Gesamtkostenanalyse',
                         items: [
-                            'Mac mini M5 Pro 64 GB: 1.999 € (70B-Benchmark noch nicht veröffentlicht)',
+                            'Mac mini M5 Pro 64 GB: 2.720 $ (US-Liste 2.700 $ plus geschätzter Strom)',
                             'RTX 5060 Ti (nur GPU): 769 $ über 3 Jahre',
                             'RTX 4090 gebraucht (nur GPU, Median): 3.136 $',
                             'RTX 5090 neu (nur GPU): 4.853–5.053 $'
@@ -635,17 +635,17 @@
                     },
                     {
                         type: 'list',
-                        h2: 'Regionale Compliance-Hinweise',
+                        h2: 'Datenschutzhinweise (keine Rechtsberatung)',
                         items: [
-                            'EU (DSGVO): Alle drei Betriebssysteme unterstützen lokale Datenverarbeitung.',
-                            'Japan (APPI): Apple Silicon Macs verarbeiten Daten lokal. Windows/Linux erfordern Benutzerzustimmung.',
-                            'Global: Stromkosten variieren (EU 0,20–0,30 €/kWh vs China 0,08–0,12 €/kWh).'
+                            'Lokale Inferenz kann Daten bei allen drei Betriebssystemen auf Ihrem Gerät halten.',
+                            'Kein Betriebssystem macht ein Setup allein DSGVO- oder APPI-konform.',
+                            'Stromtarife unterscheiden sich je nach Land und Vertrag.'
                         ]
                     },
                     {
                         type: 'cta',
                         h2: 'Bereit zu wählen?',
-                        body: 'Besuchen Sie den vollständigen Artikel für detaillierte Benchmarks, TCO-Tabellen und Installationsanleitungen für jedes Betriebssystem.',
+                        body: 'Im vollständigen Artikel finden Sie belegte Tempowerte, die Kostentabelle und Setup-Anleitungen für jedes Betriebssystem.',
                         cta: 'Vollständigen Leitfaden lesen',
                         href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=de'
                     }
@@ -664,9 +664,9 @@
                         type: 'list',
                         h2: 'Métriques clés en un coup d\'œil',
                         items: [
-                            '<strong>macOS M5 Max (128 Go) :</strong> accueille le 70B en Q8, 2 299 €, silencieux',
-                            '<strong>Windows RTX 5090 (32 Go) :</strong> 290,0 jetons/s sur 7B Q4_0 (rapporté par des développeurs), environ 4 500–4 700 $ neuve (InsiderLLM, 2026-10-15)',
-                            '<strong>Linux RTX 5090 (32 Go) :</strong> même GPU, même classe de vitesse que Windows ; la configuration diffère'
+                            '<strong>macOS M5 Max (128 Go) :</strong> accueille le 70B en Q8, silencieux',
+                            '<strong>RTX 5090 (32 Go) :</strong> 290,0 jetons/s sur 7B Q4_0 (rapporté par des développeurs, non spécifique à Windows), environ 4 500–4 700 $ neuve (InsiderLLM, 2026-10-15)',
+                            '<strong>Windows et Linux :</strong> mêmes GPU possibles ; aucune comparaison de vitesse sourcée ici'
                         ]
                     },
                     {
@@ -675,12 +675,12 @@
                         items: [
                             'macOS : Zéro coût GPU, configuration plus simple (6 min), si vous avez un Mac',
                             'Windows : Support GPU standard industriel, écosystème NVIDIA CUDA mature',
-                            'Linux : Surcharge la plus faible, idéal pour serveurs 24/7'
+                            'Linux : un choix courant pour les serveurs 24/7'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: 'Complexité de configuration',
+                        h2: 'Complexité de configuration (estimations)',
                         items: [
                             'macOS : Téléchargez Ollama → sélectionnez modèle = 6 minutes, pas de terminal',
                             'Windows : Installez pilotes → téléchargez Ollama = 15–20 minutes, GUI uniquement',
@@ -700,8 +700,8 @@
                         type: 'list',
                         h2: 'Aperçu des coûts du matériel',
                         items: [
-                            'MacBook Pro M5 Pro 64 Go : 1 649 €',
-                            'MacBook Pro M5 Max 128 Go : 2 299 €',
+                            'Mac mini M5 Pro 64 Go : 2 700 $ (prix US, selon Daring Fireball)',
+                            'Mac Studio M5 Max 128 Go : 5 100 $ (prix US, selon Daring Fireball)',
                             'RTX 5090 (GPU seul) : environ 4 500–4 700 $ neuve (InsiderLLM, 2026-10-15)',
                             'RTX 5060 Ti (GPU seul) : à partir de 679 $ (Wccftech, 2026-01-27)'
                         ]
@@ -718,7 +718,7 @@
                         h2: 'CUDA, ROCm & Apple Metal',
                         items: [
                             'CUDA : Windows/Linux uniquement, pas macOS. Standard industriel.',
-                            'ROCm : Support AMD ; meilleur sur Linux, immature sur Windows (3–6 mois en retard)',
+                            'ROCm : support AMD ; les cartes prises en charge diffèrent entre Linux et Windows',
                             'Apple Metal : macOS uniquement, nouveau, moins de bibliothèques que CUDA'
                         ]
                     },
@@ -727,22 +727,22 @@
                         h2: 'Questions courantes',
                         faqs: [
                             { q: 'Puis-je exécuter 70B sur macOS ?', a: 'Oui. M5 Pro (64 Go) accueille le 70B en Q4 (environ 35 Go). M5 Max (128 Go) accueille le 70B en Q8 (environ 70 Go).' },
-                            { q: 'Quelle puissance consomme une RTX 5090 ?', a: 'NVIDIA indique 575 W de puissance carte (1 000 W requis pour le système). M5 consomme ~30–40 W.' }
+                            { q: 'Quelle puissance consomme une RTX 5090 ?', a: 'NVIDIA indique 575 W de puissance carte (1 000 W requis pour le système). Pour un M5 Max, nous supposons 30–40 W (estimation).' }
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Fine-tuning & Support',
                         faqs: [
-                            { q: 'Quel système d\'exploitation est le meilleur pour le fine-tuning ?', a: 'Linux > Windows > macOS. Linux a le meilleur support CUDA + DeepSpeed pour production.' },
-                            { q: 'Puis-je utiliser des GPU AMD ?', a: 'Linux : Excellent support ROCm. Windows : 3–6 mois en retard. AMD 10–20% plus lent que NVIDIA.' }
+                            { q: 'Quel système d\'exploitation est le meilleur pour le fine-tuning ?', a: 'À notre avis : Linux d’abord pour le fine-tuning CUDA, puis Windows, puis macOS.' },
+                            { q: 'Puis-je utiliser des GPU AMD ?', a: 'Cela dépend de la carte. Vérifiez la liste dans la documentation GPU d’Ollama pour Windows ou Linux.' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Erreurs courantes à éviter',
                         items: [
-                            'Supposer que macOS ne peut pas exécuter de grands modèles. Cela peut — juste plus lentement.',
+                            'Supposer que macOS ne peut pas exécuter de grands modèles. Tout dépend de la mémoire unifiée : 64 Go accueillent le 70B en Q4.',
                             'Acheter Windows spécifiquement pour les LLM. Si vous avez un Mac, utilisez-le ; les coûts GPU dominent.',
                             'Penser que Linux est uniquement pour les serveurs. Linux convient aussi aux serveurs domestiques et mini-PC.',
                             'Oublier la domination NVIDIA. CUDA est la norme ; les alternatives sont des écosystèmes plus petits.'
@@ -752,7 +752,7 @@
                         type: 'list',
                         h2: 'Coût total de propriété 3 ans',
                         items: [
-                            'Mac mini M5 Pro 64 Go : 1 999 € (benchmark 70B pas encore publié)',
+                            'Mac mini M5 Pro 64 Go : 2 720 $ (prix US 2 700 $ plus électricité estimée)',
                             'RTX 5060 Ti (GPU seul) : 769 $ sur 3 ans',
                             'RTX 4090 d\'occasion (GPU seul, médiane) : 3 136 $',
                             'RTX 5090 neuve (GPU seul) : 4 853–5 053 $'
@@ -760,17 +760,17 @@
                     },
                     {
                         type: 'list',
-                        h2: 'Remarques de conformité régionale',
+                        h2: 'Confidentialité (pas un conseil juridique)',
                         items: [
-                            'UE (RGPD) : Les trois systèmes d\'exploitation prennent en charge le traitement local des données.',
-                            'Japon (APPI) : Les Mac Apple Silicon traitent les données localement. Windows/Linux nécessitent consentement utilisateur.',
-                            'Global : Les coûts électriques varient (UE 0,20–0,30 €/kWh vs Chine 0,08–0,12 €/kWh).'
+                            'L’inférence locale peut garder les données sur votre machine avec les trois systèmes.',
+                            'Aucun système ne rend à lui seul une installation conforme au RGPD ou à l’APPI.',
+                            'Les tarifs d’électricité varient selon le pays et le contrat.'
                         ]
                     },
                     {
                         type: 'cta',
                         h2: 'Prêt à choisir ?',
-                        body: 'Visitez l\'article complet pour des benchmarks détaillés, des tableaux TCO et des guides d\'installation pour chaque système d\'exploitation.',
+                        body: 'L’article complet présente les vitesses sourcées, le tableau des coûts et les guides de configuration par système.',
                         cta: 'Lire le guide complet',
                         href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=fr'
                     }
@@ -789,9 +789,9 @@
                         type: 'list',
                         h2: '主要メトリクス一覧',
                         items: [
-                            '<strong>macOS M5 Max (128GB):</strong> 70Bを Q8 で保持可能、¥330,000、無音',
-                            '<strong>Windows RTX 5090 (32GB):</strong> 7B Q4_0 で 290.0 tok/s（開発者報告値）、新品は約 $4,500～4,700（InsiderLLM、2026-10-15）',
-                            '<strong>Linux RTX 5090 (32GB):</strong> 同じ GPU で Windows と同じ速度帯、セットアップが異なる'
+                            '<strong>macOS M5 Max (128GB):</strong> 70Bを Q8 で保持可能、無音',
+                            '<strong>RTX 5090 (32GB):</strong> 7B Q4_0 で 290.0 tok/s（開発者報告値、Windows 限定の値ではない）、新品は約 $4,500～4,700（InsiderLLM、2026-10-15）',
+                            '<strong>Windows と Linux:</strong> 使える GPU は同じ。ここに出典付きの速度比較はありません'
                         ]
                     },
                     {
@@ -800,12 +800,12 @@
                         items: [
                             'macOS: GPU追加費用ゼロ、最も簡単なセットアップ (6分)、既にMacを所有している場合',
                             'Windows: 業界標準のGPUサポート、成熟したNVIDIA CUDAエコシステム',
-                            'Linux: オーバーヘッドが最小、24/7サーバー向けに最適'
+                            'Linux: 24時間稼働サーバーでよく選ばれる'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: 'セットアップ複雑性',
+                        h2: 'セットアップの手間（目安）',
                         items: [
                             'macOS: Ollama ダウンロード → モデル選択 = 6分、ターミナル不要',
                             'Windows: ドライバ インストール → Ollama ダウンロード = 15–20分、GUI のみ',
@@ -825,8 +825,8 @@
                         type: 'list',
                         h2: 'ハードウェアコスト',
                         items: [
-                            'MacBook Pro M5 Pro 64GB: ¥331,600',
-                            'MacBook Pro M5 Max 128GB: ¥463,400',
+                            'Mac mini M5 Pro 64GB: $2,700（米国定価、Daring Fireball による）',
+                            'Mac Studio M5 Max 128GB: $5,100（米国定価、Daring Fireball による）',
                             'RTX 5090（GPUのみ）: 新品は約 $4,500～4,700（InsiderLLM、2026-10-15）',
                             'RTX 5060 Ti（GPUのみ）: $679から（Wccftech、2026-01-27）'
                         ]
@@ -843,7 +843,7 @@
                         h2: 'CUDA、ROCm & Apple Metal',
                         items: [
                             'CUDA: Windows/Linux のみ、macOS 非対応。業界標準。',
-                            'ROCm: AMD サポート；Linux で優秀、Windows は未熟 (3–6ヶ月遅延)',
+                            'ROCm: AMD 対応。対応カードは Linux と Windows で異なる',
                             'Apple Metal: macOS のみ、新技術、CUDA より少ないライブラリ'
                         ]
                     },
@@ -852,22 +852,22 @@
                         h2: 'よくある質問',
                         faqs: [
                             { q: 'macOS で 70B を実行できますか？', a: 'はい。M5 Pro (64GB) は 70B を Q4（約35GB）で保持できます。M5 Max (128GB) は 70B を Q8（約70GB）で保持できます。' },
-                            { q: 'RTX 5090 の消費電力はどのくらいですか？', a: 'NVIDIA はボード電力を 575 W（システム要件 1,000 W）としています。M5 は ~30–40W です。' }
+                            { q: 'RTX 5090 の消費電力はどのくらいですか？', a: 'NVIDIA はボード電力を 575 W（システム要件 1,000 W）としています。M5 Max は 30～40 W と仮定しています（推定）。' }
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'ファインチューニング & サポート',
                         faqs: [
-                            { q: 'ファインチューニング向けに最適な OS は？', a: 'Linux > Windows > macOS。Linux は本番向けに最高の CUDA + DeepSpeed サポート。' },
-                            { q: 'AMD GPU を使用できますか？', a: 'Linux: 優秀な ROCm サポート。Windows: 3–6ヶ月遅延。AMD は NVIDIA 比 10–20% 低速。' }
+                            { q: 'ファインチューニング向けに最適な OS は？', a: '私たちの見解：CUDA でのファインチューニングは Linux、Windows、macOS の順です。' },
+                            { q: 'AMD GPU を使用できますか？', a: 'カードによります。Ollama の GPU ドキュメントで Windows または Linux の対応一覧を確認してください。' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: '避けるべき一般的な間違い',
                         items: [
-                            'macOS は大規模モデルを実行できないと思い込む。実行できる — ただし遅い。',
+                            'macOS は大規模モデルを実行できないと思い込む。ユニファイドメモリ次第で、64GB なら 70B を Q4 で保持できます。',
                             'LLM 用に Windows を購入する。Mac を所持している場合は使用；GPU コストが支配的。',
                             'Linux はサーバー専用だと思う。Linux は自宅サーバーやミニ PC にも向いています。',
                             'NVIDIA の市場支配力を忘れる。CUDA が標準；代替手段は小さいエコシステム。'
@@ -877,7 +877,7 @@
                         type: 'list',
                         h2: '3年総所有コスト分析',
                         items: [
-                            'Mac mini M5 Pro 64GB: ¥299,800 (70Bベンチマークは未公表)',
+                            'Mac mini M5 Pro 64GB: $2,720（米国定価 $2,700 + 推定電気代）',
                             'RTX 5060 Ti（GPUのみ）: 3年で $769',
                             'RTX 4090 中古（GPUのみ、中央値）: $3,136',
                             'RTX 5090 新品（GPUのみ）: $4,853～5,053'
@@ -885,17 +885,17 @@
                     },
                     {
                         type: 'list',
-                        h2: '地域別コンプライアンス注記',
+                        h2: 'プライバシーの注記（法的助言ではありません）',
                         items: [
-                            'EU (GDPR): 3つすべての OS がローカルデータ処理をサポート。',
-                            'Japan (APPI): Apple Silicon Mac はデータをローカルで処理。Windows/Linux はユーザー同意が必須。',
-                            'グローバル: 電気代は大幅に異なる (EU ¥0.33–0.50/kWh vs 中国 ¥0.13–0.20/kWh)。'
+                            'ローカル推論は、3つの OS いずれでもデータを端末内に保てる可能性があります。',
+                            'OS だけで GDPR や APPI に準拠することにはなりません。',
+                            '電気料金は国や契約によって異なります。'
                         ]
                     },
                     {
                         type: 'cta',
                         h2: '準備完了？',
-                        body: '完全な記事を訪問して、詳細ベンチマーク、TCO テーブル、および各 OS のセットアップガイドを確認してください。',
+                        body: '記事全文で、出典付きの速度値、コスト表、OS 別のセットアップガイドを確認できます。',
                         cta: '完全ガイドを読む',
                         href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=ja'
                     }
@@ -914,9 +914,9 @@
                         type: 'list',
                         h2: '关键指标概览',
                         items: [
-                            '<strong>macOS M5 Max (128GB):</strong> 可容纳 Q8 的 70B，$3,499，无声',
-                            '<strong>Windows RTX 5090 (32GB):</strong> 7B Q4_0 上 290.0 tok/s（开发者报告值），新品约 $4,500–4,700（InsiderLLM，2026-10-15）',
-                            '<strong>Linux RTX 5090 (32GB):</strong> 同一块 GPU，速度档位与 Windows 相同；配置方式不同'
+                            '<strong>macOS M5 Max (128GB):</strong> 可容纳 Q8 的 70B，无声',
+                            '<strong>RTX 5090 (32GB):</strong> 7B Q4_0 上 290.0 tok/s（开发者报告值，并非 Windows 专属），新品约 $4,500–4,700（InsiderLLM，2026-10-15）',
+                            '<strong>Windows 与 Linux：</strong>可用 GPU 相同；此处没有带来源的速度对比'
                         ]
                     },
                     {
@@ -925,12 +925,12 @@
                         items: [
                             'macOS：GPU成本为零、设置最简单 (6分钟)、如果已经拥有Mac',
                             'Windows：行业标准GPU支持、成熟的NVIDIA CUDA生态系统',
-                            'Linux：系统开销最低、最适合24/7服务器'
+                            'Linux：24/7 服务器的常见选择'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '设置复杂性',
+                        h2: '设置复杂性（粗略估计）',
                         items: [
                             'macOS：下载Ollama → 选择模型 = 6分钟，无需终端',
                             'Windows：安装驱动程序 → 下载Ollama = 15–20分钟，仅GUI',
@@ -950,8 +950,8 @@
                         type: 'list',
                         h2: '硬件成本概览',
                         items: [
-                            'MacBook Pro M5 Pro 64GB：$2,499',
-                            'MacBook Pro M5 Max 128GB：$3,499',
+                            'Mac mini M5 Pro 64GB：$2,700（美国标价，据 Daring Fireball）',
+                            'Mac Studio M5 Max 128GB：$5,100（美国标价，据 Daring Fireball）',
                             'RTX 5090（仅GPU）：新品约 $4,500–4,700（InsiderLLM，2026-10-15）',
                             'RTX 5060 Ti（仅GPU）：$679 起（Wccftech，2026-01-27）'
                         ]
@@ -968,7 +968,7 @@
                         h2: 'CUDA、ROCm & Apple Metal',
                         items: [
                             'CUDA：仅Windows/Linux，macOS不支持。行业标准。',
-                            'ROCm：AMD支持；Linux上更好，Windows上不成熟 (落后3–6个月)',
+                            'ROCm：AMD支持；Linux 与 Windows 支持的显卡不同',
                             'Apple Metal：仅macOS，较新技术，库比CUDA少'
                         ]
                     },
@@ -977,22 +977,22 @@
                         h2: '常见问题',
                         faqs: [
                             { q: '我能在macOS上运行70B吗？', a: '能。M5 Pro (64GB)可容纳 Q4 的 70B（约35GB）。M5 Max (128GB)可容纳 Q8 的 70B（约70GB）。' },
-                            { q: 'RTX 5090 的功耗是多少？', a: 'NVIDIA 标注板卡功耗为 575 W（整机电源要求 1,000 W）。M5 消耗~30–40W。' }
+                            { q: 'RTX 5090 的功耗是多少？', a: 'NVIDIA 标注板卡功耗为 575 W（整机电源要求 1,000 W）。M5 Max 按 30–40W 估算（非实测）。' }
                         ]
                     },
                     {
                         type: 'faq',
                         h2: '微调和支持',
                         faqs: [
-                            { q: '哪个操作系统最适合微调？', a: 'Linux > Windows > macOS。Linux拥有最好的生产级CUDA + DeepSpeed支持。' },
-                            { q: '我能使用AMD GPU吗？', a: 'Linux：优秀的ROCm支持。Windows：落后3–6个月。AMD比NVIDIA慢10–20%。' }
+                            { q: '哪个操作系统最适合微调？', a: '我们认为：CUDA 微调首选 Linux，其次 Windows，然后 macOS。' },
+                            { q: '我能使用AMD GPU吗？', a: '取决于显卡。请在 Ollama 的 GPU 文档中查看 Windows 或 Linux 支持列表。' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: '要避免的常见错误',
                         items: [
-                            '假设macOS无法运行大型模型。它能 — 只是速度慢。',
+                            '假设 macOS 无法运行大型模型。这取决于统一内存：64GB 可容纳 Q4 的 70B。',
                             '专门为LLM购买Windows。如果你拥有Mac，就使用它；GPU成本占主导。',
                             '认为Linux仅用于服务器。Linux也适合家用服务器和迷你PC。',
                             '忘记NVIDIA的市场主导地位。CUDA是标准；替代品是较小的生态系统。'
@@ -1002,7 +1002,7 @@
                         type: 'list',
                         h2: '3年总拥有成本分析',
                         items: [
-                            'Mac mini M5 Pro 64GB：$1,699（70B基准测试尚未公布）',
+                            'Mac mini M5 Pro 64GB：$2,720（美国标价 $2,700 加估算电费）',
                             'RTX 5060 Ti（仅GPU）：3年 $769',
                             'RTX 4090 二手（仅GPU，中位数）：$3,136',
                             'RTX 5090 新品（仅GPU）：$4,853–5,053'
@@ -1010,17 +1010,17 @@
                     },
                     {
                         type: 'list',
-                        h2: '区域合规性说明',
+                        h2: '隐私说明（非法律建议）',
                         items: [
-                            'EU (GDPR)：所有三个操作系统都支持本地数据处理。',
-                            'Japan (APPI)：Apple Silicon Mac本地处理数据。Windows/Linux需要用户同意。',
-                            '全球：电力成本差异很大 (EU $0.20–0.30/kWh vs 中国 $0.08–0.12/kWh)。'
+                            '三个操作系统上的本地推理都可以让数据留在本机。',
+                            '任何操作系统都不能单独让配置符合 GDPR 或 APPI。',
+                            '电价因国家和合同而异。'
                         ]
                     },
                     {
                         type: 'cta',
                         h2: '准备好了吗？',
-                        body: '访问完整文章，获取详细的基准测试、TCO表格和每个操作系统的设置指南。',
+                        body: '完整文章提供带来源的速度数据、成本表和各操作系统的设置指南。',
                         cta: '阅读完整指南',
                         href: 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm?lang=zh'
                     }
