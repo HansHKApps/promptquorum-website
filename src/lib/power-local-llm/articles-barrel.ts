@@ -62,6 +62,7 @@ import { article as a_photoprism_review } from './articles/photoprism-review'
 import { article as a_photoview_review } from './articles/photoview-review'
 import { article as a_whisper_notes_review } from './articles/whisper-notes-review'
 import { article as a_aiko_review } from './articles/aiko-review'
+import { article as a_weesper_transcribe_review } from './articles/weesper-transcribe-review'
 import { article as a_amical_review } from './articles/amical-review'
 import { article as a_argos_translate_review } from './articles/argos-translate-review'
 import { article as a_linguister_review } from './articles/linguister-review'
@@ -860,6 +861,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'photoview-review':                              a_photoview_review,
   'whisper-notes-review':                          a_whisper_notes_review,
   'aiko-review':                                   a_aiko_review,
+  'weesper-transcribe-review':                     a_weesper_transcribe_review,
   'amical-review':                                 a_amical_review,
   'argos-translate-review':                        a_argos_translate_review,
   'linguister-review':                             a_linguister_review,

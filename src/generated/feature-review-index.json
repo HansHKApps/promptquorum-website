@@ -1954,6 +1954,11 @@
     "urlSlug": "aiko-review",
     "url": "/power-local-llm/aiko-review"
   },
+  "weesper-transcribe": {
+    "cluster": "power-local-llm",
+    "urlSlug": "weesper-transcribe-review",
+    "url": "/power-local-llm/weesper-transcribe-review"
+  },
   "amical": {
     "cluster": "power-local-llm",
     "urlSlug": "amical-review",

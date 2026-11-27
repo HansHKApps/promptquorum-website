@@ -1334,6 +1334,7 @@ const HUB_THEMES: Array<{
       'univocal-review',
       'sprich-review',
       'weesper-neon-flow-review',
+      'weesper-transcribe-review',
       'whispy-review',
       'sablate-review',
       'meetini-review',
