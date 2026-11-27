@@ -36,8 +36,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-10-31',
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-en.webp',
-    title: 'How Balcony Solar Went From Illegal to Law in 10 US States (2026)',
-    seoTitle: 'How Balcony Solar Became Legal in the US: Guide (2026)',
+    title: 'How Plug-In (Balcony) Solar Went From Illegal to Law in 10 US States (2026)',
+    seoTitle: 'How Plug-In Solar Became Legal in the US: Guide (2026)',
     intro: 'Until 2025, plug-in balcony solar was effectively illegal everywhere in the US — not banned by name, but caught under interconnection rules written for 5–25 kW rooftop systems. Utah broke the deadlock in March 2025, and nine more states have since enacted similar laws — most recently California, signed September 30, 2026 — with New York\'s SUNNY Act now the main bill still waiting for a governor. This is the story of how that happened, why Florida and Texas are still stuck, and what a missing safety certification has to do with all of it.',
     metaDescription: 'Is balcony solar legal in Florida or Texas? Neither has a law. How Utah and nine other states legalized plug-in solar, plus UL 3700 and New York.',
     publishDate: '2026-07-16',
@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners deciding whether to buy balcony solar before their state legalizes it',
     primaryTerm: 'US balcony solar legalization',
-    targetKeywords: ['why is balcony solar illegal in the us', 'UL 3700 balcony solar', 'Utah HB 340 balcony solar', 'is balcony solar legal in california texas florida', 'US balcony solar legislation 2026'],
+    targetKeywords: ['how plug-in solar became legal', 'plug-in solar US', 'why is balcony solar illegal in the us', 'UL 3700 balcony solar', 'Utah HB 340 balcony solar', 'is balcony solar legal in california texas florida', 'US balcony solar legislation 2026'],
     leadAnswerBlock: '**Utah became the first US state to legalize plug-in balcony solar with HB 340, signed March 2025 and effective May 7, 2025 — nine more states (Maine, Virginia, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey and California) have since signed nearly identical laws, California most recently on September 30, 2026, and New York\'s SUNNY Act still awaits its governor.** Florida and Texas remain without one: Florida has an explicit legal carve-out against condo balconies, and Texas has no bill at all. Several laws are not in effect yet — California on January 1, 2027, Virginia on January 1, 2027 (per most trackers), New Hampshire\'s main provisions on January 1, 2027 and New Jersey on March 1, 2027.',
     quickAnswerTop: {
       en: {
