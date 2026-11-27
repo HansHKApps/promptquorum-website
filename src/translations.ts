@@ -1048,7 +1048,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: マルチモデルコンセンサスの仕組みは？無料プランはある？OllamaやLM Studioに対応？プロンプト最適化、フレームワーク、価格設定に関する28個の質問すべてに回答。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt工程Best Practices 2026：フレームワーク",
+    promptEngineeringHubTitle: "プロンプトエンジニアリング実践ガイド2026：フレームワーク",
     promptEngineeringHubDescription: "チェーン・オブ・ソート、few-shot、RAG技法をGPT-4o、Claude 4.8 Sonnet、Gemini 2.5 Proで習得。80本ガイド9テーマ。",
     promptEngineeringHubOgDescription: "全スキルレベル対応80本のプロンプトエンジニアリング記事 — チェーン・オブ・ソート、RAG、few-shot、チームガバナンス、評価をGPT-4o、Claude 4.8 Sonnet、Gemini 2.5 Pro向けに解説。",
     promptEngineeringHubTwitterDescription: "9テーマ80本のプロンプトエンジニアリングガイド。基礎から始め、評価と信頼性を習得 — GPT-4o、Claude、Gemini対応。",
@@ -1370,7 +1370,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum常见问题：多模型共识如何工作？有免费版本吗？支持Ollama和LM Studio本地模型吗？关于提示词优化、框架、定价的28个问题完全解答。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "提示词工程Best Practices 2026：框架",
+    promptEngineeringHubTitle: "提示词工程最佳实践 2026：提示词框架与实战指南",
     promptEngineeringHubDescription: "掌握链式思维、few-shot、RAG技术，用于GPT-4o、Claude 4.8 Sonnet、Gemini 2.5 Pro。80篇文章9大主题。",
     promptEngineeringHubOgDescription: "全技能水平80篇提示词工程文章——思维链、RAG、few-shot提示、团队治理和评估，适用于GPT-4o、Claude 4.8 Sonnet和Gemini 2.5 Pro。",
     promptEngineeringHubTwitterDescription: "9大主题80篇提示词工程指南。从基础知识开始，精通评估与可靠性——适用于GPT-4o、Claude和Gemini。",
