@@ -10,9 +10,11 @@ import dynamic from 'next/dynamic'
 import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_PROMO_AFTER_S, ASK_HANS_STORAGE } from '@/lib/askhans/config'
 import { daysBucket, durationBucket, questionBucket } from '@/lib/askhans/engagement'
 import { DEFAULT_CATEGORY_KEY, type AskHansLink, type AskHansPictureLink } from '@/lib/askhans/categories'
+import { explainQuestion, type ExplainPayload } from '@/lib/askhans/explain'
 import { AskHansLogo } from './AskHansLogo'
 import { AskHansWindow } from './AskHansWindow'
 import { ConsentNotice } from './ConsentNotice'
+import { ExplainSelection } from './ExplainSelection'
 import { useAskCopy, useAskLang } from './copy'
 import { FeedbackBar } from './FeedbackBar'
 import { OverviewStrip } from './OverviewStrip'
@@ -83,6 +85,8 @@ export function AskHansRoot() {
   /** 'power' = the guided setups screen replaces the chat inside the same window */
   const [mode, setMode] = useState<'chat' | 'power'>('chat')
   const powerBackRef = useRef<(() => boolean) | null>(null)
+  /** "Explain this" data per sent question text (kept in memory, so retry and the consent step keep the context) */
+  const explains = useRef(new Map<string, ExplainPayload>())
   const visitId = useRef('')
   /** active seconds (window open + tab visible): since the last flushed use session, and in this whole visit */
   const segMs = useRef(0)
@@ -279,7 +283,7 @@ export function AskHansRoot() {
 
       let acc = ''
       let category = conv.category
-      await streamAnswer({ visitId: visitId.current, lang, stats: consentValue?.value === 'yes', messages: [...history, { role: 'user', content: text }] }, (ev) => {
+      await streamAnswer({ visitId: visitId.current, lang, stats: consentValue?.value === 'yes', messages: [...history, { role: 'user', content: text }], explain: explains.current.get(text) }, (ev) => {
         if (ev.t === 'text') {
           acc += ev.v
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, content: acc, status: undefined }))
@@ -353,6 +357,17 @@ export function AskHansRoot() {
     },
     [active, consent, conversations, patchConv, send, streaming],
   )
+
+  // "Explain this" on marked text (website pages and Ask Hans answers): opens the chat and asks about the passage.
+  const explain = (payload: ExplainPayload) => {
+    const text = explainQuestion(tx.explainThis, payload.passage, ASK_HANS_LIMITS.maxMessageChars)
+    explains.current.set(text, payload)
+    if (!ui.open) ctaVia.current = null
+    setMode('chat')
+    stick.current = true
+    submit(text)
+    setTimeout(() => inputRef.current?.focus(), 60)
+  }
 
   // Always call the freshest submit from the global open event.
   const submitRef = useRef(submit)
@@ -515,6 +530,7 @@ export function AskHansRoot() {
             <>
               {m.content && (
                 <div
+                  data-explain=""
                   onClick={(e) => {
                     const a = (e.target as HTMLElement).closest('a')
                     if (!a) return
@@ -582,6 +598,7 @@ export function AskHansRoot() {
 
   return (
     <>
+      <ExplainSelection label={tx.explainThis} disabled={streaming || consentOpen} onExplain={explain} />
       {showLogo && <AskHansLogo
           ref={logoRef}
           onOpen={() => {

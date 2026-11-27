@@ -25,9 +25,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GPU server hosting means renting a whole GPU machine (dedicated, bare metal or a GPU VPS) on a fixed term, instead of paying by the hour on one of the [best cloud GPU providers](/power-local-llm/best-cloud-gpu-providers). This page compares four hosts from their own official pages, checked 2026-11-22: CUDO Compute, Cherry Servers, Database Mart and LumaDock. The result is uneven. CUDO Compute states that its public on-demand platform closed on March 31, 2026 and now sells GPU clusters through a sales form. Cherry Servers and Database Mart publish prices and let you order. The official LumaDock pages returned HTTP 403 to automated checks, so its GPU VPS plans are not verified here. All scores are PromptQuorum assessments, not a hands-on lab test.',
     metaDescription:
-      'GPU server hosting 2026: CUDO closed on-demand, Cherry lists A100 from $2.362/hr, Database Mart H100 $1,039.60/mo first term (renews $2,599).',
+      'GPU server hosting 2026: CUDO says it closed on-demand, Cherry lists A100 from $2.362/hr, Database Mart H100 $1,039.60/mo first term (renews $2,599).',
     twitterDescription:
-      'GPU server hosting in 2026: CUDO Compute closed its public on-demand platform, Cherry Servers and Database Mart publish prices, LumaDock is unverified. Terms, locations, model fit.',
+      'GPU server hosting in 2026: CUDO Compute states it closed its public on-demand platform, Cherry Servers and Database Mart publish prices, LumaDock is unverified. Terms, locations, model fit.',
     readTime: '11 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers and small teams who want a fixed-term GPU server for LLM inference or fine-tuning',
@@ -48,9 +48,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Which GPU server host should you use: CUDO, Cherry Servers, Database Mart or LumaDock?',
         answer:
-          'Use Cherry Servers if you want hourly or fixed-term dedicated servers at listed EU sites (GPU location not stated) with a stated 15-day money-back guarantee, and accept that most GPU models are on a waiting list. Use Database Mart if you want the widest published GPU range of the three hosts whose pages could be read (36 plans, RTX 5060 to H100, USA only) on monthly terms. Skip CUDO Compute unless you need a 128-GPU or larger cluster: its public on-demand platform closed on March 31, 2026. Treat LumaDock as unverified: its GPU VPS plans could not be checked on its official pages. Prices below were checked on 2026-11-22.',
+          'Use Cherry Servers if you want hourly or fixed-term dedicated servers at listed EU sites (GPU location not stated) with a stated 15-day money-back guarantee, and accept that most GPU models are on a waiting list. Use Database Mart if you want a wide published GPU range (36 plans, RTX 5060 to H100, USA only) among the three hosts whose pages could be read on monthly terms. Skip CUDO Compute unless you need a 128-GPU or larger cluster: it states its public on-demand platform closed on March 31, 2026. Treat LumaDock as unverified: its GPU VPS plans could not be checked on its official pages. Prices below were checked on 2026-11-22.',
         bullets: [
-          'CUDO Compute: public on-demand platform closed 2026-03-31; clusters start at 128 GPUs via a sales form, no published prices',
+          'CUDO Compute: states its public on-demand platform closed 2026-03-31; clusters start at 128 GPUs via a sales form, no published prices',
           'Cherry Servers: A100 80GB from $2.362/hr ($1,657.68/mo, waiting list); A2 16GB from $0.239/hr; Lithuania base plans; 15-day money-back stated for dedicated servers',
           'Database Mart: 36 GPU plans, USA only; H100 80GB $1,039.60/mo first term (renews at $2,599.00/mo); RTX 5090 32GB VPS $419/mo',
           'LumaDock: unverified; GPU VPS plans not checked (official pages returned HTTP 403 to automated checks)',
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'You want a large published GPU range on monthly terms (Database Mart lists 36 plans)',
           '**Skip it if:**',
           'You need a GPU for a few hours; use per-hour renting instead, see the [best cloud GPU providers](/power-local-llm/best-cloud-gpu-providers)',
-          'You expected CUDO Compute to rent single GPUs on demand: its public on-demand platform closed on March 31, 2026',
+          'You expected CUDO Compute to rent single GPUs on demand: it states its public on-demand platform closed on March 31, 2026',
           'You need instant delivery: Cherry Servers lists 24 to 72 hours depending on region',
           'You need verified plans and prices for LumaDock: its official pages could not be checked',
         ],
@@ -124,9 +124,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Criterion: 'GPU choice', CUDO: '9/10, Blackwell clusters', Cherry: '5/10, older cards', 'Database Mart': '9/10, to H100' },
           { Criterion: 'Contract flexibility', CUDO: '3/10, 128 GPUs+', Cherry: '9/10, hourly', 'Database Mart': '6/10, monthly terms' },
           { Criterion: 'Support / docs', CUDO: 'Not assessed', Cherry: '6/10, FAQ only read', 'Database Mart': 'Not assessed' },
-          { Criterion: 'Overall', CUDO: '4.0/10', Cherry: '7.0/10', 'Database Mart': '8.0/10' },
+          { Criterion: 'Overall (scored criteria only)', CUDO: '4.0/10', Cherry: '7.0/10', 'Database Mart': '8.0/10' },
         ],
-        note: 'PromptQuorum assessment, not a hands-on lab test. Reliability (uptime, network speed, real-world throughput) was not measured, so it carries no score. Overall is the average of the scored criteria, rounded: four for CUDO and Database Mart (Support / docs is not assessed), five for Cherry.',
+        note: 'PromptQuorum assessment, not a hands-on lab test. Reliability (uptime, network speed, real-world throughput) was not measured, so it carries no score. Overall (scored criteria only) is the average of the scored criteria, rounded: four for CUDO and Database Mart (Support / docs is not assessed), five for Cherry.',
       },
       tldr: {
         id: 'tldr',
@@ -134,7 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute: [docs](https://docs.cudocompute.com/) state the public on-demand platform closed on March 31, 2026; clusters begin at 128 GPUs through a request form, no prices published',
-          'Cherry Servers: GPU "from" rates run from $0.139/hr to $2.362/hr (A100 80GB); most models are on a waiting list; 15-day money-back stated for dedicated servers',
+          'Cherry Servers: GPU "from" rates run from $0.239/hr (A2) to $2.362/hr (A100); most models are on a waiting list; 15-day money-back stated for dedicated servers',
           'Database Mart: 36 GPU plans, USA only, monthly pricing with 1, 3, 12 and 24-month terms; the H100 price renews at $2,599.00/mo after the first term',
           'LumaDock: plans and prices not verified because its official pages returned HTTP 403 to automated checks',
           'A 70B model at Q4 needs about 44 GB of VRAM per this site\'s [VRAM cheat sheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet), so a 48 GB or 80 GB card fits it',
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict: Who Should Use Which Host',
         content:
-          '**Pick Cherry Servers for hourly or fixed-term dedicated servers with optional GPUs, from a provider with EU sites (which site hosts which GPU is not stated), and Database Mart for the widest published GPU range of the three hosts whose pages could be read, on monthly terms in the USA.** Both publish prices and let a developer order without a sales call. Cherry Servers offers flexible billing and a stated 15-day money-back guarantee on dedicated servers, but its A100, A40, A16 and A10 listings show a waiting list. Database Mart lists cards up to the H100 and RTX Pro 6000 96 GB, but its H100 price is a one-time discount that renews at $2,599.00 per month.\n\n**CUDO Compute is not a fit for an individual or small team in 2026.** Its docs state that the public on-demand platform closed on March 31, 2026, and its cluster page says deployments begin at 128 GPUs. If that is your scale, it is worth a sales conversation, with ISO 27001 and GDPR-aligned operations stated on its [cluster page](https://www.cudocompute.com/products/clusters), not verified by PromptQuorum.\n\n**LumaDock should be treated as unverified, so check it yourself.** PromptQuorum could not read its official pages, so this page makes no claim about its GPU VPS plans, prices or terms.',
+          '**Pick Cherry Servers for hourly or fixed-term dedicated servers with optional GPUs, from a provider with EU sites (which site hosts which GPU is not stated), and Database Mart for a wide published GPU range (36 plans) among the three hosts whose pages could be read, on monthly terms in the USA.** Both publish prices and let a developer order without a sales call. Cherry Servers offers flexible billing and a stated 15-day money-back guarantee on dedicated servers, but its A100, A40 and A10 listings show a waiting list. Database Mart lists cards up to the H100 and RTX Pro 6000 96 GB, but its H100 price is a one-time discount that renews at $2,599.00 per month.\n\n**In PromptQuorum\'s assessment, CUDO Compute is not a fit for an individual or small team in 2026.** Its docs state that the public on-demand platform closed on March 31, 2026, and its cluster page says deployments begin at 128 GPUs. If that is your scale, it is worth a sales conversation, with ISO 27001 and GDPR-aligned operations stated on its [cluster page](https://www.cudocompute.com/products/clusters) (vendor self-claims not verified by PromptQuorum; whether your use is GDPR-compliant depends on your own obligations as data controller).\n\n**LumaDock should be treated as unverified, so check it yourself.** PromptQuorum could not read its official pages, so this page makes no claim about its GPU VPS plans, prices or terms.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Pricing: What Each Host Published on 2026-11-22',
         content:
-          '**Every number below comes from the provider\'s own page, checked 2026-11-22, in USD.** Cherry Servers rates are "from" prices; Database Mart prices include sale prices that can end. For per-hour rental comparisons across other hosts, see [RunPod vs Vast.ai pricing](/prompt-bites/runpod-vs-vastai-pricing) and the [build-versus-rent calculator](/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
+          '**Every number below comes from the provider\'s own page, checked 2026-11-22, in USD.** Cherry Servers rates are "from" prices; Database Mart prices include sale prices that can end. Monthly figures are the provider\'s own listed rates, not the hourly rate times 730 hours. For per-hour rental comparisons across other hosts, see [RunPod vs Vast.ai pricing](/prompt-bites/runpod-vs-vastai-pricing) and the [build-versus-rent calculator](/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         columns: ['Provider / plan', 'GPU and VRAM', 'Price'],
         rows: [
           { 'Provider / plan': 'CUDO Compute', 'GPU and VRAM': 'Blackwell clusters', Price: 'Not published, request form' },
@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Always-on inference API:** a 14B to 70B model serving an internal tool all day, where a flat monthly rate is predictable.',
           '**Long fine-tuning runs:** multi-day jobs on a single 48 GB to 96 GB card, where hourly billing would also add up.',
           '**Private GPU for sensitive tests:** a whole machine for one customer, as Cherry Servers describes its dedicated servers (not a data-protection guarantee, see Risk and Trust).',
-          '**Large cluster training:** the one case where CUDO Compute applies, at 128 GPUs or more through its sales process.',
+          '**Large cluster training:** the main case where CUDO Compute applies, at 128 GPUs or more through its sales process.',
           '**Not a fit:** a few hours of GPU time, or a burst of parallel jobs; hourly providers suit those better.',
         ],
       },
@@ -231,11 +231,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Billing and refunds, Database Mart:** monthly price per plan with 1, 3, 12 and 24-month terms; no refund policy appears on the plan pages read; terms are in its Terms of Service and SLA, which were not read.',
           '**Billing, CUDO Compute:** no prices or contract terms are published; the cluster page names an SLA but its contents were not seen.',
           '**Where the hardware comes from:** CUDO Compute states capacity comes from independently operated data centers; Cherry Servers lists Lithuania, Stockholm, Amsterdam, Frankfurt, Chicago, Singapore and Tokyo; Database Mart states US Tier-2 data centers without naming cities.',
-          '**Data handling, CUDO Compute:** states ISO 27001 certified facilities, GDPR-aligned operations and sovereign data residency enforcement on its [cluster page](https://www.cudocompute.com/products/clusters), as vendor self-claims not verified by PromptQuorum.',
+          '**Data handling, CUDO Compute:** states ISO 27001 certified facilities, GDPR-aligned operations and sovereign data residency enforcement on its [cluster page](https://www.cudocompute.com/products/clusters), (vendor self-claims not verified by PromptQuorum; whether your use is GDPR-compliant depends on your own obligations as data controller).',
           '**Data handling, Cherry Servers:** states each server is a private machine with no virtualization, default DDoS protection and 100 GB of free backup; no data retention policy appears on the GPU page.',
           '**Data handling, Database Mart:** no data-handling statement appears on the pages read.',
           '**LumaDock:** unverified; nothing about its data handling, locations or refunds is verified here. Read its terms yourself before moving data to it.',
-          'Do not put regulated or personal data on any host until you have read its privacy policy and data processing terms.',
+          'Do not put regulated or personal data on any host until you have read its privacy policy and data processing terms. This is not legal advice.',
         ],
       },
       prosCons: {
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cons**',
           'Cherry Servers: most listed GPU models show a waiting list, and delivery is 24 to 72 hours',
           'Database Mart: US locations only, and the H100 discount renews at $2,599.00 per month',
-          'CUDO Compute: public on-demand platform closed on March 31, 2026; clusters start at 128 GPUs',
+          'CUDO Compute: states its public on-demand platform closed on March 31, 2026; clusters start at 128 GPUs',
           'LumaDock: plans not verified',
           'Paying for idle hours if the GPU is not busy',
         ],
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GPU Server Hosting 2026: CUDO Compute, Cherry Servers, Database Mart (and LumaDock GPU VPS)',
       reviewBody:
-        'A comparison of four GPU server hosts from their official pages, checked 2026-11-22. CUDO Compute states its public on-demand platform closed on March 31, 2026; Cherry Servers lists an A100 80GB from $2.362 per hour; Database Mart lists an H100 80GB at $1,039.60 per month renewing at $2,599.00; LumaDock could not be verified. The rating is the average overall score of the three scored providers (4.0, 7.0 and 8.0 out of 10), PromptQuorum assessment, not a hands-on test.',
+        'A comparison of four GPU server hosts from their official pages, checked 2026-11-22. CUDO Compute states its public on-demand platform closed on March 31, 2026; Cherry Servers lists an A100 80GB from $2.362 per hour; Database Mart lists an H100 80GB at $1,039.60 per month renewing at $2,599.00; LumaDock could not be verified. The rating is the average of each provider\'s scored criteria (4, 5 and 4 criteria respectively; 4.0, 7.0 and 8.0 out of 10), PromptQuorum assessment, not a hands-on test.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -381,9 +381,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GPU-Server-Hosting bedeutet, eine ganze GPU-Maschine (dediziert, Bare Metal oder als GPU VPS) für eine feste Laufzeit zu mieten, statt stundenweise bei einem der [besten Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) zu zahlen. Diese Seite vergleicht vier Hoster anhand ihrer eigenen offiziellen Seiten, geprüft am 2026-11-22: CUDO Compute, Cherry Servers, Database Mart und LumaDock. Das Ergebnis ist uneinheitlich. CUDO Compute gibt an, dass seine öffentliche On-Demand-Plattform am 31. März 2026 geschlossen wurde und GPU-Cluster nun über ein Vertriebsformular verkauft werden. Cherry Servers und Database Mart veröffentlichen Preise und lassen Sie bestellen. Die offiziellen Seiten von LumaDock lieferten bei automatischen Prüfungen HTTP 403, daher sind dessen GPU-VPS-Pläne hier nicht verifiziert. Alle Bewertungen sind Einschätzungen von PromptQuorum, kein praktischer Labortest.',
     metaDescription:
-      'GPU-Server-Hosting 2026: CUDO ohne On-Demand, Cherry A100 ab 2,362 $/Std., Database Mart H100 1.039,60 $/Mo. im ersten Term (danach 2.599 $).',
+      'GPU-Server-Hosting 2026: CUDO nach eigenen Angaben ohne On-Demand, Cherry A100 ab 2,362 $/Std., Database Mart H100 1.039,60 $/Mo. im 1. Term (danach 2.599 $).',
     twitterDescription:
-      'GPU-Server-Hosting 2026: CUDO Compute hat die öffentliche On-Demand-Plattform geschlossen, Cherry Servers und Database Mart veröffentlichen Preise, LumaDock ist unverifiziert. Laufzeiten, Standorte, Modelleignung.',
+      'GPU-Server-Hosting 2026: CUDO Compute gibt an, die öffentliche On-Demand-Plattform geschlossen zu haben, Cherry Servers und Database Mart veröffentlichen Preise, LumaDock ist unverifiziert. Laufzeiten, Standorte, Modelleignung.',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und kleine Teams, die einen GPU-Server mit fester Laufzeit für LLM-Inferenz oder Fine-Tuning wollen',
@@ -404,9 +404,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Welchen GPU-Server-Hoster sollten Sie nutzen: CUDO, Cherry Servers, Database Mart oder LumaDock?',
         answer:
-          'Nutzen Sie Cherry Servers, wenn Sie dedizierte Server stündlich oder mit fester Laufzeit an gelisteten EU-Standorten (GPU-Standort nicht angegeben) mit einer angegebenen 15-Tage-Geld-zurück-Garantie wollen und akzeptieren, dass die meisten GPU-Modelle auf einer Warteliste stehen. Nutzen Sie Database Mart, wenn Sie die breiteste veröffentlichte GPU-Auswahl der drei Hoster, deren Seiten lesbar waren (36 Pläne, RTX 5060 bis H100, nur USA) mit monatlicher Laufzeit wollen. Überspringen Sie CUDO Compute, es sei denn, Sie brauchen einen Cluster ab 128 GPUs: Die öffentliche On-Demand-Plattform wurde am 31. März 2026 geschlossen. Behandeln Sie LumaDock als unverifiziert: Die GPU-VPS-Pläne ließen sich auf den offiziellen Seiten nicht prüfen. Die Preise unten wurden am 2026-11-22 geprüft.',
+          'Nutzen Sie Cherry Servers, wenn Sie dedizierte Server stündlich oder mit fester Laufzeit an gelisteten EU-Standorten (GPU-Standort nicht angegeben) mit einer angegebenen 15-Tage-Geld-zurück-Garantie wollen und akzeptieren, dass die meisten GPU-Modelle auf einer Warteliste stehen. Nutzen Sie Database Mart, wenn Sie eine breite veröffentlichte GPU-Auswahl (36 Pläne, RTX 5060 bis H100, nur USA) unter den drei Hostern, deren Seiten lesbar waren, mit monatlicher Laufzeit wollen. Überspringen Sie CUDO Compute, es sei denn, Sie brauchen einen Cluster ab 128 GPUs: Es gibt an, dass die öffentliche On-Demand-Plattform am 31. März 2026 geschlossen wurde. Behandeln Sie LumaDock als unverifiziert: Die GPU-VPS-Pläne ließen sich auf den offiziellen Seiten nicht prüfen. Die Preise unten wurden am 2026-11-22 geprüft.',
         bullets: [
-          'CUDO Compute: öffentliche On-Demand-Plattform am 2026-03-31 geschlossen; Cluster ab 128 GPUs über ein Vertriebsformular, keine veröffentlichten Preise',
+          'CUDO Compute: gibt an, die öffentliche On-Demand-Plattform am 2026-03-31 geschlossen zu haben; Cluster ab 128 GPUs über ein Vertriebsformular, keine veröffentlichten Preise',
           'Cherry Servers: A100 80GB ab 2,362 $/Std. (1.657,68 $/Mo., Warteliste); A2 16GB ab 0,239 $/Std.; Basispläne in Litauen; 15 Tage Geld-zurück für dedizierte Server angegeben',
           'Database Mart: 36 GPU-Pläne, nur USA; H100 80GB 1.039,60 $/Mo. in der ersten Laufzeit (Verlängerung zu 2.599,00 $/Mo.); RTX 5090 32GB VPS 419 $/Mo.',
           'LumaDock: unverifiziert; GPU-VPS-Pläne nicht geprüft (offizielle Seiten lieferten bei automatischen Prüfungen HTTP 403)',
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sie eine große veröffentlichte GPU-Auswahl mit monatlicher Laufzeit wollen (Database Mart listet 36 Pläne)',
           '**Überspringen, wenn:**',
           'Sie eine GPU nur für wenige Stunden brauchen; mieten Sie stattdessen pro Stunde, siehe die [besten Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers)',
-          'Sie erwartet haben, dass CUDO Compute einzelne GPUs On-Demand vermietet: Die öffentliche On-Demand-Plattform wurde am 31. März 2026 geschlossen',
+          'Sie erwartet haben, dass CUDO Compute einzelne GPUs On-Demand vermietet: Es gibt an, die öffentliche On-Demand-Plattform am 31. März 2026 geschlossen zu haben',
           'Sie sofortige Bereitstellung brauchen: Cherry Servers nennt je nach Region 24 bis 72 Stunden',
           'Sie verifizierte Pläne und Preise für LumaDock brauchen: Dessen offizielle Seiten ließen sich nicht prüfen',
         ],
@@ -480,9 +480,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Kriterium: 'GPU-Auswahl', CUDO: '9/10, Blackwell-Cluster', Cherry: '5/10, ältere Karten', 'Database Mart': '9/10, bis H100' },
           { Kriterium: 'Vertragsflexibilität', CUDO: '3/10, ab 128 GPUs', Cherry: '9/10, stündlich', 'Database Mart': '6/10, Monatslaufzeiten' },
           { Kriterium: 'Support / Doku', CUDO: 'Nicht bewertet', Cherry: '6/10, nur FAQ gelesen', 'Database Mart': 'Nicht bewertet' },
-          { Kriterium: 'Gesamt', CUDO: '4,0/10', Cherry: '7,0/10', 'Database Mart': '8,0/10' },
+          { Kriterium: 'Gesamt (nur bewertete Kriterien)', CUDO: '4,0/10', Cherry: '7,0/10', 'Database Mart': '8,0/10' },
         ],
-        note: 'Einschätzung von PromptQuorum, kein praktischer Labortest. Die Zuverlässigkeit (Verfügbarkeit, Netzwerkgeschwindigkeit, reale Durchsatzwerte) wurde nicht gemessen und erhält daher keine Bewertung. Gesamt ist der gerundete Durchschnitt der bewerteten Kriterien: vier bei CUDO und Database Mart (Support / Doku ist nicht bewertet), fünf bei Cherry.',
+        note: 'Einschätzung von PromptQuorum, kein praktischer Labortest. Die Zuverlässigkeit (Verfügbarkeit, Netzwerkgeschwindigkeit, reale Durchsatzwerte) wurde nicht gemessen und erhält daher keine Bewertung. Gesamt (nur bewertete Kriterien) ist der gerundete Durchschnitt der bewerteten Kriterien: vier bei CUDO und Database Mart (Support / Doku ist nicht bewertet), fünf bei Cherry.',
       },
       tldr: {
         id: 'tldr',
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute: Die [Doku](https://docs.cudocompute.com/) gibt an, dass die öffentliche On-Demand-Plattform am 31. März 2026 geschlossen wurde; Cluster beginnen bei 128 GPUs über ein Anfrageformular, keine Preise veröffentlicht',
-          'Cherry Servers: GPU-„ab“-Preise von 0,139 $/Std. bis 2,362 $/Std. (A100 80GB); die meisten Modelle stehen auf einer Warteliste; 15 Tage Geld-zurück für dedizierte Server angegeben',
+          'Cherry Servers: GPU-„ab“-Preise von 0,239 $/Std. (A2) bis 2,362 $/Std. (A100); die meisten Modelle stehen auf einer Warteliste; 15 Tage Geld-zurück für dedizierte Server angegeben',
           'Database Mart: 36 GPU-Pläne, nur USA, Monatspreise mit Laufzeiten von 1, 3, 12 und 24 Monaten; der H100-Preis verlängert sich nach der ersten Laufzeit auf 2.599,00 $/Mo.',
           'LumaDock: Pläne und Preise nicht verifiziert, weil seine offiziellen Seiten bei automatischen Prüfungen HTTP 403 lieferten',
           'Ein 70B-Modell mit Q4 braucht laut dem [VRAM-Spickzettel](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) dieser Seite etwa 44 GB VRAM, eine Karte mit 48 GB oder 80 GB passt also',
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit: Wer welchen Hoster nutzen sollte',
         content:
-          '**Wählen Sie Cherry Servers für dedizierte Server mit optionalen GPUs, stündlich oder mit fester Laufzeit, von einem Anbieter mit EU-Standorten (welcher Standort welche GPU hostet, ist nicht angegeben), und Database Mart für die breiteste veröffentlichte GPU-Auswahl der drei Hoster, deren Seiten lesbar waren mit monatlicher Laufzeit in den USA.** Beide veröffentlichen Preise und lassen einen Entwickler ohne Vertriebsgespräch bestellen. Cherry Servers bietet flexible Abrechnung und eine angegebene 15-Tage-Geld-zurück-Garantie für dedizierte Server, doch seine Listings für A100, A40, A16 und A10 zeigen eine Warteliste. Database Mart listet Karten bis zur H100 und RTX Pro 6000 96 GB, aber sein H100-Preis ist ein einmaliger Rabatt, der sich auf 2.599,00 $ pro Monat verlängert.\n\n**CUDO Compute passt 2026 nicht für Einzelpersonen oder kleine Teams.** Die Doku gibt an, dass die öffentliche On-Demand-Plattform am 31. März 2026 geschlossen wurde, und die Cluster-Seite nennt Deployments ab 128 GPUs. Wenn das Ihre Größenordnung ist, lohnt sich ein Vertriebsgespräch; laut eigener Angabe auf der [Cluster-Seite](https://www.cudocompute.com/products/clusters) (von PromptQuorum nicht geprüft) sind die Standorte nach ISO 27001 zertifiziert und die Abläufe an der DSGVO ausgerichtet.\n\n**LumaDock sollten Sie als unverifiziert behandeln und selbst prüfen.** PromptQuorum konnte dessen offizielle Seiten nicht lesen, daher trifft diese Seite keine Aussage zu seinen GPU-VPS-Plänen, Preisen oder Bedingungen.',
+          '**Wählen Sie Cherry Servers für dedizierte Server mit optionalen GPUs, stündlich oder mit fester Laufzeit, von einem Anbieter mit EU-Standorten (welcher Standort welche GPU hostet, ist nicht angegeben), und Database Mart für eine breite veröffentlichte GPU-Auswahl (36 Pläne) unter den drei Hostern, deren Seiten lesbar waren, mit monatlicher Laufzeit in den USA.** Beide veröffentlichen Preise und lassen einen Entwickler ohne Vertriebsgespräch bestellen. Cherry Servers bietet flexible Abrechnung und eine angegebene 15-Tage-Geld-zurück-Garantie für dedizierte Server, doch seine Listings für A100, A40 und A10 zeigen eine Warteliste. Database Mart listet Karten bis zur H100 und RTX Pro 6000 96 GB, aber sein H100-Preis ist ein einmaliger Rabatt, der sich auf 2.599,00 $ pro Monat verlängert.\n\n**Nach Einschätzung von PromptQuorum passt CUDO Compute 2026 nicht für Einzelpersonen oder kleine Teams.** Die Doku gibt an, dass die öffentliche On-Demand-Plattform am 31. März 2026 geschlossen wurde, und die Cluster-Seite nennt Deployments ab 128 GPUs. Wenn das Ihre Größenordnung ist, lohnt sich ein Vertriebsgespräch; laut eigener Angabe auf der [Cluster-Seite](https://www.cudocompute.com/products/clusters) (Eigenangaben des Anbieters, von PromptQuorum nicht geprüft; ob Ihre Nutzung DSGVO-konform ist, hängt von Ihren eigenen Pflichten als Verantwortlicher ab) sind die Standorte nach ISO 27001 zertifiziert und die Abläufe an der DSGVO ausgerichtet.\n\n**LumaDock sollten Sie als unverifiziert behandeln und selbst prüfen.** PromptQuorum konnte dessen offizielle Seiten nicht lesen, daher trifft diese Seite keine Aussage zu seinen GPU-VPS-Plänen, Preisen oder Bedingungen.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Preise: Was jeder Hoster am 2026-11-22 veröffentlicht hat',
         content:
-          '**Jede Zahl unten stammt von der eigenen Seite des Anbieters, geprüft am 2026-11-22, in US-Dollar.** Die Preise von Cherry Servers sind „ab“-Preise; die Preise von Database Mart enthalten Aktionspreise, die enden können. Für Preisvergleiche pro Stunde bei anderen Hostern siehe die [Preise von RunPod und Vast.ai](/de/prompt-bites/runpod-vs-vastai-pricing) und den [Kostenrechner Kaufen vs. Mieten](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
+          '**Jede Zahl unten stammt von der eigenen Seite des Anbieters, geprüft am 2026-11-22, in US-Dollar.** Die Preise von Cherry Servers sind „ab“-Preise; die Preise von Database Mart enthalten Aktionspreise, die enden können. Die Monatswerte sind die vom Anbieter selbst veröffentlichten Preise, nicht der Stundenpreis mal 730 Stunden. Für Preisvergleiche pro Stunde bei anderen Hostern siehe die [Preise von RunPod und Vast.ai](/de/prompt-bites/runpod-vs-vastai-pricing) und den [Kostenrechner Kaufen vs. Mieten](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         columns: ['Anbieter / Tarif', 'GPU und VRAM', 'Preis'],
         rows: [
           { 'Anbieter / Tarif': 'CUDO Compute', 'GPU und VRAM': 'Blackwell-Cluster', Preis: 'Nicht veröffentlicht, Anfrageformular' },
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dauerhaft laufende Inferenz-API:** ein Modell zwischen 14B und 70B, das den ganzen Tag ein internes Werkzeug bedient, wobei ein monatlicher Pauschalpreis planbar ist.',
           '**Lange Fine-Tuning-Läufe:** mehrtägige Jobs auf einer einzelnen Karte mit 48 GB bis 96 GB, bei denen auch die stündliche Abrechnung aufläuft.',
           '**Private GPU für sensible Tests:** eine ganze Maschine für einen Kunden, wie Cherry Servers seine dedizierten Server beschreibt (keine Datenschutzgarantie, siehe Risiko und Vertrauen).',
-          '**Training auf großen Clustern:** der einzige Fall, in dem CUDO Compute zutrifft, ab 128 GPUs über seinen Vertriebsprozess.',
+          '**Training auf großen Clustern:** der Hauptfall, in dem CUDO Compute zutrifft, ab 128 GPUs über seinen Vertriebsprozess.',
           '**Nicht geeignet:** wenige Stunden GPU-Zeit oder ein Schub paralleler Jobs; stündlich abrechnende Anbieter passen dafür besser.',
         ],
       },
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Umgang mit Daten, Cherry Servers:** gibt an, dass jeder Server eine private Maschine ohne Virtualisierung ist, mit standardmäßigem DDoS-Schutz und 100 GB kostenlosem Backup; auf der GPU-Seite steht keine Richtlinie zur Datenaufbewahrung.',
           '**Umgang mit Daten, Database Mart:** Auf den gelesenen Seiten steht keine Angabe zum Umgang mit Daten.',
           '**LumaDock:** unverifiziert; zu Datenverarbeitung, Standorten oder Erstattungen ist hier nichts verifiziert. Lesen Sie seine Bedingungen selbst, bevor Sie Daten dorthin verschieben.',
-          'Legen Sie keine regulierten oder personenbezogenen Daten bei einem Hoster ab, bevor Sie dessen Datenschutzerklärung und Auftragsverarbeitungsbedingungen gelesen haben.',
+          'Legen Sie keine regulierten oder personenbezogenen Daten bei einem Hoster ab, bevor Sie dessen Datenschutzerklärung und Auftragsverarbeitungsbedingungen gelesen haben. Dies ist keine Rechtsberatung.',
         ],
       },
       prosCons: {
@@ -607,7 +607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nachteile**',
           'Cherry Servers: Die meisten gelisteten GPU-Modelle zeigen eine Warteliste, und die Bereitstellung dauert 24 bis 72 Stunden',
           'Database Mart: nur US-Standorte, und der H100-Rabatt verlängert sich auf 2.599,00 $ pro Monat',
-          'CUDO Compute: öffentliche On-Demand-Plattform am 31. März 2026 geschlossen; Cluster ab 128 GPUs',
+          'CUDO Compute: gibt an, die öffentliche On-Demand-Plattform am 31. März 2026 geschlossen zu haben; Cluster ab 128 GPUs',
           'LumaDock: Pläne nicht verifiziert',
           'Zahlung für Leerlaufstunden, wenn die GPU nicht ausgelastet ist',
         ],
@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GPU-Server-Hosting 2026: CUDO Compute, Cherry Servers, Database Mart (und LumaDock GPU VPS)',
       reviewBody:
-        'Ein Vergleich von vier GPU-Server-Hostern anhand ihrer offiziellen Seiten, geprüft am 2026-11-22. CUDO Compute gibt an, dass seine öffentliche On-Demand-Plattform am 31. März 2026 geschlossen wurde; Cherry Servers listet eine A100 80GB ab 2,362 $ pro Stunde; Database Mart listet eine H100 80GB für 1.039,60 $ pro Monat mit Verlängerung zu 2.599,00 $; LumaDock ließ sich nicht verifizieren. Die Bewertung ist der Durchschnitt der Gesamtwerte der drei bewerteten Anbieter (4,0, 7,0 und 8,0 von 10), Einschätzung von PromptQuorum, kein praktischer Test.',
+        'Ein Vergleich von vier GPU-Server-Hostern anhand ihrer offiziellen Seiten, geprüft am 2026-11-22. CUDO Compute gibt an, dass seine öffentliche On-Demand-Plattform am 31. März 2026 geschlossen wurde; Cherry Servers listet eine A100 80GB ab 2,362 $ pro Stunde; Database Mart listet eine H100 80GB für 1.039,60 $ pro Monat mit Verlängerung zu 2.599,00 $; LumaDock ließ sich nicht verifizieren. Die Bewertung ist der Durchschnitt der bewerteten Kriterien jedes Anbieters (4, 5 und 4 Kriterien; 4,0, 7,0 und 8,0 von 10), Einschätzung von PromptQuorum, kein praktischer Test.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -737,9 +737,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'L\'hébergement de serveurs GPU consiste à louer une machine GPU entière (dédiée, bare metal ou GPU VPS) pour une durée fixe, au lieu de payer à l\'heure chez l\'un des [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers). Cette page compare quatre hébergeurs d\'après leurs propres pages officielles, consultées le 2026-11-22 : CUDO Compute, Cherry Servers, Database Mart et LumaDock. Le résultat est inégal. CUDO Compute indique que sa plateforme publique à la demande a fermé le 31 mars 2026 et vend désormais des clusters GPU via un formulaire de contact commercial. Cherry Servers et Database Mart publient leurs prix et permettent de commander. Les pages officielles de LumaDock ont renvoyé une erreur HTTP 403 aux vérifications automatisées : ses offres GPU VPS ne sont donc pas vérifiées ici. Toutes les notes sont des évaluations de PromptQuorum, et non un test pratique en laboratoire.',
     metaDescription:
-      'Serveurs GPU 2026 : CUDO a fermé son offre à la demande, Cherry propose l\'A100 dès 2.362 $/h, Database Mart le H100 à 1 039.60 $/mois (puis 2 599 $).',
+      'Serveurs GPU 2026 : CUDO indique avoir fermé son offre à la demande, Cherry propose l\'A100 dès 2,362 $/h, Database Mart H100 à 1 039,60 $/mois (puis 2 599 $).',
     twitterDescription:
-      'Hébergement de serveurs GPU en 2026 : CUDO Compute a fermé sa plateforme publique à la demande, Cherry Servers et Database Mart publient leurs prix, LumaDock n\'est pas vérifié. Conditions, lieux, modèles adaptés.',
+      'Hébergement de serveurs GPU en 2026 : CUDO Compute indique avoir fermé sa plateforme publique à la demande, Cherry Servers et Database Mart publient leurs prix, LumaDock n\'est pas vérifié. Conditions, lieux, modèles adaptés.',
     readTime: '11 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs et petites équipes qui veulent un serveur GPU à durée fixe pour l\'inférence ou le fine-tuning de LLM',
@@ -755,16 +755,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'serveur gpu bare metal',
     ],
     leadAnswerBlock:
-      '**Pour un serveur GPU à durée fixe en 2026, les deux hébergeurs de ce comparatif dont les pages officielles lisibles publient leurs prix et permettent de commander en ligne sont Cherry Servers (A100 80GB dès 2.362 $/h ou 1 657.68 $/mois, majoritairement sur liste d\'attente ; offres de base en Lituanie, emplacement du GPU non précisé) et Database Mart (H100 80GB à 1 039.60 $/mois, puis 2 599.00 $/mois au renouvellement, États-Unis).** CUDO Compute indique que sa plateforme publique à la demande a fermé le 31 mars 2026 ; elle vend désormais des clusters à partir de 128 GPU via un formulaire de demande. LumaDock vend des offres GPU VPS, mais ses pages officielles ont renvoyé une erreur HTTP 403 aux vérifications automatisées : rien sur ses offres n\'est vérifié ici. Les prix proviennent des pages des fournisseurs, consultées le 2026-11-22, et changent.',
+      '**Pour un serveur GPU à durée fixe en 2026, les deux hébergeurs de ce comparatif dont les pages officielles lisibles publient leurs prix et permettent de commander en ligne sont Cherry Servers (A100 80GB dès 2,362 $/h ou 1 657,68 $/mois, majoritairement sur liste d\'attente ; offres de base en Lituanie, emplacement du GPU non précisé) et Database Mart (H100 80GB à 1 039,60 $/mois, puis 2 599,00 $/mois au renouvellement, États-Unis).** CUDO Compute indique que sa plateforme publique à la demande a fermé le 31 mars 2026 ; elle vend désormais des clusters à partir de 128 GPU via un formulaire de demande. LumaDock vend des offres GPU VPS, mais ses pages officielles ont renvoyé une erreur HTTP 403 aux vérifications automatisées : rien sur ses offres n\'est vérifié ici. Les prix proviennent des pages des fournisseurs, consultées le 2026-11-22, et changent.',
     quickAnswerTop: {
       fr: {
         question: 'Quel hébergeur de serveurs GPU choisir : CUDO, Cherry Servers, Database Mart ou LumaDock ?',
         answer:
-          'Choisissez Cherry Servers si vous voulez des serveurs dédiés à l\'heure ou à durée fixe sur des sites européens listés (emplacement du GPU non précisé), avec une garantie de remboursement annoncée de 15 jours, en acceptant que la plupart des modèles de GPU soient sur liste d\'attente. Choisissez Database Mart si vous voulez la gamme de GPU publiée la plus large parmi les trois hébergeurs dont les pages étaient lisibles (36 offres, de la RTX 5060 au H100, États-Unis uniquement) avec un engagement mensuel. Écartez CUDO Compute sauf si vous avez besoin d\'un cluster de 128 GPU ou plus : sa plateforme publique à la demande a fermé le 31 mars 2026. Considérez LumaDock comme non vérifié : ses offres GPU VPS n\'ont pas pu être contrôlées sur ses pages officielles. Les prix ci-dessous ont été vérifiés le 2026-11-22.',
+          'Choisissez Cherry Servers si vous voulez des serveurs dédiés à l\'heure ou à durée fixe sur des sites européens listés (emplacement du GPU non précisé), avec une garantie de remboursement annoncée de 15 jours, en acceptant que la plupart des modèles de GPU soient sur liste d\'attente. Choisissez Database Mart si vous voulez une large gamme de GPU publiée (36 offres, de la RTX 5060 au H100, États-Unis uniquement) parmi les trois hébergeurs dont les pages étaient lisibles, avec un engagement mensuel. Écartez CUDO Compute sauf si vous avez besoin d\'un cluster de 128 GPU ou plus : il indique que sa plateforme publique à la demande a fermé le 31 mars 2026. Considérez LumaDock comme non vérifié : ses offres GPU VPS n\'ont pas pu être contrôlées sur ses pages officielles. Les prix ci-dessous ont été vérifiés le 2026-11-22.',
         bullets: [
-          'CUDO Compute : plateforme publique à la demande fermée le 2026-03-31 ; clusters à partir de 128 GPU via un formulaire commercial, aucun prix publié',
-          'Cherry Servers : A100 80GB dès 2.362 $/h (1 657.68 $/mois, liste d\'attente) ; A2 16GB dès 0.239 $/h ; offres de base en Lituanie ; remboursement sous 15 jours annoncé pour les serveurs dédiés',
-          'Database Mart : 36 offres GPU, États-Unis uniquement ; H100 80GB 1 039.60 $/mois la première période (renouvellement à 2 599.00 $/mois) ; VPS RTX 5090 32GB 419 $/mois',
+          'CUDO Compute : indique que sa plateforme publique à la demande a fermé le 2026-03-31 ; clusters à partir de 128 GPU via un formulaire commercial, aucun prix publié',
+          'Cherry Servers : A100 80GB dès 2,362 $/h (1 657,68 $/mois, liste d\'attente) ; A2 16GB dès 0,239 $/h ; offres de base en Lituanie ; remboursement sous 15 jours annoncé pour les serveurs dédiés',
+          'Database Mart : 36 offres GPU, États-Unis uniquement ; H100 80GB 1 039,60 $/mois la première période (renouvellement à 2 599,00 $/mois) ; VPS RTX 5090 32GB 419 $/mois',
           'LumaDock : non vérifié ; offres GPU VPS non contrôlées (les pages officielles ont renvoyé une erreur HTTP 403 aux vérifications automatisées)',
           'Toutes les notes sont des évaluations de PromptQuorum fondées sur les pages officielles, et non un test pratique en laboratoire',
         ],
@@ -814,12 +814,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vous voulez une large gamme de GPU publiée avec un engagement mensuel (Database Mart liste 36 offres)',
           '**Évitez-le si :**',
           'Vous avez besoin d\'un GPU pour quelques heures ; utilisez plutôt la location à l\'heure, voir les [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers)',
-          'Vous pensiez que CUDO Compute louait des GPU à l\'unité à la demande : sa plateforme publique à la demande a fermé le 31 mars 2026',
+          'Vous pensiez que CUDO Compute louait des GPU à l\'unité à la demande : elle indique que sa plateforme publique à la demande a fermé le 31 mars 2026',
           'Vous avez besoin d\'une livraison immédiate : Cherry Servers indique de 24 à 72 heures selon la région',
           'Vous avez besoin d\'offres et de prix vérifiés pour LumaDock : ses pages officielles n\'ont pas pu être consultées',
         ],
         affiliateLinks: [
-          { label: 'Vérifier les tarifs GPU de Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB dès 2.362 $/h' },
+          { label: 'Vérifier les tarifs GPU de Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB dès 2,362 $/h' },
         ],
       },
       scorecard: {
@@ -836,9 +836,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'Choix de GPU', 'CUDO': '9/10, clusters Blackwell', 'Cherry': '5/10, cartes anciennes', 'Database Mart': '9/10, jusqu\'au H100' },
           { 'Critère': 'Souplesse du contrat', 'CUDO': '3/10, 128 GPU et plus', 'Cherry': '9/10, à l\'heure', 'Database Mart': '6/10, durées mensuelles' },
           { 'Critère': 'Support / documentation', 'CUDO': 'Non évalué', 'Cherry': '6/10, FAQ seule lue', 'Database Mart': 'Non évalué' },
-          { 'Critère': 'Global', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
+          { 'Critère': 'Global (critères notés uniquement)', 'CUDO': '4,0/10', 'Cherry': '7,0/10', 'Database Mart': '8,0/10' },
         ],
-        note: 'Évaluation de PromptQuorum, et non un test pratique en laboratoire. La fiabilité (disponibilité, vitesse du réseau, débit réel) n\'a pas été mesurée et n\'est donc pas notée. Le global est la moyenne arrondie des critères notés : quatre pour CUDO et Database Mart (le support / la documentation n\'est pas évalué), cinq pour Cherry.',
+        note: 'Évaluation de PromptQuorum, et non un test pratique en laboratoire. La fiabilité (disponibilité, vitesse du réseau, débit réel) n\'a pas été mesurée et n\'est donc pas notée. Le global (critères notés uniquement) est la moyenne arrondie des critères notés : quatre pour CUDO et Database Mart (le support / la documentation n\'est pas évalué), cinq pour Cherry.',
       },
       tldr: {
         id: 'tldr',
@@ -846,8 +846,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute : la [documentation](https://docs.cudocompute.com/) indique que la plateforme publique à la demande a fermé le 31 mars 2026 ; les clusters commencent à 128 GPU via un formulaire de demande, aucun prix publié',
-          'Cherry Servers : les tarifs GPU « dès » vont de 0.139 $/h à 2.362 $/h (A100 80GB) ; la plupart des modèles sont sur liste d\'attente ; remboursement sous 15 jours annoncé pour les serveurs dédiés',
-          'Database Mart : 36 offres GPU, États-Unis uniquement, tarification mensuelle avec des durées de 1, 3, 12 et 24 mois ; le prix du H100 passe à 2 599.00 $/mois après la première période',
+          'Cherry Servers : les tarifs GPU « dès » vont de 0,239 $/h (A2) à 2,362 $/h (A100) ; la plupart des modèles sont sur liste d\'attente ; remboursement sous 15 jours annoncé pour les serveurs dédiés',
+          'Database Mart : 36 offres GPU, États-Unis uniquement, tarification mensuelle avec des durées de 1, 3, 12 et 24 mois ; le prix du H100 passe à 2 599,00 $/mois après la première période',
           'LumaDock : offres et prix non vérifiés, car ses pages officielles ont renvoyé une erreur HTTP 403 aux vérifications automatisées',
           'Un modèle 70B en Q4 demande environ 44 Go de VRAM d\'après l\'[aide-mémoire VRAM](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) de ce site : une carte de 48 Go ou de 80 Go convient',
           'Les prix ont été vérifiés le 2026-11-22 sur chaque page officielle et changent souvent',
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict : quel hébergeur pour qui',
         content:
-          '**Choisissez Cherry Servers pour des serveurs dédiés à l\'heure ou à durée fixe avec GPU en option, chez un fournisseur disposant de sites dans l\'UE (le site qui héberge chaque GPU n\'est pas précisé), et Database Mart pour la gamme de GPU publiée la plus large parmi les trois hébergeurs dont les pages étaient lisibles, avec un engagement mensuel aux États-Unis.** Les deux publient leurs prix et permettent à un développeur de commander sans appel commercial. Cherry Servers propose une facturation souple et une garantie de remboursement annoncée de 15 jours sur les serveurs dédiés, mais ses offres A100, A40, A16 et A10 affichent une liste d\'attente. Database Mart liste des cartes jusqu\'au H100 et à la RTX Pro 6000 96 GB, mais son prix du H100 est une remise unique qui passe à 2 599.00 $ par mois au renouvellement.\n\n**CUDO Compute ne convient ni à un particulier ni à une petite équipe en 2026.** Sa documentation indique que la plateforme publique à la demande a fermé le 31 mars 2026, et sa page sur les clusters précise que les déploiements commencent à 128 GPU. Si c\'est votre échelle, une discussion commerciale vaut la peine, avec, selon sa [page sur les clusters](https://www.cudocompute.com/products/clusters) (non vérifié par PromptQuorum), des installations certifiées ISO 27001 et une exploitation alignée sur le RGPD.\n\n**LumaDock doit être considéré comme non vérifié : à vous de le contrôler vous-même.** PromptQuorum n\'a pas pu lire ses pages officielles : cette page n\'affirme donc rien sur ses offres GPU VPS, ses prix ni ses conditions.',
+          '**Choisissez Cherry Servers pour des serveurs dédiés à l\'heure ou à durée fixe avec GPU en option, chez un fournisseur disposant de sites dans l\'UE (le site qui héberge chaque GPU n\'est pas précisé), et Database Mart pour une large gamme de GPU publiée (36 offres) parmi les trois hébergeurs dont les pages étaient lisibles, avec un engagement mensuel aux États-Unis.** Les deux publient leurs prix et permettent à un développeur de commander sans appel commercial. Cherry Servers propose une facturation souple et une garantie de remboursement annoncée de 15 jours sur les serveurs dédiés, mais ses offres A100, A40 et A10 affichent une liste d\'attente. Database Mart liste des cartes jusqu\'au H100 et à la RTX Pro 6000 96 GB, mais son prix du H100 est une remise unique qui passe à 2 599,00 $ par mois au renouvellement.\n\n**Selon l\'évaluation de PromptQuorum, CUDO Compute ne convient ni à un particulier ni à une petite équipe en 2026.** Sa documentation indique que la plateforme publique à la demande a fermé le 31 mars 2026, et sa page sur les clusters précise que les déploiements commencent à 128 GPU. Si c\'est votre échelle, une discussion commerciale vaut la peine, avec, selon sa [page sur les clusters](https://www.cudocompute.com/products/clusters) (déclarations du fournisseur non vérifiées par PromptQuorum ; la conformité RGPD de votre usage dépend de vos propres obligations en tant que responsable de traitement), des installations certifiées ISO 27001 et une exploitation alignée sur le RGPD.\n\n**LumaDock doit être considéré comme non vérifié : à vous de le contrôler vous-même.** PromptQuorum n\'a pas pu lire ses pages officielles : cette page n\'affirme donc rien sur ses offres GPU VPS, ses prix ni ses conditions.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -877,25 +877,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Tarifs : ce que chaque hébergeur a publié le 2026-11-22',
         content:
-          '**Chaque chiffre ci-dessous provient de la page du fournisseur lui-même, consultée le 2026-11-22, en USD.** Les tarifs de Cherry Servers sont des prix « dès » ; les prix de Database Mart incluent des prix promotionnels qui peuvent prendre fin. Pour comparer la location à l\'heure chez d\'autres hébergeurs, voir les [tarifs RunPod vs Vast.ai](/fr/prompt-bites/runpod-vs-vastai-pricing) et le [calculateur achat ou location](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
+          '**Chaque chiffre ci-dessous provient de la page du fournisseur lui-même, consultée le 2026-11-22, en USD.** Les tarifs de Cherry Servers sont des prix « dès » ; les prix de Database Mart incluent des prix promotionnels qui peuvent prendre fin. Les montants mensuels sont les tarifs publiés par le fournisseur lui-même, et non le tarif horaire multiplié par 730 heures. Pour comparer la location à l\'heure chez d\'autres hébergeurs, voir les [tarifs RunPod vs Vast.ai](/fr/prompt-bites/runpod-vs-vastai-pricing) et le [calculateur achat ou location](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         columns: ['Fournisseur / offre', 'GPU et VRAM', 'Prix'],
         rows: [
           { 'Fournisseur / offre': 'CUDO Compute', 'GPU et VRAM': 'Clusters Blackwell', 'Prix': 'Non publié, formulaire de demande' },
-          { 'Fournisseur / offre': 'Cherry Servers A100', 'GPU et VRAM': 'A100 80GB HBM2', 'Prix': '2.362 $/h, 1 657.68 $/mois, liste d\'attente' },
-          { 'Fournisseur / offre': 'Cherry Servers A40', 'GPU et VRAM': 'A40 48GB GDDR6', 'Prix': '0.801 $/h, 472.66 $/mois, liste d\'attente' },
-          { 'Fournisseur / offre': 'Cherry Servers A10', 'GPU et VRAM': 'A10 24GB GDDR6', 'Prix': '0.518 $/h, 303.03 $/mois, liste d\'attente' },
-          { 'Fournisseur / offre': 'Cherry Servers A2', 'GPU et VRAM': 'A2 16GB GDDR6', 'Prix': '0.239 $/h, 139.23 $/mois' },
+          { 'Fournisseur / offre': 'Cherry Servers A100', 'GPU et VRAM': 'A100 80GB HBM2', 'Prix': '2,362 $/h, 1 657,68 $/mois, liste d\'attente' },
+          { 'Fournisseur / offre': 'Cherry Servers A40', 'GPU et VRAM': 'A40 48GB GDDR6', 'Prix': '0,801 $/h, 472,66 $/mois, liste d\'attente' },
+          { 'Fournisseur / offre': 'Cherry Servers A10', 'GPU et VRAM': 'A10 24GB GDDR6', 'Prix': '0,518 $/h, 303,03 $/mois, liste d\'attente' },
+          { 'Fournisseur / offre': 'Cherry Servers A2', 'GPU et VRAM': 'A2 16GB GDDR6', 'Prix': '0,239 $/h, 139,23 $/mois' },
           { 'Fournisseur / offre': 'Database Mart GPU VPS', 'GPU et VRAM': 'RTX 5090 32GB', 'Prix': '419 $/mois' },
           { 'Fournisseur / offre': 'Database Mart GPU VPS', 'GPU et VRAM': 'RTX Pro 6000 96GB', 'Prix': '649 $/mois, durées 3/12/24 mois' },
           { 'Fournisseur / offre': 'Database Mart dédié', 'GPU et VRAM': 'RTX 4090 24GB', 'Prix': '409 $/mois' },
-          { 'Fournisseur / offre': 'Database Mart dédié', 'GPU et VRAM': 'A100 80GB', 'Prix': '764.55 $/mois (avant : 1 699.00 $)' },
-          { 'Fournisseur / offre': 'Database Mart dédié', 'GPU et VRAM': 'H100 80GB', 'Prix': '1 039.60 $/mois, renouvellement 2 599.00 $' },
+          { 'Fournisseur / offre': 'Database Mart dédié', 'GPU et VRAM': 'A100 80GB', 'Prix': '764,55 $/mois (avant : 1 699,00 $)' },
+          { 'Fournisseur / offre': 'Database Mart dédié', 'GPU et VRAM': 'H100 80GB', 'Prix': '1 039,60 $/mois, renouvellement 2 599,00 $' },
           { 'Fournisseur / offre': 'LumaDock GPU VPS', 'GPU et VRAM': 'Non vérifié', 'Prix': 'Non vérifié' },
         ],
         items: [
-          'Cherry Servers liste aussi des serveurs de base où le GPU est optionnel : une offre AMD Ryzen 7700X à 0.318 $/h ou 158.13 $/mois (1 GPU maximum, 64 Go de RAM) et une offre AMD EPYC 7402P qui accepte jusqu\'à 2 GPU.',
+          'Cherry Servers liste aussi des serveurs de base où le GPU est optionnel : une offre AMD Ryzen 7700X à 0,318 $/h ou 158,13 $/mois (1 GPU maximum, 64 Go de RAM) et une offre AMD EPYC 7402P qui accepte jusqu\'à 2 GPU.',
           'Database Mart liste aussi des offres multi-GPU, par exemple 2x RTX 4090 à 729 $/mois, 2x RTX 5090 à 859 $/mois et 4x A100 40GB à 1 899 $/mois.',
-          'Le prix du H100 chez Database Mart est présenté comme une remise unique : la page indique qu\'il passe à 2 599.00 $ par mois au renouvellement.',
+          'Le prix du H100 chez Database Mart est présenté comme une remise unique : la page indique qu\'il passe à 2 599,00 $ par mois au renouvellement.',
           'LumaDock : aucun prix n\'est indiqué, car les pages officielles n\'ont pas pu être récupérées ; consultez directement [lumadock.com](https://lumadock.com/).',
           'CUDO Compute n\'affiche aucun prix ; un ancien article de blog de CUDO antérieur à la fermeture de la plateforme n\'est pas utilisé comme prix actuel.',
         ],
@@ -905,11 +905,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Quels modèles tiennent sur ces GPU',
         content:
-          '**La VRAM détermine la taille du modèle, et l\'[aide-mémoire VRAM](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) de ce site situe les distillations DeepSeek-R1 à environ 9.5 Go (14B), 20.5 Go (32B) et 44 Go (70B) en quantification Q4_K_M.** Ces chiffres correspondent aux poids plus une petite marge ; un long contexte demande davantage. Pour la méthode générale, voir [combien de VRAM pour un LLM local](/fr/local-llms/how-much-vram-local-llm).',
+          '**La VRAM détermine la taille du modèle, et l\'[aide-mémoire VRAM](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) de ce site situe les distillations DeepSeek-R1 à environ 9,5 Go (14B), 20,5 Go (32B) et 44 Go (70B) en quantification Q4_K_M.** Ces chiffres correspondent aux poids plus une petite marge ; un long contexte demande davantage. Pour la méthode générale, voir [combien de VRAM pour un LLM local](/fr/local-llms/how-much-vram-local-llm).',
         columns: ['GPU (VRAM)', 'Tient en Q4_K_M', 'Hébergeur qui le liste'],
         rows: [
-          { 'GPU (VRAM)': 'A2 (16 Go)', 'Tient en Q4_K_M': 'Jusqu\'à 14B (~9.5 Go)', 'Hébergeur qui le liste': 'Cherry Servers' },
-          { 'GPU (VRAM)': 'RTX 4090 (24 Go)', 'Tient en Q4_K_M': '32B, juste (~20.5 Go)', 'Hébergeur qui le liste': 'Database Mart' },
+          { 'GPU (VRAM)': 'A2 (16 Go)', 'Tient en Q4_K_M': 'Jusqu\'à 14B (~9,5 Go)', 'Hébergeur qui le liste': 'Cherry Servers' },
+          { 'GPU (VRAM)': 'RTX 4090 (24 Go)', 'Tient en Q4_K_M': '32B, juste (~20,5 Go)', 'Hébergeur qui le liste': 'Database Mart' },
           { 'GPU (VRAM)': 'RTX 5090 (32 Go)', 'Tient en Q4_K_M': '32B avec marge de contexte', 'Hébergeur qui le liste': 'Database Mart' },
           { 'GPU (VRAM)': 'A40 / RTX A6000 (48 Go)', 'Tient en Q4_K_M': '70B, juste (~44 Go)', 'Hébergeur qui le liste': 'Cherry, Database Mart' },
           { 'GPU (VRAM)': 'A100 / H100 (80 Go)', 'Tient en Q4_K_M': '70B avec de la marge', 'Hébergeur qui le liste': 'Cherry, Database Mart' },
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**API d\'inférence permanente :** un modèle de 14B à 70B qui alimente un outil interne toute la journée, où un tarif mensuel fixe est prévisible.',
           '**Longs fine-tunings :** des tâches de plusieurs jours sur une seule carte de 48 Go à 96 Go, où la facturation à l\'heure s\'additionnerait aussi.',
           '**GPU privé pour tests sensibles :** une machine entière pour un seul client, comme Cherry Servers décrit ses serveurs dédiés (ce n\'est pas une garantie de protection des données, voir Risques et confiance).',
-          '**Entraînement sur grand cluster :** le seul cas où CUDO Compute s\'applique, à partir de 128 GPU via son processus commercial.',
+          '**Entraînement sur grand cluster :** le principal cas où CUDO Compute s\'applique, à partir de 128 GPU via son processus commercial.',
           '**Pas adapté :** quelques heures de GPU, ou une rafale de tâches parallèles ; les fournisseurs à l\'heure conviennent mieux.',
         ],
       },
@@ -943,11 +943,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Facturation et remboursements, Database Mart :** prix mensuel par offre avec des durées de 1, 3, 12 et 24 mois ; aucune politique de remboursement n\'apparaît sur les pages d\'offres lues ; les conditions figurent dans ses Terms of Service et son SLA, qui n\'ont pas été lus.',
           '**Facturation, CUDO Compute :** aucun prix ni condition de contrat n\'est publié ; la page sur les clusters mentionne un SLA mais son contenu n\'a pas été vu.',
           '**Origine du matériel :** CUDO Compute indique que sa capacité provient de centres de données exploités indépendamment ; Cherry Servers liste la Lituanie, Stockholm, Amsterdam, Francfort, Chicago, Singapour et Tokyo ; Database Mart indique des centres de données américains de niveau Tier 2 sans nommer de villes.',
-          '**Traitement des données, CUDO Compute :** indique sur sa [page des clusters](https://www.cudocompute.com/products/clusters) des installations certifiées ISO 27001, une exploitation alignée sur le RGPD et l\'application d\'une résidence souveraine des données (déclarations du fournisseur, non vérifiées par PromptQuorum).',
+          '**Traitement des données, CUDO Compute :** indique sur sa [page des clusters](https://www.cudocompute.com/products/clusters) des installations certifiées ISO 27001, une exploitation alignée sur le RGPD et l\'application d\'une résidence souveraine des données (déclarations du fournisseur non vérifiées par PromptQuorum ; la conformité RGPD de votre usage dépend de vos propres obligations en tant que responsable de traitement).',
           '**Traitement des données, Cherry Servers :** indique que chaque serveur est une machine privée sans virtualisation, avec protection DDoS par défaut et 100 Go de sauvegarde gratuite ; aucune politique de conservation des données n\'apparaît sur la page GPU.',
           '**Traitement des données, Database Mart :** aucune déclaration sur le traitement des données n\'apparaît sur les pages lues.',
           '**LumaDock :** non vérifié ; rien sur son traitement des données, ses sites ni ses remboursements n\'est vérifié ici. Lisez vous-même ses conditions avant d\'y transférer des données.',
-          'Ne placez pas de données réglementées ou personnelles chez un hébergeur avant d\'avoir lu sa politique de confidentialité et ses conditions de traitement des données.',
+          'Ne placez pas de données réglementées ou personnelles chez un hébergeur avant d\'avoir lu sa politique de confidentialité et ses conditions de traitement des données. Ceci ne constitue pas un conseil juridique.',
         ],
       },
       prosCons: {
@@ -962,8 +962,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Un coût mensuel fixe convient à un modèle qui tourne en permanence',
           '**Inconvénients**',
           'Cherry Servers : la plupart des modèles de GPU listés affichent une liste d\'attente, et la livraison prend de 24 à 72 heures',
-          'Database Mart : sites aux États-Unis uniquement, et la remise sur le H100 passe à 2 599.00 $ par mois au renouvellement',
-          'CUDO Compute : plateforme publique à la demande fermée le 31 mars 2026 ; clusters à partir de 128 GPU',
+          'Database Mart : sites aux États-Unis uniquement, et la remise sur le H100 passe à 2 599,00 $ par mois au renouvellement',
+          'CUDO Compute : indique que sa plateforme publique à la demande a fermé le 31 mars 2026 ; clusters à partir de 128 GPU',
           'LumaDock : offres non vérifiées',
           'Payer des heures d\'inactivité si le GPU n\'est pas occupé',
         ],
@@ -983,8 +983,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Voir les clusters de CUDO Compute →', url: 'https://www.cudocompute.com/', productName: 'CUDO Compute', productCategory: 'GPU clusters' },
-          { label: 'Vérifier les tarifs GPU de Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB dès 2.362 $/h' },
-          { label: 'Vérifier les offres GPU de Database Mart →', url: 'https://www.databasemart.com/gpu-server', productName: 'Database Mart GPU servers', productCategory: 'GPU server hosting', priceRange: 'H100 80GB 1 039.60 $/mois (première période)' },
+          { label: 'Vérifier les tarifs GPU de Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB dès 2,362 $/h' },
+          { label: 'Vérifier les offres GPU de Database Mart →', url: 'https://www.databasemart.com/gpu-server', productName: 'Database Mart GPU servers', productCategory: 'GPU server hosting', priceRange: 'H100 80GB 1 039,60 $/mois (première période)' },
           { label: 'Visiter LumaDock (non vérifié) →', url: 'https://lumadock.com/', productName: 'LumaDock GPU VPS', productCategory: 'GPU VPS' },
         ],
       },
@@ -1017,10 +1017,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'CUDO Compute loue-t-il encore des GPU à l\'heure ?', a: 'La documentation de CUDO Compute indique qu\'aucune location publique à la demande n\'est proposée et que sa plateforme publique à la demande a fermé le 31 mars 2026, et sa page sur les clusters précise que les déploiements commencent à 128 GPU via un formulaire de demande (consulté le 2026-11-22).' },
-          { q: 'Combien coûte un serveur GPU Cherry Servers ?', a: 'Cherry Servers liste des tarifs « dès » de 2.362 $/h (1 657.68 $/mois) pour un A100 80GB, 0.801 $/h pour un A40 48GB, 0.518 $/h pour un A10 24GB et 0.239 $/h pour un A2 16GB (consulté le 2026-11-22). Plusieurs modèles affichent une liste d\'attente.' },
+          { q: 'Combien coûte un serveur GPU Cherry Servers ?', a: 'Cherry Servers liste des tarifs « dès » de 2,362 $/h (1 657,68 $/mois) pour un A100 80GB, 0,801 $/h pour un A40 48GB, 0,518 $/h pour un A10 24GB et 0,239 $/h pour un A2 16GB (consulté le 2026-11-22). Plusieurs modèles affichent une liste d\'attente.' },
           { q: 'Où se trouvent les centres de données de Cherry Servers ?', a: 'Cherry Servers liste la Lituanie (Šiauliai), Stockholm, Amsterdam, Francfort, Chicago, Singapour et Tokyo. La page GPU indique la Lituanie pour ses offres de serveurs de base et ne précise pas quel GPU est proposé où.' },
           { q: 'Cherry Servers offre-t-il une garantie de remboursement ?', a: 'Sa page d\'accueil et sa page de tarifs indiquent une garantie de remboursement de 15 jours pour les serveurs dédiés, sans conditions indiquées sur les pages lues. La page des serveurs GPU elle-même n\'indique aucune garantie de remboursement.' },
-          { q: 'Combien coûte un H100 chez Database Mart ?', a: 'Database Mart liste un Enterprise Dedicated H100 80GB à 1 039.60 $ par mois, présenté comme une remise unique qui passe à 2 599.00 $ par mois au renouvellement (consulté le 2026-11-22).' },
+          { q: 'Combien coûte un H100 chez Database Mart ?', a: 'Database Mart liste un Enterprise Dedicated H100 80GB à 1 039,60 $ par mois, présenté comme une remise unique qui passe à 2 599,00 $ par mois au renouvellement (consulté le 2026-11-22).' },
           { q: 'Où se trouvent les serveurs GPU de Database Mart ?', a: 'Les 36 offres listées sont toutes aux États-Unis. La page d\'accueil décrit des centres de données américains de niveau Tier 2 sans nommer de villes.' },
           { q: 'Un serveur GPU loué peut-il exécuter un modèle 70B ?', a: 'Un modèle 70B en Q4_K_M demande environ 44 Go de VRAM d\'après l\'aide-mémoire VRAM de ce site : une carte de 48 Go est juste et une carte de 80 Go (A100, H100) convient avec de la marge. C\'est un calcul de VRAM, pas une mesure de vitesse.' },
           { q: 'Qu\'a-t-on pu vérifier sur les offres GPU VPS de LumaDock ?', a: 'Rien pour l\'instant. Ses pages officielles ont renvoyé une erreur HTTP 403 aux vérifications automatisées : PromptQuorum n\'affirme donc rien sur ses offres, ses prix, ses sites ni ses conditions. Lisez vous-même ses conditions et sa politique de remboursement.' },
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Hébergement de serveurs GPU 2026 : CUDO Compute, Cherry Servers, Database Mart (et LumaDock GPU VPS)',
       reviewBody:
-        'Comparaison de quatre hébergeurs de serveurs GPU d\'après leurs pages officielles, consultées le 2026-11-22. CUDO Compute indique que sa plateforme publique à la demande a fermé le 31 mars 2026 ; Cherry Servers liste un A100 80GB dès 2.362 $ par heure ; Database Mart liste un H100 80GB à 1 039.60 $ par mois, puis 2 599.00 $ au renouvellement ; LumaDock n\'a pas pu être vérifié. La note est la moyenne des notes globales des trois fournisseurs notés (4.0, 7.0 et 8.0 sur 10), évaluation de PromptQuorum, et non un test pratique.',
+        'Comparaison de quatre hébergeurs de serveurs GPU d\'après leurs pages officielles, consultées le 2026-11-22. CUDO Compute indique que sa plateforme publique à la demande a fermé le 31 mars 2026 ; Cherry Servers liste un A100 80GB dès 2,362 $ par heure ; Database Mart liste un H100 80GB à 1 039,60 $ par mois, puis 2 599,00 $ au renouvellement ; LumaDock n\'a pas pu être vérifié. La note est la moyenne des critères notés de chaque fournisseur (4, 5 et 4 critères ; 4,0, 7,0 et 8,0 sur 10), évaluation de PromptQuorum, et non un test pratique.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -1093,9 +1093,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'El alojamiento de servidores con GPU consiste en alquilar una máquina completa con GPU (dedicada, bare metal o un VPS con GPU) a plazo fijo, en lugar de pagar por horas en uno de los [mejores proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers). Esta página compara cuatro hosts a partir de sus propias páginas oficiales, consultadas el 2026-11-22: CUDO Compute, Cherry Servers, Database Mart y LumaDock. El resultado es desigual. CUDO Compute indica que su plataforma pública bajo demanda cerró el 31 de marzo de 2026 y ahora vende clústeres de GPU mediante un formulario de ventas. Cherry Servers y Database Mart publican precios y permiten contratar. Las páginas oficiales de LumaDock devolvieron HTTP 403 a las comprobaciones automáticas, así que aquí no se verifican sus planes de VPS con GPU. Todas las puntuaciones son valoraciones de PromptQuorum, no una prueba práctica de laboratorio.',
     metaDescription:
-      'Servidores con GPU 2026: CUDO cerró el on-demand, Cherry lista A100 desde $2.362/h, Database Mart H100 a $1,039.60/mes el primer plazo (renueva $2,599).',
+      'Servidores con GPU 2026: CUDO indica que cerró el on-demand, Cherry A100 desde US$ 2,362/h, Database Mart H100 US$ 1.039,60/mes (renueva US$ 2.599).',
     twitterDescription:
-      'Servidores con GPU en 2026: CUDO Compute cerró su plataforma pública bajo demanda, Cherry Servers y Database Mart publican precios y LumaDock no está verificado. Condiciones, ubicaciones y ajuste de modelos.',
+      'Servidores con GPU en 2026: CUDO Compute indica que cerró su plataforma pública bajo demanda, Cherry Servers y Database Mart publican precios y LumaDock no está verificado. Condiciones, ubicaciones y ajuste de modelos.',
     readTime: '11 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores y equipos pequeños que quieren un servidor con GPU a plazo fijo para inferencia o fine-tuning de LLMs',
@@ -1111,16 +1111,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'servidor gpu bare metal',
     ],
     leadAnswerBlock:
-      '**Para un servidor con GPU a plazo fijo en 2026, los dos hosts de esta comparativa cuyas páginas oficiales legibles publican precios y permiten contratar en línea son Cherry Servers (A100 80GB desde $2.362/h o $1,657.68/mes, casi siempre con lista de espera; planes base en Lituania, ubicación de la GPU no indicada) y Database Mart (H100 80GB a $1,039.60/mes, con renovación a $2,599.00/mes, EE. UU.).** CUDO Compute indica que su plataforma pública bajo demanda cerró el 31 de marzo de 2026; ahora vende clústeres desde 128 GPUs mediante un formulario de solicitud. LumaDock vende planes de VPS con GPU, pero sus páginas oficiales devolvieron HTTP 403 a las comprobaciones automáticas, así que aquí no se verifica nada sobre sus planes. Los precios proceden de las propias páginas de los proveedores, consultadas el 2026-11-22, y cambian.',
+      '**Para un servidor con GPU a plazo fijo en 2026, los dos hosts de esta comparativa cuyas páginas oficiales legibles publican precios y permiten contratar en línea son Cherry Servers (A100 80GB desde US$ 2,362/h o US$ 1.657,68/mes, casi siempre con lista de espera; planes base en Lituania, ubicación de la GPU no indicada) y Database Mart (H100 80GB a US$ 1.039,60/mes, con renovación a US$ 2.599,00/mes, EE. UU.).** CUDO Compute indica que su plataforma pública bajo demanda cerró el 31 de marzo de 2026; ahora vende clústeres desde 128 GPUs mediante un formulario de solicitud. LumaDock vende planes de VPS con GPU, pero sus páginas oficiales devolvieron HTTP 403 a las comprobaciones automáticas, así que aquí no se verifica nada sobre sus planes. Los precios proceden de las propias páginas de los proveedores, consultadas el 2026-11-22, y cambian.',
     quickAnswerTop: {
       es: {
         question: '¿Qué host de servidores con GPU deberías usar: CUDO, Cherry Servers, Database Mart o LumaDock?',
         answer:
-          'Usa Cherry Servers si quieres servidores dedicados por horas o a plazo fijo en sedes de la UE listadas (ubicación de la GPU no indicada), con una garantía de devolución de 15 días indicada, y aceptas que la mayoría de los modelos de GPU están en lista de espera. Usa Database Mart si quieres el rango de GPUs publicado más amplio de los tres hosts cuyas páginas se pudieron leer (36 planes, de RTX 5060 a H100, solo EE. UU.) con condiciones mensuales. Descarta CUDO Compute salvo que necesites un clúster de 128 GPUs o más: su plataforma pública bajo demanda cerró el 31 de marzo de 2026. Trata a LumaDock como no verificado: sus planes de VPS con GPU no se pudieron comprobar en sus páginas oficiales. Los precios de abajo se consultaron el 2026-11-22.',
+          'Usa Cherry Servers si quieres servidores dedicados por horas o a plazo fijo en sedes de la UE listadas (ubicación de la GPU no indicada), con una garantía de devolución de 15 días indicada, y aceptas que la mayoría de los modelos de GPU están en lista de espera. Usa Database Mart si quieres un amplio rango de GPUs publicado (36 planes, de RTX 5060 a H100, solo EE. UU.) entre los tres hosts cuyas páginas se pudieron leer, con condiciones mensuales. Descarta CUDO Compute salvo que necesites un clúster de 128 GPUs o más: indica que su plataforma pública bajo demanda cerró el 31 de marzo de 2026. Trata a LumaDock como no verificado: sus planes de VPS con GPU no se pudieron comprobar en sus páginas oficiales. Los precios de abajo se consultaron el 2026-11-22.',
         bullets: [
-          'CUDO Compute: plataforma pública bajo demanda cerrada el 2026-03-31; los clústeres empiezan en 128 GPUs mediante formulario de ventas, sin precios publicados',
-          'Cherry Servers: A100 80GB desde $2.362/h ($1,657.68/mes, lista de espera); A2 16GB desde $0.239/h; planes base en Lituania; devolución de 15 días indicada para servidores dedicados',
-          'Database Mart: 36 planes con GPU, solo EE. UU.; H100 80GB $1,039.60/mes el primer plazo (renueva a $2,599.00/mes); VPS con RTX 5090 32GB $419/mes',
+          'CUDO Compute: indica que su plataforma pública bajo demanda cerró el 2026-03-31; los clústeres empiezan en 128 GPUs mediante formulario de ventas, sin precios publicados',
+          'Cherry Servers: A100 80GB desde US$ 2,362/h (US$ 1.657,68/mes, lista de espera); A2 16GB desde US$ 0,239/h; planes base en Lituania; devolución de 15 días indicada para servidores dedicados',
+          'Database Mart: 36 planes con GPU, solo EE. UU.; H100 80GB US$ 1.039,60/mes el primer plazo (renueva a US$ 2.599,00/mes); VPS con RTX 5090 32GB US$ 419/mes',
           'LumaDock: no verificado; planes de VPS con GPU sin comprobar (las páginas oficiales devolvieron HTTP 403 a las comprobaciones automáticas)',
           'Todas las puntuaciones son valoraciones de PromptQuorum a partir de páginas oficiales, no una prueba práctica de laboratorio',
         ],
@@ -1170,12 +1170,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Quieres un amplio rango de GPUs publicado con condiciones mensuales (Database Mart lista 36 planes)',
           '**Evítalo si:**',
           'Necesitas una GPU durante unas horas; usa alquiler por horas, consulta los [mejores proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers)',
-          'Esperabas que CUDO Compute alquilara GPUs sueltas bajo demanda: su plataforma pública bajo demanda cerró el 31 de marzo de 2026',
+          'Esperabas que CUDO Compute alquilara GPUs sueltas bajo demanda: indica que su plataforma pública bajo demanda cerró el 31 de marzo de 2026',
           'Necesitas entrega inmediata: Cherry Servers indica de 24 a 72 horas según la región',
           'Necesitas planes y precios verificados de LumaDock: sus páginas oficiales no se pudieron comprobar',
         ],
         affiliateLinks: [
-          { label: 'Consulta los precios de GPU de Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB desde $2.362/h' },
+          { label: 'Consulta los precios de GPU de Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB desde US$ 2,362/h' },
         ],
       },
       scorecard: {
@@ -1192,9 +1192,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Criterio': 'Variedad de GPUs', 'CUDO': '9/10, clústeres Blackwell', 'Cherry': '5/10, tarjetas antiguas', 'Database Mart': '9/10, hasta H100' },
           { 'Criterio': 'Flexibilidad del contrato', 'CUDO': '3/10, 128 GPUs o más', 'Cherry': '9/10, por horas', 'Database Mart': '6/10, plazos mensuales' },
           { 'Criterio': 'Soporte y docs', 'CUDO': 'No evaluado', 'Cherry': '6/10, solo se leyó la FAQ', 'Database Mart': 'No evaluado' },
-          { 'Criterio': 'Global', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
+          { 'Criterio': 'Global (solo criterios puntuados)', 'CUDO': '4,0/10', 'Cherry': '7,0/10', 'Database Mart': '8,0/10' },
         ],
-        note: 'Valoración de PromptQuorum, no una prueba práctica de laboratorio. La fiabilidad (uptime, velocidad de red, rendimiento real) no se midió, así que no tiene puntuación. La puntuación global es la media redondeada de los criterios puntuados: cuatro para CUDO y Database Mart (soporte y docs no se evalúan) y cinco para Cherry.',
+        note: 'Valoración de PromptQuorum, no una prueba práctica de laboratorio. La fiabilidad (uptime, velocidad de red, rendimiento real) no se midió, así que no tiene puntuación. La puntuación global (solo criterios puntuados) es la media redondeada de los criterios puntuados: cuatro para CUDO y Database Mart (soporte y docs no se evalúan) y cinco para Cherry.',
       },
       tldr: {
         id: 'tldr',
@@ -1202,8 +1202,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute: los [docs](https://docs.cudocompute.com/) indican que la plataforma pública bajo demanda cerró el 31 de marzo de 2026; los clústeres empiezan en 128 GPUs mediante un formulario de solicitud, sin precios publicados',
-          'Cherry Servers: las tarifas "desde" de GPU van de $0.139/h a $2.362/h (A100 80GB); la mayoría de los modelos están en lista de espera; devolución de 15 días indicada para servidores dedicados',
-          'Database Mart: 36 planes con GPU, solo EE. UU., precio mensual con plazos de 1, 3, 12 y 24 meses; el precio de la H100 renueva a $2,599.00/mes tras el primer plazo',
+          'Cherry Servers: las tarifas "desde" de GPU van de US$ 0,239/h (A2) a US$ 2,362/h (A100); la mayoría de los modelos están en lista de espera; devolución de 15 días indicada para servidores dedicados',
+          'Database Mart: 36 planes con GPU, solo EE. UU., precio mensual con plazos de 1, 3, 12 y 24 meses; el precio de la H100 renueva a US$ 2.599,00/mes tras el primer plazo',
           'LumaDock: planes y precios no verificados porque sus páginas oficiales devolvieron HTTP 403 a las comprobaciones automáticas',
           'Un modelo de 70B en Q4 necesita unos 44 GB de VRAM según la [hoja de referencia de VRAM](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) de este sitio, así que le sirve una tarjeta de 48 GB o de 80 GB',
           'Los precios se consultaron el 2026-11-22 en cada página oficial y cambian a menudo',
@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto: quién debería usar cada host',
         content:
-          '**Elige Cherry Servers para servidores dedicados por horas o a plazo fijo con GPU opcional, de un proveedor con sedes en la UE (no se indica qué sede aloja cada GPU), y Database Mart para el rango de GPUs publicado más amplio de los tres hosts cuyas páginas se pudieron leer, con condiciones mensuales en EE. UU.** Ambos publican precios y permiten que un desarrollador contrate sin llamada comercial. Cherry Servers ofrece facturación flexible y una garantía de devolución de 15 días indicada en servidores dedicados, pero sus listados de A100, A40, A16 y A10 muestran lista de espera. Database Mart lista tarjetas hasta la H100 y la RTX Pro 6000 de 96 GB, pero su precio de la H100 es un descuento único que renueva a $2,599.00 al mes.\n\n**CUDO Compute no encaja con una persona ni un equipo pequeño en 2026.** Sus docs indican que la plataforma pública bajo demanda cerró el 31 de marzo de 2026, y su página de clústeres dice que los despliegues empiezan en 128 GPUs. Si esa es tu escala, merece una conversación con ventas; según su [página de clústeres](https://www.cudocompute.com/products/clusters) (no verificado por PromptQuorum), tiene instalaciones con ISO 27001 y operaciones alineadas con el RGPD.\n\n**LumaDock debe tratarse como no verificado: compruébalo tú mismo.** PromptQuorum no pudo leer sus páginas oficiales, así que esta página no afirma nada sobre sus planes de VPS con GPU, precios ni condiciones.',
+          '**Elige Cherry Servers para servidores dedicados por horas o a plazo fijo con GPU opcional, de un proveedor con sedes en la UE (no se indica qué sede aloja cada GPU), y Database Mart para un amplio rango de GPUs publicado (36 planes) entre los tres hosts cuyas páginas se pudieron leer, con condiciones mensuales en EE. UU.** Ambos publican precios y permiten que un desarrollador contrate sin llamada comercial. Cherry Servers ofrece facturación flexible y una garantía de devolución de 15 días indicada en servidores dedicados, pero sus listados de A100, A40 y A10 muestran lista de espera. Database Mart lista tarjetas hasta la H100 y la RTX Pro 6000 de 96 GB, pero su precio de la H100 es un descuento único que renueva a US$ 2.599,00 al mes.\n\n**Según la evaluación de PromptQuorum, CUDO Compute no encaja con una persona ni un equipo pequeño en 2026.** Sus docs indican que la plataforma pública bajo demanda cerró el 31 de marzo de 2026, y su página de clústeres dice que los despliegues empiezan en 128 GPUs. Si esa es tu escala, merece una conversación con ventas; según su [página de clústeres](https://www.cudocompute.com/products/clusters) (declaraciones del proveedor no verificadas por PromptQuorum; que tu uso cumpla el RGPD depende de tus propias obligaciones como responsable del tratamiento), tiene instalaciones con ISO 27001 y operaciones alineadas con el RGPD.\n\n**LumaDock debe tratarse como no verificado: compruébalo tú mismo.** PromptQuorum no pudo leer sus páginas oficiales, así que esta página no afirma nada sobre sus planes de VPS con GPU, precios ni condiciones.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -1233,25 +1233,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Precios: lo que publicó cada host el 2026-11-22',
         content:
-          '**Cada cifra de abajo procede de la propia página del proveedor, consultada el 2026-11-22, en USD.** Las tarifas de Cherry Servers son precios "desde"; los precios de Database Mart incluyen precios de oferta que pueden terminar. Para comparar alquileres por horas con otros hosts, consulta los [precios de RunPod vs Vast.ai](/es/prompt-bites/runpod-vs-vastai-pricing) y la [calculadora de comprar vs alquilar](/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
+          '**Cada cifra de abajo procede de la propia página del proveedor, consultada el 2026-11-22, en USD.** Las tarifas de Cherry Servers son precios "desde"; los precios de Database Mart incluyen precios de oferta que pueden terminar. Las cifras mensuales son las tarifas que publica el propio proveedor, no la tarifa por hora multiplicada por 730 horas. Para comparar alquileres por horas con otros hosts, consulta los [precios de RunPod vs Vast.ai](/es/prompt-bites/runpod-vs-vastai-pricing) y la [calculadora de comprar vs alquilar](/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         columns: ['Proveedor / plan', 'GPU y VRAM', 'Precio'],
         rows: [
           { 'Proveedor / plan': 'CUDO Compute', 'GPU y VRAM': 'Clústeres Blackwell', 'Precio': 'No publicado, formulario de solicitud' },
-          { 'Proveedor / plan': 'Cherry Servers A100', 'GPU y VRAM': 'A100 80GB HBM2', 'Precio': '$2.362/h, $1,657.68/mes, lista de espera' },
-          { 'Proveedor / plan': 'Cherry Servers A40', 'GPU y VRAM': 'A40 48GB GDDR6', 'Precio': '$0.801/h, $472.66/mes, lista de espera' },
-          { 'Proveedor / plan': 'Cherry Servers A10', 'GPU y VRAM': 'A10 24GB GDDR6', 'Precio': '$0.518/h, $303.03/mes, lista de espera' },
-          { 'Proveedor / plan': 'Cherry Servers A2', 'GPU y VRAM': 'A2 16GB GDDR6', 'Precio': '$0.239/h, $139.23/mes' },
-          { 'Proveedor / plan': 'Database Mart VPS con GPU', 'GPU y VRAM': 'RTX 5090 32GB', 'Precio': '$419/mes' },
-          { 'Proveedor / plan': 'Database Mart VPS con GPU', 'GPU y VRAM': 'RTX Pro 6000 96GB', 'Precio': '$649/mes, plazos de 3/12/24 meses' },
-          { 'Proveedor / plan': 'Database Mart dedicado', 'GPU y VRAM': 'RTX 4090 24GB', 'Precio': '$409/mes' },
-          { 'Proveedor / plan': 'Database Mart dedicado', 'GPU y VRAM': 'A100 80GB', 'Precio': '$764.55/mes (antes $1,699.00)' },
-          { 'Proveedor / plan': 'Database Mart dedicado', 'GPU y VRAM': 'H100 80GB', 'Precio': '$1,039.60/mes, renueva a $2,599.00' },
+          { 'Proveedor / plan': 'Cherry Servers A100', 'GPU y VRAM': 'A100 80GB HBM2', 'Precio': 'US$ 2,362/h, US$ 1.657,68/mes, lista de espera' },
+          { 'Proveedor / plan': 'Cherry Servers A40', 'GPU y VRAM': 'A40 48GB GDDR6', 'Precio': 'US$ 0,801/h, US$ 472,66/mes, lista de espera' },
+          { 'Proveedor / plan': 'Cherry Servers A10', 'GPU y VRAM': 'A10 24GB GDDR6', 'Precio': 'US$ 0,518/h, US$ 303,03/mes, lista de espera' },
+          { 'Proveedor / plan': 'Cherry Servers A2', 'GPU y VRAM': 'A2 16GB GDDR6', 'Precio': 'US$ 0,239/h, US$ 139,23/mes' },
+          { 'Proveedor / plan': 'Database Mart VPS con GPU', 'GPU y VRAM': 'RTX 5090 32GB', 'Precio': 'US$ 419/mes' },
+          { 'Proveedor / plan': 'Database Mart VPS con GPU', 'GPU y VRAM': 'RTX Pro 6000 96GB', 'Precio': 'US$ 649/mes, plazos de 3/12/24 meses' },
+          { 'Proveedor / plan': 'Database Mart dedicado', 'GPU y VRAM': 'RTX 4090 24GB', 'Precio': 'US$ 409/mes' },
+          { 'Proveedor / plan': 'Database Mart dedicado', 'GPU y VRAM': 'A100 80GB', 'Precio': 'US$ 764,55/mes (antes US$ 1.699,00)' },
+          { 'Proveedor / plan': 'Database Mart dedicado', 'GPU y VRAM': 'H100 80GB', 'Precio': 'US$ 1.039,60/mes, renueva a US$ 2.599,00' },
           { 'Proveedor / plan': 'LumaDock VPS con GPU', 'GPU y VRAM': 'No verificado', 'Precio': 'No verificado' },
         ],
         items: [
-          'Cherry Servers también lista servidores base donde la GPU es opcional: un plan AMD Ryzen 7700X a $0.318/h o $158.13/mes (máximo 1 GPU, 64 GB de RAM) y un plan AMD EPYC 7402P que admite hasta 2 GPUs.',
-          'Database Mart también lista planes con varias GPUs, por ejemplo 2x RTX 4090 a $729/mes, 2x RTX 5090 a $859/mes y 4x A100 40GB a $1,899/mes.',
-          'El precio de la H100 de Database Mart se etiqueta como descuento único: la página indica que renueva a $2,599.00 al mes.',
+          'Cherry Servers también lista servidores base donde la GPU es opcional: un plan AMD Ryzen 7700X a US$ 0,318/h o US$ 158,13/mes (máximo 1 GPU, 64 GB de RAM) y un plan AMD EPYC 7402P que admite hasta 2 GPUs.',
+          'Database Mart también lista planes con varias GPUs, por ejemplo 2x RTX 4090 a US$ 729/mes, 2x RTX 5090 a US$ 859/mes y 4x A100 40GB a US$ 1.899/mes.',
+          'El precio de la H100 de Database Mart se etiqueta como descuento único: la página indica que renueva a US$ 2.599,00 al mes.',
           'LumaDock: no se da ningún precio porque las páginas oficiales no se pudieron obtener; consulta directamente [lumadock.com](https://lumadock.com/).',
           'CUDO Compute no lista precios; una entrada antigua del blog de CUDO anterior al cierre de la plataforma no se usa como precio vigente.',
         ],
@@ -1261,11 +1261,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Qué modelos caben en estas GPUs',
         content:
-          '**La VRAM decide el tamaño del modelo, y la [hoja de referencia de VRAM](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) de este sitio sitúa los destilados de DeepSeek-R1 en unos 9.5 GB (14B), 20.5 GB (32B) y 44 GB (70B) con la cuantización Q4_K_M.** Esas cifras son pesos más un pequeño margen; un contexto largo necesita más. Para el método general, consulta [cuánta VRAM necesita un LLM local](/es/local-llms/how-much-vram-local-llm).',
+          '**La VRAM decide el tamaño del modelo, y la [hoja de referencia de VRAM](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) de este sitio sitúa los destilados de DeepSeek-R1 en unos 9,5 GB (14B), 20,5 GB (32B) y 44 GB (70B) con la cuantización Q4_K_M.** Esas cifras son pesos más un pequeño margen; un contexto largo necesita más. Para el método general, consulta [cuánta VRAM necesita un LLM local](/es/local-llms/how-much-vram-local-llm).',
         columns: ['GPU (VRAM)', 'Cabe en Q4_K_M', 'Host que la lista'],
         rows: [
-          { 'GPU (VRAM)': 'A2 (16 GB)', 'Cabe en Q4_K_M': 'Hasta 14B (~9.5 GB)', 'Host que la lista': 'Cherry Servers' },
-          { 'GPU (VRAM)': 'RTX 4090 (24 GB)', 'Cabe en Q4_K_M': '32B, justo (~20.5 GB)', 'Host que la lista': 'Database Mart' },
+          { 'GPU (VRAM)': 'A2 (16 GB)', 'Cabe en Q4_K_M': 'Hasta 14B (~9,5 GB)', 'Host que la lista': 'Cherry Servers' },
+          { 'GPU (VRAM)': 'RTX 4090 (24 GB)', 'Cabe en Q4_K_M': '32B, justo (~20,5 GB)', 'Host que la lista': 'Database Mart' },
           { 'GPU (VRAM)': 'RTX 5090 (32 GB)', 'Cabe en Q4_K_M': '32B con margen de contexto', 'Host que la lista': 'Database Mart' },
           { 'GPU (VRAM)': 'A40 / RTX A6000 (48 GB)', 'Cabe en Q4_K_M': '70B, justo (~44 GB)', 'Host que la lista': 'Cherry, Database Mart' },
           { 'GPU (VRAM)': 'A100 / H100 (80 GB)', 'Cabe en Q4_K_M': '70B con margen', 'Host que la lista': 'Cherry, Database Mart' },
@@ -1285,7 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**API de inferencia siempre activa:** un modelo de 14B a 70B que atiende una herramienta interna todo el día, donde una tarifa mensual fija es predecible.',
           '**Ejecuciones largas de fine-tuning:** trabajos de varios días en una sola tarjeta de 48 GB a 96 GB, donde la facturación por horas también se acumularía.',
           '**GPU privada para pruebas sensibles:** una máquina entera para un solo cliente, como Cherry Servers describe sus servidores dedicados (no es una garantía de protección de datos, consulta Riesgo y confianza).',
-          '**Entrenamiento en clústeres grandes:** el único caso en que aplica CUDO Compute, con 128 GPUs o más mediante su proceso de ventas.',
+          '**Entrenamiento en clústeres grandes:** el caso principal en que aplica CUDO Compute, con 128 GPUs o más mediante su proceso de ventas.',
           '**No encaja:** unas horas de GPU o una ráfaga de trabajos en paralelo; los proveedores por horas son más adecuados para eso.',
         ],
       },
@@ -1299,11 +1299,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Facturación y reembolsos, Database Mart:** precio mensual por plan con plazos de 1, 3, 12 y 24 meses; en las páginas de planes leídas no aparece ninguna política de reembolso; los términos están en sus Terms of Service y SLA, que no se leyeron.',
           '**Facturación, CUDO Compute:** no se publican precios ni condiciones de contrato; la página de clústeres nombra un SLA pero no se vio su contenido.',
           '**De dónde procede el hardware:** CUDO Compute indica que la capacidad procede de centros de datos operados de forma independiente; Cherry Servers lista Lituania, Estocolmo, Ámsterdam, Fráncfort, Chicago, Singapur y Tokio; Database Mart indica centros de datos Tier-2 de EE. UU. sin nombrar ciudades.',
-          '**Tratamiento de datos, CUDO Compute:** indica en su [página de clústeres](https://www.cudocompute.com/products/clusters) instalaciones con ISO 27001, operaciones alineadas con el RGPD y residencia de datos soberana aplicada (declaraciones del proveedor, no verificadas por PromptQuorum).',
+          '**Tratamiento de datos, CUDO Compute:** indica en su [página de clústeres](https://www.cudocompute.com/products/clusters) instalaciones con ISO 27001, operaciones alineadas con el RGPD y residencia de datos soberana aplicada (declaraciones del proveedor no verificadas por PromptQuorum; que tu uso cumpla el RGPD depende de tus propias obligaciones como responsable del tratamiento).',
           '**Tratamiento de datos, Cherry Servers:** indica que cada servidor es una máquina privada sin virtualización, con protección DDoS por defecto y 100 GB de copia de seguridad gratuita; en la página de GPU no aparece ninguna política de retención de datos.',
           '**Tratamiento de datos, Database Mart:** en las páginas leídas no aparece ninguna declaración sobre el tratamiento de datos.',
           '**LumaDock:** no verificado; aquí no se verifica nada sobre su tratamiento de datos, ubicaciones ni reembolsos. Lee tú mismo sus términos antes de mover datos allí.',
-          'No pongas datos regulados ni personales en ningún host hasta que hayas leído su política de privacidad y sus términos de tratamiento de datos.',
+          'No pongas datos regulados ni personales en ningún host hasta que hayas leído su política de privacidad y sus términos de tratamiento de datos. Esto no es asesoramiento legal.',
         ],
       },
       prosCons: {
@@ -1318,8 +1318,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El coste mensual fijo conviene a un modelo siempre activo',
           '**Contras**',
           'Cherry Servers: la mayoría de los modelos de GPU listados muestran lista de espera, y la entrega es de 24 a 72 horas',
-          'Database Mart: solo ubicaciones en EE. UU., y el descuento de la H100 renueva a $2,599.00 al mes',
-          'CUDO Compute: plataforma pública bajo demanda cerrada el 31 de marzo de 2026; los clústeres empiezan en 128 GPUs',
+          'Database Mart: solo ubicaciones en EE. UU., y el descuento de la H100 renueva a US$ 2.599,00 al mes',
+          'CUDO Compute: indica que su plataforma pública bajo demanda cerró el 31 de marzo de 2026; los clústeres empiezan en 128 GPUs',
           'LumaDock: planes no verificados',
           'Pagar horas inactivas si la GPU no está ocupada',
         ],
@@ -1339,8 +1339,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Consulta los clústeres de CUDO Compute →', url: 'https://www.cudocompute.com/', productName: 'CUDO Compute', productCategory: 'GPU clusters' },
-          { label: 'Consulta los precios de GPU de Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB desde $2.362/h' },
-          { label: 'Consulta los planes con GPU de Database Mart →', url: 'https://www.databasemart.com/gpu-server', productName: 'Database Mart GPU servers', productCategory: 'GPU server hosting', priceRange: 'H100 80GB $1,039.60/mes (primer plazo)' },
+          { label: 'Consulta los precios de GPU de Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB desde US$ 2,362/h' },
+          { label: 'Consulta los planes con GPU de Database Mart →', url: 'https://www.databasemart.com/gpu-server', productName: 'Database Mart GPU servers', productCategory: 'GPU server hosting', priceRange: 'H100 80GB US$ 1.039,60/mes (primer plazo)' },
           { label: 'Visita LumaDock (no verificado) →', url: 'https://lumadock.com/', productName: 'LumaDock GPU VPS', productCategory: 'GPU VPS' },
         ],
       },
@@ -1373,10 +1373,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Sigue alquilando CUDO Compute GPUs por horas?', a: 'La documentación de CUDO Compute indica que no se ofrece alquiler público bajo demanda y que su plataforma pública bajo demanda cerró el 31 de marzo de 2026, y su página de clústeres dice que los despliegues empiezan en 128 GPUs mediante un formulario de solicitud (consultado el 2026-11-22).' },
-          { q: '¿Cuánto cuesta un servidor con GPU de Cherry Servers?', a: 'Cherry Servers lista tarifas "desde" de $2.362/h ($1,657.68/mes) para una A100 80GB, $0.801/h para una A40 48GB, $0.518/h para una A10 24GB y $0.239/h para una A2 16GB (consultado el 2026-11-22). Varios modelos muestran lista de espera.' },
+          { q: '¿Cuánto cuesta un servidor con GPU de Cherry Servers?', a: 'Cherry Servers lista tarifas "desde" de US$ 2,362/h (US$ 1.657,68/mes) para una A100 80GB, US$ 0,801/h para una A40 48GB, US$ 0,518/h para una A10 24GB y US$ 0,239/h para una A2 16GB (consultado el 2026-11-22). Varios modelos muestran lista de espera.' },
           { q: '¿Dónde están los centros de datos de Cherry Servers?', a: 'Cherry Servers lista Lituania (Šiauliai), Estocolmo, Ámsterdam, Fráncfort, Chicago, Singapur y Tokio. La página de GPU muestra Lituania para sus planes de servidor base y no indica qué GPU se ofrece en cada lugar.' },
           { q: '¿Tiene Cherry Servers garantía de devolución del dinero?', a: 'Su página de inicio y su página de precios listan una garantía de devolución de 15 días para servidores dedicados, sin condiciones indicadas en las páginas leídas. La propia página de servidores con GPU no indica ninguna garantía de reembolso.' },
-          { q: '¿Cuánto cuesta una H100 en Database Mart?', a: 'Database Mart lista una H100 80GB Enterprise Dedicated a $1,039.60 al mes, etiquetada como descuento único que renueva a $2,599.00 al mes (consultado el 2026-11-22).' },
+          { q: '¿Cuánto cuesta una H100 en Database Mart?', a: 'Database Mart lista una H100 80GB Enterprise Dedicated a US$ 1.039,60 al mes, etiquetada como descuento único que renueva a US$ 2.599,00 al mes (consultado el 2026-11-22).' },
           { q: '¿Dónde están los servidores con GPU de Database Mart?', a: 'Los 36 planes listados están en EE. UU. La página de inicio describe centros de datos Tier-2 de EE. UU. sin nombrar ciudades.' },
           { q: '¿Puede un servidor con GPU alquilado ejecutar un modelo de 70B?', a: 'Un modelo de 70B en Q4_K_M necesita unos 44 GB de VRAM según la hoja de referencia de VRAM de este sitio, así que una tarjeta de 48 GB es justa y una de 80 GB (A100, H100) cabe con margen. Es aritmética de VRAM, no una medición de velocidad.' },
           { q: '¿Qué se pudo verificar sobre los planes de VPS con GPU de LumaDock?', a: 'Nada por ahora. Sus páginas oficiales devolvieron HTTP 403 a las comprobaciones automáticas, así que PromptQuorum no afirma nada sobre sus planes, precios, ubicaciones ni condiciones. Lee tú mismo sus términos y su política de reembolso.' },
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Alojamiento de servidores con GPU 2026: CUDO Compute, Cherry Servers, Database Mart (y GPU VPS de LumaDock)',
       reviewBody:
-        'Comparativa de cuatro hosts de servidores con GPU a partir de sus páginas oficiales, consultadas el 2026-11-22. CUDO Compute indica que su plataforma pública bajo demanda cerró el 31 de marzo de 2026; Cherry Servers lista una A100 80GB desde $2.362 por hora; Database Mart lista una H100 80GB a $1,039.60 al mes con renovación a $2,599.00; LumaDock no se pudo verificar. La puntuación es la media de la valoración global de los tres proveedores puntuados (4.0, 7.0 y 8.0 sobre 10), valoración de PromptQuorum, no una prueba práctica.',
+        'Comparativa de cuatro hosts de servidores con GPU a partir de sus páginas oficiales, consultadas el 2026-11-22. CUDO Compute indica que su plataforma pública bajo demanda cerró el 31 de marzo de 2026; Cherry Servers lista una A100 80GB desde US$ 2,362 por hora; Database Mart lista una H100 80GB a US$ 1.039,60 al mes con renovación a US$ 2.599,00; LumaDock no se pudo verificar. La puntuación es la media de los criterios puntuados de cada proveedor (4, 5 y 4 criterios; 4,0, 7,0 y 8,0 sobre 10), valoración de PromptQuorum, no una prueba práctica.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -1449,9 +1449,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GPUサーバーホスティングとは、[おすすめクラウドGPUプロバイダー](/ja/power-local-llm/best-cloud-gpu-providers)で1時間単位で支払う代わりに、GPUマシン1台を丸ごと（専用サーバー、ベアメタル、またはGPU VPS）固定期間で借りるサービスです。このページでは、4つのホスト（CUDO Compute、Cherry Servers、Database Mart、LumaDock）を各社の公式ページに基づいて比較します（2026-11-22確認）。結果にはばらつきがあります。CUDO Computeは、公開のオンデマンドプラットフォームを2026年3月31日に終了し、現在はGPUクラスターを問い合わせフォーム経由で販売していると述べています。Cherry ServersとDatabase Martは料金を公開しており、注文できます。LumaDockの公式ページは自動確認にHTTP 403を返したため、GPU VPSのプランはここでは未確認です。スコアはすべてPromptQuorumの評価であり、実機ラボテストではありません。',
     metaDescription:
-      'GPUサーバーホスティング2026：CUDOはオンデマンド終了、CherryはA100が1時間2.362ドルから、Database MartはH100が初回月1,039.60ドル（更新後2,599ドル）。',
+      'GPUサーバーホスティング2026：CUDOは公式にオンデマンド終了と表示、CherryはA100が1時間2.362ドルから、Database MartはH100が初回月1,039.60ドル（更新後2,599ドル）。',
     twitterDescription:
-      '2026年のGPUサーバーホスティング：CUDO Computeは公開オンデマンドを終了、Cherry ServersとDatabase Martは料金を公開、LumaDockは未確認。契約条件、設置場所、モデルの適合を解説。',
+      '2026年のGPUサーバーホスティング：CUDO Computeは公開オンデマンドを終了したと表示、Cherry ServersとDatabase Martは料金を公開、LumaDockは未確認。契約条件、設置場所、モデルの適合を解説。',
     readTime: '11分で読める',
     educationalLevel: 'Intermediate',
     audience: 'LLMの推論やファインチューニングのために、固定期間のGPUサーバーを借りたい開発者と小規模チーム',
@@ -1472,9 +1472,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'GPUサーバーのホストは、CUDO、Cherry Servers、Database Mart、LumaDockのどれを使うべきですか？',
         answer:
-          'EUの掲載拠点（GPUの設置場所は未記載）で、1時間単位または固定期間の専用サーバーを使いたく、15日間の返金保証が明記されていることを重視し、大半のGPUモデルが順番待ちであることを受け入れられるなら、Cherry Serversです。ページを読み取れた3社の中で公開GPUの種類が最も多く（36プラン、RTX 5060からH100まで、米国のみ）、月単位で契約したいなら、Database Martです。128GPU以上のクラスターが必要な場合を除き、CUDO Computeは見送ってください。公開のオンデマンドプラットフォームは2026年3月31日に終了しました。LumaDockは未確認として扱ってください。公式ページでGPU VPSのプランを確認できませんでした。以下の料金は2026-11-22に確認しました。',
+          'EUの掲載拠点（GPUの設置場所は未記載）で、1時間単位または固定期間の専用サーバーを使いたく、15日間の返金保証が明記されていることを重視し、大半のGPUモデルが順番待ちであることを受け入れられるなら、Cherry Serversです。ページを読み取れた3社の中で公開GPUの種類が幅広く（36プラン、RTX 5060からH100まで、米国のみ）、月単位で契約したいなら、Database Martです。128GPU以上のクラスターが必要な場合を除き、CUDO Computeは見送ってください。同社は公開のオンデマンドプラットフォームを2026年3月31日に終了したと表示しています。LumaDockは未確認として扱ってください。公式ページでGPU VPSのプランを確認できませんでした。以下の料金は2026-11-22に確認しました。',
         bullets: [
-          'CUDO Compute：公開オンデマンドプラットフォームは2026-03-31に終了。クラスターは128GPUから、問い合わせフォーム経由で、料金は非公開',
+          'CUDO Compute：公開オンデマンドプラットフォームを2026-03-31に終了したと表示。クラスターは128GPUから、問い合わせフォーム経由で、料金は非公開',
           'Cherry Servers：A100 80GBは1時間2.362ドルから（月1,657.68ドル、順番待ち）。A2 16GBは1時間0.239ドルから。標準プランはリトアニア。専用サーバーは15日間の返金保証を明記',
           'Database Mart：GPUは36プラン、米国のみ。H100 80GBは初回期間が月1,039.60ドル（更新後は月2,599.00ドル）。RTX 5090 32GBのVPSは月419ドル',
           'LumaDock：未確認。GPU VPSのプランは確認できず（公式ページが自動確認にHTTP 403を返した）',
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '月単位の契約で、公開されている幅広いGPUから選びたい（Database Martは36プランを掲載）',
           '**見送る場合：**',
           'GPUが数時間だけ必要：時間単位のレンタルを使ってください。[おすすめクラウドGPUプロバイダー](/ja/power-local-llm/best-cloud-gpu-providers)をご覧ください',
-          'CUDO Computeが単体のGPUをオンデマンドで貸し出すと期待していた：公開のオンデマンドプラットフォームは2026年3月31日に終了しました',
+          'CUDO Computeが単体のGPUをオンデマンドで貸し出すと期待していた：同社は公開のオンデマンドプラットフォームを2026年3月31日に終了したと表示しています',
           'すぐに受け取りたい：Cherry Serversはリージョンにより24〜72時間と記載しています',
           'LumaDockの確認済みのプランと料金が必要：公式ページを確認できませんでした',
         ],
@@ -1548,9 +1548,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'GPUの選択肢', 'CUDO': '9/10、Blackwellクラスター', 'Cherry': '5/10、旧世代のカード', 'Database Mart': '9/10、H100まで' },
           { '項目': '契約の柔軟性', 'CUDO': '3/10、128GPU以上', 'Cherry': '9/10、1時間単位', 'Database Mart': '6/10、月単位の契約' },
           { '項目': 'サポート／ドキュメント', 'CUDO': '評価せず', 'Cherry': '6/10、FAQのみ確認', 'Database Mart': '評価せず' },
-          { '項目': '総合', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
+          { '項目': '総合（採点した項目のみ）', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
         ],
-        note: 'PromptQuorumの評価であり、実機ラボテストではありません。信頼性（稼働率、ネットワーク速度、実環境のスループット）は測定していないため、採点していません。総合は、採点した項目の平均を丸めた値です（CUDOとDatabase Martはサポート／ドキュメントを評価していないため4項目、Cherryは5項目）。',
+        note: 'PromptQuorumの評価であり、実機ラボテストではありません。信頼性（稼働率、ネットワーク速度、実環境のスループット）は測定していないため、採点していません。総合（採点した項目のみ）は、採点した項目の平均を丸めた値です（CUDOとDatabase Martはサポート／ドキュメントを評価していないため4項目、Cherryは5項目）。',
       },
       tldr: {
         id: 'tldr',
@@ -1558,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute：[ドキュメント](https://docs.cudocompute.com/)には、公開オンデマンドプラットフォームを2026年3月31日に終了したと記載。クラスターは128GPUから、問い合わせフォーム経由で、料金は非公開',
-          'Cherry Servers：GPUの「from」料金は1時間0.139ドルから2.362ドル（A100 80GB）。大半のモデルは順番待ちで、専用サーバーは15日間の返金保証を明記',
+          'Cherry Servers：GPUの「from」料金は1時間0.239ドル（A2）から2.362ドル（A100）。大半のモデルは順番待ちで、専用サーバーは15日間の返金保証を明記',
           'Database Mart：36のGPUプラン、米国のみ、1・3・12・24か月契約の月額料金。H100の料金は初回期間の後は月2,599.00ドルに更新',
           'LumaDock：公式ページが自動確認にHTTP 403を返したため、プランと料金は未確認',
           '本サイトの[VRAMチートシート](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet)によると、70BモデルのQ4には約44GBのVRAMが必要なため、48GBまたは80GBのカードで動かせます',
@@ -1569,7 +1569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総合評価：どのホストを使うべきか',
         content:
-          '**1時間単位または固定期間で、GPUをオプションで付けられる専用サーバーを、EU拠点を持つ事業者（どの拠点にどのGPUがあるかは未記載）から借りるならCherry Servers、米国で月単位の契約で、ページを読み取れた3社の中で公開GPUの種類が最も多いのはDatabase Martです。** どちらも料金を公開しており、開発者が営業への問い合わせなしで注文できます。Cherry Serversは柔軟な課金と、専用サーバーの15日間の返金保証を明記していますが、A100、A40、A16、A10の掲載は順番待ちです。Database MartはH100やRTX Pro 6000 96GBまでのカードを掲載していますが、H100の料金は1回限りの割引で、更新後は月2,599.00ドルになります。\n\n**2026年時点では、CUDO Computeは個人や小規模チームには向きません。** ドキュメントには、公開オンデマンドプラットフォームを2026年3月31日に終了したと記載されており、クラスターのページには、導入は128GPUからとあります。その規模なら、営業との相談に値します。同社の[クラスターのページ](https://www.cudocompute.com/products/clusters)には、ISO 27001とGDPRに沿った運用が記載されています（PromptQuorumは未確認）。\n\n**LumaDockは未確認として扱い、ご自身で確認してください。** PromptQuorumは公式ページを読み取れなかったため、このページではGPU VPSのプラン、料金、条件について何も主張していません。',
+          '**1時間単位または固定期間で、GPUをオプションで付けられる専用サーバーを、EU拠点を持つ事業者（どの拠点にどのGPUがあるかは未記載）から借りるならCherry Servers、米国で月単位の契約で、ページを読み取れた3社の中で公開GPUの種類が幅広い（36プラン）のはDatabase Martです。** どちらも料金を公開しており、開発者が営業への問い合わせなしで注文できます。Cherry Serversは柔軟な課金と、専用サーバーの15日間の返金保証を明記していますが、A100、A40、A10の掲載は順番待ちです。Database MartはH100やRTX Pro 6000 96GBまでのカードを掲載していますが、H100の料金は1回限りの割引で、更新後は月2,599.00ドルになります。\n\n**PromptQuorumの評価では、2026年時点でCUDO Computeは個人や小規模チームには向きません。** ドキュメントには、公開オンデマンドプラットフォームを2026年3月31日に終了したと記載されており、クラスターのページには、導入は128GPUからとあります。その規模なら、営業との相談に値します。同社の[クラスターのページ](https://www.cudocompute.com/products/clusters)には、ISO 27001とGDPRに沿った運用が記載されています（同社の自己申告でPromptQuorumは未確認。利用がGDPRに適合するかは、データ管理者としてのご自身の義務によります）。\n\n**LumaDockは未確認として扱い、ご自身で確認してください。** PromptQuorumは公式ページを読み取れなかったため、このページではGPU VPSのプラン、料金、条件について何も主張していません。',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '料金：各ホストが2026-11-22に公開していた内容',
         content:
-          '**以下の数値はすべて、2026-11-22に確認したプロバイダー自身のページに基づくUSD建てです。** Cherry Serversの料金は「from」価格で、Database Martの料金には終了する可能性のあるセール価格が含まれます。他のホストとの1時間単位のレンタルの比較は、[RunPodとVast.aiの料金比較](/ja/prompt-bites/runpod-vs-vastai-pricing)と[購入とレンタルのコスト計算ツール](/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026)をご覧ください。',
+          '**以下の数値はすべて、2026-11-22に確認したプロバイダー自身のページに基づくUSD建てです。** Cherry Serversの料金は「from」価格で、Database Martの料金には終了する可能性のあるセール価格が含まれます。月額は、プロバイダー自身が掲載している料金であり、1時間あたりの料金に730時間を掛けた値ではありません。他のホストとの1時間単位のレンタルの比較は、[RunPodとVast.aiの料金比較](/ja/prompt-bites/runpod-vs-vastai-pricing)と[購入とレンタルのコスト計算ツール](/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026)をご覧ください。',
         columns: ['プロバイダー / プラン', 'GPUとVRAM', '料金'],
         rows: [
           { 'プロバイダー / プラン': 'CUDO Compute', 'GPUとVRAM': 'Blackwellクラスター', '料金': '非公開、問い合わせフォーム' },
@@ -1641,7 +1641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**常時稼働の推論API：** 社内ツールに1日中提供する14B〜70Bのモデルなど、定額の月額料金が読みやすい用途。',
           '**長時間のファインチューニング：** 48GB〜96GBのカード1枚で数日かかる処理。時間単位の課金でも費用がかさみます。',
           '**機微なテスト用のプライベートGPU：** Cherry Serversが専用サーバーについて説明しているような、1顧客専用のマシン丸ごと（データ保護の保証ではありません。リスクと信頼性を参照）。',
-          '**大規模クラスターでの学習：** CUDO Computeが当てはまる唯一のケースで、128GPU以上を営業を通じて導入します。',
+          '**大規模クラスターでの学習：** CUDO Computeが当てはまる主なケースで、128GPU以上を営業を通じて導入します。',
           '**不向き：** 数時間だけのGPU利用や、並列ジョブのバースト。これらは時間単位のプロバイダーのほうが適しています。',
         ],
       },
@@ -1655,11 +1655,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**課金と返金、Database Mart：** プランごとの月額料金で、1・3・12・24か月契約。確認したプランのページに返金ポリシーの記載はなく、条件は利用規約とSLAにありますが、読んでいません。',
           '**課金、CUDO Compute：** 料金も契約条件も公開されていません。クラスターのページにSLAの記載がありますが、内容は確認していません。',
           '**ハードウェアの出どころ：** CUDO Computeは、独立して運営されるデータセンターから容量を調達すると述べています。Cherry Serversは、リトアニア、ストックホルム、アムステルダム、フランクフルト、シカゴ、シンガポール、東京を掲載しています。Database Martは、都市名を挙げずに米国のTier-2データセンターと述べています。',
-          '**データの扱い、CUDO Compute：** [クラスターのページ](https://www.cudocompute.com/products/clusters)に、ISO 27001認証施設、GDPRに沿った運用、ソブリンなデータ所在地の徹底が記載されています（同社の自己申告で、PromptQuorumは未確認）。',
+          '**データの扱い、CUDO Compute：** [クラスターのページ](https://www.cudocompute.com/products/clusters)に、ISO 27001認証施設、GDPRに沿った運用、ソブリンなデータ所在地の徹底が記載されています（同社の自己申告でPromptQuorumは未確認。利用がGDPRに適合するかは、データ管理者としてのご自身の義務によります）。',
           '**データの扱い、Cherry Servers：** 各サーバーは仮想化なしのプライベートなマシンで、標準でDDoS対策があり、100GBの無料バックアップが付くと記載しています。GPUのページにデータ保持ポリシーの記載はありません。',
           '**データの扱い、Database Mart：** 確認したページに、データの扱いに関する記載はありません。',
           '**LumaDock：** 未確認です。データの扱い、設置場所、返金についてはここでは何も確認していません。データを移す前に、利用規約をご自身でお読みください。',
-          'プライバシーポリシーとデータ処理条項を読むまでは、規制対象のデータや個人データをどのホストにも置かないでください。',
+          'プライバシーポリシーとデータ処理条項を読むまでは、規制対象のデータや個人データをどのホストにも置かないでください。これは法的助言ではありません。',
         ],
       },
       prosCons: {
@@ -1675,7 +1675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**短所**',
           'Cherry Servers：掲載されているGPUモデルの大半が順番待ちで、導入に24〜72時間かかる',
           'Database Mart：拠点は米国のみで、H100の割引は更新後に月2,599.00ドルになる',
-          'CUDO Compute：公開オンデマンドプラットフォームは2026年3月31日に終了し、クラスターは128GPUから',
+          'CUDO Compute：公開オンデマンドプラットフォームを2026年3月31日に終了したと表示。クラスターは128GPUから',
           'LumaDock：プランは未確認',
           'GPUが使われていなくても、アイドル時間の分を支払う',
         ],
@@ -1728,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'CUDO Computeは今でもGPUを1時間単位で貸し出していますか？', a: 'いいえ。CUDO Computeのドキュメントには、公開のオンデマンドレンタルは提供されておらず、公開オンデマンドプラットフォームを2026年3月31日に終了したと記載されており、クラスターのページには、導入は問い合わせフォーム経由で128GPUからとあります（2026-11-22確認）。' },
+          { q: 'CUDO Computeは今でもGPUを1時間単位で貸し出していますか？', a: 'CUDO Computeのドキュメントによると、公開のオンデマンドレンタルは提供されておらず、公開オンデマンドプラットフォームを2026年3月31日に終了したと記載されており、クラスターのページには、導入は問い合わせフォーム経由で128GPUからとあります（2026-11-22確認）。' },
           { q: 'Cherry ServersのGPUサーバーはいくらですか？', a: 'Cherry Serversは、A100 80GBが1時間2.362ドルから（月1,657.68ドル）、A40 48GBが1時間0.801ドル、A10 24GBが1時間0.518ドル、A2 16GBが1時間0.239ドルという「from」料金を掲載しています（2026-11-22確認）。いくつかのモデルは順番待ちと表示されています。' },
           { q: 'Cherry Serversのデータセンターはどこにありますか？', a: 'Cherry Serversは、リトアニア（シャウレイ）、ストックホルム、アムステルダム、フランクフルト、シカゴ、シンガポール、東京を掲載しています。GPUのページでは標準のサーバープランの拠点としてリトアニアが示されており、どのGPUがどこで提供されるかは書かれていません。' },
           { q: 'Cherry Serversに返金保証はありますか？', a: 'ホームページと料金ページに、専用サーバーの15日間の返金保証が記載されていますが、確認したページに条件の記載はありません。GPUサーバーのページ自体には返金保証の記載がありません。' },
@@ -1760,7 +1760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GPUサーバーホスティング（2026）：CUDO Compute、Cherry Servers、Database Mart（とLumaDock GPU VPS）',
       reviewBody:
-        '4つのGPUサーバーホストを、公式ページ（2026-11-22確認）に基づいて比較しました。CUDO Computeは公開オンデマンドプラットフォームを2026年3月31日に終了したと述べています。Cherry ServersはA100 80GBを1時間2.362ドルから掲載し、Database MartはH100 80GBを月1,039.60ドル（更新後は月2,599.00ドル）で掲載しています。LumaDockは確認できませんでした。評価は、採点した3社の総合スコア（10点満点で4.0、7.0、8.0）の平均で、PromptQuorumの評価であり、実機テストではありません。',
+        '4つのGPUサーバーホストを、公式ページ（2026-11-22確認）に基づいて比較しました。CUDO Computeは公開オンデマンドプラットフォームを2026年3月31日に終了したと述べています。Cherry ServersはA100 80GBを1時間2.362ドルから掲載し、Database MartはH100 80GBを月1,039.60ドル（更新後は月2,599.00ドル）で掲載しています。LumaDockは確認できませんでした。評価は、各社の採点した項目（それぞれ4、5、4項目。10点満点で4.0、7.0、8.0）の平均で、PromptQuorumの評価であり、実機テストではありません。',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -1805,9 +1805,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GPU 服务器托管是指按固定期限租用整台 GPU 机器（独立服务器、裸金属或 GPU VPS），而不是在[最佳云 GPU 服务商](/zh/power-local-llm/best-cloud-gpu-providers)上按小时付费。本页依据四家托管商各自的官方页面（核实于 2026-11-22）进行比较：CUDO Compute、Cherry Servers、Database Mart 和 LumaDock。结果参差不齐。CUDO Compute 称其公共按需平台已于 2026 年 3 月 31 日关闭，现在通过销售表单出售 GPU 集群。Cherry Servers 和 Database Mart 公布价格并可直接下单。LumaDock 的官方页面对自动化检查返回了 HTTP 403，因此这里没有核实它的 GPU VPS 套餐。所有评分都是 PromptQuorum 的评估，并非实机实验室测试。',
     metaDescription:
-      'GPU 服务器托管 2026：CUDO 关闭按需平台，Cherry A100 每小时 $2.362 起，Database Mart H100 首期每月 $1,039.60（续费 $2,599）。',
+      'GPU 服务器托管 2026：CUDO 称已关闭按需平台，Cherry A100 每小时 $2.362 起，Database Mart H100 首期每月 $1,039.60（续费 $2,599）。',
     twitterDescription:
-      '2026 年 GPU 服务器托管：CUDO Compute 关闭了公共按需平台，Cherry Servers 和 Database Mart 公布价格，LumaDock 未核实。条款、位置、模型适配。',
+      '2026 年 GPU 服务器托管：CUDO Compute 称已关闭其公共按需平台，Cherry Servers 和 Database Mart 公布价格，LumaDock 未核实。条款、位置、模型适配。',
     readTime: '阅读约11分钟',
     educationalLevel: 'Intermediate',
     audience: '想要固定期限 GPU 服务器来做 LLM 推理或微调的开发者和小型团队',
@@ -1828,9 +1828,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '该选哪家 GPU 服务器托管商：CUDO、Cherry Servers、Database Mart 还是 LumaDock？',
         answer:
-          '如果你想在其列出的欧盟站点（未说明 GPU 位于哪个站点）按小时或固定期限租用独立服务器，并有 15 天退款保证的说明，可以选 Cherry Servers，但要接受多数 GPU 型号需要排队。如果你想要在页面可读的三家中公布范围最广的 GPU（36 个套餐，RTX 5060 至 H100，仅限美国）并按月付费，可以选 Database Mart。除非你需要 128 张 GPU 或更大的集群，否则请跳过 CUDO Compute：其公共按需平台已于 2026 年 3 月 31 日关闭。请将 LumaDock 视为未核实：其 GPU VPS 套餐无法在官方页面上核实。以下价格核实于 2026-11-22。',
+          '如果你想在其列出的欧盟站点（未说明 GPU 位于哪个站点）按小时或固定期限租用独立服务器，并有 15 天退款保证的说明，可以选 Cherry Servers，但要接受多数 GPU 型号需要排队。如果你想在页面可读的三家中选择公布范围较广的 GPU（36 个套餐，RTX 5060 至 H100，仅限美国）并按月付费，可以选 Database Mart。除非你需要 128 张 GPU 或更大的集群，否则请跳过 CUDO Compute：其称公共按需平台已于 2026 年 3 月 31 日关闭。请将 LumaDock 视为未核实：其 GPU VPS 套餐无法在官方页面上核实。以下价格核实于 2026-11-22。',
         bullets: [
-          'CUDO Compute：公共按需平台于 2026-03-31 关闭；集群 128 张 GPU 起，通过销售表单申请，没有公布价格',
+          'CUDO Compute：称其公共按需平台于 2026-03-31 关闭；集群 128 张 GPU 起，通过销售表单申请，没有公布价格',
           'Cherry Servers：A100 80GB 每小时 $2.362 起（每月 $1,657.68，需排队）；A2 16GB 每小时 $0.239 起；基础套餐位于立陶宛；独立服务器有 15 天退款保证的说明',
           'Database Mart：36 个 GPU 套餐，仅限美国；H100 80GB 首期每月 $1,039.60（续费每月 $2,599.00）；RTX 5090 32GB VPS 每月 $419',
           'LumaDock：未核实；GPU VPS 套餐未能检查（官方页面对自动化检查返回 HTTP 403）',
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '你想要按月付费的、公布范围很广的 GPU 选择（Database Mart 列出 36 个套餐）',
           '**建议跳过的情形：**',
           '你只需要几个小时的 GPU；请改用按小时租用，参见[最佳云 GPU 服务商](/zh/power-local-llm/best-cloud-gpu-providers)',
-          '你以为 CUDO Compute 会按需出租单张 GPU：其公共按需平台已于 2026 年 3 月 31 日关闭',
+          '你以为 CUDO Compute 会按需出租单张 GPU：其称公共按需平台已于 2026 年 3 月 31 日关闭',
           '你需要即时交付：Cherry Servers 列出的交付时间为 24 至 72 小时，视区域而定',
           '你需要已核实的 LumaDock 套餐和价格：其官方页面无法核查',
         ],
@@ -1904,9 +1904,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '标准': 'GPU 选择', 'CUDO': '9/10，Blackwell 集群', 'Cherry': '5/10，较旧的显卡', 'Database Mart': '9/10，最高 H100' },
           { '标准': '合同灵活性', 'CUDO': '3/10，128 张 GPU 起', 'Cherry': '9/10，按小时', 'Database Mart': '6/10，按月期限' },
           { '标准': '支持 / 文档', 'CUDO': '未评估', 'Cherry': '6/10，仅读了常见问题', 'Database Mart': '未评估' },
-          { '标准': '综合', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
+          { '标准': '综合（仅限已评分标准）', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
         ],
-        note: 'PromptQuorum 评估，并非实机实验室测试。可靠性（在线时间、网络速度、真实吞吐量）没有测量，因此不给评分。综合分是已评分标准的平均值，四舍五入：CUDO 和 Database Mart 为四项（支持 / 文档未评估），Cherry 为五项。',
+        note: 'PromptQuorum 评估，并非实机实验室测试。可靠性（在线时间、网络速度、真实吞吐量）没有测量，因此不给评分。综合分（仅限已评分标准）是已评分标准的平均值，四舍五入：CUDO 和 Database Mart 为四项（支持 / 文档未评估），Cherry 为五项。',
       },
       tldr: {
         id: 'tldr',
@@ -1914,7 +1914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute：[文档](https://docs.cudocompute.com/)称公共按需平台已于 2026 年 3 月 31 日关闭；集群从 128 张 GPU 起，通过申请表单办理，没有公布价格',
-          'Cherry Servers：GPU 的“起价”费率从每小时 $0.139 到 $2.362（A100 80GB）；多数型号需排队；独立服务器有 15 天退款保证的说明',
+          'Cherry Servers：GPU 的“起价”费率从每小时 $0.239（A2）到 $2.362（A100）；多数型号需排队；独立服务器有 15 天退款保证的说明',
           'Database Mart：36 个 GPU 套餐，仅限美国，按月定价，期限有 1、3、12 和 24 个月；H100 的价格在首期之后续费为每月 $2,599.00',
           'LumaDock：套餐和价格未核实，因为其官方页面对自动化检查返回了 HTTP 403',
           '据本站的[显存速查表](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet)，70B 的 Q4 模型约需 44 GB 显存，因此 48 GB 或 80 GB 的显卡放得下',
@@ -1925,7 +1925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论：谁该选哪家托管商',
         content:
-          '**按小时或固定期限租用可选配 GPU 的独立服务器、且服务商设有欧盟站点（未说明哪个站点托管哪种 GPU），选 Cherry Servers；在美国按月租用、要在页面可读的三家中公布范围最广的 GPU，选 Database Mart。** 两家都公布价格，开发者无需销售电话即可下单。Cherry Servers 提供灵活的计费方式和独立服务器 15 天退款保证的说明，但其 A100、A40、A16 和 A10 的列表显示需要排队。Database Mart 列出的显卡最高到 H100 和 RTX Pro 6000 96 GB，但其 H100 价格是一次性折扣，续费为每月 $2,599.00。\n\n**2026 年 CUDO Compute 不适合个人或小团队。** 其文档称公共按需平台已于 2026 年 3 月 31 日关闭，其集群页面称部署从 128 张 GPU 起。如果这是你的规模，值得与销售谈一谈，其[集群页面](https://www.cudocompute.com/products/clusters)称设施通过 ISO 27001 认证并与 GDPR 保持一致（均为其自述，未经 PromptQuorum 核实）。\n\n**LumaDock 应当被视为未核实，需要你自己核实。** PromptQuorum 无法读取其官方页面，因此本页不对其 GPU VPS 套餐、价格或条款作任何说明。',
+          '**按小时或固定期限租用可选配 GPU 的独立服务器、且服务商设有欧盟站点（未说明哪个站点托管哪种 GPU），选 Cherry Servers；在美国按月租用、想在页面可读的三家中选择公布范围较广的 GPU（36 个套餐），选 Database Mart。** 两家都公布价格，开发者无需销售电话即可下单。Cherry Servers 提供灵活的计费方式和独立服务器 15 天退款保证的说明，但其 A100、A40 和 A10 的列表显示需要排队。Database Mart 列出的显卡最高到 H100 和 RTX Pro 6000 96 GB，但其 H100 价格是一次性折扣，续费为每月 $2,599.00。\n\n**据 PromptQuorum 评估，2026 年 CUDO Compute 不适合个人或小团队。** 其文档称公共按需平台已于 2026 年 3 月 31 日关闭，其集群页面称部署从 128 张 GPU 起。如果这是你的规模，值得与销售谈一谈，其[集群页面](https://www.cudocompute.com/products/clusters)称设施通过 ISO 27001 认证并与 GDPR 保持一致（均为其自述，未经 PromptQuorum 核实；你的使用是否符合 GDPR，取决于你作为数据控制者自身的义务）。\n\n**LumaDock 应当被视为未核实，需要你自己核实。** PromptQuorum 无法读取其官方页面，因此本页不对其 GPU VPS 套餐、价格或条款作任何说明。',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -1945,7 +1945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '价格：各托管商 2026-11-22 公布的内容',
         content:
-          '**以下每个数字都来自服务商自己的页面，核实于 2026-11-22，单位为美元。** Cherry Servers 的费率是“起价”；Database Mart 的价格包含可能结束的促销价。其他托管商按小时租用的比较，请参阅 [RunPod 与 Vast.ai 价格对比](/zh/prompt-bites/runpod-vs-vastai-pricing)和[自建与租用成本计算器](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026)。',
+          '**以下每个数字都来自服务商自己的页面，核实于 2026-11-22，单位为美元。** Cherry Servers 的费率是“起价”；Database Mart 的价格包含可能结束的促销价。月费是服务商自己公布的价格，而不是小时费率乘以 730 小时。其他托管商按小时租用的比较，请参阅 [RunPod 与 Vast.ai 价格对比](/zh/prompt-bites/runpod-vs-vastai-pricing)和[自建与租用成本计算器](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026)。',
         columns: ['服务商 / 套餐', 'GPU 与显存', '价格'],
         rows: [
           { '服务商 / 套餐': 'CUDO Compute', 'GPU 与显存': 'Blackwell 集群', '价格': '未公布，申请表单' },
@@ -1997,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**常驻推理 API：** 一个 14B 到 70B 的模型全天为内部工具提供服务，固定月费便于预测。',
           '**长时间微调：** 在单张 48 GB 到 96 GB 显卡上运行数天的任务，这种情况下按小时计费也会累积。',
           '**用于敏感测试的私有 GPU：** 一整台机器只给一个客户使用，正如 Cherry Servers 对其独立服务器的描述（这不是数据保护保证，参见风险与信任）。',
-          '**大型集群训练：** CUDO Compute 适用的唯一情形，通过销售流程办理 128 张或更多 GPU。',
+          '**大型集群训练：** CUDO Compute 适用的主要情形，通过销售流程办理 128 张或更多 GPU。',
           '**不适合：** 只需要几个小时的 GPU，或一批并行任务；按小时计费的服务商更适合这些情形。',
         ],
       },
@@ -2011,11 +2011,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**计费与退款，Database Mart：** 每个套餐按月定价，期限有 1、3、12 和 24 个月；所读套餐页面上没有退款政策；条款在其服务条款和 SLA 中，这些没有阅读。',
           '**计费，CUDO Compute：** 没有公布价格或合同条款；集群页面提到了 SLA，但没有看到其内容。',
           '**硬件来源：** CUDO Compute 称算力来自独立运营的数据中心；Cherry Servers 列出立陶宛、斯德哥尔摩、阿姆斯特丹、法兰克福、芝加哥、新加坡和东京；Database Mart 称使用美国 Tier-2 数据中心，没有点名城市。',
-          '**数据处理，CUDO Compute：** 其[集群页面](https://www.cudocompute.com/products/clusters)称设施通过 ISO 27001 认证、运营与 GDPR 保持一致，并执行主权数据驻留（均为服务商自述，未经 PromptQuorum 核实）。',
+          '**数据处理，CUDO Compute：** 其[集群页面](https://www.cudocompute.com/products/clusters)称设施通过 ISO 27001 认证、运营与 GDPR 保持一致，并执行主权数据驻留（均为服务商自述，未经 PromptQuorum 核实；你的使用是否符合 GDPR，取决于你作为数据控制者自身的义务）。',
           '**数据处理，Cherry Servers：** 称每台服务器都是没有虚拟化的私有机器，默认提供 DDoS 防护和 100 GB 免费备份；GPU 页面上没有数据保留政策。',
           '**数据处理，Database Mart：** 所读页面上没有数据处理说明。',
           '**LumaDock：** 未核实；其数据处理、位置或退款在此都没有核实。把数据迁移过去之前，请自行阅读其条款。',
-          '在阅读任何托管商的隐私政策和数据处理条款之前，不要把受监管数据或个人数据放在上面。',
+          '在阅读任何托管商的隐私政策和数据处理条款之前，不要把受监管数据或个人数据放在上面。这不构成法律建议。',
         ],
       },
       prosCons: {
@@ -2031,7 +2031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**缺点**',
           'Cherry Servers：多数列出的 GPU 型号需要排队，交付需 24 至 72 小时',
           'Database Mart：仅限美国地点，H100 的折扣续费为每月 $2,599.00',
-          'CUDO Compute：公共按需平台已于 2026 年 3 月 31 日关闭；集群 128 张 GPU 起',
+          'CUDO Compute：称其公共按需平台已于 2026 年 3 月 31 日关闭；集群 128 张 GPU 起',
           'LumaDock：套餐未核实',
           'GPU 不繁忙时仍要为空闲时间付费',
         ],
@@ -2116,7 +2116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GPU 服务器托管 2026：CUDO Compute、Cherry Servers、Database Mart（及 LumaDock GPU VPS）',
       reviewBody:
-        '依据官方页面（核实于 2026-11-22）对四家 GPU 服务器托管商所作的对比。CUDO Compute 称其公共按需平台已于 2026 年 3 月 31 日关闭；Cherry Servers 列出 A100 80GB 每小时 $2.362 起；Database Mart 列出 H100 80GB 每月 $1,039.60，续费为 $2,599.00；LumaDock 无法核实。评分为三家已评分服务商综合分的平均值（4.0、7.0 和 8.0，满分 10），PromptQuorum 评估，并非实机测试。',
+        '依据官方页面（核实于 2026-11-22）对四家 GPU 服务器托管商所作的对比。CUDO Compute 称其公共按需平台已于 2026 年 3 月 31 日关闭；Cherry Servers 列出 A100 80GB 每小时 $2.362 起；Database Mart 列出 H100 80GB 每月 $1,039.60，续费为 $2,599.00；LumaDock 无法核实。评分为各服务商已评分标准的平均值（分别为 4、5 和 4 项标准；4.0、7.0 和 8.0，满分 10），PromptQuorum 评估，并非实机测试。',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -2161,9 +2161,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GPU 서버 호스팅은 [최고의 클라우드 GPU 제공업체](/ko/power-local-llm/best-cloud-gpu-providers)에서 시간 단위로 비용을 내는 대신, GPU가 달린 머신 전체(전용 서버, 베어메탈 또는 GPU VPS)를 고정 기간으로 대여하는 방식입니다. 이 페이지는 2026-11-22에 확인한 각 업체의 공식 페이지를 근거로 CUDO Compute, Cherry Servers, Database Mart, LumaDock 네 곳을 비교합니다. 결과는 고르지 않습니다. CUDO Compute는 공개 온디맨드 플랫폼을 2026년 3월 31일에 종료했으며 지금은 영업 양식을 통해 GPU 클러스터를 판매한다고 밝힙니다. Cherry Servers와 Database Mart는 가격을 공개하고 바로 주문할 수 있습니다. LumaDock의 공식 페이지는 자동화된 확인에 HTTP 403을 반환했으므로 GPU VPS 플랜은 여기서 확인하지 못했습니다. 모든 점수는 직접 실험실에서 테스트한 결과가 아닌 PromptQuorum의 평가입니다.',
     metaDescription:
-      'GPU 서버 호스팅 2026: CUDO 온디맨드 종료, Cherry A100 시간당 $2.362부터, Database Mart H100 첫 약정 월 $1,039.60(갱신 $2,599).',
+      'GPU 서버 호스팅 2026: CUDO는 온디맨드를 종료했다고 밝힘, Cherry A100 시간당 $2.362부터, Database Mart H100 첫 약정 월 $1,039.60(갱신 $2,599).',
     twitterDescription:
-      '2026년 GPU 서버 호스팅: CUDO Compute는 공개 온디맨드 플랫폼을 종료했고, Cherry Servers와 Database Mart는 가격을 공개하며, LumaDock은 미확인입니다. 약정 조건, 위치, 적합한 모델.',
+      '2026년 GPU 서버 호스팅: CUDO Compute는 공개 온디맨드 플랫폼을 종료했다고 밝혔고, Cherry Servers와 Database Mart는 가격을 공개하며, LumaDock은 미확인입니다. 약정 조건, 위치, 적합한 모델.',
     readTime: '11분 읽기',
     educationalLevel: 'Intermediate',
     audience: 'LLM 추론이나 파인튜닝을 위해 고정 기간 GPU 서버를 원하는 개발자와 소규모 팀',
@@ -2179,14 +2179,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '베어메탈 gpu 서버',
     ],
     leadAnswerBlock:
-      '**2026년에 고정 기간 GPU 서버를 이 비교 대상 중 읽을 수 있는 공식 페이지에서 가격을 공개하고 온라인 주문이 가능한 곳은 Cherry Servers(A100 80GB 시간당 $2.362 또는 월 $1,657.68부터, 대부분 대기 목록, 기본 플랜은 리투아니아, GPU 위치는 명시되지 않음)와 Database Mart(H100 80GB 월 $1,039.60, 갱신 시 월 $2,599.00, 미국) 두 곳입니다.** CUDO Compute는 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었으며, 지금은 신청 양식을 통해 128 GPU부터 시작하는 클러스터를 판매한다고 밝힙니다. LumaDock은 GPU VPS 플랜을 판매하지만 공식 페이지가 자동화된 확인에 HTTP 403을 반환했으므로 이 페이지에서는 플랜에 대해 확인된 내용이 없습니다. 가격은 2026-11-22에 확인한 각 업체의 자체 페이지 기준이며 바뀔 수 있습니다.',
+      '**2026년에 고정 기간 GPU 서버를 빌리려는 경우, 이 비교에서 공식 페이지를 읽을 수 있고 가격을 공개하며 온라인 주문이 가능한 호스트는 Cherry Servers(A100 80GB 시간당 $2.362 또는 월 $1,657.68부터, 대부분 대기 목록, 기본 플랜은 리투아니아, GPU 위치는 명시되지 않음)와 Database Mart(H100 80GB 월 $1,039.60, 갱신 시 월 $2,599.00, 미국) 두 곳입니다.** CUDO Compute는 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었으며, 지금은 신청 양식을 통해 128 GPU부터 시작하는 클러스터를 판매한다고 밝힙니다. LumaDock은 GPU VPS 플랜을 판매하지만 공식 페이지가 자동화된 확인에 HTTP 403을 반환했으므로 이 페이지에서는 플랜에 대해 확인된 내용이 없습니다. 가격은 2026-11-22에 확인한 각 업체의 자체 페이지 기준이며 바뀔 수 있습니다.',
     quickAnswerTop: {
       ko: {
         question: 'GPU 서버 호스트는 CUDO, Cherry Servers, Database Mart, LumaDock 중 어디를 써야 합니까?',
         answer:
-          '공개된 EU 위치(GPU 위치는 명시되지 않음)에서 시간 단위 또는 고정 기간 전용 서버를 원하고 명시된 15일 환불 보증이 필요하며 대부분의 GPU 모델이 대기 목록에 있다는 점을 받아들일 수 있다면 Cherry Servers를 쓰십시오. 월 단위 약정으로 페이지를 읽을 수 있었던 세 곳 중 가장 폭넓게 공개된 GPU 범위(RTX 5060부터 H100까지 36개 플랜, 미국에만 있음)를 원한다면 Database Mart를 쓰십시오. 128 GPU 이상의 클러스터가 필요한 경우가 아니라면 CUDO Compute는 건너뛰십시오. 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었습니다. LumaDock은 미확인으로 취급하십시오. 공식 페이지에서 GPU VPS 플랜을 확인할 수 없었습니다. 아래 가격은 2026-11-22에 확인했습니다.',
+          '공개된 EU 위치(GPU 위치는 명시되지 않음)에서 시간 단위 또는 고정 기간 전용 서버를 원하고 명시된 15일 환불 보증이 필요하며 대부분의 GPU 모델이 대기 목록에 있다는 점을 받아들일 수 있다면 Cherry Servers를 쓰십시오. 월 단위 약정으로 페이지를 읽을 수 있었던 세 곳 중 폭넓게 공개된 GPU 범위(RTX 5060부터 H100까지 36개 플랜, 미국에만 있음)를 원한다면 Database Mart를 쓰십시오. 128 GPU 이상의 클러스터가 필요한 경우가 아니라면 CUDO Compute는 건너뛰십시오. 해당 업체는 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었다고 밝히고 있습니다. LumaDock은 미확인으로 취급하십시오. 공식 페이지에서 GPU VPS 플랜을 확인할 수 없었습니다. 아래 가격은 2026-11-22에 확인했습니다.',
         bullets: [
-          'CUDO Compute: 공개 온디맨드 플랫폼 2026-03-31 종료, 클러스터는 영업 양식을 통해 128 GPU부터, 공개 가격 없음',
+          'CUDO Compute: 공개 온디맨드 플랫폼이 2026-03-31에 종료되었다고 밝힘, 클러스터는 영업 양식을 통해 128 GPU부터, 공개 가격 없음',
           'Cherry Servers: A100 80GB 시간당 $2.362부터(월 $1,657.68, 대기 목록), A2 16GB 시간당 $0.239부터, 기본 플랜은 리투아니아, 전용 서버 15일 환불 명시',
           'Database Mart: GPU 플랜 36개, 미국에만 있음, H100 80GB 첫 약정 월 $1,039.60(갱신 시 월 $2,599.00), RTX 5090 32GB VPS 월 $419',
           'LumaDock: 미확인, GPU VPS 플랜 확인 못함(공식 페이지가 자동화된 확인에 HTTP 403을 반환)',
@@ -2238,7 +2238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '월 단위 약정으로 공개된 폭넓은 GPU 범위를 원합니다(Database Mart는 36개 플랜을 제공합니다)',
           '**건너뛰어야 하는 경우:**',
           'GPU가 몇 시간만 필요합니다. 시간 단위 대여를 사용하십시오. [최고의 클라우드 GPU 제공업체](/ko/power-local-llm/best-cloud-gpu-providers)를 참고하십시오',
-          'CUDO Compute가 단일 GPU를 온디맨드로 대여할 것으로 기대했습니다. 공개 온디맨드 플랫폼은 2026년 3월 31일에 종료되었습니다',
+          'CUDO Compute가 단일 GPU를 온디맨드로 대여할 것으로 기대했습니다. 해당 업체는 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었다고 밝히고 있습니다',
           '즉시 인도가 필요합니다. Cherry Servers는 리전에 따라 24~72시간이 걸린다고 안내합니다',
           'LumaDock의 확인된 플랜과 가격이 필요합니다. 공식 페이지를 확인할 수 없었습니다',
         ],
@@ -2260,9 +2260,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '기준': 'GPU 선택폭', 'CUDO': '9/10, Blackwell 클러스터', 'Cherry': '5/10, 구형 카드', 'Database Mart': '9/10, H100까지' },
           { '기준': '약정 유연성', 'CUDO': '3/10, 128 GPU 이상', 'Cherry': '9/10, 시간 단위', 'Database Mart': '6/10, 월 단위 약정' },
           { '기준': '지원 / 문서', 'CUDO': '평가하지 않음', 'Cherry': '6/10, FAQ만 읽음', 'Database Mart': '평가하지 않음' },
-          { '기준': '종합', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
+          { '기준': '종합 (점수를 매긴 기준만)', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
         ],
-        note: 'PromptQuorum의 평가이며 직접 실험실에서 테스트한 결과가 아닙니다. 안정성(가동률, 네트워크 속도, 실제 처리량)은 측정하지 않았으므로 점수가 없습니다. 종합은 점수를 매긴 기준의 평균을 반올림한 값입니다. CUDO와 Database Mart는 네 기준(지원 / 문서는 평가하지 않음), Cherry는 다섯 기준입니다.',
+        note: 'PromptQuorum의 평가이며 직접 실험실에서 테스트한 결과가 아닙니다. 안정성(가동률, 네트워크 속도, 실제 처리량)은 측정하지 않았으므로 점수가 없습니다. 종합(점수를 매긴 기준만)은 점수를 매긴 기준의 평균을 반올림한 값입니다. CUDO와 Database Mart는 네 기준(지원 / 문서는 평가하지 않음), Cherry는 다섯 기준입니다.',
       },
       tldr: {
         id: 'tldr',
@@ -2270,7 +2270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute: [문서](https://docs.cudocompute.com/)에 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었다고 나와 있으며, 클러스터는 신청 양식을 통해 128 GPU부터 시작하고 가격은 공개하지 않습니다',
-          'Cherry Servers: GPU "부터" 요금은 시간당 $0.139에서 $2.362(A100 80GB)까지이며, 대부분의 모델이 대기 목록에 있고, 전용 서버는 15일 환불이 명시되어 있습니다',
+          'Cherry Servers: GPU "부터" 요금은 시간당 $0.239(A2)에서 $2.362(A100)까지이며, 대부분의 모델이 대기 목록에 있고, 전용 서버는 15일 환불이 명시되어 있습니다',
           'Database Mart: GPU 플랜 36개, 미국에만 있음, 1, 3, 12, 24개월 약정의 월 단위 가격이며 H100 가격은 첫 약정 이후 월 $2,599.00으로 갱신됩니다',
           'LumaDock: 공식 페이지가 자동화된 확인에 HTTP 403을 반환해 플랜과 가격은 미확인입니다',
           '이 사이트의 [VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet)에 따르면 Q4 70B 모델은 VRAM이 약 44 GB 필요하므로 48 GB 또는 80 GB 카드가 맞습니다',
@@ -2281,7 +2281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론: 어떤 호스트를 써야 하는가',
         content:
-          '**GPU를 선택할 수 있는 시간 단위 또는 고정 기간 전용 서버를 EU 사이트가 있는 업체에서 쓰려면(어느 사이트가 어떤 GPU를 호스팅하는지는 명시되지 않음) Cherry Servers, 미국에서 월 단위 약정으로 페이지를 읽을 수 있었던 세 곳 중 가장 폭넓게 공개된 GPU 범위가 필요하면 Database Mart를 선택하십시오.** 두 곳 모두 가격을 공개하며 개발자가 영업 상담 없이 주문할 수 있습니다. Cherry Servers는 유연한 과금과 전용 서버에 대한 명시된 15일 환불 보증을 제공하지만, A100, A40, A16, A10 목록에는 대기 목록이 표시됩니다. Database Mart는 H100과 RTX Pro 6000 96 GB까지의 카드를 제공하지만, H100 가격은 일회성 할인이며 월 $2,599.00으로 갱신됩니다.\n\n**2026년에 CUDO Compute는 개인이나 소규모 팀에 맞지 않습니다.** 문서에는 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었다고 나와 있고, 클러스터 페이지에는 배포가 128 GPU부터 시작한다고 나와 있습니다. 그 규모라면 영업 상담을 받아볼 만하며, [클러스터 페이지](https://www.cudocompute.com/products/clusters)에는 ISO 27001과 GDPR에 맞춘 운영이 명시되어 있습니다(업체의 자체 표기이며 PromptQuorum은 확인하지 않았습니다).\n\n**LumaDock은 미확인으로 취급하고 직접 확인하십시오.** PromptQuorum은 공식 페이지를 읽을 수 없었으므로, 이 페이지는 GPU VPS 플랜, 가격, 약관에 대해 어떤 주장도 하지 않습니다.',
+          '**GPU를 선택할 수 있는 시간 단위 또는 고정 기간 전용 서버를 EU 사이트가 있는 업체에서 쓰려면(어느 사이트가 어떤 GPU를 호스팅하는지는 명시되지 않음) Cherry Servers, 미국에서 월 단위 약정으로 페이지를 읽을 수 있었던 세 곳 중 폭넓게 공개된 GPU 범위(36개 플랜)가 필요하면 Database Mart를 선택하십시오.** 두 곳 모두 가격을 공개하며 개발자가 영업 상담 없이 주문할 수 있습니다. Cherry Servers는 유연한 과금과 전용 서버에 대한 명시된 15일 환불 보증을 제공하지만, A100, A40, A10 목록에는 대기 목록이 표시됩니다. Database Mart는 H100과 RTX Pro 6000 96 GB까지의 카드를 제공하지만, H100 가격은 일회성 할인이며 월 $2,599.00으로 갱신됩니다.\n\n**PromptQuorum의 평가로는 2026년에 CUDO Compute는 개인이나 소규모 팀에 맞지 않습니다.** 문서에는 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었다고 나와 있고, 클러스터 페이지에는 배포가 128 GPU부터 시작한다고 나와 있습니다. 그 규모라면 영업 상담을 받아볼 만하며, [클러스터 페이지](https://www.cudocompute.com/products/clusters)에는 ISO 27001과 GDPR에 맞춘 운영이 명시되어 있습니다(업체의 자체 표기이며 PromptQuorum은 확인하지 않았습니다. 귀하의 사용이 GDPR에 부합하는지는 데이터 컨트롤러로서 귀하 자신의 의무에 따라 달라집니다).\n\n**LumaDock은 미확인으로 취급하고 직접 확인하십시오.** PromptQuorum은 공식 페이지를 읽을 수 없었으므로, 이 페이지는 GPU VPS 플랜, 가격, 약관에 대해 어떤 주장도 하지 않습니다.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '가격: 2026-11-22에 각 호스트가 공개한 내용',
         content:
-          '**아래 수치는 모두 2026-11-22에 확인한 업체의 자체 페이지에서 가져온 USD 가격입니다.** Cherry Servers 요금은 "부터" 가격이고, Database Mart 가격에는 종료될 수 있는 할인가가 포함되어 있습니다. 다른 호스트의 시간 단위 대여 비교는 [RunPod vs Vast.ai 가격 비교](/ko/prompt-bites/runpod-vs-vastai-pricing)와 [구매 vs 대여 비용 계산기](/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026)를 참고하십시오.',
+          '**아래 수치는 모두 2026-11-22에 확인한 업체의 자체 페이지에서 가져온 USD 가격입니다.** Cherry Servers 요금은 "부터" 가격이고, Database Mart 가격에는 종료될 수 있는 할인가가 포함되어 있습니다. 월 요금은 업체가 직접 공개한 요금이며, 시간당 요금에 730시간을 곱한 값이 아닙니다. 다른 호스트의 시간 단위 대여 비교는 [RunPod vs Vast.ai 가격 비교](/ko/prompt-bites/runpod-vs-vastai-pricing)와 [구매 vs 대여 비용 계산기](/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026)를 참고하십시오.',
         columns: ['제공업체 / 플랜', 'GPU와 VRAM', '가격'],
         rows: [
           { '제공업체 / 플랜': 'CUDO Compute', 'GPU와 VRAM': 'Blackwell 클러스터', '가격': '미공개, 신청 양식' },
@@ -2353,7 +2353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**상시 가동 추론 API:** 14B에서 70B 모델이 하루 종일 사내 도구를 서빙하는 경우, 월 정액이 예측 가능합니다.',
           '**장시간 파인튜닝:** 48 GB에서 96 GB 카드 한 장으로 며칠 동안 실행하는 작업은 시간 단위 과금도 누적됩니다.',
           '**민감한 테스트용 프라이빗 GPU:** Cherry Servers가 전용 서버를 설명하는 것처럼 한 고객이 쓰는 머신 전체입니다(데이터 보호 보장이 아니며, 위험과 신뢰 참조).',
-          '**대규모 클러스터 학습:** CUDO Compute가 해당하는 유일한 경우이며, 영업 절차를 통해 128 GPU 이상입니다.',
+          '**대규모 클러스터 학습:** CUDO Compute가 해당하는 주된 경우이며, 영업 절차를 통해 128 GPU 이상입니다.',
           '**부적합:** GPU 몇 시간 사용이나 병렬 작업의 폭주. 시간 단위 제공업체가 더 잘 맞습니다.',
         ],
       },
@@ -2367,11 +2367,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**과금과 환불, Database Mart:** 플랜별 월 가격이며 1, 3, 12, 24개월 약정입니다. 읽은 플랜 페이지에는 환불 정책이 없습니다. 약관은 읽지 않은 이용약관과 SLA에 있습니다.',
           '**과금, CUDO Compute:** 가격이나 계약 조건이 공개되어 있지 않습니다. 클러스터 페이지에 SLA가 언급되어 있지만 내용은 확인하지 못했습니다.',
           '**하드웨어 출처:** CUDO Compute는 용량이 독립적으로 운영되는 데이터 센터에서 온다고 밝힙니다. Cherry Servers는 리투아니아, 스톡홀름, 암스테르담, 프랑크푸르트, 시카고, 싱가포르, 도쿄를 제공합니다. Database Mart는 도시를 명시하지 않고 미국 Tier-2 데이터 센터라고 밝힙니다.',
-          '**데이터 처리, CUDO Compute:** [클러스터 페이지](https://www.cudocompute.com/products/clusters)에 ISO 27001 인증 시설, GDPR에 맞춘 운영, 소버린 데이터 거주지 적용을 명시합니다(업체의 자체 표기이며 PromptQuorum은 확인하지 않았습니다).',
+          '**데이터 처리, CUDO Compute:** [클러스터 페이지](https://www.cudocompute.com/products/clusters)에 ISO 27001 인증 시설, GDPR에 맞춘 운영, 소버린 데이터 거주지 적용을 명시합니다(업체의 자체 표기이며 PromptQuorum은 확인하지 않았습니다. 귀하의 사용이 GDPR에 부합하는지는 데이터 컨트롤러로서 귀하 자신의 의무에 따라 달라집니다).',
           '**데이터 처리, Cherry Servers:** 각 서버가 가상화 없는 프라이빗 머신이며 기본 DDoS 보호와 100 GB 무료 백업을 제공한다고 밝힙니다. GPU 페이지에는 데이터 보관 정책이 없습니다.',
           '**데이터 처리, Database Mart:** 읽은 페이지에는 데이터 처리에 대한 설명이 없습니다.',
           '**LumaDock:** 미확인이며 데이터 처리, 위치, 환불에 대해 여기서 확인된 내용이 없습니다. 데이터를 옮기기 전에 약관을 직접 읽으십시오.',
-          '개인정보 처리방침과 데이터 처리 약관을 읽기 전에는 어떤 호스트에도 규제 대상 데이터나 개인 데이터를 올리지 마십시오.',
+          '개인정보 처리방침과 데이터 처리 약관을 읽기 전에는 어떤 호스트에도 규제 대상 데이터나 개인 데이터를 올리지 마십시오. 이는 법률 자문이 아닙니다.',
         ],
       },
       prosCons: {
@@ -2387,7 +2387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**단점**',
           'Cherry Servers: 표시된 GPU 모델 대부분이 대기 목록이며 인도는 24~72시간',
           'Database Mart: 미국 위치만 있고 H100 할인은 월 $2,599.00으로 갱신됨',
-          'CUDO Compute: 공개 온디맨드 플랫폼 2026년 3월 31일 종료, 클러스터는 128 GPU부터',
+          'CUDO Compute: 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었다고 밝힘, 클러스터는 128 GPU부터',
           'LumaDock: 플랜 미확인',
           'GPU가 놀고 있어도 유휴 시간에 비용 지불',
         ],
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Cherry Servers GPU 서버는 얼마입니까?', a: 'Cherry Servers는 A100 80GB가 시간당 $2.362(월 $1,657.68), A40 48GB가 시간당 $0.801, A10 24GB가 시간당 $0.518, A2 16GB가 시간당 $0.239부터라고 표시합니다(2026-11-22 확인). 여러 모델이 대기 목록으로 표시됩니다.' },
           { q: 'Cherry Servers 데이터 센터는 어디에 있습니까?', a: 'Cherry Servers는 리투아니아(샤울레이), 스톡홀름, 암스테르담, 프랑크푸르트, 시카고, 싱가포르, 도쿄를 제공합니다. GPU 페이지에는 기본 서버 플랜의 위치로 리투아니아가 표시되어 있으며, 어느 GPU를 어디에서 제공하는지는 나와 있지 않습니다.' },
           { q: 'Cherry Servers에 환불 보증이 있습니까?', a: '홈페이지와 가격 페이지에 전용 서버 15일 환불 보증이 나와 있으며, 읽은 페이지에는 조건이 명시되어 있지 않습니다. GPU 서버 페이지 자체에는 환불 보증이 명시되어 있지 않습니다.' },
-          { q: 'Database Mart의 H100은 얼마입니까?', a: 'Database Mart는 Enterprise Dedicated H100 80GB를 월 $1,039.60로 표시하며, 일회성 할인이고 월 $2,599.00으로 갱신된다고 나와 있습니다(2026-11-22 확인).' },
+          { q: 'Database Mart의 H100은 얼마입니까?', a: 'Database Mart는 Enterprise Dedicated H100 80GB를 월 $1,039.60으로 표시하며, 일회성 할인이고 월 $2,599.00으로 갱신된다고 나와 있습니다(2026-11-22 확인).' },
           { q: 'Database Mart GPU 서버는 어디에 있습니까?', a: '표시된 36개 플랜은 모두 미국에 있습니다. 홈페이지는 도시를 명시하지 않고 미국 Tier-2 데이터 센터라고 설명합니다.' },
           { q: '대여한 GPU 서버에서 70B 모델을 실행할 수 있습니까?', a: '이 사이트의 VRAM 치트시트에 따르면 Q4_K_M 70B 모델은 VRAM이 약 44 GB 필요하므로 48 GB 카드는 빠듯하고 80 GB 카드(A100, H100)는 여유 있게 맞습니다. 이는 VRAM 산술이며 속도 측정이 아닙니다.' },
           { q: 'LumaDock의 GPU VPS 플랜에 대해 무엇을 확인했습니까?', a: '아직 확인된 내용이 없습니다. 공식 페이지가 자동화된 확인에 HTTP 403을 반환했으므로, PromptQuorum은 플랜, 가격, 위치, 약관에 대해 어떤 주장도 하지 않습니다. 약관과 환불 정책을 직접 읽으십시오.' },
@@ -2472,7 +2472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GPU 서버 호스팅 2026: CUDO Compute, Cherry Servers, Database Mart (및 LumaDock GPU VPS)',
       reviewBody:
-        '2026-11-22에 확인한 공식 페이지를 근거로 GPU 서버 호스트 네 곳을 비교했습니다. CUDO Compute는 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었다고 밝히고, Cherry Servers는 A100 80GB를 시간당 $2.362부터, Database Mart는 H100 80GB를 월 $1,039.60(갱신 시 $2,599.00)로 표시하며, LumaDock은 확인하지 못했습니다. 평점은 점수를 매긴 세 제공업체의 종합 점수(10점 만점에 4.0, 7.0, 8.0) 평균이며, 직접 테스트가 아닌 PromptQuorum의 평가입니다.',
+        '2026-11-22에 확인한 공식 페이지를 근거로 GPU 서버 호스트 네 곳을 비교했습니다. CUDO Compute는 공개 온디맨드 플랫폼이 2026년 3월 31일에 종료되었다고 밝히고, Cherry Servers는 A100 80GB를 시간당 $2.362부터, Database Mart는 H100 80GB를 월 $1,039.60(갱신 시 $2,599.00)로 표시하며, LumaDock은 확인하지 못했습니다. 평점은 각 제공업체가 점수를 매긴 기준(각각 4, 5, 4개 기준. 10점 만점에 4.0, 7.0, 8.0)의 평균이며, 직접 테스트가 아닌 PromptQuorum의 평가입니다.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -2517,9 +2517,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Hospedagem de servidor GPU significa alugar uma máquina inteira com GPU (dedicada, bare metal ou uma GPU VPS) por um prazo fixo, em vez de pagar por hora em um dos [melhores provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers). Esta página compara quatro hosts a partir das páginas oficiais deles, conferidas em 2026-11-22: CUDO Compute, Cherry Servers, Database Mart e LumaDock. O resultado é desigual. A CUDO Compute informa que sua plataforma pública sob demanda foi encerrada em 31 de março de 2026 e agora vende clusters de GPU por meio de um formulário de vendas. A Cherry Servers e a Database Mart publicam preços e permitem contratar. As páginas oficiais da LumaDock retornaram HTTP 403 às verificações automatizadas, então os planos de GPU VPS dela não estão verificados aqui. Todas as notas são avaliações do PromptQuorum, e não um teste prático em laboratório.',
     metaDescription:
-      'Hospedagem de GPU 2026: CUDO encerrou o sob demanda, Cherry A100 de US$ 2.362/h, Database Mart H100 US$ 1,039.60/mês no 1º prazo (renova US$ 2,599).',
+      'Hospedagem de GPU 2026: a CUDO diz ter encerrado o sob demanda, Cherry A100 a partir de US$ 2,362/h, Database Mart H100 US$ 1.039,60/mês (renova US$ 2.599).',
     twitterDescription:
-      'Hospedagem de servidor GPU em 2026: a CUDO Compute encerrou a plataforma pública sob demanda, Cherry Servers e Database Mart publicam preços, a LumaDock não foi verificada. Termos, locais e adequação de modelos.',
+      'Hospedagem de servidor GPU em 2026: a CUDO Compute diz ter encerrado a plataforma pública sob demanda, Cherry Servers e Database Mart publicam preços, a LumaDock não foi verificada. Termos, locais e adequação de modelos.',
     readTime: '11 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e pequenas equipes que querem um servidor com GPU por prazo fixo para inferência ou fine-tuning de LLMs',
@@ -2535,16 +2535,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'servidor gpu bare metal',
     ],
     leadAnswerBlock:
-      '**Para um servidor com GPU por prazo fixo em 2026, os dois hosts desta comparação cujas páginas oficiais legíveis publicam preços e permitem contratar online são a Cherry Servers (A100 80GB a partir de US$ 2.362/h ou US$ 1,657.68/mês, em sua maioria com lista de espera; planos base na Lituânia, local da GPU não informado) e a Database Mart (H100 80GB a US$ 1,039.60/mês, renovando a US$ 2,599.00/mês, EUA).** A CUDO Compute informa que sua plataforma pública sob demanda foi encerrada em 31 de março de 2026; agora ela vende clusters a partir de 128 GPUs por meio de um formulário de solicitação. A LumaDock vende planos de GPU VPS, mas suas páginas oficiais retornaram HTTP 403 às verificações automatizadas, então nada sobre os planos dela está verificado aqui. Os preços vêm das páginas dos próprios provedores, conferidas em 2026-11-22, e mudam.',
+      '**Para um servidor com GPU por prazo fixo em 2026, os dois hosts desta comparação cujas páginas oficiais legíveis publicam preços e permitem contratar online são a Cherry Servers (A100 80GB a partir de US$ 2,362/h ou US$ 1.657,68/mês, em sua maioria com lista de espera; planos base na Lituânia, local da GPU não informado) e a Database Mart (H100 80GB a US$ 1.039,60/mês, renovando a US$ 2.599,00/mês, EUA).** A CUDO Compute informa que sua plataforma pública sob demanda foi encerrada em 31 de março de 2026; agora ela vende clusters a partir de 128 GPUs por meio de um formulário de solicitação. A LumaDock vende planos de GPU VPS, mas suas páginas oficiais retornaram HTTP 403 às verificações automatizadas, então nada sobre os planos dela está verificado aqui. Os preços vêm das páginas dos próprios provedores, conferidas em 2026-11-22, e mudam.',
     quickAnswerTop: {
       pt: {
         question: 'Qual host de servidor GPU você deve usar: CUDO, Cherry Servers, Database Mart ou LumaDock?',
         answer:
-          'Use a Cherry Servers se quiser servidores dedicados por hora ou por prazo fixo em locais da UE listados (local da GPU não informado), com garantia de reembolso de 15 dias declarada, e aceitar que a maioria dos modelos de GPU está em lista de espera. Use a Database Mart se quiser a gama de GPUs publicada mais ampla entre os três hosts cujas páginas puderam ser lidas (36 planos, da RTX 5060 à H100, somente nos EUA) em contratos mensais. Evite a CUDO Compute, a menos que precise de um cluster de 128 GPUs ou maior: sua plataforma pública sob demanda foi encerrada em 31 de março de 2026. Trate a LumaDock como não verificada: os planos de GPU VPS dela não puderam ser conferidos nas páginas oficiais. Os preços abaixo foram conferidos em 2026-11-22.',
+          'Use a Cherry Servers se quiser servidores dedicados por hora ou por prazo fixo em locais da UE listados (local da GPU não informado), com garantia de reembolso de 15 dias declarada, e aceitar que a maioria dos modelos de GPU está em lista de espera. Use a Database Mart se quiser uma ampla gama de GPUs publicada (36 planos, da RTX 5060 à H100, somente nos EUA) entre os três hosts cujas páginas puderam ser lidas, em contratos mensais. Evite a CUDO Compute, a menos que precise de um cluster de 128 GPUs ou maior: ela diz que sua plataforma pública sob demanda foi encerrada em 31 de março de 2026. Trate a LumaDock como não verificada: os planos de GPU VPS dela não puderam ser conferidos nas páginas oficiais. Os preços abaixo foram conferidos em 2026-11-22.',
         bullets: [
-          'CUDO Compute: plataforma pública sob demanda encerrada em 2026-03-31; clusters a partir de 128 GPUs por formulário de vendas, sem preços publicados',
-          'Cherry Servers: A100 80GB a partir de US$ 2.362/h (US$ 1,657.68/mês, lista de espera); A2 16GB a partir de US$ 0.239/h; planos base na Lituânia; reembolso de 15 dias declarado para servidores dedicados',
-          'Database Mart: 36 planos de GPU, somente nos EUA; H100 80GB a US$ 1,039.60/mês no primeiro prazo (renova a US$ 2,599.00/mês); VPS com RTX 5090 32GB a US$ 419/mês',
+          'CUDO Compute: diz que a plataforma pública sob demanda foi encerrada em 2026-03-31; clusters a partir de 128 GPUs por formulário de vendas, sem preços publicados',
+          'Cherry Servers: A100 80GB a partir de US$ 2,362/h (US$ 1.657,68/mês, lista de espera); A2 16GB a partir de US$ 0,239/h; planos base na Lituânia; reembolso de 15 dias declarado para servidores dedicados',
+          'Database Mart: 36 planos de GPU, somente nos EUA; H100 80GB a US$ 1.039,60/mês no primeiro prazo (renova a US$ 2.599,00/mês); VPS com RTX 5090 32GB a US$ 419/mês',
           'LumaDock: não verificada; planos de GPU VPS não conferidos (as páginas oficiais retornaram HTTP 403 às verificações automatizadas)',
           'Todas as notas são avaliações do PromptQuorum a partir de páginas oficiais, e não um teste prático em laboratório',
         ],
@@ -2594,12 +2594,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Você quer uma gama grande de GPUs publicada em contratos mensais (a Database Mart lista 36 planos)',
           '**Evite se:**',
           'Você precisa de uma GPU por poucas horas; use aluguel por hora, veja os [melhores provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers)',
-          'Você esperava que a CUDO Compute alugasse GPUs avulsas sob demanda: a plataforma pública sob demanda dela foi encerrada em 31 de março de 2026',
+          'Você esperava que a CUDO Compute alugasse GPUs avulsas sob demanda: ela diz que a plataforma pública sob demanda foi encerrada em 31 de março de 2026',
           'Você precisa de entrega imediata: a Cherry Servers informa de 24 a 72 horas, conforme a região',
           'Você precisa de planos e preços verificados da LumaDock: as páginas oficiais dela não puderam ser verificadas',
         ],
         affiliateLinks: [
-          { label: 'Ver preços de GPU da Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB a partir de US$ 2.362/h' },
+          { label: 'Ver preços de GPU da Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB a partir de US$ 2,362/h' },
         ],
       },
       scorecard: {
@@ -2616,9 +2616,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Critério: 'Escolha de GPU', CUDO: '9/10, clusters Blackwell', Cherry: '5/10, placas mais antigas', 'Database Mart': '9/10, até H100' },
           { Critério: 'Flexibilidade do contrato', CUDO: '3/10, 128+ GPUs', Cherry: '9/10, por hora', 'Database Mart': '6/10, prazos mensais' },
           { Critério: 'Suporte / docs', CUDO: 'Não avaliado', Cherry: '6/10, só o FAQ foi lido', 'Database Mart': 'Não avaliado' },
-          { Critério: 'Geral', CUDO: '4.0/10', Cherry: '7.0/10', 'Database Mart': '8.0/10' },
+          { Critério: 'Geral (só critérios avaliados)', CUDO: '4,0/10', Cherry: '7,0/10', 'Database Mart': '8,0/10' },
         ],
-        note: 'Avaliação do PromptQuorum, e não um teste prático em laboratório. A confiabilidade (uptime, velocidade de rede, throughput real) não foi medida, então não tem nota. A nota geral é a média arredondada dos critérios avaliados: quatro para CUDO e Database Mart (suporte / docs não foi avaliado) e cinco para Cherry.',
+        note: 'Avaliação do PromptQuorum, e não um teste prático em laboratório. A confiabilidade (uptime, velocidade de rede, throughput real) não foi medida, então não tem nota. A nota geral (só critérios avaliados) é a média arredondada dos critérios avaliados: quatro para CUDO e Database Mart (suporte / docs não foi avaliado) e cinco para Cherry.',
       },
       tldr: {
         id: 'tldr',
@@ -2626,8 +2626,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute: a [documentação](https://docs.cudocompute.com/) informa que a plataforma pública sob demanda foi encerrada em 31 de março de 2026; os clusters começam em 128 GPUs por um formulário de solicitação, sem preços publicados',
-          'Cherry Servers: as tarifas "a partir de" de GPU vão de US$ 0.139/h a US$ 2.362/h (A100 80GB); a maioria dos modelos está em lista de espera; reembolso de 15 dias declarado para servidores dedicados',
-          'Database Mart: 36 planos de GPU, somente nos EUA, preço mensal com prazos de 1, 3, 12 e 24 meses; o preço da H100 renova a US$ 2,599.00/mês após o primeiro prazo',
+          'Cherry Servers: as tarifas "a partir de" de GPU vão de US$ 0,239/h (A2) a US$ 2,362/h (A100); a maioria dos modelos está em lista de espera; reembolso de 15 dias declarado para servidores dedicados',
+          'Database Mart: 36 planos de GPU, somente nos EUA, preço mensal com prazos de 1, 3, 12 e 24 meses; o preço da H100 renova a US$ 2.599,00/mês após o primeiro prazo',
           'LumaDock: planos e preços não verificados porque as páginas oficiais dela retornaram HTTP 403 às verificações automatizadas',
           'Um modelo de 70B em Q4 precisa de cerca de 44 GB de VRAM segundo a [tabela de VRAM](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) deste site, então uma placa de 48 GB ou 80 GB comporta o modelo',
           'Os preços foram conferidos em 2026-11-22 em cada página oficial e mudam com frequência',
@@ -2637,7 +2637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito: Quem Deve Usar Qual Host',
         content:
-          '**Escolha a Cherry Servers para servidores dedicados por hora ou por prazo fixo com GPU opcional, de um provedor com locais na UE (não se informa qual local hospeda cada GPU), e a Database Mart para a gama de GPUs publicada mais ampla entre os três hosts cujas páginas puderam ser lidas, em contratos mensais nos EUA.** As duas publicam preços e permitem que um desenvolvedor contrate sem falar com vendas. A Cherry Servers oferece cobrança flexível e uma garantia de reembolso de 15 dias declarada em servidores dedicados, mas suas listagens de A100, A40, A16 e A10 mostram lista de espera. A Database Mart lista placas até a H100 e a RTX Pro 6000 de 96 GB, mas o preço da H100 é um desconto único que renova a US$ 2,599.00 por mês.\n\n**A CUDO Compute não serve para uma pessoa ou uma equipe pequena em 2026.** A documentação dela informa que a plataforma pública sob demanda foi encerrada em 31 de março de 2026, e a página de clusters diz que as implantações começam em 128 GPUs. Se essa é a sua escala, vale uma conversa com vendas, com instalações ISO 27001 e operações alinhadas ao GDPR declaradas na [página de clusters](https://www.cudocompute.com/products/clusters) dela (não verificado pelo PromptQuorum).\n\n**A LumaDock deve ser tratada como não verificada: confira você mesmo.** O PromptQuorum não conseguiu ler as páginas oficiais dela, então esta página não faz nenhuma afirmação sobre os planos, preços ou termos de GPU VPS dela.',
+          '**Escolha a Cherry Servers para servidores dedicados por hora ou por prazo fixo com GPU opcional, de um provedor com locais na UE (não se informa qual local hospeda cada GPU), e a Database Mart para uma ampla gama de GPUs publicada (36 planos) entre os três hosts cujas páginas puderam ser lidas, em contratos mensais nos EUA.** As duas publicam preços e permitem que um desenvolvedor contrate sem falar com vendas. A Cherry Servers oferece cobrança flexível e uma garantia de reembolso de 15 dias declarada em servidores dedicados, mas suas listagens de A100, A40 e A10 mostram lista de espera. A Database Mart lista placas até a H100 e a RTX Pro 6000 de 96 GB, mas o preço da H100 é um desconto único que renova a US$ 2.599,00 por mês.\n\n**Na avaliação da PromptQuorum, a CUDO Compute não serve para uma pessoa ou uma equipe pequena em 2026.** A documentação dela informa que a plataforma pública sob demanda foi encerrada em 31 de março de 2026, e a página de clusters diz que as implantações começam em 128 GPUs. Se essa é a sua escala, vale uma conversa com vendas, com instalações ISO 27001 e operações alinhadas ao GDPR declaradas na [página de clusters](https://www.cudocompute.com/products/clusters) dela (autodeclarações do provedor não verificadas pelo PromptQuorum; se o seu uso está em conformidade com o GDPR depende das suas próprias obrigações como controlador de dados).\n\n**A LumaDock deve ser tratada como não verificada: confira você mesmo.** O PromptQuorum não conseguiu ler as páginas oficiais dela, então esta página não faz nenhuma afirmação sobre os planos, preços ou termos de GPU VPS dela.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -2657,25 +2657,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Preços: O Que Cada Host Publicou em 2026-11-22',
         content:
-          '**Todo número abaixo vem da página do próprio provedor, conferida em 2026-11-22, em USD.** As tarifas da Cherry Servers são preços "a partir de"; os preços da Database Mart incluem preços promocionais que podem acabar. Para comparações de aluguel por hora entre outros hosts, veja [preços RunPod vs Vast.ai](/pt/prompt-bites/runpod-vs-vastai-pricing) e a [calculadora comprar vs alugar](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
+          '**Todo número abaixo vem da página do próprio provedor, conferida em 2026-11-22, em USD.** As tarifas da Cherry Servers são preços "a partir de"; os preços da Database Mart incluem preços promocionais que podem acabar. Os valores mensais são as tarifas publicadas pelo próprio provedor, não a tarifa por hora multiplicada por 730 horas. Para comparações de aluguel por hora entre outros hosts, veja [preços RunPod vs Vast.ai](/pt/prompt-bites/runpod-vs-vastai-pricing) e a [calculadora comprar vs alugar](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         columns: ['Provedor / plano', 'GPU e VRAM', 'Preço'],
         rows: [
           { 'Provedor / plano': 'CUDO Compute', 'GPU e VRAM': 'Clusters Blackwell', Preço: 'Não publicado, formulário' },
-          { 'Provedor / plano': 'Cherry Servers A100', 'GPU e VRAM': 'A100 80GB HBM2', Preço: '$2.362/h, $1,657.68/mês, lista de espera' },
-          { 'Provedor / plano': 'Cherry Servers A40', 'GPU e VRAM': 'A40 48GB GDDR6', Preço: '$0.801/h, $472.66/mês, lista de espera' },
-          { 'Provedor / plano': 'Cherry Servers A10', 'GPU e VRAM': 'A10 24GB GDDR6', Preço: '$0.518/h, $303.03/mês, lista de espera' },
-          { 'Provedor / plano': 'Cherry Servers A2', 'GPU e VRAM': 'A2 16GB GDDR6', Preço: '$0.239/h, $139.23/mês' },
-          { 'Provedor / plano': 'Database Mart GPU VPS', 'GPU e VRAM': 'RTX 5090 32GB', Preço: '$419/mês' },
-          { 'Provedor / plano': 'Database Mart GPU VPS', 'GPU e VRAM': 'RTX Pro 6000 96GB', Preço: '$649/mês, prazos de 3/12/24 meses' },
-          { 'Provedor / plano': 'Database Mart dedicado', 'GPU e VRAM': 'RTX 4090 24GB', Preço: '$409/mês' },
-          { 'Provedor / plano': 'Database Mart dedicado', 'GPU e VRAM': 'A100 80GB', Preço: '$764.55/mês (antes $1,699.00)' },
-          { 'Provedor / plano': 'Database Mart dedicado', 'GPU e VRAM': 'H100 80GB', Preço: '$1,039.60/mês, renova $2,599.00' },
+          { 'Provedor / plano': 'Cherry Servers A100', 'GPU e VRAM': 'A100 80GB HBM2', Preço: 'US$ 2,362/h, US$ 1.657,68/mês, lista de espera' },
+          { 'Provedor / plano': 'Cherry Servers A40', 'GPU e VRAM': 'A40 48GB GDDR6', Preço: 'US$ 0,801/h, US$ 472,66/mês, lista de espera' },
+          { 'Provedor / plano': 'Cherry Servers A10', 'GPU e VRAM': 'A10 24GB GDDR6', Preço: 'US$ 0,518/h, US$ 303,03/mês, lista de espera' },
+          { 'Provedor / plano': 'Cherry Servers A2', 'GPU e VRAM': 'A2 16GB GDDR6', Preço: 'US$ 0,239/h, US$ 139,23/mês' },
+          { 'Provedor / plano': 'Database Mart GPU VPS', 'GPU e VRAM': 'RTX 5090 32GB', Preço: 'US$ 419/mês' },
+          { 'Provedor / plano': 'Database Mart GPU VPS', 'GPU e VRAM': 'RTX Pro 6000 96GB', Preço: 'US$ 649/mês, prazos de 3/12/24 meses' },
+          { 'Provedor / plano': 'Database Mart dedicado', 'GPU e VRAM': 'RTX 4090 24GB', Preço: 'US$ 409/mês' },
+          { 'Provedor / plano': 'Database Mart dedicado', 'GPU e VRAM': 'A100 80GB', Preço: 'US$ 764,55/mês (antes US$ 1.699,00)' },
+          { 'Provedor / plano': 'Database Mart dedicado', 'GPU e VRAM': 'H100 80GB', Preço: 'US$ 1.039,60/mês, renova US$ 2.599,00' },
           { 'Provedor / plano': 'LumaDock GPU VPS', 'GPU e VRAM': 'Não verificado', Preço: 'Não verificado' },
         ],
         items: [
-          'A Cherry Servers também lista servidores base em que a GPU é opcional: um plano AMD Ryzen 7700X a US$ 0.318/h ou US$ 158.13/mês (máximo de 1 GPU, 64 GB de RAM) e um plano AMD EPYC 7402P que aceita até 2 GPUs.',
-          'A Database Mart também lista planos com várias GPUs, por exemplo 2x RTX 4090 a US$ 729/mês, 2x RTX 5090 a US$ 859/mês e 4x A100 40GB a US$ 1,899/mês.',
-          'O preço da H100 na Database Mart é descrito como um desconto único: a página informa que ele renova a US$ 2,599.00 por mês.',
+          'A Cherry Servers também lista servidores base em que a GPU é opcional: um plano AMD Ryzen 7700X a US$ 0,318/h ou US$ 158,13/mês (máximo de 1 GPU, 64 GB de RAM) e um plano AMD EPYC 7402P que aceita até 2 GPUs.',
+          'A Database Mart também lista planos com várias GPUs, por exemplo 2x RTX 4090 a US$ 729/mês, 2x RTX 5090 a US$ 859/mês e 4x A100 40GB a US$ 1.899/mês.',
+          'O preço da H100 na Database Mart é descrito como um desconto único: a página informa que ele renova a US$ 2.599,00 por mês.',
           'LumaDock: nenhum preço é informado porque as páginas oficiais não puderam ser consultadas; confira diretamente em [lumadock.com](https://lumadock.com/).',
           'A CUDO Compute não lista preços; um post antigo do blog da CUDO, de antes do encerramento da plataforma, não é usado como preço atual.',
         ],
@@ -2685,11 +2685,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Quais Modelos Cabem Nessas GPUs',
         content:
-          '**A VRAM define o tamanho do modelo, e a [tabela de VRAM](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) deste site coloca os distills do DeepSeek-R1 em cerca de 9.5 GB (14B), 20.5 GB (32B) e 44 GB (70B) na quantização Q4_K_M.** Esses valores são os pesos mais uma pequena margem; um contexto longo exige mais. Para o método geral, veja [quanta VRAM um LLM local precisa](/pt/local-llms/how-much-vram-local-llm).',
+          '**A VRAM define o tamanho do modelo, e a [tabela de VRAM](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) deste site coloca os distills do DeepSeek-R1 em cerca de 9,5 GB (14B), 20,5 GB (32B) e 44 GB (70B) na quantização Q4_K_M.** Esses valores são os pesos mais uma pequena margem; um contexto longo exige mais. Para o método geral, veja [quanta VRAM um LLM local precisa](/pt/local-llms/how-much-vram-local-llm).',
         columns: ['GPU (VRAM)', 'Cabe em Q4_K_M', 'Host que lista'],
         rows: [
-          { 'GPU (VRAM)': 'A2 (16 GB)', 'Cabe em Q4_K_M': 'Até 14B (~9.5 GB)', 'Host que lista': 'Cherry Servers' },
-          { 'GPU (VRAM)': 'RTX 4090 (24 GB)', 'Cabe em Q4_K_M': '32B, justo (~20.5 GB)', 'Host que lista': 'Database Mart' },
+          { 'GPU (VRAM)': 'A2 (16 GB)', 'Cabe em Q4_K_M': 'Até 14B (~9,5 GB)', 'Host que lista': 'Cherry Servers' },
+          { 'GPU (VRAM)': 'RTX 4090 (24 GB)', 'Cabe em Q4_K_M': '32B, justo (~20,5 GB)', 'Host que lista': 'Database Mart' },
           { 'GPU (VRAM)': 'RTX 5090 (32 GB)', 'Cabe em Q4_K_M': '32B com folga de contexto', 'Host que lista': 'Database Mart' },
           { 'GPU (VRAM)': 'A40 / RTX A6000 (48 GB)', 'Cabe em Q4_K_M': '70B, justo (~44 GB)', 'Host que lista': 'Cherry, Database Mart' },
           { 'GPU (VRAM)': 'A100 / H100 (80 GB)', 'Cabe em Q4_K_M': '70B com folga', 'Host que lista': 'Cherry, Database Mart' },
@@ -2709,7 +2709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**API de inferência sempre ativa:** um modelo de 14B a 70B atendendo uma ferramenta interna o dia todo, em que uma tarifa mensal fixa é previsível.',
           '**Fine-tunings longos:** jobs de vários dias em uma única placa de 48 GB a 96 GB, em que a cobrança por hora também pesaria.',
           '**GPU privada para testes sensíveis:** uma máquina inteira para um só cliente, como a Cherry Servers descreve seus servidores dedicados (não é uma garantia de proteção de dados, veja Riscos e Confiança).',
-          '**Treinamento em cluster grande:** o único caso em que a CUDO Compute se aplica, com 128 GPUs ou mais por meio do processo de vendas dela.',
+          '**Treinamento em cluster grande:** o principal caso em que a CUDO Compute se aplica, com 128 GPUs ou mais por meio do processo de vendas dela.',
           '**Não é adequado:** poucas horas de GPU, ou uma rajada de jobs paralelos; provedores por hora atendem melhor esses casos.',
         ],
       },
@@ -2723,11 +2723,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cobrança e reembolsos, Database Mart:** preço mensal por plano com prazos de 1, 3, 12 e 24 meses; nenhuma política de reembolso aparece nas páginas de plano lidas; os termos estão nos Terms of Service e no SLA dela, que não foram lidos.',
           '**Cobrança, CUDO Compute:** nenhum preço ou termo contratual é publicado; a página de clusters cita um SLA, mas o conteúdo dele não foi visto.',
           '**De onde vem o hardware:** a CUDO Compute informa que a capacidade vem de data centers operados de forma independente; a Cherry Servers lista Lituânia, Estocolmo, Amsterdã, Frankfurt, Chicago, Singapura e Tóquio; a Database Mart informa data centers Tier-2 nos EUA sem citar cidades.',
-          '**Tratamento de dados, CUDO Compute:** declara, na [página de clusters](https://www.cudocompute.com/products/clusters), instalações ISO 27001, operações alinhadas ao GDPR e aplicação de residência soberana de dados (declarações do provedor, não verificadas pelo PromptQuorum).',
+          '**Tratamento de dados, CUDO Compute:** declara, na [página de clusters](https://www.cudocompute.com/products/clusters), instalações ISO 27001, operações alinhadas ao GDPR e aplicação de residência soberana de dados (autodeclarações do provedor não verificadas pelo PromptQuorum; se o seu uso está em conformidade com o GDPR depende das suas próprias obrigações como controlador de dados).',
           '**Tratamento de dados, Cherry Servers:** declara que cada servidor é uma máquina privada sem virtualização, proteção contra DDoS por padrão e 100 GB de backup gratuito; nenhuma política de retenção de dados aparece na página de GPU.',
           '**Tratamento de dados, Database Mart:** nenhuma declaração sobre tratamento de dados aparece nas páginas lidas.',
           '**LumaDock:** não verificada; nada sobre o tratamento de dados, os locais ou os reembolsos dela está verificado aqui. Leia os termos dela por conta própria antes de mover dados para lá.',
-          'Não coloque dados regulados ou pessoais em nenhum host até ter lido a política de privacidade e os termos de processamento de dados dele.',
+          'Não coloque dados regulados ou pessoais em nenhum host até ter lido a política de privacidade e os termos de processamento de dados dele. Isto não é aconselhamento jurídico.',
         ],
       },
       prosCons: {
@@ -2742,8 +2742,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O custo mensal fixo combina com um modelo sempre ativo',
           '**Contras**',
           'Cherry Servers: a maioria dos modelos de GPU listados mostra lista de espera, e a entrega leva de 24 a 72 horas',
-          'Database Mart: somente locais nos EUA, e o desconto da H100 renova a US$ 2,599.00 por mês',
-          'CUDO Compute: plataforma pública sob demanda encerrada em 31 de março de 2026; clusters a partir de 128 GPUs',
+          'Database Mart: somente locais nos EUA, e o desconto da H100 renova a US$ 2.599,00 por mês',
+          'CUDO Compute: diz que a plataforma pública sob demanda foi encerrada em 31 de março de 2026; clusters a partir de 128 GPUs',
           'LumaDock: planos não verificados',
           'Pagar por horas ociosas se a GPU não estiver ocupada',
         ],
@@ -2763,8 +2763,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Ver clusters da CUDO Compute →', url: 'https://www.cudocompute.com/', productName: 'CUDO Compute', productCategory: 'GPU clusters' },
-          { label: 'Ver preços de GPU da Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB a partir de US$ 2.362/h' },
-          { label: 'Ver planos de GPU da Database Mart →', url: 'https://www.databasemart.com/gpu-server', productName: 'Database Mart GPU servers', productCategory: 'GPU server hosting', priceRange: 'H100 80GB US$ 1,039.60/mês (primeiro prazo)' },
+          { label: 'Ver preços de GPU da Cherry Servers →', url: 'https://www.cherryservers.com/dedicated-gpu-servers', productName: 'Cherry Servers GPU servers', productCategory: 'GPU server hosting', priceRange: 'A100 80GB a partir de US$ 2,362/h' },
+          { label: 'Ver planos de GPU da Database Mart →', url: 'https://www.databasemart.com/gpu-server', productName: 'Database Mart GPU servers', productCategory: 'GPU server hosting', priceRange: 'H100 80GB US$ 1.039,60/mês (primeiro prazo)' },
           { label: 'Visitar a LumaDock (não verificada) →', url: 'https://lumadock.com/', productName: 'LumaDock GPU VPS', productCategory: 'GPU VPS' },
         ],
       },
@@ -2797,10 +2797,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas Frequentes',
         faqs: [
           { q: 'A CUDO Compute ainda aluga GPUs por hora?', a: 'A documentação da CUDO Compute informa que não há aluguel público sob demanda e que sua plataforma pública sob demanda foi encerrada em 31 de março de 2026, e a página de clusters diz que as implantações começam em 128 GPUs por meio de um formulário de solicitação (conferido em 2026-11-22).' },
-          { q: 'Quanto custa um servidor com GPU da Cherry Servers?', a: 'A Cherry Servers lista tarifas "a partir de" de US$ 2.362/h (US$ 1,657.68/mês) para uma A100 80GB, US$ 0.801/h para uma A40 48GB, US$ 0.518/h para uma A10 24GB e US$ 0.239/h para uma A2 16GB (conferido em 2026-11-22). Vários modelos mostram lista de espera.' },
+          { q: 'Quanto custa um servidor com GPU da Cherry Servers?', a: 'A Cherry Servers lista tarifas "a partir de" de US$ 2,362/h (US$ 1.657,68/mês) para uma A100 80GB, US$ 0,801/h para uma A40 48GB, US$ 0,518/h para uma A10 24GB e US$ 0,239/h para uma A2 16GB (conferido em 2026-11-22). Vários modelos mostram lista de espera.' },
           { q: 'Onde ficam os data centers da Cherry Servers?', a: 'A Cherry Servers lista Lituânia (Šiauliai), Estocolmo, Amsterdã, Frankfurt, Chicago, Singapura e Tóquio. A página de GPU mostra a Lituânia para seus planos de servidor base e não diz qual GPU é oferecida em cada local.' },
           { q: 'A Cherry Servers tem garantia de reembolso?', a: 'A página inicial e a página de preços dela listam uma garantia de reembolso de 15 dias para servidores dedicados, sem condições declaradas nas páginas lidas. A própria página de servidores com GPU não declara garantia de reembolso.' },
-          { q: 'Quanto custa uma H100 na Database Mart?', a: 'A Database Mart lista uma Enterprise Dedicated H100 80GB a US$ 1,039.60 por mês, descrita como um desconto único que renova a US$ 2,599.00 por mês (conferido em 2026-11-22).' },
+          { q: 'Quanto custa uma H100 na Database Mart?', a: 'A Database Mart lista uma Enterprise Dedicated H100 80GB a US$ 1.039,60 por mês, descrita como um desconto único que renova a US$ 2.599,00 por mês (conferido em 2026-11-22).' },
           { q: 'Onde ficam os servidores com GPU da Database Mart?', a: 'Todos os 36 planos listados ficam nos EUA. A página inicial descreve data centers Tier-2 nos EUA sem citar cidades.' },
           { q: 'Um servidor com GPU alugado consegue rodar um modelo de 70B?', a: 'Um modelo de 70B em Q4_K_M precisa de cerca de 44 GB de VRAM segundo a tabela de VRAM deste site, então uma placa de 48 GB é justa e uma placa de 80 GB (A100, H100) comporta o modelo com folga. É aritmética de VRAM, e não uma medição de velocidade.' },
           { q: 'O que foi possível verificar sobre os planos de GPU VPS da LumaDock?', a: 'Ainda nada. As páginas oficiais dela retornaram HTTP 403 às verificações automatizadas, então o PromptQuorum não faz nenhuma afirmação sobre os planos, preços, locais ou termos dela. Leia os termos e a política de reembolso dela por conta própria.' },
@@ -2828,7 +2828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Hospedagem de Servidor GPU 2026: CUDO Compute, Cherry Servers, Database Mart (e GPU VPS da LumaDock)',
       reviewBody:
-        'Uma comparação de quatro hosts de servidor GPU a partir de suas páginas oficiais, conferidas em 2026-11-22. A CUDO Compute informa que sua plataforma pública sob demanda foi encerrada em 31 de março de 2026; a Cherry Servers lista uma A100 80GB a partir de US$ 2.362 por hora; a Database Mart lista uma H100 80GB a US$ 1,039.60 por mês, renovando a US$ 2,599.00; a LumaDock não pôde ser verificada. A nota é a média das notas gerais dos três provedores avaliados (4.0, 7.0 e 8.0 de 10), avaliação do PromptQuorum, e não um teste prático.',
+        'Uma comparação de quatro hosts de servidor GPU a partir de suas páginas oficiais, conferidas em 2026-11-22. A CUDO Compute informa que sua plataforma pública sob demanda foi encerrada em 31 de março de 2026; a Cherry Servers lista uma A100 80GB a partir de US$ 2,362 por hora; a Database Mart lista uma H100 80GB a US$ 1.039,60 por mês, renovando a US$ 2.599,00; a LumaDock não pôde ser verificada. A nota é a média dos critérios avaliados de cada provedor (4, 5 e 4 critérios; 4,0, 7,0 e 8,0 de 10), avaliação do PromptQuorum, e não um teste prático.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -2873,9 +2873,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'استضافة خوادم GPU تعني استئجار جهاز GPU كامل (مخصص أو bare metal أو GPU VPS) لمدة ثابتة، بدلًا من الدفع بالساعة لدى أحد [أفضل مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers). تقارن هذه الصفحة أربعة مضيفين من صفحاتهم الرسمية، وقد فُحصت بتاريخ 2026-11-22: CUDO Compute وCherry Servers وDatabase Mart وLumaDock. والنتيجة متفاوتة. تذكر CUDO Compute أن منصتها العلنية عند الطلب أُغلقت في 31 مارس 2026 وأنها تبيع الآن عناقيد GPU عبر نموذج مبيعات. وتنشر Cherry Servers وDatabase Mart الأسعار وتتيحان الطلب. أما صفحات LumaDock الرسمية فأعادت HTTP 403 للفحص الآلي، فلم يُتحقق هنا من خطط GPU VPS لديها. جميع الدرجات تقييمات من PromptQuorum، وليست اختبارًا عمليًا في مختبر.',
     metaDescription:
-      'استضافة خوادم GPU 2026: CUDO أغلقت الطلب الفوري، وCherry تُدرج A100 من $2.362/ساعة، وDatabase Mart H100 بـ $1,039.60/شهر أولًا (يتجدد $2,599).',
+      'استضافة خوادم GPU 2026: CUDO تذكر أنها أغلقت الطلب الفوري، وCherry تُدرج A100 من $2.362/ساعة، وDatabase Mart H100 بـ $1,039.60/شهر أولًا (يتجدد $2,599).',
     twitterDescription:
-      'استضافة خوادم GPU في 2026: أغلقت CUDO Compute منصتها العلنية عند الطلب، وتنشر Cherry Servers وDatabase Mart الأسعار، وLumaDock لم يُتحقق منها. الشروط والمواقع وملاءمة النماذج.',
+      'استضافة خوادم GPU في 2026: تذكر CUDO Compute أنها أغلقت منصتها العلنية عند الطلب، وتنشر Cherry Servers وDatabase Mart الأسعار، وLumaDock لم يُتحقق منها. الشروط والمواقع وملاءمة النماذج.',
     readTime: '11 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون والفرق الصغيرة التي تريد خادم GPU بمدة ثابتة لاستدلال LLM أو الضبط الدقيق',
@@ -2896,9 +2896,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'أي مضيف خوادم GPU تستخدم: CUDO أم Cherry Servers أم Database Mart أم LumaDock؟',
         answer:
-          'استخدم Cherry Servers إذا أردت خوادم مخصصة بالساعة أو بمدة ثابتة في مواقع أوروبية مُدرجة (موقع GPU غير مذكور) مع ضمان استرداد أموال مذكور مدته 15 يومًا، وتقبّل أن معظم طُرز GPU على قائمة انتظار. واستخدم Database Mart إذا أردت أوسع نطاق GPU منشور بين المضيفين الثلاثة الذين أمكن قراءة صفحاتهم (36 خطة، من RTX 5060 إلى H100، في الولايات المتحدة فقط) بشروط شهرية. وتخطَّ CUDO Compute ما لم تكن تحتاج عنقودًا من 128 GPU أو أكبر: فقد أُغلقت منصتها العلنية عند الطلب في 31 مارس 2026. وتعامل مع LumaDock على أنها غير متحقق منها: لم يمكن فحص خطط GPU VPS لديها في صفحاتها الرسمية. الأسعار أدناه فُحصت بتاريخ 2026-11-22.',
+          'استخدم Cherry Servers إذا أردت خوادم مخصصة بالساعة أو بمدة ثابتة في مواقع أوروبية مُدرجة (موقع GPU غير مذكور) مع ضمان استرداد أموال مذكور مدته 15 يومًا، وتقبّل أن معظم طُرز GPU على قائمة انتظار. واستخدم Database Mart إذا أردت نطاق GPU منشورًا واسعًا (36 خطة، من RTX 5060 إلى H100، في الولايات المتحدة فقط) بين المضيفين الثلاثة الذين أمكن قراءة صفحاتهم، بشروط شهرية. وتخطَّ CUDO Compute ما لم تكن تحتاج عنقودًا من 128 GPU أو أكبر: فهي تذكر أن منصتها العلنية عند الطلب أُغلقت في 31 مارس 2026. وتعامل مع LumaDock على أنها غير متحقق منها: لم يمكن فحص خطط GPU VPS لديها في صفحاتها الرسمية. الأسعار أدناه فُحصت بتاريخ 2026-11-22.',
         bullets: [
-          'CUDO Compute: المنصة العلنية عند الطلب أُغلقت في 2026-03-31؛ وتبدأ العناقيد من 128 GPU عبر نموذج مبيعات، ولا أسعار منشورة',
+          'CUDO Compute: تذكر أن المنصة العلنية عند الطلب أُغلقت في 2026-03-31؛ وتبدأ العناقيد من 128 GPU عبر نموذج مبيعات، ولا أسعار منشورة',
           'Cherry Servers: ‏A100 80GB من $2.362 في الساعة ($1,657.68 في الشهر، قائمة انتظار)؛ وA2 16GB من $0.239 في الساعة؛ وخطط أساسية في ليتوانيا؛ واسترداد خلال 15 يومًا مذكور للخوادم المخصصة',
           'Database Mart: ‏36 خطة GPU، الولايات المتحدة فقط؛ ‏H100 80GB بسعر $1,039.60 في الشهر للمدة الأولى (يتجدد بسعر $2,599.00 في الشهر)؛ وRTX 5090 32GB VPS بسعر $419 في الشهر',
           'LumaDock: غير متحقق منها؛ خطط GPU VPS لم تُفحص (أعادت صفحاتها الرسمية HTTP 403 للفحص الآلي)',
@@ -2950,7 +2950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'كنت تريد نطاق GPU منشورًا واسعًا بشروط شهرية (تُدرج Database Mart 36 خطة)',
           '**تخطَّه إذا:**',
           'كنت تحتاج GPU لبضع ساعات؛ فاستخدم التأجير بالساعة بدلًا من ذلك، راجع [أفضل مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers)',
-          'كنت تتوقع أن تؤجّر CUDO Compute وحدات GPU منفردة عند الطلب: فقد أُغلقت منصتها العلنية عند الطلب في 31 مارس 2026',
+          'كنت تتوقع أن تؤجّر CUDO Compute وحدات GPU منفردة عند الطلب: فهي تذكر أن منصتها العلنية عند الطلب أُغلقت في 31 مارس 2026',
           'كنت تحتاج تسليمًا فوريًا: تذكر Cherry Servers من 24 إلى 72 ساعة بحسب المنطقة',
           'كنت تحتاج خططًا وأسعارًا متحققًا منها لدى LumaDock: لم يمكن فحص صفحاتها الرسمية',
         ],
@@ -2972,9 +2972,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المعيار': 'تنوع GPU', 'CUDO': '9/10، عناقيد Blackwell', 'Cherry': '5/10، بطاقات أقدم', 'Database Mart': '9/10، حتى H100' },
           { 'المعيار': 'مرونة العقد', 'CUDO': '3/10، من 128 GPU', 'Cherry': '9/10، بالساعة', 'Database Mart': '6/10، شروط شهرية' },
           { 'المعيار': 'الدعم / الوثائق', 'CUDO': 'لم يُقيَّم', 'Cherry': '6/10، قُرئت الأسئلة الشائعة فقط', 'Database Mart': 'لم يُقيَّم' },
-          { 'المعيار': 'الإجمالي', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
+          { 'المعيار': 'الإجمالي (المعايير المقيَّمة فقط)', 'CUDO': '4.0/10', 'Cherry': '7.0/10', 'Database Mart': '8.0/10' },
         ],
-        note: 'تقييم PromptQuorum، وليس اختبارًا عمليًا في مختبر. لم تُقَس الموثوقية (وقت التشغيل وسرعة الشبكة والإنتاجية الفعلية)، لذا لا درجة لها. والإجمالي هو متوسط المعايير المقيَّمة، مقرَّبًا: أربعة لـ CUDO وDatabase Mart (لم يُقيَّم الدعم / الوثائق) وخمسة لـ Cherry.',
+        note: 'تقييم PromptQuorum، وليس اختبارًا عمليًا في مختبر. لم تُقَس الموثوقية (وقت التشغيل وسرعة الشبكة والإنتاجية الفعلية)، لذا لا درجة لها. والإجمالي (المعايير المقيَّمة فقط) هو متوسط المعايير المقيَّمة، مقرَّبًا: أربعة لـ CUDO وDatabase Mart (لم يُقيَّم الدعم / الوثائق) وخمسة لـ Cherry.',
       },
       tldr: {
         id: 'tldr',
@@ -2982,7 +2982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'CUDO Compute: تذكر [الوثائق](https://docs.cudocompute.com/) أن المنصة العلنية عند الطلب أُغلقت في 31 مارس 2026؛ وتبدأ العناقيد من 128 GPU عبر نموذج طلب، ولا أسعار منشورة',
-          'Cherry Servers: أسعار GPU "من" تتراوح بين $0.139 و$2.362 في الساعة (A100 80GB)؛ ومعظم الطُرز على قائمة انتظار؛ واسترداد خلال 15 يومًا مذكور للخوادم المخصصة',
+          'Cherry Servers: أسعار GPU "من" تتراوح بين $0.239 (A2) و$2.362 (A100) في الساعة؛ ومعظم الطُرز على قائمة انتظار؛ واسترداد خلال 15 يومًا مذكور للخوادم المخصصة',
           'Database Mart: ‏36 خطة GPU، الولايات المتحدة فقط، تسعير شهري بمدد 1 و3 و12 و24 شهرًا؛ ويتجدد سعر H100 بقيمة $2,599.00 في الشهر بعد المدة الأولى',
           'LumaDock: الخطط والأسعار لم يُتحقق منها لأن صفحاتها الرسمية أعادت HTTP 403 للفحص الآلي',
           'يحتاج نموذج 70B بتكميم Q4 إلى نحو 44 GB من VRAM بحسب [الورقة المرجعية لـ VRAM](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) في هذا الموقع، فتناسبه بطاقة 48 GB أو 80 GB',
@@ -2993,7 +2993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم: من يستخدم أي مضيف',
         content:
-          '**اختر Cherry Servers لخوادم مخصصة بالساعة أو بمدة ثابتة مع GPU اختيارية، من مزود لديه مواقع في الاتحاد الأوروبي (لا يُذكر أي موقع يستضيف أي GPU)، واختر Database Mart لأوسع نطاق GPU منشور بين المضيفين الثلاثة الذين أمكن قراءة صفحاتهم بشروط شهرية في الولايات المتحدة.** كلاهما ينشر الأسعار ويتيح للمطور الطلب دون مكالمة مبيعات. تقدم Cherry Servers فوترة مرنة وضمان استرداد مذكورًا مدته 15 يومًا على الخوادم المخصصة، لكن قوائمها لـ A100 وA40 وA16 وA10 تُظهر قائمة انتظار. وتُدرج Database Mart بطاقات حتى H100 وRTX Pro 6000 96 GB، لكن سعر H100 لديها خصم لمرة واحدة يتجدد بسعر $2,599.00 في الشهر.\n\n**CUDO Compute ليست مناسبة لفرد أو فريق صغير في 2026.** تذكر وثائقها أن المنصة العلنية عند الطلب أُغلقت في 31 مارس 2026، وتقول صفحة العناقيد لديها إن عمليات النشر تبدأ من 128 GPU. وإذا كان هذا حجمك فهي تستحق محادثة مع المبيعات؛ وتذكر [صفحة العناقيد](https://www.cudocompute.com/products/clusters) لديها منشآت حاصلة على ISO 27001 وعمليات مواءَمة مع GDPR، دون أن تتحقق PromptQuorum من ذلك.\n\n**ينبغي التعامل مع LumaDock على أنها غير متحقق منها، وعليك التحقق منها بنفسك.** لم تستطع PromptQuorum قراءة صفحاتها الرسمية، لذا لا تدّعي هذه الصفحة شيئًا عن خطط GPU VPS لديها أو أسعارها أو شروطها.',
+          '**اختر Cherry Servers لخوادم مخصصة بالساعة أو بمدة ثابتة مع GPU اختيارية، من مزود لديه مواقع في الاتحاد الأوروبي (لا يُذكر أي موقع يستضيف أي GPU)، واختر Database Mart لنطاق GPU منشور واسع (36 خطة) بين المضيفين الثلاثة الذين أمكن قراءة صفحاتهم بشروط شهرية في الولايات المتحدة.** كلاهما ينشر الأسعار ويتيح للمطور الطلب دون مكالمة مبيعات. تقدم Cherry Servers فوترة مرنة وضمان استرداد مذكورًا مدته 15 يومًا على الخوادم المخصصة، لكن قوائمها لـ A100 وA40 وA10 تُظهر قائمة انتظار. وتُدرج Database Mart بطاقات حتى H100 وRTX Pro 6000 96 GB، لكن سعر H100 لديها خصم لمرة واحدة يتجدد بسعر $2,599.00 في الشهر.\n\n**في تقييم PromptQuorum، CUDO Compute ليست مناسبة لفرد أو فريق صغير في 2026.** تذكر وثائقها أن المنصة العلنية عند الطلب أُغلقت في 31 مارس 2026، وتقول صفحة العناقيد لديها إن عمليات النشر تبدأ من 128 GPU. وإذا كان هذا حجمك فهي تستحق محادثة مع المبيعات؛ وتذكر [صفحة العناقيد](https://www.cudocompute.com/products/clusters) لديها منشآت حاصلة على ISO 27001 وعمليات مواءَمة مع GDPR (إفادات ذاتية من المزود دون أن تتحقق PromptQuorum منها؛ والامتثال لـ GDPR يعتمد على التزامات المتحكم في بياناتك).\n\n**ينبغي التعامل مع LumaDock على أنها غير متحقق منها، وعليك التحقق منها بنفسك.** لم تستطع PromptQuorum قراءة صفحاتها الرسمية، لذا لا تدّعي هذه الصفحة شيئًا عن خطط GPU VPS لديها أو أسعارها أو شروطها.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -3013,7 +3013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'الأسعار: ما نشره كل مضيف بتاريخ 2026-11-22',
         content:
-          '**كل رقم أدناه من صفحة المزود نفسه، فُحصت بتاريخ 2026-11-22، بالدولار الأمريكي.** أسعار Cherry Servers هي أسعار "من"؛ وأسعار Database Mart تشمل أسعار تخفيضات قد تنتهي. ولمقارنات التأجير بالساعة عبر مضيفين آخرين، راجع [أسعار RunPod وVast.ai](/ar/prompt-bites/runpod-vs-vastai-pricing) و[حاسبة الشراء مقابل الاستئجار](/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
+          '**كل رقم أدناه من صفحة المزود نفسه، فُحصت بتاريخ 2026-11-22، بالدولار الأمريكي.** أسعار Cherry Servers هي أسعار "من"؛ وأسعار Database Mart تشمل أسعار تخفيضات قد تنتهي. القيم الشهرية هي الأسعار التي ينشرها المزود نفسه، وليست سعر الساعة مضروبًا في 730 ساعة. ولمقارنات التأجير بالساعة عبر مضيفين آخرين، راجع [أسعار RunPod وVast.ai](/ar/prompt-bites/runpod-vs-vastai-pricing) و[حاسبة الشراء مقابل الاستئجار](/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026).',
         columns: ['المزود / الخطة', 'GPU وVRAM', 'السعر'],
         rows: [
           { 'المزود / الخطة': 'CUDO Compute', 'GPU وVRAM': 'عناقيد Blackwell', 'السعر': 'غير منشور، نموذج طلب' },
@@ -3065,7 +3065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**واجهة API استدلال تعمل دائمًا:** نموذج من 14B إلى 70B يخدم أداة داخلية طوال اليوم، حيث يكون السعر الشهري الثابت متوقعًا.',
           '**جولات ضبط دقيق طويلة:** مهام تمتد أيامًا على بطاقة واحدة بسعة 48 GB إلى 96 GB، حيث تتراكم الفوترة بالساعة أيضًا.',
           '**GPU خاصة لاختبارات حساسة:** جهاز كامل لعميل واحد، كما تصف Cherry Servers خوادمها المخصصة (وهذا ليس ضمانًا لحماية البيانات، راجع المخاطر والثقة).',
-          '**تدريب على عنقود كبير:** الحالة الوحيدة التي تنطبق فيها CUDO Compute، عند 128 GPU أو أكثر عبر عملية المبيعات لديها.',
+          '**تدريب على عنقود كبير:** الحالة الرئيسية التي تنطبق فيها CUDO Compute، عند 128 GPU أو أكثر عبر عملية المبيعات لديها.',
           '**غير مناسب:** بضع ساعات من وقت GPU، أو دفعة من المهام المتوازية؛ فمزودو الساعة أنسب لها.',
         ],
       },
@@ -3083,7 +3083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**التعامل مع البيانات، Cherry Servers:** تذكر أن كل خادم جهاز خاص دون محاكاة افتراضية، وحماية DDoS افتراضية، و100 GB من النسخ الاحتياطي المجاني؛ ولا تظهر سياسة احتفاظ بالبيانات في صفحة GPU.',
           '**التعامل مع البيانات، Database Mart:** لا يظهر أي بيان عن التعامل مع البيانات في الصفحات المقروءة.',
           '**LumaDock:** غير متحقق منها؛ ولم يُتحقق هنا من أي شيء عن تعاملها مع البيانات أو مواقعها أو استردادها. اقرأ شروطها بنفسك قبل نقل البيانات إليها.',
-          'لا تضع بيانات منظَّمة أو شخصية لدى أي مضيف حتى تقرأ سياسة الخصوصية وشروط معالجة البيانات لديه.',
+          'لا تضع بيانات منظَّمة أو شخصية لدى أي مضيف حتى تقرأ سياسة الخصوصية وشروط معالجة البيانات لديه. هذا ليس استشارة قانونية.',
         ],
       },
       prosCons: {
@@ -3099,7 +3099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**العيوب**',
           'Cherry Servers: معظم طُرز GPU المُدرجة عليها قائمة انتظار، والتسليم من 24 إلى 72 ساعة',
           'Database Mart: مواقع أمريكية فقط، ويتجدد خصم H100 بسعر $2,599.00 في الشهر',
-          'CUDO Compute: المنصة العلنية عند الطلب أُغلقت في 31 مارس 2026؛ وتبدأ العناقيد من 128 GPU',
+          'CUDO Compute: تذكر أن المنصة العلنية عند الطلب أُغلقت في 31 مارس 2026؛ وتبدأ العناقيد من 128 GPU',
           'LumaDock: الخطط لم يُتحقق منها',
           'دفع ثمن ساعات خاملة إذا لم تكن GPU مشغولة',
         ],
@@ -3184,7 +3184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'استضافة خوادم GPU 2026: CUDO Compute وCherry Servers وDatabase Mart (وLumaDock GPU VPS)',
       reviewBody:
-        'مقارنة بين أربعة مضيفي خوادم GPU من صفحاتهم الرسمية، فُحصت بتاريخ 2026-11-22. تذكر CUDO Compute أن منصتها العلنية عند الطلب أُغلقت في 31 مارس 2026؛ وتُدرج Cherry Servers وحدة A100 80GB من $2.362 في الساعة؛ وتُدرج Database Mart وحدة H100 80GB بسعر $1,039.60 في الشهر يتجدد بسعر $2,599.00؛ ولم يمكن التحقق من LumaDock. والتقييم هو متوسط الدرجة الإجمالية للمزودين الثلاثة المقيَّمين (4.0 و7.0 و8.0 من 10)، تقييم PromptQuorum، وليس اختبارًا عمليًا.',
+        'مقارنة بين أربعة مضيفي خوادم GPU من صفحاتهم الرسمية، فُحصت بتاريخ 2026-11-22. تذكر CUDO Compute أن منصتها العلنية عند الطلب أُغلقت في 31 مارس 2026؛ وتُدرج Cherry Servers وحدة A100 80GB من $2.362 في الساعة؛ وتُدرج Database Mart وحدة H100 80GB بسعر $1,039.60 في الشهر يتجدد بسعر $2,599.00؛ ولم يمكن التحقق من LumaDock. والتقييم هو متوسط المعايير المقيَّمة لكل مزود (4 و5 و4 معايير على التوالي؛ 4.0 و7.0 و8.0 من 10)، تقييم PromptQuorum، وليس اختبارًا عمليًا.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),

@@ -39,6 +39,7 @@ export const copy: AskCopy = {
   aiNotice: 'Ask Hans는 AI이며 오류가 있을 수 있습니다. 개인정보는 입력하지 마십시오.',
   withdraw: '동의 철회',
   thinking: 'Ask Hans가 생각하고 있습니다 …',
+  explainThis: '이 부분 설명',
   searching: 'PromptQuorum을 검색하고 있습니다 …',
   panelTools: '도구를 사용하고 있습니다 …',
 

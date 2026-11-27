@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Novita AI review 2026: per-token model API prices, GPU instance billing, serverless GPUs, LlamaIndex guide, and a Together AI and Fireworks comparison.',
     twitterDescription:
-      'Novita AI (2026): model API from $0.05 per 1M input tokens (GPT OSS 120B), per-second GPU billing, serverless GPUs. Scorecard, billing rules and Together AI and Fireworks comparison.',
+      'Novita AI (2026): model API from $0.05 per 1M input tokens (GPT OSS 120B, list price, checked 2026-11-22), per-second GPU billing, serverless GPUs. Scorecard, billing rules and Together AI and Fireworks comparison.',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing between a hosted model API, rented GPU instances and serverless GPUs',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'What is Novita AI and who is it for?',
         answer:
-          'Novita AI is a developer platform with a per-token model API catalog, on-demand GPU instances and serverless GPUs, billed in USD through Stripe. It suits teams that want open-weight models such as Llama, DeepSeek, Qwen and GPT OSS behind an OpenAI-style API without running hardware, and that sometimes need a GPU for a custom workload. It is not a marketplace of community-hosted machines and it does not accept cryptocurrency, per its billing FAQ. Per-GPU hourly rates were not readable on the official pages in this check, so price GPU work in the console first.',
+          'Novita AI is a developer platform with a per-token model API catalog, on-demand GPU instances and serverless GPUs, billed in USD through Stripe. It suits teams that want open-weight models such as Llama, DeepSeek, Qwen and GPT OSS behind an OpenAI-style API without running hardware, and that sometimes need a GPU for a custom workload. Novita describes its own GPU cloud rather than a marketplace of community-hosted machines, and, per its billing FAQ, it does not accept cryptocurrency. Per-GPU hourly rates were not readable on the official pages in this check, so price GPU work in the console first.',
         bullets: [
           'Model API: GPT OSS 120B $0.05 / $0.25 per 1M input / output tokens (checked 2026-11-22)',
           'GPU instances: billed per second, settled hourly, from the Pulling status',
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Category: 'Support and docs', Score: '8/10', Why: 'Docs cover billing, instances and integrations' },
           { Category: 'Overall', Score: '7.8/10', Why: 'Strong API product; verify GPU rates in the console' },
         ],
-        note: 'Every score is PromptQuorum assessment derived from official pages (see "How We Evaluate"), not from PromptQuorum running workloads on the platform.',
+        note: 'Every score is PromptQuorum assessment derived from official pages (see "How We Evaluate"), not from PromptQuorum running workloads on the platform. Overall is an editorial weighting, not an arithmetic mean.',
       },
       tldr: {
         id: 'tldr',
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Model API vs Together AI and Fireworks',
         content:
-          '**For the one model all three list, GPT OSS 120B, Novita AI shows the lowest per-token price on the pages checked 2026-11-22 (the Together AI input rate is labelled "(cached)").** The comparison covers list prices only, not latency, quality or limits, which this review did not measure.',
+          '**On the pricing pages checked 2026-11-22, Novita AI lists GPT OSS 120B at $0.05 / $0.25 per 1M input / output tokens, against $0.15 / $0.60 on Together AI and Fireworks (Together AI\'s input rate is labelled "(cached)").** The comparison covers list prices only, not latency, quality or limits, which this review did not measure.',
         columns: ['Provider', 'GPT OSS 120B in / out', 'H100 per hour'],
         rows: [
           { Provider: 'Novita AI', 'GPT OSS 120B in / out': '$0.05 / $0.25', 'H100 per hour': 'Not verified' },
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Matches between Novita AI products and common jobs, from strong to weak fit (PromptQuorum assessment).**',
         items: [
           '**Strong fit:** prototyping an app against open-weight models with an OpenAI-style client and per-token billing.',
-          '**Strong fit:** RAG pipelines in LlamaIndex using the documented `NovitaAI` class and an embedding model such as BGE-M3 ($0.01 per 1M tokens).',
+          '**Strong fit:** RAG pipelines in LlamaIndex using the documented `NovitaAI` class and an embedding model such as BGE-M3 (listed at $0.01 per 1M tokens on the pricing page, checked 2026-11-22).',
           '**Good fit:** bursty inference on your own model through serverless GPUs, where you pay only while requests run.',
           '**Weaker fit:** long-running training that needs a published, fixed hourly rate; confirm the live GPU rate first, or see our [vLLM explainer](/power-local-llm/vllm-explained) for self-hosted serving options.',
           '**Poor fit:** workloads that need crypto payment or prepaid money you can get back.',
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Novita AI Review 2026: Preise der Modell-API pro Token, GPU-Abrechnung, Serverless-GPUs, LlamaIndex-Anleitung und Vergleich mit Together AI und Fireworks.',
     twitterDescription:
-      'Novita AI (2026): Modell-API ab 0,05 $ pro 1 Mio. Input-Tokens (GPT OSS 120B), GPU-Abrechnung pro Sekunde, Serverless-GPUs. Scorecard, Abrechnungsregeln und Vergleich mit Together AI und Fireworks.',
+      'Novita AI (2026): Modell-API ab 0,05 $ pro 1 Mio. Input-Tokens (GPT OSS 120B, Listenpreis, geprüft am 2026-11-22), GPU-Abrechnung pro Sekunde, Serverless-GPUs. Scorecard, Abrechnungsregeln und Vergleich mit Together AI und Fireworks.',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die zwischen einer gehosteten Modell-API, gemieteten GPU-Instanzen und Serverless-GPUs wählen',
@@ -385,13 +385,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Was ist Novita AI und für wen ist es gedacht?',
         answer:
-          'Novita AI ist eine Entwicklerplattform mit einem Modell-API-Katalog mit Abrechnung pro Token, GPU-Instanzen auf Abruf und Serverless-GPUs, abgerechnet in US-Dollar über Stripe. Sie eignet sich für Teams, die Open-Weight-Modelle wie Llama, DeepSeek, Qwen und GPT OSS hinter einer OpenAI-ähnlichen API nutzen möchten, ohne Hardware zu betreiben, und die gelegentlich eine GPU für eine eigene Workload brauchen. Es ist kein Marktplatz für Maschinen aus der Community, und laut Abrechnungs-FAQ werden keine Kryptowährungen akzeptiert. Stundenpreise pro GPU waren auf den offiziellen Seiten in dieser Prüfung nicht ablesbar; ermitteln Sie GPU-Kosten daher zuerst in der Konsole.',
+          'Novita AI ist eine Entwicklerplattform mit einem Modell-API-Katalog mit Abrechnung pro Token, GPU-Instanzen auf Abruf und Serverless-GPUs, abgerechnet in US-Dollar über Stripe. Sie eignet sich für Teams, die Open-Weight-Modelle wie Llama, DeepSeek, Qwen und GPT OSS hinter einer OpenAI-ähnlichen API nutzen möchten, ohne Hardware zu betreiben, und die gelegentlich eine GPU für eine eigene Workload brauchen. Novita beschreibt eine eigene GPU-Cloud statt eines Marktplatzes für Maschinen aus der Community und akzeptiert laut Abrechnungs-FAQ keine Kryptowährungen. Stundenpreise pro GPU waren auf den offiziellen Seiten in dieser Prüfung nicht ablesbar; ermitteln Sie GPU-Kosten daher zuerst in der Konsole.',
         bullets: [
           'Modell-API: GPT OSS 120B 0,05 $ / 0,25 $ pro 1 Mio. Input- / Output-Tokens (geprüft am 2026-11-22)',
           'GPU-Instanzen: Abrechnung pro Sekunde, stündlich verrechnet, ab dem Status „Pulling“',
           'Serverless-GPUs: Abrechnung pro Sekunde, Herunterskalieren auf null in 30 s laut Novita',
-          'Zahlung: nur Karten über Stripe; „Kryptowährungszahlungen werden nicht unterstützt“',
-          'Erstattungen: „grundsätzlich nicht verfügbar“; Ausnahmen laufen über den Support',
+          'Zahlung: nur Karten über Stripe; „Cryptocurrency payments are not supported“ (Kryptowährungszahlungen werden nicht unterstützt)',
+          'Erstattungen: „Refunds are generally not available“ (grundsätzlich nicht verfügbar); Ausnahmen laufen über den Support',
         ],
         updatedDate: '2026-11',
       },
@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Kategorie: 'Support und Doku', Bewertung: '8/10', Begründung: 'Doku zu Abrechnung, Instanzen und Integrationen' },
           { Kategorie: 'Gesamt', Bewertung: '7,8/10', Begründung: 'Starke API; GPU-Preise in der Konsole prüfen' },
         ],
-        note: 'Jede Bewertung ist eine Einschätzung von PromptQuorum, abgeleitet aus offiziellen Seiten (siehe „Wie wir bewerten“), und nicht daraus, dass PromptQuorum Workloads auf der Plattform ausgeführt hat.',
+        note: 'Jede Bewertung ist eine Einschätzung von PromptQuorum, abgeleitet aus offiziellen Seiten (siehe „Wie wir bewerten“), und nicht daraus, dass PromptQuorum Workloads auf der Plattform ausgeführt hat. „Gesamt“ ist eine redaktionelle Gewichtung, kein arithmetisches Mittel.',
       },
       tldr: {
         id: 'tldr',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Abrechnung von GPU-Instanzen (Doku, geprüft am 2026-11-22):** Stückpreis x Dauer x Anzahl der Karten, sekundengenau und stündlich verrechnet; siehe die [Dokumentation zu den GPU-Instanzpreisen](https://docs.novita.ai/guides/gpu-instance-pricing).',
           '**Speicher (gleiche Doku):** die ersten 60 GB Container-Disk kostenlos, danach 0,005 $ pro GB und Tag; Volume-Disk 0,005 $ pro GB und Tag; Netzwerk-Volume 0,002 $ pro GB und Tag.',
           '**GPU-Stundenpreise:** nicht verifiziert. Die aktuelle Tabelle steht auf der [GPU-Preisseite](https://novita.ai/gpus) und in der Konsole; Novita weist außerdem auf eine GPU-Preisanpassung mit Wirkung zum 2026-03-16 hin, ältere Zahlen anderswo können daher veraltet sein.',
-          '**Serverless-Preise:** nicht verifiziert; Novita nennt, dass Spot-Preise „bis zu 50 %“ sparen können, ohne im Seitentext Preise aufzulisten.',
+          '**Serverless-Preise:** nicht verifiziert; Novita nennt, dass Spot-Preise „up to 50%“ (bis zu 50 %) sparen können, ohne im Seitentext Preise aufzulisten.',
           '**Zahlung:** über Stripe abgewickelt; laut Abrechnungs-FAQ wird Kryptowährung nicht unterstützt. In manchen Regionen sind lokale Wallets möglich.',
           'Preise ändern sich oft: Betrachten Sie jede Zahl als Momentaufnahme und bestätigen Sie sie auf der aktuellen Seite.',
         ],
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Modell-API im Vergleich mit Together AI und Fireworks',
         content:
-          '**Bei dem einen Modell, das alle drei listen, GPT OSS 120B, zeigt Novita AI auf den am 2026-11-22 geprüften Seiten den niedrigsten Preis pro Token (der Input-Preis von Together AI ist mit „(cached)“ gekennzeichnet).** Der Vergleich umfasst nur Listenpreise, nicht Latenz, Qualität oder Limits, die diese Rezension nicht gemessen hat.',
+          '**Auf den am 2026-11-22 geprüften Preisseiten listet Novita AI GPT OSS 120B mit 0,05 $ / 0,25 $ pro 1 Mio. Input- / Output-Tokens, bei Together AI und Fireworks mit 0,15 $ / 0,60 $ (der Input-Preis von Together AI ist mit „(cached)“ gekennzeichnet).** Der Vergleich umfasst nur Listenpreise, nicht Latenz, Qualität oder Limits, die diese Rezension nicht gemessen hat.',
         columns: ['Anbieter', 'GPT OSS 120B In / Out', 'H100 pro Stunde'],
         rows: [
           { Anbieter: 'Novita AI', 'GPT OSS 120B In / Out': '0,05 $ / 0,25 $', 'H100 pro Stunde': 'Nicht verifiziert' },
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Zuordnung der Novita-AI-Produkte zu gängigen Aufgaben, von starker bis schwacher Eignung (Einschätzung von PromptQuorum).**',
         items: [
           '**Sehr gut geeignet:** Prototypen einer App gegen Open-Weight-Modelle mit einem OpenAI-ähnlichen Client und Abrechnung pro Token.',
-          '**Sehr gut geeignet:** RAG-Pipelines in LlamaIndex mit der dokumentierten Klasse `NovitaAI` und einem Embedding-Modell wie BGE-M3 (0,01 $ pro 1 Mio. Tokens).',
+          '**Sehr gut geeignet:** RAG-Pipelines in LlamaIndex mit der dokumentierten Klasse `NovitaAI` und einem Embedding-Modell wie BGE-M3 (auf der Preisseite mit 0,01 $ pro 1 Mio. Tokens gelistet, geprüft am 2026-11-22).',
           '**Gut geeignet:** schubweise Inferenz auf Ihrem eigenen Modell über Serverless-GPUs, bei der Sie nur zahlen, während Anfragen laufen.',
           '**Weniger geeignet:** lange Trainingsläufe, die einen veröffentlichten, festen Stundenpreis brauchen; bestätigen Sie zuerst den aktuellen GPU-Preis oder lesen Sie unsere [vLLM-Erklärung](/de/power-local-llm/vllm-explained) zu Optionen für selbst gehostetes Serving.',
           '**Schlecht geeignet:** Workloads, die Zahlung in Kryptowährung oder rückholbares Prepaid-Geld brauchen.',
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Test Novita AI 2026 : tarifs de l\'API de modèles au token, GPU facturés à la seconde, GPU Serverless, LlamaIndex et comparatif Together AI et Fireworks.',
     twitterDescription:
-      'Novita AI (2026) : API de modèles dès 0.05 $ par million de tokens d\'entrée (GPT OSS 120B), GPU facturés à la seconde, GPU Serverless. Notation, règles de facturation et comparaison avec Together AI et Fireworks.',
+      'Novita AI (2026) : API de modèles dès 0,05 $ par million de tokens d\'entrée (GPT OSS 120B, prix catalogue, consulté le 2026-11-22), GPU facturés à la seconde, GPU Serverless. Notation, règles de facturation et comparaison avec Together AI et Fireworks.',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs qui hésitent entre une API de modèles hébergée, des instances GPU louées et des GPU Serverless',
@@ -723,14 +723,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'novita ai vs together ai',
     ],
     leadAnswerBlock:
-      '**Novita AI est une plateforme à l\'usage dont le produit principal est une API de modèles : sa [page de tarifs officielle](https://novita.ai/pricing) affiche OpenAI GPT OSS 120B à 0.05 $ par million de tokens d\'entrée et 0.25 $ par million de tokens de sortie, et Llama 3.3 70B Instruct à 0.135 $ en entrée et 0.4 $ en sortie (consulté le 2026-11-22).** Elle loue aussi des instances GPU facturées à la seconde et propose des GPU Serverless. Évaluation de PromptQuorum, fondée sur les pages officielles et la documentation, et non sur un test pratique : 7.8/10 au global. Les tarifs horaires par GPU n\'étaient pas lisibles sur les pages officielles lors de cette vérification : confirmez-les dans la console. Les remboursements sont décrits comme généralement indisponibles.',
+      '**Novita AI est une plateforme à l\'usage dont le produit principal est une API de modèles : sa [page de tarifs officielle](https://novita.ai/pricing) affiche OpenAI GPT OSS 120B à 0,05 $ par million de tokens d\'entrée et 0,25 $ par million de tokens de sortie, et Llama 3.3 70B Instruct à 0,135 $ en entrée et 0,4 $ en sortie (consulté le 2026-11-22).** Elle loue aussi des instances GPU facturées à la seconde et propose des GPU Serverless. Évaluation de PromptQuorum, fondée sur les pages officielles et la documentation, et non sur un test pratique : 7,8/10 au global. Les tarifs horaires par GPU n\'étaient pas lisibles sur les pages officielles lors de cette vérification : confirmez-les dans la console. Les remboursements sont décrits comme généralement indisponibles.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que Novita AI et à qui s\'adresse-t-elle ?',
         answer:
-          'Novita AI est une plateforme pour développeurs avec un catalogue d\'API de modèles facturé au token, des instances GPU à la demande et des GPU Serverless, facturés en USD via Stripe. Elle convient aux équipes qui veulent des modèles à poids ouverts comme Llama, DeepSeek, Qwen et GPT OSS derrière une API de style OpenAI sans gérer de matériel, et qui ont parfois besoin d\'un GPU pour une charge de travail sur mesure. Ce n\'est pas une place de marché de machines hébergées par la communauté, et elle n\'accepte pas les cryptomonnaies, selon sa FAQ de facturation. Les tarifs horaires par GPU n\'étaient pas lisibles sur les pages officielles lors de cette vérification : chiffrez d\'abord le travail GPU dans la console.',
+          'Novita AI est une plateforme pour développeurs avec un catalogue d\'API de modèles facturé au token, des instances GPU à la demande et des GPU Serverless, facturés en USD via Stripe. Elle convient aux équipes qui veulent des modèles à poids ouverts comme Llama, DeepSeek, Qwen et GPT OSS derrière une API de style OpenAI sans gérer de matériel, et qui ont parfois besoin d\'un GPU pour une charge de travail sur mesure. Novita décrit son propre cloud GPU plutôt qu\'une place de marché de machines hébergées par la communauté et, selon sa FAQ de facturation, n\'accepte pas les cryptomonnaies. Les tarifs horaires par GPU n\'étaient pas lisibles sur les pages officielles lors de cette vérification : chiffrez d\'abord le travail GPU dans la console.',
         bullets: [
-          'API de modèles : GPT OSS 120B à 0.05 $ / 0.25 $ par million de tokens d\'entrée / de sortie (consulté le 2026-11-22)',
+          'API de modèles : GPT OSS 120B à 0,05 $ / 0,25 $ par million de tokens d\'entrée / de sortie (consulté le 2026-11-22)',
           'Instances GPU : facturées à la seconde, réglées à l\'heure, à partir du statut Pulling',
           'GPU Serverless : facturation à la seconde, retour à zéro en 30 s selon Novita',
           'Paiements : cartes via Stripe uniquement ; « Cryptocurrency payments are not supported »',
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Novita AI est une plateforme à l\'usage qui propose une API de modèles facturée au token, des instances GPU facturées à la seconde et des GPU Serverless, avec GPT OSS 120B affiché à 0.05 $ par million de tokens d\'entrée (consulté le 2026-11-22).' },
+      { type: 'one-sentence', content: 'Novita AI est une plateforme à l\'usage qui propose une API de modèles facturée au token, des instances GPU facturées à la seconde et des GPU Serverless, avec GPT OSS 120B affiché à 0,05 $ par million de tokens d\'entrée (consulté le 2026-11-22).' },
       { type: 'plain-terms', content: 'Voyez Novita AI comme une boutique de puissance de calcul IA avec trois comptoirs. Le premier vend des réponses de modèles prêts à l\'emploi, au mot près. Le deuxième vous loue une carte graphique entière à la seconde. Le troisième exécute votre propre code sur une carte uniquement quand des requêtes arrivent. La plupart des gens n\'ont besoin que du premier comptoir.' },
     ],
     sections: {
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vous avez besoin de garanties de résidence ou de conservation des données que vous avez vérifiées par écrit',
         ],
         affiliateLinks: [
-          { label: 'Vérifier les tarifs de Novita AI →', url: 'https://novita.ai/pricing', productName: 'Novita AI', productCategory: 'Model API and GPU cloud', priceRange: 'GPT OSS 120B dès 0.05 $ par million de tokens d\'entrée' },
+          { label: 'Vérifier les tarifs de Novita AI →', url: 'https://novita.ai/pricing', productName: 'Novita AI', productCategory: 'Model API and GPU cloud', priceRange: 'GPT OSS 120B dès 0,05 $ par million de tokens d\'entrée' },
         ],
       },
       scorecard: {
@@ -790,14 +790,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Évaluation de PromptQuorum, fondée sur les pages officielles et la documentation de Novita AI consultées le 2026-11-22. Ce n\'est pas un test en laboratoire.** Les notes reflètent l\'adéquation pour des développeurs qui veulent des modèles ouverts hébergés, avec des GPU en option.',
         columns: ['Catégorie', 'Note', 'Pourquoi'],
         rows: [
-          { 'Catégorie': 'Prix', 'Note': '8.5/10', 'Pourquoi': 'Tarifs au token bas ; tarifs horaires GPU non lisibles' },
+          { 'Catégorie': 'Prix', 'Note': '8,5/10', 'Pourquoi': 'Tarifs au token bas ; tarifs horaires GPU non lisibles' },
           { 'Catégorie': 'Fiabilité', 'Note': 'Non noté', 'Pourquoi': 'Disponibilité non vérifiée ; noté sur la conception annoncée' },
-          { 'Catégorie': 'Facilité de mise en place', 'Note': '8.5/10', 'Pourquoi': 'Clé d\'API et nom du modèle ; étapes LlamaIndex documentées' },
+          { 'Catégorie': 'Facilité de mise en place', 'Note': '8,5/10', 'Pourquoi': 'Clé d\'API et nom du modèle ; étapes LlamaIndex documentées' },
           { 'Catégorie': 'Choix de GPU', 'Note': '7/10', 'Pourquoi': 'Types et tarifs de GPU non lisibles sur les pages vérifiées' },
           { 'Catégorie': 'Support et documentation', 'Note': '8/10', 'Pourquoi': 'Documentation : facturation, instances, intégrations' },
-          { 'Catégorie': 'Global', 'Note': '7.8/10', 'Pourquoi': 'API solide ; vérifiez les tarifs GPU dans la console' },
+          { 'Catégorie': 'Global', 'Note': '7,8/10', 'Pourquoi': 'API solide ; vérifiez les tarifs GPU dans la console' },
         ],
-        note: 'Chaque note est une évaluation de PromptQuorum déduite des pages officielles (voir « Notre méthode d\'évaluation »), et non de charges de travail exécutées par PromptQuorum sur la plateforme.',
+        note: 'Chaque note est une évaluation de PromptQuorum déduite des pages officielles (voir « Notre méthode d\'évaluation »), et non de charges de travail exécutées par PromptQuorum sur la plateforme. La note globale est une pondération éditoriale, pas une moyenne arithmétique.',
       },
       tldr: {
         id: 'tldr',
@@ -805,18 +805,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Novita AI vend trois produits sous un même compte : une API de modèles, des instances GPU et des GPU Serverless',
-          'GPT OSS 120B est affiché à 0.05 $ en entrée / 0.25 $ en sortie par million de tokens ; Llama 3.3 70B Instruct à 0.135 $ / 0.4 $ (consulté le 2026-11-22)',
-          'Les instances GPU sont facturées à la seconde et réglées à l\'heure ; le stockage au-delà des 60 premiers Go de disque de conteneur coûte 0.005 $ par Go et par jour',
+          'GPT OSS 120B est affiché à 0,05 $ en entrée / 0,25 $ en sortie par million de tokens ; Llama 3.3 70B Instruct à 0,135 $ / 0,4 $ (consulté le 2026-11-22)',
+          'Les instances GPU sont facturées à la seconde et réglées à l\'heure ; le stockage au-delà des 60 premiers Go de disque de conteneur coûte 0,005 $ par Go et par jour',
           'Les paiements passent par Stripe ; les cryptomonnaies ne sont pas prises en charge ; les remboursements sont généralement indisponibles',
           'Les tarifs horaires par GPU n\'étaient pas lisibles sur les pages officielles lors de cette vérification : non vérifiés',
-          'Together AI et Fireworks affichent GPT OSS 120B à 0.15 $ en entrée / 0.60 $ en sortie par million de tokens sur leurs propres pages de tarifs',
+          'Together AI et Fireworks affichent GPT OSS 120B à 0,15 $ en entrée / 0,60 $ en sortie par million de tokens sur leurs propres pages de tarifs',
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Verdict : qui devrait l\'utiliser',
         content:
-          '**Utilisez Novita AI si c\'est l\'API de modèles que vous voulez : des modèles à poids ouverts à bas tarif au token, avec une interface de style OpenAI.** Sur les pages de tarifs consultées le 2026-11-22, GPT OSS 120B est affiché à 0.05 $ / 0.25 $ par million de tokens d\'entrée / de sortie, contre 0.15 $ / 0.60 $ chez Together AI et Fireworks (le tarif d\'entrée de Together AI est indiqué « (cached) »).\n\n**Ne la choisissez pas pour du travail GPU sur le seul critère du prix, car les pages officielles consultées n\'exposaient pas de tarifs horaires par GPU.** Ouvrez la console, lisez le tarif en vigueur pour la carte exacte, et comparez-le aux chiffres du [coût horaire d\'un GPU cloud](/fr/prompt-bites/cloud-gpu-cost-per-hour) avant de vous engager. L\'absence de remboursement par défaut fait d\'un petit rechargement de test la première étape raisonnable.',
+          '**Utilisez Novita AI si c\'est l\'API de modèles que vous voulez : des modèles à poids ouverts à bas tarif au token, avec une interface de style OpenAI.** Sur les pages de tarifs consultées le 2026-11-22, GPT OSS 120B est affiché à 0,05 $ / 0,25 $ par million de tokens d\'entrée / de sortie, contre 0,15 $ / 0,60 $ chez Together AI et Fireworks (le tarif d\'entrée de Together AI est indiqué « (cached) »).\n\n**Ne la choisissez pas pour du travail GPU sur le seul critère du prix, car les pages officielles consultées n\'exposaient pas de tarifs horaires par GPU.** Ouvrez la console, lisez le tarif en vigueur pour la carte exacte, et comparez-le aux chiffres du [coût horaire d\'un GPU cloud](/fr/prompt-bites/cloud-gpu-cost-per-hour) avant de vous engager. L\'absence de remboursement par défaut fait d\'un petit rechargement de test la première étape raisonnable.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -839,16 +839,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les tarifs de l\'API de modèles sont publics et bas ; les tarifs horaires des GPU n\'étaient pas lisibles sur les pages officielles consultées, aucun n\'est donc cité ici.** Tous les chiffres sont en USD par million de tokens, tirés de la [page de tarifs officielle](https://novita.ai/pricing), consultée le 2026-11-22.',
         columns: ['Modèle', 'Entrée / sortie', 'Contexte'],
         rows: [
-          { 'Modèle': 'OpenAI GPT OSS 120B', 'Entrée / sortie': '0.05 $ / 0.25 $', 'Contexte': '131K' },
-          { 'Modèle': 'Llama 3.1 8B Instruct', 'Entrée / sortie': '0.02 $ / 0.05 $', 'Contexte': '16K' },
-          { 'Modèle': 'Llama 3.3 70B Instruct', 'Entrée / sortie': '0.135 $ / 0.4 $', 'Contexte': '12K' },
-          { 'Modèle': 'Gemma 3 27B', 'Entrée / sortie': '0.119 $ / 0.2 $', 'Contexte': '98K' },
-          { 'Modèle': 'Qwen3.5 27B', 'Entrée / sortie': '0.3 $ / 2.4 $', 'Contexte': '262K' },
-          { 'Modèle': 'DeepSeek R1 0528', 'Entrée / sortie': '0.7 $ / 2.5 $', 'Contexte': '164K' },
+          { 'Modèle': 'OpenAI GPT OSS 120B', 'Entrée / sortie': '0,05 $ / 0,25 $', 'Contexte': '131K' },
+          { 'Modèle': 'Llama 3.1 8B Instruct', 'Entrée / sortie': '0,02 $ / 0,05 $', 'Contexte': '16K' },
+          { 'Modèle': 'Llama 3.3 70B Instruct', 'Entrée / sortie': '0,135 $ / 0,4 $', 'Contexte': '12K' },
+          { 'Modèle': 'Gemma 3 27B', 'Entrée / sortie': '0,119 $ / 0,2 $', 'Contexte': '98K' },
+          { 'Modèle': 'Qwen3.5 27B', 'Entrée / sortie': '0,3 $ / 2,4 $', 'Contexte': '262K' },
+          { 'Modèle': 'DeepSeek R1 0528', 'Entrée / sortie': '0,7 $ / 2,5 $', 'Contexte': '164K' },
         ],
         items: [
           '**Facturation des instances GPU (documentation, consultée le 2026-11-22) :** prix unitaire × durée × nombre de cartes, précis à la seconde et réglé à l\'heure ; voir la [documentation des tarifs d\'instances GPU](https://docs.novita.ai/guides/gpu-instance-pricing).',
-          '**Stockage (même documentation) :** les 60 premiers Go de disque de conteneur sont gratuits, puis 0.005 $ par Go et par jour ; disque de volume 0.005 $ par Go et par jour ; volume réseau 0.002 $ par Go et par jour.',
+          '**Stockage (même documentation) :** les 60 premiers Go de disque de conteneur sont gratuits, puis 0,005 $ par Go et par jour ; disque de volume 0,005 $ par Go et par jour ; volume réseau 0,002 $ par Go et par jour.',
           '**Tarifs horaires des GPU :** non vérifiés. Le tableau en vigueur se trouve sur la [page de tarifs GPU](https://novita.ai/gpus) et dans la console ; Novita signale aussi un ajustement des tarifs GPU effectif au 2026-03-16, si bien que des chiffres plus anciens ailleurs peuvent être périmés.',
           '**Tarifs Serverless :** non vérifiés ; Novita indique que les prix spot peuvent faire économiser « jusqu\'à 50 % » sans lister de tarifs dans le texte de la page.',
           '**Paiements :** traités par Stripe ; selon la FAQ de facturation, les cryptomonnaies ne sont pas prises en charge. Certaines régions peuvent proposer des portefeuilles locaux.',
@@ -863,17 +863,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'API de modèles face à Together AI et Fireworks',
         content:
-          '**Pour le seul modèle que les trois proposent, GPT OSS 120B, Novita AI affiche le tarif au token le plus bas sur les pages consultées le 2026-11-22 (le tarif d\'entrée de Together AI est indiqué « (cached) »).** La comparaison porte uniquement sur les prix catalogue, pas sur la latence, la qualité ni les limites, que ce test n\'a pas mesurées.',
+          '**Sur les pages de tarifs consultées le 2026-11-22, Novita AI affiche GPT OSS 120B à 0,05 $ / 0,25 $ par million de tokens d\'entrée / de sortie, contre 0,15 $ / 0,60 $ chez Together AI et Fireworks (le tarif d\'entrée de Together AI est indiqué « (cached) »).** La comparaison porte uniquement sur les prix catalogue, pas sur la latence, la qualité ni les limites, que ce test n\'a pas mesurées.',
         columns: ['Fournisseur', 'GPT OSS 120B ent./sort.', 'H100 par heure'],
         rows: [
-          { 'Fournisseur': 'Novita AI', 'GPT OSS 120B ent./sort.': '0.05 $ / 0.25 $', 'H100 par heure': 'Non vérifié' },
-          { 'Fournisseur': '[Together AI](https://www.together.ai/pricing)', 'GPT OSS 120B ent./sort.': '0.15 $ / 0.60 $', 'H100 par heure': '5.49 $ dédié' },
-          { 'Fournisseur': '[Fireworks](https://fireworks.ai/pricing)', 'GPT OSS 120B ent./sort.': '0.15 $ / 0.60 $', 'H100 par heure': '8.00 $ à la demande' },
+          { 'Fournisseur': 'Novita AI', 'GPT OSS 120B ent./sort.': '0,05 $ / 0,25 $', 'H100 par heure': 'Non vérifié' },
+          { 'Fournisseur': '[Together AI](https://www.together.ai/pricing)', 'GPT OSS 120B ent./sort.': '0,15 $ / 0,60 $', 'H100 par heure': '5,49 $ dédié' },
+          { 'Fournisseur': '[Fireworks](https://fireworks.ai/pricing)', 'GPT OSS 120B ent./sort.': '0,15 $ / 0,60 $', 'H100 par heure': '8,00 $ à la demande' },
         ],
         items: [
           'Together AI indique son tarif d\'entrée pour GPT OSS 120B comme « (cached) » : confirmez le tarif d\'entrée hors cache sur la page du modèle.',
           'Les chiffres H100 correspondent à des produits différents : Together AI affiche l\'inférence dédiée, Fireworks les déploiements à la demande. Ce n\'est pas un devis comparable à périmètre égal.',
-          'Fireworks indique que les déploiements restreints à une région sont facturés 1.5 fois plus.',
+          'Fireworks indique que les déploiements restreints à une région sont facturés 1,5 fois plus.',
         ],
       },
       inferenceFit: {
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Adéquation avec les LLM locaux',
         content:
-          '**Novita AI permet d\'exécuter des modèles qui ne tiendraient pas sur votre propre carte, sans louer un GPU entier.** Notre [aide-mémoire VRAM des distillations DeepSeek-R1](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) situe la distillation 32B à environ 20.5 Go et la 70B à environ 44 Go en Q4_K_M, ce qui explique pourquoi les gros modèles passent souvent par une API ou une location multi-GPU.',
+          '**Novita AI permet d\'exécuter des modèles qui ne tiendraient pas sur votre propre carte, sans louer un GPU entier.** Notre [aide-mémoire VRAM des distillations DeepSeek-R1](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) situe la distillation 32B à environ 20,5 Go et la 70B à environ 44 Go en Q4_K_M, ce qui explique pourquoi les gros modèles passent souvent par une API ou une location multi-GPU.',
         items: [
           '**Le modèle tient sur votre carte :** exécutez-le en local ; voir [combien de VRAM pour un LLM local](/fr/local-llms/how-much-vram-local-llm).',
           '**Le modèle ne tient pas :** appelez-le via l\'API de modèles de Novita au token plutôt que de louer un pod à l\'heure.',
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Correspondances entre les produits Novita AI et les tâches courantes, de la plus forte à la plus faible adéquation (évaluation de PromptQuorum).**',
         items: [
           '**Très bonne adéquation :** prototyper une application sur des modèles à poids ouverts avec un client de style OpenAI et une facturation au token.',
-          '**Très bonne adéquation :** pipelines RAG dans LlamaIndex avec la classe documentée `NovitaAI` et un modèle d\'embeddings comme BGE-M3 (0.01 $ par million de tokens).',
+          '**Très bonne adéquation :** pipelines RAG dans LlamaIndex avec la classe documentée `NovitaAI` et un modèle d\'embeddings comme BGE-M3 (affiché à 0,01 $ par million de tokens sur la page de tarifs, consulté le 2026-11-22).',
           '**Bonne adéquation :** inférence par rafales sur votre propre modèle via les GPU Serverless, où vous ne payez que pendant l\'exécution des requêtes.',
           '**Adéquation plus faible :** entraînement de longue durée qui exige un tarif horaire fixe publié ; confirmez d\'abord le tarif GPU en vigueur, ou consultez notre [explication de vLLM](/fr/power-local-llm/vllm-explained) pour les options de service auto-hébergé.',
           '**Mauvaise adéquation :** charges de travail qui exigent un paiement en cryptomonnaie ou un prépaiement récupérable.',
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Une API à bas coût avec des GPU en option ; les lacunes concernent les tarifs GPU publiés et les remboursements.**',
         items: [
           '**Avantages**',
-          'GPT OSS 120B affiché à 0.05 $ / 0.25 $ par million de tokens',
+          'GPT OSS 120B affiché à 0,05 $ / 0,25 $ par million de tokens',
           'Facturation GPU à la seconde, sans arrondi à l\'heure',
           'Intégration LlamaIndex documentée',
           'Remise sur l\'inférence par lots décrite sur la page de tarifs',
@@ -980,14 +980,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qu\'est-ce que Novita AI ?', a: 'Novita AI est une plateforme pour développeurs avec un catalogue d\'API de modèles facturé au token, des instances GPU facturées à la seconde et des GPU Serverless. Les paiements sont traités par Stripe. Cette réponse reflète les pages officielles de Novita AI consultées le 2026-11-22.' },
-          { q: 'Combien coûte l\'API de modèles de Novita AI ?', a: 'Sur la page de tarifs officielle consultée le 2026-11-22, GPT OSS 120B coûte 0.05 $ par million de tokens d\'entrée et 0.25 $ par million de tokens de sortie, Llama 3.1 8B Instruct 0.02 $ / 0.05 $, et Llama 3.3 70B Instruct 0.135 $ / 0.4 $. Les prix changent : confirmez sur la page en vigueur.' },
-          { q: 'Comment les instances GPU de Novita AI sont-elles facturées ?', a: 'Le calcul est prix unitaire × durée × nombre de cartes, précis à la seconde et réglé à l\'heure. La facturation démarre quand l\'instance atteint le statut Pulling et s\'arrête quand vous l\'arrêtez. Le stockage au-delà des 60 premiers Go de disque de conteneur coûte 0.005 $ par Go et par jour.' },
+          { q: 'Combien coûte l\'API de modèles de Novita AI ?', a: 'Sur la page de tarifs officielle consultée le 2026-11-22, GPT OSS 120B coûte 0,05 $ par million de tokens d\'entrée et 0,25 $ par million de tokens de sortie, Llama 3.1 8B Instruct 0,02 $ / 0,05 $, et Llama 3.3 70B Instruct 0,135 $ / 0,4 $. Les prix changent : confirmez sur la page en vigueur.' },
+          { q: 'Comment les instances GPU de Novita AI sont-elles facturées ?', a: 'Le calcul est prix unitaire × durée × nombre de cartes, précis à la seconde et réglé à l\'heure. La facturation démarre quand l\'instance atteint le statut Pulling et s\'arrête quand vous l\'arrêtez. Le stockage au-delà des 60 premiers Go de disque de conteneur coûte 0,005 $ par Go et par jour.' },
           { q: 'Quels sont les tarifs horaires des GPU de Novita AI ?', a: 'Non vérifiés. La documentation officielle renvoie à la page de tarifs GPU en vigueur, dont le tableau n\'a pas pu être lu lors de cette vérification. Ouvrez la console pour connaître le tarif actuel du GPU, de la région et du produit exacts que vous voulez.' },
           { q: 'Novita AI propose-t-elle des GPU Serverless ?', a: 'Oui. Novita annonce une facturation à la seconde, un retour à zéro en 30 secondes et un démarrage inférieur à la seconde après préchauffage. Elle ne donne aucun chiffre de démarrage à froid pour les instances non préchauffées, et aucun tarif Serverless n\'était lisible lors de cette vérification.' },
           { q: 'Novita AI fonctionne-t-elle avec LlamaIndex ?', a: 'Oui. Le guide officiel vous fait copier un nom de modèle depuis la Model Library, créer une clé d\'API dans les paramètres de la plateforme, installer LlamaIndex et utiliser la classe NovitaAI. Le paquet llama-index-llms-novita est listé sur PyPI.' },
           { q: 'Puis-je payer Novita AI en cryptomonnaie ?', a: 'Non. La FAQ de facturation indique que les paiements en cryptomonnaie ne sont pas pris en charge. Les paiements sont traités par Stripe avec des cartes de crédit et de débit, et certaines régions peuvent proposer des portefeuilles locaux.' },
           { q: 'Novita AI rembourse-t-elle ?', a: 'Les remboursements sont décrits comme généralement indisponibles. Dans des cas exceptionnels, comme une indisponibilité totale du service, vous pouvez en demander un au support. Commencez par un petit rechargement pendant vos tests.' },
-          { q: 'Novita AI est-elle moins chère que Together AI et Fireworks ?', a: 'Pour GPT OSS 120B, les pages consultées le 2026-11-22 affichent Novita AI à 0.05 $ / 0.25 $ par million de tokens contre 0.15 $ / 0.60 $ chez Together AI et Fireworks. Cela compare uniquement les prix catalogue, pas la vitesse ni la qualité. Les tarifs GPU n\'ont pas été comparés.' },
+          { q: 'Novita AI est-elle moins chère que Together AI et Fireworks ?', a: 'Pour GPT OSS 120B, les pages consultées le 2026-11-22 affichent Novita AI à 0,05 $ / 0,25 $ par million de tokens contre 0,15 $ / 0,60 $ chez Together AI et Fireworks. Cela compare uniquement les prix catalogue, pas la vitesse ni la qualité. Les tarifs GPU n\'ont pas été comparés.' },
           { q: 'Mes données sont-elles privées sur Novita AI ?', a: 'Non vérifié. Aucune déclaration sur le stockage ou la conservation des prompts n\'était lisible sur les pages consultées. Lisez la politique de confidentialité et les conditions, et n\'envoyez pas de données sensibles à une API hébergée sans avoir confirmé les conditions par écrit.' },
           { q: 'Novita AI convient-elle pour exécuter des LLM locaux ?', a: 'Elle convient quand un modèle ne tient pas sur votre propre carte : appelez-le au token plutôt que de louer un pod. Pour un modèle qui tient en local, exécutez-le en local. Aucun chiffre de débit n\'a été vérifié, ce test n\'en cite donc aucun.' },
         ],
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Test de Novita AI (2026) : API de modèles et GPU Serverless',
       reviewBody:
-        'Novita AI est une plateforme à l\'usage avec une API de modèles facturée au token, des instances GPU facturées à la seconde et des GPU Serverless. GPT OSS 120B est affiché à 0.05 $ par million de tokens d\'entrée et 0.25 $ par million de tokens de sortie (page de tarifs officielle, consultée le 2026-11-22). Les tarifs horaires par GPU n\'ont pas pu être vérifiés. Évaluation de PromptQuorum : 7.8/10 au global, d\'après les pages officielles et la documentation, et non un test pratique.',
+        'Novita AI est une plateforme à l\'usage avec une API de modèles facturée au token, des instances GPU facturées à la seconde et des GPU Serverless. GPT OSS 120B est affiché à 0,05 $ par million de tokens d\'entrée et 0,25 $ par million de tokens de sortie (page de tarifs officielle, consultée le 2026-11-22). Les tarifs horaires par GPU n\'ont pas pu être vérifiés. Évaluation de PromptQuorum : 7,8/10 au global, d\'après les pages officielles et la documentation, et non un test pratique.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -1051,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Análisis de Novita AI 2026: precios de la API por token, facturación de GPU, GPUs Serverless, guía de LlamaIndex y comparación con Together AI y Fireworks.',
     twitterDescription:
-      'Novita AI (2026): API de modelos desde $0.05 por 1M de tokens de entrada (GPT OSS 120B), GPU facturada por segundo, GPUs Serverless. Puntuación, reglas de facturación y comparación con Together AI y Fireworks.',
+      'Novita AI (2026): API de modelos desde $0,05 por 1M de tokens de entrada (GPT OSS 120B, precio de lista, consultado el 2026-11-22), GPU facturada por segundo, GPUs Serverless. Puntuación, reglas de facturación y comparación con Together AI y Fireworks.',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que eligen entre una API de modelos alojada, instancias de GPU alquiladas y GPUs Serverless',
@@ -1066,14 +1066,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'novita ai vs together ai',
     ],
     leadAnswerBlock:
-      '**Novita AI es una plataforma de pago por uso cuyo producto principal es una API de modelos: su [página de precios oficial](https://novita.ai/pricing) lista OpenAI GPT OSS 120B a $0.05 por 1M de tokens de entrada y $0.25 por 1M de salida, y Llama 3.3 70B Instruct a $0.135 de entrada y $0.4 de salida (consultado el 2026-11-22).** También alquila instancias de GPU facturadas por segundo y ofrece GPUs Serverless. Valoración de PromptQuorum, basada en páginas oficiales y documentación y no en una prueba práctica: 7.8/10 en conjunto. En esta comprobación no se pudieron leer las tarifas por hora de cada GPU en las páginas oficiales, así que confírmalas en la consola. Los reembolsos se describen como generalmente no disponibles.',
+      '**Novita AI es una plataforma de pago por uso cuyo producto principal es una API de modelos: su [página de precios oficial](https://novita.ai/pricing) lista OpenAI GPT OSS 120B a $0,05 por 1M de tokens de entrada y $0,25 por 1M de salida, y Llama 3.3 70B Instruct a $0,135 de entrada y $0,4 de salida (consultado el 2026-11-22).** También alquila instancias de GPU facturadas por segundo y ofrece GPUs Serverless. Valoración de PromptQuorum, basada en páginas oficiales y documentación y no en una prueba práctica: 7,8/10 en conjunto. En esta comprobación no se pudieron leer las tarifas por hora de cada GPU en las páginas oficiales, así que confírmalas en la consola. Los reembolsos se describen como generalmente no disponibles.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Novita AI y para quién es?',
         answer:
-          'Novita AI es una plataforma para desarrolladores con un catálogo de API de modelos por token, instancias de GPU bajo demanda y GPUs Serverless, facturada en USD a través de Stripe. Encaja con equipos que quieren modelos de pesos abiertos como Llama, DeepSeek, Qwen y GPT OSS detrás de una API al estilo OpenAI sin gestionar hardware, y que a veces necesitan una GPU para una carga personalizada. No es un marketplace de máquinas alojadas por la comunidad y, según su FAQ de facturación, no acepta criptomonedas. Las tarifas por hora de cada GPU no se pudieron leer en las páginas oficiales en esta comprobación, así que calcula primero el coste del trabajo con GPU en la consola.',
+          'Novita AI es una plataforma para desarrolladores con un catálogo de API de modelos por token, instancias de GPU bajo demanda y GPUs Serverless, facturada en USD a través de Stripe. Encaja con equipos que quieren modelos de pesos abiertos como Llama, DeepSeek, Qwen y GPT OSS detrás de una API al estilo OpenAI sin gestionar hardware, y que a veces necesitan una GPU para una carga personalizada. Novita describe su propia nube de GPU y no un marketplace de máquinas alojadas por la comunidad y, según su FAQ de facturación, no acepta criptomonedas. Las tarifas por hora de cada GPU no se pudieron leer en las páginas oficiales en esta comprobación, así que calcula primero el coste del trabajo con GPU en la consola.',
         bullets: [
-          'API de modelos: GPT OSS 120B a $0.05 / $0.25 por 1M de tokens de entrada / salida (consultado el 2026-11-22)',
+          'API de modelos: GPT OSS 120B a $0,05 / $0,25 por 1M de tokens de entrada / salida (consultado el 2026-11-22)',
           'Instancias de GPU: facturadas por segundo y liquidadas cada hora, desde el estado Pulling',
           'GPUs Serverless: facturación por segundo, escalan a cero en 30 s según indica Novita',
           'Pagos: solo tarjetas mediante Stripe; "Cryptocurrency payments are not supported"',
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Novita AI es una plataforma de pago por uso que ofrece una API de modelos por token, instancias de GPU facturadas por segundo y GPUs Serverless, con GPT OSS 120B listado a $0.05 por 1M de tokens de entrada (consultado el 2026-11-22).' },
+      { type: 'one-sentence', content: 'Novita AI es una plataforma de pago por uso que ofrece una API de modelos por token, instancias de GPU facturadas por segundo y GPUs Serverless, con GPT OSS 120B listado a $0,05 por 1M de tokens de entrada (consultado el 2026-11-22).' },
       { type: 'plain-terms', content: 'Piensa en Novita AI como una tienda de cómputo para IA con tres mostradores. Uno vende respuestas de modelos ya preparados, por palabra. Otro te alquila una tarjeta gráfica completa por segundos. El tercero ejecuta tu propio código en una tarjeta solo mientras llegan peticiones. La mayoría de la gente solo necesita el primer mostrador.' },
     ],
     sections: {
@@ -1122,7 +1122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Necesitas condiciones garantizadas de residencia o retención de datos que hayas verificado por escrito',
         ],
         affiliateLinks: [
-          { label: 'Consulta los precios de Novita AI →', url: 'https://novita.ai/pricing', productName: 'Novita AI', productCategory: 'Model API and GPU cloud', priceRange: 'GPT OSS 120B desde $0.05 por 1M de tokens de entrada' },
+          { label: 'Consulta los precios de Novita AI →', url: 'https://novita.ai/pricing', productName: 'Novita AI', productCategory: 'Model API and GPU cloud', priceRange: 'GPT OSS 120B desde $0,05 por 1M de tokens de entrada' },
         ],
       },
       scorecard: {
@@ -1133,14 +1133,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Valoración de PromptQuorum, basada en las páginas y la documentación oficiales de Novita AI consultadas el 2026-11-22. No es una prueba práctica de laboratorio.** Las puntuaciones reflejan la idoneidad para desarrolladores que quieren modelos abiertos alojados más GPUs opcionales.',
         columns: ['Categoría', 'Puntuación', 'Motivo'],
         rows: [
-          { 'Categoría': 'Precio', 'Puntuación': '8.5/10', 'Motivo': 'Tarifas por token bajas; tarifas por hora de GPU no legibles' },
+          { 'Categoría': 'Precio', 'Puntuación': '8,5/10', 'Motivo': 'Tarifas por token bajas; tarifas por hora de GPU no legibles' },
           { 'Categoría': 'Fiabilidad', 'Puntuación': 'Sin puntuar', 'Motivo': 'Sin cifra de uptime verificada; solo por el diseño declarado' },
-          { 'Categoría': 'Facilidad de configuración', 'Puntuación': '8.5/10', 'Motivo': 'Clave de API y nombre del modelo; pasos de LlamaIndex' },
+          { 'Categoría': 'Facilidad de configuración', 'Puntuación': '8,5/10', 'Motivo': 'Clave de API y nombre del modelo; pasos de LlamaIndex' },
           { 'Categoría': 'Variedad de GPUs', 'Puntuación': '7/10', 'Motivo': 'Tipos y tarifas de GPU no legibles en las páginas revisadas' },
           { 'Categoría': 'Soporte y docs', 'Puntuación': '8/10', 'Motivo': 'Docs sobre facturación, instancias e integraciones' },
-          { 'Categoría': 'Global', 'Puntuación': '7.8/10', 'Motivo': 'API sólida; verifica las tarifas de GPU en la consola' },
+          { 'Categoría': 'Global', 'Puntuación': '7,8/10', 'Motivo': 'API sólida; verifica las tarifas de GPU en la consola' },
         ],
-        note: 'Cada puntuación es una valoración de PromptQuorum derivada de páginas oficiales (consulta "Cómo evaluamos"), no de que PromptQuorum haya ejecutado cargas en la plataforma.',
+        note: 'Cada puntuación es una valoración de PromptQuorum derivada de páginas oficiales (consulta "Cómo evaluamos"), no de que PromptQuorum haya ejecutado cargas en la plataforma. La puntuación global es una ponderación editorial, no una media aritmética.',
       },
       tldr: {
         id: 'tldr',
@@ -1148,18 +1148,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Novita AI vende tres cosas en una cuenta: una API de modelos, instancias de GPU y GPUs Serverless',
-          'GPT OSS 120B figura a $0.05 de entrada / $0.25 de salida por 1M de tokens; Llama 3.3 70B Instruct a $0.135 / $0.4 (consultado el 2026-11-22)',
-          'Las instancias de GPU se facturan por segundo y se liquidan cada hora; el almacenamiento por encima de los primeros 60 GB de disco de contenedor cuesta $0.005 por GB al día',
+          'GPT OSS 120B figura a $0,05 de entrada / $0,25 de salida por 1M de tokens; Llama 3.3 70B Instruct a $0,135 / $0,4 (consultado el 2026-11-22)',
+          'Las instancias de GPU se facturan por segundo y se liquidan cada hora; el almacenamiento por encima de los primeros 60 GB de disco de contenedor cuesta $0,005 por GB al día',
           'Los pagos pasan por Stripe; no se admiten criptomonedas; los reembolsos generalmente no están disponibles',
           'Las tarifas por hora de cada GPU no se pudieron leer en las páginas oficiales en esta comprobación: no verificado',
-          'Together AI y Fireworks listan GPT OSS 120B a $0.15 de entrada / $0.60 de salida por 1M de tokens en sus propias páginas de precios',
+          'Together AI y Fireworks listan GPT OSS 120B a $0,15 de entrada / $0,60 de salida por 1M de tokens en sus propias páginas de precios',
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Veredicto: quién debería usarlo',
         content:
-          '**Usa Novita AI si lo que quieres es la API de modelos: modelos de pesos abiertos con tarifas bajas por token y una interfaz al estilo OpenAI.** En las páginas de precios consultadas el 2026-11-22, GPT OSS 120B figura a $0.05 / $0.25 por 1M de tokens de entrada / salida, frente a $0.15 / $0.60 en Together AI y Fireworks (la tarifa de entrada de Together AI aparece como "(cached)").\n\n**No lo elijas para trabajo con GPU solo por el precio, porque las páginas oficiales revisadas no mostraban tarifas por hora de cada GPU.** Abre la consola, lee la tarifa vigente de la tarjeta exacta y compárala con las cifras de [coste por hora de GPU en la nube](/es/prompt-bites/cloud-gpu-cost-per-hour) antes de comprometerte. Como por defecto no hay reembolsos, lo sensato es empezar con recargas pequeñas de prueba.',
+          '**Usa Novita AI si lo que quieres es la API de modelos: modelos de pesos abiertos con tarifas bajas por token y una interfaz al estilo OpenAI.** En las páginas de precios consultadas el 2026-11-22, GPT OSS 120B figura a $0,05 / $0,25 por 1M de tokens de entrada / salida, frente a $0,15 / $0,60 en Together AI y Fireworks (la tarifa de entrada de Together AI aparece como "(cached)").\n\n**No lo elijas para trabajo con GPU solo por el precio, porque las páginas oficiales revisadas no mostraban tarifas por hora de cada GPU.** Abre la consola, lee la tarifa vigente de la tarjeta exacta y compárala con las cifras de [coste por hora de GPU en la nube](/es/prompt-bites/cloud-gpu-cost-per-hour) antes de comprometerte. Como por defecto no hay reembolsos, lo sensato es empezar con recargas pequeñas de prueba.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -1182,16 +1182,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Las tarifas de la API de modelos son públicas y bajas; las tarifas por hora de GPU no se pudieron leer en las páginas oficiales revisadas, así que aquí no se cita ninguna.** Todas las cifras están en USD por 1M de tokens y proceden de la [página de precios oficial](https://novita.ai/pricing), consultada el 2026-11-22.',
         columns: ['Modelo', 'Entrada / salida', 'Contexto'],
         rows: [
-          { 'Modelo': 'OpenAI GPT OSS 120B', 'Entrada / salida': '$0.05 / $0.25', 'Contexto': '131K' },
-          { 'Modelo': 'Llama 3.1 8B Instruct', 'Entrada / salida': '$0.02 / $0.05', 'Contexto': '16K' },
-          { 'Modelo': 'Llama 3.3 70B Instruct', 'Entrada / salida': '$0.135 / $0.4', 'Contexto': '12K' },
-          { 'Modelo': 'Gemma 3 27B', 'Entrada / salida': '$0.119 / $0.2', 'Contexto': '98K' },
-          { 'Modelo': 'Qwen3.5 27B', 'Entrada / salida': '$0.3 / $2.4', 'Contexto': '262K' },
-          { 'Modelo': 'DeepSeek R1 0528', 'Entrada / salida': '$0.7 / $2.5', 'Contexto': '164K' },
+          { 'Modelo': 'OpenAI GPT OSS 120B', 'Entrada / salida': '$0,05 / $0,25', 'Contexto': '131K' },
+          { 'Modelo': 'Llama 3.1 8B Instruct', 'Entrada / salida': '$0,02 / $0,05', 'Contexto': '16K' },
+          { 'Modelo': 'Llama 3.3 70B Instruct', 'Entrada / salida': '$0,135 / $0,4', 'Contexto': '12K' },
+          { 'Modelo': 'Gemma 3 27B', 'Entrada / salida': '$0,119 / $0,2', 'Contexto': '98K' },
+          { 'Modelo': 'Qwen3.5 27B', 'Entrada / salida': '$0,3 / $2,4', 'Contexto': '262K' },
+          { 'Modelo': 'DeepSeek R1 0528', 'Entrada / salida': '$0,7 / $2,5', 'Contexto': '164K' },
         ],
         items: [
           '**Facturación de instancias de GPU (docs, consultado el 2026-11-22):** precio unitario x duración x número de tarjetas, con precisión de segundo y liquidado cada hora; consulta los [docs de precios de instancias de GPU](https://docs.novita.ai/guides/gpu-instance-pricing).',
-          '**Almacenamiento (mismos docs):** los primeros 60 GB de disco de contenedor son gratis y después $0.005 por GB al día; disco de volumen $0.005 por GB al día; volumen de red $0.002 por GB al día.',
+          '**Almacenamiento (mismos docs):** los primeros 60 GB de disco de contenedor son gratis y después $0,005 por GB al día; disco de volumen $0,005 por GB al día; volumen de red $0,002 por GB al día.',
           '**Tarifas por hora de GPU:** no verificado. La tabla vigente está en la [página de precios de GPU](https://novita.ai/gpus) y en la consola; Novita también indica un ajuste de precios de GPU con efecto desde 2026-03-16, por lo que las cifras anteriores de otras fuentes pueden estar desactualizadas.',
           '**Tarifas de Serverless:** no verificado; Novita indica que el precio spot puede ahorrar "hasta un 50 %" sin listar tarifas en el texto de la página.',
           '**Pagos:** los procesa Stripe; según la FAQ de facturación, no se admiten criptomonedas. Algunas regiones pueden ofrecer monederos locales.',
@@ -1206,17 +1206,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'API de modelos vs Together AI y Fireworks',
         content:
-          '**Para el único modelo que listan los tres, GPT OSS 120B, Novita AI muestra el precio por token más bajo en las páginas consultadas el 2026-11-22 (la tarifa de entrada de Together AI aparece como "(cached)").** La comparación cubre solo precios de lista, no latencia, calidad ni límites, que este análisis no midió.',
+          '**En las páginas de precios consultadas el 2026-11-22, Novita AI lista GPT OSS 120B a $0,05 / $0,25 por 1M de tokens de entrada / salida, frente a $0,15 / $0,60 en Together AI y Fireworks (la tarifa de entrada de Together AI aparece como "(cached)").** La comparación cubre solo precios de lista, no latencia, calidad ni límites, que este análisis no midió.',
         columns: ['Proveedor', 'GPT OSS 120B ent. / sal.', 'H100 por hora'],
         rows: [
-          { 'Proveedor': 'Novita AI', 'GPT OSS 120B ent. / sal.': '$0.05 / $0.25', 'H100 por hora': 'No verificado' },
-          { 'Proveedor': '[Together AI](https://www.together.ai/pricing)', 'GPT OSS 120B ent. / sal.': '$0.15 / $0.60', 'H100 por hora': '$5.49 dedicado' },
-          { 'Proveedor': '[Fireworks](https://fireworks.ai/pricing)', 'GPT OSS 120B ent. / sal.': '$0.15 / $0.60', 'H100 por hora': '$8.00 bajo demanda' },
+          { 'Proveedor': 'Novita AI', 'GPT OSS 120B ent. / sal.': '$0,05 / $0,25', 'H100 por hora': 'No verificado' },
+          { 'Proveedor': '[Together AI](https://www.together.ai/pricing)', 'GPT OSS 120B ent. / sal.': '$0,15 / $0,60', 'H100 por hora': '$5,49 dedicado' },
+          { 'Proveedor': '[Fireworks](https://fireworks.ai/pricing)', 'GPT OSS 120B ent. / sal.': '$0,15 / $0,60', 'H100 por hora': '$8,00 bajo demanda' },
         ],
         items: [
           'Together AI lista su tarifa de entrada de GPT OSS 120B como "(cached)", así que confirma la tarifa de entrada sin caché en la página del modelo.',
           'Las cifras de H100 son productos distintos: Together AI lista inferencia dedicada y Fireworks lista despliegues bajo demanda. No son una cotización equivalente.',
-          'Fireworks indica que los despliegues restringidos a una región se cobran a 1.5x.',
+          'Fireworks indica que los despliegues restringidos a una región se cobran a 1,5x.',
         ],
       },
       inferenceFit: {
@@ -1224,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Ajuste para LLMs locales',
         content:
-          '**Novita AI es una forma de ejecutar modelos que no cabrían en tu propia tarjeta, sin alquilar una GPU completa.** Nuestra [hoja de referencia de VRAM de los destilados de DeepSeek-R1](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) sitúa el destilado de 32B en unos 20.5 GB y el de 70B en unos 44 GB con Q4_K_M, y por eso los modelos grandes suelen ir a una API o a un alquiler con varias GPUs.',
+          '**Novita AI es una forma de ejecutar modelos que no cabrían en tu propia tarjeta, sin alquilar una GPU completa.** Nuestra [hoja de referencia de VRAM de los destilados de DeepSeek-R1](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) sitúa el destilado de 32B en unos 20,5 GB y el de 70B en unos 44 GB con Q4_K_M, y por eso los modelos grandes suelen ir a una API o a un alquiler con varias GPUs.',
         items: [
           '**El modelo cabe en tu tarjeta:** ejecútalo en local; consulta [cuánta VRAM necesita un LLM local](/es/local-llms/how-much-vram-local-llm).',
           '**El modelo no cabe:** llámalo a través de la API de modelos de Novita por token en lugar de alquilar un pod por horas.',
@@ -1238,7 +1238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Correspondencias entre los productos de Novita AI y tareas habituales, de mejor a peor ajuste (valoración de PromptQuorum).**',
         items: [
           '**Muy buen ajuste:** prototipar una app con modelos de pesos abiertos usando un cliente al estilo OpenAI y facturación por token.',
-          '**Muy buen ajuste:** pipelines RAG en LlamaIndex con la clase documentada `NovitaAI` y un modelo de embeddings como BGE-M3 ($0.01 por 1M de tokens).',
+          '**Muy buen ajuste:** pipelines RAG en LlamaIndex con la clase documentada `NovitaAI` y un modelo de embeddings como BGE-M3 (listado a $0,01 por 1M de tokens en la página de precios, consultado el 2026-11-22).',
           '**Buen ajuste:** inferencia a ráfagas con tu propio modelo mediante GPUs Serverless, donde pagas solo mientras se ejecutan las peticiones.',
           '**Ajuste más débil:** entrenamientos largos que necesitan una tarifa horaria fija y publicada; confirma antes la tarifa vigente de la GPU o consulta nuestra [explicación de vLLM](/es/power-local-llm/vllm-explained) para opciones de servicio autoalojado.',
           '**Mal ajuste:** cargas que requieren pago en cripto o dinero prepago recuperable.',
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Una API de bajo coste con GPUs opcionales; las carencias están en las tarifas de GPU publicadas y en los reembolsos.**',
         items: [
           '**Pros**',
-          'GPT OSS 120B listado a $0.05 / $0.25 por 1M de tokens',
+          'GPT OSS 120B listado a $0,05 / $0,25 por 1M de tokens',
           'Facturación de GPU por segundo, sin redondeo a la hora',
           'Integración documentada con LlamaIndex',
           'Descuento por inferencia por lotes descrito en la página de precios',
@@ -1323,14 +1323,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es Novita AI?', a: 'Novita AI es una plataforma para desarrolladores con un catálogo de API de modelos por token, instancias de GPU facturadas por segundo y GPUs Serverless. Los pagos los procesa Stripe. Esta respuesta refleja las páginas oficiales de Novita AI consultadas el 2026-11-22.' },
-          { q: '¿Cuánto cuesta la API de modelos de Novita AI?', a: 'En la página de precios oficial consultada el 2026-11-22, GPT OSS 120B cuesta $0.05 por 1M de tokens de entrada y $0.25 por 1M de salida, Llama 3.1 8B Instruct $0.02 / $0.05 y Llama 3.3 70B Instruct $0.135 / $0.4. Los precios cambian, así que confírmalos en la página vigente.' },
-          { q: '¿Cómo se facturan las instancias de GPU de Novita AI?', a: 'El cómputo es precio unitario x duración x número de tarjetas, con precisión de segundo y liquidado cada hora. La facturación empieza cuando la instancia llega al estado Pulling y termina cuando la detienes. El almacenamiento por encima de los primeros 60 GB de disco de contenedor cuesta $0.005 por GB al día.' },
+          { q: '¿Cuánto cuesta la API de modelos de Novita AI?', a: 'En la página de precios oficial consultada el 2026-11-22, GPT OSS 120B cuesta $0,05 por 1M de tokens de entrada y $0,25 por 1M de salida, Llama 3.1 8B Instruct $0,02 / $0,05 y Llama 3.3 70B Instruct $0,135 / $0,4. Los precios cambian, así que confírmalos en la página vigente.' },
+          { q: '¿Cómo se facturan las instancias de GPU de Novita AI?', a: 'El cómputo es precio unitario x duración x número de tarjetas, con precisión de segundo y liquidado cada hora. La facturación empieza cuando la instancia llega al estado Pulling y termina cuando la detienes. El almacenamiento por encima de los primeros 60 GB de disco de contenedor cuesta $0,005 por GB al día.' },
           { q: '¿Cuáles son las tarifas por hora de las GPUs de Novita AI?', a: 'No verificado. La documentación oficial remite a la página de precios de GPU vigente, cuya tabla de tarifas no se pudo leer en esta comprobación. Abre la consola para ver la tarifa actual de la GPU, región y producto exactos que quieras.' },
           { q: '¿Ofrece Novita AI GPUs Serverless?', a: 'Sí. Novita indica facturación por segundo, escalado a cero en 30 segundos y arranque en menos de un segundo tras el precalentamiento. No da ninguna cifra de arranque en frío para instancias sin precalentar, y en esta comprobación no se pudieron leer tarifas de Serverless.' },
           { q: '¿Funciona Novita AI con LlamaIndex?', a: 'Sí. La guía oficial te hace copiar un nombre de modelo de la Model Library, crear una clave de API en los ajustes de la plataforma, instalar LlamaIndex y usar la clase NovitaAI. El paquete llama-index-llms-novita figura en PyPI.' },
           { q: '¿Puedo pagar Novita AI con criptomonedas?', a: 'No. La FAQ de facturación indica que no se admiten pagos en criptomonedas. Los pagos los procesa Stripe con tarjetas de crédito y débito, y algunas regiones pueden ofrecer monederos locales.' },
           { q: '¿Da reembolsos Novita AI?', a: 'Los reembolsos se describen como generalmente no disponibles. En casos excepcionales, como la indisponibilidad total del servicio, puedes solicitar uno a soporte. Empieza con una recarga pequeña mientras pruebas.' },
-          { q: '¿Es Novita AI más barata que Together AI y Fireworks?', a: 'Para GPT OSS 120B, las páginas consultadas el 2026-11-22 listan Novita AI a $0.05 / $0.25 por 1M de tokens frente a $0.15 / $0.60 en Together AI y en Fireworks. Esto compara solo precios de lista, no velocidad ni calidad. No se compararon las tarifas de GPU.' },
+          { q: '¿Es Novita AI más barata que Together AI y Fireworks?', a: 'Para GPT OSS 120B, las páginas consultadas el 2026-11-22 listan Novita AI a $0,05 / $0,25 por 1M de tokens frente a $0,15 / $0,60 en Together AI y en Fireworks. Esto compara solo precios de lista, no velocidad ni calidad. No se compararon las tarifas de GPU.' },
           { q: '¿Son privados mis datos en Novita AI?', a: 'No verificado. En las páginas revisadas no se pudo leer ninguna declaración sobre el almacenamiento o la retención de prompts. Lee la política de privacidad y los términos, y no envíes datos sensibles a ninguna API alojada sin confirmar las condiciones por escrito.' },
           { q: '¿Es Novita AI una buena opción para ejecutar LLMs locales?', a: 'Es una buena opción cuando un modelo no cabe en tu propia tarjeta: llámalo por token en lugar de alquilar un pod. Si un modelo cabe en local, ejecútalo en local. No se verificó ninguna cifra de rendimiento, así que este análisis no cita ninguna.' },
         ],
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Análisis de Novita AI (2026): APIs de modelos y GPUs Serverless',
       reviewBody:
-        'Novita AI es una plataforma de pago por uso con una API de modelos por token, instancias de GPU facturadas por segundo y GPUs Serverless. GPT OSS 120B figura a $0.05 por 1M de tokens de entrada y $0.25 por 1M de salida (página de precios oficial, consultada el 2026-11-22). Las tarifas por hora de cada GPU no se pudieron verificar. La valoración de PromptQuorum le da 7.8/10 en conjunto a partir de páginas oficiales y documentación, no de una prueba práctica.',
+        'Novita AI es una plataforma de pago por uso con una API de modelos por token, instancias de GPU facturadas por segundo y GPUs Serverless. GPT OSS 120B figura a $0,05 por 1M de tokens de entrada y $0,25 por 1M de salida (página de precios oficial, consultada el 2026-11-22). Las tarifas por hora de cada GPU no se pudieron verificar. La valoración de PromptQuorum le da 7,8/10 en conjunto a partir de páginas oficiales y documentación, no de una prueba práctica.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -1394,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Novita AIレビュー2026：トークン単価のモデルAPI、GPUインスタンスの課金、Serverless GPU、LlamaIndex連携、Together AIとFireworksとの比較を解説。',
     twitterDescription:
-      'Novita AI（2026）：モデルAPIは入力100万トークンあたり0.05ドルから（GPT OSS 120B）、GPUは秒単位課金、Serverless GPUも提供。スコアカード、課金ルール、Together AIとFireworksとの比較を解説。',
+      'Novita AI（2026）：モデルAPIは入力100万トークンあたり0.05ドルから（GPT OSS 120B、定価、2026-11-22確認）、GPUは秒単位課金、Serverless GPUも提供。スコアカード、課金ルール、Together AIとFireworksとの比較を解説。',
     readTime: '9分で読める',
     educationalLevel: 'Intermediate',
     audience: 'ホスト型モデルAPI、レンタルGPUインスタンス、Serverless GPUのどれを使うか検討している開発者',
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'Novita AIとは何で、どんな人に向いていますか？',
         answer:
-          'Novita AIは、トークン単位のモデルAPIカタログ、オンデマンドのGPUインスタンス、Serverless GPUを備えた開発者向けプラットフォームで、請求はStripe経由のUSD建てです。Llama、DeepSeek、Qwen、GPT OSSなどのオープンウェイトモデルを、ハードウェアを管理せずにOpenAI形式のAPIで使いたく、ときどき独自の処理のためにGPUが必要になるチームに向いています。コミュニティが提供するマシンのマーケットプレイスではなく、課金FAQによると暗号資産には対応していません。今回の確認では公式ページからGPUごとの1時間あたり料金が読み取れなかったため、GPUを使う場合はまずコンソールで料金を確認してください。',
+          'Novita AIは、トークン単位のモデルAPIカタログ、オンデマンドのGPUインスタンス、Serverless GPUを備えた開発者向けプラットフォームで、請求はStripe経由のUSD建てです。Llama、DeepSeek、Qwen、GPT OSSなどのオープンウェイトモデルを、ハードウェアを管理せずにOpenAI形式のAPIで使いたく、ときどき独自の処理のためにGPUが必要になるチームに向いています。Novitaは、コミュニティが提供するマシンのマーケットプレイスではなく自社のGPUクラウドであると説明しており、課金FAQによると暗号資産には対応していません。今回の確認では公式ページからGPUごとの1時間あたり料金が読み取れなかったため、GPUを使う場合はまずコンソールで料金を確認してください。',
         bullets: [
           'モデルAPI：GPT OSS 120Bは入力／出力100万トークンあたり0.05ドル／0.25ドル（2026-11-22確認）',
           'GPUインスタンス：秒単位で課金し、1時間ごとに精算。Pullingステータスから課金開始',
@@ -1483,7 +1483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'サポートとドキュメント', 'スコア': '8/10', '理由': '課金、インスタンス、連携の資料がある' },
           { '項目': '総合', 'スコア': '7.8/10', '理由': 'APIは強力。GPU料金はコンソールで要確認' },
         ],
-        note: 'すべてのスコアは、公式ページ（下の「評価方法」を参照）に基づくPromptQuorumの評価であり、PromptQuorumがこのプラットフォームで実際に処理を動かした結果ではありません。',
+        note: 'すべてのスコアは、公式ページ（下の「評価方法」を参照）に基づくPromptQuorumの評価であり、PromptQuorumがこのプラットフォームで実際に処理を動かした結果ではありません。総合は編集上の重み付けであり、算術平均ではありません。',
       },
       tldr: {
         id: 'tldr',
@@ -1537,7 +1537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ストレージ（同ドキュメント）：** コンテナディスクは最初の60GBが無料で、それ以降は1GBあたり1日0.005ドル。ボリュームディスクは1GBあたり1日0.005ドル、ネットワークボリュームは1GBあたり1日0.002ドルです。',
           '**GPUの時間単価：** 未確認です。最新の料金表は[GPU料金ページ](https://novita.ai/gpus)とコンソールにあります。また、Novitaは2026-03-16付のGPU料金改定を告知しているため、他所の古い数値は現在と異なる可能性があります。',
           '**Serverlessの料金：** 未確認です。Novitaはスポット価格で「up to 50%」節約できるとしていますが、ページの本文に料金は載っていません。',
-          '**支払い：** Stripeで処理されます。課金FAQによると暗号資産は非対応です。地域によっては現地のウォレットが使える場合があります。請求はUSD建てのため、日本のカードではカード会社が海外事務手数料などを別途請求する場合があります。',
+          '**支払い：** Stripeで処理されます。課金FAQによると暗号資産は非対応です。地域によっては現地のウォレットが使える場合があります。',
           '料金は頻繁に変わります。すべての数値は一時点のものとして扱い、最新のページで確認してください。',
         ],
         affiliateLinks: [
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'モデルAPIとTogether AI・Fireworksの比較',
         content:
-          '**3社すべてが掲載している唯一のモデルGPT OSS 120Bでは、2026-11-22に確認したページ上でNovita AIのトークン単価が最も低くなっています（Together AIの入力料金は「(cached)」と表記されています）。** この比較は定価のみを対象とし、遅延、品質、制限は対象外です。このレビューでは測定していません。',
+          '**2026-11-22に確認した料金ページでは、Novita AIはGPT OSS 120Bを入力／出力100万トークンあたり0.05ドル／0.25ドルと記載し、Together AIとFireworksは0.15ドル／0.60ドルと記載しています（Together AIの入力料金は「(cached)」と表記されています）。** この比較は定価のみを対象とし、遅延、品質、制限は対象外です。このレビューでは測定していません。',
         columns: ['プロバイダー', 'GPT OSS 120B 入力 / 出力', 'H100 1時間あたり'],
         rows: [
           { 'プロバイダー': 'Novita AI', 'GPT OSS 120B 入力 / 出力': '$0.05 / $0.25', 'H100 1時間あたり': '未確認' },
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Novita AIの各製品と一般的な用途との相性を、適合度の高い順に示します（PromptQuorumの評価）。**',
         items: [
           '**適合度が高い：** OpenAI形式のクライアントとトークン単位の課金で、オープンウェイトモデルを使ったアプリのプロトタイプを作る。',
-          '**適合度が高い：** ドキュメント化された`NovitaAI`クラスと、BGE-M3（100万トークンあたり0.01ドル）などの埋め込みモデルを使った、LlamaIndexのRAGパイプライン。',
+          '**適合度が高い：** ドキュメント化された`NovitaAI`クラスと、BGE-M3（料金ページでは100万トークンあたり0.01ドルと記載、2026-11-22確認）などの埋め込みモデルを使った、LlamaIndexのRAGパイプライン。',
           '**適合度は良好：** リクエストが動いている間だけ支払うServerless GPUで、自分のモデルを使った突発的な推論を行う。',
           '**やや不向き：** 公開された固定の時間単価が必要な長時間の学習。先に最新のGPU料金を確認するか、自前で提供する方法は[vLLMの解説](/ja/power-local-llm/vllm-explained)をご覧ください。',
           '**不向き：** 暗号資産での支払いや、返金できるプリペイド残高が必要な用途。',
@@ -1737,7 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Novita AI 评测 2026：按 token 计价的模型 API、GPU 实例计费、Serverless GPU、LlamaIndex 指南，并对比 Together AI 与 Fireworks。',
     twitterDescription:
-      'Novita AI（2026）：模型 API 输入每 100 万 token 起价 $0.05（GPT OSS 120B），GPU 按秒计费，另有 Serverless GPU。评分卡、计费规则，以及与 Together AI 和 Fireworks 的对比。',
+      'Novita AI（2026）：模型 API 输入每 100 万 token 起价 $0.05（GPT OSS 120B，标价，核实于 2026-11-22），GPU 按秒计费，另有 Serverless GPU。评分卡、计费规则，以及与 Together AI 和 Fireworks 的对比。',
     readTime: '阅读约9分钟',
     educationalLevel: 'Intermediate',
     audience: '在托管模型 API、租用 GPU 实例和 Serverless GPU 之间做选择的开发者',
@@ -1757,7 +1757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: 'Novita AI 是什么，适合谁用？',
         answer:
-          'Novita AI 是一个开发者平台，提供按 token 计费的模型 API 目录、按需 GPU 实例和 Serverless GPU，通过 Stripe 以美元结算。它适合想通过类 OpenAI 的 API 使用 Llama、DeepSeek、Qwen 和 GPT OSS 等开放权重模型、又不想自己运维硬件的团队，也适合偶尔需要 GPU 跑自定义负载的场景。它不是社区主机的市场，而且按其计费常见问题，不接受加密货币。本次核查中官方页面上没有读到各 GPU 的每小时费率，因此 GPU 工作请先在控制台中核价。',
+          'Novita AI 是一个开发者平台，提供按 token 计费的模型 API 目录、按需 GPU 实例和 Serverless GPU，通过 Stripe 以美元结算。它适合想通过类 OpenAI 的 API 使用 Llama、DeepSeek、Qwen 和 GPT OSS 等开放权重模型、又不想自己运维硬件的团队，也适合偶尔需要 GPU 跑自定义负载的场景。Novita 将自己描述为自有 GPU 云，而不是社区主机的市场；按其计费常见问题，不接受加密货币。本次核查中官方页面上没有读到各 GPU 的每小时费率，因此 GPU 工作请先在控制台中核价。',
         bullets: [
           '模型 API：GPT OSS 120B 输入 / 输出每 100 万 token $0.05 / $0.25（核实于 2026-11-22）',
           'GPU 实例：按秒计费，每小时结算，从 Pulling 状态开始计费',
@@ -1826,7 +1826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '类别': '支持与文档', '评分': '8/10', '原因': '文档涵盖计费、实例和集成' },
           { '类别': '综合', '评分': '7.8/10', '原因': 'API 产品很强；请在控制台核实 GPU 费率' },
         ],
-        note: '每项评分都是 PromptQuorum 依据官方页面作出的评估（见“我们的评测方法”），而不是 PromptQuorum 在该平台上运行负载的结果。',
+        note: '每项评分都是 PromptQuorum 依据官方页面作出的评估（见“我们的评测方法”），而不是 PromptQuorum 在该平台上运行负载的结果。综合分是编辑加权结果，不是算术平均数。',
       },
       tldr: {
         id: 'tldr',
@@ -1892,7 +1892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '模型 API 与 Together AI、Fireworks 对比',
         content:
-          '**对三家都列出的同一个模型 GPT OSS 120B，在 2026-11-22 核查的页面上 Novita AI 的按 token 价格最低（Together AI 的输入费率标注为“(cached)”）。** 该对比只涵盖标价，不涉及延迟、质量或限额，本评测没有测量这些。',
+          '**在 2026-11-22 核查的定价页上，Novita AI 将 GPT OSS 120B 标价为每 100 万输入 / 输出 token $0.05 / $0.25，Together AI 和 Fireworks 为 $0.15 / $0.60（Together AI 的输入费率标注为“(cached)”）。** 该对比只涵盖标价，不涉及延迟、质量或限额，本评测没有测量这些。',
         columns: ['服务商', 'GPT OSS 120B 输入 / 输出', 'H100 每小时'],
         rows: [
           { '服务商': 'Novita AI', 'GPT OSS 120B 输入 / 输出': '$0.05 / $0.25', 'H100 每小时': '未核实' },
@@ -1924,7 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Novita AI 产品与常见任务的匹配程度，从适配度高到低（PromptQuorum 评估）。**',
         items: [
           '**适配度高：** 用类 OpenAI 的客户端和按 token 计费，针对开放权重模型做应用原型。',
-          '**适配度高：** 在 LlamaIndex 中使用有文档说明的 `NovitaAI` 类和 BGE-M3 等嵌入模型（每 100 万 token $0.01）搭建 RAG 流程。',
+          '**适配度高：** 在 LlamaIndex 中使用有文档说明的 `NovitaAI` 类和 BGE-M3 等嵌入模型（定价页标价每 100 万 token $0.01，核实于 2026-11-22）搭建 RAG 流程。',
           '**适配度较好：** 通过 Serverless GPU 对你自己的模型做突发推理，只在请求运行期间付费。',
           '**适配度较弱：** 需要公布的固定小时费率的长时间训练；请先确认实时 GPU 费率，或参阅我们的 [vLLM 详解](/zh/power-local-llm/vllm-explained)了解自托管服务选项。',
           '**适配度差：** 需要加密货币付款，或需要可退回的预付资金的负载。',
@@ -2080,7 +2080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Novita AI 리뷰 2026: 토큰 단위 모델 API 가격, GPU 인스턴스 과금, Serverless GPU, LlamaIndex 가이드, Together AI·Fireworks 비교.',
     twitterDescription:
-      'Novita AI(2026): 모델 API는 입력 100만 토큰당 $0.05부터(GPT OSS 120B), GPU는 초 단위 과금, Serverless GPU 제공. 평가 점수표, 과금 규정, Together AI·Fireworks 비교.',
+      'Novita AI(2026): 모델 API는 입력 100만 토큰당 $0.05부터(GPT OSS 120B, 목록 가격, 2026-11-22 확인), GPU는 초 단위 과금, Serverless GPU 제공. 평가 점수표, 과금 규정, Together AI·Fireworks 비교.',
     readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     audience: '호스팅 모델 API, 대여 GPU 인스턴스, Serverless GPU 중에서 선택하려는 개발자',
@@ -2100,13 +2100,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: 'Novita AI는 무엇이며 누구에게 적합합니까?',
         answer:
-          'Novita AI는 토큰 단위 모델 API 카탈로그, 온디맨드 GPU 인스턴스, Serverless GPU를 제공하는 개발자 플랫폼이며 Stripe를 통해 USD로 결제합니다. 하드웨어를 직접 운영하지 않고 Llama, DeepSeek, Qwen, GPT OSS 같은 오픈 웨이트 모델을 OpenAI 방식의 API로 쓰고 싶고, 가끔 맞춤형 작업용 GPU가 필요한 팀에 적합합니다. 커뮤니티가 호스팅하는 머신의 마켓플레이스가 아니며, 과금 FAQ에 따르면 암호화폐는 받지 않습니다. 이번 확인에서는 공식 페이지에서 GPU별 시간당 요금을 읽을 수 없었으므로 GPU 작업은 먼저 콘솔에서 가격을 확인하십시오.',
+          'Novita AI는 토큰 단위 모델 API 카탈로그, 온디맨드 GPU 인스턴스, Serverless GPU를 제공하는 개발자 플랫폼이며 Stripe를 통해 USD로 결제합니다. 하드웨어를 직접 운영하지 않고 Llama, DeepSeek, Qwen, GPT OSS 같은 오픈 웨이트 모델을 OpenAI 방식의 API로 쓰고 싶고, 가끔 맞춤형 작업용 GPU가 필요한 팀에 적합합니다. Novita는 커뮤니티가 호스팅하는 머신의 마켓플레이스가 아니라 자체 GPU 클라우드라고 설명하며, 과금 FAQ에 따르면 암호화폐는 받지 않습니다. 이번 확인에서는 공식 페이지에서 GPU별 시간당 요금을 읽을 수 없었으므로 GPU 작업은 먼저 콘솔에서 가격을 확인하십시오.',
         bullets: [
           '모델 API: GPT OSS 120B 입력/출력 100만 토큰당 $0.05 / $0.25 (2026-11-22 확인)',
           'GPU 인스턴스: 초 단위 과금, 1시간 단위 정산, Pulling 상태부터 과금',
           'Serverless GPU: 초 단위 과금, Novita 안내 기준 30초 만에 0으로 축소',
-          '결제: Stripe 카드만 가능, "암호화폐 결제는 지원하지 않음"',
-          '환불: "일반적으로 불가"이며 예외는 지원팀을 통해 처리',
+          '결제: Stripe 카드만 가능, "Cryptocurrency payments are not supported" (암호화폐 결제는 지원하지 않음)',
+          '환불: "Refunds are generally not available" (일반적으로 불가)이며 예외는 지원팀을 통해 처리',
         ],
         updatedDate: '2026-11',
       },
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '지원 및 문서', '점수': '8/10', '근거': '문서가 과금, 인스턴스, 통합을 다룸' },
           { '항목': '종합', '점수': '7.8/10', '근거': 'API 제품은 강점, GPU 요금은 콘솔에서 확인' },
         ],
-        note: '모든 점수는 공식 페이지에서 도출한 PromptQuorum의 평가이며("평가 방법" 참조), PromptQuorum이 플랫폼에서 워크로드를 실행한 결과가 아닙니다.',
+        note: '모든 점수는 공식 페이지에서 도출한 PromptQuorum의 평가이며("평가 방법" 참조), PromptQuorum이 플랫폼에서 워크로드를 실행한 결과가 아닙니다. 종합 점수는 편집상의 가중치이며 산술 평균이 아닙니다.',
       },
       tldr: {
         id: 'tldr',
@@ -2188,7 +2188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론: Novita AI를 써야 하는 사람',
         content:
-          '**원하는 것이 모델 API라면 Novita AI를 사용하십시오. 오픈 웨이트 모델을 낮은 토큰당 요금과 OpenAI 방식 인터페이스로 쓸 수 있습니다.** 2026-11-22에 확인한 가격 페이지에서 GPT OSS 120B는 입력/출력 100만 토큰당 $0.05 / $0.25로 표시되어 있고, Together AI와 Fireworks는 $0.15 / $0.60으로 표시합니다(Together AI의 입력 요금은 "(캐시)"로 표기되어 있습니다).\n\n**GPU 작업은 가격만 보고 선택하지 마십시오. 확인한 공식 페이지에는 GPU별 시간당 요금이 나와 있지 않았습니다.** 콘솔을 열어 해당 카드의 실시간 요금을 확인하고, 결정하기 전에 [클라우드 GPU 시간당 비용](/ko/prompt-bites/cloud-gpu-cost-per-hour)의 수치와 비교하십시오. 기본적으로 환불이 불가하므로 소액 테스트 충전부터 시작하는 것이 현명합니다.',
+          '**원하는 것이 모델 API라면 Novita AI를 사용하십시오. 오픈 웨이트 모델을 낮은 토큰당 요금과 OpenAI 방식 인터페이스로 쓸 수 있습니다.** 2026-11-22에 확인한 가격 페이지에서 GPT OSS 120B는 입력/출력 100만 토큰당 $0.05 / $0.25로 표시되어 있고, Together AI와 Fireworks는 $0.15 / $0.60으로 표시합니다(Together AI의 입력 요금은 "(cached)"로 표기되어 있습니다).\n\n**GPU 작업은 가격만 보고 선택하지 마십시오. 확인한 공식 페이지에는 GPU별 시간당 요금이 나와 있지 않았습니다.** 콘솔을 열어 해당 카드의 실시간 요금을 확인하고, 결정하기 전에 [클라우드 GPU 시간당 비용](/ko/prompt-bites/cloud-gpu-cost-per-hour)의 수치와 비교하십시오. 기본적으로 환불이 불가하므로 소액 테스트 충전부터 시작하는 것이 현명합니다.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -2222,8 +2222,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPU 인스턴스 과금(문서, 2026-11-22 확인):** 단가 x 사용 시간 x 카드 수이며, 초 단위로 정확하게 계산하고 1시간 단위로 정산합니다. [GPU 인스턴스 가격 문서](https://docs.novita.ai/guides/gpu-instance-pricing)를 참고하십시오.',
           '**스토리지(같은 문서):** 컨테이너 디스크 처음 60 GB는 무료이고 이후 GB당 하루 $0.005, 볼륨 디스크는 GB당 하루 $0.005, 네트워크 볼륨은 GB당 하루 $0.002입니다.',
           '**GPU 시간당 요금:** 미확인. 실시간 표는 [GPU 가격 페이지](https://novita.ai/gpus)와 콘솔에 있으며, Novita는 2026-03-16부터 GPU 가격 조정이 적용된다고 안내하므로 다른 곳의 이전 수치는 오래되었을 수 있습니다.',
-          '**Serverless 요금:** 미확인. Novita는 스팟 가격으로 "최대 50%" 절약할 수 있다고 안내하지만 페이지 본문에는 요금이 나와 있지 않습니다.',
-          '**결제:** Stripe가 처리하며, 과금 FAQ에 따르면 암호화폐는 지원하지 않습니다. 일부 지역에서는 현지 전자 지갑을 제공할 수 있습니다. 결제는 USD로 청구되므로 카드로 결제하면 카드 발급사가 해외 결제 수수료를 부과할 수 있습니다.',
+          '**Serverless 요금:** 미확인. Novita는 스팟 가격으로 "up to 50%" (최대 50%) 절약할 수 있다고 안내하지만 페이지 본문에는 요금이 나와 있지 않습니다.',
+          '**결제:** Stripe가 처리하며, 과금 FAQ에 따르면 암호화폐는 지원하지 않습니다. 일부 지역에서는 현지 전자 지갑을 제공할 수 있습니다.',
           '가격은 자주 바뀝니다. 모든 수치는 한 시점의 스냅샷으로 보고 실시간 페이지에서 확인하십시오.',
         ],
         affiliateLinks: [
@@ -2235,7 +2235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '모델 API vs Together AI·Fireworks',
         content:
-          '**세 곳 모두 표시한 모델인 GPT OSS 120B에서 Novita AI는 2026-11-22에 확인한 페이지 기준 토큰당 가격이 가장 낮습니다(Together AI의 입력 요금은 "(캐시)"로 표기되어 있습니다).** 이 비교는 목록 가격만 다루며, 이 리뷰에서 측정하지 않은 지연 시간, 품질, 한도는 포함하지 않습니다.',
+          '**2026-11-22에 확인한 가격 페이지에서 Novita AI는 GPT OSS 120B를 입력/출력 100만 토큰당 $0.05 / $0.25로 표시하고, Together AI와 Fireworks는 $0.15 / $0.60으로 표시합니다(Together AI의 입력 요금은 "(cached)"로 표기되어 있습니다).** 이 비교는 목록 가격만 다루며, 이 리뷰에서 측정하지 않은 지연 시간, 품질, 한도는 포함하지 않습니다.',
         columns: ['제공업체', 'GPT OSS 120B 입력/출력', 'H100 시간당'],
         rows: [
           { '제공업체': 'Novita AI', 'GPT OSS 120B 입력/출력': '$0.05 / $0.25', 'H100 시간당': '미확인' },
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '제공업체': '[Fireworks](https://fireworks.ai/pricing)', 'GPT OSS 120B 입력/출력': '$0.15 / $0.60', 'H100 시간당': '$8.00 온디맨드' },
         ],
         items: [
-          'Together AI는 GPT OSS 120B 입력 요금을 "(캐시)"로 표시하므로, 캐시되지 않은 입력 요금은 모델 페이지에서 확인하십시오.',
+          'Together AI는 GPT OSS 120B 입력 요금을 "(cached)"로 표시하므로, 캐시되지 않은 입력 요금은 모델 페이지에서 확인하십시오.',
           'H100 수치는 서로 다른 제품입니다. Together AI는 전용 추론, Fireworks는 온디맨드 배포를 표시합니다. 동일 조건의 견적이 아닙니다.',
           'Fireworks는 리전 제한 배포의 가격이 1.5배라고 안내합니다.',
         ],
@@ -2267,7 +2267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Novita AI 제품과 일반적인 작업의 적합도를 강한 순서에서 약한 순서로 정리했습니다(PromptQuorum 평가).**',
         items: [
           '**매우 적합:** OpenAI 방식 클라이언트와 토큰 단위 과금으로 오픈 웨이트 모델 기반 앱을 프로토타이핑하는 경우.',
-          '**매우 적합:** 문서화된 `NovitaAI` 클래스와 BGE-M3(100만 토큰당 $0.01) 같은 임베딩 모델을 사용하는 LlamaIndex RAG 파이프라인.',
+          '**매우 적합:** 문서화된 `NovitaAI` 클래스와 BGE-M3(가격 페이지에 100만 토큰당 $0.01로 표시, 2026-11-22 확인) 같은 임베딩 모델을 사용하는 LlamaIndex RAG 파이프라인.',
           '**적합:** 요청이 실행되는 동안에만 비용을 내는 Serverless GPU로 내 모델을 간헐적으로 추론하는 경우.',
           '**덜 적합:** 공개된 고정 시간당 요금이 필요한 장시간 학습. 먼저 실시간 GPU 요금을 확인하거나, 자체 호스팅 서빙 옵션은 [vLLM 설명](/ko/power-local-llm/vllm-explained)을 참고하십시오.',
           '**부적합:** 암호화폐 결제나 돌려받을 수 있는 선불 금액이 필요한 워크로드.',
@@ -2281,7 +2281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**과금 모델:** USD, 종량제. GPU 컴퓨팅은 초 단위로 과금하고 1시간 단위로 정산하며, 모델 API는 토큰 단위로 과금합니다.',
           '**결제:** 모든 결제는 Stripe가 처리하며 카드가 가능하고, FAQ에 암호화폐 결제는 지원하지 않는다고 나와 있습니다.',
-          '**환불:** FAQ에 "환불은 일반적으로 불가"라고 나와 있습니다. 서비스를 전혀 이용할 수 없는 경우 같은 예외적인 상황에서는 지원팀에 환불을 요청할 수 있습니다.',
+          '**환불:** FAQ에 "Refunds are generally not available" (환불은 일반적으로 불가)라고 나와 있습니다. 서비스를 전혀 이용할 수 없는 경우 같은 예외적인 상황에서는 지원팀에 환불을 요청할 수 있습니다.',
           '**크레딧:** 한 기기에서 여러 계정을 만드는 등 의심스러운 가입 활동이 감지되면 가입 크레딧 바우처가 회수될 수 있습니다.',
           '**하드웨어 출처:** Novita는 전 세계 리전을 갖춘 자체 GPU 클라우드라고 설명합니다. 리전 수가 페이지마다 다르므로 숫자는 기재하지 않았습니다.',
           '**데이터 처리:** 확인한 페이지에서 프롬프트 저장이나 보관에 대한 설명을 읽을 수 없었습니다: 미확인. 민감한 데이터를 보내기 전에 [개인정보 처리방침](https://novita.ai/legal/privacy-policy)과 약관을 읽으십시오.',
@@ -2423,7 +2423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Análise Novita AI 2026: preços da API por token, cobrança de GPU, GPUs serverless, guia do LlamaIndex e comparação com Together AI e Fireworks.',
     twitterDescription:
-      'Novita AI (2026): API de modelos a partir de US$ 0.05 por 1M de tokens de entrada (GPT OSS 120B), GPU cobrada por segundo, GPUs serverless. Scorecard, regras de cobrança e comparação com Together AI e Fireworks.',
+      'Novita AI (2026): API de modelos a partir de US$ 0,05 por 1M de tokens de entrada (GPT OSS 120B, preço de tabela, conferido em 2026-11-22), GPU cobrada por segundo, GPUs serverless. Scorecard, regras de cobrança e comparação com Together AI e Fireworks.',
     readTime: '9 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores que escolhem entre uma API de modelos hospedada, instâncias de GPU alugadas e GPUs serverless',
@@ -2438,14 +2438,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'novita ai vs together ai',
     ],
     leadAnswerBlock:
-      '**A Novita AI é uma plataforma de pagamento por uso cujo produto principal é uma API de modelos: sua [página oficial de preços](https://novita.ai/pricing) lista o OpenAI GPT OSS 120B a US$ 0.05 por 1M de tokens de entrada e US$ 0.25 por 1M de tokens de saída, e o Llama 3.3 70B Instruct a US$ 0.135 de entrada e US$ 0.4 de saída (conferido em 2026-11-22).** Ela também aluga instâncias de GPU cobradas por segundo e oferece GPUs serverless. Avaliação do PromptQuorum, baseada em páginas oficiais e documentação, e não em um teste prático: 7.8/10 no geral. As tarifas por hora de cada GPU não puderam ser lidas nas páginas oficiais nesta verificação, então confirme-as no console. Os reembolsos são descritos como geralmente indisponíveis.',
+      '**A Novita AI é uma plataforma de pagamento por uso cujo produto principal é uma API de modelos: sua [página oficial de preços](https://novita.ai/pricing) lista o OpenAI GPT OSS 120B a US$ 0,05 por 1M de tokens de entrada e US$ 0,25 por 1M de tokens de saída, e o Llama 3.3 70B Instruct a US$ 0,135 de entrada e US$ 0,4 de saída (conferido em 2026-11-22).** Ela também aluga instâncias de GPU cobradas por segundo e oferece GPUs serverless. Avaliação do PromptQuorum, baseada em páginas oficiais e documentação, e não em um teste prático: 7,8/10 no geral. As tarifas por hora de cada GPU não puderam ser lidas nas páginas oficiais nesta verificação, então confirme-as no console. Os reembolsos são descritos como geralmente indisponíveis.',
     quickAnswerTop: {
       pt: {
         question: 'O que é a Novita AI e para quem ela serve?',
         answer:
-          'A Novita AI é uma plataforma para desenvolvedores com um catálogo de APIs de modelos cobradas por token, instâncias de GPU sob demanda e GPUs serverless, cobradas em USD via Stripe. Serve para equipes que querem modelos de pesos abertos, como Llama, DeepSeek, Qwen e GPT OSS, atrás de uma API no estilo da OpenAI sem operar hardware, e que às vezes precisam de uma GPU para uma carga personalizada. Não é um marketplace de máquinas hospedadas pela comunidade e, segundo o FAQ de cobrança, não aceita criptomoedas. As tarifas por hora de cada GPU não puderam ser lidas nas páginas oficiais nesta verificação, então estime o custo de trabalho em GPU primeiro no console.',
+          'A Novita AI é uma plataforma para desenvolvedores com um catálogo de APIs de modelos cobradas por token, instâncias de GPU sob demanda e GPUs serverless, cobradas em USD via Stripe. Serve para equipes que querem modelos de pesos abertos, como Llama, DeepSeek, Qwen e GPT OSS, atrás de uma API no estilo da OpenAI sem operar hardware, e que às vezes precisam de uma GPU para uma carga personalizada. A Novita descreve a própria nuvem de GPU, e não um marketplace de máquinas hospedadas pela comunidade, e, segundo o FAQ de cobrança, não aceita criptomoedas. As tarifas por hora de cada GPU não puderam ser lidas nas páginas oficiais nesta verificação, então estime o custo de trabalho em GPU primeiro no console.',
         bullets: [
-          'API de modelos: GPT OSS 120B a US$ 0.05 / US$ 0.25 por 1M de tokens de entrada / saída (conferido em 2026-11-22)',
+          'API de modelos: GPT OSS 120B a US$ 0,05 / US$ 0,25 por 1M de tokens de entrada / saída (conferido em 2026-11-22)',
           'Instâncias de GPU: cobradas por segundo, liquidadas por hora, a partir do status Pulling',
           'GPUs serverless: cobrança por segundo, escala a zero em 30 s conforme a Novita informa',
           'Pagamentos: somente cartões via Stripe; "Cryptocurrency payments are not supported"',
@@ -2472,7 +2472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Perguntas Frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'A Novita AI é uma plataforma de pagamento por uso que oferece uma API de modelos cobrada por token, instâncias de GPU cobradas por segundo e GPUs serverless, com o GPT OSS 120B listado a US$ 0.05 por 1M de tokens de entrada (conferido em 2026-11-22).' },
+      { type: 'one-sentence', content: 'A Novita AI é uma plataforma de pagamento por uso que oferece uma API de modelos cobrada por token, instâncias de GPU cobradas por segundo e GPUs serverless, com o GPT OSS 120B listado a US$ 0,05 por 1M de tokens de entrada (conferido em 2026-11-22).' },
       { type: 'plain-terms', content: 'Pense na Novita AI como uma loja de computação para IA com três balcões. Um vende respostas de modelos prontos, por palavra. Outro aluga uma placa de vídeo inteira, por segundo. O terceiro executa o seu próprio código em uma placa só enquanto chegam requisições. A maioria das pessoas só precisa do primeiro balcão.' },
     ],
     sections: {
@@ -2494,7 +2494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Você precisa de termos de residência ou retenção de dados garantidos que tenha verificado por escrito',
         ],
         affiliateLinks: [
-          { label: 'Ver preços da Novita AI →', url: 'https://novita.ai/pricing', productName: 'Novita AI', productCategory: 'Model API and GPU cloud', priceRange: 'GPT OSS 120B a partir de US$ 0.05 por 1M de tokens de entrada' },
+          { label: 'Ver preços da Novita AI →', url: 'https://novita.ai/pricing', productName: 'Novita AI', productCategory: 'Model API and GPU cloud', priceRange: 'GPT OSS 120B a partir de US$ 0,05 por 1M de tokens de entrada' },
         ],
       },
       scorecard: {
@@ -2505,14 +2505,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Avaliação do PromptQuorum, baseada em páginas e documentação oficiais da Novita AI conferidas em 2026-11-22. Não é um teste prático em laboratório.** As notas refletem a adequação para desenvolvedores que querem modelos abertos hospedados e GPUs opcionais.',
         columns: ['Categoria', 'Nota', 'Por quê'],
         rows: [
-          { Categoria: 'Preço', Nota: '8.5/10', 'Por quê': 'Tarifas por token baixas; tarifas por hora de GPU ilegíveis' },
+          { Categoria: 'Preço', Nota: '8,5/10', 'Por quê': 'Tarifas por token baixas; tarifas por hora de GPU ilegíveis' },
           { Categoria: 'Confiabilidade', Nota: 'Não avaliado', 'Por quê': 'Sem uptime verificado; nota só pelo desenho declarado' },
-          { Categoria: 'Facilidade de configuração', Nota: '8.5/10', 'Por quê': 'Chave de API e nome do modelo; passos do LlamaIndex' },
+          { Categoria: 'Facilidade de configuração', Nota: '8,5/10', 'Por quê': 'Chave de API e nome do modelo; passos do LlamaIndex' },
           { Categoria: 'Escolha de GPU', Nota: '7/10', 'Por quê': 'Tipos e tarifas de GPU ilegíveis nas páginas verificadas' },
           { Categoria: 'Suporte e documentação', Nota: '8/10', 'Por quê': 'Docs cobrem cobrança, instâncias e integrações' },
-          { Categoria: 'Geral', Nota: '7.8/10', 'Por quê': 'API forte; confirme as tarifas de GPU no console' },
+          { Categoria: 'Geral', Nota: '7,8/10', 'Por quê': 'API forte; confirme as tarifas de GPU no console' },
         ],
-        note: 'Toda nota é avaliação do PromptQuorum, derivada de páginas oficiais (veja "Como Avaliamos"), e não de cargas de trabalho executadas pelo PromptQuorum na plataforma.',
+        note: 'Toda nota é avaliação do PromptQuorum, derivada de páginas oficiais (veja "Como Avaliamos"), e não de cargas de trabalho executadas pelo PromptQuorum na plataforma. A nota geral é uma ponderação editorial, não uma média aritmética.',
       },
       tldr: {
         id: 'tldr',
@@ -2520,18 +2520,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'A Novita AI vende três coisas em uma só conta: uma API de modelos, instâncias de GPU e GPUs serverless',
-          'O GPT OSS 120B está listado a US$ 0.05 de entrada / US$ 0.25 de saída por 1M de tokens; o Llama 3.3 70B Instruct a US$ 0.135 / US$ 0.4 (conferido em 2026-11-22)',
-          'As instâncias de GPU são cobradas por segundo e liquidadas por hora; o armazenamento além dos primeiros 60 GB de disco do contêiner custa US$ 0.005 por GB por dia',
+          'O GPT OSS 120B está listado a US$ 0,05 de entrada / US$ 0,25 de saída por 1M de tokens; o Llama 3.3 70B Instruct a US$ 0,135 / US$ 0,4 (conferido em 2026-11-22)',
+          'As instâncias de GPU são cobradas por segundo e liquidadas por hora; o armazenamento além dos primeiros 60 GB de disco do contêiner custa US$ 0,005 por GB por dia',
           'Os pagamentos passam pelo Stripe; criptomoedas não são aceitas; reembolsos geralmente não estão disponíveis',
           'As tarifas por hora de cada GPU não puderam ser lidas nas páginas oficiais nesta verificação: não verificado',
-          'A Together AI e a Fireworks listam o GPT OSS 120B a US$ 0.15 de entrada / US$ 0.60 de saída por 1M de tokens nas próprias páginas de preços',
+          'A Together AI e a Fireworks listam o GPT OSS 120B a US$ 0,15 de entrada / US$ 0,60 de saída por 1M de tokens nas próprias páginas de preços',
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Veredito: Quem Deve Usar',
         content:
-          '**Use a Novita AI se o que você quer é a API de modelos: modelos de pesos abertos a tarifas baixas por token, com uma interface no estilo da OpenAI.** Nas páginas de preços conferidas em 2026-11-22, o GPT OSS 120B aparece a US$ 0.05 / US$ 0.25 por 1M de tokens de entrada / saída, contra US$ 0.15 / US$ 0.60 na Together AI e na Fireworks (a tarifa de entrada da Together AI aparece como "(cached)").\n\n**Não escolha a Novita AI para trabalho em GPU apenas pelo preço, porque as páginas oficiais verificadas não exibiam tarifas por hora de cada GPU.** Abra o console, leia a tarifa atual da placa exata e compare com os números de [custo de GPU na nuvem por hora](/pt/prompt-bites/cloud-gpu-cost-per-hour) antes de se comprometer. A regra de não reembolso torna recargas pequenas de teste o primeiro passo sensato.',
+          '**Use a Novita AI se o que você quer é a API de modelos: modelos de pesos abertos a tarifas baixas por token, com uma interface no estilo da OpenAI.** Nas páginas de preços conferidas em 2026-11-22, o GPT OSS 120B aparece a US$ 0,05 / US$ 0,25 por 1M de tokens de entrada / saída, contra US$ 0,15 / US$ 0,60 na Together AI e na Fireworks (a tarifa de entrada da Together AI aparece como "(cached)").\n\n**Não escolha a Novita AI para trabalho em GPU apenas pelo preço, porque as páginas oficiais verificadas não exibiam tarifas por hora de cada GPU.** Abra o console, leia a tarifa atual da placa exata e compare com os números de [custo de GPU na nuvem por hora](/pt/prompt-bites/cloud-gpu-cost-per-hour) antes de se comprometer. A regra de não reembolso torna recargas pequenas de teste o primeiro passo sensato.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -2554,16 +2554,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**As tarifas da API de modelos são públicas e baixas; as tarifas por hora de GPU não puderam ser lidas nas páginas oficiais verificadas, então nenhuma é citada aqui.** Todos os valores estão em USD por 1M de tokens, da [página oficial de preços](https://novita.ai/pricing), conferida em 2026-11-22.',
         columns: ['Modelo', 'Entrada / saída', 'Contexto'],
         rows: [
-          { Modelo: 'OpenAI GPT OSS 120B', 'Entrada / saída': '$0.05 / $0.25', Contexto: '131K' },
-          { Modelo: 'Llama 3.1 8B Instruct', 'Entrada / saída': '$0.02 / $0.05', Contexto: '16K' },
-          { Modelo: 'Llama 3.3 70B Instruct', 'Entrada / saída': '$0.135 / $0.4', Contexto: '12K' },
-          { Modelo: 'Gemma 3 27B', 'Entrada / saída': '$0.119 / $0.2', Contexto: '98K' },
-          { Modelo: 'Qwen3.5 27B', 'Entrada / saída': '$0.3 / $2.4', Contexto: '262K' },
-          { Modelo: 'DeepSeek R1 0528', 'Entrada / saída': '$0.7 / $2.5', Contexto: '164K' },
+          { Modelo: 'OpenAI GPT OSS 120B', 'Entrada / saída': '$0,05 / $0,25', Contexto: '131K' },
+          { Modelo: 'Llama 3.1 8B Instruct', 'Entrada / saída': '$0,02 / $0,05', Contexto: '16K' },
+          { Modelo: 'Llama 3.3 70B Instruct', 'Entrada / saída': '$0,135 / $0,4', Contexto: '12K' },
+          { Modelo: 'Gemma 3 27B', 'Entrada / saída': '$0,119 / $0,2', Contexto: '98K' },
+          { Modelo: 'Qwen3.5 27B', 'Entrada / saída': '$0,3 / $2,4', Contexto: '262K' },
+          { Modelo: 'DeepSeek R1 0528', 'Entrada / saída': '$0,7 / $2,5', Contexto: '164K' },
         ],
         items: [
           '**Cobrança de instâncias de GPU (docs, conferido em 2026-11-22):** preço unitário x duração x número de placas, com precisão de segundo e liquidado por hora; veja a [documentação de preços de instâncias de GPU](https://docs.novita.ai/guides/gpu-instance-pricing).',
-          '**Armazenamento (mesma documentação):** os primeiros 60 GB de disco do contêiner são gratuitos, depois US$ 0.005 por GB por dia; disco de volume US$ 0.005 por GB por dia; volume de rede US$ 0.002 por GB por dia.',
+          '**Armazenamento (mesma documentação):** os primeiros 60 GB de disco do contêiner são gratuitos, depois US$ 0,005 por GB por dia; disco de volume US$ 0,005 por GB por dia; volume de rede US$ 0,002 por GB por dia.',
           '**Tarifas por hora de GPU:** não verificado. A tabela atual está na [página de preços de GPU](https://novita.ai/gpus) e no console; a Novita também menciona um ajuste de preços de GPU em vigor desde 2026-03-16, então valores mais antigos em outros lugares podem estar desatualizados.',
           '**Tarifas serverless:** não verificado; a Novita afirma que o preço spot pode economizar "up to 50%" sem listar tarifas no texto da página.',
           '**Pagamentos:** processados pelo Stripe; segundo o FAQ de cobrança, criptomoedas não são aceitas. Algumas regiões podem oferecer carteiras locais.',
@@ -2578,17 +2578,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'API de Modelos vs Together AI e Fireworks',
         content:
-          '**Para o único modelo que as três listam, o GPT OSS 120B, a Novita AI mostra o menor preço por token nas páginas conferidas em 2026-11-22 (a tarifa de entrada da Together AI aparece como "(cached)").** A comparação cobre apenas preços de tabela, e não latência, qualidade ou limites, que esta análise não mediu.',
+          '**Nas páginas de preços conferidas em 2026-11-22, a Novita AI lista o GPT OSS 120B a US$ 0,05 / US$ 0,25 por 1M de tokens de entrada / saída, contra US$ 0,15 / US$ 0,60 na Together AI e na Fireworks (a tarifa de entrada da Together AI aparece como "(cached)").** A comparação cobre apenas preços de tabela, e não latência, qualidade ou limites, que esta análise não mediu.',
         columns: ['Provedor', 'GPT OSS 120B ent. / saí.', 'H100 por hora'],
         rows: [
-          { Provedor: 'Novita AI', 'GPT OSS 120B ent. / saí.': '$0.05 / $0.25', 'H100 por hora': 'Não verificado' },
-          { Provedor: '[Together AI](https://www.together.ai/pricing)', 'GPT OSS 120B ent. / saí.': '$0.15 / $0.60', 'H100 por hora': '$5.49 dedicada' },
-          { Provedor: '[Fireworks](https://fireworks.ai/pricing)', 'GPT OSS 120B ent. / saí.': '$0.15 / $0.60', 'H100 por hora': '$8.00 sob demanda' },
+          { Provedor: 'Novita AI', 'GPT OSS 120B ent. / saí.': '$0,05 / $0,25', 'H100 por hora': 'Não verificado' },
+          { Provedor: '[Together AI](https://www.together.ai/pricing)', 'GPT OSS 120B ent. / saí.': '$0,15 / $0,60', 'H100 por hora': '$5,49 dedicada' },
+          { Provedor: '[Fireworks](https://fireworks.ai/pricing)', 'GPT OSS 120B ent. / saí.': '$0,15 / $0,60', 'H100 por hora': '$8,00 sob demanda' },
         ],
         items: [
           'A Together AI lista a tarifa de entrada do GPT OSS 120B como "(cached)", então confirme a tarifa de entrada sem cache na página do modelo.',
           'Os valores da H100 são produtos diferentes: a Together AI lista inferência dedicada, a Fireworks lista implantações sob demanda. Não são cotações equivalentes.',
-          'A Fireworks informa que implantações restritas a uma região custam 1.5x.',
+          'A Fireworks informa que implantações restritas a uma região custam 1,5x.',
         ],
       },
       inferenceFit: {
@@ -2596,7 +2596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Adequação para LLMs Locais',
         content:
-          '**A Novita AI é uma forma de rodar modelos que não cabem na sua placa, sem alugar uma GPU inteira.** Nossa [tabela de VRAM dos modelos DeepSeek-R1 distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) coloca o distill de 32B em cerca de 20.5 GB e o de 70B em cerca de 44 GB em Q4_K_M, e é por isso que modelos grandes costumam ir para uma API ou para um aluguel com várias GPUs.',
+          '**A Novita AI é uma forma de rodar modelos que não cabem na sua placa, sem alugar uma GPU inteira.** Nossa [tabela de VRAM dos modelos DeepSeek-R1 distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) coloca o distill de 32B em cerca de 20,5 GB e o de 70B em cerca de 44 GB em Q4_K_M, e é por isso que modelos grandes costumam ir para uma API ou para um aluguel com várias GPUs.',
         items: [
           '**O modelo cabe na sua placa:** rode-o localmente; veja [quanta VRAM um LLM local precisa](/pt/local-llms/how-much-vram-local-llm).',
           '**O modelo não cabe:** chame-o pela API de modelos da Novita, por token, em vez de alugar um Pod por hora.',
@@ -2610,7 +2610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Correspondências entre os produtos da Novita AI e tarefas comuns, da melhor à pior adequação (avaliação do PromptQuorum).**',
         items: [
           '**Ótima adequação:** prototipar um aplicativo com modelos de pesos abertos usando um cliente no estilo da OpenAI e cobrança por token.',
-          '**Ótima adequação:** pipelines de RAG no LlamaIndex usando a classe documentada `NovitaAI` e um modelo de embeddings como o BGE-M3 (US$ 0.01 por 1M de tokens).',
+          '**Ótima adequação:** pipelines de RAG no LlamaIndex usando a classe documentada `NovitaAI` e um modelo de embeddings como o BGE-M3 (listado a US$ 0,01 por 1M de tokens na página de preços, conferido em 2026-11-22).',
           '**Boa adequação:** inferência em rajadas com o seu próprio modelo em GPUs serverless, pagando só enquanto as requisições rodam.',
           '**Adequação mais fraca:** treinamento de longa duração que exige uma tarifa horária fixa e publicada; confirme antes a tarifa atual da GPU, ou veja nosso [guia do vLLM](/pt/power-local-llm/vllm-explained) para opções de serviço auto-hospedado.',
           '**Adequação ruim:** cargas que exigem pagamento em cripto ou dinheiro pré-pago que você possa recuperar.',
@@ -2637,7 +2637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Uma API de baixo custo com GPUs opcionais; as lacunas estão nas tarifas de GPU publicadas e nos reembolsos.**',
         items: [
           '**Prós**',
-          'GPT OSS 120B listado a US$ 0.05 / US$ 0.25 por 1M de tokens',
+          'GPT OSS 120B listado a US$ 0,05 / US$ 0,25 por 1M de tokens',
           'Cobrança de GPU por segundo, sem arredondar para a hora',
           'Integração documentada com o LlamaIndex',
           'Desconto de inferência em lote descrito na página de preços',
@@ -2695,14 +2695,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas Frequentes',
         faqs: [
           { q: 'O que é a Novita AI?', a: 'A Novita AI é uma plataforma para desenvolvedores com um catálogo de APIs de modelos cobradas por token, instâncias de GPU cobradas por segundo e GPUs serverless. Os pagamentos são processados pelo Stripe. Esta resposta reflete as páginas oficiais da Novita AI conferidas em 2026-11-22.' },
-          { q: 'Quanto custa a API de modelos da Novita AI?', a: 'Na página oficial de preços conferida em 2026-11-22, o GPT OSS 120B custa US$ 0.05 por 1M de tokens de entrada e US$ 0.25 por 1M de tokens de saída, o Llama 3.1 8B Instruct custa US$ 0.02 / US$ 0.05 e o Llama 3.3 70B Instruct custa US$ 0.135 / US$ 0.4. Os preços mudam, então confirme na página atual.' },
-          { q: 'Como as instâncias de GPU da Novita AI são cobradas?', a: 'A computação é preço unitário x duração x número de placas, com precisão de segundo e liquidada por hora. A cobrança começa quando a instância chega ao status Pulling e termina quando você a para. O armazenamento além dos primeiros 60 GB de disco do contêiner custa US$ 0.005 por GB por dia.' },
+          { q: 'Quanto custa a API de modelos da Novita AI?', a: 'Na página oficial de preços conferida em 2026-11-22, o GPT OSS 120B custa US$ 0,05 por 1M de tokens de entrada e US$ 0,25 por 1M de tokens de saída, o Llama 3.1 8B Instruct custa US$ 0,02 / US$ 0,05 e o Llama 3.3 70B Instruct custa US$ 0,135 / US$ 0,4. Os preços mudam, então confirme na página atual.' },
+          { q: 'Como as instâncias de GPU da Novita AI são cobradas?', a: 'A computação é preço unitário x duração x número de placas, com precisão de segundo e liquidada por hora. A cobrança começa quando a instância chega ao status Pulling e termina quando você a para. O armazenamento além dos primeiros 60 GB de disco do contêiner custa US$ 0,005 por GB por dia.' },
           { q: 'Quais são os preços por hora das GPUs da Novita AI?', a: 'Não verificado. A documentação oficial aponta para a página atual de preços de GPU, cuja tabela de tarifas não pôde ser lida nesta verificação. Abra o console para ver a tarifa atual da GPU, da região e do produto exatos que você quer.' },
           { q: 'A Novita AI oferece GPUs serverless?', a: 'Sim. A Novita informa cobrança por segundo, escala a zero em 30 segundos e inicialização em menos de um segundo após o pré-aquecimento. Ela não informa o tempo de cold start para instâncias que não foram pré-aquecidas, e nenhuma tarifa serverless pôde ser lida nesta verificação.' },
           { q: 'A Novita AI funciona com o LlamaIndex?', a: 'Sim. O guia oficial orienta você a copiar o nome de um modelo da Model Library, criar uma chave de API nas configurações da plataforma, instalar o LlamaIndex e usar a classe NovitaAI. O pacote llama-index-llms-novita está listado no PyPI.' },
           { q: 'Posso pagar a Novita AI com criptomoedas?', a: 'Não. O FAQ de cobrança afirma que pagamentos em criptomoedas não são aceitos. Os pagamentos são processados pelo Stripe com cartões de crédito e débito, e algumas regiões podem oferecer carteiras locais.' },
           { q: 'A Novita AI faz reembolsos?', a: 'Os reembolsos são descritos como geralmente indisponíveis. Em casos excepcionais, como indisponibilidade total do serviço, você pode solicitar um ao suporte. Comece com uma recarga pequena enquanto testa.' },
-          { q: 'A Novita AI é mais barata que a Together AI e a Fireworks?', a: 'Para o GPT OSS 120B, as páginas conferidas em 2026-11-22 listam a Novita AI a US$ 0.05 / US$ 0.25 por 1M de tokens, contra US$ 0.15 / US$ 0.60 tanto na Together AI quanto na Fireworks. Isso compara apenas preços de tabela, e não velocidade ou qualidade. As tarifas de GPU não foram comparadas.' },
+          { q: 'A Novita AI é mais barata que a Together AI e a Fireworks?', a: 'Para o GPT OSS 120B, as páginas conferidas em 2026-11-22 listam a Novita AI a US$ 0,05 / US$ 0,25 por 1M de tokens, contra US$ 0,15 / US$ 0,60 tanto na Together AI quanto na Fireworks. Isso compara apenas preços de tabela, e não velocidade ou qualidade. As tarifas de GPU não foram comparadas.' },
           { q: 'Meus dados são privados na Novita AI?', a: 'Não verificado. Nenhuma declaração sobre armazenamento ou retenção de prompts pôde ser lida nas páginas conferidas. Leia a política de privacidade e os termos, e não envie dados sensíveis a nenhuma API hospedada sem confirmar os termos por escrito.' },
           { q: 'A Novita AI é uma boa escolha para rodar LLMs locais?', a: 'É uma boa escolha quando um modelo não cabe na sua própria placa: chame-o por token em vez de alugar um Pod. Para um modelo que cabe localmente, rode-o localmente. Nenhum valor de throughput foi verificado, então esta análise não cita nenhum.' },
         ],
@@ -2726,7 +2726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Análise da Novita AI (2026): APIs de Modelos e GPUs Serverless',
       reviewBody:
-        'A Novita AI é uma plataforma de pagamento por uso com uma API de modelos cobrada por token, instâncias de GPU cobradas por segundo e GPUs serverless. O GPT OSS 120B está listado a US$ 0.05 por 1M de tokens de entrada e US$ 0.25 por 1M de tokens de saída (página oficial de preços, conferida em 2026-11-22). As tarifas por hora de cada GPU não puderam ser verificadas. A avaliação do PromptQuorum dá nota 7.8/10 no geral, com base em páginas e documentação oficiais, e não em um teste prático.',
+        'A Novita AI é uma plataforma de pagamento por uso com uma API de modelos cobrada por token, instâncias de GPU cobradas por segundo e GPUs serverless. O GPT OSS 120B está listado a US$ 0,05 por 1M de tokens de entrada e US$ 0,25 por 1M de tokens de saída (página oficial de preços, conferida em 2026-11-22). As tarifas por hora de cada GPU não puderam ser verificadas. A avaliação do PromptQuorum dá nota 7,8/10 no geral, com base em páginas e documentação oficiais, e não em um teste prático.',
       datePublished: '2026-11-22',
       dateModified: '2026-11-22',
       author: authorPerson(),
@@ -2766,7 +2766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'مراجعة Novita AI 2026: أسعار API للنماذج بالـ token، وفوترة نُسخ GPU، وServerless GPU، ودليل LlamaIndex، ومقارنة مع Together AI وFireworks.',
     twitterDescription:
-      'Novita AI (2026): واجهة API للنماذج من $0.05 لكل 1M token إدخال (GPT OSS 120B)، وفوترة GPU بالثانية، وServerless GPU. بطاقة تقييم وقواعد الفوترة ومقارنة مع Together AI وFireworks.',
+      'Novita AI (2026): واجهة API للنماذج من $0.05 لكل 1M token إدخال (GPT OSS 120B، سعر القائمة، جرى التحقق بتاريخ 2026-11-22)، وفوترة GPU بالثانية، وServerless GPU. بطاقة تقييم وقواعد الفوترة ومقارنة مع Together AI وFireworks.',
     readTime: '9 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يختارون بين واجهة API مستضافة للنماذج ونُسخ GPU مؤجَّرة ووحدات Serverless GPU',
@@ -2786,7 +2786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'ما هي Novita AI ولمن تناسب؟',
         answer:
-          'Novita AI منصة للمطورين تضم كتالوج واجهة API للنماذج يُحاسَب بالـ token، ونُسخ GPU عند الطلب، ووحدات Serverless GPU، وتُفوتر بالدولار الأمريكي عبر Stripe. وتناسب الفرق التي تريد نماذج مفتوحة الأوزان مثل Llama وDeepSeek وQwen وGPT OSS خلف واجهة API على طراز OpenAI دون تشغيل عتاد، وتحتاج أحيانًا إلى GPU لحمل عمل مخصص. وهي ليست سوقًا لأجهزة يستضيفها المجتمع، ولا تقبل العملات المشفرة بحسب الأسئلة الشائعة للفوترة. ولم يمكن قراءة أسعار GPU بالساعة من الصفحات الرسمية في هذا الفحص، فسعّر أعمال GPU في وحدة التحكم أولًا.',
+          'Novita AI منصة للمطورين تضم كتالوج واجهة API للنماذج يُحاسَب بالـ token، ونُسخ GPU عند الطلب، ووحدات Serverless GPU، وتُفوتر بالدولار الأمريكي عبر Stripe. وتناسب الفرق التي تريد نماذج مفتوحة الأوزان مثل Llama وDeepSeek وQwen وGPT OSS خلف واجهة API على طراز OpenAI دون تشغيل عتاد، وتحتاج أحيانًا إلى GPU لحمل عمل مخصص. تصف Novita سحابة GPU خاصة بها لا سوقًا لأجهزة يستضيفها المجتمع، ولا تقبل العملات المشفرة بحسب الأسئلة الشائعة للفوترة. ولم يمكن قراءة أسعار GPU بالساعة من الصفحات الرسمية في هذا الفحص، فسعّر أعمال GPU في وحدة التحكم أولًا.',
         bullets: [
           'API للنماذج: ‏GPT OSS 120B بسعر $0.05 / $0.25 لكل 1M token إدخال / إخراج (جرى التحقق بتاريخ 2026-11-22)',
           'نُسخ GPU: تُفوتر بالثانية وتُسوّى كل ساعة، بدءًا من حالة Pulling',
@@ -2855,7 +2855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الفئة': 'الدعم والوثائق', 'الدرجة': '8/10', 'السبب': 'الوثائق تغطي الفوترة والنُسخ والتكاملات' },
           { 'الفئة': 'الإجمالي', 'الدرجة': '7.8/10', 'السبب': 'منتج API قوي؛ تحقق من أسعار GPU في وحدة التحكم' },
         ],
-        note: 'كل درجة هي تقييم PromptQuorum مستمد من الصفحات الرسمية (راجع «كيف نقيّم»)، وليست ناتجة عن تشغيل PromptQuorum أحمال عمل على المنصة.',
+        note: 'كل درجة هي تقييم PromptQuorum مستمد من الصفحات الرسمية (راجع «كيف نقيّم»)، وليست ناتجة عن تشغيل PromptQuorum أحمال عمل على المنصة. الدرجة الإجمالية ترجيح تحريري وليست متوسطًا حسابيًا.',
       },
       tldr: {
         id: 'tldr',
@@ -2921,7 +2921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'واجهة API للنماذج مقابل Together AI وFireworks',
         content:
-          '**بالنسبة للنموذج الوحيد الذي تُدرجه الثلاث، وهو GPT OSS 120B، تعرض Novita AI أقل سعر لكل token في الصفحات المفحوصة بتاريخ 2026-11-22 (ويظهر سعر الإدخال لدى Together AI بوصفه "(cached)").** تغطي المقارنة أسعار القوائم فقط، لا زمن الاستجابة ولا الجودة ولا الحدود، فلم تقسها هذه المراجعة.',
+          '**في صفحات الأسعار التي فُحصت بتاريخ 2026-11-22، تُدرج Novita AI نموذج GPT OSS 120B بسعر $0.05 / $0.25 لكل 1M token إدخال / إخراج، مقابل $0.15 / $0.60 لدى Together AI وFireworks (ويظهر سعر الإدخال لدى Together AI بوصفه "(cached)").** تغطي المقارنة أسعار القوائم فقط، لا زمن الاستجابة ولا الجودة ولا الحدود، فلم تقسها هذه المراجعة.',
         columns: ['المزود', 'GPT OSS 120B: إدخال/إخراج', 'H100 بالساعة'],
         rows: [
           { 'المزود': 'Novita AI', 'GPT OSS 120B: إدخال/إخراج': '$0.05 / $0.25', 'H100 بالساعة': 'لم يُتحقق منه' },
@@ -2953,7 +2953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**مطابقات بين منتجات Novita AI والمهام الشائعة، من الملاءمة القوية إلى الضعيفة (تقييم PromptQuorum).**',
         items: [
           '**ملاءمة قوية:** بناء نموذج أولي لتطبيق على نماذج مفتوحة الأوزان بعميل على طراز OpenAI وفوترة لكل token.',
-          '**ملاءمة قوية:** مسارات RAG في LlamaIndex باستخدام الفئة الموثقة `NovitaAI` ونموذج تضمين مثل BGE-M3 ‏($0.01 لكل 1M token).',
+          '**ملاءمة قوية:** مسارات RAG في LlamaIndex باستخدام الفئة الموثقة `NovitaAI` ونموذج تضمين مثل BGE-M3 ‏(مُدرج بسعر $0.01 لكل 1M token في صفحة الأسعار، جرى التحقق بتاريخ 2026-11-22).',
           '**ملاءمة جيدة:** استدلال متقطع على نموذجك عبر Serverless GPU، حيث تدفع أثناء تنفيذ الطلبات فقط.',
           '**ملاءمة أضعف:** التدريب الطويل الذي يحتاج سعرًا بالساعة منشورًا وثابتًا؛ تحقق أولًا من سعر GPU الحالي، أو راجع [شرح vLLM](/ar/power-local-llm/vllm-explained) لخيارات التقديم المستضاف ذاتيًا.',
           '**ملاءمة ضعيفة:** الأحمال التي تتطلب الدفع بالعملات المشفرة أو مالًا مدفوعًا مسبقًا يمكن استرداده.',

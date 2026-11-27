@@ -5,11 +5,13 @@
 // Box, reserved height, provider switch, tracking, 9-locale copy and the SVG graphic per target.
 // Ask Hans / Power Mode / Academy open in place through lib/promo/open.ts (existing events, no navigation).
 //
+// - The whole box is clickable: the CTA's ::after covers it. So the CTA must not get a transform (scale etc.),
+//   which would shrink that click area back to the button.
 // - Inline only: no overlay, popup or interstitial. Not dismissible (clean pilot data).
 // - Reserved height per variant and breakpoint, so the slot causes no layout shift.
 // - Colors come from theme tokens (CSS variables); no hex values. Graphics are inline SVG without text.
 // - <target>_promo_view fires once per page view when >=50% of the slot is visible for >=1 s (not on render).
-// - <target>_promo_click fires on the CTA for all five targets. Link targets carry `via=promo_<target>_<placement>`.
+// - <target>_promo_click fires on a click anywhere in the box, for all five targets. Link targets carry `via=promo_<target>_<placement>`.
 
 import { useEffect, useRef } from 'react'
 import { useLang } from '@/hooks/useLang'
@@ -39,15 +41,29 @@ export interface PromoSlotProps {
   /** narrow column (side rail): graphic, text and button stack vertically */
   stack?: boolean
   className?: string
+  /** ad display test (AdTestSlot): replaces the pilot's tracking and attribution, so no pilot event or counter fires */
+  test?: { source: string; onView: () => void; onClick: () => void }
 }
 
-export function PromoSlot({ target, placement, variant = 'card', stack = false, className = '' }: PromoSlotProps) {
+/** Test ads only: IntersectionObserver ignores overlays (cookie dialog) and a tab hidden after the timer started. */
+function isHiddenFromVisitor(el: HTMLElement): boolean {
+  if (document.visibilityState !== 'visible') return true
+  const r = el.getBoundingClientRect()
+  const x = (Math.max(r.left, 0) + Math.min(r.right, window.innerWidth)) / 2
+  const y = (Math.max(r.top, 0) + Math.min(r.bottom, window.innerHeight)) / 2
+  const hit = document.elementFromPoint(x, y)
+  return !hit || !el.contains(hit)
+}
+
+export function PromoSlot({ target, placement, variant = 'card', stack = false, className = '', test }: PromoSlotProps) {
   const lang = useLang()
   const ref = useRef<HTMLElement>(null)
   const ctx = { target, placement, variant, locale: lang }
   const ctxRef = useRef(ctx)
+  const testRef = useRef(test)
   useEffect(() => {
     ctxRef.current = ctx
+    testRef.current = test
   })
 
   useEffect(() => {
@@ -55,15 +71,27 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
     if (!el || typeof IntersectionObserver === 'undefined') return
     let timer: ReturnType<typeof setTimeout> | undefined
     let done = false
+    let wasHidden = false
+    // a test ad that was covered must then stay uncovered for a further full interval
+    const fire = () => {
+      if (testRef.current) {
+        const hidden = isHiddenFromVisitor(el)
+        if (hidden || wasHidden) {
+          wasHidden = hidden
+          timer = setTimeout(fire, PROMO_VIEW_MIN_MS)
+          return
+        }
+      }
+      done = true
+      if (testRef.current) testRef.current.onView()
+      else trackPromo('view', ctxRef.current)
+      io.disconnect()
+    }
     const io = new IntersectionObserver(
       ([entry]) => {
         if (done) return
         if (entry.isIntersecting && entry.intersectionRatio >= PROMO_VIEW_THRESHOLD) {
-          timer ??= setTimeout(() => {
-            done = true
-            trackPromo('view', ctxRef.current)
-            io.disconnect()
-          }, PROMO_VIEW_MIN_MS)
+          timer ??= setTimeout(fire, PROMO_VIEW_MIN_MS)
         } else if (timer) {
           clearTimeout(timer)
           timer = undefined
@@ -86,14 +114,15 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
   const theme = THEME[target]
   const [hMobile, hDesktop] = PROMO_RESERVED_HEIGHT[variant]
   const linkPath = LINK_PATH[target]
-  const href = linkPath ? `${lang === 'en' ? '' : `/${lang}`}${linkPath}?via=${promoSource(target, placement)}` : undefined
-  const ctaClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-extrabold shadow-lg transition-transform hover:bg-white/95 motion-safe:hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${theme.btn}`
+  const href = linkPath ? `${lang === 'en' ? '' : `/${lang}`}${linkPath}?via=${test?.source ?? promoSource(target, placement)}` : undefined
+  const ctaClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-extrabold shadow-lg after:absolute after:inset-0 after:rounded-2xl after:content-[''] hover:bg-white/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${theme.btn}`
   const click = (e: React.MouseEvent<HTMLElement>) => {
-    trackPromo('click', ctx)
+    if (test) test.onClick()
+    else trackPromo('click', ctx)
     // Ask Hans / Power Mode / Academy open in place (real <button>); the others are links.
     if (href) return
-    if (target === 'academy') openAcademyFromPromo(placement)
-    else if (target === 'ask-hans' || target === 'power-mode') openAskHansFromPromo(target, placement, e.currentTarget)
+    if (target === 'academy') openAcademyFromPromo(placement, test?.source)
+    else if (target === 'ask-hans' || target === 'power-mode') openAskHansFromPromo(target, placement, e.currentTarget, test?.source)
   }
 
   const cta =
@@ -113,7 +142,7 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
       data-promo-variant={variant}
       aria-label={headline}
       style={{ ['--promo-h' as string]: `${hMobile}px`, ['--promo-h-sm' as string]: `${hDesktop}px` }}
-      className={`my-8 flex min-h-[var(--promo-h)] flex-col justify-center gap-4 rounded-2xl p-5 text-white shadow-xl ring-1 sm:min-h-[var(--promo-h-sm)] sm:p-7 ${theme.bg} ${theme.ring} ${className}`}
+      className={`relative my-8 flex min-h-[var(--promo-h)] flex-col justify-center gap-4 rounded-2xl p-5 text-white shadow-xl ring-1 sm:min-h-[var(--promo-h-sm)] sm:p-7 ${theme.bg} ${theme.ring} ${className}`}
     >
       {PROMO_PROVIDER === 'ad-tag' ? (
         // Third-party tag mounts here, inside the same reserved box. Wired when real advertising starts.
@@ -133,7 +162,7 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
             </div>
           </div>
           {showSnippet && (
-            <div>
+            <div className="relative z-10">
               {text.snippetLabel && <p className="mb-1 text-xs text-white/80">{text.snippetLabel}</p>}
               <code dir="ltr" className="block overflow-x-auto whitespace-nowrap rounded-lg bg-black/40 px-3 py-2 text-left text-xs text-white">{snippet}</code>
             </div>

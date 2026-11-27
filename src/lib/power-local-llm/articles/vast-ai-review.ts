@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'rent gpu cheap vast ai',
     ],
     leadAnswerBlock:
-      '**Vast.ai is a per-second GPU rental marketplace where price depends on the host you pick; it suits cost-sensitive, interruption-tolerant work. Vast.ai positions its Secure Cloud tier for regulated and enterprise needs; check the Data Processing Agreement and certifications yourself before relying on it.** Vast.ai states "No minimum hours, no rounding up" and lists on-demand, interruptible ("50%+ cheaper") and reserved ("Up to 50% Off") pricing (checked 2026-11-22). PromptQuorum assessment: 7.6/10 overall, not a hands-on lab test. The catch is variance: verified hosts are tested, but Vast.ai\'s docs note that "Individual hosts may have less formal security measures", so do not put regulated data on a non-Secure-Cloud host. → [Check Vast.ai GPU pricing](https://vast.ai/pricing)',
+      '**Vast.ai is a per-second GPU rental marketplace where price depends on the host you pick; it suits cost-sensitive, interruption-tolerant work. Vast.ai positions its Secure Cloud tier for regulated and enterprise needs; check the Data Processing Agreement and certifications yourself before relying on it.** Vast.ai states "No minimum hours, no rounding up" and lists on-demand, interruptible ("50%+ cheaper") and reserved ("Up to 50% Off") pricing (checked 2026-11-22). PromptQuorum assessment: 7.6/10 overall, not a hands-on lab test. The catch is variance: Vast.ai says verified hosts are tested, but its docs note that "Individual hosts may have less formal security measures", so do not put regulated data on a non-Secure-Cloud host. → [Check Vast.ai GPU pricing](https://vast.ai/pricing)',
     quickAnswerTop: {
       en: {
         question: 'Is Vast.ai a good place to rent GPUs for local models?',
@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Vast.ai is a GPU rental marketplace billed per second, offering on-demand, interruptible and reserved pricing across independent hosts and vetted datacenters.' },
-      { type: 'plain-terms', content: 'Think of Vast.ai as an auction-style marketplace for graphics cards: many different owners list machines, you pick one, and you pay only for the seconds you use. Cheaper machines can be less reliable, and some owners are private individuals, so do not put sensitive data on them.' },
+      { type: 'plain-terms', content: 'Think of Vast.ai as an auction-style marketplace for graphics cards: many different owners list machines, you pick one, and you pay only for the seconds you use. Cheaper machines can be less reliable, and some hosts are independent operators, so do not put sensitive data on them.' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -213,14 +213,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Topic: 'Hardware source', 'What Vast.ai states': 'Independent hosts and vetted datacenters (Secure Cloud)' },
           { Topic: 'Secure Cloud', 'What Vast.ai states': 'For regulated and enterprise needs; partners sign DPAs' },
           { Topic: 'Verified hosts', 'What Vast.ai states': 'Manually tested; Docker isolation; non-regulated work' },
-          { Topic: 'SOC 2', 'What Vast.ai states': '"Completed SOC 2 Type 2 certification"; report under NDA' },
+          { Topic: 'SOC 2', 'What Vast.ai states': 'Vast.ai has completed SOC 2 Type 2 certification; report under NDA' },
           { Topic: 'Data deletion', 'What Vast.ai states': 'Destroyed immediately when you delete an instance' },
           { Topic: 'Transit encryption', 'What Vast.ai states': 'TLS 1.2+ for API and console traffic' },
           { Topic: 'Refunds', 'What Vast.ai states': 'Spent credits: none. Unspent: usually, via chat' },
         ],
         items: [
           '**Host security varies:** the [security FAQ](https://docs.vast.ai/guides/reference/faq/security) says "Individual hosts may have less formal security measures" and advises encrypting sensitive data and not storing credentials in instances.',
-          '**Docs do not say whether a host can read your data:** they state clients only access their own data and are container-isolated, but do not address host access, so treat non-Secure-Cloud hosts as untrusted.',
+          '**The pages we reviewed do not say whether a host can read your data:** they state clients only access their own data and are container-isolated, but do not address host access, so treat non-Secure-Cloud hosts as untrusted unless you have confirmed otherwise.',
           '**Partner certification wording differs between pages:** the [compliance page](https://vast.ai/compliance) says ISO 27001 or SOC 2 are encouraged but not required for Secure Cloud partners, while the security FAQ lists ISO 27001 for Secure Cloud providers. Verify the current requirement before relying on either.',
           '**Billing:** compute is billed by the second, storage continues while stopped, and a negative balance without a saved card leads to destroyed instances and data. Source: [billing docs](https://docs.vast.ai/documentation/reference/billing).',
           'Vast.ai\'s SOC 2 Type 2 statement concerns the company\'s controls, not a guarantee about any individual host. This is not legal or compliance advice.',
@@ -291,9 +291,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How does Vast.ai billing work?', a: 'Compute is billed by the second for actual usage and credits must be added before starting any instance. Storage is billed while the instance exists, even when stopped (checked 2026-11-22).' },
           { q: 'What is the difference between on-demand and interruptible?', a: 'On-demand has fixed pricing and guaranteed resources. Interruptible is the lowest cost and may be paused; Vast.ai describes it as often 50%+ cheaper than on-demand.' },
           { q: 'What are reserved instances?', a: 'Reserved instances are discounted with pre-payment; Vast.ai lists up to 50% off and 1, 3 or 6 month terms on its pricing page.' },
-          { q: 'Is Vast.ai secure?', a: 'Vast.ai states it has completed SOC 2 Type 2 certification, and each workload runs in an unprivileged Docker container. Its own docs also say individual hosts may have less formal security measures. Vast.ai positions Secure Cloud for sensitive data; confirm its DPA and certifications for your case.' },
+          { q: 'Is Vast.ai secure?', a: 'Vast.ai states it has completed SOC 2 Type 2 certification and that each workload runs in an unprivileged Docker container. Its own docs also say individual hosts may have less formal security measures. Vast.ai positions Secure Cloud for sensitive data; confirm its DPA and certifications for your case.' },
           { q: 'What is the Secure Cloud tier?', a: 'Secure Cloud is a tier of vetted datacenter partners aimed at regulated and enterprise needs. Partners sign Data Processing Agreements with Vast.ai, per its [compliance page](https://vast.ai/compliance).' },
-          { q: 'What are verified hosts?', a: 'Verified hosts are manually tested for reliability and performance and use Docker-level tenant isolation. Vast.ai positions them for non-regulated workloads.' },
+          { q: 'What are verified hosts?', a: 'Vast.ai describes verified hosts as manually tested for reliability and performance, with Docker-level tenant isolation. Vast.ai positions them for non-regulated workloads.' },
           { q: 'Can I get a refund on Vast.ai?', a: 'Per the billing docs, spent credits are not refundable, while unspent credits can usually be refunded by contacting support through the website chat. Legacy Coinbase Commerce credits cannot be refunded.' },
           { q: 'What happens if my balance runs out?', a: 'Instances stop automatically when the balance reaches zero. With a saved card the balance is charged to cover it; without a saved card instances and stored data are destroyed.' },
           { q: 'Is there a minimum deposit?', a: 'The billing and pricing docs reviewed do not state a minimum amount. They only say credits must be added before starting any instance.' },
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu günstig mieten vast ai',
     ],
     leadAnswerBlock:
-      '**Vast.ai ist ein GPU-Mietmarktplatz mit Abrechnung pro Sekunde, bei dem der Preis vom gewählten Host abhängt; er eignet sich für kostensensible, unterbrechungstolerante Arbeit. Vast.ai positioniert die Secure-Cloud-Stufe für regulierte und Unternehmensanforderungen; prüfen Sie Auftragsverarbeitungsvertrag und Zertifizierungen selbst, bevor Sie sich darauf verlassen.** Vast.ai nennt „keine Mindeststunden, kein Aufrunden“ und führt On-Demand-, unterbrechbare („50 %+ günstiger“) und reservierte („bis zu 50 % Rabatt“) Preise auf (geprüft am 2026-11-22). Einschätzung von PromptQuorum: 7,6/10 insgesamt, kein praktischer Labortest. Der Haken ist die Streuung: Verifizierte Hosts werden getestet, doch Vast.ai-Doku vermerkt, dass „einzelne Hosts weniger formale Sicherheitsmaßnahmen haben können“; legen Sie regulierte Daten daher nicht auf einen Host außerhalb der Secure Cloud. → [Vast.ai-GPU-Preise prüfen](https://vast.ai/pricing)',
+      '**Vast.ai ist ein GPU-Mietmarktplatz mit Abrechnung pro Sekunde, bei dem der Preis vom gewählten Host abhängt; er eignet sich für kostensensible, unterbrechungstolerante Arbeit. Vast.ai positioniert die Secure-Cloud-Stufe für regulierte und Unternehmensanforderungen; prüfen Sie Auftragsverarbeitungsvertrag und Zertifizierungen selbst, bevor Sie sich darauf verlassen.** Vast.ai nennt „No minimum hours, no rounding up“ (keine Mindeststunden, kein Aufrunden) und führt On-Demand-, unterbrechbare („50%+ cheaper“, 50 %+ günstiger) und reservierte („Up to 50% Off“, bis zu 50 % Rabatt) Preise auf (geprüft am 2026-11-22). Einschätzung von PromptQuorum: 7,6/10 insgesamt, kein praktischer Labortest. Der Haken ist die Streuung: Laut Vast.ai werden verifizierte Hosts getestet, doch die Doku vermerkt, dass einzelne Hosts weniger formale Sicherheitsmaßnahmen haben können; legen Sie regulierte Daten daher nicht auf einen Host außerhalb der Secure Cloud. → [Vast.ai-GPU-Preise prüfen](https://vast.ai/pricing)',
     quickAnswerTop: {
       de: {
         question: 'Ist Vast.ai ein guter Ort, um GPUs für lokale Modelle zu mieten?',
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Vast.ai ist ein GPU-Mietmarktplatz mit Abrechnung pro Sekunde, der On-Demand-, unterbrechbare und reservierte Preise über unabhängige Hosts und geprüfte Rechenzentren hinweg anbietet.' },
-      { type: 'plain-terms', content: 'Stellen Sie sich Vast.ai als auktionsähnlichen Marktplatz für Grafikkarten vor: Viele verschiedene Besitzer listen Maschinen, Sie wählen eine aus und zahlen nur für die genutzten Sekunden. Günstigere Maschinen können weniger zuverlässig sein, und manche Besitzer sind Privatpersonen; legen Sie darauf daher keine sensiblen Daten.' },
+      { type: 'plain-terms', content: 'Stellen Sie sich Vast.ai als auktionsähnlichen Marktplatz für Grafikkarten vor: Viele verschiedene Besitzer listen Maschinen, Sie wählen eine aus und zahlen nur für die genutzten Sekunden. Günstigere Maschinen können weniger zuverlässig sein, und manche Hosts sind unabhängige Betreiber; legen Sie darauf daher keine sensiblen Daten.' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -456,8 +456,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Zusammenfassung',
         isTldr: true,
         items: [
-          'Vast.ai ist ein GPU-Marktplatz mit Abrechnung pro Sekunde; er nennt „keine Mindeststunden, kein Aufrunden“ (geprüft am 2026-11-22)',
-          'Drei Preisarten: On-Demand (garantiert), unterbrechbar (kann pausiert werden, laut Vast.ai „50 %+ günstiger“), reserviert (vorausbezahlt, bis zu 50 % Rabatt)',
+          'Vast.ai ist ein GPU-Marktplatz mit Abrechnung pro Sekunde; er nennt „No minimum hours, no rounding up“ (keine Mindeststunden, kein Aufrunden) (geprüft am 2026-11-22)',
+          'Drei Preisarten: On-Demand (garantiert), unterbrechbar (kann pausiert werden, laut Vast.ai „50%+ cheaper“ (50 %+ günstiger)), reserviert (vorausbezahlt, bis zu 50 % Rabatt)',
           'Zwei Vertrauensstufen: Secure Cloud (geprüfte Rechenzentren) und verifizierte Hosts (manuell getestet, für nicht regulierte Workloads)',
           'Vast.ai gibt an, die SOC-2-Type-2-Zertifizierung abgeschlossen zu haben; der Bericht ist unter NDA erhältlich',
           'Speicher wird auch bei gestoppter Instanz abgerechnet; löschen Sie die Instanz, um die Speicherkosten zu beenden',
@@ -481,8 +481,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vast.ai listet GPU-Maschinen vieler Anbieter; Sie durchsuchen Angebote, wählen eines und starten darauf einen Docker-Container.** Hosts unterscheiden sich bei Hardware, Standort, Bandbreitenpreis und Vertrauensstufe, daher sind die Suchfilter wichtiger als bei einer Cloud mit einem einzigen Betreiber.',
         items: [
           '**Angebote:** Sie filtern nach GPU-Modell, VRAM, Preis, Zuverlässigkeit und Standort (die Vast.ai-CLI-Seite beschreibt diese Filter).',
-          '**Instanztypen:** On-Demand ist „fester Preis, garantierte Ressourcen (hohe Priorität)“; unterbrechbar ist „niedrigste Kosten, kann pausiert werden (niedrige Priorität)“; reserviert ist „rabattierte Preise bei Vorauszahlung“ ([Vast.ai-Preisdoku](https://docs.vast.ai/documentation/instances/pricing)).',
-          '**Host-Stufen:** Die Secure Cloud stützt sich auf geprüfte Rechenzentren; verifizierte Hosts sind „manuell auf Zuverlässigkeit und Leistung getestet“ mit Mandantentrennung auf Docker-Ebene ([Vast.ai-Compliance-Seite](https://vast.ai/compliance)).',
+          '**Instanztypen:** On-Demand ist fester Preis, garantierte Ressourcen (hohe Priorität); unterbrechbar ist niedrigste Kosten, kann pausiert werden (niedrige Priorität); reserviert ist rabattierte Preise bei Vorauszahlung ([Vast.ai-Preisdoku](https://docs.vast.ai/documentation/instances/pricing)).',
+          '**Host-Stufen:** Die Secure Cloud stützt sich auf geprüfte Rechenzentren; verifizierte Hosts sind manuell auf Zuverlässigkeit und Leistung getestet mit Mandantentrennung auf Docker-Ebene ([Vast.ai-Compliance-Seite](https://vast.ai/compliance)).',
           '**Laufzeit:** Laut Vast.ai läuft jeder Workload in einem unprivilegierten Docker-Container, getrennt von anderen Mandanten.',
           '**Zugang:** SSH, Jupyter und eine API/CLI sind die dokumentierten Zugänge.',
         ],
@@ -495,9 +495,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Abgerechnet wird pro Sekunde für die tatsächliche Nutzung, und Guthaben muss aufgeladen werden, bevor eine Instanz startet.** Geprüft am 2026-11-22. Stundenpreise pro GPU sind Live-Marktplatzwerte, die sich je Host ändern und in dieser Rezension nicht verifiziert wurden; daher wird keine GPU-Zahl genannt.',
         columns: ['Posten', 'Was Vast.ai angibt'],
         rows: [
-          { Posten: 'Abrechnungseinheit', 'Was Vast.ai angibt': 'Pro Sekunde; „keine Mindeststunden, kein Aufrunden“' },
+          { Posten: 'Abrechnungseinheit', 'Was Vast.ai angibt': 'Pro Sekunde; „No minimum hours, no rounding up“ (keine Mindeststunden, kein Aufrunden)' },
           { Posten: 'On-Demand', 'Was Vast.ai angibt': 'Fester Preis, garantierte Ressourcen' },
-          { Posten: 'Unterbrechbar', 'Was Vast.ai angibt': '„50 %+ günstiger“ als On-Demand; kann pausiert werden' },
+          { Posten: 'Unterbrechbar', 'Was Vast.ai angibt': '„50%+ cheaper“ (50 %+ günstiger) als On-Demand; kann pausiert werden' },
           { Posten: 'Reserviert', 'Was Vast.ai angibt': 'Bis zu 50 % Rabatt; Laufzeiten 1, 3 oder 6 Monate' },
           { Posten: 'Beworbene Untergrenze', 'Was Vast.ai angibt': 'Ab 0,14 $/Std. Spot und 0,50 $/Std. On-Demand (CLI-Seite)' },
           { Posten: 'Speicher', 'Was Vast.ai angibt': 'Abgerechnet, solange die Instanz existiert, auch gestoppt' },
@@ -552,14 +552,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Thema: 'Hardwarequelle', 'Was Vast.ai angibt': 'Unabhängige Hosts und geprüfte Rechenzentren (Secure Cloud)' },
           { Thema: 'Secure Cloud', 'Was Vast.ai angibt': 'Für regulierten Bedarf; Partner unterzeichnen DPAs' },
           { Thema: 'Verifizierte Hosts', 'Was Vast.ai angibt': 'Manuell getestet; Docker-Isolation; nicht regulierte Arbeit' },
-          { Thema: 'SOC 2', 'Was Vast.ai angibt': 'SOC 2 Type 2 abgeschlossen; Bericht unter NDA' },
+          { Thema: 'SOC 2', 'Was Vast.ai angibt': 'Vast.ai hat die SOC-2-Type-2-Zertifizierung abgeschlossen; Bericht unter NDA' },
           { Thema: 'Datenlöschung', 'Was Vast.ai angibt': 'Beim Löschen einer Instanz sofort zerstört' },
           { Thema: 'Transportverschlüsselung', 'Was Vast.ai angibt': 'TLS 1.2+ für API- und Konsolenverkehr' },
           { Thema: 'Erstattungen', 'Was Vast.ai angibt': 'Verbrauchtes Guthaben: nein. Unverbrauchtes: meist, per Chat' },
         ],
         items: [
-          '**Host-Sicherheit variiert:** Die [Sicherheits-FAQ](https://docs.vast.ai/guides/reference/faq/security) sagt „einzelne Hosts können weniger formale Sicherheitsmaßnahmen haben“ und rät, sensible Daten zu verschlüsseln und keine Zugangsdaten in Instanzen zu speichern.',
-          '**Die Doku sagt nicht, ob ein Host Ihre Daten lesen kann:** Sie gibt an, dass Kunden nur auf ihre eigenen Daten zugreifen und containerisoliert sind, behandelt aber den Host-Zugriff nicht; betrachten Sie Hosts außerhalb der Secure Cloud daher als nicht vertrauenswürdig.',
+          '**Host-Sicherheit variiert:** Die [Sicherheits-FAQ](https://docs.vast.ai/guides/reference/faq/security) sagt einzelne Hosts können weniger formale Sicherheitsmaßnahmen haben und rät, sensible Daten zu verschlüsseln und keine Zugangsdaten in Instanzen zu speichern.',
+          '**Die geprüften Seiten sagen nicht, ob ein Host Ihre Daten lesen kann:** Sie gibt an, dass Kunden nur auf ihre eigenen Daten zugreifen und containerisoliert sind, behandelt aber den Host-Zugriff nicht; betrachten Sie Hosts außerhalb der Secure Cloud daher als nicht vertrauenswürdig, sofern Sie nichts anderes bestätigt haben.',
           '**Die Formulierungen zu Partner-Zertifizierungen unterscheiden sich zwischen den Seiten:** Die [Compliance-Seite](https://vast.ai/compliance) sagt, ISO 27001 oder SOC 2 würden für Secure-Cloud-Partner empfohlen, seien aber nicht vorgeschrieben, während die Sicherheits-FAQ ISO 27001 für Secure-Cloud-Anbieter aufführt. Prüfen Sie die aktuelle Anforderung, bevor Sie sich auf eine der beiden Angaben stützen.',
           '**Abrechnung:** Compute wird sekundengenau abgerechnet, der Speicher läuft im gestoppten Zustand weiter, und ein negatives Guthaben ohne hinterlegte Karte führt zu zerstörten Instanzen und Daten. Quelle: [Abrechnungsdoku](https://docs.vast.ai/documentation/reference/billing).',
           'Vast.ais SOC-2-Type-2-Angabe betrifft die Kontrollen des Unternehmens, nicht eine Garantie für einen einzelnen Host. Das ist keine Rechts- oder Compliance-Beratung.',
@@ -630,9 +630,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie funktioniert die Abrechnung bei Vast.ai?', a: 'Compute wird sekundengenau für die tatsächliche Nutzung abgerechnet, und vor dem Start jeder Instanz muss Guthaben aufgeladen werden. Speicher wird abgerechnet, solange die Instanz existiert, auch wenn sie gestoppt ist (geprüft am 2026-11-22).' },
           { q: 'Was ist der Unterschied zwischen On-Demand und unterbrechbar?', a: 'On-Demand hat einen festen Preis und garantierte Ressourcen. Unterbrechbar ist am günstigsten und kann pausiert werden; Vast.ai beschreibt es als oft 50 %+ günstiger als On-Demand.' },
           { q: 'Was sind reservierte Instanzen?', a: 'Reservierte Instanzen sind bei Vorauszahlung rabattiert; Vast.ai nennt auf der Preisseite bis zu 50 % Rabatt und Laufzeiten von 1, 3 oder 6 Monaten.' },
-          { q: 'Ist Vast.ai sicher?', a: 'Vast.ai gibt an, die SOC-2-Type-2-Zertifizierung abgeschlossen zu haben, und jeder Workload läuft in einem unprivilegierten Docker-Container. Die eigene Doku sagt aber auch, dass einzelne Hosts weniger formale Sicherheitsmaßnahmen haben können. Vast.ai positioniert Secure Cloud für sensible Daten; prüfen Sie dessen DPA und Zertifizierungen für Ihren Fall.' },
+          { q: 'Ist Vast.ai sicher?', a: 'Vast.ai gibt an, dass es die SOC-2-Type-2-Zertifizierung abgeschlossen hat und dass jeder Workload in einem unprivilegierten Docker-Container läuft. Die eigene Doku sagt aber auch, dass einzelne Hosts weniger formale Sicherheitsmaßnahmen haben können. Vast.ai positioniert Secure Cloud für sensible Daten; prüfen Sie dessen DPA und Zertifizierungen für Ihren Fall.' },
           { q: 'Was ist die Secure-Cloud-Stufe?', a: 'Die Secure Cloud ist eine Stufe geprüfter Rechenzentrumspartner, ausgerichtet auf regulierten und Enterprise-Bedarf. Laut [Compliance-Seite](https://vast.ai/compliance) schließen Partner Auftragsverarbeitungsverträge (Data Processing Agreements) mit Vast.ai.' },
-          { q: 'Was sind verifizierte Hosts?', a: 'Verifizierte Hosts werden manuell auf Zuverlässigkeit und Leistung getestet und nutzen Mandantentrennung auf Docker-Ebene. Vast.ai positioniert sie für nicht regulierte Workloads.' },
+          { q: 'Was sind verifizierte Hosts?', a: 'Vast.ai beschreibt verifizierte Hosts als manuell auf Zuverlässigkeit und Leistung getestet, mit Mandantentrennung auf Docker-Ebene. Vast.ai positioniert sie für nicht regulierte Workloads.' },
           { q: 'Kann ich bei Vast.ai eine Erstattung bekommen?', a: 'Laut Abrechnungsdoku ist verbrauchtes Guthaben nicht erstattbar, nicht verbrauchtes lässt sich in der Regel über den Support-Chat auf der Website erstatten. Alte Coinbase-Commerce-Guthaben können nicht erstattet werden.' },
           { q: 'Was passiert, wenn mein Guthaben aufgebraucht ist?', a: 'Instanzen stoppen automatisch, wenn das Guthaben null erreicht. Mit hinterlegter Karte wird das Guthaben zum Ausgleich belastet; ohne hinterlegte Karte werden Instanzen und gespeicherte Daten zerstört.' },
           { q: 'Gibt es eine Mindesteinzahlung?', a: 'Die geprüfte Abrechnungs- und Preisdoku nennt keinen Mindestbetrag. Sie sagt lediglich, dass vor dem Start jeder Instanz Guthaben aufgeladen werden muss.' },
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'louer gpu pas cher vast ai',
     ],
     leadAnswerBlock:
-      '**Vast.ai est une place de marché de location de GPU facturée à la seconde, où le prix dépend de l\'hôte choisi ; elle convient aux travaux sensibles au coût et tolérants aux interruptions. Vast.ai positionne son niveau Secure Cloud pour les besoins réglementés et d\'entreprise ; vérifiez vous-même le contrat de traitement des données (DPA) et les certifications avant de vous y fier.** Vast.ai indique « pas d\'heures minimales, pas d\'arrondi supérieur » et propose des tarifs à la demande, interruptibles (« 50 %+ moins cher ») et réservés (« jusqu\'à 50 % de remise ») (consultés le 2026-11-22). Évaluation de PromptQuorum : 7.6/10 au global, et non un test en laboratoire. Le point délicat est la variance : les hôtes vérifiés sont testés, mais la documentation de Vast.ai précise que « les hôtes individuels peuvent avoir des mesures de sécurité moins formelles » ; ne placez donc pas de données réglementées sur un hôte hors Secure Cloud. → [Vérifier les tarifs GPU de Vast.ai](https://vast.ai/pricing)',
+      '**Vast.ai est une place de marché de location de GPU facturée à la seconde, où le prix dépend de l\'hôte choisi ; elle convient aux travaux sensibles au coût et tolérants aux interruptions. Vast.ai positionne son niveau Secure Cloud pour les besoins réglementés et d\'entreprise ; vérifiez vous-même le contrat de traitement des données (DPA) et les certifications avant de vous y fier.** Vast.ai indique « No minimum hours, no rounding up » (pas d\'heures minimales, pas d\'arrondi supérieur) et propose des tarifs à la demande, interruptibles (« 50%+ cheaper », 50 %+ moins cher) et réservés (« Up to 50% Off », jusqu\'à 50 % de remise) (consultés le 2026-11-22). Évaluation de PromptQuorum : 7.6/10 au global, et non un test en laboratoire. Le point délicat est la variance : Vast.ai indique que les hôtes vérifiés sont testés, mais sa documentation précise que les hôtes individuels peuvent avoir des mesures de sécurité moins formelles ; ne placez donc pas de données réglementées sur un hôte hors Secure Cloud. → [Vérifier les tarifs GPU de Vast.ai](https://vast.ai/pricing)',
     quickAnswerTop: {
       fr: {
         question: 'Vast.ai est-il un bon endroit pour louer des GPU destinés aux modèles locaux ?',
@@ -749,7 +749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Vast.ai est une place de marché de location de GPU facturée à la seconde, qui propose des tarifs à la demande, interruptibles et réservés auprès d\'hôtes indépendants et de centres de données sélectionnés.' },
-      { type: 'plain-terms', content: 'Voyez Vast.ai comme une place de marché façon enchères pour cartes graphiques : de nombreux propriétaires listent des machines, vous en choisissez une et ne payez que les secondes utilisées. Les machines les moins chères peuvent être moins fiables et certains propriétaires sont des particuliers : n\'y placez donc pas de données sensibles.' },
+      { type: 'plain-terms', content: 'Voyez Vast.ai comme une place de marché façon enchères pour cartes graphiques : de nombreux propriétaires listent des machines, vous en choisissez une et ne payez que les secondes utilisées. Les machines les moins chères peuvent être moins fiables et certains hôtes sont des exploitants indépendants : n\'y placez donc pas de données sensibles.' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -795,8 +795,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Points clés',
         isTldr: true,
         items: [
-          'Vast.ai est une place de marché de GPU facturée à la seconde ; elle indique « pas d\'heures minimales, pas d\'arrondi supérieur » (consulté le 2026-11-22)',
-          'Trois types de tarifs : à la demande (garanti), interruptible (peut être mis en pause, « 50 %+ moins cher » selon Vast.ai), réservé (prépayé, jusqu\'à 50 % de remise)',
+          'Vast.ai est une place de marché de GPU facturée à la seconde ; elle indique « No minimum hours, no rounding up » (pas d\'heures minimales, pas d\'arrondi supérieur) (consulté le 2026-11-22)',
+          'Trois types de tarifs : à la demande (garanti), interruptible (peut être mis en pause, « 50%+ cheaper » (50 %+ moins cher) selon Vast.ai), réservé (prépayé, jusqu\'à 50 % de remise)',
           'Deux niveaux de confiance : Secure Cloud (centres de données sélectionnés) et hôtes vérifiés (testés manuellement, pour des charges non réglementées)',
           'Vast.ai indique avoir obtenu la certification SOC 2 Type 2 ; le rapport est disponible sous accord de confidentialité',
           'Le stockage est facturé même quand une instance est arrêtée ; supprimez l\'instance pour mettre fin aux frais de stockage',
@@ -820,8 +820,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vast.ai liste des machines GPU de nombreux fournisseurs ; vous cherchez des offres, en choisissez une et lancez un conteneur Docker dessus.** Les hôtes diffèrent par le matériel, l\'emplacement, le prix de la bande passante et le niveau de confiance : les filtres de recherche comptent donc plus que sur un cloud à opérateur unique.',
         items: [
           '**Offres :** vous filtrez par modèle de GPU, VRAM, prix, fiabilité et emplacement (la page CLI de Vast.ai décrit ces filtres).',
-          '**Types d\'instance :** à la demande signifie « tarif fixe, ressources garanties (priorité haute) » ; interruptible signifie « coût le plus bas, peut être mis en pause (priorité basse) » ; réservé signifie « tarifs réduits avec prépaiement » ([documentation tarifaire de Vast.ai](https://docs.vast.ai/documentation/instances/pricing)).',
-          '**Niveaux d\'hôtes :** Secure Cloud s\'appuie sur des centres de données sélectionnés ; les hôtes vérifiés sont « testés manuellement pour la fiabilité et les performances », avec isolation des locataires au niveau Docker ([page de conformité de Vast.ai](https://vast.ai/compliance)).',
+          '**Types d\'instance :** à la demande signifie tarif fixe, ressources garanties (priorité haute) ; interruptible signifie coût le plus bas, peut être mis en pause (priorité basse) ; réservé signifie tarifs réduits avec prépaiement ([documentation tarifaire de Vast.ai](https://docs.vast.ai/documentation/instances/pricing)).',
+          '**Niveaux d\'hôtes :** Secure Cloud s\'appuie sur des centres de données sélectionnés ; les hôtes vérifiés sont testés manuellement pour la fiabilité et les performances, avec isolation des locataires au niveau Docker ([page de conformité de Vast.ai](https://vast.ai/compliance)).',
           '**Exécution :** selon Vast.ai, chaque charge s\'exécute dans un conteneur Docker non privilégié, isolé des autres locataires.',
           '**Accès :** SSH, Jupyter et une API/CLI sont les modes d\'accès documentés.',
         ],
@@ -834,9 +834,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La facturation se fait à la seconde sur l\'usage réel, et des crédits doivent être ajoutés avant qu\'une instance ne démarre.** Consulté le 2026-11-22. Les tarifs horaires par GPU sont des valeurs de marché en direct, qui changent selon l\'hôte et n\'ont pas été vérifiées dans ce test : aucun chiffre par GPU n\'est donc cité.',
         columns: ['Élément', 'Ce que Vast.ai indique'],
         rows: [
-          { 'Élément': 'Unité de facturation', 'Ce que Vast.ai indique': 'À la seconde ; « pas d\'heures minimales, pas d\'arrondi »' },
+          { 'Élément': 'Unité de facturation', 'Ce que Vast.ai indique': 'À la seconde ; « No minimum hours, no rounding up » (pas d\'heures minimales, pas d\'arrondi)' },
           { 'Élément': 'À la demande', 'Ce que Vast.ai indique': 'Tarif fixe, ressources garanties' },
-          { 'Élément': 'Interruptible', 'Ce que Vast.ai indique': '« 50 %+ moins cher » qu\'à la demande ; peut être mis en pause' },
+          { 'Élément': 'Interruptible', 'Ce que Vast.ai indique': '« 50%+ cheaper » (50 %+ moins cher) qu\'à la demande ; peut être mis en pause' },
           { 'Élément': 'Réservé', 'Ce que Vast.ai indique': 'Jusqu\'à 50 % de remise ; durées de 1, 3 ou 6 mois' },
           { 'Élément': 'Prix d\'appel affiché', 'Ce que Vast.ai indique': 'Dès 0.14 $/h en spot et 0.50 $/h à la demande (page CLI)' },
           { 'Élément': 'Stockage', 'Ce que Vast.ai indique': 'Facturé tant que l\'instance existe, même arrêtée' },
@@ -891,14 +891,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sujet': 'Origine du matériel', 'Ce que Vast.ai indique': 'Hôtes indépendants et centres de données sélectionnés (Secure Cloud)' },
           { 'Sujet': 'Secure Cloud', 'Ce que Vast.ai indique': 'Pour les besoins réglementés et entreprise ; partenaires signataires de DPA' },
           { 'Sujet': 'Hôtes vérifiés', 'Ce que Vast.ai indique': 'Testés manuellement ; isolation Docker ; charges non réglementées' },
-          { 'Sujet': 'SOC 2', 'Ce que Vast.ai indique': '« Certification SOC 2 Type 2 obtenue » ; rapport sous accord de confidentialité' },
+          { 'Sujet': 'SOC 2', 'Ce que Vast.ai indique': 'Vast.ai a obtenu la certification SOC 2 Type 2 ; rapport sous accord de confidentialité' },
           { 'Sujet': 'Suppression des données', 'Ce que Vast.ai indique': 'Détruites immédiatement à la suppression d\'une instance' },
           { 'Sujet': 'Chiffrement en transit', 'Ce que Vast.ai indique': 'TLS 1.2+ pour le trafic API et console' },
           { 'Sujet': 'Remboursements', 'Ce que Vast.ai indique': 'Crédits dépensés : aucun. Non dépensés : en général, via le chat' },
         ],
         items: [
-          '**La sécurité des hôtes varie :** la [FAQ sécurité](https://docs.vast.ai/guides/reference/faq/security) indique que « les hôtes individuels peuvent avoir des mesures de sécurité moins formelles » et conseille de chiffrer les données sensibles et de ne pas stocker d\'identifiants dans les instances.',
-          '**La documentation ne dit pas si un hôte peut lire vos données :** elle indique que les clients n\'accèdent qu\'à leurs propres données et que les conteneurs sont isolés, mais n\'aborde pas l\'accès de l\'hôte ; considérez donc les hôtes hors Secure Cloud comme non fiables.',
+          '**La sécurité des hôtes varie :** la [FAQ sécurité](https://docs.vast.ai/guides/reference/faq/security) indique que les hôtes individuels peuvent avoir des mesures de sécurité moins formelles et conseille de chiffrer les données sensibles et de ne pas stocker d\'identifiants dans les instances.',
+          '**Les pages examinées ne disent pas si un hôte peut lire vos données :** elle indique que les clients n\'accèdent qu\'à leurs propres données et que les conteneurs sont isolés, mais n\'aborde pas l\'accès de l\'hôte ; considérez donc les hôtes hors Secure Cloud comme non fiables, sauf confirmation contraire de votre part.',
           '**Les formulations sur les certifications des partenaires diffèrent d\'une page à l\'autre :** la [page de conformité](https://vast.ai/compliance) indique qu\'ISO 27001 ou SOC 2 sont encouragés mais non obligatoires pour les partenaires Secure Cloud, tandis que la FAQ sécurité cite ISO 27001 pour les fournisseurs Secure Cloud. Vérifiez l\'exigence en vigueur avant de vous appuyer sur l\'une ou l\'autre.',
           '**Facturation :** le calcul est facturé à la seconde, le stockage continue pendant l\'arrêt, et un solde négatif sans carte enregistrée entraîne la destruction des instances et des données. Source : [documentation de facturation](https://docs.vast.ai/documentation/reference/billing).',
           'La déclaration SOC 2 Type 2 de Vast.ai concerne les contrôles de l\'entreprise, et non une garantie sur un hôte donné. Ceci ne constitue pas un conseil juridique ni de conformité.',
@@ -969,9 +969,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Comment fonctionne la facturation de Vast.ai ?', a: 'Le calcul est facturé à la seconde sur l\'usage réel, et des crédits doivent être ajoutés avant de démarrer une instance. Le stockage est facturé tant que l\'instance existe, même arrêtée (consulté le 2026-11-22).' },
           { q: 'Quelle différence entre à la demande et interruptible ?', a: 'À la demande : tarif fixe et ressources garanties. Interruptible : coût le plus bas, avec risque de mise en pause ; Vast.ai le décrit comme souvent 50 %+ moins cher qu\'à la demande.' },
           { q: 'Que sont les instances réservées ?', a: 'Les instances réservées bénéficient d\'une remise avec prépaiement ; Vast.ai indique jusqu\'à 50 % de remise et des durées de 1, 3 ou 6 mois sur sa page de tarifs.' },
-          { q: 'Vast.ai est-il sûr ?', a: 'Vast.ai indique avoir obtenu la certification SOC 2 Type 2, et chaque charge s\'exécute dans un conteneur Docker non privilégié. Sa documentation précise aussi que les hôtes individuels peuvent avoir des mesures de sécurité moins formelles. Vast.ai positionne Secure Cloud pour les données sensibles ; vérifiez son DPA et ses certifications pour votre cas.' },
+          { q: 'Vast.ai est-il sûr ?', a: 'Vast.ai indique avoir obtenu la certification SOC 2 Type 2 et que chaque charge s\'exécute dans un conteneur Docker non privilégié. Sa documentation précise aussi que les hôtes individuels peuvent avoir des mesures de sécurité moins formelles. Vast.ai positionne Secure Cloud pour les données sensibles ; vérifiez son DPA et ses certifications pour votre cas.' },
           { q: 'Qu\'est-ce que le niveau Secure Cloud ?', a: 'Secure Cloud est un niveau de partenaires de centres de données sélectionnés, destiné aux besoins réglementés et entreprise. Les partenaires signent des accords de traitement des données avec Vast.ai, d\'après sa [page de conformité](https://vast.ai/compliance).' },
-          { q: 'Que sont les hôtes vérifiés ?', a: 'Les hôtes vérifiés sont testés manuellement pour la fiabilité et les performances et utilisent une isolation des locataires au niveau Docker. Vast.ai les destine aux charges non réglementées.' },
+          { q: 'Que sont les hôtes vérifiés ?', a: 'Vast.ai décrit les hôtes vérifiés comme testés manuellement pour la fiabilité et les performances, avec une isolation des locataires au niveau Docker. Vast.ai les destine aux charges non réglementées.' },
           { q: 'Puis-je me faire rembourser sur Vast.ai ?', a: 'Selon la documentation de facturation, les crédits dépensés ne sont pas remboursables, tandis que les crédits non dépensés peuvent généralement être remboursés en contactant le support via le chat du site. Les anciens crédits Coinbase Commerce ne sont pas remboursables.' },
           { q: 'Que se passe-t-il si mon solde est épuisé ?', a: 'Les instances s\'arrêtent automatiquement quand le solde atteint zéro. Avec une carte enregistrée, le solde est débité pour le couvrir ; sans carte enregistrée, les instances et les données stockées sont détruites.' },
           { q: 'Existe-t-il un dépôt minimum ?', a: 'La documentation de facturation et de tarifs consultée n\'indique aucun montant minimum. Elle dit seulement que des crédits doivent être ajoutés avant de démarrer une instance.' },
@@ -1054,7 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'alquilar gpu barata vast ai',
     ],
     leadAnswerBlock:
-      '**Vast.ai es un marketplace de alquiler de GPUs por segundo donde el precio depende del host que elijas; encaja en trabajo sensible al coste y tolerante a interrupciones. Vast.ai posiciona su nivel Secure Cloud para necesidades reguladas y empresariales; comprueba tú mismo el acuerdo de tratamiento de datos (DPA) y las certificaciones antes de fiarte.** Vast.ai afirma "No minimum hours, no rounding up" y lista precios on-demand, interrumpible ("50%+ cheaper") y reservado ("Up to 50% Off") (consultado el 2026-11-22). Valoración de PromptQuorum: 7.6/10 en conjunto, no es una prueba práctica de laboratorio. La pega es la variación: los hosts verificados se prueban, pero los docs de Vast.ai señalan que "Individual hosts may have less formal security measures", así que no pongas datos regulados en un host que no sea de Secure Cloud. → [Consulta los precios de GPU de Vast.ai](https://vast.ai/pricing)',
+      '**Vast.ai es un marketplace de alquiler de GPUs por segundo donde el precio depende del host que elijas; encaja en trabajo sensible al coste y tolerante a interrupciones. Vast.ai posiciona su nivel Secure Cloud para necesidades reguladas y empresariales; comprueba tú mismo el acuerdo de tratamiento de datos (DPA) y las certificaciones antes de fiarte.** Vast.ai afirma "No minimum hours, no rounding up" y lista precios on-demand, interrumpible ("50%+ cheaper") y reservado ("Up to 50% Off") (consultado el 2026-11-22). Valoración de PromptQuorum: 7.6/10 en conjunto, no es una prueba práctica de laboratorio. La pega es la variación: Vast.ai afirma que los hosts verificados se prueban, pero sus docs señalan que "Individual hosts may have less formal security measures", así que no pongas datos regulados en un host que no sea de Secure Cloud. → [Consulta los precios de GPU de Vast.ai](https://vast.ai/pricing)',
     quickAnswerTop: {
       es: {
         question: '¿Es Vast.ai un buen sitio para alquilar GPUs para modelos locales?',
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Vast.ai es un marketplace de alquiler de GPUs facturado por segundo, con precios on-demand, interrumpible y reservado entre hosts independientes y centros de datos verificados.' },
-      { type: 'plain-terms', content: 'Piensa en Vast.ai como un marketplace tipo subasta de tarjetas gráficas: muchos propietarios distintos listan máquinas, tú eliges una y pagas solo los segundos que usas. Las máquinas más baratas pueden ser menos fiables y algunos propietarios son particulares, así que no pongas datos sensibles en ellas.' },
+      { type: 'plain-terms', content: 'Piensa en Vast.ai como un marketplace tipo subasta de tarjetas gráficas: muchos propietarios distintos listan máquinas, tú eliges una y pagas solo los segundos que usas. Las máquinas más baratas pueden ser menos fiables y algunos hosts son operadores independientes, así que no pongas datos sensibles en ellas.' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -1230,14 +1230,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tema': 'Origen del hardware', 'Qué afirma Vast.ai': 'Hosts independientes y centros de datos verificados (Secure Cloud)' },
           { 'Tema': 'Secure Cloud', 'Qué afirma Vast.ai': 'Para necesidades reguladas y empresariales; los socios firman DPAs' },
           { 'Tema': 'Hosts verificados', 'Qué afirma Vast.ai': 'Probados manualmente; aislamiento Docker; trabajo no regulado' },
-          { 'Tema': 'SOC 2', 'Qué afirma Vast.ai': '"Completed SOC 2 Type 2 certification"; informe bajo NDA' },
+          { 'Tema': 'SOC 2', 'Qué afirma Vast.ai': 'Vast.ai ha completado la certificación SOC 2 Type 2; informe bajo NDA' },
           { 'Tema': 'Borrado de datos', 'Qué afirma Vast.ai': 'Se destruyen de inmediato al eliminar una instancia' },
           { 'Tema': 'Cifrado en tránsito', 'Qué afirma Vast.ai': 'TLS 1.2+ para el tráfico de API y consola' },
           { 'Tema': 'Reembolsos', 'Qué afirma Vast.ai': 'Gastados: ninguno. No gastados: normalmente, por chat' },
         ],
         items: [
           '**La seguridad del host varía:** la [FAQ de seguridad](https://docs.vast.ai/guides/reference/faq/security) dice "Individual hosts may have less formal security measures" y aconseja cifrar los datos sensibles y no guardar credenciales en las instancias.',
-          '**Los docs no dicen si un host puede leer tus datos:** indican que los clientes solo acceden a sus propios datos y que están aislados por contenedor, pero no tratan el acceso del host, así que considera no confiables los hosts que no son de Secure Cloud.',
+          '**Las páginas que revisamos no dicen si un host puede leer tus datos:** indican que los clientes solo acceden a sus propios datos y que están aislados por contenedor, pero no tratan el acceso del host, así que considera no confiables los hosts que no son de Secure Cloud, salvo que hayas confirmado lo contrario.',
           '**La redacción sobre las certificaciones de los socios difiere entre páginas:** la [página de cumplimiento](https://vast.ai/compliance) dice que ISO 27001 o SOC 2 se recomiendan pero no son obligatorios para los socios de Secure Cloud, mientras que la FAQ de seguridad lista ISO 27001 para los proveedores de Secure Cloud. Verifica el requisito actual antes de fiarte de cualquiera de las dos.',
           '**Facturación:** el cómputo se factura por segundo, el almacenamiento continúa mientras está detenido, y un saldo negativo sin tarjeta guardada lleva a la destrucción de instancias y datos. Fuente: [docs de facturación](https://docs.vast.ai/documentation/reference/billing).',
           'La declaración SOC 2 Type 2 de Vast.ai se refiere a los controles de la empresa, no es una garantía sobre ningún host concreto. Esto no es asesoramiento legal ni de cumplimiento.',
@@ -1308,9 +1308,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cómo funciona la facturación de Vast.ai?', a: 'El cómputo se factura por segundo según el uso real y hay que añadir créditos antes de iniciar cualquier instancia. El almacenamiento se factura mientras la instancia exista, incluso detenida (consultado el 2026-11-22).' },
           { q: '¿Cuál es la diferencia entre on-demand e interrumpible?', a: 'On-demand tiene precio fijo y recursos garantizados. Interrumpible es el de menor coste y puede pausarse; Vast.ai lo describe como a menudo un 50%+ más barato que on-demand.' },
           { q: '¿Qué son las instancias reservadas?', a: 'Las instancias reservadas tienen descuento con pago anticipado; Vast.ai lista hasta un 50% menos y plazos de 1, 3 o 6 meses en su página de precios.' },
-          { q: '¿Es seguro Vast.ai?', a: 'Vast.ai afirma haber completado la certificación SOC 2 Type 2, y cada carga se ejecuta en un contenedor Docker sin privilegios. Sus propios docs también dicen que los hosts individuales pueden tener medidas de seguridad menos formales. Vast.ai posiciona Secure Cloud para datos sensibles; confirma su DPA y sus certificaciones para tu caso.' },
+          { q: '¿Es seguro Vast.ai?', a: 'Vast.ai afirma haber completado la certificación SOC 2 Type 2 y que cada carga se ejecuta en un contenedor Docker sin privilegios. Sus propios docs también dicen que los hosts individuales pueden tener medidas de seguridad menos formales. Vast.ai posiciona Secure Cloud para datos sensibles; confirma su DPA y sus certificaciones para tu caso.' },
           { q: '¿Qué es el nivel Secure Cloud?', a: 'Secure Cloud es un nivel de socios de centros de datos verificados orientado a necesidades reguladas y empresariales. Los socios firman acuerdos de tratamiento de datos (DPA) con Vast.ai, según su [página de cumplimiento](https://vast.ai/compliance).' },
-          { q: '¿Qué son los hosts verificados?', a: 'Los hosts verificados se prueban manualmente en fiabilidad y rendimiento y usan aislamiento de inquilinos a nivel de Docker. Vast.ai los destina a cargas no reguladas.' },
+          { q: '¿Qué son los hosts verificados?', a: 'Vast.ai describe los hosts verificados como probados manualmente en fiabilidad y rendimiento, con aislamiento de inquilinos a nivel de Docker. Vast.ai los destina a cargas no reguladas.' },
           { q: '¿Puedo obtener un reembolso en Vast.ai?', a: 'Según los docs de facturación, los créditos gastados no son reembolsables, mientras que los no gastados normalmente se pueden reembolsar contactando con soporte mediante el chat del sitio web. Los créditos heredados de Coinbase Commerce no se pueden reembolsar.' },
           { q: '¿Qué pasa si se me acaba el saldo?', a: 'Las instancias se detienen automáticamente cuando el saldo llega a cero. Con una tarjeta guardada se cobra el saldo para cubrirlo; sin tarjeta guardada, las instancias y los datos almacenados se destruyen.' },
           { q: '¿Hay un depósito mínimo?', a: 'Los docs de facturación y precios revisados no indican un importe mínimo. Solo dicen que hay que añadir créditos antes de iniciar cualquier instancia.' },
@@ -1393,7 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu レンタル 安い vast ai',
     ],
     leadAnswerBlock:
-      '**Vast.aiは秒単位のGPUレンタルマーケットプレイスで、選ぶホストによって価格が変わります。コスト重視で中断を許容できる作業に向いています。Vast.aiはSecure Cloud階層を規制対象や企業向けのニーズ向けと位置づけており、利用前にデータ処理契約（DPA）と認証をご自身で確認してください。** Vast.aiは「No minimum hours, no rounding up」と述べ、オンデマンド、中断可能（「50%+ cheaper」）、リザーブド（「Up to 50% Off」）の料金を掲載しています（2026-11-22確認）。PromptQuorumの評価：総合7.6/10（実機ラボテストではありません）。注意点はばらつきです。検証済みホストはテストされていますが、Vast.aiのドキュメントにも「Individual hosts may have less formal security measures」とあるため、Secure Cloud以外のホストに規制対象のデータを置かないでください。→ [Vast.aiのGPU料金を確認](https://vast.ai/pricing)',
+      '**Vast.aiは秒単位のGPUレンタルマーケットプレイスで、選ぶホストによって価格が変わります。コスト重視で中断を許容できる作業に向いています。Vast.aiはSecure Cloud階層を規制対象や企業向けのニーズ向けと位置づけており、利用前にデータ処理契約（DPA）と認証をご自身で確認してください。** Vast.aiは「No minimum hours, no rounding up」と述べ、オンデマンド、中断可能（「50%+ cheaper」）、リザーブド（「Up to 50% Off」）の料金を掲載しています（2026-11-22確認）。PromptQuorumの評価：総合7.6/10（実機ラボテストではありません）。注意点はばらつきです。Vast.aiは検証済みホストをテストしていると述べていますが、そのドキュメントにも「Individual hosts may have less formal security measures」とあるため、Secure Cloud以外のホストに規制対象のデータを置かないでください。→ [Vast.aiのGPU料金を確認](https://vast.ai/pricing)',
     quickAnswerTop: {
       ja: {
         question: 'Vast.aiはローカルモデル向けのGPUを借りる場所として適していますか？',
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Vast.aiは秒単位で課金されるGPUレンタルのマーケットプレイスで、独立したホストと審査済みデータセンターに対して、オンデマンド、中断可能、リザーブドの料金を提供しています。' },
-      { type: 'plain-terms', content: 'Vast.aiは、グラフィックスカードのオークション型マーケットプレイスのようなものです。さまざまな所有者がマシンを出品し、利用者は1台を選んで、使った秒数分だけ支払います。安いマシンは信頼性が低いことがあり、所有者が個人の場合もあるため、機微なデータは置かないでください。' },
+      { type: 'plain-terms', content: 'Vast.aiは、グラフィックスカードのオークション型マーケットプレイスのようなものです。さまざまな所有者がマシンを出品し、利用者は1台を選んで、使った秒数分だけ支払います。安いマシンは信頼性が低いことがあり、ホストが独立した運営者の場合もあるため、機微なデータは置かないでください。' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -1524,7 +1524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '0.14ドル/hrと0.50ドル/hrは、[CLIページ](https://vast.ai/developers/cli)（2026-11-22確認）にVast.aiが掲載している「から」の下限であり、特定のGPUの価格ではありません。',
           '出典：[Vast.aiの料金ページ](https://vast.ai/pricing)、[インスタンスの料金ドキュメント](https://docs.vast.ai/documentation/instances/pricing)、[課金ドキュメント](https://docs.vast.ai/documentation/reference/billing)。',
-          '課金ドキュメントに記載の支払い方法：Stripe経由の主要クレジットカード、BitPayとCrypto.com経由の暗号資産。自動課金は保存済みカードのみ対応です。このページの価格は米ドルで記載しています。お使いのカードが米ドル建てでない場合、カード会社が海外事務手数料を請求することがあります。',
+          '課金ドキュメントに記載の支払い方法：Stripe経由の主要クレジットカード、BitPayとCrypto.com経由の暗号資産。自動課金は保存済みカードのみ対応です。このページの価格は米ドルで記載しています。',
           '残高がゼロになるとインスタンスは停止します。保存済みカードがある場合は残高が請求され、ない場合はインスタンスとデータが削除されます。',
           '最新のGPUごとの料金は、[クラウドGPUの1時間あたりコスト](/ja/prompt-bites/cloud-gpu-cost-per-hour)のページと、Vast.aiのリアルタイム検索をご覧ください。',
         ],
@@ -1569,14 +1569,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'ハードウェアの出どころ', 'Vast.aiの記載': '独立したホストと審査済みデータセンター（Secure Cloud）' },
           { '項目': 'Secure Cloud', 'Vast.aiの記載': '規制対象・企業向け。パートナーはDPAに署名' },
           { '項目': '検証済みホスト', 'Vast.aiの記載': '手動テスト済み。Docker分離。規制対象外の作業向け' },
-          { '項目': 'SOC 2', 'Vast.aiの記載': '「Completed SOC 2 Type 2 certification」。レポートはNDAのもと' },
+          { '項目': 'SOC 2', 'Vast.aiの記載': 'Vast.aiはSOC 2 Type 2認証を取得済み。レポートはNDAのもと' },
           { '項目': 'データの削除', 'Vast.aiの記載': 'インスタンスを削除すると直ちに破棄' },
           { '項目': '通信の暗号化', 'Vast.aiの記載': 'APIとコンソールの通信はTLS 1.2以上' },
           { '項目': '返金', 'Vast.aiの記載': '使用済みクレジット：なし。未使用分：通常チャット経由で可' },
         ],
         items: [
           '**ホストのセキュリティはばらつきがあります：** [セキュリティFAQ](https://docs.vast.ai/guides/reference/faq/security)には「Individual hosts may have less formal security measures」とあり、機微なデータを暗号化し、インスタンスに認証情報を保存しないよう勧めています。',
-          '**ホストがデータを読めるかどうかはドキュメントに記載がありません：** クライアントは自分のデータにのみアクセスでき、コンテナで分離されていると述べていますが、ホストによるアクセスには触れていないため、Secure Cloud以外のホストは信頼できないものとして扱ってください。',
+          '**ホストがデータを読めるかどうかは、確認したページに記載がありません：** クライアントは自分のデータにのみアクセスでき、コンテナで分離されていると述べていますが、ホストによるアクセスには触れていないため、Secure Cloud以外のホストは確認が取れていない限り、信頼できないものとして扱ってください。',
           '**パートナーの認証に関する記述はページ間で異なります：** [コンプライアンスページ](https://vast.ai/compliance)ではSecure CloudのパートナーにISO 27001またはSOC 2を推奨するが必須ではないとしている一方、セキュリティFAQではSecure CloudのプロバイダーにISO 27001を挙げています。どちらかを前提にする前に、最新の要件を確認してください。',
           '**課金：** コンピュートは秒単位で課金され、ストレージは停止中も継続し、保存済みカードがない状態で残高がマイナスになると、インスタンスとデータが削除されます。出典：[課金ドキュメント](https://docs.vast.ai/documentation/reference/billing)。',
           'Vast.aiのSOC 2 Type 2に関する記述は、同社の管理体制についてのものであり、個々のホストを保証するものではありません。これは法的・コンプライアンス上の助言ではありません。',
@@ -1606,7 +1606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '登録方法',
         content: '**アカウントを作成してクレジットを追加し、起動前にオファーを絞り込みます。**',
         numberedItems: [
-          'Vast.aiのサイトでアカウントを作成し、クレジットを追加します（インスタンスの起動前に必須）。価格はすべて米ドル建てです。お使いのカードが米ドル建てでない場合、カード会社が海外事務手数料を請求することがあります',
+          'Vast.aiのサイトでアカウントを作成し、クレジットを追加します（インスタンスの起動前に必須）。価格はすべて米ドル建てです。',
           'GPUモデル、VRAM、信頼性、価格でオファーを検索します。データが機微な場合は、Secure Cloudフィルターを有効にします',
           '保証されたリソースが必要ならオンデマンド、最低コストを優先するなら中断可能を選びます',
           'Dockerイメージ（OllamaまたはvLLM）を起動し、SSHで接続します',
@@ -1644,12 +1644,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'Vast.aiとは何ですか？', a: 'Vast.aiは、独立したホストと審査済みデータセンターがマシンを出品する、秒単位課金のGPUレンタルマーケットプレイスです。[料金ページ](https://vast.ai/pricing)によると、オンデマンド、中断可能、リザーブドの料金があります。' },
-          { q: 'Vast.aiの課金の仕組みは？', a: 'コンピュートは実際の使用量に対して秒単位で課金され、インスタンスを起動する前にクレジットの追加が必要です。ストレージはインスタンスがある間、停止中も課金されます（2026-11-22確認）。このページの価格は米ドルで記載しています。お使いのカードが米ドル建てでない場合、カード会社が海外事務手数料を請求することがあります。' },
+          { q: 'Vast.aiの課金の仕組みは？', a: 'コンピュートは実際の使用量に対して秒単位で課金され、インスタンスを起動する前にクレジットの追加が必要です。ストレージはインスタンスがある間、停止中も課金されます（2026-11-22確認）。このページの価格は米ドルで記載しています。' },
           { q: 'オンデマンドと中断可能の違いは？', a: 'オンデマンドは固定料金でリソースが保証されます。中断可能は最も低コストで一時停止されることがあり、Vast.aiはオンデマンドより50%以上安いことが多いと説明しています。' },
           { q: 'リザーブドインスタンスとは何ですか？', a: 'リザーブドインスタンスは前払いで割引される料金で、Vast.aiは料金ページで最大50%オフ、1、3、6か月の期間を掲載しています。' },
-          { q: 'Vast.aiは安全ですか？', a: 'Vast.aiはSOC 2 Type 2認証を取得済みと述べており、各ワークロードは非特権のDockerコンテナで動作します。一方、公式ドキュメントには個々のホストはセキュリティ対策が形式的でない場合があるとも書かれているため、Vast.aiは機微なデータ向けにSecure Cloudを位置づけています。ご自身のケースについて、DPAと認証を確認してください。' },
+          { q: 'Vast.aiは安全ですか？', a: 'Vast.aiはSOC 2 Type 2認証を取得済みであり、各ワークロードは非特権のDockerコンテナで動作すると述べています。一方、公式ドキュメントには個々のホストはセキュリティ対策が形式的でない場合があるとも書かれているため、Vast.aiは機微なデータ向けにSecure Cloudを位置づけています。ご自身のケースについて、DPAと認証を確認してください。' },
           { q: 'Secure Cloud階層とは何ですか？', a: 'Secure Cloudは、規制対象や企業向けのニーズを想定した、審査済みデータセンターパートナーの階層です。[コンプライアンスページ](https://vast.ai/compliance)によると、パートナーはVast.aiとデータ処理契約を結びます。' },
-          { q: '検証済みホストとは何ですか？', a: '検証済みホストは、信頼性と性能について手動でテストされ、Dockerレベルのテナント分離を使用します。Vast.aiは、規制対象外のワークロード向けと位置づけています。' },
+          { q: '検証済みホストとは何ですか？', a: 'Vast.aiは検証済みホストを、信頼性と性能について手動でテストされ、Dockerレベルのテナント分離を備えたものと説明しています。Vast.aiは、規制対象外のワークロード向けと位置づけています。' },
           { q: 'Vast.aiで返金は受けられますか？', a: '課金ドキュメントによると、使用済みのクレジットは返金不可ですが、未使用のクレジットは通常、ウェブサイトのチャットでサポートに連絡すれば返金できます。旧Coinbase Commerceのクレジットは返金できません。' },
           { q: '残高がなくなるとどうなりますか？', a: '残高がゼロになるとインスタンスは自動的に停止します。保存済みカードがある場合は不足分が請求され、ない場合はインスタンスと保存データが削除されます。' },
           { q: '最低入金額はありますか？', a: '確認した課金・料金ドキュメントには最低額の記載がありません。インスタンスの起動前にクレジットを追加する必要があるとだけ書かれています。' },
@@ -1732,7 +1732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '便宜租用 gpu vast ai',
     ],
     leadAnswerBlock:
-      '**Vast.ai 是按秒计费的 GPU 租用市场，价格取决于你选择的主机；它适合对成本敏感、能容忍中断的工作。Vast.ai 将其 Secure Cloud 层级定位于受监管和企业需求；依赖之前，请自行核实数据处理协议（DPA）和认证。** Vast.ai 声明“无最低小时数，不向上取整”，并列出按需、可中断（“便宜 50% 以上”）和预留（“最高优惠 50%”）三种定价（核实于 2026-11-22）。PromptQuorum 评估：综合 7.6/10，并非实机测试。关键在于差异：已验证主机经过测试，但 Vast.ai 的文档指出“个别主机的安全措施可能不够正式”，因此不要把受监管数据放在非 Secure Cloud 的主机上。→ [查看 Vast.ai GPU 价格](https://vast.ai/pricing)',
+      '**Vast.ai 是按秒计费的 GPU 租用市场，价格取决于你选择的主机；它适合对成本敏感、能容忍中断的工作。Vast.ai 将其 Secure Cloud 层级定位于受监管和企业需求；依赖之前，请自行核实数据处理协议（DPA）和认证。** Vast.ai 声明“No minimum hours, no rounding up”（无最低小时数，不向上取整），并列出按需、可中断（“50%+ cheaper”（便宜 50% 以上））和预留（“Up to 50% Off”（最高优惠 50%））三种定价（核实于 2026-11-22）。PromptQuorum 评估：综合 7.6/10，并非实机测试。关键在于差异：Vast.ai 称已验证主机经过测试，但其文档指出个别主机的安全措施可能不够正式，因此不要把受监管数据放在非 Secure Cloud 的主机上。→ [查看 Vast.ai GPU 价格](https://vast.ai/pricing)',
     quickAnswerTop: {
       zh: {
         question: 'Vast.ai 适合租用 GPU 来运行本地模型吗？',
@@ -1766,7 +1766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Vast.ai 是按秒计费的 GPU 租用市场，在独立主机方和经审核的数据中心之间提供按需、可中断和预留三种定价。' },
-      { type: 'plain-terms', content: '可以把 Vast.ai 看作显卡的拍卖式市场：许多不同的所有者挂出机器，你挑一台，只为用到的秒数付费。较便宜的机器可能不够可靠，有些所有者还是个人，因此不要把敏感数据放在上面。' },
+      { type: 'plain-terms', content: '可以把 Vast.ai 看作显卡的拍卖式市场：许多不同的所有者挂出机器，你挑一台，只为用到的秒数付费。较便宜的机器可能不够可靠，有些主机属于独立运营者，因此不要把敏感数据放在上面。' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -1812,8 +1812,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '核心要点',
         isTldr: true,
         items: [
-          'Vast.ai 是按秒计费的 GPU 市场；它声明“无最低小时数，不向上取整”（核实于 2026-11-22）',
-          '三种定价类型：按需（有保障）、可中断（可能被暂停，据 Vast.ai“便宜 50% 以上”）、预留（预付，最高优惠 50%）',
+          'Vast.ai 是按秒计费的 GPU 市场；它声明“No minimum hours, no rounding up”（无最低小时数，不向上取整）（核实于 2026-11-22）',
+          '三种定价类型：按需（有保障）、可中断（可能被暂停，据 Vast.ai“50%+ cheaper”（便宜 50% 以上））、预留（预付，最高优惠 50%）',
           '两个信任层级：Secure Cloud（经审核的数据中心）和已验证主机（人工测试，用于非受监管工作负载）',
           'Vast.ai 声明已完成 SOC 2 Type 2 认证；报告需签署保密协议后提供',
           '实例停止后存储仍会计费；删除实例才会结束存储费用',
@@ -1837,8 +1837,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vast.ai 汇集了许多提供者的 GPU 机器；你搜索报价、挑选一台，并在其上启动 Docker 容器。** 各主机在硬件、位置、带宽价格和信任层级上各不相同，因此搜索筛选条件比单一运营方的云更重要。',
         items: [
           '**报价：** 你可以按 GPU 型号、显存、价格、可靠性和位置筛选（Vast.ai CLI 页面介绍了这些筛选条件）。',
-          '**实例类型：** 按需是“固定价格，有保障的资源（高优先级）”；可中断是“最低成本，可能被暂停（低优先级）”；预留是“预付可获得折扣价”（[Vast.ai 定价文档](https://docs.vast.ai/documentation/instances/pricing)）。',
-          '**主机层级：** Secure Cloud 来自经审核的数据中心；已验证主机“经过人工可靠性与性能测试”，并采用 Docker 级别的租户隔离（[Vast.ai 合规页面](https://vast.ai/compliance)）。',
+          '**实例类型：** 按需是固定价格，有保障的资源（高优先级）；可中断是最低成本，可能被暂停（低优先级）；预留是预付可获得折扣价（[Vast.ai 定价文档](https://docs.vast.ai/documentation/instances/pricing)）。',
+          '**主机层级：** Secure Cloud 来自经审核的数据中心；已验证主机经过人工可靠性与性能测试，并采用 Docker 级别的租户隔离（[Vast.ai 合规页面](https://vast.ai/compliance)）。',
           '**运行环境：** 据 Vast.ai，每个工作负载都运行在无特权的 Docker 容器中，与其他租户隔离。',
           '**访问方式：** 文档中的接入方式有 SSH、Jupyter 以及 API/CLI。',
         ],
@@ -1851,9 +1851,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**按实际用量按秒计费，任何实例启动之前都必须先充值。** 核实于 2026-11-22。各 GPU 的每小时费率是市场实时数值，因主机而异，本评测未核实，因此不引用任何单卡价格。',
         columns: ['项目', 'Vast.ai 的说明'],
         rows: [
-          { '项目': '计费单位', 'Vast.ai 的说明': '按秒；“无最低小时数，不向上取整”' },
+          { '项目': '计费单位', 'Vast.ai 的说明': '按秒；“No minimum hours, no rounding up”（无最低小时数，不向上取整）' },
           { '项目': '按需', 'Vast.ai 的说明': '固定价格，有保障的资源' },
-          { '项目': '可中断', 'Vast.ai 的说明': '比按需“便宜 50% 以上”；可能被暂停' },
+          { '项目': '可中断', 'Vast.ai 的说明': '比按需“50%+ cheaper”（便宜 50% 以上）；可能被暂停' },
           { '项目': '预留', 'Vast.ai 的说明': '最高优惠 50%；1、3 或 6 个月期限' },
           { '项目': '宣传的起价', 'Vast.ai 的说明': 'Spot 起价 $0.14/小时，按需 $0.50/小时（CLI 页面）' },
           { '项目': '存储', 'Vast.ai 的说明': '实例存在期间计费，即使已停止' },
@@ -1908,14 +1908,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '主题': '硬件来源', 'Vast.ai 的说明': '独立主机方和经审核的数据中心（Secure Cloud）' },
           { '主题': 'Secure Cloud', 'Vast.ai 的说明': '面向受监管和企业需求；合作方签署 DPA' },
           { '主题': '已验证主机', 'Vast.ai 的说明': '人工测试；Docker 隔离；用于非受监管工作' },
-          { '主题': 'SOC 2', 'Vast.ai 的说明': '“已完成 SOC 2 Type 2 认证”；报告需签 NDA' },
+          { '主题': 'SOC 2', 'Vast.ai 的说明': 'Vast.ai 已完成 SOC 2 Type 2 认证；报告需签 NDA' },
           { '主题': '数据删除', 'Vast.ai 的说明': '删除实例时立即销毁' },
           { '主题': '传输加密', 'Vast.ai 的说明': 'API 和控制台流量使用 TLS 1.2+' },
           { '主题': '退款', 'Vast.ai 的说明': '已花费额度：不退。未花费：通常可退，经聊天申请' },
         ],
         items: [
-          '**主机安全性各不相同：**[安全 FAQ](https://docs.vast.ai/guides/reference/faq/security) 称“个别主机的安全措施可能不够正式”，并建议加密敏感数据，不要在实例中存放凭据。',
-          '**文档没有说明主机方能否读取你的数据：** 文档称客户只能访问自己的数据且受容器隔离，但没有涉及主机方的访问，因此应把非 Secure Cloud 的主机视为不可信。',
+          '**主机安全性各不相同：**[安全 FAQ](https://docs.vast.ai/guides/reference/faq/security) 称个别主机的安全措施可能不够正式，并建议加密敏感数据，不要在实例中存放凭据。',
+          '**我们查阅的页面没有说明主机方能否读取你的数据：** 文档称客户只能访问自己的数据且受容器隔离，但没有涉及主机方的访问，因此应把非 Secure Cloud 的主机视为不可信，除非你已另行确认。',
           '**不同页面对合作方认证的表述不一致：**[合规页面](https://vast.ai/compliance)称鼓励但不强制 Secure Cloud 合作方具备 ISO 27001 或 SOC 2，而安全 FAQ 则在 Secure Cloud 提供者的特征中列出了 ISO 27001。依赖任何一种说法之前，请先核实当前要求。',
           '**计费：** 计算按秒计费，停止期间存储仍会计费；没有已保存银行卡且余额为负时，实例和数据会被销毁。来源：[计费文档](https://docs.vast.ai/documentation/reference/billing)。',
           'Vast.ai 的 SOC 2 Type 2 声明涉及公司自身的控制措施，并不保证任何单个主机的情况。这不是法律或合规建议。',
@@ -1986,9 +1986,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Vast.ai 如何计费？', a: '计算按实际用量按秒计费，启动任何实例前都必须先充值。存储在实例存在期间计费，即使已停止（核实于 2026-11-22）。' },
           { q: '按需和可中断有什么区别？', a: '按需是固定价格、有保障的资源。可中断是最低成本，可能被暂停；Vast.ai 称它通常比按需便宜 50% 以上。' },
           { q: '什么是预留实例？', a: '预留实例通过预付获得折扣；Vast.ai 在其定价页列出最高优惠 50%，期限为 1、3 或 6 个月。' },
-          { q: 'Vast.ai 安全吗？', a: 'Vast.ai 声明已完成 SOC 2 Type 2 认证，每个工作负载都运行在无特权的 Docker 容器中。其官方文档同时也说个别主机的安全措施可能不够正式。Vast.ai 将 Secure Cloud 定位于敏感数据；请根据自身情况确认其 DPA 和认证。' },
+          { q: 'Vast.ai 安全吗？', a: 'Vast.ai 声明已完成 SOC 2 Type 2 认证，并称每个工作负载都运行在无特权的 Docker 容器中。其官方文档同时也说个别主机的安全措施可能不够正式。Vast.ai 将 Secure Cloud 定位于敏感数据；请根据自身情况确认其 DPA 和认证。' },
           { q: '什么是 Secure Cloud 层级？', a: 'Secure Cloud 是由经审核的数据中心合作方组成的层级，面向受监管和企业需求。据其[合规页面](https://vast.ai/compliance)，合作方与 Vast.ai 签署数据处理协议。' },
-          { q: '什么是已验证主机？', a: '已验证主机经过人工可靠性与性能测试，并采用 Docker 级别的租户隔离。Vast.ai 将其定位于非受监管的工作负载。' },
+          { q: '什么是已验证主机？', a: 'Vast.ai 将已验证主机描述为经过人工可靠性与性能测试，并采用 Docker 级别的租户隔离。Vast.ai 将其定位于非受监管的工作负载。' },
           { q: '在 Vast.ai 上可以退款吗？', a: '据计费文档，已花费的额度不可退款，而未花费的额度通常可通过网站聊天联系客服退款。旧版 Coinbase Commerce 额度无法退款。' },
           { q: '余额用完会怎样？', a: '余额归零时实例会自动停止。有已保存的银行卡时会从卡中扣款以补足；没有已保存银行卡时，实例和存储的数据会被销毁。' },
           { q: '有最低充值金额吗？', a: '所查阅的计费和定价文档没有说明最低金额，只说明启动任何实例前必须先充值。' },
@@ -2071,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu 저렴하게 대여 vast ai',
     ],
     leadAnswerBlock:
-      '**Vast.ai는 선택한 호스트에 따라 가격이 달라지는 초 단위 GPU 대여 마켓플레이스입니다. 비용에 민감하고 중단을 감수할 수 있는 작업에 적합합니다. Vast.ai는 Secure Cloud 등급을 규제 및 기업 요구용으로 내세우므로, 의존하기 전에 데이터 처리 계약(DPA)과 인증을 직접 확인하십시오.** Vast.ai는 "최소 이용 시간 없음, 올림 없음"이라고 밝히고 온디맨드, 인터럽터블("50% 이상 저렴"), 예약("최대 50% 할인") 가격을 안내합니다(2026-11-22 확인). PromptQuorum 평가: 종합 7.6/10점이며, 직접 실험실에서 테스트한 결과가 아닙니다. 문제는 편차입니다. 검증된 호스트는 테스트를 거치지만, Vast.ai 문서는 "개별 호스트는 공식적인 보안 조치가 덜 갖춰져 있을 수 있다"고 밝히므로, Secure Cloud가 아닌 호스트에는 규제 대상 데이터를 올리지 마십시오. → [Vast.ai GPU 가격 확인](https://vast.ai/pricing)',
+      '**Vast.ai는 선택한 호스트에 따라 가격이 달라지는 초 단위 GPU 대여 마켓플레이스입니다. 비용에 민감하고 중단을 감수할 수 있는 작업에 적합합니다. Vast.ai는 Secure Cloud 등급을 규제 및 기업 요구용으로 내세우므로, 의존하기 전에 데이터 처리 계약(DPA)과 인증을 직접 확인하십시오.** Vast.ai는 "No minimum hours, no rounding up" (최소 이용 시간 없음, 올림 없음)이라고 밝히고 온디맨드, 인터럽터블("50%+ cheaper", 50% 이상 저렴), 예약("Up to 50% Off", 최대 50% 할인) 가격을 안내합니다(2026-11-22 확인). PromptQuorum 평가: 종합 7.6/10점이며, 직접 실험실에서 테스트한 결과가 아닙니다. 문제는 편차입니다. Vast.ai는 검증된 호스트를 테스트한다고 밝히지만, 그 문서는 개별 호스트는 공식적인 보안 조치가 덜 갖춰져 있을 수 있다고 밝히므로, Secure Cloud가 아닌 호스트에는 규제 대상 데이터를 올리지 마십시오. → [Vast.ai GPU 가격 확인](https://vast.ai/pricing)',
     quickAnswerTop: {
       ko: {
         question: 'Vast.ai는 로컬 모델용 GPU를 빌리기에 좋은 곳입니까?',
@@ -2105,7 +2105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Vast.ai는 초 단위로 과금하는 GPU 대여 마켓플레이스로, 독립 호스트와 검증된 데이터 센터에 걸쳐 온디맨드, 인터럽터블, 예약 가격을 제공합니다.' },
-      { type: 'plain-terms', content: 'Vast.ai는 그래픽 카드를 거래하는 경매형 시장이라고 생각하면 됩니다. 여러 소유자가 머신을 등록하고, 사용자는 하나를 골라 실제로 사용한 초 단위 시간만큼만 비용을 냅니다. 더 저렴한 머신은 덜 안정적일 수 있고 일부 소유자는 개인이므로, 민감한 데이터는 올리지 마십시오.' },
+      { type: 'plain-terms', content: 'Vast.ai는 그래픽 카드를 거래하는 경매형 시장이라고 생각하면 됩니다. 여러 소유자가 머신을 등록하고, 사용자는 하나를 골라 실제로 사용한 초 단위 시간만큼만 비용을 냅니다. 더 저렴한 머신은 덜 안정적일 수 있고 일부 호스트는 독립 운영자이므로, 민감한 데이터는 올리지 마십시오.' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -2151,8 +2151,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '핵심 요약',
         isTldr: true,
         items: [
-          'Vast.ai는 초 단위로 과금하는 GPU 마켓플레이스이며, "최소 이용 시간 없음, 올림 없음"이라고 밝힙니다(2026-11-22 확인)',
-          '세 가지 가격 유형: 온디맨드(보장), 인터럽터블(일시 중지될 수 있음, Vast.ai 기준 "50% 이상 저렴"), 예약(선불, 최대 50% 할인)',
+          'Vast.ai는 초 단위로 과금하는 GPU 마켓플레이스이며, "No minimum hours, no rounding up" (최소 이용 시간 없음, 올림 없음)이라고 밝힙니다(2026-11-22 확인)',
+          '세 가지 가격 유형: 온디맨드(보장), 인터럽터블(일시 중지될 수 있음, Vast.ai 기준 "50%+ cheaper" (50% 이상 저렴)), 예약(선불, 최대 50% 할인)',
           '두 가지 신뢰 등급: Secure Cloud(검증된 데이터 센터)와 검증 호스트(수동 테스트, 비규제 워크로드용)',
           'Vast.ai는 SOC 2 Type 2 인증을 완료했다고 밝히며, 보고서는 NDA 하에 제공됩니다',
           '인스턴스가 중지돼도 스토리지는 과금되며, 스토리지 요금을 끝내려면 인스턴스를 삭제하십시오',
@@ -2176,8 +2176,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vast.ai는 여러 제공자의 GPU 머신을 등록해 두고, 사용자는 오퍼를 검색해 하나를 고른 뒤 그 위에서 Docker 컨테이너를 실행합니다.** 호스트마다 하드웨어, 위치, 대역폭 가격, 신뢰 등급이 다르므로, 운영 주체가 하나인 클라우드보다 검색 필터가 더 중요합니다.',
         items: [
           '**오퍼:** GPU 모델, VRAM, 가격, 안정성, 위치로 필터링합니다(Vast.ai CLI 페이지에 이 필터들이 설명되어 있습니다).',
-          '**인스턴스 유형:** 온디맨드는 "고정 가격, 보장된 리소스(높은 우선순위)", 인터럽터블은 "최저 비용, 일시 중지될 수 있음(낮은 우선순위)", 예약은 "선불 시 할인 요금"입니다([Vast.ai 가격 문서](https://docs.vast.ai/documentation/instances/pricing)).',
-          '**호스트 등급:** Secure Cloud는 검증된 데이터 센터를 활용하고, 검증 호스트는 "안정성과 성능에 대해 수동으로 테스트"되며 Docker 수준의 테넌트 격리를 사용합니다([Vast.ai 규정 준수 페이지](https://vast.ai/compliance)).',
+          '**인스턴스 유형:** 온디맨드는 고정 가격, 보장된 리소스(높은 우선순위), 인터럽터블은 최저 비용, 일시 중지될 수 있음(낮은 우선순위), 예약은 선불 시 할인 요금입니다([Vast.ai 가격 문서](https://docs.vast.ai/documentation/instances/pricing)).',
+          '**호스트 등급:** Secure Cloud는 검증된 데이터 센터를 활용하고, 검증 호스트는 안정성과 성능에 대해 수동으로 테스트되며 Docker 수준의 테넌트 격리를 사용합니다([Vast.ai 규정 준수 페이지](https://vast.ai/compliance)).',
           '**런타임:** Vast.ai에 따르면 각 워크로드는 다른 테넌트와 격리된 권한 없는 Docker 컨테이너에서 실행됩니다.',
           '**접근:** 문서화된 접속 방법은 SSH, Jupyter, API/CLI입니다.',
         ],
@@ -2190,9 +2190,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**과금은 실제 사용량에 대해 초 단위로 이루어지며, 인스턴스를 시작하기 전에 크레딧을 먼저 충전해야 합니다.** 2026-11-22에 확인했습니다. GPU별 시간당 요금은 호스트에 따라 변하는 실시간 마켓플레이스 값이며 이 리뷰에서 확인하지 않았으므로 GPU별 수치는 기재하지 않았습니다.',
         columns: ['항목', 'Vast.ai 명시 내용'],
         rows: [
-          { '항목': '과금 단위', 'Vast.ai 명시 내용': '초 단위, "최소 이용 시간 없음, 올림 없음"' },
+          { '항목': '과금 단위', 'Vast.ai 명시 내용': '초 단위, "No minimum hours, no rounding up" (최소 이용 시간 없음, 올림 없음)' },
           { '항목': '온디맨드', 'Vast.ai 명시 내용': '고정 가격, 보장된 리소스' },
-          { '항목': '인터럽터블', 'Vast.ai 명시 내용': '온디맨드보다 "50% 이상 저렴", 일시 중지될 수 있음' },
+          { '항목': '인터럽터블', 'Vast.ai 명시 내용': '온디맨드보다 "50%+ cheaper" (50% 이상 저렴), 일시 중지될 수 있음' },
           { '항목': '예약', 'Vast.ai 명시 내용': '최대 50% 할인, 1·3·6개월 약정' },
           { '항목': '안내된 최저가', 'Vast.ai 명시 내용': '스팟 $0.14/hr부터, 온디맨드 $0.50/hr부터(CLI 페이지)' },
           { '항목': '스토리지', 'Vast.ai 명시 내용': '인스턴스가 존재하는 동안 과금, 중지돼도 동일' },
@@ -2200,9 +2200,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '최소 충전액', 'Vast.ai 명시 내용': '검토한 문서에는 명시되지 않음' },
         ],
         items: [
-          '$0.14/hr와 $0.50/hr는 특정 GPU의 가격이 아니라 [Vast.ai CLI 페이지](https://vast.ai/developers/cli)(2026-11-22 확인)에 안내된 "부터" 최저가입니다.',
+          '$0.14/hr와 $0.50/hr는 특정 GPU의 가격이 아니라 [Vast.ai CLI 페이지](https://vast.ai/developers/cli)(2026-11-22 확인)에 안내된 부터 최저가입니다.',
           '출처: [Vast.ai 가격](https://vast.ai/pricing), [인스턴스 가격 문서](https://docs.vast.ai/documentation/instances/pricing), [과금 문서](https://docs.vast.ai/documentation/reference/billing).',
-          '과금 문서에 나온 결제 수단: Stripe를 통한 주요 신용카드, BitPay와 Crypto.com을 통한 암호화폐. 자동 결제는 저장된 카드로만 가능합니다. 이 페이지의 가격은 USD로 표기했습니다. 카드가 USD 카드가 아니라면 카드 발급사가 해외 결제 수수료를 부과할 수 있습니다.',
+          '과금 문서에 나온 결제 수단: Stripe를 통한 주요 신용카드, BitPay와 Crypto.com을 통한 암호화폐. 자동 결제는 저장된 카드로만 가능합니다. 이 페이지의 가격은 USD로 표기했습니다.',
           '잔액이 0이 되면 인스턴스가 중지됩니다. 저장된 카드가 있으면 잔액이 청구되고, 없으면 인스턴스와 데이터가 삭제됩니다.',
           '현재 GPU별 요금은 [클라우드 GPU 시간당 비용](/ko/prompt-bites/cloud-gpu-cost-per-hour) 페이지와 Vast.ai 실시간 검색을 참고하십시오.',
         ],
@@ -2247,14 +2247,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '주제': '하드웨어 출처', 'Vast.ai 명시 내용': '독립 호스트와 검증된 데이터 센터(Secure Cloud)' },
           { '주제': 'Secure Cloud', 'Vast.ai 명시 내용': '규제 및 기업 요구용, 파트너가 DPA에 서명' },
           { '주제': '검증 호스트', 'Vast.ai 명시 내용': '수동 테스트, Docker 격리, 비규제 작업용' },
-          { '주제': 'SOC 2', 'Vast.ai 명시 내용': '"SOC 2 Type 2 인증 완료", 보고서는 NDA 하에 제공' },
+          { '주제': 'SOC 2', 'Vast.ai 명시 내용': 'Vast.ai는 SOC 2 Type 2 인증을 완료함, 보고서는 NDA 하에 제공' },
           { '주제': '데이터 삭제', 'Vast.ai 명시 내용': '인스턴스를 삭제하면 즉시 파기' },
           { '주제': '전송 암호화', 'Vast.ai 명시 내용': 'API 및 콘솔 트래픽에 TLS 1.2 이상' },
           { '주제': '환불', 'Vast.ai 명시 내용': '사용한 크레딧: 불가. 미사용분: 보통 채팅으로 가능' },
         ],
         items: [
-          '**호스트 보안은 제각각입니다:** [보안 FAQ](https://docs.vast.ai/guides/reference/faq/security)는 "개별 호스트는 공식적인 보안 조치가 덜 갖춰져 있을 수 있다"고 밝히고, 민감한 데이터를 암호화하며 인스턴스에 자격 증명을 저장하지 말라고 권고합니다.',
-          '**호스트가 데이터를 읽을 수 있는지는 문서에 없습니다:** 문서는 클라이언트가 자신의 데이터에만 접근하며 컨테이너로 격리된다고 밝히지만 호스트의 접근은 다루지 않으므로, Secure Cloud가 아닌 호스트는 신뢰할 수 없는 것으로 취급하십시오.',
+          '**호스트 보안은 제각각입니다:** [보안 FAQ](https://docs.vast.ai/guides/reference/faq/security)는 개별 호스트는 공식적인 보안 조치가 덜 갖춰져 있을 수 있다고 밝히고, 민감한 데이터를 암호화하며 인스턴스에 자격 증명을 저장하지 말라고 권고합니다.',
+          '**호스트가 데이터를 읽을 수 있는지는 확인한 페이지에 없습니다:** 문서는 클라이언트가 자신의 데이터에만 접근하며 컨테이너로 격리된다고 밝히지만 호스트의 접근은 다루지 않으므로, Secure Cloud가 아닌 호스트는 신뢰할 수 없는 것으로 취급하십시오. 달리 확인한 경우는 예외입니다.',
           '**파트너 인증에 관한 표현이 페이지마다 다릅니다:** [규정 준수 페이지](https://vast.ai/compliance)는 Secure Cloud 파트너에게 ISO 27001 또는 SOC 2를 권장하지만 필수는 아니라고 하는 반면, 보안 FAQ는 Secure Cloud 제공자에게 ISO 27001을 명시합니다. 어느 쪽이든 의존하기 전에 현재 요건을 확인하십시오.',
           '**과금:** 컴퓨팅은 초 단위로 과금되고, 스토리지는 중지된 동안에도 계속되며, 저장된 카드 없이 잔액이 마이너스가 되면 인스턴스와 데이터가 삭제됩니다. 출처: [과금 문서](https://docs.vast.ai/documentation/reference/billing).',
           'Vast.ai의 SOC 2 Type 2 설명은 회사의 통제에 관한 것이며 개별 호스트에 대한 보증이 아닙니다. 이는 법률 또는 규정 준수 자문이 아닙니다.',
@@ -2325,9 +2325,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Vast.ai 과금은 어떻게 작동합니까?', a: '컴퓨팅은 실제 사용량에 대해 초 단위로 과금되며, 인스턴스를 시작하기 전에 크레딧을 충전해야 합니다. 스토리지는 인스턴스가 존재하는 동안 중지된 상태에서도 과금됩니다(2026-11-22 확인).' },
           { q: '온디맨드와 인터럽터블은 어떻게 다릅니까?', a: '온디맨드는 고정 가격에 리소스가 보장됩니다. 인터럽터블은 비용이 가장 낮지만 일시 중지될 수 있으며, Vast.ai는 온디맨드보다 50% 이상 저렴한 경우가 많다고 설명합니다.' },
           { q: '예약 인스턴스란 무엇입니까?', a: '예약 인스턴스는 선불로 할인을 받는 방식입니다. Vast.ai는 가격 페이지에 최대 50% 할인과 1·3·6개월 약정을 안내합니다.' },
-          { q: 'Vast.ai는 안전합니까?', a: 'Vast.ai는 SOC 2 Type 2 인증을 완료했다고 밝히며, 각 워크로드는 권한 없는 Docker 컨테이너에서 실행됩니다. 자체 문서는 개별 호스트가 공식적인 보안 조치가 덜 갖춰져 있을 수 있다고도 밝힙니다. Vast.ai는 Secure Cloud를 민감한 데이터용으로 내세우고 있으니, 본인의 경우에 해당하는 DPA와 인증을 확인하십시오.' },
+          { q: 'Vast.ai는 안전합니까?', a: 'Vast.ai는 SOC 2 Type 2 인증을 완료했으며 각 워크로드가 권한 없는 Docker 컨테이너에서 실행된다고 밝힙니다. 자체 문서는 개별 호스트가 공식적인 보안 조치가 덜 갖춰져 있을 수 있다고도 밝힙니다. Vast.ai는 Secure Cloud를 민감한 데이터용으로 내세우고 있으니, 본인의 경우에 해당하는 DPA와 인증을 확인하십시오.' },
           { q: 'Secure Cloud 등급이란 무엇입니까?', a: 'Secure Cloud는 규제 및 기업 요구를 겨냥한 검증된 데이터 센터 파트너 등급입니다. [규정 준수 페이지](https://vast.ai/compliance)에 따르면 파트너는 Vast.ai와 데이터 처리 계약(DPA)에 서명합니다.' },
-          { q: '검증 호스트란 무엇입니까?', a: '검증 호스트는 안정성과 성능에 대해 수동으로 테스트되며 Docker 수준의 테넌트 격리를 사용합니다. Vast.ai는 이를 비규제 워크로드용으로 안내합니다.' },
+          { q: '검증 호스트란 무엇입니까?', a: 'Vast.ai는 검증 호스트를 안정성과 성능에 대해 수동으로 테스트되며 Docker 수준의 테넌트 격리를 갖춘 것으로 설명합니다. Vast.ai는 이를 비규제 워크로드용으로 안내합니다.' },
           { q: 'Vast.ai에서 환불받을 수 있습니까?', a: '과금 문서에 따르면 사용한 크레딧은 환불되지 않으며, 사용하지 않은 크레딧은 보통 웹사이트 채팅으로 지원팀에 문의해 환불받을 수 있습니다. 예전 Coinbase Commerce 크레딧은 환불할 수 없습니다.' },
           { q: '잔액이 떨어지면 어떻게 됩니까?', a: '잔액이 0이 되면 인스턴스가 자동으로 중지됩니다. 저장된 카드가 있으면 부족분이 청구되고, 저장된 카드가 없으면 인스턴스와 저장된 데이터가 삭제됩니다.' },
           { q: '최소 충전액이 있습니까?', a: '검토한 과금 및 가격 문서에는 최소 금액이 명시되어 있지 않습니다. 인스턴스를 시작하기 전에 크레딧을 충전해야 한다는 내용만 있습니다.' },
@@ -2410,7 +2410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'alugar gpu barata vast ai',
     ],
     leadAnswerBlock:
-      '**A Vast.ai é um marketplace de aluguel de GPU cobrado por segundo, em que o preço depende do host escolhido; serve para trabalhos sensíveis a custo e tolerantes a interrupções. A Vast.ai posiciona o nível Secure Cloud para necessidades regulamentadas e corporativas; confira você mesmo o acordo de processamento de dados (DPA) e as certificações antes de confiar nele.** A Vast.ai declara "Sem horas mínimas, sem arredondamento para cima" e lista preços sob demanda, interruptível ("50%+ mais barato") e reservado ("Até 50% de desconto") (conferido em 2026-11-22). Avaliação do PromptQuorum: 7.6/10 no geral, e não um teste prático em laboratório. O porém é a variação: os hosts verificados são testados, mas a documentação da Vast.ai observa que "hosts individuais podem ter medidas de segurança menos formais", então não coloque dados regulados em um host fora do Secure Cloud. → [Ver preços de GPU da Vast.ai](https://vast.ai/pricing)',
+      '**A Vast.ai é um marketplace de aluguel de GPU cobrado por segundo, em que o preço depende do host escolhido; serve para trabalhos sensíveis a custo e tolerantes a interrupções. A Vast.ai posiciona o nível Secure Cloud para necessidades regulamentadas e corporativas; confira você mesmo o acordo de processamento de dados (DPA) e as certificações antes de confiar nele.** A Vast.ai declara "No minimum hours, no rounding up" (Sem horas mínimas, sem arredondamento para cima) e lista preços sob demanda, interruptível ("50%+ cheaper", 50%+ mais barato) e reservado ("Up to 50% Off", Até 50% de desconto) (conferido em 2026-11-22). Avaliação do PromptQuorum: 7.6/10 no geral, e não um teste prático em laboratório. O porém é a variação: a Vast.ai afirma que os hosts verificados são testados, mas a documentação dela observa que hosts individuais podem ter medidas de segurança menos formais, então não coloque dados regulados em um host fora do Secure Cloud. → [Ver preços de GPU da Vast.ai](https://vast.ai/pricing)',
     quickAnswerTop: {
       pt: {
         question: 'A Vast.ai é um bom lugar para alugar GPUs para modelos locais?',
@@ -2444,14 +2444,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'A Vast.ai é um marketplace de aluguel de GPUs cobrado por segundo, com preços sob demanda, interruptível e reservado entre hosts independentes e data centers selecionados.' },
-      { type: 'plain-terms', content: 'Pense na Vast.ai como um marketplace estilo leilão de placas de vídeo: vários donos listam máquinas, você escolhe uma e paga só pelos segundos que usar. Máquinas mais baratas podem ser menos confiáveis, e alguns donos são pessoas físicas, então não coloque dados sensíveis nelas.' },
+      { type: 'plain-terms', content: 'Pense na Vast.ai como um marketplace estilo leilão de placas de vídeo: vários donos listam máquinas, você escolhe uma e paga só pelos segundos que usar. Máquinas mais baratas podem ser menos confiáveis, e alguns hosts são operadores independentes, então não coloque dados sensíveis nelas.' },
     ],
     sections: {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Compre se / Evite se',
         highlight: true,
-        content: 'Guia rápido de decisão. Avaliação do PromptQuorum: uma ótima opção para experimentos guiados por custo, e uma opção ruim para cargas confidenciais ou críticas de produção em hosts fora do Secure Cloud.',
+        content: 'Guia rápido de decisão. Avaliação do PromptQuorum: uma boa opção para experimentos guiados por custo, e uma opção ruim para cargas confidenciais ou críticas de produção em hosts fora do Secure Cloud.',
         items: [
           '**Alugue na Vast.ai se:**',
           'Você quer escolher entre muitos modelos de GPU, da RTX 3060 à B200 ([a Vast.ai lista mais de 68 tipos de GPU](https://vast.ai/pricing))',
@@ -2490,8 +2490,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pontos principais',
         isTldr: true,
         items: [
-          'A Vast.ai é um marketplace de GPUs cobrado por segundo; declara "Sem horas mínimas, sem arredondamento para cima" (conferido em 2026-11-22)',
-          'Três tipos de preço: sob demanda (garantido), interruptível (pode ser pausado, "50%+ mais barato" segundo a Vast.ai), reservado (pré-pago, até 50% de desconto)',
+          'A Vast.ai é um marketplace de GPUs cobrado por segundo; declara "No minimum hours, no rounding up" (Sem horas mínimas, sem arredondamento para cima) (conferido em 2026-11-22)',
+          'Três tipos de preço: sob demanda (garantido), interruptível (pode ser pausado, "50%+ cheaper" (50%+ mais barato) segundo a Vast.ai), reservado (pré-pago, até 50% de desconto)',
           'Dois níveis de confiança: Secure Cloud (data centers selecionados) e hosts verificados (testados manualmente, para cargas não regulamentadas)',
           'A Vast.ai declara ter concluído a certificação SOC 2 Type 2; o relatório está disponível sob NDA',
           'O armazenamento é cobrado mesmo com a instância parada; exclua a instância para encerrar a cobrança de armazenamento',
@@ -2515,8 +2515,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A Vast.ai lista máquinas com GPU de muitos provedores; você pesquisa ofertas, escolhe uma e inicia um contêiner Docker nela.** Os hosts diferem em hardware, localização, preço de banda e nível de confiança, então os filtros de busca importam mais do que em uma nuvem de operador único.',
         items: [
           '**Ofertas:** você filtra por modelo de GPU, VRAM, preço, confiabilidade e localização (a página da CLI da Vast.ai descreve esses filtros).',
-          '**Tipos de instância:** sob demanda é "preço fixo, recursos garantidos (alta prioridade)"; interruptível é "menor custo, pode ser pausada (baixa prioridade)"; reservada é "tarifas com desconto mediante pré-pagamento" ([documentação de preços da Vast.ai](https://docs.vast.ai/documentation/instances/pricing)).',
-          '**Níveis de host:** o Secure Cloud usa data centers selecionados; os hosts verificados são "testados manualmente quanto a confiabilidade e desempenho", com isolamento de inquilinos em nível de Docker ([página de conformidade da Vast.ai](https://vast.ai/compliance)).',
+          '**Tipos de instância:** sob demanda é preço fixo, recursos garantidos (alta prioridade); interruptível é menor custo, pode ser pausada (baixa prioridade); reservada é tarifas com desconto mediante pré-pagamento ([documentação de preços da Vast.ai](https://docs.vast.ai/documentation/instances/pricing)).',
+          '**Níveis de host:** o Secure Cloud usa data centers selecionados; os hosts verificados são testados manualmente quanto a confiabilidade e desempenho, com isolamento de inquilinos em nível de Docker ([página de conformidade da Vast.ai](https://vast.ai/compliance)).',
           '**Execução:** cada carga roda em um contêiner Docker sem privilégios, isolado de outros inquilinos, segundo a Vast.ai.',
           '**Acesso:** SSH, Jupyter e uma API/CLI são as formas documentadas de acesso.',
         ],
@@ -2529,9 +2529,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A cobrança é por segundo de uso real, e os créditos precisam ser adicionados antes de qualquer instância iniciar.** Conferido em 2026-11-22. As tarifas por hora de cada GPU são valores ao vivo do marketplace, mudam por host e não foram verificadas nesta análise, então nenhum valor por GPU é citado.',
         columns: ['Item', 'O que a Vast.ai informa'],
         rows: [
-          { Item: 'Unidade de cobrança', 'O que a Vast.ai informa': 'Por segundo; "Sem horas mínimas, sem arredondamento"' },
+          { Item: 'Unidade de cobrança', 'O que a Vast.ai informa': 'Por segundo; "No minimum hours, no rounding up" (Sem horas mínimas, sem arredondamento)' },
           { Item: 'Sob demanda', 'O que a Vast.ai informa': 'Preço fixo, recursos garantidos' },
-          { Item: 'Interruptível', 'O que a Vast.ai informa': '"50%+ mais barato" que sob demanda; pode ser pausada' },
+          { Item: 'Interruptível', 'O que a Vast.ai informa': '"50%+ cheaper" (50%+ mais barato) que sob demanda; pode ser pausada' },
           { Item: 'Reservado', 'O que a Vast.ai informa': 'Até 50% de desconto; prazos de 1, 3 ou 6 meses' },
           { Item: 'Piso anunciado', 'O que a Vast.ai informa': 'A partir de $0.14/h spot e $0.50/h sob demanda (CLI)' },
           { Item: 'Armazenamento', 'O que a Vast.ai informa': 'Cobrado enquanto a instância existir, mesmo parada' },
@@ -2586,14 +2586,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Tópico: 'Origem do hardware', 'O que a Vast.ai informa': 'Hosts independentes e data centers (Secure Cloud)' },
           { Tópico: 'Secure Cloud', 'O que a Vast.ai informa': 'Uso regulamentado e corporativo; parceiros assinam DPAs' },
           { Tópico: 'Hosts verificados', 'O que a Vast.ai informa': 'Testados manualmente; isolamento Docker; uso não regulado' },
-          { Tópico: 'SOC 2', 'O que a Vast.ai informa': '"Concluiu a certificação SOC 2 Type 2"; relatório sob NDA' },
+          { Tópico: 'SOC 2', 'O que a Vast.ai informa': 'A Vast.ai concluiu a certificação SOC 2 Type 2; relatório sob NDA' },
           { Tópico: 'Exclusão de dados', 'O que a Vast.ai informa': 'Destruídos imediatamente ao excluir uma instância' },
           { Tópico: 'Criptografia em trânsito', 'O que a Vast.ai informa': 'TLS 1.2+ no tráfego da API e do console' },
           { Tópico: 'Reembolsos', 'O que a Vast.ai informa': 'Gastos: nenhum. Não gastos: geralmente, pelo chat' },
         ],
         items: [
-          '**A segurança dos hosts varia:** o [FAQ de segurança](https://docs.vast.ai/guides/reference/faq/security) diz "hosts individuais podem ter medidas de segurança menos formais" e recomenda criptografar dados sensíveis e não guardar credenciais nas instâncias.',
-          '**A documentação não diz se um host pode ler seus dados:** ela afirma que os clientes acessam apenas os próprios dados e que há isolamento por contêiner, mas não trata do acesso do host, então trate hosts fora do Secure Cloud como não confiáveis.',
+          '**A segurança dos hosts varia:** o [FAQ de segurança](https://docs.vast.ai/guides/reference/faq/security) diz hosts individuais podem ter medidas de segurança menos formais e recomenda criptografar dados sensíveis e não guardar credenciais nas instâncias.',
+          '**As páginas que revisamos não dizem se um host pode ler seus dados:** ela afirma que os clientes acessam apenas os próprios dados e que há isolamento por contêiner, mas não trata do acesso do host, então trate hosts fora do Secure Cloud como não confiáveis, a menos que você tenha confirmado o contrário.',
           '**A redação sobre certificações de parceiros difere entre páginas:** a [página de conformidade](https://vast.ai/compliance) diz que ISO 27001 ou SOC 2 são incentivados, mas não obrigatórios para parceiros do Secure Cloud, enquanto o FAQ de segurança lista ISO 27001 para provedores do Secure Cloud. Verifique o requisito atual antes de confiar em qualquer um deles.',
           '**Cobrança:** a computação é cobrada por segundo, o armazenamento continua enquanto a instância está parada, e um saldo negativo sem cartão salvo leva à destruição de instâncias e dados. Fonte: [documentação de cobrança](https://docs.vast.ai/documentation/reference/billing).',
           'A declaração de SOC 2 Type 2 da Vast.ai diz respeito aos controles da empresa, e não é uma garantia sobre nenhum host individual. Isto não é aconselhamento jurídico nem de conformidade.',
@@ -2664,9 +2664,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Como funciona a cobrança da Vast.ai?', a: 'A computação é cobrada por segundo de uso real e os créditos precisam ser adicionados antes de iniciar qualquer instância. O armazenamento é cobrado enquanto a instância existir, mesmo parada (conferido em 2026-11-22).' },
           { q: 'Qual é a diferença entre sob demanda e interruptível?', a: 'O sob demanda tem preço fixo e recursos garantidos. O interruptível é o de menor custo e pode ser pausado; a Vast.ai o descreve como frequentemente 50%+ mais barato que o sob demanda.' },
           { q: 'O que são instâncias reservadas?', a: 'Instâncias reservadas têm desconto mediante pré-pagamento; a Vast.ai lista até 50% de desconto e prazos de 1, 3 ou 6 meses em sua página de preços.' },
-          { q: 'A Vast.ai é segura?', a: 'A Vast.ai declara ter concluído a certificação SOC 2 Type 2, e cada carga roda em um contêiner Docker sem privilégios. Sua própria documentação também diz que hosts individuais podem ter medidas de segurança menos formais. A Vast.ai posiciona o Secure Cloud para dados sensíveis; confirme o DPA e as certificações para o seu caso.' },
+          { q: 'A Vast.ai é segura?', a: 'A Vast.ai declara ter concluído a certificação SOC 2 Type 2 e que cada carga roda em um contêiner Docker sem privilégios. Sua própria documentação também diz que hosts individuais podem ter medidas de segurança menos formais. A Vast.ai posiciona o Secure Cloud para dados sensíveis; confirme o DPA e as certificações para o seu caso.' },
           { q: 'O que é o nível Secure Cloud?', a: 'O Secure Cloud é um nível de parceiros de data centers selecionados, voltado para necessidades regulamentadas e corporativas. Os parceiros assinam Acordos de Processamento de Dados com a Vast.ai, segundo sua [página de conformidade](https://vast.ai/compliance).' },
-          { q: 'O que são hosts verificados?', a: 'Hosts verificados são testados manualmente quanto a confiabilidade e desempenho e usam isolamento de inquilinos em nível de Docker. A Vast.ai os posiciona para cargas não regulamentadas.' },
+          { q: 'O que são hosts verificados?', a: 'A Vast.ai descreve hosts verificados como testados manualmente quanto a confiabilidade e desempenho, com isolamento de inquilinos em nível de Docker. A Vast.ai os posiciona para cargas não regulamentadas.' },
           { q: 'Posso pedir reembolso na Vast.ai?', a: 'Segundo a documentação de cobrança, créditos gastos não são reembolsáveis, enquanto créditos não gastos geralmente podem ser reembolsados entrando em contato com o suporte pelo chat do site. Créditos legados da Coinbase Commerce não podem ser reembolsados.' },
           { q: 'O que acontece se meu saldo acabar?', a: 'As instâncias param automaticamente quando o saldo chega a zero. Com cartão salvo, o saldo é cobrado para cobri-lo; sem cartão salvo, as instâncias e os dados armazenados são destruídos.' },
           { q: 'Existe depósito mínimo?', a: 'A documentação de cobrança e de preços consultada não informa um valor mínimo. Ela diz apenas que os créditos devem ser adicionados antes de iniciar qualquer instância.' },
@@ -2749,7 +2749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تأجير gpu رخيص vast ai',
     ],
     leadAnswerBlock:
-      '**Vast.ai سوق لتأجير GPU بالثانية يعتمد سعره على المضيف الذي تختاره؛ يناسب الأعمال الحساسة للتكلفة والتي تتحمل الانقطاع. وتضع Vast.ai مستوى Secure Cloud للاحتياجات المنظَّمة والمؤسسية؛ فتحقق بنفسك من اتفاقية معالجة البيانات (DPA) والشهادات قبل الاعتماد عليه.** تذكر Vast.ai عبارة «No minimum hours, no rounding up» (لا حد أدنى للساعات ولا تقريب للأعلى)، وتُدرج تسعيرًا عند الطلب، وقابلًا للمقاطعة («50%+ cheaper» أي أرخص بأكثر من 50%)، ومحجوزًا («Up to 50% Off» أي خصم يصل إلى 50%) (جرى التحقق بتاريخ 2026-11-22). تقييم PromptQuorum: 7.6/10 إجمالًا، وهو ليس اختبارًا عمليًا في مختبر. والمشكلة هي التفاوت: المضيفون الموثقون يخضعون للاختبار، لكن وثائق Vast.ai تنص على أن «Individual hosts may have less formal security measures» (قد تكون إجراءات الأمان لدى المضيفين الأفراد أقل رسمية)، فلا تضع بيانات خاضعة للتنظيم على مضيف خارج Secure Cloud. → [تحقق من أسعار GPU في Vast.ai](https://vast.ai/pricing)',
+      '**Vast.ai سوق لتأجير GPU بالثانية يعتمد سعره على المضيف الذي تختاره؛ يناسب الأعمال الحساسة للتكلفة والتي تتحمل الانقطاع. وتضع Vast.ai مستوى Secure Cloud للاحتياجات المنظَّمة والمؤسسية؛ فتحقق بنفسك من اتفاقية معالجة البيانات (DPA) والشهادات قبل الاعتماد عليه.** تذكر Vast.ai عبارة «No minimum hours, no rounding up» (لا حد أدنى للساعات ولا تقريب للأعلى)، وتُدرج تسعيرًا عند الطلب، وقابلًا للمقاطعة («50%+ cheaper» أي أرخص بأكثر من 50%)، ومحجوزًا («Up to 50% Off» أي خصم يصل إلى 50%) (جرى التحقق بتاريخ 2026-11-22). تقييم PromptQuorum: 7.6/10 إجمالًا، وهو ليس اختبارًا عمليًا في مختبر. والمشكلة هي التفاوت: تذكر Vast.ai أن المضيفين الموثقين يخضعون للاختبار، لكن وثائقها تنص على أن «Individual hosts may have less formal security measures» (قد تكون إجراءات الأمان لدى المضيفين الأفراد أقل رسمية)، فلا تضع بيانات خاضعة للتنظيم على مضيف خارج Secure Cloud. → [تحقق من أسعار GPU في Vast.ai](https://vast.ai/pricing)',
     quickAnswerTop: {
       ar: {
         question: 'هل Vast.ai مكان جيد لاستئجار GPU للنماذج المحلية؟',
@@ -2783,7 +2783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'Vast.ai سوق لتأجير GPU بفوترة بالثانية، يقدّم تسعيرًا عند الطلب وقابلًا للمقاطعة ومحجوزًا عبر مضيفين مستقلين ومراكز بيانات موثوقة.' },
-      { type: 'plain-terms', content: 'تخيّل Vast.ai سوقًا على نمط المزاد لبطاقات الرسوميات: يعرض ملّاك كثيرون أجهزتهم، فتختار واحدًا، وتدفع فقط عن الثواني التي تستخدمها. الأجهزة الأرخص قد تكون أقل موثوقية، وبعض الملّاك أفراد عاديون، فلا تضع عليها بيانات حساسة.' },
+      { type: 'plain-terms', content: 'تخيّل Vast.ai سوقًا على نمط المزاد لبطاقات الرسوميات: يعرض ملّاك كثيرون أجهزتهم، فتختار واحدًا، وتدفع فقط عن الثواني التي تستخدمها. الأجهزة الأرخص قد تكون أقل موثوقية، وبعض المضيفين مشغّلون مستقلون، فلا تضع عليها بيانات حساسة.' },
     ],
     sections: {
       buyIfSkipIf: {
@@ -2925,14 +2925,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الموضوع': 'مصدر العتاد', 'ما تذكره Vast.ai': 'مضيفون مستقلون ومراكز بيانات موثوقة (Secure Cloud)' },
           { 'الموضوع': 'Secure Cloud', 'ما تذكره Vast.ai': 'للاحتياجات المنظَّمة والمؤسسية؛ والشركاء يوقّعون DPAs' },
           { 'الموضوع': 'المضيفون الموثقون', 'ما تذكره Vast.ai': 'مُختبَرون يدويًا؛ عزل Docker؛ أعمال غير منظَّمة' },
-          { 'الموضوع': 'SOC 2', 'ما تذكره Vast.ai': '«Completed SOC 2 Type 2 certification»؛ التقرير بموجب NDA' },
+          { 'الموضوع': 'SOC 2', 'ما تذكره Vast.ai': 'أتمّت Vast.ai شهادة SOC 2 Type 2؛ التقرير بموجب NDA' },
           { 'الموضوع': 'حذف البيانات', 'ما تذكره Vast.ai': 'تُدمَّر فورًا عند حذف النسخة' },
           { 'الموضوع': 'التشفير أثناء النقل', 'ما تذكره Vast.ai': 'TLS 1.2+ لحركة API ووحدة التحكم' },
           { 'الموضوع': 'الاسترداد', 'ما تذكره Vast.ai': 'المُنفَق: لا. وغير المُنفَق: عادةً، عبر الدردشة' },
         ],
         items: [
           '**أمان المضيفين يتفاوت:** تقول [أسئلة الأمان](https://docs.vast.ai/guides/reference/faq/security) «Individual hosts may have less formal security measures» (قد تكون إجراءات الأمان لدى المضيفين الأفراد أقل رسمية)، وتنصح بتشفير البيانات الحساسة وعدم تخزين بيانات الاعتماد داخل النسخ.',
-          '**لا تذكر الوثائق ما إذا كان بإمكان المضيف قراءة بياناتك:** فهي تنص على أن العملاء يصلون إلى بياناتهم فقط وأنهم معزولون في حاويات، لكنها لا تتناول وصول المضيف، لذا عامل المضيفين خارج Secure Cloud على أنهم غير موثوقين.',
+          '**لا تذكر الصفحات التي راجعناها ما إذا كان بإمكان المضيف قراءة بياناتك:** فهي تنص على أن العملاء يصلون إلى بياناتهم فقط وأنهم معزولون في حاويات، لكنها لا تتناول وصول المضيف، لذا عامل المضيفين خارج Secure Cloud على أنهم غير موثوقين ما لم تتأكد من خلاف ذلك.',
           '**صياغة شهادات الشركاء تختلف بين الصفحات:** تقول [صفحة الامتثال](https://vast.ai/compliance) إن ISO 27001 أو SOC 2 مشجَّعتان لكنهما غير مطلوبتين لشركاء Secure Cloud، بينما تُدرج أسئلة الأمان ISO 27001 لمزودي Secure Cloud. تحقق من المتطلب الحالي قبل الاعتماد على أيٍّ منهما.',
           '**الفوترة:** تُفوتر الحوسبة بالثانية، ويستمر التخزين أثناء الإيقاف، ويؤدي الرصيد السالب دون بطاقة محفوظة إلى تدمير النسخ والبيانات. المصدر: [وثائق الفوترة](https://docs.vast.ai/documentation/reference/billing).',
           'بيان SOC 2 Type 2 لدى Vast.ai يخص ضوابط الشركة، وليس ضمانًا بشأن أي مضيف بعينه. وهذا ليس استشارة قانونية أو استشارة امتثال.',
@@ -3003,9 +3003,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'كيف تعمل الفوترة في Vast.ai؟', a: 'تُفوتر الحوسبة بالثانية عن الاستخدام الفعلي، ويجب إضافة رصيد قبل بدء أي نسخة. ويُفوتر التخزين ما دامت النسخة موجودة، حتى عند إيقافها (جرى التحقق بتاريخ 2026-11-22).' },
           { q: 'ما الفرق بين عند الطلب والقابل للمقاطعة؟', a: 'عند الطلب له تسعير ثابت وموارد مضمونة. أما القابل للمقاطعة فهو الأقل تكلفة وقد يُوقف مؤقتًا؛ وتصفه Vast.ai بأنه أرخص بأكثر من 50% من عند الطلب في الغالب.' },
           { q: 'ما هي النسخ المحجوزة؟', a: 'النسخ المحجوزة مخفَّضة مقابل الدفع المسبق؛ وتذكر Vast.ai في صفحة أسعارها خصمًا يصل إلى 50% ومددًا من 1 أو 3 أو 6 أشهر.' },
-          { q: 'هل Vast.ai آمنة؟', a: 'تذكر Vast.ai أنها أتمّت شهادة SOC 2 Type 2، ويعمل كل حمل في حاوية Docker غير مميزة الصلاحيات. وتقول وثائقها أيضًا إن المضيفين الأفراد قد تكون إجراءات الأمان لديهم أقل رسمية. وتضع Vast.ai مستوى Secure Cloud للبيانات الحساسة؛ فتأكد من اتفاقية معالجة البيانات (DPA) والشهادات في حالتك.' },
+          { q: 'هل Vast.ai آمنة؟', a: 'تذكر Vast.ai أنها أتمّت شهادة SOC 2 Type 2 وأن كل حمل يعمل في حاوية Docker غير مميزة الصلاحيات. وتقول وثائقها أيضًا إن المضيفين الأفراد قد تكون إجراءات الأمان لديهم أقل رسمية. وتضع Vast.ai مستوى Secure Cloud للبيانات الحساسة؛ فتأكد من اتفاقية معالجة البيانات (DPA) والشهادات في حالتك.' },
           { q: 'ما هو مستوى Secure Cloud؟', a: 'Secure Cloud مستوى من شركاء مراكز البيانات الموثوقين موجَّه للاحتياجات المنظَّمة والمؤسسية. ويوقّع الشركاء اتفاقيات معالجة البيانات مع Vast.ai، بحسب [صفحة الامتثال](https://vast.ai/compliance) لديها.' },
-          { q: 'من هم المضيفون الموثقون؟', a: 'المضيفون الموثقون مُختبَرون يدويًا من حيث الموثوقية والأداء، ويستخدمون عزل المستأجرين على مستوى Docker. وتضعهم Vast.ai للأعمال غير المنظَّمة.' },
+          { q: 'من هم المضيفون الموثقون؟', a: 'تصف Vast.ai المضيفين الموثقين بأنهم مُختبَرون يدويًا من حيث الموثوقية والأداء، مع عزل المستأجرين على مستوى Docker. وتضعهم Vast.ai للأعمال غير المنظَّمة.' },
           { q: 'هل يمكنني استرداد مبلغ من Vast.ai؟', a: 'بحسب وثائق الفوترة، الرصيد المُنفَق غير قابل للاسترداد، بينما يمكن عادةً استرداد الرصيد غير المُنفَق بالتواصل مع الدعم عبر دردشة الموقع. ولا يمكن استرداد رصيد Coinbase Commerce القديم.' },
           { q: 'ماذا يحدث إذا نفد رصيدي؟', a: 'تتوقف النسخ تلقائيًا عندما يصل الرصيد إلى الصفر. ومع بطاقة محفوظة يُخصم الرصيد من البطاقة لتغطيته؛ وبدون بطاقة محفوظة تُدمَّر النسخ والبيانات المخزنة.' },
           { q: 'هل هناك حد أدنى للإيداع؟', a: 'لا تذكر وثائق الفوترة والتسعير التي روجعت مبلغًا أدنى. فهي تقول فقط إنه يجب إضافة رصيد قبل بدء أي نسخة.' },

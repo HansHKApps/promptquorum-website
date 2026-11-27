@@ -1466,7 +1466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Hetzner GPU atende às minhas necessidades de conformidade como empresa brasileira?', a: 'Para dados de cidadãos europeus, sim — Hetzner oferece DPA sob lei alemã e residência de dados na UE. Para dados exclusivamente brasileiros (LGPD), qualquer provedor que ofereça contratos adequados de proteção de dados pode ser suficiente.' },
           { q: 'Qual provedor tem o DPA mais robusto?', a: 'Hetzner (lei alemã) e Scaleway (lei francesa) têm os DPAs mais maduros com base em feedback de usuários empresariais. OVHcloud é forte para cobertura multi-região.' },
-          { q: 'RunPod ou Vast.ai são opções para conformidade com proteção de dados?', a: 'RunPod com regiões EU tem DPA disponível, mas é empresa americana. Vast.ai é peer-to-peer sem DPA centralizado — não adequado para dados pessoais que exigem conformidade regulatória. Leitores fora da UE: veja uma comparação por preço, modelo de cobrança e adequação à carga de trabalho em [provedores de GPU na nuvem fora da UE](/pt/power-local-llm/best-cloud-gpu-providers).' },
+          { q: 'RunPod ou Vast.ai são opções para conformidade com proteção de dados?', a: 'RunPod com regiões EU tem DPA disponível, mas é empresa americana. A Vast.ai opera como marketplace de hosts independentes; antes de enviar dados pessoais, verifique o DPA aplicável ao seu nível de serviço e o host escolhido. Leitores fora da UE: veja uma comparação por preço, modelo de cobrança e adequação à carga de trabalho em [provedores de GPU na nuvem fora da UE](/pt/power-local-llm/best-cloud-gpu-providers).' },
         ],
       },
       relatedGuides: {

@@ -39,6 +39,7 @@ export const copy: AskCopy = {
   aiNotice: 'O Ask Hans é uma IA e pode errar. Por favor, não informe dados pessoais.',
   withdraw: 'Revogar consentimento',
   thinking: 'O Ask Hans está pensando …',
+  explainThis: 'Explicar isto',
   searching: 'Pesquisando no PromptQuorum …',
   panelTools: 'Usando uma ferramenta …',
 

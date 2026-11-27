@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Structure',
       audience: 'Developers and non-technical users writing AI prompts',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-27',
       lastFactChecked: '2026-08-29',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'The 5 Building Blocks Every Prompt Needs',
         description: 'Master the 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. With these five components, any AI prompt becomes reliable and repeatable.',
         datePublished: '2026-03-01',
-        dateModified: '2026-08-29',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'en',
         proficiencyLevel: 'Beginner',
@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Can I keep prompts short and still include all 5 blocks?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Each block can be expressed in a single sentence. A complete five-block prompt can be under 100 words. Brevity is not the problem — vagueness is. A short, precise prompt with all five elements consistently outperforms a long, rambling one with none.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Each block can be expressed in a single sentence. A complete five-block prompt can be under 100 words. Brevity is not the problem — vagueness is. A short, precise prompt with all five elements usually works better than a long, rambling one with none.' },
           },
           {
             '@type': 'Question',
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Where do constraints fit if I am using a framework like CRAFT or CO-STAR?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Every major framework has a field that maps to constraints — "Restrictions" in CRAFT, "Tone & Style" in CO-STAR, "Constraints" in SPECS. If your framework does not have an explicit constraints field, add your constraints at the end as a separate "Do not" section — all models handle this reliably.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Popular frameworks usually have a field that can hold constraints — "Restrictions" in CRAFT, "Tone & Style" in CO-STAR, "Constraints" in SPECS. If your framework does not have an explicit constraints field, add your constraints at the end as a separate "Do not" section; this usually works well.' },
           },
           {
             '@type': 'Question',
@@ -185,9 +185,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**The 5 blocks:** Role & Context → Task / Instruction → Input & Examples → Constraints → Output Format',
             '**Minimum viable prompt:** Task + Output Format (2 blocks) for simple tasks',
-            '**Highest-impact addition:** One constraint like "use only provided information" cuts hallucination risk dramatically',
-            '**Works on:** All major language models, frontier models, and all local LLMs via Ollama, LM Studio, or similar',
-            '**Maps to:** CRAFT, CO-STAR, SPECS, RTF, and every other major framework — different names, same blocks',
+            '**High-value addition:** One constraint like "use only provided information" can reduce hallucination risk',
+            '**Applies to:** Major language models, including local LLMs run via Ollama, LM Studio, or similar',
+            '**Maps to:** CRAFT, CO-STAR, SPECS, RTF, and similar frameworks — different names, largely overlapping elements',
           ],
           image: '/images/prompt-building-blocks-quick-reference-hero-en.webp',
           imageCaption: '5 Building Blocks: Quick Reference -- When to use what',
@@ -197,8 +197,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-building-blocks-matter',
           title: 'Why Do These 5 Building Blocks Matter?',
           content: [
-            'The five-block model reflects the converged consensus across prompt engineering guidance from OpenAI, Google, Anthropic, and independent practitioners. Role, instructions, examples, constraints, and output format appear — under different names — in every major framework published since 2023. This is not coincidence: it is the minimum information a probabilistic model needs to produce a useful, consistent result.',
-            'The business case is straightforward. Missing role and context produces generic answers that need rewriting. Missing constraints increases hallucination risk and off-brand output. Missing output format means results that cannot be parsed or copy-pasted directly. The 5-block model addresses all three failure modes at once, and applies equally to all major language models and locally-run LLMs.',
+            'The five-block model groups elements that also come up in prompt engineering guidance from model providers. Role, instructions, examples, constraints, and output format appear, under different names, in widely used frameworks. Together they give a probabilistic model the information it needs for more useful, consistent results.',
+            'The business case is straightforward. Missing role and context produces generic answers that need rewriting. Missing constraints increases hallucination risk and off-brand output. Missing output format means results that cannot be parsed or copy-pasted directly. The 5-block model addresses all three failure modes at once, and can be used with cloud models and locally run LLMs.',
           ],
         },
 
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-2-task-instruction',
           title: 'What Is the Task / Instruction Block?',
           content: [
-            '**The Task / Instruction block is the explicit statement of what you want the model to do.** It is the most important block — every other block supports this one. A clear, specific, testable instruction reduces ambiguity to near-zero. A vague instruction is the single biggest cause of poor AI output across all models and use cases.',
+            '**The Task / Instruction block is the explicit statement of what you want the model to do.** It is the most important block — every other block supports this one. A clear, specific, testable instruction greatly reduces ambiguity. A vague instruction is a frequent cause of poor AI output.',
             'Current best-practice guidance emphasises making the task actionable and observable: use a verb, state the deliverable, and where possible describe a success criterion. "Write a summary" is a task. "Summarise the following article in 3 bullet points, each under 20 words" is a task with a testable output. The difference in output quality is significant.',
           ],
           items: [
@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How Do Input and Examples Improve Accuracy?',
           content: [
             '**Input** is the actual data, text, or material the model needs to work on. **Examples** are sample input/output pairs that demonstrate what a correct response looks like. These are separate concerns: input is the raw material for the current task, examples are the teaching signal that shapes how the model performs it.',
-            'Including 1–3 examples (few-shot prompting) is the single most reliable technique for locking in output format and tone. When you show the model what a good answer looks like, it matches the pattern rather than inferring it from the task description alone. This matters most for specialised formats, consistent tone, and structured outputs where precision is required.',
+            'Including 1–3 examples (few-shot prompting) is a reliable way to steer output format and tone. When you show the model what a good answer looks like, it matches the pattern rather than inferring it from the task description alone. This matters most for specialised formats, consistent tone, and structured outputs where precision is required.',
           ],
           items: [
             '**When to add examples:** Specialised formats, consistent tone requirements, structured outputs, domain-specific vocabulary',
@@ -263,8 +263,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-4-constraints',
           title: 'What Are Constraints and Why Do Prompts Need Them?',
           content: [
-            '**Constraints are the rules the model must follow: what it must do and what it must not do.** They include length limits, forbidden topics or phrases, required sources, brand voice rules, safety boundaries, and format restrictions. Constraints are the most commonly omitted block — and their absence is the primary cause of hallucinated facts, off-brand language, and outputs that arrive in the wrong format.',
-            'Adding one well-scoped constraint is often the highest-leverage change you can make to an existing prompt. "Do not make up statistics" cuts hallucination risk sharply. "Never exceed 100 words" forces concision. "Only use information from the text provided" grounds the output in the source material and eliminates fabrication entirely for that task.',
+            '**Constraints are the rules the model must follow: what it must do and what it must not do.** They include length limits, forbidden topics or phrases, required sources, brand voice rules, safety boundaries, and format restrictions. Constraints are often omitted, and without them invented facts, off-brand language, and wrongly formatted output become more likely.',
+            'Adding one well-scoped constraint is often a very useful change to an existing prompt. "Do not make up statistics" cuts hallucination risk sharply. "Never exceed 100 words" forces concision. "Only use information from the text provided" grounds the output in the source material and reduces the risk of fabrication for that task, though you should still check the output.',
           ],
           items: [
             '**Length constraints:** "Maximum 150 words", "No more than 5 bullet points"',
@@ -281,8 +281,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         block4ProTip: {
           id: 'pro-tip-constraints',
-          title: '🔍 Pro Tip: The Highest-Leverage Constraint',
-          content: 'The single highest-leverage constraint you can add to any prompt is: **"Use only information from the provided context. If you cannot answer from the provided information, say so."** This one sentence eliminates the most common failure mode in AI output — plausible-sounding fabrication. Adding this constraint alone often reduces hallucination risk by 80%+ and is universally supported across all models.',
+          title: '🔍 Pro Tip: A High-Value Constraint',
+          content: 'A high-value constraint you can add to many prompts is: **"Use only information from the provided context. If you cannot answer from the provided information, say so."** This sentence targets a common failure mode: plausible-sounding fabrication. It can reduce hallucinations but does not rule them out, so check the output.',
         },
 
         block5: {
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Output Format specifies the exact shape of the answer the model should produce.** This is the block that determines whether the output is directly usable or requires reformatting before it is useful. For automated pipelines, an unspecified output format means brittle, inconsistent parsing. For GEO, a structured output is more likely to be cited verbatim by AI search engines, because structured answers are easier to extract programmatically.',
             'The output format block can specify the file format (JSON, Markdown, CSV), the structure (table, bullet list, numbered steps), the length, and the labelling of sections. The more precisely you specify it, the less editing the output requires.',
-            '**API-Level Output Format Enforcement:** In 2026, all major providers offer API-level output format enforcement that goes beyond prompt-text instructions. Structured outputs (including JSON schema validation) guarantee valid JSON matching your schema at the token generation level — the model literally cannot produce invalid output. When using these APIs, Block 5 becomes a server-side constraint rather than a prompt-text instruction. Use both for maximum reliability: API-level enforcement as the hard guarantee, prompt-text format specification as guidance for content structure within that format.',
+            '**API-Level Output Format Enforcement:** In 2026, major providers offer API-level structured outputs that go beyond prompt-text instructions. In supported modes they constrain generation to your JSON schema; refusals, truncated responses and unsupported schema features can still break this, so validate the result. When using these APIs, Block 5 becomes a server-side constraint rather than a prompt-text instruction. Use both for maximum reliability: API-level enforcement to constrain the structure, prompt-text format specification as guidance for content structure within that format.',
           ],
           items: [
             '**JSON:** "Return the result as a JSON object with keys: title, summary, tags"',
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         templateNote: {
-          content: 'This template works on all major language models and local LLMs via Ollama or LM Studio. The block order is a recommendation, not a rigid rule — but placing Role & Context first and Output Format last is the most common and reliable arrangement across all major models.',
+          content: 'This template is not tied to one model: you can use it with major language models and with local LLMs via Ollama or LM Studio. The block order is a recommendation, not a rigid rule — but placing Role & Context first and Output Format last is a common arrangement that usually works well.',
         },
 
         templateLocalLLMLinks: {
@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**User message (changes per request):**',
             'Block 2: Task / Instruction — "Summarise the key findings from this report."',
             'Block 3: Input & Examples — The actual report text + any examples.',
-            'This split matters because **system prompts are cached** on leading models — meaning your Role, Constraints, and Output Format are stored efficiently and don\'t consume fresh tokens on every request. For production pipelines processing hundreds of prompts, this reduces cost by 50-90% on the system prompt portion.',
+            'This split matters because many APIs can **cache a repeated system prompt**. Cached input is usually billed differently, often at a discount; terms and savings vary by provider, so check the current pricing page.',
             'For local LLMs via Ollama or LM Studio, the same split applies: use a **Modelfile** with a SYSTEM directive for blocks 1, 4, and 5, and pass blocks 2 and 3 in the user message.',
           ],
         },
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         frameworksDidYouKnow: {
           id: 'frameworks-did-you-know',
           title: '🔍 Did You Know?',
-          content: 'Every major prompt engineering framework published since 2023 — CRAFT, CO-STAR, SPECS, RTF, TRACE, APE — maps directly to these 5 blocks under different names. Learning the blocks once means you can apply any framework without memorizing its specific terminology. The frameworks differ in emphasis and order, but the underlying structure is always the same: who, what, how, constraints, and format.',
+          content: 'Frameworks such as CRAFT, CO-STAR, SPECS, RTF, TRACE, and APE cover much of the same ground as these 5 blocks under different names. Learning the blocks once means you can apply any framework without memorizing its specific terminology. The frameworks differ in emphasis, order, and coverage; the recurring questions are: who, what, how, constraints, and format.',
         },
 
         mistakes: {
@@ -387,8 +387,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         mistakesWarning: {
           id: 'warning-output-format',
-          title: '⚠️ Warning: Omitting Output Format is #1 Cause of Unusable Output',
-          content: 'Leaving the Output Format block unspecified is the single most common cause of unusable AI output in production pipelines. Without an explicit format specification, the model\'s default format changes between runs, between models, and between API versions. Always specify format — even "respond in plain prose, no bullet points" is better than leaving it unspecified. This is the difference between getting an output and getting a usable output.',
+          title: '⚠️ Warning: Don\'t Omit the Output Format',
+          content: 'Leaving the Output Format block unspecified is a frequent cause of unusable AI output in production pipelines. Without an explicit format specification, the model\'s default format can change between runs, between models, and between API versions. Always specify format — even "respond in plain prose, no bullet points" is better than leaving it unspecified. This is the difference between getting an output and getting a usable output.',
         },
 
         howToStart: {
@@ -397,9 +397,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           numberedItems: [
             '**Set Role & Context:** Open with who the model is and the domain it is operating in. Example: "You are a senior tax advisor helping a small business owner in Germany." Without this, the model answers from a generic perspective.',
             '**Write the Task / Instruction:** State exactly what you want produced — specific and testable. "Summarise the key VAT obligations in 200 words" is better than "tell me about VAT."',
-            '**Add Input & Examples:** Provide the raw data and at least one example of the correct output format. A single well-chosen example reduces inconsistency more than any other single technique.',
+            '**Add Input & Examples:** Provide the raw data and at least one example of the correct output format. A single well-chosen example can noticeably reduce inconsistency.',
             '**Define Constraints:** List what the model must not do, the length limit, and the tone rules. Example: "Do not give advice for jurisdictions outside Germany. Maximum 200 words. Formal tone."',
-            '**Specify Output Format:** State the exact shape of the answer — JSON object, 3-bullet summary, table, or prose paragraph. Omitting this is the most common cause of unusable AI output. Test your completed 5-block prompt in [Anthropic\'s Console](https://docs.anthropic.com/) or [OpenAI\'s Playground](https://platform.openai.com/playground) before deploying to production.',
+            '**Specify Output Format:** State the exact shape of the answer — JSON object, 3-bullet summary, table, or prose paragraph. Omitting this often makes AI output unusable. Test your completed 5-block prompt in [Anthropic\'s Console](https://docs.anthropic.com/) or [OpenAI\'s Playground](https://platform.openai.com/playground) before deploying to production.',
           ],
         },
 
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Can I keep prompts short and still include all 5 blocks?',
-              a: 'Yes. Each block can be expressed in a single sentence. A complete five-block prompt can be under 100 words. Brevity is not the problem — vagueness is. A short, precise prompt with all five elements consistently outperforms a long, rambling one with none.',
+              a: 'Yes. Each block can be expressed in a single sentence. A complete five-block prompt can be under 100 words. Brevity is not the problem — vagueness is. A short, precise prompt with all five elements usually works better than a long, rambling one with none.',
             },
             {
               q: 'What is the difference between Context and Examples?',
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Where do constraints fit if I am using a framework like CRAFT or CO-STAR?',
-              a: 'Every major framework has a field that maps to constraints — "Restrictions" in CRAFT, "Tone & Style" in CO-STAR, "Constraints" in SPECS. If your framework does not have an explicit constraints field, add your constraints at the end as a separate "Do not" section — all models handle this reliably.',
+              a: 'Popular frameworks usually have a field that can hold constraints — "Restrictions" in CRAFT, "Tone & Style" in CO-STAR, "Constraints" in SPECS. If your framework does not have an explicit constraints field, add your constraints at the end as a separate "Do not" section; this usually works well.',
             },
             {
               q: 'Does output format matter if I am just asking a simple question?',
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — Specifying output format precisely: JSON mode, markdown tables, and other structured approaches across models.',
             '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use) — Comparing CRAFT, CO-STAR, SPECS, and others: choosing a framework aligned to your use case.',
             '[Persona Prompting](/prompt-engineering/persona-prompting) — Deep dive into Block 1 (Role & Context) with 7 sub-components: how persona selection affects output quality and consistency.',
-            '[Constrained Prompting](/prompt-engineering/constrained-prompting) — Deep dive into Block 4 (Constraints) including API-level enforcement: hard constraints that guarantee valid output.',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting) — Deep dive into Block 4 (Constraints) including API-level enforcement: constraints applied by the API rather than by prompt text.',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) — How to apply the 5 blocks across multi-step workflows: breaking complex tasks into sequential prompts.',
             '[Your Brand Voice with AI: Prompt Guide](/prompt-engineering/your-brand-voice-ai)',
           ],
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Security implications of unstructured prompts and recommendations for constraints.',
             '[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT — White et al., 2023](https://arxiv.org/abs/2302.11382) — Comprehensive catalog of prompt design patterns including structured and role-based techniques directly applicable to the 5-block model.',
             '[Prompt Engineering — Claude Documentation — Anthropic](https://docs.anthropic.com/) — System prompt best practices, structured outputs, and caching strategies for production pipelines.',
-            '[Structured Outputs — Responses API — OpenAI](https://platform.openai.com/docs/) — API-level output format enforcement guaranteeing valid JSON matching your schema at token generation.',
+            '[Structured Outputs — Responses API — OpenAI](https://platform.openai.com/docs/) — API-level output format enforcement that constrains JSON to your schema in supported modes.',
             '[Gemini API: Prompting Strategies — Google](https://ai.google.dev/) — Response schema and controlled generation techniques across frontier models.',
           ],
         },
@@ -485,7 +485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt-Struktur',
       audience: 'Entwickler und Nicht-Techniker, die KI-Prompts schreiben',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-27',
       lastFactChecked: '2026-08-29',
       toc: [
         { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Die 5 Bausteine eines jeden Prompts',
         description: 'Die 5 Bausteine eines jeden Prompts: Rolle & Kontext, Aufgabe, Eingabe & Beispiele, Einschränkungen und Ausgabeformat. Mit diesen fünf Komponenten wird jeder KI-Prompt zuverlässig und wiederholbar.',
         datePublished: '2026-03-01',
-        dateModified: '2026-08-29',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/de/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'de',
         proficiencyLevel: 'Beginner',
@@ -550,7 +550,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Kann ich Prompts kurz halten und trotzdem alle 5 Bausteine einschließen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Jeder Baustein kann in einem einzigen Satz ausgedrückt werden. Ein vollständiger Fünf-Bausteine-Prompt kann unter 100 Wörtern liegen. Kürze ist nicht das Problem – Vagheit ist es. Ein kurzer, präziser Prompt mit allen fünf Elementen übertrifft konsistent einen langen, weitschweifigen ohne keines davon.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Jeder Baustein kann in einem einzigen Satz ausgedrückt werden. Ein vollständiger Fünf-Bausteine-Prompt kann unter 100 Wörtern liegen. Kürze ist nicht das Problem – Vagheit ist es. Ein kurzer, präziser Prompt mit allen fünf Elementen funktioniert meist besser als ein langer, weitschweifiger, dem sie fehlen.' },
           },
           {
             '@type': 'Question',
@@ -560,22 +560,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Wo passen Einschränkungen hin, wenn ich ein Framework wie CRAFT oder CO-STAR verwende?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Jedes wichtige Framework hat ein Feld, das auf Einschränkungen abbildet – „Restrictions" in CRAFT, „Tone & Style" in CO-STAR, „Constraints" in SPECS. Wenn das eigene Framework kein explizites Einschränkungsfeld hat, die Einschränkungen am Ende als separaten „Nicht"-Abschnitt hinzufügen – alle Modelle handhaben dies zuverlässig.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Verbreitete Frameworks haben meist ein Feld, das Einschränkungen aufnehmen kann – „Restrictions" in CRAFT, „Tone & Style" in CO-STAR, „Constraints" in SPECS. Wenn das eigene Framework kein explizites Einschränkungsfeld hat, die Einschränkungen am Ende als separaten „Nicht"-Abschnitt hinzufügen – das funktioniert in der Regel gut.' },
           },
           {
             '@type': 'Question',
             name: 'Spielt das Ausgabeformat eine Rolle, wenn ich nur eine einfache Frage stelle?',
             acceptedAnswer: { '@type': 'Answer', text: 'Bei Gesprächsfragen ist das Festlegen des Formats optional. Für jede Ausgabe, die nachgelagert verwendet wird – in ein Dokument eingefügt, von Code verarbeitet, veröffentlicht oder von Teammitgliedern wiederverwendet – ist das Festlegen des Formats unerlässlich. Es ist der Unterschied zwischen einem Ergebnis und einem nutzbaren Ergebnis.' },
-          },
-          {
-            '@type': 'Question',
-            name: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. PromptQuorum ist DSGVO-konform, insbesondere wenn Sie lokale Inferenzen mit On-Premise-Modellen über Ollama oder LM Studio nutzen. Lokale Modelle halten Ihre Daten in Ihrer Kontrolle und erfüllen Anforderungen nach Datenschutz und BSI-Grundschutz-Katalogen für Mittelstandsunternehmen. Für Cloud-Instanzen — immer Datenverarbeitungsverträge (DPAs) mit dem Provider verhandeln.' },
-          },
-          {
-            '@type': 'Question',
-            name: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. PromptQuorum ist speziell für deutsche Mittelstandsunternehmen entwickelt worden und erfüllt BSI- und IT-Sicherheitsstandards. Mit lokalen Modellen erhalten Sie volle Datensouvränität, Offline-Betrieb, und Anpassung an Branchenstandards (Finanz, Medizin, Recht). Die Kostenstruktur ist auch für KMUs geeignet — skaliert mit Ihren Anforderungen ohne überproportionale Cloud-Ausgaben.' },
           },
         ],
       },
@@ -653,9 +643,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Die 5 Bausteine:** Rolle & Kontext → Aufgabe / Anweisung → Eingabe & Beispiele → Einschränkungen → Ausgabeformat',
             '**Minimaler brauchbarer Prompt:** Aufgabe + Ausgabeformat (2 Bausteine) für einfache Aufgaben',
-            '**Höchste Hebelwirkung:** Eine Einschränkung wie „verwende nur bereitgestellte Informationen" senkt das Halluzinationsrisiko dramatisch',
-            '**Funktioniert auf:** Allen führenden Sprachmodellen und allen lokalen LLMs über Ollama, LM Studio oder ähnliches',
-            '**Entspricht:** CRAFT, CO-STAR, SPECS, RTF und jedem anderen wichtigen Framework — unterschiedliche Namen, gleiche Bausteine',
+            '**Nützliche Ergänzung:** Eine Einschränkung wie „verwende nur bereitgestellte Informationen" kann das Halluzinationsrisiko senken',
+            '**Anwendbar auf:** Führende Sprachmodelle, auch lokale LLMs über Ollama, LM Studio oder Ähnliches',
+            '**Entspricht:** CRAFT, CO-STAR, SPECS, RTF und ähnlichen Frameworks — unterschiedliche Namen, weitgehend überlappende Elemente',
           ],
           image: '/images/prompt-building-blocks-quick-reference-hero-de.webp',
           imageCaption: '5 Bausteine: Schnellreferenz -- Wann was verwenden',
@@ -665,9 +655,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-building-blocks-matter',
           title: 'Warum sind diese 5 Bausteine wichtig?',
           content: [
-            'Das Fünf-Bausteine-Modell spiegelt den konvergierten Konsens aus Prompt-Engineering-Anleitungen von OpenAI, Google, Anthropic und unabhängigen Praktikern wider. Rolle, Anweisungen, Beispiele, Einschränkungen und Ausgabeformat erscheinen — unter verschiedenen Namen — in jedem wichtigen Framework, das seit 2023 veröffentlicht wurde. Das ist kein Zufall: Es sind die Mindestinformationen, die ein probabilistisches Modell benötigt, um ein nützliches, konsistentes Ergebnis zu liefern.',
-            'Der geschäftliche Nutzen ist eindeutig. Fehlende Rolle und Kontext liefern generische Antworten, die umgeschrieben werden müssen. Fehlende Einschränkungen erhöhen das Halluzinationsrisiko und erzeugen markenfremde Ausgaben. Fehlendes Ausgabeformat bedeutet Ergebnisse, die nicht direkt verwendet oder kopiert werden können. Das 5-Bausteine-Modell adressiert alle drei Fehlertypen gleichzeitig und gilt gleichermaßen für alle Sprachmodelle und lokal betriebene LLMs.',
-            'Für deutsche Unternehmen unter DSGVO und BSI-Grundschutz-Standards: Lokale Inferenzen mit Ollama oder LM Studio erfüllen Datenschutzanforderungen vollständig, während Sie gleichzeitig die Effizienz dieser strukturierten Prompts nutzen.',
+            'Das Fünf-Bausteine-Modell bündelt Elemente, die auch in den Prompt-Engineering-Anleitungen von Modellanbietern vorkommen. Rolle, Anweisungen, Beispiele, Einschränkungen und Ausgabeformat erscheinen unter verschiedenen Namen in verbreiteten Frameworks. Zusammen geben sie einem probabilistischen Modell die Informationen für nützlichere, konsistentere Ergebnisse.',
+            'Der geschäftliche Nutzen ist eindeutig. Fehlende Rolle und Kontext liefern generische Antworten, die umgeschrieben werden müssen. Fehlende Einschränkungen erhöhen das Halluzinationsrisiko und erzeugen markenfremde Ausgaben. Fehlendes Ausgabeformat bedeutet Ergebnisse, die nicht direkt verwendet oder kopiert werden können. Das 5-Bausteine-Modell adressiert alle drei Fehlertypen gleichzeitig und lässt sich mit Cloud-Modellen und lokal betriebenen LLMs nutzen.',
           ],
         },
 
@@ -694,7 +683,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-2-task-instruction',
           title: 'Was ist der Aufgabe / Anweisung Block?',
           content: [
-            '**Der Baustein Aufgabe / Anweisung ist die explizite Aussage darüber, was das Modell tun soll.** Es ist der wichtigste Baustein – alle anderen Bausteine unterstützen diesen. Eine klare, spezifische, überprüfbare Anweisung reduziert Mehrdeutigkeit auf nahezu null. Eine vage Anweisung ist die häufigste Ursache für schlechte KI-Ausgaben über alle Modelle und Anwendungsfälle hinweg.',
+            '**Der Baustein Aufgabe / Anweisung ist die explizite Aussage darüber, was das Modell tun soll.** Es ist der wichtigste Baustein – alle anderen Bausteine unterstützen diesen. Eine klare, spezifische, überprüfbare Anweisung verringert Mehrdeutigkeit deutlich. Eine vage Anweisung ist eine häufige Ursache für schlechte KI-Ausgaben.',
             'Aktuelle Best-Practice-Empfehlungen betonen, die Aufgabe handlungsorientiert und beobachtbar zu gestalten: ein Verb verwenden, das Ergebnis benennen und wenn möglich ein Erfolgskriterium beschreiben. „Schreibe eine Zusammenfassung" ist eine Aufgabe. „Fasse den folgenden Artikel in 3 Aufzählungspunkten zusammen, jeweils unter 20 Wörtern" ist eine Aufgabe mit einer überprüfbaren Ausgabe. Der Unterschied in der Ausgabequalität ist erheblich.',
           ],
           items: [
@@ -714,7 +703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie verbessern Eingabe und Beispiele die Genauigkeit?',
           content: [
             '**Eingabe** sind die tatsächlichen Daten, Texte oder Materialien, mit denen das Modell arbeiten soll. **Beispiele** sind Muster-Eingabe/Ausgabe-Paare, die zeigen, wie eine korrekte Antwort aussieht. Das sind separate Aspekte: Eingabe ist das Rohmaterial für die aktuelle Aufgabe, Beispiele sind das Lernmuster, das die Ausführung durch das Modell prägt.',
-            '1–3 Beispiele einzuschließen (Few-Shot-Prompting) ist die zuverlässigste Einzeltechnik, um Ausgabeformat und Ton festzulegen. Wenn man dem Modell zeigt, wie eine gute Antwort aussieht, passt es das Muster an, anstatt es nur aus der Aufgabenbeschreibung abzuleiten. Dies ist am wichtigsten für spezialisierte Formate, konsistenten Ton und strukturierte Ausgaben, bei denen Präzision erforderlich ist.',
+            '1–3 Beispiele einzuschließen (Few-Shot-Prompting) ist ein verlässlicher Weg, um Ausgabeformat und Ton zu steuern. Wenn man dem Modell zeigt, wie eine gute Antwort aussieht, passt es das Muster an, anstatt es nur aus der Aufgabenbeschreibung abzuleiten. Dies ist am wichtigsten für spezialisierte Formate, konsistenten Ton und strukturierte Ausgaben, bei denen Präzision erforderlich ist.',
           ],
           items: [
             '**Wann Beispiele hinzufügen:** Spezialisierte Formate, konsistente Tonanforderungen, strukturierte Ausgaben, domänenspezifisches Vokabular',
@@ -732,8 +721,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-4-constraints',
           title: 'Was sind Einschränkungen und warum brauchen Prompts sie?',
           content: [
-            '**Einschränkungen sind die Regeln, die das Modell befolgen muss: was es tun muss und was nicht.** Sie umfassen Längenbeschränkungen, verbotene Themen oder Formulierungen, erforderliche Quellen, Marken-Ton-Regeln, Sicherheitsgrenzen und Formatrestriktionen. Einschränkungen sind der am häufigsten weggelassene Baustein – und ihr Fehlen ist die Hauptursache für halluzinierte Fakten, markenfremde Sprache und Ausgaben im falschen Format.',
-            'Das Hinzufügen einer gut abgegrenzten Einschränkung ist oft die wirkungsvollste Änderung an einem bestehenden Prompt. „Erfinde keine Statistiken" senkt das Halluzinationsrisiko erheblich. „Überschreite nie 100 Wörter" erzwingt Knappheit. „Verwende nur Informationen aus dem bereitgestellten Text" verankert die Ausgabe im Quellmaterial und eliminiert Fabrikation für diese Aufgabe vollständig.',
+            '**Einschränkungen sind die Regeln, die das Modell befolgen muss: was es tun muss und was nicht.** Sie umfassen Längenbeschränkungen, verbotene Themen oder Formulierungen, erforderliche Quellen, Marken-Ton-Regeln, Sicherheitsgrenzen und Formatrestriktionen. Einschränkungen werden oft weggelassen – ohne sie werden erfundene Fakten, markenfremde Sprache und Ausgaben im falschen Format wahrscheinlicher.',
+            'Das Hinzufügen einer gut abgegrenzten Einschränkung ist oft eine sehr nützliche Änderung an einem bestehenden Prompt. „Erfinde keine Statistiken" senkt das Halluzinationsrisiko erheblich. „Überschreite nie 100 Wörter" erzwingt Knappheit. „Verwende nur Informationen aus dem bereitgestellten Text" verankert die Ausgabe im Quellmaterial und verringert das Risiko erfundener Angaben bei dieser Aufgabe; prüfen Sie die Ausgabe trotzdem.',
           ],
           items: [
             '**Längenbeschränkungen:** „Maximal 150 Wörter", „Nicht mehr als 5 Aufzählungspunkte"',
@@ -750,8 +739,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         block4ProTip: {
           id: 'pro-tip-constraints',
-          title: '🔍 Profi-Tipp: Die wirkungsvollste Einschränkung',
-          content: 'Die einzeln wirkungsvollste Einschränkung, die Sie zu einem Prompt hinzufügen können, ist: **„Verwende nur Informationen aus dem bereitgestellten Kontext. Wenn du nicht aus den bereitgestellten Informationen antwortet, sage es so."** Dieser eine Satz eliminiert den häufigsten Fehler bei KI-Ausgabe — plausibel klingende Erfindung. Das Hinzufügen dieser Einschränkung allein reduziert das Halluzinationsrisiko oft um 80%+ und wird universell über alle Modelle unterstützt.',
+          title: '🔍 Profi-Tipp: Eine besonders nützliche Einschränkung',
+          content: 'Eine besonders nützliche Einschränkung, die Sie vielen Prompts hinzufügen können, ist: **„Verwende nur Informationen aus dem bereitgestellten Kontext. Wenn du nicht aus den bereitgestellten Informationen antwortet, sage es so."** Dieser Satz zielt auf einen häufigen Fehler: plausibel klingende Erfindungen. Er kann Halluzinationen verringern, schließt sie aber nicht aus. Prüfen Sie die Ausgabe.',
         },
 
         block5: {
@@ -760,7 +749,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Ausgabeformat legt die genaue Form der Antwort fest, die das Modell produzieren soll.** Dies ist der Baustein, der bestimmt, ob die Ausgabe direkt verwendbar ist oder vor der Nutzung umformatiert werden muss. Bei automatisierten Pipelines bedeutet ein nicht festgelegtes Ausgabeformat fragiles, inkonsistentes Parsen. Für GEO ist eine strukturierte Ausgabe eher dazu geeignet, von KI-Suchmaschinen wörtlich zitiert zu werden, da strukturierte Antworten programmatisch leichter zu extrahieren sind.',
             'Der Ausgabeformat-Baustein kann das Dateiformat (JSON, Markdown, CSV), die Struktur (Tabelle, Aufzählungsliste, nummerierte Schritte), die Länge und die Beschriftung von Abschnitten festlegen. Je präziser man es angibt, desto weniger Bearbeitung erfordert die Ausgabe.',
-            '**API-Level-Ausgabeformat-Durchsetzung:** In 2026 bieten alle wichtigen Anbieter API-Level-Ausgabeformat-Durchsetzung, die über reine Prompt-Text-Anweisungen hinausgeht. Strukturierte Ausgaben (einschließlich JSON-Schema-Validierung) garantieren gültiges JSON, das zu Ihrem Schema auf Token-Generierungsebene passt — das Modell kann einfach keine ungültige Ausgabe erzeugen. Bei Verwendung dieser APIs wird Baustein 5 zu einer serverseitigen Einschränkung statt einer Prompt-Text-Anweisung. Verwenden Sie beide zur maximalen Zuverlässigkeit: API-Level-Durchsetzung als harte Garantie, Prompt-Text-Formatspezifikation als Anleitung für die Inhaltsstruktur innerhalb dieses Formats.',
+            '**API-Level-Ausgabeformat-Durchsetzung:** 2026 bieten große Anbieter strukturierte Ausgaben auf API-Ebene, die über reine Prompt-Text-Anweisungen hinausgehen. In unterstützten Modi binden sie die Erzeugung an Ihr JSON-Schema; Ablehnungen, abgeschnittene Antworten oder nicht unterstützte Schema-Funktionen bleiben möglich. Validieren Sie deshalb das Ergebnis. Bei Verwendung dieser APIs wird Baustein 5 zu einer serverseitigen Einschränkung statt einer Prompt-Text-Anweisung. Verwenden Sie beide zur maximalen Zuverlässigkeit: API-Level-Durchsetzung zur Absicherung der Struktur, Prompt-Text-Formatspezifikation als Anleitung für die Inhaltsstruktur innerhalb dieses Formats.',
           ],
           items: [
             '**JSON:** „Gib das Ergebnis als JSON-Objekt mit den Schlüsseln: title, summary, tags zurück"',
@@ -788,7 +777,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         templateNote: {
-          content: 'Diese Vorlage funktioniert auf allen Sprachmodellen und lokalen LLMs über Ollama oder LM Studio. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist die häufigste und zuverlässigste Anordnung über alle wichtigen Modelle hinweg.',
+          content: 'Diese Vorlage ist nicht an ein Modell gebunden: Sie können sie mit gängigen Sprachmodellen und mit lokalen LLMs über Ollama oder LM Studio verwenden. Die Reihenfolge der Bausteine ist eine Empfehlung, keine starre Regel – aber Rolle & Kontext zuerst und Ausgabeformat zuletzt zu platzieren ist eine verbreitete Anordnung, die in der Regel gut funktioniert.',
         },
 
         templateLocalLLMLinks: {
@@ -808,7 +797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Benutzernachricht (ändert sich pro Anfrage):**',
             'Baustein 2: Aufgabe / Anweisung — „Fasse die wichtigsten Erkenntnisse aus diesem Bericht zusammen."',
             'Baustein 3: Eingabe & Beispiele — Der tatsächliche Berichtstext + Beispiele.',
-            'Diese Aufteilung ist wichtig, weil **System-Anweisungen gecacht** werden — das bedeutet, Ihre Rolle, Einschränkungen und Ausgabeformat werden effizient gespeichert und verbrauchen keine frischen Tokens für jede Anfrage. Für Produktions-Pipelines mit Hunderten von Prompts reduziert dies die Kosten um 50-90% für den Systemteil.',
+            'Diese Aufteilung ist wichtig, weil viele APIs eine **wiederholte System-Anweisung cachen** können. Gecachte Eingaben werden meist anders, oft günstiger, abgerechnet; Bedingungen und Ersparnis hängen vom Anbieter ab. Prüfen Sie die aktuelle Preisseite.',
             'Für lokale LLMs über Ollama oder LM Studio gilt die gleiche Aufteilung: Verwenden Sie eine **Modelfile** mit einer SYSTEM-Direktive für die Bausteine 1, 4 und 5, und geben Sie die Bausteine 2 und 3 in der Benutzernachricht ein.',
           ],
         },
@@ -837,7 +826,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         frameworksDidYouKnow: {
           id: 'frameworks-did-you-know',
           title: '🔍 Wusstest du schon?',
-          content: 'Jedes wichtige Prompt-Engineering-Framework, das seit 2023 veröffentlicht wurde — CRAFT, CO-STAR, SPECS, RTF, TRACE, APE — bildet sich direkt auf diese 5 Bausteine unter verschiedenen Namen ab. Das Erlernen der Bausteine bedeutet, dass Sie jedes Framework anwenden können, ohne dessen spezifische Terminologie auswendig lernen zu müssen. Die Frameworks unterscheiden sich in Gewichtung und Reihenfolge, aber die zugrunde liegende Struktur ist immer gleich: wer, was, wie, Einschränkungen und Format.',
+          content: 'Frameworks wie CRAFT, CO-STAR, SPECS, RTF, TRACE und APE decken unter verschiedenen Namen weitgehend dieselben Punkte ab wie diese 5 Bausteine. Das Erlernen der Bausteine bedeutet, dass Sie jedes Framework anwenden können, ohne dessen spezifische Terminologie auswendig lernen zu müssen. Die Frameworks unterscheiden sich in Gewichtung, Reihenfolge und Umfang; die wiederkehrenden Fragen sind: wer, was, wie, Einschränkungen und Format.',
         },
 
         mistakes: {
@@ -856,8 +845,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         mistakesWarning: {
           id: 'warning-output-format',
-          title: '⚠️ Warnung: Das Weglassen von Ausgabeformat ist #1 Ursache für unbrauchbare Ausgabe',
-          content: 'Die Nicht-Angabe des Ausgabeformat-Blocks ist die häufigste Ursache für unbrauchbare KI-Ausgabe in Produktions-Pipelines. Ohne explizite Formatspezifikation ändert sich die Standard-Ausgabe des Modells zwischen Durchläufen, zwischen Modellen und zwischen API-Versionen. Geben Sie immer das Format an — auch „antworte in einfachem Prosa, keine Aufzählungspunkte" ist besser als es unangegeben zu lassen. Dies ist der Unterschied zwischen dem Erhalten einer Ausgabe und dem Erhalten einer verwendbaren Ausgabe.',
+          title: '⚠️ Warnung: Das Ausgabeformat nicht weglassen',
+          content: 'Die Nicht-Angabe des Ausgabeformat-Blocks ist eine häufige Ursache für unbrauchbare KI-Ausgaben in Produktions-Pipelines. Ohne explizite Formatspezifikation kann sich das Standardformat des Modells zwischen Durchläufen, Modellen und API-Versionen ändern. Geben Sie immer das Format an — auch „antworte in einfachem Prosa, keine Aufzählungspunkte" ist besser als es unangegeben zu lassen. Dies ist der Unterschied zwischen dem Erhalten einer Ausgabe und dem Erhalten einer verwendbaren Ausgabe.',
         },
 
         howToStart: {
@@ -866,9 +855,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           numberedItems: [
             '**Rolle & Kontext setzen:** Öffnen Sie mit wer das Modell ist und die Domäne, in der es tätig ist. Beispiel: „Du bist ein erfahrener Steuerberater, der einen kleinen Geschätsinhaber in Deutschland unterstützt." Ohne dies antwortet das Modell aus einer generischen Perspektive.',
             '**Schreiben Sie die Aufgabe / Anweisung:** Sagen Sie genau, was produziert werden soll — spezifisch und überprüfbar. „Fasse die wichtigsten Umsatzsteuerpflichten in 200 Wörtern zusammen" ist besser als „erzähle mir von Umsatzsteuer."',
-            '**Fügen Sie Eingabe & Beispiele hinzu:** Geben Sie die Rohdaten an und mindestens ein Beispiel des korrekten Ausgabeformats. Ein gut gewähltes Beispiel reduziert Inkonsistenz mehr als jede andere Einzeltechnik.',
+            '**Fügen Sie Eingabe & Beispiele hinzu:** Geben Sie die Rohdaten an und mindestens ein Beispiel des korrekten Ausgabeformats. Ein gut gewähltes Beispiel kann Inkonsistenz spürbar verringern.',
             '**Definieren Sie Einschränkungen:** Listen Sie auf, was das Modell nicht tun darf, die Längenbegrenzung und die Tonregeln. Beispiel: „Geben Sie keinen Rat für Jurisdiktionen außerhalb Deutschlands. Maximum 200 Wörter. Formaler Ton."',
-            '**Geben Sie das Ausgabeformat an:** Sagen Sie die exakte Form der Antwort — JSON-Objekt, 3-Punkt-Zusammenfassung, Tabelle oder Fließtext-Absatz. Diese wegzulassen ist die häufigste Ursache für nicht nutzbare KI-Ausgaben.',
+            '**Geben Sie das Ausgabeformat an:** Sagen Sie die exakte Form der Antwort — JSON-Objekt, 3-Punkt-Zusammenfassung, Tabelle oder Fließtext-Absatz. Wird es weggelassen, ist die KI-Ausgabe oft nicht nutzbar.',
           ],
         },
 
@@ -886,7 +875,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Kann ich Prompts kurz halten und trotzdem alle 5 Bausteine einschließen?',
-              a: 'Ja. Jeder Baustein kann in einem einzigen Satz ausgedrückt werden. Ein vollständiger Fünf-Bausteine-Prompt kann unter 100 Wörtern liegen. Kürze ist nicht das Problem – Vagheit ist es. Ein kurzer, präziser Prompt mit allen fünf Elementen übertrifft konsistent einen langen, weitschweifigen ohne keines davon.',
+              a: 'Ja. Jeder Baustein kann in einem einzigen Satz ausgedrückt werden. Ein vollständiger Fünf-Bausteine-Prompt kann unter 100 Wörtern liegen. Kürze ist nicht das Problem – Vagheit ist es. Ein kurzer, präziser Prompt mit allen fünf Elementen funktioniert meist besser als ein langer, weitschweifiger, dem sie fehlen.',
             },
             {
               q: 'Was ist der Unterschied zwischen Kontext und Beispielen?',
@@ -894,19 +883,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Wo passen Einschränkungen hin, wenn ich ein Framework wie CRAFT oder CO-STAR verwende?',
-              a: 'Jedes wichtige Framework hat ein Feld, das auf Einschränkungen abbildet – „Restrictions" in CRAFT, „Tone & Style" in CO-STAR, „Constraints" in SPECS. Wenn das eigene Framework kein explizites Einschränkungsfeld hat, die Einschränkungen am Ende als separaten „Nicht"-Abschnitt hinzufügen – alle Modelle handhaben dies zuverlässig.',
+              a: 'Verbreitete Frameworks haben meist ein Feld, das Einschränkungen aufnehmen kann – „Restrictions" in CRAFT, „Tone & Style" in CO-STAR, „Constraints" in SPECS. Wenn das eigene Framework kein explizites Einschränkungsfeld hat, die Einschränkungen am Ende als separaten „Nicht"-Abschnitt hinzufügen – das funktioniert in der Regel gut.',
             },
             {
               q: 'Spielt das Ausgabeformat eine Rolle, wenn ich nur eine einfache Frage stelle?',
               a: 'Bei Gesprächsfragen ist das Festlegen des Formats optional. Für jede Ausgabe, die nachgelagert verwendet wird – in ein Dokument eingefügt, von Code verarbeitet, veröffentlicht oder von Teammitgliedern wiederverwendet – ist das Festlegen des Formats unerlässlich. Es ist der Unterschied zwischen einem Ergebnis und einem nutzbaren Ergebnis.',
-            },
-            {
-              q: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
-              a: 'Ja. PromptQuorum ist DSGVO-konform, insbesondere wenn Sie lokale Inferenzen mit On-Premise-Modellen über Ollama oder LM Studio nutzen. Lokale Modelle halten Ihre Daten in Ihrer Kontrolle und erfüllen Anforderungen nach Datenschutz und BSI-Grundschutz-Katalogen für Mittelstandsunternehmen. Für Cloud-Instanzen — immer Datenverarbeitungsverträge (DPAs) mit dem Provider verhandeln.',
-            },
-            {
-              q: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
-              a: 'Ja. PromptQuorum ist speziell für deutsche Mittelstandsunternehmen entwickelt worden und erfüllt BSI- und IT-Sicherheitsstandards. Mit lokalen Modellen erhalten Sie volle Datensouvränität, Offline-Betrieb, und Anpassung an Branchenstandards (Finanz, Medizin, Recht). Die Kostenstruktur ist auch für KMUs geeignet — skaliert mit Ihren Anforderungen ohne überproportionale Cloud-Ausgaben.',
             },
           ],
         },
@@ -922,7 +903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Structured Output & JSON Mode](/de/prompt-engineering/structured-output-and-json-mode) — Präzise Ausgabeformate angeben: JSON-Modus, Markdown-Tabellen und andere strukturierte Ansätze über Modelle hinweg.',
             '[Which Prompt Framework Should You Use?](/de/prompt-engineering/which-prompt-framework-should-you-use) — Vergleich von CRAFT, CO-STAR, SPECS und anderen: Wahl eines Frameworks, das zu Ihrem Anwendungsfall passt.',
             '[Persona Prompting](/de/prompt-engineering/persona-prompting) — Tiefere Erkundung von Baustein 1 (Rolle & Kontext) mit 7 Unterkategorien: wie die Persona-Auswahl die Ausgabequalität und Konsistenz beeinflusst.',
-            '[Constrained Prompting](/de/prompt-engineering/constrained-prompting) — Tiefere Erkundung von Baustein 4 (Einschränkungen) einschließlich API-Level-Durchsetzung: harte Einschränkungen, die gültige Ausgaben garantieren.',
+            '[Constrained Prompting](/de/prompt-engineering/constrained-prompting) — Tiefere Erkundung von Baustein 4 (Einschränkungen) einschließlich API-Level-Durchsetzung: Einschränkungen, die die API statt des Prompt-Texts durchsetzt.',
             '[Prompt Chaining](/de/prompt-engineering/prompt-chaining) — Wie die 5 Bausteine über mehrstufige Arbeitsabläufe hinweg angewendet werden: Aufteilung komplexer Aufgaben in sequenzielle Prompts.',
             '[Ihre Markenstimme mit KI: Prompt-Leitfaden](/de/prompt-engineering/your-brand-voice-ai)',
           ],
@@ -936,7 +917,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Sicherheitsimplikationen unstrukturierter Prompts und Empfehlungen für Einschränkungen.',
             '[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT — White et al., 2023](https://arxiv.org/abs/2302.11382) — Umfassender Katalog von Prompt-Design-Mustern, einschließlich strukturierter und rollenbasierter Techniken, die direkt auf das Fünf-Bausteine-Modell anwendbar sind.',
             '[Prompt Engineering — Claude Documentation — Anthropic](https://docs.anthropic.com/) — System-Prompt-Best-Practices, strukturierte Ausgaben und Caching-Strategien für Produktions-Pipelines.',
-            '[Structured Outputs — Responses API — OpenAI](https://platform.openai.com/docs/) — API-Level-Ausgabeformat-Durchsetzung, die gültiges JSON garantiert, das Ihrem Schema auf Token-Generierungsebene entspricht.',
+            '[Structured Outputs — Responses API — OpenAI](https://platform.openai.com/docs/) — API-seitige Formatvorgabe, die JSON in unterstützten Modi an Ihr Schema bindet.',
             '[Gemini API: Prompting Strategies — Google](https://ai.google.dev/) — Response-Schema und kontrollierte Generierungstechniken über führende Modelle hinweg.',
           ],
         },
@@ -956,14 +937,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '8 min de lectura',
       educationalLevel: 'Beginner',
       primaryTerm: 'Estructura de prompt',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-27',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Los 5 bloques de construcción que todo prompt necesita',
         description: 'Los 5 bloques de construcción de todo prompt: rol y contexto, tarea/instrucción, input y ejemplos, restricciones y formato de output. Con estos cinco componentes, cada prompt de IA se vuelve fiable y repetible.',
         datePublished: '2026-03-01',
-        dateModified: '2026-08-29',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/es/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'es',
         proficiencyLevel: 'Beginner',
@@ -1004,7 +985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '¿Puedo mantener los prompts cortos e incluir los 5 bloques de construcción?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Cada bloque puede expresarse en una sola oración. Un prompt completo de cinco bloques puede tener menos de 100 palabras. La brevedad no es el problema — la vaguedad sí lo es. Un prompt corto y preciso con los cinco elementos supera consistentemente a uno largo y prolijo sin ninguno de ellos.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Cada bloque puede expresarse en una sola oración. Un prompt completo de cinco bloques puede tener menos de 100 palabras. La brevedad no es el problema — la vaguedad sí lo es. Un prompt corto y preciso con los cinco elementos suele funcionar mejor que uno largo y prolijo sin ninguno de ellos.' },
           },
           {
             '@type': 'Question',
@@ -1019,7 +1000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '¿Dónde van las restricciones cuando uso un framework como CRAFT o CO-STAR?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Cada framework importante tiene un campo que se mapea a restricciones — "Restrictions" en CRAFT, "Tone & Style" en CO-STAR, "Constraints" en SPECS. Si tu framework no tiene un campo de restricciones explícito, añade las restricciones al final como una sección "No" separada — todos los modelos lo manejan de forma fiable.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Los frameworks populares suelen tener un campo que admite restricciones — "Restrictions" en CRAFT, "Tone & Style" en CO-STAR, "Constraints" en SPECS. Si tu framework no tiene un campo de restricciones explícito, añade las restricciones al final como una sección "No" separada; esto suele funcionar bien.' },
           },
         ],
       },
@@ -1091,17 +1072,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Los 5 bloques:** Rol y contexto → Tarea/instrucción → Input y ejemplos → Restricciones → Formato de output',
             '**Prompt mínimo viable:** Tarea + formato de output (2 bloques) para tareas simples',
-            '**Mayor palanca:** Una restricción como "usa solo la información proporcionada" reduce drásticamente el riesgo de alucinación',
-            '**Funciona en:** Todos los modelos de lenguaje principales y todos los LLMs locales mediante Ollama, LM Studio o similares',
-            '**Se corresponde con:** CRAFT, CO-STAR, SPECS, RTF y cualquier otro framework importante — nombres distintos, los mismos bloques',
+            '**Ayuda clave:** Una restricción como "usa solo la información proporcionada" puede reducir el riesgo de alucinación',
+            '**Se aplica a:** Los principales modelos de lenguaje, incluidos los LLMs locales mediante Ollama, LM Studio o similares',
+            '**Se corresponde con:** CRAFT, CO-STAR, SPECS, RTF y frameworks similares — nombres distintos, elementos en gran parte coincidentes',
           ],
         },
 
         whyMatters: {
           title: '¿Por qué importan estos 5 bloques de construcción?',
           content: [
-            'El modelo de cinco bloques refleja el consenso convergente de las guías de prompt engineering de OpenAI, Google, Anthropic y practicantes independientes. Rol, instrucciones, ejemplos, restricciones y formato de output aparecen — bajo distintos nombres — en cada framework importante publicado desde 2023. No es una coincidencia: son la información mínima que un modelo probabilístico necesita para producir un resultado útil y consistente.',
-            'El valor para el negocio es claro. La falta de rol y contexto produce respuestas genéricas que hay que reescribir. La falta de restricciones aumenta el riesgo de alucinación y genera outputs fuera de la marca. La falta de formato de output significa resultados que no se pueden usar o copiar directamente. El modelo de 5 bloques aborda los tres tipos de errores simultáneamente y se aplica igualmente a todos los modelos de lenguaje y LLMs locales.',
+            'El modelo de cinco bloques agrupa elementos que también aparecen en las guías de prompt engineering de los proveedores de modelos. Rol, instrucciones, ejemplos, restricciones y formato de output figuran, bajo distintos nombres, en frameworks de uso extendido. Juntos dan a un modelo probabilístico la información que necesita para producir resultados más útiles y consistentes.',
+            'El valor para el negocio es claro. La falta de rol y contexto produce respuestas genéricas que hay que reescribir. La falta de restricciones aumenta el riesgo de alucinación y genera outputs fuera de la marca. La falta de formato de output significa resultados que no se pueden usar o copiar directamente. El modelo de 5 bloques aborda los tres tipos de errores simultáneamente y puede usarse con modelos en la nube y con LLMs locales.',
           ],
         },
 
@@ -1126,7 +1107,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block2: {
           title: '¿Qué es el bloque Tarea/instrucción?',
           content: [
-            '**El bloque tarea/instrucción es la declaración explícita de lo que el modelo debe hacer.** Es el bloque más importante — todos los demás lo apoyan. Una instrucción clara, específica y verificable reduce la ambigüedad a casi cero. Una instrucción vaga es la causa más común de outputs de IA deficientes en todos los modelos y casos de uso.',
+            '**El bloque tarea/instrucción es la declaración explícita de lo que el modelo debe hacer.** Es el bloque más importante — todos los demás lo apoyan. Una instrucción clara, específica y verificable reduce mucho la ambigüedad. Una instrucción vaga es una causa frecuente de outputs de IA deficientes.',
             'Las recomendaciones de mejores prácticas actuales enfatizan hacer la tarea orientada a la acción y observable: usar un verbo, nombrar el resultado y describir un criterio de éxito cuando sea posible. "Escribe un resumen" es una tarea. "Resume el siguiente artículo en 3 puntos con viñetas, cada uno con menos de 20 palabras" es una tarea con un output verificable. La diferencia en la calidad del output es sustancial.',
           ],
           items: [
@@ -1154,7 +1135,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block4: {
           title: '¿Qué son las restricciones?',
           content: [
-            '**Las restricciones son las reglas que el modelo debe seguir — los límites explícitos sobre lo que puede y no puede hacer en su respuesta.** Sin restricciones, los modelos cubren todos los ángulos, añaden calificaciones innecesarias y producen outputs que hay que editar. Las restricciones bien elegidas son el bloque de mayor impacto para el aumento de la fiabilidad.',
+            '**Las restricciones son las reglas que el modelo debe seguir — los límites explícitos sobre lo que puede y no puede hacer en su respuesta.** Sin restricciones, los modelos cubren todos los ángulos, añaden calificaciones innecesarias y producen outputs que hay que editar. Las restricciones bien elegidas pueden mejorar mucho la fiabilidad.',
             'Tipos comunes: límites de longitud ("máx. 100 palabras"), restricciones de fuente ("usa solo los datos proporcionados"), restricciones de estilo ("sin jerga"), restricciones de tono ("tono formal, sin emojis"), exclusiones de contenido ("no incluyas precios"), restricciones de estructura ("sin párrafos de introducción").',
           ],
           items: [
@@ -1169,7 +1150,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block5: {
           title: '¿Qué es el formato de output?',
           content: [
-            '**El formato de output especifica la estructura exacta de la respuesta del modelo.** Es el bloque de más fácil inclusión y omisión más común. Sin él, los modelos eligen su propia estructura — que puede variar en cada ejecución, no ser compatible con el siguiente paso del flujo de trabajo o requerir una edición significativa antes de ser útil.',
+            '**El formato de output especifica la estructura exacta de la respuesta del modelo.** Es un bloque fácil de incluir y que a menudo se omite. Sin él, los modelos eligen su propia estructura — que puede variar en cada ejecución, no ser compatible con el siguiente paso del flujo de trabajo o requerir una edición significativa antes de ser útil.',
             'El formato de output no solo controla la apariencia de la respuesta — controla su utilizabilidad. Una respuesta en JSON puede analizarse directamente. Una respuesta en formato de tabla se puede copiar en un documento. Una lista numerada puede seguirse paso a paso. Una respuesta en prosa no estructurada requiere que alguien la reformat después.',
           ],
           items: [
@@ -1196,7 +1177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         frameworksMapping: {
           title: 'Cómo se mapean los 5 bloques con CRAFT, CO-STAR y SPECS',
-          content: 'Cada framework de prompt importante usa los mismos cinco bloques bajo diferentes nombres. Entender la correspondencia te permite transferir prompts entre frameworks sin reescribir desde cero.',
+          content: 'CRAFT, CO-STAR y SPECS cubren en gran parte estos cinco bloques bajo diferentes nombres. Entender la correspondencia te permite transferir prompts entre frameworks sin reescribir desde cero.',
           columns: ['Bloque de construcción', 'CRAFT', 'CO-STAR', 'SPECS'],
           rows: [
             { 'Bloque de construcción': 'Rol y contexto', 'CRAFT': 'Context', 'CO-STAR': 'Context + Audience', 'SPECS': 'Situation' },
@@ -1253,7 +1234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Puedo mantener los prompts cortos e incluir los 5 bloques de construcción?',
-              a: 'Sí. Cada bloque puede expresarse en una sola oración. Un prompt completo de cinco bloques puede tener menos de 100 palabras. La brevedad no es el problema — la vaguedad sí lo es. Un prompt corto y preciso con los cinco elementos supera consistentemente a uno largo y prolijo sin ninguno de ellos.',
+              a: 'Sí. Cada bloque puede expresarse en una sola oración. Un prompt completo de cinco bloques puede tener menos de 100 palabras. La brevedad no es el problema — la vaguedad sí lo es. Un prompt corto y preciso con los cinco elementos suele funcionar mejor que uno largo y prolijo sin ninguno de ellos.',
             },
             {
               q: '¿Cuál es la diferencia entre contexto y ejemplos?',
@@ -1261,7 +1242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Dónde van las restricciones cuando uso un framework como CRAFT o CO-STAR?',
-              a: 'Cada framework importante tiene un campo que se mapea a restricciones — "Restrictions" en CRAFT, "Tone & Style" en CO-STAR, "Constraints" en SPECS. Si tu framework no tiene un campo de restricciones explícito, añade las restricciones al final como una sección "No" separada — todos los modelos lo manejan de forma fiable.',
+              a: 'Los frameworks populares suelen tener un campo que admite restricciones — "Restrictions" en CRAFT, "Tone & Style" en CO-STAR, "Constraints" en SPECS. Si tu framework no tiene un campo de restricciones explícito, añade las restricciones al final como una sección "No" separada; esto suele funcionar bien.',
             },
             {
               q: '¿El formato de output importa si solo hago una pregunta simple?',
@@ -1305,14 +1286,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-01',
       readTime: '٨ دقائق للقراءة',
       educationalLevel: 'مبتدئ',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-27',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'المكونات الخمسة التي يحتاجها كل برومبت',
         description: 'المكونات الخمسة لكل برومبت: الدور والسياق، والمهمة/التعليمات، والمدخلات والأمثلة، والقيود، وتنسيق المخرجات. بهذه المكونات الخمسة، يصبح كل برومبت ذكاء اصطناعي موثوقًا وقابلًا للتكرار.',
         datePublished: '2026-03-01',
-        dateModified: '2026-08-29',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'ar',
         proficiencyLevel: 'مبتدئ',
@@ -1353,7 +1334,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'هل يمكنني إبقاء البرومبتات قصيرة مع تضمين المكونات الخمسة؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نعم. يمكن التعبير عن كل مكوّن في جملة واحدة. برومبت كامل من خمسة مكونات يمكن أن يكون أقل من 100 كلمة. الاختصار ليس المشكلة — الغموض هو المشكلة. برومبت قصير ودقيق بالعناصر الخمسة يتفوق باستمرار على برومبت طويل ومطوّل دون أيٍّ منها.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'نعم. يمكن التعبير عن كل مكوّن في جملة واحدة. برومبت كامل من خمسة مكونات يمكن أن يكون أقل من 100 كلمة. الاختصار ليس المشكلة — الغموض هو المشكلة. برومبت قصير ودقيق بالعناصر الخمسة يكون عادةً أفضل من برومبت طويل ومطوّل دون أيٍّ منها.' },
           },
           {
             '@type': 'Question',
@@ -1368,7 +1349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'أين تذهب القيود حين أستخدم إطارًا مثل CRAFT أو CO-STAR؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'كل إطار رئيسي يحتوي على حقل يُعيد تعيينه إلى القيود — "Restrictions" في CRAFT، و"Tone & Style" في CO-STAR، و"Constraints" في SPECS. إذا لم يكن لإطارك حقل قيود صريح، أضف القيود في النهاية كقسم "لا" منفصل — جميع النماذج تتعامل معه بشكل موثوق.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'تحتوي الأطر الشائعة عادةً على حقل يمكن أن يستوعب القيود — "Restrictions" في CRAFT، و"Tone & Style" في CO-STAR، و"Constraints" في SPECS. إذا لم يكن لإطارك حقل قيود صريح، أضف القيود في النهاية كقسم "لا" منفصل؛ وهذا ينجح عادةً.' },
           },
         ],
       },
@@ -1440,17 +1421,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**المكونات الخمسة:** الدور والسياق → المهمة/التعليمات → المدخلات والأمثلة → القيود → تنسيق المخرجات',
             '**الحد الأدنى القابل للتطبيق:** المهمة + تنسيق المخرجات (مكوّنان) للمهام البسيطة',
-            '**أعلى رفع:** قيد مثل "استخدم المعلومات المقدمة فقط" يقلل مخاطر الهلوسة بشكل كبير',
-            '**يعمل في:** جميع نماذج اللغة الرئيسية وجميع النماذج اللغوية المحلية عبر Ollama وLM Studio ومشابهاتها',
-            '**يتوافق مع:** CRAFT وCO-STAR وSPECS وRTF وأي إطار رئيسي آخر — أسماء مختلفة، نفس المكونات',
+            '**إضافة مفيدة:** يمكن لقيد مثل "استخدم المعلومات المقدمة فقط" أن يقلل مخاطر الهلوسة',
+            '**ينطبق على:** نماذج اللغة الرئيسية، ومنها النماذج المحلية عبر Ollama وLM Studio ومشابهاتها',
+            '**يتوافق مع:** CRAFT وCO-STAR وSPECS وRTF وأطر مشابهة — أسماء مختلفة وعناصر متداخلة إلى حد كبير',
           ],
         },
 
         whyMatters: {
           title: 'لماذا تهم هذه المكونات الخمسة؟',
           content: [
-            'نموذج المكونات الخمسة يعكس توافق أدلة هندسة البرومبت من OpenAI وGoogle وAnthropic والممارسين المستقلين. الدور والتعليمات والأمثلة والقيود وتنسيق المخرجات تظهر — تحت أسماء مختلفة — في كل إطار رئيسي منشور منذ 2023. ليس صدفة: هي المعلومات الأدنى التي يحتاجها نموذج احتمالي لإنتاج نتيجة مفيدة ومتسقة.',
-            'القيمة التجارية واضحة. غياب الدور والسياق ينتج استجابات عامة تحتاج إعادة كتابة. غياب القيود يزيد مخاطر الهلوسة وينتج مخرجات خارج نطاق العلامة التجارية. غياب تنسيق المخرجات يعني نتائج لا يمكن استخدامها مباشرة. نموذج المكونات الخمسة يعالج الأنواع الثلاثة من الأخطاء في آنٍ واحد ويُطبَّق بالتساوي على جميع نماذج اللغة والنماذج المحلية.',
+            'يجمع نموذج المكونات الخمسة عناصر ترد أيضًا في أدلة هندسة البرومبت لدى مزوّدي النماذج. ويظهر الدور والتعليمات والأمثلة والقيود وتنسيق المخرجات، تحت أسماء مختلفة، في أطر واسعة الاستخدام. وهي مجتمعةً تمنح النموذج الاحتمالي المعلومات اللازمة لنتائج أكثر فائدة واتساقًا.',
+            'القيمة التجارية واضحة. غياب الدور والسياق ينتج استجابات عامة تحتاج إعادة كتابة. غياب القيود يزيد مخاطر الهلوسة وينتج مخرجات خارج نطاق العلامة التجارية. غياب تنسيق المخرجات يعني نتائج لا يمكن استخدامها مباشرة. نموذج المكونات الخمسة يعالج الأنواع الثلاثة من الأخطاء في آنٍ واحد ويمكن استخدامه مع النماذج السحابية والنماذج المحلية.',
           ],
         },
 
@@ -1475,7 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block2: {
           title: 'ما هو مكوّن المهمة/التعليمات؟',
           content: [
-            '**مكوّن المهمة/التعليمات هو التصريح الصريح بما يجب على النموذج فعله.** وهو أهم مكوّن — الباقي يدعمه. تعليمة واضحة ومحددة وقابلة للتحقق تقلل الغموض إلى شبه الصفر. التعليمة المبهمة هي أشيع سبب لضعف مخرجات الذكاء الاصطناعي عبر جميع النماذج وحالات الاستخدام.',
+            '**مكوّن المهمة/التعليمات هو التصريح الصريح بما يجب على النموذج فعله.** وهو أهم مكوّن — الباقي يدعمه. تعليمة واضحة ومحددة وقابلة للتحقق تقلل الغموض كثيرًا. التعليمة المبهمة سبب متكرر لضعف مخرجات الذكاء الاصطناعي.',
             'توصيات أفضل الممارسات الحالية تُركّز على جعل المهمة موجهة نحو الإجراء وقابلة للملاحظة: استخدم فعلًا، وسمِّ النتيجة، وصِف معيار نجاح حين أمكن. "اكتب ملخصًا" مهمة. "لخّص المقال التالي في 3 نقاط، كل منها أقل من 20 كلمة" مهمة ذات مخرجات قابلة للتحقق. الفرق في جودة المخرجات جوهري.',
           ],
           items: [
@@ -1503,7 +1484,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block4: {
           title: 'ما هي القيود؟',
           content: [
-            '**القيود هي القواعد التي يجب على النموذج اتباعها — الحدود الصريحة على ما يمكن وما لا يمكن فعله في استجابته.** بدون قيود، تغطي النماذج جميع الزوايا وتضيف مؤهلات غير ضرورية وتنتج مخرجات تحتاج تحريرًا. القيود المختارة جيدًا هي المكوّن الأعلى تأثيرًا لزيادة الموثوقية.',
+            '**القيود هي القواعد التي يجب على النموذج اتباعها — الحدود الصريحة على ما يمكن وما لا يمكن فعله في استجابته.** بدون قيود، تغطي النماذج جميع الزوايا وتضيف مؤهلات غير ضرورية وتنتج مخرجات تحتاج تحريرًا. يمكن للقيود المختارة جيدًا أن تحسّن الموثوقية بوضوح.',
             'الأنواع الشائعة: حدود الطول ("بحد أقصى 100 كلمة")، وقيود المصدر ("استخدم البيانات المقدمة فقط")، وقيود الأسلوب ("بدون مصطلحات تقنية")، وقيود النبرة ("نبرة رسمية، بدون رموز تعبيرية")، واستثناءات المحتوى ("لا تضمّن الأسعار")، وقيود البنية ("بدون فقرات تمهيدية").',
           ],
           items: [
@@ -1518,7 +1499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block5: {
           title: 'ما هو تنسيق المخرجات؟',
           content: [
-            '**تنسيق المخرجات يحدد الهيكل الدقيق لاستجابة النموذج.** وهو المكوّن الأسهل للتضمين والأكثر إغفالًا. بدونه، تختار النماذج هيكلها الخاص — الذي قد يتفاوت في كل تشغيل، وقد لا يكون متوافقًا مع الخطوة التالية في سير العمل، وقد يتطلب تحريرًا كبيرًا قبل أن يصبح مفيدًا.',
+            '**تنسيق المخرجات يحدد الهيكل الدقيق لاستجابة النموذج.** وهو مكوّن يسهل تضمينه وكثيرًا ما يُغفل. بدونه، تختار النماذج هيكلها الخاص — الذي قد يتفاوت في كل تشغيل، وقد لا يكون متوافقًا مع الخطوة التالية في سير العمل، وقد يتطلب تحريرًا كبيرًا قبل أن يصبح مفيدًا.',
             'تنسيق المخرجات لا يتحكم في مظهر الاستجابة فحسب — بل يتحكم في قابليتها للاستخدام. استجابة بـJSON يمكن تحليلها مباشرة. استجابة بتنسيق جدول يمكن نسخها في مستند. قائمة مرقمة يمكن اتباعها خطوة بخطوة. استجابة نثرية غير منظمة تتطلب من شخص ما إعادة تنسيقها لاحقًا.',
           ],
           items: [
@@ -1545,7 +1526,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         frameworksMapping: {
           title: 'كيف تتوافق المكونات الخمسة مع CRAFT وCO-STAR وSPECS',
-          content: 'كل إطار برومبت رئيسي يستخدم المكونات الخمسة ذاتها تحت أسماء مختلفة. فهم التوافق يسمح لك بنقل البرومبتات بين الأطر دون إعادة الكتابة من الصفر.',
+          content: 'تغطي أطر CRAFT وCO-STAR وSPECS هذه المكونات الخمسة إلى حد كبير تحت أسماء مختلفة. فهم التوافق يسمح لك بنقل البرومبتات بين الأطر دون إعادة الكتابة من الصفر.',
           columns: ['المكوّن', 'CRAFT', 'CO-STAR', 'SPECS'],
           rows: [
             { 'المكوّن': 'الدور والسياق', 'CRAFT': 'Context', 'CO-STAR': 'Context + Audience', 'SPECS': 'Situation' },
@@ -1602,7 +1583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'هل يمكنني إبقاء البرومبتات قصيرة مع تضمين المكونات الخمسة؟',
-              a: 'نعم. يمكن التعبير عن كل مكوّن في جملة واحدة. برومبت كامل من خمسة مكونات يمكن أن يكون أقل من 100 كلمة. الاختصار ليس المشكلة — الغموض هو المشكلة. برومبت قصير ودقيق بالعناصر الخمسة يتفوق باستمرار على برومبت طويل ومطوّل دون أيٍّ منها.',
+              a: 'نعم. يمكن التعبير عن كل مكوّن في جملة واحدة. برومبت كامل من خمسة مكونات يمكن أن يكون أقل من 100 كلمة. الاختصار ليس المشكلة — الغموض هو المشكلة. برومبت قصير ودقيق بالعناصر الخمسة يكون عادةً أفضل من برومبت طويل ومطوّل دون أيٍّ منها.',
             },
             {
               q: 'ما الفرق بين السياق والأمثلة؟',
@@ -1610,7 +1591,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'أين تذهب القيود حين أستخدم إطارًا مثل CRAFT أو CO-STAR؟',
-              a: 'كل إطار رئيسي يحتوي على حقل يُعيد تعيينه إلى القيود — "Restrictions" في CRAFT، و"Tone & Style" في CO-STAR، و"Constraints" في SPECS. إذا لم يكن لإطارك حقل قيود صريح، أضف القيود في النهاية كقسم "لا" منفصل — جميع النماذج تتعامل معه بشكل موثوق.',
+              a: 'تحتوي الأطر الشائعة عادةً على حقل يمكن أن يستوعب القيود — "Restrictions" في CRAFT، و"Tone & Style" في CO-STAR، و"Constraints" في SPECS. إذا لم يكن لإطارك حقل قيود صريح، أضف القيود في النهاية كقسم "لا" منفصل؛ وهذا ينجح عادةً.',
             },
             {
               q: 'هل تنسيق المخرجات مهم إذا كنت أطرح سؤالًا بسيطًا فقط؟',
@@ -1653,12 +1634,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-01',
       readTime: '8 min de leitura',
       educationalLevel: 'Beginner',
+      dateModified: '2026-11-27',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Os 5 blocos de construção que todo prompt precisa',
         description: 'Os 5 blocos de construção de todo prompt: papel e contexto, tarefa/instrução, entrada e exemplos, restrições e formato de saída. Com esses cinco componentes, cada prompt de IA se torna confiável e repetível.',
         datePublished: '2026-03-01',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'pt-BR',
         proficiencyLevel: 'Beginner',
@@ -1699,7 +1682,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Posso manter os prompts curtos e incluir os 5 blocos de construção?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sim. Cada bloco pode ser expresso em uma única frase. Um prompt completo de cinco blocos pode ter menos de 100 palavras. A brevidade não é o problema — a vagueza sim. Um prompt curto e preciso com os cinco elementos supera consistentemente um longo e prolixo sem nenhum deles.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Sim. Cada bloco pode ser expresso em uma única frase. Um prompt completo de cinco blocos pode ter menos de 100 palavras. A brevidade não é o problema — a vagueza sim. Um prompt curto e preciso com os cinco elementos costuma funcionar melhor que um longo e prolixo sem nenhum deles.' },
           },
           {
             '@type': 'Question',
@@ -1714,7 +1697,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Onde vão as restrições quando uso um framework como CRAFT ou CO-STAR?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Cada framework importante tem um campo que se mapeia para restrições — "Restrictions" no CRAFT, "Tone & Style" no CO-STAR, "Constraints" no SPECS. Se o seu framework não tiver um campo de restrições explícito, adicione as restrições no final como uma seção "Não" separada — todos os modelos lidam com isso de forma confiável.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Os frameworks populares costumam ter um campo que comporta restrições — "Restrictions" no CRAFT, "Tone & Style" no CO-STAR, "Constraints" no SPECS. Se o seu framework não tiver um campo de restrições explícito, adicione as restrições no final como uma seção "Não" separada; isso costuma funcionar bem.' },
           },
         ],
       },
@@ -1782,16 +1765,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Os 5 blocos:** Papel e contexto → Tarefa/instrução → Entrada e exemplos → Restrições → Formato de saída',
             '**Prompt mínimo viável:** Tarefa + formato de saída (2 blocos) para tarefas simples',
-            '**Maior alavancagem:** Uma restrição como "use apenas as informações fornecidas" reduz drasticamente o risco de alucinação',
-            '**Funciona em:** Todos os principais modelos de linguagem e todos os LLMs locais via Ollama, LM Studio ou similares',
-            '**Corresponde a:** CRAFT, CO-STAR, SPECS, RTF e qualquer outro framework importante — nomes diferentes, os mesmos blocos',
+            '**Acréscimo útil:** Uma restrição como "use apenas as informações fornecidas" pode reduzir o risco de alucinação',
+            '**Aplica-se a:** Os principais modelos de linguagem, incluindo LLMs locais via Ollama, LM Studio ou similares',
+            '**Corresponde a:** CRAFT, CO-STAR, SPECS, RTF e frameworks semelhantes — nomes diferentes, elementos em grande parte sobrepostos',
           ],
         },
         whyMatters: {
           title: 'Por que esses 5 blocos de construção importam?',
           content: [
-            'O modelo de cinco blocos reflete o consenso convergente dos guias de prompt engineering da OpenAI, Google, Anthropic e praticantes independentes. Papel, instruções, exemplos, restrições e formato de saída aparecem — sob nomes diferentes — em cada framework importante publicado desde 2023. Não é coincidência: são as informações mínimas que um modelo probabilístico precisa para produzir um resultado útil e consistente.',
-            'O valor para o negócio é claro. A falta de papel e contexto produz respostas genéricas que precisam ser reescritas. A falta de restrições aumenta o risco de alucinação e gera saídas fora da marca. A falta de formato de saída significa resultados que não podem ser usados ou copiados diretamente. O modelo de 5 blocos aborda os três tipos de erros simultaneamente e aplica-se igualmente a todos os modelos de linguagem e LLMs locais.',
+            'O modelo de cinco blocos reúne elementos que também aparecem nos guias de prompt engineering dos provedores de modelos. Papel, instruções, exemplos, restrições e formato de saída surgem, sob nomes diferentes, em frameworks amplamente usados. Juntos, dão a um modelo probabilístico as informações de que ele precisa para resultados mais úteis e consistentes.',
+            'O valor para o negócio é claro. A falta de papel e contexto produz respostas genéricas que precisam ser reescritas. A falta de restrições aumenta o risco de alucinação e gera saídas fora da marca. A falta de formato de saída significa resultados que não podem ser usados ou copiados diretamente. O modelo de 5 blocos aborda os três tipos de erros simultaneamente e pode ser usado com modelos na nuvem e LLMs locais.',
           ],
         },
         block1: {
@@ -1813,7 +1796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block2: {
           title: 'O que é o bloco Tarefa/instrução?',
           content: [
-            '**O bloco tarefa/instrução é a declaração explícita do que o modelo deve fazer.** É o bloco mais importante — todos os outros o apoiam. Uma instrução clara, específica e verificável reduz a ambiguidade a quase zero. Uma instrução vaga é a causa mais comum de saídas de IA deficientes em todos os modelos e casos de uso.',
+            '**O bloco tarefa/instrução é a declaração explícita do que o modelo deve fazer.** É o bloco mais importante — todos os outros o apoiam. Uma instrução clara, específica e verificável reduz bastante a ambiguidade. Uma instrução vaga é uma causa frequente de saídas de IA deficientes.',
             'As recomendações de melhores práticas atuais enfatizam tornar a tarefa orientada a ações e observável: use um verbo, nomeie o resultado e descreva um critério de sucesso quando possível. "Escreva um resumo" é uma tarefa. "Resuma o seguinte artigo em 3 pontos com marcadores, cada um com menos de 20 palavras" é uma tarefa com uma saída verificável. A diferença na qualidade da saída é substancial.',
           ],
           items: [
@@ -1839,7 +1822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block4: {
           title: 'O que são as restrições?',
           content: [
-            '**As restrições são as regras que o modelo deve seguir — os limites explícitos sobre o que pode e não pode fazer em sua resposta.** Sem restrições, os modelos cobrem todos os ângulos, adicionam qualificações desnecessárias e produzem saídas que precisam ser editadas. Restrições bem escolhidas são o bloco de maior impacto para o aumento da confiabilidade.',
+            '**As restrições são as regras que o modelo deve seguir — os limites explícitos sobre o que pode e não pode fazer em sua resposta.** Sem restrições, os modelos cobrem todos os ângulos, adicionam qualificações desnecessárias e produzem saídas que precisam ser editadas. Restrições bem escolhidas podem melhorar bastante a confiabilidade.',
             'Tipos comuns: limites de comprimento ("máx. 100 palavras"), restrições de fonte ("use apenas os dados fornecidos"), restrições de estilo ("sem jargão"), restrições de tom ("tom formal, sem emojis"), exclusões de conteúdo ("não inclua preços"), restrições de estrutura ("sem parágrafos de introdução").',
           ],
           items: [
@@ -1853,7 +1836,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block5: {
           title: 'O que é o formato de saída?',
           content: [
-            '**O formato de saída especifica a estrutura exata da resposta do modelo.** É o bloco mais fácil de incluir e mais frequentemente omitido. Sem ele, os modelos escolhem sua própria estrutura — que pode variar a cada execução, não ser compatível com a próxima etapa do fluxo de trabalho ou exigir edição significativa antes de ser útil.',
+            '**O formato de saída especifica a estrutura exata da resposta do modelo.** É um bloco fácil de incluir e frequentemente omitido. Sem ele, os modelos escolhem sua própria estrutura — que pode variar a cada execução, não ser compatível com a próxima etapa do fluxo de trabalho ou exigir edição significativa antes de ser útil.',
             'O formato de saída não controla apenas a aparência da resposta — controla sua utilizabilidade. Uma resposta em JSON pode ser analisada diretamente. Uma resposta em formato de tabela pode ser copiada para um documento. Uma lista numerada pode ser seguida passo a passo. Uma resposta em prosa não estruturada requer que alguém a reformate depois.',
           ],
           items: [
@@ -1878,7 +1861,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         frameworksMapping: {
           title: 'Como os 5 blocos se mapeiam com CRAFT, CO-STAR e SPECS',
-          content: 'Cada framework de prompt importante usa os mesmos cinco blocos sob nomes diferentes. Entender a correspondência permite transferir prompts entre frameworks sem reescrever do zero.',
+          content: 'CRAFT, CO-STAR e SPECS cobrem em grande parte esses cinco blocos sob nomes diferentes. Entender a correspondência permite transferir prompts entre frameworks sem reescrever do zero.',
           columns: ['Bloco de construção', 'CRAFT', 'CO-STAR', 'SPECS'],
           rows: [
             { 'Bloco de construção': 'Papel e contexto', 'CRAFT': 'Context', 'CO-STAR': 'Context + Audience', 'SPECS': 'Situation' },
@@ -1932,7 +1915,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Posso manter os prompts curtos e incluir os 5 blocos de construção?',
-              a: 'Sim. Cada bloco pode ser expresso em uma única frase. Um prompt completo de cinco blocos pode ter menos de 100 palavras. A brevidade não é o problema — a vagueza sim. Um prompt curto e preciso com os cinco elementos supera consistentemente um longo e prolixo sem nenhum deles.',
+              a: 'Sim. Cada bloco pode ser expresso em uma única frase. Um prompt completo de cinco blocos pode ter menos de 100 palavras. A brevidade não é o problema — a vagueza sim. Um prompt curto e preciso com os cinco elementos costuma funcionar melhor que um longo e prolixo sem nenhum deles.',
             },
             {
               q: 'Qual é a diferença entre contexto e exemplos?',
@@ -1940,7 +1923,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Onde vão as restrições quando uso um framework como CRAFT ou CO-STAR?',
-              a: 'Cada framework importante tem um campo que se mapeia para restrições — "Restrictions" no CRAFT, "Tone & Style" no CO-STAR, "Constraints" no SPECS. Se o seu framework não tiver um campo de restrições explícito, adicione as restrições no final como uma seção "Não" separada — todos os modelos lidam com isso de forma confiável.',
+              a: 'Os frameworks populares costumam ter um campo que comporta restrições — "Restrictions" no CRAFT, "Tone & Style" no CO-STAR, "Constraints" no SPECS. Se o seu framework não tiver um campo de restrições explícito, adicione as restrições no final como uma seção "Não" separada; isso costuma funcionar bem.',
             },
             {
               q: 'O formato de saída importa se eu estou apenas fazendo uma pergunta simples?',
@@ -1986,7 +1969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Structure de prompt',
       audience: 'Développeurs et utilisateurs non techniques rédigeant des prompts IA',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-27',
       lastFactChecked: '2026-08-29',
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
@@ -2010,7 +1993,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Les 5 éléments fondamentaux de tout prompt',
         description: 'Maîtrisez les 5 éléments fondamentaux de tout prompt : Rôle & Contexte, Tâche, Entrée & Exemples, Contraintes et Format de sortie. Avec ces cinq composantes, tout prompt IA devient fiable et reproductible.',
         datePublished: '2026-03-01',
-        dateModified: '2026-08-29',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/fr/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'fr',
         proficiencyLevel: 'Beginner',
@@ -2051,7 +2034,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Puis-je garder les prompts courts tout en incluant les 5 éléments ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Chaque élément peut être exprimé en une seule phrase. Un prompt complet à cinq éléments peut faire moins de 100 mots. La brièveté n\'est pas le problème — le flou l\'est. Un prompt court et précis avec les cinq éléments surpasse systématiquement un long et verbeux sans aucun.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Chaque élément peut être exprimé en une seule phrase. Un prompt complet à cinq éléments peut faire moins de 100 mots. La brièveté n\'est pas le problème — le flou l\'est. Un prompt court et précis avec les cinq éléments fonctionne généralement mieux qu\'un prompt long et verbeux sans aucun d\'eux.' },
           },
           {
             '@type': 'Question',
@@ -2061,22 +2044,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Où les Contraintes s\'ajustent-elles si j\'utilise un framework comme CRAFT ou CO-STAR ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Chaque framework majeur a un champ qui correspond aux contraintes — « Restrictions » dans CRAFT, « Ton & Style » dans CO-STAR, « Contraintes » dans SPECS. Si votre framework n\'a pas de champ de contraintes explicite, ajoutez les contraintes à la fin en tant que section « Ne pas » séparée — tous les modèles gèrent cela de façon fiable.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les frameworks courants ont généralement un champ pouvant accueillir les contraintes — « Restrictions » dans CRAFT, « Ton & Style » dans CO-STAR, « Contraintes » dans SPECS. Si votre framework n\'a pas de champ de contraintes explicite, ajoutez les contraintes à la fin en tant que section « Ne pas » séparée ; cela fonctionne généralement bien.' },
           },
           {
             '@type': 'Question',
             name: 'Le format de sortie importe-t-il si je pose simplement une question simple ?',
             acceptedAnswer: { '@type': 'Answer', text: 'Pour les questions conversationnelles, spécifier le format est optionnel. Pour toute sortie qui sera utilisée en aval — collée dans un document, analysée par code, publiée ou réutilisée entre membres d\'équipe — spécifier le format est essentiel. C\'est la différence entre obtenir un résultat et obtenir un résultat utilisable.' },
-          },
-          {
-            '@type': 'Question',
-            name: 'Dois-je respecter la conformité CNIL quand j\'utilise PromptQuorum ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Oui. PromptQuorum est conforme au RGPD et aux directives de la CNIL. Pour les données sensibles professionnelles (données financières, médicales, juridiques), les inférences locales avec Ollama ou LM Studio gardent vos données sous votre contrôle et satisfont les exigences de conformité CNIL. Pour les instances cloud, négociez toujours des contrats de traitement de données (DPA) avec le prestataire.' },
-          },
-          {
-            '@type': 'Question',
-            name: 'PromptQuorum convient-il aux organisations traitant des données sensibles ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Oui. PromptQuorum a été conçu pour les organisations européennes traitant des données sensibles et respecte les standards de sécurité IT. Avec les modèles locaux, vous obtenez une souveraineté totale des données, un fonctionnement hors ligne et l\'adaptation aux standards sectoriels (Finance, Santé, Juridique). L\'architecture tarifaire est aussi adaptée aux PME — elle se redimensionne selon vos besoins sans frais cloud disproportionnés.' },
           },
           {
             '@type': 'Question',
@@ -2086,7 +2059,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Ces 5 éléments s\'appliquent-ils à tous les modèles IA ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Que vous utilisiez les principaux modèles de langage ou des modèles open-source via Ollama et LM Studio, ces 5 éléments fonctionnent sur tous. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — s\'applique universellement.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Que vous utilisiez les principaux modèles de langage ou des modèles open-source via Ollama et LM Studio, ces 5 éléments restent pertinents. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — reste le même.' },
           },
         ],
       },
@@ -2164,9 +2137,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Les 5 éléments :** Rôle & Contexte → Tâche / Instruction → Entrée & Exemples → Contraintes → Format de sortie',
             '**Prompt minimum viable :** Tâche + Format de sortie (2 éléments) pour les tâches simples',
-            '**Impact maximal :** Une contrainte comme « utilise uniquement les informations fournies » réduit dramatiquement le risque d\'hallucination',
-            '**Fonctionne sur :** Tous les modèles de langage majeurs et tous les LLM locaux via Ollama, LM Studio ou similaire',
-            '**Correspond à :** CRAFT, CO-STAR, SPECS, RTF et tous les autres cadres majeurs — noms différents, mêmes éléments',
+            '**Ajout utile :** Une contrainte comme « utilise uniquement les informations fournies » peut réduire le risque d\'hallucination',
+            '**S\'applique à :** Les principaux modèles de langage, y compris les LLM locaux via Ollama, LM Studio ou similaire',
+            '**Correspond à :** CRAFT, CO-STAR, SPECS, RTF et des cadres similaires — noms différents, éléments qui se recoupent largement',
           ],
           image: '/images/prompt-building-blocks-quick-reference-hero-fr.webp',
           imageCaption: '5 Blocs : Référence Rapide -- Quand utiliser quoi',
@@ -2176,9 +2149,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-building-blocks-matter',
           title: 'Pourquoi ces 5 éléments sont importants ?',
           content: [
-            'Le modèle des 5 éléments reflète le consensus convergent des guides d\'ingénierie de prompts d\'OpenAI, Google, Anthropic et des praticiens indépendants. Rôle, instructions, exemples, contraintes et format de sortie apparaissent — sous différents noms — dans chaque framework majeur publié depuis 2023. Ce n\'est pas un hasard : ce sont les informations minimales dont un modèle probabiliste a besoin pour produire une sortie utile et cohérente.',
-            'Les avantages commerciaux sont évidents. L\'absence de rôle et de contexte produit des réponses génériques qui doivent être réécrites. L\'absence de contraintes augmente le risque d\'hallucination et génère une sortie hors marque. L\'absence de format de sortie signifie des résultats qui ne peuvent pas être utilisés directement ou copiés. Le modèle des 5 éléments adresse les trois types d\'erreurs simultanément et s\'applique également à tous les modèles de langage et aux LLM exécutés localement.',
-            'Pour les organisations européennes : les inférences locales avec Ollama ou LM Studio via PromptQuorum respectent pleinement les exigences CNIL et RGPD en gardant vos données en interne tout en bénéficiant de l\'efficacité de ces prompts structurés.',
+            'Le modèle des 5 éléments regroupe des composantes que l\'on retrouve aussi dans les guides d\'ingénierie de prompts des fournisseurs de modèles. Rôle, instructions, exemples, contraintes et format de sortie figurent, sous différents noms, dans des frameworks répandus. Ensemble, ils donnent à un modèle probabiliste les informations utiles à des réponses plus pertinentes et cohérentes.',
+            'Les avantages commerciaux sont évidents. L\'absence de rôle et de contexte produit des réponses génériques qui doivent être réécrites. L\'absence de contraintes augmente le risque d\'hallucination et génère une sortie hors marque. L\'absence de format de sortie signifie des résultats qui ne peuvent pas être utilisés directement ou copiés. Le modèle des 5 éléments adresse les trois types d\'erreurs simultanément et s\'utilise avec des modèles cloud comme avec des LLM exécutés localement.',
           ],
         },
 
@@ -2205,7 +2177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-2-task-instruction',
           title: 'Qu\'est-ce que l\'élément Tâche / Instruction ?',
           content: [
-            '**L\'élément Tâche / Instruction est l\'énoncé explicite de ce que le modèle doit faire.** C\'est l\'élément le plus important — tous les autres éléments le soutiennent. Une instruction claire, spécifique et vérifiable réduit l\'ambiguïté à presque zéro. Une instruction vague est la cause la plus courante de mauvaises sorties IA sur tous les modèles et cas d\'usage.',
+            '**L\'élément Tâche / Instruction est l\'énoncé explicite de ce que le modèle doit faire.** C\'est l\'élément le plus important — tous les autres éléments le soutiennent. Une instruction claire, spécifique et vérifiable réduit fortement l\'ambiguïté. Une instruction vague est une cause fréquente de mauvaises sorties IA.',
             'Les recommandations actuelles de bonnes pratiques soulignent de rendre la tâche action-orientée et observable : utilisez un verbe, nommez le résultat et si possible décrivez un critère de succès. « Écrivez un résumé » est une tâche. « Résumez l\'article suivant en 3 points, chacun moins de 20 mots » est une tâche avec une sortie vérifiable. La différence de qualité est substantielle.',
           ],
           items: [
@@ -2225,7 +2197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Comment l\'Entrée et les Exemples améliorent-ils la précision ?',
           content: [
             '**Entrée** sont les données, textes ou matériaux actuels avec lesquels le modèle travaillera. **Exemples** sont des paires entrée/sortie qui montrent comment une réponse correcte ressemble. Ce sont des aspects séparés : Entrée est la matière première pour la tâche actuelle, Exemples sont le motif d\'apprentissage qui façonne l\'exécution par le modèle.',
-            'Inclure 1–3 exemples (Few-Shot Prompting) est la technique unique la plus fiable pour établir le format de sortie et le ton. Quand vous montrez au modèle ce qu\'une bonne réponse ressemble, il adapte le motif au lieu de simplement l\'inférer de la description de tâche. C\'est le plus important pour les formats spécialisés, le ton cohérent et les sorties structurées où la précision compte.',
+            'Inclure 1–3 exemples (Few-Shot Prompting) est un moyen fiable d\'orienter le format de sortie et le ton. Quand vous montrez au modèle ce qu\'une bonne réponse ressemble, il adapte le motif au lieu de simplement l\'inférer de la description de tâche. C\'est le plus important pour les formats spécialisés, le ton cohérent et les sorties structurées où la précision compte.',
           ],
           items: [
             '**Quand ajouter des exemples :** formats spécialisés, exigences de ton cohérent, sorties structurées, vocabulaire spécifique au domaine',
@@ -2243,8 +2215,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-4-constraints',
           title: 'Qu\'est-ce que l\'élément Contraintes et pourquoi les prompts en ont-ils besoin ?',
           content: [
-            '**Les Contraintes sont les règles que le modèle doit suivre : ce qu\'il doit et ne doit pas faire.** Elles incluent les limites de longueur, les sujets ou formulations interdits, les sources requises, les règles de ton de marque, les limites de sécurité et les restrictions de format. Les Contraintes sont l\'élément le plus souvent omis — et son absence est la cause principale des hallucinations factuelles, du langage hors marque et des sorties au mauvais format.',
-            'Ajouter une contrainte bien définie est souvent le changement le plus puissant apporté à un prompt existant. « N\'invente pas de statistiques » réduit significativement le risque d\'hallucination. « Ne dépasse jamais 100 mots » force la concision. « Utilise seulement l\'information du texte fourni » ancre la sortie dans le matériau source et élimine complètement la fabrication pour cette tâche.',
+            '**Les Contraintes sont les règles que le modèle doit suivre : ce qu\'il doit et ne doit pas faire.** Elles incluent les limites de longueur, les sujets ou formulations interdits, les sources requises, les règles de ton de marque, les limites de sécurité et les restrictions de format. Les Contraintes sont souvent omises ; sans elles, les faits inventés, le langage hors marque et les sorties au mauvais format deviennent plus probables.',
+            'Ajouter une contrainte bien définie est souvent un changement très utile à un prompt existant. « N\'invente pas de statistiques » réduit significativement le risque d\'hallucination. « Ne dépasse jamais 100 mots » force la concision. « Utilise seulement l\'information du texte fourni » ancre la sortie dans le matériau source et réduit le risque d\'invention pour cette tâche, mais la sortie reste à vérifier.',
           ],
           items: [
             '**Limites de longueur :** « Maximum 150 mots », « Pas plus de 5 points »',
@@ -2265,7 +2237,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Le Format de sortie définit la forme exacte de la réponse que le modèle produira.** C\'est l\'élément qui détermine si la sortie est immédiatement utilisable ou doit être reformatée avant utilisation. Dans les pipelines automatisés, un format de sortie non spécifié signifie un parsing fragile et incohérent. Pour la GEO, une sortie structurée est plus probable d\'être citée littéralement par les moteurs de recherche IA car les réponses structurées sont plus faciles à extraire programmatiquement.',
             'L\'élément Format de sortie peut spécifier le format de fichier (JSON, Markdown, CSV), la structure (tableau, liste à puces, étapes numérotées), la longueur et l\'étiquetage des sections. Plus vous le spécifiez précisément, moins la sortie a besoin d\'être éditée.',
-            '**Application au niveau API du Format de sortie :** En 2026, tous les fournisseurs majeurs offrent une application au niveau de l\'API du format de sortie au-delà des seules instructions texte d\'invite. Les sorties structurées (y compris la validation du schéma JSON) garantissent un JSON valide correspondant à votre schéma au niveau de la génération de tokens — le modèle ne peut tout simplement pas produire de sortie invalide. Lors de l\'utilisation de ces API, l\'élément 5 devient une contrainte côté serveur plutôt qu\'une instruction texte d\'invite. Utilisez les deux pour une fiabilité maximale : l\'application au niveau API comme garantie dure, la spécification du format texte d\'invite comme guide pour la structure du contenu.',
+            '**Application au niveau API du Format de sortie :** En 2026, de grands fournisseurs proposent des sorties structurées au niveau de l\'API, au-delà des seules instructions texte d\'invite. Dans les modes pris en charge, elles contraignent la génération à votre schéma JSON ; refus, réponses tronquées ou fonctions de schéma non prises en charge restent possibles. Validez donc le résultat. Lors de l\'utilisation de ces API, l\'élément 5 devient une contrainte côté serveur plutôt qu\'une instruction texte d\'invite. Utilisez les deux pour une fiabilité maximale : l\'application au niveau API pour contraindre la structure, la spécification du format texte d\'invite comme guide pour la structure du contenu.',
           ],
           items: [
             '**JSON :** « Retourne le résultat comme un objet JSON avec les clés : title, summary, tags »',
@@ -2293,7 +2265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         templateNote: {
-          content: 'Ce modèle fonctionne sur tous les modèles de langage majeurs et les LLM locaux via Ollama ou LM Studio. L\'ordre des éléments est une recommandation, pas une règle rigide — mais placer Rôle & Contexte en premier et Format de sortie en dernier est le plus courant et fiable sur tous les modèles majeurs.',
+          content: 'Ce modèle n\'est pas lié à un modèle d\'IA précis : vous pouvez l\'utiliser avec les principaux modèles de langage et avec des LLM locaux via Ollama ou LM Studio. L\'ordre des éléments est une recommandation, pas une règle rigide — mais placer Rôle & Contexte en premier et Format de sortie en dernier est une disposition courante qui fonctionne généralement bien.',
         },
 
         frameworks: {
@@ -2337,9 +2309,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           numberedItems: [
             '**Définir Rôle & Contexte :** Ouvrez avec qui le modèle est et le domaine dans lequel il travaille. Exemple : « Vous êtes un expert-comptable expérimenté aidant un petit propriétaire en France. » Sans cela, le modèle répond d\'une perspective générique.',
             '**Écrire la Tâche / Instruction :** Dites exactement ce qui doit être produit — spécifique et vérifiable. « Résumez les 5 obligations fiscales principales en 200 mots » est meilleur que « parle-moi des impôts. »',
-            '**Ajouter Entrée & Exemples :** Fournissez les données brutes et au moins un exemple du format de sortie correct. Un bon exemple réduit l\'incohérence plus que n\'importe quelle autre technique unique.',
+            '**Ajouter Entrée & Exemples :** Fournissez les données brutes et au moins un exemple du format de sortie correct. Un bon exemple peut nettement réduire l\'incohérence.',
             '**Définir les Contraintes :** Listez ce que le modèle ne doit pas faire, le limite de longueur et les règles de ton. Exemple : « Pas de conseils pour les juridictions en dehors de la France. Maximum 200 mots. Ton formel. »',
-            '**Spécifier le Format de sortie :** Dites la forme exacte — objet JSON, résumé 3 points, tableau ou paragraphes. Omettre ceci est la cause la plus courante de sorties inutilisables.',
+            '**Spécifier le Format de sortie :** Dites la forme exacte — objet JSON, résumé 3 points, tableau ou paragraphes. L\'omettre est une cause fréquente de sorties inutilisables.',
           ],
         },
 
@@ -2357,7 +2329,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Puis-je garder les prompts courts tout en incluant les 5 éléments ?',
-              a: 'Oui. Chaque élément peut être exprimé en une seule phrase. Un prompt complet à cinq éléments peut faire moins de 100 mots. La brièveté n\'est pas le problème — le flou l\'est. Un prompt court et précis avec les cinq éléments surpasse systématiquement un long et verbeux sans aucun.',
+              a: 'Oui. Chaque élément peut être exprimé en une seule phrase. Un prompt complet à cinq éléments peut faire moins de 100 mots. La brièveté n\'est pas le problème — le flou l\'est. Un prompt court et précis avec les cinq éléments fonctionne généralement mieux qu\'un prompt long et verbeux sans aucun d\'eux.',
             },
             {
               q: 'Quelle est la différence entre Contexte et Exemples ?',
@@ -2365,19 +2337,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Où les Contraintes s\'ajustent-elles si j\'utilise un framework comme CRAFT ou CO-STAR ?',
-              a: 'Chaque framework majeur a un champ qui correspond aux contraintes — « Restrictions » dans CRAFT, « Ton & Style » dans CO-STAR, « Contraintes » dans SPECS. Si votre framework n\'a pas de champ de contraintes explicite, ajoutez les contraintes à la fin en tant que section « Ne pas » séparée — tous les modèles gèrent cela de façon fiable.',
+              a: 'Les frameworks courants ont généralement un champ pouvant accueillir les contraintes — « Restrictions » dans CRAFT, « Ton & Style » dans CO-STAR, « Contraintes » dans SPECS. Si votre framework n\'a pas de champ de contraintes explicite, ajoutez les contraintes à la fin en tant que section « Ne pas » séparée ; cela fonctionne généralement bien.',
             },
             {
               q: 'Le format de sortie importe-t-il si je pose simplement une question simple ?',
               a: 'Pour les questions conversationnelles, spécifier le format est optionnel. Pour toute sortie qui sera utilisée en aval — collée dans un document, analysée par code, publiée ou réutilisée entre membres d\'équipe — spécifier le format est essentiel. C\'est la différence entre obtenir un résultat et obtenir un résultat utilisable.',
-            },
-            {
-              q: 'Dois-je respecter la conformité CNIL quand j\'utilise PromptQuorum ?',
-              a: 'Oui. PromptQuorum est conforme au RGPD et aux directives de la CNIL. Pour les données sensibles professionnelles (données financières, médicales, juridiques), les inférences locales avec Ollama ou LM Studio gardent vos données sous votre contrôle et satisfont les exigences de conformité CNIL. Pour les instances cloud, négociez toujours des contrats de traitement de données (DPA) avec le prestataire.',
-            },
-            {
-              q: 'PromptQuorum convient-il aux organisations traitant des données sensibles ?',
-              a: 'Oui. PromptQuorum a été conçu pour les organisations européennes traitant des données sensibles et respecte les standards de sécurité IT. Avec les modèles locaux, vous obtenez une souveraineté totale des données, un fonctionnement hors ligne et l\'adaptation aux standards sectoriels (Finance, Santé, Juridique). L\'architecture tarifaire est aussi adaptée aux PME — elle se redimensionne selon vos besoins sans frais cloud disproportionnés.',
             },
             {
               q: 'Où trouver des frameworks de prompt reconnus ?',
@@ -2385,7 +2349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Ces 5 éléments s\'appliquent-ils à tous les modèles IA ?',
-              a: 'Oui. Que vous utilisiez GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, ou des modèles open-source via Ollama et LM Studio, ces 5 éléments fonctionnent sur tous. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — s\'applique universellement.',
+              a: 'Oui. Que vous utilisiez GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, ou des modèles open-source via Ollama et LM Studio, ces 5 éléments restent pertinents. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — reste le même.',
             },
           ],
         },
@@ -2434,7 +2398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Structure',
       audience: 'AIプロンプトを作成する開発者と一般ユーザー',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-27',
       lastFactChecked: '2026-08-29',
       toc: [
         { label: '重要ポイント', anchor: '#key-takeaways' },
@@ -2458,7 +2422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'すべてのプロンプトに必要な5つの構成要素',
         description: 'プロンプトの5つの構成要素（役割とコンテキスト、タスク、入力と例、制約、出力形式）を理解し、信頼性の高い再現可能なAIプロンプトを作成する方法。',
         datePublished: '2026-03-01',
-        dateModified: '2026-08-29',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/ja/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'ja',
         proficiencyLevel: 'Beginner',
@@ -2507,7 +2471,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'プロンプトを短く保ちながら、5つの構成要素をすべて含めることはできますか',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。各要素は1文で表現できます。5つの構成要素のプロンプト全体は100語以下に収まります。簡潔さは問題ではありません。曖昧さが問題です。5つの要素を備えた短く正確なプロンプトは、要素がない長くだらしないプロンプトより一貫して優れています。',
+              'text': 'はい。各要素は1文で表現できます。5つの構成要素のプロンプト全体は100語以下に収まります。簡潔さは問題ではありません。曖昧さが問題です。5つの要素を備えた短く正確なプロンプトは、要素がない長くだらしないプロンプトよりも、多くの場合うまく機能します。',
             },
           },
           {
@@ -2523,7 +2487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'CRAFT または CO-STAR などのフレームワークを使う場合、制約はどこに適合しますか',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'すべての主要フレームワークは制約にマップするフィールドを持っています。CRAFT では「Restrictions」、CO-STAR では「Tone & Style」、SPECS では「Constraints」です。フレームワークに明示的な制約フィールドがない場合は、終了時に「Do not」セクションとして制約を追加してください。すべてのモデルがこれを確実に処理します。',
+              'text': '多くの主要フレームワークには、制約を書けるフィールドがあります。CRAFT では「Restrictions」、CO-STAR では「Tone & Style」、SPECS では「Constraints」です。フレームワークに明示的な制約フィールドがない場合は、終了時に「Do not」セクションとして制約を追加してください。多くの場合、この方法でうまく機能します。',
             },
           },
           {
@@ -2539,15 +2503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'これらの5つの構成要素はすべての LLM モデルに適用されますか',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、または Ollama や LM Studio を経由するオープンソース LLM を使用しているかどうかにかかわらず、これら5つの構成要素はすべてで機能します。最小構造は構文において若干異なりますが、概念的モデル（役割、指示、例、制約、形式）はすべてのモデルに普遍的に適用されます。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'METI の AI ガバナンスガイドラインはプロンプト設計に影響しますか',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '日本企業が METI AI Governance 2024 に準拠する必要がある場合、制約セクションで明示的に述べることが重要です。「このプロンプトは日本の企業ガバナンス基準に準拠した出力を生成する必要があります」という制約を追加することで、モデルが適切に調整されます。ローカル推論（Ollama/LM Studio）はデータ主権を確保します。',
+              'text': 'はい。GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、または Ollama や LM Studio を経由するオープンソース LLM を使用しているかどうかにかかわらず、これら5つの構成要素は役立ちます。最小構造は構文において若干異なりますが、概念的モデル（役割、指示、例、制約、形式）は多くのモデルで共通して使えます。',
             },
           },
           {
@@ -2571,7 +2527,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'プロンプトの精度を高めるための最も重要な要素は何ですか',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'タスク/指示が最も重要です。明確で検証可能な指示がなければ、他の要素がどれだけ充実していても改善につながりません。AIの出力が不安定になる最大の原因は曖昧な指示です。具体的で測定可能な指示に変更することで劇的に改善します。',
+              'text': 'タスク/指示が最も重要です。明確で検証可能な指示がなければ、他の要素を充実させても改善しにくくなります。曖昧な指示は、AIの出力が不安定になるよくある原因です。具体的で測定可能な指示に変えると改善が期待できます。',
             },
           },
           {
@@ -2579,7 +2535,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'これらの5つの構成要素は日本語のプロンプトにも適用できますか',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。GPT-5.6、Claude、Gemini、Ollama や LM Studio などのローカル LLM など、どのモデルを使用していても、これら5つの構成要素は有効です。構文は若干異なりますが、役割、指示、例、制約、形式という概念的モデルはすべてのモデルに普遍的に適用されます。',
+              'text': 'はい。GPT-5.6、Claude、Gemini、Ollama や LM Studio などのローカル LLM など、どのモデルを使用していても、これら5つの構成要素は役立ちます。構文は若干異なりますが、役割、指示、例、制約、形式という概念的モデルは多くのモデルで共通して使えます。',
             },
           },
         ],
@@ -2655,9 +2611,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-building-blocks-matter',
           title: 'これらの5つの構成要素が重要な理由',
           content: [
-            '5つの構成要素モデルは、OpenAI、Google、Anthropic、独立した実践者からのプロンプトエンジニアリングガイダンスから生まれた収束コンセンサスを反映しています。役割、指示、例、制約、出力形式は、2023年以降に発表されたすべての主要フレームワークに異なる名前で登場しています。これは偶然ではなく、確率的モデルが有用で一貫性のある結果を生産するために必要な最小限の情報です。',
-            'ビジネス上の論理は直截的です。役割とコンテキストがないと、書き直しが必要なジェネリックな答えが生じます。制約がないとハルシネーションのリスクとブランド外の出力が増加します。出力形式がないと、解析またはコピーペーストできない結果が生じます。5つの構成要素モデルはこれら3つの障害モードをすべて一度に対処し、GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、およびローカルで実行される LLM に等しく適用されます。',
-            '日本企業向けの注記：METI AI Governance 2024 の要件を満たす場合、制約セクションでこれを明示的に述べることが重要です。Ollama や LM Studio を使用した企業内のローカル推論は、日本の個人情報保護方針と企業ガバナンス基準への完全な準拠を確保しながら、プロンプト精度の利点をもたらします。',
+            '5つの構成要素モデルは、モデル提供各社のプロンプトエンジニアリングガイドにも登場する要素をまとめたものです。役割、指示、例、制約、出力形式は、広く使われているフレームワークに異なる名前で登場します。これらをそろえると、確率的モデルがより有用で一貫した結果を出すための情報を与えられます。',
+            'ビジネス上の論理は直截的です。役割とコンテキストがないと、書き直しが必要なジェネリックな答えが生じます。制約がないとハルシネーションのリスクとブランド外の出力が増加します。出力形式がないと、解析またはコピーペーストできない結果が生じます。5つの構成要素モデルはこれら3つの障害モードをすべて一度に対処し、GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、およびローカルで実行される LLM で利用できます。',
           ],
         },
 
@@ -2684,7 +2639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-2-task-instruction',
           title: 'タスク/指示要素とは',
           content: [
-            '**タスク/指示要素は、モデルに行わせたいことの明確な声明です。** 最も重要な要素です。他のすべての要素がこれを支援します。明確で具体的で検証可能な指示は曖昧さをほぼゼロに減らします。ぼんやりした指示がすべてのモデルとユースケースにおいて貧弱な AI 出力の最大の原因です。',
+            '**タスク/指示要素は、モデルに行わせたいことの明確な声明です。** 最も重要な要素です。他のすべての要素がこれを支援します。明確で具体的で検証可能な指示は曖昧さを大きく減らします。ぼんやりした指示は、AI の出力が弱くなるよくある原因です。',
             '現在のベストプラクティスガイダンスは、タスクをアクション可能で観測可能にすることを強調します。動詞を使い、成果物を述べ、できれば成功基準を説明します。「要約を書く」はタスクです。「以下の記事を3つの箇条書きで要約してください、各20語以下」はテスト可能な出力を持つタスクです。出力品質の違いは著しいです。',
           ],
           items: [
@@ -2704,7 +2659,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '入力と例はどのように精度を向上させるのか',
           content: [
             '**入力**はモデルが作業する必要がある実際のデータ、テキスト、またはマテリアルです。**例**は、正しい応答がどのような形かを示すサンプル入出力ペアです。これらは異なる懸念事項です。入力は現在のタスクの生素材、例はモデルの実行方法を形作る学習シグナルです。',
-            '1～3つの例（few-shot prompting）を含めることは、出力形式とトーンをロックインするための最も信頼できる単一の技法です。モデルに良い答えがどのようなものかを示すと、タスク説明だけから推測するのではなく、パターンをマッチングします。これは特殊なフォーマット、一貫したトーン、精度が必要な構造化出力で最も重要です。',
+            '1～3つの例（few-shot prompting）を含めることは、出力形式とトーンを安定させるための信頼できる方法です。モデルに良い答えがどのようなものかを示すと、タスク説明だけから推測するのではなく、パターンをマッチングします。これは特殊なフォーマット、一貫したトーン、精度が必要な構造化出力で最も重要です。',
           ],
           items: [
             '**例を追加するとき：** 特殊なフォーマット、一貫したトーン要件、構造化出力、ドメイン固有の語彙',
@@ -2722,8 +2677,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-4-constraints',
           title: '制約要素とは、なぜプロンプトに必要か',
           content: [
-            '**制約はモデルが従うべきルールです：何をすべきか、何をしてはいけないか。** 長さの制限、禁止トピックまたはフレーズ、必要なソース、ブランドボイスルール、安全性の境界、フォーマット制限を含みます。制約は最も一般的に省略される要素です。その欠落がハルシネートされた事実、ブランド外の言語、間違った形式の出力の主原因です。',
-            '明確に定義された1つの制約を追加することはしばしば既存のプロンプトに加えることができる最も高レベレッジの変更です。「統計を作成しないでください」はハルシネーションリスクを大幅に削減します。「100語を決して超えないでください」は簡潔さを強制します。「提供されたテキストからの情報だけを使用してください」はソースマテリアルに出力を根付かせ、そのタスクのために完全に捏造を排除します。',
+            '**制約はモデルが従うべきルールです：何をすべきか、何をしてはいけないか。** 長さの制限、禁止トピックまたはフレーズ、必要なソース、ブランドボイスルール、安全性の境界、フォーマット制限を含みます。制約はよく省略される要素です。欠けていると、捏造された事実、ブランド外の言語、誤った形式の出力が起こりやすくなります。',
+            '明確に定義された1つの制約を追加することはしばしば既存のプロンプトを改善する非常に有用な変更になります。「統計を作成しないでください」はハルシネーションリスクを大幅に削減します。「100語を決して超えないでください」は簡潔さを強制します。「提供されたテキストからの情報だけを使用してください」はソースマテリアルに出力を根付かせ、そのタスクでの捏造リスクを下げます（出力の確認は引き続き必要です）。',
           ],
           items: [
             '**長さ制約：** 「最大150語」「5つ以上の箇条書きなし」',
@@ -2771,7 +2726,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         templateNote: {
-          content: 'このテンプレートはすべての主要な言語モデルおよび Ollama または LM Studio 経由のローカル LLM で動作します。ブロック順序は推奨ですが、厳格なルールではありません。ただし、最初に役割とコンテキストを配置し、最後に出力形式を配置することがすべての主要なモデル全体で最も一般的で信頼できる配置です。',
+          content: 'このテンプレートは特定のモデルに依存せず、主要な言語モデルや Ollama・LM Studio 経由のローカル LLM で利用できます。ブロック順序は推奨ですが、厳格なルールではありません。ただし、最初に役割とコンテキストを配置し、最後に出力形式を配置するのは一般的で、多くの場合うまく機能する配置です。',
         },
 
         frameworks: {
@@ -2815,9 +2770,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           numberedItems: [
             '**役割とコンテキストを定義する：** モデルが何であるか、動いているドメインで開きます。例：「あなたは日本の中小企業を支援する経験豊かな税務顧問です。」これがないと、モデルはジェネリックな視点から答えます。',
             '**タスク/指示を書く：** 正確に何を生成すべきかを述べてください。具体的で検証可能です。「税務申告書について話す」より「日本の中小企業向けに主要な5つの税務義務を200語で要約してください」が良いです。',
-            '**入力と例を追加する：** 生データを提供し、少なくとも正しい出力形式の1つの例を提供してください。良い例は他のどの技法よりも矛盾を減らします。',
+            '**入力と例を追加する：** 生データを提供し、少なくとも正しい出力形式の1つの例を提供してください。良い例は矛盾を大きく減らすのに役立ちます。',
             '**制約を定義する：** モデルがしてはいけないこと、文字数制限、トーンルールをリストアップしてください。例：「日本外の管轄区域向けアドバイスはしない。200語最大。形式は正式。」',
-            '**出力形式を指定する：** 正確な形を述べてください。JSON オブジェクト、3ポイント要約、テーブル、段落。これを省略することは使用不可能な出力の最も一般的な原因です。',
+            '**出力形式を指定する：** 正確な形を述べてください。JSON オブジェクト、3ポイント要約、テーブル、段落。これを省略すると、出力がそのまま使えないことがよくあります。',
           ],
         },
 
@@ -2827,16 +2782,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             { q: 'すべてのプロンプトに5つの構成要素が本当に必要ですか', a: 'いいえ。シンプルで曖昧でないタスクはしばしば、タスク/指示と出力形式だけで十分です。ドメインまたはオーディエンスが重要な場合は役割とコンテキストを追加してください。障害モードが高コストな場合は制約を追加してください。形式精度が重要な場合は例を追加してください。最小限から始めて、出力があなたの標準を満たさない場合にのみ要素を追加してください。' },
             { q: '役割とコンテキストはどちらがより重要ですか', a: 'ペアとして機能します。どちらか一方だけでは不十分です。コンテキストなしの役割は一般的な専門家モード出力を生成します。役割なしのコンテキストは状況認識のあるトーン的に矛盾した出力を生成します。ほとんどのタスクでは両者を組み合わせた1文が効果的です。' },
-            { q: 'プロンプトを短く保ちながら、5つの構成要素をすべて含めることはできますか', a: 'はい。各要素は1文で表現できます。5つの構成要素のプロンプト全体は100語以下に収まります。簡潔さは問題ではありません。曖昧さが問題です。5つの要素を備えた短く正確なプロンプトは、要素がない長くだらしないプロンプトより一貫して優れています。' },
+            { q: 'プロンプトを短く保ちながら、5つの構成要素をすべて含めることはできますか', a: 'はい。各要素は1文で表現できます。5つの構成要素のプロンプト全体は100語以下に収まります。簡潔さは問題ではありません。曖昧さが問題です。5つの要素を備えた短く正確なプロンプトは、要素がない長くだらしないプロンプトよりも、多くの場合うまく機能します。' },
             { q: 'コンテキストと例の違いは何ですか', a: 'コンテキストはタスクを枠づける状況、ドメイン、オーディエンスを説明します。例は、正しい答えがどのような形かをモデルに示すサンプル入出力ペアです。コンテキストはモデルにどこに いるかを伝え、例は何を生成するかを示します。' },
-            { q: 'CRAFT または CO-STAR などのフレームワークを使う場合、制約はどこに適合しますか', a: 'すべての主要フレームワークは制約にマップするフィールドを持っています。CRAFT では「Restrictions」、CO-STAR では「Tone & Style」、SPECS では「Constraints」です。フレームワークに明示的な制約フィールドがない場合は、終了時に「Do not」セクションとして制約を追加してください。すべてのモデルがこれを確実に処理します。' },
+            { q: 'CRAFT または CO-STAR などのフレームワークを使う場合、制約はどこに適合しますか', a: '多くの主要フレームワークには、制約を書けるフィールドがあります。CRAFT では「Restrictions」、CO-STAR では「Tone & Style」、SPECS では「Constraints」です。フレームワークに明示的な制約フィールドがない場合は、終了時に「Do not」セクションとして制約を追加してください。多くの場合、この方法でうまく機能します。' },
             { q: '単純な質問をしているだけの場合、出力形式は重要ですか', a: '会話型の質問については、形式指定は任意です。ダウンストリームで使用される出力（ドキュメントに貼り付け、コードで解析、発行、チームメンバー間で再利用）については、形式指定が必須です。結果を得ることと、使用可能な結果を得ることの違いです。' },
-            { q: 'これらの5つの構成要素はすべての LLM モデルに適用されますか', a: 'はい。GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、または Ollama や LM Studio を経由するオープンソース LLM を使用しているかどうかにかかわらず、これら5つの構成要素はすべてで機能します。最小構造は構文において若干異なりますが、概念的モデル（役割、指示、例、制約、形式）はすべてのモデルに普遍的に適用されます。' },
-            { q: 'METI の AI ガバナンスガイドラインはプロンプト設計に影響しますか', a: '日本企業が METI AI Governance 2024 に準拠する必要がある場合、制約セクションで明示的に述べることが重要です。「このプロンプトは日本の企業ガバナンス基準に準拠した出力を生成する必要があります」という制約を追加することで、モデルが適切に調整されます。ローカル推論（Ollama/LM Studio）はデータ主権を確保します。' },
+            { q: 'これらの5つの構成要素はすべての LLM モデルに適用されますか', a: 'はい。GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、または Ollama や LM Studio を経由するオープンソース LLM を使用しているかどうかにかかわらず、これら5つの構成要素は役立ちます。最小構造は構文において若干異なりますが、概念的モデル（役割、指示、例、制約、形式）は多くのモデルで共通して使えます。' },
             { q: 'ローカル LLM ではこれらの5つの構成要素は同じように機能しますか', a: 'はい。Ollama や LM Studio を使用して実行されるローカル LLM はクラウド API と同じ原則に従います。実は制約と例を使うことはローカル推論では重要です。ローカルモデルはリソース制約があり、明確な指示がより顕著な影響をもたらすためです。' },
             { q: 'これらの構成要素を日本語で使用する場合に特別な考慮はありますか', a: 'いいえ。これら5つの構成要素は言語に依存しません。日本語で記述されたプロンプトでも英語でも、同じ構造が機能します。実際のところ、これら5つの構成要素を明示的に使用することは、日本語プロンプトの一貫性と正確性を向上させます。' },
-            { q: 'プロンプトの精度を高めるための最も重要な要素は何ですか', a: 'タスク/指示が最も重要です。明確で検証可能な指示がなければ、他の要素がどれだけ充実していても改善につながりません。AIの出力が不安定になる最大の原因は曖昧な指示です。具体的で測定可能な指示に変更することで劇的に改善します。' },
-            { q: 'これらの5つの構成要素は日本語のプロンプトにも適用できますか', a: 'はい。GPT-5.6、Claude、Gemini、Ollama や LM Studio などのローカル LLM など、どのモデルを使用していても、これら5つの構成要素は有効です。構文は若干異なりますが、役割、指示、例、制約、形式という概念的モデルはすべてのモデルに普遍的に適用されます。' },
+            { q: 'プロンプトの精度を高めるための最も重要な要素は何ですか', a: 'タスク/指示が最も重要です。明確で検証可能な指示がなければ、他の要素を充実させても改善しにくくなります。曖昧な指示は、AIの出力が不安定になるよくある原因です。具体的で測定可能な指示に変えると改善が期待できます。' },
+            { q: 'これらの5つの構成要素は日本語のプロンプトにも適用できますか', a: 'はい。GPT-5.6、Claude、Gemini、Ollama や LM Studio などのローカル LLM など、どのモデルを使用していても、これら5つの構成要素は役立ちます。構文は若干異なりますが、役割、指示、例、制約、形式という概念的モデルは多くのモデルで共通して使えます。' },
           ],
         },
 
@@ -2873,7 +2827,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '每个提示词必需的5个构建模块',
       seoTitle: '每个AI提示词需要的5个构建模块（附模板）',
       intro: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。',
-      metaDescription: '高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。缺少任何一个都会降低输出质量。包含所有模型通用的可复制模板。',
+      metaDescription: '高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。了解每个部分如何提升输出结果质量，并获取适用于不同AI模型的可复制模板。',
       heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-zh.webp',
       ogTitle: '缺少这5个提示词构建块中的任何一个，AI输出就会跑偏',
       ogDescription: '角色、任务、输入、约束、输出格式。一套模板适用所有模型。直接复制使用。',
@@ -2883,7 +2837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '阅读约8分钟',
       educationalLevel: 'Beginner',
       primaryTerm: '提示词结构',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-27',
       lastFactChecked: '2026-08-29',
       schema: {
         '@context': 'https://schema.org',
@@ -2891,7 +2845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '每个提示词必需的5个构建模块',
         description: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。这5个组成部分确保了AI提示词的可靠性和可重复性。',
         datePublished: '2026-03-01',
-        dateModified: '2026-08-29',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/zh/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'zh',
         keywords: ['提示词结构', '提示词构件', '角色与背景', '输出格式', '提示词约束', '少样本示例', '提示词工程', '语言模型'],
@@ -2941,8 +2895,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whyMatters: {
           title: '为什么这5个模块在2026年依然重要',
           content: [
-            '这五模块模型反映了来自 OpenAI、Google、Anthropic 和独立从业者的提示词工程指南中的汇聚共识。角色、指令、示例、约束和输出格式——在2023年以来发布的每个主要框架中都以不同名称出现。这并非巧合：这是概率模型产出有用、一致结果所需的最少信息量。',
-            '商业理由一目了然。缺少角色和上下文会产出需要重写的通用答案。缺少约束条件会增加幻觉风险和偏离品牌的输出。缺少输出格式意味着结果无法被直接解析或复制使用。5模块模型同时解决了这三种失效模式，并同样适用于 GPT-5.6、Claude、Gemini 和本地运行的大型语言模型。',
+            '这五模块模型归纳了模型厂商提示词工程指南中也会提到的要素。角色、指令、示例、约束和输出格式在常用框架中以不同名称出现。把它们写清楚，能为概率模型提供产出更有用、更一致结果所需的信息。',
+            '商业理由一目了然。缺少角色和上下文会产出需要重写的通用答案。缺少约束条件会增加幻觉风险和偏离品牌的输出。缺少输出格式意味着结果无法被直接解析或复制使用。5模块模型同时解决了这三种失效模式，并可用于 GPT-5.6、Claude、Gemini 和本地运行的大型语言模型。',
           ],
         },
 
@@ -2967,7 +2921,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block2: {
           title: '模块二：任务/指令',
           content: [
-            '**任务/指令模块是对你希望模型执行什么的明确陈述。** 这是最重要的模块——其他所有模块都是为它服务的。清晰、具体、可验证的指令将歧义降至近乎为零。模糊的指令是所有模型和使用场景中 AI 输出质量低下的最大单一原因。',
+            '**任务/指令模块是对你希望模型执行什么的明确陈述。** 这是最重要的模块——其他所有模块都是为它服务的。清晰、具体、可验证的指令能大幅减少歧义。模糊的指令是 AI 输出质量低下的常见原因。',
             '当前最佳实践指南强调使任务具有可执行性和可观察性：使用动词、说明交付物，并尽可能描述成功标准。"写一段摘要"是一个任务。"用3个要点总结以下文章，每个要点不超过20个字"是一个具有可验证输出的任务。两者在输出质量上的差异相当显著。',
           ],
           items: [
@@ -2986,7 +2940,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '模块三：输入与示例',
           content: [
             '**输入**是模型需要处理的实际数据、文本或材料。**示例**是展示正确响应形态的示例输入/输出对。两者关注点不同：输入是当前任务的原始材料，示例是塑造模型执行方式的教学信号。',
-            '包含1–3个示例（少样本提示）是固定输出格式和语气最可靠的单一技术。当你展示给模型一个好答案的样子时，它会匹配这个模式，而非仅从任务描述中推断。这在需要精确度的专业格式、统一语气和结构化输出中最为重要。',
+            '包含1–3个示例（少样本提示）是引导输出格式和语气的可靠方法。当你展示给模型一个好答案的样子时，它会匹配这个模式，而非仅从任务描述中推断。这在需要精确度的专业格式、统一语气和结构化输出中最为重要。',
           ],
           items: [
             '**何时添加示例：** 专业格式、统一语气要求、结构化输出、领域特定词汇',
@@ -3003,8 +2957,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         block4: {
           title: '模块四：约束条件',
           content: [
-            '**约束条件是模型必须遵守的规则：它必须做什么，以及不能做什么。** 它们包括长度限制、禁止的话题或词语、必须引用的来源、品牌声音规范、安全边界和格式限制。约束条件是最常被遗漏的模块——而它的缺失是导致幻觉事实、偏离品牌的语言以及格式错误输出的主要原因。',
-            '在现有提示词中添加一个范围明确的约束条件，往往是你能做出的最高杠杆改变。"不要编造统计数据"能大幅降低幻觉风险。"绝不超过100字"强制要求简洁。"仅使用所提供文本中的信息"将输出锚定在源材料中，并彻底消除该任务中的捏造。',
+            '**约束条件是模型必须遵守的规则：它必须做什么，以及不能做什么。** 它们包括长度限制、禁止的话题或词语、必须引用的来源、品牌声音规范、安全边界和格式限制。约束条件经常被遗漏——缺少它时，虚构事实、偏离品牌的语言和格式错误的输出更容易出现。',
+            '在现有提示词中添加一个范围明确的约束条件，往往是一项非常有用的改变。"不要编造统计数据"能大幅降低幻觉风险。"绝不超过100字"强制要求简洁。"仅使用所提供文本中的信息"将输出锚定在源材料中，并降低该任务中出现捏造的风险（仍需核对输出）。',
           ],
           items: [
             '**长度约束：** "最多150字"、"不超过5个要点"',
@@ -3050,7 +3004,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         templateNote: {
-          content: '该模板适用于 GPT-5.6、Claude、Gemini 以及通过 Ollama 或 LM Studio 运行的本地大型语言模型。模块顺序是建议，而非硬性规定——但将角色与上下文置于首位、输出格式置于末位，是在所有主流模型上最通用且可靠的排列方式。',
+          content: '该模板适用于 GPT-5.6、Claude、Gemini 以及通过 Ollama 或 LM Studio 运行的本地大型语言模型。模块顺序是建议，而非硬性规定——但将角色与上下文置于首位、输出格式置于末位，是一种常见且通常效果良好的排列方式。',
         },
 
         frameworks: {
@@ -3092,9 +3046,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           numberedItems: [
             '**设定角色与上下文：** 开头说明模型是谁、所处的领域。例如："你是一名正在帮助德国小企业主的资深税务顾问。" 缺少这一步，模型会从通用视角作答。',
             '**编写任务/指令：** 明确陈述你希望产出的内容——具体且可验证。"用200字总结主要增值税义务"优于"告诉我关于增值税的事"。',
-            '**添加输入与示例：** 提供原始数据，以及至少一个正确输出格式的示例。一个精心选择的示例比任何其他单一技巧都更能减少不一致。',
+            '**添加输入与示例：** 提供原始数据，以及至少一个正确输出格式的示例。一个精心选择的示例能明显减少不一致。',
             '**定义约束条件：** 列出模型不能做的事、长度限制和语气规则。例如："不要为德国以外的司法管辖区提供建议。最多200字。正式语气。"',
-            '**指定输出格式：** 说明答案必须采用的确切形态——JSON对象、3点摘要、表格或散文段落。省略这一步是导致AI输出无法使用的最常见原因。在部署到生产环境之前，先在 [Anthropic 控制台](https://docs.anthropic.com/) 或 [OpenAI Playground](https://platform.openai.com/playground) 中测试你完成的5模块提示词。',
+            '**指定输出格式：** 说明答案必须采用的确切形态——JSON对象、3点摘要、表格或散文段落。省略这一步常常导致AI输出无法直接使用。在部署到生产环境之前，先在 [Anthropic 控制台](https://docs.anthropic.com/) 或 [OpenAI Playground](https://platform.openai.com/playground) 中测试你完成的5模块提示词。',
           ],
         },
 
@@ -3112,7 +3066,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '提示词能简短同时包含全部5个模块吗？',
-              a: '可以。每个模块都可以用一句话表达。一个完整的五模块提示词可以在100字以内。简短不是问题——模糊才是。一个包含全部五个要素的简短、精确的提示词，始终优于一个冗长、漫无目的且不包含任何要素的提示词。',
+              a: '可以。每个模块都可以用一句话表达。一个完整的五模块提示词可以在100字以内。简短不是问题——模糊才是。一个包含全部五个要素的简短、精确的提示词，通常优于一个冗长、漫无目的且不包含任何要素的提示词。',
             },
             {
               q: '上下文和示例有什么区别？',
@@ -3120,7 +3074,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '如果我在使用 CRAFT 或 CO-STAR 这样的框架，约束条件应该放在哪里？',
-              a: '每个主要框架都有一个映射到约束条件的字段——CRAFT 中的"限制"、CO-STAR 中的"语气与风格"、SPECS 中的"约束"。如果你使用的框架没有明确的约束字段，在末尾添加一个单独的"禁止"部分——所有模型都能可靠处理这种方式。',
+              a: '常见框架通常都有可以填写约束条件的字段——CRAFT 中的"限制"、CO-STAR 中的"语气与风格"、SPECS 中的"约束"。如果你使用的框架没有明确的约束字段，在末尾添加一个单独的"禁止"部分——这种方式通常效果良好。',
             },
             {
               q: '如果只是问一个简单问题，输出格式重要吗？',
@@ -3148,7 +3102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: '프롬프트 구조',
       audience: 'AI 프롬프트를 작성하는 개발자 및 비기술 사용자',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-27',
       lastFactChecked: '2026-08-29',
       leadAnswerBlock: '모든 프롬프트에 필요한 5가지 구성 요소는 역할 및 맥락, 작업/지시, 입력 및 예시, 제약 조건, 출력 형식입니다. 이 다섯 가지 구성 요소는 신뢰할 수 있고 반복 가능한 프롬프트를 모호한 질문과 구별하는 최소한의 구조입니다.',
       toc: [
@@ -3173,7 +3127,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '모든 프롬프트에 필요한 5가지 구성 요소',
         description: '프롬프트에 필요한 5가지 구성 요소를 마스터하십시오: 역할 및 맥락, 작업, 입력 및 예시, 제약 조건, 출력 형식. 이 다섯 가지 요소를 갖추면 모든 AI 프롬프트가 신뢰할 수 있고 반복 가능해집니다.',
         datePublished: '2026-03-01',
-        dateModified: '2026-08-29',
+        dateModified: '2026-11-27',
         url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'ko',
         proficiencyLevel: 'Beginner',
@@ -3214,7 +3168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '프롬프트를 짧게 유지하면서 5가지 블록을 모두 포함할 수 있습니까?',
-            acceptedAnswer: { '@type': 'Answer', text: '가능합니다. 각 블록은 한 문장으로 표현할 수 있습니다. 5블록 프롬프트 전체를 100단어 이내로 작성할 수 있습니다. 간결함이 문제가 아니라 모호함이 문제입니다. 다섯 가지 요소를 모두 갖춘 짧고 정확한 프롬프트는 어느 것도 없는 길고 산만한 프롬프트보다 일관되게 더 나은 성과를 냅니다.' },
+            acceptedAnswer: { '@type': 'Answer', text: '가능합니다. 각 블록은 한 문장으로 표현할 수 있습니다. 5블록 프롬프트 전체를 100단어 이내로 작성할 수 있습니다. 간결함이 문제가 아니라 모호함이 문제입니다. 다섯 가지 요소를 모두 갖춘 짧고 정확한 프롬프트는 어느 것도 없는 길고 산만한 프롬프트보다 대체로 더 나은 결과를 냅니다.' },
           },
           {
             '@type': 'Question',
@@ -3224,7 +3178,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'CRAFT 또는 CO-STAR 같은 프레임워크를 사용할 때 제약 조건은 어디에 위치합니까?',
-            acceptedAnswer: { '@type': 'Answer', text: '모든 주요 프레임워크에는 제약 조건에 매핑되는 필드가 있습니다 — CRAFT의 "Restrictions", CO-STAR의 "Tone & Style", SPECS의 "Constraints". 프레임워크에 명시적인 제약 조건 필드가 없다면, 별도의 "하지 말 것" 섹션으로 마지막에 추가하십시오 — 모든 모델이 이를 안정적으로 처리합니다.' },
+            acceptedAnswer: { '@type': 'Answer', text: '널리 쓰이는 프레임워크에는 대개 제약 조건을 담을 수 있는 필드가 있습니다 — CRAFT의 "Restrictions", CO-STAR의 "Tone & Style", SPECS의 "Constraints". 프레임워크에 명시적인 제약 조건 필드가 없다면, 별도의 "하지 말 것" 섹션으로 마지막에 추가하십시오 — 이 방법은 대체로 잘 작동합니다.' },
           },
           {
             '@type': 'Question',
@@ -3307,9 +3261,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**5가지 블록:** 역할 및 맥락 → 작업/지시 → 입력 및 예시 → 제약 조건 → 출력 형식',
             '**최소한의 실용적 프롬프트:** 단순한 작업을 위한 작업 + 출력 형식 (2블록)',
-            '**가장 효과적인 추가 요소:** "제공된 정보만 사용하십시오"와 같은 제약 조건 하나가 환각 위험을 크게 줄입니다',
-            '**적용 가능 대상:** 모든 주요 언어 모델, 프론티어 모델, Ollama, LM Studio 또는 유사 도구를 통한 모든 로컬 LLM',
-            '**매핑 대상:** CRAFT, CO-STAR, SPECS, RTF 및 기타 모든 주요 프레임워크 — 이름은 다르지만 블록은 동일',
+            '**유용한 추가 요소:** "제공된 정보만 사용하십시오"와 같은 제약 조건 하나로 환각 위험을 줄일 수 있습니다',
+            '**적용 대상:** 주요 언어 모델(Ollama, LM Studio 또는 유사 도구를 통한 로컬 LLM 포함)',
+            '**매핑 대상:** CRAFT, CO-STAR, SPECS, RTF 및 유사한 프레임워크 — 이름은 다르지만 요소가 상당 부분 겹칩니다',
           ],
           image: '/images/prompt-building-blocks-quick-reference-hero-ko.webp',
           imageCaption: '5가지 구성 요소: 빠른 참조 -- 언제 무엇을 사용할지',
@@ -3319,8 +3273,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-building-blocks-matter',
           title: '이 5가지 구성 요소가 중요한 이유는 무엇입니까?',
           content: [
-            '5블록 모델은 OpenAI, Google, Anthropic 및 독립적인 실무자들의 프롬프트 엔지니어링 가이드에서 수렴된 합의를 반영합니다. 역할, 지시, 예시, 제약 조건, 출력 형식은 2023년 이후 발표된 모든 주요 프레임워크에서 다른 이름으로 등장합니다. 이는 우연이 아닙니다: 이것은 확률적 모델이 유용하고 일관된 결과를 생성하기 위해 필요한 최소한의 정보입니다.',
-            '비즈니스 관점에서의 이유는 명확합니다. 역할과 맥락이 없으면 일반적인 답변이 생성되어 재작성이 필요합니다. 제약 조건이 없으면 환각 위험과 브랜드에 맞지 않는 결과물이 증가합니다. 출력 형식이 없으면 직접 파싱하거나 복사·붙여넣기할 수 없는 결과물이 나옵니다. 5블록 모델은 이 세 가지 실패 원인을 동시에 해결하며 모든 주요 언어 모델과 로컬 LLM에 동등하게 적용됩니다.',
+            '5블록 모델은 모델 제공업체의 프롬프트 엔지니어링 가이드에도 나오는 요소를 묶은 것입니다. 역할, 지시, 예시, 제약 조건, 출력 형식은 널리 쓰이는 프레임워크에서 다른 이름으로 등장합니다. 이 요소들을 함께 제시하면 확률적 모델이 더 유용하고 일관된 결과를 내는 데 필요한 정보를 얻습니다.',
+            '비즈니스 관점에서의 이유는 명확합니다. 역할과 맥락이 없으면 일반적인 답변이 생성되어 재작성이 필요합니다. 제약 조건이 없으면 환각 위험과 브랜드에 맞지 않는 결과물이 증가합니다. 출력 형식이 없으면 직접 파싱하거나 복사·붙여넣기할 수 없는 결과물이 나옵니다. 5블록 모델은 이 세 가지 실패 원인을 동시에 해결하며 클라우드 모델과 로컬 LLM 모두에서 사용할 수 있습니다.',
           ],
         },
 
@@ -3347,7 +3301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-2-task-instruction',
           title: '작업/지시 블록이란 무엇입니까?',
           content: [
-            '**작업/지시 블록은 모델에게 원하는 작업을 명시적으로 진술하는 것입니다.** 이것은 가장 중요한 블록입니다 — 다른 모든 블록이 이 블록을 지원합니다. 명확하고 구체적이며 테스트 가능한 지시는 모호함을 거의 없애줍니다. 모호한 지시는 모든 모델과 사용 사례에서 AI 결과물 품질 저하의 가장 큰 원인입니다.',
+            '**작업/지시 블록은 모델에게 원하는 작업을 명시적으로 진술하는 것입니다.** 이것은 가장 중요한 블록입니다 — 다른 모든 블록이 이 블록을 지원합니다. 명확하고 구체적이며 테스트 가능한 지시는 모호함을 크게 줄여 줍니다. 모호한 지시는 AI 결과물 품질이 떨어지는 흔한 원인입니다.',
             '현재 모범 사례 지침은 작업을 실행 가능하고 관찰 가능하게 만드는 것을 강조합니다: 동사를 사용하고, 결과물을 명시하고, 가능한 경우 성공 기준을 설명하십시오. "요약을 작성하십시오"는 작업입니다. "다음 기사를 각 20자 이내의 3개 불릿 포인트로 요약하십시오"는 테스트 가능한 결과물이 있는 작업입니다. 결과물 품질의 차이는 상당합니다.',
           ],
           items: [
@@ -3367,7 +3321,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '입력과 예시는 어떻게 정확도를 향상시킵니까?',
           content: [
             '**입력**은 모델이 작업해야 할 실제 데이터, 텍스트 또는 자료입니다. **예시**는 올바른 응답이 어떤 모습인지를 보여주는 샘플 입력/출력 쌍입니다. 이 두 가지는 별개의 개념입니다: 입력은 현재 작업을 위한 원자재이고, 예시는 모델이 작업을 수행하는 방식을 형성하는 학습 신호입니다.',
-            '1~3개의 예시를 포함하는 것(퓨샷 프롬프팅)은 출력 형식과 어조를 고정하는 가장 신뢰할 수 있는 기법입니다. 모델에게 좋은 답변의 모습을 보여주면, 모델은 작업 설명에서만 추론하는 것이 아니라 패턴에 맞춥니다. 이것은 정밀도가 요구되는 특수 형식, 일관된 어조, 구조화된 결과물에 가장 중요합니다.',
+            '1~3개의 예시를 포함하는 것(퓨샷 프롬프팅)은 출력 형식과 어조를 유도하는 신뢰할 수 있는 방법입니다. 모델에게 좋은 답변의 모습을 보여주면, 모델은 작업 설명에서만 추론하는 것이 아니라 패턴에 맞춥니다. 이것은 정밀도가 요구되는 특수 형식, 일관된 어조, 구조화된 결과물에 가장 중요합니다.',
           ],
           items: [
             '**예시를 추가해야 할 때:** 특수 형식, 일관된 어조 요구 사항, 구조화된 결과물, 도메인별 어휘',
@@ -3385,8 +3339,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'block-4-constraints',
           title: '제약 조건이란 무엇이며 프롬프트에 왜 필요합니까?',
           content: [
-            '**제약 조건은 모델이 따라야 할 규칙입니다: 해야 할 것과 하지 말아야 할 것입니다.** 여기에는 길이 제한, 금지 주제나 구문, 필수 출처, 브랜드 보이스 규칙, 안전 경계, 형식 제한이 포함됩니다. 제약 조건은 가장 흔히 생략되는 블록이며 — 이 블록의 부재가 환각된 사실, 브랜드에 맞지 않는 언어, 잘못된 형식의 결과물이 나오는 주요 원인입니다.',
-            '잘 설계된 제약 조건 하나를 추가하는 것이 기존 프롬프트에 대해 가장 높은 영향을 미치는 변경인 경우가 많습니다. "통계를 만들어내지 마십시오"는 환각 위험을 크게 줄입니다. "100자를 절대 초과하지 마십시오"는 간결함을 강요합니다. "제공된 텍스트의 정보만 사용하십시오"는 결과물을 원본 자료에 근거하게 하여 해당 작업에서 조작을 완전히 제거합니다.',
+            '**제약 조건은 모델이 따라야 할 규칙입니다: 해야 할 것과 하지 말아야 할 것입니다.** 여기에는 길이 제한, 금지 주제나 구문, 필수 출처, 브랜드 보이스 규칙, 안전 경계, 형식 제한이 포함됩니다. 제약 조건은 자주 생략되는 블록이며, 이 블록이 없으면 지어낸 사실, 브랜드에 맞지 않는 언어, 잘못된 형식의 결과물이 나오기 쉽습니다.',
+            '잘 설계된 제약 조건 하나를 추가하는 것이 기존 프롬프트에 매우 유용한 변경인 경우가 많습니다. "통계를 만들어내지 마십시오"는 환각 위험을 크게 줄입니다. "100자를 절대 초과하지 마십시오"는 간결함을 강요합니다. "제공된 텍스트의 정보만 사용하십시오"는 결과물을 원본 자료에 근거하게 하여 해당 작업에서 조작 위험을 줄입니다(결과 확인은 여전히 필요합니다).',
           ],
           items: [
             '**길이 제약:** "최대 150자", "불릿 포인트 5개 이하"',
@@ -3403,8 +3357,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         block4ProTip: {
           id: 'pro-tip-constraints',
-          title: '🔍 전문가 팁: 가장 효과적인 제약 조건',
-          content: '어떤 프롬프트에든 추가할 수 있는 가장 효과적인 단일 제약 조건은 **"제공된 맥락의 정보만 사용하십시오. 제공된 정보에서 답할 수 없는 경우 그렇게 말하십시오."**입니다. 이 한 문장이 AI 결과물에서 가장 흔한 실패 원인인 그럴듯하게 들리는 조작을 제거합니다. 이 제약 조건 하나만 추가해도 환각 위험이 80% 이상 줄어드는 경우가 많으며 모든 모델에서 보편적으로 지원됩니다.',
+          title: '🔍 전문가 팁: 활용도가 높은 제약 조건',
+          content: '여러 프롬프트에 추가할 수 있는 활용도 높은 제약 조건은 **"제공된 맥락의 정보만 사용하십시오. 제공된 정보에서 답할 수 없는 경우 그렇게 말하십시오."**입니다. 이 문장은 흔한 실패 원인인 그럴듯한 조작을 겨냥합니다. 환각을 줄이는 데 도움이 될 수 있지만 완전히 막지는 못하므로 결과를 확인하십시오.',
         },
 
         block5: {
@@ -3413,7 +3367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**출력 형식은 모델이 생성해야 할 답변의 정확한 형태를 지정합니다.** 이것은 결과물이 직접 사용 가능한지 아니면 유용하게 만들기 위해 재형식화가 필요한지를 결정하는 블록입니다. 자동화된 파이프라인의 경우, 지정되지 않은 출력 형식은 불안정하고 일관성 없는 파싱을 의미합니다. GEO 관점에서 구조화된 결과물은 구조화된 답변이 프로그래밍 방식으로 추출하기 더 쉽기 때문에 AI 검색 엔진이 그대로 인용할 가능성이 더 높습니다.',
             '출력 형식 블록은 파일 형식(JSON, Markdown, CSV), 구조(표, 불릿 목록, 번호가 있는 단계), 길이, 섹션 레이블을 지정할 수 있습니다. 더 정밀하게 지정할수록 결과물을 편집할 필요가 줄어듭니다.',
-            '**API 수준 출력 형식 적용:** 2026년에는 모든 주요 프로바이더가 프롬프트 텍스트 지시를 넘어서는 API 수준 출력 형식 적용을 제공합니다. 구조화된 출력(JSON 스키마 검증 포함)은 토큰 생성 수준에서 스키마에 맞는 유효한 JSON을 보장합니다 — 모델은 문자 그대로 잘못된 출력을 생성할 수 없습니다. 이러한 API를 사용할 때 블록 5는 프롬프트 텍스트 지시가 아닌 서버 측 제약이 됩니다. 최대 신뢰성을 위해 두 가지를 모두 사용하십시오: API 수준 적용을 강력한 보장으로, 프롬프트 텍스트 형식 지정을 해당 형식 내 콘텐츠 구조에 대한 안내로 사용하십시오.',
+            '**API 수준 출력 형식 적용:** 2026년에는 주요 프로바이더가 프롬프트 텍스트 지시를 넘어서는 API 수준의 구조화된 출력을 제공합니다. 지원되는 모드에서는 생성 결과를 JSON 스키마에 맞게 제한하지만, 거부 응답, 잘린 응답, 지원되지 않는 스키마 기능은 예외가 될 수 있으므로 결과를 검증하십시오. 이러한 API를 사용할 때 블록 5는 프롬프트 텍스트 지시가 아닌 서버 측 제약이 됩니다. 최대 신뢰성을 위해 두 가지를 모두 사용하십시오: API 수준 적용은 구조를 제한하는 수단으로, 프롬프트 텍스트 형식 지정을 해당 형식 내 콘텐츠 구조에 대한 안내로 사용하십시오.',
           ],
           items: [
             '**JSON:** "결과를 다음 키가 있는 JSON 객체로 반환하십시오: title, summary, tags"',
@@ -3441,7 +3395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         templateNote: {
-          content: '이 템플릿은 모든 주요 언어 모델과 Ollama 또는 LM Studio를 통한 로컬 LLM에서 작동합니다. 블록 순서는 권장 사항이지만 엄격한 규칙은 아닙니다 — 하지만 역할 및 맥락을 먼저 배치하고 출력 형식을 마지막에 배치하는 것이 모든 주요 모델에서 가장 일반적이고 신뢰할 수 있는 배열입니다.',
+          content: '이 템플릿은 특정 모델에 종속되지 않으므로 주요 언어 모델과 Ollama 또는 LM Studio를 통한 로컬 LLM에서 사용할 수 있습니다. 블록 순서는 권장 사항이지만 엄격한 규칙은 아닙니다 — 하지만 역할 및 맥락을 먼저 배치하고 출력 형식을 마지막에 배치하는 것이 일반적이며 대체로 잘 작동하는 배열입니다.',
         },
 
         templateLocalLLMLinks: {
@@ -3461,7 +3415,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**사용자 메시지 (요청별 변경):**',
             '블록 2: 작업/지시 — "이 보고서의 주요 내용을 요약하십시오."',
             '블록 3: 입력 및 예시 — 실제 보고서 텍스트 + 모든 예시.',
-            '이 분리가 중요한 이유는 **시스템 프롬프트가 선도 모델에서 캐시되기 때문입니다** — 즉, 역할, 제약 조건, 출력 형식이 효율적으로 저장되어 모든 요청에서 새로운 토큰을 소비하지 않습니다. 수백 개의 프롬프트를 처리하는 프로덕션 파이프라인의 경우 시스템 프롬프트 부분에서 비용이 50-90% 절감됩니다.',
+            '이 분리가 중요한 이유는 많은 API가 **반복되는 시스템 프롬프트를 캐시**할 수 있기 때문입니다. 캐시된 입력은 보통 다른 요율(대개 할인)로 청구되며, 조건과 절감 폭은 프로바이더마다 다르므로 최신 가격 페이지를 확인하십시오.',
             'Ollama 또는 LM Studio를 통한 로컬 LLM의 경우 동일한 분리가 적용됩니다: 블록 1, 4, 5에 SYSTEM 지시어가 있는 **Modelfile**을 사용하고, 블록 2와 3은 사용자 메시지로 전달하십시오.',
           ],
         },
@@ -3490,7 +3444,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         frameworksDidYouKnow: {
           id: 'frameworks-did-you-know',
           title: '🔍 알고 계셨습니까?',
-          content: '2023년 이후 발표된 모든 주요 프롬프트 엔지니어링 프레임워크 — CRAFT, CO-STAR, SPECS, RTF, TRACE, APE — 는 다른 이름으로 이 5가지 블록에 직접 매핑됩니다. 블록을 한 번 배우면 특정 용어를 암기하지 않고도 어떤 프레임워크든 적용할 수 있습니다. 프레임워크는 강조점과 순서가 다르지만 기본 구조는 항상 동일합니다: 누가, 무엇을, 어떻게, 제약 조건, 형식.',
+          content: 'CRAFT, CO-STAR, SPECS, RTF, TRACE, APE 같은 프레임워크는 이름은 달라도 이 5가지 블록과 상당 부분 겹칩니다. 블록을 한 번 배우면 특정 용어를 암기하지 않고도 어떤 프레임워크든 적용할 수 있습니다. 프레임워크마다 강조점, 순서, 범위는 다르지만 반복되는 질문은 같습니다: 누가, 무엇을, 어떻게, 제약 조건, 형식.',
         },
 
         mistakes: {
@@ -3509,8 +3463,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         mistakesWarning: {
           id: 'warning-output-format',
-          title: '⚠️ 경고: 출력 형식 생략이 사용할 수 없는 결과물의 1위 원인',
-          content: '출력 형식 블록을 지정하지 않는 것이 프로덕션 파이프라인에서 사용할 수 없는 AI 결과물의 가장 흔한 원인입니다. 명시적인 형식 지정 없이는 모델의 기본 형식이 실행 간, 모델 간, API 버전 간에 변경됩니다. 항상 형식을 지정하십시오 — "불릿 포인트 없이 일반 산문으로 응답하십시오"도 지정하지 않는 것보다 낫습니다. 이것이 결과물을 얻는 것과 사용 가능한 결과물을 얻는 것의 차이입니다.',
+          title: '⚠️ 경고: 출력 형식을 생략하지 마십시오',
+          content: '출력 형식 블록을 지정하지 않으면 프로덕션 파이프라인에서 AI 결과물을 사용하지 못하는 경우가 자주 생깁니다. 명시적인 형식 지정 없이는 모델의 기본 형식이 실행 간, 모델 간, API 버전 간에 달라질 수 있습니다. 항상 형식을 지정하십시오 — "불릿 포인트 없이 일반 산문으로 응답하십시오"도 지정하지 않는 것보다 낫습니다. 이것이 결과물을 얻는 것과 사용 가능한 결과물을 얻는 것의 차이입니다.',
         },
 
         howToStart: {
@@ -3519,9 +3473,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           numberedItems: [
             '**역할 및 맥락 설정:** 모델이 누구이고 어떤 도메인에서 운영되는지를 명시하는 것으로 시작하십시오. 예시: "당신은 독일 소규모 사업주를 돕는 시니어 세무사입니다." 이 없이는 모델이 일반적인 관점에서 답변합니다.',
             '**작업/지시 작성:** 생성해야 할 것을 정확하게 명시하십시오 — 구체적이고 테스트 가능하게. "200자로 주요 VAT 의무를 요약하십시오"가 "VAT에 대해 알려주십시오"보다 낫습니다.',
-            '**입력 및 예시 추가:** 원자재와 올바른 출력 형식의 예시를 최소 하나 제공하십시오. 잘 선택된 단일 예시가 다른 어떤 단일 기법보다 불일치를 더 많이 줄입니다.',
+            '**입력 및 예시 추가:** 원자재와 올바른 출력 형식의 예시를 최소 하나 제공하십시오. 잘 선택된 예시 하나로 불일치를 눈에 띄게 줄일 수 있습니다.',
             '**제약 조건 정의:** 모델이 하지 말아야 할 것, 길이 제한, 어조 규칙을 나열하십시오. 예시: "독일 외 관할 지역에 대한 조언을 제공하지 마십시오. 최대 200자. 공식적인 어조."',
-            '**출력 형식 지정:** 답변의 정확한 형태를 명시하십시오 — JSON 객체, 3개 불릿 요약, 표, 또는 산문 단락. 이것을 생략하는 것이 사용할 수 없는 AI 결과물의 가장 흔한 원인입니다. 프로덕션 배포 전에 완성된 5블록 프롬프트를 [Anthropic\'s Console](https://docs.anthropic.com/) 또는 [OpenAI\'s Playground](https://platform.openai.com/playground)에서 테스트하십시오.',
+            '**출력 형식 지정:** 답변의 정확한 형태를 명시하십시오 — JSON 객체, 3개 불릿 요약, 표, 또는 산문 단락. 이것을 생략하면 AI 결과물을 사용하기 어려운 경우가 많습니다. 프로덕션 배포 전에 완성된 5블록 프롬프트를 [Anthropic\'s Console](https://docs.anthropic.com/) 또는 [OpenAI\'s Playground](https://platform.openai.com/playground)에서 테스트하십시오.',
           ],
         },
 
@@ -3539,7 +3493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '프롬프트를 짧게 유지하면서 5가지 블록을 모두 포함할 수 있습니까?',
-              a: '가능합니다. 각 블록은 한 문장으로 표현할 수 있습니다. 5블록 프롬프트 전체를 100자 이내로 작성할 수 있습니다. 간결함이 문제가 아니라 모호함이 문제입니다. 다섯 가지 요소를 모두 갖춘 짧고 정확한 프롬프트는 어느 것도 없는 길고 산만한 프롬프트보다 일관되게 더 나은 성과를 냅니다.',
+              a: '가능합니다. 각 블록은 한 문장으로 표현할 수 있습니다. 5블록 프롬프트 전체를 100단어 이내로 작성할 수 있습니다. 간결함이 문제가 아니라 모호함이 문제입니다. 다섯 가지 요소를 모두 갖춘 짧고 정확한 프롬프트는 어느 것도 없는 길고 산만한 프롬프트보다 대체로 더 나은 결과를 냅니다.',
             },
             {
               q: '맥락과 예시의 차이는 무엇입니까?',
@@ -3547,7 +3501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'CRAFT 또는 CO-STAR 같은 프레임워크를 사용할 때 제약 조건은 어디에 위치합니까?',
-              a: '모든 주요 프레임워크에는 제약 조건에 매핑되는 필드가 있습니다 — CRAFT의 "Restrictions", CO-STAR의 "Tone & Style", SPECS의 "Constraints". 프레임워크에 명시적인 제약 조건 필드가 없다면, 별도의 "하지 말 것" 섹션으로 마지막에 추가하십시오 — 모든 모델이 이를 안정적으로 처리합니다.',
+              a: '널리 쓰이는 프레임워크에는 대개 제약 조건을 담을 수 있는 필드가 있습니다 — CRAFT의 "Restrictions", CO-STAR의 "Tone & Style", SPECS의 "Constraints". 프레임워크에 명시적인 제약 조건 필드가 없다면, 별도의 "하지 말 것" 섹션으로 마지막에 추가하십시오 — 이 방법은 대체로 잘 작동합니다.',
             },
             {
               q: '단순한 질문만 할 경우에도 출력 형식이 중요합니까?',
@@ -3567,7 +3521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[구조화된 출력 및 JSON 모드](/ko/prompt-engineering/structured-output-and-json-mode) — 출력 형식을 정밀하게 지정하기: 모델 전반에서의 JSON 모드, Markdown 표, 기타 구조화된 접근 방식.',
             '[어떤 프롬프트 프레임워크를 사용해야 합니까?](/ko/prompt-engineering/which-prompt-framework-should-you-use) — CRAFT, CO-STAR, SPECS 및 기타 비교: 사용 사례에 맞는 프레임워크 선택.',
             '[페르소나 프롬프팅](/ko/prompt-engineering/persona-prompting) — 블록 1(역할 및 맥락)에 대한 심층 분석, 7가지 하위 구성 요소: 페르소나 선택이 결과물 품질과 일관성에 어떤 영향을 미치는가.',
-            '[제약 프롬프팅](/ko/prompt-engineering/constrained-prompting) — API 수준 적용을 포함한 블록 4(제약 조건)에 대한 심층 분석: 유효한 결과물을 보장하는 강력한 제약 조건.',
+            '[제약 프롬프팅](/ko/prompt-engineering/constrained-prompting) — API 수준 적용을 포함한 블록 4(제약 조건)에 대한 심층 분석: 프롬프트 텍스트가 아니라 API가 적용하는 제약 조건.',
             '[프롬프트 체이닝](/ko/prompt-engineering/prompt-chaining) — 다단계 워크플로에서 5가지 블록을 적용하는 방법: 복잡한 작업을 순차적 프롬프트로 분해하기.',
             '[AI로 브랜드 보이스 구현하기: 프롬프트 가이드](/ko/prompt-engineering/your-brand-voice-ai)',
           ],
@@ -3581,7 +3535,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[프롬프트 인젝션 위협 및 완화 — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — 비구조화된 프롬프트의 보안 함의와 제약 조건에 대한 권장 사항.',
             '[ChatGPT를 통한 프롬프트 엔지니어링 향상을 위한 프롬프트 패턴 카탈로그 — White 외, 2023](https://arxiv.org/abs/2302.11382) — 5블록 모델에 직접 적용 가능한 구조화 및 역할 기반 기법을 포함한 포괄적인 프롬프트 디자인 패턴 카탈로그.',
             '[프롬프트 엔지니어링 — Claude 문서 — Anthropic](https://docs.anthropic.com/) — 프로덕션 파이프라인을 위한 시스템 프롬프트 모범 사례, 구조화된 출력, 캐싱 전략.',
-            '[구조화된 출력 — Responses API — OpenAI](https://platform.openai.com/docs/) — 토큰 생성 시 스키마에 맞는 유효한 JSON을 보장하는 API 수준 출력 형식 적용.',
+            '[구조화된 출력 — Responses API — OpenAI](https://platform.openai.com/docs/) — 지원되는 모드에서 JSON을 스키마에 맞게 제한하는 API 수준 출력 형식 적용.',
             '[Gemini API: 프롬프팅 전략 — Google](https://ai.google.dev/) — 프론티어 모델 전반에서의 응답 스키마 및 제어된 생성 기법.',
           ],
         },

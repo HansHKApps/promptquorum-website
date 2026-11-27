@@ -1665,6 +1665,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'laptop',
             label: 'AppleでMacBook Proの構成を確認する',
           },
+          {
+            url: 'https://kakaku.com/search_results/MacBook%20Pro/',
+            productName: 'MacBook Pro',
+            productCategory: 'laptop',
+            label: '価格.comで「MacBook Pro」の最安値を確認',
+          },
         ],
       },
       comparisonTable: {
@@ -1796,6 +1802,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'laptop',
             label: 'LenovoでThinkPadの構成を確認する',
           },
+          {
+            url: 'https://kakaku.com/search_results/Lenovo%20ThinkPad/',
+            productName: 'Lenovo ThinkPad',
+            productCategory: 'laptop',
+            label: '価格.comで「Lenovo ThinkPad」の最安値を確認',
+          },
         ],
       },
       familyRog: {
@@ -1830,6 +1842,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'laptop',
             label: 'ASUSでASUS ROGの構成を確認する',
           },
+          {
+            url: 'https://kakaku.com/search_results/ASUS%20ROG/',
+            productName: 'ASUS ROG',
+            productCategory: 'laptop',
+            label: '価格.comで「ASUS ROG」の最安値を確認',
+          },
         ],
       },
       familyFramework: {
@@ -1862,6 +1880,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productName: 'Framework Laptop 16',
             productCategory: 'laptop',
             label: 'FrameworkでFramework Laptop 16の構成を確認する',
+          },
+          {
+            url: 'https://kakaku.com/search_results/Framework%20Laptop%2016/',
+            productName: 'Framework Laptop 16',
+            productCategory: 'laptop',
+            label: '価格.comで「Framework Laptop 16」の最安値を確認',
           },
         ],
       },
@@ -4218,6 +4242,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'laptop',
             label: 'Apple에서 MacBook Pro 구성 확인하기',
           },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=MacBook%20Pro',
+            productName: 'MacBook Pro',
+            productCategory: 'laptop',
+            label: "다나와에서 'MacBook Pro' 최저가 확인",
+          },
         ],
       },
       comparisonTable: {
@@ -4349,6 +4379,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'laptop',
             label: 'Lenovo에서 ThinkPad 구성 확인하기',
           },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=Lenovo%20ThinkPad',
+            productName: 'Lenovo ThinkPad',
+            productCategory: 'laptop',
+            label: "다나와에서 'Lenovo ThinkPad' 최저가 확인",
+          },
         ],
       },
       familyRog: {
@@ -4383,6 +4419,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'laptop',
             label: 'ASUS에서 ASUS ROG 구성 확인하기',
           },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=ASUS%20ROG',
+            productName: 'ASUS ROG',
+            productCategory: 'laptop',
+            label: "다나와에서 'ASUS ROG' 최저가 확인",
+          },
         ],
       },
       familyFramework: {
@@ -4415,6 +4457,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productName: 'Framework Laptop 16',
             productCategory: 'laptop',
             label: 'Framework에서 Framework Laptop 16 구성 확인하기',
+          },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=Framework%20Laptop%2016',
+            productName: 'Framework Laptop 16',
+            productCategory: 'laptop',
+            label: "다나와에서 'Framework Laptop 16' 최저가 확인",
           },
         ],
       },
@@ -4477,7 +4525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**독일:** Amazon.de와 독일 제조사 스토어; 표시 가격에 약 19% 부가세가 포함되어 있습니다.',
           '**프랑스:** Amazon.fr과 프랑스 제조사 스토어; 가격은 20% 부가세가 포함된 독일과 유사합니다.',
           '**일본:** Amazon.co.jp와 일본 제조사 스토어; 구성 옵션은 미국과 동일합니다.',
-          '**한국:** 다나와에서 여러 판매처의 가격을 비교하고 쿠팡 등 주요 쇼핑몰에서 재고와 가격을 확인하세요. 국내 정식 유통 제품인지, 국내 AS가 가능한지 구매 전에 확인하는 것이 좋습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요.',
+          '**한국:** 다나와에서 여러 판매처의 가격을 비교하고 쿠팡 등 주요 쇼핑몰에서 재고와 가격을 확인하세요. 아래 링크에서 다나와의 최신 최저가를 바로 확인할 수 있습니다. 국내 정식 유통 제품인지, 국내 AS가 가능한지 구매 전에 확인하는 것이 좋습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요.',
           '**모델 업데이트 근처에서 구매하는 경우:** 새로운 세대가 출시될 때 이전 세대 가격이 떨어지는 경우가 많으며, 중고 또는 리퍼비시 게이밍 노트북은 신제품 프리미엄의 많은 부분을 피할 수 있습니다.',
         ],
         callouts: [

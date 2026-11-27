@@ -1,8 +1,10 @@
 // Weesper Neon Flow Review: offline push-to-talk dictation for Mac and Windows
 // Slug: weesper-neon-flow-review
 // Companion to: handy-review, macwhisper-review, fluidvoice-review, openwhispr-review, local-llm-voice-audio-compared
-// Facts verified 2026-11-06 against weesperneonflow.ai (home, download, changelog, privacy, terms) and GitHub Releases direct-v1.8.12 (2026-10-28).
-// Not hands-on tested. Stale-project warning is OFF (9 days since the last update on 2026-11-06).
+// Facts verified 2026-11-06 against weesperneonflow.ai (home, download, changelog, privacy, terms) and GitHub Releases direct-v1.8.12 (2026-10-28) (first version).
+// 2026-11-27: the maker read the review, sent two fixes (free-plan limits apply together; when internet is needed) and a founder comment. Re-checked pricing, about, legal,
+// privacy (updated 2026-11-09), changelog and GitHub Releases direct-v1.8.16 (2026-11-24).
+// Not hands-on tested. Stale-project warning is OFF (3 days since the last update on 2026-11-27).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -12,13 +14,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-en.webp',
     title: 'Weesper Neon Flow Review: Offline Dictation for Mac and Windows',
     seoTitle: 'Weesper Neon Flow Review: Offline Whisper Dictation App',
-    intro: "Weesper Neon Flow is a paid, closed-source dictation app for Mac and Windows: you hold a shortcut, speak, and it types the cleaned-up text into whatever app has the cursor, running OpenAI's Whisper model on your own computer. This review covers what the maker's website, changelog and privacy policy document, where those pages disagree, and how it compares with other dictation tools in the directory.",
+    intro: "Weesper Neon Flow is a paid, closed-source dictation app for Mac and Windows: you hold a shortcut, speak, and it types the cleaned-up text into whatever app has the cursor, running OpenAI's Whisper model on your own computer. This review covers what the maker's website, changelog and privacy policy document and how it compares with other dictation tools in the directory.",
     metaDescription: 'Weesper Neon Flow review: Whisper dictation for Mac and Windows that, per its maker, runs on your PC. 15-day trial, then 5 EUR a month. Not tested.',
     twitterDescription: 'Weesper Neon Flow review: push-to-talk dictation for Mac and Windows with Whisper on your own computer. Price, privacy, limits and alternatives.',
     audience: 'Mac and Windows users who want to dictate into any app without sending their voice to a cloud service — covers price, install, models, privacy, limits and alternatives.',
@@ -40,19 +42,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: "**Weesper Neon Flow is a closed-source dictation app for Mac and Windows that runs OpenAI's Whisper model on your own computer, and its maker says audio and dictated text never leave the machine.** It costs 5 EUR a month, 45 EUR a year or 99 EUR once after a 15-day free trial. The newest release is version 1.8.12 from 28 October 2026. This review rests on the maker's public website, changelog and privacy policy and on its GitHub release page, not on hands-on testing.",
+    leadAnswerBlock: "**Weesper Neon Flow is a closed-source dictation app for Mac and Windows that runs OpenAI's Whisper model on your own computer, and its maker says audio and dictated text never leave the machine.** It costs 5 EUR a month, 45 EUR a year or 99 EUR once after a 15-day free trial. The newest release is version 1.8.16 from 24 November 2026. This review rests on the maker's public website, changelog and privacy policy and on its GitHub release page, not on hands-on testing.",
     quickAnswerTop: {
       en: {
         question: 'Is Weesper Neon Flow a local dictation app?',
-        answer: 'According to its maker, yes: speech recognition runs on your Mac or Windows PC with Whisper, and audio, transcripts and dictated text are not sent to the maker\'s servers. The internet is still used for downloading the app and speech models, license checks, billing, updates and optional diagnostics. The code is closed, and PromptQuorum did not inspect network traffic, so the claim is the maker\'s own.',
+        answer: 'According to its maker, yes: speech recognition runs on your Mac or Windows PC with Whisper, and audio, transcripts and dictated text are not sent to the maker\'s servers. The internet is still used for downloading the app and speech models, license checks, billing, updates and diagnostics. The code is closed, and PromptQuorum did not inspect network traffic, so the claim is the maker\'s own.',
         bullets: [
           'Hold a shortcut, speak, release: the cleaned-up text appears at the cursor in apps such as Gmail, Slack, Notion or Word.',
           'Pricing: 15-day free trial with all features, then 5 EUR a month, 45 EUR a year or 99 EUR once.',
           'Four speech profiles from Minimal (about 75 MB) to Large (3.2 GB); Small (512 MB) is the default.',
           'Mac (macOS 13 or newer) and Windows 10 or 11 only; no Linux, iPhone or Android version.',
-          "The maker's pages disagree on whether the internet is required and on what the free plan after the trial includes.",
+          'After the trial, the free plan caps both each dictation\'s length and the words per week.',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -64,6 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Features', anchor: 'features' },
       { label: 'Models and Hardware', anchor: 'models-hardware' },
       { label: 'Privacy, License and Cost', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Trade-Offs: Benefits vs. Limitations', anchor: 'tradeoffs' },
       { label: 'Weesper Neon Flow vs. Alternatives', anchor: 'vs-alternatives' },
       { label: 'Who Should Use Weesper Neon Flow', anchor: 'who-should-use' },
@@ -85,15 +88,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Think of a microphone key that types for you: hold the shortcut, talk, let go, and your computer turns the speech into text without sending the audio to the maker.',
+            text: 'Think of a microphone key that types for you: hold the shortcut, talk, let go, and, according to the maker, your computer turns the speech into text without sending them the audio.',
           },
         ],
         items: [
-          'Local claim: speech recognition runs on the device with Whisper; downloads, license checks, billing, updates and optional diagnostics still use the internet.',
+          'Local claim: speech recognition runs on the device with Whisper; downloads, license checks, billing, updates and diagnostics still use the internet.',
           'License and maker: proprietary, published by THE BLUE HOUSE (SASU) in Paris; the linked GitHub repository only hosts release installers.',
           'Price: 15-day free trial, then 5 EUR a month, 45 EUR a year or 99 EUR once, with a 7-day money-back guarantee.',
-          'Maintenance: version 1.8.12 was released on 28 October 2026, so the project is actively updated.',
-          'Gaps: no Linux or mobile version, and the maker\'s own pages contradict each other on the free plan and on needing internet.',
+          'Maintenance: version 1.8.16 was released on 24 November 2026, so the project is actively updated.',
+          'Gaps: no Linux or mobile version, and closed code that outsiders cannot audit.',
         ],
       },
       getItWeesper: {
@@ -157,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Weesper Neon Flow Is',
         content: [
           '**Weesper Neon Flow is a push-to-talk dictation app, not a transcription editor.** You hold a keyboard shortcut, speak, and release; the app runs Whisper on the computer and inserts cleaned-up text at the cursor, for example in Gmail, Slack, Notion or Word.',
-          'The maker is THE BLUE HOUSE (SASU), based in Paris, and the About page says the product was founded in 2024. It also sells a separate product, Weesper Transcribe, for audio and video files; this review covers only the dictation app.',
+          'The maker is THE BLUE HOUSE (SASU), based in Paris, and the About page says the product was founded in 2024. It also sells a separate product, [Weesper Transcribe](/power-local-llm/weesper-transcribe-review), for audio and video files; this review covers only the dictation app.',
           'This review draws on the website, changelog, privacy policy, terms and the GitHub release page. It involved no hands-on testing, so accuracy, speed and stability are not rated here.',
         ],
       },
@@ -190,11 +193,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: 'Features',
         content: [
-          '**The feature set centres on fast, private dictation into any app.** Everything below comes from the website and changelog.',
+          '**The feature set centres on dictation into any app.** Everything below comes from the website and changelog.',
         ],
         items: [
           '**Dictation anywhere.** Text is inserted at the cursor in any app that accepts typing.',
-          '**Clean-up.** Automatic removal of filler words, plus smart punctuation and capitalization.',
+          '**Clean-up.** Automatic removal of filler words, plus smart punctuation and capitalization. Version 1.8.16 added an optional clean-up in beta that rewrites the text with a local model of about 3.1 GB.',
           '**Languages.** More than 50 languages with automatic detection, and speaking in one language to get text in another.',
           '**Meeting mode.** Speaker diarization was added in version 1.7.5.',
           '**Personalization.** A custom dictionary, text shortcuts, contextual prompts, custom prompts and a dictation history.',
@@ -213,10 +216,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacy, License and Cost',
         content: [
-          '**The privacy policy says speech recognition runs locally and that audio, transcripts, dictated text and clipboard contents are not sent to Weesper servers for transcription.** The policy was last updated on 23 July 2026. The terms add that the application operates 100% locally.',
-          'The internet is still involved elsewhere: downloads of the app and speech models, license activation and checks through a licensing service hosted on Cloudflare, billing through Stripe, update metadata from GitHub, and optional product analytics (PostHog) and crash diagnostics (Sentry). The policy says analytics events do not include audio, transcripts or dictated text. The code is closed and PromptQuorum did not examine network traffic, so these statements are the maker\'s own.',
-          'It is a paid, proprietary product: a 15-day free trial, then 5 EUR a month, 45 EUR a year or 99 EUR once, with a 7-day money-back guarantee. A personal license covers up to three of your own computers. The site does not say clearly whether prices include VAT, so check at checkout. The free plan after the trial is described two ways: 1,500 words a week in the FAQ and short clips of up to 60 seconds in the changelog.',
+          '**The privacy policy says speech recognition runs locally and that audio, transcripts, dictated text and clipboard contents are not sent to Weesper servers for transcription.** The policy was last updated on 9 November 2026. The terms add that the application operates 100% locally.',
+          'The internet is still involved elsewhere: downloads of the app and speech models, license activation and checks through a licensing service hosted on Cloudflare, billing through Stripe, update metadata from GitHub, optional product analytics (PostHog), and crash diagnostics (Sentry) where enabled or needed to maintain the service. The policy says analytics events do not include audio, transcripts or dictated text. The code is closed and PromptQuorum did not examine network traffic, so these statements are the maker\'s own.',
+          'It is a paid, proprietary product: a 15-day free trial, then 5 EUR a month, 45 EUR a year or 99 EUR once, with a 7-day money-back guarantee. A personal license covers up to three of your own computers. The site does not say clearly whether prices include VAT, so check at checkout. After the 15 days, the free plan applies two limits together: each dictation is capped at 60 seconds, and you get 1,500 words a week. The listed amounts are base prices in EUR; the pricing page says buyers outside the European Economic Area get purchasing-power prices that it does not list.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'The maker of Weesper Neon Flow sent this note to PromptQuorum after reading this review. It is the maker\'s own account, not PromptQuorum\'s independent assessment, and PromptQuorum has not tested the app.',
+          '“I started Weesper Neon Flow because I dictate a lot and didn\'t want my voice going to a cloud service. Recognition runs with Whisper on your own Mac or PC. The 15-day trial has every feature, so you can judge speed and accuracy on your own machine before paying.”',
+        ],
+        note: '— The maker of Weesper Neon Flow',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -226,7 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Benefit: 'Whisper on your computer',
-            'What it means in real use': 'Dictation is processed on the machine, with no audio upload for transcription.',
+            'What it means in real use': 'Per the maker, dictation is processed on the machine, with no audio upload for transcription.',
             'Limitation / caveat': 'Closed source, so the claim cannot be checked; internet is still used for licensing and downloads.',
           },
           {
@@ -237,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Benefit: 'Lifetime option',
             'What it means in real use': 'A 99 EUR one-time purchase avoids a subscription.',
-            'Limitation / caveat': 'Monthly and annual plans are the default; a free plan after the trial is described inconsistently.',
+            'Limitation / caveat': 'Monthly and annual plans are also sold; the free plan after the trial is capped.',
           },
           {
             Benefit: 'Four speech profiles',
@@ -251,8 +263,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Benefit: 'Active development',
-            'What it means in real use': 'Version 1.8.12 shipped on 28 October 2026.',
-            'Limitation / caveat': 'Some pages, such as About, still carry older wording.',
+            'What it means in real use': 'Version 1.8.16 shipped on 24 November 2026.',
+            'Limitation / caveat': 'The text clean-up added in 1.8.16 is labelled beta.',
           },
         ],
       },
@@ -329,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Does Weesper Neon Flow work offline?',
-            a: 'The maker says dictation works 100% offline once the app and a speech model are installed. The internet is needed to download them, to activate the trial or license and for occasional license checks. The About page says no connection is required, which conflicts with this. PromptQuorum did not test it offline.',
+            a: 'The maker says dictation works 100% offline once the app and a speech model are installed. The internet is needed to download them, to activate the trial or license and for occasional license checks. PromptQuorum did not test it offline.',
           },
           {
             q: 'Is my voice sent to the cloud?',
@@ -354,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           'Weesper Neon Flow is a good fit if you want push-to-talk dictation on a Mac or Windows PC where, per the maker, Whisper runs on your own computer, and you accept paying for closed-source software. It has a free 15-day trial, a lifetime option and a recent release.',
-          'The caveats are scope and verifiability: no Linux or mobile version, closed code, privacy claims that PromptQuorum could not check, and maker pages that disagree on the free plan and on needing internet. Use the trial before you buy.',
+          'The caveats are scope and verifiability: no Linux or mobile version, closed code and privacy claims that PromptQuorum could not check. Use the trial before you buy.',
         ],
       },
       sources: {
@@ -364,9 +376,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Weesper Neon Flow website](https://weesperneonflow.ai/en/) — features, pricing and FAQ.',
           '[Download page](https://weesperneonflow.ai/en/download/) — platforms and system requirements.',
           '[Changelog](https://weesperneonflow.ai/en/changelog/) — version history and feature additions.',
-          '[Privacy policy](https://weesperneonflow.ai/en/privacy) — data handling, last updated 23 July 2026.',
+          '[Privacy policy](https://weesperneonflow.ai/en/privacy) — data handling, last updated 9 November 2026.',
           '[Terms of use](https://weesperneonflow.ai/en/terms/) — operator and local-operation statement.',
-          '[GitHub Releases](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — installer assets and release date of version 1.8.12.',
+          '[GitHub Releases](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — installer assets and release date of version 1.8.16.',
+          '[Pricing page](https://weesperneonflow.ai/en/pricing/) — trial, free plan limits and prices.',
+          '[About page](https://weesperneonflow.ai/en/about/) — when an internet connection is needed.',
+          '[Legal notice](https://weesperneonflow.ai/en/legal/) — publisher and registered office.',
         ],
       },
       relatedReading: {
@@ -387,13 +402,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-de.webp',
     title: 'Weesper Neon Flow Rezension: Offline-Diktat für Mac und Windows',
     seoTitle: 'Weesper Neon Flow Rezension: Offline-Diktier-App',
-    intro: 'Weesper Neon Flow ist eine kostenpflichtige, nicht quelloffene Diktier-App für Mac und Windows: Sie halten ein Tastenkürzel gedrückt, sprechen, und die App tippt den bereinigten Text in die App, in der gerade der Cursor steht. Dabei läuft OpenAIs Whisper-Modell auf Ihrem eigenen Computer. Diese Rezension fasst zusammen, was Website, Änderungsprotokoll und Datenschutzerklärung des Herstellers dokumentieren, wo sich diese Seiten widersprechen und wie die App im Vergleich zu anderen Diktier-Werkzeugen im Verzeichnis abschneidet.',
+    intro: 'Weesper Neon Flow ist eine kostenpflichtige, nicht quelloffene Diktier-App für Mac und Windows: Sie halten ein Tastenkürzel gedrückt, sprechen, und die App tippt den bereinigten Text in die App, in der gerade der Cursor steht. Dabei läuft OpenAIs Whisper-Modell auf Ihrem eigenen Computer. Diese Rezension fasst zusammen, was Website, Änderungsprotokoll und Datenschutzerklärung des Herstellers dokumentieren und wie die App im Vergleich zu anderen Diktier-Werkzeugen im Verzeichnis abschneidet.',
     metaDescription: 'Weesper Neon Flow Rezension: Whisper-Diktat für Mac und Windows, laut Hersteller lokal. 15 Tage testen, dann 5 €/Monat oder 99 € einmalig. Nicht getestet.',
     twitterDescription: 'Weesper Neon Flow Rezension: Diktat per Tastenkürzel für Mac und Windows mit Whisper auf dem eigenen Rechner. Preis, Datenschutz, Grenzen und Alternativen.',
     audience: 'Mac- und Windows-Nutzer, die in jede App diktieren möchten, ohne ihre Stimme an einen Cloud-Dienst zu senden — behandelt Preis, Installation, Modelle, Datenschutz, Grenzen und Alternativen.',
@@ -415,19 +430,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: '**Weesper Neon Flow ist eine nicht quelloffene Diktier-App für Mac und Windows, die OpenAIs Whisper-Modell auf Ihrem eigenen Computer ausführt; laut Hersteller verlassen Audio und diktierter Text den Rechner nie.** Nach einer 15-tägigen kostenlosen Testphase kostet sie 5 € im Monat, 45 € im Jahr oder einmalig 99 €. Die neueste Version ist 1.8.12 vom 28. Oktober 2026. Diese Rezension stützt sich auf Website, Änderungsprotokoll und Datenschutzerklärung des Herstellers sowie auf seine GitHub-Release-Seite, nicht auf einen eigenen Praxistest.',
+    leadAnswerBlock: '**Weesper Neon Flow ist eine nicht quelloffene Diktier-App für Mac und Windows, die OpenAIs Whisper-Modell auf Ihrem eigenen Computer ausführt; laut Hersteller verlassen Audio und diktierter Text den Rechner nie.** Nach einer 15-tägigen kostenlosen Testphase kostet sie 5 € im Monat, 45 € im Jahr oder einmalig 99 €. Die neueste Version ist 1.8.16 vom 24. November 2026. Diese Rezension stützt sich auf Website, Änderungsprotokoll und Datenschutzerklärung des Herstellers sowie auf seine GitHub-Release-Seite, nicht auf einen eigenen Praxistest.',
     quickAnswerTop: {
       de: {
         question: 'Ist Weesper Neon Flow eine lokale Diktier-App?',
-        answer: 'Laut Hersteller ja: Die Spracherkennung läuft mit Whisper auf Ihrem Mac oder Windows-PC, und Audio, Transkripte und diktierter Text werden nicht an die Server des Herstellers gesendet. Das Internet wird dennoch für den Download von App und Sprachmodellen, Lizenzprüfungen, Abrechnung, Updates und optionale Diagnosedaten genutzt. Der Code ist nicht offen, und PromptQuorum hat den Netzwerkverkehr nicht untersucht; die Aussage stammt also vom Hersteller selbst.',
+        answer: 'Laut Hersteller ja: Die Spracherkennung läuft mit Whisper auf Ihrem Mac oder Windows-PC, und Audio, Transkripte und diktierter Text werden nicht an die Server des Herstellers gesendet. Das Internet wird dennoch für den Download von App und Sprachmodellen, Lizenzprüfungen, Abrechnung, Updates und Diagnosedaten genutzt. Der Code ist nicht offen, und PromptQuorum hat den Netzwerkverkehr nicht untersucht; die Aussage stammt also vom Hersteller selbst.',
         bullets: [
           'Kürzel halten, sprechen, loslassen: Der bereinigte Text erscheint am Cursor, etwa in Gmail, Slack, Notion oder Word.',
           'Preise: 15 Tage kostenlos testen mit allen Funktionen, danach 5 € im Monat, 45 € im Jahr oder einmalig 99 €.',
           'Vier Sprachprofile von Minimal (etwa 75 MB) bis Large (3,2 GB); Small (512 MB) ist die Voreinstellung.',
           'Nur Mac (macOS 13 oder neuer) und Windows 10 oder 11; keine Version für Linux, iPhone oder Android.',
-          'Die Seiten des Herstellers widersprechen sich dabei, ob Internet nötig ist und was der kostenlose Tarif nach der Testphase enthält.',
+          'Nach der Testphase begrenzt der kostenlose Tarif sowohl die Länge jedes Diktats als auch die Wörter pro Woche.',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -439,6 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Funktionen', anchor: 'features' },
       { label: 'Modelle und Hardware', anchor: 'models-hardware' },
       { label: 'Datenschutz, Lizenz und Kosten', anchor: 'privacy' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Abwägungen: Vorteile und Einschränkungen', anchor: 'tradeoffs' },
       { label: 'Weesper Neon Flow im Vergleich zu Alternativen', anchor: 'vs-alternatives' },
       { label: 'Für wen Weesper Neon Flow geeignet ist', anchor: 'who-should-use' },
@@ -460,15 +476,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Stellen Sie sich eine Mikrofontaste vor, die für Sie tippt: Kürzel halten, sprechen, loslassen, und Ihr Computer macht aus der Sprache Text, ohne das Audio an den Hersteller zu senden.',
+            text: 'Stellen Sie sich eine Mikrofontaste vor, die für Sie tippt: Kürzel halten, sprechen, loslassen, und laut Hersteller macht Ihr Computer aus der Sprache Text, ohne ihm das Audio zu senden.',
           },
         ],
         items: [
-          'Lokale Aussage: Die Spracherkennung läuft mit Whisper auf dem Gerät; Downloads, Lizenzprüfungen, Abrechnung, Updates und optionale Diagnosedaten nutzen weiterhin das Internet.',
+          'Lokale Aussage: Die Spracherkennung läuft mit Whisper auf dem Gerät; Downloads, Lizenzprüfungen, Abrechnung, Updates und Diagnosedaten nutzen weiterhin das Internet.',
           'Lizenz und Hersteller: proprietär, veröffentlicht von THE BLUE HOUSE (SASU) in Paris; das verlinkte GitHub-Repository enthält nur Installationsdateien der Releases.',
           'Preis: 15 Tage kostenlos testen, danach 5 € im Monat, 45 € im Jahr oder einmalig 99 €, mit 7 Tagen Geld-zurück-Garantie.',
-          'Pflege: Version 1.8.12 erschien am 28. Oktober 2026, das Projekt wird also aktiv aktualisiert.',
-          'Lücken: keine Version für Linux oder Mobilgeräte, und die eigenen Seiten des Herstellers widersprechen sich beim kostenlosen Tarif und bei der Frage, ob Internet nötig ist.',
+          'Pflege: Version 1.8.16 erschien am 24. November 2026, das Projekt wird also aktiv aktualisiert.',
+          'Lücken: keine Version für Linux oder Mobilgeräte und nicht offener Code, den Außenstehende nicht prüfen können.',
         ],
       },
       getItWeesper: {
@@ -532,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was Weesper Neon Flow ist',
         content: [
           '**Weesper Neon Flow ist eine Diktier-App mit Tastenkürzel, kein Transkriptions-Editor.** Sie halten ein Tastenkürzel gedrückt, sprechen und lassen los; die App führt Whisper auf dem Computer aus und fügt den bereinigten Text am Cursor ein, zum Beispiel in Gmail, Slack, Notion oder Word.',
-          'Hersteller ist THE BLUE HOUSE (SASU) mit Sitz in Paris, und laut Über-uns-Seite wurde das Produkt 2024 gegründet. Außerdem verkauft das Unternehmen mit Weesper Transcribe ein separates Produkt für Audio- und Videodateien; diese Rezension behandelt nur die Diktier-App.',
+          'Hersteller ist THE BLUE HOUSE (SASU) mit Sitz in Paris, und laut Über-uns-Seite wurde das Produkt 2024 gegründet. Außerdem verkauft das Unternehmen mit [Weesper Transcribe](/de/power-local-llm/weesper-transcribe-review) ein separates Produkt für Audio- und Videodateien; diese Rezension behandelt nur die Diktier-App.',
           'Diese Rezension stützt sich auf Website, Änderungsprotokoll, Datenschutzerklärung, Nutzungsbedingungen und die GitHub-Release-Seite. Es gab keinen eigenen Praxistest, daher werden Genauigkeit, Geschwindigkeit und Stabilität hier nicht bewertet.',
         ],
       },
@@ -565,11 +581,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: 'Funktionen',
         content: [
-          '**Der Funktionsumfang konzentriert sich auf schnelles, privates Diktat in jede App.** Alles Folgende stammt von der Website und aus dem Änderungsprotokoll.',
+          '**Der Funktionsumfang konzentriert sich auf das Diktat in jede App.** Alles Folgende stammt von der Website und aus dem Änderungsprotokoll.',
         ],
         items: [
           '**Diktat überall.** Text wird am Cursor in jeder App eingefügt, die Eingaben annimmt.',
-          '**Bereinigung.** Automatisches Entfernen von Füllwörtern sowie intelligente Zeichensetzung und Großschreibung.',
+          '**Bereinigung.** Automatisches Entfernen von Füllwörtern sowie intelligente Zeichensetzung und Großschreibung. Version 1.8.16 brachte eine optionale Textbereinigung (Beta), die den Text mit einem lokalen Modell von etwa 3,1 GB umschreibt.',
           '**Sprachen.** Mehr als 50 Sprachen mit automatischer Erkennung, und Sprechen in einer Sprache, um Text in einer anderen zu erhalten.',
           '**Meeting-Modus.** Die Sprecherzuordnung (Diarisierung) kam mit Version 1.7.5 hinzu.',
           '**Anpassung.** Ein eigenes Wörterbuch, Textkürzel, kontextbezogene Prompts, eigene Prompts und ein Diktierverlauf.',
@@ -588,10 +604,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Datenschutz, Lizenz und Kosten',
         content: [
-          '**Die Datenschutzerklärung sagt, die Spracherkennung laufe lokal und Audio, Transkripte, diktierter Text und Inhalte der Zwischenablage würden für die Transkription nicht an Weesper-Server gesendet.** Die Erklärung wurde zuletzt am 23. Juli 2026 aktualisiert. Die Nutzungsbedingungen ergänzen, dass die Anwendung zu 100 % lokal arbeitet.',
-          'Das Internet ist dennoch an anderer Stelle beteiligt: Downloads von App und Sprachmodellen, Lizenzaktivierung und -prüfung über einen bei Cloudflare gehosteten Lizenzdienst, Abrechnung über Stripe, Update-Metadaten von GitHub sowie optionale Produktanalyse (PostHog) und Absturzdiagnose (Sentry). Laut Erklärung enthalten Analyseereignisse weder Audio noch Transkripte noch diktierten Text. Der Code ist nicht offen, und PromptQuorum hat den Netzwerkverkehr nicht untersucht; diese Aussagen stammen also vom Hersteller selbst.',
-          'Es ist ein kostenpflichtiges, proprietäres Produkt: 15 Tage kostenlos testen, danach 5 € im Monat, 45 € im Jahr oder einmalig 99 €, mit 7 Tagen Geld-zurück-Garantie. Eine persönliche Lizenz gilt für bis zu drei eigene Computer. Die Website sagt nicht eindeutig, ob die Preise die Mehrwertsteuer enthalten; prüfen Sie das an der Kasse. Der kostenlose Tarif nach der Testphase wird auf zwei Arten beschrieben: 1.500 Wörter pro Woche in der FAQ und kurze Clips von bis zu 60 Sekunden im Änderungsprotokoll.',
+          '**Die Datenschutzerklärung sagt, die Spracherkennung laufe lokal und Audio, Transkripte, diktierter Text und Inhalte der Zwischenablage würden für die Transkription nicht an Weesper-Server gesendet.** Die Erklärung wurde zuletzt am 9. November 2026 aktualisiert. Die Nutzungsbedingungen ergänzen, dass die Anwendung zu 100 % lokal arbeitet.',
+          'Das Internet ist dennoch an anderer Stelle beteiligt: Downloads von App und Sprachmodellen, Lizenzaktivierung und -prüfung über einen bei Cloudflare gehosteten Lizenzdienst, Abrechnung über Stripe, Update-Metadaten von GitHub, optionale Produktanalyse (PostHog) sowie Absturzdiagnose (Sentry), sofern aktiviert oder für den Betrieb des Dienstes erforderlich. Laut Erklärung enthalten Analyseereignisse weder Audio noch Transkripte noch diktierten Text. Der Code ist nicht offen, und PromptQuorum hat den Netzwerkverkehr nicht untersucht; diese Aussagen stammen also vom Hersteller selbst.',
+          'Es ist ein kostenpflichtiges, proprietäres Produkt: 15 Tage kostenlos testen, danach 5 € im Monat, 45 € im Jahr oder einmalig 99 €, mit 7 Tagen Geld-zurück-Garantie. Eine persönliche Lizenz gilt für bis zu drei eigene Computer. Die Website sagt nicht eindeutig, ob die Preise die Mehrwertsteuer enthalten; prüfen Sie das an der Kasse. Nach den 15 Tagen gelten im kostenlosen Tarif beide Grenzen zugleich: Jedes Diktat ist auf 60 Sekunden begrenzt, und pro Woche stehen 1.500 Wörter zur Verfügung. Die genannten Beträge sind Basispreise in Euro; laut Preisseite gelten außerhalb des Europäischen Wirtschaftsraums kaufkraftangepasste Preise, die dort nicht aufgeführt sind.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Entwickler',
+        content: [
+          'Der Entwickler von Weesper Neon Flow hat PromptQuorum diese Mitteilung geschickt, nachdem er diese Rezension gelesen hatte. Es ist die eigene Darstellung des Herstellers, keine unabhängige Einschätzung von PromptQuorum, und PromptQuorum hat die App nicht getestet.',
+          '„Ich habe Weesper Neon Flow begonnen, weil ich viel diktiere und nicht wollte, dass meine Stimme an einen Cloud-Dienst geht. Die Erkennung läuft mit Whisper auf Ihrem eigenen Mac oder PC. Die 15-tägige Testversion enthält alle Funktionen, sodass Sie Geschwindigkeit und Genauigkeit auf Ihrem eigenen Rechner beurteilen können, bevor Sie bezahlen.“',
+        ],
+        note: '— Der Entwickler von Weesper Neon Flow',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -601,7 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Vorteil: 'Whisper auf Ihrem Computer',
-            'Was das im Alltag bedeutet': 'Das Diktat wird auf dem Rechner verarbeitet, ohne Audio-Upload für die Transkription.',
+            'Was das im Alltag bedeutet': 'Laut Hersteller wird das Diktat auf dem Rechner verarbeitet, ohne Audio-Upload für die Transkription.',
             'Einschränkung / Hinweis': 'Nicht quelloffen, die Aussage lässt sich nicht prüfen; für Lizenz und Downloads wird weiterhin das Internet genutzt.',
           },
           {
@@ -612,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Vorteil: 'Lifetime-Option',
             'Was das im Alltag bedeutet': 'Ein Einmalkauf für 99 € erspart ein Abo.',
-            'Einschränkung / Hinweis': 'Monats- und Jahrestarif sind der Standard; ein kostenloser Tarif nach der Testphase wird widersprüchlich beschrieben.',
+            'Einschränkung / Hinweis': 'Monats- und Jahrestarife werden ebenfalls angeboten; der kostenlose Tarif nach der Testphase ist begrenzt.',
           },
           {
             Vorteil: 'Vier Sprachprofile',
@@ -626,8 +651,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Vorteil: 'Aktive Entwicklung',
-            'Was das im Alltag bedeutet': 'Version 1.8.12 erschien am 28. Oktober 2026.',
-            'Einschränkung / Hinweis': 'Manche Seiten, etwa Über uns, tragen noch ältere Formulierungen.',
+            'Was das im Alltag bedeutet': 'Version 1.8.16 erschien am 24. November 2026.',
+            'Einschränkung / Hinweis': 'Die in 1.8.16 ergänzte Textbereinigung ist als Beta gekennzeichnet.',
           },
         ],
       },
@@ -704,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Funktioniert Weesper Neon Flow offline?',
-            a: 'Laut Hersteller funktioniert das Diktat zu 100 % offline, sobald die App und ein Sprachmodell installiert sind. Das Internet wird für deren Download, für die Aktivierung der Testphase oder Lizenz und für gelegentliche Lizenzprüfungen gebraucht. Die Über-uns-Seite sagt, keine Verbindung sei nötig, was dem widerspricht. PromptQuorum hat es nicht offline getestet.',
+            a: 'Laut Hersteller funktioniert das Diktat zu 100 % offline, sobald die App und ein Sprachmodell installiert sind. Das Internet wird für deren Download, für die Aktivierung der Testphase oder Lizenz und für gelegentliche Lizenzprüfungen gebraucht. PromptQuorum hat es nicht offline getestet.',
           },
           {
             q: 'Wird meine Stimme in die Cloud gesendet?',
@@ -729,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           'Weesper Neon Flow passt, wenn Sie auf einem Mac oder Windows-PC per Tastenkürzel diktieren möchten, wobei laut Hersteller Whisper auf Ihrem eigenen Computer läuft, und wenn Sie bereit sind, für nicht quelloffene Software zu zahlen. Es gibt eine kostenlose 15-tägige Testphase, eine Lifetime-Option und ein aktuelles Release.',
-          'Die Einschränkungen betreffen Umfang und Überprüfbarkeit: keine Version für Linux oder Mobilgeräte, nicht offener Code, Datenschutzaussagen, die PromptQuorum nicht prüfen konnte, und Herstellerseiten, die sich beim kostenlosen Tarif und beim Internetbedarf widersprechen. Nutzen Sie die Testphase vor dem Kauf.',
+          'Die Einschränkungen betreffen Umfang und Überprüfbarkeit: keine Version für Linux oder Mobilgeräte, nicht offener Code und Datenschutzaussagen, die PromptQuorum nicht prüfen konnte. Nutzen Sie die Testphase vor dem Kauf.',
         ],
       },
       sources: {
@@ -739,9 +764,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Website von Weesper Neon Flow](https://weesperneonflow.ai/en/) — Funktionen, Preise und FAQ.',
           '[Download-Seite](https://weesperneonflow.ai/en/download/) — Plattformen und Systemanforderungen.',
           '[Änderungsprotokoll](https://weesperneonflow.ai/en/changelog/) — Versionsverlauf und neue Funktionen.',
-          '[Datenschutzerklärung](https://weesperneonflow.ai/en/privacy) — Umgang mit Daten, zuletzt aktualisiert am 23. Juli 2026.',
+          '[Datenschutzerklärung](https://weesperneonflow.ai/en/privacy) — Umgang mit Daten, zuletzt aktualisiert am 9. November 2026.',
           '[Nutzungsbedingungen](https://weesperneonflow.ai/en/terms/) — Betreiber und Aussage zum lokalen Betrieb.',
-          '[GitHub Releases](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — Installationsdateien und Veröffentlichungsdatum von Version 1.8.12.',
+          '[GitHub Releases](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — Installationsdateien und Veröffentlichungsdatum von Version 1.8.16.',
+          '[Preisseite](https://weesperneonflow.ai/en/pricing/) — Testphase, Grenzen des kostenlosen Tarifs und Preise.',
+          '[Über-uns-Seite](https://weesperneonflow.ai/en/about/) — wann eine Internetverbindung nötig ist.',
+          '[Impressum](https://weesperneonflow.ai/en/legal/) — Herausgeber und Firmensitz.',
         ],
       },
       relatedReading: {
@@ -762,13 +790,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-fr.webp',
     title: 'Test de Weesper Neon Flow : dictée hors ligne pour Mac et Windows',
     seoTitle: 'Test de Weesper Neon Flow : dictée hors ligne Mac/PC',
-    intro: "Weesper Neon Flow est une application de dictée payante et propriétaire pour Mac et Windows : vous maintenez un raccourci, vous parlez, et elle saisit le texte nettoyé dans l'application où se trouve le curseur, en exécutant le modèle Whisper d'OpenAI sur votre propre ordinateur. Ce test résume ce que documentent le site de l'éditeur, son journal des modifications et sa politique de confidentialité, les points où ces pages se contredisent, et comment l'application se compare aux autres outils de dictée du répertoire.",
+    intro: "Weesper Neon Flow est une application de dictée payante et propriétaire pour Mac et Windows : vous maintenez un raccourci, vous parlez, et elle saisit le texte nettoyé dans l'application où se trouve le curseur, en exécutant le modèle Whisper d'OpenAI sur votre propre ordinateur. Ce test résume ce que documentent le site de l'éditeur, son journal des modifications et sa politique de confidentialité, et comment l'application se compare aux autres outils de dictée du répertoire.",
     metaDescription: "Test de Weesper Neon Flow : dictée Whisper pour Mac et Windows, locale selon l'éditeur. Essai de 15 jours, puis 5 €/mois ou 99 € une fois. Non testée.",
     twitterDescription: "Test de Weesper Neon Flow : dictée par raccourci pour Mac et Windows avec Whisper sur votre propre ordinateur. Prix, confidentialité, limites et alternatives.",
     audience: "Utilisateurs de Mac et de Windows qui veulent dicter dans n'importe quelle application sans envoyer leur voix à un service cloud — couvre le prix, l'installation, les modèles, la confidentialité, les limites et les alternatives.",
@@ -790,19 +818,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: "**Weesper Neon Flow est une application de dictée propriétaire pour Mac et Windows qui exécute le modèle Whisper d'OpenAI sur votre propre ordinateur ; selon son éditeur, l'audio et le texte dicté ne quittent jamais la machine.** Elle coûte 5 € par mois, 45 € par an ou 99 € en achat unique après un essai gratuit de 15 jours. La version la plus récente est la 1.8.12, du 28 octobre 2026. Ce test s'appuie sur le site public de l'éditeur, son journal des modifications, sa politique de confidentialité et sa page de versions GitHub, pas sur un essai pratique.",
+    leadAnswerBlock: "**Weesper Neon Flow est une application de dictée propriétaire pour Mac et Windows qui exécute le modèle Whisper d'OpenAI sur votre propre ordinateur ; selon son éditeur, l'audio et le texte dicté ne quittent jamais la machine.** Elle coûte 5 € par mois, 45 € par an ou 99 € en achat unique après un essai gratuit de 15 jours. La version la plus récente est la 1.8.16, du 24 novembre 2026. Ce test s'appuie sur le site public de l'éditeur, son journal des modifications, sa politique de confidentialité et sa page de versions GitHub, pas sur un essai pratique.",
     quickAnswerTop: {
       fr: {
         question: 'Weesper Neon Flow est-elle une application de dictée locale ?',
-        answer: "Selon son éditeur, oui : la reconnaissance vocale s'exécute sur votre Mac ou votre PC Windows avec Whisper, et l'audio, les transcriptions et le texte dicté ne sont pas envoyés aux serveurs de l'éditeur. Internet reste utilisé pour télécharger l'application et les modèles vocaux, vérifier la licence, facturer, mettre à jour et, en option, envoyer des diagnostics. Le code est fermé et PromptQuorum n'a pas inspecté le trafic réseau : l'affirmation est celle de l'éditeur.",
+        answer: "Selon son éditeur, oui : la reconnaissance vocale s'exécute sur votre Mac ou votre PC Windows avec Whisper, et l'audio, les transcriptions et le texte dicté ne sont pas envoyés aux serveurs de l'éditeur. Internet reste utilisé pour télécharger l'application et les modèles vocaux, vérifier la licence, facturer, mettre à jour et envoyer des diagnostics. Le code est fermé et PromptQuorum n'a pas inspecté le trafic réseau : l'affirmation est celle de l'éditeur.",
         bullets: [
           "Maintenez un raccourci, parlez, relâchez : le texte nettoyé apparaît au curseur dans des applications comme Gmail, Slack, Notion ou Word.",
           "Tarifs : essai gratuit de 15 jours avec toutes les fonctions, puis 5 € par mois, 45 € par an ou 99 € en achat unique.",
           "Quatre profils vocaux, de Minimal (environ 75 Mo) à Large (3,2 Go) ; Small (512 Mo) est le profil par défaut.",
           "Mac (macOS 13 ou ultérieur) et Windows 10 ou 11 uniquement ; pas de version Linux, iPhone ni Android.",
-          "Les pages de l'éditeur se contredisent sur la nécessité d'une connexion Internet et sur le contenu de l'offre gratuite après l'essai.",
+          'Après l\'essai, l\'offre gratuite limite à la fois la durée de chaque dictée et le nombre de mots par semaine.',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -814,6 +842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Fonctionnalités', anchor: 'features' },
       { label: 'Modèles et matériel', anchor: 'models-hardware' },
       { label: 'Confidentialité, licence et coût', anchor: 'privacy' },
+      { label: 'Le mot du développeur', anchor: 'from-the-maker' },
       { label: 'Compromis : avantages et limites', anchor: 'tradeoffs' },
       { label: 'Weesper Neon Flow face aux alternatives', anchor: 'vs-alternatives' },
       { label: 'Pour qui Weesper Neon Flow est adaptée', anchor: 'who-should-use' },
@@ -835,15 +864,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: "Imaginez une touche de micro qui tape à votre place : vous maintenez le raccourci, vous parlez, vous relâchez, et votre ordinateur transforme la voix en texte sans envoyer l'audio à l'éditeur.",
+            text: "Imaginez une touche de micro qui tape à votre place : vous maintenez le raccourci, vous parlez, vous relâchez, et, selon l'éditeur, votre ordinateur transforme la voix en texte sans lui envoyer l'audio.",
           },
         ],
         items: [
-          "Affirmation locale : la reconnaissance vocale s'exécute sur l'appareil avec Whisper ; les téléchargements, la vérification de licence, la facturation, les mises à jour et les diagnostics optionnels utilisent tout de même Internet.",
+          "Affirmation locale : la reconnaissance vocale s'exécute sur l'appareil avec Whisper ; les téléchargements, la vérification de licence, la facturation, les mises à jour et les diagnostics utilisent tout de même Internet.",
           "Licence et éditeur : propriétaire, publiée par THE BLUE HOUSE (SASU) à Paris ; le dépôt GitHub lié ne contient que les installateurs des versions.",
           "Prix : essai gratuit de 15 jours, puis 5 € par mois, 45 € par an ou 99 € en achat unique, avec une garantie de remboursement de 7 jours.",
-          "Maintenance : la version 1.8.12 est sortie le 28 octobre 2026, le projet est donc mis à jour activement.",
-          "Lacunes : pas de version Linux ni mobile, et les pages de l'éditeur se contredisent sur l'offre gratuite et sur le besoin d'une connexion Internet.",
+          "Maintenance : la version 1.8.16 est sortie le 24 novembre 2026, le projet est donc mis à jour activement.",
+          'Lacunes : pas de version Linux ni mobile, et un code fermé que des tiers ne peuvent pas auditer.',
         ],
       },
       getItWeesper: {
@@ -907,7 +936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Ce qu'est Weesper Neon Flow",
         content: [
           "**Weesper Neon Flow est une application de dictée par raccourci, pas un éditeur de transcriptions.** Vous maintenez un raccourci clavier, vous parlez et vous relâchez ; l'application exécute Whisper sur l'ordinateur et insère le texte nettoyé au curseur, par exemple dans Gmail, Slack, Notion ou Word.",
-          "L'éditeur est THE BLUE HOUSE (SASU), basée à Paris, et la page À propos indique que le produit a été fondé en 2024. Elle vend aussi un produit distinct, Weesper Transcribe, pour les fichiers audio et vidéo ; ce test ne couvre que l'application de dictée.",
+          "L'éditeur est THE BLUE HOUSE (SASU), basée à Paris, et la page À propos indique que le produit a été fondé en 2024. Elle vend aussi un produit distinct, [Weesper Transcribe](/fr/power-local-llm/weesper-transcribe-review), pour les fichiers audio et vidéo ; ce test ne couvre que l'application de dictée.",
           "Ce test s'appuie sur le site, le journal des modifications, la politique de confidentialité, les conditions d'utilisation et la page de versions GitHub. Il n'a donné lieu à aucun essai pratique : la précision, la vitesse et la stabilité ne sont donc pas évaluées ici.",
         ],
       },
@@ -940,11 +969,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: 'Fonctionnalités',
         content: [
-          "**L'ensemble des fonctions est centré sur une dictée rapide et privée dans n'importe quelle application.** Tout ce qui suit provient du site et du journal des modifications.",
+          "**L'ensemble des fonctions est centré sur la dictée dans n'importe quelle application.** Tout ce qui suit provient du site et du journal des modifications.",
         ],
         items: [
           "**Dictée partout.** Le texte est inséré au curseur dans toute application qui accepte la saisie.",
-          "**Nettoyage.** Suppression automatique des mots de remplissage, avec ponctuation et majuscules intelligentes.",
+          "**Nettoyage.** Suppression automatique des mots de remplissage, avec ponctuation et majuscules intelligentes. La version 1.8.16 a ajouté un nettoyage optionnel, en bêta, qui réécrit le texte avec un modèle local d'environ 3,1 Go.",
           "**Langues.** Plus de 50 langues avec détection automatique, et possibilité de parler dans une langue pour obtenir du texte dans une autre.",
           "**Mode Réunion.** La séparation des locuteurs a été ajoutée dans la version 1.7.5.",
           "**Personnalisation.** Un dictionnaire personnalisé, des raccourcis de texte, des prompts contextuels, des prompts personnalisés et un historique de dictée.",
@@ -963,10 +992,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Confidentialité, licence et coût',
         content: [
-          "**La politique de confidentialité indique que la reconnaissance vocale s'exécute localement et que l'audio, les transcriptions, le texte dicté et le contenu du presse-papiers ne sont pas envoyés aux serveurs de Weesper pour la transcription.** La politique a été mise à jour pour la dernière fois le 23 juillet 2026. Les conditions d'utilisation ajoutent que l'application fonctionne à 100 % en local.",
-          "Internet intervient tout de même ailleurs : téléchargement de l'application et des modèles vocaux, activation et vérification de la licence via un service de licences hébergé sur Cloudflare, facturation via Stripe, métadonnées de mise à jour depuis GitHub, et, en option, analyses d'usage (PostHog) et diagnostics de plantage (Sentry). La politique précise que les événements d'analyse n'incluent ni audio, ni transcriptions, ni texte dicté. Le code est fermé et PromptQuorum n'a pas examiné le trafic réseau : ces déclarations sont celles de l'éditeur.",
-          "C'est un produit payant et propriétaire : essai gratuit de 15 jours, puis 5 € par mois, 45 € par an ou 99 € en achat unique, avec une garantie de remboursement de 7 jours. Une licence personnelle couvre jusqu'à trois de vos propres ordinateurs. Le site n'indique pas clairement si les prix incluent la TVA : vérifiez au moment du paiement. L'offre gratuite après l'essai est décrite de deux façons : 1 500 mots par semaine dans la FAQ, et de courts extraits de 60 secondes maximum dans le journal des modifications.",
+          "**La politique de confidentialité indique que la reconnaissance vocale s'exécute localement et que l'audio, les transcriptions, le texte dicté et le contenu du presse-papiers ne sont pas envoyés aux serveurs de Weesper pour la transcription.** La politique a été mise à jour pour la dernière fois le 9 novembre 2026. Les conditions d'utilisation ajoutent que l'application fonctionne à 100 % en local.",
+          "Internet intervient tout de même ailleurs : téléchargement de l'application et des modèles vocaux, activation et vérification de la licence via un service de licences hébergé sur Cloudflare, facturation via Stripe, métadonnées de mise à jour depuis GitHub, analyses d'usage optionnelles (PostHog), ainsi que diagnostics de plantage (Sentry) lorsqu'ils sont activés ou nécessaires au maintien du service. La politique précise que les événements d'analyse n'incluent ni audio, ni transcriptions, ni texte dicté. Le code est fermé et PromptQuorum n'a pas examiné le trafic réseau : ces déclarations sont celles de l'éditeur.",
+          "C'est un produit payant et propriétaire : essai gratuit de 15 jours, puis 5 € par mois, 45 € par an ou 99 € en achat unique, avec une garantie de remboursement de 7 jours. Une licence personnelle couvre jusqu'à trois de vos propres ordinateurs. Le site n'indique pas clairement si les prix incluent la TVA : vérifiez au moment du paiement. Après les 15 jours, l'offre gratuite applique deux limites à la fois : chaque dictée est limitée à 60 secondes et vous disposez de 1 500 mots par semaine. Les montants indiqués sont les prix de base en euros ; selon la page des tarifs, les acheteurs hors de l'Espace économique européen se voient appliquer des prix ajustés au pouvoir d'achat, qui n'y sont pas affichés.",
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du développeur',
+        content: [
+          'Le développeur de Weesper Neon Flow a envoyé cette note à PromptQuorum après avoir lu ce test. C\'est le récit de l\'éditeur lui-même, pas une évaluation indépendante de PromptQuorum, et PromptQuorum n\'a pas testé l\'application.',
+          '« J\'ai lancé Weesper Neon Flow parce que je dicte beaucoup et que je ne voulais pas que ma voix parte vers un service cloud. La reconnaissance s\'exécute avec Whisper sur votre propre Mac ou PC. L\'essai de 15 jours comprend toutes les fonctions : vous pouvez donc juger la vitesse et la précision sur votre propre machine avant de payer. »',
+        ],
+        note: '— Le développeur de Weesper Neon Flow',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -976,7 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Avantage: 'Whisper sur votre ordinateur',
-            "Ce que cela donne à l'usage": "La dictée est traitée sur la machine, sans envoi d'audio pour la transcription.",
+            "Ce que cela donne à l'usage": "Selon l'éditeur, la dictée est traitée sur la machine, sans envoi d'audio pour la transcription.",
             'Limite / réserve': "Code fermé, l'affirmation ne peut pas être vérifiée ; Internet sert tout de même à la licence et aux téléchargements.",
           },
           {
@@ -987,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Avantage: 'Option à vie',
             "Ce que cela donne à l'usage": 'Un achat unique à 99 € évite un abonnement.',
-            'Limite / réserve': "Les formules mensuelle et annuelle sont la norme ; l'offre gratuite après l'essai est décrite de façon contradictoire.",
+            'Limite / réserve': 'Des formules mensuelle et annuelle existent aussi ; l\'offre gratuite après l\'essai est limitée.',
           },
           {
             Avantage: 'Quatre profils vocaux',
@@ -1001,8 +1039,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Avantage: 'Développement actif',
-            "Ce que cela donne à l'usage": 'La version 1.8.12 est sortie le 28 octobre 2026.',
-            'Limite / réserve': "Certaines pages, comme À propos, conservent une formulation plus ancienne.",
+            "Ce que cela donne à l'usage": 'La version 1.8.16 est sortie le 24 novembre 2026.',
+            'Limite / réserve': 'Le nettoyage de texte ajouté dans la 1.8.16 est signalé comme bêta.',
           },
         ],
       },
@@ -1079,7 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Weesper Neon Flow fonctionne-t-elle hors ligne ?',
-            a: "L'éditeur affirme que la dictée fonctionne à 100 % hors ligne une fois l'application et un modèle vocal installés. Internet est nécessaire pour les télécharger, pour activer l'essai ou la licence et pour des vérifications occasionnelles de licence. La page À propos indique qu'aucune connexion n'est requise, ce qui contredit ces informations. PromptQuorum ne l'a pas testée hors ligne.",
+            a: "L'éditeur affirme que la dictée fonctionne à 100 % hors ligne une fois l'application et un modèle vocal installés. Internet est nécessaire pour les télécharger, pour activer l'essai ou la licence et pour des vérifications occasionnelles de licence. PromptQuorum ne l'a pas testée hors ligne.",
           },
           {
             q: 'Ma voix est-elle envoyée dans le cloud ?',
@@ -1104,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           "Weesper Neon Flow convient si vous voulez une dictée par raccourci sur un Mac ou un PC Windows où, selon l'éditeur, Whisper s'exécute sur votre propre ordinateur, et si vous acceptez de payer pour un logiciel à code fermé. Elle propose un essai gratuit de 15 jours, une option à vie et une version récente.",
-          "Les réserves tiennent à la portée et à la vérifiabilité : pas de version Linux ni mobile, code fermé, affirmations de confidentialité que PromptQuorum n'a pas pu vérifier, et pages de l'éditeur qui se contredisent sur l'offre gratuite et sur le besoin d'Internet. Utilisez l'essai avant d'acheter.",
+          'Les réserves tiennent à la portée et à la vérifiabilité : pas de version Linux ni mobile, code fermé et affirmations de confidentialité que PromptQuorum n\'a pas pu vérifier. Utilisez l\'essai avant d\'acheter.',
         ],
       },
       sources: {
@@ -1114,9 +1152,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Site de Weesper Neon Flow](https://weesperneonflow.ai/en/) — fonctions, tarifs et FAQ.',
           '[Page de téléchargement](https://weesperneonflow.ai/en/download/) — plateformes et configuration requise.',
           '[Journal des modifications](https://weesperneonflow.ai/en/changelog/) — historique des versions et ajouts de fonctions.',
-          '[Politique de confidentialité](https://weesperneonflow.ai/en/privacy) — traitement des données, dernière mise à jour le 23 juillet 2026.',
+          '[Politique de confidentialité](https://weesperneonflow.ai/en/privacy) — traitement des données, dernière mise à jour le 9 novembre 2026.',
           "[Conditions d'utilisation](https://weesperneonflow.ai/en/terms/) — exploitant et mention du fonctionnement local.",
-          '[Versions GitHub](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — fichiers d\'installation et date de publication de la version 1.8.12.',
+          '[Versions GitHub](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — fichiers d\'installation et date de publication de la version 1.8.16.',
+          '[Page des tarifs](https://weesperneonflow.ai/en/pricing/) — essai, limites de l\'offre gratuite et prix.',
+          '[Page À propos](https://weesperneonflow.ai/en/about/) — quand une connexion Internet est nécessaire.',
+          '[Mentions légales](https://weesperneonflow.ai/en/legal/) — éditeur et siège social.',
         ],
       },
       relatedReading: {
@@ -1137,13 +1178,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-ja.webp',
     title: 'Weesper Neon Flow レビュー：Mac・Windows向けオフライン音声入力アプリ',
     seoTitle: 'Weesper Neon Flowレビュー：音声入力アプリ',
-    intro: 'Weesper Neon Flowは、Mac・Windows向けの有料のクローズドソース音声入力アプリです。ショートカットを押したまま話して離すと、お使いのコンピューター上でOpenAIのWhisperモデルを実行し、整えたテキストをカーソルのあるアプリに入力します。このレビューでは、開発元の公式サイト、変更履歴、プライバシーポリシーが示している点、ページ同士で食い違っている点、ディレクトリ内の他の音声入力ツールとの比較をまとめます。',
+    intro: 'Weesper Neon Flowは、Mac・Windows向けの有料のクローズドソース音声入力アプリです。ショートカットを押したまま話して離すと、お使いのコンピューター上でOpenAIのWhisperモデルを実行し、整えたテキストをカーソルのあるアプリに入力します。このレビューでは、開発元の公式サイト、変更履歴、プライバシーポリシーが示している点、ディレクトリ内の他の音声入力ツールとの比較をまとめます。',
     metaDescription: 'Weesper Neon Flowのレビュー：Mac・Windows向け、開発元によるとお使いのPC上で動くWhisper音声入力アプリ。15日間の無料体験後は月5ユーロまたは99ユーロの買い切り。実機検証なし。',
     twitterDescription: 'Weesper Neon Flowのレビュー：Mac・WindowsでWhisperを自分のPC上で動かすプッシュトゥトーク音声入力アプリ。価格、プライバシー、制限、代替ツールを解説します。',
     audience: '音声をクラウドサービスに送らずに、あらゆるアプリへ音声入力したいMac・Windowsユーザー向け。価格、インストール、モデル、プライバシー、制限、代替ツールを扱います。',
@@ -1165,19 +1206,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: '**Weesper Neon Flowは、Mac・Windows向けのクローズドソースの音声入力アプリで、OpenAIのWhisperモデルをお使いのコンピューター上で実行します。開発元によると、音声と入力したテキストがマシンの外に出ることはありません。** 15日間の無料体験後は、月5ユーロ、年45ユーロ、または99ユーロの買い切りです。最新リリースは2026年10月28日のバージョン1.8.12です。このレビューは、開発元の公式サイト、変更履歴、プライバシーポリシー、GitHubのリリースページに基づいており、実機での検証は行っていません。',
+    leadAnswerBlock: '**Weesper Neon Flowは、Mac・Windows向けのクローズドソースの音声入力アプリで、OpenAIのWhisperモデルをお使いのコンピューター上で実行します。開発元によると、音声と入力したテキストがマシンの外に出ることはありません。** 15日間の無料体験後は、月5ユーロ、年45ユーロ、または99ユーロの買い切りです。最新リリースは2026年11月24日のバージョン1.8.16です。このレビューは、開発元の公式サイト、変更履歴、プライバシーポリシー、GitHubのリリースページに基づいており、実機での検証は行っていません。',
     quickAnswerTop: {
       ja: {
         question: 'Weesper Neon Flowはローカルで動く音声入力アプリですか？',
-        answer: '開発元によると、はい。音声認識はMacまたはWindows PC上でWhisperにより実行され、音声、文字起こし結果、入力したテキストは開発元のサーバーに送信されません。ただし、アプリと音声認識モデルのダウンロード、ライセンス確認、課金、アップデート、任意の診断情報の送信にはインターネットが使われます。コードは非公開で、PromptQuorumはネットワーク通信を調べていないため、この主張は開発元自身によるものです。',
+        answer: '開発元によると、はい。音声認識はMacまたはWindows PC上でWhisperにより実行され、音声、文字起こし結果、入力したテキストは開発元のサーバーに送信されません。ただし、アプリと音声認識モデルのダウンロード、ライセンス確認、課金、アップデート、診断情報の送信にはインターネットが使われます。コードは非公開で、PromptQuorumはネットワーク通信を調べていないため、この主張は開発元自身によるものです。',
         bullets: [
           'ショートカットを押したまま話して離すと、整えたテキストがGmail、Slack、Notion、Wordなどのカーソル位置に入力されます。',
           '価格：全機能が使える15日間の無料体験のあと、月5ユーロ、年45ユーロ、または99ユーロの買い切りです。',
           '音声認識プロファイルはMinimal（約75MB）からLarge（3.2GB）まで4種類で、既定はSmall（512MB）です。',
           '対応はMac（macOS 13以降）とWindows 10・11のみで、Linux、iPhone、Android版はありません。',
-          '開発元のページ同士で、インターネットが必要かどうかと、体験後の無料プランの内容について記述が食い違っています。',
+          '体験後の無料プランでは、1回の音声入力の長さと週あたりの語数の両方に上限があります。',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -1189,6 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '機能', anchor: 'features' },
       { label: 'モデルとハードウェア', anchor: 'models-hardware' },
       { label: 'プライバシー・ライセンス・費用', anchor: 'privacy' },
+      { label: '開発者より', anchor: 'from-the-maker' },
       { label: 'メリットと制限', anchor: 'tradeoffs' },
       { label: 'Weesper Neon Flowと代替ツールの比較', anchor: 'vs-alternatives' },
       { label: 'Weesper Neon Flowが向いている人', anchor: 'who-should-use' },
@@ -1210,15 +1252,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '代わりに入力してくれるマイクキーだと考えてください。ショートカットを押したまま話して離すと、音声を開発元に送らずにコンピューターが音声をテキストに変換します。',
+            text: '代わりに入力してくれるマイクキーだと考えてください。ショートカットを押したまま話して離すと、開発元によれば、音声を開発元に送らずにコンピューターが音声をテキストに変換します。',
           },
         ],
         items: [
-          'ローカルの主張：音声認識はWhisperにより端末内で実行されます。ダウンロード、ライセンス確認、課金、アップデート、任意の診断情報にはインターネットが使われます。',
+          'ローカルの主張：音声認識はWhisperにより端末内で実行されます。ダウンロード、ライセンス確認、課金、アップデート、診断情報にはインターネットが使われます。',
           'ライセンスと開発元：プロプライエタリで、パリのTHE BLUE HOUSE（SASU）が公開しています。リンクされているGitHubリポジトリはリリース用インストーラーを置いているだけです。',
           '価格：15日間の無料体験のあと、月5ユーロ、年45ユーロ、または99ユーロの買い切りで、7日間の返金保証があります。',
-          'メンテナンス：バージョン1.8.12が2026年10月28日にリリースされており、継続的に更新されています。',
-          '不足点：Linux版とモバイル版はなく、開発元自身のページ同士で、無料プランとインターネットの要否について記述が食い違っています。',
+          'メンテナンス：バージョン1.8.16が2026年11月24日にリリースされており、継続的に更新されています。',
+          '不足点：Linux版とモバイル版はなく、コードは非公開で第三者が監査できません。',
         ],
       },
       getItWeesper: {
@@ -1288,7 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weesper Neon Flowとは',
         content: [
           '**Weesper Neon Flowは、文字起こしの編集ツールではなく、プッシュトゥトーク方式の音声入力アプリです。** キーボードショートカットを押したまま話して離すと、アプリがコンピューター上でWhisperを実行し、整えたテキストをカーソル位置、たとえばGmail、Slack、Notion、Wordなどに入力します。',
-          '開発元はパリに拠点を置くTHE BLUE HOUSE（SASU）で、Aboutページによると製品は2024年に立ち上げられました。音声・動画ファイル向けに別製品のWeesper Transcribeも販売していますが、このレビューが扱うのは音声入力アプリだけです。',
+          '開発元はパリに拠点を置くTHE BLUE HOUSE（SASU）で、Aboutページによると製品は2024年に立ち上げられました。音声・動画ファイル向けに別製品の[Weesper Transcribe](/ja/power-local-llm/weesper-transcribe-review)も販売していますが、このレビューが扱うのは音声入力アプリだけです。',
           'このレビューは、公式サイト、変更履歴、プライバシーポリシー、利用規約、GitHubのリリースページに基づいています。実機での検証は行っていないため、精度、速度、安定性は評価していません。',
         ],
       },
@@ -1321,11 +1363,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: '機能',
         content: [
-          '**機能の中心は、あらゆるアプリへの高速でプライベートな音声入力です。** 以下はすべて公式サイトと変更履歴によります。',
+          '**機能の中心は、あらゆるアプリへの音声入力です。** 以下はすべて公式サイトと変更履歴によります。',
         ],
         items: [
           '**どこでも音声入力。** 文字入力を受け付けるアプリなら、カーソル位置にテキストが入力されます。',
-          '**整形。** フィラー（言いよどみ）の自動削除に加え、句読点と大文字小文字の自動調整があります。',
+          '**整形。** フィラー（言いよどみ）の自動削除に加え、句読点と大文字小文字の自動調整があります。バージョン1.8.16では、約3.1GBのローカルモデルで文章を書き直す任意の整形機能（ベータ版）が追加されました。',
           '**言語。** 50以上の言語を自動検出で扱え、ある言語で話して別の言語のテキストを得ることもできます。',
           '**会議モード。** 話者分離（ダイアライゼーション）はバージョン1.7.5で追加されました。',
           '**カスタマイズ。** カスタム辞書、テキストショートカット、コンテキストプロンプト、カスタムプロンプト、音声入力の履歴があります。',
@@ -1344,10 +1386,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'プライバシー・ライセンス・費用',
         content: [
-          '**プライバシーポリシーには、音声認識はローカルで実行され、音声、文字起こし結果、入力したテキスト、クリップボードの内容は、文字起こしのためにWeesperのサーバーへ送信されないと記載されています。** ポリシーの最終更新は2026年7月23日です。利用規約には、アプリケーションが100%ローカルで動作すると追記されています。',
-          'それ以外の場面ではインターネットが使われます。アプリと音声認識モデルのダウンロード、Cloudflare上のライセンスサービスによるライセンスの有効化と確認、Stripeによる課金、GitHubからのアップデート情報、任意の利用状況分析（PostHog）とクラッシュ診断（Sentry）です。ポリシーによると、分析イベントに音声、文字起こし結果、入力したテキストは含まれません。コードは非公開で、PromptQuorumはネットワーク通信を調べていないため、これらの記述は開発元自身によるものです。',
-          '有料のプロプライエタリ製品で、15日間の無料体験のあと、月5ユーロ、年45ユーロ、または99ユーロの買い切りです。7日間の返金保証があり、個人ライセンスはご自身のコンピューター最大3台に使えます。価格にVAT（付加価値税）が含まれるかはサイトに明記されていないため、購入時にご確認ください。体験後の無料プランの説明は2通りあり、FAQでは週1,500語まで、変更履歴では最長60秒の短いクリップまでとなっています。',
+          '**プライバシーポリシーには、音声認識はローカルで実行され、音声、文字起こし結果、入力したテキスト、クリップボードの内容は、文字起こしのためにWeesperのサーバーへ送信されないと記載されています。** ポリシーの最終更新は2026年11月9日です。利用規約には、アプリケーションが100%ローカルで動作すると追記されています。',
+          'それ以外の場面ではインターネットが使われます。アプリと音声認識モデルのダウンロード、Cloudflare上のライセンスサービスによるライセンスの有効化と確認、Stripeによる課金、GitHubからのアップデート情報、任意の利用状況分析（PostHog）、そして有効にした場合またはサービス維持に必要な場合のクラッシュ診断（Sentry）です。ポリシーによると、分析イベントに音声、文字起こし結果、入力したテキストは含まれません。コードは非公開で、PromptQuorumはネットワーク通信を調べていないため、これらの記述は開発元自身によるものです。',
+          '有料のプロプライエタリ製品で、15日間の無料体験のあと、月5ユーロ、年45ユーロ、または99ユーロの買い切りです。7日間の返金保証があり、個人ライセンスはご自身のコンピューター最大3台に使えます。価格にVAT（付加価値税）が含まれるかはサイトに明記されていないため、購入時にご確認ください。15日経過後の無料プランには2つの制限が同時に適用されます。1回の音声入力は最長60秒で、週あたりの上限は1,500語です。表示の金額はユーロ建ての基本価格です。料金ページによると、欧州経済領域外の購入者には購買力に応じた価格が適用されますが、その金額はページに掲載されていません。',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者より',
+        content: [
+          'Weesper Neon Flowの開発者が、このレビューを読んだうえでPromptQuorumに寄せたメッセージです。これは開発元自身の説明であり、PromptQuorumの独立した評価ではありません。PromptQuorumはこのアプリを検証していません。',
+          '「私は音声入力をよく使いますが、自分の声がクラウドサービスに送られるのは避けたいと考え、Weesper Neon Flowを始めました。音声認識は、お使いのMacやPC上のWhisperで実行されます。15日間の体験版ではすべての機能が使えるので、支払う前に、ご自身のマシンで速度と精度を確かめられます。」',
+        ],
+        note: '— Weesper Neon Flow開発者',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1361,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'メリット': 'お使いのPC上のWhisper',
-            '実際の使い勝手': '音声入力はマシン上で処理され、文字起こしのための音声アップロードはありません。',
+            '実際の使い勝手': '開発元によると、音声入力はマシン上で処理され、文字起こしのための音声アップロードはありません。',
             '制限・注意点': 'クローズドソースのため主張は検証できません。ライセンスとダウンロードにはインターネットが使われます。',
           },
           {
@@ -1372,7 +1423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'メリット': '買い切りの選択肢',
             '実際の使い勝手': '99ユーロの買い切りでサブスクリプションを避けられます。',
-            '制限・注意点': '標準は月額・年額プランで、体験後の無料プランの説明は一貫していません。',
+            '制限・注意点': '月額・年額プランもあり、体験後の無料プランには上限があります。',
           },
           {
             'メリット': '4種類の音声認識プロファイル',
@@ -1386,8 +1437,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'メリット': '活発な開発',
-            '実際の使い勝手': 'バージョン1.8.12が2026年10月28日に公開されました。',
-            '制限・注意点': 'Aboutなど一部のページには、古い記述が残っています。',
+            '実際の使い勝手': 'バージョン1.8.16が2026年11月24日に公開されました。',
+            '制限・注意点': '1.8.16で追加された文章の整形機能はベータ版と表示されています。',
           },
         ],
       },
@@ -1470,7 +1521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Weesper Neon Flowはオフラインで使えますか？',
-            a: '開発元によると、アプリと音声認識モデルをインストールしたあとは、音声入力は100%オフラインで動作します。ダウンロード、体験版やライセンスの有効化、時々のライセンス確認にはインターネットが必要です。Aboutページには接続不要とあり、これと食い違っています。PromptQuorumはオフラインでの動作を検証していません。',
+            a: '開発元によると、アプリと音声認識モデルをインストールしたあとは、音声入力は100%オフラインで動作します。ダウンロード、体験版やライセンスの有効化、時々のライセンス確認にはインターネットが必要です。PromptQuorumはオフラインでの動作を検証していません。',
           },
           {
             q: '音声はクラウドに送信されますか？',
@@ -1495,7 +1546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '結論',
         content: [
           'MacまたはWindows PCで、開発元によるとWhisperが自分のコンピューター上で動くプッシュトゥトーク音声入力を使いたく、クローズドソースのソフトに支払うことを受け入れられる方にWeesper Neon Flowは向いています。15日間の無料体験、買い切りの選択肢、最近のリリースがあります。',
-          '注意点は対応範囲と検証可能性です。Linux版とモバイル版がなく、コードは非公開で、プライバシーの主張はPromptQuorumでは確認できず、開発元のページ同士で無料プランとインターネットの要否について記述が食い違っています。購入前に体験版をお試しください。',
+          '注意点は対応範囲と検証可能性です。Linux版とモバイル版がなく、コードは非公開で、プライバシーの主張はPromptQuorumでは確認できていません。購入前に体験版をお試しください。',
         ],
       },
       sources: {
@@ -1505,9 +1556,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Weesper Neon Flow公式サイト](https://weesperneonflow.ai/en/) — 機能、価格、FAQ。',
           '[ダウンロードページ](https://weesperneonflow.ai/en/download/) — 対応プラットフォームとシステム要件。',
           '[変更履歴](https://weesperneonflow.ai/en/changelog/) — バージョン履歴と機能追加。',
-          '[プライバシーポリシー](https://weesperneonflow.ai/en/privacy) — データの取り扱い。最終更新は2026年7月23日。',
+          '[プライバシーポリシー](https://weesperneonflow.ai/en/privacy) — データの取り扱い。最終更新は2026年11月9日。',
           '[利用規約](https://weesperneonflow.ai/en/terms/) — 運営者とローカル動作に関する記述。',
-          '[GitHubリリース](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — インストーラーのアセットとバージョン1.8.12のリリース日。',
+          '[GitHubリリース](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — インストーラーのアセットとバージョン1.8.16のリリース日。',
+          '[料金ページ](https://weesperneonflow.ai/en/pricing/) — 体験版、無料プランの上限、価格。',
+          '[Aboutページ](https://weesperneonflow.ai/en/about/) — インターネット接続が必要な場面。',
+          '[法的表示](https://weesperneonflow.ai/en/legal/) — 発行元と登記上の所在地。',
         ],
       },
       relatedReading: {
@@ -1528,13 +1582,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-zh.webp',
     title: 'Weesper Neon Flow评测：适用于Mac和Windows的离线听写应用',
     seoTitle: 'Weesper Neon Flow评测：离线听写应用',
-    intro: 'Weesper Neon Flow是一款适用于Mac和Windows的付费闭源听写应用：按住快捷键说话，它就把整理后的文字输入到光标所在的任意应用中，并在你自己的电脑上运行OpenAI的Whisper模型。本评测梳理其官网、更新日志和隐私政策记载的内容、这些页面之间互相矛盾之处，以及它与目录中其他听写工具的对比。',
+    intro: 'Weesper Neon Flow是一款适用于Mac和Windows的付费闭源听写应用：按住快捷键说话，它就把整理后的文字输入到光标所在的任意应用中，并在你自己的电脑上运行OpenAI的Whisper模型。本评测梳理其官网、更新日志和隐私政策记载的内容，以及它与目录中其他听写工具的对比。',
     metaDescription: 'Weesper Neon Flow评测：适用于Mac和Windows的付费Whisper听写应用，据开发者称在你的电脑上运行。15天试用，之后每月5欧元或一次性99欧元，未经实测。',
     twitterDescription: 'Weesper Neon Flow评测：适用于Mac和Windows的按键听写工具，Whisper在你自己的电脑上运行。价格、隐私、限制与替代方案。',
     audience: '希望在任意应用中听写、又不想把语音发送到云服务的Mac和Windows用户——涵盖价格、安装、模型、隐私、限制和替代方案。',
@@ -1556,19 +1610,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: '**Weesper Neon Flow是一款适用于Mac和Windows的闭源听写应用，在你自己的电脑上运行OpenAI的Whisper模型，其开发者称音频和听写文字不会离开这台机器。** 15天免费试用之后，每月5欧元、每年45欧元，或一次性99欧元。最新版本为2026年10月28日发布的1.8.12。本评测依据开发者公开的官网、更新日志、隐私政策和GitHub发布页面，并非实际上手测试。',
+    leadAnswerBlock: '**Weesper Neon Flow是一款适用于Mac和Windows的闭源听写应用，在你自己的电脑上运行OpenAI的Whisper模型，其开发者称音频和听写文字不会离开这台机器。** 15天免费试用之后，每月5欧元、每年45欧元，或一次性99欧元。最新版本为2026年11月24日发布的1.8.16。本评测依据开发者公开的官网、更新日志、隐私政策和GitHub发布页面，并非实际上手测试。',
     quickAnswerTop: {
       zh: {
         question: 'Weesper Neon Flow是本地听写应用吗？',
-        answer: '据其开发者称，是：语音识别在你的Mac或Windows电脑上用Whisper运行，音频、转写结果和听写文字不会发送到开发者的服务器。不过下载应用和语音模型、许可证检查、计费、更新以及可选的诊断仍会使用互联网。代码为闭源，PromptQuorum也没有检查网络流量，因此这一说法出自开发者自己。',
+        answer: '据其开发者称，是：语音识别在你的Mac或Windows电脑上用Whisper运行，音频、转写结果和听写文字不会发送到开发者的服务器。不过下载应用和语音模型、许可证检查、计费、更新以及诊断仍会使用互联网。代码为闭源，PromptQuorum也没有检查网络流量，因此这一说法出自开发者自己。',
         bullets: [
           '按住快捷键、说话、松开：整理后的文字出现在Gmail、Slack、Notion或Word等应用的光标处。',
           '价格：15天免费试用（含全部功能），之后每月5欧元、每年45欧元，或一次性99欧元。',
           '四种语音配置，从Minimal（约75 MB）到Large（3.2 GB）；默认为Small（512 MB）。',
           '仅支持Mac（macOS 13或更高版本）以及Windows 10或11；没有Linux、iPhone或Android版本。',
-          '开发者的各个页面对是否需要联网，以及试用期后的免费方案包含什么，说法不一致。',
+          '试用期后，免费方案同时限制单次听写时长和每周词数。',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -1580,6 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '功能', anchor: 'features' },
       { label: '模型与硬件', anchor: 'models-hardware' },
       { label: '隐私、许可与费用', anchor: 'privacy' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '优势与局限', anchor: 'tradeoffs' },
       { label: 'Weesper Neon Flow与替代方案对比', anchor: 'vs-alternatives' },
       { label: '适合使用Weesper Neon Flow的人', anchor: 'who-should-use' },
@@ -1601,15 +1656,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '把它想成一个会替你打字的麦克风键：按住快捷键、说话、松开，你的电脑就把语音转成文字，而不会把音频发给开发者。',
+            text: '把它想成一个会替你打字的麦克风键：按住快捷键、说话、松开，据开发者称，你的电脑就把语音转成文字，而不会把音频发给开发者。',
           },
         ],
         items: [
-          '本地说法：语音识别在设备上用Whisper运行；下载、许可证检查、计费、更新和可选的诊断仍会使用互联网。',
+          '本地说法：语音识别在设备上用Whisper运行；下载、许可证检查、计费、更新和诊断仍会使用互联网。',
           '许可与开发者：专有软件，由巴黎的THE BLUE HOUSE (SASU)发布；所链接的GitHub仓库只托管发布安装包。',
           '价格：15天免费试用，之后每月5欧元、每年45欧元或一次性99欧元，并提供7天退款保证。',
-          '维护状态：版本1.8.12于2026年10月28日发布，说明项目仍在积极更新。',
-          '不足：没有Linux或移动版本，开发者自己的页面在免费方案和是否需要联网上互相矛盾。',
+          '维护状态：版本1.8.16于2026年11月24日发布，说明项目仍在积极更新。',
+          '不足：没有Linux或移动版本，代码闭源，外部无法审计。',
         ],
       },
       getItWeesper: {
@@ -1673,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weesper Neon Flow是什么',
         content: [
           '**Weesper Neon Flow是一款按键说话式的听写应用，而不是转录编辑器。** 你按住键盘快捷键、说话、松开；应用在电脑上运行Whisper，并把整理后的文字插入光标处，例如Gmail、Slack、Notion或Word中。',
-          '开发者是位于巴黎的THE BLUE HOUSE (SASU)，“关于”页面称该产品创立于2024年。它还销售另一款用于音频和视频文件的产品Weesper Transcribe；本评测只涵盖听写应用。',
+          '开发者是位于巴黎的THE BLUE HOUSE (SASU)，“关于”页面称该产品创立于2024年。它还销售另一款用于音频和视频文件的产品[Weesper Transcribe](/zh/power-local-llm/weesper-transcribe-review)；本评测只涵盖听写应用。',
           '本评测依据官网、更新日志、隐私政策、条款和GitHub发布页面，没有进行实际上手测试，因此这里不对准确度、速度和稳定性做评级。',
         ],
       },
@@ -1706,11 +1761,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: '功能',
         content: [
-          '**功能集中在向任意应用快速、私密地听写。** 以下内容均来自官网和更新日志。',
+          '**功能集中在向任意应用听写。** 以下内容均来自官网和更新日志。',
         ],
         items: [
           '**随处听写。** 文字会插入到任何可输入文字的应用的光标处。',
-          '**整理文字。** 自动去除口头禅，并提供智能标点和大小写。',
+          '**整理文字。** 自动去除口头禅，并提供智能标点和大小写。版本1.8.16新增了可选的文字整理功能（测试版），用约3.1 GB的本地模型改写文字。',
           '**语言。** 支持50多种语言并自动检测，也可以用一种语言说话、得到另一种语言的文字。',
           '**会议模式。** 说话人区分功能在版本1.7.5中加入。',
           '**个性化。** 自定义词典、文本快捷方式、上下文提示、自定义提示和听写历史。',
@@ -1729,10 +1784,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: '隐私、许可与费用',
         content: [
-          '**隐私政策称，语音识别在本地运行，音频、转写结果、听写文字和剪贴板内容不会为转录而发送到Weesper服务器。** 该政策最后更新于2026年7月23日。条款补充说，该应用100%在本地运行。',
-          '互联网在其他方面仍会用到：下载应用和语音模型，通过托管在Cloudflare上的许可服务激活和检查许可证，通过Stripe计费，从GitHub获取更新元数据，以及可选的产品分析（PostHog）和崩溃诊断（Sentry）。政策称分析事件不包含音频、转写结果或听写文字。代码为闭源，PromptQuorum也没有检查网络流量，因此这些说法出自开发者自己。',
-          '这是付费的专有产品：15天免费试用，之后每月5欧元、每年45欧元或一次性99欧元，并提供7天退款保证。个人许可证最多可用于你自己的三台电脑。官网没有明确说明价格是否含增值税，请在结账时确认。试用期后的免费方案有两种说法：常见问题称每周1,500词，更新日志称最长60秒的短片段。',
+          '**隐私政策称，语音识别在本地运行，音频、转写结果、听写文字和剪贴板内容不会为转录而发送到Weesper服务器。** 该政策最后更新于2026年11月9日。条款补充说，该应用100%在本地运行。',
+          '互联网在其他方面仍会用到：下载应用和语音模型，通过托管在Cloudflare上的许可服务激活和检查许可证，通过Stripe计费，从GitHub获取更新元数据，可选的产品分析（PostHog），以及在启用时或维持服务所需时的崩溃诊断（Sentry）。政策称分析事件不包含音频、转写结果或听写文字。代码为闭源，PromptQuorum也没有检查网络流量，因此这些说法出自开发者自己。',
+          '这是付费的专有产品：15天免费试用，之后每月5欧元、每年45欧元或一次性99欧元，并提供7天退款保证。个人许可证最多可用于你自己的三台电脑。官网没有明确说明价格是否含增值税，请在结账时确认。15天之后，免费方案同时适用两项限制：每次听写最长60秒，每周1,500词。所列金额为欧元基准价；定价页面称，欧洲经济区以外的买家适用按购买力调整的价格，但页面并未列出。',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'Weesper Neon Flow的开发者在阅读本评测后向PromptQuorum发来这段话。这是开发者自己的说法，并非PromptQuorum的独立评价，PromptQuorum也没有测试过该应用。',
+          '“我开始做Weesper Neon Flow，是因为我经常听写，不想让自己的声音传到云服务上。语音识别通过Whisper在你自己的Mac或电脑上运行。15天试用版包含全部功能，因此你可以在付费之前，在自己的机器上判断速度和准确度。”',
+        ],
+        note: '— Weesper Neon Flow开发者',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1742,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '优势': 'Whisper在你的电脑上运行',
-            '实际使用中的意义': '听写在本机处理，转录时不上传音频。',
+            '实际使用中的意义': '据开发者称，听写在本机处理，转录时不上传音频。',
             '局限 / 注意事项': '闭源，因此该说法无法核实；许可证和下载仍会使用互联网。',
           },
           {
@@ -1753,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '优势': '终身买断选项',
             '实际使用中的意义': '一次性支付99欧元即可避免订阅。',
-            '局限 / 注意事项': '默认方案是月付和年付；试用期后的免费方案说法不一致。',
+            '局限 / 注意事项': '同时也提供月付和年付方案；试用期后的免费方案有上限。',
           },
           {
             '优势': '四种语音配置',
@@ -1767,8 +1831,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '优势': '积极开发',
-            '实际使用中的意义': '版本1.8.12于2026年10月28日发布。',
-            '局限 / 注意事项': '部分页面（如“关于”）仍保留较旧的表述。',
+            '实际使用中的意义': '版本1.8.16于2026年11月24日发布。',
+            '局限 / 注意事项': '1.8.16新增的文字整理功能标注为测试版。',
           },
         ],
       },
@@ -1845,7 +1909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Weesper Neon Flow可以离线使用吗？',
-            a: '开发者称，应用和语音模型安装之后，听写可完全离线运行。下载它们、激活试用或许可证以及偶尔的许可证检查需要联网。“关于”页面称无需网络连接，与此矛盾。PromptQuorum没有在离线状态下测试。',
+            a: '开发者称，应用和语音模型安装之后，听写可完全离线运行。下载它们、激活试用或许可证以及偶尔的许可证检查需要联网。PromptQuorum没有在离线状态下测试。',
           },
           {
             q: '我的声音会被发送到云端吗？',
@@ -1870,7 +1934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '结论',
         content: [
           '如果你想在Mac或Windows电脑上使用按键听写，并且据开发者称Whisper在你自己的电脑上运行，同时你接受为闭源软件付费，Weesper Neon Flow是个合适的选择。它提供15天免费试用、终身买断选项和较新的版本。',
-          '需要注意的是适用范围和可验证性：没有Linux或移动版本、代码闭源、PromptQuorum无法核实隐私说法，而且开发者的页面在免费方案和是否需要联网上说法不一。购买前请先使用试用版。',
+          '需要注意的是适用范围和可验证性：没有Linux或移动版本、代码闭源，PromptQuorum也无法核实隐私说法。购买前请先使用试用版。',
         ],
       },
       sources: {
@@ -1880,9 +1944,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Weesper Neon Flow官网](https://weesperneonflow.ai/en/) — 功能、价格和常见问题。',
           '[下载页面](https://weesperneonflow.ai/en/download/) — 平台和系统要求。',
           '[更新日志](https://weesperneonflow.ai/en/changelog/) — 版本历史和新增功能。',
-          '[隐私政策](https://weesperneonflow.ai/en/privacy) — 数据处理，最后更新于2026年7月23日。',
+          '[隐私政策](https://weesperneonflow.ai/en/privacy) — 数据处理，最后更新于2026年11月9日。',
           '[使用条款](https://weesperneonflow.ai/en/terms/) — 运营方和本地运行声明。',
-          '[GitHub Releases](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — 安装包文件和版本1.8.12的发布日期。',
+          '[GitHub Releases](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — 安装包文件和版本1.8.16的发布日期。',
+          '[定价页面](https://weesperneonflow.ai/en/pricing/) — 试用、免费方案限制和价格。',
+          '[“关于”页面](https://weesperneonflow.ai/en/about/) — 何时需要联网。',
+          '[法律声明](https://weesperneonflow.ai/en/legal/) — 发布方和注册地址。',
         ],
       },
       relatedReading: {
@@ -1903,13 +1970,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-es.webp',
     title: 'Reseña de Weesper Neon Flow: dictado sin conexión para Mac y Windows',
     seoTitle: 'Reseña de Weesper Neon Flow: dictado sin conexión',
-    intro: 'Weesper Neon Flow es una app de dictado de pago y de código cerrado para Mac y Windows: mantienes pulsado un atajo, hablas y la app escribe el texto limpio en la aplicación que tenga el cursor, con el modelo Whisper de OpenAI ejecutándose en tu propio ordenador. Esta reseña resume lo que documentan la web, el registro de cambios y la política de privacidad del fabricante, dónde se contradicen esas páginas y cómo se compara con otras herramientas de dictado del directorio.',
+    intro: 'Weesper Neon Flow es una app de dictado de pago y de código cerrado para Mac y Windows: mantienes pulsado un atajo, hablas y la app escribe el texto limpio en la aplicación que tenga el cursor, con el modelo Whisper de OpenAI ejecutándose en tu propio ordenador. Esta reseña resume lo que documentan la web, el registro de cambios y la política de privacidad del fabricante y cómo se compara con otras herramientas de dictado del directorio.',
     metaDescription: 'Reseña de Weesper Neon Flow: dictado con Whisper para Mac y Windows, local según su fabricante. Prueba de 15 días, luego 5 €/mes. No probada.',
     twitterDescription: 'Reseña de Weesper Neon Flow: dictado por atajo para Mac y Windows con Whisper en tu propio ordenador. Precio, privacidad, límites y alternativas.',
     audience: 'Usuarios de Mac y Windows que quieren dictar en cualquier app sin enviar su voz a un servicio en la nube — cubre precio, instalación, modelos, privacidad, límites y alternativas.',
@@ -1931,19 +1998,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: '**Weesper Neon Flow es una app de dictado de código cerrado para Mac y Windows que ejecuta el modelo Whisper de OpenAI en tu propio ordenador, y su fabricante afirma que el audio y el texto dictado nunca salen del equipo.** Cuesta 5 € al mes, 45 € al año o 99 € de pago único tras una prueba gratuita de 15 días. La versión más reciente es la 1.8.12, del 28 de octubre de 2026. Esta reseña se basa en la web pública, el registro de cambios y la política de privacidad del fabricante, y en su página de versiones de GitHub, no en una prueba práctica.',
+    leadAnswerBlock: '**Weesper Neon Flow es una app de dictado de código cerrado para Mac y Windows que ejecuta el modelo Whisper de OpenAI en tu propio ordenador, y su fabricante afirma que el audio y el texto dictado nunca salen del equipo.** Cuesta 5 € al mes, 45 € al año o 99 € de pago único tras una prueba gratuita de 15 días. La versión más reciente es la 1.8.16, del 24 de noviembre de 2026. Esta reseña se basa en la web pública, el registro de cambios y la política de privacidad del fabricante, y en su página de versiones de GitHub, no en una prueba práctica.',
     quickAnswerTop: {
       es: {
         question: '¿Es Weesper Neon Flow una app de dictado local?',
-        answer: 'Según su fabricante, sí: el reconocimiento de voz se ejecuta en tu Mac o PC con Windows mediante Whisper, y el audio, las transcripciones y el texto dictado no se envían a los servidores del fabricante. Internet se sigue usando para descargar la app y los modelos de voz, comprobar la licencia, cobrar, actualizar y, de forma opcional, enviar diagnósticos. El código es cerrado y PromptQuorum no inspeccionó el tráfico de red, así que la afirmación es del propio fabricante.',
+        answer: 'Según su fabricante, sí: el reconocimiento de voz se ejecuta en tu Mac o PC con Windows mediante Whisper, y el audio, las transcripciones y el texto dictado no se envían a los servidores del fabricante. Internet se sigue usando para descargar la app y los modelos de voz, comprobar la licencia, cobrar, actualizar y enviar diagnósticos. El código es cerrado y PromptQuorum no inspeccionó el tráfico de red, así que la afirmación es del propio fabricante.',
         bullets: [
           'Mantén pulsado un atajo, habla y suéltalo: el texto limpio aparece en el cursor en apps como Gmail, Slack, Notion o Word.',
           'Precio: prueba gratuita de 15 días con todas las funciones, luego 5 € al mes, 45 € al año o 99 € de pago único.',
           'Cuatro perfiles de voz, de Minimal (unos 75 MB) a Large (3,2 GB); Small (512 MB) es el predeterminado.',
           'Solo Mac (macOS 13 o posterior) y Windows 10 u 11; no hay versión para Linux, iPhone ni Android.',
-          'Las páginas del fabricante se contradicen sobre si hace falta internet y sobre qué incluye el plan gratuito tras la prueba.',
+          'Tras la prueba, el plan gratuito limita tanto la duración de cada dictado como las palabras por semana.',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -1955,6 +2022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Funciones', anchor: 'features' },
       { label: 'Modelos y hardware', anchor: 'models-hardware' },
       { label: 'Privacidad, licencia y coste', anchor: 'privacy' },
+      { label: 'La palabra del desarrollador', anchor: 'from-the-maker' },
       { label: 'Equilibrio: ventajas y limitaciones', anchor: 'tradeoffs' },
       { label: 'Weesper Neon Flow frente a alternativas', anchor: 'vs-alternatives' },
       { label: 'Quién debería usar Weesper Neon Flow', anchor: 'who-should-use' },
@@ -1976,15 +2044,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Piensa en una tecla de micrófono que escribe por ti: mantienes el atajo, hablas, lo sueltas y tu ordenador convierte la voz en texto sin enviar el audio al fabricante.',
+            text: 'Piensa en una tecla de micrófono que escribe por ti: mantienes el atajo, hablas, lo sueltas y, según el fabricante, tu ordenador convierte la voz en texto sin enviarle el audio.',
           },
         ],
         items: [
-          'Afirmación de uso local: el reconocimiento de voz se ejecuta en el dispositivo con Whisper; las descargas, las comprobaciones de licencia, el cobro, las actualizaciones y los diagnósticos opcionales siguen usando internet.',
+          'Afirmación de uso local: el reconocimiento de voz se ejecuta en el dispositivo con Whisper; las descargas, las comprobaciones de licencia, el cobro, las actualizaciones y los diagnósticos siguen usando internet.',
           'Licencia y fabricante: propietaria, publicada por THE BLUE HOUSE (SASU) en París; el repositorio de GitHub enlazado solo aloja instaladores de las versiones.',
           'Precio: prueba gratuita de 15 días, luego 5 € al mes, 45 € al año o 99 € de pago único, con garantía de devolución de 7 días.',
-          'Mantenimiento: la versión 1.8.12 salió el 28 de octubre de 2026, así que el proyecto se actualiza de forma activa.',
-          'Carencias: sin versión para Linux ni móvil, y las propias páginas del fabricante se contradicen sobre el plan gratuito y sobre la necesidad de internet.',
+          'Mantenimiento: la versión 1.8.16 salió el 24 de noviembre de 2026, así que el proyecto se actualiza de forma activa.',
+          'Carencias: sin versión para Linux ni móvil, y código cerrado que terceros no pueden auditar.',
         ],
       },
       getItWeesper: {
@@ -2048,7 +2116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué es Weesper Neon Flow',
         content: [
           '**Weesper Neon Flow es una app de dictado por atajo, no un editor de transcripciones.** Mantienes pulsado un atajo de teclado, hablas y lo sueltas; la app ejecuta Whisper en el ordenador e inserta el texto limpio en el cursor, por ejemplo en Gmail, Slack, Notion o Word.',
-          'El fabricante es THE BLUE HOUSE (SASU), con sede en París, y la página Acerca de dice que el producto se fundó en 2024. También vende otro producto, Weesper Transcribe, para archivos de audio y vídeo; esta reseña cubre solo la app de dictado.',
+          'El fabricante es THE BLUE HOUSE (SASU), con sede en París, y la página Acerca de dice que el producto se fundó en 2024. También vende otro producto, [Weesper Transcribe](/es/power-local-llm/weesper-transcribe-review), para archivos de audio y vídeo; esta reseña cubre solo la app de dictado.',
           'Esta reseña se basa en la web, el registro de cambios, la política de privacidad, las condiciones y la página de versiones de GitHub. No hubo prueba práctica, así que aquí no se valoran la precisión, la velocidad ni la estabilidad.',
         ],
       },
@@ -2081,11 +2149,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: 'Funciones',
         content: [
-          '**El conjunto de funciones se centra en un dictado rápido y privado en cualquier app.** Todo lo siguiente procede de la web y del registro de cambios.',
+          '**El conjunto de funciones se centra en el dictado en cualquier app.** Todo lo siguiente procede de la web y del registro de cambios.',
         ],
         items: [
           '**Dictado en cualquier sitio.** El texto se inserta en el cursor de cualquier app que acepte escritura.',
-          '**Limpieza.** Eliminación automática de muletillas, además de puntuación y mayúsculas inteligentes.',
+          '**Limpieza.** Eliminación automática de muletillas, además de puntuación y mayúsculas inteligentes. La versión 1.8.16 añadió una limpieza opcional en beta que reescribe el texto con un modelo local de unos 3,1 GB.',
           '**Idiomas.** Más de 50 idiomas con detección automática, y la posibilidad de hablar en un idioma para obtener el texto en otro.',
           '**Modo Reunión.** La identificación de hablantes se añadió en la versión 1.7.5.',
           '**Personalización.** Un diccionario personalizado, atajos de texto, prompts contextuales, prompts personalizados y un historial de dictados.',
@@ -2104,10 +2172,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacidad, licencia y coste',
         content: [
-          '**La política de privacidad dice que el reconocimiento de voz se ejecuta en local y que el audio, las transcripciones, el texto dictado y el contenido del portapapeles no se envían a los servidores de Weesper para transcribir.** La política se actualizó por última vez el 23 de julio de 2026. Las condiciones añaden que la aplicación funciona al 100 % en local.',
-          'Internet interviene igualmente en otros puntos: descargas de la app y de los modelos de voz, activación y comprobación de la licencia mediante un servicio de licencias alojado en Cloudflare, cobro a través de Stripe, metadatos de actualización de GitHub y, de forma opcional, analítica de producto (PostHog) y diagnósticos de fallos (Sentry). La política dice que los eventos de analítica no incluyen audio, transcripciones ni texto dictado. El código es cerrado y PromptQuorum no examinó el tráfico de red, así que estas afirmaciones son del propio fabricante.',
-          'Es un producto de pago y propietario: prueba gratuita de 15 días, luego 5 € al mes, 45 € al año o 99 € de pago único, con garantía de devolución de 7 días. Una licencia personal cubre hasta tres de tus propios ordenadores. La web no aclara si los precios incluyen IVA, así que compruébalo al pagar. El plan gratuito tras la prueba se describe de dos formas: 1.500 palabras por semana en las preguntas frecuentes y clips cortos de hasta 60 segundos en el registro de cambios.',
+          '**La política de privacidad dice que el reconocimiento de voz se ejecuta en local y que el audio, las transcripciones, el texto dictado y el contenido del portapapeles no se envían a los servidores de Weesper para transcribir.** La política se actualizó por última vez el 9 de noviembre de 2026. Las condiciones añaden que la aplicación funciona al 100 % en local.',
+          'Internet interviene igualmente en otros puntos: descargas de la app y de los modelos de voz, activación y comprobación de la licencia mediante un servicio de licencias alojado en Cloudflare, cobro a través de Stripe, metadatos de actualización de GitHub, analítica de producto opcional (PostHog) y diagnósticos de fallos (Sentry) cuando están activados o son necesarios para mantener el servicio. La política dice que los eventos de analítica no incluyen audio, transcripciones ni texto dictado. El código es cerrado y PromptQuorum no examinó el tráfico de red, así que estas afirmaciones son del propio fabricante.',
+          'Es un producto de pago y propietario: prueba gratuita de 15 días, luego 5 € al mes, 45 € al año o 99 € de pago único, con garantía de devolución de 7 días. Una licencia personal cubre hasta tres de tus propios ordenadores. La web no aclara si los precios incluyen IVA, así que compruébalo al pagar. Pasados los 15 días, el plan gratuito aplica dos límites a la vez: cada dictado tiene un máximo de 60 segundos y dispones de 1.500 palabras por semana. Las cifras indicadas son precios base en euros; según la página de precios, fuera del Espacio Económico Europeo se aplican precios ajustados al poder adquisitivo que no aparecen en ella.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La palabra del desarrollador',
+        content: [
+          'El desarrollador de Weesper Neon Flow envió esta nota a PromptQuorum después de leer esta reseña. Es el relato del propio fabricante, no una evaluación independiente de PromptQuorum, y PromptQuorum no ha probado la app.',
+          '«Empecé Weesper Neon Flow porque dicto mucho y no quería que mi voz acabara en un servicio en la nube. El reconocimiento se ejecuta con Whisper en tu propio Mac o PC. La prueba de 15 días incluye todas las funciones, así que puedes valorar la velocidad y la precisión en tu propio equipo antes de pagar.»',
+        ],
+        note: '— El desarrollador de Weesper Neon Flow',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2117,7 +2194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Ventaja: 'Whisper en tu ordenador',
-            'Qué significa en el uso real': 'El dictado se procesa en el equipo, sin subir audio para transcribirlo.',
+            'Qué significa en el uso real': 'Según el fabricante, el dictado se procesa en el equipo, sin subir audio para transcribirlo.',
             'Limitación / advertencia': 'Código cerrado, así que la afirmación no se puede comprobar; internet se sigue usando para licencia y descargas.',
           },
           {
@@ -2128,7 +2205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Ventaja: 'Opción vitalicia',
             'Qué significa en el uso real': 'Una compra única de 99 € evita la suscripción.',
-            'Limitación / advertencia': 'Los planes mensual y anual son los predeterminados; el plan gratuito tras la prueba se describe de forma incoherente.',
+            'Limitación / advertencia': 'También hay planes mensual y anual; el plan gratuito tras la prueba es limitado.',
           },
           {
             Ventaja: 'Cuatro perfiles de voz',
@@ -2142,8 +2219,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Ventaja: 'Desarrollo activo',
-            'Qué significa en el uso real': 'La versión 1.8.12 salió el 28 de octubre de 2026.',
-            'Limitación / advertencia': 'Algunas páginas, como Acerca de, conservan redacciones más antiguas.',
+            'Qué significa en el uso real': 'La versión 1.8.16 salió el 24 de noviembre de 2026.',
+            'Limitación / advertencia': 'La limpieza de texto añadida en la 1.8.16 figura como beta.',
           },
         ],
       },
@@ -2220,7 +2297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Funciona Weesper Neon Flow sin conexión?',
-            a: 'El fabricante dice que el dictado funciona al 100 % sin conexión una vez instalados la app y un modelo de voz. Hace falta internet para descargarlos, activar la prueba o la licencia y para comprobaciones de licencia ocasionales. La página Acerca de dice que no se necesita conexión, lo que contradice lo anterior. PromptQuorum no la probó sin conexión.',
+            a: 'El fabricante dice que el dictado funciona al 100 % sin conexión una vez instalados la app y un modelo de voz. Hace falta internet para descargarlos, activar la prueba o la licencia y para comprobaciones de licencia ocasionales. PromptQuorum no la probó sin conexión.',
           },
           {
             q: '¿Se envía mi voz a la nube?',
@@ -2245,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto',
         content: [
           'Weesper Neon Flow encaja si quieres dictado por atajo en un Mac o PC con Windows donde, según el fabricante, Whisper se ejecuta en tu propio ordenador, y aceptas pagar por software de código cerrado. Tiene una prueba gratuita de 15 días, una opción vitalicia y una versión reciente.',
-          'Las advertencias son el alcance y la verificabilidad: sin versión para Linux ni móvil, código cerrado, afirmaciones de privacidad que PromptQuorum no pudo comprobar y páginas del fabricante que se contradicen sobre el plan gratuito y sobre la necesidad de internet. Usa la prueba antes de comprar.',
+          'Las advertencias son el alcance y la verificabilidad: sin versión para Linux ni móvil, código cerrado y afirmaciones de privacidad que PromptQuorum no pudo comprobar. Usa la prueba antes de comprar.',
         ],
       },
       sources: {
@@ -2255,9 +2332,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Web de Weesper Neon Flow](https://weesperneonflow.ai/en/) — funciones, precios y preguntas frecuentes.',
           '[Página de descarga](https://weesperneonflow.ai/en/download/) — plataformas y requisitos del sistema.',
           '[Registro de cambios](https://weesperneonflow.ai/en/changelog/) — historial de versiones y funciones añadidas.',
-          '[Política de privacidad](https://weesperneonflow.ai/en/privacy) — tratamiento de datos, actualizada por última vez el 23 de julio de 2026.',
+          '[Política de privacidad](https://weesperneonflow.ai/en/privacy) — tratamiento de datos, actualizada por última vez el 9 de noviembre de 2026.',
           '[Condiciones de uso](https://weesperneonflow.ai/en/terms/) — operador y declaración de funcionamiento local.',
-          '[Versiones de GitHub](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — archivos del instalador y fecha de lanzamiento de la versión 1.8.12.',
+          '[Versiones de GitHub](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — archivos del instalador y fecha de lanzamiento de la versión 1.8.16.',
+          '[Página de precios](https://weesperneonflow.ai/en/pricing/) — prueba, límites del plan gratuito y precios.',
+          '[Página Acerca de](https://weesperneonflow.ai/en/about/) — cuándo se necesita conexión a internet.',
+          '[Aviso legal](https://weesperneonflow.ai/en/legal/) — editor y domicilio social.',
         ],
       },
       relatedReading: {
@@ -2278,13 +2358,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-pt.webp',
     title: 'Análise do Weesper Neon Flow: ditado offline para Mac e Windows',
     seoTitle: 'Análise do Weesper Neon Flow: ditado offline no Mac e PC',
-    intro: 'O Weesper Neon Flow é um app de ditado pago e de código fechado para Mac e Windows: você segura um atalho, fala, e ele digita o texto já limpo no app em que estiver o cursor, executando o modelo Whisper da OpenAI no seu próprio computador. Esta análise resume o que o site, o changelog e a política de privacidade do fabricante documentam, onde essas páginas se contradizem e como o app se compara a outras ferramentas de ditado do diretório.',
+    intro: 'O Weesper Neon Flow é um app de ditado pago e de código fechado para Mac e Windows: você segura um atalho, fala, e ele digita o texto já limpo no app em que estiver o cursor, executando o modelo Whisper da OpenAI no seu próprio computador. Esta análise resume o que o site, o changelog e a política de privacidade do fabricante documentam e como o app se compara a outras ferramentas de ditado do diretório.',
     metaDescription: 'Análise do Weesper Neon Flow: ditado com Whisper para Mac e Windows, local segundo o fabricante. Teste grátis de 15 dias, depois 5 EUR/mês. Não testado.',
     twitterDescription: 'Análise do Weesper Neon Flow: ditado por atalho para Mac e Windows com Whisper no seu próprio computador. Preço, privacidade, limites e alternativas.',
     audience: 'Usuários de Mac e Windows que querem ditar em qualquer app sem enviar a voz para um serviço na nuvem — cobre preço, instalação, modelos, privacidade, limites e alternativas.',
@@ -2306,19 +2386,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: '**O Weesper Neon Flow é um app de ditado de código fechado para Mac e Windows que executa o modelo Whisper da OpenAI no seu próprio computador, e o fabricante afirma que o áudio e o texto ditado nunca saem da máquina.** Custa 5 EUR por mês, 45 EUR por ano ou 99 EUR únicos após um teste grátis de 15 dias. A versão mais recente é a 1.8.12, de 28 de outubro de 2026. Esta análise se baseia no site público, no changelog e na política de privacidade do fabricante e na página de versões no GitHub, não em um teste prático.',
+    leadAnswerBlock: '**O Weesper Neon Flow é um app de ditado de código fechado para Mac e Windows que executa o modelo Whisper da OpenAI no seu próprio computador, e o fabricante afirma que o áudio e o texto ditado nunca saem da máquina.** Custa 5 EUR por mês, 45 EUR por ano ou 99 EUR únicos após um teste grátis de 15 dias. A versão mais recente é a 1.8.16, de 24 de novembro de 2026. Esta análise se baseia no site público, no changelog e na política de privacidade do fabricante e na página de versões no GitHub, não em um teste prático.',
     quickAnswerTop: {
       pt: {
         question: 'O Weesper Neon Flow é um app de ditado local?',
-        answer: 'Segundo o fabricante, sim: o reconhecimento de fala roda no seu Mac ou PC com Windows usando o Whisper, e áudio, transcrições e texto ditado não são enviados aos servidores do fabricante. A internet ainda é usada para baixar o app e os modelos de fala, verificar a licença, cobrança, atualizações e diagnósticos opcionais. O código é fechado e o PromptQuorum não inspecionou o tráfego de rede, então a afirmação é do próprio fabricante.',
+        answer: 'Segundo o fabricante, sim: o reconhecimento de fala roda no seu Mac ou PC com Windows usando o Whisper, e áudio, transcrições e texto ditado não são enviados aos servidores do fabricante. A internet ainda é usada para baixar o app e os modelos de fala, verificar a licença, cobrança, atualizações e diagnósticos. O código é fechado e o PromptQuorum não inspecionou o tráfego de rede, então a afirmação é do próprio fabricante.',
         bullets: [
           'Segure um atalho, fale, solte: o texto limpo aparece no cursor em apps como Gmail, Slack, Notion ou Word.',
           'Preço: teste grátis de 15 dias com todos os recursos, depois 5 EUR por mês, 45 EUR por ano ou 99 EUR únicos.',
           'Quatro perfis de fala, do Minimal (cerca de 75 MB) ao Large (3.2 GB); o Small (512 MB) é o padrão.',
           'Apenas Mac (macOS 13 ou mais recente) e Windows 10 ou 11; sem versão para Linux, iPhone ou Android.',
-          'As páginas do fabricante divergem sobre a internet ser necessária e sobre o que o plano grátis após o teste inclui.',
+          'Após o teste, o plano grátis limita tanto a duração de cada ditado quanto as palavras por semana.',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -2330,6 +2410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Recursos', anchor: 'features' },
       { label: 'Modelos e hardware', anchor: 'models-hardware' },
       { label: 'Privacidade, licença e custo', anchor: 'privacy' },
+      { label: 'A palavra do desenvolvedor', anchor: 'from-the-maker' },
       { label: 'Prós e contras', anchor: 'tradeoffs' },
       { label: 'Weesper Neon Flow e as alternativas', anchor: 'vs-alternatives' },
       { label: 'Para quem o Weesper Neon Flow serve', anchor: 'who-should-use' },
@@ -2351,15 +2432,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Pense em uma tecla de microfone que digita por você: segure o atalho, fale, solte, e o seu computador transforma a fala em texto sem enviar o áudio ao fabricante.',
+            text: 'Pense em uma tecla de microfone que digita por você: segure o atalho, fale, solte, e, segundo o fabricante, o seu computador transforma a fala em texto sem enviar o áudio a ele.',
           },
         ],
         items: [
-          'Afirmação de uso local: o reconhecimento de fala roda no aparelho com o Whisper; downloads, verificação de licença, cobrança, atualizações e diagnósticos opcionais ainda usam a internet.',
+          'Afirmação de uso local: o reconhecimento de fala roda no aparelho com o Whisper; downloads, verificação de licença, cobrança, atualizações e diagnósticos ainda usam a internet.',
           'Licença e fabricante: proprietário, publicado pela THE BLUE HOUSE (SASU), em Paris; o repositório do GitHub vinculado hospeda apenas instaladores de versões.',
           'Preço: teste grátis de 15 dias, depois 5 EUR por mês, 45 EUR por ano ou 99 EUR únicos, com garantia de reembolso de 7 dias.',
-          'Manutenção: a versão 1.8.12 saiu em 28 de outubro de 2026, então o projeto recebe atualizações ativamente.',
-          'Lacunas: sem versão para Linux ou celular, e as próprias páginas do fabricante se contradizem sobre o plano grátis e sobre a necessidade de internet.',
+          'Manutenção: a versão 1.8.16 saiu em 24 de novembro de 2026, então o projeto recebe atualizações ativamente.',
+          'Lacunas: sem versão para Linux ou celular, e código fechado que terceiros não podem auditar.',
         ],
       },
       getItWeesper: {
@@ -2423,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Weesper Neon Flow',
         content: [
           '**O Weesper Neon Flow é um app de ditado por atalho, não um editor de transcrições.** Você segura um atalho de teclado, fala e solta; o app executa o Whisper no computador e insere o texto limpo no cursor, por exemplo no Gmail, Slack, Notion ou Word.',
-          'O fabricante é a THE BLUE HOUSE (SASU), sediada em Paris, e a página Sobre diz que o produto foi fundado em 2024. Ele também vende um produto separado, o Weesper Transcribe, para arquivos de áudio e vídeo; esta análise cobre apenas o app de ditado.',
+          'O fabricante é a THE BLUE HOUSE (SASU), sediada em Paris, e a página Sobre diz que o produto foi fundado em 2024. Ele também vende um produto separado, o [Weesper Transcribe](/pt/power-local-llm/weesper-transcribe-review), para arquivos de áudio e vídeo; esta análise cobre apenas o app de ditado.',
           'Esta análise se baseia no site, no changelog, na política de privacidade, nos termos e na página de versões no GitHub. Não houve teste prático, então precisão, velocidade e estabilidade não são avaliadas aqui.',
         ],
       },
@@ -2456,11 +2537,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: 'Recursos',
         content: [
-          '**O conjunto de recursos gira em torno de um ditado rápido e privado em qualquer app.** Tudo abaixo vem do site e do changelog.',
+          '**O conjunto de recursos gira em torno do ditado em qualquer app.** Tudo abaixo vem do site e do changelog.',
         ],
         items: [
           '**Ditado em qualquer lugar.** O texto é inserido no cursor em qualquer app que aceite digitação.',
-          '**Limpeza.** Remoção automática de palavras de preenchimento, além de pontuação e capitalização inteligentes.',
+          '**Limpeza.** Remoção automática de palavras de preenchimento, além de pontuação e capitalização inteligentes. A versão 1.8.16 adicionou uma limpeza opcional, em beta, que reescreve o texto com um modelo local de cerca de 3.1 GB.',
           '**Idiomas.** Mais de 50 idiomas com detecção automática, e a possibilidade de falar em um idioma para obter o texto em outro.',
           '**Modo Reunião.** A identificação de falantes (diarização) foi adicionada na versão 1.7.5.',
           '**Personalização.** Dicionário personalizado, atalhos de texto, prompts contextuais, prompts personalizados e histórico de ditados.',
@@ -2479,10 +2560,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Privacidade, licença e custo',
         content: [
-          '**A política de privacidade diz que o reconhecimento de fala roda localmente e que áudio, transcrições, texto ditado e conteúdo da área de transferência não são enviados aos servidores da Weesper para transcrição.** A política foi atualizada pela última vez em 23 de julho de 2026. Os termos acrescentam que o aplicativo opera 100% localmente.',
-          'A internet ainda entra em outros pontos: downloads do app e dos modelos de fala, ativação e verificação da licença por um serviço de licenciamento hospedado na Cloudflare, cobrança pela Stripe, metadados de atualização do GitHub e análises de produto opcionais (PostHog) e diagnósticos de falhas (Sentry). A política diz que os eventos de análise não incluem áudio, transcrições nem texto ditado. O código é fechado e o PromptQuorum não examinou o tráfego de rede, então essas afirmações são do próprio fabricante.',
-          'É um produto pago e proprietário: teste grátis de 15 dias, depois 5 EUR por mês, 45 EUR por ano ou 99 EUR únicos, com garantia de reembolso de 7 dias. Uma licença pessoal cobre até três computadores seus. O site não deixa claro se os preços incluem impostos, então confira no checkout. O plano grátis após o teste é descrito de duas formas: 1.500 palavras por semana no FAQ e clipes curtos de até 60 segundos no changelog.',
+          '**A política de privacidade diz que o reconhecimento de fala roda localmente e que áudio, transcrições, texto ditado e conteúdo da área de transferência não são enviados aos servidores da Weesper para transcrição.** A política foi atualizada pela última vez em 9 de novembro de 2026. Os termos acrescentam que o aplicativo opera 100% localmente.',
+          'A internet ainda entra em outros pontos: downloads do app e dos modelos de fala, ativação e verificação da licença por um serviço de licenciamento hospedado na Cloudflare, cobrança pela Stripe, metadados de atualização do GitHub, análises de produto opcionais (PostHog) e diagnósticos de falhas (Sentry) quando ativados ou necessários para manter o serviço. A política diz que os eventos de análise não incluem áudio, transcrições nem texto ditado. O código é fechado e o PromptQuorum não examinou o tráfego de rede, então essas afirmações são do próprio fabricante.',
+          'É um produto pago e proprietário: teste grátis de 15 dias, depois 5 EUR por mês, 45 EUR por ano ou 99 EUR únicos, com garantia de reembolso de 7 dias. Uma licença pessoal cobre até três computadores seus. O site não deixa claro se os preços incluem impostos, então confira no checkout. Depois dos 15 dias, o plano grátis aplica dois limites ao mesmo tempo: cada ditado vai até 60 segundos e você tem 1.500 palavras por semana. Os valores listados são preços-base em euros; segundo a página de preços, quem compra fora do Espaço Econômico Europeu recebe preços ajustados ao poder de compra, que não aparecem ali.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do desenvolvedor',
+        content: [
+          'O desenvolvedor do Weesper Neon Flow enviou esta nota ao PromptQuorum depois de ler esta análise. É o relato do próprio fabricante, não uma avaliação independente do PromptQuorum, e o PromptQuorum não testou o app.',
+          '“Comecei o Weesper Neon Flow porque dito muito e não queria que minha voz fosse para um serviço na nuvem. O reconhecimento roda com o Whisper no seu próprio Mac ou PC. O teste de 15 dias tem todos os recursos, então você pode avaliar a velocidade e a precisão na sua própria máquina antes de pagar.”',
+        ],
+        note: '— O desenvolvedor do Weesper Neon Flow',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2492,7 +2582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             Vantagem: 'Whisper no seu computador',
-            'O que significa na prática': 'O ditado é processado na máquina, sem envio de áudio para transcrição.',
+            'O que significa na prática': 'Segundo o fabricante, o ditado é processado na máquina, sem envio de áudio para transcrição.',
             'Limitação / ressalva': 'Código fechado, então a afirmação não pode ser verificada; a internet ainda é usada para licença e downloads.',
           },
           {
@@ -2503,7 +2593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Vantagem: 'Opção vitalícia',
             'O que significa na prática': 'Uma compra única de 99 EUR evita a assinatura.',
-            'Limitação / ressalva': 'Os planos mensal e anual são o padrão; o plano grátis após o teste é descrito de forma inconsistente.',
+            'Limitação / ressalva': 'Também há planos mensal e anual; o plano grátis após o teste é limitado.',
           },
           {
             Vantagem: 'Quatro perfis de fala',
@@ -2517,8 +2607,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Vantagem: 'Desenvolvimento ativo',
-            'O que significa na prática': 'A versão 1.8.12 foi lançada em 28 de outubro de 2026.',
-            'Limitação / ressalva': 'Algumas páginas, como Sobre, ainda trazem textos mais antigos.',
+            'O que significa na prática': 'A versão 1.8.16 foi lançada em 24 de novembro de 2026.',
+            'Limitação / ressalva': 'A limpeza de texto adicionada na 1.8.16 é marcada como beta.',
           },
         ],
       },
@@ -2595,7 +2685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O Weesper Neon Flow funciona offline?',
-            a: 'O fabricante diz que o ditado funciona 100% offline depois que o app e um modelo de fala estão instalados. A internet é necessária para baixá-los, para ativar o teste ou a licença e para verificações ocasionais da licença. A página Sobre diz que nenhuma conexão é necessária, o que contradiz isso. O PromptQuorum não testou o app offline.',
+            a: 'O fabricante diz que o ditado funciona 100% offline depois que o app e um modelo de fala estão instalados. A internet é necessária para baixá-los, para ativar o teste ou a licença e para verificações ocasionais da licença. O PromptQuorum não testou o app offline.',
           },
           {
             q: 'Minha voz é enviada para a nuvem?',
@@ -2620,7 +2710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito',
         content: [
           'O Weesper Neon Flow serve bem se você quer ditado por atalho em um Mac ou PC com Windows em que, segundo o fabricante, o Whisper roda no seu próprio computador, e aceita pagar por um software de código fechado. Ele tem teste grátis de 15 dias, uma opção vitalícia e uma versão recente.',
-          'As ressalvas são o alcance e a verificabilidade: sem versão para Linux ou celular, código fechado, afirmações de privacidade que o PromptQuorum não pôde verificar e páginas do fabricante que divergem sobre o plano grátis e sobre a necessidade de internet. Use o teste antes de comprar.',
+          'As ressalvas são o alcance e a verificabilidade: sem versão para Linux ou celular, código fechado e afirmações de privacidade que o PromptQuorum não pôde verificar. Use o teste antes de comprar.',
         ],
       },
       sources: {
@@ -2630,9 +2720,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Site do Weesper Neon Flow](https://weesperneonflow.ai/en/) — recursos, preços e FAQ.',
           '[Página de download](https://weesperneonflow.ai/en/download/) — plataformas e requisitos do sistema.',
           '[Changelog](https://weesperneonflow.ai/en/changelog/) — histórico de versões e novos recursos.',
-          '[Política de privacidade](https://weesperneonflow.ai/en/privacy) — tratamento de dados, atualizada em 23 de julho de 2026.',
+          '[Política de privacidade](https://weesperneonflow.ai/en/privacy) — tratamento de dados, atualizada em 9 de novembro de 2026.',
           '[Termos de uso](https://weesperneonflow.ai/en/terms/) — operador e declaração de operação local.',
-          '[Versões no GitHub](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — arquivos do instalador e data de lançamento da versão 1.8.12.',
+          '[Versões no GitHub](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — arquivos do instalador e data de lançamento da versão 1.8.16.',
+          '[Página de preços](https://weesperneonflow.ai/en/pricing/) — teste, limites do plano grátis e preços.',
+          '[Página Sobre](https://weesperneonflow.ai/en/about/) — quando é preciso ter internet.',
+          '[Aviso legal](https://weesperneonflow.ai/en/legal/) — responsável pela publicação e sede.',
         ],
       },
       relatedReading: {
@@ -2653,13 +2746,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-ar.webp',
     title: 'مراجعة Weesper Neon Flow: إملاء صوتي دون اتصال لأجهزة Mac وWindows',
     seoTitle: 'مراجعة Weesper Neon Flow: تطبيق إملاء دون اتصال',
-    intro: 'Weesper Neon Flow تطبيق إملاء مدفوع ومغلق المصدر لأجهزة Mac وWindows: تضغط على اختصار وتتحدث، فيكتب النص المنقّح في أي تطبيق يوجد فيه المؤشر، مشغّلًا نموذج Whisper من OpenAI على حاسوبك. تلخّص هذه المراجعة ما يوثّقه موقع المطوّر وسجل التغييرات وسياسة الخصوصية، وأين تتعارض هذه الصفحات، وكيف يقارن بأدوات الإملاء الأخرى في الدليل.',
+    intro: 'Weesper Neon Flow تطبيق إملاء مدفوع ومغلق المصدر لأجهزة Mac وWindows: تضغط على اختصار وتتحدث، فيكتب النص المنقّح في أي تطبيق يوجد فيه المؤشر، مشغّلًا نموذج Whisper من OpenAI على حاسوبك. تلخّص هذه المراجعة ما يوثّقه موقع المطوّر وسجل التغييرات وسياسة الخصوصية، وكيف يقارن بأدوات الإملاء الأخرى في الدليل.',
     metaDescription: 'مراجعة Weesper Neon Flow: تطبيق إملاء مدفوع بنموذج Whisper لأجهزة Mac وWindows يعمل على حاسوبك بحسب مطوّره. تجربة 15 يومًا ثم 5 EUR شهريًا. لم يُختبر.',
     twitterDescription: 'مراجعة Weesper Neon Flow: إملاء بالضغط والتحدث لأجهزة Mac وWindows مع Whisper على حاسوبك. السعر والخصوصية والحدود والبدائل.',
     audience: 'مستخدمو Mac وWindows الذين يريدون الإملاء في أي تطبيق دون إرسال أصواتهم إلى خدمة سحابية — يغطي السعر والتثبيت والنماذج والخصوصية والحدود والبدائل.',
@@ -2681,19 +2774,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: '**Weesper Neon Flow تطبيق إملاء مغلق المصدر لأجهزة Mac وWindows يشغّل نموذج Whisper من OpenAI على حاسوبك، ويقول مطوّره إن الصوت والنص المُملى لا يغادران الجهاز.** يكلّف 5 EUR شهريًا أو 45 EUR سنويًا أو 99 EUR لمرة واحدة بعد تجربة مجانية لمدة 15 يومًا. وأحدث إصدار هو 1.8.12 الصادر في 28 أكتوبر 2026. تعتمد هذه المراجعة على الموقع العام للمطوّر وسجل التغييرات وسياسة الخصوصية وصفحة الإصدارات على GitHub، وليس على اختبار عملي.',
+    leadAnswerBlock: '**Weesper Neon Flow تطبيق إملاء مغلق المصدر لأجهزة Mac وWindows يشغّل نموذج Whisper من OpenAI على حاسوبك، ويقول مطوّره إن الصوت والنص المُملى لا يغادران الجهاز.** يكلّف 5 EUR شهريًا أو 45 EUR سنويًا أو 99 EUR لمرة واحدة بعد تجربة مجانية لمدة 15 يومًا. وأحدث إصدار هو 1.8.16 الصادر في 24 نوفمبر 2026. تعتمد هذه المراجعة على الموقع العام للمطوّر وسجل التغييرات وسياسة الخصوصية وصفحة الإصدارات على GitHub، وليس على اختبار عملي.',
     quickAnswerTop: {
       ar: {
         question: 'هل Weesper Neon Flow تطبيق إملاء محلي؟',
-        answer: 'بحسب مطوّره نعم: يعمل التعرف على الكلام على جهاز Mac أو Windows لديك بنموذج Whisper، ولا تُرسل الأصوات والنصوص المحوّلة والنص المُملى إلى خوادم المطوّر. ويُستخدم الإنترنت مع ذلك لتنزيل التطبيق ونماذج الكلام ولفحوص الترخيص والفوترة والتحديثات والتشخيصات الاختيارية. الشيفرة مغلقة ولم تفحص PromptQuorum حركة الشبكة، لذا فالادعاء من المطوّر نفسه.',
+        answer: 'بحسب مطوّره نعم: يعمل التعرف على الكلام على جهاز Mac أو Windows لديك بنموذج Whisper، ولا تُرسل الأصوات والنصوص المحوّلة والنص المُملى إلى خوادم المطوّر. ويُستخدم الإنترنت مع ذلك لتنزيل التطبيق ونماذج الكلام ولفحوص الترخيص والفوترة والتحديثات والتشخيصات. الشيفرة مغلقة ولم تفحص PromptQuorum حركة الشبكة، لذا فالادعاء من المطوّر نفسه.',
         bullets: [
           'اضغط على الاختصار وتحدث ثم اتركه: يظهر النص المنقّح عند المؤشر في تطبيقات مثل Gmail وSlack وNotion وWord.',
           'الأسعار: تجربة مجانية لمدة 15 يومًا بكل الميزات، ثم 5 EUR شهريًا أو 45 EUR سنويًا أو 99 EUR لمرة واحدة.',
           'أربعة ملفات كلام من Minimal (نحو 75 MB) إلى Large (3.2 GB)؛ والافتراضي Small (512 MB).',
           'Mac (macOS 13 أو أحدث) وWindows 10 أو 11 فقط؛ لا نسخة لنظام Linux أو iPhone أو Android.',
-          'تتعارض صفحات المطوّر بشأن ضرورة الاتصال بالإنترنت وبشأن ما تتضمنه الخطة المجانية بعد التجربة.',
+          'بعد التجربة، تحدّ الخطة المجانية من مدة كل إملاء ومن عدد الكلمات أسبوعيًا معًا.',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -2728,6 +2821,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       {
         label: 'الخصوصية والترخيص والتكلفة',
         anchor: 'privacy',
+      },
+      {
+        label: 'من مطوّر التطبيق',
+        anchor: 'from-the-maker',
       },
       {
         label: 'المزايا والقيود',
@@ -2774,15 +2871,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'فكّر فيه كمفتاح ميكروفون يكتب عنك: تضغط على الاختصار وتتحدث ثم تتركه، فيحوّل حاسوبك الكلام إلى نص دون إرسال الصوت إلى المطوّر.',
+            text: 'فكّر فيه كمفتاح ميكروفون يكتب عنك: تضغط على الاختصار وتتحدث ثم تتركه، فيحوّل حاسوبك، بحسب المطوّر، الكلام إلى نص دون إرسال الصوت إليه.',
           },
         ],
         items: [
-          'الادعاء المحلي: يعمل التعرف على الكلام على الجهاز بنموذج Whisper؛ ويظل الإنترنت مستخدمًا في التنزيلات وفحوص الترخيص والفوترة والتحديثات والتشخيصات الاختيارية.',
+          'الادعاء المحلي: يعمل التعرف على الكلام على الجهاز بنموذج Whisper؛ ويظل الإنترنت مستخدمًا في التنزيلات وفحوص الترخيص والفوترة والتحديثات والتشخيصات.',
           'الترخيص والمطوّر: مملوك، وتنشره THE BLUE HOUSE (SASU) في باريس؛ ومستودع GitHub المرتبط يستضيف مثبّتات الإصدارات فقط.',
           'السعر: تجربة مجانية لمدة 15 يومًا، ثم 5 EUR شهريًا أو 45 EUR سنويًا أو 99 EUR لمرة واحدة، مع ضمان استرداد الأموال خلال 7 أيام.',
-          'الصيانة: صدر الإصدار 1.8.12 في 28 أكتوبر 2026، فالمشروع يُحدَّث بنشاط.',
-          'الثغرات: لا نسخة لنظام Linux أو للجوال، وتتناقض صفحات المطوّر نفسها بشأن الخطة المجانية وضرورة الإنترنت.',
+          'الصيانة: صدر الإصدار 1.8.16 في 24 نوفمبر 2026، فالمشروع يُحدَّث بنشاط.',
+          'الثغرات: لا نسخة لنظام Linux أو للجوال، والشيفرة مغلقة فلا يمكن لأطراف خارجية تدقيقها.',
         ],
       },
       getItWeesper: {
@@ -2879,7 +2976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Weesper Neon Flow',
         content: [
           '**Weesper Neon Flow تطبيق إملاء بالضغط والتحدث، وليس محرّر تفريغ نصي.** تضغط على اختصار لوحة المفاتيح وتتحدث ثم تتركه؛ فيشغّل التطبيق Whisper على الحاسوب ويُدرج نصًا منقّحًا عند المؤشر، مثلًا في Gmail أو Slack أو Notion أو Word.',
-          'المطوّر هو THE BLUE HOUSE (SASU) ومقرها باريس، وتقول صفحة «من نحن» إن المنتج تأسس عام 2024. ويبيع أيضًا منتجًا منفصلًا هو Weesper Transcribe لملفات الصوت والفيديو؛ وتغطي هذه المراجعة تطبيق الإملاء فقط.',
+          'المطوّر هو THE BLUE HOUSE (SASU) ومقرها باريس، وتقول صفحة «من نحن» إن المنتج تأسس عام 2024. ويبيع أيضًا منتجًا منفصلًا هو [Weesper Transcribe](/ar/power-local-llm/weesper-transcribe-review) لملفات الصوت والفيديو؛ وتغطي هذه المراجعة تطبيق الإملاء فقط.',
           'تعتمد هذه المراجعة على الموقع وسجل التغييرات وسياسة الخصوصية والشروط وصفحة الإصدارات على GitHub. ولم يُجرَ اختبار عملي، لذا لا تُقيَّم هنا الدقة والسرعة والاستقرار.',
         ],
       },
@@ -2912,11 +3009,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: 'الميزات',
         content: [
-          '**تتمحور الميزات حول إملاء سريع وخاص في أي تطبيق.** كل ما يلي مصدره الموقع وسجل التغييرات.',
+          '**تتمحور الميزات حول الإملاء في أي تطبيق.** كل ما يلي مصدره الموقع وسجل التغييرات.',
         ],
         items: [
           '**الإملاء في أي مكان.** يُدرج النص عند المؤشر في أي تطبيق يقبل الكتابة.',
-          '**التنقيح.** إزالة تلقائية لكلمات الحشو، مع ترقيم ذكي وضبط للأحرف الكبيرة.',
+          '**التنقيح.** إزالة تلقائية لكلمات الحشو، مع ترقيم ذكي وضبط للأحرف الكبيرة. وأضاف الإصدار 1.8.16 تنقيحًا اختياريًا (تجريبيًا) يعيد صياغة النص بنموذج محلي حجمه نحو 3.1 GB.',
           '**اللغات.** أكثر من 50 لغة مع كشف تلقائي، وإمكانية التحدث بلغة والحصول على النص بلغة أخرى.',
           '**وضع الاجتماعات.** أُضيف تمييز المتحدثين في الإصدار 1.7.5.',
           '**التخصيص.** قاموس مخصص واختصارات نصية وموجّهات سياقية وموجّهات مخصصة وسجل للإملاء.',
@@ -2935,10 +3032,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'الخصوصية والترخيص والتكلفة',
         content: [
-          '**تقول سياسة الخصوصية إن التعرف على الكلام يعمل محليًا، وإن الصوت والنصوص المحوّلة والنص المُملى ومحتويات الحافظة لا تُرسل إلى خوادم Weesper من أجل التحويل.** وكان آخر تحديث للسياسة في 23 يوليو 2026. وتضيف الشروط أن التطبيق يعمل محليًا بنسبة 100%.',
-          'ويظل الإنترنت مستخدمًا في جوانب أخرى: تنزيل التطبيق ونماذج الكلام، وتفعيل الترخيص وفحصه عبر خدمة ترخيص مستضافة على Cloudflare، والفوترة عبر Stripe، وبيانات التحديث من GitHub، وتحليلات المنتج الاختيارية (PostHog) وتشخيصات الأعطال (Sentry). وتقول السياسة إن أحداث التحليلات لا تتضمن الصوت ولا النصوص المحوّلة ولا النص المُملى. الشيفرة مغلقة ولم تفحص PromptQuorum حركة الشبكة، لذا فهذه الأقوال من المطوّر نفسه.',
-          'هو منتج مدفوع ومملوك: تجربة مجانية لمدة 15 يومًا، ثم 5 EUR شهريًا أو 45 EUR سنويًا أو 99 EUR لمرة واحدة، مع ضمان استرداد الأموال خلال 7 أيام. ويغطي الترخيص الشخصي ما يصل إلى ثلاثة من حواسيبك. ولا يوضح الموقع بجلاء ما إذا كانت الأسعار تشمل ضريبة القيمة المضافة، لذا تحقق عند الدفع. وتُوصف الخطة المجانية بعد التجربة بطريقتين: 1,500 كلمة أسبوعيًا في الأسئلة الشائعة، ومقاطع قصيرة حتى 60 ثانية في سجل التغييرات.',
+          '**تقول سياسة الخصوصية إن التعرف على الكلام يعمل محليًا، وإن الصوت والنصوص المحوّلة والنص المُملى ومحتويات الحافظة لا تُرسل إلى خوادم Weesper من أجل التحويل.** وكان آخر تحديث للسياسة في 9 نوفمبر 2026. وتضيف الشروط أن التطبيق يعمل محليًا بنسبة 100%.',
+          'ويظل الإنترنت مستخدمًا في جوانب أخرى: تنزيل التطبيق ونماذج الكلام، وتفعيل الترخيص وفحصه عبر خدمة ترخيص مستضافة على Cloudflare، والفوترة عبر Stripe، وبيانات التحديث من GitHub، وتحليلات المنتج الاختيارية (PostHog)، وتشخيصات الأعطال (Sentry) عند تفعيلها أو عند الحاجة إليها لاستمرار الخدمة. وتقول السياسة إن أحداث التحليلات لا تتضمن الصوت ولا النصوص المحوّلة ولا النص المُملى. الشيفرة مغلقة ولم تفحص PromptQuorum حركة الشبكة، لذا فهذه الأقوال من المطوّر نفسه.',
+          'هو منتج مدفوع ومملوك: تجربة مجانية لمدة 15 يومًا، ثم 5 EUR شهريًا أو 45 EUR سنويًا أو 99 EUR لمرة واحدة، مع ضمان استرداد الأموال خلال 7 أيام. ويغطي الترخيص الشخصي ما يصل إلى ثلاثة من حواسيبك. ولا يوضح الموقع بجلاء ما إذا كانت الأسعار تشمل ضريبة القيمة المضافة، لذا تحقق عند الدفع. وبعد الأيام الـ15 تطبّق الخطة المجانية حدّين معًا: لا تتجاوز كل عملية إملاء 60 ثانية، ولك 1,500 كلمة أسبوعيًا. والمبالغ المذكورة أسعار أساسية باليورو؛ وتقول صفحة الأسعار إن المشترين خارج المنطقة الاقتصادية الأوروبية تُطبّق عليهم أسعار معدّلة بحسب القدرة الشرائية لا تعرضها الصفحة.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من مطوّر التطبيق',
+        content: [
+          'أرسل مطوّر Weesper Neon Flow هذه الرسالة إلى PromptQuorum بعد قراءة هذه المراجعة. وهي رواية المطوّر نفسه وليست تقييمًا مستقلًا من PromptQuorum، ولم تختبر PromptQuorum التطبيق.',
+          '«بدأتُ Weesper Neon Flow لأنني أُملي كثيرًا ولم أرد أن يذهب صوتي إلى خدمة سحابية. ويجري التعرف على الكلام بنموذج Whisper على جهاز Mac أو الحاسوب الخاص بك. وتتضمن التجربة الممتدة 15 يومًا كل الميزات، فيمكنك الحكم على السرعة والدقة على جهازك قبل أن تدفع.»',
+        ],
+        note: '— مطوّر Weesper Neon Flow',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2952,7 +3058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'الميزة': 'Whisper على حاسوبك',
-            'ما تعنيه في الاستخدام الفعلي': 'يُعالَج الإملاء على الجهاز دون رفع الصوت من أجل التحويل.',
+            'ما تعنيه في الاستخدام الفعلي': 'بحسب المطوّر، يُعالَج الإملاء على الجهاز دون رفع الصوت من أجل التحويل.',
             'القيد / تنبيه': 'مغلق المصدر، لذا لا يمكن التحقق من الادعاء؛ ويظل الإنترنت مستخدمًا للترخيص والتنزيلات.',
           },
           {
@@ -2963,7 +3069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الميزة': 'خيار الترخيص الدائم',
             'ما تعنيه في الاستخدام الفعلي': 'شراء لمرة واحدة بسعر 99 EUR يغني عن الاشتراك.',
-            'القيد / تنبيه': 'الخطتان الشهرية والسنوية هما الأساس؛ وتُوصف الخطة المجانية بعد التجربة بشكل متناقض.',
+            'القيد / تنبيه': 'تتوفر أيضًا خطتان شهرية وسنوية؛ والخطة المجانية بعد التجربة محدودة.',
           },
           {
             'الميزة': 'أربعة ملفات كلام',
@@ -2977,8 +3083,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الميزة': 'تطوير نشط',
-            'ما تعنيه في الاستخدام الفعلي': 'صدر الإصدار 1.8.12 في 28 أكتوبر 2026.',
-            'القيد / تنبيه': 'ما زالت بعض الصفحات، مثل «من نحن»، تحمل صياغة أقدم.',
+            'ما تعنيه في الاستخدام الفعلي': 'صدر الإصدار 1.8.16 في 24 نوفمبر 2026.',
+            'القيد / تنبيه': 'تنقيح النص المضاف في الإصدار 1.8.16 موسوم بأنه تجريبي.',
           },
         ],
       },
@@ -3061,7 +3167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل يعمل Weesper Neon Flow دون اتصال بالإنترنت؟',
-            a: 'يقول المطوّر إن الإملاء يعمل دون اتصال بنسبة 100% بعد تثبيت التطبيق ونموذج الكلام. ويلزم الإنترنت لتنزيلهما ولتفعيل التجربة أو الترخيص ولفحوص الترخيص العرضية. وتقول صفحة «من نحن» إنه لا حاجة إلى اتصال، وهذا يتعارض مع ما سبق. ولم تختبره PromptQuorum دون اتصال.',
+            a: 'يقول المطوّر إن الإملاء يعمل دون اتصال بنسبة 100% بعد تثبيت التطبيق ونموذج الكلام. ويلزم الإنترنت لتنزيلهما ولتفعيل التجربة أو الترخيص ولفحوص الترخيص العرضية. ولم تختبره PromptQuorum دون اتصال.',
           },
           {
             q: 'هل يُرسل صوتي إلى السحابة؟',
@@ -3086,7 +3192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           'يناسب Weesper Neon Flow من يريد إملاءً بالضغط والتحدث على Mac أو Windows يعمل فيه Whisper على حاسوبه، بحسب المطوّر، ويقبل دفع ثمن برنامج مغلق المصدر. وله تجربة مجانية لمدة 15 يومًا وخيار ترخيص دائم وإصدار حديث.',
-          'التحفظات تخص النطاق وإمكانية التحقق: لا نسخة لنظام Linux أو للجوال، وشيفرة مغلقة، وادعاءات خصوصية لم تتمكن PromptQuorum من فحصها، وصفحات للمطوّر تتعارض بشأن الخطة المجانية وضرورة الإنترنت. استخدم التجربة قبل الشراء.',
+          'التحفظات تخص النطاق وإمكانية التحقق: لا نسخة لنظام Linux أو للجوال، وشيفرة مغلقة، وادعاءات خصوصية لم تتمكن PromptQuorum من فحصها. استخدم التجربة قبل الشراء.',
         ],
       },
       sources: {
@@ -3096,9 +3202,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[موقع Weesper Neon Flow](https://weesperneonflow.ai/en/) — الميزات والأسعار والأسئلة الشائعة.',
           '[صفحة التنزيل](https://weesperneonflow.ai/en/download/) — المنصات ومتطلبات النظام.',
           '[سجل التغييرات](https://weesperneonflow.ai/en/changelog/) — تاريخ الإصدارات والميزات المضافة.',
-          '[سياسة الخصوصية](https://weesperneonflow.ai/en/privacy) — التعامل مع البيانات، آخر تحديث في 23 يوليو 2026.',
+          '[سياسة الخصوصية](https://weesperneonflow.ai/en/privacy) — التعامل مع البيانات، آخر تحديث في 9 نوفمبر 2026.',
           '[شروط الاستخدام](https://weesperneonflow.ai/en/terms/) — الجهة المشغّلة وبيان التشغيل المحلي.',
-          '[إصدارات GitHub](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — ملفات المثبّت وتاريخ إصدار النسخة 1.8.12.',
+          '[إصدارات GitHub](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — ملفات المثبّت وتاريخ إصدار النسخة 1.8.16.',
+          '[صفحة الأسعار](https://weesperneonflow.ai/en/pricing/) — التجربة وحدود الخطة المجانية والأسعار.',
+          '[صفحة «من نحن»](https://weesperneonflow.ai/en/about/) — متى يلزم الاتصال بالإنترنت.',
+          '[الإشعار القانوني](https://weesperneonflow.ai/en/legal/) — الناشر والمقر المسجّل.',
         ],
       },
       relatedReading: {
@@ -3119,13 +3228,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-06',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-27',
     next_refresh_due: '2027-05-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/weesper-neon-flow-review-hero-ko.webp',
     title: 'Weesper Neon Flow 리뷰: Mac·Windows용 오프라인 받아쓰기 앱',
     seoTitle: 'Weesper Neon Flow 리뷰: 오프라인 받아쓰기 앱',
-    intro: 'Weesper Neon Flow는 Mac과 Windows용 유료 비공개 소스 받아쓰기 앱입니다. 단축키를 누른 채 말하면 커서가 있는 앱에 정리된 텍스트를 입력해 주며, OpenAI의 Whisper 모델을 사용자의 컴퓨터에서 실행합니다. 이 리뷰는 개발사의 웹사이트, 변경 내역, 개인정보 처리방침이 밝히는 내용과 페이지들이 서로 어긋나는 부분, 그리고 디렉터리의 다른 받아쓰기 도구와의 비교를 정리합니다.',
+    intro: 'Weesper Neon Flow는 Mac과 Windows용 유료 비공개 소스 받아쓰기 앱입니다. 단축키를 누른 채 말하면 커서가 있는 앱에 정리된 텍스트를 입력해 주며, OpenAI의 Whisper 모델을 사용자의 컴퓨터에서 실행합니다. 이 리뷰는 개발사의 웹사이트, 변경 내역, 개인정보 처리방침이 밝히는 내용, 그리고 디렉터리의 다른 받아쓰기 도구와의 비교를 정리합니다.',
     metaDescription: 'Weesper Neon Flow 리뷰: 개발사에 따르면 PC에서 실행되는 Mac·Windows용 유료 Whisper 받아쓰기 앱. 15일 체험 후 월 5 EUR. 직접 테스트하지 않았습니다.',
     twitterDescription: 'Weesper Neon Flow 리뷰: 내 컴퓨터에서 Whisper를 실행하는 Mac·Windows용 단축키 받아쓰기 앱. 가격, 개인정보 보호, 한계, 대안을 정리했습니다.',
     audience: '음성을 클라우드 서비스로 보내지 않고 어떤 앱에든 받아쓰기를 하려는 Mac·Windows 사용자를 위한 글입니다. 가격, 설치, 모델, 개인정보 보호, 한계, 대안을 다룹니다.',
@@ -3147,19 +3256,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple Silicon',
       'Windows PC',
     ],
-    leadAnswerBlock: '**Weesper Neon Flow는 OpenAI의 Whisper 모델을 사용자의 컴퓨터에서 실행하는 Mac·Windows용 비공개 소스 받아쓰기 앱이며, 개발사는 오디오와 받아쓴 텍스트가 기기 밖으로 나가지 않는다고 밝힙니다.** 15일 무료 체험 이후 월 5 EUR, 연 45 EUR, 또는 99 EUR 일회성 결제입니다. 최신 릴리스는 2026년 10월 28일의 버전 1.8.12입니다. 이 리뷰는 개발사의 공개 웹사이트, 변경 내역, 개인정보 처리방침과 GitHub 릴리스 페이지에 근거하며 직접 사용해 본 테스트는 아닙니다.',
+    leadAnswerBlock: '**Weesper Neon Flow는 OpenAI의 Whisper 모델을 사용자의 컴퓨터에서 실행하는 Mac·Windows용 비공개 소스 받아쓰기 앱이며, 개발사는 오디오와 받아쓴 텍스트가 기기 밖으로 나가지 않는다고 밝힙니다.** 15일 무료 체험 이후 월 5 EUR, 연 45 EUR, 또는 99 EUR 일회성 결제입니다. 최신 릴리스는 2026년 11월 24일의 버전 1.8.16입니다. 이 리뷰는 개발사의 공개 웹사이트, 변경 내역, 개인정보 처리방침과 GitHub 릴리스 페이지에 근거하며 직접 사용해 본 테스트는 아닙니다.',
     quickAnswerTop: {
       ko: {
         question: 'Weesper Neon Flow는 로컬 받아쓰기 앱입니까?',
-        answer: '개발사에 따르면 그렇습니다. 음성 인식은 Mac 또는 Windows PC에서 Whisper로 실행되며, 오디오, 전사본, 받아쓴 텍스트는 개발사 서버로 전송되지 않습니다. 다만 앱과 음성 모델 다운로드, 라이선스 확인, 결제, 업데이트, 선택형 진단에는 여전히 인터넷이 사용됩니다. 코드는 비공개이고 PromptQuorum은 네트워크 트래픽을 확인하지 않았으므로, 이 주장은 개발사 자체의 설명입니다.',
+        answer: '개발사에 따르면 그렇습니다. 음성 인식은 Mac 또는 Windows PC에서 Whisper로 실행되며, 오디오, 전사본, 받아쓴 텍스트는 개발사 서버로 전송되지 않습니다. 다만 앱과 음성 모델 다운로드, 라이선스 확인, 결제, 업데이트, 진단에는 여전히 인터넷이 사용됩니다. 코드는 비공개이고 PromptQuorum은 네트워크 트래픽을 확인하지 않았으므로, 이 주장은 개발사 자체의 설명입니다.',
         bullets: [
           '단축키를 누른 채 말하고 놓으면, 정리된 텍스트가 Gmail, Slack, Notion, Word 같은 앱의 커서 위치에 나타납니다.',
           '가격: 전체 기능을 쓰는 15일 무료 체험 이후 월 5 EUR, 연 45 EUR, 또는 99 EUR 일회성입니다.',
           '음성 프로필은 Minimal(약 75 MB)부터 Large(3.2 GB)까지 4종이며, 기본값은 Small(512 MB)입니다.',
           'Mac(macOS 13 이상)과 Windows 10·11 전용이며 Linux, iPhone, Android 버전은 없습니다.',
-          '개발사의 페이지들은 인터넷이 필요한지 여부와 체험 이후 무료 플랜의 내용에 대해 서로 다르게 설명합니다.',
+          '체험 이후 무료 플랜은 받아쓰기 한 번의 길이와 주당 단어 수를 모두 제한합니다.',
         ],
-        updatedDate: '2026-11-06',
+        updatedDate: '2026-11-27',
       },
     },
     toc: [
@@ -3171,6 +3280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '기능', anchor: 'features' },
       { label: '모델과 하드웨어', anchor: 'models-hardware' },
       { label: '개인정보 보호, 라이선스, 비용', anchor: 'privacy' },
+      { label: '개발자의 말', anchor: 'from-the-maker' },
       { label: '장점과 한계', anchor: 'tradeoffs' },
       { label: 'Weesper Neon Flow와 대안 비교', anchor: 'vs-alternatives' },
       { label: 'Weesper Neon Flow를 쓰면 좋은 사용자', anchor: 'who-should-use' },
@@ -3192,15 +3302,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '대신 타자를 쳐 주는 마이크 키라고 생각하면 됩니다. 단축키를 누른 채 말하고 놓으면, 컴퓨터가 오디오를 개발사로 보내지 않고 음성을 텍스트로 바꿉니다.',
+            text: '대신 타자를 쳐 주는 마이크 키라고 생각하면 됩니다. 단축키를 누른 채 말하고 놓으면, 개발사에 따르면 컴퓨터가 오디오를 개발사로 보내지 않고 음성을 텍스트로 바꿉니다.',
           },
         ],
         items: [
-          '로컬 주장: 음성 인식은 기기에서 Whisper로 실행되며, 다운로드, 라이선스 확인, 결제, 업데이트, 선택형 진단에는 여전히 인터넷이 사용됩니다.',
+          '로컬 주장: 음성 인식은 기기에서 Whisper로 실행되며, 다운로드, 라이선스 확인, 결제, 업데이트, 진단에는 여전히 인터넷이 사용됩니다.',
           '라이선스와 개발사: 독점 소프트웨어이며 파리의 THE BLUE HOUSE (SASU)가 배포합니다. 연결된 GitHub 저장소는 릴리스 설치 파일만 호스팅합니다.',
           '가격: 15일 무료 체험 이후 월 5 EUR, 연 45 EUR, 또는 99 EUR 일회성이며, 7일 환불 보장이 있습니다.',
-          '유지보수: 버전 1.8.12가 2026년 10월 28일에 출시되어 프로젝트가 활발히 업데이트되고 있습니다.',
-          '공백: Linux나 모바일 버전이 없고, 개발사의 페이지들이 무료 플랜과 인터넷 필요 여부에 대해 서로 모순됩니다.',
+          '유지보수: 버전 1.8.16이 2026년 11월 24일에 출시되어 프로젝트가 활발히 업데이트되고 있습니다.',
+          '공백: Linux나 모바일 버전이 없으며, 코드가 비공개라 외부에서 감사할 수 없습니다.',
         ],
       },
       getItWeesper: {
@@ -3264,7 +3374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weesper Neon Flow란',
         content: [
           '**Weesper Neon Flow는 전사 편집기가 아니라 단축키 방식의 받아쓰기 앱입니다.** 키보드 단축키를 누른 채 말하고 놓으면, 앱이 컴퓨터에서 Whisper를 실행해 정리된 텍스트를 커서 위치에 입력합니다. 예를 들어 Gmail, Slack, Notion, Word에서 쓸 수 있습니다.',
-          '개발사는 파리에 있는 THE BLUE HOUSE (SASU)이며, 소개 페이지에는 제품이 2024년에 설립되었다고 적혀 있습니다. 오디오·동영상 파일용 별도 제품인 Weesper Transcribe도 판매하지만, 이 리뷰는 받아쓰기 앱만 다룹니다.',
+          '개발사는 파리에 있는 THE BLUE HOUSE (SASU)이며, 소개 페이지에는 제품이 2024년에 설립되었다고 적혀 있습니다. 오디오·동영상 파일용 별도 제품인 [Weesper Transcribe](/ko/power-local-llm/weesper-transcribe-review)도 판매하지만, 이 리뷰는 받아쓰기 앱만 다룹니다.',
           '이 리뷰는 공식 사이트, 변경 내역, 개인정보 처리방침, 이용 약관, GitHub 릴리스 페이지에 근거합니다. 직접 사용해 본 테스트는 하지 않았으므로 정확도, 속도, 안정성은 평가하지 않습니다.',
         ],
       },
@@ -3297,11 +3407,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'features',
         title: '기능',
         content: [
-          '**기능은 어떤 앱에서든 빠르고 비공개로 받아쓰는 데 집중되어 있습니다.** 아래 내용은 모두 공식 사이트와 변경 내역에서 가져왔습니다.',
+          '**기능은 어떤 앱에서든 받아쓰는 데 집중되어 있습니다.** 아래 내용은 모두 공식 사이트와 변경 내역에서 가져왔습니다.',
         ],
         items: [
           '**어디서나 받아쓰기.** 타이핑을 받는 모든 앱의 커서 위치에 텍스트가 입력됩니다.',
-          '**정리.** 군더더기 말을 자동으로 제거하고, 문장 부호와 대소문자를 알아서 처리합니다.',
+          '**정리.** 군더더기 말을 자동으로 제거하고, 문장 부호와 대소문자를 알아서 처리합니다. 버전 1.8.16에는 약 3.1 GB의 로컬 모델로 글을 다시 쓰는 선택형 정리 기능(베타)이 추가되었습니다.',
           '**언어.** 자동 감지를 포함해 50개 이상의 언어를 지원하며, 한 언어로 말하고 다른 언어의 텍스트를 얻을 수도 있습니다.',
           '**회의 모드.** 화자 구분(diarization)은 버전 1.7.5에서 추가되었습니다.',
           '**개인화.** 사용자 사전, 텍스트 단축 입력, 맥락 프롬프트, 사용자 지정 프롬프트, 받아쓰기 기록을 제공합니다.',
@@ -3320,10 +3430,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: '개인정보 보호, 라이선스, 비용',
         content: [
-          '**개인정보 처리방침에 따르면 음성 인식은 로컬에서 실행되며, 오디오, 전사본, 받아쓴 텍스트, 클립보드 내용은 전사를 위해 Weesper 서버로 전송되지 않습니다.** 방침의 최종 갱신일은 2026년 7월 23일입니다. 이용 약관에는 애플리케이션이 100% 로컬로 작동한다고 덧붙어 있습니다.',
-          '다른 부분에서는 여전히 인터넷이 관여합니다. 앱과 음성 모델 다운로드, Cloudflare에 호스팅된 라이선스 서비스를 통한 라이선스 활성화와 확인, Stripe를 통한 결제, GitHub의 업데이트 메타데이터, 선택형 제품 분석(PostHog)과 충돌 진단(Sentry)이 그렇습니다. 방침에 따르면 분석 이벤트에는 오디오, 전사본, 받아쓴 텍스트가 포함되지 않습니다. 코드는 비공개이고 PromptQuorum은 네트워크 트래픽을 조사하지 않았으므로, 이런 진술은 개발사 자체의 설명입니다.',
-          '유료 독점 제품입니다. 15일 무료 체험 이후 월 5 EUR, 연 45 EUR, 또는 99 EUR 일회성이며 7일 환불 보장이 있습니다. 개인 라이선스는 본인 소유 컴퓨터 최대 3대를 포함합니다. 사이트에는 가격에 VAT가 포함되는지 명확히 나와 있지 않으므로 결제 단계에서 확인하십시오. 체험 이후 무료 플랜은 두 가지로 설명됩니다. FAQ에는 주당 1,500단어, 변경 내역에는 최대 60초 분량의 짧은 클립이라고 되어 있습니다.',
+          '**개인정보 처리방침에 따르면 음성 인식은 로컬에서 실행되며, 오디오, 전사본, 받아쓴 텍스트, 클립보드 내용은 전사를 위해 Weesper 서버로 전송되지 않습니다.** 방침의 최종 갱신일은 2026년 11월 9일입니다. 이용 약관에는 애플리케이션이 100% 로컬로 작동한다고 덧붙어 있습니다.',
+          '다른 부분에서는 여전히 인터넷이 관여합니다. 앱과 음성 모델 다운로드, Cloudflare에 호스팅된 라이선스 서비스를 통한 라이선스 활성화와 확인, Stripe를 통한 결제, GitHub의 업데이트 메타데이터, 선택형 제품 분석(PostHog), 그리고 활성화했거나 서비스 유지에 필요한 경우의 충돌 진단(Sentry)이 그렇습니다. 방침에 따르면 분석 이벤트에는 오디오, 전사본, 받아쓴 텍스트가 포함되지 않습니다. 코드는 비공개이고 PromptQuorum은 네트워크 트래픽을 조사하지 않았으므로, 이런 진술은 개발사 자체의 설명입니다.',
+          '유료 독점 제품입니다. 15일 무료 체험 이후 월 5 EUR, 연 45 EUR, 또는 99 EUR 일회성이며 7일 환불 보장이 있습니다. 개인 라이선스는 본인 소유 컴퓨터 최대 3대를 포함합니다. 사이트에는 가격에 VAT가 포함되는지 명확히 나와 있지 않으므로 결제 단계에서 확인하십시오. 15일이 지난 뒤의 무료 플랜에는 두 가지 제한이 함께 적용됩니다. 받아쓰기 한 번은 최대 60초이고, 주당 1,500단어까지 쓸 수 있습니다. 표시된 금액은 유로 기준 기본 가격입니다. 요금 페이지에 따르면 유럽경제지역 밖의 구매자에게는 구매력에 맞춘 가격이 적용되며, 그 금액은 페이지에 나와 있지 않습니다.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발자의 말',
+        content: [
+          'Weesper Neon Flow 개발자가 이 리뷰를 읽은 뒤 PromptQuorum에 보내온 글입니다. 개발사 자체의 설명이며 PromptQuorum의 독립적인 평가가 아닙니다. PromptQuorum은 이 앱을 테스트하지 않았습니다.',
+          '“저는 받아쓰기를 많이 하는데 제 목소리가 클라우드 서비스로 가는 것을 원하지 않아 Weesper Neon Flow를 시작했습니다. 음성 인식은 사용자의 Mac이나 PC에서 Whisper로 실행됩니다. 15일 체험판에는 모든 기능이 들어 있어, 결제하기 전에 자신의 컴퓨터에서 속도와 정확도를 판단할 수 있습니다.”',
+        ],
+        note: '— Weesper Neon Flow 개발자',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -3333,7 +3452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '장점': '내 컴퓨터에서 실행되는 Whisper',
-            '실제 사용에서의 의미': '받아쓰기가 기기에서 처리되며 전사를 위한 오디오 업로드가 없습니다.',
+            '실제 사용에서의 의미': '개발사에 따르면 받아쓰기가 기기에서 처리되며 전사를 위한 오디오 업로드가 없습니다.',
             '한계 / 주의점': '비공개 소스라 이 주장은 검증할 수 없고, 라이선스와 다운로드에는 여전히 인터넷이 사용됩니다.',
           },
           {
@@ -3344,7 +3463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '장점': '평생 라이선스 옵션',
             '실제 사용에서의 의미': '99 EUR 일회성 결제로 구독을 피할 수 있습니다.',
-            '한계 / 주의점': '기본은 월간·연간 플랜이며, 체험 이후 무료 플랜은 일관되지 않게 설명됩니다.',
+            '한계 / 주의점': '월간·연간 플랜도 있으며, 체험 이후 무료 플랜에는 제한이 있습니다.',
           },
           {
             '장점': '4종의 음성 프로필',
@@ -3358,8 +3477,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '장점': '활발한 개발',
-            '실제 사용에서의 의미': '버전 1.8.12가 2026년 10월 28일에 출시되었습니다.',
-            '한계 / 주의점': '소개 페이지 같은 일부 페이지에는 아직 이전 표현이 남아 있습니다.',
+            '실제 사용에서의 의미': '버전 1.8.16이 2026년 11월 24일에 출시되었습니다.',
+            '한계 / 주의점': '1.8.16에 추가된 텍스트 정리 기능은 베타로 표시되어 있습니다.',
           },
         ],
       },
@@ -3436,7 +3555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Weesper Neon Flow는 오프라인에서 작동합니까?',
-            a: '개발사는 앱과 음성 모델을 설치하고 나면 받아쓰기가 100% 오프라인으로 작동한다고 밝힙니다. 인터넷은 이를 내려받을 때, 체험판이나 라이선스를 활성화할 때, 그리고 가끔 하는 라이선스 확인에 필요합니다. 소개 페이지는 연결이 필요 없다고 적고 있어 이와 어긋납니다. PromptQuorum은 오프라인에서 테스트하지 않았습니다.',
+            a: '개발사는 앱과 음성 모델을 설치하고 나면 받아쓰기가 100% 오프라인으로 작동한다고 밝힙니다. 인터넷은 이를 내려받을 때, 체험판이나 라이선스를 활성화할 때, 그리고 가끔 하는 라이선스 확인에 필요합니다. PromptQuorum은 오프라인에서 테스트하지 않았습니다.',
           },
           {
             q: '내 음성이 클라우드로 전송됩니까?',
@@ -3461,7 +3580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결론',
         content: [
           'Mac이나 Windows PC에서 개발사에 따르면 Whisper가 사용자의 컴퓨터에서 실행되는 단축키 받아쓰기를 원하고, 비공개 소스 소프트웨어에 비용을 낼 의향이 있다면 Weesper Neon Flow가 잘 맞습니다. 15일 무료 체험, 평생 라이선스 옵션, 최근 릴리스가 있습니다.',
-          '주의할 점은 범위와 검증 가능성입니다. Linux나 모바일 버전이 없고, 코드가 비공개이며, PromptQuorum이 확인하지 못한 개인정보 보호 주장이 있고, 개발사의 페이지들이 무료 플랜과 인터넷 필요 여부에 대해 서로 어긋납니다. 구매 전에 체험판을 사용하십시오.',
+          '주의할 점은 범위와 검증 가능성입니다. Linux나 모바일 버전이 없고, 코드가 비공개이며, PromptQuorum이 확인하지 못한 개인정보 보호 주장이 있습니다. 구매 전에 체험판을 사용하십시오.',
         ],
       },
       sources: {
@@ -3471,9 +3590,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Weesper Neon Flow 공식 사이트](https://weesperneonflow.ai/en/) — 기능, 가격, FAQ.',
           '[다운로드 페이지](https://weesperneonflow.ai/en/download/) — 플랫폼과 시스템 요구 사항.',
           '[변경 내역](https://weesperneonflow.ai/en/changelog/) — 버전 기록과 기능 추가.',
-          '[개인정보 처리방침](https://weesperneonflow.ai/en/privacy) — 데이터 처리, 최종 갱신일 2026년 7월 23일.',
+          '[개인정보 처리방침](https://weesperneonflow.ai/en/privacy) — 데이터 처리, 최종 갱신일 2026년 11월 9일.',
           '[이용 약관](https://weesperneonflow.ai/en/terms/) — 운영 주체와 로컬 작동에 관한 진술.',
-          '[GitHub Releases](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — 설치 파일과 버전 1.8.12의 출시일.',
+          '[GitHub Releases](https://github.com/TheBlueHouse75/weesper-neon-flow-release/releases) — 설치 파일과 버전 1.8.16의 출시일.',
+          '[요금 페이지](https://weesperneonflow.ai/en/pricing/) — 체험판, 무료 플랜 제한, 가격.',
+          '[소개 페이지](https://weesperneonflow.ai/en/about/) — 인터넷 연결이 필요한 경우.',
+          '[법적 고지](https://weesperneonflow.ai/en/legal/) — 발행사와 등록 소재지.',
         ],
       },
       relatedReading: {

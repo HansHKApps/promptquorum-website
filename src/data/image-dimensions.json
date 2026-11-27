@@ -6209,6 +6209,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-cloud-gpu-providers-overview-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cloud-gpu-providers-overview-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cloud-gpu-providers-overview-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cloud-gpu-providers-overview-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cloud-gpu-providers-overview-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cloud-gpu-providers-overview-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cloud-gpu-providers-overview-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cloud-gpu-providers-overview-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cloud-gpu-providers-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-cpu-only-llm-cpu-vs-gpu-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -6958,96 +7003,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
-  },
-  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 480
   },
   "/images/best-gpu-for-llm-inference-under-500-2026-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -15779,6 +15734,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/clore-ai-review-overview-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/clore-ai-review-overview-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/clore-ai-review-overview-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/clore-ai-review-overview-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/clore-ai-review-overview-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/clore-ai-review-overview-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/clore-ai-review-overview-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/clore-ai-review-overview-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/clore-ai-review-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/cloud-gpu-cost-per-hour-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -23134,6 +23134,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-server-hosting-cudo-cherry-database-mart-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/gpu-tier-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -28169,26 +28214,6 @@
     "width": 800,
     "height": 400
   },
-  "/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/laptop-vs-desktop-local-llm-cost-efficiency-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/laptop-vs-desktop-local-llm-decision-framework-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/laptop-vs-desktop-local-llm-decision-framework-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
   "/images/laptop-vs-desktop-local-llm-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -28233,26 +28258,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/laptop-vs-desktop-local-llm-performance-comparison-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/laptop-vs-desktop-local-llm-thermal-throttling-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/laptop-vs-desktop-local-llm-thermal-throttling-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
   },
   "/images/laria-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -34409,6 +34414,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/local-llms-vs-chatgpt-plus-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-llms-vs-chatgpt-plus-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -37904,26 +37954,6 @@
     "width": 800,
     "height": 400
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
   "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -37969,80 +37999,50 @@
     "width": 1200,
     "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
   "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -38050,21 +38050,6 @@
     "height": 350
   },
   "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
@@ -38114,36 +38099,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
   "/images/mac-vs-windows-vs-linux-local-llm-tool-support-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -38160,16 +38115,6 @@
     "height": 360
   },
   "/images/mac-vs-windows-vs-linux-local-llm-tool-support-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tool-support-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tool-support-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
@@ -41120,6 +41065,51 @@
     "height": 675
   },
   "/images/noema-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/novita-ai-review-overview-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -45374,77 +45364,17 @@
     "width": 1200,
     "height": 675
   },
-  "/images/private-local-ai-for-business-common-mistakes-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 500
-  },
-  "/images/private-local-ai-for-business-common-mistakes-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 500
-  },
-  "/images/private-local-ai-for-business-compliance-checklist-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/private-local-ai-for-business-compliance-checklist-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
   "/images/private-local-ai-for-business-cost-breakeven-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
-  },
-  "/images/private-local-ai-for-business-cost-breakeven-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-cost-breakeven-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-hardware-requirements-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/private-local-ai-for-business-hardware-requirements-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
   },
   "/images/private-local-ai-for-business-latency-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
   },
-  "/images/private-local-ai-for-business-latency-performance-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/private-local-ai-for-business-latency-performance-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
   "/images/private-local-ai-for-business-on-prem-vs-cloud-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-on-prem-vs-cloud-es.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
@@ -51019,6 +50949,51 @@
     "width": 800,
     "height": 350
   },
+  "/images/runpod-review-overview-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/runpod-review-overview-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/runpod-review-overview-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/runpod-review-overview-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/runpod-review-overview-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/runpod-review-overview-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/runpod-review-overview-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/runpod-review-overview-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/runpod-review-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/runpod-vs-vastai-pricing-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -56259,6 +56234,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/vast-ai-review-overview-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vast-ai-review-overview-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vast-ai-review-overview-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vast-ai-review-overview-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vast-ai-review-overview-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vast-ai-review-overview-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vast-ai-review-overview-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vast-ai-review-overview-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vast-ai-review-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/vla-models-robots-local-inference-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -57004,6 +57024,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/wechat-bot-architecture-flow-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -57165,6 +57230,51 @@
     "height": 675
   },
   "/images/weesper-neon-flow-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/weesper-transcribe-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675

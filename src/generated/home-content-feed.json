@@ -83,81 +83,81 @@
   {
     "lang": "en",
     "title": "How to Optimize Prompts: Prompt Optimization Techniques & Best Practices",
-    "excerpt": "Improve AI output quality by 20–40% using 6 levers and a 6-step process. Before/after examples for GPT-5.6, Claude, and Gemini — works on all major models.",
+    "excerpt": "How to optimize prompts with 6 levers and a 6-step process. Before/after examples for GPT-5.6, Claude and Gemini, plus 7 common mistakes to avoid.",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "de",
     "title": "So optimierst du Prompts: Prompt-Optimierungstechniken und Best Practices",
-    "excerpt": "6 Hebel und 6-Schritte-Prozess für bessere KI-Ausgaben. Verbessere Prompts um 20–40 % bei GPT-5.6, Claude und Gemini. Mit Vorher/nachher-Beispielen.",
+    "excerpt": "Prompts optimieren mit 6 Hebeln und 6 Schritten: Vorher/nachher-Beispiele für GPT-5.6, Claude und Gemini sowie 7 häufige Fehler, die Sie vermeiden sollten.",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/de/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "fr",
     "title": "Fondamentaux de l'optimisation des prompts",
-    "excerpt": "6 leviers et 6 étapes pour améliorer les sorties IA de 20–40 %. Exemples avant/après pour GPT-5.6, Claude et Gemini. Fonctionne sur tous les modèles.",
+    "excerpt": "Optimiser un prompt avec 6 leviers et 6 étapes. Exemples avant/après pour GPT-5.6, Claude et Gemini, et 7 erreurs courantes à éviter.",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/fr/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ja",
     "title": "プロンプト最適化の基礎",
-    "excerpt": "6つのレバーと6ステップのプロセスでAI出力品質を20〜40%改善。GPT-5.6、Claude、Gemini向けの最適化前後の比較例とテクニックを詳しく紹介。すべてのモデルに対応。",
+    "excerpt": "6つのレバーと6ステップでプロンプトを最適化する方法を解説します。GPT-5.6、Claude、Gemini向けの最適化前後の比較例と、避けたい7つのよくある間違いも紹介します。",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/ja/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "zh",
     "title": "如何优化提示词：提示词优化技巧与最佳实践",
-    "excerpt": "通过6个优化杠杆和6步流程将AI输出质量提升20–40%。包含GPT-5.6、Claude和Gemini的前后对比示例，适用于所有主流大语言模型的提示词基础优化指南。",
+    "excerpt": "用6个杠杆和6步流程优化提示词。本指南包含面向GPT-5.6、Claude和Gemini的前后对比示例、各模型的调整建议，以及优化时需要避免的7个常见错误和检查要点。",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/zh/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "es",
     "title": "Cómo optimizar prompts: técnicas y mejores prácticas de optimización de prompts",
-    "excerpt": "Mejora la calidad de la IA un 20–40 % con 6 palancas y un proceso de 6 pasos. Ejemplos antes/después para GPT-5.6, Claude y Gemini: funciona en todos.",
+    "excerpt": "Cómo optimizar prompts con 6 palancas y 6 pasos. Ejemplos antes/después para GPT-5.6, Claude y Gemini, y 7 errores comunes que conviene evitar.",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/es/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "pt",
     "title": "Como otimizar prompts: técnicas e melhores práticas de otimização de prompts",
-    "excerpt": "Melhore a qualidade da IA em 20–40% com 6 alavancas e um processo de 6 etapas. Exemplos antes/depois para GPT-5.6, Claude e Gemini: funciona em todos os modelos.",
+    "excerpt": "Como otimizar prompts com 6 alavancas e um processo de 6 etapas. Veja exemplos antes e depois para GPT-5.6, Claude e Gemini e 7 erros comuns a evitar.",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-04-02",
+    "dateModified": "2026-11-27",
     "url": "/pt/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ar",
     "title": "كيفية تحسين الموجّهات: تقنيات وأفضل الممارسات",
-    "excerpt": "حسّن مخرجات الذكاء الاصطناعي بنسبة ⁨20⁩–⁨40%⁩ باستخدام ⁨6⁩ رافعات وعملية مُثبتة من ⁨6⁩ خطوات. أمثلة قبل/بعد لـ⁨GPT-5.6⁩ و⁨Claude⁩ و⁨Gemini⁩.",
+    "excerpt": "كيفية تحسين الموجّهات بـ⁨6⁩ رافعات وعملية من ⁨6⁩ خطوات. أمثلة قبل/بعد لـ⁨GPT-5.6⁩ و⁨Claude⁩ و⁨Gemini⁩، و⁨7⁩ أخطاء شائعة ينبغي تجنبها.",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/ar/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ko",
     "title": "프롬프트 최적화 방법: 기술과 모범 사례",
-    "excerpt": "6가지 레버와 6단계 프로세스로 AI 품질을 20–40% 향상시키십시오. GPT-5.6, Claude, Gemini에 대한 전후 예시: 모든 모델에서 작동합니다.",
+    "excerpt": "6가지 레버와 6단계 프로세스로 프롬프트를 최적화하는 방법을 설명합니다. GPT-5.6, Claude, Gemini 전후 예시와 흔한 실수 7가지.",
     "publishDate": "2026-04-02",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/ko/prompt-engineering/fundamentals-of-prompt-optimization",
     "cluster": "prompt-engineering"
   },
@@ -328,7 +328,7 @@
     "title": "The 5 Building Blocks Every Prompt Needs",
     "excerpt": "Role, Task, Input, Constraints, Output Format — the 5 prompt building blocks that work on every LLM. Miss one and quality drops. Template included.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-27",
     "url": "/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
@@ -337,7 +337,7 @@
     "title": "Die 5 Bausteine eines jeden Prompts",
     "excerpt": "Jeder gute KI-Prompt braucht 5 Teile: Rolle, Aufgabe, Input, Einschränkungen, Ausgabeformat. Fehlt einer, sinkt die Qualität. Mit kopierfertiger Vorlage.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-27",
     "url": "/de/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
@@ -346,7 +346,7 @@
     "title": "Les 5 éléments fondamentaux de tout prompt",
     "excerpt": "Tout bon prompt IA compte 5 parties : Rôle, Tâche, Input, Contraintes, Format de sortie. En oublier un dégrade la réponse. Modèle prêt à copier pour tous.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-27",
     "url": "/fr/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
@@ -355,16 +355,16 @@
     "title": "すべてのプロンプトに必要な5つの構成要素",
     "excerpt": "効果的なAIプロンプトには5つの要素が必須です：役割、タスク、入力、制約、出力形式。1つ欠けるだけで出力品質が低下します。すべてのモデルに対応したテンプレート付き。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-27",
     "url": "/ja/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "zh",
     "title": "每个提示词必需的5个构建模块",
-    "excerpt": "高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。缺少任何一个都会降低输出质量。包含所有模型通用的可复制模板。",
+    "excerpt": "高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。了解每个部分如何提升输出结果质量，并获取适用于不同AI模型的可复制模板。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-27",
     "url": "/zh/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
@@ -373,7 +373,7 @@
     "title": "Los 5 bloques de construcción que todo prompt necesita",
     "excerpt": "Todo buen prompt de IA necesita 5 partes: rol, tarea, input, restricciones y formato. Si falta una, la calidad cae. Plantilla lista para copiar.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-27",
     "url": "/es/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
@@ -382,7 +382,7 @@
     "title": "Os 5 blocos de construção que todo prompt precisa",
     "excerpt": "Todo bom prompt de IA precisa de 5 partes: papel, tarefa, entrada, restrições e formato. Se faltar um, a qualidade cai. Modelo pronto para copiar.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-11-27",
     "url": "/pt/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
@@ -391,7 +391,7 @@
     "title": "المكونات الخمسة التي يحتاجها كل برومبت",
     "excerpt": "كل برومبت فعّال يحتاج ⁨5⁩ أجزاء: الدور، المهمة، المدخلات، القيود، وتنسيق المخرجات. غياب أي منها يخفض الجودة. قالب جاهز للنسخ على أي ⁨LLM⁩.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-27",
     "url": "/ar/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
@@ -400,7 +400,7 @@
     "title": "모든 프롬프트에 필요한 5가지 구성 요소",
     "excerpt": "역할, 작업, 입력, 제약 조건, 출력 형식 — 모든 LLM에서 통하는 5가지 프롬프트 구성 요소. 하나라도 빠지면 품질이 저하됩니다. 복사·붙여넣기용 템플릿 포함.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-27",
     "url": "/ko/prompt-engineering/5-building-blocks-every-prompt-needs",
     "cluster": "prompt-engineering"
   },
@@ -11422,82 +11422,82 @@
   },
   {
     "lang": "en",
-    "title": "Laptop vs Desktop for Local LLMs: 7× Cost Gap, Thermal Throttling Data & 2026 Buying Guide",
-    "excerpt": "Desktop RTX 4070 Ti: 80 tok/sec sustained at $19/tok/sec. MacBook M5 Max: 55-70 tok/sec (est.), throttles after 15-18 min, $100/tok/sec. Full thermal data, cost analysis, M5 Max 70B capability, and 2026 buying guide.",
+    "title": "Laptop vs Desktop for Local LLMs: Thermals, Memory & 2026 Buying Guide",
+    "excerpt": "Laptop or desktop for local LLMs? Compare thermals, memory capacity and power, plus sourced RTX 5090 and RTX 4090 cost per tok/sec. 2026 buying guide.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-23",
     "url": "/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Laptop vs. Desktop für lokale LLMs 2026: Kosten, Geschwindigkeit & 70B-Fähigkeit",
-    "excerpt": "RTX 4070 Ti: 80 Tok/Sek, 21 €/Tok/Sek. MacBook M4 Max: 35 Tok/Sek, Drosselung nach 18 Min. 70B-Modelle: Desktop oder Mac Studio. Kaufratgeber 2026.",
+    "title": "Laptop vs. Desktop für lokale LLMs: Thermik, Speicher & Kaufratgeber 2026",
+    "excerpt": "Laptop oder Desktop für lokale LLMs? Thermik, Speicher und Leistungsaufnahme im Vergleich, plus belegte Kosten pro tok/s für RTX 5090 und 4090.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-23",
     "url": "/de/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "Laptop vs bureau pour les LLMs locaux 2026 : coût, vitesse & capacité 70B",
-    "excerpt": "RTX 4070 Ti : 80 tok/s, 21 €/tok/s. MacBook M4 Max : 35 tok/s, throttling après 18 min. Modèles 70B nécessitent un bureau. Guide d'achat avril 2026.",
+    "title": "Laptop vs PC de bureau pour LLMs locaux : thermique, mémoire et guide d'achat 2026",
+    "excerpt": "Laptop ou PC de bureau pour LLMs locaux ? Thermique, mémoire et consommation, avec le coût par tok/s sourcé des RTX 5090 et 4090. Guide 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-23",
     "url": "/fr/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "ローカルLLM向けラップトップ vs デスクトップ 2026：コスト・速度・70B対応能力",
-    "excerpt": "RTX 4070 Ti：80トークン/秒、コスト19ドル/トークン/秒。MacBook M4 Max：35トークン/秒（18分後にスロットリング）、約100ドル/トークン/秒。70Bモデルの実行にはデスクトップまたはMac Studio M5 Maxが必要。2026年8月更新の購入ガイド。",
+    "title": "ローカルLLM向けノート vs デスクトップ：熱・メモリ・2026年購入ガイド",
+    "excerpt": "ローカルLLMはノートかデスクトップか。熱、メモリ容量、消費電力を比較し、出典付きのRTX 5090・RTX 4090のtok/secあたりコストも紹介します。2026年購入ガイド。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-23",
     "url": "/ja/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "本地LLM笔记本 vs 台式机 2026：成本、速度与70B模型能力",
-    "excerpt": "RTX 4070 Ti：80令牌/秒，成本19美元/令牌/秒。MacBook M4 Max：35令牌/秒（18分钟后降频），约100美元/令牌/秒。运行70B模型需要台式机或Mac Studio M5 Max。2026年8月更新的购买指南。",
+    "title": "本地LLM笔记本 vs 台式机：散热、内存与2026购买指南",
+    "excerpt": "本地LLM选笔记本还是台式机？比较散热、内存容量和功耗，并给出有来源的 RTX 5090 与 RTX 4090 每令牌/秒成本。2026购买指南。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-23",
     "url": "/zh/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "Laptop vs escritorio para LLMs locales: brecha de costo 7×, datos de throttling térmico y guía de compra 2026",
-    "excerpt": "Escritorio RTX 4070 Ti: 80 tok/s sostenidos a $19/tok/s. MacBook M5 Max: 55–70 tok/s, con throttling tras 15–18 min, $100/tok/s. Datos térmicos y de costos.",
+    "title": "Laptop vs escritorio para LLMs locales: térmica, memoria y guía de compra 2026",
+    "excerpt": "¿Laptop o escritorio para LLMs locales? Compara térmica, memoria y consumo, más el costo por tok/seg de RTX 5090 y RTX 4090 con fuente. Guía 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-23",
     "url": "/es/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Laptop vs desktop para LLMs locais: diferença de custo 7×, dados de throttling térmico e guia de compra 2026",
-    "excerpt": "Desktop RTX 4070 Ti: 80 tok/s sustentados a $19/tok/s. MacBook M5 Max: 55–70 tok/s, com throttling após 15–18 min, $100/tok/s. Dados térmicos e de custos.",
+    "title": "Laptop vs desktop para LLMs locais: térmica, memória e guia de compra 2026",
+    "excerpt": "Laptop ou desktop para LLMs locais? Compare térmica, memória e consumo, além do custo por tok/s da RTX 5090 e da RTX 4090 com fonte. Guia 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-11-23",
     "url": "/pt/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "الحاسوب المحمول مقابل المكتبي لنماذج ⁨LLM⁩ المحلية: فجوة تكلفة ⁨7⁩×، بيانات الاختناق الحراري ودليل الشراء ⁨2026⁩",
-    "excerpt": "مكتبي ⁨RTX 4070 Ti⁩ يُنتج ⁨80 tok/s⁩ مستدامة بـ ⁨19⁩$/⁨tok/s⁩؛ ⁨MacBook M5 Max⁩ يختنق بعد ⁨18⁩ دقيقة عند ⁨100⁩$/⁨tok/s⁩. مقارنة حرارية وتكلفة شاملة.",
+    "title": "المحمول مقابل المكتبي لنماذج LLM المحلية: الحرارة والذاكرة ودليل الشراء 2026",
+    "excerpt": "محمول أم مكتبي لنماذج LLM المحلية؟ قارن الحرارة وسعة الذاكرة واستهلاك الطاقة، مع تكلفة موثّقة لكل tok/sec لبطاقتي RTX 5090 وRTX 4090. دليل شراء 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-23",
     "url": "/ar/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "로컬 LLM용 노트북 vs 데스크톱: 7배 비용 차이, 열 제한 데이터 및 2026 구매 가이드",
-    "excerpt": "데스크톱 RTX 4070 Ti: 지속 80 tok/s, tok/s당 $19. MacBook M5 Max: 55-70 tok/s, 15-18분 후 스로틀링, tok/s당 $100. 전체 열 데이터와 비용 분석, 2026 구매 가이드.",
+    "title": "로컬 LLM용 노트북 vs 데스크톱: 발열, 메모리, 2026 구매 가이드",
+    "excerpt": "로컬 LLM에는 노트북과 데스크톱 중 무엇이 좋을까요? 발열, 메모리 용량, 전력을 비교하고 출처가 있는 RTX 5090·RTX 4090의 tok/sec당 비용도 소개합니다. 2026 구매 가이드.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-23",
     "url": "/ko/local-llms/laptop-vs-desktop-local-llm",
     "cluster": "local-llms"
   },
@@ -11909,81 +11909,81 @@
   {
     "lang": "en",
     "title": "Private Local AI For Business: On-Premises Deployment Without Cloud",
-    "excerpt": "On-premises AI breaks even at 200M tokens/month: $133/mo hardware vs $1,000/mo GPT-5.6 API. GDPR/HIPAA-compatible architecture (no data egress at inference). Llama 3.3 70B on RTX 5090 or vLLM cluster.",
+    "excerpt": "On-premises AI breaks even near 41M tokens/month: ~$205/mo (RTX 5090) vs $1,000/mo GPT-5.6 API at 200M tokens. Can help meet GDPR and HIPAA needs.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Private lokale KI für Unternehmen: On-Premises-Bereitstellung ohne Cloud",
-    "excerpt": "Private lokale KI für Unternehmen 2026: DSGVO-konforme On-Premises-LLMs ohne Cloud. Datenschutz, Kosten und Setup für den Mittelstand.",
+    "excerpt": "Private lokale KI für Unternehmen: On-Premises-LLMs ohne Cloud. Break-even ca. 41 Mio. Token/Monat, Datenschutz-Überlegungen, Setup für den Mittelstand.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/de/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "IA Locale Privée Pour Les Entreprises : Déploiement On-Premises Sans Cloud",
-    "excerpt": "L'IA sur site rentable dès 200M tokens/mois : 120 €/mois matériel vs 900 €/mois API GPT-5.6. RGPD, HIPAA, SOC2 conformes. Llama 3.3 70B sur RTX 5090 ou cluster vLLM.",
+    "excerpt": "IA sur site rentable dès ~41M tokens/mois : ~205 $/mois (RTX 5090) vs 1 000 $/mois API GPT-5.6 à 200M. Peut aider à répondre aux exigences RGPD et HIPAA.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/fr/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "プライベート・ローカルAI for ビジネス：オンプレミス展開ガイド 2026",
-    "excerpt": "オンプレミスAIは月2億トークンで損益分岐：ハードウェア¥15,000/月 vs GPT-5.6 API ¥150,000/月。GDPR・HIPAA・SOC2準拠。Llama 3.3 70BをRTX 5090またはvLLMクラスタで運用。",
+    "excerpt": "オンプレミスAIは月約4,100万トークンで損益分岐：RTX 5090構成は約$205/月、GPT-5.6 APIは2億トークンで$1,000/月。GDPR・HIPAA対応の検討に役立ちます。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/ja/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "企业本地私有AI：保持数据主权与成本控制的On-Premises部署指南 2026",
-    "excerpt": "本地部署AI在月2亿token时盈亏平衡：硬件$150/月 vs GPT-5.6 API $1,000/月。GDPR、HIPAA、SOC2合规。Llama 3.3 70B运行于RTX 5090或vLLM集群。",
+    "excerpt": "本地部署AI约在月4,100万token盈亏平衡：RTX 5090方案约$205/月，GPT-5.6 API在月2亿token时为$1,000/月。可帮助满足GDPR、HIPAA等要求。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/zh/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "IA Local Privada para Empresas: Despliegue On-Premises sin la Nube",
-    "excerpt": "La IA on-premises es rentable a partir de 200M tokens/mes: $133/mes en hardware frente a $1.000/mes de la API GPT-5.6. Cumple GDPR, HIPAA y SOC2. Llama 3.3 70B en RTX 5090 o clúster vLLM.",
+    "excerpt": "La IA on-premises es rentable desde unos 41M tokens/mes: ~$205/mes (RTX 5090) frente a $1.000/mes de API GPT-5.6 a 200M. Puede ayudar con GDPR e HIPAA.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/es/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "IA Local Privada para Empresas: Implantação On-Premises sem a Nuvem",
-    "excerpt": "IA on-premises é economicamente viável a partir de 200M tokens/mês: $133/mês em hardware vs $1.000/mês da API GPT-5.6. Conformidade com LGPD, HIPAA e SOC2. Llama 3.3 70B em RTX 5090 ou cluster vLLM.",
+    "excerpt": "IA on-premises é viável a partir de ~41M tokens/mês: ~$205/mês com uma RTX 5090 vs $1.000/mês da API GPT-5.6 a 200M. Pode ajudar a atender LGPD e HIPAA.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/pt/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "الذكاء الاصطناعي المحلي الخاص للشركات: نشر في الموقع دون السحابة",
-    "excerpt": "تكلفة ⁨133⁩ دولارًا/شهر للعتاد مقابل ⁨1⁩,⁨000⁩ دولار/شهر لـ ⁨API GPT-5.6⁩ عند ⁨200⁩ مليون ⁨token. Llama 3.3 70B⁩ على ⁨RTX⁩ يمتثل للوائح ⁨ISO 27001⁩ وحماية البيانات.",
+    "excerpt": "التعادل قرب 41 مليون token/شهر: نحو 205 دولارات/شهر (RTX 5090) مقابل 1,000 دولار/شهر لـ API GPT-5.6 عند 200 مليون token. قد يساعد في حماية البيانات.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/ar/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "비즈니스를 위한 프라이빗 로컬 AI: 클라우드 없이 온프레미스 배포",
-    "excerpt": "온프레미스 AI는 월 2억 토큰에서 손익분기점 도달: 하드웨어 월 $133 vs GPT-5.6 API 월 $1,000. GDPR·HIPAA·SOC2 준수. RTX 5090 또는 vLLM 클러스터에서 Llama 3.3 70B 구동.",
+    "excerpt": "온프레미스 AI는 월 약 4,100만 토큰에서 손익분기: RTX 5090 구성 월 약 $205 vs GPT-5.6 API 월 2억 토큰 기준 $1,000. GDPR·HIPAA 검토에 도움이 됩니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/ko/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -14825,81 +14825,81 @@
   {
     "lang": "en",
     "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
-    "excerpt": "ChatGPT Plus: $20/mo = $720 over 3 years. Local 13B–24B model on RTX 5060 Ti: $400 GPU + $90 power = $490 total. 7 ChatGPT tiers compared.",
+    "excerpt": "ChatGPT Plus: $20/mo = $720 over 3 years. Local 13B–24B model on RTX 5060 Ti: $679 GPU + $90 power = $769 total. 7 ChatGPT tiers compared.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Lokale LLMs vs ChatGPT Plus 2026: Vollständiger Kostenvergleich über 7 Preisstufen",
-    "excerpt": "Lokale LLMs vs. ChatGPT Plus 2026: Kostenvergleich über 3 Jahre, Datenschutz und Performance. Wann sich lokale Hardware gegen das $20-Abo lohnt. (Aktualisiert August 2026.)",
+    "excerpt": "Lokale LLMs vs. ChatGPT Plus 2026: Kostenvergleich über 3 Jahre, Datenschutz und Performance. Wann sich lokale Hardware gegen das $20-Abo lohnt.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/de/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux",
-    "excerpt": "ChatGPT Plus : 20€/mois = 720€ sur 3 ans. Modèle local 13B–24B sur RTX 5060 Ti : 400€ GPU + 90€ électricité = 490€ total. 7 niveaux ChatGPT comparés.",
+    "excerpt": "ChatGPT Plus : 20 $/mois = 720 $ sur 3 ans. Modèle local 13B–24B sur RTX 5060 Ti : 679 $ GPU + 90 $ électricité = 769 $ total. 7 niveaux ChatGPT comparés.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/fr/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカルLLM vs ChatGPT Plus 2026：7つの価格レベルの完全比較",
-    "excerpt": "ChatGPT Plus：20€/月 = 3年間で約144,000円。RTX 5060 Ti 上のローカル13B～24Bモデル：約75,800円 GPU + 22,500円電気代 = 約98,300円。7つの ChatGPT レベルを比較。",
+    "excerpt": "ChatGPT Plus：$20/月 = 3年間で$720。RTX 5060 Ti 上のローカル13B～24Bモデル：GPU $679 + 電気代 $90 = 約$769。7つの ChatGPT レベルを比較。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ja/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "本地LLM vs ChatGPT Plus 2026：7个价格级别完整对比",
-    "excerpt": "ChatGPT Plus：$20/月 = 3年$720。RTX 5060 Ti本地13B-24B模型：约$400 GPU + $90电费 = $490总计。7个ChatGPT级别对比。",
+    "excerpt": "ChatGPT Plus：$20/月 = 3年$720。RTX 5060 Ti本地13B-24B模型：约$679 GPU + $90电费 = $769总计。7个ChatGPT级别对比。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/zh/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "LLMs locales vs ChatGPT Plus 2026: Comparación completa de costos en 7 niveles de precios",
-    "excerpt": "ChatGPT Plus: $20/mes = $720 en 3 años. Modelo local de 13B–24B en RTX 5060 Ti: $400 GPU + $90 luz = $490. 7 niveles comparados.",
+    "excerpt": "ChatGPT Plus: $20/mes = $720 en 3 años. Modelo local de 13B–24B en RTX 5060 Ti: $679 GPU + $90 luz = $769. 7 niveles comparados.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/es/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "LLMs Locais vs ChatGPT Plus 2026: Comparação Completa de Custos em 7 Níveis de Preço",
-    "excerpt": "ChatGPT Plus: $20/mês = $720 em 3 anos. Modelo local de 13B–24B em RTX 5060 Ti: $400 GPU + $90 energia = $490. 7 níveis comparados.",
+    "excerpt": "ChatGPT Plus: $20/mês = $720 em 3 anos. Modelo local de 13B–24B em RTX 5060 Ti: $679 GPU + $90 energia = $769. 7 níveis comparados.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/pt/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "نماذج ⁨LLM⁩ المحلية مقابل ⁨ChatGPT Plus 2026⁩: مقارنة تكاليف كاملة عبر ⁨7⁩ مستويات تسعير",
-    "excerpt": "⁨ChatGPT Plus⁩ يكلّف ⁨720⁩$ في ⁨3⁩ سنوات. نموذج ⁨13B–24B⁩ محلي على ⁨RTX 5060 Ti⁩: ⁨400⁩$ ⁨GPU + 90⁩$ كهرباء = ⁨490⁩$. مقارنة ⁨7⁩ مستويات.",
+    "excerpt": "⁨ChatGPT Plus⁩ يكلّف ⁨720⁩$ في ⁨3⁩ سنوات. نموذج ⁨13B–24B⁩ محلي على ⁨RTX 5060 Ti⁩: ⁨679⁩$ ⁨GPU + 90⁩$ كهرباء = ⁨769⁩$. مقارنة ⁨7⁩ مستويات.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ar/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM vs ChatGPT Plus 2026: 7가지 요금제 완전 비용 비교",
-    "excerpt": "ChatGPT Plus: $20/월 = 3년간 $720. RTX 5060 Ti의 로컬 13B~24B 모델: GPU $400 + 전기료 $90 = 총 $490. 7가지 ChatGPT 요금제 비교.",
+    "excerpt": "ChatGPT Plus: $20/월 = 3년간 $720. RTX 5060 Ti의 로컬 13B~24B 모델: GPU $679 + 전기료 $90 = 총 $769. 7가지 ChatGPT 요금제 비교.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ko/local-llms/local-llms-vs-chatgpt-plus",
     "cluster": "local-llms"
   },
@@ -15230,9 +15230,9 @@
   {
     "lang": "en",
     "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
-    "excerpt": "MacBook Pro M5 Max 128GB: 70B at 25–35 tok/s, 614 GB/s bandwidth. Windows RTX 5090 32GB: 70B at 40–50 tok/s, $2,000. Linux: 1–5% faster, $810 TCO 3 years. Full OS comparison.",
+    "excerpt": "MacBook Pro M5 Max 128GB: 614 GB/s bandwidth. RTX 5090 32GB: 290 tok/s on a 7B model, about $4,500–4,700 new. macOS vs Windows vs Linux compared.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
@@ -15241,70 +15241,70 @@
     "title": "Mac vs Windows vs Linux für lokale LLMs 2026: Apple M5, RTX 5090 und Linux Server verglichen",
     "excerpt": "Mac vs. Windows vs. Linux für lokale LLMs 2026: Performance, Setup-Aufwand und Kompatibilität. Welches OS die beste Erfahrung für lokale KI bietet.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/de/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Mac vs Windows vs Linux pour les LLM locaux 2026 : Apple M5, RTX 5090 et serveur Linux comparés",
-    "excerpt": "MacBook Pro M5 Max 128 Go : 70B à 25–35 jetons/s, 614 Go/s bande passante. Windows RTX 5090 32 Go : 70B à 40–50 jetons/s, 1.999 €. Linux : 1–5% plus rapide, 540 € TCO 3 ans. Comparaison complète du système d'exploitation.",
+    "excerpt": "MacBook Pro M5 Max 128 Go : 614 Go/s. RTX 5090 32 Go : 290 jetons/s sur un modèle 7B, environ 4 500–4 700 $ neuve. macOS, Windows et Linux comparés.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/fr/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "Mac vs Windows vs Linux でローカルLLM 2026年 : Apple M5、RTX 5090 とLinuxサーバー比較",
-    "excerpt": "MacBook Pro M5 Max 128GB : 70B を25–35トークン/秒、614GB/s帯域幅。Windows RTX 5090 32GB : 70B を40–50トークン/秒、2,000ドル。Linux : 1–5%高速、3年TCO 810ドル。完全なOS比較。",
+    "excerpt": "M5 Max 128GB：614 GB/s。RTX 5090 32GB：7B で 290 tok/s、新品は約$4,500～4,700。macOS・Windows・Linux を比較。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/ja/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Mac vs Windows vs Linux 本地LLM 2026：Apple M5、RTX 5090和Linux服务器对比",
-    "excerpt": "MacBook Pro M5 Max 128GB：70B在25–35标记/秒，614GB/s带宽。Windows RTX 5090 32GB：70B在40–50标记/秒，2000美元。Linux：快1–5%，3年TCO 810美元。完整操作系统对比。",
+    "excerpt": "MacBook Pro M5 Max 128GB：带宽 614 GB/s。RTX 5090 32GB：7B 模型 290 tok/s，新品约 $4,500–4,700。macOS、Windows、Linux 对比。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/zh/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Mac vs Windows vs Linux para LLMs locales 2026: Apple M5, RTX 5090 y servidor Linux comparados",
-    "excerpt": "MacBook Pro M5 Max 128GB: 70B a 25–35 tok/s, 614 GB/s. Windows RTX 5090 32GB: 70B a 40–50 tok/s, $2.000. Linux: 1–5% más rápido, $810 TCO a 3 años.",
+    "excerpt": "MacBook Pro M5 Max 128GB: 614 GB/s. RTX 5090 32GB: 290 tok/s con un modelo 7B, unos $4.500–4.700 nueva. macOS vs Windows vs Linux comparados.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/es/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Mac vs Windows vs Linux para LLMs Locais 2026: Apple M5, RTX 5090 e Servidor Linux Comparados",
-    "excerpt": "MacBook Pro M5 Max 128GB: 70B a 25–35 tok/s, 614 GB/s. Windows RTX 5090 32GB: 70B a 40–50 tok/s, $2.000. Linux: 1–5% mais rápido, $810 TCO em 3 anos.",
+    "excerpt": "MacBook Pro M5 Max 128GB: 614 GB/s. RTX 5090 32GB: 290 tok/s com um modelo 7B, cerca de $4.500–4.700 nova. macOS vs Windows vs Linux comparados.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/pt/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "⁨Mac⁩ مقابل ⁨Windows⁩ مقابل ⁨Linux⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: مقارنة ⁨Apple M5⁩ و⁨RTX 5090⁩ وخادم ⁨Linux⁩",
-    "excerpt": "⁨M5 Max 128GB⁩: ⁨70B⁩ بـ ⁨25⁩–⁨35 tok/s⁩ و⁨614 GB/s. RTX 5090 32GB⁩: ⁨40⁩–⁨50 tok/s⁩ بـ ⁨2⁩,⁨000⁩$. ⁨Linux⁩ أسرع بـ ⁨1⁩–⁨5%⁩ وأوفر ⁨810⁩$ على ⁨3⁩ سنوات.",
+    "excerpt": "MacBook Pro M5 Max 128GB: نطاق ترددي 614 GB/s. RTX 5090 32GB: 290 tok/s على نموذج 7B وبسعر جديد نحو 4,500–4,700$. مقارنة macOS وWindows وLinux.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/ar/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Mac vs Windows vs Linux 로컬 LLM 2026: Apple M5, RTX 5090, Linux 서버 비교",
-    "excerpt": "MacBook Pro M5 Max 128GB: 70B 모델 초당 25~35 토큰, 614 GB/s 대역폭. Windows RTX 5090 32GB: 70B 모델 초당 40~50 토큰, $2,000. Linux: 1~5% 더 빠름, 3년 총소유비용 $810. 전체 OS 비교.",
+    "excerpt": "M5 Max 128GB: 614 GB/s. RTX 5090 32GB: 7B 모델 290 tok/s, 신품 약 $4,500~4,700. macOS·Windows·Linux 비교.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-27",
     "url": "/ko/local-llms/mac-vs-windows-vs-linux-local-llm",
     "cluster": "local-llms"
   },
@@ -16852,7 +16852,7 @@
     "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
     "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5, Coder and VL locally. VRAM needs, Ollama and LM Studio setup, Q4_K_M speeds and hardware tiers for every budget.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16861,7 +16861,7 @@
     "title": "Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Coder & VL je Hardware-Stufe",
     "excerpt": "Qwen 3.6 27B läuft lokal mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b`. VRAM-Bedarf je Modellgröße, Coder- und VL-Varianten, Hardware-Tiers.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/de/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16870,7 +16870,7 @@
     "title": "Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Coder et VL par niveau matériel",
     "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/fr/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16879,7 +16879,7 @@
     "title": "Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Coder・VLを全ハードウェア階層で動かす",
     "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/ja/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16888,7 +16888,7 @@
     "title": "Qwen本地部署指南2026：Qwen 3.6 27B、Coder和VL各硬件层级完整指南",
     "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/zh/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16897,7 +16897,7 @@
     "title": "Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware",
     "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/es/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16906,7 +16906,7 @@
     "title": "Guia de implantação local do Qwen 2026: Qwen 3.6 27B, Coder e VL por nível de hardware",
     "excerpt": "Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2.5-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/pt/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16915,7 +16915,7 @@
     "title": "دليل النشر المحلي لـ Qwen 2026: Qwen 3.6 27B وCoder وVL على كل مستوى أجهزة",
     "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/ar/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16924,7 +16924,7 @@
     "title": "Qwen 로컬 배포 가이드 2026: Qwen 3.6 27B, Coder & VL 하드웨어 티어별 실행 방법",
     "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-23",
     "url": "/ko/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -17012,7 +17012,7 @@
   {
     "lang": "en",
     "title": "Best GPU for LLM Inference Under $500 (2026)",
-    "excerpt": "Best GPU under $500 for local LLM inference: Intel Arc B580 12GB ($250–290). RTX 4060 Ti 16GB now ~$562 — no longer sub-$500 after the 2026 memory shortage.",
+    "excerpt": "Best GPU under $500 for local LLM inference: Intel Arc B580 12GB first, used RTX 3060 12GB for CUDA. Why the RTX 4060 Ti 16GB no longer fits the budget.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17020,8 +17020,8 @@
   },
   {
     "lang": "de",
-    "title": "Beste GPU für LLM-Inferenz unter 500 € (2026)",
-    "excerpt": "Beste GPU unter 500 € für lokale LLM-Inferenz: Intel Arc B580 12GB (250–290 €). Die RTX 4060 Ti 16GB liegt jetzt bei ~560 € nach der Speicherknappheit 2026.",
+    "title": "Beste GPU für LLM-Inferenz unter 500 $ (2026)",
+    "excerpt": "Beste GPU unter 500 $ für lokale LLM-Inferenz: Intel Arc B580 12GB vorn, gebrauchte RTX 3060 12GB für CUDA. Warum die RTX 4060 Ti 16GB nicht mehr passt.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/de/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17029,8 +17029,8 @@
   },
   {
     "lang": "fr",
-    "title": "Meilleure GPU pour l'inférence LLM à moins de 500 € (2026)",
-    "excerpt": "Meilleure GPU sous 500 € pour l'inférence LLM locale : Intel Arc B580 12 Go (250–290 €). La RTX 4060 Ti 16 Go est désormais à ~560 € après la pénurie de 2026.",
+    "title": "Meilleure GPU pour l'inférence LLM à moins de 500 $ (2026)",
+    "excerpt": "Meilleure GPU sous 500 $ pour l'inférence LLM locale : Intel Arc B580 12 Go, RTX 3060 12 Go d'occasion pour CUDA. Pourquoi la RTX 4060 Ti sort du budget.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/fr/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17039,7 +17039,7 @@
   {
     "lang": "ja",
     "title": "500ドル以下のLLM推論向けGPUおすすめランキング（2026年）",
-    "excerpt": "$500以下のローカルLLM推論に最良のGPUはIntel Arc B580 12GB（約¥58,000〜67,000）。2026年のメモリ不足でRTX 4060 Ti 16GBと新品RTX 3060は$500超に。",
+    "excerpt": "$500以下のローカルLLM推論GPUはIntel Arc B580 12GBが首位、CUDAなら中古RTX 3060 12GB。RTX 4060 Ti 16GBが予算外になった理由も解説します。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/ja/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17048,7 +17048,7 @@
   {
     "lang": "zh",
     "title": "2026年500美元以下LLM推理最佳GPU排行",
-    "excerpt": "500美元以下本地LLM推理的最佳GPU现在是Intel Arc B580 12GB（$250–290）——2026年存储器短缺已将RTX 4060 Ti 16GB和全新RTX 3060推高至500美元以上。",
+    "excerpt": "500美元以下本地LLM推理最佳GPU：Intel Arc B580 12GB居首，需要CUDA则选二手RTX 3060 12GB。并说明RTX 4060 Ti 16GB为何已超出预算。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/zh/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17056,8 +17056,8 @@
   },
   {
     "lang": "es",
-    "title": "Mejor GPU para inferencia LLM por menos de 500 € (2026)",
-    "excerpt": "La mejor GPU por menos de 500 € para LLM local: Intel Arc B580 12GB (250–290 €). La RTX 4060 Ti 16GB ronda ahora los 560 € tras la escasez de memoria de 2026.",
+    "title": "Mejor GPU para inferencia LLM por menos de $500 (2026)",
+    "excerpt": "La mejor GPU por menos de $500 para LLM local: Intel Arc B580 12GB y, para CUDA, RTX 3060 12GB usada. Por qué la RTX 4060 Ti 16GB sale del presupuesto.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/es/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17066,7 +17066,7 @@
   {
     "lang": "pt",
     "title": "Melhor GPU para inferência de LLM por menos de US$ 500 (2026)",
-    "excerpt": "A melhor GPU até US$ 500 para LLM local no Brasil é a RTX 3060 12GB (R$ 1.450–2.000): a Arc B580 chegou a R$ 2.400 após a escassez de 2026.",
+    "excerpt": "A melhor GPU até US$ 500 para LLM local: Intel Arc B580 12GB em primeiro e RTX 3060 12GB usada para CUDA. Por que a RTX 4060 Ti 16GB saiu do orçamento.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/pt/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17075,7 +17075,7 @@
   {
     "lang": "ar",
     "title": "أفضل ⁨GPU⁩ للاستدلال على نماذج ⁨LLM⁩ بأقل من $⁨500⁩ (⁨2026⁩)",
-    "excerpt": "أفضل ⁨GPU⁩ بأقل من $⁨500⁩ للاستدلال المحلي: ⁨Intel Arc B580 12GB⁩ (⁨250⁩–⁨290⁩$). صارت ⁨RTX 4060 Ti 16GB⁩ بنحو ⁨562⁩$ بعد نقص الذاكرة في ⁨2026⁩.",
+    "excerpt": "أفضل GPU بأقل من $500 للاستدلال المحلي على LLM: Intel Arc B580 12GB أولاً، وRTX 3060 12GB مستعملة لـ CUDA. وسبب خروج RTX 4060 Ti من الميزانية.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/ar/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17084,7 +17084,7 @@
   {
     "lang": "ko",
     "title": "500달러 이하 LLM 추론용 최고 GPU 순위 (2026년)",
-    "excerpt": "$500 이하 로컬 LLM 추론에 가장 좋은 GPU는 이제 Intel Arc B580 12GB($250–290)입니다. 2026년 메모리 공급 부족으로 RTX 4060 Ti 16GB와 신품 RTX 3060은 $500을 넘었습니다.",
+    "excerpt": "$500 이하 로컬 LLM 추론 GPU는 Intel Arc B580 12GB가 1순위, CUDA는 중고 RTX 3060 12GB입니다. RTX 4060 Ti 16GB가 빠진 이유도 설명합니다.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/ko/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17102,7 +17102,7 @@
   {
     "lang": "de",
     "title": "Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026",
-    "excerpt": "Lokale GPU kaufen oder Cloud-GPU mieten? Break-even-Beispiel, RunPod- und Vast.ai-Preise vom 22. November 2026 und ein Rechner für Ihre eigenen Zahlen.",
+    "excerpt": "Lokale GPU kaufen oder Cloud-GPU mieten? Rechenbeispiel zum Break-even, RunPod- und Vast.ai-Preise sowie ein Rechner für Ihre eigenen Zahlen.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17111,7 +17111,7 @@
   {
     "lang": "fr",
     "title": "IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026",
-    "excerpt": "Acheter un GPU local ou louer un GPU cloud ? Exemple de seuil de rentabilité, prix RunPod et Vast.ai du 22 novembre 2026 et calculateur pour vos chiffres.",
+    "excerpt": "Acheter un GPU local ou louer un GPU cloud ? Exemple de seuil de rentabilité, prix RunPod et Vast.ai et calculateur pour vos propres chiffres.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17120,7 +17120,7 @@
   {
     "lang": "ja",
     "title": "ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版",
-    "excerpt": "ローカルGPUを買うかクラウドGPUを借りるか。損益分岐の計算例、RunPodとVast.aiの2026年11月22日時点の料金、自分の数値で試せる計算機。",
+    "excerpt": "ローカルGPUを買うかクラウドGPUを借りるか。損益分岐の計算例、RunPodとVast.aiの料金、自分の数値で試せる計算機をまとめました。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17129,7 +17129,7 @@
   {
     "lang": "zh",
     "title": "本地AI vs 云端AI：成本计算器（自建 vs 租用）2026",
-    "excerpt": "购买本地GPU还是租用云GPU？含盈亏平衡计算示例、2026年11月22日读取的RunPod和Vast.ai价格，以及可输入自己数据的计算器。",
+    "excerpt": "购买本地GPU还是租用云GPU？含盈亏平衡计算示例、RunPod和Vast.ai的价格对比，以及可输入自己数据的计算器，帮你算清哪种方式更划算。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17138,7 +17138,7 @@
   {
     "lang": "es",
     "title": "IA Local vs IA en la Nube: Calculadora de Costos (Comprar vs Rentar) 2026",
-    "excerpt": "¿Comprar una GPU local o alquilar una en la nube? Ejemplo de punto de equilibrio, precios de RunPod y Vast.ai del 22 de noviembre de 2026 y calculadora.",
+    "excerpt": "¿Comprar una GPU local o alquilar una en la nube? Ejemplo de punto de equilibrio, precios de RunPod y Vast.ai y una calculadora para tus propias cifras.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17147,7 +17147,7 @@
   {
     "lang": "pt",
     "title": "IA Local vs IA na Nuvem: Calculadora de Custo (Montar vs Alugar) 2026",
-    "excerpt": "Comprar uma GPU local ou alugar uma na nuvem? Exemplo de ponto de equilíbrio, preços da RunPod e Vast.ai de 22 de novembro de 2026 e calculadora.",
+    "excerpt": "Comprar uma GPU local ou alugar uma na nuvem? Exemplo de ponto de equilíbrio, preços da RunPod e Vast.ai e uma calculadora para seus próprios números.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17156,7 +17156,7 @@
   {
     "lang": "ar",
     "title": "الذكاء الاصطناعي المحلي مقابل السحابي: حاسبة التكلفة (شراء مقابل استئجار) 2026",
-    "excerpt": "هل تشتري GPU محلية أم تستأجر GPU سحابية؟ مثال حساب نقطة التعادل وأسعار RunPod وVast.ai المقروءة في 22 نوفمبر 2026 وحاسبة لأرقامك الخاصة.",
+    "excerpt": "هل تشتري GPU محلية أم تستأجر GPU سحابية؟ مثال حساب نقطة التعادل، وأسعار RunPod وVast.ai، وحاسبة لأرقامك الخاصة.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17165,7 +17165,7 @@
   {
     "lang": "ko",
     "title": "로컬 AI vs 클라우드 AI: 비용 계산기(구매 vs 렌탈) 2026",
-    "excerpt": "로컬 GPU 구매와 클라우드 GPU 임대 비용 비교: 손익분기 계산 예시, 2026년 11월 22일 확인한 RunPod·Vast.ai 가격, 직접 입력하는 계산기.",
+    "excerpt": "로컬 GPU 구매와 클라우드 GPU 임대 비용 비교: 손익분기 계산 예시, RunPod·Vast.ai 가격, 직접 입력하는 계산기.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -22762,8 +22762,8 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 425 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 425 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 426 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 426 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/directory",
@@ -22771,8 +22771,8 @@
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 425 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 425 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 426 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 426 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/de/directory",
@@ -22780,8 +22780,8 @@
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 425 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 425 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 426 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 426 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/fr/directory",
@@ -22789,8 +22789,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす425のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを425件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす426のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを426件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/ja/directory",
@@ -22798,8 +22798,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：425款软件，在本地运行AI（2026）",
-    "excerpt": "对比425款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：426款软件，在本地运行AI（2026）",
+    "excerpt": "对比426款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/zh/directory",
@@ -22807,8 +22807,8 @@
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 425 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 425 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 426 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 426 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/es/directory",
@@ -22816,8 +22816,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 425 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 425 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 426 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 426 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/pt/directory",
@@ -22825,8 +22825,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 425 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 425 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 426 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 426 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/ar/directory",
@@ -22834,8 +22834,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 425개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 425개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 426개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 426개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-22",
     "url": "/ko/directory",
@@ -25274,7 +25274,7 @@
   {
     "lang": "en",
     "title": "Best Affiliate Tools for AI Developers: Earn While You Build (2026)",
-    "excerpt": "Seven affiliate programs for AI developers: NordVPN (up to 100%), Coursera (up to 45%), RunPod (3–5% referral credits), DataCamp (25%), v0/Vercel (30% recurring), Cursor, and Amazon Associates.",
+    "excerpt": "Seven affiliate programs for AI developers: NordVPN (up to 100%), Coursera (up to 45%), RunPod (3–5% credits; not re-verified 2026-11-22), DataCamp (25%).",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/power-local-llm/best-affiliate-tools-ai-developers-2026",
@@ -25301,7 +25301,7 @@
   {
     "lang": "ja",
     "title": "AIデベロッパー向けアフィリエイトプログラム完全ガイド：開発しながら稼ぐ（2026年）",
-    "excerpt": "AIデベロッパー向け7つのアフィリエイトプログラム：NordVPN（最大100%）、Coursera（最大45%）、RunPod（紹介クレジット3〜5%）、DataCamp（25%）、v0/Vercel（30%継続）、Cursor、Amazonアソシエイト。",
+    "excerpt": "AIデベロッパー向け7つのアフィリエイトプログラム：NordVPN（最大100%）、Coursera（最大45%）、RunPod（紹介クレジット3〜5%、2026-11-22時点で再確認なし）、DataCamp（25%）、v0/Vercel（30%継続）、Cursor、Amazonアソシエイト。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/best-affiliate-tools-ai-developers-2026",
@@ -25310,7 +25310,7 @@
   {
     "lang": "zh",
     "title": "AI开发者最佳联盟计划：边开发边赚钱（2026）",
-    "excerpt": "AI开发者七大联盟计划：NordVPN（最高100%）、Coursera（最高45%）、RunPod（推荐积分3–5%）、DataCamp（25%）、v0/Vercel（30%循环）、Cursor、亚马逊联盟。",
+    "excerpt": "AI开发者七大联盟计划：NordVPN（最高100%）、Coursera（最高45%）、RunPod（推荐积分3–5%，2026-11-22未重新核实）、DataCamp（25%）、v0/Vercel（30%循环）、Cursor、亚马逊联盟。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/zh/power-local-llm/best-affiliate-tools-ai-developers-2026",
@@ -25319,7 +25319,7 @@
   {
     "lang": "es",
     "title": "Mejores programas de afiliados para desarrolladores de IA: gana mientras construyes (2026)",
-    "excerpt": "Siete programas de afiliados para desarrolladores de IA: NordVPN (hasta 100%), Coursera (45%), RunPod (3–5% en créditos de referido), DataCamp (25%) y v0/Vercel (30% recurrente).",
+    "excerpt": "Siete programas de afiliados para devs de IA: NordVPN (hasta 100%), Coursera (hasta 45%), RunPod (3–5% en créditos; no reverificado 2026-11-22), DataCamp (25%).",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/es/power-local-llm/best-affiliate-tools-ai-developers-2026",
@@ -25328,7 +25328,7 @@
   {
     "lang": "pt",
     "title": "Melhores programas de afiliados para desenvolvedores de IA: ganhe enquanto constrói (2026)",
-    "excerpt": "Sete programas de afiliados para desenvolvedores de IA: NordVPN (até 100%), Coursera (até 45%), RunPod (3–5% em créditos de indicação), DataCamp (25%), v0/Vercel (30% recorrente), Cursor e Amazon Associates.",
+    "excerpt": "Sete programas de afiliados para devs de IA: NordVPN (até 100%), Coursera (até 45%), RunPod (3–5% em créditos; não reverificado 2026-11-22), DataCamp (25%).",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/pt/power-local-llm/best-affiliate-tools-ai-developers-2026",
@@ -25337,7 +25337,7 @@
   {
     "lang": "ar",
     "title": "أفضل برامج الشراكة لمطوّري الذكاء الاصطناعي: اكسب وأنت تبني (⁨2026⁩)",
-    "excerpt": "⁨NordVPN⁩ يدفع حتى ⁨100%⁩ على البيع الأول، و⁨Coursera⁩ حتى ⁨45%⁩، و⁨RunPod 3–5%⁩ رصيداً عبر ⁨الإحالة. 7⁩ برامج شراكة مناسبة لمحتوى الذكاء الاصطناعي ⁨2026⁩.",
+    "excerpt": "برامج شراكة لمطوّري الذكاء الاصطناعي: NordVPN (حتى 100%)، Coursera (حتى 45%)، RunPod (رصيد إحالة 3–5%، دون إعادة تحقق في 2026-11-22)، DataCamp (25%).",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/ar/power-local-llm/best-affiliate-tools-ai-developers-2026",
@@ -25346,7 +25346,7 @@
   {
     "lang": "ko",
     "title": "AI 개발자를 위한 최고의 제휴 프로그램: 개발하면서 수익 창출하기 (2026)",
-    "excerpt": "AI 개발자를 위한 7가지 제휴 프로그램: NordVPN (최대 100%), Coursera (45%), RunPod (추천 크레딧 3–5%), DataCamp (25%), v0/Vercel (30% 반복 수수료), Cursor, Amazon Associates (1–4%).",
+    "excerpt": "AI 개발자용 제휴 프로그램 7종: NordVPN (최대 100%), Coursera (최대 45%), RunPod (크레딧 3–5%, 2026-11-22 재확인 안 함), DataCamp (25%), v0/Vercel (30%).",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/best-affiliate-tools-ai-developers-2026",
@@ -26569,82 +26569,82 @@
   },
   {
     "lang": "en",
-    "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
-    "excerpt": "Local AI video models (Wan 2.2, LTX-2, HunyuanVideo) are free if your GPU can run them. Invideo's cloud does everything for $17/mo. Honest comparison: VRAM, licenses, fine print.",
+    "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
+    "excerpt": "Local AI video models (Wan 2.2, LTX-2, HunyuanVideo) are free to download if your GPU can run them. How they compare with invideo's cloud service.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Invideo vs. lokale KI-Videogenerierung: Die eine kostet 0 $ plus Ihr Wochenende – die andere kostet 17 $",
-    "excerpt": "Lokale KI-Videomodelle (Wan 2.2, LTX-2, HunyuanVideo) sind kostenlos, wenn Ihre GPU sie ausführen kann. Invideos Cloud erledigt alles für 17 $/Monat. Ehrlicher Vergleich: VRAM, Lizenzen, Kleingedrucktes.",
+    "title": "Invideo vs. lokale KI-Videogenerierung: Die eine kostet eine GPU plus Ihr Wochenende – die andere ein Cloud-Abo",
+    "excerpt": "Lokale KI-Videomodelle (Wan 2.2, LTX-2, HunyuanVideo) sind gratis ladbar, wenn Ihre GPU sie schafft. So unterscheiden sie sich von invideos Cloud-Dienst.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/de/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Invideo vs vidéo IA locale : une option ne coûte rien (plus votre week-end), l'autre coûte 17 $",
-    "excerpt": "Les modèles de vidéo IA locale (Wan 2.2, LTX-2, HunyuanVideo) sont gratuits si votre GPU suit. Le cloud invideo fait tout pour 17 $/mois. Comparatif honnête : VRAM, licences, clauses.",
+    "title": "Invideo vs vidéo IA locale : l'une coûte un GPU et votre week-end, l'autre un abonnement cloud",
+    "excerpt": "Les modèles de vidéo IA locale (Wan 2.2, LTX-2, HunyuanVideo) se téléchargent gratuitement si votre GPU suit. Comparaison avec le cloud d'invideo.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/fr/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "Invideo vs ローカルAI動画生成：一方は$0＋週末の時間、もう一方は$17",
-    "excerpt": "ローカルAI動画モデル（Wan 2.2、LTX-2、HunyuanVideo）は、GPUが対応していれば無料です。Invideoのクラウドなら月額$17ですべて完結します。VRAM、ライセンス、細則まで正直に比較します。",
+    "title": "Invideo vs ローカルAI動画生成：一方はGPUと週末の時間、もう一方はクラウドの定額契約",
+    "excerpt": "ローカルAI動画モデル（Wan 2.2、LTX-2、HunyuanVideo）は、対応GPUがあれば無料でダウンロードして使えます。invideoのクラウドサービスとの違いを、VRAMとライセンスの面から比較します。",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/ja/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "Invideo 与本地 AI 视频对比：一个 0 美元加你的周末，另一个 17 美元",
-    "excerpt": "本地 AI 视频模型(Wan 2.2、LTX-2、HunyuanVideo)如果你的 GPU 够用就是免费的。Invideo 的云端方案每月 17 美元包办一切。诚实对比:VRAM、许可证、细则条款。",
+    "title": "Invideo 与本地 AI 视频对比：一个要付出 GPU 加你的周末，另一个是云端订阅",
+    "excerpt": "本地 AI 视频模型(Wan 2.2、LTX-2、HunyuanVideo)只要 GPU 够用就能免费下载。本文从显存、许可证和工作流角度对比它们与 invideo 云端服务。",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/zh/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Invideo vs. IA de Video Local: Una Opción Cuesta $0 Más Tu Fin de Semana — la Otra Cuesta $17",
-    "excerpt": "Los modelos de video con IA local (Wan 2.2, LTX-2, HunyuanVideo) son gratis si tu GPU puede correrlos. La nube de invideo lo hace todo por $17/mes. Comparación honesta: VRAM, licencias, letra pequeña.",
+    "title": "Invideo vs. IA de Video Local: Una Cuesta una GPU Más Tu Fin de Semana — la Otra, una Suscripción en la Nube",
+    "excerpt": "Los modelos de video IA local (Wan 2.2, LTX-2, HunyuanVideo) se descargan gratis si tu GPU puede con ellos. Así se comparan con la nube de invideo.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/es/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "Invideo vs Vídeo IA Local: Uma Opção Custa $0 Mais o Seu Fim de Semana — a Outra Custa $17",
-    "excerpt": "Modelos de vídeo IA locais (Wan 2.2, LTX-2, HunyuanVideo) são gratuitos se sua GPU aguentar. O invideo na nuvem faz tudo por $17/mês. Comparação honesta: VRAM, licenças, letras miúdas.",
+    "title": "Invideo vs Vídeo IA Local: Um Custa uma GPU Mais o Seu Fim de Semana — o Outro, uma Assinatura na Nuvem",
+    "excerpt": "Modelos de vídeo IA locais (Wan 2.2, LTX-2, HunyuanVideo) podem ser baixados de graça se sua GPU aguentar. Veja a comparação com a nuvem do invideo.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/pt/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: خيار بلا تكلفة يستهلك عطلتك مقابل خيار بـ 17 دولارًا",
-    "excerpt": "نماذج الفيديو المحلية بالذكاء الاصطناعي (Wan 2.2 وLTX-2 وHunyuanVideo) مجانية إذا كان معالج الرسومات لديك يدعمها. تتولى منصة invideo السحابية كل شيء مقابل 17 دولارًا شهريًا. مقارنة صادقة: VRAM، التراخيص، والتفاصيل الدقيقة.",
+    "title": "Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: أحدهما يكلّفك معالج رسومات وعطلتك، والآخر اشتراكًا سحابيًا",
+    "excerpt": "نماذج الفيديو المحلية (Wan 2.2 وLTX-2 وHunyuanVideo) مجانية التنزيل إن كان معالج رسوماتك يشغّلها. إليك مقارنتها بخدمة invideo السحابية.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/ar/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "Invideo vs 로컬 AI 비디오: 한쪽은 $0에 주말 시간, 다른 한쪽은 $17",
-    "excerpt": "로컬 AI 비디오 모델(Wan 2.2, LTX-2, HunyuanVideo)은 GPU만 있으면 무료입니다. Invideo의 클라우드는 모든 것을 $17/월에 해결합니다. VRAM, 라이선스, 세부 조항까지 정직하게 비교합니다.",
+    "title": "Invideo vs 로컬 AI 비디오: 한쪽은 GPU와 주말 시간, 다른 한쪽은 클라우드 구독",
+    "excerpt": "로컬 AI 비디오 모델(Wan 2.2, LTX-2, HunyuanVideo)은 GPU가 지원하면 무료로 내려받을 수 있습니다. invideo 클라우드 서비스와 비교합니다.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-20",
+    "dateModified": "2026-11-27",
     "url": "/ko/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26896,7 +26896,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud for AI Companies Compared in 2026",
     "excerpt": "Compare 8 AI clouds, from DigitalOcean and AWS to CoreWeave, RunPod and Lambda, on H100 price, GPU availability and workload fit for AI teams.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26905,7 +26905,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud für KI-Unternehmen im Vergleich 2026",
     "excerpt": "8 KI-Clouds im Vergleich, von DigitalOcean und AWS bis CoreWeave, RunPod und Lambda: H100-Preis, GPU-Verfügbarkeit und Workload-Eignung für KI-Teams.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/de/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26914,7 +26914,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod : comparatif des clouds pour entreprises IA en 2026",
     "excerpt": "Comparatif de 8 clouds IA, de DigitalOcean et AWS à CoreWeave, RunPod et Lambda : prix du H100, disponibilité des GPU et adéquation aux charges de travail.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/fr/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26923,7 +26923,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod：2026年AI企業向けクラウド比較",
     "excerpt": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月7日に確認。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/ja/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26932,7 +26932,7 @@
     "title": "DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod：2026 年 AI 公司云服务对比",
     "excerpt": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-07。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/zh/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26941,7 +26941,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativa de nubes para empresas de IA en 2026",
     "excerpt": "Compara 8 nubes de IA, de DigitalOcean y AWS a CoreWeave, RunPod y Lambda, por precio del H100, disponibilidad de GPU y ajuste a tu carga de trabajo.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/es/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26950,7 +26950,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativo de nuvens para empresas de IA em 2026",
     "excerpt": "Compare 8 nuvens de IA, do DigitalOcean e da AWS à CoreWeave, RunPod e Lambda, por preço do H100, disponibilidade de GPU e adequação à carga de trabalho.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/pt/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26959,7 +26959,7 @@
     "title": "DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod: مقارنة السحابات لشركات الذكاء الاصطناعي في 2026",
     "excerpt": "قارن 8 سحابات ذكاء اصطناعي، من DigitalOcean وAWS إلى CoreWeave وRunPod وLambda، من حيث سعر H100 وتوفر GPU وملاءمة حمل العمل.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/ar/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26968,14 +26968,14 @@
     "title": "DigitalOcean 대 AWS 대 CoreWeave 대 RunPod: 2026년 AI 기업용 클라우드 비교",
     "excerpt": "DigitalOcean, AWS, CoreWeave, RunPod 등 AI 클라우드 8곳을 H100 가격, GPU 가용성, 워크로드 적합성으로 비교합니다.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-23",
     "url": "/ko/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
   {
     "lang": "en",
-    "title": "Best Cloud GPU Providers 2026: RunPod, Vast.ai, Clore, Novita, Vultr and More Compared",
-    "excerpt": "Best cloud GPU providers 2026 compared: RunPod, Vast.ai, Clore, Novita, Vultr and more. Prices checked 2026-11-22, billing, risks and EU options.",
+    "title": "Cloud GPU Providers Compared 2026: RunPod, Vast.ai, Clore, Novita, Vultr and More",
+    "excerpt": "Cloud GPU providers compared for 2026: RunPod, Vast.ai, Clore, Novita, Vultr and more. Prices checked 2026-11-22, billing, risks and EU options.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/power-local-llm/best-cloud-gpu-providers",
@@ -26983,8 +26983,8 @@
   },
   {
     "lang": "de",
-    "title": "Beste Cloud-GPU-Anbieter 2026: RunPod, Vast.ai, Clore, Novita, Vultr und mehr im Vergleich",
-    "excerpt": "Beste Cloud-GPU-Anbieter 2026 im Vergleich: RunPod, Vast.ai, Clore, Novita, Vultr u. a. Preise geprüft am 2026-11-22, Abrechnung, Risiken, EU-Optionen.",
+    "title": "Cloud-GPU-Anbieter im Vergleich 2026: RunPod, Vast.ai, Clore, Novita, Vultr und mehr",
+    "excerpt": "Cloud-GPU-Anbieter 2026 im Vergleich: RunPod, Vast.ai, Clore, Novita, Vultr u. a. Preise geprüft am 2026-11-22, Abrechnung, Risiken, EU-Optionen.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/de/power-local-llm/best-cloud-gpu-providers",
@@ -26992,8 +26992,8 @@
   },
   {
     "lang": "fr",
-    "title": "Meilleurs fournisseurs de GPU cloud 2026 : RunPod, Vast.ai, Clore, Novita, Vultr et autres comparés",
-    "excerpt": "Meilleurs GPU cloud 2026 comparés : RunPod, Vast.ai, Clore, Novita, Vultr et autres. Prix vérifiés le 2026-11-22, facturation, risques et options UE.",
+    "title": "Fournisseurs de GPU cloud comparés 2026 : RunPod, Vast.ai, Clore, Novita, Vultr et autres",
+    "excerpt": "GPU cloud 2026 comparés : RunPod, Vast.ai, Clore, Novita, Vultr et autres. Prix vérifiés le 2026-11-22, facturation, risques et options UE.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/fr/power-local-llm/best-cloud-gpu-providers",
@@ -27001,8 +27001,8 @@
   },
   {
     "lang": "ja",
-    "title": "おすすめクラウドGPUプロバイダー2026：RunPod、Vast.ai、Clore、Novita、Vultrなどを比較",
-    "excerpt": "おすすめクラウドGPUプロバイダー2026を比較：RunPod、Vast.ai、Clore、Novita、Vultrなど。料金は2026-11-22確認、課金方式、リスク、EUの選択肢を解説。",
+    "title": "クラウドGPUプロバイダー比較2026：RunPod、Vast.ai、Clore、Novita、Vultrなど",
+    "excerpt": "クラウドGPUプロバイダー2026を比較：RunPod、Vast.ai、Clore、Novita、Vultrなど。料金は2026-11-22確認、課金方式、リスク、EUの選択肢を解説。",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/best-cloud-gpu-providers",
@@ -27010,8 +27010,8 @@
   },
   {
     "lang": "zh",
-    "title": "最佳云 GPU 服务商 2026：RunPod、Vast.ai、Clore、Novita、Vultr 等对比",
-    "excerpt": "2026 年最佳云 GPU 服务商对比：RunPod、Vast.ai、Clore、Novita、Vultr 等。价格核实于 2026-11-22，含计费、风险与欧盟选项。",
+    "title": "云 GPU 服务商对比 2026：RunPod、Vast.ai、Clore、Novita、Vultr 等",
+    "excerpt": "2026 年云 GPU 服务商对比：RunPod、Vast.ai、Clore、Novita、Vultr 等。价格核实于 2026-11-22，含计费、风险与欧盟选项。",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/zh/power-local-llm/best-cloud-gpu-providers",
@@ -27019,8 +27019,8 @@
   },
   {
     "lang": "es",
-    "title": "Mejores proveedores de GPU en la nube 2026: RunPod, Vast.ai, Clore, Novita, Vultr y más comparados",
-    "excerpt": "Mejores proveedores de GPU en la nube 2026: RunPod, Vast.ai, Clore, Novita, Vultr. Precios consultados el 2026-11-22, facturación, riesgos y opciones UE.",
+    "title": "Proveedores de GPU en la nube comparados 2026: RunPod, Vast.ai, Clore, Novita, Vultr y más",
+    "excerpt": "Proveedores de GPU en la nube comparados 2026: RunPod, Vast.ai, Clore, Novita, Vultr. Precios consultados el 2026-11-22, facturación, riesgos y opciones UE.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/es/power-local-llm/best-cloud-gpu-providers",
@@ -27028,8 +27028,8 @@
   },
   {
     "lang": "pt",
-    "title": "Melhores Provedores de GPU na Nuvem 2026: RunPod, Vast.ai, Clore, Novita, Vultr e Mais Comparados",
-    "excerpt": "Melhores provedores de GPU na nuvem 2026: RunPod, Vast.ai, Clore, Novita, Vultr e mais. Preços conferidos em 2026-11-22, cobrança, riscos e opções na UE.",
+    "title": "Provedores de GPU na Nuvem Comparados 2026: RunPod, Vast.ai, Clore, Novita, Vultr e Mais",
+    "excerpt": "Provedores de GPU na nuvem comparados em 2026: RunPod, Vast.ai, Clore, Novita, Vultr e mais. Preços conferidos em 2026-11-22, cobrança, riscos e opções na UE.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/pt/power-local-llm/best-cloud-gpu-providers",
@@ -27037,8 +27037,8 @@
   },
   {
     "lang": "ar",
-    "title": "أفضل مزودي GPU السحابية 2026: مقارنة RunPod وVast.ai وClore وNovita وVultr وغيرها",
-    "excerpt": "مقارنة أفضل مزودي GPU السحابية 2026: RunPod وVast.ai وClore وNovita وVultr وغيرها. أسعار جرى التحقق منها 2026-11-22 والفوترة والمخاطر وخيارات أوروبا.",
+    "title": "مقارنة مزودي GPU السحابية 2026: RunPod وVast.ai وClore وNovita وVultr وغيرها",
+    "excerpt": "مقارنة مزودي GPU السحابية 2026: RunPod وVast.ai وClore وNovita وVultr وغيرها. أسعار جرى التحقق منها 2026-11-22 والفوترة والمخاطر وخيارات أوروبا.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ar/power-local-llm/best-cloud-gpu-providers",
@@ -27046,8 +27046,8 @@
   },
   {
     "lang": "ko",
-    "title": "추천 클라우드 GPU 제공업체 2026: RunPod, Vast.ai, Clore, Novita, Vultr 등 비교",
-    "excerpt": "추천 클라우드 GPU 제공업체 2026 비교: RunPod, Vast.ai, Clore, Novita, Vultr 등. 2026-11-22 확인 가격, 과금 방식, 위험, EU 옵션.",
+    "title": "클라우드 GPU 제공업체 비교 2026: RunPod, Vast.ai, Clore, Novita, Vultr 등",
+    "excerpt": "클라우드 GPU 제공업체 2026 비교: RunPod, Vast.ai, Clore, Novita, Vultr 등. 2026-11-22 확인 가격, 과금 방식, 위험, EU 옵션.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/best-cloud-gpu-providers",
@@ -27056,7 +27056,7 @@
   {
     "lang": "en",
     "title": "GPU Server Hosting 2026: CUDO Compute, Cherry Servers, Database Mart (and LumaDock GPU VPS)",
-    "excerpt": "GPU server hosting 2026: CUDO closed on-demand, Cherry lists A100 from $2.362/hr, Database Mart H100 $1,039.60/mo first term (renews $2,599).",
+    "excerpt": "GPU server hosting 2026: CUDO says it closed on-demand, Cherry lists A100 from $2.362/hr, Database Mart H100 $1,039.60/mo first term (renews $2,599).",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27065,7 +27065,7 @@
   {
     "lang": "de",
     "title": "GPU-Server-Hosting 2026: CUDO Compute, Cherry Servers, Database Mart (und LumaDock GPU VPS)",
-    "excerpt": "GPU-Server-Hosting 2026: CUDO ohne On-Demand, Cherry A100 ab 2,362 $/Std., Database Mart H100 1.039,60 $/Mo. im ersten Term (danach 2.599 $).",
+    "excerpt": "GPU-Server-Hosting 2026: CUDO nach eigenen Angaben ohne On-Demand, Cherry A100 ab 2,362 $/Std., Database Mart H100 1.039,60 $/Mo. im 1. Term (danach 2.599 $).",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/de/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27074,7 +27074,7 @@
   {
     "lang": "fr",
     "title": "Hébergement de serveurs GPU 2026 : CUDO Compute, Cherry Servers, Database Mart (et LumaDock GPU VPS)",
-    "excerpt": "Serveurs GPU 2026 : CUDO a fermé son offre à la demande, Cherry propose l'A100 dès 2.362 $/h, Database Mart le H100 à 1 039.60 $/mois (puis 2 599 $).",
+    "excerpt": "Serveurs GPU 2026 : CUDO indique avoir fermé son offre à la demande, Cherry propose l'A100 dès 2,362 $/h, Database Mart H100 à 1 039,60 $/mois (puis 2 599 $).",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/fr/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27083,7 +27083,7 @@
   {
     "lang": "ja",
     "title": "GPUサーバーホスティング（2026）：CUDO Compute、Cherry Servers、Database Mart（とLumaDock GPU VPS）",
-    "excerpt": "GPUサーバーホスティング2026：CUDOはオンデマンド終了、CherryはA100が1時間2.362ドルから、Database MartはH100が初回月1,039.60ドル（更新後2,599ドル）。",
+    "excerpt": "GPUサーバーホスティング2026：CUDOは公式にオンデマンド終了と表示、CherryはA100が1時間2.362ドルから、Database MartはH100が初回月1,039.60ドル（更新後2,599ドル）。",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27092,7 +27092,7 @@
   {
     "lang": "zh",
     "title": "GPU 服务器托管 2026：CUDO Compute、Cherry Servers、Database Mart（及 LumaDock GPU VPS）",
-    "excerpt": "GPU 服务器托管 2026：CUDO 关闭按需平台，Cherry A100 每小时 $2.362 起，Database Mart H100 首期每月 $1,039.60（续费 $2,599）。",
+    "excerpt": "GPU 服务器托管 2026：CUDO 称已关闭按需平台，Cherry A100 每小时 $2.362 起，Database Mart H100 首期每月 $1,039.60（续费 $2,599）。",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/zh/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27101,7 +27101,7 @@
   {
     "lang": "es",
     "title": "Alojamiento de servidores con GPU 2026: CUDO Compute, Cherry Servers, Database Mart (y GPU VPS de LumaDock)",
-    "excerpt": "Servidores con GPU 2026: CUDO cerró el on-demand, Cherry lista A100 desde $2.362/h, Database Mart H100 a $1,039.60/mes el primer plazo (renueva $2,599).",
+    "excerpt": "Servidores con GPU 2026: CUDO indica que cerró el on-demand, Cherry A100 desde US$ 2,362/h, Database Mart H100 US$ 1.039,60/mes (renueva US$ 2.599).",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/es/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27110,7 +27110,7 @@
   {
     "lang": "pt",
     "title": "Hospedagem de Servidor GPU 2026: CUDO Compute, Cherry Servers, Database Mart (e GPU VPS da LumaDock)",
-    "excerpt": "Hospedagem de GPU 2026: CUDO encerrou o sob demanda, Cherry A100 de US$ 2.362/h, Database Mart H100 US$ 1,039.60/mês no 1º prazo (renova US$ 2,599).",
+    "excerpt": "Hospedagem de GPU 2026: a CUDO diz ter encerrado o sob demanda, Cherry A100 a partir de US$ 2,362/h, Database Mart H100 US$ 1.039,60/mês (renova US$ 2.599).",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/pt/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27119,7 +27119,7 @@
   {
     "lang": "ar",
     "title": "استضافة خوادم GPU 2026: CUDO Compute وCherry Servers وDatabase Mart (وLumaDock GPU VPS)",
-    "excerpt": "استضافة خوادم GPU 2026: CUDO أغلقت الطلب الفوري، وCherry تُدرج A100 من $2.362/ساعة، وDatabase Mart H100 بـ $1,039.60/شهر أولًا (يتجدد $2,599).",
+    "excerpt": "استضافة خوادم GPU 2026: CUDO تذكر أنها أغلقت الطلب الفوري، وCherry تُدرج A100 من $2.362/ساعة، وDatabase Mart H100 بـ $1,039.60/شهر أولًا (يتجدد $2,599).",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ar/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27128,7 +27128,7 @@
   {
     "lang": "ko",
     "title": "GPU 서버 호스팅 2026: CUDO Compute, Cherry Servers, Database Mart (및 LumaDock GPU VPS)",
-    "excerpt": "GPU 서버 호스팅 2026: CUDO 온디맨드 종료, Cherry A100 시간당 $2.362부터, Database Mart H100 첫 약정 월 $1,039.60(갱신 $2,599).",
+    "excerpt": "GPU 서버 호스팅 2026: CUDO는 온디맨드를 종료했다고 밝힘, Cherry A100 시간당 $2.362부터, Database Mart H100 첫 약정 월 $1,039.60(갱신 $2,599).",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
@@ -27317,7 +27317,7 @@
   {
     "lang": "fr",
     "title": "Test de Clore.ai (2026) : place de marché de GPU payée en crypto pour les LLM",
-    "excerpt": "Test Clore.ai 2026 : GPU communautaires payés en crypto. Frais On-Demand vs Spot (10 % / 2.5 %), Proof-of-Holding, dépôts et risques pour les LLM.",
+    "excerpt": "Test Clore.ai 2026 : GPU communautaires payés en crypto. Frais On-Demand vs Spot (10 % / 2,5 %), Proof-of-Holding, dépôts et risques pour les LLM.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/fr/power-local-llm/clore-ai-review",
@@ -27344,7 +27344,7 @@
   {
     "lang": "es",
     "title": "Análisis de Clore.ai (2026): marketplace de GPUs con pago en cripto para LLMs",
-    "excerpt": "Análisis de Clore.ai 2026: marketplace de GPUs de la comunidad con pago en cripto. Comisiones On-Demand vs Spot (10% / 2.5%), Proof-of-Holding y riesgos.",
+    "excerpt": "Análisis de Clore.ai 2026: marketplace de GPUs de la comunidad con pago en cripto. Comisiones On-Demand vs Spot (10% / 2,5%), Proof-of-Holding y riesgos.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/es/power-local-llm/clore-ai-review",
@@ -27353,7 +27353,7 @@
   {
     "lang": "pt",
     "title": "Análise da Clore.ai (2026): Marketplace de GPU Pago em Cripto para LLMs",
-    "excerpt": "Análise Clore.ai 2026: marketplace de GPU da comunidade pago em cripto. Taxas On-Demand vs Spot (10% / 2.5%), Proof-of-Holding, depósitos e riscos.",
+    "excerpt": "Análise Clore.ai 2026: marketplace de GPU da comunidade pago em cripto. Taxas On-Demand vs Spot (10% / 2,5%), Proof-of-Holding, depósitos e riscos.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/pt/power-local-llm/clore-ai-review",
@@ -27461,7 +27461,7 @@
   {
     "lang": "en",
     "title": "RunPod Review (2026): Pods, Serverless and Real Costs",
-    "excerpt": "RunPod review 2026: Pods vs Serverless, Secure vs Community Cloud, per-second billing, RTX 4090 from $0.34/hr, storage costs and data-handling facts.",
+    "excerpt": "RunPod review: Pods vs Serverless, Secure vs Community Cloud, per-second billing, RTX 4090 from $0.34/hr (RunPod pricing page, 2026-11-22), storage and data handling.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/power-local-llm/runpod-review",
@@ -27470,7 +27470,7 @@
   {
     "lang": "de",
     "title": "RunPod Review (2026): Pods, Serverless und die echten Kosten",
-    "excerpt": "RunPod Review 2026: Pods vs. Serverless, Secure vs. Community Cloud, Abrechnung pro Sekunde, RTX 4090 ab 0,34 $/Std., Speicherkosten und Datenschutzfakten.",
+    "excerpt": "RunPod Review: Pods vs. Serverless, Secure vs. Community Cloud, Abrechnung pro Sekunde, RTX 4090 ab 0,34 $/Std. (RunPod-Preisseite, 2026-11-22), Speicher und Datenumgang.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/de/power-local-llm/runpod-review",
@@ -27478,8 +27478,8 @@
   },
   {
     "lang": "fr",
-    "title": "Test de RunPod (2026) : Pods, Serverless et coûts réels",
-    "excerpt": "Test RunPod 2026 : Pods vs Serverless, Secure vs Community Cloud, facturation à la seconde, RTX 4090 dès 0.34 $/h, stockage et traitement des données.",
+    "title": "Avis sur RunPod (2026) : Pods, Serverless et coûts réels",
+    "excerpt": "Avis sur RunPod : Pods vs Serverless, Secure vs Community Cloud, facturation à la seconde, RTX 4090 dès 0.34 $/h (page de tarifs RunPod, 2026-11-22), stockage et données.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/fr/power-local-llm/runpod-review",
@@ -27488,7 +27488,7 @@
   {
     "lang": "ja",
     "title": "RunPodレビュー（2026）：PodとServerlessの仕組みと実際のコスト",
-    "excerpt": "RunPodレビュー2026：PodとServerless、Secure CloudとCommunity Cloudの違い、秒単位課金、RTX 4090は1時間0.34ドルから、ストレージ料金とデータの扱いを解説。",
+    "excerpt": "RunPodレビュー：PodとServerless、Secure CloudとCommunity Cloudの違い、秒単位課金、RTX 4090は1時間0.34ドルから（RunPod料金ページ、2026-11-22）、ストレージ料金とデータの扱い。",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/runpod-review",
@@ -27497,7 +27497,7 @@
   {
     "lang": "zh",
     "title": "RunPod 评测（2026）：Pod、Serverless 与真实成本",
-    "excerpt": "RunPod 评测 2026：Pod 与 Serverless、Secure 与 Community Cloud、按秒计费，RTX 4090 低至 $0.34/小时，另含存储成本与数据处理说明。",
+    "excerpt": "RunPod 评测：Pod 与 Serverless、Secure 与 Community Cloud、按秒计费，RTX 4090 低至 $0.34/小时（RunPod 定价页，2026-11-22），另含存储成本与数据处理说明。",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/zh/power-local-llm/runpod-review",
@@ -27506,7 +27506,7 @@
   {
     "lang": "es",
     "title": "Análisis de RunPod (2026): Pods, Serverless y costes reales",
-    "excerpt": "Análisis de RunPod 2026: Pods vs Serverless, Secure vs Community Cloud, facturación por segundo, RTX 4090 desde $0.34/h, almacenamiento y datos.",
+    "excerpt": "Análisis de RunPod: Pods vs Serverless, Secure vs Community Cloud, facturación por segundo, RTX 4090 desde $0.34/h (página de precios de RunPod, 2026-11-22), almacenamiento y datos.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/es/power-local-llm/runpod-review",
@@ -27515,7 +27515,7 @@
   {
     "lang": "pt",
     "title": "Análise da RunPod (2026): Pods, Serverless e Custos Reais",
-    "excerpt": "Análise RunPod 2026: Pods vs Serverless, Secure vs Community Cloud, cobrança por segundo, RTX 4090 a partir de US$ 0.34/h, armazenamento e dados.",
+    "excerpt": "Análise RunPod: Pods vs Serverless, Secure vs Community Cloud, cobrança por segundo, RTX 4090 a partir de US$ 0.34/h (página de preços da RunPod, 2026-11-22), armazenamento e dados.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/pt/power-local-llm/runpod-review",
@@ -27524,7 +27524,7 @@
   {
     "lang": "ar",
     "title": "مراجعة RunPod (2026): Pods وServerless والتكاليف الفعلية",
-    "excerpt": "مراجعة RunPod 2026: Pods مقابل Serverless، وSecure Cloud مقابل Community Cloud، فوترة بالثانية، وRTX 4090 من $0.34/ساعة، وتكاليف التخزين.",
+    "excerpt": "مراجعة RunPod: Pods مقابل Serverless، وSecure Cloud مقابل Community Cloud، فوترة بالثانية، وRTX 4090 من $0.34/ساعة (صفحة أسعار RunPod، 2026-11-22)، وتكاليف التخزين.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ar/power-local-llm/runpod-review",
@@ -27533,7 +27533,7 @@
   {
     "lang": "ko",
     "title": "RunPod 리뷰 (2026): Pod, Serverless, 실제 비용",
-    "excerpt": "RunPod 리뷰 2026: Pod와 Serverless, Secure·Community Cloud 차이, 초 단위 과금, RTX 4090 시간당 $0.34부터, 스토리지 비용과 데이터 처리 사실.",
+    "excerpt": "RunPod 리뷰: Pod와 Serverless, Secure·Community Cloud 차이, 초 단위 과금, RTX 4090 시간당 $0.34부터(RunPod 가격 페이지, 2026-11-22), 스토리지 비용과 데이터 처리.",
     "publishDate": "2026-11-22",
     "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/runpod-review",
@@ -34994,7 +34994,7 @@
   {
     "lang": "en",
     "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-    "excerpt": "Compare 55 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
+    "excerpt": "Compare 56 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -35003,7 +35003,7 @@
   {
     "lang": "de",
     "title": "Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten",
-    "excerpt": "Vergleich von 55 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
+    "excerpt": "Vergleich von 56 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/local-llm-voice-audio-compared",
@@ -35012,7 +35012,7 @@
   {
     "lang": "fr",
     "title": "Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux",
-    "excerpt": "Comparez 55 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
+    "excerpt": "Comparez 56 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-llm-voice-audio-compared",
@@ -35021,7 +35021,7 @@
   {
     "lang": "ja",
     "title": "ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント",
-    "excerpt": "ローカル音声ツール55種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル音声ツール56種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-llm-voice-audio-compared",
@@ -35030,7 +35030,7 @@
   {
     "lang": "zh",
     "title": "本地语音工具对比(2026):语音合成、语音转文字与语音助手",
-    "excerpt": "并排对比55款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
+    "excerpt": "并排对比56款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-llm-voice-audio-compared",
@@ -35039,7 +35039,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz",
-    "excerpt": "Compara 55 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
+    "excerpt": "Compara 56 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-llm-voice-audio-compared",
@@ -35048,7 +35048,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz",
-    "excerpt": "Compare 55 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
+    "excerpt": "Compare 56 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-llm-voice-audio-compared",
@@ -35057,7 +35057,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون",
-    "excerpt": "قارن 55 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
+    "excerpt": "قارن 56 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-llm-voice-audio-compared",
@@ -35066,7 +35066,7 @@
   {
     "lang": "ko",
     "title": "로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트",
-    "excerpt": "로컬 음성 도구 55개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 음성 도구 56개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-llm-voice-audio-compared",
@@ -42202,6 +42202,87 @@
   },
   {
     "lang": "en",
+    "title": "Weesper Transcribe Review: Offline File Transcription for Mac",
+    "excerpt": "Weesper Transcribe transcribes audio and video on your Mac with Whisper, its maker says. Free up to 15 minutes; Pro adds batches and subtitles. Untested.",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Weesper Transcribe Rezension: Dateien offline transkribieren auf dem Mac",
+    "excerpt": "Weesper Transcribe transkribiert laut Anbieter Audio und Video mit Whisper auf dem Mac. Gratis bis 15 Min.; Pro bietet Stapel und Untertitel. Ungetestet.",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/de/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Weesper Transcribe : transcription de fichiers hors ligne sur Mac",
+    "excerpt": "Weesper Transcribe transcrit audio et vidéo sur Mac avec Whisper, selon l’éditeur. Gratuit jusqu’à 15 minutes ; Pro ajoute lots et sous-titres. Non testé.",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/fr/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Weesper Transcribeレビュー：Mac向けオフラインファイル文字起こし",
+    "excerpt": "開発元によると、Weesper TranscribeはWhisperで音声・動画をMac上で文字起こしします。15分までのファイルは無料、一括処理や字幕書き出しはPro。未検証のレビューです。",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/ja/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Weesper Transcribe 评测：Mac 离线文件转录",
+    "excerpt": "据开发商称，Weesper Transcribe 用 Whisper 在 Mac 本机转录音频和视频。15分钟以内的文件免费，批量处理和字幕导出需 Pro 版。本评测未做实测。",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/zh/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Weesper Transcribe: transcripción de archivos sin conexión en Mac",
+    "excerpt": "Weesper Transcribe transcribe audio y video en tu Mac con Whisper, según su creador. Gratis hasta 15 minutos; Pro añade lotes y subtítulos. Sin probar.",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/es/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Weesper Transcribe: transcrição de arquivos offline no Mac",
+    "excerpt": "Weesper Transcribe transcreve áudio e vídeo no Mac com Whisper, segundo o fabricante. Grátis até 15 minutos; o Pro adiciona lotes e legendas. Não testado.",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/pt/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Weesper Transcribe: تحويل الملفات إلى نص دون اتصال على Mac",
+    "excerpt": "بحسب المطوّر، يحوّل Weesper Transcribe الصوت والفيديو إلى نص على Mac عبر Whisper. مجاني حتى 15 دقيقة، وتضيف Pro الدفعات وملفات الترجمة. لم نختبره.",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/ar/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Weesper Transcribe 리뷰: Mac용 오프라인 파일 전사",
+    "excerpt": "개발사에 따르면 Weesper Transcribe는 Whisper로 Mac에서 오디오·동영상을 전사합니다. 15분 이하 파일은 무료, 일괄 처리와 자막 내보내기는 Pro. 직접 테스트하지 않음.",
+    "publishDate": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "url": "/ko/power-local-llm/weesper-transcribe-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
     "excerpt": "Amical review: free MIT-licensed dictation for Mac and Windows that runs Whisper on your PC and works offline after a model download. Not tested.",
     "publishDate": "2026-11-09",
@@ -43015,7 +43096,7 @@
     "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
     "excerpt": "Weesper Neon Flow review: Whisper dictation for Mac and Windows that, per its maker, runs on your PC. 15-day trial, then 5 EUR a month. Not tested.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -43024,7 +43105,7 @@
     "title": "Weesper Neon Flow Rezension: Offline-Diktat für Mac und Windows",
     "excerpt": "Weesper Neon Flow Rezension: Whisper-Diktat für Mac und Windows, laut Hersteller lokal. 15 Tage testen, dann 5 €/Monat oder 99 € einmalig. Nicht getestet.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/de/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -43033,7 +43114,7 @@
     "title": "Test de Weesper Neon Flow : dictée hors ligne pour Mac et Windows",
     "excerpt": "Test de Weesper Neon Flow : dictée Whisper pour Mac et Windows, locale selon l'éditeur. Essai de 15 jours, puis 5 €/mois ou 99 € une fois. Non testée.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/fr/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -43042,7 +43123,7 @@
     "title": "Weesper Neon Flow レビュー：Mac・Windows向けオフライン音声入力アプリ",
     "excerpt": "Weesper Neon Flowのレビュー：Mac・Windows向け、開発元によるとお使いのPC上で動くWhisper音声入力アプリ。15日間の無料体験後は月5ユーロまたは99ユーロの買い切り。実機検証なし。",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ja/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -43051,7 +43132,7 @@
     "title": "Weesper Neon Flow评测：适用于Mac和Windows的离线听写应用",
     "excerpt": "Weesper Neon Flow评测：适用于Mac和Windows的付费Whisper听写应用，据开发者称在你的电脑上运行。15天试用，之后每月5欧元或一次性99欧元，未经实测。",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/zh/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -43060,7 +43141,7 @@
     "title": "Reseña de Weesper Neon Flow: dictado sin conexión para Mac y Windows",
     "excerpt": "Reseña de Weesper Neon Flow: dictado con Whisper para Mac y Windows, local según su fabricante. Prueba de 15 días, luego 5 €/mes. No probada.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/es/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -43069,7 +43150,7 @@
     "title": "Análise do Weesper Neon Flow: ditado offline para Mac e Windows",
     "excerpt": "Análise do Weesper Neon Flow: ditado com Whisper para Mac e Windows, local segundo o fabricante. Teste grátis de 15 dias, depois 5 EUR/mês. Não testado.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/pt/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -43078,7 +43159,7 @@
     "title": "مراجعة Weesper Neon Flow: إملاء صوتي دون اتصال لأجهزة Mac وWindows",
     "excerpt": "مراجعة Weesper Neon Flow: تطبيق إملاء مدفوع بنموذج Whisper لأجهزة Mac وWindows يعمل على حاسوبك بحسب مطوّره. تجربة 15 يومًا ثم 5 EUR شهريًا. لم يُختبر.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ar/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -43087,7 +43168,7 @@
     "title": "Weesper Neon Flow 리뷰: Mac·Windows용 오프라인 받아쓰기 앱",
     "excerpt": "Weesper Neon Flow 리뷰: 개발사에 따르면 PC에서 실행되는 Mac·Windows용 유료 Whisper 받아쓰기 앱. 15일 체험 후 월 5 EUR. 직접 테스트하지 않았습니다.",
     "publishDate": "2026-11-06",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ko/power-local-llm/weesper-neon-flow-review",
     "cluster": "power-local-llm"
   },
@@ -67556,7 +67637,7 @@
   {
     "lang": "en",
     "title": "Best Cloud GPU for LLM Fine-Tuning Under $1/Hour (2026)",
-    "excerpt": "Rent a GPU to fine-tune Llama 3.1 8B or Qwen3 14B for under $1/hour: RTX 4090 at $0.34/hr on RunPod, and how Vast.ai compares. Real costs.",
+    "excerpt": "Rent a GPU to fine-tune Llama 3.1 8B or Qwen3 14B for under $1/hour: RTX 4090 at $0.34/hr on RunPod, and how Vast.ai compares. Listed prices.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour",
@@ -67564,7 +67645,7 @@
   },
   {
     "lang": "de",
-    "title": "Günstigste Cloud-GPU für LLM-Fine-Tuning unter 1 $/Stunde (2026)",
+    "title": "Cloud-GPU für LLM-Fine-Tuning unter 1 $/Stunde (2026)",
     "excerpt": "GPU mieten und Llama 3.1 8B oder Qwen3 14B für unter 1 $/Std. fine-tunen: RTX 4090 ab 0,34 $/Std. bei RunPod, dazu der Vergleich mit Vast.ai.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
@@ -67574,7 +67655,7 @@
   {
     "lang": "fr",
     "title": "Meilleur GPU cloud pour fine-tuner un LLM à moins de 1 $/heure (2026)",
-    "excerpt": "Louez un GPU pour fine-tuner Llama 3.1 8B ou Qwen3 14B à moins de 1 $/h : RTX 4090 à 0,34 $/h chez RunPod, et comparaison avec Vast.ai. Coûts réels.",
+    "excerpt": "Louez un GPU pour fine-tuner Llama 3.1 8B ou Qwen3 14B à moins de 1 $/h : RTX 4090 à 0,34 $/h chez RunPod, et comparaison avec Vast.ai. Prix listés.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/fr/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour",
@@ -67582,7 +67663,7 @@
   },
   {
     "lang": "ja",
-    "title": "LLMファインチューニングに最安クラウドGPU（時間1ドル以下、2026年）",
+    "title": "LLMファインチューニング向け1時間1ドル未満のクラウドGPU（2026年）",
     "excerpt": "GPUを借りてLlama 3.1 8B/Qwen3 14Bを時間1ドル以下でファインチューニング。RunPod RTX 4090は0.34ドル/時、Vast.aiとの比較も。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
@@ -67591,8 +67672,8 @@
   },
   {
     "lang": "zh",
-    "title": "2026年最便宜LLM微调云GPU（每小时不到1美元）",
-    "excerpt": "租用GPU微调Llama 3.1 8B或Qwen3 14B，每小时不到1美元：RunPod RTX 4090 0.34美元/小时，并对比Vast.ai。含实际成本与租用步骤。",
+    "title": "2026年LLM微调云GPU（每小时低于1美元）",
+    "excerpt": "租用GPU微调Llama 3.1 8B或Qwen3 14B，每小时不到1美元：RunPod RTX 4090 0.34美元/小时，并对比Vast.ai。含价格与租用步骤。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/zh/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour",
@@ -67627,7 +67708,7 @@
   },
   {
     "lang": "ko",
-    "title": "LLM 파인튜닝을 위한 최저가 클라우드 GPU — 시간당 $1 미만 (2026)",
+    "title": "LLM 파인튜닝을 위한 시간당 1달러 미만 클라우드 GPU (2026)",
     "excerpt": "GPU를 빌려 Llama 3.1 8B·Qwen3 14B를 시간당 $1 미만으로 파인튜닝: RunPod RTX 4090 $0.34/시간, Vast.ai와의 비교.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
@@ -74197,10 +74278,10 @@
   },
   {
     "lang": "en",
-    "title": "Is Balcony Solar Legal in My State? US State-by-State Guide",
-    "excerpt": "Which states allow balcony solar? 10 have signed plug-in laws and New York awaits its governor; Texas and Florida have none. Bills, caps, dates.",
+    "title": "Is Plug-In (Balcony) Solar Legal in My State? US State Guide",
+    "excerpt": "Which states allow plug-in (balcony) solar? 10 have signed laws, New York awaits its governor; Texas and Florida have none. Bills, caps, dates.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-31",
+    "dateModified": "2026-11-27",
     "url": "/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -75331,7 +75412,7 @@
   },
   {
     "lang": "en",
-    "title": "How Balcony Solar Went From Illegal to Law in 10 US States (2026)",
+    "title": "How Plug-In (Balcony) Solar Went From Illegal to Law in 10 US States (2026)",
     "excerpt": "Is balcony solar legal in Florida or Texas? Neither has a law. How Utah and nine other states legalized plug-in solar, plus UL 3700 and New York.",
     "publishDate": "2026-07-16",
     "dateModified": "2026-10-31",
@@ -78736,7 +78817,7 @@
     "title": "Best Hardware for a Local Smart Home + Local AI (2026)",
     "excerpt": "Best local smart home + AI hardware in 2026: Intel N100 mini PC or Raspberry Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo), SSD storage, and an LLM step-up. Updated pricing.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-27",
     "url": "/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78745,7 +78826,7 @@
     "title": "Beste Hardware für ein lokales Smart Home + lokale KI (2026)",
     "excerpt": "Beste Hardware für lokales Smart Home + KI 2026: Intel-N100-Mini-PC oder Raspberry Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo), SSD-Speicher, LLM-Aufstieg. Aktualisierte Preise.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/de/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78754,7 +78835,7 @@
     "title": "Meilleur Matériel pour une Maison Connectée Locale + IA Locale (2026)",
     "excerpt": "Meilleur matériel maison connectée locale + IA 2026 : mini-PC Intel N100 ou Raspberry Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo), stockage SSD, montée en gamme LLM. Prix actualisés.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/fr/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78763,7 +78844,7 @@
     "title": "ローカルスマートホーム + ローカルAIに最適なハードウェア（2026）",
     "excerpt": "ローカルスマートホーム＋AIの最適ハードウェア（2026年）：Intel N100 ミニPC または Raspberry Pi 5 のハブ、Frigate 加速（Intel 内蔵GPU／Hailo）、SSD ストレージ、LLM 用の上位構成を解説。価格情報を更新。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/ja/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78772,7 +78853,7 @@
     "title": "本地智能家居 + 本地 AI 的最佳硬件（2026）",
     "excerpt": "2026年本地智能家居 + AI 硬件推荐：Intel N100 迷你 PC 或 Raspberry Pi 5 中枢，Frigate 加速方案（Intel 集成显卡/Hailo），SSD 存储，以及本地 LLM 升级选项。含最新价格。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/zh/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78781,7 +78862,7 @@
     "title": "Mejor Hardware para un Smart Home Local + IA Local (2026)",
     "excerpt": "Mejor hardware para un smart home local + IA en 2026: hub con mini PC Intel N100 o Raspberry Pi 5, acelerador Frigate (Intel iGPU/Hailo), almacenamiento SSD y salto a LLM. Precios actualizados.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/es/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78790,7 +78871,7 @@
     "title": "Melhor Hardware para uma Casa Inteligente Local + IA Local (2026)",
     "excerpt": "Melhor hardware para casa inteligente local + IA em 2026: hub mini PC Intel N100 ou Raspberry Pi 5, acelerador do Frigate (iGPU Intel/Hailo), armazenamento SSD e um passo seguinte para LLM. Preços atualizados.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/pt/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78799,7 +78880,7 @@
     "title": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي المحلي (⁨2026⁩)",
     "excerpt": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM. أسعار محدّثة.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/ar/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78808,7 +78889,7 @@
     "title": "로컬 스마트 홈 + 로컬 AI를 위한 최고의 하드웨어 (2026)",
     "excerpt": "2026년 로컬 스마트 홈 + AI 최고의 하드웨어: Intel N100 미니 PC 또는 Raspberry Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo), SSD 스토리지, LLM 업그레이드 경로. 최신 가격 반영.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/ko/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },

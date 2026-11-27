@@ -10,6 +10,7 @@
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
 import { PilotPromoSlot } from '@/components/promo/PilotPromoSlot'
+import { AdTestSlot } from '@/components/promo/AdTestSlot'
 import { bannerMidIndex } from '@/lib/affiliate-banners/lookup'
 import { AffiliateBannerSlot } from '@/components/affiliate-banner/AffiliateBannerSlot'
 import { promoMidArticleIndex } from '@/lib/promo/config'
@@ -1821,6 +1822,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
 
         {/* Sections */}
         <PilotPromoSlot at="P1" />
+        <AdTestSlot at="P1" />
         <AffiliateBannerSlot at="AP1" />
         <PilotPromoSlot at="P5" />
         <article className={`key-takeaways-container ${skinCls.sections}`}>
@@ -1882,13 +1884,16 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                   return [
                     key === 'relatedReading' ? <PilotPromoSlot key={`${key}-p3`} at="P3" /> : null,
                     key === 'relatedReading' ? <AffiliateBannerSlot key={`${key}-ap3`} at="AP3" /> : null,
+                    key === 'relatedReading' ? <AdTestSlot key={`${key}-t3`} at="P3" /> : null,
                     el,
                     vi !== -1 && vi === mid ? <PilotPromoSlot key={`${key}-p2`} at="P2" /> : null,
                     vi !== -1 && vi === bmid ? <AffiliateBannerSlot key={`${key}-ap2`} at="AP2" /> : null,
+                    vi !== -1 && vi === mid ? <AdTestSlot key={`${key}-t2`} at="P2" /> : null,
                   ]
                 })}
                 {!hasRelated && <PilotPromoSlot at="P3" />}
                 {!hasRelated && <AffiliateBannerSlot at="AP3" />}
+                {!hasRelated && <AdTestSlot at="P3" />}
               </>
             )
           })()}
