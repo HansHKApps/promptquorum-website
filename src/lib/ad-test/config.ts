@@ -1,7 +1,8 @@
-// Ad display test: our own ads (Ask Hans, Directory, Academy) on the uncensored pages, to measure how often
-// an ad is DISPLAYED per page view (clicks are only a side number). No ad network, no third party, no cookies.
-// Separate from the promo pilot: own pages, own events (adtest_*), own `adtest_` open source / ?via=.
-// Method, events and report: docs/ad-display-test.md. Check: npm run test:ad-display
+// Page view reality check ("ad display test"): our own ads on the uncensored pages, counted by OUR OWN counter (not
+// Umami), so that real ad displays can be compared with Google Search Console and with Umami page views.
+// No ad network, no third party, no cookies, no storage in the browser, no visitor ID.
+// Separate from the promo pilot: own pages, own counter, own `adtest_` open source / ?via=.
+// Method, counts and report: docs/ad-display-test.md. Check: npm run test:ad-display
 import type { PromoTarget } from '@/lib/promo/types'
 
 /** English paths; the same entry covers /de/..., /fr/..., ... (all 9 locales). */
@@ -13,13 +14,6 @@ export const AD_TEST_PAGES: readonly string[] = [
 export type AdTestPosition = 'P1' | 'P2' | 'P3'
 export const AD_TEST_POSITIONS: readonly AdTestPosition[] = ['P1', 'P2', 'P3']
 export const AD_TEST_CREATIVES: readonly PromoTarget[] = ['ask-hans', 'directory', 'academy']
-
-/**
- * Share of page views that send adtest_request / adtest_impression. Every visitor SEES the ads; only the
- * measurement is sampled, because each event counts against the Umami event quota (about 4 per measured view).
- * Clicks are always sent. If you change this, restart the measurement window.
- */
-export const AD_TEST_MEASURE_SHARE = 0.25
 
 /** Creative at a position for rotation 0..2 (Latin square: every creative once per view, each position equally often). */
 export function adTestCreative(position: AdTestPosition, rotation: number): PromoTarget {

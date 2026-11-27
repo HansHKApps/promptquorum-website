@@ -1,109 +1,123 @@
-// Pure math of the ad display test report and revenue simulator (docs/ad-display-test.md).
-export const POSITIONS = ['P1', 'P2', 'P3']
-export const CREATIVES = ['ask-hans', 'directory', 'academy']
-export const FILL_RATES = [0.7, 0.85, 0.95]
-export const CPMS = [1, 2, 3, 5]
+// Pure math of the page view reality check report (docs/ad-display-test.md).
+// Compares three measurements of the same pages and days: GSC, our own counter, Umami.
 
-/** 95% Wilson interval for k of n. */
-export function wilson(k, n, z = 1.96) {
-  if (!n) return null
-  const p = k / n
-  const d = 1 + (z * z) / n
-  const mid = (p + (z * z) / (2 * n)) / d
-  const half = (z * Math.sqrt((p * (1 - p)) / n + (z * z) / (4 * n * n))) / d
-  return [Math.max(0, mid - half), Math.min(1, mid + half)]
-}
-
-export function simulateRevenue({ pageviews, adsPerPage, fillRate, cpm, adblock = 0 }) {
-  return (pageviews * adsPerPage * fillRate * (1 - adblock) * cpm) / 1000
-}
-
-function checkCount(v, name) {
-  if (!Number.isInteger(v) || v < 0) throw new Error(`${name} must be a whole number >= 0, got ${JSON.stringify(v)}`)
-  return v
-}
-
-/** counts = { days, measureShare, pageviews, requests, impressions: {cell: n}, clicks: {cell: n} } */
-export function analyse(counts) {
-  const days = checkCount(counts.days, 'days')
-  const pageviews = checkCount(counts.pageviews, 'pageviews')
-  const requests = checkCount(counts.requests, 'requests')
-  const share = counts.measureShare
-  if (!days || !pageviews || !requests) throw new Error('days, pageviews and requests must be above 0')
-  if (!(share > 0 && share <= 1)) throw new Error('measureShare must be in (0, 1]')
-  const valid = new Set(POSITIONS.flatMap((p) => CREATIVES.map((c) => `${p}:${c}`)))
-  for (const key of ['impressions', 'clicks']) {
-    for (const [cell, n] of Object.entries(counts[key] ?? {})) {
-      if (!valid.has(cell)) throw new Error(`unknown cell in ${key}: ${cell}`)
-      checkCount(n, `${key}.${cell}`)
-    }
+/** counter field = <event>|<source>|<locale>|<page> */
+function tally(dayCounts, match) {
+  let n = 0
+  for (const [field, value] of Object.entries(dayCounts)) {
+    const [event, source, locale, page] = field.split('|')
+    if (match({ event, source, locale, page })) n += Number(value)
   }
-  const sum = (obj, match) => Object.entries(obj ?? {}).reduce((a, [cell, n]) => a + (match(cell) ? n : 0), 0)
-  const row = (name, match) => {
-    const impressions = sum(counts.impressions, match)
-    // every measured view has each position once and each creative once, so both have `requests` opportunities
-    if (impressions > requests) throw new Error(`${name}: ${impressions} impressions but only ${requests} requests`)
-    const clicks = sum(counts.clicks, match)
-    // clicks are counted on all views, impressions on the measured share only
-    return { name, opportunities: requests, impressions, rate: impressions / requests, interval: wilson(impressions, requests), clicks, ctr: impressions ? clicks / (impressions / share) : null }
-  }
-  const positions = POSITIONS.map((p) => row(p, (cell) => cell.startsWith(`${p}:`)))
-  const creatives = CREATIVES.map((c) => row(c, (cell) => cell.endsWith(`:${c}`)))
-  const displayed = positions.reduce((a, r) => a + r.impressions, 0)
+  return n
+}
+
+/** Accepts the GSC tool output ({rows:[{keys:[date,page],clicks,impressions}]}) with dimensions date, page. */
+export function gscRows(gsc, pages) {
+  return (gsc.rows ?? []).flatMap((r) => {
+    const [date, url] = r.keys
+    const m = /^https:\/\/www\.promptquorum\.com(?:\/(de|fr|es|pt|ja|zh|ko|ar))?\/power-local-llm\/([a-z0-9-]+)$/.exec(url)
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error('GSC rows need dimensions ["date","page"], in that order')
+    return m && pages.has(m[2]) ? [{ date, locale: m[1] ?? 'en', page: m[2], clicks: r.clicks, impressions: r.impressions }] : []
+  })
+}
+
+const sum = (list, f) => list.reduce((a, x) => a + f(x), 0)
+export const ratio = (a, b) => (b ? a / b : null)
+
+function metrics(counterDays, dates, rows, filter = () => true) {
+  const count = (match) => sum(dates, (d) => tally(counterDays[d], (f) => filter(f) && match(f)))
+  const visitors = (event) => (f) => f.event === event && f.source !== 'auto'
+  const mine = rows.filter((r) => dates.includes(r.date) && filter(r))
   return {
-    days,
-    pageviews,
-    requests,
-    coverage: requests / (pageviews * share),
-    displayed,
-    displayRate: displayed / (requests * POSITIONS.length),
-    // "N ads per page" = the first N positions, P1 first
-    perPage: [1, 2, 3].map((n) => ({ ads: n, displayed: positions.slice(0, n).reduce((a, r) => a + r.rate, 0) })),
-    monthlyPageviews: (pageviews * 30) / days,
-    positions,
-    creatives,
+    gscImpressions: sum(mine, (r) => r.impressions),
+    gscClicks: sum(mine, (r) => r.clicks),
+    loads: count(visitors('load')),
+    googleLoads: count((f) => f.event === 'load' && f.source === 'google'),
+    shownViews: count(visitors('first')),
+    googleShownViews: count((f) => f.event === 'first' && f.source === 'google'),
+    humanViews: count(visitors('human')),
+    googleHumanViews: count((f) => f.event === 'human' && f.source === 'google'),
+    adsShown: count((f) => f.event.startsWith('ad:') && f.source !== 'auto'),
+    clicks: count((f) => f.event.startsWith('click:') && f.source !== 'auto'),
+    automatedLoads: count((f) => f.event === 'load' && f.source === 'auto'),
   }
 }
 
-const pct = (v) => (v == null ? '-' : `${(v * 100).toFixed(1)}%`)
-const int = (v) => Math.round(v).toLocaleString('en-US')
-
-export function renderReport(a, { adblock = 0 } = {}) {
-  const table = (title, rows) => [
-    `## ${title}`,
-    '| | Opportunities | Displayed | Display rate (95% interval) | Clicks (all views) | CTR (estimate) |',
-    '|---|---|---|---|---|---|',
-    ...rows.map((r) => `| ${r.name} | ${int(r.opportunities)} | ${int(r.impressions)} | ${pct(r.rate)} (${pct(r.interval[0])} to ${pct(r.interval[1])}) | ${int(r.clicks)} | ${pct(r.ctr)} |`),
-    '',
-  ]
-  const out = [
-    '# Ad display test report',
-    '',
-    `Window: ${a.days} days. Umami page views of the test pages: ${int(a.pageviews)}. Measured ad requests (page views): ${int(a.requests)}.`,
-    `Tracking coverage (requests vs the measured share of page views): ${pct(a.coverage)}.${a.coverage < 0.85 || a.coverage > 1.15 ? ' **CHECK:** outside 85-115%. Same pages, same dates, same sample share? Do not use the numbers until explained.' : ''}`,
-    ...(a.requests < 1000 ? ['**Thin data:** below 1,000 measured page views.'] : []),
-    '',
-    `**Overall display rate: ${pct(a.displayRate)}** of ad opportunities (3 per page view) were really displayed.`,
-    '',
-    ...table('By position', a.positions),
-    ...table('By ad (rotated through all positions)', a.creatives),
-    '## Ads displayed per page view',
-    '| Ads per page | Displayed per page view |',
-    '|---|---|',
-    ...a.perPage.map((p) => `| ${p.ads} (${POSITIONS.slice(0, p.ads).join(' + ')}) | ${p.displayed.toFixed(2)} |`),
-    '',
-    '## Revenue simulator (assumptions, NOT revenue)',
-    `Per month, from ${int(a.monthlyPageviews)} page views. Display rates are measured; fill rate and CPM are assumed. CPM is applied to DISPLAYED (viewable) ads. Extra ad-block deduction: ${pct(adblock)}.`,
-    '',
-    `| Ads per page | Fill rate | ${CPMS.map((c) => `CPM €${c}`).join(' | ')} |`,
-    `|---|---|${CPMS.map(() => '---|').join('')}`,
-  ]
-  for (const p of a.perPage) {
-    for (const fillRate of FILL_RATES) {
-      const cells = CPMS.map((cpm) => `€${simulateRevenue({ pageviews: a.monthlyPageviews, adsPerPage: p.displayed, fillRate, cpm, adblock }).toFixed(2)}`)
-      out.push(`| ${p.ads} | ${pct(fillRate)} | ${cells.join(' | ')} |`)
-    }
+/** counter = {days:{date:{field:n}}}. A day is compared only if BOTH GSC and the counter have data for it. */
+export function analyse({ counter, gsc, pages, umami = null }) {
+  const rows = gscRows(gsc, pages)
+  const counterDates = Object.keys(counter.days).sort()
+  if (!counterDates.length) throw new Error('the counter export has no days')
+  const dates = []
+  const excluded = []
+  for (const d of counterDates) {
+    const hasGsc = rows.some((r) => r.date === d)
+    const hasCounter = tally(counter.days[d], (f) => f.event === 'load') > 0
+    if (hasGsc && hasCounter) dates.push(d)
+    else excluded.push({ date: d, reason: !hasCounter ? 'counter has no data (not started, or storage failed)' : 'no GSC data yet' })
   }
-  out.push('', 'Limits: visitors who block Umami are in neither page views nor events. A real network would also be blocked more often than our own ads, and may show fewer ads on adult-adjacent ("uncensored") pages. Fill rate cannot be measured with own ads.', '')
-  return out.join('\n')
+  if (!dates.length) throw new Error('no day has both GSC data and counter data')
+  const split = (key, values) => values.map((v) => ({ name: v, ...metrics(counter.days, dates, rows, (f) => f[key] === v) }))
+  return {
+    dates,
+    excluded,
+    umami,
+    total: metrics(counter.days, dates, rows),
+    byDay: dates.map((d) => ({ name: d, ...metrics(counter.days, [d], rows) })),
+    byLocale: split('locale', ['en', 'de', 'fr', 'es', 'pt', 'ja', 'zh', 'ko', 'ar']).filter((r) => r.gscClicks || r.loads),
+    bySource: ['google', 'search', 'site', 'internal', 'direct', 'repeat', 'auto'].map((s) => ({ name: s, loads: sum(dates, (d) => tally(counter.days[d], (f) => f.event === 'load' && f.source === s)) })),
+  }
+}
+
+const int = (v) => Math.round(v).toLocaleString('en-US')
+const pct = (a, b) => (b ? `${((a / b) * 100).toFixed(0)}%` : '-')
+const per = (a, b) => (b ? (a / b).toFixed(2) : '-')
+
+export function renderReport(a) {
+  const t = a.total
+  const detail = (title, list) => [
+    `## ${title}`,
+    '| | GSC impressions | GSC clicks | Counted from Google | Counted / GSC clicks | Ad shown, from Google | All counted page views | With human input |',
+    '|---|---|---|---|---|---|---|---|',
+    ...list.map((r) => `| ${r.name} | ${int(r.gscImpressions)} | ${int(r.gscClicks)} | ${int(r.googleLoads)} | ${pct(r.googleLoads, r.gscClicks)} | ${int(r.googleShownViews)} | ${int(r.loads)} | ${int(r.humanViews)} |`),
+    '',
+  ]
+  return [
+    '# Are the page views real?',
+    '',
+    `Compared days (Pacific Time, as in GSC): ${a.dates.length}, ${a.dates[0]} to ${a.dates.at(-1)}.`,
+    ...(a.excluded.length ? [`**Left out:** ${a.excluded.map((e) => `${e.date} (${e.reason})`).join('; ')}.`] : []),
+    '',
+    '## 1. Google traffic: GSC against our counter',
+    '| Measurement | Count | Share of GSC clicks |',
+    '|---|---|---|',
+    `| GSC clicks | ${int(t.gscClicks)} | 100% |`,
+    `| Our counter: page views arriving from Google | ${int(t.googleLoads)} | ${pct(t.googleLoads, t.gscClicks)} |`,
+    `| ... of these, an ad was really shown | ${int(t.googleShownViews)} | ${pct(t.googleShownViews, t.gscClicks)} |`,
+    `| ... of these, ad shown AND human input | ${int(t.googleHumanViews)} | ${pct(t.googleHumanViews, t.gscClicks)} |`,
+    '',
+    `For context: ${int(t.gscImpressions)} GSC impressions. An impression is a listing in Google's results, not an opened page, so no ad can be shown on it.`,
+    '',
+    '## 2. All traffic: our counter against Umami',
+    '| Measurement | Count | Share of Umami page views |',
+    '|---|---|---|',
+    `| Umami page views | ${a.umami == null ? 'not given' : int(a.umami)} | ${a.umami == null ? '-' : '100%'} |`,
+    `| Our counter: page views | ${int(t.loads)} | ${pct(t.loads, a.umami)} |`,
+    `| ... an ad was really shown | ${int(t.shownViews)} | ${pct(t.shownViews, a.umami)} |`,
+    `| ... ad shown AND human input | ${int(t.humanViews)} | ${pct(t.humanViews, a.umami)} |`,
+    `| Counted separately, not included above: automated browsers and crawlers | ${int(t.automatedLoads)} | |`,
+    ...(a.umami != null && a.excluded.length ? ['', '**CHECK:** days were left out; the Umami number must cover exactly the compared days.'] : []),
+    '',
+    '## 3. How often ads were shown',
+    `Ads shown: **${int(t.adsShown)}** (${int(t.clicks)} clicks).`,
+    `Per GSC click: ${per(t.adsShown, t.gscClicks)} (includes ads shown to visitors from every source). Per GSC impression: ${per(t.adsShown, t.gscImpressions)}. Per counted page view: ${per(t.adsShown, t.loads)} of 3 possible.`,
+    '',
+    '## Where the counted page views came from',
+    '| Source | Page views |',
+    '|---|---|',
+    ...a.bySource.map((s) => `| ${s.name} | ${int(s.loads)} |`),
+    '',
+    ...detail('By day', a.byDay),
+    ...detail('By language', a.byLocale),
+  ].join('\n')
 }
