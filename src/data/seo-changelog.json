@@ -31774,47 +31774,5 @@
       "period": "90d 2026-08-30 to 2026-11-27"
     },
     "deployedAt": null
-  },
-  {
-    "id": "cf224929-972a-49b9-a121-5a3d49d85f7d",
-    "slug": "/ja/prompt-engineering/single-prompt-method",
-    "date": "2026-11-27T11:36:45.618Z",
-    "fields": [
-      {
-        "field": "metaDescription",
-        "old": "ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトに統合する手法。複数ターン対話を削減し、すべてのモデルで一貫した結果を実現するための構造的アプローチです。",
-        "new": "ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトにまとめる手法です。書き方、テスト、テンプレート化の手順と、ほかのフレームワークとの違いを解説します。"
-      }
-    ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description.",
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "90d 2026-08-30 to 2026-11-27 (no GSC rows)"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "901a75aa-cd7d-484a-af3c-df7180c33563",
-    "slug": "/ko/prompt-engineering/single-prompt-method",
-    "date": "2026-11-27T11:36:45.737Z",
-    "fields": [
-      {
-        "field": "metaDescription",
-        "old": "단일 단계 프롬프트 방법론을 학습하십시오. 역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담아 전달합니다. 구조화된 프롬프트는 모호한 지시보다 훨씬 우수한 결과를 제공합니다.",
-        "new": "역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담아, 테스트하고 저장해 다시 쓸 수 있는 단일 단계 프롬프트를 작성하는 방법입니다."
-      }
-    ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description.",
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "90d 2026-08-30 to 2026-11-27 (no GSC rows)"
-    },
-    "deployedAt": null
   }
 ]
