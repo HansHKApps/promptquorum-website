@@ -11,6 +11,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llms-vs-chatgpt-plus",
+        "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
+        "url": "/local-llms/local-llms-vs-chatgpt-plus",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mac-vs-windows-vs-linux-local-llm",
+        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
+        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
@@ -64,22 +80,6 @@
         "url": "/local-llms/local-llm-workstation-build",
         "dateModified": "2026-11-22",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llms-vs-cloud-apis",
-        "title": "Local LLMs vs Cloud APIs: Which Should You Use in 2026?",
-        "url": "/local-llms/local-llms-vs-cloud-apis",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "multi-gpu-local-llms",
-        "title": "Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama",
-        "url": "/local-llms/multi-gpu-local-llms",
-        "dateModified": "2026-11-22",
-        "tier": "about"
       }
     ],
     "totalCount": 397,
@@ -93,6 +93,14 @@
         "title": "llama.cpp: What It Is, How to Install, First Command",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mac-vs-windows-vs-linux-local-llm",
+        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
+        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
+        "dateModified": "2026-11-27",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
         "dateModified": "2026-11-22",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vllm-explained",
-        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
-        "url": "/power-local-llm/vllm-explained",
-        "dateModified": "2026-11-22",
-        "tier": "about"
       }
     ],
-    "totalCount": 201,
+    "totalCount": 202,
     "capped": true
   },
   "vLLM": {
@@ -877,6 +877,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "mac-vs-windows-vs-linux-local-llm",
+        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
+        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
@@ -936,14 +944,6 @@
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-11-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-11-20",
         "tier": "about"
       }
@@ -7257,6 +7257,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "animatediff-video-generation-guide-2026",
         "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
         "url": "/power-local-llm/animatediff-video-generation-guide",
@@ -7268,14 +7276,6 @@
         "slug": "local-ai-image-generation-vs-cloud",
         "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
         "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
-        "dateModified": "2026-11-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-video-generation-vs-cloud",
-        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
-        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
         "dateModified": "2026-11-20",
         "tier": "about"
       },
@@ -7675,17 +7675,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-image-generation-vs-cloud",
-        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
-        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
-        "dateModified": "2026-11-20",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-27",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-video-generation-vs-cloud",
-        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
-        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "slug": "local-ai-image-generation-vs-cloud",
+        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
+        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
@@ -11671,6 +11671,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llms-vs-chatgpt-plus",
+        "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
+        "url": "/local-llms/local-llms-vs-chatgpt-plus",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "local-llm-hardware-guide",
         "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
         "url": "/local-llms/local-llm-hardware-guide",
@@ -11732,17 +11740,9 @@
         "url": "/local-llms/hp-z2-mini-g1a-local-ai-workstation",
         "dateModified": "2026-10-31",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-ai-workstations-strix-halo-vs-dgx-spark",
-        "title": "Local AI Workstations: AMD Strix Halo vs. NVIDIA DGX Spark",
-        "url": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
-        "dateModified": "2026-10-31",
-        "tier": "about"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "YoVoice": {
@@ -11945,6 +11945,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "mac-vs-windows-vs-linux-local-llm",
+        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
+        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
@@ -11969,25 +11985,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-video-generation-vs-cloud",
-        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
-        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
@@ -12088,6 +12088,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mac-vs-windows-vs-linux-local-llm",
+        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
+        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "qwen-local-deployment-complete-guide-2026",
         "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
@@ -12108,14 +12124,6 @@
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
         "url": "/power-local-llm/local-ai-agents-with-mcp",
-        "dateModified": "2026-11-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-video-generation-vs-cloud",
-        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
-        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
         "dateModified": "2026-11-20",
         "tier": "about"
       },
@@ -12149,14 +12157,6 @@
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-11-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-security-privacy-checklist",
-        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
-        "url": "/local-llms/local-llm-security-privacy-checklist",
-        "dateModified": "2026-11-15",
         "tier": "about"
       }
     ],
@@ -14561,6 +14561,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "weesper-neon-flow-review",
         "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
         "url": "/power-local-llm/weesper-neon-flow-review",
@@ -14620,14 +14628,6 @@
         "slug": "best-cloud-gpu-providers",
         "title": "Cloud GPU Providers Compared 2026: RunPod, Vast.ai, Clore, Novita, Vultr and More",
         "url": "/power-local-llm/best-cloud-gpu-providers",
-        "dateModified": "2026-11-22",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-offline-china-self-hosted-2026",
-        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
-        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
         "dateModified": "2026-11-22",
         "tier": "mentioned"
       }

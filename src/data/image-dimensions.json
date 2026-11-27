@@ -34414,6 +34414,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/local-llms-vs-chatgpt-plus-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llms-vs-chatgpt-plus-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-llms-vs-chatgpt-plus-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -37909,26 +37954,6 @@
     "width": 800,
     "height": 400
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
   "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -37974,80 +37999,50 @@
     "width": 1200,
     "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-os-summary-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-performance-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+  "/images/mac-vs-windows-vs-linux-local-llm-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
   "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -38055,21 +38050,6 @@
     "height": 350
   },
   "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
@@ -38119,36 +38099,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tco-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
   "/images/mac-vs-windows-vs-linux-local-llm-tool-support-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -38165,16 +38115,6 @@
     "height": 360
   },
   "/images/mac-vs-windows-vs-linux-local-llm-tool-support-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tool-support-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/mac-vs-windows-vs-linux-local-llm-tool-support-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
