@@ -40,6 +40,7 @@ export const copy: AskCopy = {
   aiNotice: 'Ask Hans ذكاء اصطناعي وقد يخطئ. يُرجى عدم إدخال بيانات شخصية.',
   withdraw: 'سحب الموافقة',
   thinking: 'Ask Hans يفكّر …',
+  explainThis: 'اشرح هذا',
   searching: 'يبحث في PromptQuorum …',
   panelTools: 'يستخدم أداة …',
 
