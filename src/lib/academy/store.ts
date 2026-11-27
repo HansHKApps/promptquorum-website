@@ -4,6 +4,7 @@
 
 import { z } from 'zod'
 import { isValidProgrammeLanguage } from './language'
+import { cleanSavedAnswers } from './progress'
 import { ACADEMY_MINUTE_OPTIONS, ACADEMY_STORAGE_KEY, ACADEMY_SUBJECT_MAX_CHARS } from './config'
 import { ACADEMY_VIEWS, LEVELS, SETUP_FIELDS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES, type AcademyState, type SetupDraft } from './types'
 
@@ -71,7 +72,9 @@ export function migrateAcademyState(raw: unknown): AcademyState {
   const quickCheck = quickCheckSchema.safeParse(r.quickCheck)
   if (quickCheck.success) state.quickCheck = quickCheck.data as AcademyState['quickCheck']
   const programme = r.programme as AcademyState['programme'] | undefined
-  if (programme && typeof programme === 'object' && Array.isArray(programme.lessons) && Array.isArray(programme.objectives)) state.programme = programme
+  if (programme && typeof programme === 'object' && Array.isArray(programme.lessons) && Array.isArray(programme.objectives)) {
+    state.programme = programme.aiAnswers === undefined ? programme : { ...programme, aiAnswers: cleanSavedAnswers(programme.aiAnswers) }
+  }
   // A screen needs the data it shows; otherwise fall back to setup.
   const view = viewSchema.safeParse(r.view)
   if (view.success) {

@@ -1,7 +1,7 @@
 // PromptQuorum Academy — progress updates on the stored programme (browser-safe, pure functions).
 
 import { ACADEMY_LESSON_TIME_CAP_FACTOR, ACADEMY_TEST_TIME_CAP_SECONDS } from './config'
-import type { Lesson, Programme } from './types'
+import type { Lesson, Programme, SavedAnswer } from './types'
 
 /** Adds active seconds to a lesson and the total, never beyond the per-lesson cap (SPEC 6.1). */
 export function addActiveTime(p: Programme, lessonId: string, seconds: number): Programme {
@@ -84,7 +84,9 @@ export function setLessonNote(p: Programme, index: number, note: string, confirm
 
 /** Throws the written lesson away so it is written again with the current wish (the learner asked for it). */
 export function clearLessonContent(p: Programme, index: number): Programme {
-  return { ...p, lessons: p.lessons.map((l, i) => (i === index ? { ...l, sections: [], furtherReading: [], followUpQuestions: undefined, noteUsed: undefined } : l)) }
+  // Saved AI answers refer to the old text (wand answers by section number), so they go with it.
+  const aiAnswers = p.aiAnswers && Object.fromEntries(Object.entries(p.aiAnswers).filter(([id]) => id !== p.lessons[index]?.id))
+  return { ...p, ...(aiAnswers ? { aiAnswers } : {}), lessons: p.lessons.map((l, i) => (i === index ? { ...l, sections: [], furtherReading: [], followUpQuestions: undefined, noteUsed: undefined } : l)) }
 }
 
 export function setFreeWish(p: Programme, wish: string): Programme {
@@ -93,4 +95,54 @@ export function setFreeWish(p: Programme, wish: string): Programme {
 
 export function setLessonContent(p: Programme, index: number, content: Pick<Lesson, 'sections' | 'furtherReading' | 'followUpQuestions' | 'noteUsed'>): Programme {
   return { ...p, lessons: p.lessons.map((l, i) => (i === index ? { ...l, ...content } : l)) }
+}
+
+/** Limits for saved AI answers: browser storage is small. The oldest answer of a lesson makes room for a new one. */
+export const SAVED_ANSWER_MAX_CHARS = 6000
+export const SAVED_QUESTION_MAX_CHARS = 700
+export const SAVED_ANSWERS_PER_LESSON = 24
+
+const safeSourceUrl = (url: string) => /^(https?:\/\/|\/(?!\/))/i.test(url)
+
+/** One stored entry made safe to show, or null when it is unusable (stored data and backups can hold anything). */
+function cleanSavedAnswer(raw: unknown): SavedAnswer | null {
+  const a = raw as Partial<SavedAnswer> | null
+  if (!a || (a.source !== 'tutor' && a.source !== 'wand') || typeof a.question !== 'string' || typeof a.answer !== 'string' || !a.answer.trim()) return null
+  const sources = Array.isArray(a.sources)
+    ? a.sources.filter((s) => !!s && typeof s.title === 'string' && typeof s.url === 'string' && safeSourceUrl(s.url)).slice(0, 8).map((s) => ({ title: s.title.slice(0, 300), url: s.url, ...(s.web ? { web: true } : {}) }))
+    : []
+  return {
+    source: a.source,
+    ...(Number.isInteger(a.sectionIndex) ? { sectionIndex: a.sectionIndex } : {}),
+    question: a.question.slice(0, SAVED_QUESTION_MAX_CHARS),
+    answer: a.answer.slice(0, SAVED_ANSWER_MAX_CHARS),
+    ...(sources.length ? { sources } : {}),
+    at: typeof a.at === 'string' ? a.at : '',
+  }
+}
+
+export function cleanSavedAnswers(raw: unknown): Record<string, SavedAnswer[]> | undefined {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined
+  const out = Object.entries(raw)
+    .map(([id, list]) => [id, Array.isArray(list) ? list.map(cleanSavedAnswer).filter((a): a is SavedAnswer => !!a).slice(-SAVED_ANSWERS_PER_LESSON) : []] as const)
+    .filter(([, list]) => list.length)
+  return out.length ? Object.fromEntries(out) : undefined
+}
+
+/** Keeps a finished AI answer with its lesson. Anything not tied to a lesson (the final test) is not kept. */
+export function addSavedAnswer(p: Programme, lessonId: string, answer: SavedAnswer): Programme {
+  const clean = cleanSavedAnswer(answer)
+  if (!clean || !p.lessons.some((l) => l.id === lessonId)) return p
+  return { ...p, aiAnswers: { ...p.aiAnswers, [lessonId]: [...(p.aiAnswers?.[lessonId] ?? []), clean].slice(-SAVED_ANSWERS_PER_LESSON) } }
+}
+
+/**
+ * Which segments of the lesson bar can be opened for rereading: a written lesson other than the current one that is
+ * finished, or that lies before the current one.
+ */
+export function canReviewLesson(p: Programme, index: number): boolean {
+  const lesson = p.lessons[index]
+  const current = p.progress.currentLesson
+  if (!lesson || index === current || !lesson.sections?.length) return false
+  return index < current || p.progress.lessonStatus[lesson.id] === 'done'
 }

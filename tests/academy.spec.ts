@@ -752,3 +752,118 @@ test.describe('test formats: multiple choice, short written answer, explain the 
     expect(choiceCalls).toBe(1)
   })
 })
+
+// ------------------------------------------------------------------------------------------------ rereading
+
+function reviewProgramme(language = 'en') {
+  const base = seededProgramme()
+  const lesson = (n: number, written: boolean) => ({
+    ...base.lessons[0],
+    id: `lesson-${n}`,
+    title: `Lesson title ${n}`,
+    sections: written ? [{ heading: `Heading ${n}`, body: `Body of lesson ${n}.` }] : [],
+  })
+  return {
+    ...base,
+    language,
+    testMode: 'per_lesson_and_final',
+    lessons: [lesson(1, true), lesson(2, true), lesson(3, false), lesson(4, false)],
+    notes: { 'lesson-1:0': 'My own note' },
+    aiAnswers: { 'lesson-1': [{ source: 'wand', sectionIndex: 0, question: 'Explain it simply', answer: 'Saved section answer.', at: '2026-11-19T10:00:00.000Z' }] },
+    progress: {
+      ...base.progress,
+      currentLesson: 1,
+      lessonStatus: { 'lesson-1': 'done', 'lesson-2': 'viewed' },
+      lessonSeconds: { 'lesson-1': 40 },
+      quizResults: [
+        {
+          quizId: 'lesson-1',
+          answers: { a: 0 },
+          correct: 0,
+          total: 1,
+          byTopic: {},
+          takenAt: '2026-11-19T10:00:00.000Z',
+          questions: [{ id: 'a', topic: 'Basics', kind: 'lesson', prompt: 'Old quiz question?', options: ['Wrong one', 'Right one', 'Other'], sealed: 'x', reveal: { correctIndex: 1, explanationCorrect: 'Because it is right.', explanationChosen: 'That one is wrong.' } }],
+        },
+      ],
+    },
+  } as unknown as ReturnType<typeof seededProgramme>
+}
+
+/** A finished lesson would otherwise open the "create a cabinet" prompt over the lesson. */
+const noCabinetPrompt = (page: Page) => page.addInitScript(() => localStorage.setItem('pq_academy_cabinet', 'declined'))
+
+const storedProgramme = async (page: Page) => JSON.parse((await stored(page)) ?? '{}').programme
+
+test.describe('rereading earlier lessons', () => {
+  test('read-only: sends nothing, changes no progress, keeps the live chat, saves AI answers, no chat carry-over', async ({ page }) => {
+    const calls: string[] = []
+    page.on('request', (r) => {
+      const path = new URL(r.url()).pathname
+      if (/\/api\/academy\/(lesson|tutor|quiz|open-quiz|answer|grade)/.test(path)) calls.push(path)
+    })
+    await page.route('**/api/academy/tutor', (r) => r.fulfill({ contentType: 'text/plain', body: 'Mocked tutor answer.' }))
+    await page.route('**/api/academy/lesson', (r) => r.fulfill({ json: lessonReply }))
+    await page.route('**/api/academy/quiz', (r) => r.fulfill({ status: 502, json: { error: 'generation' } }))
+    await noCabinetPrompt(page)
+    await openSeededLesson(page, reviewProgramme())
+    const dialog = page.getByRole('dialog', { name: 'PromptQuorum Academy' })
+    await dialog.getByRole('button', { name: /open the ai tutor/i }).click()
+    await dialog.getByRole('button', { name: /start the tutor/i }).click()
+    await dialog.getByPlaceholder(/ask/i).fill('My live question')
+    await dialog.getByPlaceholder(/ask/i).press('Enter')
+    await expect(dialog.getByText('Mocked tutor answer.')).toBeVisible()
+    await expect.poll(async () => (await storedProgramme(page)).aiAnswers['lesson-2']?.[0]?.answer).toBe('Mocked tutor answer.')
+
+    await expect(dialog.getByRole('button', { name: /lesson 3 of 4/i })).toBeDisabled()
+    const before = await storedProgramme(page)
+    calls.length = 0
+    await dialog.getByRole('button', { name: /lesson 1 of 4/i }).click()
+    await expect(dialog.getByText('Body of lesson 1.')).toBeVisible()
+    await expect(dialog.getByText(/read-only/i)).toBeVisible()
+    await expect(dialog.getByText('My own note')).toBeVisible()
+    await dialog.getByText(/saved ai answers for this section/i).click()
+    await expect(dialog.getByText('Saved section answer.')).toBeVisible()
+    await expect(dialog.getByText('Old quiz question?')).toBeVisible()
+    await expect(dialog.getByText('That one is wrong.')).toBeVisible()
+    await expect(dialog.getByRole('button', { name: /next lesson|done, next|open the ai tutor|close the tutor|try again/i })).toHaveCount(0)
+    await expect(dialog.getByRole('radio')).toHaveCount(0)
+    await page.screenshot({ path: 'test-results/review-en.png' })
+    // Longer than one activity tick, with activity on the page.
+    for (let i = 0; i < 4; i++) {
+      await page.mouse.move(200 + i * 20, 300)
+      await page.mouse.wheel(0, 50)
+      await page.waitForTimeout(1800)
+    }
+    const during = await storedProgramme(page)
+    expect(during.progress.currentLesson).toBe(1)
+    expect(during.progress.lessonStatus).toEqual(before.progress.lessonStatus)
+    expect(during.progress.lessonSeconds).toEqual(before.progress.lessonSeconds)
+    expect(calls).toEqual([])
+
+    await dialog.getByRole('button', { name: /back to the current lesson/i }).first().click()
+    await expect(dialog.getByText('Body of lesson 2.')).toBeVisible()
+    await expect(dialog.getByText('Mocked tutor answer.')).toBeVisible()
+    await page.screenshot({ path: 'test-results/review-current.png' })
+
+    // A finished lesson opened again starts without the chat of the lesson before.
+    await page.evaluate(() => window.getSelection()?.removeAllRanges())
+    await dialog.getByRole('button', { name: /back to program/i }).click()
+    await dialog.getByRole('button', { name: /lesson title 1/i }).first().click()
+    await expect(dialog.getByText('Body of lesson 1.')).toBeVisible()
+    await expect(dialog.getByText('Mocked tutor answer.')).toHaveCount(0)
+  })
+
+  for (const [language, width] of [['de', 390], ['ar', 1200]] as const) {
+    test(`rereading in ${language} at ${width}px fits the screen`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 844 })
+      await noCabinetPrompt(page)
+      await openSeededLesson(page, reviewProgramme(language))
+      const dialog = page.getByRole('dialog', { name: 'PromptQuorum Academy' })
+      await dialog.locator('ol button').first().click()
+      await expect(dialog.getByText('Body of lesson 1.')).toBeVisible()
+      await page.screenshot({ path: `test-results/review-${language}.png` })
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
+    })
+  }
+})

@@ -13,7 +13,7 @@ import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_PREFS_KEY, ACADE
 import { clearPrefs, loadPrefs, savePrefs } from '@/lib/academy/prefs'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
-import { addActivity, clearLessonContent, lessonsDone, nextOpenLesson, openLesson, setFreeWish, setLessonNote } from '@/lib/academy/progress'
+import { addActivity, clearLessonContent, lessonsDone, nextOpenLesson, openLesson, setFreeWish, setLessonNote, canReviewLesson } from '@/lib/academy/progress'
 import { ActivityTracker, type ActivityTarget } from './ActivityTracker'
 import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
@@ -37,6 +37,8 @@ import { trackGrowth } from './SuccessShare'
 import { downloadBlob } from '@/components/askhans/power/export/download'
 import { academyUrl } from './share-plan'
 import { ACADEMY_STREAK_EVENT, ACADEMY_STREAK_KEY, CHALLENGE_STORAGE_KEY, currentStreak, recordActiveDay, reminderIcs, sanitizeBeat, sanitizeChallengeSubject } from '@/lib/academy/challenge'
+import { LessonProgress } from './LessonProgress'
+import { LessonReview } from './LessonReview'
 import { useAcademyState } from './useAcademyState'
 
 export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicSuggestion[] }) {
@@ -127,6 +129,20 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
   }
   const askCabinet = ready && cabinetOk && cabinetFlag === null && !!state.programme && lessonsDone(state.programme) >= 1 && state.view !== 'cabinet'
 
+  // Rereading an earlier lesson (read-only). Kept only here, never stored: the current lesson, the lesson status and
+  // the learning record stay as they are. It ends as soon as the screen, the program or the current lesson changes.
+  const [review, setReview] = useState<{ programmeId: string; current: number; index: number } | null>(null)
+  const reviewValid =
+    !!review && state.view === 'lesson' && !!state.programme && state.programme.id === review.programmeId && state.programme.progress.currentLesson === review.current && canReviewLesson(state.programme, review.index)
+  if (review && !reviewValid) setReview(null)
+  const reviewIndex = review && reviewValid ? review.index : null
+  const openReview = (index: number | null) => {
+    // Reading aloud belongs to the screen being left.
+    if (typeof window !== 'undefined') window.speechSynthesis?.cancel()
+    const p = state.programme
+    setReview(index === null || !p ? null : { programmeId: p.id, current: p.progress.currentLesson, index })
+  }
+
   const draft = state.draft
   // Once a program exists, its screens (quick check, program overview, lesson, quiz; the results screen has its own certificate-language chooser and stays in the page language) use the program language when the site
   // has that language, so labels like "Writing the lesson…" or "Deeper" match the lesson text. For a custom
@@ -137,10 +153,10 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
   const learning = ['diagnostic', 'programme', 'lesson', 'quiz'].includes(state.view)
   const stripLang: AcademyLang = learning || state.view === 'results' ? learnLang : lang
   const learnProps = learning && learnLang !== lang ? { lang: learnLang, dir: learnLang === 'ar' ? ('rtl' as const) : ('ltr' as const) } : {}
-  // Where active time is booked: the open lesson, or the open test. Other screens (overview, results) count nothing.
+  // Where active time is booked: the open lesson, or the open test. Other screens (overview, results, rereading) count nothing.
   const prog = state.programme
   const activityTarget: ActivityTarget =
-    prog && state.view === 'lesson' && prog.lessons[prog.progress.currentLesson]
+    prog && state.view === 'lesson' && reviewIndex === null && prog.lessons[prog.progress.currentLesson]
       ? { kind: 'lesson', id: prog.lessons[prog.progress.currentLesson].id }
       : prog && state.view === 'quiz' && prog.progress.activeQuiz
         ? { kind: 'test', id: prog.progress.activeQuiz.quizId }
@@ -174,7 +190,25 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
       ) : state.view === 'results' && state.programme && programmeScore(state.programme) ? (
         <ResultsView tx={tx} lang={lang} programme={state.programme} update={update} />
       ) : state.view === 'lesson' && state.programme ? (
-        <LessonView tx={ltx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(ltx, code)} />
+        <>
+          {/* Keyed by lesson: tutor and wand chats never carry over into another lesson. */}
+          <LessonView
+            key={`${state.programme.id}:${state.programme.lessons[state.programme.progress.currentLesson]?.id ?? ''}`}
+            tx={ltx}
+            programme={state.programme}
+            update={update}
+            postJson={postJson}
+            errorText={(code) => errorText(ltx, code)}
+            reviewing={reviewIndex !== null}
+            onReview={openReview}
+          />
+          {reviewIndex !== null && (
+            <div className="space-y-4">
+              <LessonProgress tx={ltx} programme={state.programme} reviewIndex={reviewIndex} onSelect={openReview} />
+              <LessonReview key={reviewIndex} tx={ltx} lang={learnLang} programme={state.programme} index={reviewIndex} onBack={() => openReview(null)} />
+            </div>
+          )}
+        </>
       ) : state.view === 'programme' && state.programme ? (
         <ProgrammeView
           tx={ltx}

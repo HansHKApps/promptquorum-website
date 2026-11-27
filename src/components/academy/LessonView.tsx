@@ -5,12 +5,11 @@
 // programme. The learner always sees subject, objective, "lesson x of y" and progress (SPEC 5 navigation rule).
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ReadAloud } from '@/components/ReadAloud'
-import { Markdown } from '@/components/askhans/markdown'
 import { lessonsDone, markLessonDone } from '@/lib/academy/progress'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Lesson, Programme } from '@/lib/academy/types'
-import { AiBadge } from './AiBadge'
+import { LessonBody, LessonHeader } from './LessonContent'
+import { LessonProgress } from './LessonProgress'
 import { loadLesson, prefetchLesson } from './lesson-loader'
 import { Content } from './Content'
 import { ReportProblem } from './ReportProblem'
@@ -29,12 +28,17 @@ export function LessonView({
   update,
   postJson,
   errorText,
+  reviewing,
+  onReview,
 }: {
   tx: AcademyCopy
   programme: Programme
   update: Update
   postJson: <T>(url: string, body: unknown) => Promise<{ ok: true; data: T } | { ok: false; code: AcademyErrorCode | 'network' }>
   errorText: (code: AcademyErrorCode | 'network') => string
+  /** an earlier lesson is being reread: this screen stays mounted (the open tutor chat survives) but hidden */
+  reviewing: boolean
+  onReview: (index: number | null) => void
 }) {
   const index = Math.min(Math.max(programme.progress.currentLesson, 0), programme.lessons.length - 1)
   const lesson = programme.lessons[index]
@@ -80,8 +84,8 @@ export function LessonView({
   }, [lesson.id, lesson.sections.length, load])
 
   useEffect(() => {
-    topRef.current?.scrollIntoView({ block: 'start' })
-  }, [index])
+    if (!reviewing) topRef.current?.scrollIntoView({ block: 'start' })
+  }, [index, reviewing])
 
   // Prefetch: once the learner is about a third through this lesson's reading time (at least 20 s of active reading),
   // the next lesson starts being written in the background, so "Next lesson" opens without a wait.
@@ -95,7 +99,6 @@ export function LessonView({
 
   const total = programme.lessons.length
   const done = lessonsDone(programme)
-  const objectives = lesson.objectiveIds.map((i) => programme.objectives[i]).filter(Boolean)
   const last = index === total - 1
   const needsQuiz = programme.testMode === 'per_lesson_and_final' && !programme.progress.quizResults.some((r) => r.quizId === lesson.id)
   // The lesson text must be on screen and generation finished before the lesson can be marked done (F9).
@@ -119,41 +122,12 @@ export function LessonView({
   }
 
   return (
-    <div ref={topRef} className="scroll-mt-24 space-y-4">
+    <div ref={topRef} hidden={reviewing} className="scroll-mt-24 space-y-4">
       {/* Always visible, also while scrolling: subject, "lesson x of y · title" and progress (SPEC 5 navigation rule). */}
-      <div className="sticky top-0 z-20 -mx-1 rounded-2xl border border-purple-100 bg-white/95 px-4 py-3 shadow-sm backdrop-blur">
-        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm">
-          <span className="font-medium text-gray-900">{programme.subject}</span>
-          <span className="min-w-0 truncate text-gray-600">
-            {tx.lessonOf(index + 1, total)} · {lesson.title}
-          </span>
-        </div>
-        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-label={tx.lessonOf(index + 1, total)} aria-valuemin={0} aria-valuemax={total} aria-valuenow={done}>
-          <div className="h-full bg-purple-600 transition-all" style={{ width: `${(Math.max(done, index) / total) * 100}%` }} />
-        </div>
-      </div>
+      <LessonProgress tx={tx} programme={programme} reviewIndex={null} onSelect={onReview} />
 
       <article ref={articleRef} aria-labelledby="academy-lesson" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
-        <header>
-          <Content lang={programme.language}>
-            <h2 id="academy-lesson" className="text-2xl font-semibold text-gray-900">
-              {lesson.title}
-            </h2>
-          </Content>
-          <p className="mt-2">
-            <AiBadge text={tx.aiLabel} />
-          </p>
-          {objectives.length > 0 && (
-            <div className="mt-3 rounded-xl bg-purple-50 px-4 py-3 text-sm text-purple-900">
-              <span className="font-medium">{tx.lessonObjectives}:</span>
-              <ul className="mt-1 list-disc ps-5">
-                {objectives.map((o, i) => (
-                  <li key={i}>{o}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </header>
+        <LessonHeader tx={tx} programme={programme} lesson={lesson} titleId="academy-lesson" />
 
         {error ? (
           <div className="space-y-3 rounded-xl border border-red-200 bg-red-50 p-4 text-red-900" role="alert">
@@ -171,39 +145,13 @@ export function LessonView({
             <WaitNote language={programme.language} />
           </div>
         ) : (
-          <>
-            <ReadAloud lang={programme.language} getText={() => `${lesson.title}. ${lesson.sections.map((s) => `${s.heading}. ${s.body}`).join(' ')}`} />
-            <Content lang={programme.language} className="space-y-8">
-              {lesson.sections.map((s, i) => (
-                <section key={i} className="space-y-3">
-                  <div className="flex items-start gap-3 pt-2">
-                    <h3 className="text-xl font-semibold leading-snug text-gray-900 sm:text-2xl">{s.heading}</h3>
-                    <SectionWand tx={tx} programme={programme} update={update} lessonKey={lesson.id} lessonTitle={lesson.title} section={s} index={i} />
-                  </div>
-                  <div className="space-y-4 text-[1.05rem] leading-8 text-gray-800">
-                    <Markdown text={s.body} />
-                  </div>
-                </section>
-              ))}
-            </Content>
-            {lesson.furtherReading.length > 0 && (
-              <aside aria-labelledby="academy-reading" className="rounded-xl border border-gray-200 p-4">
-                <h3 id="academy-reading" className="font-semibold text-gray-900">
-                  {tx.furtherReading}
-                </h3>
-                <ul className="mt-2 space-y-2">
-                  {lesson.furtherReading.map((r) => (
-                    <li key={r.url} className="flex flex-wrap items-center gap-2">
-                      <a href={r.url} className="font-medium text-purple-700 underline underline-offset-2 hover:text-purple-900">
-                        {r.title}
-                      </a>
-                      <span className="rounded-full bg-purple-50 px-2 py-0.5 text-xs text-purple-700">{tx.fromPromptQuorum}</span>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            )}
-          </>
+          <LessonBody
+            tx={tx}
+            programme={programme}
+            lesson={lesson}
+            readingId="academy-reading"
+            headingExtra={(section, i) => <SectionWand tx={tx} programme={programme} update={update} lessonKey={lesson.id} lessonTitle={lesson.title} section={section} index={i} />}
+          />
         )}
 
         {ready && (
