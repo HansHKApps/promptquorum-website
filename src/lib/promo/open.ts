@@ -16,10 +16,10 @@ export const PROMO_OPEN_SOURCES: ReadonlySet<string> = new Set(
   (['ask-hans', 'power-mode'] as const).flatMap((t) => PROMO_PLACEMENTS.map((p) => promoOpenSource(t, p))),
 )
 
-export function openAskHansFromPromo(target: PromoOpenTarget, placement: PromoPlacement, trigger: HTMLElement | null): void {
+export function openAskHansFromPromo(target: PromoOpenTarget, placement: PromoPlacement, trigger: HTMLElement | null, source?: string): void {
   window.dispatchEvent(
     new CustomEvent(ASK_HANS_OPEN_EVENT, {
-      detail: { ...(target === 'power-mode' ? { power: true } : {}), source: promoOpenSource(target, placement), returnFocusTo: trigger },
+      detail: { ...(target === 'power-mode' ? { power: true } : {}), source: source ?? promoOpenSource(target, placement), returnFocusTo: trigger },
     }),
   )
 }
@@ -29,6 +29,6 @@ export function openAskHansFromPromo(target: PromoOpenTarget, placement: PromoPl
  * `detail.source` and counts `academy_promo_open` only when the window was closed). Nothing is sent to the Academy
  * server: no programme is started and no generation call is made until the visitor does that themselves.
  */
-export function openAcademyFromPromo(placement: PromoPlacement): void {
-  window.dispatchEvent(new CustomEvent(ACADEMY_OPEN_EVENT, { detail: { source: promoOpenSource('academy', placement) } }))
+export function openAcademyFromPromo(placement: PromoPlacement, source?: string): void {
+  window.dispatchEvent(new CustomEvent(ACADEMY_OPEN_EVENT, { detail: { source: source ?? promoOpenSource('academy', placement) } }))
 }

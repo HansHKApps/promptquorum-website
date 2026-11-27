@@ -11,6 +11,8 @@
     "check:affiliate-banner-links": "node scripts/check-affiliate-banner-links.mjs",
     "test:promo-report": "node scripts/test-promo-report.mjs",
     "promo:report": "node scripts/promo-pilot-report.mjs",
+    "adtest:report": "node scripts/ad-test-report.mjs",
+    "test:ad-display": "node scripts/test-ad-display.mjs",
     "adblock:report": "node scripts/adblock-report.mjs",
     "test:adblock-report": "node scripts/test-adblock-report.mjs",
     "validate-translations": "node scripts/validate-translation-integrity.mjs",

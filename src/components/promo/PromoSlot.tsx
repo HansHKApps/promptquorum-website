@@ -39,15 +39,29 @@ export interface PromoSlotProps {
   /** narrow column (side rail): graphic, text and button stack vertically */
   stack?: boolean
   className?: string
+  /** ad display test (AdTestSlot): replaces the pilot's tracking and attribution, so no pilot event or counter fires */
+  test?: { source: string; onView: () => void; onClick: () => void }
 }
 
-export function PromoSlot({ target, placement, variant = 'card', stack = false, className = '' }: PromoSlotProps) {
+/** Test ads only: IntersectionObserver ignores overlays (cookie dialog) and a tab hidden after the timer started. */
+function isHiddenFromVisitor(el: HTMLElement): boolean {
+  if (document.visibilityState !== 'visible') return true
+  const r = el.getBoundingClientRect()
+  const x = (Math.max(r.left, 0) + Math.min(r.right, window.innerWidth)) / 2
+  const y = (Math.max(r.top, 0) + Math.min(r.bottom, window.innerHeight)) / 2
+  const hit = document.elementFromPoint(x, y)
+  return !hit || !el.contains(hit)
+}
+
+export function PromoSlot({ target, placement, variant = 'card', stack = false, className = '', test }: PromoSlotProps) {
   const lang = useLang()
   const ref = useRef<HTMLElement>(null)
   const ctx = { target, placement, variant, locale: lang }
   const ctxRef = useRef(ctx)
+  const testRef = useRef(test)
   useEffect(() => {
     ctxRef.current = ctx
+    testRef.current = test
   })
 
   useEffect(() => {
@@ -55,15 +69,27 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
     if (!el || typeof IntersectionObserver === 'undefined') return
     let timer: ReturnType<typeof setTimeout> | undefined
     let done = false
+    let wasHidden = false
+    // a test ad that was covered must then stay uncovered for a further full interval
+    const fire = () => {
+      if (testRef.current) {
+        const hidden = isHiddenFromVisitor(el)
+        if (hidden || wasHidden) {
+          wasHidden = hidden
+          timer = setTimeout(fire, PROMO_VIEW_MIN_MS)
+          return
+        }
+      }
+      done = true
+      if (testRef.current) testRef.current.onView()
+      else trackPromo('view', ctxRef.current)
+      io.disconnect()
+    }
     const io = new IntersectionObserver(
       ([entry]) => {
         if (done) return
         if (entry.isIntersecting && entry.intersectionRatio >= PROMO_VIEW_THRESHOLD) {
-          timer ??= setTimeout(() => {
-            done = true
-            trackPromo('view', ctxRef.current)
-            io.disconnect()
-          }, PROMO_VIEW_MIN_MS)
+          timer ??= setTimeout(fire, PROMO_VIEW_MIN_MS)
         } else if (timer) {
           clearTimeout(timer)
           timer = undefined
@@ -86,14 +112,15 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
   const theme = THEME[target]
   const [hMobile, hDesktop] = PROMO_RESERVED_HEIGHT[variant]
   const linkPath = LINK_PATH[target]
-  const href = linkPath ? `${lang === 'en' ? '' : `/${lang}`}${linkPath}?via=${promoSource(target, placement)}` : undefined
+  const href = linkPath ? `${lang === 'en' ? '' : `/${lang}`}${linkPath}?via=${test?.source ?? promoSource(target, placement)}` : undefined
   const ctaClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-extrabold shadow-lg transition-transform hover:bg-white/95 motion-safe:hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${theme.btn}`
   const click = (e: React.MouseEvent<HTMLElement>) => {
-    trackPromo('click', ctx)
+    if (test) test.onClick()
+    else trackPromo('click', ctx)
     // Ask Hans / Power Mode / Academy open in place (real <button>); the others are links.
     if (href) return
-    if (target === 'academy') openAcademyFromPromo(placement)
-    else if (target === 'ask-hans' || target === 'power-mode') openAskHansFromPromo(target, placement, e.currentTarget)
+    if (target === 'academy') openAcademyFromPromo(placement, test?.source)
+    else if (target === 'ask-hans' || target === 'power-mode') openAskHansFromPromo(target, placement, e.currentTarget, test?.source)
   }
 
   const cta =
