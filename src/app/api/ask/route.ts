@@ -20,6 +20,7 @@ import { redis } from '@/lib/redis'
 import { ASK_HANS_DEFAULT_MODEL, ASK_HANS_LIMITS } from '@/lib/askhans/config'
 import { buildSystemPrompt } from '@/lib/askhans/system-prompt'
 import { detectLang } from '@/lib/askhans/detect-lang'
+import { EXPLAIN_SYSTEM, explainData, explainSchema, type ExplainPayload } from '@/lib/askhans/explain'
 import { generateFollowups } from '@/lib/askhans/followups'
 import { missingSourcesMarkdown } from '@/lib/askhans/sources'
 import { bumpTotals } from '@/lib/askhans/totals'
@@ -72,8 +73,8 @@ interface ChatMessage {
   content: string
 }
 
-function parseBody(raw: unknown): { visitId: string; lang: string; messages: ChatMessage[]; stats: boolean } | null {
-  const b = raw as { visitId?: unknown; lang?: unknown; messages?: unknown; stats?: unknown } | null
+function parseBody(raw: unknown): { visitId: string; lang: string; messages: ChatMessage[]; stats: boolean; explain?: ExplainPayload } | null {
+  const b = raw as { visitId?: unknown; lang?: unknown; messages?: unknown; stats?: unknown; explain?: unknown } | null
   if (!b || typeof b.visitId !== 'string' || !/^[a-zA-Z0-9-]{8,64}$/.test(b.visitId)) return null
   if (!Array.isArray(b.messages) || b.messages.length === 0 || b.messages.length > MAX_HISTORY_MESSAGES) return null
   const messages: ChatMessage[] = []
@@ -88,7 +89,9 @@ function parseBody(raw: unknown): { visitId: string; lang: string; messages: Cha
   for (let i = 1; i < messages.length; i++) if (messages[i].role === messages[i - 1].role) return null
   const lang = typeof b.lang === 'string' && /^[a-z]{2}$/.test(b.lang) ? b.lang : 'de'
   // Totals are counted only for visitors who said "Yes" to the statistics (owner decision 2026-11-07).
-  return { visitId: b.visitId, lang, messages, stats: b.stats === true }
+  const explain = b.explain === undefined ? undefined : explainSchema.safeParse(b.explain)
+  if (explain && !explain.success) return null
+  return { visitId: b.visitId, lang, messages, stats: b.stats === true, explain: explain?.data }
 }
 
 function classify(err: unknown): ErrorCode {
@@ -139,7 +142,9 @@ export async function POST(req: NextRequest): Promise<Response> {
 
   const { lang: pageLang, messages: history } = parsed
   // The visitor's question decides the language of answer, link titles and link prefixes, not the page they are on.
-  const lang = detectLang(history[history.length - 1]?.content ?? '', pageLang)
+  // "Explain this": the passage decides, not the button label in front of it.
+  const explain = parsed.explain
+  const lang = detectLang(explain ? explain.passage : (history[history.length - 1]?.content ?? ''), pageLang)
   const model = process.env.ASK_HANS_MODEL || ASK_HANS_DEFAULT_MODEL
   const client = new Anthropic({ maxRetries: 1, timeout: ASK_HANS_LIMITS.answerTimeoutMs })
   const tools = buildToolDefinitions()
@@ -148,7 +153,8 @@ export async function POST(req: NextRequest): Promise<Response> {
   const startedAt = Date.now()
 
   return ndjson(async (send) => {
-    const messages: Anthropic.MessageParam[] = history.map((m) => ({ role: m.role, content: m.content }))
+    // The marked passage's surroundings go to the model with the latest message only; they are not part of the chat.
+    const messages: Anthropic.MessageParam[] = history.map((m, i) => ({ role: m.role, content: explain && i === history.length - 1 ? m.content + explainData(explain) : m.content }))
     const toolsUsed: string[] = []
     const topics: AnswerTopics = { apps: [], dirCats: [] }
     let category = 'default'
@@ -169,7 +175,7 @@ export async function POST(req: NextRequest): Promise<Response> {
           {
             model,
             max_tokens: ASK_HANS_LIMITS.maxOutputTokens,
-            system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
+            system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }, ...(explain ? [{ type: 'text' as const, text: EXPLAIN_SYSTEM }] : [])],
             // The tools list must stay identical on every turn: the API binds earlier thinking blocks to it and
             // rejects the request (400) if it changes. Once the budget is spent, forbid tool use via tool_choice.
             tools,

@@ -3,6 +3,7 @@
 // Calls POST /api/ask and parses its NDJSON stream. Used only by AskHansRoot.
 
 import type { AskErrorCode } from './types'
+import type { ExplainPayload } from '@/lib/askhans/explain'
 import type { SiteOverview } from '@/lib/home/overview'
 
 export type AskStreamEvent =
@@ -19,7 +20,7 @@ const CLIENT_TIMEOUT_MS = 70_000
 const SOLUTION_CLIENT_TIMEOUT_MS = 125_000
 
 export async function streamAnswer(
-  body: { visitId: string; lang: string; stats?: boolean; messages: { role: 'user' | 'assistant'; content: string }[] },
+  body: { visitId: string; lang: string; stats?: boolean; messages: { role: 'user' | 'assistant'; content: string }[]; explain?: ExplainPayload },
   onEvent: (e: AskStreamEvent) => void,
   options: { endpoint?: string; timeoutMs?: number; signal?: AbortSignal } = {},
 ): Promise<void> {

@@ -396,7 +396,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: Wie funktioniert Multi-Model-Consensus? Kostenlos? Ollama/LM Studio Support? Alle 28 Fragen beantwortet zu Prompt-Optimierung, Datenschutz und Preisen.",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt Engineering Best Practices 2026: Frameworks",
+    promptEngineeringHubTitle: "Prompt Engineering: Best Practices und Frameworks 2026",
     promptEngineeringHubDescription: "Beherrschen Sie Prompt Engineering: Chain-of-Thought, Few-Shot und RAG-Techniken für GPT-4o, Claude 4.8 Sonnet und Gemini 2.5 Pro. 80 Leitfäden.",
     promptEngineeringHubOgDescription: "80 Prompt-Engineering-Artikel für alle Kenntnisstufen — Chain-of-Thought, RAG, Few-Shot, Team-Governance und Evaluierung für GPT-4o, Claude 4.8 Sonnet und Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 Prompt-Engineering-Leitfäden in 9 Themenbereichen. Beginnen Sie mit Grundlagen, meistern Sie Evaluierung — für GPT-4o, Claude und Gemini.",
@@ -726,7 +726,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: Comment fonctionne le consensus multi-modèles? Accès gratuit? Support Ollama/LM Studio? Toutes les 28 questions répondues sur optimisation, confidentialité et tarification.",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt Engineering Best Practices 2026: Frameworks",
+    promptEngineeringHubTitle: "Prompt Engineering : bonnes pratiques et frameworks 2026",
     promptEngineeringHubDescription: "Maîtrisez le prompt engineering : chain-of-thought, few-shot et techniques RAG pour GPT-4o, Claude 4.8 Sonnet et Gemini 2.5 Pro. 80 guides en 9 thèmes.",
     promptEngineeringHubOgDescription: "80 articles de prompt engineering pour tous niveaux — chaîne de pensée, RAG, few-shot, gouvernance d'équipe et évaluation pour GPT-4o, Claude 4.8 Sonnet et Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 guides de prompt engineering en 9 thématiques. Commencez par les Fondamentaux, maîtrisez l'Évaluation — pour GPT-4o, Claude et Gemini.",

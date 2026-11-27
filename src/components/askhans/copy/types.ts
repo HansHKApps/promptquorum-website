@@ -55,6 +55,8 @@ export interface AskCopy {
   aiNotice: string
   withdraw: string
   thinking: string
+  /** pill on selected text and start of the chat message it sends (same wording as the Academy) */
+  explainThis: string
   searching: string
   panelTools: string
 
