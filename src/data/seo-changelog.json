@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -31205,5 +31205,286 @@
       "t14": "2026-12-07",
       "t28": "2026-12-21"
     }
+  },
+  {
+    "id": "b5ba3fe0-a6ae-4867-b124-3566cf6dff33",
+    "slug": "/balcony-solar",
+    "date": "2026-11-27T07:23:13.303Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Balcony Solar: Balkonkraftwerk Kits, Rules, and No-Cloud Setups (2026)",
+        "new": "Plug-In Solar (Balcony Solar): Kits, Rules, No-Cloud (2026)"
+      }
+    ],
+    "reason": "Owner request 2026-11-27: add plug-in solar naming to English solar section; keep balcony solar for existing queries",
+    "queries": [
+      "plug in solar",
+      "balcony solar system"
+    ],
+    "baseline": {
+      "position": 12.7,
+      "impressions": 1771,
+      "clicks": 10,
+      "ctr": 0.00564652738565782,
+      "period": "90d to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "37c5be1e-226a-4cfa-8569-b91928da3734",
+    "slug": "/balcony-solar/balcony-solar-legal-us-states",
+    "date": "2026-11-27T07:23:13.425Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Which States Allow Balcony Solar? US Guide (2026)",
+        "new": "Which States Allow Plug-In Solar? Balcony Solar Guide (2026)"
+      }
+    ],
+    "reason": "Owner request 2026-11-27: add plug-in solar naming to English solar section; keep balcony solar for existing queries; state status re-checked, 30-states FAQ added",
+    "queries": [
+      "plug in solar",
+      "which states allow plug in solar",
+      "does texas allow plug in solar",
+      "are plug in solar panels legal in virginia",
+      "balcony solar states",
+      "balcony solar legal states"
+    ],
+    "baseline": {
+      "position": 6.82,
+      "impressions": 543,
+      "clicks": 7,
+      "ctr": 0.01289134438305709,
+      "period": "28d to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b6d91d60-55e2-413f-bbfb-4a0157dbbb41",
+    "slug": "/balcony-solar/how-balcony-solar-became-legal-in-the-us",
+    "date": "2026-11-27T07:23:13.534Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "How Balcony Solar Became Legal in the US: Guide (2026)",
+        "new": "How Plug-In Solar Became Legal in the US: Guide (2026)"
+      }
+    ],
+    "reason": "Owner request 2026-11-27: add plug-in solar naming to English solar section; keep balcony solar for existing queries",
+    "queries": [
+      "plug in solar",
+      "which states allow plug in solar",
+      "does texas allow plug in solar",
+      "are plug in solar panels legal in virginia",
+      "balcony solar law",
+      "balcony solar florida"
+    ],
+    "baseline": {
+      "position": 7.12,
+      "impressions": 800,
+      "clicks": 6,
+      "ctr": 0.0075,
+      "period": "28d to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "823db06f-c84c-4f8b-ad0b-1d1888b701de",
+    "slug": "/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:01.054Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Weesper Transcribe review: Mac app that, per its maker, transcribes audio and video files on your computer. Free tier, Pro, privacy limits. Not tested.",
+        "new": "Weesper Transcribe transcribes audio and video on your Mac with Whisper, its maker says. Free up to 15 minutes; Pro adds batches and subtitles. Untested."
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "440ff1ed-f5f0-4e54-9151-c4022bd83c44",
+    "slug": "/de/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:01.199Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Weesper Transcribe im Check: Mac-App, die laut Anbieter Audio und Video auf Ihrem Rechner transkribiert. Gratis-Stufe, Pro und Datenschutz. Ungetestet.",
+        "new": "Weesper Transcribe transkribiert laut Anbieter Audio und Video mit Whisper auf dem Mac. Gratis bis 15 Min.; Pro bietet Stapel und Untertitel. Ungetestet."
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f3d14268-3852-47e1-8ab0-54a686876aa6",
+    "slug": "/fr/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:01.328Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Test de Weesper Transcribe : app Mac qui, selon l’éditeur, transcrit audio et vidéo sur votre ordinateur. Offre gratuite, Pro, confidentialité. Non testée.",
+        "new": "Weesper Transcribe transcrit audio et vidéo sur Mac avec Whisper, selon l’éditeur. Gratuit jusqu’à 15 minutes ; Pro ajoute lots et sous-titres. Non testé."
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d88ee39a-ebb5-48cd-9713-508f7ebc317d",
+    "slug": "/es/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:01.467Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Weesper Transcribe: app para Mac que, según su creador, transcribe audio y video en tu equipo. Nivel gratuito, Pro y privacidad. Sin probar.",
+        "new": "Weesper Transcribe transcribe audio y video en tu Mac con Whisper, según su creador. Gratis hasta 15 minutos; Pro añade lotes y subtítulos. Sin probar."
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3f39402a-a544-4094-a648-0265b3552365",
+    "slug": "/pt/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:01.598Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do Weesper Transcribe: app para Mac que, segundo o fabricante, transcreve áudio e vídeo no seu computador. Plano grátis e Pro. Não testado.",
+        "new": "Weesper Transcribe transcreve áudio e vídeo no Mac com Whisper, segundo o fabricante. Grátis até 15 minutos; o Pro adiciona lotes e legendas. Não testado."
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fcc776e0-886b-46cd-a0fa-bee444b2584c",
+    "slug": "/ja/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:01.719Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Weesper Transcribeレビュー：開発元によると、お使いのMac上で音声・動画ファイルを文字起こしするアプリ。無料版とProの違い、プライバシーを解説。未検証。",
+        "new": "開発元によると、Weesper TranscribeはWhisperで音声・動画をMac上で文字起こしします。15分までのファイルは無料、一括処理や字幕書き出しはPro。未検証のレビューです。"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Weesper Transcribeレビュー：Macでオフライン文字起こし",
+        "new": "Weesper Transcribeレビュー：Mac文字起こし"
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b28152f3-4628-4cf2-8e18-f144080f82be",
+    "slug": "/zh/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:01.846Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Weesper Transcribe 评测：据开发商称，这款 Mac 应用在你的电脑上转录音频和视频文件。介绍免费版与 Pro 的划分以及隐私说明。本站未做实测。",
+        "new": "据开发商称，Weesper Transcribe 用 Whisper 在 Mac 本机转录音频和视频。15分钟以内的文件免费，批量处理和字幕导出需 Pro 版。本评测未做实测。"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Weesper Transcribe评测：Mac离线音视频转录工具",
+        "new": "Weesper Transcribe评测：Mac离线转录工具"
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8148e7a2-8448-44ef-be4b-d3cacc190ee9",
+    "slug": "/ko/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:01.979Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Weesper Transcribe 리뷰: 개발사에 따르면 내 컴퓨터에서 오디오·동영상 파일을 전사하는 Mac 앱입니다. 무료 등급, Pro, 개인정보 보호. 직접 테스트하지 않음.",
+        "new": "개발사에 따르면 Weesper Transcribe는 Whisper로 Mac에서 오디오·동영상을 전사합니다. 15분 이하 파일은 무료, 일괄 처리와 자막 내보내기는 Pro. 직접 테스트하지 않음."
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a3a0b717-a90a-4742-ac0d-6337fbc726b5",
+    "slug": "/ar/power-local-llm/weesper-transcribe-review",
+    "date": "2026-11-27T07:31:02.156Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Weesper Transcribe: تطبيق Mac يحوّل ملفات الصوت والفيديو إلى نص على حاسوبك بحسب المطوّر. الفئة المجانية وPro والخصوصية. لم نختبر التطبيق.",
+        "new": "بحسب المطوّر، يحوّل Weesper Transcribe الصوت والفيديو إلى نص على Mac عبر Whisper. مجاني حتى 15 دقيقة، وتضيف Pro الدفعات وملفات الترجمة. لم نختبره."
+      }
+    ],
+    "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "628c2dc5-3394-49a7-952b-54e944faa553",
+    "slug": "/de/prompt-engineering",
+    "date": "2026-11-27T07:19:03.103Z",
+    "fields": [
+      {
+        "field": "promptEngineeringHubTitle",
+        "old": "Prompt Engineering Best Practices 2026: Frameworks",
+        "new": "Prompt Engineering: Best Practices und Frameworks 2026"
+      }
+    ],
+    "reason": "Hub title was in English on the DE page; now German.",
+    "queries": [
+      "best practices für prompt engineering",
+      "prompt engineering dokumentation",
+      "prompting frameworks",
+      "prompt framework"
+    ],
+    "baseline": {
+      "position": 11.29,
+      "impressions": 253,
+      "clicks": 6,
+      "ctr": 0.023715415019762844,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "aeff6a75-32d2-4bba-a8e0-46f8849ffb2d",
+    "slug": "/fr/prompt-engineering",
+    "date": "2026-11-27T07:19:03.137Z",
+    "fields": [
+      {
+        "field": "promptEngineeringHubTitle",
+        "old": "Prompt Engineering Best Practices 2026: Frameworks",
+        "new": "Prompt Engineering : bonnes pratiques et frameworks 2026"
+      }
+    ],
+    "reason": "Hub title was in English on the FR page; now French.",
+    "queries": [
+      "bonnes pratiques du prompt engineering",
+      "framework prompt engineering",
+      "prompt framework"
+    ],
+    "baseline": {
+      "position": 9.57,
+      "impressions": 242,
+      "clicks": 4,
+      "ctr": 0.01652892561983471,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
   }
 ]

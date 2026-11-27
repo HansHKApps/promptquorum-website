@@ -5,11 +5,13 @@
 // Box, reserved height, provider switch, tracking, 9-locale copy and the SVG graphic per target.
 // Ask Hans / Power Mode / Academy open in place through lib/promo/open.ts (existing events, no navigation).
 //
+// - The whole box is clickable: the CTA's ::after covers it. So the CTA must not get a transform (scale etc.),
+//   which would shrink that click area back to the button.
 // - Inline only: no overlay, popup or interstitial. Not dismissible (clean pilot data).
 // - Reserved height per variant and breakpoint, so the slot causes no layout shift.
 // - Colors come from theme tokens (CSS variables); no hex values. Graphics are inline SVG without text.
 // - <target>_promo_view fires once per page view when >=50% of the slot is visible for >=1 s (not on render).
-// - <target>_promo_click fires on the CTA for all five targets. Link targets carry `via=promo_<target>_<placement>`.
+// - <target>_promo_click fires on a click anywhere in the box, for all five targets. Link targets carry `via=promo_<target>_<placement>`.
 
 import { useEffect, useRef } from 'react'
 import { useLang } from '@/hooks/useLang'
@@ -113,7 +115,7 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
   const [hMobile, hDesktop] = PROMO_RESERVED_HEIGHT[variant]
   const linkPath = LINK_PATH[target]
   const href = linkPath ? `${lang === 'en' ? '' : `/${lang}`}${linkPath}?via=${test?.source ?? promoSource(target, placement)}` : undefined
-  const ctaClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-extrabold shadow-lg transition-transform hover:bg-white/95 motion-safe:hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${theme.btn}`
+  const ctaClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-extrabold shadow-lg after:absolute after:inset-0 after:rounded-2xl after:content-[''] hover:bg-white/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${theme.btn}`
   const click = (e: React.MouseEvent<HTMLElement>) => {
     if (test) test.onClick()
     else trackPromo('click', ctx)
@@ -140,7 +142,7 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
       data-promo-variant={variant}
       aria-label={headline}
       style={{ ['--promo-h' as string]: `${hMobile}px`, ['--promo-h-sm' as string]: `${hDesktop}px` }}
-      className={`my-8 flex min-h-[var(--promo-h)] flex-col justify-center gap-4 rounded-2xl p-5 text-white shadow-xl ring-1 sm:min-h-[var(--promo-h-sm)] sm:p-7 ${theme.bg} ${theme.ring} ${className}`}
+      className={`relative my-8 flex min-h-[var(--promo-h)] flex-col justify-center gap-4 rounded-2xl p-5 text-white shadow-xl ring-1 sm:min-h-[var(--promo-h-sm)] sm:p-7 ${theme.bg} ${theme.ring} ${className}`}
     >
       {PROMO_PROVIDER === 'ad-tag' ? (
         // Third-party tag mounts here, inside the same reserved box. Wired when real advertising starts.
@@ -160,7 +162,7 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
             </div>
           </div>
           {showSnippet && (
-            <div>
+            <div className="relative z-10">
               {text.snippetLabel && <p className="mb-1 text-xs text-white/80">{text.snippetLabel}</p>}
               <code dir="ltr" className="block overflow-x-auto whitespace-nowrap rounded-lg bg-black/40 px-3 py-2 text-left text-xs text-white">{snippet}</code>
             </div>

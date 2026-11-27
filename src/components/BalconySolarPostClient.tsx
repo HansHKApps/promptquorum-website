@@ -124,7 +124,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ko: '홈',
   },
   breadcrumbHub: {
-    en: 'Balcony Solar',
+    en: 'Plug-In Solar',
     de: 'Balcony Solar',
     fr: 'Balcony Solar',
     ja: 'Balcony Solar',
@@ -204,7 +204,7 @@ const THEME_LABELS: Record<string, Partial<Record<Language, string>>> = {
     es: 'Normativa', pt: 'Regulamentação', ar: 'اللوائح', ko: '규정',
   },
   'Balcony Solar Money Pages': {
-    en: 'Balcony Solar', de: 'Balcony Solar', fr: 'Balcony Solar', ja: 'Balcony Solar', zh: 'Balcony Solar',
+    en: 'Plug-In Solar', de: 'Balcony Solar', fr: 'Balcony Solar', ja: 'Balcony Solar', zh: 'Balcony Solar',
     es: 'Balcony Solar', pt: 'Balcony Solar', ar: 'Balcony Solar', ko: 'Balcony Solar',
   },
 }

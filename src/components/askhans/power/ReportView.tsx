@@ -107,7 +107,7 @@ export function ReportView({ tx, doc, streaming, status, onExport, process }: Pr
         </ul>
       </details>
 
-      <div className="mt-3 text-[14px] leading-relaxed text-foreground">
+      <div data-explain="" className="mt-3 text-[14px] leading-relaxed text-foreground">
         <Markdown text={doc.body} />
       </div>
       {streaming && status && (
