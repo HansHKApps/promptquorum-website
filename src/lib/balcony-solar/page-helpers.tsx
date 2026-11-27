@@ -356,9 +356,14 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
 // ─── HUB PAGE ──────────────────────────────────────────────────────────────
 
 export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
-  const title = 'Balcony Solar: Balkonkraftwerk Kits, Rules, and No-Cloud Setups (2026)'
+  const title =
+    lang === 'en'
+      ? 'Plug-In Solar (Balcony Solar): Kits, Rules, No-Cloud (2026)'
+      : 'Balcony Solar: Balkonkraftwerk Kits, Rules, and No-Cloud Setups (2026)'
   const desc =
-    'Everything about plug-in balcony solar: the best kits and batteries, legality by country, installation and registration, and running it without the cloud. 20 guides.'
+    lang === 'en'
+      ? 'Plug-in solar (balcony solar): kits and batteries, legality by US state and country, installation, registration and running it without the cloud.'
+      : 'Everything about plug-in balcony solar: the best kits and batteries, legality by country, installation and registration, and running it without the cloud. 20 guides.'
 
   const isPublished = isBalconySolarHubPublished(lang)
 
@@ -422,8 +427,8 @@ interface HubCopy {
 
 const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
   en: {
-    title: 'Balcony Solar: Kits, Rules, and No-Cloud Setups',
-    intro: 'Plug-in balcony solar (Balkonkraftwerk) lets you generate your own power from a railing, wall, or garden panel — no rooftop installer required. These 33 guides cover the stack: the best kits, batteries, and micro-inverters, legality by country, installation and registration, and running the whole setup on Home Assistant instead of a vendor cloud.',
+    title: 'Plug-In Solar (Balcony Solar): Kits, Rules, and No-Cloud Setups',
+    intro: 'Plug-in solar, also called balcony solar or Balkonkraftwerk, lets you generate your own power from a railing, wall, or garden panel — no rooftop installer required. These 33 guides cover the stack: the best kits, batteries, and micro-inverters, legality by country, installation and registration, and running the whole setup on Home Assistant instead of a vendor cloud.',
     intro2: 'Most balcony solar brands push you toward their own app and cloud dashboard — Hoymiles, Deye, APsystems, EcoFlow, Anker, and Zendure all default to routing your production data through a vendor server. A local setup reads that same data directly from the inverter or battery and keeps it on hardware you own, so monitoring keeps working even if the manufacturer\'s app disappears.',
     benefits: [
       { label: 'No Installer Needed', detail: 'Plug into an outlet or the inverter\'s own connector — no electrician, no roof work, and no permit at all in most notification-only markets.' },
@@ -592,6 +597,7 @@ interface HubFaqEntry { q: string; a: string; bullets?: string[] }
 
 const HUB_FAQ: Partial<Record<Lang, HubFaqEntry[]>> = {
   en: [
+    { q: 'Is plug-in solar the same as balcony solar?', a: 'Mostly yes. Plug-in solar is the broader term, common in US news coverage and in the UK: a small solar system that connects to your home wiring through a plug or dedicated connector. Balcony solar and Balkonkraftwerk name the same kind of system, which can also sit on a wall, patio or in a garden.' },
     { q: 'What is balcony solar (Balkonkraftwerk)?', a: 'A plug-in solar system — usually one or two panels feeding a small micro-inverter — that connects directly to a household outlet or dedicated connector, generating power for self-consumption without a rooftop installation or an electrician in most markets.' },
     { q: 'Do I need a permit to install balcony solar?', a: 'It depends on the country. France, Austria, Belgium, the Netherlands, Germany, and Portugal use simple notification-only registration for small systems; the US now has 10 states with dedicated laws; several other markets — the UAE, Saudi Arabia, Brazil, Japan — have no dedicated framework yet, so requirements vary.' },
     { q: 'How much does a balcony solar kit cost, and what\'s the payback time?', a: 'Typical kits run from a few hundred to around a thousand dollars or euros depending on panel count, inverter brand, and whether a battery is included — payback commonly falls in the 2–5 year range depending on local electricity prices and how much of the output you self-consume.' },

@@ -100,7 +100,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
   },
   balconySolar: {
     // Labels match the primary term used in each locale's cluster articles.
-    en: 'Balcony Solar',
+    en: 'Plug-In Solar',
     de: 'Balkonkraftwerk',
     fr: 'Solaire balcon',
     ja: 'ベランダ太陽光',

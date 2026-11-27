@@ -176,12 +176,12 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
     guideCountToken: '33 Anleitungen',
   },
   en: {
-    pill: 'Balcony solar',
+    pill: 'Plug-in solar',
     titleHighlight: 'No-Cloud',
     primaryCta: 'Check the rules for my country',
     secondaryCta: 'See all topics',
     summary: [
-      { label: 'In one sentence', text: 'A balcony solar system is a **plug-in solar device** that generates power for your own use, in most markets **without a roof installation or an electrician**.' },
+      { label: 'In one sentence', text: 'A **plug-in solar system**, also called balcony solar, generates power for your own use, in most markets **without a roof installation or an electrician**.' },
       { label: 'In plain terms', text: 'Pick a kit, check your country\'s rules, plug it in. The guides below walk you through **every step**.' },
     ],
     flow: {
@@ -219,8 +219,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       profilesIntro: 'Profiles of **manufacturers and brands** for kits, inverters and storage, from **Anker SOLIX to Zendure**.',
     },
     why: {
-      title: 'Why balcony solar, and why without the cloud',
-      takeaway: '**In short:** A balcony solar system needs **no installer**, pays for itself within **a few years** for most kits, and on the common brands can be run **entirely without a vendor cloud** through Home Assistant.',
+      title: 'Why plug-in solar, and why without the cloud',
+      takeaway: '**In short:** A plug-in (balcony) solar system needs **no installer**, pays for itself within **a few years** for most kits, and on the common brands can be run **entirely without a vendor cloud** through Home Assistant.',
     },
     latest: { title: 'Recently updated', intro: 'The three pages with the newest change.', more: 'See all topics', updated: 'Updated', published: 'Published' },
     deeper: {
