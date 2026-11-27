@@ -5,7 +5,7 @@
 // Returns nothing on every page that is not in the pilot, when the pilot flag is off, and for control pages.
 //
 //   at = 'P1' after the intro, before the first section | 'P2' after ~40% of the sections | 'P3' before related links
-//        'P4' desktop sticky side rail (needs >= 1360px; narrower screens use the P2 spot instead) | 'P5' hub/index pages
+//        'P4' desktop side rail, scrolls with the page (needs >= 1360px; narrower screens use the P2 spot instead) | 'P5' hub/index pages
 
 import { usePathname } from 'next/navigation'
 import { pilotEntryFor } from '@/lib/promo/pilot'
@@ -30,9 +30,7 @@ export function PilotPromoSlot({ at }: { at: PilotSpot }) {
     if (at === 'P4') {
       return (
         <div className="absolute bottom-0 left-full top-0 ms-8 hidden w-64 min-[1360px]:block rtl:left-auto rtl:right-full rtl:me-8 rtl:ms-0">
-          <div className="sticky top-24">
-            <PromoSlot target={entry.target} placement="P4" variant={variantFor('P4')} stack className="my-0" />
-          </div>
+          <PromoSlot target={entry.target} placement="P4" variant={variantFor('P4')} stack className="my-0" />
         </div>
       )
     }

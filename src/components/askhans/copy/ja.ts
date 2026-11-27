@@ -39,6 +39,7 @@ export const copy: AskCopy = {
   aiNotice: 'Ask Hans はAIのため、誤りを含む場合があります。個人情報は入力しないでください。',
   withdraw: '同意を撤回する',
   thinking: 'Ask Hans が考えています …',
+  explainThis: 'これを説明',
   searching: 'PromptQuorum を検索しています …',
   panelTools: 'ツールを使用しています …',
 
