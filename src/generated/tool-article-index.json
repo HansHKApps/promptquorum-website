@@ -12160,7 +12160,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 114,
+    "totalCount": 115,
     "capped": true
   },
   "Sokuji": {
@@ -14560,6 +14560,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "weesper-transcribe-review",
+        "title": "Weesper Transcribe Review: Offline File Transcription for Mac",
+        "url": "/power-local-llm/weesper-transcribe-review",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-llm-api-gateway-2026",
         "title": "LiteLLM vs OpenRouter vs Portkey: Best LLM Gateway 2026",
@@ -14622,17 +14630,9 @@
         "url": "/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
         "dateModified": "2026-11-22",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rin-chat-review",
-        "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
-        "url": "/power-local-llm/rin-chat-review",
-        "dateModified": "2026-11-22",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 297,
+    "totalCount": 298,
     "capped": true
   },
   "Qdrant": {
@@ -16741,6 +16741,36 @@
     "totalCount": 2,
     "capped": false
   },
+  "Weesper Transcribe": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "weesper-transcribe-review",
+        "title": "Weesper Transcribe Review: Offline File Transcription for Mac",
+        "url": "/power-local-llm/weesper-transcribe-review",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weesper-neon-flow-review",
+        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
+        "url": "/power-local-llm/weesper-neon-flow-review",
+        "dateModified": "2026-11-09",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
+  },
   "Amical": {
     "articles": [
       {
@@ -17002,9 +17032,17 @@
         "url": "/power-local-llm/local-llm-voice-audio-compared",
         "dateModified": "2026-11-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weesper-transcribe-review",
+        "title": "Weesper Transcribe Review: Offline File Transcription for Mac",
+        "url": "/power-local-llm/weesper-transcribe-review",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Whispy": {
