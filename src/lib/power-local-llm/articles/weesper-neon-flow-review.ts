@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Weesper Neon Flow Is',
         content: [
           '**Weesper Neon Flow is a push-to-talk dictation app, not a transcription editor.** You hold a keyboard shortcut, speak, and release; the app runs Whisper on the computer and inserts cleaned-up text at the cursor, for example in Gmail, Slack, Notion or Word.',
-          'The maker is THE BLUE HOUSE (SASU), based in Paris, and the About page says the product was founded in 2024. It also sells a separate product, Weesper Transcribe, for audio and video files; this review covers only the dictation app.',
+          'The maker is THE BLUE HOUSE (SASU), based in Paris, and the About page says the product was founded in 2024. It also sells a separate product, [Weesper Transcribe](/power-local-llm/weesper-transcribe-review), for audio and video files; this review covers only the dictation app.',
           'This review draws on the website, changelog, privacy policy, terms and the GitHub release page. It involved no hands-on testing, so accuracy, speed and stability are not rated here.',
         ],
       },
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was Weesper Neon Flow ist',
         content: [
           '**Weesper Neon Flow ist eine Diktier-App mit Tastenkürzel, kein Transkriptions-Editor.** Sie halten ein Tastenkürzel gedrückt, sprechen und lassen los; die App führt Whisper auf dem Computer aus und fügt den bereinigten Text am Cursor ein, zum Beispiel in Gmail, Slack, Notion oder Word.',
-          'Hersteller ist THE BLUE HOUSE (SASU) mit Sitz in Paris, und laut Über-uns-Seite wurde das Produkt 2024 gegründet. Außerdem verkauft das Unternehmen mit Weesper Transcribe ein separates Produkt für Audio- und Videodateien; diese Rezension behandelt nur die Diktier-App.',
+          'Hersteller ist THE BLUE HOUSE (SASU) mit Sitz in Paris, und laut Über-uns-Seite wurde das Produkt 2024 gegründet. Außerdem verkauft das Unternehmen mit [Weesper Transcribe](/de/power-local-llm/weesper-transcribe-review) ein separates Produkt für Audio- und Videodateien; diese Rezension behandelt nur die Diktier-App.',
           'Diese Rezension stützt sich auf Website, Änderungsprotokoll, Datenschutzerklärung, Nutzungsbedingungen und die GitHub-Release-Seite. Es gab keinen eigenen Praxistest, daher werden Genauigkeit, Geschwindigkeit und Stabilität hier nicht bewertet.',
         ],
       },
@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Ce qu'est Weesper Neon Flow",
         content: [
           "**Weesper Neon Flow est une application de dictée par raccourci, pas un éditeur de transcriptions.** Vous maintenez un raccourci clavier, vous parlez et vous relâchez ; l'application exécute Whisper sur l'ordinateur et insère le texte nettoyé au curseur, par exemple dans Gmail, Slack, Notion ou Word.",
-          "L'éditeur est THE BLUE HOUSE (SASU), basée à Paris, et la page À propos indique que le produit a été fondé en 2024. Elle vend aussi un produit distinct, Weesper Transcribe, pour les fichiers audio et vidéo ; ce test ne couvre que l'application de dictée.",
+          "L'éditeur est THE BLUE HOUSE (SASU), basée à Paris, et la page À propos indique que le produit a été fondé en 2024. Elle vend aussi un produit distinct, [Weesper Transcribe](/fr/power-local-llm/weesper-transcribe-review), pour les fichiers audio et vidéo ; ce test ne couvre que l'application de dictée.",
           "Ce test s'appuie sur le site, le journal des modifications, la politique de confidentialité, les conditions d'utilisation et la page de versions GitHub. Il n'a donné lieu à aucun essai pratique : la précision, la vitesse et la stabilité ne sont donc pas évaluées ici.",
         ],
       },
@@ -1330,7 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weesper Neon Flowとは',
         content: [
           '**Weesper Neon Flowは、文字起こしの編集ツールではなく、プッシュトゥトーク方式の音声入力アプリです。** キーボードショートカットを押したまま話して離すと、アプリがコンピューター上でWhisperを実行し、整えたテキストをカーソル位置、たとえばGmail、Slack、Notion、Wordなどに入力します。',
-          '開発元はパリに拠点を置くTHE BLUE HOUSE（SASU）で、Aboutページによると製品は2024年に立ち上げられました。音声・動画ファイル向けに別製品のWeesper Transcribeも販売していますが、このレビューが扱うのは音声入力アプリだけです。',
+          '開発元はパリに拠点を置くTHE BLUE HOUSE（SASU）で、Aboutページによると製品は2024年に立ち上げられました。音声・動画ファイル向けに別製品の[Weesper Transcribe](/ja/power-local-llm/weesper-transcribe-review)も販売していますが、このレビューが扱うのは音声入力アプリだけです。',
           'このレビューは、公式サイト、変更履歴、プライバシーポリシー、利用規約、GitHubのリリースページに基づいています。実機での検証は行っていないため、精度、速度、安定性は評価していません。',
         ],
       },
@@ -1728,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weesper Neon Flow是什么',
         content: [
           '**Weesper Neon Flow是一款按键说话式的听写应用，而不是转录编辑器。** 你按住键盘快捷键、说话、松开；应用在电脑上运行Whisper，并把整理后的文字插入光标处，例如Gmail、Slack、Notion或Word中。',
-          '开发者是位于巴黎的THE BLUE HOUSE (SASU)，“关于”页面称该产品创立于2024年。它还销售另一款用于音频和视频文件的产品Weesper Transcribe；本评测只涵盖听写应用。',
+          '开发者是位于巴黎的THE BLUE HOUSE (SASU)，“关于”页面称该产品创立于2024年。它还销售另一款用于音频和视频文件的产品[Weesper Transcribe](/zh/power-local-llm/weesper-transcribe-review)；本评测只涵盖听写应用。',
           '本评测依据官网、更新日志、隐私政策、条款和GitHub发布页面，没有进行实际上手测试，因此这里不对准确度、速度和稳定性做评级。',
         ],
       },
@@ -2116,7 +2116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué es Weesper Neon Flow',
         content: [
           '**Weesper Neon Flow es una app de dictado por atajo, no un editor de transcripciones.** Mantienes pulsado un atajo de teclado, hablas y lo sueltas; la app ejecuta Whisper en el ordenador e inserta el texto limpio en el cursor, por ejemplo en Gmail, Slack, Notion o Word.',
-          'El fabricante es THE BLUE HOUSE (SASU), con sede en París, y la página Acerca de dice que el producto se fundó en 2024. También vende otro producto, Weesper Transcribe, para archivos de audio y vídeo; esta reseña cubre solo la app de dictado.',
+          'El fabricante es THE BLUE HOUSE (SASU), con sede en París, y la página Acerca de dice que el producto se fundó en 2024. También vende otro producto, [Weesper Transcribe](/es/power-local-llm/weesper-transcribe-review), para archivos de audio y vídeo; esta reseña cubre solo la app de dictado.',
           'Esta reseña se basa en la web, el registro de cambios, la política de privacidad, las condiciones y la página de versiones de GitHub. No hubo prueba práctica, así que aquí no se valoran la precisión, la velocidad ni la estabilidad.',
         ],
       },
@@ -2504,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Weesper Neon Flow',
         content: [
           '**O Weesper Neon Flow é um app de ditado por atalho, não um editor de transcrições.** Você segura um atalho de teclado, fala e solta; o app executa o Whisper no computador e insere o texto limpo no cursor, por exemplo no Gmail, Slack, Notion ou Word.',
-          'O fabricante é a THE BLUE HOUSE (SASU), sediada em Paris, e a página Sobre diz que o produto foi fundado em 2024. Ele também vende um produto separado, o Weesper Transcribe, para arquivos de áudio e vídeo; esta análise cobre apenas o app de ditado.',
+          'O fabricante é a THE BLUE HOUSE (SASU), sediada em Paris, e a página Sobre diz que o produto foi fundado em 2024. Ele também vende um produto separado, o [Weesper Transcribe](/pt/power-local-llm/weesper-transcribe-review), para arquivos de áudio e vídeo; esta análise cobre apenas o app de ditado.',
           'Esta análise se baseia no site, no changelog, na política de privacidade, nos termos e na página de versões no GitHub. Não houve teste prático, então precisão, velocidade e estabilidade não são avaliadas aqui.',
         ],
       },
@@ -2976,7 +2976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Weesper Neon Flow',
         content: [
           '**Weesper Neon Flow تطبيق إملاء بالضغط والتحدث، وليس محرّر تفريغ نصي.** تضغط على اختصار لوحة المفاتيح وتتحدث ثم تتركه؛ فيشغّل التطبيق Whisper على الحاسوب ويُدرج نصًا منقّحًا عند المؤشر، مثلًا في Gmail أو Slack أو Notion أو Word.',
-          'المطوّر هو THE BLUE HOUSE (SASU) ومقرها باريس، وتقول صفحة «من نحن» إن المنتج تأسس عام 2024. ويبيع أيضًا منتجًا منفصلًا هو Weesper Transcribe لملفات الصوت والفيديو؛ وتغطي هذه المراجعة تطبيق الإملاء فقط.',
+          'المطوّر هو THE BLUE HOUSE (SASU) ومقرها باريس، وتقول صفحة «من نحن» إن المنتج تأسس عام 2024. ويبيع أيضًا منتجًا منفصلًا هو [Weesper Transcribe](/ar/power-local-llm/weesper-transcribe-review) لملفات الصوت والفيديو؛ وتغطي هذه المراجعة تطبيق الإملاء فقط.',
           'تعتمد هذه المراجعة على الموقع وسجل التغييرات وسياسة الخصوصية والشروط وصفحة الإصدارات على GitHub. ولم يُجرَ اختبار عملي، لذا لا تُقيَّم هنا الدقة والسرعة والاستقرار.',
         ],
       },
@@ -3374,7 +3374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weesper Neon Flow란',
         content: [
           '**Weesper Neon Flow는 전사 편집기가 아니라 단축키 방식의 받아쓰기 앱입니다.** 키보드 단축키를 누른 채 말하고 놓으면, 앱이 컴퓨터에서 Whisper를 실행해 정리된 텍스트를 커서 위치에 입력합니다. 예를 들어 Gmail, Slack, Notion, Word에서 쓸 수 있습니다.',
-          '개발사는 파리에 있는 THE BLUE HOUSE (SASU)이며, 소개 페이지에는 제품이 2024년에 설립되었다고 적혀 있습니다. 오디오·동영상 파일용 별도 제품인 Weesper Transcribe도 판매하지만, 이 리뷰는 받아쓰기 앱만 다룹니다.',
+          '개발사는 파리에 있는 THE BLUE HOUSE (SASU)이며, 소개 페이지에는 제품이 2024년에 설립되었다고 적혀 있습니다. 오디오·동영상 파일용 별도 제품인 [Weesper Transcribe](/ko/power-local-llm/weesper-transcribe-review)도 판매하지만, 이 리뷰는 받아쓰기 앱만 다룹니다.',
           '이 리뷰는 공식 사이트, 변경 내역, 개인정보 처리방침, 이용 약관, GitHub 릴리스 페이지에 근거합니다. 직접 사용해 본 테스트는 하지 않았으므로 정확도, 속도, 안정성은 평가하지 않습니다.',
         ],
       },

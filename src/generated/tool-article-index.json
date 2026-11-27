@@ -10649,6 +10649,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "weesper-neon-flow-review",
+        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
+        "url": "/power-local-llm/weesper-neon-flow-review",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "whispy-review",
         "title": "Whispy Review: Private Audio Transcription for Mac and Windows",
         "url": "/power-local-llm/whispy-review",
@@ -10700,14 +10708,6 @@
         "slug": "argos-translate-review",
         "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
         "url": "/power-local-llm/argos-translate-review",
-        "dateModified": "2026-11-13",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-android-guide",
-        "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-android-guide",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
@@ -14561,6 +14561,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "weesper-neon-flow-review",
+        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
+        "url": "/power-local-llm/weesper-neon-flow-review",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "weesper-transcribe-review",
         "title": "Weesper Transcribe Review: Offline File Transcription for Mac",
         "url": "/power-local-llm/weesper-transcribe-review",
@@ -14620,14 +14628,6 @@
         "slug": "deepseek-offline-china-self-hosted-2026",
         "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
         "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
-        "dateModified": "2026-11-22",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpu-server-hosting-cudo-cherry-database-mart",
-        "title": "GPU Server Hosting 2026: CUDO Compute, Cherry Servers, Database Mart (and LumaDock GPU VPS)",
-        "url": "/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart",
         "dateModified": "2026-11-22",
         "tier": "mentioned"
       }
@@ -16753,18 +16753,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-20",
+        "slug": "weesper-neon-flow-review",
+        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
+        "url": "/power-local-llm/weesper-neon-flow-review",
+        "dateModified": "2026-11-27",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "weesper-neon-flow-review",
-        "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
-        "url": "/power-local-llm/weesper-neon-flow-review",
-        "dateModified": "2026-11-09",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -17022,7 +17022,7 @@
         "slug": "weesper-neon-flow-review",
         "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
         "url": "/power-local-llm/weesper-neon-flow-review",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-27",
         "tier": "about"
       },
       {
