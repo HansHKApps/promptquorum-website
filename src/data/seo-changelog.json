@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -31432,6 +31432,59 @@
     ],
     "reason": "geo-meta-optimizer No-GSC on first publish: key facts, Whisper entity, attribution, length budgets",
     "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "628c2dc5-3394-49a7-952b-54e944faa553",
+    "slug": "/de/prompt-engineering",
+    "date": "2026-11-27T07:19:03.103Z",
+    "fields": [
+      {
+        "field": "promptEngineeringHubTitle",
+        "old": "Prompt Engineering Best Practices 2026: Frameworks",
+        "new": "Prompt Engineering: Best Practices und Frameworks 2026"
+      }
+    ],
+    "reason": "Hub title was in English on the DE page; now German.",
+    "queries": [
+      "best practices für prompt engineering",
+      "prompt engineering dokumentation",
+      "prompting frameworks",
+      "prompt framework"
+    ],
+    "baseline": {
+      "position": 11.29,
+      "impressions": 253,
+      "clicks": 6,
+      "ctr": 0.023715415019762844,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "aeff6a75-32d2-4bba-a8e0-46f8849ffb2d",
+    "slug": "/fr/prompt-engineering",
+    "date": "2026-11-27T07:19:03.137Z",
+    "fields": [
+      {
+        "field": "promptEngineeringHubTitle",
+        "old": "Prompt Engineering Best Practices 2026: Frameworks",
+        "new": "Prompt Engineering : bonnes pratiques et frameworks 2026"
+      }
+    ],
+    "reason": "Hub title was in English on the FR page; now French.",
+    "queries": [
+      "bonnes pratiques du prompt engineering",
+      "framework prompt engineering",
+      "prompt framework"
+    ],
+    "baseline": {
+      "position": 9.57,
+      "impressions": 242,
+      "clicks": 4,
+      "ctr": 0.01652892561983471,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
     "deployedAt": null
   }
 ]
