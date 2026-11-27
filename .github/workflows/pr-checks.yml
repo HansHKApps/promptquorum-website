@@ -46,6 +46,9 @@ jobs:
       - name: Validate meta budgets (changed article files only, strict)
         run: node scripts/validate-meta-budgets.mjs --changed=origin/${{ github.base_ref }} --strict
 
+      - name: Validate localized titles (newly introduced violations only)
+        run: node scripts/validate-localized-titles.mjs --changed=origin/${{ github.base_ref }} --strict
+
       - name: Validate no internal-note leakage
         run: node scripts/validate-no-internal-note-leakage.mjs
 

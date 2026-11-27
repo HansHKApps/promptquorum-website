@@ -224,7 +224,7 @@ It grades every query A–D against the title, meta, H1, H2s, lead and FAQ quest
 When no GSC data exists, review the meta fields against the page itself instead of query data. Intent proxy = the page's own content + web research + the freshness tier. For **every locale block** (en, de, fr, ja, zh, es, pt, ar, ko), check and fix:
 
 1. **Length** — title/meta within per-locale limits (incl. CJK counts for ja/zh; use the limits in `/geo-meta-optimizer`).
-2. **Language** — every field in its block's own language; no English leakage into non-EN blocks.
+2. **Language** — every field in its block's own language; no English leakage into non-EN blocks. For titles (`title`, `seoTitle`, and the hub/meta/page titles in `src/translations.ts`) run `npm run validate-localized-titles:changed` (flags non-EN titles identical to EN, and ja/zh/ko/ar titles without local script or with untranslated English phrases; fails only on violations new against `origin/main`). `npm run validate-localized-titles` lists the backlog. Descriptions and body text are not covered: re-read them. `validate-meta-budgets` only checks length, does not read `src/translations.ts`, and only sees locale blocks indented by two spaces, so it is not a language check.
 3. **Topic match** — title/meta/OG reflect the page's actual current content and top recommendation; no contradiction with the body (Anti-Pattern #6, applied per-locale).
 4. **Staleness** — no superseded model names/versions vs `current_models_mentioned`.
 5. **Site rules** — no month names in trailing-stamp position; year where the tier requires it; `| PromptQuorum` suffix only on titles ≤45 chars; no marketing superlatives.
