@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-22',
     last_full_refresh: '2026-11-22',
-    lastFactChecked: '2026-11-22',
+    lastFactChecked: '2026-11-27',
     current_hardware_mentioned: ['RTX 4090', 'RTX 3090', 'Ryzen 9 9950X', 'Ryzen 7 7700X', 'Threadripper 7960X'],
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -22,17 +22,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Shop Professional Build components →', url: 'https://www.amazon.com/s?k=Threadripper+7960X+workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**The best local AI workstation for most people in 2026 is the RTX 4090 build: 24 GB VRAM + Ryzen 9 9950X + 64 GB DDR5. On the [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013) it reaches 186.2 tok/s on a 7B Q4_0 model (developer-reported), and 14B at Q8 fits without offloading. Skip to your tier: [Budget](#tier1) · [Recommended](#tier2) · [Professional](#tier3).**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**Our pick for most people building a local AI workstation in 2026 is the RTX 4090 build: 24 GB VRAM + Ryzen 9 9950X + 64 GB DDR5. On the [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013) it reaches 186.2 tok/s on a 7B Q4_0 model (developer-reported), and 14B at Q8 fits without offloading. Skip to your tier: [Budget](#tier1) · [Recommended](#tier2) · [Professional](#tier3).**',
     quickAnswerTop: {
       en: {
         question: 'What is the best PC build for running AI models locally in 2026?',
-        answer: 'For most users: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. For 70B models at GPU speed: dual RTX 3090 (48 GB VRAM total) + Threadripper. Budget entry: used RTX 3090 + Ryzen 7 7700X. Build totals are not tracked; only GPU prices are, from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15; listing data, not quotes): RTX 3090 used sold listings about $1,400–1,550 and RTX 4090 used sold listings $2,575–3,010 (median $2,860). DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399), so check current RAM prices before buying.',
+        answer: 'For most users: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. For 70B models at GPU speed: dual RTX 3090 (48 GB VRAM total) + Threadripper. Budget entry: used RTX 3090 + Ryzen 7 7700X. Build totals are not tracked; only GPU prices are (US market, eBay sold listings, not quotes): used RTX 3090 $1,500–1,725 (median $1,650; 225 sales, 13–23 November 2026, excluding shipping; [InsiderLLM used-GPU guide](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)) and used RTX 4090 $2,575–3,010 (median $2,860; 216 sales, October 2026; [InsiderLLM price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)). DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399), so check current RAM prices before buying.',
         bullets: [
           'Budget: used RTX 3090 (24 GB) + Ryzen 7 7700X + 64 GB DDR5 — runs 30B Q4',
           'Recommended: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — runs 30B Q4',
           'Professional: dual RTX 3090 (48 GB) + Threadripper 7960X — fits 70B Q4 in VRAM (no sourced tok/s figure for multi-GPU)',
-          'RAM can add more to a build than GPU price moves: DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399)',
+          'RAM prices can change a build\'s cost a lot: DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399)',
           'All builds handle 7B and 14B models with ease; 70B needs dual GPU or CPU offloading',
         ],
         updatedDate: '2026-11',
@@ -42,20 +42,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'RTX 4090 is still the best single consumer GPU for local AI in 2026: 24 GB VRAM, ~1 TB/s bandwidth — and its used sold listings were $2,575–3,010 (median $2,860) per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15',
+          'RTX 4090 is our pick for the recommended tier: 24 GB VRAM and about 1 TB/s bandwidth (the RTX 5090 has more VRAM, 32 GB). Used US sold listings were $2,575–3,010 (median $2,860, October 2026, [InsiderLLM price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/))',
           'DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399)',
           '70B Q4 models need 40+ GB VRAM — requires dual RTX 3090 or CPU offloading',
           'CPU, motherboard, PSU, case, cooler and storage prices are not tracked on this page — check current listings before buying',
-          'PCIe Gen 4/5 NVMe loads a 7B model in under 2 seconds vs 10+ seconds on SATA; storage prices are not tracked here',
+          'PCIe Gen 4/5 NVMe drives have much higher sequential read speed than SATA, which shortens model loading (load times are not measured here); storage prices are not tracked here',
           'Tier 1 and Tier 2 share the AM5 socket — upgrade GPU/RAM later without a new motherboard; Tier 3 requires TRX50',
         ],
       },
       quickCompare: {
         title: 'Which Workstation Should You Build?',
-        content: 'Choose your build based on the largest model you need to run: 7B–14B → Budget. 14B–32B → Recommended. 70B → Professional. The first row shows GPU prices only (used sold listings, [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15; listing data, not quotes); system totals are not tracked.',
+        content: 'Choose your build based on the largest model you need to run: 7B–14B → Budget. 14B–32B → Recommended. 70B → Professional. The first row shows GPU prices only (US used sold listings, not quotes: [RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), 13–23 November 2026; [RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), October 2026); system totals are not tracked.',
         columns: ['', 'Budget', 'Recommended', 'Professional'],
         rows: [
-          { '': 'GPU price (used)', 'Budget': '$1,400–1,550 (used sold listings, InsiderLLM, 2026-10-15)', 'Recommended': '$2,575–3,010 (used sold listings, InsiderLLM, 2026-10-15)', 'Professional': '$2,800–3,100 (2 × $1,400–1,550, used sold listings, InsiderLLM, 2026-10-15)' },
+          { '': 'GPU price (used)', 'Budget': '$1,500–1,725 (US sold, 13–23 Nov 2026)', 'Recommended': '$2,575–3,010 (US sold, Oct 2026)', 'Professional': '$3,000–3,450 (2 × $1,500–1,725, US sold, 13–23 Nov 2026)' },
           { '': 'GPU', 'Budget': 'RTX 3090 24GB (used)', 'Recommended': 'RTX 4090 24GB', 'Professional': '2× RTX 3090 (48GB)' },
           { '': 'CPU', 'Budget': 'Ryzen 7 7700X', 'Recommended': 'Ryzen 9 9950X', 'Professional': 'Threadripper 7960X' },
           { '': 'RAM', 'Budget': '64GB DDR5', 'Recommended': '64GB DDR5-6000', 'Professional': '256GB DDR5 ECC' },
@@ -67,21 +67,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Shop Recommended Build components →', url: 'https://www.amazon.com/s?k=RTX+4090+Ryzen+9950X+build', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: 'Shop Professional Build components →', url: 'https://www.amazon.com/s?k=Threadripper+7960X+workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: 'Only the GPU line of each build is priced (used sold listings, [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15). RAM and other parts are not tracked: DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399).',
+        note: 'Only the GPU line of each build is priced (US used sold listings: [InsiderLLM used-GPU guide](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) for the RTX 3090, 13–23 November 2026; [InsiderLLM price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) for the RTX 4090, October 2026). RAM and other parts are not tracked: DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399).',
       },
       editorsChoice: {
         title: "Editor's Choice: RTX 4090 Recommended Workstation",
         highlight: true,
-        content: 'Best overall local-AI workstation for 2026 — the balance point between VRAM, upgrade headroom, and price for the widest range of models.',
+        content: 'Our pick among these three builds: a balance point between VRAM, upgrade headroom, and price for the widest range of models.',
         items: [
-          '24 GB VRAM — runs every model up to 32B Q4 fully on GPU',
+          '24 GB VRAM — models up to about 32B at Q4 fit on the GPU (context length permitting)',
           '64 GB DDR5-6000 — enough for CPU offload of 70B (speed not tracked here)',
           'Qwen3 32B Q4 fits fully on the GPU; 70B with offloading',
-          'GPU: RTX 4090 used sold listings $2,575–3,010 (median $2,860, [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15); other parts not tracked',
-          '**Skip this if:** you only ever run 7B–14B models — the Budget build costs less and does that job just as well',
+          'GPU: RTX 4090 used sold listings $2,575–3,010 (median $2,860, [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), October 2026 sales, US); other parts not tracked',
+          '**Skip this if:** you only ever run 7B–14B models — the Budget build costs less and covers those model sizes',
         ],
         affiliateLinks: [
-          { label: 'RTX 4090 24GB — check current price →', url: 'https://www.amazon.com/s?k=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu', priceRange: '$2,575–3,010 (used sold listings)' },
+          { label: 'RTX 4090 24GB — check current price →', url: 'https://www.amazon.com/s?k=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu', priceRange: '$2,575–3,010 (US sold, Oct 2026)' },
           { label: 'Ryzen 9 9950X — check current price →', url: 'https://www.amazon.com/s?k=Ryzen+9+9950X', productName: 'AMD Ryzen 9 9950X', productCategory: 'cpu' },
           { label: 'ASUS ProArt X870E — check current price →', url: 'https://www.amazon.com/s?k=ASUS+ProArt+X870E', productName: 'ASUS ProArt X870E-Creator WiFi', productCategory: 'motherboard' },
           { label: 'Shop the complete Recommended build →', url: 'https://www.amazon.com/s?k=RTX+4090+Ryzen+9950X+64GB+DDR5+workstation', productName: 'Recommended Workstation Build', productCategory: 'pc-component' },
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'The budget build uses a used RTX 3090 (24 GB VRAM) as the core. On the [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013) the RTX 3090 reaches 158.2 tok/s on a 7B Q4_0 model (developer-reported); speeds for larger models are not tracked here. NVIDIA lists 350 W board power for the RTX 3090 — pair it with a quality 850 W PSU (this is not electrical-safety advice). **Buy this build if:** you mainly run 7B–32B models and you are comfortable buying a used GPU. **Skip it if:** 70B is your primary workload — it needs CPU offloading on this tier, which is functional but slow.',
         columns: ['Component', 'Model', 'Price'],
         rows: [
-          { 'Component': 'GPU', 'Model': 'NVIDIA RTX 3090 (used, 24 GB)', 'Price': '$1,400–1,550 (used sold listings, InsiderLLM, 2026-10-15)' },
+          { 'Component': 'GPU', 'Model': 'NVIDIA RTX 3090 (used, 24 GB)', 'Price': '$1,500–1,725 (US sold, 13–23 Nov 2026)' },
           { 'Component': 'CPU', 'Model': 'AMD Ryzen 7 7700X', 'Price': 'not tracked' },
           { 'Component': 'Motherboard', 'Model': 'MSI MAG X670E Tomahawk WiFi', 'Price': 'not tracked' },
           { 'Component': 'RAM', 'Model': '64 GB DDR5-5600 (2×32 GB)', 'Price': 'not tracked' },
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Component': 'Total', 'Model': '', 'Price': 'not tracked (only the GPU line is tracked)' },
         ],
         affiliateLinks: [
-          { label: 'Check used RTX 3090 on eBay →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu', priceRange: '$1,400–1,550 (used sold listings)' },
+          { label: 'Check used RTX 3090 on eBay →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu', priceRange: '$1,500–1,725 (US sold, 13–23 Nov 2026)' },
           { label: 'Check new RTX 3090 alternatives →', url: 'https://www.amazon.com/s?k=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu' },
           { label: 'Ryzen 7 7700X on Amazon →', url: 'https://www.amazon.com/s?k=Ryzen+7+7700X', productName: 'AMD Ryzen 7 7700X', productCategory: 'cpu' },
           { label: 'Shop the complete Budget build →', url: 'https://www.amazon.com/s?k=RTX+3090+64GB+DDR5+budget+AI+workstation', productName: 'Budget Workstation Build', productCategory: 'pc-component' },
@@ -125,20 +125,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Models supported at full GPU speed:** 7B (any quant), 13B (Q4/Q8), 14B (Q4/Q8), 30B (Q4)',
           '**70B support:** CPU offloading required — functional but not ideal (speed not tracked here)',
-          '**Power draw:** ~450 W peak (GPU 350 W + CPU 65 W + rest)',
+          '**Nameplate power (CPU + GPU only):** 350 W + 105 W = 455 W; other parts and transient spikes come on top',
           '**Recommended PSU:** Corsair RM850x or equivalent 80+ Gold',
         ],
         callouts: [
-          { type: 'tip', text: 'Used vs. new RTX 3090: used sold listings were about $1,400–1,550 per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15); new-old-stock units, if any, are not tracked here, and a used card comes with an unknown warranty. Buy from a seller with return acceptance and check for mining wear (fan noise, thermal paste residue) before committing.' },
+          { type: 'tip', text: 'Used vs. new RTX 3090: US eBay sold listings were $1,500–1,725 (median $1,650; 225 sales, 13–23 November 2026, excluding shipping) per the [InsiderLLM used-GPU guide](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/); new-old-stock units, if any, are not tracked here, and a used card comes with an unknown warranty. Buy from a seller with return acceptance and check for mining wear (fan noise, thermal paste residue) before committing.' },
         ],
       },
       tier2: {
         title: 'Tier 2: Recommended AI Workstation',
         id: 'tier2',
-        content: 'The recommended build centers on the RTX 4090 (24 GB, ~1 TB/s memory bandwidth) paired with the AMD Ryzen 9 9950X (Zen 5, 16 cores). On the [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, developer-reported) the RTX 4090 generates 186.2 tok/s against 158.2 for the RTX 3090 (186.2 / 158.2 = 1.18×) and processes prompts at 11,993 against 5,175 tok/s (2.3×); NVIDIA lists 450 W board power for the RTX 4090 against 350 W for the RTX 3090. This build handles 30B Q4 models fully on GPU and 70B models via CPU offloading with 64 GB RAM. **Buy this build if:** you want the best single-GPU workstation, run 14B–32B models regularly, and occasionally offload a 70B. **Skip it if:** 70B is your primary daily workload — go Professional instead for GPU-speed 70B.',
+        content: 'The recommended build centers on the RTX 4090 (24 GB, ~1 TB/s memory bandwidth) paired with the AMD Ryzen 9 9950X (Zen 5, 16 cores). On the [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, developer-reported) the RTX 4090 generates 186.2 tok/s against 158.2 for the RTX 3090 (186.2 / 158.2 = 1.18×) and processes prompts at 11,993 against 5,175 tok/s (2.3×); NVIDIA lists 450 W board power for the RTX 4090 against 350 W for the RTX 3090. This build handles 30B Q4 models fully on GPU and 70B models via CPU offloading with 64 GB RAM. **Buy this build if:** you want a 24 GB single-GPU workstation, run 14B–32B models regularly, and occasionally offload a 70B. **Skip it if:** 70B is your primary daily workload — go Professional instead for GPU-speed 70B.',
         columns: ['Component', 'Model', 'Price'],
         rows: [
-          { 'Component': 'GPU', 'Model': 'NVIDIA GeForce RTX 4090 24 GB', 'Price': '$2,575–3,010 (used sold listings, InsiderLLM, 2026-10-15)' },
+          { 'Component': 'GPU', 'Model': 'NVIDIA GeForce RTX 4090 24 GB', 'Price': '$2,575–3,010 (US sold, Oct 2026)' },
           { 'Component': 'CPU', 'Model': 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', 'Price': 'not tracked' },
           { 'Component': 'Motherboard', 'Model': 'ASUS ProArt X870E-Creator WiFi', 'Price': 'not tracked' },
           { 'Component': 'RAM', 'Model': '64 GB DDR5-6000 CL30 (2×32 GB)', 'Price': 'not tracked' },
@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Component': 'Total', 'Model': '', 'Price': 'not tracked (only the GPU line is tracked)' },
         ],
         affiliateLinks: [
-          { label: 'RTX 4090 — check current price →', url: 'https://www.amazon.com/s?k=RTX+4090', productName: 'NVIDIA RTX 4090', productCategory: 'gpu', priceRange: '$2,575–3,010 (used sold listings)' },
+          { label: 'RTX 4090 — check current price →', url: 'https://www.amazon.com/s?k=RTX+4090', productName: 'NVIDIA RTX 4090', productCategory: 'gpu', priceRange: '$2,575–3,010 (US sold, Oct 2026)' },
           { label: 'Ryzen 9 9950X — check current price →', url: 'https://www.amazon.com/s?k=Ryzen+9+9950X', productName: 'AMD Ryzen 9 9950X', productCategory: 'cpu' },
           { label: 'ASUS ProArt X870E — check current price →', url: 'https://www.amazon.com/s?k=ASUS+ProArt+X870E', productName: 'ASUS ProArt X870E-Creator WiFi', productCategory: 'motherboard' },
           { label: 'Newegg alternative for the 4090 →', url: 'https://www.newegg.com/p/pl?d=RTX+4090', productName: 'NVIDIA RTX 4090', productCategory: 'gpu' },
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**7B Q4_0 speed:** 186.2 tok/s (RTX 4090, [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013), developer-reported)',
           '**14B Q8 speed:** not tracked here',
           '**30B Q4 speed:** not tracked here',
-          '**Power draw:** ~550 W peak (GPU 450 W + CPU 65 W + rest)',
+          '**Nameplate power (CPU + GPU only):** 450 W + 170 W = 620 W; other parts and transient spikes come on top',
         ],
       },
       tier3: {
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'The professional build targets 70B model inference held entirely in VRAM using dual RTX 3090 GPUs for 48 GB total VRAM. The Ryzen Threadripper 7960X (24 cores, high memory bandwidth) accelerates CPU offloading for models that spill over 48 GB. With 256 GB DDR5 ECC, even 140B quantized models load entirely in RAM. **Buy this build if:** 70B is your primary workload, you need 48 GB+ GPU VRAM, or you support multiple concurrent users. **Skip it if:** you have never run a model larger than 32B — this tier is significant overspend for that use case.',
         columns: ['Component', 'Model', 'Price'],
         rows: [
-          { 'Component': 'GPU ×2', 'Model': '2× NVIDIA RTX 3090 24 GB (used)', 'Price': '$2,800–3,100 (2 × $1,400–1,550, used sold listings, InsiderLLM, 2026-10-15)' },
+          { 'Component': 'GPU ×2', 'Model': '2× NVIDIA RTX 3090 24 GB (used)', 'Price': '$3,000–3,450 (2 × $1,500–1,725, US sold, 13–23 Nov 2026)' },
           { 'Component': 'CPU', 'Model': 'AMD Ryzen Threadripper 7960X (24C)', 'Price': 'not tracked' },
           { 'Component': 'Motherboard', 'Model': 'ASUS Pro WS TRX50-SAGE WiFi', 'Price': 'not tracked' },
           { 'Component': 'RAM', 'Model': '256 GB DDR5-5200 ECC (8×32 GB)', 'Price': 'not tracked' },
@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Component': 'Total', 'Model': '', 'Price': 'not tracked (only the GPU line is tracked)' },
         ],
         affiliateLinks: [
-          { label: 'Check 2× RTX 3090 on eBay →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'gpu', priceRange: '$1,400–1,550 (used sold listings)' },
+          { label: 'Check 2× RTX 3090 on eBay →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'gpu', priceRange: '$1,500–1,725 (US sold, 13–23 Nov 2026)' },
           { label: 'Ryzen Threadripper 7960X — check price →', url: 'https://www.amazon.com/s?k=Threadripper+7960X', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'cpu' },
           { label: 'ASUS TRX50-SAGE on Amazon →', url: 'https://www.amazon.com/s?k=ASUS+TRX50+Sage', productName: 'ASUS Pro WS TRX50-SAGE WiFi', productCategory: 'motherboard' },
           { label: 'Shop the complete Professional build →', url: 'https://www.amazon.com/s?k=Threadripper+7960X+dual+RTX+3090+workstation', productName: 'Professional Workstation Build', productCategory: 'pc-component' },
@@ -192,30 +192,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**70B Q4 speed:** no sourced tok/s figure exists for multi-GPU setups, so none is quoted here',
           '**CPU offloading with 256 GB RAM:** can hold 140B+ quantized models in RAM (speed not tracked here)',
           '**Dual GPU configuration:** Ollama detects both GPUs automatically; no NVLink needed',
-          '**Power draw:** ~900 W peak (2× GPU 700 W board power + CPU 350 W + rest; not electrical-safety advice)',
+          '**Nameplate power (CPU + GPU only):** 2 × 350 W + 350 W = 1,050 W; other parts and transient spikes come on top',
           '**Recommended PSU:** Seasonic PRIME TX-1600W or equivalent',
         ],
         callouts: [
-          { type: 'warning', text: 'The 2026 DRAM shortage hit ECC/RDIMM server memory hardest — 256 GB DDR5 ECC kits are both scarce and volatile in price, and RAM prices are not tracked on this page (DDR5 prices rose about 500% in 12 months to August 2026 — [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399)). Get a live quote from your motherboard vendor\'s QVL-listed RAM before ordering.' },
+          { type: 'warning', text: '256 GB of DDR5 ECC memory is a large cost item in this build, and RAM prices are not tracked on this page. DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399); that figure is not specific to ECC/RDIMM server memory. Get a current quote for RAM on your motherboard vendor\'s QVL before ordering.' },
         ],
       },
       dontBuy: {
         title: 'Hardware We Would Not Buy for This Use Case',
         items: [
           '**An 8 GB GPU if your goal is 32B models** — you will hit a VRAM wall immediately; no CPU offloading trick fixes an undersized card the way it can stretch RAM',
-          '**An expensive CPU paired with an undersized GPU** — the GPU and its VRAM decide inference speed far more than CPU clock speed; a $600 CPU with a 12 GB GPU is money misallocated',
-          '**A SATA SSD for a new AI workstation** — model loading is 5x slower than PCIe Gen 4 NVMe for a difference of $20–40 on a multi-thousand-dollar build',
-          '**An undersized PSU** — the Professional tier peaks near 900 W; a cheap 750 W unit will brownout under sustained dual-GPU load',
+          '**An expensive CPU paired with an undersized GPU** — the GPU and its VRAM decide inference speed far more than CPU clock speed; an expensive CPU next to a 12 GB GPU is money misallocated',
+          '**A SATA SSD for a new AI workstation** — model loading is limited by the SATA interface (6 Gb/s), well below what PCIe Gen 4 NVMe drives offer',
+          '**An undersized PSU** — in the Professional tier, GPU board power plus CPU TDP alone is 1,050 W before other parts and transient spikes, so a 750 W unit is too small (not electrical-safety advice)',
           '**32 GB RAM for serious 70B CPU offloading** — the model itself needs ~40 GB just to sit in memory before the OS and Ollama overhead',
         ],
-        note: 'The GPU and its VRAM matter more than spending another $300 on the CPU — that single rule resolves most of the "what should I upgrade" questions we get.',
+        note: 'For local inference, the GPU and its VRAM matter more than a more expensive CPU.',
       },
       cloudVsLocal: {
         title: 'Should You Build a Workstation or Rent Cloud GPUs?',
         decisionBlock: {
           title: 'Local Workstation vs. Cloud GPU Rental',
           localIf: [
-            'You use local models 2+ hours/day',
+            'You use local models 4+ hours/day (payback on the GPU alone is about 5.3 years at that level)',
             'Privacy or data residency matters for your workload',
             'You want a fixed, predictable long-term cost',
             'You are already committed to a specific tier above',
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Install NVIDIA drivers 550+ from nvidia.com or `ubuntu-drivers autoinstall`',
           'Install Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
           'Pull a model: `ollama pull qwen2.5:14b-instruct-q8_0`',
-          'Run as network server: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'Run as network server: `OLLAMA_HOST=0.0.0.0 ollama serve` — optional, trusted networks only: this opens the API to your network, and the local API needs no authentication, so never expose the port to the internet',
           'Install Open WebUI for browser UI: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           'Expose via Tailscale for secure remote access from any device',
         ],
@@ -261,14 +261,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: 'Total Cost of Ownership: Workstation vs. Cloud GPU',
-        content: 'A GPU-only illustration, because system totals are not tracked: the used RTX 4090 median of $2,860 ([InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15) against RunPod A40 rental at the illustrative rate of $0.44/hr used on this page (not re-verified), at three usage levels. Electricity is the RTX 4090 board power of 450 W at $0.15/kWh (for example 450 W × 4 h × 365 = 657 kWh × $0.15 ≈ $99). Payback is GPU price ÷ (cloud cost − power cost), e.g. 4 hrs/day: $2,860 ÷ ($642 − $99) ≈ 5.3 years. RAM, CPU and other parts would lengthen it.',
+        content: 'A GPU-only illustration, because system totals are not tracked: the used RTX 4090 median of $2,860 ([InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), October 2026 sales, US) against RunPod A40 rental at the illustrative rate of $0.44/hr used on this page as an assumption, at three usage levels. [RunPod pricing](https://www.runpod.io/pricing), checked 2026-11-27, listed the A40 at $0.35/hr (Community Cloud) and $0.59/hr (Secure Cloud); at 4 hrs/day those rates would put payback at about 6.9 and 3.8 years. Electricity is the RTX 4090 board power of 450 W at $0.15/kWh (for example 450 W × 4 h × 365 = 657 kWh × $0.15 ≈ $99). Payback is GPU price ÷ (cloud cost − power cost), e.g. 4 hrs/day: $2,860 ÷ ($642 − $99) ≈ 5.3 years. RAM, CPU and other parts would lengthen it.',
         columns: ['Usage level', 'Cloud cost/year (A40 @ $0.44/hr)', 'Workstation power cost/year', 'Payback vs. cloud'],
         rows: [
           { 'Usage level': '2 hrs/day', 'Cloud cost/year (A40 @ $0.44/hr)': '~$321', 'Workstation power cost/year': '$49 (450 W, $0.15/kWh)', 'Payback vs. cloud': '~10.5 years (GPU only)' },
           { 'Usage level': '4 hrs/day', 'Cloud cost/year (A40 @ $0.44/hr)': '~$642', 'Workstation power cost/year': '$99', 'Payback vs. cloud': '~5.3 years (GPU only)' },
           { 'Usage level': '8 hrs/day', 'Cloud cost/year (A40 @ $0.44/hr)': '~$1,285', 'Workstation power cost/year': '$197', 'Payback vs. cloud': '~2.6 years (GPU only)' },
         ],
-        note: 'On this GPU-only illustration the workstation pays back within a few years only at 4 hrs/day of use or more; below that, cloud rental is likely the better financial choice, even though the A40 (Ampere-generation) is slower than an RTX 4090. Privacy, data residency, and not depending on cloud availability are separate reasons to go local regardless of the payback period. Electricity assumed at $0.15/kWh (US average); European users at ~€0.30/kWh should roughly double the power-cost column.',
+        note: 'On this GPU-only illustration the workstation pays back within a few years only at 4 hrs/day of use or more; below that, cloud rental is likely the better financial choice, even though the A40 (Ampere generation) has lower memory bandwidth than an RTX 4090. Privacy, data residency, and not depending on cloud availability are separate reasons to go local regardless of the payback period. Electricity assumed at $0.15/kWh (US average); European users at ~€0.30/kWh should roughly double the power-cost column.',
       },
       faq: {
         id: 'faq',
@@ -279,27 +279,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Why do RAM prices matter so much for these builds?',
-            a: 'RAM can add more to a build than GPU prices move. A 2026 DRAM supply shortage — memory makers shifted factory capacity to AI-datacenter HBM chips — drove DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399). RAM and storage prices are not tracked on this page, so check current listings before you buy.',
+            a: 'RAM prices can change a build\'s cost a lot. A 2026 DRAM supply shortage — memory makers shifted factory capacity to AI-datacenter HBM chips — meant that DDR5 prices rose about 500% in 12 months to August 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; a 128 GB DDR5-6400 kit was listed at $3,399). RAM and storage prices are not tracked on this page, so check current listings before you buy.',
           },
           {
             q: 'Should I buy a used or new RTX 3090 for the Budget or Professional build?',
-            a: 'Used is the usual choice for the RTX 3090 in 2026 — "new" units, if any, are old retailer stock. Used sold listings were about $1,400–1,550 per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15; listing data, not quotes); check for excessive fan noise or a burning smell under load (signs of mining wear), and prefer a seller who accepts returns. If you want factory warranty coverage instead, look at RTX 4090 new listings ($2,000–3,000 per the same tracker), just at Recommended-tier pricing.',
+            a: 'Used is the usual choice for the RTX 3090 in 2026; any "new" units are leftover stock. US eBay sold listings were $1,500–1,725 (median $1,650; 225 sales, 13–23 November 2026, excluding shipping) per the [InsiderLLM used-GPU guide](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (sales data, not quotes). Check for excessive fan noise or a burning smell under load (possible signs of heavy wear), and prefer a seller who accepts returns. Warranty terms on used cards vary, so confirm them with the seller.',
           },
           {
             q: 'Do I need NVLink to run Ollama across two GPUs?',
-            a: 'No. Ollama uses CUDA tensor parallelism to split model layers across multiple GPUs via PCIe — no NVLink required. NVLink would increase inter-GPU bandwidth from ~32 GB/s (PCIe 4.0 x16) to ~600 GB/s, which matters for training but minimally for inference. The dual RTX 3090 setup works fully without NVLink.',
+            a: 'No. According to the [Ollama FAQ](https://docs.ollama.com/faq), a model that fits on one GPU is loaded there; otherwise it is spread across the available GPUs over PCIe, and NVLink is not required. The RTX 3090 NVLink bridge is rated at 112.5 GB/s total (both directions combined), against about 32 GB/s per direction for PCIe 4.0 x16. The effect on speed is not measured here.',
           },
           {
             q: 'Why not an RTX 4090 over dual RTX 3090 for the professional build?',
-            a: 'VRAM is the deciding factor. Two RTX 3090s at 24 GB each = 48 GB total, enough for Llama 3.3 70B Q4 (~40 GB). A single RTX 4090 has only 24 GB — 70B Q4 does not fit without CPU offloading. For 70B inference at GPU speed, dual 3090s win on VRAM/dollar. For 30B and below, the RTX 4090 is faster per dollar.',
+            a: 'VRAM is the deciding factor. Two RTX 3090s at 24 GB each = 48 GB total, enough for Llama 3.3 70B Q4 (~40 GB). A single RTX 4090 has only 24 GB — 70B Q4 does not fit without CPU offloading. For 70B inference held on GPU, dual 3090s offer more VRAM per dollar. For 30B and below, the RTX 4090 is faster per card (1.18× on the 7B scoreboard figure above), but at the used prices on this page it costs about 1.7× as much as an RTX 3090 (median $2,860 against $1,650), so it is not faster per dollar on that figure.',
           },
           {
             q: 'Can I start with the budget build and upgrade to the recommended tier?',
-            a: 'Yes — Tier 1 and Tier 2 both use the AM5 socket. You can replace the RTX 3090 with an RTX 4090 later, or add a second GPU. RAM modules are compatible, though you will likely be buying at whatever the DDR5 market price is at upgrade time. The only incompatibility is Tier 1/2 (AM5) vs Tier 3 (TRX50) — moving to Threadripper requires a new motherboard and CPU.',
+            a: 'Yes — Tier 1 and Tier 2 both use the AM5 socket. You can replace the RTX 3090 with an RTX 4090 later (check PSU capacity, connectors and case clearance first). Adding a second GPU is not a given: it needs a larger power supply, a suitable second slot and enough case space. RAM modules are compatible, though you will likely be buying at whatever the DDR5 market price is at upgrade time. The only incompatibility is Tier 1/2 (AM5) vs Tier 3 (TRX50) — moving to Threadripper requires a new motherboard and CPU.',
           },
           {
             q: 'What power outlet do I need for the professional build?',
-            a: 'The professional build (dual RTX 3090 + Threadripper) peaks at ~900 W from the wall. A standard 15A/120V US outlet supports ~1800 W — you are fine. European 16A/230V outlets support ~3680 W. Use a quality PSU (Seasonic, Corsair, be quiet!) with 80+ Platinum efficiency to minimize heat and power draw.',
+            a: 'Plan for more than 1,050 W. Two RTX 3090s (350 W board power each) plus the Threadripper 7960X (350 W TDP) add up to 1,050 W before the rest of the system, power-supply losses and transient spikes. Do not assume a wall socket or circuit is sufficient: capacity depends on the circuit rating, local electrical code and what else runs on the same circuit, so have a qualified electrician check it. This is not electrical-safety advice.',
           },
         ],
       },
@@ -325,14 +325,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: '💰 Budget Build',
             tagline: 'RTX 3090 24GB (used)',
-            verdict: 'Runs every model up to 32B Q4 fully on GPU. Best if your budget is capped and you can source a used GPU.',
+            verdict: 'Models up to about 32B at Q4 fit on the GPU (context length permitting). Suits you if your budget is capped and you can source a used GPU.',
             affiliateLinks: [{ label: 'Shop the Budget build →', url: 'https://www.amazon.com/s?k=RTX+3090+budget+AI+workstation' }],
           },
           {
             rank: 2,
-            name: '⭐ Best overall — Recommended Build',
+            name: '⭐ Our pick — Recommended Build',
             tagline: 'RTX 4090 24GB',
-            verdict: 'The best balance of performance, VRAM, power draw, and upgrade headroom for most local-AI users. Start here if unsure.',
+            verdict: 'In our view, a good balance of performance, VRAM, power draw and upgrade headroom for most local-AI users. Start here if unsure.',
             affiliateLinks: [{ label: 'Shop the Recommended build →', url: 'https://www.amazon.com/s?k=RTX+4090+Ryzen+9950X+workstation+build' }],
           },
           {
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             affiliateLinks: [{ label: 'Shop the Professional build →', url: 'https://www.amazon.com/s?k=Threadripper+7960X+dual+RTX+3090+workstation' }],
           },
         ],
-        content: 'Still unsure? Start with the Recommended RTX 4090 build — it offers the best balance of performance, VRAM, power consumption, and upgradeability for most local-AI users. You can always add a second GPU or more RAM later; the socket and case have room for it.',
+        content: 'Still unsure? Start with the Recommended RTX 4090 build — in our view it balances performance, VRAM, power draw and upgradeability well for most local-AI users. You can add more RAM later within the board\'s limits; a second GPU needs a power-supply, slot and case-space check first.',
       },
       relatedReading: {
         title: 'Related Reading',
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Do I need NVLink to run Ollama across two GPUs?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No. Ollama uses CUDA tensor parallelism via PCIe — no NVLink needed. The dual RTX 3090 setup works fully without it.',
+            text: 'No. Ollama can spread a model across multiple GPUs over PCIe, so NVLink is not needed.',
           },
         },
         {
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best Workstation Build for Local AI (2026): Three Budget Tiers',
       description: 'Complete parts lists for three local AI workstation builds: budget, recommended and professional, with dated GPU prices and the 2026 DDR5 shortage impact.',
       datePublished: '2026-05-26',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       url: 'https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',
@@ -436,17 +436,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Profi-Build-Komponenten ansehen →', url: 'https://www.amazon.de/s?k=Threadripper+7960X+Workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**Die beste lokale KI-Workstation 2026 für die meisten Nutzer ist der RTX-4090-Build: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. Im [CUDA-Scoreboard von llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) erreicht die Karte 186,2 Tok/s bei einem 7B-Q4_0-Modell (von Entwicklern gemeldet); 14B mit Q8 passt ohne Offloading. Direkt zur Stufe: [Budget](#tier1) · [Empfohlen](#tier2) · [Profi](#tier3).**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**Unsere Empfehlung für die meisten Nutzer, die 2026 eine lokale KI-Workstation bauen, ist der RTX-4090-Build: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. Im [CUDA-Scoreboard von llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) erreicht die Karte 186,2 Tok/s bei einem 7B-Q4_0-Modell (von Entwicklern gemeldet); 14B mit Q8 passt ohne Offloading. Direkt zur Stufe: [Budget](#tier1) · [Empfohlen](#tier2) · [Profi](#tier3).**',
     quickAnswerTop: {
       de: {
         question: 'Was ist der beste PC-Build für lokale KI-Modelle 2026?',
-        answer: 'Für die meisten Nutzer: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. Für 70B-Modelle mit GPU-Geschwindigkeit: Dual RTX 3090 (48 GB VRAM gesamt) + Threadripper. Budget: Gebrauchte RTX 3090 + Ryzen 7 7700X. Gesamtpreise werden nicht erfasst, nur GPU-Preise laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert 2026-10-15; Listendaten, keine Angebote): RTX 3090 gebraucht verkauft etwa $1.400–1.550, RTX 4090 gebraucht verkauft $2.575–3.010 (Median $2.860). Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet); prüfe daher die aktuellen RAM-Preise vor dem Kauf.',
+        answer: 'Für die meisten Nutzer: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. Für 70B-Modelle mit GPU-Geschwindigkeit: Dual RTX 3090 (48 GB VRAM gesamt) + Threadripper. Budget: Gebrauchte RTX 3090 + Ryzen 7 7700X. Gesamtpreise werden nicht erfasst, nur GPU-Preise (US-Markt, bei eBay verkaufte Angebote, keine Offerten): RTX 3090 gebraucht $1.500–1.725 (Median $1.650; 225 Verkäufe, 13.–23. November 2026, ohne Versand; [InsiderLLM-Ratgeber für Gebraucht-GPUs](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)), RTX 4090 gebraucht $2.575–3.010 (Median $2.860; 216 Verkäufe, Oktober 2026; [InsiderLLM-Preistracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)). Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet); prüfe daher die aktuellen RAM-Preise vor dem Kauf.',
         bullets: [
           'Budget: Gebrauchte RTX 3090 (24 GB) + Ryzen 7 7700X + 64 GB DDR5 — läuft 30B Q4',
           'Empfohlen: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — läuft 30B Q4',
           'Profi: Dual RTX 3090 (48 GB) + Threadripper 7960X — 70B Q4 passt in den VRAM (keine belegte Tok/s-Angabe für Multi-GPU)',
-          'RAM kann ein Build stärker verteuern als GPU-Preisänderungen: Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet)',
+          'RAM-Preise können die Kosten eines Builds stark verändern: Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet)',
           'Alle Builds verarbeiten 7B und 14B problemlos; 70B braucht Dual-GPU oder CPU-Offloading',
         ],
         updatedDate: '2026-11',
@@ -456,20 +456,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'RTX 4090 ist weiterhin die beste Einzel-Consumer-GPU für lokale KI 2026: 24 GB VRAM, ~1 TB/s Bandbreite — der Gebrauchtpreis ist seit Frühjahr sogar leicht gefallen',
+          'Die RTX 4090 ist unsere Wahl für die empfohlene Stufe: 24 GB VRAM und rund 1 TB/s Bandbreite (die RTX 5090 hat mit 32 GB mehr VRAM). Gebraucht in den USA verkauft: $2.575–3.010 (Median $2.860, Oktober 2026, [InsiderLLM-Preistracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/))',
           'Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet)',
           '70B-Q4-Modelle brauchen 40+ GB VRAM — erfordert Dual RTX 3090 oder CPU-Offloading',
           'Preise für CPU, Mainboard, Netzteil, Gehäuse, Kühler und Speicher werden auf dieser Seite nicht erfasst — prüfe vor dem Kauf die aktuellen Angebote',
-          'PCIe Gen 4/5 NVMe lädt ein 7B-Modell in unter 2 Sekunden, SSD-Preise werden hier nicht erfasst',
+          'PCIe-Gen-4/5-NVMe-SSDs lesen sequenziell deutlich schneller als SATA, was das Laden von Modellen verkürzt (Ladezeiten werden hier nicht gemessen); SSD-Preise werden hier nicht erfasst',
           'Stufe 1 und 2 teilen sich den AM5-Sockel — GPU/RAM später ohne neues Mainboard aufrüstbar; Stufe 3 braucht TRX50',
         ],
       },
       quickCompare: {
         title: 'Welche Workstation solltest du bauen?',
-        content: 'Wähle deinen Build nach dem größten Modell, das du wirklich brauchst: 7B–14B → Budget. 14B–32B → Empfohlen. 70B → Profi. Die erste Zeile zeigt nur GPU-Preise (gebraucht verkaufte Angebote, [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert 2026-10-15; Listendaten, keine Angebote); Systemgesamtpreise werden nicht erfasst.',
+        content: 'Wähle deinen Build nach dem größten Modell, das du wirklich brauchst: 7B–14B → Budget. 14B–32B → Empfohlen. 70B → Profi. Die erste Zeile zeigt nur GPU-Preise (in den USA gebraucht verkaufte Angebote, keine Offerten: [RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), 13.–23. November 2026; [RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Oktober 2026); Systemgesamtpreise werden nicht erfasst.',
         columns: ['', 'Budget', 'Empfohlen', 'Profi'],
         rows: [
-          { '': 'GPU-Preis (gebraucht)', 'Budget': '$1.400–1.550 (gebraucht verkaufte Angebote, InsiderLLM, 2026-10-15)', 'Empfohlen': '$2.575–3.010 (gebraucht verkaufte Angebote, InsiderLLM, 2026-10-15)', 'Profi': '$2.800–3.100 (2 × $1.400–1.550, gebraucht verkaufte Angebote, InsiderLLM, 2026-10-15)' },
+          { '': 'GPU-Preis (gebraucht)', 'Budget': '$1.500–1.725 (US-Verkäufe, 13.–23. Nov. 2026)', 'Empfohlen': '$2.575–3.010 (US-Verkäufe, Okt. 2026)', 'Profi': '$3.000–3.450 (2 × $1.500–1.725, US-Verkäufe, 13.–23. Nov. 2026)' },
           { '': 'GPU', 'Budget': 'RTX 3090 24GB (gebraucht)', 'Empfohlen': 'RTX 4090 24GB', 'Profi': '2× RTX 3090 (48GB)' },
           { '': 'CPU', 'Budget': 'Ryzen 7 7700X', 'Empfohlen': 'Ryzen 9 9950X', 'Profi': 'Threadripper 7960X' },
           { '': 'RAM', 'Budget': '64GB DDR5', 'Empfohlen': '64GB DDR5-6000', 'Profi': '256GB DDR5 ECC' },
@@ -481,21 +481,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Empfohlene Build-Komponenten ansehen →', url: 'https://www.amazon.de/s?k=RTX+4090+Ryzen+9950X+Build', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: 'Profi-Build-Komponenten ansehen →', url: 'https://www.amazon.de/s?k=Threadripper+7960X+Workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: 'Nur die GPU-Zeile jedes Builds ist bepreist (gebraucht verkaufte Angebote, [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert 2026-10-15). RAM und übrige Teile werden nicht erfasst: Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet).',
+        note: 'Nur die GPU-Zeile jedes Builds ist bepreist (in den USA gebraucht verkaufte Angebote: [InsiderLLM-Ratgeber](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) für die RTX 3090, 13.–23. November 2026; [InsiderLLM-Preistracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) für die RTX 4090, Oktober 2026). RAM und übrige Teile werden nicht erfasst: Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet).',
       },
       editorsChoice: {
         title: 'Redaktionsempfehlung: RTX 4090 Empfohlene Workstation',
         highlight: true,
-        content: 'Die beste lokale KI-Workstation insgesamt für 2026 — der Balancepunkt zwischen VRAM, Aufrüstpotenzial und Preis für die breiteste Modellpalette.',
+        content: 'Unsere Wahl unter diesen drei Builds: ein Balancepunkt zwischen VRAM, Aufrüstpotenzial und Preis für die breiteste Modellpalette.',
         items: [
-          '24 GB VRAM — läuft jedes Modell bis 32B Q4 vollständig auf GPU',
+          '24 GB VRAM — Modelle bis etwa 32B in Q4 passen auf die GPU (je nach Kontextlänge)',
           '64 GB DDR5-6000 — genug für CPU-Offload von 70B (Geschwindigkeit hier nicht erfasst)',
           'Qwen3 32B Q4 passt vollständig auf die GPU; 70B mit Offloading',
-          'GPU: RTX 4090 gebraucht verkauft $2.575–3.010 (Median $2.860, [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert 2026-10-15); übrige Teile nicht erfasst',
-          '**Überspringen, wenn:** du nur 7B–14B-Modelle nutzt — der Budget-Build kostet weniger und erledigt das genauso gut',
+          'GPU: RTX 4090 gebraucht verkauft $2.575–3.010 (Median $2.860, [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Verkäufe in den USA, Oktober 2026); übrige Teile nicht erfasst',
+          '**Überspringen, wenn:** du nur 7B–14B-Modelle nutzt — der Budget-Build kostet weniger und deckt diese Modellgrößen ab',
         ],
         affiliateLinks: [
-          { label: 'RTX 4090 24GB — aktuellen Preis prüfen →', url: 'https://www.amazon.de/s?k=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu', priceRange: '$2.575–3.010 (gebraucht verkaufte Angebote)' },
+          { label: 'RTX 4090 24GB — aktuellen Preis prüfen →', url: 'https://www.amazon.de/s?k=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu', priceRange: '$2.575–3.010 (US-Verkäufe, Okt. 2026)' },
           { label: 'Ryzen 9 9950X — aktuellen Preis prüfen →', url: 'https://www.amazon.de/s?k=Ryzen+9+9950X', productName: 'AMD Ryzen 9 9950X', productCategory: 'cpu' },
           { label: 'ASUS ProArt X870E — aktuellen Preis prüfen →', url: 'https://www.amazon.de/s?k=ASUS+ProArt+X870E', productName: 'ASUS ProArt X870E-Creator WiFi', productCategory: 'motherboard' },
           { label: 'Kompletten Empfohlenen Build ansehen →', url: 'https://www.amazon.de/s?k=RTX+4090+Ryzen+9950X+64GB+DDR5+Workstation', productName: 'Recommended Workstation Build', productCategory: 'pc-component' },
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Der Budget-Build nutzt eine gebrauchte RTX 3090 (24 GB VRAM) als Kern. Im [CUDA-Scoreboard von llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) erreicht die RTX 3090 158,2 Tok/s bei einem 7B-Q4_0-Modell (von Entwicklern gemeldet); Geschwindigkeiten größerer Modelle werden hier nicht erfasst. NVIDIA nennt 350 W Board-Leistung für die RTX 3090 — kombiniere sie mit einem hochwertigen 850-W-Netzteil (keine Beratung zur elektrischen Sicherheit). **Kaufe diesen Build, wenn:** du hauptsächlich 7B–32B-Modelle nutzt und eine gebrauchte GPU kein Problem ist. **Überspringen, wenn:** 70B dein Hauptworkload ist — auf dieser Stufe ist CPU-Offloading nötig, funktional aber langsam.',
         columns: ['Komponente', 'Modell', 'Preis'],
         rows: [
-          { 'Komponente': 'GPU', 'Modell': 'NVIDIA RTX 3090 (gebraucht, 24 GB)', 'Preis': '$1.400–1.550 (gebraucht verkaufte Angebote, InsiderLLM, 2026-10-15)' },
+          { 'Komponente': 'GPU', 'Modell': 'NVIDIA RTX 3090 (gebraucht, 24 GB)', 'Preis': '$1.500–1.725 (US-Verkäufe, 13.–23. Nov. 2026)' },
           { 'Komponente': 'CPU', 'Modell': 'AMD Ryzen 7 7700X', 'Preis': 'nicht erfasst' },
           { 'Komponente': 'Mainboard', 'Modell': 'MSI MAG X670E Tomahawk WiFi', 'Preis': 'nicht erfasst' },
           { 'Komponente': 'RAM', 'Modell': '64 GB DDR5-5600 (2×32 GB)', 'Preis': 'nicht erfasst' },
@@ -531,26 +531,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Komponente': 'Gesamt', 'Modell': '', 'Preis': 'nicht erfasst (nur die GPU-Zeile ist erfasst)' },
         ],
         affiliateLinks: [
-          { label: 'Gebrauchte RTX 3090 bei eBay.de →', url: 'https://www.ebay.de/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu', priceRange: '$1.400–1.550 (gebraucht verkaufte Angebote)' },
+          { label: 'Gebrauchte RTX 3090 bei eBay.de →', url: 'https://www.ebay.de/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu', priceRange: '$1.500–1.725 (US-Verkäufe, 13.–23. Nov. 2026)' },
           { label: 'AMD Ryzen 7 7700X bei Amazon.de →', url: 'https://www.amazon.de/s?k=Ryzen+7+7700X', productName: 'AMD Ryzen 7 7700X', productCategory: 'cpu' },
           { label: 'Kompletten Budget-Build ansehen →', url: 'https://www.amazon.de/s?k=RTX+3090+64GB+DDR5+Budget+KI+Workstation', productName: 'Budget Workstation Build', productCategory: 'pc-component' },
         ],
         items: [
           '**Vollständig auf GPU unterstützte Modelle:** 7B (alle Quants), 13B, 14B Q4/Q8, 30B Q4',
           '**70B-Unterstützung:** CPU-Offloading nötig (Geschwindigkeit hier nicht erfasst)',
-          '**Stromaufnahme Peak:** ~450 W',
+          '**Nennleistung (nur CPU + GPU):** 350 W + 105 W = 455 W; übrige Teile und Lastspitzen kommen hinzu',
         ],
         callouts: [
-          { type: 'tip', text: 'Gebraucht vs. neu: Gebraucht verkaufte RTX 3090 lagen laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert 2026-10-15) bei etwa $1.400–1.550; Neuware-Restbestände, falls vorhanden, werden hier nicht erfasst, und eine gebrauchte Karte hat eine unbekannte Garantie. Käufer mit Rückgaberecht wählen und auf Mining-Verschleiß (Lüftergeräusche, Wärmeleitpaste-Reste) prüfen.' },
+          { type: 'tip', text: 'Gebraucht vs. neu: Laut [InsiderLLM-Ratgeber für Gebraucht-GPUs](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) lagen die bei eBay in den USA verkauften Angebote bei $1.500–1.725 (Median $1.650; 225 Verkäufe, 13.–23. November 2026, ohne Versand). Neuware-Restbestände werden hier nicht erfasst, und bei einer gebrauchten Karte ist die Garantie ungewiss. Einen Verkäufer mit Rückgaberecht wählen und auf Mining-Verschleiß (Lüftergeräusche, Wärmeleitpaste-Reste) prüfen.' },
         ],
       },
       tier2: {
         title: 'Stufe 2: Empfohlene KI-Workstation',
         id: 'tier2',
-        content: 'Der Empfohlene Build zentriert sich auf die RTX 4090 (24 GB, ~1 TB/s Speicherbandbreite) mit dem AMD Ryzen 9 9950X (Zen 5, 16 Kerne). Im [CUDA-Scoreboard von llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, von Entwicklern gemeldet) erzeugt die RTX 4090 186,2 Tok/s gegenüber 158,2 bei der RTX 3090 (186,2 / 158,2 = 1,18×) und verarbeitet Prompts mit 11.993 gegenüber 5.175 Tok/s (2,3×); NVIDIA nennt 450 W Board-Leistung für die RTX 4090 gegenüber 350 W für die RTX 3090. **Kaufe diesen Build, wenn:** du die beste Single-GPU-Workstation willst, regelmäßig 14B–32B-Modelle nutzt und gelegentlich 70B offloaden willst. **Überspringen, wenn:** 70B dein täglicher Hauptworkload ist — dann besser Profi für GPU-Tempo bei 70B.',
+        content: 'Der Empfohlene Build zentriert sich auf die RTX 4090 (24 GB, ~1 TB/s Speicherbandbreite) mit dem AMD Ryzen 9 9950X (Zen 5, 16 Kerne). Im [CUDA-Scoreboard von llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, von Entwicklern gemeldet) erzeugt die RTX 4090 186,2 Tok/s gegenüber 158,2 bei der RTX 3090 (186,2 / 158,2 = 1,18×) und verarbeitet Prompts mit 11.993 gegenüber 5.175 Tok/s (2,3×); NVIDIA nennt 450 W Board-Leistung für die RTX 4090 gegenüber 350 W für die RTX 3090. **Kaufe diesen Build, wenn:** du eine Single-GPU-Workstation mit 24 GB willst, regelmäßig 14B–32B-Modelle nutzt und gelegentlich 70B offloaden willst. **Überspringen, wenn:** 70B dein täglicher Hauptworkload ist — dann besser Profi für GPU-Tempo bei 70B.',
         columns: ['Komponente', 'Modell', 'Preis'],
         rows: [
-          { 'Komponente': 'GPU', 'Modell': 'NVIDIA GeForce RTX 4090 24 GB', 'Preis': '$2.575–3.010 (gebraucht verkaufte Angebote, InsiderLLM, 2026-10-15)' },
+          { 'Komponente': 'GPU', 'Modell': 'NVIDIA GeForce RTX 4090 24 GB', 'Preis': '$2.575–3.010 (US-Verkäufe, Okt. 2026)' },
           { 'Komponente': 'CPU', 'Modell': 'AMD Ryzen 9 9950X (16K/32T, Zen 5)', 'Preis': 'nicht erfasst' },
           { 'Komponente': 'Mainboard', 'Modell': 'ASUS ProArt X870E-Creator WiFi', 'Preis': 'nicht erfasst' },
           { 'Komponente': 'RAM', 'Modell': '64 GB DDR5-6000 CL30 (2×32 GB)', 'Preis': 'nicht erfasst' },
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**14B Q8 Geschwindigkeit:** hier nicht erfasst',
           '**30B Q4 Geschwindigkeit:** hier nicht erfasst',
           '**70B Q4 (CPU-Offloading):** mit 64 GB RAM möglich (Geschwindigkeit hier nicht erfasst)',
-          '**Stromaufnahme Peak:** ~550 W',
+          '**Nennleistung (nur CPU + GPU):** 450 W + 170 W = 620 W; übrige Teile und Lastspitzen kommen hinzu',
         ],
       },
       tier3: {
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Der Profi-Build zielt auf 70B-Modell-Inferenz, vollständig im VRAM, durch dual RTX 3090 GPUs für 48 GB VRAM gesamt. Der Ryzen Threadripper 7960X (24 Kerne) beschleunigt CPU-Offloading. Mit 256 GB DDR5 ECC laden selbst 140B-quantisierte Modelle vollständig in RAM. **Kaufe diesen Build, wenn:** 70B dein Hauptworkload ist, du 48 GB+ GPU-VRAM brauchst oder mehrere Nutzer gleichzeitig bedienst. **Überspringen, wenn:** du noch nie ein Modell größer als 32B genutzt hast — diese Stufe ist dann deutlich überdimensioniert.',
         columns: ['Komponente', 'Modell', 'Preis'],
         rows: [
-          { 'Komponente': 'GPU ×2', 'Modell': '2× NVIDIA RTX 3090 24 GB (gebraucht)', 'Preis': '$2.800–3.100 (2 × $1.400–1.550, gebraucht verkaufte Angebote, InsiderLLM, 2026-10-15)' },
+          { 'Komponente': 'GPU ×2', 'Modell': '2× NVIDIA RTX 3090 24 GB (gebraucht)', 'Preis': '$3.000–3.450 (2 × $1.500–1.725, US-Verkäufe, 13.–23. Nov. 2026)' },
           { 'Komponente': 'CPU', 'Modell': 'AMD Ryzen Threadripper 7960X (24K)', 'Preis': 'nicht erfasst' },
           { 'Komponente': 'Mainboard', 'Modell': 'ASUS Pro WS TRX50-SAGE WiFi', 'Preis': 'nicht erfasst' },
           { 'Komponente': 'RAM', 'Modell': '256 GB DDR5-5200 ECC (8×32 GB)', 'Preis': 'nicht erfasst' },
@@ -598,10 +598,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**70B Q4 Geschwindigkeit:** für Multi-GPU-Setups gibt es keine belegte Tok/s-Angabe, daher wird hier keine genannt',
           '**CPU-Offloading mit 256 GB RAM:** 140B+ quantisierte Modelle passen in den RAM (Geschwindigkeit hier nicht erfasst)',
-          '**Stromaufnahme Peak:** ~900 W',
+          '**Nennleistung (nur CPU + GPU):** 2 × 350 W + 350 W = 1.050 W; übrige Teile und Lastspitzen kommen hinzu',
         ],
         callouts: [
-          { type: 'warning', text: 'Der DDR5-Engpass 2026 traf ECC/RDIMM-Server-RAM am härtesten — 256-GB-DDR5-ECC-Kits sind knapp und preislich volatil, und RAM-Preise werden auf dieser Seite nicht erfasst (die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet)). Vor der Bestellung ein Live-Angebot für auf der QVL des Mainboards gelistetes RAM einholen.' },
+          { type: 'warning', text: '256 GB DDR5-ECC-RAM sind ein großer Kostenposten dieses Builds, und RAM-Preise werden auf dieser Seite nicht erfasst. Laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) stiegen die DDR5-Preise in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet); die Angabe bezieht sich nicht speziell auf ECC/RDIMM-Serverspeicher. Vor der Bestellung ein aktuelles Angebot für RAM von der QVL des Mainboard-Herstellers einholen.' },
         ],
       },
       dontBuy: {
@@ -609,18 +609,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Eine 8-GB-GPU, wenn 32B-Modelle das Ziel sind** — die VRAM-Grenze wird sofort erreicht; kein CPU-Offloading-Trick gleicht eine zu kleine Karte so aus wie er RAM strecken kann',
           '**Eine teure CPU mit unterdimensionierter GPU** — GPU und VRAM entscheiden über die Inferenzgeschwindigkeit weit mehr als die CPU-Taktrate',
-          '**Eine SATA-SSD für eine neue KI-Workstation** — das Modell-Laden ist 5x langsamer als bei PCIe-Gen-4-NVMe, für einen Unterschied von 20–40 € bei einem Mehrtausend-Euro-Build',
-          '**Ein unterdimensioniertes Netzteil** — die Profi-Stufe erreicht Spitzen nahe 900 W; ein billiges 750-W-Netzteil bricht unter Dual-GPU-Dauerlast ein',
+          '**Eine SATA-SSD für eine neue KI-Workstation** — das Laden von Modellen ist durch die SATA-Schnittstelle (6 Gbit/s) begrenzt, weit unter dem, was PCIe-Gen-4-NVMe bietet',
+          '**Ein unterdimensioniertes Netzteil** — in der Profi-Stufe ergeben GPU-Board-Leistung und CPU-TDP allein 1.050 W, ohne übrige Teile und Lastspitzen; ein 750-W-Netzteil ist zu klein (keine Beratung zur elektrischen Sicherheit)',
           '**32 GB RAM für ernsthaftes 70B-CPU-Offloading** — das Modell selbst braucht bereits ~40 GB nur um im Speicher zu liegen',
         ],
-        note: 'GPU und VRAM zählen mehr als weitere 300 € in die CPU zu stecken — diese eine Regel beantwortet die meisten "was soll ich aufrüsten"-Fragen.',
+        note: 'Für lokale Inferenz zählen GPU und VRAM mehr als eine teurere CPU.',
       },
       cloudVsLocal: {
         title: 'Workstation bauen oder Cloud-GPUs mieten?',
         decisionBlock: {
           title: 'Lokale Workstation vs. Cloud-GPU-Miete',
           localIf: [
-            'Du nutzt lokale Modelle 2+ Stunden/Tag',
+            'Du nutzt lokale Modelle 4+ Stunden/Tag (Amortisation allein der GPU dann etwa 5,3 Jahre)',
             'Datenschutz oder Datenresidenz sind für deinen Workload wichtig',
             'Du willst feste, planbare Langzeitkosten',
             'Du hast dich bereits für eine Stufe oben entschieden',
@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA-Treiber 550+ von nvidia.com installieren oder `ubuntu-drivers autoinstall` ausführen',
           'Ollama installieren: `curl -fsSL https://ollama.com/install.sh | sh`',
           'Ein Modell laden: `ollama pull qwen2.5:14b-instruct-q8_0`',
-          'Als Netzwerkserver ausführen: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'Als Netzwerkserver ausführen: `OLLAMA_HOST=0.0.0.0 ollama serve` — optional, nur in vertrauenswürdigen Netzen: Damit ist die API im Netzwerk erreichbar, die lokale API verlangt keine Authentifizierung; den Port nie ins Internet freigeben',
           'Open WebUI für die Browser-Oberfläche installieren: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           'Über Tailscale für sicheren Fernzugriff von jedem Gerät freigeben',
         ],
@@ -666,14 +666,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: 'Gesamtbetriebskosten: Workstation vs. Cloud-GPU',
-        content: 'Eine reine GPU-Rechnung, weil Systemgesamtpreise nicht erfasst werden: der Median von $2.860 für gebrauchte RTX 4090 ([InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert 2026-10-15) gegenüber der Miete einer RunPod A40 zum illustrativen Satz von $0,44/Std., der auf dieser Seite verwendet wird (nicht neu geprüft), bei drei Nutzungsniveaus. Der Strom ergibt sich aus 450 W Board-Leistung der RTX 4090 bei $0,15/kWh (Beispiel: 450 W × 4 Std. × 365 = 657 kWh × $0,15 ≈ $99). Amortisation = GPU-Preis ÷ (Cloud-Kosten − Stromkosten), z. B. bei 4 Std./Tag: $2.860 ÷ ($642 − $99) ≈ 5,3 Jahre. RAM, CPU und übrige Teile würden sie verlängern.',
+        content: 'Eine reine GPU-Rechnung, weil Systemgesamtpreise nicht erfasst werden: der Median von $2.860 für gebrauchte RTX 4090 ([InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Verkäufe in den USA, Oktober 2026) gegenüber der Miete einer RunPod A40 zum illustrativen Satz von $0,44/Std., der auf dieser Seite als Annahme dient, bei drei Nutzungsniveaus. Die [RunPod-Preisseite](https://www.runpod.io/pricing) nannte am 2026-11-27 für die A40 $0,35/Std. (Community Cloud) und $0,59/Std. (Secure Cloud); bei 4 Std./Tag läge die Amortisation damit bei etwa 6,9 bzw. 3,8 Jahren. Der Strom ergibt sich aus 450 W Board-Leistung der RTX 4090 bei $0,15/kWh (Beispiel: 450 W × 4 Std. × 365 = 657 kWh × $0,15 ≈ $99). Amortisation = GPU-Preis ÷ (Cloud-Kosten − Stromkosten), z. B. bei 4 Std./Tag: $2.860 ÷ ($642 − $99) ≈ 5,3 Jahre. RAM, CPU und übrige Teile würden sie verlängern.',
         columns: ['Nutzung', 'Cloud-Kosten/Jahr (A40 @ 0,44 $/Std.)', 'Stromkosten Workstation/Jahr', 'Amortisation vs. Cloud'],
         rows: [
           { 'Nutzung': '2 Std./Tag', 'Cloud-Kosten/Jahr (A40 @ 0,44 $/Std.)': '~$321', 'Stromkosten Workstation/Jahr': '$49 (450 W, $0,15/kWh)', 'Amortisation vs. Cloud': '~10,5 Jahre (nur GPU)' },
           { 'Nutzung': '4 Std./Tag', 'Cloud-Kosten/Jahr (A40 @ 0,44 $/Std.)': '~$642', 'Stromkosten Workstation/Jahr': '$99', 'Amortisation vs. Cloud': '~5,3 Jahre (nur GPU)' },
           { 'Nutzung': '8 Std./Tag', 'Cloud-Kosten/Jahr (A40 @ 0,44 $/Std.)': '~$1.285', 'Stromkosten Workstation/Jahr': '$197', 'Amortisation vs. Cloud': '~2,6 Jahre (nur GPU)' },
         ],
-        note: 'In dieser reinen GPU-Rechnung amortisiert sich die Workstation innerhalb weniger Jahre nur ab ~4 Std./Tag Nutzung; darunter ist Cloud-Miete wahrscheinlich finanziell günstiger, auch wenn die A40 (Ampere-Generation) langsamer ist als eine RTX 4090. Datenschutz, Datenresidenz und Unabhängigkeit von Cloud-Verfügbarkeit sind eigenständige Gründe für lokal, unabhängig von der Amortisationszeit. Strompreis angenommen mit $0,15/kWh (US-Durchschnitt); bei ~0,30 €/kWh in der EU verdoppelt sich die Stromkosten-Spalte etwa.',
+        note: 'In dieser reinen GPU-Rechnung amortisiert sich die Workstation innerhalb weniger Jahre nur ab ~4 Std./Tag Nutzung; darunter ist Cloud-Miete wahrscheinlich finanziell günstiger, auch wenn die A40 (Ampere-Generation) weniger Speicherbandbreite hat als eine RTX 4090. Datenschutz, Datenresidenz und Unabhängigkeit von Cloud-Verfügbarkeit sind eigenständige Gründe für lokal, unabhängig von der Amortisationszeit. Strompreis angenommen mit $0,15/kWh (US-Durchschnitt); bei ~0,30 €/kWh in der EU verdoppelt sich die Stromkosten-Spalte etwa.',
       },
       faq: {
         id: 'faq',
@@ -684,19 +684,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Warum spielen RAM-Preise für diese Builds so eine große Rolle?',
-            a: 'RAM kann einen Build stärker verteuern als GPU-Preisänderungen. Ein DRAM-Engpass 2026 — Speicherhersteller verlagerten Fertigungskapazität zu KI-Rechenzentrums-HBM-Chips — trieb: Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet). RAM- und Speicherpreise werden auf dieser Seite nicht erfasst; prüfe vor dem Kauf die aktuellen Angebote.',
+            a: 'RAM-Preise können die Kosten eines Builds stark verändern. Ein DRAM-Engpass 2026 — Speicherhersteller verlagerten Fertigungskapazität zu KI-Rechenzentrums-HBM-Chips — trieb die Preise: Die DDR5-Preise stiegen laut [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18) in 12 Monaten bis August 2026 um rund 500 % (ein 128-GB-DDR5-6400-Kit wurde für $3.399 gelistet). RAM- und Speicherpreise werden auf dieser Seite nicht erfasst; prüfe vor dem Kauf die aktuellen Angebote.',
           },
           {
             q: 'Sollte ich für den Budget- oder Profi-Build eine gebrauchte oder neue RTX 3090 kaufen?',
-            a: 'Gebraucht ist 2026 die übliche Wahl bei der RTX 3090 — "neue" Einheiten sind, falls vorhanden, ältere Restbestände. Gebraucht verkaufte Karten lagen laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert 2026-10-15; Listendaten, keine Angebote) bei etwa $1.400–1.550; auf übermäßige Lüftergeräusche oder Brandgeruch unter Last achten (Zeichen von Mining-Verschleiß) und einen Verkäufer mit Rückgaberecht bevorzugen.',
+            a: 'Gebraucht ist 2026 die übliche Wahl bei der RTX 3090; "neue" Einheiten sind Restbestände. Laut [InsiderLLM-Ratgeber für Gebraucht-GPUs](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) lagen die bei eBay in den USA verkauften Angebote bei $1.500–1.725 (Median $1.650; 225 Verkäufe, 13.–23. November 2026, ohne Versand) (Verkaufsdaten, keine Offerten). Auf übermäßige Lüftergeräusche oder Brandgeruch unter Last achten (mögliche Zeichen starker Abnutzung) und einen Verkäufer mit Rückgaberecht bevorzugen.',
           },
           {
             q: 'Brauche ich NVLink für Ollama mit zwei GPUs?',
-            a: 'Nein. Ollama nutzt CUDA Tensor-Parallelismus über PCIe — kein NVLink nötig. Das Dual-RTX-3090-Setup funktioniert vollständig ohne NVLink.',
+            a: 'Nein. Laut [Ollama-FAQ](https://docs.ollama.com/faq) wird ein Modell, das auf eine GPU passt, dort geladen; andernfalls wird es über PCIe auf die verfügbaren GPUs verteilt. NVLink ist nicht erforderlich.',
           },
           {
             q: 'Warum Dual RTX 3090 statt einer RTX 4090 für den Profi-Build?',
-            a: 'VRAM ist entscheidend. Zwei RTX 3090s ergeben 48 GB gesamt — genug für Llama 3.3 70B Q4 (~40 GB). Eine einzelne RTX 4090 hat nur 24 GB. Für 70B-Inferenz auf GPU gewinnen die Dual-3090s beim VRAM/Euro-Verhältnis.',
+            a: 'VRAM ist entscheidend. Zwei RTX 3090s ergeben 48 GB gesamt — genug für Llama 3.3 70B Q4 (~40 GB). Eine einzelne RTX 4090 hat nur 24 GB. Für 70B-Inferenz auf GPU gewinnen die Dual-3090s beim Verhältnis von VRAM pro Dollar.',
           },
         ],
       },
@@ -717,11 +717,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       finalVerdict: {
         title: 'Welche Workstation solltest du kaufen?',
         rankedItems: [
-          { rank: 1, name: '💰 Budget-Build', tagline: 'RTX 3090 24GB (gebraucht)', verdict: 'Läuft jedes Modell bis 32B Q4 vollständig auf GPU. Am besten bei begrenztem Budget und Bereitschaft für eine gebrauchte GPU.', affiliateLinks: [{ label: 'Budget-Build ansehen →', url: 'https://www.amazon.de/s?k=RTX+3090+Budget+KI+Workstation' }] },
-          { rank: 2, name: '⭐ Beste Gesamtlösung — Empfohlener Build', tagline: 'RTX 4090 24GB', verdict: 'Die beste Balance aus Leistung, VRAM, Stromverbrauch und Aufrüstpotenzial für die meisten Nutzer. Bei Unsicherheit hier starten.', affiliateLinks: [{ label: 'Empfohlenen Build ansehen →', url: 'https://www.amazon.de/s?k=RTX+4090+Ryzen+9950X+Workstation+Build' }] },
+          { rank: 1, name: '💰 Budget-Build', tagline: 'RTX 3090 24GB (gebraucht)', verdict: 'Modelle bis etwa 32B in Q4 passen auf die GPU (je nach Kontextlänge). Passt bei begrenztem Budget und Bereitschaft für eine gebrauchte GPU.', affiliateLinks: [{ label: 'Budget-Build ansehen →', url: 'https://www.amazon.de/s?k=RTX+3090+Budget+KI+Workstation' }] },
+          { rank: 2, name: '⭐ Unsere Wahl — Empfohlener Build', tagline: 'RTX 4090 24GB', verdict: 'Aus unserer Sicht eine gute Balance aus Leistung, VRAM, Stromverbrauch und Aufrüstpotenzial für die meisten Nutzer. Bei Unsicherheit hier starten.', affiliateLinks: [{ label: 'Empfohlenen Build ansehen →', url: 'https://www.amazon.de/s?k=RTX+4090+Ryzen+9950X+Workstation+Build' }] },
           { rank: 3, name: '🚀 70B / Profi — Profi-Build', tagline: 'Dual RTX 3090 (48GB)', verdict: '70B im VRAM (keine belegte Multi-GPU-Tok/s-Angabe). Nur kaufen, wenn 70B dein täglicher Hauptworkload ist.', affiliateLinks: [{ label: 'Profi-Build ansehen →', url: 'https://www.amazon.de/s?k=Threadripper+7960X+Dual+RTX+3090+Workstation' }] },
         ],
-        content: 'Immer noch unsicher? Starte mit dem Empfohlenen RTX-4090-Build — er bietet die beste Balance aus Leistung, VRAM, Stromverbrauch und Aufrüstbarkeit für die meisten lokalen KI-Nutzer.',
+        content: 'Immer noch unsicher? Starte mit dem Empfohlenen RTX-4090-Build — aus unserer Sicht verbindet er Leistung, VRAM, Stromverbrauch und Aufrüstbarkeit für die meisten lokalen KI-Nutzer gut.',
       },
       relatedReading: {
         title: 'Weiterführende Artikel',
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', position: 2, name: 'NVIDIA-Treiber 550+ von nvidia.com installieren oder `ubuntu-drivers autoinstall` ausführen' },
         { '@type': 'HowToStep', position: 3, name: 'Ollama installieren: `curl -fsSL https://ollama.com/install.sh | sh`' },
         { '@type': 'HowToStep', position: 4, name: 'Ein Modell laden: `ollama pull qwen2.5:14b-instruct-q8_0`' },
-        { '@type': 'HowToStep', position: 5, name: 'Als Netzwerkserver ausführen: `OLLAMA_HOST=0.0.0.0 ollama serve`' },
+        { '@type': 'HowToStep', position: 5, name: 'Als Netzwerkserver ausführen: `OLLAMA_HOST=0.0.0.0 ollama serve` (nur in vertrauenswürdigen Netzen, nie ins Internet freigeben)' },
         { '@type': 'HowToStep', position: 6, name: 'Open WebUI für die Browser-Oberfläche installieren: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`' },
         { '@type': 'HowToStep', position: 7, name: 'Über Tailscale für sicheren Fernzugriff von jedem Gerät freigeben' },
       ],
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Profi-Build', description: 'Dual RTX 3090 48 GB + Threadripper + 256 GB RAM — 70B Q4 im VRAM' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Beste Workstation für lokale KI 2026: Drei Budgetstufen', datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/de/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Beste Workstation für lokale KI 2026: Drei Budgetstufen', datePublished: '2026-05-26', dateModified: '2026-11-27', url: 'https://www.promptquorum.com/de/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'de' },
   },
 
   fr: {
@@ -791,17 +791,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Voir les composants Professionnel →', url: 'https://www.amazon.fr/s?k=Threadripper+7960X+workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**La meilleure workstation IA locale 2026 pour la plupart des utilisateurs est le build RTX 4090 : RTX 4090 (24 Go VRAM) + Ryzen 9 9950X + 64 Go DDR5. Dans le [tableau CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013), elle atteint 186.2 tok/s sur un modèle 7B Q4_0 (rapporté par des développeurs), et le 14B en Q8 tient sans déchargement. Aller directement au niveau : [Budget](#tier1) · [Recommandé](#tier2) · [Professionnel](#tier3).**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**Notre choix pour la plupart des utilisateurs qui montent une workstation IA locale en 2026 est le build RTX 4090 : RTX 4090 (24 Go VRAM) + Ryzen 9 9950X + 64 Go DDR5. Dans le [tableau CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013), elle atteint 186.2 tok/s sur un modèle 7B Q4_0 (rapporté par des développeurs), et le 14B en Q8 tient sans déchargement. Aller directement au niveau : [Budget](#tier1) · [Recommandé](#tier2) · [Professionnel](#tier3).**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle est la meilleure configuration PC pour faire tourner des modèles IA en local en 2026 ?',
-        answer: 'Pour la plupart : RTX 4090 (24 Go) + Ryzen 9 9950X + 64 Go DDR5-6000. Pour les modèles 70B à vitesse GPU : dual RTX 3090 (48 Go VRAM au total) + Threadripper. Budget : RTX 3090 d\'occasion + Ryzen 7 7700X. Les totaux ne sont pas suivis, seuls les prix GPU le sont, d\'après le [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15 ; données d\'annonces, pas des offres) : RTX 3090 vendues d\'occasion environ $1,400–1,550, RTX 4090 vendues d\'occasion $2,575–3,010 (médiane $2,860). Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399) ; vérifiez donc les prix actuels de la RAM avant d\'acheter.',
+        answer: 'Pour la plupart : RTX 4090 (24 Go) + Ryzen 9 9950X + 64 Go DDR5-6000. Pour les modèles 70B à vitesse GPU : dual RTX 3090 (48 Go VRAM au total) + Threadripper. Budget : RTX 3090 d\'occasion + Ryzen 7 7700X. Les totaux ne sont pas suivis, seuls les prix GPU le sont (marché américain, ventes eBay conclues, pas des offres) : RTX 3090 d\'occasion $1,500–1,725 (médiane $1,650 ; 225 ventes, 13–23 novembre 2026, hors livraison ; [guide GPU d\'occasion InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)), RTX 4090 d\'occasion $2,575–3,010 (médiane $2,860 ; 216 ventes, octobre 2026 ; [suivi des prix InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)). Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399) ; vérifiez donc les prix actuels de la RAM avant d\'acheter.',
         bullets: [
           'Budget : RTX 3090 d\'occasion (24 Go) + Ryzen 7 7700X + 64 Go DDR5 — modèles 30B Q4',
           'Recommandé : RTX 4090 (24 Go) + Ryzen 9 9950X + 64 Go DDR5 — 30B Q4',
           'Professionnel : dual RTX 3090 (48 Go) + Threadripper 7960X — le 70B Q4 tient en VRAM (aucune valeur tok/s sourcée en multi-GPU)',
-          'La RAM peut peser plus sur un build que les variations du prix GPU. Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399)',
+          'Le prix de la RAM peut fortement modifier le coût d\'un build. Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399)',
           'Tous les builds gèrent 7B et 14B facilement ; 70B nécessite dual GPU ou déchargement CPU',
         ],
         updatedDate: '2026-11',
@@ -811,20 +811,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'RTX 4090 reste la meilleure GPU grand public pour l\'IA locale en 2026 : 24 Go VRAM, ~1 To/s de bande passante — son prix d\'occasion a même légèrement baissé depuis le printemps',
+          'La RTX 4090 est notre choix pour le niveau recommandé : 24 Go de VRAM et environ 1 To/s de bande passante (la RTX 5090 a plus de VRAM, 32 Go). Ventes d\'occasion aux États-Unis : $2,575–3,010 (médiane $2,860, octobre 2026, [suivi des prix InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/))',
           'Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399)',
           'Les modèles 70B Q4 ont besoin de 40+ Go VRAM — nécessite dual RTX 3090 ou déchargement CPU',
           'Les prix du CPU, de la carte mère, de l\'alimentation, du boîtier, du refroidisseur et du stockage ne sont pas suivis sur cette page — vérifiez les annonces actuelles avant d\'acheter',
-          'NVMe PCIe Gen 4/5 charge un modèle 7B en moins de 2 secondes, les prix du stockage ne sont pas suivis ici',
+          'Les SSD NVMe PCIe Gen 4/5 ont un débit de lecture séquentielle bien supérieur au SATA, ce qui raccourcit le chargement des modèles (temps non mesurés ici) ; les prix du stockage ne sont pas suivis ici',
           'Les niveaux 1 et 2 partagent le socket AM5 — GPU/RAM évolutifs sans changer de carte mère ; le niveau 3 nécessite un TRX50',
         ],
       },
       quickCompare: {
         title: 'Quelle workstation construire ?',
-        content: 'Choisissez votre build selon le plus grand modèle à faire tourner : 7B–14B → Budget. 14B–32B → Recommandé. 70B → Professionnel. La première ligne n\'indique que les prix GPU (ventes d\'occasion, [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15 ; données d\'annonces, pas des offres) ; les totaux système ne sont pas suivis.',
+        content: 'Choisissez votre build selon le plus grand modèle à faire tourner : 7B–14B → Budget. 14B–32B → Recommandé. 70B → Professionnel. La première ligne n\'indique que les prix GPU (ventes d\'occasion aux États-Unis, pas des offres : [RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), 13–23 novembre 2026 ; [RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), octobre 2026) ; les totaux système ne sont pas suivis.',
         columns: ['', 'Budget', 'Recommandé', 'Professionnel'],
         rows: [
-          { '': 'Prix du GPU (occasion)', 'Budget': '$1,400–1,550 (ventes d\'occasion, InsiderLLM, 2026-10-15)', 'Recommandé': '$2,575–3,010 (ventes d\'occasion, InsiderLLM, 2026-10-15)', 'Professionnel': '$2,800–3,100 (2 × $1,400–1,550, ventes d\'occasion, InsiderLLM, 2026-10-15)' },
+          { '': 'Prix du GPU (occasion)', 'Budget': '$1,500–1,725 (ventes US, 13–23 nov. 2026)', 'Recommandé': '$2,575–3,010 (ventes US, oct. 2026)', 'Professionnel': '$3,000–3,450 (2 × $1,500–1,725, ventes US, 13–23 nov. 2026)' },
           { '': 'GPU', 'Budget': 'RTX 3090 24 Go (occasion)', 'Recommandé': 'RTX 4090 24 Go', 'Professionnel': '2× RTX 3090 (48 Go)' },
           { '': 'CPU', 'Budget': 'Ryzen 7 7700X', 'Recommandé': 'Ryzen 9 9950X', 'Professionnel': 'Threadripper 7960X' },
           { '': 'RAM', 'Budget': '64 Go DDR5', 'Recommandé': '64 Go DDR5-6000', 'Professionnel': '256 Go DDR5 ECC' },
@@ -836,17 +836,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Voir les composants Recommandé →', url: 'https://www.amazon.fr/s?k=RTX+4090+Ryzen+9950X+build', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: 'Voir les composants Professionnel →', url: 'https://www.amazon.fr/s?k=Threadripper+7960X+workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: 'Seule la ligne GPU de chaque build est chiffrée (ventes d\'occasion, [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15). La RAM et les autres pièces ne sont pas suivies : Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399).',
+        note: 'Seule la ligne GPU de chaque build est chiffrée (ventes d\'occasion aux États-Unis : [guide InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) pour la RTX 3090, 13–23 novembre 2026 ; [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) pour la RTX 4090, octobre 2026). La RAM et les autres pièces ne sont pas suivies : Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399).',
       },
       editorsChoice: {
         title: 'Choix de la rédaction : Workstation Recommandée RTX 4090',
         highlight: true,
-        content: 'La meilleure workstation IA locale globale pour 2026 — le point d\'équilibre entre VRAM, marge d\'évolution et prix pour la plus large gamme de modèles.',
+        content: 'Notre choix parmi ces trois builds : un point d\'équilibre entre VRAM, marge d\'évolution et prix pour la plus large gamme de modèles.',
         items: [
-          '24 Go VRAM — fait tourner tout modèle jusqu\'à 32B Q4 entièrement sur GPU',
+          '24 Go VRAM — les modèles jusqu\'à environ 32B en Q4 tiennent sur le GPU (selon la longueur de contexte)',
           '64 Go DDR5-6000 — suffisant pour du déchargement CPU du 70B (vitesse non suivie ici)',
           'Qwen3 32B Q4 tient entièrement sur le GPU ; 70B avec déchargement',
-          'GPU : RTX 4090 vendues d\'occasion $2,575–3,010 (médiane $2,860, [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15) ; autres pièces non suivies',
+          'GPU : RTX 4090 vendues d\'occasion $2,575–3,010 (médiane $2,860, [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), ventes aux États-Unis, octobre 2026) ; autres pièces non suivies',
           '**À éviter si :** vous ne faites tourner que du 7B–14B — le build Budget coûte moins cher pour le même usage',
         ],
         affiliateLinks: [
@@ -875,7 +875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Le build budget utilise une RTX 3090 occasion (24 Go VRAM). Dans le [tableau CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013), la RTX 3090 atteint 158.2 tok/s sur un modèle 7B Q4_0 (rapporté par des développeurs) ; les vitesses des modèles plus grands ne sont pas suivies ici. NVIDIA indique 350 W de puissance de carte pour la RTX 3090 — associez-la à une alimentation de qualité de 850 W (ceci n\'est pas un conseil de sécurité électrique). **Prenez ce build si :** vous utilisez surtout du 7B–32B et l\'achat d\'occasion ne vous gêne pas. **Évitez si :** le 70B est votre usage principal — ce niveau exige un déchargement CPU, fonctionnel mais lent.',
         columns: ['Composant', 'Modèle', 'Prix'],
         rows: [
-          { 'Composant': 'GPU', 'Modèle': 'NVIDIA RTX 3090 (occasion, 24 Go)', 'Prix': '$1,400–1,550 (ventes d\'occasion, InsiderLLM, 2026-10-15)' },
+          { 'Composant': 'GPU', 'Modèle': 'NVIDIA RTX 3090 (occasion, 24 Go)', 'Prix': '$1,500–1,725 (ventes US, 13–23 nov. 2026)' },
           { 'Composant': 'CPU', 'Modèle': 'AMD Ryzen 7 7700X', 'Prix': 'non suivi' },
           { 'Composant': 'Carte mère', 'Modèle': 'MSI MAG X670E Tomahawk WiFi', 'Prix': 'non suivi' },
           { 'Composant': 'RAM', 'Modèle': '64 Go DDR5-5600 (2×32 Go)', 'Prix': 'non suivi' },
@@ -893,19 +893,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Modèles supportés à pleine vitesse GPU :** 7B, 13B, 14B Q4/Q8, 30B Q4',
           '**Support 70B :** déchargement CPU nécessaire (vitesse non suivie ici)',
-          '**Consommation crête :** ~450 W',
+          '**Puissance nominale (CPU + GPU seuls) :** 350 W + 105 W = 455 W ; les autres pièces et les pics s\'ajoutent',
         ],
         callouts: [
-          { type: 'tip', text: 'Occasion vs neuf : les RTX 3090 vendues d\'occasion se situaient autour de $1,400–1,550 selon le [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15) ; le neuf restant, s\'il y en a, n\'est pas suivi ici, et une carte d\'occasion a une garantie incertaine. Privilégiez un vendeur acceptant les retours et vérifiez l\'absence d\'usure minage.' },
+          { type: 'tip', text: 'Occasion vs neuf : Selon le [guide GPU d\'occasion InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), les ventes eBay conclues aux États-Unis allaient de $1,500 à 1,725 (médiane $1,650 ; 225 ventes, 13–23 novembre 2026, hors livraison). Le stock neuf restant n\'est pas suivi ici, et la garantie d\'une carte d\'occasion est incertaine. Privilégiez un vendeur acceptant les retours et vérifiez l\'absence d\'usure liée au minage.' },
         ],
       },
       tier2: {
         title: 'Niveau 2 : Workstation IA recommandée',
         id: 'tier2',
-        content: 'Le build recommandé est centré sur la RTX 4090 (24 Go, ~1 To/s de bande passante mémoire) avec l\'AMD Ryzen 9 9950X (Zen 5, 16 cœurs). Dans le [tableau CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, rapporté par des développeurs), la RTX 4090 génère 186.2 tok/s contre 158.2 pour la RTX 3090 (186.2 / 158.2 = 1.18×) et traite les prompts à 11,993 contre 5,175 tok/s (2.3×) ; NVIDIA indique 450 W de puissance de carte pour la RTX 4090 contre 350 W pour la RTX 3090. **Prenez ce build si :** vous voulez la meilleure workstation mono-GPU, utilisez du 14B–32B régulièrement, et déchargez occasionnellement du 70B. **Évitez si :** le 70B est votre usage quotidien principal — préférez le Professionnel pour de la vitesse GPU sur 70B.',
+        content: 'Le build recommandé est centré sur la RTX 4090 (24 Go, ~1 To/s de bande passante mémoire) avec l\'AMD Ryzen 9 9950X (Zen 5, 16 cœurs). Dans le [tableau CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, rapporté par des développeurs), la RTX 4090 génère 186.2 tok/s contre 158.2 pour la RTX 3090 (186.2 / 158.2 = 1.18×) et traite les prompts à 11,993 contre 5,175 tok/s (2.3×) ; NVIDIA indique 450 W de puissance de carte pour la RTX 4090 contre 350 W pour la RTX 3090. **Prenez ce build si :** vous voulez une workstation mono-GPU de 24 Go, utilisez du 14B–32B régulièrement, et déchargez occasionnellement du 70B. **Évitez si :** le 70B est votre usage quotidien principal — préférez le Professionnel pour de la vitesse GPU sur 70B.',
         columns: ['Composant', 'Modèle', 'Prix'],
         rows: [
-          { 'Composant': 'GPU', 'Modèle': 'NVIDIA GeForce RTX 4090 24 Go', 'Prix': '$2,575–3,010 (ventes d\'occasion, InsiderLLM, 2026-10-15)' },
+          { 'Composant': 'GPU', 'Modèle': 'NVIDIA GeForce RTX 4090 24 Go', 'Prix': '$2,575–3,010 (ventes US, oct. 2026)' },
           { 'Composant': 'CPU', 'Modèle': 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', 'Prix': 'non suivi' },
           { 'Composant': 'Carte mère', 'Modèle': 'ASUS ProArt X870E-Creator WiFi', 'Prix': 'non suivi' },
           { 'Composant': 'RAM', 'Modèle': '64 Go DDR5-6000 CL30 (2×32 Go)', 'Prix': 'non suivi' },
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Le build professionnel vise l\'inférence 70B entièrement en VRAM avec deux RTX 3090 pour 48 Go VRAM au total, plus un Threadripper 7960X (24 cœurs) et 256 Go DDR5 ECC. **Prenez ce build si :** le 70B est votre usage principal, vous avez besoin de 48 Go+ de VRAM GPU, ou plusieurs utilisateurs simultanés. **Évitez si :** vous n\'avez jamais utilisé de modèle au-delà de 32B — ce niveau est alors largement surdimensionné.',
         columns: ['Composant', 'Modèle', 'Prix'],
         rows: [
-          { 'Composant': 'GPU ×2', 'Modèle': '2× NVIDIA RTX 3090 24 Go (occasion)', 'Prix': '$2,800–3,100 (2 × $1,400–1,550, ventes d\'occasion, InsiderLLM, 2026-10-15)' },
+          { 'Composant': 'GPU ×2', 'Modèle': '2× NVIDIA RTX 3090 24 Go (occasion)', 'Prix': '$3,000–3,450 (2 × $1,500–1,725, ventes US, 13–23 nov. 2026)' },
           { 'Composant': 'CPU', 'Modèle': 'AMD Ryzen Threadripper 7960X (24C)', 'Prix': 'non suivi' },
           { 'Composant': 'Carte mère', 'Modèle': 'ASUS Pro WS TRX50-SAGE WiFi', 'Prix': 'non suivi' },
           { 'Composant': 'RAM', 'Modèle': '256 Go DDR5-5200 ECC (8×32 Go)', 'Prix': 'non suivi' },
@@ -952,10 +952,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**70B Q4 :** aucune valeur tok/s sourcée n\'existe pour les configurations multi-GPU, aucune n\'est donc citée ici',
           '**Déchargement CPU 256 Go :** modèles 140B+ quantifiés tenant en RAM (vitesse non suivie ici)',
-          '**Consommation crête :** ~900 W',
+          '**Puissance nominale (CPU + GPU seuls) :** 2 × 350 W + 350 W = 1,050 W ; les autres pièces et les pics s\'ajoutent',
         ],
         callouts: [
-          { type: 'warning', text: 'La pénurie DDR5 2026 a le plus touché la RAM serveur ECC/RDIMM — les kits DDR5 ECC 256 Go sont rares et volatils, et les prix de la RAM ne sont pas suivis sur cette page (les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399)). Obtenez un devis en direct pour de la RAM listée QVL par votre carte mère avant de commander.' },
+          { type: 'warning', text: '256 Go de DDR5 ECC représentent un gros poste de coût dans ce build, et les prix de la RAM ne sont pas suivis sur cette page. Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399) ; ce chiffre ne porte pas spécifiquement sur la mémoire serveur ECC/RDIMM. Demandez un devis actuel pour de la RAM figurant sur la QVL de votre carte mère avant de commander.' },
         ],
       },
       dontBuy: {
@@ -963,18 +963,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Une GPU 8 Go si l\'objectif est du 32B** — mur de VRAM immédiat, aucun déchargement CPU ne compense une carte sous-dimensionnée aussi bien qu\'il étire la RAM',
           '**Un CPU cher avec une GPU sous-dimensionnée** — la GPU et sa VRAM décident de la vitesse d\'inférence bien plus que la fréquence CPU',
-          '**Un SSD SATA pour une nouvelle workstation IA** — chargement 5x plus lent qu\'un NVMe Gen 4 pour 20–40 € d\'écart',
-          '**Une alimentation sous-dimensionnée** — le niveau Professionnel culmine près de 900 W ; une 750 W bas de gamme décrochera en charge dual-GPU',
+          '**Un SSD SATA pour une nouvelle workstation IA** — le chargement des modèles est limité par l\'interface SATA (6 Gb/s), bien en dessous d\'un NVMe PCIe Gen 4',
+          '**Une alimentation sous-dimensionnée** — au niveau Professionnel, la puissance des cartes GPU et le TDP du CPU font à eux seuls 1 050 W, hors autres pièces et pics ; une 750 W est trop petite (ceci n\'est pas un conseil de sécurité électrique)',
           '**32 Go de RAM pour du déchargement CPU 70B sérieux** — le modèle seul a besoin d\'environ 40 Go pour tenir en mémoire',
         ],
-        note: 'La GPU et sa VRAM comptent plus que 300 € de plus sur le CPU — cette seule règle répond à la plupart des questions « que dois-je améliorer ».',
+        note: 'Pour l\'inférence locale, la GPU et sa VRAM comptent plus qu\'un CPU plus cher.',
       },
       cloudVsLocal: {
         title: 'Construire une workstation ou louer des GPU cloud ?',
         decisionBlock: {
           title: 'Workstation locale vs location GPU cloud',
           localIf: [
-            'Vous utilisez des modèles locaux 2h+/jour',
+            'Vous utilisez des modèles locaux 4h+/jour (amortissement du seul GPU : environ 5.3 ans)',
             'La confidentialité ou la résidence des données compte pour votre usage',
             'Vous voulez un coût fixe et prévisible sur le long terme',
             'Vous êtes déjà décidé sur un niveau ci-dessus',
@@ -1001,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installer les pilotes NVIDIA 550+ depuis nvidia.com ou via `ubuntu-drivers autoinstall`',
           'Installer Ollama : `curl -fsSL https://ollama.com/install.sh | sh`',
           'Récupérer un modèle : `ollama pull qwen2.5:14b-instruct-q8_0`',
-          'Lancer en serveur réseau : `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'Lancer en serveur réseau : `OLLAMA_HOST=0.0.0.0 ollama serve` — facultatif, réseaux de confiance uniquement : l\'API devient accessible sur le réseau et l\'API locale n\'exige aucune authentification ; n\'exposez jamais le port à Internet',
           'Installer Open WebUI pour l\'interface navigateur : `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           'Exposer via Tailscale pour un accès distant sécurisé depuis n\'importe quel appareil',
         ],
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: 'Coût total de possession : workstation vs GPU cloud',
-        content: 'Un calcul GPU seul, car les totaux système ne sont pas suivis : la médiane de $2,860 des RTX 4090 vendues d\'occasion ([suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15) face à la location d\'un A40 RunPod au tarif illustratif de $0.44/h utilisé sur cette page (non re-vérifié), à trois niveaux d\'usage. L\'électricité correspond aux 450 W de puissance de carte de la RTX 4090 à $0.15/kWh (par exemple 450 W × 4 h × 365 = 657 kWh × $0.15 ≈ $99). Amortissement = prix du GPU ÷ (coût cloud − coût électricité), p. ex. à 4h/jour : $2,860 ÷ ($642 − $99) ≈ 5.3 ans. La RAM, le CPU et les autres pièces l\'allongeraient.',
+        content: 'Un calcul GPU seul, car les totaux système ne sont pas suivis : la médiane de $2,860 des RTX 4090 vendues d\'occasion ([suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), ventes aux États-Unis, octobre 2026) face à la location d\'un A40 RunPod au tarif illustratif de $0.44/h retenu sur cette page comme hypothèse, à trois niveaux d\'usage. La [page tarifaire de RunPod](https://www.runpod.io/pricing), consultée le 2026-11-27, affichait l\'A40 à $0.35/h (Community Cloud) et $0.59/h (Secure Cloud) ; à 4h/jour, l\'amortissement serait alors d\'environ 6.9 et 3.8 ans. L\'électricité correspond aux 450 W de puissance de carte de la RTX 4090 à $0.15/kWh (par exemple 450 W × 4 h × 365 = 657 kWh × $0.15 ≈ $99). Amortissement = prix du GPU ÷ (coût cloud − coût électricité), p. ex. à 4h/jour : $2,860 ÷ ($642 − $99) ≈ 5.3 ans. La RAM, le CPU et les autres pièces l\'allongeraient.',
         columns: ['Usage', 'Coût cloud/an (A40 à 0,44 $/h)', 'Coût électricité workstation/an', 'Amortissement vs cloud'],
         rows: [
           { 'Usage': '2h/jour', 'Coût cloud/an (A40 à 0,44 $/h)': '~$321', 'Coût électricité workstation/an': '$49 (450 W, $0.15/kWh)', 'Amortissement vs cloud': '~10.5 ans (GPU seul)' },
@@ -1038,15 +1038,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Pourquoi le prix de la RAM compte-t-il autant pour ces builds ?',
-            a: 'La RAM peut peser plus sur un build que les variations du prix GPU. Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399). Les prix de la RAM et du stockage ne sont pas suivis sur cette page ; vérifiez les annonces actuelles avant d\'acheter.',
+            a: 'Le prix de la RAM peut fortement modifier le coût d\'un build. Les prix de la DDR5 ont augmenté d\'environ 500 % en 12 mois jusqu\'en août 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18 ; un kit DDR5-6400 de 128 Go était listé à $3,399). Les prix de la RAM et du stockage ne sont pas suivis sur cette page ; vérifiez les annonces actuelles avant d\'acheter.',
           },
           {
             q: 'Faut-il acheter une RTX 3090 neuve ou d\'occasion ?',
-            a: 'L\'occasion est le choix usuel en 2026 — le « neuf » n\'est, s\'il existe, que du vieux stock. Les cartes vendues d\'occasion se situaient autour de $1,400–1,550 selon le [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15 ; données d\'annonces, pas des offres) ; vérifiez l\'absence de bruit de ventilateur excessif ou d\'odeur de brûlé en charge, et préférez un vendeur acceptant les retours.',
+            a: 'L\'occasion est le choix usuel pour la RTX 3090 en 2026 ; le « neuf » correspond à des stocks restants. Selon le [guide GPU d\'occasion InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), les ventes eBay conclues aux États-Unis allaient de $1,500 à 1,725 (médiane $1,650 ; 225 ventes, 13–23 novembre 2026, hors livraison) (données de ventes, pas des offres). Vérifiez l\'absence de bruit de ventilateur excessif ou d\'odeur de brûlé en charge, et préférez un vendeur acceptant les retours.',
           },
           {
             q: 'Faut-il NVLink pour faire tourner Ollama sur deux GPU ?',
-            a: 'Non. Ollama utilise le parallélisme tensoriel CUDA via PCIe — NVLink n\'est pas nécessaire. La configuration dual RTX 3090 fonctionne parfaitement sans NVLink.',
+            a: 'Non. Selon la [FAQ d\'Ollama](https://docs.ollama.com/faq), un modèle qui tient sur un seul GPU y est chargé ; sinon, il est réparti entre les GPU disponibles via PCIe. NVLink n\'est pas nécessaire.',
           },
         ],
       },
@@ -1067,11 +1067,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       finalVerdict: {
         title: 'Quelle workstation acheter ?',
         rankedItems: [
-          { rank: 1, name: '💰 Build Budget', tagline: 'RTX 3090 24Go (occasion)', verdict: 'Fait tourner tout modèle jusqu\'à 32B Q4 entièrement sur GPU.', affiliateLinks: [{ label: 'Voir le build Budget →', url: 'https://www.amazon.fr/s?k=RTX+3090+budget+AI+workstation' }] },
-          { rank: 2, name: '⭐ Meilleur choix global — Build Recommandé', tagline: 'RTX 4090 24Go', verdict: 'Le meilleur équilibre performance/VRAM/prix pour la plupart des usages.', affiliateLinks: [{ label: 'Voir le build Recommandé →', url: 'https://www.amazon.fr/s?k=RTX+4090+Ryzen+9950X+workstation+build' }] },
+          { rank: 1, name: '💰 Build Budget', tagline: 'RTX 3090 24Go (occasion)', verdict: 'Les modèles jusqu\'à environ 32B en Q4 tiennent sur le GPU (selon la longueur de contexte).', affiliateLinks: [{ label: 'Voir le build Budget →', url: 'https://www.amazon.fr/s?k=RTX+3090+budget+AI+workstation' }] },
+          { rank: 2, name: '⭐ Notre choix — Build Recommandé', tagline: 'RTX 4090 24Go', verdict: 'À notre avis, un bon équilibre performance/VRAM/prix pour la plupart des usages.', affiliateLinks: [{ label: 'Voir le build Recommandé →', url: 'https://www.amazon.fr/s?k=RTX+4090+Ryzen+9950X+workstation+build' }] },
           { rank: 3, name: '🚀 70B / professionnel — Build Professionnel', tagline: 'Dual RTX 3090 (48Go)', verdict: '70B en VRAM (aucune valeur tok/s multi-GPU sourcée). À réserver à un usage 70B quotidien.', affiliateLinks: [{ label: 'Voir le build Professionnel →', url: 'https://www.amazon.fr/s?k=Threadripper+7960X+dual+RTX+3090+workstation' }] },
         ],
-        content: 'Toujours indécis ? Commencez par le build Recommandé RTX 4090 — le meilleur équilibre entre performance, VRAM, consommation et évolutivité pour la plupart des utilisateurs.',
+        content: 'Toujours indécis ? Commencez par le build Recommandé RTX 4090 — à notre avis, un bon équilibre entre performance, VRAM, consommation et évolutivité pour la plupart des utilisateurs.',
       },
       relatedReading: {
         title: 'Lectures complémentaires',
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', position: 2, name: 'Installer les pilotes NVIDIA 550+ depuis nvidia.com ou via `ubuntu-drivers autoinstall`' },
         { '@type': 'HowToStep', position: 3, name: 'Installer Ollama : `curl -fsSL https://ollama.com/install.sh | sh`' },
         { '@type': 'HowToStep', position: 4, name: 'Récupérer un modèle : `ollama pull qwen2.5:14b-instruct-q8_0`' },
-        { '@type': 'HowToStep', position: 5, name: 'Lancer en serveur réseau : `OLLAMA_HOST=0.0.0.0 ollama serve`' },
+        { '@type': 'HowToStep', position: 5, name: 'Lancer en serveur réseau : `OLLAMA_HOST=0.0.0.0 ollama serve` (réseaux de confiance uniquement, jamais exposé à Internet)' },
         { '@type': 'HowToStep', position: 6, name: 'Installer Open WebUI pour l\'interface navigateur : `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`' },
         { '@type': 'HowToStep', position: 7, name: 'Exposer via Tailscale pour un accès distant sécurisé depuis n\'importe quel appareil' },
       ],
@@ -1120,7 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Build professionnel', description: 'Dual RTX 3090 48 Go + Threadripper + 256 Go RAM — 70B Q4 en VRAM' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleure configuration workstation IA locale 2026 : 3 budgets', datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/fr/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleure configuration workstation IA locale 2026 : 3 budgets', datePublished: '2026-05-26', dateModified: '2026-11-27', url: 'https://www.promptquorum.com/fr/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'fr' },
   },
 
   ja: {
@@ -1141,17 +1141,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'プロ構成パーツを見る →', url: 'https://www.amazon.co.jp/s?k=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**2026年のほとんどのユーザーにとって最良のローカルAIワークステーションはRTX 4090のビルド：RTX 4090（24GB VRAM）+ Ryzen 9 9950X + 64GB DDR5。[llama.cppのCUDAスコアボード](https://github.com/ggml-org/llama.cpp/discussions/15013)では7B Q4_0モデルで186.2 tok/s（開発者報告）に達し、14BはQ8でオフロードなしで収まります。各段階へ：[バジェット](#tier1)・[推奨](#tier2)・[プロ](#tier3)。**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**2026年にローカルAIワークステーションを組むほとんどのユーザーに当サイトがすすめるのはRTX 4090のビルド：RTX 4090（24GB VRAM）+ Ryzen 9 9950X + 64GB DDR5。[llama.cppのCUDAスコアボード](https://github.com/ggml-org/llama.cpp/discussions/15013)では7B Q4_0モデルで186.2 tok/s（開発者報告）に達し、14BはQ8でオフロードなしで収まります。各段階へ：[バジェット](#tier1)・[推奨](#tier2)・[プロ](#tier3)。**',
     quickAnswerTop: {
       ja: {
         question: '2026年のローカルAIモデル実行に最適なPC構成は何ですか？',
-        answer: 'ほとんどのユーザーに：RTX 4090（24GB）+ Ryzen 9 9950X + 64GB DDR5-6000。GPU速度の70Bモデル向け：デュアルRTX 3090（合計48GB VRAM）+ Threadripper。バジェット：中古RTX 3090 + Ryzen 7 7700X。総額は追跡しておらず、追跡しているのは[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（情報源の更新日2026-10-15、出品データであり見積りではありません）に基づくGPU価格のみです：RTX 3090の中古成約は約$1,400〜1,550、RTX 4090の中古成約は$2,575〜3,010（中央値$2,860）。日本円の価格は調査していないため、ここではUSDのままです（日本での価格は異なる場合があります）。DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）。購入前に現在のRAM価格を確認してください。',
+        answer: 'ほとんどのユーザーに：RTX 4090（24GB）+ Ryzen 9 9950X + 64GB DDR5-6000。GPU速度の70Bモデル向け：デュアルRTX 3090（合計48GB VRAM）+ Threadripper。バジェット：中古RTX 3090 + Ryzen 7 7700X。総額は追跡しておらず、追跡しているのはGPU価格のみです（米国市場のeBay成約データで、見積りではありません）：中古RTX 3090は$1,500〜1,725（中央値$1,650、225件、2026年11月13〜23日、送料別。[InsiderLLM中古GPUガイド](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)）、中古RTX 4090は$2,575〜3,010（中央値$2,860、216件、2026年10月。[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)）。日本円の価格は調査していないため、ここではUSDのままです（日本での価格は異なる場合があります）。DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）。購入前に現在のRAM価格を確認してください。',
         bullets: [
           'バジェット：中古RTX 3090（24GB）+ Ryzen 7 7700X + 64GB DDR5 — 30B Q4対応',
           '推奨：RTX 4090（24GB）+ Ryzen 9 9950X + 64GB DDR5 — 30B Q4対応',
           'プロ：デュアルRTX 3090（48GB）+ Threadripper 7960X — 70B Q4をVRAMに収容（マルチGPUのtok/sは出典付きの数値なし）',
-          'RAMはGPU価格の変動以上にビルド費用を押し上げることがあります：DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）',
+          'RAM価格はビルド費用を大きく左右することがあります：DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）',
           '全構成で7Bと14Bは問題なし；70Bはデュアルまたはオフロードが必要',
         ],
         updatedDate: '2026-11',
@@ -1161,20 +1161,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'RTX 4090は引き続き2026年のローカルAI向け最良コンシューマーGPU：24GB VRAM、約1TB/s帯域幅——中古の成約は$2,575〜3,010（中央値$2,860、[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、情報源の更新日2026-10-15）',
+          '推奨クラスにはRTX 4090を選びます：24GB VRAM、約1TB/sの帯域幅（VRAMはRTX 5090の方が多く32GBです）。米国の中古成約は$2,575〜3,010（中央値$2,860、2026年10月、[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)）',
           'DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）',
           '70B Q4モデルは40GB以上のVRAMが必要——デュアルRTX 3090またはCPUオフロードが必須',
           'CPU、マザーボード、電源、ケース、クーラー、ストレージの価格はこのページでは追跡していません——購入前に現在の出品を確認してください',
-          'PCIe Gen 4/5 NVMeは7Bモデルを2秒未満でロードするが、ストレージの価格はここでは追跡していません',
+          'PCIe Gen 4/5 NVMeはSATAよりシーケンシャル読み込みがはるかに速く、モデルのロードが短くなります（ロード時間はここでは計測していません）。ストレージ価格は追跡していません',
           '第1・2段階はAM5ソケットを共有——マザーボード交換なしでGPU/RAMを後でアップグレード可能；第3段階はTRX50が必要',
         ],
       },
       quickCompare: {
         title: 'どのワークステーションを構築すべきか？',
-        content: '実際に必要な最大モデルサイズで選ぶ：7B〜14B→バジェット。14B〜32B→推奨。70B→プロ。最初の行はGPU価格のみ（中古の成約済み、[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、情報源の更新日2026-10-15、出品データであり見積りではありません）で、システム総額は追跡していません。',
+        content: '実際に必要な最大モデルサイズで選ぶ：7B〜14B→バジェット。14B〜32B→推奨。70B→プロ。最初の行はGPU価格のみ（米国の中古成約で、見積りではありません：[RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)は2026年11月13〜23日、[RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)は2026年10月）で、システム総額は追跡していません。',
         columns: ['', 'バジェット', '推奨', 'プロ'],
         rows: [
-          { '': 'GPU価格（中古）', 'バジェット': '$1,400–1,550 (中古の成約済み, InsiderLLM、2026-10-15)', '推奨': '$2,575–3,010 (中古の成約済み, InsiderLLM、2026-10-15)', 'プロ': '$2,800–3,100 (2 × $1,400–1,550, 中古の成約済み, InsiderLLM、2026-10-15)' },
+          { '': 'GPU価格（中古）', 'バジェット': '$1,500–1,725 (米国成約、2026年11月13〜23日)', '推奨': '$2,575–3,010 (米国成約、2026年10月)', 'プロ': '$3,000–3,450 (2 × $1,500–1,725, 米国成約、2026年11月13〜23日)' },
           { '': 'GPU', 'バジェット': 'RTX 3090 24GB（中古）', '推奨': 'RTX 4090 24GB', 'プロ': '2× RTX 3090（48GB）' },
           { '': 'CPU', 'バジェット': 'Ryzen 7 7700X', '推奨': 'Ryzen 9 9950X', 'プロ': 'Threadripper 7960X' },
           { '': 'RAM', 'バジェット': '64GB DDR5', '推奨': '64GB DDR5-6000', 'プロ': '256GB DDR5 ECC' },
@@ -1186,18 +1186,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '推奨構成パーツを見る →', url: 'https://www.amazon.co.jp/s?k=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: 'プロ構成パーツを見る →', url: 'https://www.amazon.co.jp/s?k=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: '各構成で価格を載せているのはGPU行のみです（中古の成約済み、[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、情報源の更新日2026-10-15）。RAMなどの部品は追跡していません：DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）。',
+        note: '各構成で価格を載せているのはGPU行のみです（米国の中古成約：RTX 3090は[InsiderLLM中古GPUガイド](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)の2026年11月13〜23日、RTX 4090は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)の2026年10月）。RAMなどの部品は追跡していません：DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）。',
       },
       editorsChoice: {
         title: '編集部のおすすめ：RTX 4090推奨ワークステーション',
         highlight: true,
-        content: '2026年の総合ベストなローカルAIワークステーション——最も幅広いモデルに対応するVRAM・拡張余地・価格のバランス点。',
+        content: 'この3構成の中で当サイトがすすめる構成——幅広いモデルに対応するVRAM・拡張余地・価格のバランス点。',
         items: [
-          '24GB VRAM——32B Q4までのモデルを完全にGPU上で実行',
+          '24GB VRAM——Q4の約32BまでのモデルはGPUに収まります（コンテキスト長による）',
           '64GB DDR5-6000——70BのCPUオフロードに十分（速度はここでは追跡していません）',
           'Qwen3 32B Q4は完全にGPUに収まる；70Bもオフロード対応',
-          'GPU：RTX 4090の中古成約$2,575〜3,010（中央値$2,860、[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、情報源の更新日2026-10-15）；その他の部品は未追跡',
-          '**該当する場合はスキップ：** 7B〜14Bモデルしか使わないなら、バジェット構成の方が安く同等の性能',
+          'GPU：RTX 4090の中古成約$2,575〜3,010（中央値$2,860、[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、米国の成約、2026年10月）；その他の部品は未追跡',
+          '**該当する場合はスキップ：** 7B〜14Bモデルしか使わないなら、より安いバジェット構成でこのモデルサイズに対応できます',
         ],
         affiliateLinks: [
           { label: 'RTX 4090 24GB — 現在価格を確認 →', url: 'https://www.amazon.co.jp/s?k=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu' },
@@ -1225,7 +1225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'バジェットビルドは中古RTX 3090（24GB VRAM）を中心に構成。[llama.cppのCUDAスコアボード](https://github.com/ggml-org/llama.cpp/discussions/15013)ではRTX 3090は7B Q4_0モデルで158.2 tok/s（開発者報告）です。より大きなモデルの速度はここでは追跡していません。NVIDIAはRTX 3090のボード電力を350 Wと記載しており、品質の良い850 W電源と組み合わせてください（電気安全に関する助言ではありません）。**この構成を選ぶべき場合：** 主に7B〜32Bモデルを使う、中古GPUに抵抗がない。**避けるべき場合：** 70Bが主用途——このクラスではCPUオフロードが必要で、機能はするが遅い。',
         columns: ['コンポーネント', 'モデル', '価格'],
         rows: [
-          { 'コンポーネント': 'GPU', 'モデル': 'NVIDIA RTX 3090（中古、24GB）', '価格': '$1,400–1,550 (中古の成約済み, InsiderLLM、2026-10-15)' },
+          { 'コンポーネント': 'GPU', 'モデル': 'NVIDIA RTX 3090（中古、24GB）', '価格': '$1,500–1,725 (米国成約、2026年11月13〜23日)' },
           { 'コンポーネント': 'CPU', 'モデル': 'AMD Ryzen 7 7700X', '価格': '未追跡' },
           { 'コンポーネント': 'マザーボード', 'モデル': 'MSI MAG X670E Tomahawk WiFi', '価格': '未追跡' },
           { 'コンポーネント': 'RAM', 'モデル': '64GB DDR5-5600（2×32GB）', '価格': '未追跡' },
@@ -1243,19 +1243,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**フルGPU速度対応モデル：** 7B（全量子化）、13B、14B Q4/Q8、30B Q4',
           '**70Bサポート：** CPUオフロードが必要（速度はここでは追跡していません）',
-          '**最大消費電力：** 約450W',
+          '**定格電力（CPUとGPUのみ）：** 350 W + 105 W = 455 W。他の部品と瞬間ピークは別です',
         ],
         callouts: [
-          { type: 'tip', text: '中古 vs 新品：中古RTX 3090の成約は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（情報源の更新日2026-10-15）によると約$1,400〜1,550。残りの新品在庫があってもここでは追跡しておらず、中古は保証が不確実。返品可能な販売者を選び、マイニング使用の痕跡（ファン異音など）を確認すること。' },
+          { type: 'tip', text: '中古 vs 新品：[InsiderLLM中古GPUガイド](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)によると、米国eBayの成約は$1,500〜1,725（中央値$1,650、225件、2026年11月13〜23日、送料別）です。残りの新品在庫はここでは追跡しておらず、中古は保証が不確実です。返品可能な販売者を選び、マイニング使用の痕跡（ファン異音など）を確認してください。' },
         ],
       },
       tier2: {
         title: '第2段階：推奨AIワークステーション',
         id: 'tier2',
-        content: '推奨ビルドはRTX 4090（24GB、約1TB/sメモリ帯域幅）とAMD Ryzen 9 9950X（Zen 5、16コア）を中心に構成。[llama.cppのCUDAスコアボード](https://github.com/ggml-org/llama.cpp/discussions/15013)（7B Q4_0、開発者報告）ではRTX 4090は186.2 tok/s、RTX 3090は158.2 tok/s（186.2 / 158.2 = 1.18倍）で、プロンプト処理は11,993対5,175 tok/s（2.3倍）。NVIDIAのボード電力はRTX 4090が450 W、RTX 3090が350 Wです。**この構成を選ぶべき場合：** 最良のシングルGPU構成が欲しい、14B〜32Bモデルを日常的に使う、70Bを時々オフロードで動かしたい。**避けるべき場合：** 70Bが日常の主用途——その場合はプロ構成でGPU速度の70Bを。',
+        content: '推奨ビルドはRTX 4090（24GB、約1TB/sメモリ帯域幅）とAMD Ryzen 9 9950X（Zen 5、16コア）を中心に構成。[llama.cppのCUDAスコアボード](https://github.com/ggml-org/llama.cpp/discussions/15013)（7B Q4_0、開発者報告）ではRTX 4090は186.2 tok/s、RTX 3090は158.2 tok/s（186.2 / 158.2 = 1.18倍）で、プロンプト処理は11,993対5,175 tok/s（2.3倍）。NVIDIAのボード電力はRTX 4090が450 W、RTX 3090が350 Wです。**この構成を選ぶべき場合：** 24GBのシングルGPU構成が欲しい、14B〜32Bモデルを日常的に使う、70Bを時々オフロードで動かしたい。**避けるべき場合：** 70Bが日常の主用途——その場合はプロ構成でGPU速度の70Bを。',
         columns: ['コンポーネント', 'モデル', '価格'],
         rows: [
-          { 'コンポーネント': 'GPU', 'モデル': 'NVIDIA GeForce RTX 4090 24GB', '価格': '$2,575–3,010 (中古の成約済み, InsiderLLM、2026-10-15)' },
+          { 'コンポーネント': 'GPU', 'モデル': 'NVIDIA GeForce RTX 4090 24GB', '価格': '$2,575–3,010 (米国成約、2026年10月)' },
           { 'コンポーネント': 'CPU', 'モデル': 'AMD Ryzen 9 9950X（16C/32T、Zen 5）', '価格': '未追跡' },
           { 'コンポーネント': 'マザーボード', 'モデル': 'ASUS ProArt X870E-Creator WiFi', '価格': '未追跡' },
           { 'コンポーネント': 'RAM', 'モデル': '64GB DDR5-6000 CL30（2×32GB）', '価格': '未追跡' },
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**14B Q8速度：** ここでは追跡していません',
           '**30B Q4速度：** ここでは追跡していません',
           '**70B Q4（CPUオフロード）：** 64GB RAMで可能（速度はここでは追跡していません）',
-          '**最大消費電力：** 約550W',
+          '**定格電力（CPUとGPUのみ）：** 450 W + 170 W = 620 W。他の部品と瞬間ピークは別です',
         ],
       },
       tier3: {
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'デュアルRTX 3090（合計48GB VRAM）で70Bモデル推論をVRAM内で実現。Ryzen Threadripper 7960X（24コア）と256GB DDR5 ECCで大型レイヤーのCPUオフロードも高速化。**この構成を選ぶべき場合：** 70Bが主用途、48GB以上のGPU VRAMが必要、複数ユーザーが同時利用。**避けるべき場合：** 32Bを超えるモデルを使ったことがない——その場合は明らかにオーバースペック。',
         columns: ['コンポーネント', 'モデル', '価格'],
         rows: [
-          { 'コンポーネント': 'GPU ×2', 'モデル': '2× NVIDIA RTX 3090 24GB（中古）', '価格': '$2,800–3,100 (2 × $1,400–1,550, 中古の成約済み, InsiderLLM、2026-10-15)' },
+          { 'コンポーネント': 'GPU ×2', 'モデル': '2× NVIDIA RTX 3090 24GB（中古）', '価格': '$3,000–3,450 (2 × $1,500–1,725, 米国成約、2026年11月13〜23日)' },
           { 'コンポーネント': 'CPU', 'モデル': 'AMD Ryzen Threadripper 7960X（24C）', '価格': '未追跡' },
           { 'コンポーネント': 'マザーボード', 'モデル': 'ASUS Pro WS TRX50-SAGE WiFi', '価格': '未追跡' },
           { 'コンポーネント': 'RAM', 'モデル': '256GB DDR5-5200 ECC（8×32GB）', '価格': '未追跡' },
@@ -1302,10 +1302,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**70B Q4速度：** マルチGPU構成について出典付きのtok/s値はないため、記載しません',
           '**256GB RAM CPUオフロード：** 140B以上の量子化モデルをRAMに収容可能（速度はここでは追跡していません）',
-          '**最大消費電力：** 約900W',
+          '**定格電力（CPUとGPUのみ）：** 2 × 350 W + 350 W = 1,050 W。他の部品と瞬間ピークは別です',
         ],
         callouts: [
-          { type: 'warning', text: '2026年のDDR5不足はECC/RDIMMサーバーメモリに最も強く影響——256GB DDR5 ECCキットは希少かつ価格変動が激しい。注文前にマザーボードのQVL掲載RAMのリアルタイム見積もりを取得すること。上記は確認済みの推定値であり保証価格ではない。' },
+          { type: 'warning', text: '256GBのDDR5 ECCメモリはこの構成の大きな費用項目で、RAM価格はこのページでは追跡していません。DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）が、この数字はECC/RDIMMサーバーメモリに限ったものではありません。注文前に、マザーボードのQVLに掲載されたRAMの最新見積もりを取ってください。' },
         ],
       },
       dontBuy: {
@@ -1313,18 +1313,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**32Bモデルが目標なのに8GB GPU** — 即座にVRAMの壁に当たる。RAMを伸縮できるようにGPUの容量不足を補うトリックはない',
           '**高価なCPUと容量不足のGPUの組み合わせ** — 推論速度を決めるのはGPUとVRAMであり、CPUクロックではない',
-          '**新規AIワークステーションにSATA SSD** — モデルロードがPCIe Gen 4 NVMeより5倍遅く、差額はわずか3000〜6000円',
-          '**容量不足の電源** — プロ構成は約900Wに達する。安価な750W電源はデュアルGPU連続稼働で不安定になる',
+          '**新規AIワークステーションにSATA SSD** — モデルのロードがSATAインターフェース（6 Gb/s）に制限され、PCIe Gen 4 NVMeを大きく下回ります',
+          '**容量不足の電源** — プロ構成はGPUのボード電力とCPUのTDPだけで1,050 Wになり、他の部品や瞬間的なピークは別です。750W電源では不足です（電気安全に関する助言ではありません）',
           '**本格的な70B CPUオフロードに32GB RAM** — モデル自体がメモリに載るだけで約40GB必要',
         ],
-        note: 'GPUとVRAMは、CPUにさらに4万円かけるより重要——このルール一つで「何をアップグレードすべきか」という質問のほとんどに答えられる。',
+        note: 'ローカル推論では、より高価なCPUよりもGPUとVRAMが重要です。',
       },
       cloudVsLocal: {
         title: 'ワークステーションを構築すべきか、クラウドGPUを借りるべきか？',
         decisionBlock: {
           title: 'ローカルワークステーション vs クラウドGPUレンタル',
           localIf: [
-            'ローカルモデルを1日2時間以上使用する',
+            'ローカルモデルを1日4時間以上使用する（この場合、GPUのみの回収期間は約5.3年）',
             'プライバシーやデータ所在地が重要',
             '固定で予測可能な長期コストを望む',
             '既に上記のいずれかの構成に決めている',
@@ -1351,14 +1351,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'nvidia.comから、または`ubuntu-drivers autoinstall`でNVIDIAドライバー550+をインストール',
           'Ollamaをインストール: `curl -fsSL https://ollama.com/install.sh | sh`',
           'モデルを取得: `ollama pull qwen2.5:14b-instruct-q8_0`',
-          'ネットワークサーバーとして実行: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'ネットワークサーバーとして実行: `OLLAMA_HOST=0.0.0.0 ollama serve`（任意。信頼できるネットワークのみ：APIがネットワークに公開され、ローカルAPIは認証を要求しないため、ポートをインターネットに公開しないでください）',
           'ブラウザUI用にOpen WebUIをインストール: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           'Tailscale経由で公開し、あらゆるデバイスから安全にリモートアクセス',
         ],
       },
       benchmarkComparison: {
         title: '3つの構成すべての性能比較',
-        content: 'ハードウェア性能は2026年初頭の測定値と変わりません——変わったのは価格だけです。',
+        content: '出典があるのは単一のRTXカードの7B Q4_0生成速度のみです（[llama.cppのCUDAスコアボード](https://github.com/ggml-org/llama.cpp/discussions/15013)、開発者報告）。その他のセルは未追跡と表示しています。',
         columns: ['モデル + 量子化', 'バジェット', '推奨', 'プロ'],
         rows: [
           { 'モデル + 量子化': '7B Q4_0（llama.cppスコアボード）', 'バジェット': '158.2 tok/s（RTX 3090）', '推奨': '186.2 tok/s（RTX 4090）', 'プロ': 'マルチGPUの出典付き数値なし' },
@@ -1370,7 +1370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: '総所有コスト：ワークステーション vs クラウドGPU',
-        content: 'システム総額は追跡していないため、GPUのみの試算です：中古RTX 4090の成約中央値$2,860（[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、情報源の更新日2026-10-15）と、このページで使っている例示レート$0.44/時（再確認していません）のRunPod A40レンタルを、3つの利用レベルで比較します。電気代はRTX 4090のボード電力450 Wを$0.15/kWhで計算（例：450 W × 4時間 × 365 = 657 kWh × $0.15 ≈ $99）。回収期間 = GPU価格 ÷（クラウド費用 − 電気代）、例：1日4時間なら$2,860 ÷（$642 − $99）≈ 5.3年。RAM、CPU、その他の部品は期間を延ばします。',
+        content: 'システム総額は追跡していないため、GPUのみの試算です：中古RTX 4090の成約中央値$2,860（[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、米国の成約、2026年10月）と、このページで仮定している例示レート$0.44/時のRunPod A40レンタルを、3つの利用レベルで比較します。2026-11-27に確認した[RunPodの料金ページ](https://www.runpod.io/pricing)では、A40は$0.35/時（Community Cloud）と$0.59/時（Secure Cloud）で、1日4時間の場合の回収期間はそれぞれ約6.9年と約3.8年になります。電気代はRTX 4090のボード電力450 Wを$0.15/kWhで計算（例：450 W × 4時間 × 365 = 657 kWh × $0.15 ≈ $99）。回収期間 = GPU価格 ÷（クラウド費用 − 電気代）、例：1日4時間なら$2,860 ÷（$642 − $99）≈ 5.3年。RAM、CPU、その他の部品は期間を延ばします。',
         columns: ['利用状況', 'クラウド年間コスト(A40 @$0.44/時)', 'ワークステーション年間電気代', 'クラウド比の回収期間'],
         rows: [
           { '利用状況': '1日2時間', 'クラウド年間コスト(A40 @$0.44/時)': '~$321', 'ワークステーション年間電気代': '$49 (450 W, $0.15/kWh)', 'クラウド比の回収期間': '~10.5 年 (GPUのみ)' },
@@ -1388,19 +1388,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'なぜRAM価格がこれらの構成でそれほど重要なのですか？',
-            a: 'RAMはGPU価格の変動以上にビルド費用を押し上げることがあります。メーカーがAIデータセンター向けHBMチップに製造能力を振り向けたことによる2026年のDRAM不足により、DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）。RAMとストレージの価格はこのページでは追跡していません。購入前に現在の出品を確認してください。',
+            a: 'RAM価格はビルド費用を大きく左右することがあります。メーカーがAIデータセンター向けHBMチップに製造能力を振り向けたことによる2026年のDRAM不足により、DDR5の価格は2026年8月までの12か月で約500%上昇しました（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)、2026-08-18。128GBのDDR5-6400キットは$3,399で掲載）。RAMとストレージの価格はこのページでは追跡していません。購入前に現在の出品を確認してください。',
           },
           {
             q: 'バジェット・プロ構成用のRTX 3090は中古と新品どちらを買うべきですか？',
-            a: '2026年時点では中古が一般的な選択です——「新品」があっても旧在庫です。中古カードの成約は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（情報源の更新日2026-10-15、出品データであり見積りではありません）によると約$1,400〜1,550です。負荷時の異音や焦げ臭さ（マイニング使用の兆候）を確認し、返品可能な販売者を選んでください。',
+            a: '2026年時点ではRTX 3090は中古が一般的な選択で、「新品」は残り在庫です。[InsiderLLM中古GPUガイド](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)によると、米国eBayの成約は$1,500〜1,725（中央値$1,650、225件、2026年11月13〜23日、送料別）です（成約データであり見積りではありません）。負荷時の異音や焦げ臭さ（激しい使用の可能性を示す兆候）を確認し、返品可能な販売者を選んでください。',
           },
           {
             q: 'OllamaをデュアルGPUで動かすためにNVLinkは必要ですか？',
-            a: 'いいえ。OllamaはPCIe経由のCUDAテンソル並列処理を使用します——NVLinkは不要。デュアルRTX 3090のセットアップはNVLinkなしで完全に動作します。',
+            a: 'いいえ。[OllamaのFAQ](https://docs.ollama.com/faq)によると、1枚のGPUに収まるモデルはそのGPUに読み込まれ、収まらない場合はPCIe経由で利用可能なGPUに分散されます。NVLinkは不要です。',
           },
           {
             q: 'プロビルドにRTX 4090の代わりにデュアルRTX 3090を使う理由は？',
-            a: 'VRAMが決め手です。2枚のRTX 3090で合計48GB——Llama 3.3 70B Q4（約40GB）を収容できます。単体のRTX 4090は24GBのみ——70BはCPUオフロードなしでは収まりません。GPU速度での70B推論にはデュアル3090がVRAM/円で優れています。',
+            a: 'VRAMが決め手です。2枚のRTX 3090で合計48GB——Llama 3.3 70B Q4（約40GB）を収容できます。単体のRTX 4090は24GBのみ——70BはCPUオフロードなしでは収まりません。GPU速度での70B推論にはデュアル3090が1ドルあたりのVRAMで優れています。',
           },
         ],
       },
@@ -1421,11 +1421,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       finalVerdict: {
         title: 'どのワークステーションを買うべきか？',
         rankedItems: [
-          { rank: 1, name: '💰 バジェット構成', tagline: 'RTX 3090 24GB（中古）', verdict: '32B Q4までのモデルを完全にGPUで実行。予算重視で中古GPUに抵抗がない人向け。', affiliateLinks: [{ label: 'バジェット構成を見る →', url: 'https://www.amazon.co.jp/s?k=RTX+3090' }] },
-          { rank: 2, name: '⭐ 総合ベスト — 推奨構成', tagline: 'RTX 4090 24GB', verdict: '性能・VRAM・消費電力・拡張性のバランスが最良。迷ったらここから。', affiliateLinks: [{ label: '推奨構成を見る →', url: 'https://www.amazon.co.jp/s?k=RTX+4090+Ryzen+9950X' }] },
+          { rank: 1, name: '💰 バジェット構成', tagline: 'RTX 3090 24GB（中古）', verdict: 'Q4の約32BまでのモデルはGPUに収まります（コンテキスト長による）。予算重視で中古GPUに抵抗がない人向け。', affiliateLinks: [{ label: 'バジェット構成を見る →', url: 'https://www.amazon.co.jp/s?k=RTX+3090' }] },
+          { rank: 2, name: '⭐ 当サイトのおすすめ — 推奨構成', tagline: 'RTX 4090 24GB', verdict: '当サイトの見解では、性能・VRAM・消費電力・拡張性のバランスが良い構成。迷ったらここから。', affiliateLinks: [{ label: '推奨構成を見る →', url: 'https://www.amazon.co.jp/s?k=RTX+4090+Ryzen+9950X' }] },
           { rank: 3, name: '🚀 70B／プロ — プロ構成', tagline: 'デュアルRTX 3090（48GB）', verdict: '70BをVRAMに収容（マルチGPUのtok/sは出典付きの数値なし）。70Bが日常の主用途の場合のみ購入。', affiliateLinks: [{ label: 'プロ構成を見る →', url: 'https://www.amazon.co.jp/s?k=Threadripper+7960X' }] },
         ],
-        content: 'まだ迷っていますか？推奨RTX 4090構成から始めましょう——大多数のローカルAIユーザーにとって性能・VRAM・消費電力・拡張性の最良のバランスです。',
+        content: 'まだ迷っていますか？推奨RTX 4090構成から始めましょう——当サイトの見解では、大多数のローカルAIユーザーにとって性能・VRAM・消費電力・拡張性のバランスが良い構成です。',
       },
       relatedReading: {
         title: '関連記事',
@@ -1458,7 +1458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', position: 2, name: 'nvidia.comまたは`ubuntu-drivers autoinstall`でNVIDIAドライバー550以降をインストールする' },
         { '@type': 'HowToStep', position: 3, name: 'Ollamaをインストールする: `curl -fsSL https://ollama.com/install.sh | sh`' },
         { '@type': 'HowToStep', position: 4, name: 'モデルを取得する: `ollama pull qwen2.5:14b-instruct-q8_0`' },
-        { '@type': 'HowToStep', position: 5, name: 'ネットワークサーバーとして実行する: `OLLAMA_HOST=0.0.0.0 ollama serve`' },
+        { '@type': 'HowToStep', position: 5, name: 'ネットワークサーバーとして実行する: `OLLAMA_HOST=0.0.0.0 ollama serve`（信頼できるネットワークのみ。インターネットには公開しない）' },
         { '@type': 'HowToStep', position: 6, name: 'ブラウザUI用のOpen WebUIをインストールする: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`' },
         { '@type': 'HowToStep', position: 7, name: 'Tailscale経由で公開し、あらゆるデバイスから安全にリモートアクセスする' },
       ],
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'プロビルド', description: 'デュアルRTX 3090 48GB + Threadripper + 256GB — 70B Q4をVRAMに収容' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'ローカルAI最高ワークステーション構成2026年版：3つの予算別ビルド', datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/ja/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'ローカルAI最高ワークステーション構成2026年版：3つの予算別ビルド', datePublished: '2026-05-26', dateModified: '2026-11-27', url: 'https://www.promptquorum.com/ja/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'ja' },
   },
 
   zh: {
@@ -1495,17 +1495,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '查看专业档配件 →', url: 'https://search.jd.com/Search?keyword=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**2026年大多数用户的最佳本地AI工作站是RTX 4090方案：RTX 4090（24GB显存）+ Ryzen 9 9950X + 64GB DDR5。在[llama.cpp CUDA 排行榜](https://github.com/ggml-org/llama.cpp/discussions/15013)上，它在7B Q4_0模型上达到186.2 tok/s（开发者报告），14B Q8无需卸载即可装下。直达各档位：[入门](#tier1)・[推荐](#tier2)・[专业](#tier3)。**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**对于2026年组装本地AI工作站的大多数用户，我们的首选是RTX 4090方案：RTX 4090（24GB显存）+ Ryzen 9 9950X + 64GB DDR5。在[llama.cpp CUDA 排行榜](https://github.com/ggml-org/llama.cpp/discussions/15013)上，它在7B Q4_0模型上达到186.2 tok/s（开发者报告），14B Q8无需卸载即可装下。直达各档位：[入门](#tier1)・[推荐](#tier2)・[专业](#tier3)。**',
     quickAnswerTop: {
       zh: {
         question: '2026年本地运行AI模型的最佳PC配置是什么？',
-        answer: '多数用户推荐：RTX 4090（24GB）+ Ryzen 9 9950X + 64GB DDR5-6000。GPU速度运行70B模型：双RTX 3090（合计48GB显存）+ Threadripper。预算入门：二手RTX 3090 + Ryzen 7 7700X。整机总价未追踪，仅追踪GPU价格，依据[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于2026-10-15；挂牌数据，不是报价）：RTX 3090 二手成交约$1,400–1,550，RTX 4090 二手成交$2,575–3,010（中位数$2,860）。DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）；购买前请查看当前RAM价格。',
+        answer: '多数用户推荐：RTX 4090（24GB）+ Ryzen 9 9950X + 64GB DDR5-6000。GPU速度运行70B模型：双RTX 3090（合计48GB显存）+ Threadripper。预算入门：二手RTX 3090 + Ryzen 7 7700X。整机总价未追踪，仅追踪GPU价格（美国市场eBay成交数据，不是报价）：二手RTX 3090为$1,500–1,725（中位数$1,650；225笔，2026年11月13–23日，不含运费；[InsiderLLM 二手GPU指南](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)），二手RTX 4090为$2,575–3,010（中位数$2,860；216笔，2026年10月；[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)）。DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）；购买前请查看当前RAM价格。',
         bullets: [
           '入门：二手RTX 3090（24GB）+ Ryzen 7 7700X + 64GB DDR5 — 运行30B Q4',
           '推荐：RTX 4090（24GB）+ Ryzen 9 9950X + 64GB DDR5 — 运行30B Q4',
           '专业：双RTX 3090（48GB）+ Threadripper 7960X — 70B Q4可装入显存（多GPU的tok/s无有出处的数据）',
-          'RAM对整机成本的影响可能超过GPU价格波动：DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）',
+          'RAM价格可能大幅改变整机成本：DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）',
           '所有配置轻松运行7B和14B；70B需要双GPU或CPU卸载',
         ],
         updatedDate: '2026-11',
@@ -1515,20 +1515,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'RTX 4090依然是2026年本地AI最佳单卡消费级GPU：24GB显存，约1TB/s带宽——其二手成交价为$2,575–3,010（中位数$2,860，[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）',
+          '推荐档我们选择RTX 4090：24GB显存，带宽约1TB/s（RTX 5090显存更大，为32GB）。美国二手成交价$2,575–3,010（中位数$2,860，2026年10月，[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)）',
           'DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）',
           '70B Q4模型需要40GB以上显存——需要双RTX 3090或CPU卸载',
           '本页不追踪CPU、主板、电源、机箱、散热器和存储的价格——购买前请查看当前挂牌价',
-          'PCIe Gen 4/5 NVMe可在2秒内加载完7B模型，存储价格在此未追踪',
+          'PCIe Gen 4/5 NVMe的顺序读取速度远高于SATA，可缩短模型加载时间（本页未实测加载时间）；存储价格在此未追踪',
           '第一、二档共用AM5插槽——GPU/内存可后续升级无需换主板；第三档需要TRX50',
         ],
       },
       quickCompare: {
         title: '应该组装哪种工作站？',
-        content: '根据实际需要运行的最大模型选择：7B–14B→入门档。14B–32B→推荐档。70B→专业档。第一行仅显示GPU价格（二手成交，[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15；挂牌数据，不是报价）；整机总价未追踪。',
+        content: '根据实际需要运行的最大模型选择：7B–14B→入门档。14B–32B→推荐档。70B→专业档。第一行仅显示GPU价格（美国二手成交，不是报价：[RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)为2026年11月13–23日，[RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)为2026年10月）；整机总价未追踪。',
         columns: ['', '入门档', '推荐档', '专业档'],
         rows: [
-          { '': 'GPU 价格（二手）', '入门档': '$1,400–1,550 (二手成交, InsiderLLM，2026-10-15)', '推荐档': '$2,575–3,010 (二手成交, InsiderLLM，2026-10-15)', '专业档': '$2,800–3,100 (2 × $1,400–1,550, 二手成交, InsiderLLM，2026-10-15)' },
+          { '': 'GPU 价格（二手）', '入门档': '$1,500–1,725 (美国成交，2026年11月13–23日)', '推荐档': '$2,575–3,010 (美国成交，2026年10月)', '专业档': '$3,000–3,450 (2 × $1,500–1,725, 美国成交，2026年11月13–23日)' },
           { '': 'GPU', '入门档': 'RTX 3090 24GB（二手）', '推荐档': 'RTX 4090 24GB', '专业档': '2× RTX 3090（48GB）' },
           { '': 'CPU', '入门档': 'Ryzen 7 7700X', '推荐档': 'Ryzen 9 9950X', '专业档': 'Threadripper 7960X' },
           { '': '内存', '入门档': '64GB DDR5', '推荐档': '64GB DDR5-6000', '专业档': '256GB DDR5 ECC' },
@@ -1540,18 +1540,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '查看推荐档配件 →', url: 'https://search.jd.com/Search?keyword=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: '查看专业档配件 →', url: 'https://search.jd.com/Search?keyword=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: '每套配置仅标注GPU一行的价格（二手成交，[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）。RAM和其他配件未追踪：DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）。',
+        note: '每套配置仅标注GPU一行的价格（美国二手成交：RTX 3090 见[InsiderLLM 二手GPU指南](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)，2026年11月13–23日；RTX 4090 见[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，2026年10月）。RAM和其他配件未追踪：DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）。',
       },
       editorsChoice: {
         title: '编辑推荐：RTX 4090推荐档工作站',
         highlight: true,
-        content: '2026年综合最佳本地AI工作站——在显存、升级空间和价格之间为最广泛的模型范围取得平衡。',
+        content: '这三套配置中我们的首选——为较广的模型范围在显存、升级空间和价格之间取得平衡。',
         items: [
-          '24GB显存——32B Q4以内的模型均可完全在GPU上运行',
+          '24GB显存——Q4量化下约32B以内的模型可装入GPU（视上下文长度而定）',
           '64GB DDR5-6000——足以对70B进行CPU卸载（速度在此未追踪）',
           'Qwen3 32B Q4可完全装入GPU；70B可卸载运行',
-          'GPU：RTX 4090 二手成交$2,575–3,010（中位数$2,860，[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）；其他配件未追踪',
-          '**可跳过的情况：** 如果只运行7B–14B模型，入门档成本更低且效果相当',
+          'GPU：RTX 4090 二手成交$2,575–3,010（中位数$2,860，[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，美国成交，2026年10月）；其他配件未追踪',
+          '**可跳过的情况：** 如果只运行7B–14B模型，成本更低的入门档即可覆盖这些模型规模',
         ],
         affiliateLinks: [
           { label: 'RTX 4090 24GB — 查看当前价格 →', url: 'https://search.jd.com/Search?keyword=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu' },
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '预算方案以二手RTX 3090（24GB显存）为核心。在[llama.cpp CUDA 排行榜](https://github.com/ggml-org/llama.cpp/discussions/15013)上，RTX 3090在7B Q4_0模型上达到158.2 tok/s（开发者报告）；更大模型的速度在此未追踪。NVIDIA标注RTX 3090的板卡功耗为350 W——请搭配优质850 W电源（这不是电气安全建议）。**适合购买的情况：** 主要运行7B–32B模型、可接受二手GPU。**应跳过的情况：** 70B是主要负载——本档需要CPU卸载，可用但较慢。',
         columns: ['组件', '型号', '价格'],
         rows: [
-          { '组件': 'GPU', '型号': 'NVIDIA RTX 3090（二手，24GB）', '价格': '$1,400–1,550 (二手成交, InsiderLLM，2026-10-15)' },
+          { '组件': 'GPU', '型号': 'NVIDIA RTX 3090（二手，24GB）', '价格': '$1,500–1,725 (美国成交，2026年11月13–23日)' },
           { '组件': 'CPU', '型号': 'AMD Ryzen 7 7700X', '价格': '未追踪' },
           { '组件': '主板', '型号': 'MSI MAG X670E Tomahawk WiFi', '价格': '未追踪' },
           { '组件': '内存', '型号': '64GB DDR5-5600（2×32GB）', '价格': '未追踪' },
@@ -1597,19 +1597,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**全GPU速度支持的模型：** 7B（任意量化）、13B、14B Q4/Q8、30B Q4',
           '**70B支持：** 需要CPU卸载（速度在此未追踪）',
-          '**峰值功耗：** 约450W',
+          '**标称功耗（仅CPU+GPU）：** 350 W + 105 W = 455 W；其他配件和瞬时峰值另计',
         ],
         callouts: [
-          { type: 'tip', text: '二手 vs 全新：二手RTX 3090的成交价约$1,400–1,550（[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）；所剩的全新库存若有，本页未追踪，且二手卡保修不确定。选择支持退货的卖家，并检查是否有挖矿磨损痕迹（风扇噪音异常等）。' },
+          { type: 'tip', text: '二手 vs 全新：据[InsiderLLM 二手GPU指南](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)，美国eBay成交价为$1,500–1,725（中位数$1,650；225笔，2026年11月13–23日，不含运费）。所剩全新库存本页未追踪，且二手卡保修不确定。请选择支持退货的卖家，并检查是否有挖矿磨损痕迹（风扇噪音异常等）。' },
         ],
       },
       tier2: {
         title: '第二档：推荐AI工作站',
         id: 'tier2',
-        content: '推荐方案以RTX 4090（24GB，约1TB/s内存带宽）搭配AMD Ryzen 9 9950X（Zen 5，16核）为核心。在[llama.cpp CUDA 排行榜](https://github.com/ggml-org/llama.cpp/discussions/15013)（7B Q4_0，开发者报告）上，RTX 4090为186.2 tok/s，RTX 3090为158.2 tok/s（186.2 / 158.2 = 1.18倍），提示处理为11,993对5,175 tok/s（2.3倍）；NVIDIA标注的板卡功耗为RTX 4090 450 W、RTX 3090 350 W。**适合购买的情况：** 想要最佳单卡工作站、经常运行14B–32B模型、偶尔卸载运行70B。**应跳过的情况：** 70B是日常主要负载——应选专业档以GPU速度运行70B。',
+        content: '推荐方案以RTX 4090（24GB，约1TB/s内存带宽）搭配AMD Ryzen 9 9950X（Zen 5，16核）为核心。在[llama.cpp CUDA 排行榜](https://github.com/ggml-org/llama.cpp/discussions/15013)（7B Q4_0，开发者报告）上，RTX 4090为186.2 tok/s，RTX 3090为158.2 tok/s（186.2 / 158.2 = 1.18倍），提示处理为11,993对5,175 tok/s（2.3倍）；NVIDIA标注的板卡功耗为RTX 4090 450 W、RTX 3090 350 W。**适合购买的情况：** 想要24GB单卡工作站、经常运行14B–32B模型、偶尔卸载运行70B。**应跳过的情况：** 70B是日常主要负载——应选专业档以GPU速度运行70B。',
         columns: ['组件', '型号', '价格'],
         rows: [
-          { '组件': 'GPU', '型号': 'NVIDIA GeForce RTX 4090 24GB', '价格': '$2,575–3,010 (二手成交, InsiderLLM，2026-10-15)' },
+          { '组件': 'GPU', '型号': 'NVIDIA GeForce RTX 4090 24GB', '价格': '$2,575–3,010 (美国成交，2026年10月)' },
           { '组件': 'CPU', '型号': 'AMD Ryzen 9 9950X（16C/32T，Zen 5）', '价格': '未追踪' },
           { '组件': '主板', '型号': 'ASUS ProArt X870E-Creator WiFi', '价格': '未追踪' },
           { '组件': '内存', '型号': '64GB DDR5-6000 CL30（2×32GB）', '价格': '未追踪' },
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**14B Q8速度：** 在此未追踪',
           '**30B Q4速度：** 在此未追踪',
           '**70B Q4（CPU卸载）：** 64GB内存可行（速度在此未追踪）',
-          '**峰值功耗：** 约550W',
+          '**标称功耗（仅CPU+GPU）：** 450 W + 170 W = 620 W；其他配件和瞬时峰值另计',
         ],
       },
       tier3: {
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '使用双RTX 3090（合计48GB显存）将70B模型完整放入显存运行。Ryzen Threadripper 7960X（24核）加速大型层CPU卸载，256GB DDR5 ECC支持甚至140B量化模型完整加载到内存。**适合购买的情况：** 70B是主要负载、需要48GB以上GPU显存、或支持多用户并发。**应跳过的情况：** 从未运行过超过32B的模型——本档明显配置过剩。',
         columns: ['组件', '型号', '价格'],
         rows: [
-          { '组件': 'GPU ×2', '型号': '2× NVIDIA RTX 3090 24GB（二手）', '价格': '$2,800–3,100 (2 × $1,400–1,550, 二手成交, InsiderLLM，2026-10-15)' },
+          { '组件': 'GPU ×2', '型号': '2× NVIDIA RTX 3090 24GB（二手）', '价格': '$3,000–3,450 (2 × $1,500–1,725, 美国成交，2026年11月13–23日)' },
           { '组件': 'CPU', '型号': 'AMD Ryzen Threadripper 7960X（24C）', '价格': '未追踪' },
           { '组件': '主板', '型号': 'ASUS Pro WS TRX50-SAGE WiFi', '价格': '未追踪' },
           { '组件': '内存', '型号': '256GB DDR5-5200 ECC（8×32GB）', '价格': '未追踪' },
@@ -1656,10 +1656,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**70B Q4速度：** 多GPU配置没有有出处的tok/s数据，因此不列出数字',
           '**256GB内存CPU卸载：** 140B以上量化模型可装入内存（速度在此未追踪）',
-          '**峰值功耗：** 约900W',
+          '**标称功耗（仅CPU+GPU）：** 2 × 350 W + 350 W = 1,050 W；其他配件和瞬时峰值另计',
         ],
         callouts: [
-          { type: 'warning', text: '2026年DDR5短缺对ECC/RDIMM服务器内存冲击最大——256GB DDR5 ECC套装既稀缺又价格波动剧烈。下单前请向主板QVL列表内的内存获取实时报价，上表为核实估算值，非保证价格。' },
+          { type: 'warning', text: '256GB DDR5 ECC内存是这套配置中的一大开销，本页不追踪RAM价格。DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399），但该数据并非专门针对ECC/RDIMM服务器内存。下单前请为主板QVL列表内的内存获取最新报价。' },
         ],
       },
       dontBuy: {
@@ -1667,18 +1667,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**目标是32B模型却选8GB显存GPU** — 会立即遭遇显存瓶颈，任何CPU卸载技巧都无法像扩展内存那样弥补显存不足',
           '**昂贵CPU搭配显存不足的GPU** — 决定推理速度的是GPU及其显存，而非CPU主频',
-          '**新装AI工作站使用SATA SSD** — 模型加载速度比PCIe Gen 4 NVMe慢5倍，差价仅150–300元',
-          '**电源功率不足** — 专业档峰值接近900W，廉价750W电源在双GPU持续负载下会不稳定',
+          '**新装AI工作站使用SATA SSD** — 模型加载受SATA接口（6 Gb/s）限制，远低于PCIe Gen 4 NVMe',
+          '**电源功率不足** — 专业档仅GPU板卡功耗加CPU TDP就达1,050 W，还未计其他配件和瞬时峰值，750W电源功率不足（这不是电气安全建议）',
           '**认真的70B CPU卸载只配32GB内存** — 模型本身仅驻留内存就需要约40GB',
         ],
-        note: 'GPU及其显存比多花1500元在CPU上更重要——这一条规则能回答大多数"该升级什么"的问题。',
+        note: '对本地推理而言，GPU及其显存比更贵的CPU更重要。',
       },
       cloudVsLocal: {
         title: '应该自建工作站还是租用云GPU？',
         decisionBlock: {
           title: '本地工作站 vs 云GPU租赁',
           localIf: [
-            '每天使用本地模型2小时以上',
+            '每天使用本地模型4小时以上（此时仅GPU的回本期约5.3年）',
             '隐私或数据留存对你的业务很重要',
             '希望长期成本固定、可预测',
             '已经决定好上述某个档位',
@@ -1705,7 +1705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '从nvidia.com安装550以上版本的NVIDIA驱动，或运行`ubuntu-drivers autoinstall`',
           '安装Ollama：`curl -fsSL https://ollama.com/install.sh | sh`',
           '拉取模型：`ollama pull qwen2.5:14b-instruct-q8_0`',
-          '以网络服务器模式运行：`OLLAMA_HOST=0.0.0.0 ollama serve`',
+          '以网络服务器模式运行：`OLLAMA_HOST=0.0.0.0 ollama serve`（可选，仅限可信网络：API将向局域网开放，而本地API无需身份验证，切勿将该端口暴露到互联网）',
           '安装Open WebUI以获得浏览器界面：`docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           '通过Tailscale暴露服务，实现从任意设备安全远程访问',
         ],
@@ -1724,7 +1724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: '总拥有成本：工作站 vs 云GPU',
-        content: '整机总价未追踪，因此仅做GPU估算：二手RTX 4090成交中位数$2,860（[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）对比本页使用的示例费率$0.44/小时的RunPod A40租赁（未重新核实），分三种使用强度。电费按RTX 4090板卡功耗450 W、$0.15/kWh计算（例如450 W × 4小时 × 365 = 657 kWh × $0.15 ≈ $99）。回本期 = GPU价格 ÷（云端费用 − 电费），例如每天4小时：$2,860 ÷（$642 − $99）≈ 5.3年。RAM、CPU和其他配件会拉长回本期。',
+        content: '整机总价未追踪，因此仅做GPU估算：二手RTX 4090成交中位数$2,860（[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，美国成交，2026年10月）对比本页假设的示例费率$0.44/小时的RunPod A40租赁，分三种使用强度。2026-11-27查看的[RunPod价格页](https://www.runpod.io/pricing)标示A40为$0.35/小时（Community Cloud）和$0.59/小时（Secure Cloud）；按每天4小时计算，回本期分别约为6.9年和3.8年。电费按RTX 4090板卡功耗450 W、$0.15/kWh计算（例如450 W × 4小时 × 365 = 657 kWh × $0.15 ≈ $99）。回本期 = GPU价格 ÷（云端费用 − 电费），例如每天4小时：$2,860 ÷（$642 − $99）≈ 5.3年。RAM、CPU和其他配件会拉长回本期。',
         columns: ['使用强度', '云端年费（A40 @ 0.44美元/时）', '工作站年电费', '相对云端回本期'],
         rows: [
           { '使用强度': '每天2小时', '云端年费（A40 @ 0.44美元/时）': '~$321', '工作站年电费': '$49 (450 W, $0.15/kWh)', '相对云端回本期': '~10.5 年 (仅 GPU)' },
@@ -1742,23 +1742,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '为什么RAM价格对这些配置影响这么大？',
-            a: 'RAM对整机成本的影响可能超过GPU价格波动。厂商将产能转向AI数据中心HBM芯片导致2026年DRAM短缺，DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）。本页不追踪RAM和存储价格；购买前请查看当前挂牌价。',
+            a: 'RAM价格可能大幅改变整机成本。厂商将产能转向AI数据中心HBM芯片导致2026年DRAM短缺，DDR5 价格在截至2026年8月的12个月内上涨约500%（[Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/)，2026-08-18；一套128GB DDR5-6400 套装标价$3,399）。本页不追踪RAM和存储价格；购买前请查看当前挂牌价。',
           },
           {
             q: '入门档或专业档的RTX 3090应该买二手还是全新？',
-            a: '2026年二手是RTX 3090的常见选择——"全新"若有，也只是旧库存。二手成交价约$1,400–1,550（[InsiderLLM GPU 价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15；挂牌数据，不是报价）；负载下检查是否有异常风扇噪音或焦糊味（挖矿磨损迹象），并优先选择支持退货的卖家。',
+            a: '2026年二手是RTX 3090的常见选择，“全新”只是剩余库存。据[InsiderLLM 二手GPU指南](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)，美国eBay成交价为$1,500–1,725（中位数$1,650；225笔，2026年11月13–23日，不含运费）（成交数据，不是报价）。请在负载下检查是否有异常风扇噪音或焦糊味（可能是重度使用的迹象），并优先选择支持退货的卖家。',
           },
           {
             q: 'Ollama在双GPU上运行需要NVLink吗？',
-            a: '不需要。Ollama通过PCIe使用CUDA张量并行——无需NVLink。双RTX 3090配置完全不需要NVLink即可正常工作。',
+            a: '不需要。根据[Ollama FAQ](https://docs.ollama.com/faq)，能放进单张GPU的模型会加载到该卡；否则会通过PCIe分配到可用的多张GPU上。无需NVLink。',
           },
           {
             q: '专业方案为什么用双RTX 3090而不是单RTX 4090？',
-            a: '显存是关键。两块RTX 3090合计48GB——足够装下Llama 3.3 70B Q4（约40GB）。单块RTX 4090只有24GB——70B无法不卸载直接运行。对于GPU速度的70B推理，双3090在显存/元的性价比上更优。',
+            a: '显存是关键。两块RTX 3090合计48GB——足够装下Llama 3.3 70B Q4（约40GB）。单块RTX 4090只有24GB——70B无法不卸载直接运行。对于GPU速度的70B推理，双3090每美元获得的显存更多。',
           },
           {
             q: '可以从预算方案升级到推荐方案吗？',
-            a: '可以——第一档和第二档都使用AM5接口，可以更换更好的GPU或增加内存而不需要更换主板。第三档使用TRX50接口，从第一/二档升级到第三档需要更换主板和CPU。',
+            a: '可以——第一档和第二档都使用AM5接口，可以更换更好的GPU或增加内存而不需要更换主板（更换GPU前请先确认电源容量、供电接口和机箱空间）。第三档使用TRX50接口，从第一/二档升级到第三档需要更换主板和CPU。',
           },
         ],
       },
@@ -1779,11 +1779,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       finalVerdict: {
         title: '应该购买哪种工作站？',
         rankedItems: [
-          { rank: 1, name: '💰 入门档', tagline: 'RTX 3090 24GB（二手）', verdict: '可完全在GPU上运行32B Q4以内的模型。适合预算有限、可接受二手GPU的用户。', affiliateLinks: [{ label: '查看入门档配置 →', url: 'https://search.jd.com/Search?keyword=RTX+3090' }] },
-          { rank: 2, name: '⭐ 综合最佳 — 推荐档', tagline: 'RTX 4090 24GB', verdict: '在性能、显存、功耗和升级空间之间取得最佳平衡，适合大多数用户，不确定就从这里开始。', affiliateLinks: [{ label: '查看推荐档配置 →', url: 'https://search.jd.com/Search?keyword=RTX+4090+Ryzen+9950X' }] },
+          { rank: 1, name: '💰 入门档', tagline: 'RTX 3090 24GB（二手）', verdict: 'Q4量化下约32B以内的模型可装入GPU（视上下文长度而定）。适合预算有限、可接受二手GPU的用户。', affiliateLinks: [{ label: '查看入门档配置 →', url: 'https://search.jd.com/Search?keyword=RTX+3090' }] },
+          { rank: 2, name: '⭐ 我们的首选 — 推荐档', tagline: 'RTX 4090 24GB', verdict: '我们认为它在性能、显存、功耗和升级空间之间较为均衡，适合大多数用户，不确定就从这里开始。', affiliateLinks: [{ label: '查看推荐档配置 →', url: 'https://search.jd.com/Search?keyword=RTX+4090+Ryzen+9950X' }] },
           { rank: 3, name: '🚀 70B／专业 — 专业档', tagline: '双RTX 3090（48GB）', verdict: '70B装入显存（多GPU的tok/s无有出处的数据）。仅当70B是日常主要负载时才购买。', affiliateLinks: [{ label: '查看专业档配置 →', url: 'https://search.jd.com/Search?keyword=Threadripper+7960X' }] },
         ],
-        content: '仍不确定？从推荐档RTX 4090配置开始——对大多数本地AI用户而言，它在性能、显存、功耗和可升级性之间提供最佳平衡。',
+        content: '仍不确定？从推荐档RTX 4090配置开始——我们认为，对大多数本地AI用户而言，它在性能、显存、功耗和可升级性之间较为均衡。',
       },
       relatedReading: {
         title: '相关阅读',
@@ -1808,7 +1808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: '专业方案为什么用双RTX 3090而不是单RTX 4090？',
-          acceptedAnswer: { '@type': 'Answer', text: '显存决定一切。双3090合计48GB可装下70B Q4（约40GB）；单4090只有24GB，70B必须CPU卸载。双3090在70B GPU速度推理上性价比更高。' },
+          acceptedAnswer: { '@type': 'Answer', text: '显存决定一切。双3090合计48GB可装下70B Q4（约40GB）；单4090只有24GB，70B必须CPU卸载。要以GPU速度运行70B，双3090的显存才够用。' },
         },
       ],
     },
@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'HowToStep', position: 2, name: '从nvidia.com安装550以上版本的NVIDIA驱动，或运行`ubuntu-drivers autoinstall`' },
         { '@type': 'HowToStep', position: 3, name: '安装Ollama：`curl -fsSL https://ollama.com/install.sh | sh`' },
         { '@type': 'HowToStep', position: 4, name: '拉取模型：`ollama pull qwen2.5:14b-instruct-q8_0`' },
-        { '@type': 'HowToStep', position: 5, name: '以网络服务器模式运行：`OLLAMA_HOST=0.0.0.0 ollama serve`' },
+        { '@type': 'HowToStep', position: 5, name: '以网络服务器模式运行：`OLLAMA_HOST=0.0.0.0 ollama serve`（仅限可信网络，切勿暴露到互联网）' },
         { '@type': 'HowToStep', position: 6, name: '安装Open WebUI以获得浏览器界面：`docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`' },
         { '@type': 'HowToStep', position: 7, name: '通过Tailscale暴露服务，实现从任意设备安全远程访问' },
       ],
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '专业方案', description: '双RTX 3090 48GB + Threadripper + 256GB — 70B Q4装入显存' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年本地AI最佳工作站配置：三档预算方案', datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/zh/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年本地AI最佳工作站配置：三档预算方案', datePublished: '2026-05-26', dateModified: '2026-11-27', url: 'https://www.promptquorum.com/zh/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'zh' },
   },
 
   es: {
@@ -1858,17 +1858,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ver componentes del build Profesional →', url: 'https://www.amazon.es/s?k=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**La mejor workstation de IA local en 2026 para la mayoría de usuarios es el build con RTX 4090: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. En la [tabla CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) alcanza 186,2 tok/s con un modelo 7B Q4_0 (informado por desarrolladores), y el 14B en Q8 cabe sin offloading. Ir directo al nivel: [Económico](#tier1) · [Recomendado](#tier2) · [Profesional](#tier3).**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**Nuestra elección para la mayoría de quienes montan una workstation de IA local en 2026 es el build con RTX 4090: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. En la [tabla CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) alcanza 186,2 tok/s con un modelo 7B Q4_0 (informado por desarrolladores), y el 14B en Q8 cabe sin offloading. Ir directo al nivel: [Económico](#tier1) · [Recomendado](#tier2) · [Profesional](#tier3).**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor build de PC para ejecutar modelos de IA localmente en 2026?',
-        answer: 'Para la mayoría de usuarios: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. Para modelos de 70B a velocidad de GPU: dual RTX 3090 (48 GB VRAM en total) + Threadripper. Opción económica: RTX 3090 usada + Ryzen 7 7700X. Los totales no se rastrean; solo los precios de GPU, según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15; datos de anuncios, no ofertas): RTX 3090 vendidas de segunda mano unos $1.400–1.550 y RTX 4090 vendidas de segunda mano $2.575–3.010 (mediana $2.860). Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399); comprueba los precios actuales de la RAM antes de comprar. Los precios en tu país pueden variar según impuestos locales.',
+        answer: 'Para la mayoría de usuarios: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. Para modelos de 70B a velocidad de GPU: dual RTX 3090 (48 GB VRAM en total) + Threadripper. Opción económica: RTX 3090 usada + Ryzen 7 7700X. Los totales no se rastrean; solo los precios de GPU (mercado de EE. UU., ventas cerradas en eBay, no ofertas): RTX 3090 usada $1.500–1.725 (mediana $1.650; 225 ventas, 13–23 de noviembre de 2026, sin envío; [guía de GPU usadas de InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)) y RTX 4090 usada $2.575–3.010 (mediana $2.860; 216 ventas, octubre de 2026; [rastreador de precios de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)). Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399); comprueba los precios actuales de la RAM antes de comprar. Los precios en tu país pueden variar según impuestos locales.',
         bullets: [
           'Económico: RTX 3090 usada (24 GB) + Ryzen 7 7700X + 64 GB DDR5 — ejecuta 30B Q4',
           'Recomendado: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — ejecuta 30B Q4',
           'Profesional: dual RTX 3090 (48 GB) + Threadripper 7960X — el 70B Q4 cabe en VRAM (sin cifra de tok/s con fuente para multi-GPU)',
-          'La RAM puede encarecer un build más que los cambios de precio de la GPU: Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399)',
+          'El precio de la RAM puede cambiar mucho el coste de un build: Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399)',
           'Todos los builds manejan modelos de 7B y 14B sin problemas; el 70B requiere dual GPU o CPU offloading',
         ],
         updatedDate: '2026-11',
@@ -1878,20 +1878,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'La RTX 4090 sigue siendo la mejor GPU de consumo individual para IA local en 2026: 24 GB VRAM, ~1 TB/s de ancho de banda — su precio de segunda mano incluso ha bajado ligeramente desde la primavera',
+          'La RTX 4090 es nuestra elección para el nivel recomendado: 24 GB de VRAM y alrededor de 1 TB/s de ancho de banda (la RTX 5090 tiene más VRAM, 32 GB). Ventas de segunda mano en EE. UU.: $2.575–3.010 (mediana $2.860, octubre de 2026, [rastreador de precios de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/))',
           'Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399)',
           'Los modelos 70B Q4 necesitan más de 40 GB VRAM — requieren dual RTX 3090 o CPU offloading',
           'Los precios de CPU, placa base, fuente, caja, refrigeración y almacenamiento no se rastrean en esta página — comprueba los anuncios actuales antes de comprar',
-          'NVMe PCIe Gen 4/5 carga un modelo de 7B en menos de 2 segundos, los precios del almacenamiento no se rastrean aquí',
+          'Las unidades NVMe PCIe Gen 4/5 leen en secuencial mucho más rápido que SATA, lo que acorta la carga de modelos (los tiempos no se miden aquí); los precios del almacenamiento no se rastrean aquí',
           'Los Niveles 1 y 2 comparten el socket AM5 — actualiza GPU/RAM sin cambiar la placa base; el Nivel 3 requiere TRX50',
         ],
       },
       quickCompare: {
         title: '¿Qué workstation deberías construir?',
-        content: 'Elige tu build según el modelo más grande que realmente necesitas ejecutar: 7B–14B → Económico. 14B–32B → Recomendado. 70B → Profesional. La primera fila muestra solo precios de GPU (ventas de segunda mano, [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15; datos de anuncios, no ofertas); los totales del sistema no se rastrean.',
+        content: 'Elige tu build según el modelo más grande que realmente necesitas ejecutar: 7B–14B → Económico. 14B–32B → Recomendado. 70B → Profesional. La primera fila muestra solo precios de GPU (ventas de segunda mano en EE. UU., no ofertas: [RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), 13–23 de noviembre de 2026; [RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), octubre de 2026); los totales del sistema no se rastrean.',
         columns: ['', 'Económico', 'Recomendado', 'Profesional'],
         rows: [
-          { '': 'Precio de la GPU (usada)', 'Económico': '$1.400–1.550 (ventas de segunda mano, InsiderLLM, 2026-10-15)', 'Recomendado': '$2.575–3.010 (ventas de segunda mano, InsiderLLM, 2026-10-15)', 'Profesional': '$2.800–3.100 (2 × $1.400–1.550, ventas de segunda mano, InsiderLLM, 2026-10-15)' },
+          { '': 'Precio de la GPU (usada)', 'Económico': '$1.500–1.725 (ventas en EE. UU., 13–23 nov 2026)', 'Recomendado': '$2.575–3.010 (ventas en EE. UU., oct 2026)', 'Profesional': '$3.000–3.450 (2 × $1.500–1.725, ventas en EE. UU., 13–23 nov 2026)' },
           { '': 'GPU', 'Económico': 'RTX 3090 24GB (usada)', 'Recomendado': 'RTX 4090 24GB', 'Profesional': '2× RTX 3090 (48GB)' },
           { '': 'CPU', 'Económico': 'Ryzen 7 7700X', 'Recomendado': 'Ryzen 9 9950X', 'Profesional': 'Threadripper 7960X' },
           { '': 'RAM', 'Económico': '64GB DDR5', 'Recomendado': '64GB DDR5-6000', 'Profesional': '256GB DDR5 ECC' },
@@ -1903,18 +1903,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver componentes del build Recomendado →', url: 'https://www.amazon.es/s?k=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: 'Ver componentes del build Profesional →', url: 'https://www.amazon.es/s?k=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: 'Solo la línea de GPU de cada build tiene precio (ventas de segunda mano, [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15). La RAM y el resto de piezas no se rastrean: Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399).',
+        note: 'Solo la línea de GPU de cada build tiene precio (ventas de segunda mano en EE. UU.: [guía de InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) para la RTX 3090, 13–23 de noviembre de 2026; [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) para la RTX 4090, octubre de 2026). La RAM y el resto de piezas no se rastrean: Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399).',
       },
       editorsChoice: {
         title: 'Elección del editor: Workstation Recomendada RTX 4090',
         highlight: true,
-        content: 'La mejor workstation de IA local en general para 2026 — el punto de equilibrio entre VRAM, margen de actualización y precio para la gama más amplia de modelos.',
+        content: 'Nuestra elección entre estos tres builds: un punto de equilibrio entre VRAM, margen de actualización y precio para la gama más amplia de modelos.',
         items: [
-          '24 GB VRAM — ejecuta cualquier modelo hasta 32B Q4 completamente en GPU',
+          '24 GB VRAM — los modelos de hasta unos 32B en Q4 caben en la GPU (según la longitud de contexto)',
           '64 GB DDR5-6000 — suficiente para CPU offload del 70B (velocidad no rastreada aquí)',
           'Qwen3 32B Q4 cabe completamente en la GPU; 70B con offloading',
-          'GPU: RTX 4090 vendidas de segunda mano $2.575–3.010 (mediana $2.860, [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15); resto de piezas no rastreado',
-          '**Sáltatelo si:** solo ejecutas modelos 7B–14B — el build Económico cuesta menos y cumple igual de bien',
+          'GPU: RTX 4090 vendidas de segunda mano $2.575–3.010 (mediana $2.860, [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), ventas en EE. UU., octubre de 2026); resto de piezas no rastreado',
+          '**Sáltatelo si:** solo ejecutas modelos 7B–14B — el build Económico cuesta menos y cubre esos tamaños de modelo',
         ],
         affiliateLinks: [
           { label: 'RTX 4090 24GB — ver precio actual →', url: 'https://www.amazon.es/s?k=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu' },
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'El build económico utiliza una RTX 3090 usada (24 GB VRAM) como núcleo. En la [tabla CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013), la RTX 3090 alcanza 158,2 tok/s con un modelo 7B Q4_0 (informado por desarrolladores); las velocidades de modelos mayores no se rastrean aquí. NVIDIA indica 350 W de potencia de placa para la RTX 3090: combínala con una fuente de calidad de 850 W (esto no es un consejo de seguridad eléctrica). **Elige este build si:** usas sobre todo modelos 7B–32B y no te importa comprar una GPU usada. **Sáltatelo si:** el 70B es tu carga principal — este nivel requiere CPU offloading, funcional pero lento.',
         columns: ['Componente', 'Modelo', 'Precio'],
         rows: [
-          { 'Componente': 'GPU', 'Modelo': 'NVIDIA RTX 3090 (usada, 24 GB)', 'Precio': '$1.400–1.550 (ventas de segunda mano, InsiderLLM, 2026-10-15)' },
+          { 'Componente': 'GPU', 'Modelo': 'NVIDIA RTX 3090 (usada, 24 GB)', 'Precio': '$1.500–1.725 (ventas en EE. UU., 13–23 nov 2026)' },
           { 'Componente': 'CPU', 'Modelo': 'AMD Ryzen 7 7700X', 'Precio': 'no rastreado' },
           { 'Componente': 'Placa base', 'Modelo': 'MSI MAG X670E Tomahawk WiFi', 'Precio': 'no rastreado' },
           { 'Componente': 'RAM', 'Modelo': '64 GB DDR5-5600 (2×32 GB)', 'Precio': 'no rastreado' },
@@ -1960,19 +1960,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Modelos compatibles a velocidad GPU completa:** 7B (cualquier cuantización), 13B (Q4/Q8), 14B (Q4/Q8), 30B (Q4)',
           '**Soporte para 70B:** requiere CPU offloading — funcional pero no ideal (velocidad no rastreada aquí)',
-          '**Consumo eléctrico:** ~450 W en pico (GPU 350 W + CPU 65 W + resto)',
+          '**Potencia nominal (solo CPU + GPU):** 350 W + 105 W = 455 W; se suman las demás piezas y los picos',
         ],
         callouts: [
-          { type: 'tip', text: 'Usada vs. nueva: las RTX 3090 vendidas de segunda mano rondaban los $1.400–1.550 según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15); el stock nuevo que quede, si lo hay, no se rastrea aquí, y una tarjeta usada tiene una garantía incierta. Elige un vendedor con devoluciones y revisa señales de desgaste por minería (ruido de ventilador, olor a quemado bajo carga).' },
+          { type: 'tip', text: 'Usada vs. nueva: Según la [guía de GPU usadas de InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), las ventas cerradas en eBay en EE. UU. fueron de $1.500–1.725 (mediana $1.650; 225 ventas, 13–23 de noviembre de 2026, sin envío). El stock nuevo que quede no se rastrea aquí, y una tarjeta usada tiene una garantía incierta. Elige un vendedor con devoluciones y revisa señales de desgaste por minería (ruido de ventilador, olor a quemado bajo carga).' },
         ],
       },
       tier2: {
         title: 'Nivel 2: workstation de IA recomendada',
         id: 'tier2',
-        content: 'El build recomendado se centra en la RTX 4090 (24 GB, ~1 TB/s de ancho de banda de memoria) combinada con el AMD Ryzen 9 9950X (Zen 5, 16 núcleos). En la [tabla CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, informado por desarrolladores) la RTX 4090 genera 186,2 tok/s frente a 158,2 de la RTX 3090 (186,2 / 158,2 = 1,18×) y procesa prompts a 11.993 frente a 5.175 tok/s (2,3×); NVIDIA indica 450 W de potencia de placa para la RTX 4090 frente a 350 W para la RTX 3090. **Elige este build si:** quieres la mejor workstation mono-GPU, usas modelos 14B–32B regularmente, y ocasionalmente haces offload de un 70B. **Sáltatelo si:** el 70B es tu carga diaria principal — mejor Profesional para velocidad de GPU en 70B.',
+        content: 'El build recomendado se centra en la RTX 4090 (24 GB, ~1 TB/s de ancho de banda de memoria) combinada con el AMD Ryzen 9 9950X (Zen 5, 16 núcleos). En la [tabla CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, informado por desarrolladores) la RTX 4090 genera 186,2 tok/s frente a 158,2 de la RTX 3090 (186,2 / 158,2 = 1,18×) y procesa prompts a 11.993 frente a 5.175 tok/s (2,3×); NVIDIA indica 450 W de potencia de placa para la RTX 4090 frente a 350 W para la RTX 3090. **Elige este build si:** quieres una workstation mono-GPU de 24 GB, usas modelos 14B–32B regularmente, y ocasionalmente haces offload de un 70B. **Sáltatelo si:** el 70B es tu carga diaria principal — mejor Profesional para velocidad de GPU en 70B.',
         columns: ['Componente', 'Modelo', 'Precio'],
         rows: [
-          { 'Componente': 'GPU', 'Modelo': 'NVIDIA GeForce RTX 4090 24 GB', 'Precio': '$2.575–3.010 (ventas de segunda mano, InsiderLLM, 2026-10-15)' },
+          { 'Componente': 'GPU', 'Modelo': 'NVIDIA GeForce RTX 4090 24 GB', 'Precio': '$2.575–3.010 (ventas en EE. UU., oct 2026)' },
           { 'Componente': 'CPU', 'Modelo': 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', 'Precio': 'no rastreado' },
           { 'Componente': 'Placa base', 'Modelo': 'ASUS ProArt X870E-Creator WiFi', 'Precio': 'no rastreado' },
           { 'Componente': 'RAM', 'Modelo': '64 GB DDR5-6000 CL30 (2×32 GB)', 'Precio': 'no rastreado' },
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Velocidad 14B Q8:** no rastreada aquí',
           '**Velocidad 30B Q4:** no rastreada aquí',
           '**70B Q4 (CPU offloading):** posible con 64 GB RAM (velocidad no rastreada aquí)',
-          '**Consumo eléctrico:** ~550 W en pico',
+          '**Potencia nominal (solo CPU + GPU):** 450 W + 170 W = 620 W; se suman las demás piezas y los picos',
         ],
       },
       tier3: {
@@ -2002,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'El build profesional está orientado a la inferencia de modelos 70B completamente en VRAM usando dos RTX 3090 para un total de 48 GB VRAM. El Ryzen Threadripper 7960X (24 núcleos) acelera el CPU offloading. Con 256 GB DDR5 ECC, incluso los modelos 140B cuantizados se cargan completamente en RAM. **Elige este build si:** el 70B es tu carga principal, necesitas 48 GB+ de VRAM de GPU, o das soporte a varios usuarios simultáneos. **Sáltatelo si:** nunca has usado un modelo mayor de 32B — este nivel es entonces un sobrecoste importante.',
         columns: ['Componente', 'Modelo', 'Precio'],
         rows: [
-          { 'Componente': 'GPU ×2', 'Modelo': '2× NVIDIA RTX 3090 24 GB (usadas)', 'Precio': '$2.800–3.100 (2 × $1.400–1.550, ventas de segunda mano, InsiderLLM, 2026-10-15)' },
+          { 'Componente': 'GPU ×2', 'Modelo': '2× NVIDIA RTX 3090 24 GB (usadas)', 'Precio': '$3.000–3.450 (2 × $1.500–1.725, ventas en EE. UU., 13–23 nov 2026)' },
           { 'Componente': 'CPU', 'Modelo': 'AMD Ryzen Threadripper 7960X (24C)', 'Precio': 'no rastreado' },
           { 'Componente': 'Placa base', 'Modelo': 'ASUS Pro WS TRX50-SAGE WiFi', 'Precio': 'no rastreado' },
           { 'Componente': 'RAM', 'Modelo': '256 GB DDR5-5200 ECC (8×32 GB)', 'Precio': 'no rastreado' },
@@ -2020,10 +2020,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Velocidad 70B Q4:** no existe una cifra de tok/s con fuente para configuraciones multi-GPU, por lo que no se cita ninguna',
           '**CPU offloading con 256 GB RAM:** modelos cuantizados de 140B+ caben en la RAM (velocidad no rastreada aquí)',
-          '**Consumo eléctrico:** ~900 W en pico',
+          '**Potencia nominal (solo CPU + GPU):** 2 × 350 W + 350 W = 1.050 W; se suman las demás piezas y los picos',
         ],
         callouts: [
-          { type: 'warning', text: 'La escasez de DDR5 de 2026 golpeó con más fuerza a la RAM de servidor ECC/RDIMM — los kits DDR5 ECC de 256 GB son escasos y con precio volátil, y los precios de la RAM no se rastrean en esta página (los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399)). Consigue un presupuesto en tiempo real de RAM listada en la QVL de tu placa antes de pedir.' },
+          { type: 'warning', text: '256 GB de DDR5 ECC son una partida de coste importante en este build, y los precios de la RAM no se rastrean en esta página. Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399); esa cifra no se refiere específicamente a la memoria de servidor ECC/RDIMM. Pide un presupuesto actual de RAM incluida en la QVL de tu placa antes de comprar.' },
         ],
       },
       dontBuy: {
@@ -2031,18 +2031,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Una GPU de 8 GB si el objetivo son modelos de 32B** — chocarás con el límite de VRAM de inmediato',
           '**Una CPU cara con una GPU insuficiente** — la GPU y su VRAM deciden la velocidad de inferencia mucho más que el reloj de la CPU',
-          '**Un SSD SATA para una workstation de IA nueva** — carga de modelos 5 veces más lenta que NVMe Gen 4 por una diferencia de 20–40 €',
-          '**Una fuente de poder insuficiente** — el nivel Profesional alcanza picos cercanos a 900 W',
+          '**Un SSD SATA para una workstation de IA nueva** — la carga de modelos queda limitada por la interfaz SATA (6 Gb/s), muy por debajo de un NVMe PCIe Gen 4',
+          '**Una fuente de poder insuficiente** — en el nivel Profesional, la potencia de placa de las GPU y el TDP de la CPU suman solos 1.050 W, sin otras piezas ni picos; una de 750 W se queda corta (no es un consejo de seguridad eléctrica)',
           '**32 GB de RAM para offloading serio de 70B en CPU** — el propio modelo necesita ~40 GB solo para residir en memoria',
         ],
-        note: 'La GPU y su VRAM importan más que otros 300 € en la CPU — esta única regla responde la mayoría de las preguntas de "qué debería mejorar".',
+        note: 'Para la inferencia local, la GPU y su VRAM importan más que una CPU más cara.',
       },
       cloudVsLocal: {
         title: '¿Construir una workstation o alquilar GPU en la nube?',
         decisionBlock: {
           title: 'Workstation local vs. alquiler de GPU en la nube',
           localIf: [
-            'Usas modelos locales 2+ horas/día',
+            'Usas modelos locales 4+ horas/día (la GPU sola se amortiza entonces en unos 5,3 años)',
             'La privacidad o la residencia de datos importan para tu caso de uso',
             'Quieres un coste fijo y predecible a largo plazo',
             'Ya te has decidido por un nivel de arriba',
@@ -2069,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instala los drivers de NVIDIA 550+ desde nvidia.com o con `ubuntu-drivers autoinstall`',
           'Instala Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
           'Descarga un modelo: `ollama pull qwen2.5:14b-instruct-q8_0`',
-          'Ejecuta como servidor de red: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'Ejecuta como servidor de red: `OLLAMA_HOST=0.0.0.0 ollama serve` — opcional, solo en redes de confianza: la API queda accesible en la red y la API local no exige autenticación; nunca expongas el puerto a Internet',
           'Instala Open WebUI para interfaz en el navegador: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           'Usa Tailscale para acceso remoto seguro desde cualquier dispositivo',
         ],
@@ -2088,7 +2088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: 'Coste total de propiedad: workstation vs. GPU en la nube',
-        content: 'Un cálculo solo de GPU, porque los totales del sistema no se rastrean: la mediana de $2.860 de las RTX 4090 vendidas de segunda mano ([rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15) frente al alquiler de una A40 de RunPod a la tarifa ilustrativa de $0,44/h usada en esta página (sin reverificar), en tres niveles de uso. La electricidad son los 450 W de potencia de placa de la RTX 4090 a $0,15/kWh (por ejemplo 450 W × 4 h × 365 = 657 kWh × $0,15 ≈ $99). Amortización = precio de la GPU ÷ (coste en la nube − coste eléctrico), p. ej. a 4 h/día: $2.860 ÷ ($642 − $99) ≈ 5,3 años. La RAM, la CPU y el resto de piezas la alargarían.',
+        content: 'Un cálculo solo de GPU, porque los totales del sistema no se rastrean: la mediana de $2.860 de las RTX 4090 vendidas de segunda mano ([rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), ventas en EE. UU., octubre de 2026) frente al alquiler de una A40 de RunPod a la tarifa ilustrativa de $0,44/h que esta página toma como supuesto, en tres niveles de uso. La [página de precios de RunPod](https://www.runpod.io/pricing), consultada el 2026-11-27, mostraba la A40 a $0,35/h (Community Cloud) y $0,59/h (Secure Cloud); a 4 h/día, la amortización sería de unos 6,9 y 3,8 años. La electricidad son los 450 W de potencia de placa de la RTX 4090 a $0,15/kWh (por ejemplo 450 W × 4 h × 365 = 657 kWh × $0,15 ≈ $99). Amortización = precio de la GPU ÷ (coste en la nube − coste eléctrico), p. ej. a 4 h/día: $2.860 ÷ ($642 − $99) ≈ 5,3 años. La RAM, la CPU y el resto de piezas la alargarían.',
         columns: ['Uso', 'Coste nube/año (A40 a 0,44 $/h)', 'Coste eléctrico workstation/año', 'Amortización vs. nube'],
         rows: [
           { 'Uso': '2 h/día', 'Coste nube/año (A40 a 0,44 $/h)': '~$321', 'Coste eléctrico workstation/año': '$49 (450 W, $0,15/kWh)', 'Amortización vs. nube': '~10,5 años (solo GPU)' },
@@ -2106,15 +2106,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Por qué importa tanto el precio de la RAM en estos builds?',
-            a: 'La RAM puede encarecer un build más que los cambios de precio de la GPU. Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399). Los precios de RAM y almacenamiento no se rastrean en esta página; comprueba los anuncios actuales antes de comprar.',
+            a: 'El precio de la RAM puede cambiar mucho el coste de un build. Los precios de la DDR5 subieron cerca de un 500 % en 12 meses hasta agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; un kit DDR5-6400 de 128 GB se listó a $3.399). Los precios de RAM y almacenamiento no se rastrean en esta página; comprueba los anuncios actuales antes de comprar.',
           },
           {
             q: '¿Debería comprar una RTX 3090 usada o nueva?',
-            a: 'Usada es la opción habitual en 2026 — "nueva" es, si existe, stock antiguo. Las tarjetas vendidas de segunda mano rondaban los $1.400–1.550 según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15; datos de anuncios, no ofertas); revisa ruido excesivo de ventilador u olor a quemado bajo carga, y prefiere un vendedor que acepte devoluciones.',
+            a: 'Usada es la opción habitual para la RTX 3090 en 2026; las unidades «nuevas» son stock sobrante. Según la [guía de GPU usadas de InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), las ventas cerradas en eBay en EE. UU. fueron de $1.500–1.725 (mediana $1.650; 225 ventas, 13–23 de noviembre de 2026, sin envío) (datos de ventas, no ofertas). Revisa si hay ruido excesivo de ventilador u olor a quemado bajo carga, y prefiere un vendedor que acepte devoluciones.',
           },
           {
             q: '¿Necesito NVLink para ejecutar Ollama en dos GPU?',
-            a: 'No. Ollama usa paralelismo de tensores CUDA a través de PCIe — no se necesita NVLink. La configuración con dual RTX 3090 funciona perfectamente sin NVLink.',
+            a: 'No. Según las [FAQ de Ollama](https://docs.ollama.com/faq), un modelo que cabe en una sola GPU se carga en ella; si no, se reparte entre las GPU disponibles a través de PCIe. No se necesita NVLink.',
           },
           {
             q: '¿Por qué una dual RTX 3090 en lugar de una RTX 4090 para el build profesional?',
@@ -2139,11 +2139,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       finalVerdict: {
         title: '¿Qué workstation deberías comprar?',
         rankedItems: [
-          { rank: 1, name: '💰 Build Económico', tagline: 'RTX 3090 24GB (usada)', verdict: 'Ejecuta cualquier modelo hasta 32B Q4 completamente en GPU.', affiliateLinks: [{ label: 'Ver el build Económico →', url: 'https://www.amazon.es/s?k=RTX+3090' }] },
-          { rank: 2, name: '⭐ Mejor opción general — Build Recomendado', tagline: 'RTX 4090 24GB', verdict: 'El mejor equilibrio entre rendimiento, VRAM y precio para la mayoría de usuarios.', affiliateLinks: [{ label: 'Ver el build Recomendado →', url: 'https://www.amazon.es/s?k=RTX+4090+Ryzen+9950X' }] },
+          { rank: 1, name: '💰 Build Económico', tagline: 'RTX 3090 24GB (usada)', verdict: 'Los modelos de hasta unos 32B en Q4 caben en la GPU (según la longitud de contexto).', affiliateLinks: [{ label: 'Ver el build Económico →', url: 'https://www.amazon.es/s?k=RTX+3090' }] },
+          { rank: 2, name: '⭐ Nuestra elección — Build Recomendado', tagline: 'RTX 4090 24GB', verdict: 'En nuestra opinión, un buen equilibrio entre rendimiento, VRAM y precio para la mayoría de usuarios.', affiliateLinks: [{ label: 'Ver el build Recomendado →', url: 'https://www.amazon.es/s?k=RTX+4090+Ryzen+9950X' }] },
           { rank: 3, name: '🚀 70B / profesional — Build Profesional', tagline: 'Dual RTX 3090 (48GB)', verdict: '70B en VRAM (sin cifra de tok/s multi-GPU con fuente). Solo para uso diario de 70B.', affiliateLinks: [{ label: 'Ver el build Profesional →', url: 'https://www.amazon.es/s?k=Threadripper+7960X' }] },
         ],
-        content: '¿Sigues sin decidirte? Empieza con el build Recomendado RTX 4090 — ofrece el mejor equilibrio de rendimiento, VRAM, consumo y capacidad de actualización para la mayoría de usuarios.',
+        content: '¿Sigues sin decidirte? Empieza con el build Recomendado RTX 4090 — en nuestra opinión equilibra bien rendimiento, VRAM, consumo y capacidad de actualización para la mayoría de usuarios.',
       },
       relatedReading: {
         title: 'Lectura relacionada',
@@ -2173,7 +2173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Necesito NVLink para ejecutar Ollama en dos GPU?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No. Ollama usa paralelismo de tensores CUDA a través de PCIe — no se necesita NVLink. La configuración dual RTX 3090 funciona perfectamente sin él.',
+            text: 'No. Según las [FAQ de Ollama](https://docs.ollama.com/faq), un modelo que cabe en una sola GPU se carga en ella; si no, se reparte entre las GPU disponibles a través de PCIe. No se necesita NVLink.',
           },
         },
         {
@@ -2202,7 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor workstation para IA local 2026: tres niveles de presupuesto',
       description: 'Listas completas de componentes para tres builds de workstation de IA local: económico, recomendado y profesional, con precios de GPU fechados y el impacto de la escasez de DDR5 de 2026.',
       datePublished: '2026-05-26',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2229,17 +2229,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '전문가형 구성 부품 보기 →', url: 'https://www.coupang.com/np/search?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**2026년 대부분의 사용자에게 최적인 로컬 AI 워크스테이션은 RTX 4090 빌드입니다: RTX 4090(24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. [llama.cpp CUDA 스코어보드](https://github.com/ggml-org/llama.cpp/discussions/15013)에서 7B Q4_0 모델 기준 186.2 tok/s(개발자 보고)에 도달하며, 14B Q8은 오프로딩 없이 들어갑니다. 단계별 바로가기: [경제형](#tier1) · [추천형](#tier2) · [전문가형](#tier3).**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**2026년에 로컬 AI 워크스테이션을 구성하는 대부분의 사용자에게 저희가 추천하는 것은 RTX 4090 빌드입니다: RTX 4090(24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. [llama.cpp CUDA 스코어보드](https://github.com/ggml-org/llama.cpp/discussions/15013)에서 7B Q4_0 모델 기준 186.2 tok/s(개발자 보고)에 도달하며, 14B Q8은 오프로딩 없이 들어갑니다. 단계별 바로가기: [경제형](#tier1) · [추천형](#tier2) · [전문가형](#tier3).**',
     quickAnswerTop: {
       ko: {
         question: '2026년 AI 모델을 로컬로 실행하기 위한 최고의 PC 빌드는 무엇입니까?',
-        answer: '대부분의 사용자에게: RTX 4090(24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. GPU 속도로 70B 모델을 실행하려면: 듀얼 RTX 3090(총 48 GB VRAM) + Threadripper. 경제적 옵션: 중고 RTX 3090 + Ryzen 7 7700X. 총액은 추적하지 않으며 GPU 가격만 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15, 매물 데이터이며 견적이 아닙니다)에 따라 추적합니다: RTX 3090 중고 체결 약 $1,400–1,550, RTX 4090 중고 체결 $2,575–3,010(중앙값 $2,860). 원화 가격은 조사하지 않아 USD로 표기하며, 한국 가격은 다를 수 있습니다. DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록). 구매 전에 현재 RAM 가격을 확인하십시오.',
+        answer: '대부분의 사용자에게: RTX 4090(24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. GPU 속도로 70B 모델을 실행하려면: 듀얼 RTX 3090(총 48 GB VRAM) + Threadripper. 경제적 옵션: 중고 RTX 3090 + Ryzen 7 7700X. 총액은 추적하지 않으며 GPU 가격만 추적합니다(미국 시장 eBay 체결 데이터이며 견적이 아닙니다): 중고 RTX 3090 $1,500–1,725(중앙값 $1,650, 225건, 2026년 11월 13–23일, 배송비 제외, [InsiderLLM 중고 GPU 가이드](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)), 중고 RTX 4090 $2,575–3,010(중앙값 $2,860, 216건, 2026년 10월, [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)). 원화 가격은 조사하지 않아 USD로 표기하며, 한국 가격은 다를 수 있습니다. DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록). 구매 전에 현재 RAM 가격을 확인하십시오.',
         bullets: [
           '경제형: 중고 RTX 3090(24 GB) + Ryzen 7 7700X + 64 GB DDR5 — 30B Q4 실행',
           '추천형: RTX 4090(24 GB) + Ryzen 9 9950X + 64 GB DDR5 — 30B Q4 실행',
           '전문가형: 듀얼 RTX 3090(48 GB) + Threadripper 7960X — 70B Q4를 VRAM에 수용(멀티 GPU의 tok/s는 출처 있는 수치 없음)',
-          'RAM은 GPU 가격 변동보다 빌드 비용을 더 크게 올릴 수 있습니다: DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록)',
+          'RAM 가격은 빌드 비용을 크게 바꿀 수 있습니다: DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록)',
           '모든 빌드에서 7B, 14B 모델은 문제 없이 실행됩니다. 70B는 듀얼 GPU 또는 CPU 오프로딩이 필요합니다.',
         ],
         updatedDate: '2026-11',
@@ -2249,20 +2249,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'RTX 4090은 여전히 2026년 로컬 AI용 최고의 단일 소비자 GPU입니다: 24 GB VRAM, ~1 TB/s 대역폭 — 중고 체결은 $2,575–3,010(중앙값 $2,860, [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15)',
+          '추천형에는 RTX 4090을 선택합니다: 24 GB VRAM, 약 1 TB/s 대역폭(VRAM은 RTX 5090이 32 GB로 더 많습니다). 미국 중고 체결가 $2,575–3,010(중앙값 $2,860, 2026년 10월, [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/))',
           'DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록)',
           '70B Q4 모델은 40 GB VRAM 이상이 필요합니다 — 듀얼 RTX 3090 또는 CPU 오프로딩 필요',
           'CPU, 메인보드, 전원공급장치, 케이스, 쿨러, 스토리지 가격은 이 페이지에서 추적하지 않습니다 — 구매 전에 현재 매물을 확인하십시오',
-          'NVMe PCIe Gen 4/5는 7B 모델을 2초 미만에 로드하지만, 스토리지 가격은 여기서 추적하지 않습니다',
+          'PCIe Gen 4/5 NVMe는 SATA보다 순차 읽기 속도가 훨씬 빨라 모델 로딩이 짧아집니다(로딩 시간은 여기서 측정하지 않음). 스토리지 가격은 추적하지 않습니다',
           '1, 2단계는 AM5 소켓을 공유합니다 — 마더보드 교체 없이 GPU/RAM 업그레이드 가능; 3단계는 TRX50 필요',
         ],
       },
       quickCompare: {
         title: '어떤 워크스테이션을 구성해야 할까?',
-        content: '실제로 실행할 최대 모델 크기로 선택하세요: 7B–14B → 경제형. 14B–32B → 추천형. 70B → 전문가형. 첫 행은 GPU 가격만 보여줍니다(중고 체결, [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15, 매물 데이터이며 견적이 아닙니다). 시스템 총액은 추적하지 않습니다.',
+        content: '실제로 실행할 최대 모델 크기로 선택하십시오: 7B–14B → 경제형. 14B–32B → 추천형. 70B → 전문가형. 첫 행은 GPU 가격만 보여줍니다(미국 중고 체결이며 견적이 아닙니다: [RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)은 2026년 11월 13–23일, [RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)은 2026년 10월). 시스템 총액은 추적하지 않습니다.',
         columns: ['', '경제형', '추천형', '전문가형'],
         rows: [
-          { '': 'GPU 가격(중고)', '경제형': '$1,400–1,550 (중고 체결, InsiderLLM, 2026-10-15)', '추천형': '$2,575–3,010 (중고 체결, InsiderLLM, 2026-10-15)', '전문가형': '$2,800–3,100 (2 × $1,400–1,550, 중고 체결, InsiderLLM, 2026-10-15)' },
+          { '': 'GPU 가격(중고)', '경제형': '$1,500–1,725 (미국 체결, 2026년 11월 13–23일)', '추천형': '$2,575–3,010 (미국 체결, 2026년 10월)', '전문가형': '$3,000–3,450 (2 × $1,500–1,725, 미국 체결, 2026년 11월 13–23일)' },
           { '': 'GPU', '경제형': 'RTX 3090 24GB(중고)', '추천형': 'RTX 4090 24GB', '전문가형': '2× RTX 3090(48GB)' },
           { '': 'CPU', '경제형': 'Ryzen 7 7700X', '추천형': 'Ryzen 9 9950X', '전문가형': 'Threadripper 7960X' },
           { '': 'RAM', '경제형': '64GB DDR5', '추천형': '64GB DDR5-6000', '전문가형': '256GB DDR5 ECC' },
@@ -2274,18 +2274,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '추천형 구성 부품 보기 →', url: 'https://www.coupang.com/np/search?q=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: '전문가형 구성 부품 보기 →', url: 'https://www.coupang.com/np/search?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: '구성별로 GPU 행만 가격을 표기합니다(중고 체결, [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15). RAM 등 나머지 부품은 추적하지 않습니다: DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록).',
+        note: '구성별로 GPU 행만 가격을 표기합니다(미국 중고 체결: RTX 3090은 [InsiderLLM 중고 GPU 가이드](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)의 2026년 11월 13–23일, RTX 4090은 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)의 2026년 10월). RAM 등 나머지 부품은 추적하지 않습니다: DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록).',
       },
       editorsChoice: {
         title: '편집부 추천: RTX 4090 추천형 워크스테이션',
         highlight: true,
-        content: '2026년 종합 최고의 로컬 AI 워크스테이션 — 가장 폭넓은 모델 범위에 대해 VRAM, 업그레이드 여지, 가격의 균형점.',
+        content: '이 세 가지 구성 중 저희의 선택 — 폭넓은 모델 범위에 대해 VRAM, 업그레이드 여지, 가격의 균형점.',
         items: [
-          '24GB VRAM — 32B Q4까지 모든 모델을 GPU에서 완전히 실행',
+          '24GB VRAM — Q4 기준 약 32B까지의 모델이 GPU에 들어갑니다(컨텍스트 길이에 따라 다름)',
           '64GB DDR5-6000 — 70B CPU 오프로드에 충분(속도는 여기서 추적하지 않음)',
           'Qwen3 32B Q4는 GPU에 완전히 들어갑니다; 70B는 오프로딩으로',
-          'GPU: RTX 4090 중고 체결 $2,575–3,010(중앙값 $2,860, [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15); 나머지 부품은 미추적',
-          '**건너뛰어야 할 경우:** 7B–14B 모델만 사용한다면 경제형이 더 저렴하면서 동일한 성능',
+          'GPU: RTX 4090 중고 체결 $2,575–3,010(중앙값 $2,860, [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 미국 체결, 2026년 10월); 나머지 부품은 미추적',
+          '**건너뛰어야 할 경우:** 7B–14B 모델만 사용한다면 더 저렴한 경제형으로 이 모델 크기를 처리할 수 있습니다',
         ],
         affiliateLinks: [
           { label: 'RTX 4090 24GB — 현재 가격 확인 →', url: 'https://www.coupang.com/np/search?q=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu' },
@@ -2313,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '경제형 빌드는 중고 RTX 3090(24 GB VRAM)을 핵심으로 사용합니다. [llama.cpp CUDA 스코어보드](https://github.com/ggml-org/llama.cpp/discussions/15013)에서 RTX 3090은 7B Q4_0 모델 기준 158.2 tok/s(개발자 보고)입니다. 더 큰 모델의 속도는 여기서 추적하지 않습니다. NVIDIA는 RTX 3090의 보드 전력을 350 W로 명시하며, 품질 좋은 850 W 전원공급장치와 함께 사용하십시오(전기 안전에 대한 조언이 아닙니다). **이 구성을 선택할 경우:** 주로 7B–32B 모델을 사용하며 중고 GPU 구매에 거부감이 없는 경우. **건너뛰어야 할 경우:** 70B가 주 용도라면 — 이 단계는 CPU 오프로딩이 필요하며 작동은 하지만 느립니다.',
         columns: ['부품', '모델', '가격'],
         rows: [
-          { '부품': 'GPU', '모델': 'NVIDIA RTX 3090 (중고, 24 GB)', '가격': '$1,400–1,550 (중고 체결, InsiderLLM, 2026-10-15)' },
+          { '부품': 'GPU', '모델': 'NVIDIA RTX 3090 (중고, 24 GB)', '가격': '$1,500–1,725 (미국 체결, 2026년 11월 13–23일)' },
           { '부품': 'CPU', '모델': 'AMD Ryzen 7 7700X', '가격': '미추적' },
           { '부품': '마더보드', '모델': 'MSI MAG X670E Tomahawk WiFi', '가격': '미추적' },
           { '부품': 'RAM', '모델': '64 GB DDR5-5600 (2×32 GB)', '가격': '미추적' },
@@ -2324,26 +2324,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '부품': '합계', '모델': '', '가격': '미추적(GPU 행만 추적)' },
         ],
         affiliateLinks: [
-          { label: '중고나라·번개장터에서 중고 RTX 3090 확인 →', url: 'https://www.danggeun.com/search?keyword=RTX%203090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu' },
+          { label: '당근에서 중고 RTX 3090 확인 →', url: 'https://www.daangn.com/kr/search/buy-sell/?q=RTX%203090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu' },
           { label: 'Coupang에서 AMD Ryzen 7 7700X 확인 →', url: 'https://www.coupang.com/np/search?q=Ryzen+7+7700X', productName: 'AMD Ryzen 7 7700X', productCategory: 'cpu' },
           { label: '경제형 전체 구성 보기 →', url: 'https://www.coupang.com/np/search?q=RTX+3090+64GB+DDR5', productName: 'Budget Workstation Build', productCategory: 'pc-component' },
         ],
         items: [
           '**전체 GPU 속도로 지원되는 모델:** 7B (모든 양자화), 13B (Q4/Q8), 14B (Q4/Q8), 30B (Q4)',
           '**70B 지원:** CPU 오프로딩 필요 — 기능적이지만 이상적이지 않음(속도는 여기서 추적하지 않음)',
-          '**전력 소비:** ~450 W 최대 (GPU 350 W + CPU 65 W + 나머지)',
+          '**정격 전력(CPU + GPU만):** 350 W + 105 W = 455 W. 다른 부품과 순간 피크는 별도입니다',
         ],
         callouts: [
-          { type: 'tip', text: '중고 vs 신품: 중고 RTX 3090 체결은 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)에 따르면 약 $1,400–1,550입니다. 남은 신품 재고가 있더라도 여기서 추적하지 않으며, 중고는 보증이 불확실합니다. 반품 가능한 판매자를 선택하고, 채굴 사용 흔적(팬 소음 등)을 확인하세요.' },
+          { type: 'tip', text: '중고 vs 신품: [InsiderLLM 중고 GPU 가이드](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)에 따르면 미국 eBay 체결가는 $1,500–1,725입니다(중앙값 $1,650, 225건, 2026년 11월 13–23일, 배송비 제외). 남은 신품 재고는 여기서 추적하지 않으며, 중고는 보증이 불확실합니다. 반품 가능한 판매자를 선택하고 채굴 사용 흔적(팬 소음 등)을 확인하십시오.' },
         ],
       },
       tier2: {
         title: '2단계: 추천형 AI 워크스테이션',
         id: 'tier2',
-        content: '추천 빌드는 RTX 4090(24 GB, ~1 TB/s 메모리 대역폭)과 AMD Ryzen 9 9950X(Zen 5, 16코어)를 중심으로 합니다. [llama.cpp CUDA 스코어보드](https://github.com/ggml-org/llama.cpp/discussions/15013)(7B Q4_0, 개발자 보고)에서 RTX 4090은 186.2 tok/s, RTX 3090은 158.2 tok/s(186.2 / 158.2 = 1.18배)이며, 프롬프트 처리는 11,993 대 5,175 tok/s(2.3배)입니다. NVIDIA가 명시한 보드 전력은 RTX 4090이 450 W, RTX 3090이 350 W입니다. **이 구성을 선택할 경우:** 최고의 단일 GPU 워크스테이션을 원하고 14B–32B 모델을 자주 사용하며 가끔 70B를 오프로드하는 경우. **건너뛰어야 할 경우:** 70B가 매일 주 용도라면 — GPU 속도로 70B를 실행하려면 전문가형을 선택하세요.',
+        content: '추천 빌드는 RTX 4090(24 GB, ~1 TB/s 메모리 대역폭)과 AMD Ryzen 9 9950X(Zen 5, 16코어)를 중심으로 합니다. [llama.cpp CUDA 스코어보드](https://github.com/ggml-org/llama.cpp/discussions/15013)(7B Q4_0, 개발자 보고)에서 RTX 4090은 186.2 tok/s, RTX 3090은 158.2 tok/s(186.2 / 158.2 = 1.18배)이며, 프롬프트 처리는 11,993 대 5,175 tok/s(2.3배)입니다. NVIDIA가 명시한 보드 전력은 RTX 4090이 450 W, RTX 3090이 350 W입니다. **이 구성을 선택할 경우:** 24 GB 단일 GPU 워크스테이션을 원하고 14B–32B 모델을 자주 사용하며 가끔 70B를 오프로드하는 경우. **건너뛰어야 할 경우:** 70B가 매일 주 용도라면 — GPU 속도로 70B를 실행하려면 전문가형을 선택하십시오.',
         columns: ['부품', '모델', '가격'],
         rows: [
-          { '부품': 'GPU', '모델': 'NVIDIA GeForce RTX 4090 24 GB', '가격': '$2,575–3,010 (중고 체결, InsiderLLM, 2026-10-15)' },
+          { '부품': 'GPU', '모델': 'NVIDIA GeForce RTX 4090 24 GB', '가격': '$2,575–3,010 (미국 체결, 2026년 10월)' },
           { '부품': 'CPU', '모델': 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', '가격': '미추적' },
           { '부품': '마더보드', '모델': 'ASUS ProArt X870E-Creator WiFi', '가격': '미추적' },
           { '부품': 'RAM', '모델': '64 GB DDR5-6000 CL30 (2×32 GB)', '가격': '미추적' },
@@ -2363,7 +2363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**14B Q8 속도:** 여기서 추적하지 않음',
           '**30B Q4 속도:** 여기서 추적하지 않음',
           '**70B Q4 (CPU 오프로딩):** 64 GB RAM으로 가능(속도는 여기서 추적하지 않음)',
-          '**전력 소비:** ~550 W 최대',
+          '**정격 전력(CPU + GPU만):** 450 W + 170 W = 620 W. 다른 부품과 순간 피크는 별도입니다',
         ],
       },
       tier3: {
@@ -2372,7 +2372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '전문가형 빌드는 총 48 GB VRAM의 RTX 3090 두 개를 사용하여 70B 모델을 VRAM 안에서 추론하는 것을 목표로 합니다. Ryzen Threadripper 7960X(24코어)는 48 GB를 초과하는 모델의 CPU 오프로딩을 가속합니다. 256 GB DDR5 ECC로 양자화된 140B 모델도 완전히 RAM에 로드할 수 있습니다. **이 구성을 선택할 경우:** 70B가 주 용도이거나 48GB 이상의 GPU VRAM이 필요하거나 여러 사용자가 동시에 접속하는 경우. **건너뛰어야 할 경우:** 32B 이상 모델을 써본 적이 없다면 — 이 단계는 명백한 과잉 사양입니다.',
         columns: ['부품', '모델', '가격'],
         rows: [
-          { '부품': 'GPU ×2', '모델': '2× NVIDIA RTX 3090 24 GB (중고)', '가격': '$2,800–3,100 (2 × $1,400–1,550, 중고 체결, InsiderLLM, 2026-10-15)' },
+          { '부품': 'GPU ×2', '모델': '2× NVIDIA RTX 3090 24 GB (중고)', '가격': '$3,000–3,450 (2 × $1,500–1,725, 미국 체결, 2026년 11월 13–23일)' },
           { '부품': 'CPU', '모델': 'AMD Ryzen Threadripper 7960X (24C)', '가격': '미추적' },
           { '부품': '마더보드', '모델': 'ASUS Pro WS TRX50-SAGE WiFi', '가격': '미추적' },
           { '부품': 'RAM', '모델': '256 GB DDR5-5200 ECC (8×32 GB)', '가격': '미추적' },
@@ -2383,17 +2383,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '부품': '합계', '모델': '', '가격': '미추적(GPU 행만 추적)' },
         ],
         affiliateLinks: [
-          { label: '중고 RTX 3090 2개 확인 →', url: 'https://www.danggeun.com/search?keyword=RTX%203090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'gpu' },
+          { label: '중고 RTX 3090 2개 확인 →', url: 'https://www.daangn.com/kr/search/buy-sell/?q=RTX%203090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'gpu' },
           { label: 'Coupang에서 Ryzen Threadripper 7960X 확인 →', url: 'https://www.coupang.com/np/search?q=Threadripper+7960X', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'cpu' },
           { label: '전문가형 전체 구성 보기 →', url: 'https://www.coupang.com/np/search?q=Threadripper+7960X+dual+RTX+3090', productName: 'Professional Workstation Build', productCategory: 'pc-component' },
         ],
         items: [
           '**70B Q4 속도:** 멀티 GPU 구성에 대해 출처 있는 tok/s 수치가 없어 어떤 수치도 제시하지 않습니다',
           '**256 GB RAM으로 CPU 오프로딩:** 140B+ 양자화 모델을 RAM에 수용 가능(속도는 여기서 추적하지 않음)',
-          '**전력 소비:** ~900 W 최대',
+          '**정격 전력(CPU + GPU만):** 2 × 350 W + 350 W = 1,050 W. 다른 부품과 순간 피크는 별도입니다',
         ],
         callouts: [
-          { type: 'warning', text: '2026년 DDR5 부족은 ECC/RDIMM 서버 메모리에 가장 큰 타격을 주었습니다 — 256GB DDR5 ECC 키트는 희소하고 가격 변동이 심하며, RAM 가격은 이 페이지에서 추적하지 않습니다. DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록)를 참고하세요. 주문 전 마더보드 QVL에 등재된 RAM의 실시간 견적을 받으세요.' },
+          { type: 'warning', text: '256 GB DDR5 ECC 메모리는 이 구성에서 큰 비용 항목이며, RAM 가격은 이 페이지에서 추적하지 않습니다. DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐지만([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록), 이 수치는 ECC/RDIMM 서버 메모리에 한정된 것이 아닙니다. 주문 전 마더보드 QVL에 등재된 RAM의 최신 견적을 받으십시오.' },
         ],
       },
       dontBuy: {
@@ -2401,18 +2401,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**32B 모델이 목표인데 8GB GPU** — 즉시 VRAM 한계에 부딪히며, 어떤 CPU 오프로딩 트릭도 GPU 용량 부족을 RAM처럼 늘려주지 못합니다',
           '**비싼 CPU와 VRAM 부족한 GPU 조합** — 추론 속도를 결정하는 것은 CPU 클록보다 GPU와 VRAM입니다',
-          '**신규 AI 워크스테이션에 SATA SSD** — 모델 로딩이 PCIe Gen 4 NVMe보다 5배 느린데 가격 차이는 3~5만원 수준입니다',
-          '**용량 부족한 파워 서플라이** — 전문가형은 약 900W 피크에 도달, 저가 750W는 듀얼 GPU 연속 부하에서 불안정해집니다',
+          '**신규 AI 워크스테이션에 SATA SSD** — 모델 로딩이 SATA 인터페이스(6 Gb/s)에 제한되어 PCIe Gen 4 NVMe에 크게 못 미칩니다',
+          '**용량 부족한 파워 서플라이** — 전문가형은 GPU 보드 전력과 CPU TDP만 합쳐도 1,050 W이며 다른 부품과 순간 피크는 별도이므로 750W는 부족합니다(전기 안전에 대한 조언이 아닙니다)',
           '**본격적인 70B CPU 오프로딩에 32GB RAM** — 모델 자체가 메모리에 올라가는 데만 약 40GB가 필요합니다',
         ],
-        note: 'GPU와 VRAM이 CPU에 40만원 더 쓰는 것보다 중요합니다 — 이 규칙 하나로 "무엇을 업그레이드해야 하나"라는 질문 대부분이 해결됩니다.',
+        note: '로컬 추론에서는 더 비싼 CPU보다 GPU와 VRAM이 중요합니다.',
       },
       cloudVsLocal: {
         title: '워크스테이션을 만들어야 할까, 클라우드 GPU를 빌려야 할까?',
         decisionBlock: {
           title: '로컬 워크스테이션 vs 클라우드 GPU 대여',
           localIf: [
-            '로컬 모델을 하루 2시간 이상 사용한다',
+            '로컬 모델을 하루 4시간 이상 사용한다(이 경우 GPU만의 회수 기간은 약 5.3년)',
             '프라이버시나 데이터 보관 위치가 중요하다',
             '장기적으로 고정되고 예측 가능한 비용을 원한다',
             '이미 위의 특정 단계로 결정했다',
@@ -2439,7 +2439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'nvidia.com에서 또는 `ubuntu-drivers autoinstall`로 NVIDIA 드라이버 550+ 설치',
           'Ollama 설치: `curl -fsSL https://ollama.com/install.sh | sh`',
           '모델 다운로드: `ollama pull qwen2.5:14b-instruct-q8_0`',
-          '네트워크 서버로 실행: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          '네트워크 서버로 실행: `OLLAMA_HOST=0.0.0.0 ollama serve` — 선택 사항, 신뢰할 수 있는 네트워크에서만: API가 네트워크에 열리며 로컬 API는 인증을 요구하지 않으므로 포트를 인터넷에 노출하지 마십시오',
           '브라우저 인터페이스를 위해 Open WebUI 설치: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           '모든 기기에서 안전한 원격 접근을 위해 Tailscale 사용',
         ],
@@ -2458,7 +2458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: '총소유비용: 워크스테이션 vs 클라우드 GPU',
-        content: '시스템 총액을 추적하지 않으므로 GPU만의 시산입니다: 중고 RTX 4090 체결 중앙값 $2,860([InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15)과, 이 페이지에서 쓰는 예시 요율 $0.44/시간의 RunPod A40 대여(재확인하지 않음)를 세 가지 사용량으로 비교합니다. 전기료는 RTX 4090 보드 전력 450 W를 $0.15/kWh로 계산했습니다(예: 450 W × 4시간 × 365 = 657 kWh × $0.15 ≈ $99). 회수 기간 = GPU 가격 ÷ (클라우드 비용 − 전기료), 예: 하루 4시간이면 $2,860 ÷ ($642 − $99) ≈ 5.3년. RAM, CPU 등 나머지 부품은 기간을 늘립니다.',
+        content: '시스템 총액을 추적하지 않으므로 GPU만의 시산입니다: 중고 RTX 4090 체결 중앙값 $2,860([InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 미국 체결, 2026년 10월)과, 이 페이지에서 가정한 예시 요율 $0.44/시간의 RunPod A40 대여를 세 가지 사용량으로 비교합니다. 2026-11-27에 확인한 [RunPod 요금 페이지](https://www.runpod.io/pricing)에는 A40이 $0.35/시간(Community Cloud)과 $0.59/시간(Secure Cloud)으로 표시되어 있었으며, 하루 4시간 기준 회수 기간은 각각 약 6.9년과 3.8년입니다. 전기료는 RTX 4090 보드 전력 450 W를 $0.15/kWh로 계산했습니다(예: 450 W × 4시간 × 365 = 657 kWh × $0.15 ≈ $99). 회수 기간 = GPU 가격 ÷ (클라우드 비용 − 전기료), 예: 하루 4시간이면 $2,860 ÷ ($642 − $99) ≈ 5.3년. RAM, CPU 등 나머지 부품은 기간을 늘립니다.',
         columns: ['사용량', '클라우드 연간 비용(A40 @ $0.44/시간)', '워크스테이션 연간 전기료', '클라우드 대비 회수 기간'],
         rows: [
           { '사용량': '하루 2시간', '클라우드 연간 비용(A40 @ $0.44/시간)': '~$321', '워크스테이션 연간 전기료': '$49 (450 W, $0.15/kWh)', '클라우드 대비 회수 기간': '~10.5 년 (GPU만)' },
@@ -2476,15 +2476,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '이 구성에서 RAM 가격이 왜 그렇게 중요합니까?',
-            a: 'RAM은 GPU 가격 변동보다 빌드 비용을 더 크게 올릴 수 있습니다. 메모리 제조사들이 AI 데이터센터용 HBM 칩으로 생산능력을 돌리면서 발생한 2026년 DRAM 부족으로, DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록). RAM과 스토리지 가격은 이 페이지에서 추적하지 않으므로 구매 전에 현재 매물을 확인하십시오.',
+            a: 'RAM 가격은 빌드 비용을 크게 바꿀 수 있습니다. 메모리 제조사들이 AI 데이터센터용 HBM 칩으로 생산능력을 돌리면서 발생한 2026년 DRAM 부족으로, DDR5 가격은 2026년 8월까지 12개월 동안 약 500% 올랐습니다([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; 128 GB DDR5-6400 키트가 $3,399에 등록). RAM과 스토리지 가격은 이 페이지에서 추적하지 않으므로 구매 전에 현재 매물을 확인하십시오.',
           },
           {
             q: '경제형·전문가형용 RTX 3090은 중고와 신품 중 무엇을 사야 합니까?',
-            a: '2026년 기준 중고가 일반적인 선택입니다 — "신품"이 있더라도 옛 재고입니다. 중고 카드 체결은 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15, 매물 데이터이며 견적이 아닙니다)에 따르면 약 $1,400–1,550이며, 부하 시 이상한 팬 소음이나 탄내가 나는지(채굴 사용 흔적) 확인하고 반품 가능한 판매자를 선택하세요.',
+            a: '2026년 기준 RTX 3090은 중고가 일반적인 선택이며, "신품"은 남은 재고입니다. [InsiderLLM 중고 GPU 가이드](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)에 따르면 미국 eBay 체결가는 $1,500–1,725입니다(중앙값 $1,650, 225건, 2026년 11월 13–23일, 배송비 제외)(체결 데이터이며 견적이 아닙니다). 부하 시 이상한 팬 소음이나 탄내가 나는지(과도한 사용의 흔적일 수 있음) 확인하고 반품 가능한 판매자를 선택하십시오.',
           },
           {
             q: '두 GPU에서 Ollama를 실행하기 위해 NVLink가 필요합니까?',
-            a: '아닙니다. Ollama는 CUDA 텐서 병렬 처리를 사용하여 PCIe를 통해 여러 GPU에 모델 레이어를 분산합니다 — NVLink가 필요 없습니다. 듀얼 RTX 3090 설정은 NVLink 없이 완벽하게 작동합니다.',
+            a: '아닙니다. [Ollama FAQ](https://docs.ollama.com/faq)에 따르면 GPU 한 장에 들어가는 모델은 그 GPU에 로드되고, 그렇지 않으면 PCIe를 통해 사용 가능한 GPU에 분산됩니다. NVLink는 필요 없습니다.',
           },
           {
             q: '전문가 빌드에서 단일 RTX 4090 대신 듀얼 RTX 3090을 사용하는 이유는 무엇입니까?',
@@ -2509,11 +2509,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       finalVerdict: {
         title: '어떤 워크스테이션을 사야 할까?',
         rankedItems: [
-          { rank: 1, name: '💰 경제형', tagline: 'RTX 3090 24GB (중고)', verdict: '32B Q4까지 모든 모델을 GPU에서 완전히 실행. 예산이 제한적이고 중고 GPU에 거부감이 없다면 최적.', affiliateLinks: [{ label: '경제형 구성 보기 →', url: 'https://www.coupang.com/np/search?q=RTX+3090' }] },
-          { rank: 2, name: '⭐ 종합 최고 — 추천형', tagline: 'RTX 4090 24GB', verdict: '성능, VRAM, 전력, 업그레이드 여지의 균형이 가장 좋음. 확신이 없다면 여기서 시작.', affiliateLinks: [{ label: '추천형 구성 보기 →', url: 'https://www.coupang.com/np/search?q=RTX+4090+Ryzen+9950X' }] },
+          { rank: 1, name: '💰 경제형', tagline: 'RTX 3090 24GB (중고)', verdict: 'Q4 기준 약 32B까지의 모델이 GPU에 들어갑니다(컨텍스트 길이에 따라 다름). 예산이 제한적이고 중고 GPU에 거부감이 없다면 최적.', affiliateLinks: [{ label: '경제형 구성 보기 →', url: 'https://www.coupang.com/np/search?q=RTX+3090' }] },
+          { rank: 2, name: '⭐ 저희의 선택 — 추천형', tagline: 'RTX 4090 24GB', verdict: '저희 판단으로는 성능, VRAM, 전력, 업그레이드 여지의 균형이 좋음. 확신이 없다면 여기서 시작.', affiliateLinks: [{ label: '추천형 구성 보기 →', url: 'https://www.coupang.com/np/search?q=RTX+4090+Ryzen+9950X' }] },
           { rank: 3, name: '🚀 70B／전문가용 — 전문가형', tagline: '듀얼 RTX 3090(48GB)', verdict: '70B를 VRAM에 수용(멀티 GPU의 tok/s는 출처 있는 수치 없음). 70B가 매일 주 용도일 때만 구매.', affiliateLinks: [{ label: '전문가형 구성 보기 →', url: 'https://www.coupang.com/np/search?q=Threadripper+7960X' }] },
         ],
-        content: '아직 확신이 없다면 추천형 RTX 4090 구성으로 시작하세요 — 대부분의 로컬 AI 사용자에게 성능, VRAM, 전력 소비, 업그레이드 가능성의 균형이 가장 좋습니다.',
+        content: '아직 확신이 없다면 추천형 RTX 4090 구성으로 시작하세요 — 저희 판단으로는 대부분의 로컬 AI 사용자에게 성능, VRAM, 전력 소비, 업그레이드 가능성의 균형이 좋습니다.',
       },
       relatedReading: {
         title: '관련 읽기',
@@ -2543,7 +2543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '두 GPU에서 Ollama를 실행하기 위해 NVLink가 필요합니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '아닙니다. Ollama는 PCIe를 통해 CUDA 텐서 병렬 처리를 사용합니다 — NVLink가 필요 없습니다. 듀얼 RTX 3090 설정은 NVLink 없이 완벽하게 작동합니다.',
+            text: '아닙니다. Ollama는 PCIe를 통해 모델을 여러 GPU에 분산할 수 있으므로 NVLink가 필요 없습니다.',
           },
         },
         {
@@ -2572,7 +2572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 로컬 AI를 위한 최고의 워크스테이션: 3가지 예산 수준',
       description: '3가지 로컬 AI 워크스테이션 빌드의 완전한 부품 목록: 경제형, 추천형, 전문가형. 날짜가 명시된 GPU 가격과 2026년 DDR5 부족의 영향 포함.',
       datePublished: '2026-05-26',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2599,17 +2599,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ver componentes do build Profissional →', url: 'https://www.mercadolivre.com.br/search?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**A melhor workstation de IA local em 2026 para a maioria dos usuários é o build com RTX 4090: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. No [placar CUDA do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) ela atinge 186,2 tok/s em um modelo 7B Q4_0 (informado por desenvolvedores), e o 14B em Q8 cabe sem offloading. Vá direto ao nível: [Econômico](#tier1) · [Recomendado](#tier2) · [Profissional](#tier3).**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**Nossa escolha para a maioria de quem monta uma workstation de IA local em 2026 é o build com RTX 4090: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. No [placar CUDA do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) ela atinge 186,2 tok/s em um modelo 7B Q4_0 (informado por desenvolvedores), e o 14B em Q8 cabe sem offloading. Vá direto ao nível: [Econômico](#tier1) · [Recomendado](#tier2) · [Profissional](#tier3).**',
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor build de PC para rodar modelos de IA localmente em 2026?',
-        answer: 'Para a maioria dos usuários: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. Para modelos de 70B em velocidade de GPU: dual RTX 3090 (48 GB VRAM no total) + Threadripper. Opção econômica: RTX 3090 usada + Ryzen 7 7700X. Os totais não são rastreados; só os preços de GPU, segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15; dados de anúncios, não ofertas): RTX 3090 vendidas como usadas cerca de $1.400–1.550 e RTX 4090 vendidas como usadas $2.575–3.010 (mediana $2.860), em dólares dos EUA. Os preços no Brasil podem variar bastante devido a impostos de importação. Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399); confira os preços atuais da RAM antes de comprar.',
+        answer: 'Para a maioria dos usuários: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. Para modelos de 70B em velocidade de GPU: dual RTX 3090 (48 GB VRAM no total) + Threadripper. Opção econômica: RTX 3090 usada + Ryzen 7 7700X. Os totais não são rastreados; só os preços de GPU (mercado dos EUA, vendas concluídas no eBay, não ofertas): RTX 3090 usada $1.500–1.725 (mediana $1.650; 225 vendas, 13–23 de novembro de 2026, sem frete; [guia de GPUs usadas da InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)) e RTX 4090 usada $2.575–3.010 (mediana $2.860; 216 vendas, outubro de 2026; [rastreador de preços da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)), em dólares dos EUA. Os preços no Brasil podem variar bastante devido a impostos de importação. Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399); confira os preços atuais da RAM antes de comprar.',
         bullets: [
           'Econômico: RTX 3090 usada (24 GB) + Ryzen 7 7700X + 64 GB DDR5 — roda 30B Q4',
           'Recomendado: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — roda 30B Q4',
           'Profissional: dual RTX 3090 (48 GB) + Threadripper 7960X — o 70B Q4 cabe na VRAM (sem valor de tok/s com fonte para multi-GPU)',
-          'A RAM pode encarecer um build mais do que as variações de preço da GPU: Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399)',
+          'O preço da RAM pode mudar bastante o custo de um build: Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399)',
           'Todos os builds lidam com modelos de 7B e 14B sem problemas; o 70B exige dual GPU ou CPU offloading',
         ],
         updatedDate: '2026-11',
@@ -2619,20 +2619,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'A RTX 4090 continua a melhor GPU de consumo individual para IA local em 2026: 24 GB VRAM, ~1 TB/s de largura de banda — as vendas como usada ficaram em $2.575–3.010 (mediana $2.860) segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15',
+          'A RTX 4090 é nossa escolha para o nível recomendado: 24 GB de VRAM e cerca de 1 TB/s de largura de banda (a RTX 5090 tem mais VRAM, 32 GB). Vendas de usadas nos EUA: $2.575–3.010 (mediana $2.860, outubro de 2026, [rastreador de preços da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/))',
           'Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399)',
           'Os modelos 70B Q4 precisam de mais de 40 GB VRAM — exigem dual RTX 3090 ou CPU offloading',
           'Os preços de CPU, placa-mãe, fonte, gabinete, cooler e armazenamento não são rastreados nesta página — confira os anúncios atuais antes de comprar',
-          'NVMe PCIe Gen 4/5 carrega um modelo de 7B em menos de 2 segundos, os preços de armazenamento não são rastreados aqui',
+          'SSDs NVMe PCIe Gen 4/5 têm leitura sequencial bem mais rápida que SATA, o que encurta o carregamento de modelos (tempos não medidos aqui); preços de armazenamento não são rastreados aqui',
           'Os Níveis 1 e 2 compartilham o socket AM5 — atualize GPU/RAM sem trocar a placa-mãe; o Nível 3 exige TRX50',
         ],
       },
       quickCompare: {
         title: 'Qual workstation você deveria montar?',
-        content: 'Escolha seu build pelo maior modelo que você realmente precisa rodar: 7B–14B → Econômico. 14B–32B → Recomendado. 70B → Profissional. A primeira linha mostra só preços de GPU (vendas de usados, [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15; dados de anúncios, não ofertas); os totais do sistema não são rastreados.',
+        content: 'Escolha seu build pelo maior modelo que você realmente precisa rodar: 7B–14B → Econômico. 14B–32B → Recomendado. 70B → Profissional. A primeira linha mostra só preços de GPU (vendas de usados nos EUA, não ofertas: [RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), 13–23 de novembro de 2026; [RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), outubro de 2026); os totais do sistema não são rastreados.',
         columns: ['', 'Econômico', 'Recomendado', 'Profissional'],
         rows: [
-          { '': 'Preço da GPU (usada)', 'Econômico': '$1.400–1.550 (vendas de usados, InsiderLLM, 2026-10-15)', 'Recomendado': '$2.575–3.010 (vendas de usados, InsiderLLM, 2026-10-15)', 'Profissional': '$2.800–3.100 (2 × $1.400–1.550, vendas de usados, InsiderLLM, 2026-10-15)' },
+          { '': 'Preço da GPU (usada)', 'Econômico': '$1.500–1.725 (vendas nos EUA, 13–23 nov 2026)', 'Recomendado': '$2.575–3.010 (vendas nos EUA, out 2026)', 'Profissional': '$3.000–3.450 (2 × $1.500–1.725, vendas nos EUA, 13–23 nov 2026)' },
           { '': 'GPU', 'Econômico': 'RTX 3090 24GB (usada)', 'Recomendado': 'RTX 4090 24GB', 'Profissional': '2× RTX 3090 (48GB)' },
           { '': 'CPU', 'Econômico': 'Ryzen 7 7700X', 'Recomendado': 'Ryzen 9 9950X', 'Profissional': 'Threadripper 7960X' },
           { '': 'RAM', 'Econômico': '64GB DDR5', 'Recomendado': '64GB DDR5-6000', 'Profissional': '256GB DDR5 ECC' },
@@ -2644,17 +2644,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver componentes do build Recomendado →', url: 'https://www.mercadolivre.com.br/search?q=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: 'Ver componentes do build Profissional →', url: 'https://www.mercadolivre.com.br/search?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: 'Só a linha de GPU de cada build tem preço (vendas de usados, [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15, em dólares dos EUA). Os preços no Brasil podem variar bastante devido a impostos de importação. RAM e demais peças não são rastreadas: Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399).',
+        note: 'Só a linha de GPU de cada build tem preço (vendas de usados nos EUA, em dólares dos EUA: [guia da InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) para a RTX 3090, 13–23 de novembro de 2026; [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) para a RTX 4090, outubro de 2026). Os preços no Brasil podem variar bastante devido a impostos de importação. RAM e demais peças não são rastreadas: Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399).',
       },
       editorsChoice: {
         title: 'Escolha do editor: Workstation Recomendada RTX 4090',
         highlight: true,
-        content: 'A melhor workstation de IA local no geral para 2026 — o ponto de equilíbrio entre VRAM, margem de upgrade e preço para a gama mais ampla de modelos.',
+        content: 'Nossa escolha entre estes três builds: um ponto de equilíbrio entre VRAM, margem de upgrade e preço para a gama mais ampla de modelos.',
         items: [
-          '24 GB VRAM — roda qualquer modelo até 32B Q4 totalmente na GPU',
+          '24 GB VRAM — modelos de até cerca de 32B em Q4 cabem na GPU (conforme o tamanho do contexto)',
           '64 GB DDR5-6000 — suficiente para CPU offload do 70B (velocidade não rastreada aqui)',
           'Qwen3 32B Q4 cabe totalmente na GPU; 70B com offloading',
-          'GPU: RTX 4090 vendidas como usadas $2.575–3.010 (mediana $2.860, [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15); demais peças não rastreadas',
+          'GPU: RTX 4090 vendidas como usadas $2.575–3.010 (mediana $2.860, [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), vendas nos EUA, outubro de 2026); demais peças não rastreadas',
           '**Pule se:** você só roda modelos 7B–14B — o build Econômico custa menos e cumpre o mesmo papel',
         ],
         affiliateLinks: [
@@ -2683,7 +2683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'O build econômico usa uma RTX 3090 usada (24 GB VRAM) como núcleo. No [placar CUDA do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013), a RTX 3090 atinge 158,2 tok/s em um modelo 7B Q4_0 (informado por desenvolvedores); velocidades de modelos maiores não são rastreadas aqui. A NVIDIA indica 350 W de potência de placa para a RTX 3090 — combine com uma fonte de qualidade de 850 W (isto não é conselho de segurança elétrica). **Escolha este build se:** você usa principalmente modelos 7B–32B e não se importa em comprar uma GPU usada. **Pule se:** o 70B é sua carga principal — este nível exige offloading para CPU, funcional mas lento.',
         columns: ['Componente', 'Modelo', 'Preço'],
         rows: [
-          { 'Componente': 'GPU', 'Modelo': 'NVIDIA RTX 3090 (usada, 24 GB)', 'Preço': '$1.400–1.550 (vendas de usados, InsiderLLM, 2026-10-15)' },
+          { 'Componente': 'GPU', 'Modelo': 'NVIDIA RTX 3090 (usada, 24 GB)', 'Preço': '$1.500–1.725 (vendas nos EUA, 13–23 nov 2026)' },
           { 'Componente': 'CPU', 'Modelo': 'AMD Ryzen 7 7700X', 'Preço': 'não rastreado' },
           { 'Componente': 'Placa-mãe', 'Modelo': 'MSI MAG X670E Tomahawk WiFi', 'Preço': 'não rastreado' },
           { 'Componente': 'RAM', 'Modelo': '64 GB DDR5-5600 (2×32 GB)', 'Preço': 'não rastreado' },
@@ -2701,19 +2701,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Modelos compatíveis em velocidade total de GPU:** 7B (qualquer quantização), 13B (Q4/Q8), 14B (Q4/Q8), 30B (Q4)',
           '**Suporte a 70B:** exige CPU offloading — funcional mas não ideal (velocidade não rastreada aqui)',
-          '**Consumo elétrico:** ~450 W em pico (GPU 350 W + CPU 65 W + restante)',
+          '**Potência nominal (só CPU + GPU):** 350 W + 105 W = 455 W; somam-se as demais peças e os picos',
         ],
         callouts: [
-          { type: 'tip', text: 'Usada vs. nova: as RTX 3090 usadas custam bem menos que o pouco estoque novo restante, ao custo de uma garantia incerta. Prefira um vendedor com boa reputação e política de devolução, e verifique sinais de desgaste por mineração (ruído do cooler, cheiro de queimado sob carga).' },
+          { type: 'tip', text: 'Usada vs. nova: Segundo o [guia de GPUs usadas da InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), as vendas concluídas no eBay dos EUA ficaram em $1.500–1.725 (mediana $1.650; 225 vendas, 13–23 de novembro de 2026, sem frete). O estoque novo restante não é rastreado aqui, e uma placa usada tem garantia incerta. Prefira um vendedor com boa reputação e política de devolução, e verifique sinais de desgaste por mineração (ruído do cooler, cheiro de queimado sob carga).' },
         ],
       },
       tier2: {
         title: 'Nível 2: workstation de IA recomendada',
         id: 'tier2',
-        content: 'O build recomendado se concentra na RTX 4090 (24 GB, ~1 TB/s de largura de banda de memória) combinada com o AMD Ryzen 9 9950X (Zen 5, 16 núcleos). No [placar CUDA do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, informado por desenvolvedores) a RTX 4090 gera 186,2 tok/s contra 158,2 da RTX 3090 (186,2 / 158,2 = 1,18×) e processa prompts a 11.993 contra 5.175 tok/s (2,3×); a NVIDIA indica 450 W de potência de placa para a RTX 4090 contra 350 W para a RTX 3090. **Escolha este build se:** você quer a melhor workstation mono-GPU, usa modelos 14B–32B regularmente, e ocasionalmente faz offload de um 70B. **Pule se:** o 70B é sua carga diária principal — vá de Profissional para velocidade de GPU no 70B.',
+        content: 'O build recomendado se concentra na RTX 4090 (24 GB, ~1 TB/s de largura de banda de memória) combinada com o AMD Ryzen 9 9950X (Zen 5, 16 núcleos). No [placar CUDA do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0, informado por desenvolvedores) a RTX 4090 gera 186,2 tok/s contra 158,2 da RTX 3090 (186,2 / 158,2 = 1,18×) e processa prompts a 11.993 contra 5.175 tok/s (2,3×); a NVIDIA indica 450 W de potência de placa para a RTX 4090 contra 350 W para a RTX 3090. **Escolha este build se:** você quer uma workstation mono-GPU de 24 GB, usa modelos 14B–32B regularmente, e ocasionalmente faz offload de um 70B. **Pule se:** o 70B é sua carga diária principal — vá de Profissional para velocidade de GPU no 70B.',
         columns: ['Componente', 'Modelo', 'Preço'],
         rows: [
-          { 'Componente': 'GPU', 'Modelo': 'NVIDIA GeForce RTX 4090 24 GB', 'Preço': '$2.575–3.010 (vendas de usados, InsiderLLM, 2026-10-15)' },
+          { 'Componente': 'GPU', 'Modelo': 'NVIDIA GeForce RTX 4090 24 GB', 'Preço': '$2.575–3.010 (vendas nos EUA, out 2026)' },
           { 'Componente': 'CPU', 'Modelo': 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', 'Preço': 'não rastreado' },
           { 'Componente': 'Placa-mãe', 'Modelo': 'ASUS ProArt X870E-Creator WiFi', 'Preço': 'não rastreado' },
           { 'Componente': 'RAM', 'Modelo': '64 GB DDR5-6000 CL30 (2×32 GB)', 'Preço': 'não rastreado' },
@@ -2733,7 +2733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Velocidade 14B Q8:** não rastreada aqui',
           '**Velocidade 30B Q4:** não rastreada aqui',
           '**70B Q4 (CPU offloading):** possível com 64 GB RAM (velocidade não rastreada aqui)',
-          '**Consumo elétrico:** ~550 W em pico',
+          '**Potência nominal (só CPU + GPU):** 450 W + 170 W = 620 W; somam-se as demais peças e os picos',
         ],
       },
       tier3: {
@@ -2742,7 +2742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'O build profissional é voltado para a inferência de modelos 70B totalmente na VRAM usando duas RTX 3090 para um total de 48 GB VRAM. O Ryzen Threadripper 7960X (24 núcleos) acelera o CPU offloading. Com 256 GB DDR5 ECC, até os modelos 140B quantizados carregam totalmente na RAM. **Escolha este build se:** o 70B é sua carga principal, você precisa de 48 GB+ de VRAM de GPU, ou atende vários usuários simultâneos. **Pule se:** você nunca rodou um modelo maior que 32B — este nível é um investimento excessivo nesse caso.',
         columns: ['Componente', 'Modelo', 'Preço'],
         rows: [
-          { 'Componente': 'GPU ×2', 'Modelo': '2× NVIDIA RTX 3090 24 GB (usadas)', 'Preço': '$2.800–3.100 (2 × $1.400–1.550, vendas de usados, InsiderLLM, 2026-10-15)' },
+          { 'Componente': 'GPU ×2', 'Modelo': '2× NVIDIA RTX 3090 24 GB (usadas)', 'Preço': '$3.000–3.450 (2 × $1.500–1.725, vendas nos EUA, 13–23 nov 2026)' },
           { 'Componente': 'CPU', 'Modelo': 'AMD Ryzen Threadripper 7960X (24C)', 'Preço': 'não rastreado' },
           { 'Componente': 'Placa-mãe', 'Modelo': 'ASUS Pro WS TRX50-SAGE WiFi', 'Preço': 'não rastreado' },
           { 'Componente': 'RAM', 'Modelo': '256 GB DDR5-5200 ECC (8×32 GB)', 'Preço': 'não rastreado' },
@@ -2760,10 +2760,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Velocidade 70B Q4:** não existe valor de tok/s com fonte para configurações multi-GPU, então nenhum é citado',
           '**CPU offloading com 256 GB RAM:** modelos quantizados de 140B+ cabem na RAM (velocidade não rastreada aqui)',
-          '**Consumo elétrico:** ~900 W em pico',
+          '**Potência nominal (só CPU + GPU):** 2 × 350 W + 350 W = 1.050 W; somam-se as demais peças e os picos',
         ],
         callouts: [
-          { type: 'warning', text: 'A escassez de DDR5 de 2026 atingiu com mais força a memória de servidor ECC/RDIMM — kits DDR5 ECC de 256 GB são escassos e com preço volátil, e os preços de RAM não são rastreados nesta página (os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399)). Consiga uma cotação atualizada de RAM listada na QVL da sua placa-mãe antes de comprar.' },
+          { type: 'warning', text: '256 GB de DDR5 ECC são um item de custo grande neste build, e os preços de RAM não são rastreados nesta página. Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399); esse número não é específico da memória de servidor ECC/RDIMM. Peça uma cotação atual de RAM listada na QVL da sua placa-mãe antes de comprar.' },
         ],
       },
       dontBuy: {
@@ -2771,18 +2771,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Uma GPU de 8 GB se o objetivo são modelos de 32B** — você bate no limite de VRAM imediatamente',
           '**Uma CPU cara com uma GPU insuficiente** — a GPU e sua VRAM decidem a velocidade de inferência muito mais que o clock da CPU',
-          '**Um SSD SATA para uma workstation de IA nova** — carregamento de modelos 5x mais lento que NVMe Gen 4 por uma diferença pequena de preço',
-          '**Uma fonte insuficiente** — o nível Profissional chega a picos de ~900 W',
+          '**Um SSD SATA para uma workstation de IA nova** — o carregamento de modelos fica limitado pela interface SATA (6 Gb/s), bem abaixo de um NVMe PCIe Gen 4',
+          '**Uma fonte insuficiente** — no nível Profissional, a potência de placa das GPUs mais o TDP da CPU já somam 1.050 W, sem as demais peças e os picos; uma de 750 W é pequena demais (isto não é conselho de segurança elétrica)',
           '**32 GB de RAM para offloading sério de 70B em CPU** — o próprio modelo precisa de ~40 GB só para caber na memória',
         ],
-        note: 'A GPU e sua VRAM importam mais que gastar mais na CPU — essa regra sozinha responde a maioria das perguntas de "o que eu deveria melhorar".',
+        note: 'Para inferência local, a GPU e sua VRAM importam mais que uma CPU mais cara.',
       },
       cloudVsLocal: {
         title: 'Montar uma workstation ou alugar GPU na nuvem?',
         decisionBlock: {
           title: 'Workstation local vs. aluguel de GPU na nuvem',
           localIf: [
-            'Você usa modelos locais 2+ horas/dia',
+            'Você usa modelos locais 4+ horas/dia (só a GPU se paga então em cerca de 5,3 anos)',
             'Privacidade ou residência de dados importam para seu uso',
             'Você quer um custo fixo e previsível a longo prazo',
             'Você já decidiu por um dos níveis acima',
@@ -2809,7 +2809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instale os drivers da NVIDIA 550+ do nvidia.com ou com `ubuntu-drivers autoinstall`',
           'Instale o Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
           'Baixe um modelo: `ollama pull qwen2.5:14b-instruct-q8_0`',
-          'Rode como servidor de rede: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'Rode como servidor de rede: `OLLAMA_HOST=0.0.0.0 ollama serve` — opcional, só em redes confiáveis: a API fica acessível na rede e a API local não exige autenticação; nunca exponha a porta à internet',
           'Instale o Open WebUI para interface no navegador: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           'Use o Tailscale para acesso remoto seguro de qualquer dispositivo',
         ],
@@ -2828,7 +2828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: 'Custo total de propriedade: workstation vs. GPU na nuvem',
-        content: 'Um cálculo só da GPU, porque os totais do sistema não são rastreados: a mediana de $2.860 das RTX 4090 vendidas como usadas ([rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15) contra o aluguel de uma A40 da RunPod à tarifa ilustrativa de $0,44/h usada nesta página (não reverificada), em três níveis de uso. A eletricidade é a potência de placa de 450 W da RTX 4090 a $0,15/kWh (por exemplo 450 W × 4 h × 365 = 657 kWh × $0,15 ≈ $99). Retorno = preço da GPU ÷ (custo na nuvem − custo elétrico), p. ex. a 4 h/dia: $2.860 ÷ ($642 − $99) ≈ 5,3 anos. RAM, CPU e demais peças o alongariam.',
+        content: 'Um cálculo só da GPU, porque os totais do sistema não são rastreados: a mediana de $2.860 das RTX 4090 vendidas como usadas ([rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), vendas nos EUA, outubro de 2026) contra o aluguel de uma A40 da RunPod à tarifa ilustrativa de $0,44/h adotada nesta página como premissa, em três níveis de uso. A [página de preços da RunPod](https://www.runpod.io/pricing), consultada em 2026-11-27, listava a A40 a $0,35/h (Community Cloud) e $0,59/h (Secure Cloud); a 4 h/dia, o retorno seria de cerca de 6,9 e 3,8 anos. A eletricidade é a potência de placa de 450 W da RTX 4090 a $0,15/kWh (por exemplo 450 W × 4 h × 365 = 657 kWh × $0,15 ≈ $99). Retorno = preço da GPU ÷ (custo na nuvem − custo elétrico), p. ex. a 4 h/dia: $2.860 ÷ ($642 − $99) ≈ 5,3 anos. RAM, CPU e demais peças o alongariam.',
         columns: ['Uso', 'Custo nuvem/ano (A40 a US$0,44/h)', 'Custo elétrico workstation/ano', 'Retorno vs. nuvem'],
         rows: [
           { 'Uso': '2 h/dia', 'Custo nuvem/ano (A40 a US$0,44/h)': '~$321', 'Custo elétrico workstation/ano': '$49 (450 W, $0,15/kWh)', 'Retorno vs. nuvem': '~10,5 anos (só a GPU)' },
@@ -2846,15 +2846,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Por que o preço da RAM pesa tanto nesses builds?',
-            a: 'A RAM pode encarecer um build mais do que as variações de preço da GPU. Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399). Os preços de RAM e armazenamento não são rastreados nesta página; confira os anúncios atuais antes de comprar. No Brasil, impostos de importação e câmbio se somam a isso.',
+            a: 'O preço da RAM pode mudar bastante o custo de um build. Os preços da DDR5 subiram cerca de 500% em 12 meses até agosto de 2026 ([Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/), 2026-08-18; um kit DDR5-6400 de 128 GB foi listado a $3.399). Os preços de RAM e armazenamento não são rastreados nesta página; confira os anúncios atuais antes de comprar. No Brasil, impostos de importação e câmbio se somam a isso.',
           },
           {
             q: 'Devo comprar uma RTX 3090 usada ou nova?',
-            a: 'Usada é a escolha padrão em 2026 — a produção acabou em 2022, então "nova" é apenas estoque antigo com ágio. Verifique ruído excessivo do cooler ou cheiro de queimado sob carga (sinais de uso em mineração), e prefira um vendedor com boa reputação e política de devolução no Mercado Livre.',
+            a: 'Usada é a escolha comum para a RTX 3090 em 2026; unidades "novas" são estoque remanescente. Segundo o [guia de GPUs usadas da InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/), as vendas concluídas no eBay dos EUA ficaram em $1.500–1.725 (mediana $1.650; 225 vendas, 13–23 de novembro de 2026, sem frete) (dados de vendas, não ofertas). Verifique ruído excessivo do cooler ou cheiro de queimado sob carga (possíveis sinais de desgaste), e prefira um vendedor com boa reputação e política de devolução.',
           },
           {
             q: 'Preciso de NVLink para rodar o Ollama em duas GPUs?',
-            a: 'Não. O Ollama usa paralelismo de tensores CUDA para distribuir as camadas do modelo entre várias GPUs via PCIe — não precisa de NVLink. A configuração com dual RTX 3090 funciona perfeitamente sem NVLink.',
+            a: 'Não. Segundo o [FAQ do Ollama](https://docs.ollama.com/faq), um modelo que cabe em uma única GPU é carregado nela; caso contrário, é distribuído entre as GPUs disponíveis via PCIe. Não é preciso NVLink.',
           },
           {
             q: 'Por que uma dual RTX 3090 em vez de uma RTX 4090 para o build profissional?',
@@ -2879,11 +2879,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       finalVerdict: {
         title: 'Qual workstation você deveria comprar?',
         rankedItems: [
-          { rank: 1, name: '💰 Build Econômico', tagline: 'RTX 3090 24GB (usada)', verdict: 'Roda qualquer modelo até 32B Q4 totalmente na GPU.', affiliateLinks: [{ label: 'Ver o build Econômico →', url: 'https://www.mercadolivre.com.br/search?q=RTX+3090' }] },
-          { rank: 2, name: '⭐ Melhor opção geral — Build Recomendado', tagline: 'RTX 4090 24GB', verdict: 'O melhor equilíbrio de desempenho, VRAM e preço para a maioria dos usuários.', affiliateLinks: [{ label: 'Ver o build Recomendado →', url: 'https://www.mercadolivre.com.br/search?q=RTX+4090+Ryzen+9950X' }] },
+          { rank: 1, name: '💰 Build Econômico', tagline: 'RTX 3090 24GB (usada)', verdict: 'Modelos de até cerca de 32B em Q4 cabem na GPU (conforme o tamanho do contexto).', affiliateLinks: [{ label: 'Ver o build Econômico →', url: 'https://www.mercadolivre.com.br/search?q=RTX+3090' }] },
+          { rank: 2, name: '⭐ Nossa escolha — Build Recomendado', tagline: 'RTX 4090 24GB', verdict: 'Na nossa opinião, um bom equilíbrio de desempenho, VRAM e preço para a maioria dos usuários.', affiliateLinks: [{ label: 'Ver o build Recomendado →', url: 'https://www.mercadolivre.com.br/search?q=RTX+4090+Ryzen+9950X' }] },
           { rank: 3, name: '🚀 70B / profissional — Build Profissional', tagline: 'Dual RTX 3090 (48GB)', verdict: '70B na VRAM (sem valor de tok/s multi-GPU com fonte). Só para uso diário de 70B.', affiliateLinks: [{ label: 'Ver o build Profissional →', url: 'https://www.mercadolivre.com.br/search?q=Threadripper+7960X' }] },
         ],
-        content: 'Ainda em dúvida? Comece pelo build Recomendado RTX 4090 — oferece o melhor equilíbrio de desempenho, VRAM, consumo e capacidade de upgrade para a maioria dos usuários de IA local.',
+        content: 'Ainda em dúvida? Comece pelo build Recomendado RTX 4090 — na nossa opinião, ele equilibra bem desempenho, VRAM, consumo e capacidade de upgrade para a maioria dos usuários de IA local.',
       },
       relatedReading: {
         title: 'Leitura relacionada',
@@ -2913,7 +2913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Preciso de NVLink para rodar o Ollama em duas GPUs?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Não. O Ollama usa paralelismo de tensores CUDA via PCIe — não precisa de NVLink. A configuração dual RTX 3090 funciona perfeitamente sem ele.',
+            text: 'Não. Segundo o [FAQ do Ollama](https://docs.ollama.com/faq), um modelo que cabe em uma única GPU é carregado nela; caso contrário, é distribuído entre as GPUs disponíveis via PCIe. Não é preciso NVLink.',
           },
         },
         {
@@ -2942,7 +2942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhor workstation para IA local 2026: três níveis de orçamento',
       description: 'Listas completas de componentes para três builds de workstation de IA local: econômico, recomendado e profissional, com preços de GPU datados e o impacto da escassez de DDR5 de 2026.',
       datePublished: '2026-05-26',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2970,17 +2970,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'عرض مكونات الإعداد الاحترافي →', url: 'https://www.noon.com/uae-en/search/?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
-    leadAnswerBlock: '**أفضل محطة عمل للذكاء الاصطناعي المحلي في 2026 لمعظم المستخدمين هي المبنية على RTX 4090: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. وفق [لوحة نتائج CUDA في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) تبلغ 186.2 tok/s على نموذج 7B Q4_0 (بحسب تقارير المطورين)، ويتسع 14B بتكميم Q8 بدون تفريغ. انتقل مباشرةً إلى المستوى: [اقتصادي](#tier1) · [موصى به](#tier2) · [احترافي](#tier3).**',
+    dateModified: '2026-11-27',
+    leadAnswerBlock: '**خيارنا لمعظم من يبنون محطة عمل للذكاء الاصطناعي المحلي في 2026 هو الإعداد المبني على RTX 4090: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. وفق [لوحة نتائج CUDA في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) تبلغ 186.2 tok/s على نموذج 7B Q4_0 (بحسب تقارير المطورين)، ويتسع 14B بتكميم Q8 بدون تفريغ. انتقل مباشرةً إلى المستوى: [اقتصادي](#tier1) · [موصى به](#tier2) · [احترافي](#tier3).**',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل مواصفات حاسوب لتشغيل نماذج الذكاء الاصطناعي محلياً في 2026؟',
-        answer: 'لمعظم المستخدمين: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. لتشغيل نماذج 70B بسرعة GPU: RTX 3090 مزدوجة (48 GB VRAM إجمالاً) + Threadripper. الخيار الاقتصادي: RTX 3090 مستعملة + Ryzen 7 7700X. لا تُتتبَّع الإجماليات؛ تُتتبَّع أسعار GPU فقط وفق [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15؛ بيانات إعلانات وليست عروضاً): RTX 3090 المستعملة المباعة نحو $1,400–1,550 وRTX 4090 المستعملة المباعة $2,575–3,010 (الوسيط $2,860)، بالدولار الأمريكي وقد تختلف الأسعار حسب السوق والرسوم الجمركية. ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399)؛ فتحقق من أسعار RAM الحالية قبل الشراء.',
+        answer: 'لمعظم المستخدمين: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000. لتشغيل نماذج 70B بسرعة GPU: RTX 3090 مزدوجة (48 GB VRAM إجمالاً) + Threadripper. الخيار الاقتصادي: RTX 3090 مستعملة + Ryzen 7 7700X. لا تُتتبَّع الإجماليات؛ تُتتبَّع أسعار GPU فقط (السوق الأمريكية، مبيعات مكتملة على eBay وليست عروضاً): RTX 3090 المستعملة $1,500–1,725 (الوسيط $1,650؛ 225 عملية بيع، 13–23 نوفمبر 2026، دون الشحن؛ [دليل InsiderLLM لبطاقات GPU المستعملة](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)) وRTX 4090 المستعملة $2,575–3,010 (الوسيط $2,860؛ 216 عملية بيع، أكتوبر 2026؛ [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/))، بالدولار الأمريكي وقد تختلف الأسعار حسب السوق والرسوم الجمركية. ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399)؛ فتحقق من أسعار RAM الحالية قبل الشراء.',
         bullets: [
           'اقتصادي: RTX 3090 مستعملة (24 GB) + Ryzen 7 7700X + 64 GB DDR5 — يُشغّل 30B Q4',
           'موصى به: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — يُشغّل 30B Q4',
           'احترافي: RTX 3090 مزدوجة (48 GB) + Threadripper 7960X — يتسع 70B Q4 في VRAM (لا رقم tok/s موثّق لـ multi-GPU)',
-          'قد تضيف RAM إلى كلفة الإعداد أكثر مما تغيّره أسعار GPU: ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399)',
+          'قد تغيّر أسعار RAM كلفة الإعداد كثيراً: ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399)',
           'جميع الإعدادات تتعامل مع نماذج 7B و14B بسهولة؛ نموذج 70B يتطلب GPU مزدوجة أو CPU offloading',
         ],
         updatedDate: '2026-11',
@@ -2990,20 +2990,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'تظل RTX 4090 أفضل GPU استهلاكية مفردة للذكاء الاصطناعي المحلي في 2026: 24 GB VRAM، عرض نطاق ~1 TB/ثانية — وبلغت أسعار الإعلانات المستعملة المباعة $2,575–3,010 (الوسيط $2,860) وفق [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15',
+          'خيارنا للمستوى الموصى به هو RTX 4090: ذاكرة 24 GB VRAM وعرض نطاق نحو 1 TB/ثانية (تملك RTX 5090 ذاكرة أكبر، 32 GB). المبيعات المستعملة في الولايات المتحدة: $2,575–3,010 (الوسيط $2,860، أكتوبر 2026، [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/))',
           'ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399)',
           'نماذج 70B Q4 تحتاج أكثر من 40 GB VRAM — تتطلب RTX 3090 مزدوجة أو CPU offloading',
           'لا تُتتبَّع في هذه الصفحة أسعار المعالج واللوحة الأم ومصدر الطاقة والصندوق والمبرّد والتخزين — تحقق من الإعلانات الحالية قبل الشراء',
-          'NVMe PCIe Gen 4/5 يُحمّل نموذج 7B في أقل من ثانيتين، وأسعار التخزين غير متتبَّعة هنا',
+          'أقراص NVMe بمعيار PCIe Gen 4/5 أسرع بكثير من SATA في القراءة المتسلسلة، ما يقصّر تحميل النماذج (لا تُقاس أزمنة التحميل هنا)؛ وأسعار التخزين غير متتبَّعة هنا',
           'المستويان 1 و2 يتشاركان مقبس AM5 — قم بترقية GPU/RAM دون تغيير اللوحة الأم؛ المستوى 3 يتطلب TRX50',
         ],
       },
       quickCompare: {
         title: 'أي محطة عمل يجب أن تبني؟',
-        content: 'اختر إعدادك حسب أكبر نموذج تحتاج فعلياً لتشغيله: 7B–14B → اقتصادي. 14B–32B → موصى به. 70B → احترافي. يعرض الصف الأول أسعار GPU فقط (إعلانات مستعملة مباعة، [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15؛ بيانات إعلانات وليست عروضاً)؛ ولا تُتتبَّع إجماليات النظام.',
+        content: 'اختر إعدادك حسب أكبر نموذج تحتاج فعلياً لتشغيله: 7B–14B → اقتصادي. 14B–32B → موصى به. 70B → احترافي. يعرض الصف الأول أسعار GPU فقط (مبيعات مستعملة في الولايات المتحدة وليست عروضاً: [RTX 3090](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) بين 13 و23 نوفمبر 2026؛ [RTX 4090](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) في أكتوبر 2026)؛ ولا تُتتبَّع إجماليات النظام.',
         columns: ['', 'اقتصادي', 'موصى به', 'احترافي'],
         rows: [
-          { '': 'سعر GPU (مستعملة)', 'اقتصادي': '$1,400–1,550 (إعلانات مستعملة مباعة, InsiderLLM، 2026-10-15)', 'موصى به': '$2,575–3,010 (إعلانات مستعملة مباعة, InsiderLLM، 2026-10-15)', 'احترافي': '$2,800–3,100 (2 × $1,400–1,550, إعلانات مستعملة مباعة, InsiderLLM، 2026-10-15)' },
+          { '': 'سعر GPU (مستعملة)', 'اقتصادي': '$1,500–1,725 (مبيعات أمريكية، 13–23 نوفمبر 2026)', 'موصى به': '$2,575–3,010 (مبيعات أمريكية، أكتوبر 2026)', 'احترافي': '$3,000–3,450 (2 × $1,500–1,725, مبيعات أمريكية، 13–23 نوفمبر 2026)' },
           { '': 'GPU', 'اقتصادي': 'RTX 3090 24GB (مستعملة)', 'موصى به': 'RTX 4090 24GB', 'احترافي': '2× RTX 3090 (48GB)' },
           { '': 'CPU', 'اقتصادي': 'Ryzen 7 7700X', 'موصى به': 'Ryzen 9 9950X', 'احترافي': 'Threadripper 7960X' },
           { '': 'RAM', 'اقتصادي': '64GB DDR5', 'موصى به': '64GB DDR5-6000', 'احترافي': '256GB DDR5 ECC' },
@@ -3015,18 +3015,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'عرض مكونات الإعداد الموصى به →', url: 'https://www.noon.com/uae-en/search/?q=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
           { label: 'عرض مكونات الإعداد الاحترافي →', url: 'https://www.noon.com/uae-en/search/?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
         ],
-        note: 'يُسعَّر سطر GPU فقط لكل إعداد (إعلانات مستعملة مباعة، [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15). وRAM وبقية القطع غير متتبَّعة: ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399).',
+        note: 'يُسعَّر سطر GPU فقط لكل إعداد (مبيعات مستعملة في الولايات المتحدة: [دليل InsiderLLM](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) لـ RTX 3090 بين 13 و23 نوفمبر 2026؛ و[متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) لـ RTX 4090 في أكتوبر 2026). وRAM وبقية القطع غير متتبَّعة: ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399).',
       },
       editorsChoice: {
         title: 'اختيار المحرر: محطة العمل الموصى بها RTX 4090',
         highlight: true,
-        content: 'أفضل محطة عمل للذكاء الاصطناعي المحلي إجمالاً لعام 2026 — نقطة التوازن بين VRAM وهامش الترقية والسعر لأوسع نطاق من النماذج.',
+        content: 'خيارنا بين هذه الإعدادات الثلاثة: نقطة توازن بين VRAM وهامش الترقية والسعر لأوسع نطاق من النماذج.',
         items: [
-          '24 GB VRAM — تُشغّل أي نموذج حتى 32B Q4 بالكامل على GPU',
+          '24 GB VRAM — تتسع GPU للنماذج حتى نحو 32B بتكميم Q4 (بحسب طول السياق)',
           '64 GB DDR5-6000 — كافٍ لـ CPU offload لنموذج 70B (السرعة غير متتبَّعة هنا)',
           'Qwen3 32B Q4 يتسع بالكامل على GPU؛ 70B مع التفريغ',
-          'GPU: RTX 4090 المستعملة المباعة $2,575–3,010 (الوسيط $2,860، [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15)؛ بقية القطع غير متتبَّعة',
-          '**تخطَّ هذا الخيار إذا:** كنت تُشغّل فقط نماذج 7B–14B — الإعداد الاقتصادي أقل كلفة وبنفس الأداء',
+          'GPU: RTX 4090 المستعملة المباعة $2,575–3,010 (الوسيط $2,860، [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، مبيعات أمريكية، أكتوبر 2026)؛ بقية القطع غير متتبَّعة',
+          '**تخطَّ هذا الخيار إذا:** كنت تُشغّل فقط نماذج 7B–14B — الإعداد الاقتصادي أقل كلفة ويغطي أحجام النماذج هذه',
         ],
         affiliateLinks: [
           { label: 'RTX 4090 24GB — تحقّق من السعر الحالي →', url: 'https://www.noon.com/uae-en/search/?q=RTX+4090', productName: 'NVIDIA GeForce RTX 4090 24GB', productCategory: 'gpu' },
@@ -3054,7 +3054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'يستخدم الإعداد الاقتصادي RTX 3090 مستعملة (24 GB VRAM) كنواة. وفق [لوحة نتائج CUDA في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) تبلغ RTX 3090 نحو 158.2 tok/s على نموذج 7B Q4_0 (بحسب تقارير المطورين)؛ أما سرعات النماذج الأكبر فغير متتبَّعة هنا. تذكر NVIDIA أن قدرة اللوحة 350 W لـ RTX 3090 — اقرنها بمصدر طاقة جيد 850 W (هذه ليست نصيحة للسلامة الكهربائية). **اختر هذا الإعداد إذا:** كنت تستخدم أساساً نماذج 7B–32B ولا تمانع شراء GPU مستعملة. **تخطَّه إذا:** كان 70B هو عبء العمل الرئيسي — يتطلب هذا المستوى التفريغ إلى CPU، وهو عملي لكنه بطيء.',
         columns: ['المكوّن', 'الطراز', 'السعر'],
         rows: [
-          { 'المكوّن': 'GPU', 'الطراز': 'NVIDIA RTX 3090 (مستعملة، 24 GB)', 'السعر': '$1,400–1,550 (إعلانات مستعملة مباعة, InsiderLLM، 2026-10-15)' },
+          { 'المكوّن': 'GPU', 'الطراز': 'NVIDIA RTX 3090 (مستعملة، 24 GB)', 'السعر': '$1,500–1,725 (مبيعات أمريكية، 13–23 نوفمبر 2026)' },
           { 'المكوّن': 'CPU', 'الطراز': 'AMD Ryzen 7 7700X', 'السعر': 'غير متتبَّع' },
           { 'المكوّن': 'اللوحة الأم', 'الطراز': 'MSI MAG X670E Tomahawk WiFi', 'السعر': 'غير متتبَّع' },
           { 'المكوّن': 'RAM', 'الطراز': '64 GB DDR5-5600 (2×32 GB)', 'السعر': 'غير متتبَّع' },
@@ -3071,20 +3071,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**النماذج المتوافقة بسرعة GPU كاملة:** 7B (أي تكميم)، 13B (Q4/Q8)، 14B (Q4/Q8)، 30B (Q4)',
-          '**دعم 70B:** يتطلب CPU offloading — ~5–8 رموز/ثانية، عملي لكن ليس مثالياً',
-          '**استهلاك الطاقة:** ~450 واط في الذروة (GPU 350 واط + CPU 65 واط + الباقي)',
+          '**دعم 70B:** يتطلب CPU offloading — عملي لكن ليس مثالياً (السرعة غير متتبَّعة هنا)',
+          '**القدرة الاسمية (CPU وGPU فقط):** 350 W + 105 W = 455 W؛ تضاف إليها بقية القطع والذروات اللحظية',
         ],
         callouts: [
-          { type: 'tip', text: 'مستعملة مقابل جديدة: بطاقات RTX 3090 المستعملة بلغت أسعار الإعلانات المستعملة المباعة نحو $1,400–1,550 وفق [متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15)؛ والمخزون الجديد المتبقي، إن وُجد، غير متتبَّع هنا، والبطاقة المستعملة بضمان غير مؤكد. اختر بائعاً يقبل الإرجاع وتحقّق من علامات استخدامها في التعدين (ضوضاء المروحة، رائحة احتراق تحت الحِمل).' },
+          { type: 'tip', text: 'مستعملة مقابل جديدة: وفق [دليل InsiderLLM لبطاقات GPU المستعملة](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) تراوحت المبيعات المكتملة على eBay الأمريكية بين $1,500–1,725 (الوسيط $1,650؛ 225 عملية بيع، 13–23 نوفمبر 2026، دون الشحن). المخزون الجديد المتبقي غير متتبَّع هنا، وضمان البطاقة المستعملة غير مؤكد. اختر بائعاً يقبل الإرجاع وتحقّق من علامات استخدامها في التعدين (ضوضاء المروحة، رائحة احتراق تحت الحِمل).' },
         ],
       },
       tier2: {
         title: 'المستوى 2: محطة عمل ذكاء اصطناعي موصى بها',
         id: 'tier2',
-        content: 'يتمحور الإعداد الموصى به حول RTX 4090 (24 GB، ~1 TB/ثانية عرض نطاق الذاكرة) مقرونةً بـAMD Ryzen 9 9950X (Zen 5، 16 نواة). وفق [لوحة نتائج CUDA في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0، بحسب تقارير المطورين) تولّد RTX 4090 نحو 186.2 tok/s مقابل 158.2 لـ RTX 3090 (186.2 / 158.2 = 1.18×) وتعالج المطالبات بسرعة 11,993 مقابل 5,175 tok/s (2.3×)؛ وتذكر NVIDIA قدرة لوحة 450 W لـ RTX 4090 مقابل 350 W لـ RTX 3090. **اختر هذا الإعداد إذا:** تريد أفضل محطة عمل بمعالج رسومي واحد، وتستخدم نماذج 14B–32B بانتظام، وتُفرّغ 70B أحياناً. **تخطَّه إذا:** كان 70B عبء عملك اليومي الرئيسي — اختر الاحترافي لسرعة GPU مع 70B.',
+        content: 'يتمحور الإعداد الموصى به حول RTX 4090 (24 GB، ~1 TB/ثانية عرض نطاق الذاكرة) مقرونةً بـAMD Ryzen 9 9950X (Zen 5، 16 نواة). وفق [لوحة نتائج CUDA في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) (7B Q4_0، بحسب تقارير المطورين) تولّد RTX 4090 نحو 186.2 tok/s مقابل 158.2 لـ RTX 3090 (186.2 / 158.2 = 1.18×) وتعالج المطالبات بسرعة 11,993 مقابل 5,175 tok/s (2.3×)؛ وتذكر NVIDIA قدرة لوحة 450 W لـ RTX 4090 مقابل 350 W لـ RTX 3090. **اختر هذا الإعداد إذا:** تريد محطة عمل بمعالج رسومي واحد بذاكرة 24 GB، وتستخدم نماذج 14B–32B بانتظام، وتُفرّغ 70B أحياناً. **تخطَّه إذا:** كان 70B عبء عملك اليومي الرئيسي — اختر الاحترافي لسرعة GPU مع 70B.',
         columns: ['المكوّن', 'الطراز', 'السعر'],
         rows: [
-          { 'المكوّن': 'GPU', 'الطراز': 'NVIDIA GeForce RTX 4090 24 GB', 'السعر': '$2,575–3,010 (إعلانات مستعملة مباعة, InsiderLLM، 2026-10-15)' },
+          { 'المكوّن': 'GPU', 'الطراز': 'NVIDIA GeForce RTX 4090 24 GB', 'السعر': '$2,575–3,010 (مبيعات أمريكية، أكتوبر 2026)' },
           { 'المكوّن': 'CPU', 'الطراز': 'AMD Ryzen 9 9950X (16C/32T، Zen 5)', 'السعر': 'غير متتبَّع' },
           { 'المكوّن': 'اللوحة الأم', 'الطراز': 'ASUS ProArt X870E-Creator WiFi', 'السعر': 'غير متتبَّع' },
           { 'المكوّن': 'RAM', 'الطراز': '64 GB DDR5-6000 CL30 (2×32 GB)', 'السعر': 'غير متتبَّع' },
@@ -3104,7 +3104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**سرعة 14B Q8:** غير متتبَّعة هنا',
           '**سرعة 30B Q4:** غير متتبَّعة هنا',
           '**70B Q4 (تفريغ CPU):** ممكن مع 64 GB RAM (السرعة غير متتبَّعة هنا)',
-          '**استهلاك الطاقة:** ~550 واط في الذروة',
+          '**القدرة الاسمية (CPU وGPU فقط):** 450 W + 170 W = 620 W؛ تضاف إليها بقية القطع والذروات اللحظية',
         ],
       },
       tier3: {
@@ -3113,7 +3113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'الإعداد الاحترافي موجّه للاستدلال على نماذج 70B داخل VRAM بالكامل باستخدام RTX 3090 مزدوجتين لإجمالي 48 GB VRAM. يُسرّع Ryzen Threadripper 7960X (24 نواة) CPU offloading. مع 256 GB DDR5 ECC، حتى النماذج 140B المكمّمة تُحمَّل بالكامل في RAM. **اختر هذا الإعداد إذا:** كان 70B عبء عملك الرئيسي، أو تحتاج 48 GB+ من VRAM، أو تخدم عدة مستخدمين متزامنين. **تخطَّه إذا:** لم تُشغّل قط نموذجاً أكبر من 32B — هذا المستوى مبالغ فيه في هذه الحالة.',
         columns: ['المكوّن', 'الطراز', 'السعر'],
         rows: [
-          { 'المكوّن': 'GPU ×2', 'الطراز': '2× NVIDIA RTX 3090 24 GB (مستعملة)', 'السعر': '$2,800–3,100 (2 × $1,400–1,550, إعلانات مستعملة مباعة, InsiderLLM، 2026-10-15)' },
+          { 'المكوّن': 'GPU ×2', 'الطراز': '2× NVIDIA RTX 3090 24 GB (مستعملة)', 'السعر': '$3,000–3,450 (2 × $1,500–1,725, مبيعات أمريكية، 13–23 نوفمبر 2026)' },
           { 'المكوّن': 'CPU', 'الطراز': 'AMD Ryzen Threadripper 7960X (24C)', 'السعر': 'غير متتبَّع' },
           { 'المكوّن': 'اللوحة الأم', 'الطراز': 'ASUS Pro WS TRX50-SAGE WiFi', 'السعر': 'غير متتبَّع' },
           { 'المكوّن': 'RAM', 'الطراز': '256 GB DDR5-5200 ECC (8×32 GB)', 'السعر': 'غير متتبَّع' },
@@ -3130,11 +3130,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**سرعة 70B Q4:** لا يوجد رقم tok/s موثّق لإعدادات multi-GPU، لذا لا يُذكر أي رقم',
-          '**CPU offloading مع 256 GB RAM:** يُشغّل نماذج 140B+ بسرعة 4–6 رموز/ثانية',
-          '**استهلاك الطاقة:** ~900 واط في الذروة',
+          '**CPU offloading مع 256 GB RAM:** تتسع RAM لنماذج 140B+ المكمّمة (السرعة غير متتبَّعة هنا)',
+          '**القدرة الاسمية (CPU وGPU فقط):** 2 × 350 W + 350 W = 1,050 W؛ تضاف إليها بقية القطع والذروات اللحظية',
         ],
         callouts: [
-          { type: 'warning', text: 'نقص DDR5 في 2026 أثّر بأشد قوة على ذاكرة الخوادم ECC/RDIMM — عبوات DDR5 ECC سعة 256 جيجابايت نادرة ومتقلبة السعر. احصل على عرض سعر مباشر لذاكرة مدرجة في قائمة QVL الخاصة باللوحة الأم قبل الطلب.' },
+          { type: 'warning', text: 'تشكّل ذاكرة DDR5 ECC بسعة 256 GB بنداً كبيراً في كلفة هذا الإعداد، وأسعار RAM غير متتبَّعة في هذه الصفحة. ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399)، وهذا الرقم لا يخص ذاكرة الخوادم ECC/RDIMM تحديداً. احصل على عرض سعر حالي لذاكرة مدرجة في قائمة QVL للوحة الأم قبل الطلب.' },
         ],
       },
       dontBuy: {
@@ -3142,18 +3142,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**GPU بذاكرة 8 GB إذا كان الهدف نماذج 32B** — ستصطدم بحائط VRAM فوراً',
           '**CPU باهظة الثمن مع GPU غير كافية** — سرعة الاستدلال يحددها GPU وVRAM أكثر بكثير من سرعة CPU',
-          '**قرص SATA SSD لمحطة عمل ذكاء اصطناعي جديدة** — تحميل النماذج أبطأ 5 مرات من PCIe Gen 4 NVMe مقابل فرق سعر بسيط',
-          '**مزود طاقة غير كافٍ** — تصل الفئة الاحترافية إلى ذروة قرابة 900 واط',
-          '**64GB RAM لتفريغ 70B جاد على CPU بذاكرة 32GB فقط** — النموذج نفسه يحتاج نحو 40 GB فقط ليستقر في الذاكرة',
+          '**قرص SATA SSD لمحطة عمل ذكاء اصطناعي جديدة** — تحميل النماذج محدود بواجهة SATA (‏6 Gb/s)، وهي أقل بكثير مما توفره أقراص PCIe Gen 4 NVMe',
+          '**مزود طاقة غير كافٍ** — في المستوى الاحترافي تبلغ قدرة لوحتي GPU مع TDP المعالج وحدها 1,050 واط قبل بقية القطع وذروات الاستهلاك اللحظية، لذا فمزود 750 واط غير كافٍ (هذه ليست نصيحة للسلامة الكهربائية)',
+          '**ذاكرة RAM بسعة 32 GB فقط لتفريغ 70B بجدية على CPU** — يحتاج النموذج وحده إلى نحو 40 GB ليستقر في الذاكرة',
         ],
-        note: 'GPU وVRAM أهم من إنفاق مبلغ إضافي على CPU — هذه القاعدة الواحدة تجيب على معظم أسئلة "ماذا يجب أن أُرقّي".',
+        note: 'في الاستدلال المحلي، تُعد GPU وذاكرة VRAM أهم من معالج أغلى.',
       },
       cloudVsLocal: {
         title: 'هل تبني محطة عمل أم تستأجر GPU سحابية؟',
         decisionBlock: {
           title: 'محطة عمل محلية مقابل استئجار GPU سحابية',
           localIf: [
-            'تستخدم النماذج المحلية أكثر من ساعتين يومياً',
+            'تستخدم النماذج المحلية 4 ساعات أو أكثر يومياً (عندها تُسترد كلفة GPU وحدها خلال نحو 5.3 سنة)',
             'الخصوصية أو مكان تخزين البيانات مهم لعملك',
             'تريد تكلفة ثابتة ومتوقعة على المدى الطويل',
             'قررت بالفعل أحد المستويات أعلاه',
@@ -3180,7 +3180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ثبّت تعريفات NVIDIA 550+ من nvidia.com أو بأمر `ubuntu-drivers autoinstall`',
           'ثبّت Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
           'حمّل نموذجاً: `ollama pull qwen2.5:14b-instruct-q8_0`',
-          'شغّل كخادم شبكة: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'شغّل كخادم شبكة: `OLLAMA_HOST=0.0.0.0 ollama serve` — اختياري، في الشبكات الموثوقة فقط: يصبح API متاحاً على الشبكة، وAPI المحلي لا يتطلب مصادقة، فلا تكشف المنفذ على الإنترنت أبداً',
           'ثبّت Open WebUI للواجهة في المتصفح: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
           'استخدم Tailscale للوصول الآمن عن بُعد من أي جهاز',
         ],
@@ -3199,7 +3199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tco: {
         title: 'إجمالي تكلفة الملكية: محطة العمل مقابل GPU السحابية',
-        content: 'حساب لـ GPU وحدها لأن إجماليات النظام غير متتبَّعة: وسيط $2,860 لـ RTX 4090 المستعملة المباعة ([متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15) مقابل استئجار A40 من RunPod بالسعر التوضيحي $0.44/ساعة المستخدم في هذه الصفحة (لم يُعاد التحقق منه)، عند ثلاثة مستويات استخدام. الكهرباء هي قدرة لوحة RTX 4090 البالغة 450 W بسعر $0.15/kWh (مثلاً 450 W × 4 ساعات × 365 = 657 kWh × $0.15 ≈ $99). الاسترداد = سعر GPU ÷ (تكلفة السحابة − تكلفة الكهرباء)، مثلاً عند 4 ساعات/يوم: $2,860 ÷ ($642 − $99) ≈ 5.3 سنة. وRAM والمعالج وبقية القطع ستطيله.',
+        content: 'حساب لـ GPU وحدها لأن إجماليات النظام غير متتبَّعة: وسيط $2,860 لـ RTX 4090 المستعملة المباعة ([متتبع أسعار InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، مبيعات أمريكية، أكتوبر 2026) مقابل استئجار A40 من RunPod بالسعر التوضيحي $0.44/ساعة المفترض في هذه الصفحة، عند ثلاثة مستويات استخدام. وكانت [صفحة أسعار RunPod](https://www.runpod.io/pricing) التي اطُّلع عليها في 2026-11-27 تعرض A40 بسعر $0.35/ساعة (Community Cloud) و$0.59/ساعة (Secure Cloud)؛ وعند 4 ساعات يومياً يصبح الاسترداد نحو 6.9 و3.8 سنة على التوالي. الكهرباء هي قدرة لوحة RTX 4090 البالغة 450 W بسعر $0.15/kWh (مثلاً 450 W × 4 ساعات × 365 = 657 kWh × $0.15 ≈ $99). الاسترداد = سعر GPU ÷ (تكلفة السحابة − تكلفة الكهرباء)، مثلاً عند 4 ساعات/يوم: $2,860 ÷ ($642 − $99) ≈ 5.3 سنة. وRAM والمعالج وبقية القطع ستطيله.',
         columns: ['الاستخدام', 'تكلفة السحابة/سنة (A40 بسعر 0.44$/ساعة)', 'تكلفة كهرباء محطة العمل/سنة', 'الاسترداد مقابل السحابة'],
         rows: [
           { 'الاستخدام': 'ساعتان/يوم', 'تكلفة السحابة/سنة (A40 بسعر 0.44$/ساعة)': '~$321', 'تكلفة كهرباء محطة العمل/سنة': '$49 (450 W, $0.15/kWh)', 'الاسترداد مقابل السحابة': '~10.5 سنة (GPU فقط)' },
@@ -3217,15 +3217,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'لماذا يهم سعر RAM إلى هذا الحد في هذه الإعدادات؟',
-            a: 'قد تضيف RAM إلى كلفة الإعداد أكثر مما تغيّره أسعار GPU. أدى نقص DRAM خلال 2026 — إذ حوّلت شركات الذاكرة طاقتها الإنتاجية نحو شرائح HBM لمراكز بيانات الذكاء الاصطناعي — إلى ما يلي: ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399). أسعار RAM والتخزين غير متتبَّعة في هذه الصفحة؛ تحقق من الإعلانات الحالية قبل الشراء.',
+            a: 'قد تغيّر أسعار RAM كلفة الإعداد كثيراً. أدى نقص DRAM خلال 2026 — إذ حوّلت شركات الذاكرة طاقتها الإنتاجية نحو شرائح HBM لمراكز بيانات الذكاء الاصطناعي — إلى ما يلي: ارتفعت أسعار DDR5 بنحو 500% خلال 12 شهراً حتى أغسطس 2026 وفق [Hardware Busters](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) (2026-08-18؛ عُرضت عبوة DDR5-6400 سعة 128 GB بسعر $3,399). أسعار RAM والتخزين غير متتبَّعة في هذه الصفحة؛ تحقق من الإعلانات الحالية قبل الشراء.',
           },
           {
             q: 'هل أشتري RTX 3090 مستعملة أم جديدة؟',
-            a: 'المستعملة هي الخيار المعتاد في 2026 — توقف الإنتاج عام 2022، لذا "الجديدة" ما هي إلا مخزون قديم بسعر مرتفع. تحقّق من ضوضاء المروحة المفرطة أو رائحة الاحتراق تحت الحِمل (علامات استخدام في التعدين)، وفضّل بائعاً يقبل الإرجاع.',
+            a: 'المستعملة هي الخيار المعتاد لـ RTX 3090 في 2026، أما "الجديدة" فمخزون متبقٍّ. وفق [دليل InsiderLLM لبطاقات GPU المستعملة](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) تراوحت المبيعات المكتملة على eBay الأمريكية بين $1,500–1,725 (الوسيط $1,650؛ 225 عملية بيع، 13–23 نوفمبر 2026، دون الشحن) (بيانات مبيعات وليست عروضاً). تحقّق من ضوضاء المروحة المفرطة أو رائحة الاحتراق تحت الحِمل (علامات محتملة على استخدام مكثف)، وفضّل بائعاً يقبل الإرجاع.',
           },
           {
             q: 'هل أحتاج إلى NVLink لتشغيل Ollama على GPU مزدوجة؟',
-            a: 'لا. يستخدم Ollama توازي الموترات CUDA لتوزيع طبقات النموذج على عدة GPU عبر PCIe — NVLink غير مطلوب. إعداد RTX 3090 المزدوجة يعمل بشكل ممتاز بدون NVLink.',
+            a: 'لا. وفق [الأسئلة الشائعة في Ollama](https://docs.ollama.com/faq)، يُحمَّل النموذج الذي يتسع في GPU واحدة عليها، وإلا فيُوزَّع على وحدات GPU المتاحة عبر PCIe. ولا يلزم NVLink.',
           },
           {
             q: 'لماذا RTX 3090 مزدوجة بدلاً من RTX 4090 واحدة للإعداد الاحترافي؟',
@@ -3250,11 +3250,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       finalVerdict: {
         title: 'أي محطة عمل يجب أن تشتري؟',
         rankedItems: [
-          { rank: 1, name: '💰 الإعداد الاقتصادي', tagline: 'RTX 3090 24GB (مستعملة)', verdict: 'يُشغّل أي نموذج حتى 32B Q4 بالكامل على GPU.', affiliateLinks: [{ label: 'عرض الإعداد الاقتصادي →', url: 'https://www.noon.com/uae-en/search/?q=RTX+3090' }] },
-          { rank: 2, name: '⭐ الأفضل إجمالاً — الإعداد الموصى به', tagline: 'RTX 4090 24GB', verdict: 'أفضل توازن بين الأداء وVRAM والسعر لمعظم المستخدمين.', affiliateLinks: [{ label: 'عرض الإعداد الموصى به →', url: 'https://www.noon.com/uae-en/search/?q=RTX+4090+Ryzen+9950X' }] },
+          { rank: 1, name: '💰 الإعداد الاقتصادي', tagline: 'RTX 3090 24GB (مستعملة)', verdict: 'تتسع GPU للنماذج حتى نحو 32B بتكميم Q4 (بحسب طول السياق).', affiliateLinks: [{ label: 'عرض الإعداد الاقتصادي →', url: 'https://www.noon.com/uae-en/search/?q=RTX+3090' }] },
+          { rank: 2, name: '⭐ خيارنا — الإعداد الموصى به', tagline: 'RTX 4090 24GB', verdict: 'في رأينا، توازن جيد بين الأداء وVRAM والسعر لمعظم المستخدمين.', affiliateLinks: [{ label: 'عرض الإعداد الموصى به →', url: 'https://www.noon.com/uae-en/search/?q=RTX+4090+Ryzen+9950X' }] },
           { rank: 3, name: '🚀 70B/احترافي — الإعداد الاحترافي', tagline: 'RTX 3090 مزدوجة (48GB)', verdict: '70B داخل VRAM (لا رقم tok/s موثّق لـ multi-GPU). فقط للاستخدام اليومي لنماذج 70B.', affiliateLinks: [{ label: 'عرض الإعداد الاحترافي →', url: 'https://www.noon.com/uae-en/search/?q=Threadripper+7960X' }] },
         ],
-        content: 'لا تزال متردداً؟ ابدأ بالإعداد الموصى به RTX 4090 — يقدّم أفضل توازن بين الأداء وVRAM واستهلاك الطاقة وإمكانية الترقية لمعظم مستخدمي الذكاء الاصطناعي المحلي.',
+        content: 'لا تزال متردداً؟ ابدأ بالإعداد الموصى به RTX 4090 — وفي رأينا يوازن جيداً بين الأداء وVRAM واستهلاك الطاقة وإمكانية الترقية لمعظم مستخدمي الذكاء الاصطناعي المحلي.',
       },
       relatedReading: {
         title: 'قراءة ذات صلة',
@@ -3285,7 +3285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'هل أحتاج إلى NVLink لتشغيل Ollama على GPU مزدوجة؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'لا. يستخدم Ollama توازي الموترات CUDA عبر PCIe — NVLink غير مطلوب. إعداد RTX 3090 المزدوجة يعمل بشكل ممتاز بدونه.',
+            text: 'لا. يمكن لـ Ollama توزيع النموذج على عدة وحدات GPU عبر PCIe، لذا لا يلزم NVLink.',
           },
         },
         {
@@ -3314,7 +3314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل محطة عمل للذكاء الاصطناعي المحلي 2026: ثلاثة مستويات ميزانية',
       description: 'قوائم مكونات كاملة لثلاثة إعدادات محطات عمل للذكاء الاصطناعي المحلي: اقتصادي وموصى به واحترافي، مع أسعار GPU مؤرَّخة وأثر نقص DDR5 في 2026.',
       datePublished: '2026-05-26',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

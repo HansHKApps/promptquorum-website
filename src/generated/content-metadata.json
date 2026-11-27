@@ -1249,8 +1249,8 @@
       "images": []
     },
     "local-llm-hardware-guide": {
-      "dateModified": "2026-11-22",
-      "lastFactChecked": "2026-11-02",
+      "dateModified": "2026-11-27",
+      "lastFactChecked": "2026-11-22",
       "publishDate": "2026-04-04",
       "hasSections": true,
       "langs": [
@@ -1270,36 +1270,8 @@
           "title": "VRAM calculator showing the formula (Model Size × Bits) ÷ 8, with examples: 8B Q4_K_M = 4.7 GB, 13B Q5_K_M = 9.1 GB, 70B Q4_K_M = 40 GB. Q4_K_M is the recommended sweet spot for most hardware."
         },
         {
-          "url": "/images/gpu-tier-comparison-en.svg",
-          "title": "GPU tier recommendations (street prices): ~$800 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $6,950 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU."
-        },
-        {
-          "url": "/images/models-for-16gb-vram-en.svg",
-          "title": "Bar chart showing which models fit in 16 GB VRAM: Mistral Small 3.1 24B Q4_K_M (13 GB ✅), Devstral Small 24B Q4_K_M (16 GB ✅), Qwen3 14B Q8_0 (15 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌). Best choice: Mistral Small 3.1 24B for 55 tok/sec."
-        },
-        {
           "url": "/images/rtx4090-70b-reality-en.svg",
           "title": "VRAM requirements vs RTX 4090 24 GB limit: Qwen 3.6 27B Q4_K_M (16 GB ✅), DeepSeek-R1 32B Q4_K_M (19 GB ✅), Qwen3 32B Q5_K_M (21 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌ -- exceeds 24 GB by 63%). Sweet spot: 27-32B models at Q4-Q5."
-        },
-        {
-          "url": "/images/cpu-inference-speed-en.svg",
-          "title": "CPU-only inference speeds on Ryzen 9 7950X: Gemma 2 2B Q8_0 (28 tok/sec fastest), Phi-4 Mini Q4_K_M (25 tok/sec best choice), Llama 3.1 8B Q8_0 (8 tok/sec). A used RTX 3060 ($285) achieves 5-8× faster."
-        },
-        {
-          "url": "/images/budget-builds-en.svg",
-          "title": "Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7-13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13-30B, $6,500+ high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. The mid-level build is a balanced option."
-        },
-        {
-          "url": "/images/llamacpp-speed-flags-en.svg",
-          "title": "Default llama.cpp config: ~40 tok/sec. Optimized (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/sec -- a 125% speed improvement on RTX 4070 Ti running Llama 3.1 8B Q4_K_M."
-        },
-        {
-          "url": "/images/mac-hardware-comparison-en.svg",
-          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, from $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified (about 8 GB left after macOS) is the practical minimum for 7B models on a Mac."
-        },
-        {
-          "url": "/images/server-vs-consumer-en.svg",
-          "title": "Consumer vs server hardware: RTX 5090 (~$4,300–5,000+ street, 32GB, single-user, part-time) vs RTX 6000 Ada ($7,000+, 48GB, multi-user, 24/7 duty). Start with consumer hardware; upgrade to server-grade only if running production services."
         }
       ]
     },
@@ -4026,7 +3998,7 @@
       "images": []
     },
     "what-is-prompt-engineering": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-03-01",
       "hasSections": true,
@@ -5856,7 +5828,7 @@
       "images": []
     },
     "local-ai-workstation-build-guide": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5871,16 +5843,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg",
-          "title": "Local AI PC build tiers compared: RTX 4060 Ti 16GB budget build (~$2,000) runs 7B-13B models, RTX 4070 Ti Super 16GB mid build (~$3,100) runs 14B-33B models, RTX 5090 32GB enthusiast build (~$9,600) runs 33B-70B models."
-        },
-        {
-          "url": "/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg",
-          "title": "Decision tree for choosing a local-AI PC build by largest model size: 7B-13B models route to the ~$2,000 budget build, 14B-33B models to the ~$3,100 mid build, and 70B models to the ~$9,600 enthusiast build."
-        }
-      ]
+      "images": []
     },
     "best-vpn-ai-privacy-local-llm-2026": {
       "dateModified": "2026-11-09",
@@ -7465,7 +7428,7 @@
       ]
     },
     "apple-mlx-vs-nvidia-cuda-local-llm-2026": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-24",
       "hasSections": true,
@@ -7482,16 +7445,12 @@
       ],
       "images": [
         {
-          "url": "/images/apple-mlx-vs-nvidia-cuda-architecture-en.svg",
-          "title": "Apple Silicon unified memory vs NVIDIA discrete GPU: CPU, GPU, Neural Engine share 128GB at 614 GB/s vs dedicated 24GB GDDR6X at 1,008 GB/s, separated by a PCIe bus."
-        },
-        {
           "url": "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-en.webp",
-          "title": "Inference speed comparison across hardware: RTX 4090 delivers ~150 tok/s on Llama 3 8B but cannot load 70B; M5 Max 128GB delivers ~75 tok/s on 8B and ~18 tok/s on 70B."
+          "title": "llama.cpp Llama 2 7B Q4_0, developer-reported: M5 Ultra 179.1, M5 Max 119.9, RTX 4090 186.2, RTX 5090 290.0 tok/s. The 43GB Llama 3.3 70B file needs more memory than either card has."
         },
         {
           "url": "/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.webp",
-          "title": "Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M5 Max 64GB from $2,499 base price vs $7,000+ multi-GPU system)."
+          "title": "70B tier, US prices: Mac Studio M5 Max 64GB about $3,499 (complete computer) vs 2× used RTX 4090 GPUs alone at $5,150–6,020. NVIDIA prices for smaller tiers are not tracked here."
         }
       ]
     },
@@ -7532,7 +7491,7 @@
       "images": []
     },
     "qwen-local-deployment-complete-guide-2026": {
-      "dateModified": "2026-11-22",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7550,11 +7509,7 @@
       "images": [
         {
           "url": "/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg",
-          "title": "Qwen model VRAM requirements at Q4_K_M quantization: Qwen3 8B needs 5.2 GB (RTX 3060 12 GB), Qwen3 32B needs 20.1 GB (RTX 4090 24 GB, now EOL/used-only), and Qwen2.5-72B needs 43.5 GB (dual RTX 4090s, EOL/used-only)."
-        },
-        {
-          "url": "/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg",
-          "title": "Self-hosted vs cloud decision tree for Qwen: self-host if using 4+ hours/day (Minisforum UM890 Pro $429 for Qwen3 8B, used RTX 4090 build ~$3,200 for Qwen3 32B — the RTX 4090 is EOL and used-market only); use cloud like RunPod A40 48 GB at $0.44/hr for occasional Qwen2.5-72B runs under 4 hours/day."
+          "title": "Qwen model VRAM requirements at Q4_K_M quantization: Qwen3 8B needs 5.2 GB (RTX 3060 12 GB), Qwen3 32B needs 20 GB (RTX 4090 24 GB), and Qwen2.5-72B is 47 GB (tight on two RTX 4090s). Figures are download sizes."
         }
       ]
     },
@@ -7586,8 +7541,8 @@
       ]
     },
     "best-workstation-build-local-ai-2026": {
-      "dateModified": "2026-09-01",
-      "lastFactChecked": "2026-08-25",
+      "dateModified": "2026-11-27",
+      "lastFactChecked": "2026-11-27",
       "publishDate": "2026-05-26",
       "hasSections": true,
       "langs": [
@@ -7601,16 +7556,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg",
-          "title": "Three local-AI workstation tiers compared by hardware: Budget uses an RTX 3090 (24 GB VRAM) running 70B models at 5-8 tok/s via CPU offload, Recommended uses an RTX 4090 (24 GB VRAM) at 10-15 tok/s, and Professional uses dual RTX 3090 GPUs (48 GB VRAM) at 25-40 tok/s on GPU."
-        },
-        {
-          "url": "/images/best-workstation-build-local-ai-2026-decision-tree-en.svg",
-          "title": "Decision tree for choosing a local-AI workstation tier by largest model size: builds up to 30B route to the Budget (RTX 3090) or Recommended (RTX 4090) tier, while 70B builds route to Recommended via CPU offload (10-15 tok/s) or Professional with dual RTX 3090 GPUs at full GPU speed (25-40 tok/s)."
-        }
-      ]
+      "images": []
     },
     "best-local-llm-ide-plugins-2026": {
       "dateModified": "2026-10-17",

@@ -1834,56 +1834,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/apple-mlx-vs-nvidia-cuda-architecture-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-architecture-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-architecture-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-architecture-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-architecture-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-architecture-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-benchmark-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-benchmark-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-benchmark-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-benchmark-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
   "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -1929,36 +1879,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/apple-mlx-vs-nvidia-cuda-benchmark-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-benchmark-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-cost-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-cost-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-cost-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-cost-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
   "/images/apple-mlx-vs-nvidia-cuda-cost-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -2003,41 +1923,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-cost-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-cost-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-verdict-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-verdict-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-verdict-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-verdict-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/apple-mlx-vs-nvidia-cuda-verdict-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
   },
   "/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -13769,51 +13654,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
-  "/images/best-workstation-build-local-ai-2026-decision-tree-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 470
-  },
   "/images/best-workstation-build-local-ai-2026-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -13858,51 +13698,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-workstation-build-local-ai-2026-tier-comparison-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
   },
   "/images/best-zigbee-thread-dongles-2027-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -14383,16 +14178,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/budget-builds-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/budget-builds-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
   },
   "/images/budget-gpu-model-requirements-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -17418,36 +17203,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/cpu-inference-speed-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/cpu-inference-speed-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/cpu-inference-speed-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/cpu-inference-speed-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/cpu-inference-speed-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/cpu-inference-speed-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
   },
   "/images/create-custom-local-models-7step-finetuning-path-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -23178,36 +22933,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/gpu-tier-comparison-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/gpu-tier-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/gpu-tier-comparison-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/gpu-tier-comparison-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/gpu-tier-comparison-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
-  },
-  "/images/gpu-tier-comparison-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 450
   },
   "/images/gpu-vs-ai-subscription-roi-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -29129,36 +28854,6 @@
     "width": 800,
     "height": 350
   },
-  "/images/llamacpp-speed-flags-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/llamacpp-speed-flags-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/llamacpp-speed-flags-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/llamacpp-speed-flags-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/llamacpp-speed-flags-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/llamacpp-speed-flags-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
   "/images/llamacpp-vs-ollama-vs-vllm-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -31604,11 +31299,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
   "/images/local-ai-workstation-build-guide-2026-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -31653,11 +31343,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
   },
   "/images/local-ai-workstations-strix-halo-vs-dgx-spark-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -37829,31 +37514,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/mac-hardware-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/mac-hardware-comparison-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/mac-hardware-comparison-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/mac-hardware-comparison-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/mac-hardware-comparison-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
   "/images/mac-mini-m4-local-llm-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -39938,36 +39598,6 @@
     "encodingFormat": "image/svg+xml",
     "width": 900,
     "height": 750
-  },
-  "/images/models-for-16gb-vram-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/models-for-16gb-vram-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/models-for-16gb-vram-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/models-for-16gb-vram-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/models-for-16gb-vram-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/models-for-16gb-vram-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
   },
   "/images/modly-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -48089,51 +47719,6 @@
     "width": 800,
     "height": 400
   },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-ar.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-de.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-en.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-es.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-fr.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-ja.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-ko.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-pt.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-cost-comparison-hero-zh.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
   "/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -48178,11 +47763,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
   },
   "/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -49959,6 +49539,11 @@
     "width": 1200,
     "height": 675
   },
+  "/images/rtx4090-70b-reality-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
   "/images/rtx4090-70b-reality-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -49980,6 +49565,16 @@
     "height": 420
   },
   "/images/rtx4090-70b-reality-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/rtx4090-70b-reality-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/rtx4090-70b-reality-pt.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
@@ -51688,16 +51283,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/server-vs-consumer-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/server-vs-consumer-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
   },
   "/images/setup-workflow-business-writing-de.svg": {
     "encodingFormat": "image/svg+xml",

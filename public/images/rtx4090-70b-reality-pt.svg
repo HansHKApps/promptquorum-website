@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+<rect width="800" height="420" fill="#FFFFFF"/>
+<text x="400" y="34" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">O que cabe em 24 GB de VRAM (RTX 4090)</text>
+<text x="453" y="66" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">Limite de 24 GB</text>
+<text x="20" y="103" font-size="13" font-weight="700" fill="#1C1B1F">Qwen 3.6 27B · Q4_K_M</text>
+<rect x="225" y="80" width="152" height="36" rx="4" fill="#D4EDDA" stroke="#28A745" stroke-width="2"/>
+<text x="235" y="103" font-size="13" font-weight="700" fill="#1C1B1F">~16 GB ✅</text>
+<text x="610" y="103" font-size="12" fill="#49454F">Opção para código</text>
+<text x="20" y="159" font-size="13" font-weight="700" fill="#1C1B1F">DeepSeek-R1 32B · Q4_K_M</text>
+<rect x="225" y="136" width="180.5" height="36" rx="4" fill="#D4EDDA" stroke="#28A745" stroke-width="2"/>
+<text x="235" y="159" font-size="13" font-weight="700" fill="#1C1B1F">~19 GB ✅</text>
+<text x="610" y="159" font-size="12" fill="#49454F">Opção de raciocínio</text>
+<text x="20" y="215" font-size="13" font-weight="700" fill="#1C1B1F">Qwen3 32B · Q5_K_M</text>
+<rect x="225" y="192" width="199.5" height="36" rx="4" fill="#D4EDDA" stroke="#28A745" stroke-width="2"/>
+<text x="235" y="215" font-size="13" font-weight="700" fill="#1C1B1F">~21 GB ✅</text>
+<text x="610" y="215" font-size="12" fill="#49454F">Mais qualidade</text>
+<text x="20" y="271" font-size="13" font-weight="700" fill="#1C1B1F">Llama 3.3 70B · Q2_K</text>
+<rect x="225" y="248" width="228" height="36" rx="4" fill="#FFF3CD" stroke="#B88600" stroke-width="2"/>
+<text x="235" y="271" font-size="13" font-weight="700" fill="#1C1B1F">~24 GB ⚠️</text>
+<text x="610" y="271" font-size="12" fill="#49454F">Perda de qualidade visível</text>
+<text x="20" y="327" font-size="13" font-weight="700" fill="#1C1B1F">Llama 3.3 70B · Q4_K_M</text>
+<rect x="225" y="304" width="370.5" height="36" rx="4" fill="#F8D7DA" stroke="#DC3545" stroke-width="2"/>
+<text x="235" y="327" font-size="13" font-weight="700" fill="#1C1B1F">~39 GB ❌</text>
+<text x="610" y="327" font-size="12" fill="#49454F">Não cabe</text>
+<line x1="453" y1="72" x2="453" y2="350" stroke="#6750A4" stroke-width="2" stroke-dasharray="4,4"/>
+<text x="400" y="384" font-size="12" fill="#49454F" text-anchor="middle">27-32B em Q4-Q5 é o ponto ideal para uma placa de 24 GB. 70B em Q4_K_M precisa de cerca de 48 GB.</text>
+<text x="788" y="410" font-size="9" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>

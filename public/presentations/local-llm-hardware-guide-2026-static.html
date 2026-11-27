@@ -8,7 +8,7 @@
     <meta property="og:title" content="Local LLM Hardware Guide 2026 — PromptQuorum" />
     <meta property="og:description" content="Master local LLM hardware with practical GPU, VRAM, and CPU recommendations for 2026." />
     <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-hardware-guide" />
 
     <style>
         * {
@@ -312,7 +312,7 @@
             }
 
             .slide::before {
-                content: "https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=" attr(data-lang);
+                content: "https://www.promptquorum.com/local-llms/local-llm-hardware-guide" "";
                 position: absolute;
                 bottom: 15mm;
                 left: 24mm;
@@ -381,7 +381,7 @@
                 <span id="header-title">Local LLM Hardware Guide 2026</span>
             </div>
             <div class="header-links">
-                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026">← Back to Article</a>
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llm-hardware-guide">← Back to Article</a>
                 <a href="https://www.promptquorum.com">PromptQuorum.com</a>
             </div>
         </div>
@@ -406,18 +406,18 @@
                         type: 'title',
                         h1: 'Local LLM Hardware Guide 2026',
                         subtitle: 'GPU VRAM tiers, best models, CPU inference, and optimization for 2026.',
-                        link: 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026'
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide'
                     },
                     {
                         type: 'list',
                         h2: 'Key Takeaways',
                         items: [
-                            '<strong>VRAM math:</strong> (Model size ÷ Quantization bits) × 8 = VRAM needed',
+                            '<strong>VRAM math:</strong> parameters (billions) × bits per weight ÷ 8 = GB for the weights; add room for context. Speeds in this deck are approximate, not PromptQuorum measurements.',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/sec) is best',
                             '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/sec)',
                             '<strong>24 GB VRAM:</strong> 70B models don\'t fit at Q4_K_M (~39 GB). Use 27–32B models instead.',
                             '<strong>CPU-only (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) or Llama 3.2 3B (20 tok/sec)',
-                            '<strong>llama.cpp speed:</strong> Set --n-gpu-layers 99 to double RTX 4070 Ti performance',
+                            '<strong>llama.cpp speed:</strong> Set --n-gpu-layers 99 so all layers run on the GPU (large speed gain over CPU fallback)',
                             '<strong>GPU matters most:</strong> Used RTX 3060 12GB is 5–8× faster than CPU'
                         ]
                     },
@@ -426,7 +426,7 @@
                         h2: 'VRAM Math: The Formula',
                         line1: 'VRAM (GB) = (Model Size × Quantization Bits) ÷ 8',
                         line2: 'Example: Llama 3.3 70B at Q4 ≈ 39 GB VRAM',
-                        tip: 'Q4_K_M is the practical sweet spot — NVIDIA GPUs accelerate it more efficiently than Q4_0'
+                        tip: 'Q4_K_M is a common practical choice: it generally keeps more quality than Q4_0 at a similar size'
                     },
                     {
                         type: 'table',
@@ -434,7 +434,7 @@
                         columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Speed'],
                         rows: [
                             { 'Tier': 'Budget ($679+)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best For': '7–13B models', 'Speed': '~60 tok/sec' },
-                            { 'Tier': 'Mid (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'Best For': '14–32B models', 'Speed': '~110 tok/sec' },
+                            { 'Tier': 'Mid (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'Best For': '14–24B models', 'Speed': '~110 tok/sec' },
                             { 'Tier': 'High (~$4,500–4,700)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Best For': '70B (Q4, light offload)', 'Speed': '290.0 tok/s (7B Q4_0)' },
                             { 'Tier': 'Server ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'Best For': '70B+ models', 'Speed': 'Production-grade' }
                         ]
@@ -470,7 +470,7 @@
                         h2: '70B Models on RTX 4090 (24 GB)',
                         columns: ['Model', 'Quant', 'VRAM', 'Fits?'],
                         rows: [
-                            { 'Model': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 GB', 'Fits?': '✅ Best coding (77.2% SWE-bench)' },
+                            { 'Model': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 GB', 'Fits?': '✅ Best coding (77.2% SWE-bench Verified, developer-reported)' },
                             { 'Model': 'DeepSeek-R1 32B', 'Quant': 'Q4_K_M', 'VRAM': '~19 GB', 'Fits?': '✅ Best reasoning' },
                             { 'Model': 'Qwen3 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 GB', 'Fits?': '✅ High quality' },
                             { 'Model': 'Qwen3 32B', 'Quant': 'Q8_0', 'VRAM': '~34 GB', 'Fits?': '❌ No (34 GB)' },
@@ -508,8 +508,8 @@
                         columns: ['Budget', 'GPU', 'VRAM', 'Best Models'],
                         rows: [
                             { 'Budget': '$1500 entry', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Best Models': '7–13B' },
-                            { 'Budget': '$2500 solid', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Best Models': '13–30B' },
-                            { 'Budget': '$8,550+ high-end', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', 'Best Models': 'Any (70B+)' }
+                            { 'Budget': '$2500 solid', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Best Models': '13–24B' },
+                            { 'Budget': '$8,550+ high-end', 'GPU': '2× RTX 4090', 'VRAM': '48 GB', 'Best Models': 'Any (70B+)' }
                         ]
                     },
                     {
@@ -525,7 +525,7 @@
                         type: 'list',
                         h2: 'Server vs Consumer Hardware',
                         items: [
-                            '<strong>Consumer (RTX 5090):</strong> $1,999 MSRP (~$4,500–4,700 new retail), 32 GB VRAM, single-user, prone to thermal throttling',
+                            '<strong>Consumer (RTX 5090):</strong> $1,999 MSRP (~$4,500–4,700 new retail), 32 GB VRAM, single-user, may need extra cooling under 24/7 load',
                             '<strong>Server (RTX 6000 Ada):</strong> ~$7,000, 48 GB VRAM, designed for 24/7 use with better cooling',
                             '<strong>Recommendation:</strong> Start with RTX 5090. Upgrade to dual A100 or RTX 6000 Ada for 24/7 70B+ use'
                         ]
@@ -538,13 +538,13 @@
                             'Not accounting for VRAM overhead. Model file size + system overhead + context = total VRAM used.',
                             'Assuming all 70B models fit in 40 GB VRAM. They do barely in Q4 only; Q5 requires 45+ GB.',
                             'Ignoring power supply and cooling. NVIDIA lists 450 W board power (850 W required system power) for the RTX 4090 and 575 W (1,000 W) for the RTX 5090; check the card maker\'s PSU guidance. Not electrical-safety advice.',
-                            'Thinking old GPUs work. RTX 2080 is 10× slower than RTX 4070 Ti. Modern architecture matters.'
+                            'Thinking old GPUs work. RTX 2080 is roughly 10× slower than RTX 4070 Ti (approximate). Modern architecture matters.'
                         ]
                     },
                     {
                         type: 'cta',
-                        h2: 'Try PromptQuorum Free',
-                        body: 'Test multiple local LLM frontends and compare outputs — for free on PromptQuorum.',
+                        h2: 'Try PromptQuorum',
+                        body: 'Send one prompt to several AI models and compare the answers with PromptQuorum.',
                         cta: 'Start PromptQuorum →',
                         href: 'https://www.promptquorum.com'
                     }
@@ -557,19 +557,19 @@
                         type: 'title',
                         h1: 'Local LLM Hardware Guide 2026',
                         subtitle: 'GPU-VRAM-Tiers, beste Modelle, CPU-Inferenz und Optimierung für 2026.',
-                        link: 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=de'
+                        link: 'https://www.promptquorum.com/de/local-llms/local-llm-hardware-guide'
                     },
                     {
                         type: 'list',
                         h2: 'Wichtigste Erkenntnisse',
                         items: [
-                            '<strong>VRAM-Mathe:</strong> (Modellgröße ÷ Quantisierungsbits) × 8 = VRAM benötigt',
+                            '<strong>VRAM-Mathe:</strong> Parameter (Milliarden) × Bits pro Gewicht ÷ 8 = GB für die Gewichte; Platz für Kontext einplanen. Geschwindigkeiten in diesem Deck sind ungefähre Werte, keine Messungen von PromptQuorum.',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/Sek.) ist beste Wahl',
                             '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/Sek.)',
                             '<strong>24 GB VRAM:</strong> 70B-Modelle passen nicht bei Q4_K_M (~39 GB). Nutzen Sie 27–32B-Modelle.',
                             '<strong>CPU-only (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/Sek.) oder Llama 3.2 3B (20 tok/Sek.)',
-                            '<strong>llama.cpp Geschwindigkeit:</strong> Setzen Sie --n-gpu-layers 99 um RTX 4070 Ti zu verdoppeln',
-                            '<strong>GPU ist wichtigste:</strong> Gebrauchte RTX 3060 12GB (~200 €) ist 5–8× schneller als CPU'
+                            '<strong>llama.cpp-Geschwindigkeit:</strong> --n-gpu-layers 99 setzen, damit alle Layer auf der GPU laufen (deutlich schneller als mit CPU-Auslagerung)',
+                            '<strong>GPU ist wichtigste:</strong> Gebrauchte RTX 3060 12GB ist 5–8× schneller als CPU'
                         ]
                     },
                     {
@@ -577,7 +577,7 @@
                         h2: 'VRAM-Berechnung: Die Formel',
                         line1: 'VRAM (GB) = (Modellgröße × Quantisierungsbits) ÷ 8',
                         line2: 'Beispiel: Llama 3.3 70B bei Q4 ≈ 39 GB VRAM',
-                        tip: 'Q4_K_M ist der praktische Sweetspot — NVIDIA-GPUs beschleunigen es effizienter als Q4_0'
+                        tip: 'Q4_K_M ist eine gängige praktische Wahl: Bei ähnlicher Größe bleibt in der Regel mehr Qualität erhalten als bei Q4_0'
                     },
                     {
                         type: 'table',
@@ -585,7 +585,7 @@
                         columns: ['Tier', 'GPU', 'VRAM', 'Best für', 'Geschwindigkeit'],
                         rows: [
                             { 'Tier': 'Budget ($679+)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best für': '7–13B-Modelle', 'Geschwindigkeit': '~60 tok/Sek.' },
-                            { 'Tier': 'Mittel (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'Best für': '14–32B-Modelle', 'Geschwindigkeit': '~110 tok/Sek.' },
+                            { 'Tier': 'Mittel (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'Best für': '14–24B-Modelle', 'Geschwindigkeit': '~110 tok/Sek.' },
                             { 'Tier': 'High (~$4.500–4.700)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Best für': '70B (Q4, leichtes Offload)', 'Geschwindigkeit': '290,0 tok/s (7B Q4_0)' },
                             { 'Tier': 'Server ($7.000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'Best für': '70B+ Modelle', 'Geschwindigkeit': 'Production-ready' }
                         ]
@@ -621,7 +621,7 @@
                         h2: '70B-Modelle auf RTX 4090 (24 GB)',
                         columns: ['Modell', 'Quant', 'VRAM', 'Passt?'],
                         rows: [
-                            { 'Modell': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 GB', 'Passt?': '✅ Bestes Coding (77,2% SWE-bench)' },
+                            { 'Modell': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 GB', 'Passt?': '✅ Bestes Coding (77,2 % SWE-bench Verified, Herstellerangabe)' },
                             { 'Modell': 'DeepSeek-R1 32B', 'Quant': 'Q4_K_M', 'VRAM': '~19 GB', 'Passt?': '✅ Beste Wahl' },
                             { 'Modell': 'Qwen3 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 GB', 'Passt?': '✅ Hohe Qualität' },
                             { 'Modell': 'Qwen3 32B', 'Quant': 'Q8_0', 'VRAM': '~34 GB', 'Passt?': '❌ Nein (34 GB)' },
@@ -658,9 +658,9 @@
                         h2: 'Budget-Build Optionen',
                         columns: ['Budget', 'GPU', 'VRAM', 'Beste Modelle'],
                         rows: [
-                            { 'Budget': '€1200 Einstieg', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Beste Modelle': '7–13B' },
-                            { 'Budget': '€2000 Solide', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Beste Modelle': '13–30B' },
-                            { 'Budget': '$8,550+ High-End', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', 'Beste Modelle': 'Alle (70B+)' }
+                            { 'Budget': '$1500 Einstieg', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Beste Modelle': '7–13B' },
+                            { 'Budget': '$2500 Solide', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Beste Modelle': '13–24B' },
+                            { 'Budget': '$8,550+ High-End', 'GPU': '2× RTX 4090', 'VRAM': '48 GB', 'Beste Modelle': 'Alle (70B+)' }
                         ]
                     },
                     {
@@ -676,7 +676,7 @@
                         type: 'list',
                         h2: 'Server vs. Consumer-Hardware',
                         items: [
-                            '<strong>Consumer (RTX 5090):</strong> 1.999 $ UVP (~4.500–4.700 $ Neuhandel), 32 GB VRAM, Single-User, anfällig für Thermal-Drosselung',
+                            '<strong>Consumer (RTX 5090):</strong> 1.999 $ UVP (~4.500–4.700 $ Neuhandel), 32 GB VRAM, Single-User, bei Dauerlast ist eventuell zusätzliche Kühlung nötig',
                             '<strong>Server (RTX 6000 Ada):</strong> ~7.000 $, 48 GB VRAM, für 24/7-Nutzung mit besserer Kühlung',
                             '<strong>Empfehlung:</strong> Starten Sie mit RTX 5090. Upgraden Sie auf Dual-A100 oder RTX 6000 Ada für 24/7 70B+ Nutzung'
                         ]
@@ -689,13 +689,13 @@
                             'VRAM-Overhead nicht berücksichtigen. Modelldateigröße + System-Overhead + Context = VRAM benötigt.',
                             'Annehmen, dass alle 70B-Modelle in 40 GB VRAM passen. Sie passen knapp in Q4 nur; Q5 braucht 45+ GB.',
                             'Stromversorgung und Kühlung ignorieren. NVIDIA nennt für die RTX 4090 450 W Board-Leistung (850 W Systemleistung), für die RTX 5090 575 W (1.000 W); Netzteilvorgaben des Herstellers beachten. Keine Beratung zur elektrischen Sicherheit.',
-                            'Denken, dass alte GPUs funktionieren. RTX 2080 ist 10× langsamer als RTX 4070 Ti. Moderne Architektur zählt.'
+                            'Denken, dass alte GPUs funktionieren. RTX 2080 ist ungefähr 10× langsamer als RTX 4070 Ti (Näherungswert). Moderne Architektur zählt.'
                         ]
                     },
                     {
                         type: 'cta',
-                        h2: 'PromptQuorum kostenlos testen',
-                        body: 'Testen Sie mehrere lokale LLM-Frontends und vergleichen Sie Ausgaben — kostenlos auf PromptQuorum.',
+                        h2: 'PromptQuorum ausprobieren',
+                        body: 'Schicken Sie einen Prompt an mehrere KI-Modelle und vergleichen Sie die Antworten mit PromptQuorum.',
                         cta: 'PromptQuorum starten →',
                         href: 'https://www.promptquorum.com?lang=de'
                     }
@@ -708,18 +708,18 @@
                         type: 'title',
                         h1: 'Guide Matériel Local LLM 2026',
                         subtitle: 'Niveaux GPU VRAM, meilleurs modèles, inférence CPU et optimisation pour 2026.',
-                        link: 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=fr'
+                        link: 'https://www.promptquorum.com/fr/local-llms/local-llm-hardware-guide'
                     },
                     {
                         type: 'list',
                         h2: 'Points Clés',
                         items: [
-                            '<strong>Calcul VRAM:</strong> (Taille modèle ÷ bits quantification) × 8 = VRAM nécessaire',
+                            '<strong>Calcul VRAM :</strong> paramètres (milliards) × bits par poids ÷ 8 = Go pour les poids ; prévoyez de la place pour le contexte. Les vitesses de ce diaporama sont approximatives, pas des mesures de PromptQuorum.',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/sec) est le meilleur',
                             '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/sec)',
                             '<strong>24 GB VRAM:</strong> Les modèles 70B ne rentrent pas en Q4_K_M (~39 GB). Utilisez 27–32B à la place.',
                             '<strong>CPU-only (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) ou Llama 3.2 3B (20 tok/sec)',
-                            '<strong>Vitesse llama.cpp:</strong> Mettez --n-gpu-layers 99 pour doubler RTX 4070 Ti',
+                            '<strong>Vitesse llama.cpp :</strong> utilisez --n-gpu-layers 99 pour exécuter toutes les couches sur le GPU (gain important par rapport au repli CPU)',
                             '<strong>GPU prime:</strong> RTX 3060 12GB d\'occasion est 5–8× plus rapide que CPU'
                         ]
                     },
@@ -728,7 +728,7 @@
                         h2: 'Calcul VRAM : La Formule',
                         line1: 'VRAM (Go) = (Taille modèle × bits quant.) ÷ 8',
                         line2: 'Exemple : Llama 3.3 70B en Q4 ≈ 39 Go VRAM',
-                        tip: 'Q4_K_M est le meilleur compromis — les GPU NVIDIA l\'accélèrent mieux que Q4_0'
+                        tip: 'Q4_K_M est un choix pratique courant : à taille comparable, il préserve en général mieux la qualité que Q4_0'
                     },
                     {
                         type: 'table',
@@ -736,7 +736,7 @@
                         columns: ['Niveau', 'GPU', 'VRAM', 'Meilleur pour', 'Vitesse'],
                         rows: [
                             { 'Niveau': 'Budget (dès 679 $)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 7–13B', 'Vitesse': '~60 tok/sec' },
-                            { 'Niveau': 'Milieu (~979 $)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 14–32B', 'Vitesse': '~110 tok/sec' },
+                            { 'Niveau': 'Milieu (~979 $)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 14–24B', 'Vitesse': '~110 tok/sec' },
                             { 'Niveau': 'Haut (~4 500–4 700 $)', 'GPU': 'RTX 5090', 'VRAM': '32 Go', 'Meilleur pour': '70B (Q4, offload léger)', 'Vitesse': '290.0 tok/s (7B Q4_0)' },
                             { 'Niveau': 'Serveur (7 000+ $)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 Go', 'Meilleur pour': 'Modèles 70B+', 'Vitesse': 'Niveau production' }
                         ]
@@ -772,7 +772,7 @@
                         h2: 'Modèles 70B sur RTX 4090 (24 Go)',
                         columns: ['Modèle', 'Quant', 'VRAM', 'Rentre?'],
                         rows: [
-                            { 'Modèle': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 Go', 'Rentre?': '✅ Meilleur codage (77,2% SWE-bench)' },
+                            { 'Modèle': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 Go', 'Rentre?': '✅ Meilleur codage (77,2 % SWE-bench Verified, valeur du développeur)' },
                             { 'Modèle': 'DeepSeek-R1 32B', 'Quant': 'Q4_K_M', 'VRAM': '~19 Go', 'Rentre?': '✅ Meilleur choix' },
                             { 'Modèle': 'Qwen3 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 Go', 'Rentre?': '✅ Haute qualité' },
                             { 'Modèle': 'Qwen3 32B', 'Quant': 'Q8_0', 'VRAM': '~34 Go', 'Rentre?': '❌ Non (34 Go)' },
@@ -809,9 +809,9 @@
                         h2: 'Options de configuration budget',
                         columns: ['Budget', 'GPU', 'VRAM', 'Meilleurs modèles'],
                         rows: [
-                            { 'Budget': '€1200 entrée', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 Go', 'Meilleurs modèles': '7–13B' },
-                            { 'Budget': '€2000 solide', 'GPU': 'RTX 4080', 'VRAM': '16 Go', 'Meilleurs modèles': '13–30B' },
-                            { 'Budget': '8 550 $+ haut de gamme', 'GPU': '2× RTX 4090', 'VRAM': '24 Go', 'Meilleurs modèles': 'Tous (70B+)' }
+                            { 'Budget': '$1500 entrée', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 Go', 'Meilleurs modèles': '7–13B' },
+                            { 'Budget': '$2500 solide', 'GPU': 'RTX 4080', 'VRAM': '16 Go', 'Meilleurs modèles': '13–24B' },
+                            { 'Budget': '8 550 $+ haut de gamme', 'GPU': '2× RTX 4090', 'VRAM': '48 Go', 'Meilleurs modèles': 'Tous (70B+)' }
                         ]
                     },
                     {
@@ -827,7 +827,7 @@
                         type: 'list',
                         h2: 'Serveur vs matériel grand public',
                         items: [
-                            '<strong>Grand public (RTX 5090):</strong> 1 999 $ PDSF (~4 500–4 700 $ neuf), 32 Go VRAM, mono-utilisateur, throttling thermique',
+                            '<strong>Grand public (RTX 5090):</strong> 1 999 $ PDSF (~4 500–4 700 $ neuf), 32 Go VRAM, mono-utilisateur, un refroidissement supplémentaire peut être nécessaire en 24h/24',
                             '<strong>Serveur (RTX 6000 Ada):</strong> ~7 000 $, 48 Go VRAM, conçu 24/7 avec meilleur refroidissement',
                             '<strong>Recommandation:</strong> Commencez avec RTX 5090. Passez à double A100 ou RTX 6000 Ada pour 24/7 70B+ utilisation'
                         ]
@@ -840,13 +840,13 @@
                             'Ne pas tenir compte du surcoût VRAM. Taille fichier + overhead système + contexte = VRAM total.',
                             'Supposer tous modèles 70B rentrent dans 40 Go VRAM. Rentrent à peine en Q4 seul; Q5 demande 45+ Go.',
                             'Ignorer alimentation et refroidissement. NVIDIA indique 450 W pour la RTX 4090 (850 W système requis) et 575 W (1 000 W) pour la RTX 5090 ; suivre les recommandations d\'alimentation du fabricant. Pas un conseil de sécurité électrique.',
-                            'Penser vieilles GPUs fonctionnent. RTX 2080 est 10× plus lente que RTX 4070 Ti. Architecture moderne compte.'
+                            'Penser vieilles GPUs fonctionnent. La RTX 2080 est environ 10× plus lente que la RTX 4070 Ti (ordre de grandeur). Architecture moderne compte.'
                         ]
                     },
                     {
                         type: 'cta',
-                        h2: 'Essayez PromptQuorum Gratuitement',
-                        body: 'Testez plusieurs frontends LLM locaux et comparez les sorties — gratuitement sur PromptQuorum.',
+                        h2: 'Essayez PromptQuorum',
+                        body: 'Envoyez un prompt à plusieurs modèles d\'IA et comparez les réponses avec PromptQuorum.',
                         cta: 'Démarrer sur PromptQuorum →',
                         href: 'https://www.promptquorum.com?lang=fr'
                     }
@@ -859,18 +859,18 @@
                         type: 'title',
                         h1: 'ローカルLLM ハードウェアガイド 2026',
                         subtitle: 'GPU VRAM層、最良モデル、CPU推論、2026年の最適化。',
-                        link: 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=ja'
+                        link: 'https://www.promptquorum.com/ja/local-llms/local-llm-hardware-guide'
                     },
                     {
                         type: 'list',
                         h2: '重要ポイント',
                         items: [
-                            '<strong>VRAM計算:</strong> (モデルサイズ ÷ 量子化ビット) × 8 = VRAM必要',
+                            '<strong>VRAM計算:</strong> パラメータ数（10億単位）× 重みあたりのビット数 ÷ 8 = 重みに必要なGB。コンテキスト分の余裕も必要です。本スライドの速度は概算値で、PromptQuorumの実測ではありません。',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/sec) が最良',
                             '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/sec)',
                             '<strong>24 GB VRAM:</strong> 70Bモデルは Q4_K_M では収まらない (~39 GB)。27–32B を代わりに使用。',
                             '<strong>CPUのみ (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) または Llama 3.2 3B (20 tok/sec)',
-                            '<strong>llama.cpp速度:</strong> --n-gpu-layers 99 で RTX 4070 Ti を倍にする',
+                            '<strong>llama.cpp速度:</strong> --n-gpu-layers 99 で全レイヤーをGPUで実行（CPUへのフォールバックより大幅に高速）',
                             '<strong>GPUが最優先:</strong> 中古RTX 3060 12GBはCPUより5–8倍高速'
                         ]
                     },
@@ -879,7 +879,7 @@
                         h2: 'VRAM計算：計算式',
                         line1: 'VRAM (GB) = (モデルサイズ × 量子化ビット数) ÷ 8',
                         line2: '例：Llama 3.3 70B を Q4 で ≈ 39 GB VRAM',
-                        tip: 'Q4_K_M が最適なバランス — NVIDIA GPU は Q4_0 よりも効率的に処理'
+                        tip: 'Q4_K_M は実用的でよく使われる選択肢です。同程度のサイズなら Q4_0 より品質を保ちやすいのが一般的です'
                     },
                     {
                         type: 'table',
@@ -887,7 +887,7 @@
                         columns: ['階層', 'GPU', 'VRAM', 'ベスト', '速度'],
                         rows: [
                             { '階層': 'バジェット ($679+)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'ベスト': '7–13Bモデル', '速度': '~60 tok/秒' },
-                            { '階層': 'ミッド (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'ベスト': '14–32Bモデル', '速度': '~110 tok/秒' },
+                            { '階層': 'ミッド (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'ベスト': '14–24Bモデル', '速度': '~110 tok/秒' },
                             { '階層': 'ハイ (~$4,500–4,700)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'ベスト': '70B（Q4、軽いオフロード）', '速度': '290.0 tok/s (7B Q4_0)' },
                             { '階層': 'サーバー ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'ベスト': '70B+モデル', '速度': 'Production級' }
                         ]
@@ -923,7 +923,7 @@
                         h2: 'RTX 4090（24 GB）での70Bモデル',
                         columns: ['モデル', '量子化', 'VRAM', '対応?'],
                         rows: [
-                            { 'モデル': 'Qwen 3.6 27B', '量子化': 'Q4_K_M', 'VRAM': '~16 GB', '対応?': '✅ 最良コーディング (77.2% SWE-bench)' },
+                            { 'モデル': 'Qwen 3.6 27B', '量子化': 'Q4_K_M', 'VRAM': '~16 GB', '対応?': '✅ 最良コーディング (77.2% SWE-bench Verified、開発元の報告値)' },
                             { 'モデル': 'DeepSeek-R1 32B', '量子化': 'Q4_K_M', 'VRAM': '~19 GB', '対応?': '✅ 最良選択' },
                             { 'モデル': 'Qwen3 32B', '量子化': 'Q5_K_M', 'VRAM': '~21 GB', '対応?': '✅ 高品質' },
                             { 'モデル': 'Qwen3 32B', '量子化': 'Q8_0', 'VRAM': '~34 GB', '対応?': '❌ いいえ (34 GB)' },
@@ -961,8 +961,8 @@
                         columns: ['予算', 'GPU', 'VRAM', '最良モデル'],
                         rows: [
                             { '予算': '$1500 入門', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '最良モデル': '7–13B' },
-                            { '予算': '$2500 堅実', 'GPU': 'RTX 4080', 'VRAM': '16 GB', '最良モデル': '13–30B' },
-                            { '予算': '$8,550+ ハイエンド', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', '最良モデル': 'すべて (70B+)' }
+                            { '予算': '$2500 堅実', 'GPU': 'RTX 4080', 'VRAM': '16 GB', '最良モデル': '13–24B' },
+                            { '予算': '$8,550+ ハイエンド', 'GPU': '2× RTX 4090', 'VRAM': '48 GB', '最良モデル': 'すべて (70B+)' }
                         ]
                     },
                     {
@@ -978,7 +978,7 @@
                         type: 'list',
                         h2: 'サーバー vs. コンシューマーハードウェア',
                         items: [
-                            '<strong>コンシューマー (RTX 5090):</strong> $1,999 MSRP（~$4,500–4,700 新品販売価格）、32 GB VRAM、シングルユーザー、サーマルスロットリング',
+                            '<strong>コンシューマー (RTX 5090):</strong> $1,999 MSRP（~$4,500–4,700 新品販売価格）、32 GB VRAM、シングルユーザー、24時間の連続負荷では追加の冷却が必要になる場合があります',
                             '<strong>サーバー (RTX 6000 Ada):</strong> ~$7,000、48 GB VRAM、24/7 利用向け、良好な冷却',
                             '<strong>推奨:</strong> RTX 5090 から開始。24/7 70B+ は Dual A100 または RTX 6000 Ada にアップグレード'
                         ]
@@ -991,13 +991,13 @@
                             'VRAM オーバーヘッドを考慮しない。モデルファイル + システムオーバーヘッド + コンテキスト = VRAM合計。',
                             '70Bすべてが40GB VRAMに収まると仮定。Q4 のみでかろうじて収まり、Q5 は45+ GB 必要。',
                             '電源とクーリングを無視。NVIDIAはRTX 4090を450W（必要システム電力850W）、RTX 5090を575W（1,000W）と記載。メーカー推奨のPSU容量を確認。電気安全に関する助言ではありません。',
-                            '古いGPUが機能すると思う。RTX 2080 は RTX 4070 Ti の 10倍遅い。モダン アーキテクチャが重要。'
+                            '古いGPUが機能すると思う。RTX 2080 は RTX 4070 Ti よりおよそ10倍遅いです（概算）。モダン アーキテクチャが重要。'
                         ]
                     },
                     {
                         type: 'cta',
-                        h2: 'PromptQuorumを無料で試す',
-                        body: '複数のローカルLLMフロントエンドをテストし、出力を比較 — PromptQuorumで無料。',
+                        h2: 'PromptQuorumを試す',
+                        body: '1つのプロンプトを複数のAIモデルに送り、PromptQuorumで回答を比較できます。',
                         cta: 'PromptQuorumを始める →',
                         href: 'https://www.promptquorum.com?lang=ja'
                     }
@@ -1010,18 +1010,18 @@
                         type: 'title',
                         h1: '本地LLM硬件指南 2026',
                         subtitle: 'GPU VRAM层级、最佳模型、CPU推理和2026年优化。',
-                        link: 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=zh'
+                        link: 'https://www.promptquorum.com/zh/local-llms/local-llm-hardware-guide'
                     },
                     {
                         type: 'list',
                         h2: '核心要点',
                         items: [
-                            '<strong>VRAM计算:</strong> (模型大小 ÷ 量化位数) × 8 = VRAM所需',
+                            '<strong>VRAM计算:</strong> 参数量（十亿）× 每个权重的位数 ÷ 8 = 权重所需 GB；另需为上下文预留空间。本幻灯片中的速度为近似值，并非 PromptQuorum 实测。',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/秒) 最佳选择',
                             '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/秒)',
                             '<strong>24 GB VRAM:</strong> 70B模型在Q4_K_M处不适合 (~39 GB)。改用27–32B模型。',
                             '<strong>仅CPU (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/秒) 或 Llama 3.2 3B (20 tok/秒)',
-                            '<strong>llama.cpp速度:</strong> 设置 --n-gpu-layers 99 使RTX 4070 Ti 加倍',
+                            '<strong>llama.cpp速度:</strong> 设置 --n-gpu-layers 99，让所有层在 GPU 上运行（比回退到 CPU 快得多）',
                             '<strong>GPU至关重要:</strong> 二手RTX 3060 12GB比CPU快5–8倍'
                         ]
                     },
@@ -1030,7 +1030,7 @@
                         h2: 'VRAM计算：公式',
                         line1: 'VRAM (GB) = (模型大小 × 量化位数) ÷ 8',
                         line2: '示例：Llama 3.3 70B 以Q4运行 ≈ 39 GB VRAM',
-                        tip: 'Q4_K_M是最佳平衡点 — NVIDIA GPU对其加速比Q4_0更高效'
+                        tip: 'Q4_K_M 是常见的实用选择：在体积相近时，通常比 Q4_0 保留更多质量'
                     },
                     {
                         type: 'table',
@@ -1038,7 +1038,7 @@
                         columns: ['层级', 'GPU', 'VRAM', '最佳用途', '速度'],
                         rows: [
                             { '层级': '预算型 ($679+)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最佳用途': '7–13B模型', '速度': '~60 tok/秒' },
-                            { '层级': '中端 (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', '最佳用途': '14–32B模型', '速度': '~110 tok/秒' },
+                            { '层级': '中端 (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', '最佳用途': '14–24B模型', '速度': '~110 tok/秒' },
                             { '层级': '高端 (~$4,500–4,700)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', '最佳用途': '70B（Q4，轻度卸载）', '速度': '290.0 tok/s (7B Q4_0)' },
                             { '层级': '服务器 ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', '最佳用途': '70B+模型', '速度': '生产级' }
                         ]
@@ -1074,7 +1074,7 @@
                         h2: 'RTX 4090（24 GB）上的70B模型',
                         columns: ['模型', '量化', 'VRAM', '兼容?'],
                         rows: [
-                            { '模型': 'Qwen 3.6 27B', '量化': 'Q4_K_M', 'VRAM': '~16 GB', '兼容?': '✅ 最佳编程模型 (77.2% SWE-bench)' },
+                            { '模型': 'Qwen 3.6 27B', '量化': 'Q4_K_M', 'VRAM': '~16 GB', '兼容?': '✅ 最佳编程模型 (77.2% SWE-bench Verified，开发方报告值)' },
                             { '模型': 'DeepSeek-R1 32B', '量化': 'Q4_K_M', 'VRAM': '~19 GB', '兼容?': '✅ 最佳推理' },
                             { '模型': 'Qwen3 32B', '量化': 'Q5_K_M', 'VRAM': '~21 GB', '兼容?': '✅ 高质量' },
                             { '模型': 'Qwen3 32B', '量化': 'Q8_0', 'VRAM': '~34 GB', '兼容?': '❌ 否 (34 GB)' },
@@ -1112,8 +1112,8 @@
                         columns: ['预算', 'GPU', 'VRAM', '最佳模型'],
                         rows: [
                             { '预算': '$1500 入门', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '最佳模型': '7–13B' },
-                            { '预算': '$2500 稳定', 'GPU': 'RTX 4080', 'VRAM': '16 GB', '最佳模型': '13–30B' },
-                            { '预算': '$8,550+ 高端', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', '最佳模型': '任意 (70B+)' }
+                            { '预算': '$2500 稳定', 'GPU': 'RTX 4080', 'VRAM': '16 GB', '最佳模型': '13–24B' },
+                            { '预算': '$8,550+ 高端', 'GPU': '2× RTX 4090', 'VRAM': '48 GB', '最佳模型': '任意 (70B+)' }
                         ]
                     },
                     {
@@ -1129,7 +1129,7 @@
                         type: 'list',
                         h2: '服务器 vs 消费级硬件',
                         items: [
-                            '<strong>消费级 (RTX 5090):</strong> $1,999建议零售价（~$4,500–4,700新品零售价）、32 GB VRAM、单用户、易发热节流',
+                            '<strong>消费级 (RTX 5090):</strong> $1,999建议零售价（~$4,500–4,700新品零售价）、32 GB VRAM、单用户、24/7 持续负载下可能需要额外散热',
                             '<strong>服务器 (RTX 6000 Ada):</strong> ~$7,000、48 GB VRAM、设计用于24/7、冷却更佳',
                             '<strong>推荐:</strong> 从RTX 5090开始。24/7运行70B+升级至双A100或RTX 6000 Ada'
                         ]
@@ -1142,13 +1142,13 @@
                             '不计入VRAM开销。模型文件大小 + 系统开销 + 上下文 = VRAM总量。',
                             '假设所有70B模型在40 GB VRAM中适配。仅在Q4时勉强适配；Q5需要45+ GB。',
                             '忽视电源和冷却。NVIDIA标注RTX 4090为450W（所需系统功率850W），RTX 5090为575W（1,000W）；请查看厂商推荐的电源功率。这不是电气安全建议。',
-                            '认为旧GPU能用。RTX 2080比RTX 4070 Ti慢10倍。现代架构至关重要。'
+                            '认为旧GPU能用。RTX 2080 比 RTX 4070 Ti 大约慢 10 倍（近似值）。现代架构至关重要。'
                         ]
                     },
                     {
                         type: 'cta',
-                        h2: '免费试用PromptQuorum',
-                        body: '测试多个本地LLM前端并比较输出 — 在PromptQuorum上免费使用。',
+                        h2: '试用PromptQuorum',
+                        body: '将一个提示词发送给多个 AI 模型，并用 PromptQuorum 比较回答。',
                         cta: '开始使用PromptQuorum →',
                         href: 'https://www.promptquorum.com?lang=zh'
                     }
@@ -1159,7 +1159,7 @@
         function renderSlide(slide) {
             let html = '';
             const lang = window.location.search ? new URLSearchParams(window.location.search).get('lang') || 'en' : 'en';
-            const articleUrl = `https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=${lang}`;
+            const articleUrl = `https://www.promptquorum.com/${['de','fr','ja','zh'].includes(lang) ? lang + '/' : ''}local-llms/local-llm-hardware-guide`;
             const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
 
             switch (slide.type) {
@@ -1243,7 +1243,7 @@
         // Update header
         document.getElementById('header-title').textContent = content.title;
         const backLink = document.getElementById('back-link');
-        backLink.href += `?lang=${lang}`;
+        if (["de","fr","ja","zh"].includes(lang)) backLink.href = `https://www.promptquorum.com/${lang}/local-llms/local-llm-hardware-guide`;
 
         // Render all slides
         const container = document.getElementById('slides-container');

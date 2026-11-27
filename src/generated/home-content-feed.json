@@ -166,16 +166,16 @@
     "title": "What Is Prompt Engineering? — PromptQuorum Guide",
     "excerpt": "Prompt engineering: designing text inputs for reliable AI outputs. Learn role prompting, chain-of-thought, few-shot techniques for ChatGPT, Claude, Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "de",
     "title": "Was ist Prompt Engineering? — PromptQuorum Leitfaden",
-    "excerpt": "Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.",
+    "excerpt": "Prompt Engineering 2026: die Technik für verlässlichere KI-Ausgaben. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/de/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -184,25 +184,25 @@
     "title": "Qu'est-ce que le Prompt Engineering ? — Guide PromptQuorum",
     "excerpt": "Ingénierie de prompt : définition, principes et techniques (chain-of-thought, few-shot), puis comparaison avec le fine-tuning et le RAG pour ChatGPT et Claude.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/fr/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ja",
     "title": "プロンプトエンジニアリングとは？",
-    "excerpt": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。",
+    "excerpt": "プロンプトエンジニアリングはAI出力の品質を左右する技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/ja/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "zh",
     "title": "什么是提示工程？ — PromptQuorum 指南",
-    "excerpt": "提示工程是决定AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。",
+    "excerpt": "提示工程是影响AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/zh/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -211,16 +211,16 @@
     "title": "¿Qué es el Prompt Engineering? — Guía PromptQuorum",
     "excerpt": "Prompt engineering en 2026: diseña entradas de texto para resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT y Claude.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/es/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "pt",
     "title": "O que é Prompt Engineering? — Guia PromptQuorum",
-    "excerpt": "Prompt engineering em 2026: projete entradas de texto para resultados confiáveis de IA. Aprenda role prompting, chain-of-thought e few-shot para ChatGPT, Claude e Ollama.",
+    "excerpt": "Aprenda prompt engineering em 2026: crie instruções melhores para obter resultados confiáveis no ChatGPT, Claude e Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/pt/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -229,7 +229,7 @@
     "title": "ما هي هندسة الطلبات؟ — دليل ⁨PromptQuorum⁩",
     "excerpt": "هندسة الطلبات: صمّم المدخلات النصية للحصول على نتائج موثوقة من ⁨LLMs⁩. تعلّم ⁨role prompting⁩ و⁨chain-of-thought⁩ و⁨few-shot⁩ لـ ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Ollama⁩.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/ar/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -238,7 +238,7 @@
     "title": "프롬프트 엔지니어링이란? — PromptQuorum 가이드",
     "excerpt": "프롬프트 엔지니어링: 신뢰할 수 있는 AI 출력을 위한 텍스트 입력 설계. ChatGPT, Claude, Ollama를 위한 역할 프롬프팅, 사고 연쇄, 퓨샷 기법을 학습하십시오.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/ko/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -10696,7 +10696,7 @@
     "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
     "excerpt": "Local AI models are limited by VRAM: 8 GB runs 7B, 12 GB 14B, 16 GB 24B, 24 GB 32B, 70B needs ~40 GB. Table by model size plus 12, 16 and 24 GB limits.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10705,7 +10705,7 @@
     "title": "Lokale-LLM-Hardware: GPU vs. Mini-PC vs. Mac im Vergleich",
     "excerpt": "Lokale LLM Hardware: 8 GB VRAM reichen für 7B, 12 GB für 14B, 16 GB für 24B, 24 GB für 32B, 70B braucht ~40 GB. Tabelle nach Modellgröße und GPU-Grenzen.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/de/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10714,7 +10714,7 @@
     "title": "Matériel pour LLM local : GPU, mini PC et Mac comparés",
     "excerpt": "Un LLM local est limité par la VRAM : 8 Go pour 7B, 12 Go pour 14B, 16 Go pour 24B, 24 Go pour 32B, ~40 Go pour 70B. Tableau par taille de modèle.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/fr/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10723,7 +10723,7 @@
     "title": "ローカルLLMハードウェア：GPU vs ミニPC vs Mac 比較",
     "excerpt": "ローカルLLMの限界はVRAMです。8 GBで7B、12 GBで14B、16 GBで24B、24 GBで32B、70Bは約40 GB。モデルサイズ別の表と12・16・24 GB GPUの限界も解説。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/ja/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10732,7 +10732,7 @@
     "title": "本地LLM硬件：GPU vs 迷你PC vs Mac 对比",
     "excerpt": "本地大模型的硬件瓶颈是显存：8 GB跑7B，12 GB跑14B，16 GB跑24B，24 GB跑32B，70B约需40 GB。附模型规模对照表及12、16、24 GB显卡上下文限制。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/zh/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10741,7 +10741,7 @@
     "title": "Hardware para LLM locales: GPU vs Mini PC vs Mac comparados",
     "excerpt": "Límites de hardware de un LLM local: 8 GB ejecutan 7B, 12 GB 14B, 16 GB 24B, 24 GB 32B y 70B pide ~40 GB. Tabla por tamaño y límites de 12, 16 y 24 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/es/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10750,7 +10750,7 @@
     "title": "Hardware para LLM Local: GPU vs Mini PC vs Mac Comparados",
     "excerpt": "Limites de hardware de um LLM local: 8 GB rodam 7B, 12 GB 14B, 16 GB 24B, 24 GB 32B e o 70B pede ~40 GB. Tabela por tamanho e limites de 12, 16 e 24 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/pt/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10759,7 +10759,7 @@
     "title": "عتاد ⁨LLM⁩ المحلي: مقارنة بين ⁨GPU⁩ و⁨Mini PC⁩ و⁨Mac⁩",
     "excerpt": "حدود عتاد ⁨LLM⁩ المحلي هي ⁨VRAM⁩: يشغّل ⁨8 GB⁩ نماذج ⁨7B⁩ و⁨12 GB⁩ نماذج ⁨14B⁩ و⁨16 GB⁩ نماذج ⁨24B⁩، ويحتاج ⁨70B⁩ إلى نحو ⁨40 GB⁩. جدول حسب الحجم.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/ar/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10768,7 +10768,7 @@
     "title": "로컬 LLM 하드웨어: GPU vs 미니 PC vs Mac 비교",
     "excerpt": "로컬 LLM의 한계는 VRAM입니다. 8GB는 7B, 12GB는 14B, 16GB는 24B, 24GB는 32B, 70B는 약 40GB가 필요합니다. 모델 크기별 표와 GPU별 한계를 정리했습니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/ko/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -20576,81 +20576,81 @@
   {
     "lang": "en",
     "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
-    "excerpt": "Three complete local-AI PC builds for 2026: budget 7B-13B, mid 14B-33B, and enthusiast 70B tiers. Exact parts lists, expected tokens/sec, and total costs repriced for the 2026 GPU, RAM, and SSD shortage.",
+    "excerpt": "Three local-AI PC builds for 2026: budget 7B-13B, mid 14B-33B and enthusiast 70B tiers. Parts lists, a few dated US GPU prices and notes on DDR5 price rises.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Lokale-KI-Workstation 2026 selbst bauen: 3 Budget-Stufen",
-    "excerpt": "Lokale KI-Workstation bauen 2026: CPU, GPU, RAM und Speicher für LLM-Inferenz. Komplette Build-Anleitungen nach Budget, von Einsteiger bis RTX 5090 — Gesamtkosten neu berechnet für die GPU-, RAM- und SSD-Knappheit 2026.",
+    "excerpt": "Lokale KI-Workstation bauen 2026: CPU, GPU, RAM und Speicher für LLM-Inferenz. Komplette Build-Anleitungen nach Budget, von Einsteiger bis RTX 5090 — einige datierte US-GPU-Preise und Hinweise zur DDR5-Knappheit 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/de/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Monter une station IA locale en 2026 : 3 niveaux de budget",
-    "excerpt": "Trois configurations PC IA locale complètes pour 2026 : niveaux budget 7B-13B, intermédiaire 14B-33B et enthousiaste 70B. Listes de pièces exactes, tokens/s attendus et coûts totaux repensés pour la pénurie de GPU, de RAM et de SSD de 2026.",
+    "excerpt": "Trois configurations PC IA locale complètes pour 2026 : niveaux budget 7B-13B, intermédiaire 14B-33B et enthousiaste 70B. Listes de pièces, quelques prix GPU datés (marché américain) et notes sur la pénurie de DDR5 de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/fr/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカルAIワークステーション自作ガイド2026：予算別3構成",
-    "excerpt": "2026年のローカルAI PC構成3種：7B〜13B向けエントリー、14B〜33B向けミドル、70B向けハイエンド。正確なパーツリスト、想定tokens/sec、2026年のGPU・RAM・SSD不足を反映した合計コストを掲載。",
+    "excerpt": "2026年のローカルAI PC構成3種：7B〜13B向けエントリー、14B〜33B向けミドル、70B向けハイエンド。パーツリスト、日付付きの米国GPU価格の一部と2026年のDDR5不足に関する注記を掲載。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ja/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "2026 本地 AI 工作站装机指南：三档预算配置",
-    "excerpt": "2026年本地AI工作站搭建：LLM推理所需的CPU、GPU、内存和存储。按预算的完整搭建指南，从入门级到搭载RTX 5090的高端配置，全面解析硬件选择。",
+    "excerpt": "2026年本地AI工作站搭建：LLM推理所需的CPU、GPU、内存和存储。按预算的完整搭建指南，从入门级到搭载RTX 5090的高端配置，并附硬件选择说明。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/zh/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Guía para armar una PC con IA local 2026: 3 niveles de presupuesto",
-    "excerpt": "Tres PCs para IA local en 2026: económica 7B–13B, media 14B–33B y entusiasta 70B. Listas de componentes exactas, tokens/s esperados y costos totales actualizados por la escasez de GPU, RAM y SSD de 2026.",
+    "excerpt": "Tres PCs para IA local en 2026: económica 7B–13B, media 14B–33B y entusiasta 70B. Listas de componentes, algunos precios de GPU fechados (EE. UU.) y notas sobre la escasez de DDR5 de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/es/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Guia para montar um PC com IA local 2026: 3 níveis de orçamento",
-    "excerpt": "Três PCs para IA local em 2026: econômica 7B–13B, intermediária 14B–33B e entusiasta 70B. Listas de componentes exatas, tokens/s esperados e custos totais reajustados para a escassez de GPU, RAM e SSD de 2026.",
+    "excerpt": "Três PCs para IA local em 2026: econômica 7B–13B, intermediária 14B–33B e entusiasta 70B. Listas de componentes, alguns preços de GPU datados (EUA) e notas sobre a escassez de DDR5 de 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/pt/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "دليل بناء محطة عمل الذكاء الاصطناعي المحلي ⁨2026⁩: ⁨3⁩ مستويات ميزانية",
-    "excerpt": "3 قوائم مكوّنات كاملة لحاسوب LLM محلي 2026: مستوى اقتصادي لنماذج 7B–13B ومتوسط لـ 14B–33B ومتحمس لـ 70B. أداء توكن/ثانية وتكاليف معاد تسعيرها بعد شحّ GPU وRAM وSSD في 2026.",
+    "excerpt": "3 قوائم مكوّنات كاملة لحاسوب LLM محلي 2026: مستوى اقتصادي لنماذج 7B–13B ومتوسط لـ 14B–33B ومتحمس لـ 70B. أسعار GPU مؤرَّخة وملاحظات عن شحّ DDR5 في 2026.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ar/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 AI 워크스테이션 구성 가이드 2026: 예산별 3단계",
-    "excerpt": "2026년 로컬 AI PC 3가지 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 2026년 GPU·RAM·SSD 공급 부족을 반영해 다시 산정한 총 비용을 확인하십시오.",
+    "excerpt": "2026년 로컬 AI PC 3가지 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 부품 목록, 날짜가 명시된 일부 미국 GPU 가격과 2026년 DDR5 공급 부족 관련 안내를 확인하십시오.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-27",
     "url": "/ko/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
@@ -25355,81 +25355,81 @@
   {
     "lang": "en",
     "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
-    "excerpt": "M5 Ultra vs RTX 5090: M5 Ultra hits ~45 tok/s on Llama 3.3 70B (96GB, $5,499); RTX 5090's 32GB can't load 70B. M5 Max benchmarks, cost, power. 2026.",
+    "excerpt": "M5 Ultra vs RTX 5090: 179 vs 290 tok/s in llama.cpp's 7B Q4_0 test (developer-reported). The 43GB Llama 3.3 70B fits a 96GB Mac, not a 32GB card. Cost, power.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-27",
     "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Apple MLX vs NVIDIA CUDA für lokale LLMs: Welches System wählen in 2026?",
-    "excerpt": "M5 Ultra vs RTX 5090: M5 Ultra erreicht ~45 Tok/s bei Llama 3.3 70B (96GB, 5.499 $); RTX 5090 (32GB) kann 70B nicht laden. Plus M5 Max, Kosten, Stromverbrauch 2026.",
+    "excerpt": "M5 Ultra vs. RTX 5090: 179 vs. 290 Tok/s im 7B-Test von llama.cpp (Entwicklerangaben). Das 43-GB-Modell Llama 3.3 70B passt in 96 GB, nicht auf 32 GB.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-27",
     "url": "/de/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Apple MLX vs NVIDIA CUDA pour LLMs locaux : Quel système choisir en 2026 ?",
-    "excerpt": "M5 Ultra vs RTX 5090 : le M5 Ultra atteint ~45 tok/s sur Llama 3.3 70B (96Go, 5 499 $) ; les 32Go du RTX 5090 ne peuvent pas charger 70B. Plus M5 Max, coût, conso 2026.",
+    "excerpt": "M5 Ultra vs RTX 5090 : 179 contre 290 tok/s au test 7B de llama.cpp (chiffres de développeurs). Llama 3.3 70B (43 Go) tient en 96 Go, pas en 32 Go.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-27",
     "url": "/fr/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "Apple MLX vs NVIDIA CUDA ローカルLLM比較：2026年のおすすめはどちら？",
-    "excerpt": "M5 UltraとRTX 5090を比較：RTX 5090の32GB VRAMではLlama 3.3 70Bを読み込めませんが、M5 Ultra（96GB、米国価格5,499米ドル）なら収まります。M5 Max・消費電力・おすすめ構成も比較。",
+    "excerpt": "M5 UltraとRTX 5090を比較：llama.cppの7Bテストは179対290 tok/s（開発者報告値）。43GBのLlama 3.3 70Bは96GBのMacに収まり、32GBには収まりません。",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "Apple MLX vs NVIDIA CUDA 本地LLM对比：2026年该选哪个系统？",
-    "excerpt": "M5 Ultra vs RTX 5090：M5 Ultra在Llama 3.3 70B上约45 tok/s（96GB，5,499美元）；RTX 5090的32GB无法加载70B模型。另含M5 Max、成本与功耗对比2026。",
+    "excerpt": "M5 Ultra对比RTX 5090：llama.cpp 7B测试为179对290 tok/s（开发者上报）。43GB的Llama 3.3 70B装得进96GB Mac，装不进32GB显卡。含成本与功耗对比。",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-27",
     "url": "/zh/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Apple MLX vs NVIDIA CUDA para LLMs locales: ¿Qué sistema elegir en 2026?",
-    "excerpt": "M5 Ultra vs RTX 5090: el M5 Ultra alcanza ~45 tok/s en Llama 3.3 70B (96GB, $5,499); los 32GB del RTX 5090 no pueden cargar 70B. Además M5 Max, costo y consumo 2026.",
+    "excerpt": "M5 Ultra vs RTX 5090: 179 vs 290 tok/s en la prueba 7B de llama.cpp (datos de desarrolladores). Llama 3.3 70B (43GB) cabe en 96GB, no en 32GB.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-27",
     "url": "/es/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Apple MLX vs NVIDIA CUDA para LLMs locais: qual sistema escolher em 2026?",
-    "excerpt": "M5 Ultra vs RTX 5090: o M5 Ultra atinge ~45 tok/s no Llama 3.3 70B (96GB, US$ 5.499); os 32GB da RTX 5090 não carregam 70B. Mais M5 Max, custo e consumo 2026.",
+    "excerpt": "M5 Ultra vs RTX 5090: 179 vs 290 tok/s no teste 7B do llama.cpp (dados de desenvolvedores). O Llama 3.3 70B (43GB) cabe em 96GB, não em 32GB.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-27",
     "url": "/pt/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "⁨Apple MLX⁩ مقابل ⁨NVIDIA CUDA⁩ لنماذج اللغة الكبيرة المحلية: أيهما تختار في ⁨2026⁩؟",
-    "excerpt": "⁨M5 Ultra⁩ مقابل ⁨RTX 5090⁩: يصل ⁨M5 Ultra⁩ إلى ⁨~45 tok/s⁩ على ⁨Llama 3.3 70B⁩ (⁨96GB⁩، ⁨5,499$⁩)؛ ذاكرة ⁨RTX 5090⁩ البالغة ⁨32GB⁩ لا تحمّل ⁨70B⁩. بالإضافة إلى ⁨M5 Max⁩ والتكلفة والطاقة ⁨2026⁩.",
+    "excerpt": "M5 Ultra مقابل RTX 5090: ‏179 مقابل 290 رمز/ثانية في اختبار 7B في llama.cpp (أرقام المطورين). ملف Llama 3.3 70B (43GB) يتسع في 96GB لا في 32GB.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-27",
     "url": "/ar/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "Apple MLX vs NVIDIA CUDA 로컬 LLM 비교: 2026년 어떤 시스템을 추천할까요?",
-    "excerpt": "M5 Ultra vs RTX 5090: RTX 5090의 32GB VRAM으로는 Llama 3.3 70B를 로드할 수 없지만 M5 Ultra(96GB, 미국 가격 5,499달러)는 메모리에 올릴 수 있습니다. M5 Max·전력·추천 구성 비교.",
+    "excerpt": "M5 Ultra vs RTX 5090: llama.cpp 7B 테스트 179 대 290 tok/s(개발자 보고). 43GB Llama 3.3 70B는 96GB Mac에는 들어가지만 32GB에는 들어가지 않습니다.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/ko/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -25600,7 +25600,7 @@
     "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
     "excerpt": "Self-host Qwen3 locally: 8B, 14B and 32B via Ollama/vLLM, hardware requirements, Docker API, and multi-GPU setup. Qwen3 has no 7B — use the 8B (qwen3:8b).",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25609,7 +25609,7 @@
     "title": "Qwen3 Lokales Deployment: Vollständiger Produktionsleitfaden (2026)",
     "excerpt": "Qwen3 lokal betreiben: 8B, 14B und 32B via Ollama/vLLM mit Docker-API-Server, Hardware-Empfehlungen und Multi-GPU. Hinweis — Qwen3 hat kein 7B; nutze das 8B (qwen3:8b). Leitfaden 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/de/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25618,7 +25618,7 @@
     "title": "Déploiement Local de Qwen3 : Guide Complet de Production (2026)",
     "excerpt": "Déployez Qwen3 en local : 8B, 14B et 32B via Ollama/vLLM avec un serveur API Docker, choix matériel et multi-GPU. Note — Qwen3 n'a pas de 7B ; utilisez le 8B (qwen3:8b). Guide 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/fr/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25627,7 +25627,7 @@
     "title": "Qwen3ローカルデプロイ完全ガイド（2026）：本番運用",
     "excerpt": "Qwen3をローカルにデプロイ：8B・14B・32BをOllama/vLLMとDocker APIサーバーで、ハードウェア選定とマルチGPUも解説。注記 — Qwen3に7Bはありません。8B（qwen3:8b）を使用。2026年版ガイド。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/ja/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25636,7 +25636,7 @@
     "title": "Qwen3本地部署完整指南（2026）：生产环境",
     "excerpt": "Qwen3本地部署：通过Ollama/vLLM运行8B、14B和32B，搭配Docker API服务器、硬件选型与多GPU方案。注意——Qwen3没有7B，请使用8B（qwen3:8b）。2026年指南。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/zh/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25645,7 +25645,7 @@
     "title": "Despliegue Local de Qwen3: Guía Completa de Producción (2026)",
     "excerpt": "Despliega Qwen3 en local: 8B, 14B y 32B con Ollama/vLLM y un servidor API Docker, elección de hardware y multi-GPU. Nota — Qwen3 no tiene 7B; usa el 8B (qwen3:8b). Guía 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/es/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25654,7 +25654,7 @@
     "title": "Implantação Local do Qwen3: Guia Completo de Produção (2026)",
     "excerpt": "Implante o Qwen3 localmente: 8B, 14B e 32B via Ollama/vLLM com servidor API Docker, escolha de hardware e multi-GPU. Nota — o Qwen3 não tem 7B; use o 8B (qwen3:8b). Guia 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/pt/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25663,7 +25663,7 @@
     "title": "نشر ⁨Qwen3⁩ محليًا: الدليل الكامل للإنتاج ⁨2026⁩",
     "excerpt": "انشر Qwen3 محليًا: نماذج 8B و14B و32B عبر Ollama/vLLM مع خادم Docker API، واختيار الأجهزة، وتعدد GPU. ملاحظة — لا يوجد Qwen3 بحجم 7B؛ استخدم 8B (qwen3:8b). دليل 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-27",
     "url": "/ar/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25672,7 +25672,7 @@
     "title": "Qwen3 로컬 배포 완전 가이드 (2026): 프로덕션",
     "excerpt": "Qwen3 로컬 배포: 8B, 14B, 32B를 Ollama/vLLM과 Docker API 서버로 실행, 하드웨어 선택과 Multi-GPU 포함. 참고 — Qwen3에는 7B가 없으니 8B(qwen3:8b)를 사용하세요. 2026년 가이드.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-27",
     "url": "/ko/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -25760,81 +25760,81 @@
   {
     "lang": "en",
     "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
-    "excerpt": "Three local AI workstation builds for 2026, priced this week: ~$2,700 budget, ~$5,300 recommended (RTX 4090), ~$8,800 professional (dual RTX 3090). Full parts lists, shop links, and why RAM/SSD prices jumped.",
+    "excerpt": "Three local AI workstation builds for 2026: budget (used RTX 3090), recommended (RTX 4090) and professional (dual RTX 3090), with dated GPU prices and RAM.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-27",
     "url": "/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Beste Workstation für lokale KI 2026: Drei Budgetstufen",
-    "excerpt": "Drei lokale KI-Workstations 2026, Preise aktuell: ~2.500 € Budget, ~4.950 € Empfohlen (RTX 4090), ~8.200 € Profi (Dual RTX 3090). Komplette Teilelisten, Shop-Links, und warum RAM/SSD-Preise explodiert sind.",
+    "excerpt": "Drei lokale KI-Workstations 2026: Budget (gebrauchte RTX 3090), Empfohlen (RTX 4090) und Profi (Dual RTX 3090), mit datierten GPU-Preisen und RAM.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/de/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Meilleure configuration workstation IA locale 2026 : 3 budgets",
-    "excerpt": "Trois configurations workstation IA locale 2026, prix vérifiés : ~2 500 € budget, ~4 950 € recommandé (RTX 4090), ~8 200 € professionnel (dual RTX 3090). Listes complètes, liens d'achat, et pourquoi les prix RAM/SSD ont explosé.",
+    "excerpt": "Trois workstations IA locales 2026 : budget (RTX 3090 d'occasion), recommandé (RTX 4090) et pro (dual RTX 3090), avec prix GPU datés et notes sur la RAM.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/fr/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカルAI最高ワークステーション構成2026年版：3つの予算別ビルド",
-    "excerpt": "ローカルAIワークステーション3段階、今週確認した価格：約43万円バジェット、約84万円推奨（RTX 4090）、約139万円プロ（デュアルRTX 3090）。完全パーツリストと購入リンク、RAM/SSD高騰の理由を解説。",
+    "excerpt": "ローカルAIワークステーション3構成：バジェット（中古RTX 3090）、推奨（RTX 4090）、プロ（デュアルRTX 3090）。日付付きのGPU価格とRAM高騰の理由を解説。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/ja/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "2026年本地AI最佳工作站配置：三档预算方案",
-    "excerpt": "2026年三档本地AI工作站，本周核实价格：入门档约19300元、推荐档约38000元（RTX 4090）、专业档约62600元（双RTX 3090）。完整配件清单、购买链接，以及RAM/SSD价格暴涨的原因。",
+    "excerpt": "2026年三档本地AI工作站：入门（二手RTX 3090）、推荐（RTX 4090）、专业（双RTX 3090），附带注明日期的GPU价格及RAM涨价原因。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/zh/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Mejor workstation para IA local 2026: tres niveles de presupuesto",
-    "excerpt": "Tres workstations de IA local 2026, precios verificados esta semana: ~2.500 € económica, ~4.950 € recomendada (RTX 4090), ~8.200 € profesional (dual RTX 3090). Listas completas, enlaces de compra, y por qué subieron los precios de RAM/SSD.",
+    "excerpt": "Tres workstations de IA local 2026: económica (RTX 3090 usada), recomendada (RTX 4090) y profesional (dual RTX 3090), con precios de GPU fechados y RAM.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/es/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Melhor workstation para IA local 2026: três níveis de orçamento",
-    "excerpt": "Três workstations de IA local 2026, preços conferidos nesta semana: ~R$ 25.000 econômica, ~R$ 49.000 recomendada (RTX 4090), ~R$ 81.000 profissional (dual RTX 3090). Listas completas, links de compra e por que RAM/SSD subiram tanto.",
+    "excerpt": "Três workstations de IA local 2026: econômica (RTX 3090 usada), recomendada (RTX 4090) e profissional (dual RTX 3090), com preços de GPU datados e RAM.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/pt/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "أفضل محطة عمل للذكاء الاصطناعي المحلي ⁨2026⁩: ثلاثة مستويات ميزانية",
-    "excerpt": "ثلاث محطات عمل للذكاء الاصطناعي المحلي ⁨2026⁩، أسعار مُحدَّثة هذا الأسبوع: نحو ⁨10,500⁩ درهم اقتصادي، و⁨20,600⁩ درهم موصى به (⁨RTX 4090⁩)، و⁨34,000⁩ درهم احترافي (⁨RTX 3090⁩ مزدوجة). قوائم مكونات كاملة وروابط شراء، وسبب ارتفاع أسعار RAM وSSD.",
+    "excerpt": "ثلاث محطات عمل للذكاء الاصطناعي المحلي 2026: اقتصادية (RTX 3090 مستعملة)، وموصى بها (RTX 4090)، واحترافية (RTX 3090 مزدوجة)، مع أسعار GPU مؤرَّخة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/ar/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "2026년 로컬 AI를 위한 최고의 워크스테이션: 3가지 예산 수준",
-    "excerpt": "2026년 로컬 AI 워크스테이션 3단계, 이번 주 확인한 가격: 경제형 약 419만원, 추천형 약 823만원(RTX 4090), 전문가형 약 1,559만원(듀얼 RTX 3090). 전체 부품 목록과 구매 링크, RAM/SSD 가격 폭등 이유까지.",
+    "excerpt": "2026년 로컬 AI 워크스테이션 3종: 경제형(중고 RTX 3090), 추천형(RTX 4090), 전문가형(듀얼 RTX 3090). 날짜가 명시된 GPU 가격과 RAM 가격 상승 이유.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-27",
     "url": "/ko/power-local-llm/best-workstation-build-local-ai-2026",
     "cluster": "power-local-llm"
   },
