@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide",
+        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "local-llms-vs-chatgpt-plus",
         "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
         "url": "/local-llms/local-llms-vs-chatgpt-plus",
@@ -22,6 +30,30 @@
         "slug": "mac-vs-windows-vs-linux-local-llm",
         "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
         "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-workstation-build-local-ai-2026",
+        "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
+        "url": "/power-local-llm/best-workstation-build-local-ai-2026",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "qwen-local-deployment-complete-guide-2026",
+        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
+        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
         "dateModified": "2026-11-27",
         "tier": "about"
       },
@@ -48,38 +80,6 @@
         "url": "/local-llms/fastest-local-llms-low-end-pcs",
         "dateModified": "2026-11-22",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "how-much-vram-local-llm",
-        "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
-        "url": "/local-llms/how-much-vram-local-llm",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-cost-calculator-build-vs-rent-2026",
-        "title": "Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026",
-        "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide",
-        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-workstation-build",
-        "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
-        "url": "/local-llms/local-llm-workstation-build",
-        "dateModified": "2026-11-22",
-        "tier": "about"
       }
     ],
     "totalCount": 397,
@@ -97,9 +97,33 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide",
+        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "mac-vs-windows-vs-linux-local-llm",
         "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
         "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-11-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-workstation-build-local-ai-2026",
+        "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
+        "url": "/power-local-llm/best-workstation-build-local-ai-2026",
         "dateModified": "2026-11-27",
         "tier": "about"
       },
@@ -129,14 +153,6 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide",
-        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
         "slug": "local-llm-workstation-build",
         "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
         "url": "/local-llms/local-llm-workstation-build",
@@ -150,25 +166,9 @@
         "url": "/power-local-llm/best-gpu-buying-guide-local-llm-2026",
         "dateModified": "2026-11-22",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-offline-china-self-hosted-2026",
-        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
-        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
-        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
-        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
-        "dateModified": "2026-11-22",
-        "tier": "about"
       }
     ],
-    "totalCount": 202,
+    "totalCount": 204,
     "capped": true
   },
   "vLLM": {
@@ -395,18 +395,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-11-20",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-11-27",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
-        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "dateModified": "2026-11-06",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -578,7 +578,7 @@
         "slug": "local-llm-hardware-guide",
         "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
         "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-11-22",
+        "dateModified": "2026-11-27",
         "tier": "mentioned"
       },
       {
@@ -839,6 +839,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-iphone-guide",
         "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
         "url": "/power-local-llm/local-ai-on-iphone-guide",
@@ -851,14 +859,6 @@
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
         "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
         "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
-        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "dateModified": "2026-11-06",
         "tier": "mentioned"
       }
     ],
@@ -2140,7 +2140,7 @@
         "slug": "qwen-local-deployment-complete-guide-2026",
         "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
         "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
-        "dateModified": "2026-11-22",
+        "dateModified": "2026-11-27",
         "tier": "about"
       },
       {
@@ -2279,22 +2279,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "qwen-local-deployment-complete-guide-2026",
-        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
-        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
-        "dateModified": "2026-11-22",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 14,
     "capped": true
   },
   "text-generation-webui": {
@@ -3442,7 +3442,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 41,
+    "totalCount": 42,
     "capped": true
   },
   "ShellGPT": {
@@ -4505,14 +4505,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "qwen-local-deployment-complete-guide-2026",
-        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
-        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
-        "dateModified": "2026-11-22",
+        "slug": "gpt-engineer-review",
+        "title": "GPT Engineer Review: Archived on GitHub, App Now Lovable",
+        "url": "/power-local-llm/gpt-engineer-review",
+        "dateModified": "2026-11-06",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 20,
     "capped": true
   },
   "Microsoft Agent Framework": {
@@ -11671,18 +11671,18 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "local-llms-vs-chatgpt-plus",
-        "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
-        "url": "/local-llms/local-llms-vs-chatgpt-plus",
+        "slug": "local-llm-hardware-guide",
+        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide",
         "dateModified": "2026-11-27",
         "tier": "about"
       },
       {
         "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide",
-        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-11-22",
+        "slug": "local-llms-vs-chatgpt-plus",
+        "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
+        "url": "/local-llms/local-llms-vs-chatgpt-plus",
+        "dateModified": "2026-11-27",
         "tier": "about"
       },
       {
@@ -11992,7 +11992,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 74,
+    "totalCount": 73,
     "capped": true
   },
   "Newelle": {
@@ -12105,14 +12105,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "qwen-local-deployment-complete-guide-2026",
-        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
-        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "autonomous-local-agents-actually-work",
         "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
         "url": "/power-local-llm/autonomous-local-agents-actually-work",
@@ -12157,6 +12149,14 @@
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
         "tier": "about"
       }
     ],
@@ -14569,6 +14569,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-workstation-build-guide",
+        "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
+        "url": "/power-local-llm/local-ai-workstation-build-guide",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "weesper-neon-flow-review",
         "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
         "url": "/power-local-llm/weesper-neon-flow-review",
@@ -14620,14 +14628,6 @@
         "slug": "renting-gpu-cloud-vs-buying-on-prem-enterprise-ai",
         "title": "Renting GPU Cloud vs Buying On-Prem Hardware for Enterprise AI (2026)",
         "url": "/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai",
-        "dateModified": "2026-11-22",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-cloud-gpu-providers",
-        "title": "Cloud GPU Providers Compared 2026: RunPod, Vast.ai, Clore, Novita, Vultr and More",
-        "url": "/power-local-llm/best-cloud-gpu-providers",
         "dateModified": "2026-11-22",
         "tier": "mentioned"
       }
@@ -17748,6 +17748,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "best-workstation-build-local-ai-2026",
+        "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
+        "url": "/power-local-llm/best-workstation-build-local-ai-2026",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "how-much-vram-local-llm",
         "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
@@ -17761,14 +17769,6 @@
         "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
         "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
         "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-workstation-build-local-ai-2026",
-        "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
-        "url": "/power-local-llm/best-workstation-build-local-ai-2026",
-        "dateModified": "2026-09-01",
         "tier": "mentioned"
       },
       {
