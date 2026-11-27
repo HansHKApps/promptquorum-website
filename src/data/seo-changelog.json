@@ -31627,5 +31627,152 @@
       "t14": "2026-12-11",
       "t28": "2026-12-25"
     }
+  },
+  {
+    "id": "09bfa0ed-55d3-47cd-8e1b-99b003d91021",
+    "slug": "/ja/prompt-engineering",
+    "date": "2026-11-27T08:33:20.466Z",
+    "fields": [
+      {
+        "field": "promptEngineeringHubTitle",
+        "old": "Prompt工程Best Practices 2026：フレームワーク",
+        "new": "プロンプトエンジニアリング実践ガイド2026：フレームワーク"
+      }
+    ],
+    "reason": "Hub title was part English on the JA page; now Japanese.",
+    "queries": [
+      "プロンプトエンジニアリング",
+      "プロンプトエンジニアリング ガイド",
+      "プロンプト フレームワーク"
+    ],
+    "baseline": {
+      "position": 17.21,
+      "impressions": 165,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5d8155f7-015a-4e99-8b8e-8c6ccafad502",
+    "slug": "/zh/prompt-engineering",
+    "date": "2026-11-27T08:33:20.501Z",
+    "fields": [
+      {
+        "field": "promptEngineeringHubTitle",
+        "old": "提示词工程Best Practices 2026：框架",
+        "new": "提示词工程最佳实践 2026：提示词框架与实战指南"
+      }
+    ],
+    "reason": "Hub title was part English on the ZH page; now Chinese.",
+    "queries": [
+      "提示词工程",
+      "提示词框架",
+      "提示词工程最佳实践 2026",
+      "提示工程"
+    ],
+    "baseline": {
+      "position": 7.64,
+      "impressions": 1555,
+      "clicks": 15,
+      "ctr": 0.00964630225080386,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "da261223-51c0-4c1e-91ab-6d5c5fc09736",
+    "slug": "/pt/prompt-engineering/what-is-prompt-engineering",
+    "date": "2026-11-27T08:33:20.535Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Prompt engineering em 2026: projete entradas de texto para resultados confiáveis de IA. Aprenda role prompting, chain-of-thought e few-shot para ChatGPT, Claude e Ollama.",
+        "new": "Aprenda prompt engineering em 2026: crie instruções melhores para obter resultados confiáveis no ChatGPT, Claude e Ollama."
+      }
+    ],
+    "reason": "Owner-requested PT meta description.",
+    "baseline": {
+      "position": 36.43,
+      "impressions": 14,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "295931c9-c9b4-4f0d-ab9f-1b9df4d703ac",
+    "slug": "/de/prompt-engineering/what-is-prompt-engineering",
+    "date": "2026-11-27T08:33:20.570Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.",
+        "new": "Prompt Engineering 2026: die Technik für verlässlichere KI-Ausgaben. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama."
+      }
+    ],
+    "reason": "Risk gate: removed a reliability guarantee from the meta description.",
+    "queries": [
+      "was ist prompt engineering",
+      "prompt engineering anleitung",
+      "prompt engineering einführung"
+    ],
+    "baseline": {
+      "position": 46.75,
+      "impressions": 309,
+      "clicks": 1,
+      "ctr": 0.003236245954692557,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "545e3ef5-f7c2-48ce-a46c-d56dcba97aa8",
+    "slug": "/ja/prompt-engineering/what-is-prompt-engineering",
+    "date": "2026-11-27T08:33:20.604Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。",
+        "new": "プロンプトエンジニアリングはAI出力の品質を左右する技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。"
+      }
+    ],
+    "reason": "Risk gate: softened an absolute claim in the meta description.",
+    "queries": [
+      "プロンプトエンジニアリングとは",
+      "プロンプトエンジニアリング とは",
+      "プロンプト・エンジニアリングとは"
+    ],
+    "baseline": {
+      "position": 42.94,
+      "impressions": 719,
+      "clicks": 1,
+      "ctr": 0.0013908205841446453,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "20d5655f-aca4-4616-852b-7f66f331d892",
+    "slug": "/zh/prompt-engineering/what-is-prompt-engineering",
+    "date": "2026-11-27T08:33:20.639Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "提示工程是决定AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。",
+        "new": "提示工程是影响AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。"
+      }
+    ],
+    "reason": "Risk gate: softened an absolute claim in the meta description.",
+    "baseline": {
+      "position": 11.87,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
   }
 ]
