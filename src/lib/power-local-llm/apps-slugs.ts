@@ -218,6 +218,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'openmontage':                             'openmontage',
   'whisper-notes':                           'whisper-notes',
   'aiko':                                    'aiko',
+  'weesper-transcribe':                      'weesper-transcribe',
   'amical':                                  'amical',
   'argos-translate':                         'argos-translate',
   'linguister':                              'linguister',

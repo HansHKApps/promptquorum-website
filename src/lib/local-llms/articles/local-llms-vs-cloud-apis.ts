@@ -1078,7 +1078,7 @@ schema: {
             '**Wählen Sie ein lokales LLM, wenn:** Sie sensible oder regulierte Daten verarbeiten, Sie hohe Arbeitslasten mit akkumulierenden Token-Kosten haben, Sie Offline-Fähigkeit benötigen oder Sie verstehen möchten, wie LLMs intern funktionieren.',
             '**Wählen Sie eine Cloud-API, wenn:** Sie die höchste verfügbare Ausgabequalität benötigen, Sie keinen Einrichtungsaufwand möchten, Sie prototypisieren und keine Infrastruktur verwalten möchten oder Ihre Nutzung geringvolumig ist.',
             '**Verwenden Sie beides parallel:** Tools wie [PromptQuorum](/de) ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, lokale vs. Cloud-Ergebnisse in einer Ansicht zu vergleichen und Aufgaben an das richtige Modell weiterzuleiten.',
-            '**Noch keine Hardware kaufen?** Sie können eine GPU mieten und offene Modelle selbst betreiben oder sie über eine API aufrufen; siehe [GPU-Miete und Inferenz-API-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) und den [Novita-AI-Testbericht](/de/power-local-llm/novita-ai-review).',
+            '**Noch keine Hardware kaufen?** Sie können eine GPU mieten und offene Modelle selbst betreiben oder sie über eine API aufrufen; siehe [GPU-Miete und Inferenz-API-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) und die [Novita-AI-Bewertung](/de/power-local-llm/novita-ai-review).',
           ],
           image: '/images/local-llms-vs-cloud-apis-decision-de.svg',
           imageCaption: 'Entscheidungsrahmen lokales LLM vs. Cloud-API: lokal bei sensiblen Daten, hohem Volumen, Offline-Bedarf oder Lernzweck; Cloud-API bei maximaler Qualität, ohne Einrichtungsaufwand, für Prototyping oder geringes Volumen.',
@@ -1105,7 +1105,7 @@ schema: {
             '[Local LLM Sicherheits- und Datenschutzchecklist](/de/local-llms/local-llm-security-privacy-checklist) \u2014 12-Schritte-Audit für den sicheren Betrieb lokaler LLMs in regulierten und datenschutzsensiblen Umgebungen',
             '[Tokens, Kosten und Limits](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) \u2014 detaillierte Aufschlüsselung der Cloud-API-Preise und wann lokale Modelle kostengünstiger werden',
             '[Beste lokale LLM-Modelle für Einsteiger](/de/local-llms/best-beginner-local-llm-models) \u2014 wo Sie anfangen, wenn Sie von Cloud-APIs zur lokalen Inferenz wechseln',
-            '[GPU-Miete und Inferenz-API-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) -- Miet- und API-Optionen für offene Modelle, dazu der [Novita-AI-Testbericht](/de/power-local-llm/novita-ai-review).',
+            '[GPU-Miete und Inferenz-API-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) -- Miet- und API-Optionen für offene Modelle, dazu die [Novita-AI-Bewertung](/de/power-local-llm/novita-ai-review).',
           ],
         },
         faqSection: {

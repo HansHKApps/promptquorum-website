@@ -1525,7 +1525,7 @@
       "images": []
     },
     "laptop-vs-desktop-local-llm": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-23",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1540,24 +1540,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg",
-          "title": "Laptop vs desktop performance: MacBook Pro M4 Max reaches 35 tok/sec before throttling, while desktop RTX 4070 Ti sustains 80 tok/sec 24/7 — a 2.3× speed difference. Cost efficiency: $140 per tok/sec (laptop) vs $19 per tok/sec (desktop)."
-        },
-        {
-          "url": "/images/laptop-vs-desktop-local-llm-thermal-throttling-en.svg",
-          "title": "Thermal throttling over time: MacBook Pro M4 Max drops from 35 tok/sec to 18–22 tok/sec after 18 minutes under load. Desktop RTX 4070 Ti maintains 80 tok/sec sustained indefinitely with no throttling."
-        },
-        {
-          "url": "/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg",
-          "title": "Cost per token/sec comparison: MacBook Pro M4 Max (~$100/tok/sec) is 5.3× more expensive than desktop RTX 4070 Ti ($19/tok/sec). Desktop RTX 4090 ($22/tok/sec) scales to 70B models with no throttle."
-        },
-        {
-          "url": "/images/laptop-vs-desktop-local-llm-decision-framework-en.svg",
-          "title": "Decision framework: Choose laptop if you need daily portability (15-25 tok/sec, $140/tok/sec). Choose desktop if you need 70B models, sustained speed (80+ tok/sec), or cost efficiency ($19/tok/sec)."
-        }
-      ]
+      "images": []
     },
     "mobile-local-llms": {
       "dateModified": "2026-08-28",
@@ -1714,7 +1697,7 @@
       "images": []
     },
     "private-local-ai-for-business": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-23",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1731,32 +1714,8 @@
       ],
       "images": [
         {
-          "url": "/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg",
-          "title": "Cloud APIs expose data to external servers with 200–500ms latency and $20,000+ annual costs, while on-premises infrastructure keeps data local with 50–150ms latency and $5,000 amortized annual costs."
-        },
-        {
-          "url": "/images/private-local-ai-for-business-compliance-checklist-en.svg",
-          "title": "On-premises AI compliance requirements: GDPR requires EU data residency and data processing agreements, HIPAA requires AES-256 encryption and audit logging, SOC2 requires access controls and incident response plans."
-        },
-        {
-          "url": "/images/private-local-ai-for-business-latency-performance-en.svg",
-          "title": "On-premises infrastructure achieves 50–150ms first-token latency compared to 200–500ms on cloud APIs, with no network round-trip, no cloud queuing, predictable performance, and unlimited concurrent requests."
-        },
-        {
-          "url": "/images/private-local-ai-for-business-hardware-requirements-en.svg",
-          "title": "Hardware requirements by deployment scale: Small teams need 1× RTX 5090 ($2,000), production deployments require 2–4× RTX 5090s ($4,000–$8,000), enterprise scale requires A100 clusters or multi-node RTX 5090 setups ($30,000+)."
-        },
-        {
-          "url": "/images/private-local-ai-for-business-cost-breakeven-en.svg",
-          "title": "Cost break-even analysis: On-premises infrastructure becomes cost-effective at 200M+ tokens per month, paying for itself within 3–4 months compared to $20,000+ annual cloud API costs."
-        },
-        {
           "url": "/images/private-local-ai-for-business-use-cases-en.svg",
-          "title": "On-premises AI addresses critical needs across five industries: healthcare (HIPAA compliance), finance (data security), legal (audit trails), manufacturing (proprietary data), and government (classified processing)."
-        },
-        {
-          "url": "/images/private-local-ai-for-business-common-mistakes-en.svg",
-          "title": "Four critical mistakes when deploying on-premises AI: underestimating total cost of ownership (plan 3–5× hardware cost), poor scaling design (single GPU cannot handle production), neglecting disaster recovery, and weak security posture."
+          "title": "On-premises AI addresses critical needs across five industries: healthcare (HIPAA safeguards), finance (data security), legal (audit trails), manufacturing (proprietary data), and government (classified processing)."
         }
       ]
     },
@@ -3302,7 +3261,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-23",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -3321,10 +3280,6 @@
         {
           "url": "/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp",
           "title": "Qwen3 VRAM requirements by model size (Q4_K_M) — approximate values"
-        },
-        {
-          "url": "/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.webp",
-          "title": "Qwen3 benchmark scores (Q4_K_M) — approximate values"
         }
       ]
     },
@@ -3371,16 +3326,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-en.svg",
-          "title": "Budget GPU comparison for local LLM inference under $500: Intel Arc B580 12GB ($250–290, 31 tok/s), used RTX 3060 12GB ($270–300, 36 tok/s), and RTX 4060 Ti 16GB (~$562 in stock, 55 tok/s, 30B max) benchmarked with Ollama."
-        },
-        {
-          "url": "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-en.svg",
-          "title": "Decision tree for choosing a budget GPU under $500 for local LLM inference: routes to Intel Arc B580 12GB ($250–290) as the default pick, used RTX 3060 12GB ($270–300) if you need CUDA, and a $850+ used RTX 3090 (24 GB) for 30B models."
-        }
-      ]
+      "images": []
     },
     "local-llm-cost-calculator-build-vs-rent-2026": {
       "dateModified": "2026-11-22",
@@ -6706,7 +6652,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 14 categories of a local LLM stack: 425 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
+          "title": "The 14 categories of a local LLM stack: 426 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7985,7 +7931,7 @@
       "images": []
     },
     "digitalocean-vs-aws-cloud-for-ai-companies": {
-      "dateModified": "2026-11-22",
+      "dateModified": "2026-11-23",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -11377,6 +11323,24 @@
       "dateModified": "2026-10-30",
       "lastFactChecked": null,
       "publishDate": "2026-10-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "weesper-transcribe-review": {
+      "dateModified": "2026-11-27",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-27",
       "hasSections": true,
       "langs": [
         "en",

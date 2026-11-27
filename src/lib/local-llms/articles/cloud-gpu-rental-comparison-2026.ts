@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "heroImage": "/images/cloud-gpu-rental-comparison-2026-overview-hero-de.webp",
     "seoTitle": "RunPod vs Vast.ai vs Lambda Labs: GPU-Preise 2026",
     "metaDescription": "RunPod, Vast.ai und Lambda Labs für LLM-Inferenz: Stundenpreise für RTX 4090, 5090, A100 und H100, Abrechnung und Regionen, Stand 22. November 2026.",
-    "intro": "Eine Cloud-GPU zu mieten erfordert keinen Kauf und wird sekunden- oder minutengenau abgerechnet. Dieser Leitfaden vergleicht RunPod, Vast.ai und Lambda Labs für LLM-Inferenz nach Preis, Abrechnung, Regionen und veröffentlichten Sicherheitsangaben, auf Basis der am 22. November 2026 gelesenen Listenpreise und Angebote. Den vollständigen Anbieter-Überblick finden Sie unter [beste Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers), im [RunPod-Test](/de/power-local-llm/runpod-review) und im [Vast.ai-Test](/de/power-local-llm/vast-ai-review).",
+    "intro": "Eine Cloud-GPU zu mieten erfordert keinen Kauf und wird sekunden- oder minutengenau abgerechnet. Dieser Leitfaden vergleicht RunPod, Vast.ai und Lambda Labs für LLM-Inferenz nach Preis, Abrechnung, Regionen und veröffentlichten Sicherheitsangaben, auf Basis der am 22. November 2026 gelesenen Listenpreise und Angebote. Den vollständigen Anbieter-Überblick finden Sie unter [beste Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers), in der [RunPod-Bewertung](/de/power-local-llm/runpod-review) und in der [Vast.ai-Bewertung](/de/power-local-llm/vast-ai-review).",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "designSkin": "hub",
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Günstigste Cloud-GPU für LLM-Fine-Tuning unter 1 $/Stunde (2026)](/de/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour) -- Optionen bei RunPod, Vast.ai und Lambda für LoRA-Fine-Tuning",
           "[EU-Cloud-GPU mit DSGVO 2026: Hetzner vs Scaleway vs OVHcloud](/de/local-llms/eu-cloud-gpu-gdpr-2026) -- GPU-Cloud-Anbieter mit Sitz in der EU",
           "[GPU vs. ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abo lohnt](/de/local-llms/gpu-vs-ai-subscription-roi) -- wann sich der GPU-Kauf gegenüber einem Abo lohnt",
-          "Anbieter-Überblick: [beste Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers), [RunPod-Test](/de/power-local-llm/runpod-review) und [Vast.ai-Test](/de/power-local-llm/vast-ai-review)"
+          "Anbieter-Überblick: [beste Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers), [RunPod-Bewertung](/de/power-local-llm/runpod-review) und [Vast.ai-Bewertung](/de/power-local-llm/vast-ai-review)"
         ]
       },
       "faq": {
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "heroImage": "/images/cloud-gpu-rental-comparison-2026-overview-hero-fr.webp",
     "seoTitle": "RunPod vs Vast.ai vs Lambda Labs : prix GPU 2026",
     "metaDescription": "RunPod, Vast.ai et Lambda Labs pour l'inférence LLM : prix horaires RTX 4090, 5090, A100 et H100, facturation et régions, relevés le 22 novembre 2026.",
-    "intro": "Louer un GPU cloud n'exige aucun achat et se facture à la seconde ou à la minute. Ce guide compare RunPod, Vast.ai et Lambda Labs pour l'inférence LLM selon le prix, la facturation, les régions et les déclarations de sécurité publiées, à partir des prix catalogue et des offres relevés le 22 novembre 2026. Pour le panorama complet des fournisseurs, consultez les [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), le [test de RunPod](/fr/power-local-llm/runpod-review) et le [test de Vast.ai](/fr/power-local-llm/vast-ai-review).",
+    "intro": "Louer un GPU cloud n'exige aucun achat et se facture à la seconde ou à la minute. Ce guide compare RunPod, Vast.ai et Lambda Labs pour l'inférence LLM selon le prix, la facturation, les régions et les déclarations de sécurité publiées, à partir des prix catalogue et des offres relevés le 22 novembre 2026. Pour le panorama complet des fournisseurs, consultez les [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), l'[avis sur RunPod](/fr/power-local-llm/runpod-review) et l'[avis sur Vast.ai](/fr/power-local-llm/vast-ai-review).",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "designSkin": "hub",
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Meilleur GPU cloud pour fine-tuner un LLM à moins de 1 $/heure (2026)](/fr/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour) -- options RunPod, Vast.ai et Lambda pour le fine-tuning LoRA",
           "[GPU Cloud RGPD UE 2026 : Hetzner vs Scaleway vs OVHcloud](/fr/local-llms/eu-cloud-gpu-gdpr-2026) -- fournisseurs de GPU cloud établis dans l'UE",
           "[GPU vs ChatGPT Plus 2026 : quand l'achat d'un GPU rentabilise l'abonnement](/fr/local-llms/gpu-vs-ai-subscription-roi) -- quand l'achat d'un GPU rentabilise un abonnement",
-          "Panorama des fournisseurs : [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), [test de RunPod](/fr/power-local-llm/runpod-review) et [test de Vast.ai](/fr/power-local-llm/vast-ai-review)"
+          "Panorama des fournisseurs : [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), [avis sur RunPod](/fr/power-local-llm/runpod-review) et [avis sur Vast.ai](/fr/power-local-llm/vast-ai-review)"
         ]
       },
       "faq": {

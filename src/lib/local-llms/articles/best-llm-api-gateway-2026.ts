@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nutzen Sie OpenRouter, wenn** Sie heute Multi-Modell-Zugang ohne Infrastruktur brauchen — nächster Schritt: API-Schlüssel erstellen, Konto aufladen und die Gebühr von ca. 5,5 % einplanen.',
           '**Nutzen Sie Portkey / Prisma AIRS, wenn** Sie ohnehin Palo-Alto-Networks-Security beschaffen und Gateway-Routing gebündelt haben wollen — nächster Schritt: aktuelle Konditionen nach der Übernahme direkt bei Palo Alto Networks erfragen.',
           '**Verzichten Sie auf alle drei, wenn** Sie einen Anbieter mit geringem Volumen nutzen und kein zweiter geplant ist — nächster Schritt: erneut prüfen, sobald ein zweiter Anbieter dazukommt.',
-          '**Schauen Sie sich stattdessen eine gehostete Modell-API an, wenn** Sie offene Modelle ohne eigenes Gateway und ohne eigene GPU aufrufen möchten — nächster Schritt: den [Novita-AI-Modell-API-Test](/de/power-local-llm/novita-ai-review) lesen.',
+          '**Schauen Sie sich stattdessen eine gehostete Modell-API an, wenn** Sie offene Modelle ohne eigenes Gateway und ohne eigene GPU aufrufen möchten — nächster Schritt: die [Novita-AI-Modell-API-Bewertung](/de/power-local-llm/novita-ai-review) lesen.',
         ],
         note: 'Die Produktlinks auf dieser Seite führen zur jeweiligen Anbieterseite. PromptQuorum unterhält keine Partnerbeziehung zu LiteLLM, OpenRouter oder Portkey / Palo Alto Networks und verdient an diesen Links nichts.',
       },

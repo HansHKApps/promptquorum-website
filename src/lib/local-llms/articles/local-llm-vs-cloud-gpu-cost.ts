@@ -1357,7 +1357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Lambda (Single-GPU-Instanzen): A6000 48 GB 1,09 $/Stunde; A100 40 GB 1,99 $/Stunde; H100 PCIe 80 GB 3,79 $/Stunde; H100 SXM 80 GB 4,89 $/Stunde.",
           "DigitalOcean GPU Droplets: RTX 6000 Ada 48 GB 1,57 $/Stunde; L40S 48 GB 1,57 $/Stunde; H100 80 GB 4,41 $/Stunde.",
           "AWS EC2 g4dn.2xlarge (eine NVIDIA T4, 16 GiB): 0,752 $/Stunde On-Demand, 0,474 $/Stunde mit 1-Jahres-Reservierung und 0,259 $/Stunde Spot, laut dem Drittanbieter-Index Vantage. Eine T4 hat weniger Speicher und geringeren Durchsatz als eine RTX 4090 (siehe NVIDIA-Spezifikationsseiten), der Vergleich hinkt also.",
-          "Wer lieber mietet als kauft, kann [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers) und den [RunPod-Test](/de/power-local-llm/runpod-review), den [Vast.ai-Test](/de/power-local-llm/vast-ai-review) sowie den [Clore.ai-Test](/de/power-local-llm/clore-ai-review) lesen."
+          "Wer lieber mietet als kauft, kann [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers) und die [RunPod-Bewertung](/de/power-local-llm/runpod-review), die [Vast.ai-Bewertung](/de/power-local-llm/vast-ai-review) sowie die [Clore.ai-Bewertung](/de/power-local-llm/clore-ai-review) lesen."
         ]
       },
       "tokens": {
@@ -1440,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Lokale LLMs vs ChatGPT Plus 2026: Vollständiger Kostenvergleich über 7 Preisstufen](/de/local-llms/local-llms-vs-chatgpt-plus)",
           "[Multi-GPU Lokale LLMs 2026: 70B-Modelle auf 2+ GPUs mit vLLM und Ollama ausführen](/de/local-llms/multi-gpu-local-llms)",
           "[Wann sollten Sie lokale und Cloud-LLM-Inferenz kombinieren?](/de/prompt-bites/hybrid-local-cloud-llm-strategy) -- die Architekturfrage, sobald Sie bereits wissen, was günstiger ist.",
-          "Mieten statt kaufen: [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers), [RunPod-Test](/de/power-local-llm/runpod-review), [Vast.ai-Test](/de/power-local-llm/vast-ai-review) und [Clore.ai-Test](/de/power-local-llm/clore-ai-review)"
+          "Mieten statt kaufen: [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers), [RunPod-Bewertung](/de/power-local-llm/runpod-review), [Vast.ai-Bewertung](/de/power-local-llm/vast-ai-review) und [Clore.ai-Bewertung](/de/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
@@ -1981,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Lambda (instances à un GPU) : A6000 48 Go 1,09 $/heure ; A100 40 Go 1,99 $/heure ; H100 PCIe 80 Go 3,79 $/heure ; H100 SXM 80 Go 4,89 $/heure.",
           "DigitalOcean GPU Droplets : RTX 6000 Ada 48 Go 1,57 $/heure ; L40S 48 Go 1,57 $/heure ; H100 80 Go 4,41 $/heure.",
           "AWS EC2 g4dn.2xlarge (un NVIDIA T4, 16 Gio) : 0,752 $/heure à la demande, 0,474 $/heure avec réservation d'un an et 0,259 $/heure en spot, selon l'index tiers Vantage. Un T4 a moins de mémoire et un débit plus faible qu'une RTX 4090 (voir les pages de spécifications NVIDIA) : la comparaison n'est pas équivalente.",
-          "Pour louer plutôt qu'acheter, vous pouvez [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) et lire le [test de RunPod](/fr/power-local-llm/runpod-review), le [test de Vast.ai](/fr/power-local-llm/vast-ai-review) et le [test de Clore.ai](/fr/power-local-llm/clore-ai-review)."
+          "Pour louer plutôt qu'acheter, vous pouvez [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) et lire l'[avis sur RunPod](/fr/power-local-llm/runpod-review), l'[avis sur Vast.ai](/fr/power-local-llm/vast-ai-review) et l'[avis sur Clore.ai](/fr/power-local-llm/clore-ai-review)."
         ]
       },
       "tokens": {
@@ -2064,7 +2064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux](/fr/local-llms/local-llms-vs-chatgpt-plus)",
           "[Multi-GPU LLMs Locaux 2026 : Exécuter les Modèles 70B sur 2+ GPUs avec vLLM et Ollama](/fr/local-llms/multi-gpu-local-llms)",
           "[Quand faut-il combiner inférence LLM locale et cloud ?](/fr/prompt-bites/hybrid-local-cloud-llm-strategy) -- la question d'architecture, une fois que vous savez déjà lequel est le moins cher.",
-          "Louer plutôt qu'acheter : [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), [test de RunPod](/fr/power-local-llm/runpod-review), [test de Vast.ai](/fr/power-local-llm/vast-ai-review) et [test de Clore.ai](/fr/power-local-llm/clore-ai-review)"
+          "Louer plutôt qu'acheter : [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), [avis sur RunPod](/fr/power-local-llm/runpod-review), [avis sur Vast.ai](/fr/power-local-llm/vast-ai-review) et [avis sur Clore.ai](/fr/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
