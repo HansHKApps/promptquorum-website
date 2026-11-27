@@ -2646,7 +2646,7 @@
       "images": []
     },
     "local-llms-vs-chatgpt-plus": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2661,12 +2661,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg",
-          "title": "macOS vs Windows vs Linux for local LLMs: macOS offers a particularly simple setup from $1,099; Windows delivers peak GPU performance; Linux provides the best cost-to-performance ratio starting at $810 total."
-        }
-      ]
+      "images": []
     },
     "local-llms-vs-claude-pro": {
       "dateModified": "2026-11-15",
@@ -2741,7 +2736,7 @@
       "images": []
     },
     "mac-vs-windows-vs-linux-local-llm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2756,32 +2751,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg",
-          "title": "macOS vs Windows vs Linux for local LLMs: macOS offers the simplest setup from $1,099; Windows delivers peak GPU performance; Linux provides the best cost-to-performance ratio starting at $810 total."
-        },
-        {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.webp",
-          "title": "Mac vs Windows vs Linux hardware cost for local LLMs: M5 Max at $3,499–4,999 runs 70B Q8 at 25–35 tok/s; RTX 5090 at ~$2,000 reaches 40–50 tok/s; used RTX 4090 at $1,000–1,400 offers 70B Q4 support."
-        },
-        {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-en.webp",
-          "title": "Local LLM setup time by OS: macOS takes 6 minutes with zero terminal commands; Windows takes 15–20 minutes with GUI; Linux Ubuntu requires 40–70 minutes including CUDA installation."
-        },
-        {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-performance-en.svg",
-          "title": "Local LLM inference speed comparison: RTX 5090 leads at 40–50 tok/s for 70B models; M5 Max reaches 25–35 tok/s; M5 Pro achieves 15–20 tok/s; RTX 5060 Ti 16 GB cannot run 70B."
-        },
-        {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-tool-support-en.svg",
-          "title": "Tool and framework support by OS: Ollama runs on all three; LM Studio has no native Linux GUI; vLLM and CUDA fine-tuning are Linux-exclusive at full performance."
-        },
-        {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-tco-en.svg",
-          "title": "3-year total cost of ownership for local LLMs: Linux + RTX 5060 Ti is cheapest at $810; Mac mini M5 Pro (64 GB) costs $1,719; MacBook Pro M5 Max costs $3,529; Linux + RTX 5090 offers best GPU value at $1,500."
-        }
-      ]
+      "images": []
     },
     "gpu-vs-ai-subscription-roi": {
       "dateModified": "2026-11-22",
@@ -4038,7 +4008,7 @@
       "images": []
     },
     "fundamentals-of-prompt-optimization": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-04-02",
       "hasSections": true,
@@ -4092,7 +4062,7 @@
       "images": []
     },
     "prompt-building-blocks": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-27",
       "lastFactChecked": "2026-08-29",
       "publishDate": "2026-03-01",
       "hasSections": true,
@@ -7859,7 +7829,7 @@
       ]
     },
     "local-ai-video-generation-vs-cloud": {
-      "dateModified": "2026-11-20",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-08-21",
       "hasSections": true,
@@ -18566,7 +18536,7 @@
       "images": []
     },
     "best-hardware-for-local-smart-home": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-27",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,
