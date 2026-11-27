@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Best budget GPU for local LLMs 2026: RTX 3060 12GB ($320–350 used) runs Qwen3 14B at ~9–12 tok/s (est.). New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-en.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-18',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**RTX 3060 12GB (about $320–350 used) is our pick for the most balanced used budget GPU for local LLMs in 2026 (VRAM, speed and price, based on the prices and estimates below): it runs Qwen3 14B at an estimated 9–12 tok/sec and Qwen3 8B at an estimated 16–20 tok/sec at Q4. The RTX 5060 Ti 16GB (about $620 new, roughly 44% over MSRP; lowest asking price per BuySellRAM, 2026-10-11) is the new-card pick.**',
       quickAnswerTop: {
         question: 'What is the best budget GPU for local LLMs in 2026?',
@@ -206,7 +206,7 @@ rows: [
           title: 'Used vs. New: Where Should You Buy?',
           items: [
             '**Used ($150-300 cheaper than new)**: eBay, Facebook Marketplace, Craigslist, local computer repair shops. Higher risk of dead cards or bad VRAM. Always test before committing. The gap between used and new has widened sharply in 2026, so used is now where most of the value sits in our assessment.',
-            '**New ($300-800, if still in stock)**: Newegg, Amazon, Best Buy, Microcenter. Warranty included. No surprises. Prices are not stable — new-card street prices have climbed through 2026 and some SKUs, such as the RTX 4060 Ti 16GB, go out of stock at major retailers for stretches. Good for risk-averse buyers who accept paying above MSRP.',
+            '**New ($300-800, if still in stock)**: Newegg, Amazon, Best Buy, Microcenter. Warranty included. Prices are not stable — new-card street prices have climbed through 2026 and some SKUs, such as the RTX 4060 Ti 16GB, go out of stock at major retailers for stretches. Good for risk-averse buyers who accept paying above MSRP.',
             '**Mined cards (crypto, dirt cheap)**: Extreme risk. VRAM degradation is a reported risk. Only buy if you can fully bench-test on-site.',
           ],
         },
@@ -245,7 +245,7 @@ rows: [
             { q: 'Is RTX 3060 12GB still worth buying in 2026?', a: 'Yes. It\'s 4+ years old, but in our assessment 12GB VRAM still fits most mainstream models. Is estimated to run Qwen3 14B, Qwen3 8B, Gemma 4 12B, and Ministral 3 8B at Q4. It fits every 7B-8B model and most dense 13B-14B models.' },
             { q: 'Should I buy RTX 5060 Ti or RTX 4060 Ti for local LLMs?', a: 'RTX 5060 Ti 16GB (about $620; lowest asking price per BuySellRAM, 2026-10-11) is still the better buy: 8 GB more VRAM than the 8 GB RTX 4060 Ti and, by our estimate, roughly 20% faster (25–30 vs 20–25 tok/s in this page\'s estimated speed table). It is the current-generation budget pick for a new card, though it sells roughly 44% above its $429 MSRP. If budget-constrained, the 8 GB RTX 4060 Ti is still solid for 7B models at about $420 new or about $350 used (BuySellRAM lowest asking prices, 2026-10-11). Avoid base 4060/5060 (8GB) and 4070 (12GB) if you plan to run 13B+ models — poor VRAM headroom.' },
             { q: 'Can I use an AMD RX 7900 XT or RX 7900 XTX instead?', a: 'Yes, but in our assessment AMD driver support has generally been less mature than NVIDIA + CUDA, and it varies by card and software version. HIP/ROCm setup can require more effort. RTX/CUDA setup is usually simpler for beginners.' },
-            { q: 'Is 12GB VRAM enough for 13B models?', a: 'Barely, at Q4 quantization. Q5 or Q8 will cause OOM errors. If you want 13B comfort, aim for 16GB.' },
+            { q: 'Is 12GB VRAM enough for 13B models?', a: 'Barely, at Q4 quantization. Q5 or Q8 can cause OOM errors. If you want 13B comfort, aim for 16GB.' },
             { q: 'Should I buy a used enterprise GPU like RTX A4000?', a: 'Not any more. The RTX A4000 was a genuine budget bargain when it sold for $180-230 used. Listings we last checked (earlier estimates, not re-verified in this refresh) put it at roughly $790-850 used — about 2.4-2.7x an RTX 3060 12GB (page prices) for 4 GB more VRAM and slower inference. The RTX A2000 12GB showed a similar jump, at roughly $440-615. Check live listings before buying. In our assessment a used RTX 3060 12GB or a new RTX 5060 Ti 16GB is the better buy.' },
             { q: 'What PSU wattage should I buy with a $300 GPU?', a: 'A 650 W 80+ Gold unit is a common starting point for a $300 GPU build. Such a system (a $300 GPU + CPU + motherboard) typically stays under about 400W, but check your own parts\' combined draw and leave headroom for spikes. Follow the PSU and card maker\'s guidance; this is not electrical-safety advice.' },
             { q: 'Can I run Ollama with a $300 budget GPU?', a: 'Yes. Ollama is lightweight. An RTX 3060 (released in 2021) with Ollama is estimated to run Qwen3 14B at about 9-12 tok/sec or Qwen3 8B at about 16-20 tok/sec (estimates, not our benchmarks; speeds vary with prompt length, context and setup) — usable for interactive chat and coding assistance.' },
@@ -255,7 +255,7 @@ rows: [
             { q: 'Can I upgrade my current GPU to run larger models later?', a: 'Yes, GPU upgrades are straightforward in desktop PCs. Start with RTX 3060 12GB, then upgrade to RTX 4090 or 5090 later. PCIE slot is backward-compatible across generations.' },
             { q: 'What is the best budget NVIDIA GPU for local LLM inference?', a: 'RTX 4060 Ti (8 GB, about $420 new or $350 used) for 7B models, or RTX 4070 Super (12 GB, about $700 new or $620 used) for 13B models (BuySellRAM lowest asking prices, 2026-10-11). For used: RTX 3060 12GB ($320–350) is estimated to run 7-13B models at Q4. In our assessment the RTX 3060 12GB used is a balanced pick, while the RX 6700 XT has the lowest price per GB if its ROCm trade-off is acceptable; the RTX 5060 Ti 16GB (about $620; lowest asking price per BuySellRAM, 2026-10-11) is our pick for a new card.' },
             { q: 'How does the AMD 6800XT compare to the RTX 4070 for AI inference?', a: 'AMD RX 6800 XT has 16 GB of VRAM versus 12 GB on the RTX 4070, but it can lag on LLM inference speed (the gap depends on the model, backend and setup). In our assessment, ROCm driver setup for llama.cpp has generally been more complex than CUDA. For pure LLM work, the RTX 4070 is likely easier; if you also game, the 6800 XT\'s extra VRAM may offer better value in our view. We have not benchmarked either card, so treat this as general orientation.' },
-            { q: 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?', a: 'Used RX 6700 XT (12 GB, $175–315) = $15-26 per GB. Used RTX 3060 (12 GB, $320–350) = $27-29 per GB. Used RTX 3090 (24 GB, about $1,400-1,550) = $58-65 per GB. New RTX 4070 Super (12 GB, about $700, BuySellRAM lowest asking price, 2026-10-11) = about $58 per GB. Best value in our assessment: RX 6700 XT if you accept ROCm setup, otherwise RTX 3060 12GB. Note that used RTX 3090 pricing is now well above its old levels, so it is no longer the capacity bargain it was. The RTX 3090 price is from observed US eBay sold listings ([InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15).' },
+            { q: 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?', a: 'Used RX 6700 XT (12 GB, $175–315) = $15-26 per GB. Used RTX 3060 (12 GB, $320–350) = $27-29 per GB. Used RTX 3090 (24 GB, about $1,500-1,725) = $63-72 per GB. New RTX 4070 Super (12 GB, about $700, BuySellRAM lowest asking price, 2026-10-11) = about $58 per GB. Best value in our assessment: RX 6700 XT if you accept ROCm setup, otherwise RTX 3060 12GB. Note that used RTX 3090 pricing is now well above its old levels, so it is no longer the capacity bargain it was. The RTX 3090 price is from observed US eBay sold listings ([InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), figure dated 2026-11-23).' },
             { q: 'Can I use an AMD RX 6700 or 6800 XT instead of NVIDIA for local LLMs?', a: 'Yes, but in our assessment AMD ROCm driver support for ONNX Runtime has generally been less mature than NVIDIA CUDA, and it varies by version. Expect more setup friction. NVIDIA/CUDA is usually the simpler choice for budget builds.' },
             { q: 'What is the cheapest GPU for LLM inference?', a: 'The RTX 3060 12GB at roughly $320–350 used is among the cheapest ways to get 12 GB of VRAM (a used RX 6700 XT can be cheaper if you accept AMD setup friction). Cheaper cards exist, but below 12GB the model sizes worth running stop fitting, so a cheaper card is not a cheaper way to run local AI — it is a card too small for most of the models covered here. If you want new rather than used, the RTX 5060 Ti 16GB at roughly $620 is the new card with the most VRAM headroom (the RTX 4070 Super 12GB, at about $620 used or $700 new per BuySellRAM, 2026-10-11, is in a similar range but has 4 GB less VRAM). One scope note: this page ranks consumer cards for a single machine. Cheapest GPU inference at production scale is a different question, decided by throughput per watt and per rack unit rather than sticker price.' },
           ],
@@ -286,7 +286,7 @@ rows: [
           items: [
             'Meta AI. (2025). "Llama 4 Model Card." — Scout MoE architecture, VRAM requirements ([GitHub](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md))',
             'Qwen Team. (2025). "Qwen3 Technical Report." — Qwen3 8B specifications ([arXiv:2505.09388](https://arxiv.org/abs/2505.09388))',
-            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — observed US eBay sold listings used for the RTX 3090 price (source updated 2026-10-15)',
+            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — observed US eBay sold listings used for the RTX 3090 price (figure dated 2026-11-23)',
             '[BuySellRAM consumer GPU market update](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) — lowest asking prices (new and used) used for the RTX 5060 Ti 16GB, RTX 4060 Ti 8GB and RTX 4070 Super prices and as a cross-check for the RTX 3060 12GB (source dated 2026-10-11)',
             'TechPowerUp GPU Database: RTX 3060 / RTX 4060 Ti / RTX 4070 Super specs and power consumption',
             'NVIDIA CUDA Capability Matrix: GPU memory bandwidth and theoretical throughput for inference workloads',
@@ -301,7 +301,7 @@ schema: {
         'description': 'What local LLMs can you run on RTX 3060 12GB or 6GB? See best models for coding, chat, and reasoning in 2026 with real VRAM limits and performance tips.',
         'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-18',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -352,7 +352,7 @@ schema: {
             'name': 'Is 12GB VRAM enough for 13B models?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Barely, at Q4 quantization. Q5 or Q8 will cause OOM errors. If you want 13B comfort, aim for 16GB.',
+              'text': 'Barely, at Q4 quantization. Q5 or Q8 can cause OOM errors. If you want 13B comfort, aim for 16GB.',
             },
           },
           {
@@ -432,7 +432,7 @@ schema: {
             'name': 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Used RX 6700 XT (12 GB, $175–315) = $15-26 per GB. Used RTX 3060 (12 GB, $320–350) = $27-29 per GB. Used RTX 3090 (24 GB, about $1,400-1,550) = $58-65 per GB. New RTX 4070 Super (12 GB, about $700, BuySellRAM lowest asking price, 2026-10-11) = about $58 per GB. Best value in our assessment: RX 6700 XT if you accept ROCm setup, otherwise RTX 3060 12GB. Note that used RTX 3090 pricing is now well above its old levels, so it is no longer the capacity bargain it was. The RTX 3090 price is from observed US eBay sold listings (InsiderLLM GPU price tracker, insiderllm.com/guides/nvidia-gpu-prices-rising, source updated 2026-10-15).',
+              'text': 'Used RX 6700 XT (12 GB, $175–315) = $15-26 per GB. Used RTX 3060 (12 GB, $320–350) = $27-29 per GB. Used RTX 3090 (24 GB, about $1,500-1,725) = $63-72 per GB. New RTX 4070 Super (12 GB, about $700, BuySellRAM lowest asking price, 2026-10-11) = about $58 per GB. Best value in our assessment: RX 6700 XT if you accept ROCm setup, otherwise RTX 3060 12GB. Note that used RTX 3090 pricing is now well above its old levels, so it is no longer the capacity bargain it was. The RTX 3090 price is from observed US eBay sold listings (InsiderLLM GPU price tracker, insiderllm.com/guides/nvidia-gpu-prices-rising, figure dated 2026-11-23).',
             },
           },
           {
@@ -495,7 +495,7 @@ schema: {
       metaDescription: 'Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($320–350 usada) ejecuta Qwen3 14B a ~9–12 tok/s (est.). Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-es.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-18',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**La RTX 3060 12GB (unos $320–350 usada) es nuestra elección de GPU económica de segunda mano más equilibrada para LLMs locales en 2026 (VRAM, velocidad y precio, según los precios y estimaciones de esta guía). La RTX 5060 Ti 16GB (unos $620, 44 % sobre el PVP; precio mínimo pedido según BuySellRAM, 2026-10-11) es la opción nueva.**',
       nextStep: {
         text: '¿Ya tienes tu GPU? Ahora elige el software adecuado para ejecutar modelos en ella.',
@@ -644,7 +644,7 @@ rows: [
             { q: '¿Sigue valiendo la pena comprar una RTX 3060 12GB en 2026?', a: 'Sí. Tiene más de 4 años, pero, según nuestra valoración, 12GB de VRAM siguen alcanzando para la mayoría de los modelos populares. Se estima que ejecuta Qwen3 14B, Qwen3 8B, Gemma 4 12B y Ministral 3 8B en Q4. Cabe con todos los modelos 7B-8B y la mayoría de los densos 13B-14B.' },
             { q: '¿Debería comprar RTX 5060 Ti o RTX 4060 Ti para LLMs locales?', a: 'RTX 5060 Ti 16GB (unos $620; precio mínimo pedido según BuySellRAM, 2026-10-11) sigue siendo la mejor compra de las dos: 8 GB más de VRAM que la RTX 4060 Ti de 8GB y, según nuestra estimación, aproximadamente un 20 % más rápida (según las velocidades estimadas de la tabla de esta página: 25–30 frente a 20–25 tok/seg). Es la opción económica de generación actual para una tarjeta nueva, aunque se sitúa en torno a un 44 % por encima de su precio de lista. Si tienes restricciones de presupuesto, la RTX 4060 Ti de 8GB sigue siendo sólida para modelos 7B, a unos $420 nueva o unos $350 usada (precios mínimos pedidos según BuySellRAM, 2026-10-11). Evita la base 4060/5060 (8GB) y la 4070 (12GB) si planeas ejecutar modelos 13B+ — poco margen de VRAM.' },
             { q: '¿Puedo usar una AMD RX 7900 XT o RX 7900 XTX en su lugar?', a: 'Sí, pero, según nuestra valoración, el soporte de drivers de AMD ha sido por lo general menos maduro que NVIDIA + CUDA, y varía según la tarjeta y la versión del software. La configuración de HIP/ROCm puede requerir más esfuerzo. La configuración con RTX/CUDA suele ser más sencilla para principiantes.' },
-            { q: '¿12GB de VRAM es suficiente para modelos de 13B?', a: 'Por muy poco, a cuantización Q4. Q5 o Q8 provocarán errores OOM. Si quieres un 13B cómodo, apunta a 16GB.' },
+            { q: '¿12GB de VRAM es suficiente para modelos de 13B?', a: 'Por muy poco, a cuantización Q4. Q5 o Q8 pueden provocar errores OOM. Si quieres un 13B cómodo, apunta a 16GB.' },
             { q: '¿Debería comprar una GPU empresarial usada como RTX A4000?', a: 'Ya no. La RTX A4000 fue una ganga económica real mientras se vendía a $180-230 de segunda mano. Los anuncios revisados por última vez (estimaciones anteriores, no reverificadas en esta actualización) la sitúan en torno a $790-850 usada — entre 2,4 y 2,7 veces una RTX 3060 12GB (según los precios de esta página), por 4 GB más de VRAM y una inferencia más lenta. La RTX A2000 12GB muestra un salto similar, en torno a $440-615. Consulta los anuncios actuales antes de comprar. En nuestra valoración, una RTX 3060 12GB usada o una RTX 5060 Ti 16GB nueva es la mejor compra.' },
             { q: '¿Cuántos vatios de fuente de alimentación debo comprar con una GPU de $300?', a: 'Una fuente de 650 W 80+ Gold es un punto de partida habitual para una GPU de $300. Un sistema con una GPU de $300 + CPU + placa base suele mantenerse por debajo de unos 400W, pero comprueba el consumo combinado de tus propios componentes y deja margen para picos. Sigue las indicaciones del fabricante de la fuente y de la tarjeta; esto no es un consejo de seguridad eléctrica.' },
             { q: '¿Puedo ejecutar Ollama con una GPU económica de $300?', a: 'Sí. Ollama es ligero. Se estima que una RTX 3060 (lanzada en 2021) con Ollama ejecuta Qwen3 14B a unos 9-12 tok/seg o Qwen3 8B a unos 16-20 tok/seg (estimaciones, no pruebas propias; la velocidad varía según la longitud del prompt, el contexto y la configuración) — utilizable para chat interactivo y asistencia de código.' },
@@ -655,7 +655,7 @@ rows: [
             { q: '¿Puedo actualizar mi GPU para ejecutar modelos más grandes más adelante?', a: 'Sí, las actualizaciones de GPU son sencillas en PCs de escritorio. Comienza con RTX 3060 12GB y luego actualiza a RTX 4090 o 5090 más adelante. El slot PCIe es retrocompatible entre generaciones.' },
             { q: '¿Cuál es la mejor GPU NVIDIA económica para inferencia de LLM local?', a: 'RTX 4060 Ti (8 GB, unos $420 nueva o $350 usada) para modelos 7B, o RTX 4070 Super (12 GB, unos $700 nueva o $620 usada) para modelos 13B (precios mínimos pedidos según BuySellRAM, 2026-10-11). Usada: se estima que la RTX 3060 12GB ($320–350) ejecuta modelos 7-13B a Q4. En nuestra valoración, la RTX 3060 12GB usada es una opción equilibrada, y la RX 6700 XT tiene el menor precio por GB si aceptas su compromiso con ROCm; la RTX 5060 Ti 16GB (unos $620; precio mínimo pedido según BuySellRAM, 2026-10-11) es nuestra elección para una tarjeta nueva.' },
             { q: '¿Cómo se compara la AMD 6800XT con la RTX 4070 para inferencia de IA?', a: 'La AMD RX 6800 XT tiene 16 GB de VRAM frente a los 12 GB de la RTX 4070, pero puede ser más lenta en inferencia de LLMs (la diferencia depende del modelo, el backend y la configuración). En nuestra valoración, la configuración del driver ROCm para llama.cpp ha sido por lo general más compleja que CUDA. Para trabajo puro con LLMs, la RTX 4070 probablemente sea más fácil; si además juegas, la VRAM extra de la 6800 XT puede ofrecer mejor valor, en nuestra opinión. No hemos medido ninguna de las dos tarjetas, así que toma esto como orientación general.' },
-            { q: '¿Cuál es la GPU con mejor precio por GB de VRAM para LLMs locales en 2026?', a: 'RX 6700 XT usada (12 GB, $175–315) = $15–26 por GB. RTX 3060 usada (12 GB, ~$320–350) = $27–29 por GB. RTX 3090 usada (24 GB, unos $1,400-1,550) = $58–65 por GB. RTX 4070 Super nueva (12 GB, unos $700, precio mínimo pedido según BuySellRAM, 2026-10-11) = unos $58 por GB. Mejor valor según nuestra valoración: RX 6700 XT si aceptas ROCm; si no, RTX 3060 12GB usada. Ten en cuenta que el precio de la RTX 3090 usada está ahora muy por encima de sus niveles anteriores, por lo que ya no es la ganga de capacidad que era. El precio de la RTX 3090 proviene de listados vendidos observados en eBay EE. UU. ([rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15).' },
+            { q: '¿Cuál es la GPU con mejor precio por GB de VRAM para LLMs locales en 2026?', a: 'RX 6700 XT usada (12 GB, $175–315) = $15–26 por GB. RTX 3060 usada (12 GB, ~$320–350) = $27–29 por GB. RTX 3090 usada (24 GB, unos $1,500-1,725) = $63–72 por GB. RTX 4070 Super nueva (12 GB, unos $700, precio mínimo pedido según BuySellRAM, 2026-10-11) = unos $58 por GB. Mejor valor según nuestra valoración: RX 6700 XT si aceptas ROCm; si no, RTX 3060 12GB usada. Ten en cuenta que el precio de la RTX 3090 usada está ahora muy por encima de sus niveles anteriores, por lo que ya no es la ganga de capacidad que era. El precio de la RTX 3090 proviene de listados vendidos observados en eBay EE. UU. ([rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), dato con fecha 2026-11-23).' },
           ],
         },
         'relatedReading': {
@@ -683,7 +683,7 @@ rows: [
           items: [
             'Meta AI. (2025). "Llama 4 Model Card." — Arquitectura MoE de Scout, requisitos de VRAM ([GitHub](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md))',
             'Qwen Team. (2025). "Qwen3 Technical Report." — Especificaciones de Qwen3 8B ([arXiv:2505.09388](https://arxiv.org/abs/2505.09388))',
-            '[Rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — listados vendidos observados en eBay EE. UU. para el precio de la RTX 3090 (fuente actualizada el 2026-10-15)',
+            '[Rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — listados vendidos observados en eBay EE. UU. para el precio de la RTX 3090 (dato con fecha 2026-11-23)',
             '[Actualización del mercado de GPU de consumo de BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) — precios mínimos pedidos (nuevas y usadas) usados para los precios de la RTX 5060 Ti 16GB, la RTX 4060 Ti 8GB y la RTX 4070 Super, y como contraste para la RTX 3060 12GB (fuente fechada el 2026-10-11)',
             'Base de datos de GPUs TechPowerUp: especificaciones y consumo de energía de RTX 3060 / RTX 4060 Ti / RTX 4070 Super',
             'Matriz de capacidades CUDA de NVIDIA: ancho de banda de memoria de GPU y rendimiento teórico para cargas de trabajo de inferencia',
@@ -699,7 +699,7 @@ rows: [
         'description': '¿Qué LLMs locales puedes ejecutar en RTX 3060 12GB o 6GB? Consulta los mejores modelos para código, chat y razonamiento en 2026 con límites reales de VRAM y consejos de rendimiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-18',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -748,7 +748,7 @@ rows: [
             'name': '¿12GB de VRAM es suficiente para modelos de 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Por muy poco, a cuantización Q4. Q5 o Q8 provocarán errores OOM. Si quieres un 13B cómodo, apunta a 16GB.',
+              'text': 'Por muy poco, a cuantización Q4. Q5 o Q8 pueden provocar errores OOM. Si quieres un 13B cómodo, apunta a 16GB.',
             },
           },
           {
@@ -836,7 +836,7 @@ rows: [
             'name': '¿Cuál es la GPU con mejor precio por GB de VRAM para LLMs locales en 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RX 6700 XT usada (12 GB, $175–315) = $15–26 por GB. RTX 3060 usada (12 GB, ~$320–350) = $27–29 por GB. RTX 3090 usada (24 GB, unos $1,400-1,550) = $58–65 por GB. RTX 4070 Super nueva (12 GB, unos $700, precio mínimo pedido según BuySellRAM, 2026-10-11) = unos $58 por GB. Mejor valor según nuestra valoración: RX 6700 XT si aceptas ROCm; si no, RTX 3060 12GB usada. Ten en cuenta que el precio de la RTX 3090 usada está ahora muy por encima de sus niveles anteriores, por lo que ya no es la ganga de capacidad que era. El precio de la RTX 3090 proviene de listados vendidos observados en eBay EE. UU. (rastreador de precios de GPU de InsiderLLM, insiderllm.com/guides/nvidia-gpu-prices-rising, fuente actualizada el 2026-10-15).',
+              'text': 'RX 6700 XT usada (12 GB, $175–315) = $15–26 por GB. RTX 3060 usada (12 GB, ~$320–350) = $27–29 por GB. RTX 3090 usada (24 GB, unos $1,500-1,725) = $63–72 por GB. RTX 4070 Super nueva (12 GB, unos $700, precio mínimo pedido según BuySellRAM, 2026-10-11) = unos $58 por GB. Mejor valor según nuestra valoración: RX 6700 XT si aceptas ROCm; si no, RTX 3060 12GB usada. Ten en cuenta que el precio de la RTX 3090 usada está ahora muy por encima de sus niveles anteriores, por lo que ya no es la ganga de capacidad que era. El precio de la RTX 3090 proviene de listados vendidos observados en eBay EE. UU. (rastreador de precios de GPU de InsiderLLM, insiderllm.com/guides/nvidia-gpu-prices-rising, dato con fecha 2026-11-23).',
             },
           },
         ]
@@ -883,7 +883,7 @@ rows: [
       metaDescription: 'أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (320–350$ مستعملة) تشغّل Qwen3 14B بنحو 9–12 tok/ث (تقدير). الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-ar.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-18',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**تُعد RTX 3060 12GB (نحو 320–350 دولار مستعملة) في رأينا أكثر GPU اقتصادية مستعملة توازناً لنماذج LLM المحلية في 2026 (VRAM والسرعة والسعر، بناءً على الأسعار والتقديرات في هذا الدليل): تشغّل Qwen3 14B بسرعة تقديرية 9–12 tok/ث وQwen3 8B بسرعة تقديرية 16–20 tok/ث بتكميم Q4. أما RTX 5060 Ti 16GB (نحو 620 دولار جديدة، أي نحو 44% فوق السعر الرسمي; أقل سعر مطلوب وفق BuySellRAM، 2026-10-11) فهي خيار البطاقة الجديدة.**',
       nextStep: {
         text: 'هل لديك GPU بالفعل؟ الآن اختر البرنامج المناسب لتشغيل النماذج عليها.',
@@ -1001,7 +1001,7 @@ rows: [
           title: 'مستعملة مقابل جديدة: من أين تشتري؟',
           items: [
             '**مستعملة (أرخص بـ 150-300 دولار)**: eBay، Facebook Marketplace، Craigslist، متاجر إصلاح الحواسيب المحلية. خطر أعلى لبطاقات معيبة أو VRAM تالفة. اختبر دائماً قبل الالتزام.',
-            '**جديدة (300–800 دولار، إن توفرت)**: Newegg، Amazon، Best Buy، Microcenter. ضمان مشمول. دون مفاجآت. لكن الأسعار ليست مستقرة — فقد ارتفعت أسعار البطاقات الجديدة في السوق طوال 2026، وتنفد بعض الطرازات مثل RTX 4060 Ti 16GB من كبار المتاجر لفترات. مثالية للمشترين الذين يفضّلون تجنب المخاطر ويقبلون الدفع فوق السعر المُعلن.',
+            '**جديدة (300–800 دولار، إن توفرت)**: Newegg، Amazon، Best Buy، Microcenter. ضمان مشمول. لكن الأسعار ليست مستقرة — فقد ارتفعت أسعار البطاقات الجديدة في السوق طوال 2026، وتنفد بعض الطرازات مثل RTX 4060 Ti 16GB من كبار المتاجر لفترات. مثالية للمشترين الذين يفضّلون تجنب المخاطر ويقبلون الدفع فوق السعر المُعلن.',
             '**بطاقات التعدين (تشفير، رخيصة جداً)**: خطر شديد. تدهور VRAM خطر مُبلَّغ عنه. اشترِ فقط إذا كان بإمكانك إجراء اختبارات ضغط كاملة في الموقع.',
           ],
         },
@@ -1031,7 +1031,7 @@ rows: [
             { q: 'هل لا يزال شراء RTX 3060 12GB يستحق العناء في 2026؟', a: 'نعم. عمرها أكثر من 4 سنوات، لكن 12GB من VRAM لا تزال، في تقييمنا، كافية لمعظم النماذج الرئيسية. يُقدَّر أنها تشغّل Qwen3 14B وQwen3 8B وGemma 4 12B وMinistral 3 8B بصيغة Q4. تتسع لجميع نماذج 7B-8B ومعظم النماذج الكثيفة 13B-14B.' },
             { q: 'هل يجب أن أشتري RTX 5060 Ti أم RTX 4060 Ti لنماذج LLM المحلية؟', a: 'RTX 5060 Ti 16GB (~620 دولار; أقل سعر مطلوب وفق BuySellRAM، 2026-10-11) هي الآن الخيار الأفضل: ذاكرة VRAM أكبر بـ 8 GB من RTX 4060 Ti بسعة 8GB وأسرع، بحسب تقديرنا، بنحو 20% (استناداً إلى السرعات التقديرية في جدول هذه الصفحة: 25–30 مقابل 20–25 tok/ث). إنها الخيار الاقتصادي من الجيل الحالي لبطاقة جديدة. إذا كانت ميزانيتك محدودة، تبقى RTX 4060 Ti بسعة 8GB متينة لنماذج 7B بنحو 420 دولاراً جديدة أو نحو 350 دولاراً مستعملة (أقل أسعار مطلوبة وفق BuySellRAM، 2026-10-11). تجنّب الأساس 4060/5060 (8GB) و4070 (12GB) إذا كنت تخطط لتشغيل نماذج 13B+ — هامش VRAM ضعيف.' },
             { q: 'هل يمكنني استخدام AMD RX 7900 XT أو RX 7900 XTX بدلاً من ذلك؟', a: 'نعم، لكن في تقييمنا كان دعم برامج تشغيل AMD عموماً أقل نضجاً من NVIDIA + CUDA، ويختلف حسب البطاقة وإصدار البرنامج. قد يتطلب إعداد HIP/ROCm جهداً أكبر. إعداد RTX/CUDA أبسط عادةً للمبتدئين.' },
-            { q: 'هل 12GB من VRAM كافية لنماذج 13B؟', a: 'بالكاد، بتكميم Q4. ستسبب Q5 أو Q8 أخطاء OOM. إذا أردت 13B مريحاً، استهدف 16GB.' },
+            { q: 'هل 12GB من VRAM كافية لنماذج 13B؟', a: 'بالكاد، بتكميم Q4. قد تسبب Q5 أو Q8 أخطاء OOM. إذا أردت 13B مريحاً، استهدف 16GB.' },
             { q: 'هل يجب أن أشتري GPU مؤسسية مستعملة مثل RTX A4000؟', a: 'لم يعد الأمر كذلك. كانت RTX A4000 صفقة اقتصادية حقيقية عندما كانت تُباع بـ 180-230 دولاراً مستعملة. أما آخر إعلانات راجعناها (تقديرات سابقة لم نعد التحقق منها في هذا التحديث) فتضعها عند نحو 790-850 دولاراً مستعملة — أي ما يقارب 2.4–2.7 ضعف سعر RTX 3060 12GB (وفق أسعار هذه الصفحة)، مقابل 4GB إضافية من VRAM واستدلال أبطأ. وتُظهر RTX A2000 12GB قفزة مماثلة عند نحو 440-615 دولاراً. تحقق من الإعلانات الحالية قبل الشراء. وفي تقييمنا فإن RTX 3060 12GB مستعملة أو RTX 5060 Ti 16GB جديدة هي الشراء الأفضل.' },
             { q: 'كم واط من مصدر الطاقة يجب أن أشتري مع GPU بـ 300 دولار؟', a: 'مصدر طاقة بقدرة 650 واط وشهادة 80+ Gold نقطة انطلاق شائعة لبناء بـ GPU بسعر 300 دولار. عادةً ما يبقى استهلاك نظام يضم GPU بـ 300 دولار + CPU + اللوحة الأم دون نحو 400W، لكن تحقق من الاستهلاك المجمّع لمكوّناتك أنت واترك هامشاً للذروات. اتبع إرشادات الشركة المصنّعة لمصدر الطاقة وللبطاقة؛ وهذا ليس نصيحة للسلامة الكهربائية.' },
             { q: 'هل يمكنني تشغيل Ollama على GPU اقتصادية بـ 300 دولار؟', a: 'نعم. Ollama خفيف. يُقدَّر أن تشغّل RTX 3060 (صدرت عام 2021) مع Ollama نموذج Qwen3 14B بنحو 9-12 tok/ث أو Qwen3 8B بنحو 16-20 tok/ث (تقديرات وليست قياسات من عندنا؛ وتختلف السرعة بحسب طول الموجّه والسياق والإعداد) — وهذا مناسب للدردشة التفاعلية والمساعدة في البرمجة.' },
@@ -1042,7 +1042,7 @@ rows: [
             { q: 'هل يمكنني ترقية GPU لتشغيل نماذج أكبر لاحقاً؟', a: 'نعم، ترقيات GPU سهلة في الحواسيب المكتبية. ابدأ بـ RTX 3060 12GB ثم رقِّ إلى RTX 4090 أو 5090 لاحقاً. منفذ PCIe متوافق رجعياً بين الأجيال.' },
             { q: 'ما أفضل GPU من NVIDIA اقتصادية لاستدلال LLM المحلي؟', a: 'RTX 4060 Ti (8 GB، نحو 420 دولاراً جديدة أو 350 مستعملة) لنماذج 7B، أو RTX 4070 Super (12 GB، نحو 700 دولار جديدة أو 620 مستعملة) لنماذج 13B (أقل أسعار مطلوبة وفق BuySellRAM، 2026-10-11). مستعملة: RTX 3060 12GB (320–350 دولار) يُقدَّر أنها تشغّل نماذج 7-13B بصيغة Q4. في تقييمنا، RTX 3060 12GB مستعملة خيار متوازن، وRX 6700 XT الأقل سعراً لكل GB إن قبلت تنازلات ROCm؛ وRTX 5060 Ti 16GB (نحو 620 دولار; أقل سعر مطلوب وفق BuySellRAM، 2026-10-11) هي خيارنا لبطاقة جديدة.' },
             { q: 'كيف تقارَن AMD 6800XT بـ RTX 4070 لاستدلال الذكاء الاصطناعي؟', a: 'تمتلك AMD RX 6800 XT ذاكرة VRAM بسعة 16 GB مقابل 12 GB في RTX 4070، لكنها قد تكون أبطأ في استدلال LLM (يختلف الفارق حسب النموذج والواجهة الخلفية والإعداد). في تقييمنا، كان إعداد برنامج تشغيل ROCm لـ llama.cpp بوجه عام أكثر تعقيداً من CUDA. للعمل الخالص مع LLM، من المرجح أن تكون RTX 4070 أسهل؛ وإذا كنت تلعب أيضاً، فقد توفر VRAM الإضافية في 6800 XT قيمة أفضل في رأينا. لم نقِس أداء أي من البطاقتين، فاعتبر هذا توجيهاً عاماً.' },
-            { q: 'ما GPU بأفضل سعر لكل GB من VRAM لنماذج LLM المحلية في 2026؟', a: 'RX 6700 XT مستعملة (12 GB، 175–315 دولاراً) = 15–26 دولاراً لكل GB. RTX 3060 مستعملة (12 GB، ~320–350 دولاراً) = 27–29 دولاراً لكل GB. RTX 3090 مستعملة (24 GB، نحو 1,400-1,550 دولار) = 58-65 دولاراً لكل GB. RTX 4070 Super جديدة (12 GB، نحو 700 دولار، أقل سعر مطلوب وفق BuySellRAM، 2026-10-11) = نحو 58 دولاراً لكل GB. أفضل قيمة في تقييمنا: RX 6700 XT إذا قبلت إعداد ROCm، وإلا RTX 3060 12GB مستعملة. لاحظ أن سعر RTX 3090 المستعملة يفوق الآن مستوياتها السابقة بكثير، فلم تعد صفقة السعة التي كانت عليها. سعر RTX 3090 مأخوذ من قوائم بيع مرصودة على eBay الأمريكي ([متتبع أسعار GPU من InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15).' },
+            { q: 'ما GPU بأفضل سعر لكل GB من VRAM لنماذج LLM المحلية في 2026؟', a: 'RX 6700 XT مستعملة (12 GB، 175–315 دولاراً) = 15–26 دولاراً لكل GB. RTX 3060 مستعملة (12 GB، ~320–350 دولاراً) = 27–29 دولاراً لكل GB. RTX 3090 مستعملة (24 GB، نحو 1,500-1,725 دولار) = 63-72 دولاراً لكل GB. RTX 4070 Super جديدة (12 GB، نحو 700 دولار، أقل سعر مطلوب وفق BuySellRAM، 2026-10-11) = نحو 58 دولاراً لكل GB. أفضل قيمة في تقييمنا: RX 6700 XT إذا قبلت إعداد ROCm، وإلا RTX 3060 12GB مستعملة. لاحظ أن سعر RTX 3090 المستعملة يفوق الآن مستوياتها السابقة بكثير، فلم تعد صفقة السعة التي كانت عليها. سعر RTX 3090 مأخوذ من قوائم بيع مرصودة على eBay الأمريكي ([متتبع أسعار GPU من InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، بيانات السعر بتاريخ 2026-11-23).' },
           ],
         },
         'relatedReading': {
@@ -1070,7 +1070,7 @@ rows: [
           items: [
             'Meta AI. (2025). "Llama 4 Model Card." — بنية MoE لـ Scout، متطلبات VRAM ([GitHub](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md))',
             'Qwen Team. (2025). "Qwen3 Technical Report." — مواصفات Qwen3 8B ([arXiv:2505.09388](https://arxiv.org/abs/2505.09388))',
-            '[متتبع أسعار GPU من InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — قوائم بيع مرصودة على eBay الأمريكي لسعر RTX 3090 (المصدر محدّث في 2026-10-15)',
+            '[متتبع أسعار GPU من InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — قوائم بيع مرصودة على eBay الأمريكي لسعر RTX 3090 (بيانات السعر بتاريخ 2026-11-23)',
             '[تحديث سوق بطاقات GPU الاستهلاكية من BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) — أقل أسعار مطلوبة (جديدة ومستعملة) المستخدمة لـ RTX 5060 Ti 16GB وللمقارنة مع RTX 3060 12GB (المصدر مؤرّخ في 2026-10-11)',
             'قاعدة بيانات GPU من TechPowerUp: مواصفات واستهلاك طاقة RTX 3060 / RTX 4060 Ti / RTX 4070 Super',
             'مصفوفة قدرات CUDA من NVIDIA: عرض نطاق ذاكرة GPU والإنتاجية النظرية لأحمال عمل الاستدلال',
@@ -1086,7 +1086,7 @@ rows: [
         'description': 'أي نماذج LLM محلية يمكنك تشغيلها على RTX 3060 12GB أو 6GB؟ راجع أفضل النماذج للبرمجة والمحادثة والاستدلال في 2026 بحدود VRAM حقيقية ونصائح للأداء.',
         'url': 'https://www.promptquorum.com/ar/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-18',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1135,7 +1135,7 @@ rows: [
             'name': 'هل 12GB من VRAM كافية لنماذج 13B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'بالكاد، بتكميم Q4. ستسبب Q5 أو Q8 أخطاء OOM. إذا أردت 13B مريحاً، استهدف 16GB.',
+              'text': 'بالكاد، بتكميم Q4. قد تسبب Q5 أو Q8 أخطاء OOM. إذا أردت 13B مريحاً، استهدف 16GB.',
             },
           },
           {
@@ -1223,7 +1223,7 @@ rows: [
             'name': 'ما GPU بأفضل سعر لكل GB من VRAM لنماذج LLM المحلية في 2026؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RX 6700 XT مستعملة (12 GB، 175–315 دولاراً) = 15–26 دولاراً لكل GB. RTX 3060 مستعملة (12 GB، ~320–350 دولاراً) = 27–29 دولاراً لكل GB. RTX 3090 مستعملة (24 GB، نحو 1,400-1,550 دولار) = 58-65 دولاراً لكل GB. RTX 4070 Super جديدة (12 GB، نحو 700 دولار، أقل سعر مطلوب وفق BuySellRAM، 2026-10-11) = نحو 58 دولاراً لكل GB. أفضل قيمة في تقييمنا: RX 6700 XT إذا قبلت إعداد ROCm، وإلا RTX 3060 12GB مستعملة. لاحظ أن سعر RTX 3090 المستعملة يفوق الآن مستوياتها السابقة بكثير، فلم تعد صفقة السعة التي كانت عليها. سعر RTX 3090 مأخوذ من قوائم بيع مرصودة على eBay الأمريكي (متتبع أسعار GPU من InsiderLLM، insiderllm.com/guides/nvidia-gpu-prices-rising، المصدر محدّث في 2026-10-15).',
+              'text': 'RX 6700 XT مستعملة (12 GB، 175–315 دولاراً) = 15–26 دولاراً لكل GB. RTX 3060 مستعملة (12 GB، ~320–350 دولاراً) = 27–29 دولاراً لكل GB. RTX 3090 مستعملة (24 GB، نحو 1,500-1,725 دولار) = 63-72 دولاراً لكل GB. RTX 4070 Super جديدة (12 GB، نحو 700 دولار، أقل سعر مطلوب وفق BuySellRAM، 2026-10-11) = نحو 58 دولاراً لكل GB. أفضل قيمة في تقييمنا: RX 6700 XT إذا قبلت إعداد ROCm، وإلا RTX 3060 12GB مستعملة. لاحظ أن سعر RTX 3090 المستعملة يفوق الآن مستوياتها السابقة بكثير، فلم تعد صفقة السعة التي كانت عليها. سعر RTX 3090 مأخوذ من قوائم بيع مرصودة على eBay الأمريكي (متتبع أسعار GPU من InsiderLLM، insiderllm.com/guides/nvidia-gpu-prices-rising، بيانات السعر بتاريخ 2026-11-23).',
             },
           },
         ]
@@ -1270,7 +1270,7 @@ rows: [
       metaDescription: 'Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 320–350 usada) roda Qwen3 14B a ~9–12 tok/s (est.). Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-pt.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-18',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**A RTX 3060 12 GB (US$ 320–350 usada) é, na nossa avaliação, a GPU econômica usada mais equilibrada para LLMs locais (VRAM, velocidade e preço, com base nos preços e estimativas deste guia); a RTX 5060 Ti 16 GB (~US$ 620, 44% acima do MSRP; menor preço pedido segundo a BuySellRAM, 2026-10-11) é a opção nova.**',
       quickAnswerTop: {
         question: 'Qual é a melhor GPU econômica para LLMs locais em 2026?',
@@ -1448,7 +1448,7 @@ rows: [
             { q: 'A RTX 3060 12 GB ainda vale a pena comprar em 2026?', a: 'Sim. Tem mais de 4 anos, mas, na nossa avaliação, 12 GB de VRAM ainda atendem à maioria dos modelos populares. Estima-se que rode Qwen3 14B, Qwen3 8B, Gemma 4 12B e Ministral 3 8B em Q4. Cabe em todos os modelos 7B-8B e na maioria dos densos 13B-14B.' },
             { q: 'Devo comprar a RTX 5060 Ti ou a RTX 4060 Ti para LLMs locais?', a: 'A RTX 5060 Ti 16GB (~US$ 620; menor preço pedido segundo a BuySellRAM, 2026-10-11) é agora a melhor compra: 8 GB a mais de VRAM que a RTX 4060 Ti de 8GB e, pela nossa estimativa, cerca de 20% mais rápida (pelas velocidades estimadas da tabela desta página: 25–30 contra 20–25 tok/s). É a opção econômica de geração atual para uma placa nova. Se o orçamento for apertado, a RTX 4060 Ti de 8GB ainda é sólida para modelos 7B, por cerca de US$ 420 nova ou cerca de US$ 350 usada (menores preços pedidos segundo a BuySellRAM, 2026-10-11). Evite a 4060/5060 base (8GB) e a 4070 (12GB) se planeja rodar modelos 13B+ — pouca margem de VRAM.' },
             { q: 'Posso usar uma AMD RX 7900 XT ou RX 7900 XTX no lugar?', a: 'Sim, mas, na nossa avaliação, o suporte a drivers da AMD tem sido geralmente menos maduro que NVIDIA + CUDA, e varia conforme a placa e a versão do software. A configuração de HIP/ROCm pode exigir mais esforço. A configuração com RTX/CUDA costuma ser mais simples para iniciantes.' },
-            { q: '12 GB de VRAM é suficiente para modelos de 13B?', a: 'Por pouco, em quantização Q4. Q5 ou Q8 causarão erros de OOM. Se você quer conforto com 13B, mire em 16 GB.' },
+            { q: '12 GB de VRAM é suficiente para modelos de 13B?', a: 'Por pouco, em quantização Q4. Q5 ou Q8 podem causar erros de OOM. Se você quer conforto com 13B, mire em 16 GB.' },
             { q: 'Devo comprar uma GPU empresarial usada como a RTX A4000?', a: 'Não mais. A RTX A4000 foi uma pechincha real enquanto custava US$ 180-230 usada. Os anúncios verificados por último (estimativas anteriores, não reverificadas nesta atualização) a colocam em cerca de US$ 790–850 usada — de 2,4 a 2,7 vezes uma RTX 3060 12GB (pelos preços desta página), por 4 GB a mais de VRAM e inferência mais lenta. A RTX A2000 12GB mostra um salto semelhante, em cerca de US$ 440-615. Confira os anúncios atuais antes de comprar. Na nossa avaliação, uma RTX 3060 12GB usada ou uma RTX 5060 Ti 16GB nova é a melhor compra.' },
             { q: 'Qual potência de fonte devo comprar com uma GPU de US$ 300?', a: 'Uma fonte de 650 W 80+ Gold é um ponto de partida comum para uma GPU de US$ 300. Um sistema com GPU de US$ 300 + CPU + placa-mãe normalmente fica abaixo de cerca de 400W, mas confira o consumo combinado das suas próprias peças e deixe margem para picos. Siga as orientações do fabricante da fonte e da placa; isto não é aconselhamento de segurança elétrica.' },
             { q: 'Posso rodar o Ollama com uma GPU econômica de US$ 300?', a: 'Sim. O Ollama é leve. Estima-se que uma RTX 3060 (lançada em 2021) com Ollama rode o Qwen3 14B a cerca de 9-12 tok/s ou o Qwen3 8B a cerca de 16-20 tok/s (estimativas, não benchmarks nossos; a velocidade varia com o tamanho do prompt, o contexto e a configuração) — utilizável para chat interativo e assistência de código.' },
@@ -1458,7 +1458,7 @@ rows: [
             { q: 'Posso fazer upgrade da minha GPU atual para rodar modelos maiores depois?', a: 'Sim, upgrades de GPU são simples em PCs de mesa. Comece com a RTX 3060 12GB e depois faça upgrade para a RTX 4090 ou 5090. O slot PCIe é retrocompatível entre gerações.' },
             { q: 'Qual é a melhor GPU NVIDIA econômica para inferência de LLM local?', a: 'RTX 4060 Ti (8 GB, cerca de US$ 420 nova ou US$ 350 usada) para modelos 7B, ou RTX 4070 Super (12 GB, cerca de US$ 700 nova ou US$ 620 usada) para modelos 13B (menores preços pedidos segundo a BuySellRAM, 2026-10-11). Usada: estima-se que a RTX 3060 12GB (US$ 320–350) rode modelos 7-13B em Q4. Na nossa avaliação, a RTX 3060 12GB usada é uma opção equilibrada, e a RX 6700 XT tem o menor preço por GB se você aceitar o compromisso com o ROCm; a RTX 5060 Ti 16GB (cerca de US$ 620; menor preço pedido segundo a BuySellRAM, 2026-10-11) é a nossa escolha para uma placa nova.' },
             { q: 'Como a AMD 6800 XT se compara à RTX 4070 para inferência de IA?', a: 'A AMD RX 6800 XT tem 16 GB de VRAM contra 12 GB da RTX 4070, mas pode ficar atrás na velocidade de inferência de LLM (a diferença depende do modelo, do backend e da configuração). Na nossa avaliação, a configuração do driver ROCm para llama.cpp tem sido, em geral, mais complexa que CUDA. Para trabalho puro com LLM, a RTX 4070 provavelmente é mais fácil; se você também joga, a VRAM extra da 6800 XT pode oferecer melhor custo-benefício, na nossa opinião. Não medimos nenhuma das duas placas, então use isto como orientação geral.' },
-            { q: 'Qual é a GPU com melhor preço por GB de VRAM para LLMs locais em 2026?', a: 'RX 6700 XT usada (12 GB, US$ 175–315) = US$ 15-26 por GB. RTX 3060 usada (12 GB, ~US$ 320–350) = US$ 27-29 por GB. RTX 3090 usada (24 GB, cerca de US$ 1.400-1.550) = US$ 58-65 por GB. RTX 4070 Super nova (12 GB, ~US$ 700, menor preço pedido segundo a BuySellRAM, 2026-10-11) = cerca de US$ 58 por GB. Melhor valor na nossa avaliação: RX 6700 XT se você aceitar o ROCm; caso contrário, RTX 3060 12GB usada. Observe que o preço da RTX 3090 usada está agora bem acima dos níveis antigos, então ela deixou de ser a pechincha de capacidade que era. O preço da RTX 3090 vem de listagens vendidas observadas no eBay EUA ([rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15).' },
+            { q: 'Qual é a GPU com melhor preço por GB de VRAM para LLMs locais em 2026?', a: 'RX 6700 XT usada (12 GB, US$ 175–315) = US$ 15-26 por GB. RTX 3060 usada (12 GB, ~US$ 320–350) = US$ 27-29 por GB. RTX 3090 usada (24 GB, cerca de US$ 1.500-1.725) = US$ 63-72 por GB. RTX 4070 Super nova (12 GB, ~US$ 700, menor preço pedido segundo a BuySellRAM, 2026-10-11) = cerca de US$ 58 por GB. Melhor valor na nossa avaliação: RX 6700 XT se você aceitar o ROCm; caso contrário, RTX 3060 12GB usada. Observe que o preço da RTX 3090 usada está agora bem acima dos níveis antigos, então ela deixou de ser a pechincha de capacidade que era. O preço da RTX 3090 vem de listagens vendidas observadas no eBay EUA ([rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), dado com data de 2026-11-23).' },
             { q: 'A RTX 3060 12 GB funciona bem para conteúdo em português?', a: 'Sim. A GPU apenas executa o modelo -- a qualidade do idioma depende do modelo escolhido. Qwen3 8B e Qwen3 14B têm suporte multilíngue que inclui o português (confira o model card) e rodam na RTX 3060 12 GB.' },
             { q: 'Onde comprar uma RTX 3060 12 GB usada no Brasil?', a: 'Mercado Livre, OLX e grupos de Facebook são fontes comuns de GPUs usadas no Brasil; confira os preços atuais, que podem incluir impostos de importação e frete. Nos EUA, uma RTX 3060 12 GB usada custa cerca de US$ 320–350; no Brasil, espere pagar bem mais por causa de impostos de importação e frete. Verifique a procedência e teste antes de comprar.' },
             { q: 'Posso usar uma AMD RX 6700 ou 6800 XT em vez da NVIDIA para LLMs locais?', a: 'Sim, mas, na nossa avaliação, o suporte de driver ROCm da AMD para ONNX Runtime tem sido geralmente menos maduro que o CUDA da NVIDIA, e varia conforme a versão. Espere mais atrito na configuração. A NVIDIA/CUDA costuma ser a opção mais simples para builds econômicas.' },
@@ -1489,7 +1489,7 @@ rows: [
           items: [
             'Meta AI. (2025). "Llama 4 Model Card." — Arquitetura MoE do Scout, requisitos de VRAM ([GitHub](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md))',
             'Qwen Team. (2025). "Qwen3 Technical Report." — Especificações do Qwen3 8B ([arXiv:2505.09388](https://arxiv.org/abs/2505.09388))',
-            '[Rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — listagens vendidas observadas no eBay EUA para o preço da RTX 3090 (fonte atualizada em 2026-10-15)',
+            '[Rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — listagens vendidas observadas no eBay EUA para o preço da RTX 3090 (dado com data de 2026-11-23)',
             '[Atualização do mercado de GPUs de consumo da BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) — menores preços pedidos (novas e usadas) usados para a RTX 5060 Ti 16GB e como conferência da RTX 3060 12GB (fonte datada de 2026-10-11)',
             'Banco de dados de GPU TechPowerUp: especificações e consumo de energia da RTX 3060 / RTX 4060 Ti / RTX 4070 Super',
             'Matriz de capacidade CUDA da NVIDIA: largura de banda de memória de GPU e throughput teórico para cargas de inferência',
@@ -1505,7 +1505,7 @@ rows: [
         'url': 'https://www.promptquorum.com/pt/local-llms/best-budget-gpus-local-llm',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-18',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1556,7 +1556,7 @@ rows: [
             'name': '12 GB de VRAM é suficiente para modelos de 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Por pouco, em quantização Q4. Q5 ou Q8 causarão erros de OOM. Se você quer conforto com 13B, mire em 16 GB.',
+              'text': 'Por pouco, em quantização Q4. Q5 ou Q8 podem causar erros de OOM. Se você quer conforto com 13B, mire em 16 GB.',
             },
           },
           {
@@ -1636,7 +1636,7 @@ rows: [
             'name': 'Qual é a GPU com melhor preço por GB de VRAM para LLMs locais em 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RX 6700 XT usada (12 GB, US$ 175–315) = US$ 15-26 por GB. RTX 3060 usada (12 GB, ~US$ 320–350) = US$ 27-29 por GB. RTX 3090 usada (24 GB, cerca de US$ 1.400-1.550) = US$ 58-65 por GB. RTX 4070 Super nova (12 GB, ~US$ 700, menor preço pedido segundo a BuySellRAM, 2026-10-11) = cerca de US$ 58 por GB. Melhor valor na nossa avaliação: RX 6700 XT se você aceitar o ROCm; caso contrário, RTX 3060 12GB usada. Observe que o preço da RTX 3090 usada está agora bem acima dos níveis antigos, então ela deixou de ser a pechincha de capacidade que era. O preço da RTX 3090 vem de listagens vendidas observadas no eBay EUA (rastreador de preços de GPU da InsiderLLM, insiderllm.com/guides/nvidia-gpu-prices-rising, fonte atualizada em 2026-10-15).',
+              'text': 'RX 6700 XT usada (12 GB, US$ 175–315) = US$ 15-26 por GB. RTX 3060 usada (12 GB, ~US$ 320–350) = US$ 27-29 por GB. RTX 3090 usada (24 GB, cerca de US$ 1.500-1.725) = US$ 63-72 por GB. RTX 4070 Super nova (12 GB, ~US$ 700, menor preço pedido segundo a BuySellRAM, 2026-10-11) = cerca de US$ 58 por GB. Melhor valor na nossa avaliação: RX 6700 XT se você aceitar o ROCm; caso contrário, RTX 3060 12GB usada. Observe que o preço da RTX 3090 usada está agora bem acima dos níveis antigos, então ela deixou de ser a pechincha de capacidade que era. O preço da RTX 3090 vem de listagens vendidas observadas no eBay EUA (rastreador de preços de GPU da InsiderLLM, insiderllm.com/guides/nvidia-gpu-prices-rising, dado com data de 2026-11-23).',
             },
           },
           {
@@ -1711,7 +1711,7 @@ rows: [
       metaDescription: 'Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (320–350 $ gebraucht) betreibt Qwen3 14B mit ca. 9–12 Tok/s (gesch.). Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-de.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-18',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**Die RTX 3060 12GB (ca. 320–350 $ gebraucht) ist in unserer Einschätzung die ausgewogenste gebrauchte Budget-GPU für lokale LLMs 2026 (VRAM, Geschwindigkeit und Preis, auf Basis der Preise und Schätzwerte in diesem Leitfaden). Die RTX 5060 Ti 16GB (ca. 620 $ neu, rund 44 % über UVP; niedrigster Angebotspreis laut BuySellRAM, 2026-10-11) ist die Neukauf-Option.**',
       nextStep: { text: 'GPU besorgt? Wählen Sie jetzt die passende Software, um Modelle darauf auszuführen.', label: 'Beste lokale LLM-Frontends 2026 →', href: '/de/local-llms/best-local-llm-frontends' },
       audience: 'Einsteiger, die ihr erstes lokales LLM auf Consumer-Hardware betreiben',
@@ -1785,7 +1785,7 @@ rows: [
         ] },
         'used-vs-new': { title: 'Gebraucht vs. neu: Wo sollten Sie kaufen?', items: [
           '**Gebraucht (150–300 $ günstiger als neu)**: eBay, Kleinanzeigen, lokale Computer-Reparaturwerkstätten. Höheres Risiko defekter Karten oder fehlerhaften VRAMs. Vor dem Kauf immer testen. Der Abstand zwischen Gebraucht- und Neupreis ist 2026 deutlich gewachsen — der Gebrauchtmarkt ist nach unserer Einschätzung jetzt der Ort mit dem meisten Gegenwert.',
-          '**Neu (300–800 $, falls lieferbar)**: Mindfactory, Amazon, MediaMarkt, Alternate. Garantie inklusive. Keine Überraschungen. Die Preise sind allerdings nicht stabil — die Straßenpreise für Neukarten sind 2026 gestiegen, und einzelne Modelle wie die RTX 4060 Ti 16GB sind bei großen Händlern zeitweise nicht lieferbar. Gut für risikoscheue Käufer, die einen Aufschlag auf den Listenpreis akzeptieren.',
+          '**Neu (300–800 $, falls lieferbar)**: Mindfactory, Amazon, MediaMarkt, Alternate. Garantie inklusive. Die Preise sind allerdings nicht stabil — die Straßenpreise für Neukarten sind 2026 gestiegen, und einzelne Modelle wie die RTX 4060 Ti 16GB sind bei großen Händlern zeitweise nicht lieferbar. Gut für risikoscheue Käufer, die einen Aufschlag auf den Listenpreis akzeptieren.',
           '**Mining-Karten (Krypto, spottbillig)**: Extremes Risiko. VRAM-Degradation ist ein bekanntes Risiko. Nur kaufen, wenn Sie vor Ort vollständig benchen können.',
         ] },
         'mistakes': { title: 'Häufige Budget-GPU-Fehler', items: [
@@ -1808,7 +1808,7 @@ rows: [
             { q: 'Lohnt sich die RTX 3060 12GB 2026 noch?', a: 'Ja. Sie ist über 4 Jahre alt, aber nach unserer Einschätzung reichen 12 GB VRAM weiterhin für die meisten gängigen Modelle. Nach Schätzung betreibt sie Qwen3 14B, Qwen3 8B, Gemma 4 12B und Ministral 3 8B bei Q4. Sie fasst jedes 7B-8B-Modell und die meisten dichten 13B-14B-Modelle.' },
             { q: 'Soll ich die RTX 5060 Ti oder RTX 4060 Ti für lokale LLMs kaufen?', a: 'RTX 5060 Ti 16GB (ca. 620 $; niedrigster Angebotspreis laut BuySellRAM, 2026-10-11) ist weiterhin die bessere Wahl bei Neukauf: 8 GB mehr VRAM als die 8-GB-RTX-4060-Ti und nach unserer Schätzung etwa 20 % schneller (laut den geschätzten Geschwindigkeiten der Tabelle auf dieser Seite: 25–30 gegenüber 20–25 Tok/s). Sie ist die aktuelle Budget-Wahl für eine neue Karte, liegt aber rund 44 % über dem Listenpreis. Bei knappem Budget ist die 8-GB-RTX-4060-Ti für 7B-Modelle weiterhin solide, für ca. 420 $ neu oder ca. 350 $ gebraucht (niedrigste Angebotspreise laut BuySellRAM, 2026-10-11). Meiden Sie die Basis-4060/5060 (8 GB) und 4070 (12 GB), wenn Sie 13B+-Modelle betreiben wollen — zu wenig VRAM-Spielraum.' },
             { q: 'Kann ich stattdessen eine AMD RX 7900 XT oder RX 7900 XTX verwenden?', a: 'Ja, aber nach unserer Einschätzung war die AMD-Treiberunterstützung bisher meist weniger ausgereift als NVIDIA + CUDA und hängt von Karte und Softwareversion ab. Das HIP/ROCm-Setup kann mehr Aufwand erfordern. Das Setup mit RTX/CUDA ist für Einsteiger meist einfacher.' },
-            { q: 'Reichen 12 GB VRAM für 13B-Modelle?', a: 'Knapp, bei Q4-Quantisierung. Q5 oder Q8 verursachen OOM-Fehler. Wenn Sie 13B komfortabel wollen, peilen Sie 16 GB an.' },
+            { q: 'Reichen 12 GB VRAM für 13B-Modelle?', a: 'Knapp, bei Q4-Quantisierung. Q5 oder Q8 können OOM-Fehler verursachen. Wenn Sie 13B komfortabel wollen, peilen Sie 16 GB an.' },
             { q: 'Soll ich eine gebrauchte Enterprise-GPU wie die RTX A4000 kaufen?', a: 'Nicht mehr. Die RTX A4000 war ein echtes Budget-Schnäppchen, solange sie gebraucht 180–230 $ kostete. Zuletzt geprüfte Angebote (frühere Schätzungen, in dieser Aktualisierung nicht erneut verifiziert) liegen bei grob 790–850 $ gebraucht — etwa das 2,4- bis 2,7-Fache einer RTX 3060 12GB (laut den Preisen auf dieser Seite), für 4 GB mehr VRAM und langsamere Inferenz. Die RTX A2000 12GB zeigt einen ähnlichen Sprung, bei grob 440–615 $. Prüfen Sie vor dem Kauf aktuelle Angebote. Nach unserer Einschätzung ist eine gebrauchte RTX 3060 12GB oder eine neue RTX 5060 Ti 16GB die bessere Wahl.' },
             { q: 'Welche Netzteil-Wattzahl sollte ich zu einer GPU für 300 $ kaufen?', a: 'Ein 650-W-Netzteil mit 80+ Gold ist ein üblicher Ausgangspunkt für einen Aufbau mit einer 300-$-GPU. Ein System aus einer GPU für 300 $ + CPU + Mainboard bleibt typischerweise unter etwa 400 W, prüfen Sie aber die Gesamtaufnahme Ihrer eigenen Komponenten und planen Sie Spielraum für Spitzen ein. Befolgen Sie die Angaben des Netzteil- und Kartenherstellers; dies ist keine Beratung zur elektrischen Sicherheit.' },
             { q: 'Kann ich Ollama mit einer Budget-GPU für 300 $ betreiben?', a: 'Ja. Ollama ist schlank. Eine RTX 3060 (erschienen 2021) schafft mit Ollama nach Schätzung etwa 9–12 Tok/Sek bei Qwen3 14B bzw. etwa 16–20 Tok/Sek bei Qwen3 8B (Schätzwerte, keine eigenen Benchmarks; die Geschwindigkeit hängt von Prompt-Länge, Kontext und Setup ab) — nutzbar für interaktiven Chat und Coding-Unterstützung.' },
@@ -1819,7 +1819,7 @@ rows: [
             { q: 'Kann ich meine aktuelle GPU später für größere Modelle aufrüsten?', a: 'Ja, GPU-Upgrades sind in Desktop-PCs unkompliziert. Beginnen Sie mit der RTX 3060 12GB und rüsten Sie später auf RTX 4090 oder 5090 auf. Der PCIe-Steckplatz ist über Generationen hinweg abwärtskompatibel.' },
             { q: 'Was ist die beste Budget-NVIDIA-GPU für lokale LLM-Inferenz?', a: 'RTX 4060 Ti (8 GB, ca. 420 $ neu oder 350 $ gebraucht) für 7B-Modelle oder RTX 4070 Super (12 GB, ca. 700 $ neu oder 620 $ gebraucht) für 13B-Modelle (niedrigste Angebotspreise laut BuySellRAM, 2026-10-11). Gebraucht: Die RTX 3060 12GB (320–350 $) betreibt nach Schätzung 7-13B-Modelle bei Q4. Nach unserer Einschätzung ist die RTX 3060 12GB gebraucht eine ausgewogene Wahl, und die RX 6700 XT hat den niedrigsten Preis pro GB, wenn Sie den ROCm-Kompromiss akzeptieren; die RTX 5060 Ti 16GB (ca. 620 $; niedrigster Angebotspreis laut BuySellRAM, 2026-10-11) ist unsere Wahl für eine neue Karte.' },
             { q: 'Wie schneidet die AMD 6800XT im Vergleich zur RTX 4070 bei der KI-Inferenz ab?', a: 'Die AMD RX 6800 XT hat 16 GB VRAM gegenüber 12 GB bei der RTX 4070, kann aber bei der LLM-Inferenzgeschwindigkeit hinterherhinken (der Abstand hängt von Modell, Backend und Setup ab). Nach unserer Einschätzung war das ROCm-Treiber-Setup für llama.cpp bislang im Allgemeinen komplexer als CUDA. Für reine LLM-Arbeit ist die RTX 4070 vermutlich einfacher; wer auch spielt, findet im zusätzlichen VRAM der 6800 XT nach unserer Einschätzung möglicherweise das bessere Preis-Leistungs-Verhältnis. Wir haben keine der beiden Karten gemessen; verstehen Sie dies als allgemeine Orientierung.' },
-            { q: 'Was ist die GPU mit dem besten Preis pro GB VRAM für lokale LLMs 2026?', a: 'Gebrauchte RX 6700 XT (12 GB, 175–315 $) = ca. 15–26 $ pro GB. Gebrauchte RTX 3060 (12 GB, 320–350 $) = ca. 27–29 $ pro GB. Gebrauchte RTX 3090 (24 GB, rund 1.400–1.550 $) = ca. 58–65 $ pro GB. Neue RTX 4070 Super (12 GB, ca. 700 $, niedrigster Angebotspreis laut BuySellRAM, 2026-10-11) = ca. 58 $ pro GB. Bestes Preis-Leistungs-Verhältnis nach unserer Einschätzung: RX 6700 XT, wenn Sie ROCm akzeptieren, sonst RTX 3060 12GB gebraucht. Beachten Sie, dass der Preis der gebrauchten RTX 3090 inzwischen weit über ihrem früheren Niveau liegt; sie ist daher kein Kapazitäts-Schnäppchen mehr. Der RTX-3090-Preis stammt aus beobachteten US-eBay-Verkaufsangeboten ([InsiderLLM-GPU-Preistracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert am 2026-10-15).' },
+            { q: 'Was ist die GPU mit dem besten Preis pro GB VRAM für lokale LLMs 2026?', a: 'Gebrauchte RX 6700 XT (12 GB, 175–315 $) = ca. 15–26 $ pro GB. Gebrauchte RTX 3060 (12 GB, 320–350 $) = ca. 27–29 $ pro GB. Gebrauchte RTX 3090 (24 GB, rund 1.500–1.725 $) = ca. 63–72 $ pro GB. Neue RTX 4070 Super (12 GB, ca. 700 $, niedrigster Angebotspreis laut BuySellRAM, 2026-10-11) = ca. 58 $ pro GB. Bestes Preis-Leistungs-Verhältnis nach unserer Einschätzung: RX 6700 XT, wenn Sie ROCm akzeptieren, sonst RTX 3060 12GB gebraucht. Beachten Sie, dass der Preis der gebrauchten RTX 3090 inzwischen weit über ihrem früheren Niveau liegt; sie ist daher kein Kapazitäts-Schnäppchen mehr. Der RTX-3090-Preis stammt aus beobachteten US-eBay-Verkaufsangeboten ([InsiderLLM-GPU-Preistracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Preisstand: 2026-11-23).' },
           ] },
         'relatedReading': { title: 'Weiterführende Artikel', items: [
           '[AMD Ryzen AI Max+ Mini-PCs (2026)](/de/local-llms/best-amd-mini-pc-local-llm-2026) — Alternative zu dedizierten GPUs: iGPU + 50-TOPS-NPU für 1.200–2.500 $.',
@@ -1842,7 +1842,7 @@ rows: [
         'sources': { title: 'Quellen', items: [
           'Meta AI. (2025). „Llama 4 Model Card." — Scout-MoE-Architektur, VRAM-Anforderungen ([GitHub](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md))',
           'Qwen Team. (2025). „Qwen3 Technical Report." — Qwen3-8B-Spezifikationen ([arXiv:2505.09388](https://arxiv.org/abs/2505.09388))',
-          '[InsiderLLM-GPU-Preistracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — beobachtete US-eBay-Verkaufsangebote für den RTX-3090-Preis (Quelle aktualisiert am 2026-10-15)',
+          '[InsiderLLM-GPU-Preistracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — beobachtete US-eBay-Verkaufsangebote für den RTX-3090-Preis (Preisstand: 2026-11-23)',
           '[BuySellRAM-Marktupdate für Consumer-GPUs](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) — niedrigste Angebotspreise (neu und gebraucht) für die RTX 5060 Ti 16GB und als Gegenprobe für die RTX 3060 12GB (Quelle vom 2026-10-11)',
           'TechPowerUp GPU-Datenbank: RTX 3060 / RTX 4060 Ti / RTX 4070 Super Spezifikationen und Leistungsaufnahme',
           'NVIDIA CUDA Capability Matrix: GPU-Speicherbandbreite und theoretischer Durchsatz für Inferenz-Workloads',
@@ -1850,7 +1850,7 @@ rows: [
           'Compliance-Frameworks erfordern auditierbare Workflows. Etablieren Sie Governance-Standards für KI-Prompt-Qualität und -Review: [Prompt-Governance in der Produktion](https://www.promptquorum.com/de/prompt-engineering/prompt-governance-in-production) behandelt Richtlinien, Versionskontrolle und Freigabeprozesse.',
         ] },
       },
-      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'RTX 3060 Leitfaden für lokale LLMs 2026: Welche Modelle laufen', 'description': 'Welche lokalen LLMs können Sie auf der RTX 3060 12GB oder 6GB betreiben? Sehen Sie die besten Modelle für Coding, Chat und Reasoning 2026 mit echten VRAM-Grenzen und Performance-Tipps.', 'url': 'https://www.promptquorum.com/de/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-11-18', 'inLanguage': 'de', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'RTX 3060 Leitfaden für lokale LLMs 2026: Welche Modelle laufen', 'description': 'Welche lokalen LLMs können Sie auf der RTX 3060 12GB oder 6GB betreiben? Sehen Sie die besten Modelle für Coding, Chat und Reasoning 2026 mit echten VRAM-Grenzen und Performance-Tipps.', 'url': 'https://www.promptquorum.com/de/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-11-27', 'inLanguage': 'de', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', 'mainEntity': [
           {
             '@type': 'Question',
@@ -1881,7 +1881,7 @@ rows: [
             'name': 'Reichen 12 GB VRAM für 13B-Modelle?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Knapp, bei Q4-Quantisierung. Q5 oder Q8 verursachen OOM-Fehler. Wenn Sie 13B komfortabel wollen, peilen Sie 16 GB an.',
+              'text': 'Knapp, bei Q4-Quantisierung. Q5 oder Q8 können OOM-Fehler verursachen. Wenn Sie 13B komfortabel wollen, peilen Sie 16 GB an.',
             },
           },
           {
@@ -1969,7 +1969,7 @@ rows: [
             'name': 'Was ist die GPU mit dem besten Preis pro GB VRAM für lokale LLMs 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Gebrauchte RX 6700 XT (12 GB, 175–315 $) = ca. 15–26 $ pro GB. Gebrauchte RTX 3060 (12 GB, 320–350 $) = ca. 27–29 $ pro GB. Gebrauchte RTX 3090 (24 GB, rund 1.400–1.550 $) = ca. 58–65 $ pro GB. Neue RTX 4070 Super (12 GB, ca. 700 $, niedrigster Angebotspreis laut BuySellRAM, 2026-10-11) = ca. 58 $ pro GB. Bestes Preis-Leistungs-Verhältnis nach unserer Einschätzung: RX 6700 XT, wenn Sie ROCm akzeptieren, sonst RTX 3060 12GB gebraucht. Beachten Sie, dass der Preis der gebrauchten RTX 3090 inzwischen weit über ihrem früheren Niveau liegt; sie ist daher kein Kapazitäts-Schnäppchen mehr. Der RTX-3090-Preis stammt aus beobachteten US-eBay-Verkaufsangeboten (InsiderLLM-GPU-Preistracker, insiderllm.com/guides/nvidia-gpu-prices-rising, Quelle aktualisiert am 2026-10-15).',
+              'text': 'Gebrauchte RX 6700 XT (12 GB, 175–315 $) = ca. 15–26 $ pro GB. Gebrauchte RTX 3060 (12 GB, 320–350 $) = ca. 27–29 $ pro GB. Gebrauchte RTX 3090 (24 GB, rund 1.500–1.725 $) = ca. 63–72 $ pro GB. Neue RTX 4070 Super (12 GB, ca. 700 $, niedrigster Angebotspreis laut BuySellRAM, 2026-10-11) = ca. 58 $ pro GB. Bestes Preis-Leistungs-Verhältnis nach unserer Einschätzung: RX 6700 XT, wenn Sie ROCm akzeptieren, sonst RTX 3060 12GB gebraucht. Beachten Sie, dass der Preis der gebrauchten RTX 3090 inzwischen weit über ihrem früheren Niveau liegt; sie ist daher kein Kapazitäts-Schnäppchen mehr. Der RTX-3090-Preis stammt aus beobachteten US-eBay-Verkaufsangeboten (InsiderLLM-GPU-Preistracker, insiderllm.com/guides/nvidia-gpu-prices-rising, Preisstand: 2026-11-23).',
             },
           },
         ] },
@@ -2019,7 +2019,7 @@ rows: [
       metaDescription: 'Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (320–350 $ d\'occasion), Qwen3 14B à ~9–12 tok/s (est.). Neuf : RTX 5060 Ti 16GB. Tableau complet.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-fr.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-18',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**La RTX 3060 12GB (320–350 $ d\'occasion) est, selon notre évaluation, le GPU économique d\'occasion le plus équilibré pour LLM locaux (VRAM, vitesse et prix, d\'après les prix et estimations de ce guide). La RTX 5060 Ti 16GB (env. 620 $, 44 % au-dessus du prix conseillé; prix demandé le plus bas selon BuySellRAM, 2026-10-11) est le choix neuf.**',
       nextStep: { text: 'Votre GPU est prêt ? Choisissez maintenant le bon logiciel pour exécuter vos modèles.', label: 'Meilleures interfaces pour LLM locaux 2026 →', href: '/fr/local-llms/best-local-llm-frontends' },
       audience: 'Débutants exécutant leur premier LLM local sur du matériel grand public',
@@ -2093,7 +2093,7 @@ rows: [
         ] },
         'used-vs-new': { title: 'Occasion ou neuf : où acheter ?', items: [
           '**Occasion (150-300 $ moins cher que le neuf)** : leboncoin, Marketplace Facebook, magasins de réparation locaux. Risque accru de cartes mortes ou de VRAM défectueuse. Testez toujours avant de vous engager. L\'écart entre occasion et neuf s\'est fortement creusé en 2026 : c\'est désormais, selon notre évaluation, sur le marché de l\'occasion que se trouve la valeur.',
-          '**Neuf (300–800 $, si encore en stock)** : LDLC, Materiel.net, Amazon, Top Achat. Garantie incluse. Aucune surprise. Les prix ne sont en revanche pas stables — les prix de rue du neuf ont grimpé tout au long de 2026 et certaines références, comme la RTX 4060 Ti 16GB, sont périodiquement en rupture chez les grands revendeurs. Idéal pour les acheteurs prudents qui acceptent de payer au-dessus du prix catalogue.',
+          '**Neuf (300–800 $, si encore en stock)** : LDLC, Materiel.net, Amazon, Top Achat. Garantie incluse. Les prix ne sont en revanche pas stables — les prix de rue du neuf ont grimpé tout au long de 2026 et certaines références, comme la RTX 4060 Ti 16GB, sont périodiquement en rupture chez les grands revendeurs. Idéal pour les acheteurs prudents qui acceptent de payer au-dessus du prix catalogue.',
           '**Cartes de minage (crypto, très bon marché)** : risque extrême. La dégradation de la VRAM est un risque signalé. À acheter uniquement si vous pouvez la tester intégralement sur place.',
         ] },
         'mistakes': { title: 'Erreurs courantes avec les GPU économiques', items: [
@@ -2116,7 +2116,7 @@ rows: [
             { q: 'La RTX 3060 12GB vaut-elle encore l\'achat en 2026 ?', a: 'Oui. Elle a 4 ans et plus, mais, selon notre évaluation, ses 12GB de VRAM suffisent encore pour la plupart des modèles courants. Elle devrait, selon nos estimations, faire tourner Qwen3 14B, Qwen3 8B, Gemma 4 12B et Ministral 3 8B en Q4. Elle accueille tous les modèles 7B-8B et la plupart des denses 13B-14B.' },
             { q: 'Faut-il acheter une RTX 5060 Ti ou une RTX 4060 Ti pour les LLM locaux ?', a: 'La RTX 5060 Ti 16GB (env. 620 $; prix demandé le plus bas selon BuySellRAM, 2026-10-11) reste le meilleur achat neuf : 8 Go de VRAM en plus que la RTX 4060 Ti 8GB et, d\'après notre estimation, environ 20 % plus rapide (d\'après les vitesses estimées du tableau de cette page : 25–30 contre 20–25 tok/s). Elle se négocie toutefois à environ 44 % au-dessus de son prix catalogue. C\'est le choix économique de génération actuelle pour une carte neuve. Avec un budget serré, la RTX 4060 Ti 8GB reste solide pour les modèles 7B, à environ 420 $ neuve ou environ 350 $ d\'occasion (prix demandés les plus bas selon BuySellRAM, 2026-10-11). Évitez les 4060/5060 de base (8GB) et la 4070 (12GB) si vous comptez exécuter des modèles 13B+ — marge de VRAM insuffisante.' },
             { q: 'Puis-je utiliser une AMD RX 7900 XT ou RX 7900 XTX à la place ?', a: 'Oui, mais, selon notre évaluation, le support des pilotes AMD a généralement été moins mature que NVIDIA + CUDA, et il varie selon la carte et la version du logiciel. La configuration HIP/ROCm peut demander plus d\'efforts. La configuration RTX/CUDA est généralement plus simple pour les débutants.' },
-            { q: 'Les 12GB de VRAM suffisent-ils pour les modèles 13B ?', a: 'Tout juste, en quantification Q4. Le Q5 ou le Q8 provoqueront des erreurs OOM. Si vous voulez du 13B confortable, visez 16GB.' },
+            { q: 'Les 12GB de VRAM suffisent-ils pour les modèles 13B ?', a: 'Tout juste, en quantification Q4. Le Q5 ou le Q8 peuvent provoquer des erreurs OOM. Si vous voulez du 13B confortable, visez 16GB.' },
             { q: 'Faut-il acheter un GPU professionnel d\'occasion comme la RTX A4000 ?', a: 'Plus maintenant. La RTX A4000 était une vraie bonne affaire tant qu\'elle se vendait 180-230 $ d\'occasion. Les annonces vérifiées en dernier (estimations antérieures, non revérifiées dans cette mise à jour) la situent autour de 790-850 $ d\'occasion — environ 2,4 à 2,7 fois une RTX 3060 12GB (d\'après les prix de cette page), pour 4 Go de VRAM en plus et une inférence plus lente. La RTX A2000 12GB montre un bond similaire, autour de 440-615 $. Vérifiez les annonces en cours avant d\'acheter. Selon notre évaluation, une RTX 3060 12GB d\'occasion ou une RTX 5060 Ti 16GB neuve est le meilleur achat.' },
             { q: 'Quelle puissance d\'alimentation acheter avec un GPU à 300 $ ?', a: 'Une alimentation 650 W 80+ Gold est un point de départ courant pour une configuration avec un GPU à 300 $. Un système composé d\'un GPU à 300 $ + CPU + carte mère reste généralement sous environ 400W, mais vérifiez la consommation cumulée de vos propres composants et prévoyez de la marge pour les pics. Suivez les recommandations du fabricant de l\'alimentation et de la carte ; ceci n\'est pas un conseil de sécurité électrique.' },
             { q: 'Puis-je faire tourner Ollama avec un GPU économique à 300 $ ?', a: 'Oui. Ollama est léger. Une RTX 3060 (sortie en 2021) devrait, selon nos estimations, faire tourner Qwen3 14B à environ 9-12 tok/sec ou Qwen3 8B à environ 16-20 tok/sec avec Ollama (estimations, pas nos propres benchmarks ; la vitesse varie selon la longueur du prompt, le contexte et la configuration) — utilisable pour le chat interactif et l\'aide au code.' },
@@ -2127,7 +2127,7 @@ rows: [
             { q: 'Puis-je faire évoluer mon GPU actuel pour exécuter de plus gros modèles plus tard ?', a: 'Oui, les mises à niveau de GPU sont simples sur les PC fixes. Commencez avec une RTX 3060 12GB, puis passez à une RTX 4090 ou 5090 plus tard. Le slot PCIE est rétrocompatible entre générations.' },
             { q: 'Quel est le meilleur GPU NVIDIA économique pour l\'inférence LLM locale ?', a: 'RTX 4060 Ti (8 GB, env. 420 $ neuve ou 350 $ d\'occasion) pour les modèles 7B, ou RTX 4070 Super (12 GB, env. 700 $ neuve ou 620 $ d\'occasion) pour les modèles 13B (prix demandés les plus bas selon BuySellRAM, 2026-10-11). En occasion : RTX 3060 12GB (320–350 $) devrait, selon nos estimations, faire tourner les modèles 7-13B en Q4. Selon notre évaluation, la RTX 3060 12GB d\'occasion est un choix équilibré, et la RX 6700 XT a le prix par Go le plus bas si vous acceptez le compromis ROCm ; la RTX 5060 Ti 16GB (env. 620 $; prix demandé le plus bas selon BuySellRAM, 2026-10-11) est notre choix pour une carte neuve.' },
             { q: 'Comment l\'AMD 6800XT se compare-t-elle à la RTX 4070 pour l\'inférence IA ?', a: 'L\'AMD RX 6800 XT dispose de 16 GB de VRAM contre 12 GB pour la RTX 4070, mais peut rester en retrait sur la vitesse d\'inférence LLM (l\'écart dépend du modèle, du backend et de la configuration). Selon notre évaluation, la configuration ROCm pour llama.cpp a généralement été plus complexe que CUDA. Pour du LLM pur, la RTX 4070 est probablement plus simple ; si vous jouez aussi, la VRAM supplémentaire de la 6800 XT peut offrir une meilleure valeur, à notre avis. Nous n\'avons mesuré aucune des deux cartes : prenez ceci comme une orientation générale.' },
-            { q: 'Quel est le meilleur GPU au prix par Go de VRAM pour les LLM locaux en 2026 ?', a: 'RX 6700 XT d\'occasion (12 GB, 175–315 $, soit ~15–26 $/Go). RTX 3060 d\'occasion (12 GB, 320–350 $, soit ~27–29 $/Go). RTX 3090 d\'occasion (24 GB, environ 1 400-1 550 $, soit ~58-65 $/Go). RTX 4070 Super neuve (12 GB, env. 700 $, prix demandé le plus bas selon BuySellRAM, 2026-10-11, soit ~58 $/Go). Meilleur rapport qualité-prix selon notre évaluation : RX 6700 XT si vous acceptez ROCm, sinon RTX 3060 12GB d\'occasion. Notez que le prix de la RTX 3090 d\'occasion est désormais bien au-dessus de ses anciens niveaux ; elle n\'est plus l\'aubaine en capacité qu\'elle était. Le prix de la RTX 3090 provient d\'annonces vendues observées sur eBay États-Unis ([suivi des prix GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15).' },
+            { q: 'Quel est le meilleur GPU au prix par Go de VRAM pour les LLM locaux en 2026 ?', a: 'RX 6700 XT d\'occasion (12 GB, 175–315 $, soit ~15–26 $/Go). RTX 3060 d\'occasion (12 GB, 320–350 $, soit ~27–29 $/Go). RTX 3090 d\'occasion (24 GB, environ 1 500-1 725 $, soit ~63-72 $/Go). RTX 4070 Super neuve (12 GB, env. 700 $, prix demandé le plus bas selon BuySellRAM, 2026-10-11, soit ~58 $/Go). Meilleur rapport qualité-prix selon notre évaluation : RX 6700 XT si vous acceptez ROCm, sinon RTX 3060 12GB d\'occasion. Notez que le prix de la RTX 3090 d\'occasion est désormais bien au-dessus de ses anciens niveaux ; elle n\'est plus l\'aubaine en capacité qu\'elle était. Le prix de la RTX 3090 provient d\'annonces vendues observées sur eBay États-Unis ([suivi des prix GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), données datées du 2026-11-23).' },
           ] },
         'relatedReading': { title: 'Lectures complémentaires', items: [
           '[Mini PC AMD Ryzen AI Max+ (2026)](/fr/local-llms/best-amd-mini-pc-local-llm-2026) — Alternative aux GPU dédiés : iGPU + NPU 50 TOPS à 1 200–2 500 $.',
@@ -2150,7 +2150,7 @@ rows: [
         'sources': { title: 'Sources', items: [
           'Meta AI. (2025). « Llama 4 Model Card. » — architecture MoE de Scout, besoins en VRAM ([GitHub](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md))',
           'Qwen Team. (2025). « Qwen3 Technical Report. » — spécifications de Qwen3 8B ([arXiv:2505.09388](https://arxiv.org/abs/2505.09388))',
-          '[Suivi des prix GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — annonces vendues observées sur eBay États-Unis pour le prix de la RTX 3090 (source mise à jour le 2026-10-15)',
+          '[Suivi des prix GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — annonces vendues observées sur eBay États-Unis pour le prix de la RTX 3090 (données datées du 2026-11-23)',
           '[Mise à jour du marché des GPU grand public de BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) — prix demandés les plus bas (neuf et occasion) utilisés pour la RTX 5060 Ti 16GB et comme recoupement pour la RTX 3060 12GB (source datée du 2026-10-11)',
           'Base de données GPU TechPowerUp : spécifications et consommation des RTX 3060 / RTX 4060 Ti / RTX 4070 Super',
           'Matrice de capacité CUDA NVIDIA : bande passante mémoire des GPU et débit théorique pour les charges d\'inférence',
@@ -2158,7 +2158,7 @@ rows: [
           'Les cadres de conformité exigent des flux de travail auditables. Établissez des normes de gouvernance pour la qualité et la revue des prompts IA : [gouvernance des prompts en production](https://www.promptquorum.com/fr/prompt-engineering/prompt-governance-in-production) couvre les politiques, le contrôle de version et les processus d\'approbation.',
         ] },
       },
-      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Guide RTX 3060 pour LLM locaux 2026 : quels modèles pouvez-vous exécuter', 'description': 'Quels LLM locaux pouvez-vous faire tourner sur une RTX 3060 12GB ou 6GB ? Découvrez les meilleurs modèles pour le code, le chat et le raisonnement en 2026, avec limites de VRAM réelles et conseils de performance.', 'url': 'https://www.promptquorum.com/fr/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-11-18', 'inLanguage': 'fr', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Guide RTX 3060 pour LLM locaux 2026 : quels modèles pouvez-vous exécuter', 'description': 'Quels LLM locaux pouvez-vous faire tourner sur une RTX 3060 12GB ou 6GB ? Découvrez les meilleurs modèles pour le code, le chat et le raisonnement en 2026, avec limites de VRAM réelles et conseils de performance.', 'url': 'https://www.promptquorum.com/fr/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-11-27', 'inLanguage': 'fr', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'fr', 'mainEntity': [
           {
             '@type': 'Question',
@@ -2189,7 +2189,7 @@ rows: [
             'name': 'Les 12GB de VRAM suffisent-ils pour les modèles 13B ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Tout juste, en quantification Q4. Le Q5 ou le Q8 provoqueront des erreurs OOM. Si vous voulez du 13B confortable, visez 16GB.',
+              'text': 'Tout juste, en quantification Q4. Le Q5 ou le Q8 peuvent provoquer des erreurs OOM. Si vous voulez du 13B confortable, visez 16GB.',
             },
           },
           {
@@ -2277,7 +2277,7 @@ rows: [
             'name': 'Quel est le meilleur GPU au prix par Go de VRAM pour les LLM locaux en 2026 ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RX 6700 XT d\'occasion (12 GB, 175–315 $, soit ~15–26 $/Go). RTX 3060 d\'occasion (12 GB, 320–350 $, soit ~27–29 $/Go). RTX 3090 d\'occasion (24 GB, environ 1 400-1 550 $, soit ~58-65 $/Go). RTX 4070 Super neuve (12 GB, env. 700 $, prix demandé le plus bas selon BuySellRAM, 2026-10-11, soit ~58 $/Go). Meilleur rapport qualité-prix selon notre évaluation : RX 6700 XT si vous acceptez ROCm, sinon RTX 3060 12GB d\'occasion. Notez que le prix de la RTX 3090 d\'occasion est désormais bien au-dessus de ses anciens niveaux ; elle n\'est plus l\'aubaine en capacité qu\'elle était. Le prix de la RTX 3090 provient d\'annonces vendues observées sur eBay États-Unis (suivi des prix GPU d\'InsiderLLM, insiderllm.com/guides/nvidia-gpu-prices-rising, source mise à jour le 2026-10-15).',
+              'text': 'RX 6700 XT d\'occasion (12 GB, 175–315 $, soit ~15–26 $/Go). RTX 3060 d\'occasion (12 GB, 320–350 $, soit ~27–29 $/Go). RTX 3090 d\'occasion (24 GB, environ 1 500-1 725 $, soit ~63-72 $/Go). RTX 4070 Super neuve (12 GB, env. 700 $, prix demandé le plus bas selon BuySellRAM, 2026-10-11, soit ~58 $/Go). Meilleur rapport qualité-prix selon notre évaluation : RX 6700 XT si vous acceptez ROCm, sinon RTX 3060 12GB d\'occasion. Notez que le prix de la RTX 3090 d\'occasion est désormais bien au-dessus de ses anciens niveaux ; elle n\'est plus l\'aubaine en capacité qu\'elle était. Le prix de la RTX 3090 provient d\'annonces vendues observées sur eBay États-Unis (suivi des prix GPU d\'InsiderLLM, insiderllm.com/guides/nvidia-gpu-prices-rising, données datées du 2026-11-23).',
             },
           },
         ] },
@@ -2357,7 +2357,7 @@ rows: [
         updatedDate: '2026-11-15',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**RTX 3060 12GB（米国中古価格約$320–350）は、本ガイドの価格と推定値に基づく当サイトの評価で、2026年のローカルLLM向けに最もバランスの取れた中古バジェットGPU（VRAM、速度、価格）で、Q4でQwen3 14Bを推定9–12トークン/秒、Qwen3 8Bを推定16–20トークン/秒で実行します。RTX 5060 Ti 16GB（米国新品価格約$620、希望小売価格を約44%上回る；最低提示価格、BuySellRAM調べ、2026-10-11）が新品の選択肢です。**',
       readTime: '7分で読める',
       educationalLevel: 'Intermediate',
@@ -2405,7 +2405,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '米国価格（中古）'
             { q: 'RTX 3060 12GBは2026年でもまだ価値があるか？', a: 'はい。4年以上前のカードですが、当社の評価では、12GB VRAMは今もほとんどの主要モデルに対応できます。Qwen3 14B、Qwen3 8B、Gemma 4 12B、Ministral 3 8BをQ4で実行できると推定されます。すべての7B-8Bモデルとほとんどの稠密13B-14Bモデルに対応します。' },
             { q: 'ローカルLLM用にRTX 5060 TiまたはRTX 4060 Tiを購入すべきか？', a: 'RTX 5060 Ti 16GB（米国価格約$620；最低提示価格、BuySellRAM調べ、2026-10-11）が現在はより良い選択です：8GB RTX 4060 Tiより8GB多いVRAMを持ち、当社の推定では約20%高速です（本ページの表の推定速度：25–30対20–25トークン/秒）。新品カードでは現行世代のバジェット選択です。予算が厳しい場合、8GB RTX 4060 Tiも7Bモデルには十分実用的です（米国新品価格約$420、米国中古価格約$350；最低提示価格、BuySellRAM調べ、2026-10-11）。13B以上を実行する予定なら、ベースの4060/5060（8GB）と4070（12GB）はVRAMの余裕が乏しいため避けてください。' },
             { q: 'AMD RX 7900 XTまたはRX 7900 XTXを代わりに使用できるか？', a: 'はい、ただし当社の評価では、AMDのドライバサポートはこれまでNVIDIA + CUDAより成熟度が低い傾向にあり、カードやソフトウェアのバージョンによっても異なります。HIP/ROCmのセットアップにはより多くの手間がかかる場合があります。初心者にはRTX/CUDAの方が設定が簡単なことが多いです。' },
-            { q: '12GB VRAMは13Bモデルに十分か？', a: 'かろうじて、Q4量子化でなら。Q5またはQ8はOOMエラーを起こします。13Bを快適に実行したいなら16GBを目指してください。' },
+            { q: '12GB VRAMは13Bモデルに十分か？', a: 'かろうじて、Q4量子化でなら。Q5またはQ8はOOMエラーになることがあります。13Bを快適に実行したいなら16GBを目指してください。' },
             { q: 'RTX A4000などの中古エンタープライズGPUを購入すべきか？', a: '現在は勧めません。RTX A4000は米国中古価格$180–230で買えた頃は本物のバジェット掘り出し物でした。最後に確認した出品（以前の推定値で、今回の更新では再確認していません）では米国中古価格およそ$790–850で、RTX 3060 12GBの約2.4〜2.7倍の価格（本ページの価格による）に対し、VRAMは4GB多いだけで推論はより低速です。RTX A2000 12GBも同様に上昇し、米国価格およそ$440–615です。購入前に最新の出品をご確認ください。当社の評価では、中古のRTX 3060 12GBか新品のRTX 5060 Ti 16GBの方が良い買い物です。' },
             { q: '米ドル$300のGPUに合わせるべきPSU電力は？', a: '650W・80+ Gold認証の電源は、米国価格$300のGPU構成で一般的な出発点です。$300のGPU+CPU+マザーボードの構成では通常およそ400W未満に収まりますが、ご自身のパーツの合計消費電力を確認し、スパイクへの余裕を持たせてください。電源とカードのメーカーの指示に従ってください。これは電気安全に関する助言ではありません。' },
             { q: '米ドル$300のバジェットGPUでOllamaを実行できるか？', a: 'はい。Ollamaは軽量です。2021年発売のRTX 3060でOllamaを使うと、Qwen3 14Bは約9–12トークン/秒、Qwen3 8Bは約16–20トークン/秒で動作すると推定されます（推定値であり当社のベンチマークではありません。速度はプロンプト長、コンテキスト、環境により変わります）。対話型チャットやコーディング支援に使える水準です。' },
@@ -2415,7 +2415,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '米国価格（中古）'
             { q: '後で大きなモデルを実行するためにGPUをアップグレードできるか？', a: 'はい、デスクトップPCでのGPUアップグレードは簡単です。RTX 3060 12GBから始めて、後でRTX 4090や5090にアップグレードできます。PCIeスロットは世代をまたいで後方互換性があります。' },
             { q: 'ローカルLLM推論に最適なバジェットNVIDIA GPUは？', a: '7BモデルにはRTX 4060 Ti（8GB、米国新品価格約$420または米国中古価格約$350）、13BモデルにはRTX 4070 Super（12GB、米国新品価格約$700または米国中古価格約$620；最低提示価格、BuySellRAM調べ、2026-10-11）。中古なら、RTX 3060 12GB（米国価格$320–350）がQ4で7-13Bモデルを実行できると推定されます。当社の評価では、最も価値が高いのは中古のRTX 3060 12GB。新品ならRTX 5060 Ti 16GB（米国価格約$620；最低提示価格、BuySellRAM調べ、2026-10-11）が当社の推奨です。' },
             { q: 'AMD 6800XTはAI推論でRTX 4070とどう比較されるか？', a: 'AMD RX 6800 XTはVRAMが16GBで、RTX 4070の12GBより多い一方、LLM推論速度では劣る場合があります（差はモデル、バックエンド、環境によって異なります）。当社の評価では、llama.cpp向けのROCmドライバ設定はこれまで一般にCUDAより複雑でした。純粋なLLM作業にはRTX 4070の方が簡単と思われます。ゲームも行うなら、6800 XTの追加VRAMの方がコストパフォーマンスに優れる可能性があると当社は考えます。どちらのカードも当社では実測していないため、一般的な目安としてお読みください。' },
-            { q: '2026年のローカルLLM向けGB単価が最良のGPUは？', a: '中古RX 6700 XT（12GB、米国価格$175–315）＝1GBあたり米国価格$15–26。中古RTX 3060（12GB、米国価格約$320–350）＝1GBあたり米国価格$27–29。中古RTX 3090（24GB、米国価格約$1,400–1,550）＝1GBあたり米国価格$58–65。新品RTX 4070 Super（12GB、米国価格約$700；最低提示価格、BuySellRAM調べ、2026-10-11）＝1GBあたり約$58。当社の評価での最良の価値：ROCmを許容できるならRX 6700 XT、そうでなければRTX 3060 12GB中古。なお、中古RTX 3090の価格は以前の水準を大きく上回っており、もはや容量面でお得な選択肢ではありません。RTX 3090の価格は、eBay米国の落札実績の観測値です（[InsiderLLM GPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、情報源の更新日：2026-10-15）。' },
+            { q: '2026年のローカルLLM向けGB単価が最良のGPUは？', a: '中古RX 6700 XT（12GB、米国価格$175–315）＝1GBあたり米国価格$15–26。中古RTX 3060（12GB、米国価格約$320–350）＝1GBあたり米国価格$27–29。中古RTX 3090（24GB、米国価格約$1,500–1,725）＝1GBあたり米国価格$63–72。新品RTX 4070 Super（12GB、米国価格約$700；最低提示価格、BuySellRAM調べ、2026-10-11）＝1GBあたり約$58。当社の評価での最良の価値：ROCmを許容できるならRX 6700 XT、そうでなければRTX 3060 12GB中古。なお、中古RTX 3090の価格は以前の水準を大きく上回っており、もはや容量面でお得な選択肢ではありません。RTX 3090の価格は、eBay米国の落札実績の観測値です（[InsiderLLM GPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、価格データの日付：2026-11-23）。' },
             { q: 'ローカルLLM用にAMD RX 6700または6800 XTをNVIDIAの代わりに使えますか？', a: 'はい、ただし当社の評価では、AMDのONNX Runtime向けROCmドライバサポートはこれまでNVIDIA CUDAより成熟度が低い傾向にあり、バージョンによっても異なります。セットアップの手間が増えることを想定してください。バジェット構成ではNVIDIA/CUDAの方が設定が簡単なことが多いです。' },
             { q: 'LLM推論に最も安いGPUは？', a: 'RTX 3060 12GBは、米国の中古価格でおよそ$320–350と、12GB VRAMを手に入れる最安クラスの方法の一つです（AMDのセットアップの手間を許容できるなら、中古のRX 6700 XTの方が安い場合があります）。より安いカードもありますが、12GB未満ではここで取り上げるモデルの多くが収まらなくなるため、安いカードは安くローカルAIを動かす手段ではなく、多くのモデルには小さすぎるカードです。中古ではなく新品が良ければ、米国の新品価格で約$620のRTX 5060 Ti 16GBがVRAMに最も余裕のある新品です（RTX 4070 Super 12GBは、BuySellRAM調べ、2026-10-11で米国の中古約$620、新品約$700と近い価格帯ですが、VRAMは4GB少なくなります）。補足：本ページは1台のマシン向けのコンシューマーカードを順位付けしています。本番規模でのGPU推論の最安は、販売価格ではなく電力あたり・ラックユニットあたりのスループットで決まる別の問いです。' },
             { q: '日本でRTX 3060などのGPUを買うならどこがおすすめですか？保証はどうなりますか？', a: '新品はAmazon.co.jp、ドスパラ、ツクモ、ヨドバシ、ソフマップなどの大手電機・PCショップで、在庫と価格を各サイトで確認してください。中古はメルカリ、ヤフオク!、じゃんぱらなどが探す場所の候補で、不良カードやVRAM不良のリスクがあるため、購入前にテストできるかを確認することをおすすめします。国内保証・サポートの有無は購入前に販売店へ確認してください。' },
@@ -2423,7 +2423,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '米国価格（中古）'
             { q: '日本でのGPU価格はどこで比較できますか？', a: '価格.comなどの価格比較サイトで、複数の販売店の価格を並べて比較できます。Amazon.co.jpや大手電機・PCショップのページでも在庫と価格を確認してください。本ページのドル表記は米国価格の目安で、日本の実売価格は税、輸入コスト、為替によって異なります。日本の中古市場を含む価格の見方は、[日本でコスパ最強のローカルLLM用GPUガイド](/ja/prompt-bites/best-gpu-local-llm-japan-price)もご覧ください。' },
           ] },
         'relatedReading': { title: '関連資料', items: ['[ローカルLLMに必要なVRAMはいくらか](/ja/local-llms/how-much-vram-local-llm)', '[コンシューマーハードウェアの70Bモデル](/ja/local-llms/70b-models-consumer-hardware)', '[RTX 5090 vs RTX 4090](/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm)', '[ローカルLLM用の中古GPU](/ja/local-llms/used-gpus-for-local-llms)', '[ローカルLLM向けの最高のGPU](/ja/local-llms/best-gpus-for-local-llms)', '[VRAM計算機](/ja/local-llms/how-much-vram-local-llm)', '[Mac Mini M5ローカルAIサーバーとして](/ja/local-llms/mac-mini-m5-local-ai-server)', '[ローカルLLM向けApple Silicon M5](/ja/local-llms/apple-silicon-m5-local-llm) — M5 Pro/Max完全ガイド：ベンチマーク、Mac構成、メモリ層、ローカル推論用Mac購入ガイド', '[ローカルLLM向けApple Silicon対NVIDIA GPU](/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026)', '[Apple Silicon向けベストモデル2026](/ja/local-llms/best-models-apple-silicon-2026)', '秋葉原の販売店、メルカリ・Yahoo!オークションの中古市場を含む日本のGPU価格については、<a href="/ja/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">日本でコスパ最強のローカルLLM用GPUガイド</a>をご覧ください。', 'UAE（アラブ首長国連邦)・湾岸地域のGPU価格については、Sharaf DG、noon.com、Amazon.aeなどの販売店や中古市場dubizzleを含め、<a href="/ja/prompt-bites/best-gpu-local-llm-uae-price" class="text-primary hover:underline">UAEでコスパ最強のローカルLLM用GPUガイド</a>をご覧ください。'] },
-        'sources': { title: 'ソース', items: ['[BuySellRAM コンシューマーGPU市場アップデート](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)：RTX 5060 Ti 16GB、RTX 4060 Ti 8GB、RTX 4070 Superの価格およびRTX 3060 12GBの照合に用いた最低提示価格（新品・中古）（情報源の日付：2026-10-11）', 'TechPowerUp GPUデータベース：RTX 3060 / RTX 4060 Ti / RTX 4070 Super仕様と電力消費', 'NVIDIA CUDA能力マトリックス：推論ワークロード用GPU メモリバンド幅と理論的スループット', 'Ollama モデル要件：Llama 3.1 8B、Ministral 3 8B、Qwen量子化レベルVRAM推奨', '[InsiderLLM GPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)：RTX 3090の価格に用いたeBay米国の落札実績の観測値（情報源の更新日：2026-10-15）'] },
+        'sources': { title: 'ソース', items: ['[BuySellRAM コンシューマーGPU市場アップデート](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)：RTX 5060 Ti 16GB、RTX 4060 Ti 8GB、RTX 4070 Superの価格およびRTX 3060 12GBの照合に用いた最低提示価格（新品・中古）（情報源の日付：2026-10-11）', 'TechPowerUp GPUデータベース：RTX 3060 / RTX 4060 Ti / RTX 4070 Super仕様と電力消費', 'NVIDIA CUDA能力マトリックス：推論ワークロード用GPU メモリバンド幅と理論的スループット', 'Ollama モデル要件：Llama 3.1 8B、Ministral 3 8B、Qwen量子化レベルVRAM推奨', '[InsiderLLM GPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)：RTX 3090の価格に用いたeBay米国の落札実績の観測値（価格データの日付：2026-11-23）'] },
       },
       itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'url': 'https://www.promptquorum.com/ja/local-llms/best-budget-gpus-local-llm', 'inLanguage': 'ja', name: 'ローカルLLM向けの最高のバジェットGPU', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'RTX 3060 12GB（米国中古価格約$320–350）は7B～13Bモデルの総合的なバジェット選択肢として有力です。' }, { '@type': 'ListItem', position: 2, name: 'RTX 4060 Ti 8GB（米国新品価格約$420、BuySellRAM調べ、2026-10-11）は7Bで3060より高速と推定されますが、VRAMは8GBです。' }, { '@type': 'ListItem', position: 3, name: 'ローカルLLM用に2GBまたは4GBカードの購入は避けてください。快適な推論のための最小限のVRAMは8GBです。' }, { '@type': 'ListItem', position: 4, name: 'RTX A2000やRTX A4000などの中古企業GPUはかつて割安でしたが、最後の推定では米国中古価格およそ$440–850（以前の推定値で、今回の更新では再確認していません）で、もはやバジェット枠ではありません。' }, { '@type': 'ListItem', position: 5, name: '目安として、ボトルネック回避のためGPUに300～400ドル、残りのシステム（CPU、RAM、SSD）に400～500ドルを予算化します。' }, { '@type': 'ListItem', position: 6, name: 'バジェットGPUでは、DDR5 RAMやハイエンドCPUはGPU推論の速度向上にほとんど寄与しない場合があります。' }], regionalContext: { title: '地域のプライバシー法はローカルLLM向けGPUの選択にどう影響しますか？', content: ['**EU GDPR：ローカル推論はデータ移転リスクを減らし得ます — 既定ではクラウド呼び出しなし。** RTX 3060でQwen3やGemma 4を実行すると推論をデバイス内にとどめられ、プライバシー・バイ・デザイン（GDPR第25条）と技術的安全管理（第32条）の取り組みを支援しますが、それだけで運用が適合したことにはなりません。適合は構成全体に依存するため、データ保護責任者または弁護士にご確認ください。これは一般的な情報であり、法的助言ではありません。', '**日本のAPPIとアジア太平洋地域：ローカルGPU推論は、プロンプトデータを海外のサーバーへ送らずに済ませられます。** 改正個人情報保護法（APPI）では、個人データを外国の第三者に提供する場合、原則として本人の同意または同等の保護措置が必要です。中古のRTX 3060（米国価格約$320–350）でOllamaをローカル実行すればプロンプトを端末内にとどめられますが、構成がAPPIに適合するかはワークフロー全体に依存するため、弁護士にご確認ください。これは一般的な情報であり、法的助言ではありません。', '**米国および世界の中小企業：バジェットGPU構成はAPIコストとベンダーロックインを減らします。** 小規模事業者では、RTX 3060（米国中古価格$320–350）は、トークン量や電気代次第で、GPT-4o APIの利用と比べて数か月で元が取れる可能性があります。トークン単位の料金はかかりませんが、電力と維持費は無料ではありません。'] } },
       faqSchema: {
@@ -2461,7 +2461,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '米国価格（中古）'
             'name': '12GB VRAMは13Bモデルに十分か？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'かろうじて、Q4量子化でなら。Q5またはQ8はOOMエラーを起こします。13Bを快適に実行したいなら16GBを目指してください。',
+              'text': 'かろうじて、Q4量子化でなら。Q5またはQ8はOOMエラーになることがあります。13Bを快適に実行したいなら16GBを目指してください。',
             },
           },
           {
@@ -2541,7 +2541,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '米国価格（中古）'
             'name': '2026年のローカルLLM向けGB単価が最良のGPUは？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '中古RX 6700 XT（12GB、米国価格$175–315）＝1GBあたり米国価格$15–26。中古RTX 3060（12GB、米国価格約$320–350）＝1GBあたり米国価格$27–29。中古RTX 3090（24GB、米国価格約$1,400–1,550）＝1GBあたり米国価格$58–65。新品RTX 4070 Super（12GB、米国価格約$700；最低提示価格、BuySellRAM調べ、2026-10-11）＝1GBあたり約$58。当社の評価での最良の価値：ROCmを許容できるならRX 6700 XT、そうでなければRTX 3060 12GB中古。なお、中古RTX 3090の価格は以前の水準を大きく上回っており、もはや容量面でお得な選択肢ではありません。RTX 3090の価格は、eBay米国の落札実績の観測値です（InsiderLLM GPU価格トラッカー、insiderllm.com/guides/nvidia-gpu-prices-rising、情報源の更新日：2026-10-15）。',
+              'text': '中古RX 6700 XT（12GB、米国価格$175–315）＝1GBあたり米国価格$15–26。中古RTX 3060（12GB、米国価格約$320–350）＝1GBあたり米国価格$27–29。中古RTX 3090（24GB、米国価格約$1,500–1,725）＝1GBあたり米国価格$63–72。新品RTX 4070 Super（12GB、米国価格約$700；最低提示価格、BuySellRAM調べ、2026-10-11）＝1GBあたり約$58。当社の評価での最良の価値：ROCmを許容できるならRX 6700 XT、そうでなければRTX 3060 12GB中古。なお、中古RTX 3090の価格は以前の水準を大きく上回っており、もはや容量面でお得な選択肢ではありません。RTX 3090の価格は、eBay米国の落札実績の観測値です（InsiderLLM GPU価格トラッカー、insiderllm.com/guides/nvidia-gpu-prices-rising、価格データの日付：2026-11-23）。',
             },
           },
           {
@@ -2593,7 +2593,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '米国価格（中古）'
         'description': 'RTX 3060 12GBまたは6GBでどのローカルLLMを実行できますか？2026年のコーディング、チャット、推論に最適なモデルを、実際のVRAM制限とパフォーマンスのヒントとともに紹介します。',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'inLanguage': 'ja',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -2668,7 +2668,7 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '米国価格（中古）'
         updatedDate: '2026-11-15',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-11-18',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**RTX 3060 12GB（二手约$320–350）是我们根据本指南的价格与估算评选的2026年本地LLM最均衡的二手预算GPU（显存、速度与价格），在Q4下运行Qwen3 14B估计可达9–12令牌/秒，Qwen3 8B估计可达16–20令牌/秒。RTX 5060 Ti 16GB（全新约$620，约高出建议零售价44%；最低挂牌价，来源BuySellRAM，2026-10-11）是全新显卡之选。**',
       readTime: '阅读约7分钟',
       educationalLevel: 'Intermediate',
@@ -2810,7 +2810,7 @@ rows: [
             { q: 'RTX 3060 12GB在2026年还值得买吗？', a: '是的。它已有4年多历史，但据我们评估，12GB显存仍可适配大多数主流模型。据估计，Q4下可运行Qwen3 14B、Qwen3 8B、Gemma 4 12B和Ministral 3 8B。它适配所有7B-8B模型和大多数密集13B-14B模型。' },
             { q: '本地LLM应该买RTX 5060 Ti还是RTX 4060 Ti？', a: 'RTX 5060 Ti 16GB（约$620；最低挂牌价，来源BuySellRAM，2026-10-11）目前是更好的选择：比8GB的RTX 4060 Ti多8GB显存，按我们的估算快约20%（本页表格中的估算速度：25–30对20–25令牌/秒）。它是全新显卡中当代的预算之选。如果预算有限，8GB的RTX 4060 Ti运行7B模型仍然可靠，全新约$420或二手约$350（最低挂牌价，来源BuySellRAM，2026-10-11）。如果打算运行13B以上模型，避免入门级4060/5060（8GB）和4070（12GB）——显存余量不足。' },
             { q: '我可以用AMD RX 7900 XT或RX 7900 XTX代替吗？', a: '可以，但据我们评估，AMD的驱动支持此前总体不如NVIDIA + CUDA成熟，且因显卡和软件版本而异。HIP/ROCm的配置可能需要更多精力。对初学者而言，RTX/CUDA的配置通常更简单。' },
-            { q: '12GB显存够用于13B模型吗？', a: '勉强够，仅限Q4量化。Q5或Q8会导致OOM错误。如果想舒适运行13B，建议选择16GB。' },
+            { q: '12GB显存够用于13B模型吗？', a: '勉强够，仅限Q4量化。Q5或Q8可能导致OOM错误。如果想舒适运行13B，建议选择16GB。' },
             { q: '我应该买二手企业级GPU比如RTX A4000吗？', a: '现在不建议了。RTX A4000在二手价$180-230时确实是预算好货。我们最后查看的挂牌信息（此前的估算，本次更新中未重新核实）显示其二手价约为$790-850——约为RTX 3060 12GB的2.4至2.7倍价格（按本页价格），却只多4GB显存且推理更慢。RTX A2000 12GB也有类似涨幅，约$440-615。购买前请查看最新挂牌信息。据我们评估，二手RTX 3060 12GB或全新RTX 5060 Ti 16GB更值得买。' },
             { q: '搭配$300 GPU应该配多大功率的电源？', a: '650W、80+ Gold认证的电源是搭配$300 GPU的常见起点。$300 GPU + CPU + 主板的配置功耗通常在约400W以内，但请核对你自己所用部件的总功耗，并为瞬时峰值留出余量。请遵循电源和显卡厂商的指引；以上不属于电气安全建议。' },
             { q: '我能用$300预算GPU运行Ollama吗？', a: '能。Ollama很轻量。2021年发布的RTX 3060配合Ollama，估计可以约9–12令牌/秒运行Qwen3 14B，或约16–20令牌/秒运行Qwen3 8B（估算值，并非我们的基准测试；速度会因提示长度、上下文和配置而异）——可用于交互式聊天和编程辅助。' },
@@ -2820,7 +2820,7 @@ rows: [
             { q: '以后能升级GPU来运行更大的模型吗？', a: '能，桌面PC升级GPU很简单。先从RTX 3060 12GB开始，以后再升级到RTX 4090或5090。PCIe插槽在各代之间向后兼容。' },
             { q: '本地LLM推理最佳的预算NVIDIA GPU是什么？', a: '7B模型选RTX 4060 Ti（8GB，全新约$420或二手约$350），13B模型选RTX 4070 Super（12GB，全新约$700或二手约$620；最低挂牌价，来源BuySellRAM，2026-10-11）。二手方面：RTX 3060 12GB（$320–350）据估计能以Q4运行7-13B模型。据我们评估，性价比最高的是二手RTX 3060 12GB；全新显卡中RTX 5060 Ti 16GB（约$620；最低挂牌价，来源BuySellRAM，2026-10-11）是我们的推荐。' },
             { q: 'AMD 6800XT在AI推理上与RTX 4070相比如何？', a: 'AMD RX 6800 XT拥有16GB显存，高于RTX 4070的12GB，但LLM推理速度可能落后（差距取决于模型、后端和配置）。据我们评估，llama.cpp的ROCm驱动配置迄今一般比CUDA更复杂。纯LLM工作，RTX 4070可能更省心；如果你也玩游戏，我们认为6800 XT多出的显存可能更具性价比。我们没有实测这两张显卡，请仅作一般参考。' },
-            { q: '2026年本地LLM每GB显存性价比最高的GPU是什么？', a: '二手RX 6700 XT（12GB，$175–315）= 每GB约$15–26。二手RTX 3060（12GB，约$320–350）= 每GB约$27–29。二手RTX 3090（24GB，约$1,400-1,550）= 每GB约$58-65。全新RTX 4070 Super（12GB，约$700；最低挂牌价，来源BuySellRAM，2026-10-11）= 每GB约$58。据我们评估，最佳性价比：若可接受ROCm配置则为RX 6700 XT，否则为二手RTX 3060 12GB。请注意，二手RTX 3090价格现已远高于以往水平，它已不再是容量上的超值之选。RTX 3090价格来自eBay美国成交记录观测值（[InsiderLLM GPU价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）。' },
+            { q: '2026年本地LLM每GB显存性价比最高的GPU是什么？', a: '二手RX 6700 XT（12GB，$175–315）= 每GB约$15–26。二手RTX 3060（12GB，约$320–350）= 每GB约$27–29。二手RTX 3090（24GB，约$1,500-1,725）= 每GB约$63-72。全新RTX 4070 Super（12GB，约$700；最低挂牌价，来源BuySellRAM，2026-10-11）= 每GB约$58。据我们评估，最佳性价比：若可接受ROCm配置则为RX 6700 XT，否则为二手RTX 3060 12GB。请注意，二手RTX 3090价格现已远高于以往水平，它已不再是容量上的超值之选。RTX 3090价格来自eBay美国成交记录观测值（[InsiderLLM GPU价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，价格数据日期：2026-11-23）。' },
             { q: '本地LLM可以用AMD RX 6700或6800 XT代替NVIDIA吗？', a: '可以，但据我们评估，AMD在ONNX Runtime上的ROCm驱动支持此前总体不如NVIDIA CUDA成熟，且因版本而异。预计配置会更麻烦。预算型配置中，NVIDIA/CUDA通常更省事。' },
           ],
         },
@@ -2848,7 +2848,7 @@ rows: [
             'TechPowerUp GPU数据库：RTX 3060 / RTX 4060 Ti / RTX 4070 Super规格和功耗',
             'NVIDIA CUDA能力矩阵：推理工作负载的GPU内存带宽和理论吞吐量',
             'Ollama模型要求：Llama 3.1 8B、Ministral 3 8B和Qwen量子化级别的VRAM建议',
-            '[InsiderLLM GPU价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)：RTX 3090价格所用的eBay美国成交记录观测值（来源更新于2026-10-15）',
+            '[InsiderLLM GPU价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)：RTX 3090价格所用的eBay美国成交记录观测值（价格数据日期：2026-11-23）',
           ],
         },
       },
@@ -2910,7 +2910,7 @@ rows: [
             'name': '12GB显存够用于13B模型吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '勉强够，仅限Q4量化。Q5或Q8会导致OOM错误。如果想舒适运行13B，建议选择16GB。',
+              'text': '勉强够，仅限Q4量化。Q5或Q8可能导致OOM错误。如果想舒适运行13B，建议选择16GB。',
             },
           },
           {
@@ -2990,7 +2990,7 @@ rows: [
             'name': '2026年本地LLM每GB显存性价比最高的GPU是什么？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '二手RX 6700 XT（12GB，$175–315）= 每GB约$15–26。二手RTX 3060（12GB，约$320–350）= 每GB约$27–29。二手RTX 3090（24GB，约$1,400-1,550）= 每GB约$58-65。全新RTX 4070 Super（12GB，约$700；最低挂牌价，来源BuySellRAM，2026-10-11）= 每GB约$58。据我们评估，最佳性价比：若可接受ROCm配置则为RX 6700 XT，否则为二手RTX 3060 12GB。请注意，二手RTX 3090价格现已远高于以往水平，它已不再是容量上的超值之选。RTX 3090价格来自eBay美国成交记录观测值（InsiderLLM GPU价格追踪页，insiderllm.com/guides/nvidia-gpu-prices-rising，来源更新于2026-10-15）。',
+              'text': '二手RX 6700 XT（12GB，$175–315）= 每GB约$15–26。二手RTX 3060（12GB，约$320–350）= 每GB约$27–29。二手RTX 3090（24GB，约$1,500-1,725）= 每GB约$63-72。全新RTX 4070 Super（12GB，约$700；最低挂牌价，来源BuySellRAM，2026-10-11）= 每GB约$58。据我们评估，最佳性价比：若可接受ROCm配置则为RX 6700 XT，否则为二手RTX 3060 12GB。请注意，二手RTX 3090价格现已远高于以往水平，它已不再是容量上的超值之选。RTX 3090价格来自eBay美国成交记录观测值（InsiderLLM GPU价格追踪页，insiderllm.com/guides/nvidia-gpu-prices-rising，价格数据日期：2026-11-23）。',
             },
           },
           {
@@ -3010,7 +3010,7 @@ rows: [
         'description': 'RTX 3060 12GB或6GB可以运行哪些本地LLM？查看2026年编程、聊天和推理的最佳模型，附真实显存限制和性能提示。',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-18',
+        'dateModified': '2026-11-27',
         'inLanguage': 'zh',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -3091,7 +3091,7 @@ rows: [
       metaDescription: 'RTX 3060 12GB: Qwen3 8B 초당 약 16-20토큰(추정). 예산별 GPU 추천, 미국 가격 비교, 국내 가격은 다나와 확인.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-ko.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**RTX 3060 12GB(미국 중고 가격 약 $320–350)는 이 가이드의 가격과 추정치를 기준으로 한 당사 평가에서 2026년 로컬 LLM용 가장 균형 잡힌(VRAM, 속도, 가격) 중고 예산형 GPU로, Q4에서 Qwen3 14B를 추정 초당 9–12토큰, Qwen3 8B를 추정 초당 16–20토큰으로 실행합니다. RTX 5060 Ti 16GB(미국 신품 가격 약 $620, 권장소비자가격보다 약 44% 높음; 최저 호가, BuySellRAM 기준, 2026-10-11)가 신품 선택지입니다.**',
       nextStep: {
         text: 'GPU를 준비하셨습니까? 이제 모델 실행에 적합한 소프트웨어를 선택하십시오.',
@@ -3253,7 +3253,7 @@ rows: [
             { q: 'RTX 3060 12GB는 2026년에도 구매할 가치가 있습니까?', a: '예. 4년 이상 된 제품이지만 당사 평가로는 12GB VRAM은 여전히 대부분의 주요 모델에 충분합니다. Q4에서 Qwen3 14B, Qwen3 8B, Gemma 4 12B, Ministral 3 8B을 실행할 수 있는 것으로 추정됩니다. 모든 7B-8B 모델과 대부분의 밀집형 13B-14B 모델에 적합합니다.' },
             { q: '로컬 LLM에 RTX 5060 Ti와 RTX 4060 Ti 중 어느 것을 구매해야 합니까?', a: 'RTX 5060 Ti 16GB(미국 가격 약 $620; 최저 호가, BuySellRAM 기준, 2026-10-11)가 이제 더 나은 신품 선택입니다. 8GB RTX 4060 Ti보다 VRAM이 8GB 더 많고 당사 추정으로 약 20% 더 빠릅니다(이 페이지 표의 추정 속도: 초당 25–30토큰 대 20–25토큰). 신품 카드를 위한 최신 세대 예산형 선택지입니다. 예산이 제한적이라면 7B 모델용으로 8GB RTX 4060 Ti도 여전히 훌륭합니다(미국 신품 가격 약 $420, 미국 중고 가격 약 $350; 최저 호가, BuySellRAM 기준, 2026-10-11). 13B 이상 모델을 실행할 계획이라면 기본형 4060/5060(8GB)과 4070(12GB)은 VRAM 여유가 부족하므로 피하십시오.' },
             { q: 'AMD RX 7900 XT 또는 RX 7900 XTX를 대안으로 사용할 수 있습니까?', a: '예, 하지만 당사 평가로는 AMD의 드라이버 지원은 지금까지 NVIDIA + CUDA보다 성숙도가 낮은 편이며 카드와 소프트웨어 버전에 따라 다릅니다. HIP/ROCm 설정에는 더 많은 노력이 필요할 수 있습니다. 초보자에게는 RTX/CUDA 설정이 보통 더 간단합니다.' },
-            { q: '12GB VRAM은 13B 모델에 충분합니까?', a: 'Q4 양자화로는 간신히 가능합니다. Q5 또는 Q8은 메모리 부족 오류를 유발합니다. 13B 모델을 편안하게 실행하려면 16GB를 목표로 하십시오.' },
+            { q: '12GB VRAM은 13B 모델에 충분합니까?', a: 'Q4 양자화로는 간신히 가능합니다. Q5 또는 Q8은 메모리 부족 오류를 유발할 수 있습니다. 13B 모델을 편안하게 실행하려면 16GB를 목표로 하십시오.' },
             { q: 'RTX A4000 같은 중고 엔터프라이즈 GPU를 구매해야 합니까?', a: '이제는 권장하지 않습니다. RTX A4000은 미국 중고 가격 $180-230에 거래되던 시절에는 진정한 예산형 특가였습니다. 마지막으로 확인한 매물(이전 추정치이며 이번 업데이트에서 재검증하지 않음)은 미국 중고 가격 약 $790-850로, RTX 3060 12GB의 약 2.4~2.7배 가격(이 페이지 가격 기준)에 VRAM은 4GB 더 많을 뿐이고 추론은 더 느립니다. RTX A2000 12GB도 비슷하게 올라 약 $440-615입니다. 구매 전 최신 매물을 확인하십시오. 당사 평가로는 중고 RTX 3060 12GB나 신품 RTX 5060 Ti 16GB가 더 나은 선택입니다.' },
             { q: '$300 GPU 구매 시 PSU 와트 수는 얼마나 필요합니까?', a: '650W 80+ Gold 전원 공급 장치는 $300 GPU 구성에서 흔한 출발점입니다. $300 GPU + CPU + 마더보드 구성의 소비 전력은 보통 약 400W 미만이지만, 실제로 사용하는 부품의 합산 소비 전력을 확인하고 전력 스파이크에 대한 여유를 두십시오. 전원공급장치와 카드 제조사의 지침을 따르십시오. 전기 안전에 관한 조언이 아닙니다.' },
             { q: '$300 예산형 GPU로 Ollama를 실행할 수 있습니까?', a: '예. Ollama는 경량입니다. 2021년에 출시된 RTX 3060에서 Ollama로 Qwen3 14B는 초당 약 9-12토큰, Qwen3 8B는 초당 약 16-20토큰으로 실행되는 것으로 추정됩니다(추정치이며 당사 벤치마크가 아니고, 속도는 프롬프트 길이·컨텍스트·환경에 따라 달라집니다). 대화형 채팅과 코딩 지원에 쓸 만한 수준입니다.' },
@@ -3264,7 +3264,7 @@ rows: [
             { q: '나중에 더 큰 모델을 실행하기 위해 현재 GPU를 업그레이드할 수 있습니까?', a: '예, 데스크톱 PC에서는 GPU 업그레이드가 간단합니다. RTX 3060 12GB로 시작해 나중에 RTX 4090이나 5090으로 업그레이드할 수 있습니다. PCIe 슬롯은 세대 간 하위 호환됩니다.' },
             { q: '로컬 LLM 추론에 가장 좋은 예산형 NVIDIA GPU는 무엇입니까?', a: '7B 모델에는 RTX 4060 Ti(8GB, 미국 가격 기준 신품 약 $420 또는 중고 약 $350), 13B 모델에는 RTX 4070 Super(12GB, 신품 약 $700 또는 중고 약 $620)입니다(BuySellRAM 최저 호가, 2026-10-11). 중고라면 RTX 3060 12GB(미국 가격 $320–350)가 Q4에서 7-13B 모델을 실행할 수 있는 것으로 추정됩니다. 당사 평가로는 중고 RTX 3060 12GB가 균형 잡힌 선택이고, RX 6700 XT는 ROCm의 단점을 감수할 수 있다면 GB당 가격이 가장 낮습니다. 신품이라면 RTX 5060 Ti 16GB(미국 가격 약 $620; 최저 호가, BuySellRAM 기준, 2026-10-11)가 당사의 선택입니다.' },
             { q: 'AMD 6800XT는 AI 추론에서 RTX 4070과 어떻게 비교됩니까?', a: 'AMD RX 6800 XT는 VRAM이 16GB로 RTX 4070의 12GB보다 많지만, LLM 추론 속도에서는 뒤처질 수 있습니다(차이는 모델, 백엔드, 환경에 따라 다릅니다). 당사 평가로는 llama.cpp용 ROCm 드라이버 설정이 지금까지 대체로 CUDA보다 복잡했습니다. 순수 LLM 작업에는 RTX 4070이 더 쉬울 가능성이 높고, 게임도 한다면 6800 XT의 추가 VRAM이 더 나은 가성비를 줄 수 있다고 봅니다. 두 카드를 직접 벤치마크하지 않았으므로 일반적인 참고 자료로 보십시오.' },
-            { q: '2026년 로컬 LLM용으로 GB당 가격이 가장 좋은 GPU는 무엇입니까?', a: '미국 가격 기준: 중고 RX 6700 XT(12GB, $175–315) = GB당 $15-26. 중고 RTX 3060(12GB, $320–350) = GB당 $27-29. 중고 RTX 3090(24GB, 약 $1,400-1,550) = GB당 $58-65. 신품 RTX 4070 Super(12GB, 약 $700, BuySellRAM 최저 호가, 2026-10-11) = GB당 약 $58. 당사 평가 기준 최고의 가성비: ROCm 설정을 감수할 수 있다면 RX 6700 XT, 그렇지 않다면 RTX 3060 12GB. 중고 RTX 3090 가격은 이제 예전 수준을 크게 웃돌아 더 이상 용량 면에서 싼 선택이 아닙니다. RTX 3090 가격은 미국 eBay 낙찰 실적 관측값입니다([InsiderLLM GPU 가격 추적기](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15).' },
+            { q: '2026년 로컬 LLM용으로 GB당 가격이 가장 좋은 GPU는 무엇입니까?', a: '미국 가격 기준: 중고 RX 6700 XT(12GB, $175–315) = GB당 $15-26. 중고 RTX 3060(12GB, $320–350) = GB당 $27-29. 중고 RTX 3090(24GB, 약 $1,500-1,725) = GB당 $63-72. 신품 RTX 4070 Super(12GB, 약 $700, BuySellRAM 최저 호가, 2026-10-11) = GB당 약 $58. 당사 평가 기준 최고의 가성비: ROCm 설정을 감수할 수 있다면 RX 6700 XT, 그렇지 않다면 RTX 3060 12GB. 중고 RTX 3090 가격은 이제 예전 수준을 크게 웃돌아 더 이상 용량 면에서 싼 선택이 아닙니다. RTX 3090 가격은 미국 eBay 낙찰 실적 관측값입니다([InsiderLLM GPU 가격 추적기](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 가격 데이터 기준일 2026-11-23).' },
             { q: 'LLM 추론용으로 가장 저렴한 GPU는 무엇입니까?', a: 'RTX 3060 12GB는 미국 중고 가격으로 대략 $320–350이며, 12GB VRAM을 얻는 가장 저렴한 방법 중 하나입니다(AMD 설정의 번거로움을 감수할 수 있다면 중고 RX 6700 XT가 더 쌀 수 있습니다). 더 저렴한 카드도 있지만 12GB 미만에서는 여기서 다루는 모델 대부분이 들어가지 않으므로, 저렴한 카드는 로컬 AI를 싸게 돌리는 방법이 아니라 대부분의 모델에 너무 작은 카드입니다. 중고가 아니라 신품을 원한다면 미국 신품 가격 약 $620의 RTX 5060 Ti 16GB가 VRAM 여유가 가장 큰 신품입니다(RTX 4070 Super 12GB는 BuySellRAM 기준 2026-10-11에 중고 약 $620, 신품 약 $700으로 비슷한 가격대이지만 VRAM이 4GB 적습니다). 범위에 대한 참고: 이 페이지는 한 대의 머신을 위한 소비자용 카드를 평가합니다. 프로덕션 규모의 GPU 추론에서 가장 저렴한 구성은 판매가가 아니라 전력당·랙 유닛당 처리량으로 결정되는 별개의 문제입니다.' },
             { q: '국내에서 RTX 3060 같은 GPU는 어디서 구매하고 AS는 어떻게 확인합니까?', a: '신품은 다나와에서 가격을 비교하고 쿠팡, 컴퓨존 등에서 재고와 가격을 확인하십시오. 국내 정식 유통 제품인지와 국내 AS 가능 여부를 구매 전에 확인하는 것이 좋습니다. 중고는 당근마켓, 중고나라 등에서 찾아볼 수 있으며, 불량 카드나 VRAM 결함의 위험이 있으므로 구매 전에 테스트가 가능한지 확인하십시오.' },
             { q: '국내 220V 환경에서 GPU나 전원 공급 장치(PSU)를 쓸 때 무엇을 확인해야 합니까?', a: 'GPU는 PC 케이스 안에서 PSU로부터 전력을 공급받으므로, PSU가 지원하는 전압과 필요한 출력(W)을 제조사 사양으로 확인하는 것이 기본입니다. 이 페이지의 650W 80+ Gold는 $300급 GPU 구성에서 흔한 출발점일 뿐이며 전기 안전에 관한 조언이 아닙니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하십시오.' },
@@ -3312,7 +3312,7 @@ rows: [
         'description': 'RTX 3060 12GB 또는 6GB에서 어떤 로컬 LLM을 실행할 수 있습니까? 실제 VRAM 한계 및 성능 팁과 함께 2026년 코딩, 채팅, 추론에 최적인 모델을 확인하십시오.',
         'url': 'https://www.promptquorum.com/ko/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'inLanguage': 'ko',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -3362,7 +3362,7 @@ rows: [
             'name': '12GB VRAM은 13B 모델에 충분합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q4 양자화로는 간신히 가능합니다. Q5 또는 Q8은 메모리 부족 오류를 유발합니다. 13B 모델을 편안하게 실행하려면 16GB를 목표로 하십시오.',
+              'text': 'Q4 양자화로는 간신히 가능합니다. Q5 또는 Q8은 메모리 부족 오류를 유발할 수 있습니다. 13B 모델을 편안하게 실행하려면 16GB를 목표로 하십시오.',
             },
           },
           {
@@ -3450,7 +3450,7 @@ rows: [
             'name': '2026년 로컬 LLM용으로 GB당 가격이 가장 좋은 GPU는 무엇입니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '미국 가격 기준: 중고 RX 6700 XT(12GB, $175–315) = GB당 $15-26. 중고 RTX 3060(12GB, $320–350) = GB당 $27-29. 중고 RTX 3090(24GB, 약 $1,400-1,550) = GB당 $58-65. 신품 RTX 4070 Super(12GB, 약 $700, BuySellRAM 최저 호가, 2026-10-11) = GB당 약 $58. 당사 평가 기준 최고의 가성비: ROCm 설정을 감수할 수 있다면 RX 6700 XT, 그렇지 않다면 RTX 3060 12GB. 중고 RTX 3090 가격은 이제 예전 수준을 크게 웃돌아 더 이상 용량 면에서 싼 선택이 아닙니다. RTX 3090 가격은 미국 eBay 낙찰 실적 관측값입니다([InsiderLLM GPU 가격 추적기](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15).',
+              'text': '미국 가격 기준: 중고 RX 6700 XT(12GB, $175–315) = GB당 $15-26. 중고 RTX 3060(12GB, $320–350) = GB당 $27-29. 중고 RTX 3090(24GB, 약 $1,500-1,725) = GB당 $63-72. 신품 RTX 4070 Super(12GB, 약 $700, BuySellRAM 최저 호가, 2026-10-11) = GB당 약 $58. 당사 평가 기준 최고의 가성비: ROCm 설정을 감수할 수 있다면 RX 6700 XT, 그렇지 않다면 RTX 3060 12GB. 중고 RTX 3090 가격은 이제 예전 수준을 크게 웃돌아 더 이상 용량 면에서 싼 선택이 아닙니다. RTX 3090 가격은 미국 eBay 낙찰 실적 관측값입니다([InsiderLLM GPU 가격 추적기](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 가격 데이터 기준일 2026-11-23).',
             },
           },
           {

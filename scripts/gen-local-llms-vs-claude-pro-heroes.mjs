@@ -17,15 +17,15 @@ if (TITLES.length !== 9) throw new Error('expected 9 titles, got ' + TITLES.leng
 const TITLE = Object.fromEntries(ORDER.map((l, i) => [l, TITLES[i]]))
 
 const HIGHLIGHTS = {
-  en: ['Claude Pro: $20/month', 'Local: $1,700-3,700 over 5 years', '70B at Q4 needs ~43 GB'],
-  de: ['Claude Pro: 20 $/Monat', 'Lokal: 1.700-3.700 $ in 5 Jahren', '70B in Q4 braucht ~43 GB'],
-  fr: ['Claude Pro : 20 $/mois', 'Local : 1 700-3 700 $ sur 5 ans', '70B en Q4 : ~43 Go requis'],
-  ja: ['Claude Pro: 月$20', 'ローカル: 5年$1,700-3,700', '70B(Q4)は約43GB'],
-  zh: ['Claude Pro：每月$20', '本地：5年$1,700-3,700', '70B(Q4)约需43GB'],
-  es: ['Claude Pro: $20/mes', 'Local: $1,700-3,700 en 5 años', '70B en Q4 necesita ~43 GB'],
-  pt: ['Claude Pro: $20/mês', 'Local: $1.700-3.700 em 5 anos', '70B em Q4 exige ~43 GB'],
-  ar: ['سعر ⁨Claude Pro⁩ ⁨$20⁩ شهرياً', 'التكلفة محلياً ⁨$1,700-3,700⁩ خلال 5 سنوات', '⁨70B⁩ بصيغة ⁨Q4⁩ يحتاج ⁨43 GB⁩'],
-  ko: ['Claude Pro: 월 $20', '로컬: 5년 $1,700-3,700', '70B(Q4)는 약 43 GB'],
+  en: ['Claude Pro: $20/month', 'Local: $1,800-4,050 over 5 years', '70B at Q4 needs ~43 GB'],
+  de: ['Claude Pro: 20 $/Monat', 'Lokal: 1.800-4.050 $ in 5 Jahren', '70B in Q4 braucht ~43 GB'],
+  fr: ['Claude Pro : 20 $/mois', 'Local : 1 800-4 050 $ sur 5 ans', '70B en Q4 : ~43 Go requis'],
+  ja: ['Claude Pro: 月$20', 'ローカル: 5年$1,800-4,050', '70B(Q4)は約43GB'],
+  zh: ['Claude Pro：每月$20', '本地：5年$1,800-4,050', '70B(Q4)约需43GB'],
+  es: ['Claude Pro: $20/mes', 'Local: $1,800-4,050 en 5 años', '70B en Q4 necesita ~43 GB'],
+  pt: ['Claude Pro: $20/mês', 'Local: $1.800-4.050 em 5 anos', '70B em Q4 exige ~43 GB'],
+  ar: ['سعر ⁨Claude Pro⁩ ⁨$20⁩ شهرياً', 'التكلفة محلياً ⁨$1,800-4,050⁩ خلال 5 سنوات', '⁨70B⁩ بصيغة ⁨Q4⁩ يحتاج ⁨43 GB⁩'],
+  ko: ['Claude Pro: 월 $20', '로컬: 5년 $1,800-4,050', '70B(Q4)는 약 43 GB'],
 }
 const FOOTER = {
   en: 'Local LLM Guide', de: 'Leitfaden Lokale LLMs', fr: 'Guide LLM locaux',

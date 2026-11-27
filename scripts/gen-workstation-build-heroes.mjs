@@ -23,14 +23,14 @@ const TITLE = {
   ko: '로컬 LLM 워크스테이션 구축 (2026): 70B 모델용 GPU, RAM, PSU, 비용',
 }
 const HIGHLIGHTS = {
-  en: ['48 GB of VRAM holds 70B at Q4', '2× used RTX 3090: $2,800–3,100', 'No NVLink on RTX 4090 or 5090'],
-  de: ['48 GB VRAM für 70B in Q4', '2× RTX 3090 gebraucht: $2,800–3,100', 'Kein NVLink bei RTX 4090/5090'],
-  fr: ['48 GB de VRAM pour le 70B en Q4', "2× RTX 3090 d'occasion : $2,800–3,100", 'Pas de NVLink sur RTX 4090/5090'],
+  en: ['48 GB of VRAM holds 70B at Q4', '2× used RTX 3090: $3,000–3,450', 'No NVLink on RTX 4090 or 5090'],
+  de: ['48 GB VRAM für 70B in Q4', '2× RTX 3090 gebraucht: $3,000–3,450', 'Kein NVLink bei RTX 4090/5090'],
+  fr: ['48 GB de VRAM pour le 70B en Q4', "2× RTX 3090 d'occasion : $3,000–3,450", 'Pas de NVLink sur RTX 4090/5090'],
   ja: ['70BにはVRAM 48GB', '4090/5090はNVLink非対応', '電源は定格の約1.2倍'],
   zh: ['70B需约48GB显存', 'RTX 4090/5090无NVLink', '电源按额定功率×1.2'],
-  es: ['48 GB de VRAM para 70B en Q4', '2× RTX 3090 usadas: $2,800–3,100', 'Sin NVLink en RTX 4090/5090'],
-  pt: ['48 GB de VRAM para 70B em Q4', '2× RTX 3090 usadas: $2,800–3,100', 'Sem NVLink na RTX 4090/5090'],
-  ar: ['⁨48 GB⁩ من ⁨VRAM⁩ لنموذج ⁨70B⁩ بتكميم ⁨Q4⁩', '⁨2× RTX 3090⁩ مستعملة: ⁨$2,800–3,100⁩', 'لا ⁨NVLink⁩ في ⁨RTX 4090/5090⁩'],
+  es: ['48 GB de VRAM para 70B en Q4', '2× RTX 3090 usadas: $3,000–3,450', 'Sin NVLink en RTX 4090/5090'],
+  pt: ['48 GB de VRAM para 70B em Q4', '2× RTX 3090 usadas: $3,000–3,450', 'Sem NVLink na RTX 4090/5090'],
+  ar: ['⁨48 GB⁩ من ⁨VRAM⁩ لنموذج ⁨70B⁩ بتكميم ⁨Q4⁩', '⁨2× RTX 3090⁩ مستعملة: ⁨$3,000–3,450⁩', 'لا ⁨NVLink⁩ في ⁨RTX 4090/5090⁩'],
   ko: ['70B에는 VRAM 48GB', '4090/5090은 NVLink 없음', '전원은 정격 합계×1.2'],
 }
 const FOOTER = {

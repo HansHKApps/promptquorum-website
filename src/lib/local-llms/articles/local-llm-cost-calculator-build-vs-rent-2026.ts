@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**Local hardware or a rented cloud GPU: the cheaper option depends mainly on your hours per month. Enter your own numbers in the calculator below for the break-even.**',
     quickAnswerTop: {
       question: 'Is it cheaper to build a local LLM server or rent cloud GPU?',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ hr/month or 24/7: local usually wins on total cost of ownership',
         'Full TCO = hardware price + electricity − resale value, not just purchase price ÷ cloud rate',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -103,14 +103,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: 'Hardware Decision Table',
-        content: 'Match your target model size and usage pattern to a hardware tier before pricing out a specific build. Price classes for mini PCs and Macs are example USD system prices, not quotes. The GPU rows show the card alone from [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) listing data (source updated 2026-10-15), not a full system, and the 48 GB row is two used RTX 3090 cards (2 × $1,400–1,550 = $2,800–3,100); the rest of the system comes on top. Local prices differ with taxes and import duties.',
+        content: 'Match your target model size and usage pattern to a hardware tier before pricing out a specific build. Price classes for mini PCs and Macs are example USD system prices, not quotes. The GPU rows show the card alone from [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) listing data (RTX 4090: source updated 2026-10-15; RTX 3090: data dated 2026-11-23), not a full system, and the 48 GB row is two used RTX 3090 cards (2 × $1,500–1,725 = $3,000–3,450); the rest of the system comes on top. Local prices differ with taxes and import duties.',
         columns: ['Tier', 'VRAM / RAM', 'Best For', 'Price Class'],
         rows: [
           { Tier: 'N150 mini PC', 'VRAM / RAM': '16GB RAM', 'Best For': 'Light chat, models up to 7B', 'Price Class': 'Under $500' },
           { Tier: 'Ryzen mini PC', 'VRAM / RAM': '32–64GB RAM', 'Best For': '7B–14B daily use, 24/7 server', 'Price Class': '$500–1,000' },
-          { Tier: 'RTX 3090 (used)', 'VRAM / RAM': '24GB VRAM', 'Best For': 'Up to 30B Q4, lowest-priced 24 GB card here', 'Price Class': '$1,400–1,550 (card only, used sold listings)' },
+          { Tier: 'RTX 3090 (used)', 'VRAM / RAM': '24GB VRAM', 'Best For': 'Up to 30B Q4, lowest-priced 24 GB card here', 'Price Class': '$1,500–1,725 (card only, used sold listings)' },
           { Tier: 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'Best For': 'Up to 34B Q4, faster than the RTX 3090', 'Price Class': '$2,575–3,010 used, $2,000–3,000 new (card only)' },
-          { Tier: '48GB GPU setup (2× used RTX 3090)', 'VRAM / RAM': '48GB VRAM', 'Best For': 'Up to 70B Q4, dev/research', 'Price Class': '≈$2,800–3,100 (2 cards only)' },
+          { Tier: '48GB GPU setup (2× used RTX 3090)', 'VRAM / RAM': '48GB VRAM', 'Best For': 'Up to 70B Q4, dev/research', 'Price Class': '≈$3,000–3,450 (2 cards only)' },
           { Tier: 'Mac (unified memory)', 'VRAM / RAM': '48–128GB unified', 'Best For': '70B+ via MLX, low power draw', 'Price Class': '$2,000–4,000+' },
         ],
       },
@@ -128,11 +128,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '"What Should I Buy?" By Price Tier',
-        content: '**Under $500** — Do not buy dedicated AI hardware. Use what you already own, or rent a cloud GPU for occasional needs.\n\n**$500–1,000** — A Ryzen mini PC with 32 GB+ of RAM. See the [best AMD mini PC for local LLMs](/local-llms/best-amd-mini-pc-local-llm-2026) and the [Beelink SER8 review](/smart-home/beelink-ser8-local-ai-review).\n\n**$1,000–1,800** — A more powerful mini PC. See the [best mini PCs for local LLMs guide](/local-llms/best-mini-pcs-local-llm) and the [best GPU under $500 guide](/local-llms/best-gpu-for-llm-inference-under-500-2026) for entry GPU context.\n\n**$1,800–2,500** — A used RTX 3090 build, as an illustrative budget band: the card alone was listed at $1,400–1,550 by [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (sold listings, source updated 2026-10-15), and the rest of the system comes on top. See the [local LLM workstation build guide](/local-llms/local-llm-workstation-build).\n\n**$3,000–4,500** — An RTX 4090 workstation, as an illustrative budget band (the card alone was listed at $2,000–3,000 new and $2,575–3,010 in used sold listings by [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15, plus the rest of the system), or a Mac with large unified memory. See the [workstation build guide](/local-llms/local-llm-workstation-build) and the [Apple Silicon local LLM guide](/local-llms/apple-silicon-local-llm-guide-2026).\n\n**$5,000+** — 48 GB+ of VRAM, multi-GPU or workstation-class builds (two used RTX 3090 cards alone come to about $2,800–3,100 at the InsiderLLM sold-listing range; one RTX PRO 6000 Blackwell 96 GB was listed at about $16,000 per [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) on 2026-08-13). Calculate your utilization first: this tier only pays back at sustained, heavy usage. See [PromptQuorum\'s GPU workstation build guide](/power-local-llm/best-workstation-build-local-ai-2026).\n\nNot ready to buy yet? You can rent instead: [compare cloud GPU providers](/power-local-llm/best-cloud-gpu-providers), read the [RunPod review](/power-local-llm/runpod-review), the [Vast.ai review](/power-local-llm/vast-ai-review) or the [Clore.ai review](/power-local-llm/clore-ai-review), or look at [GPU server hosting providers](/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
+        content: '**Under $500** — Do not buy dedicated AI hardware. Use what you already own, or rent a cloud GPU for occasional needs.\n\n**$500–1,000** — A Ryzen mini PC with 32 GB+ of RAM. See the [best AMD mini PC for local LLMs](/local-llms/best-amd-mini-pc-local-llm-2026) and the [Beelink SER8 review](/smart-home/beelink-ser8-local-ai-review).\n\n**$1,000–1,800** — A more powerful mini PC. See the [best mini PCs for local LLMs guide](/local-llms/best-mini-pcs-local-llm) and the [best GPU under $500 guide](/local-llms/best-gpu-for-llm-inference-under-500-2026) for entry GPU context.\n\n**$1,800–2,500** — A used RTX 3090 build, as an illustrative budget band: the card alone was listed at $1,500–1,725 by [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (sold listings, data dated 2026-11-23). That leaves about $75–1,000 of this band for the rest of the system, so the lower end may not cover a complete new build. See the [local LLM workstation build guide](/local-llms/local-llm-workstation-build).\n\n**$3,000–4,500** — An RTX 4090 workstation, as an illustrative budget band (the card alone was listed at $2,000–3,000 new and $2,575–3,010 in used sold listings by [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15, plus the rest of the system), or a Mac with large unified memory. See the [workstation build guide](/local-llms/local-llm-workstation-build) and the [Apple Silicon local LLM guide](/local-llms/apple-silicon-local-llm-guide-2026).\n\n**$5,000+** — 48 GB+ of VRAM, multi-GPU or workstation-class builds (two used RTX 3090 cards alone come to about $3,000–3,450 at the InsiderLLM sold-listing range; one RTX PRO 6000 Blackwell 96 GB was listed at about $16,000 per [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) on 2026-08-13). Calculate your utilization first: this tier only pays back at sustained, heavy usage. See [PromptQuorum\'s GPU workstation build guide](/power-local-llm/best-workstation-build-local-ai-2026).\n\nNot ready to buy yet? You can rent instead: [compare cloud GPU providers](/power-local-llm/best-cloud-gpu-providers), read the [RunPod review](/power-local-llm/runpod-review), the [Vast.ai review](/power-local-llm/vast-ai-review) or the [Clore.ai review](/power-local-llm/clore-ai-review), or look at [GPU server hosting providers](/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       hardwarePicks: {
         title: 'Hardware Picks by Category',
-        content: '- **Budget:** [GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — entry mini PC for 7B-class models\n- **Mid-range:** [Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — 7B–14B experimentation, Home Assistant, 24/7 Ollama server; [Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) as a Ryzen alternative\n- **GPU value:** RTX 3090 (used card listed at $1,400–1,550 by [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), updated 2026-10-15) — 24 GB of VRAM at a lower card price than the RTX 4090\n- **GPU performance:** RTX 4090 (new $2,000–3,000, used sold listings $2,575–3,010 per InsiderLLM) — faster than the RTX 3090 at a higher price, see the [workstation build guide](/local-llms/local-llm-workstation-build)\n- **Apple option:** a Mac with high unified memory for 70B+ models at low power draw — see the [Apple Silicon local LLM guide](/local-llms/apple-silicon-local-llm-guide-2026)\n\nThe RTX 3090/4090 and Apple hardware links above are plain product/editorial references — PromptQuorum has no affiliate program and earns no commission on any hardware purchase.',
+        content: '- **Budget:** [GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — entry mini PC for 7B-class models\n- **Mid-range:** [Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — 7B–14B experimentation, Home Assistant, 24/7 Ollama server; [Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) as a Ryzen alternative\n- **GPU value:** RTX 3090 (used card listed at $1,500–1,725 by [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), data dated 2026-11-23) — 24 GB of VRAM at a lower card price than the RTX 4090\n- **GPU performance:** RTX 4090 (new $2,000–3,000, used sold listings $2,575–3,010 per InsiderLLM, source updated 2026-10-15) — faster than the RTX 3090 at a higher price, see the [workstation build guide](/local-llms/local-llm-workstation-build)\n- **Apple option:** a Mac with high unified memory for 70B+ models at low power draw — see the [Apple Silicon local LLM guide](/local-llms/apple-silicon-local-llm-guide-2026)\n\nThe RTX 3090/4090 and Apple hardware links above are plain product/editorial references — PromptQuorum has no affiliate program and earns no commission on any hardware purchase.',
       },
       dontBuy: {
         title: 'When You Should NOT Buy Local AI Hardware',
@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RunPod pricing](https://www.runpod.io/pricing), read 22 November 2026',
           '[Vast.ai pricing](https://vast.ai/pricing) and its public offers API (single-GPU RTX 4090 offers), read 22 November 2026',
           '[Lambda pricing](https://lambda.com/pricing), read 22 November 2026',
-          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), RTX 4090 and RTX 3090 price ranges (updated 2026-10-15)',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), RTX 4090 price ranges (source updated 2026-10-15) and RTX 3090 used sold-listing range (data dated 2026-11-23)',
           '[Ollama pricing](https://ollama.com/pricing) and [Ollama cloud docs](https://docs.ollama.com/cloud), read 22 November 2026',
         ],
       },
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**Lokale Hardware oder gemietete Cloud-GPU: Was günstiger ist, hängt vor allem von Ihren Stunden pro Monat ab. Geben Sie im Rechner unten Ihre eigenen Zahlen ein.**',
     quickAnswerTop: {
       question: 'Ist es günstiger, eine lokale LLM-Workstation zu bauen oder Cloud-GPUs zu mieten?',
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ Std./Monat oder Dauerbetrieb: lokal gewinnt meist bei Gesamtkosten',
         'Vollständige TCO = Hardwarepreis + Strom − Wiederverkaufswert, nicht nur Kaufpreis ÷ Cloud-Rate',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -347,14 +347,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: 'Hardware-Entscheidungstabelle',
-        content: 'Ordnen Sie Ihre Zielmodellgröße und Ihr Nutzungsmuster einer Hardware-Stufe zu, bevor Sie einen konkreten Build kalkulieren. Die Preisklassen für Mini-PCs und Macs sind beispielhafte Systempreise in US-Dollar, keine Angebote. Die GPU-Zeilen zeigen die Karte allein nach den Angebotsdaten von [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15), nicht ein Gesamtsystem; die Zeile mit 48 GB sind zwei gebrauchte RTX 3090 (2 × 1.400–1.550 $ = 2.800–3.100 $). Das übrige System kommt hinzu. Lokale Preise weichen wegen Steuern und Einfuhrzöllen ab.',
+        content: 'Ordnen Sie Ihre Zielmodellgröße und Ihr Nutzungsmuster einer Hardware-Stufe zu, bevor Sie einen konkreten Build kalkulieren. Die Preisklassen für Mini-PCs und Macs sind beispielhafte Systempreise in US-Dollar, keine Angebote. Die GPU-Zeilen zeigen die Karte allein nach den Angebotsdaten von [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (RTX 4090: Quelle aktualisiert am 2026-10-15; RTX 3090: Datenstand 2026-11-23), nicht ein Gesamtsystem; die Zeile mit 48 GB sind zwei gebrauchte RTX 3090 (2 × 1.500–1.725 $ = 3.000–3.450 $). Das übrige System kommt hinzu. Lokale Preise weichen wegen Steuern und Einfuhrzöllen ab.',
         columns: ['Stufe', 'VRAM / RAM', 'Am besten für', 'Preisklasse'],
         rows: [
           { Stufe: 'N150 Mini-PC', 'VRAM / RAM': '16 GB RAM', 'Am besten für': 'Leichter Chat, bis 7B', Preisklasse: 'Unter 500 $' },
           { Stufe: 'Ryzen Mini-PC', 'VRAM / RAM': '32–64 GB RAM', 'Am besten für': '7B–14B täglich, 24/7-Server', Preisklasse: '500–1.000 $' },
-          { Stufe: 'RTX 3090 (gebraucht)', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 30B Q4, günstigste 24-GB-Karte hier', Preisklasse: '1.400–1.550 $ (nur Karte, verkaufte gebrauchte Angebote)' },
+          { Stufe: 'RTX 3090 (gebraucht)', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 30B Q4, günstigste 24-GB-Karte hier', Preisklasse: '1.500–1.725 $ (nur Karte, verkaufte gebrauchte Angebote)' },
           { Stufe: 'RTX 4090', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 34B Q4, schneller als die RTX 3090', Preisklasse: '2.575–3.010 $ gebraucht, 2.000–3.000 $ neu (nur Karte)' },
-          { Stufe: '48-GB-GPU-Setup (2× RTX 3090 gebraucht)', 'VRAM / RAM': '48 GB VRAM', 'Am besten für': 'Bis 70B Q4, Entwicklung', Preisklasse: 'ca. 2.800–3.100 $ (nur 2 Karten)' },
+          { Stufe: '48-GB-GPU-Setup (2× RTX 3090 gebraucht)', 'VRAM / RAM': '48 GB VRAM', 'Am besten für': 'Bis 70B Q4, Entwicklung', Preisklasse: 'ca. 3.000–3.450 $ (nur 2 Karten)' },
           { Stufe: 'Mac (Unified Memory)', 'VRAM / RAM': '48–128 GB unified', 'Am besten für': '70B+ via MLX, geringer Verbrauch', Preisklasse: '2.000–4.000 $+' },
         ],
       },
@@ -372,11 +372,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '"Was soll ich kaufen?" nach Preisklasse',
-        content: '**Unter 500 $** — Keine dedizierte KI-Hardware kaufen. Nutzen Sie vorhandene Geräte oder mieten Sie für gelegentlichen Bedarf eine Cloud-GPU.\n\n**500–1.000 $** — Ein Ryzen-Mini-PC mit 32 GB+ RAM. Siehe den [besten AMD-Mini-PC für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026) und den [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review).\n\n**1.000–1.800 $** — Ein leistungsstärkerer Mini-PC. Siehe den [Guide zu den besten Mini-PCs](/de/local-llms/best-mini-pcs-local-llm) und die [beste GPU unter 500 $](/de/local-llms/best-gpu-for-llm-inference-under-500-2026) als Einstiegskontext.\n\n**1.800–2.500 $** — Ein Build mit gebrauchter RTX 3090 als beispielhaftes Budgetband: Die Karte allein wurde bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) mit 1.400–1.550 $ gelistet (verkaufte Angebote, Quelle aktualisiert am 2026-10-15), das übrige System kommt hinzu. Siehe den [Guide zum Bau einer lokalen LLM-Workstation](/de/local-llms/local-llm-workstation-build).\n\n**3.000–4.500 $** — Eine RTX-4090-Workstation als beispielhaftes Budgetband (die Karte allein wurde bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) neu mit 2.000–3.000 $ und in verkauften gebrauchten Angeboten mit 2.575–3.010 $ gelistet, Quelle aktualisiert am 2026-10-15, dazu das übrige System) oder ein Mac mit großem Unified Memory. Siehe den [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build) und den [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5.000 $+** — 48 GB+ VRAM, Multi-GPU oder Workstation-Klasse (zwei gebrauchte RTX 3090 allein kommen im verkauften Angebotsbereich von InsiderLLM auf etwa 2.800–3.100 $; eine RTX PRO 6000 Blackwell mit 96 GB wurde laut [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) am 2026-08-13 mit rund 16.000 $ gelistet). Kalkulieren Sie die Auslastung zuerst: Diese Stufe rechnet sich nur bei intensiver Dauernutzung. Siehe [PromptQuorums GPU-Workstation-Build-Guide](/de/power-local-llm/best-workstation-build-local-ai-2026).\n\nNoch nicht zum Kauf bereit? Dann können Sie stattdessen mieten: Sie können [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers), die [RunPod-Bewertung](/de/power-local-llm/runpod-review), die [Vast.ai-Bewertung](/de/power-local-llm/vast-ai-review) oder die [Clore.ai-Bewertung](/de/power-local-llm/clore-ai-review) lesen oder sich [GPU-Server-Hosting-Anbieter](/de/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) ansehen.',
+        content: '**Unter 500 $** — Keine dedizierte KI-Hardware kaufen. Nutzen Sie vorhandene Geräte oder mieten Sie für gelegentlichen Bedarf eine Cloud-GPU.\n\n**500–1.000 $** — Ein Ryzen-Mini-PC mit 32 GB+ RAM. Siehe den [besten AMD-Mini-PC für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026) und den [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review).\n\n**1.000–1.800 $** — Ein leistungsstärkerer Mini-PC. Siehe den [Guide zu den besten Mini-PCs](/de/local-llms/best-mini-pcs-local-llm) und die [beste GPU unter 500 $](/de/local-llms/best-gpu-for-llm-inference-under-500-2026) als Einstiegskontext.\n\n**1.800–2.500 $** — Ein Build mit gebrauchter RTX 3090 als beispielhaftes Budgetband: Die Karte allein wurde bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) mit 1.500–1.725 $ gelistet (verkaufte Angebote, Datenstand 2026-11-23). Damit bleiben in diesem Band etwa 75–1.000 $ für das übrige System, sodass das untere Ende möglicherweise nicht für einen vollständigen neuen Build reicht. Siehe den [Guide zum Bau einer lokalen LLM-Workstation](/de/local-llms/local-llm-workstation-build).\n\n**3.000–4.500 $** — Eine RTX-4090-Workstation als beispielhaftes Budgetband (die Karte allein wurde bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) neu mit 2.000–3.000 $ und in verkauften gebrauchten Angeboten mit 2.575–3.010 $ gelistet, Quelle aktualisiert am 2026-10-15, dazu das übrige System) oder ein Mac mit großem Unified Memory. Siehe den [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build) und den [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5.000 $+** — 48 GB+ VRAM, Multi-GPU oder Workstation-Klasse (zwei gebrauchte RTX 3090 allein kommen im verkauften Angebotsbereich von InsiderLLM auf etwa 3.000–3.450 $; eine RTX PRO 6000 Blackwell mit 96 GB wurde laut [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) am 2026-08-13 mit rund 16.000 $ gelistet). Kalkulieren Sie die Auslastung zuerst: Diese Stufe rechnet sich nur bei intensiver Dauernutzung. Siehe [PromptQuorums GPU-Workstation-Build-Guide](/de/power-local-llm/best-workstation-build-local-ai-2026).\n\nNoch nicht zum Kauf bereit? Dann können Sie stattdessen mieten: Sie können [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers), die [RunPod-Bewertung](/de/power-local-llm/runpod-review), die [Vast.ai-Bewertung](/de/power-local-llm/vast-ai-review) oder die [Clore.ai-Bewertung](/de/power-local-llm/clore-ai-review) lesen oder sich [GPU-Server-Hosting-Anbieter](/de/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) ansehen.',
       },
       hardwarePicks: {
         title: 'Hardware-Empfehlungen nach Kategorie',
-        content: '- **Budget:** [GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — Einstiegs-Mini-PC für 7B-Modelle\n- **Mittelklasse:** [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, 24/7-Ollama-Server; [Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) als Ryzen-Alternative\n- **GPU-Preis-Leistung:** RTX 3090 (gebrauchte Karte bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) mit 1.400–1.550 $ gelistet, Stand 2026-10-15) — 24 GB VRAM zu einem niedrigeren Kartenpreis als die RTX 4090\n- **GPU-Leistung:** RTX 4090 (neu 2.000–3.000 $, verkaufte gebrauchte Angebote 2.575–3.010 $ laut InsiderLLM) — schneller als die RTX 3090, aber teurer, siehe [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build)\n- **Apple-Option:** Mac mit viel Unified Memory für 70B+ Modelle bei geringem Verbrauch — siehe [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026)\n\nDie RTX-3090/4090- und Apple-Links oben sind reine Produkt-/Referenzlinks — PromptQuorum hat kein Partnerprogramm und erhält keine Provision auf Hardware-Käufe.',
+        content: '- **Budget:** [GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — Einstiegs-Mini-PC für 7B-Modelle\n- **Mittelklasse:** [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, 24/7-Ollama-Server; [Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) als Ryzen-Alternative\n- **GPU-Preis-Leistung:** RTX 3090 (gebrauchte Karte bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) mit 1.500–1.725 $ gelistet, Datenstand 2026-11-23) — 24 GB VRAM zu einem niedrigeren Kartenpreis als die RTX 4090\n- **GPU-Leistung:** RTX 4090 (neu 2.000–3.000 $, verkaufte gebrauchte Angebote 2.575–3.010 $ laut InsiderLLM) — schneller als die RTX 3090, aber teurer, siehe [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build)\n- **Apple-Option:** Mac mit viel Unified Memory für 70B+ Modelle bei geringem Verbrauch — siehe [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026)\n\nDie RTX-3090/4090- und Apple-Links oben sind reine Produkt-/Referenzlinks — PromptQuorum hat kein Partnerprogramm und erhält keine Provision auf Hardware-Käufe.',
       },
       dontBuy: {
         title: 'Wann Sie KEINE lokale KI-Hardware kaufen sollten',
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RunPod-Preise](https://www.runpod.io/pricing), gelesen am 22. November 2026',
           '[Vast.ai-Preise](https://vast.ai/pricing) und die öffentliche Offers-API (Einzel-GPU-Angebote für RTX 4090), gelesen am 22. November 2026',
           '[Lambda-Preise](https://lambda.com/pricing), gelesen am 22. November 2026',
-          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Preisspannen für RTX 4090 und RTX 3090 (Stand 2026-10-15)',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Preisspannen für die RTX 4090 (Stand 2026-10-15) und Spanne verkaufter gebrauchter RTX-3090-Angebote (Datenstand 2026-11-23)',
           '[Ollama-Preise](https://ollama.com/pricing) und [Ollama-Cloud-Doku](https://docs.ollama.com/cloud), gelesen am 22. November 2026',
         ],
       },
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**Matériel local ou GPU cloud loué : le moins cher dépend surtout de vos heures par mois. Saisissez vos propres chiffres dans le calculateur ci-dessous.**',
     quickAnswerTop: {
       question: 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?',
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mois ou usage continu : le local gagne généralement en coût total',
         'TCO complet = prix du matériel + électricité − revente, pas seulement prix ÷ tarif cloud',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -591,14 +591,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: 'Tableau de décision matériel',
-        content: 'Associez la taille de modèle visée et votre usage à un niveau de matériel avant de chiffrer une configuration précise. Les gammes de prix des mini PC et des Mac sont des prix de système d\'exemple en dollars américains, pas des devis. Les lignes GPU indiquent la carte seule d\'après les données d\'annonces d\'[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15), pas un système complet ; la ligne 48 Go correspond à deux RTX 3090 d\'occasion (2 × 1 400–1 550 $ = 2 800–3 100 $). Le reste du système s\'ajoute. Les prix locaux varient selon les taxes et droits d\'importation.',
+        content: 'Associez la taille de modèle visée et votre usage à un niveau de matériel avant de chiffrer une configuration précise. Les gammes de prix des mini PC et des Mac sont des prix de système d\'exemple en dollars américains, pas des devis. Les lignes GPU indiquent la carte seule d\'après les données d\'annonces d\'[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (RTX 4090 : source mise à jour le 2026-10-15 ; RTX 3090 : données datées du 2026-11-23), pas un système complet ; la ligne 48 Go correspond à deux RTX 3090 d\'occasion (2 × 1 500–1 725 $ = 3 000–3 450 $). Le reste du système s\'ajoute. Les prix locaux varient selon les taxes et droits d\'importation.',
         columns: ['Niveau', 'VRAM / RAM', 'Idéal pour', 'Gamme de prix'],
         rows: [
           { Niveau: 'Mini PC N150', 'VRAM / RAM': '16 Go RAM', 'Idéal pour': 'Chat léger, jusqu\'à 7B', 'Gamme de prix': 'Moins de 500 $' },
           { Niveau: 'Mini PC Ryzen', 'VRAM / RAM': '32–64 Go RAM', 'Idéal pour': '7B–14B quotidien, serveur 24/7', 'Gamme de prix': '500–1 000 $' },
-          { Niveau: 'RTX 3090 (occasion)', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 30B Q4, carte 24 Go la moins chère ici', 'Gamme de prix': '1 400–1 550 $ (carte seule, annonces d\'occasion vendues)' },
+          { Niveau: 'RTX 3090 (occasion)', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 30B Q4, carte 24 Go la moins chère ici', 'Gamme de prix': '1 500–1 725 $ (carte seule, annonces d\'occasion vendues)' },
           { Niveau: 'RTX 4090', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 34B Q4, plus rapide que la RTX 3090', 'Gamme de prix': '2 575–3 010 $ d\'occasion, 2 000–3 000 $ neuve (carte seule)' },
-          { Niveau: 'Setup GPU 48 Go (2× RTX 3090 d\'occasion)', 'VRAM / RAM': '48 Go VRAM', 'Idéal pour': 'Jusqu\'à 70B Q4, R&D', 'Gamme de prix': 'env. 2 800–3 100 $ (2 cartes seulement)' },
+          { Niveau: 'Setup GPU 48 Go (2× RTX 3090 d\'occasion)', 'VRAM / RAM': '48 Go VRAM', 'Idéal pour': 'Jusqu\'à 70B Q4, R&D', 'Gamme de prix': 'env. 3 000–3 450 $ (2 cartes seulement)' },
           { Niveau: 'Mac (mémoire unifiée)', 'VRAM / RAM': '48–128 Go unifié', 'Idéal pour': '70B+ via MLX, faible consommation', 'Gamme de prix': '2 000–4 000 $+' },
         ],
       },
@@ -616,11 +616,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '« Que dois-je acheter ? » par gamme de prix',
-        content: '**Moins de 500 $** — N\'achetez pas de matériel IA dédié. Utilisez ce que vous avez déjà ou louez un GPU cloud pour des besoins occasionnels.\n\n**500–1 000 $** — Un mini PC Ryzen avec 32 Go+ de RAM. Voir le [meilleur mini PC AMD pour LLM local](/fr/local-llms/best-amd-mini-pc-local-llm-2026) et le [test Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review).\n\n**1 000–1 800 $** — Un mini PC plus puissant. Voir le [guide des meilleurs mini PC](/fr/local-llms/best-mini-pcs-local-llm) et le [guide meilleur GPU sous 500 $](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026) pour le contexte des GPU d\'entrée.\n\n**1 800–2 500 $** — Une configuration avec RTX 3090 d\'occasion, comme tranche de budget d\'exemple : la carte seule était listée à 1 400–1 550 $ par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (annonces vendues, source mise à jour le 2026-10-15), le reste du système s\'ajoute. Voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build).\n\n**3 000–4 500 $** — Une workstation RTX 4090, comme tranche de budget d\'exemple (la carte seule était listée à 2 000–3 000 $ neuve et à 2 575–3 010 $ en annonces d\'occasion vendues par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15, plus le reste du système), ou un Mac à grande mémoire unifiée. Voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build) et le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5 000 $+** — 48 Go+ de VRAM, multi-GPU ou classe workstation (deux RTX 3090 d\'occasion seules représentent environ 2 800–3 100 $ dans la fourchette d\'annonces vendues d\'InsiderLLM ; une RTX PRO 6000 Blackwell 96 Go était listée à environ 16 000 $ selon [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) le 2026-08-13). Calculez d\'abord votre taux d\'utilisation : ce niveau ne se rentabilise qu\'en usage intensif soutenu. Voir le [guide de build workstation GPU de PromptQuorum](/fr/power-local-llm/best-workstation-build-local-ai-2026).\n\nPas encore prêt à acheter ? Vous pouvez louer à la place : [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), lisez l\'[avis sur RunPod](/fr/power-local-llm/runpod-review), l\'[avis sur Vast.ai](/fr/power-local-llm/vast-ai-review) ou l\'[avis sur Clore.ai](/fr/power-local-llm/clore-ai-review), ou consultez les [hébergeurs de serveurs GPU](/fr/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
+        content: '**Moins de 500 $** — N\'achetez pas de matériel IA dédié. Utilisez ce que vous avez déjà ou louez un GPU cloud pour des besoins occasionnels.\n\n**500–1 000 $** — Un mini PC Ryzen avec 32 Go+ de RAM. Voir le [meilleur mini PC AMD pour LLM local](/fr/local-llms/best-amd-mini-pc-local-llm-2026) et le [test Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review).\n\n**1 000–1 800 $** — Un mini PC plus puissant. Voir le [guide des meilleurs mini PC](/fr/local-llms/best-mini-pcs-local-llm) et le [guide meilleur GPU sous 500 $](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026) pour le contexte des GPU d\'entrée.\n\n**1 800–2 500 $** — Une configuration avec RTX 3090 d\'occasion, comme tranche de budget d\'exemple : la carte seule était listée à 1 500–1 725 $ par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (annonces vendues, données datées du 2026-11-23). Il reste ainsi environ 75–1 000 $ de cette tranche pour le reste du système : le bas de la tranche peut donc ne pas suffire pour une configuration neuve complète. Voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build).\n\n**3 000–4 500 $** — Une workstation RTX 4090, comme tranche de budget d\'exemple (la carte seule était listée à 2 000–3 000 $ neuve et à 2 575–3 010 $ en annonces d\'occasion vendues par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15, plus le reste du système), ou un Mac à grande mémoire unifiée. Voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build) et le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5 000 $+** — 48 Go+ de VRAM, multi-GPU ou classe workstation (deux RTX 3090 d\'occasion seules représentent environ 3 000–3 450 $ dans la fourchette d\'annonces vendues d\'InsiderLLM ; une RTX PRO 6000 Blackwell 96 Go était listée à environ 16 000 $ selon [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) le 2026-08-13). Calculez d\'abord votre taux d\'utilisation : ce niveau ne se rentabilise qu\'en usage intensif soutenu. Voir le [guide de build workstation GPU de PromptQuorum](/fr/power-local-llm/best-workstation-build-local-ai-2026).\n\nPas encore prêt à acheter ? Vous pouvez louer à la place : [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), lisez l\'[avis sur RunPod](/fr/power-local-llm/runpod-review), l\'[avis sur Vast.ai](/fr/power-local-llm/vast-ai-review) ou l\'[avis sur Clore.ai](/fr/power-local-llm/clore-ai-review), ou consultez les [hébergeurs de serveurs GPU](/fr/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       hardwarePicks: {
         title: 'Sélections matérielles par catégorie',
-        content: '- **Budget :** [GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — mini PC d\'entrée pour modèles 7B\n- **Milieu de gamme :** [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, serveur Ollama 24/7 ; [Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) en alternative Ryzen\n- **Rapport qualité-prix GPU :** RTX 3090 (carte d\'occasion listée à 1 400–1 550 $ par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), mis à jour le 2026-10-15) — 24 Go de VRAM à un prix de carte inférieur à la RTX 4090\n- **Performance GPU :** RTX 4090 (neuve 2 000–3 000 $, annonces d\'occasion vendues 2 575–3 010 $ selon InsiderLLM) — plus rapide que la RTX 3090, mais plus chère, voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build)\n- **Option Apple :** Mac à grande mémoire unifiée pour modèles 70B+ à faible consommation — voir le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026)\n\nLes liens RTX 3090/4090 et Apple ci-dessus sont de simples liens produit/éditoriaux — PromptQuorum n\'a aucun programme d\'affiliation et ne perçoit aucune commission sur un achat matériel.',
+        content: '- **Budget :** [GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — mini PC d\'entrée pour modèles 7B\n- **Milieu de gamme :** [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, serveur Ollama 24/7 ; [Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) en alternative Ryzen\n- **Rapport qualité-prix GPU :** RTX 3090 (carte d\'occasion listée à 1 500–1 725 $ par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), données datées du 2026-11-23) — 24 Go de VRAM à un prix de carte inférieur à la RTX 4090\n- **Performance GPU :** RTX 4090 (neuve 2 000–3 000 $, annonces d\'occasion vendues 2 575–3 010 $ selon InsiderLLM) — plus rapide que la RTX 3090, mais plus chère, voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build)\n- **Option Apple :** Mac à grande mémoire unifiée pour modèles 70B+ à faible consommation — voir le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026)\n\nLes liens RTX 3090/4090 et Apple ci-dessus sont de simples liens produit/éditoriaux — PromptQuorum n\'a aucun programme d\'affiliation et ne perçoit aucune commission sur un achat matériel.',
       },
       dontBuy: {
         title: 'Quand NE PAS acheter de matériel IA local',
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Tarifs RunPod](https://www.runpod.io/pricing), relevés le 22 novembre 2026',
           '[Tarifs Vast.ai](https://vast.ai/pricing) et son API publique d\'offres (offres RTX 4090 à un seul GPU), relevés le 22 novembre 2026',
           '[Tarifs Lambda](https://lambda.com/pricing), relevés le 22 novembre 2026',
-          '[InsiderLLM : NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fourchettes de prix des RTX 4090 et RTX 3090 (mis à jour le 2026-10-15)',
+          '[InsiderLLM : NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fourchettes de prix de la RTX 4090 (mis à jour le 2026-10-15) et fourchette des annonces d\'occasion vendues de RTX 3090 (données datées du 2026-11-23)',
           '[Tarifs Ollama](https://ollama.com/pricing) et [documentation cloud d\'Ollama](https://docs.ollama.com/cloud), relevés le 22 novembre 2026',
         ],
       },
@@ -762,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**ローカルGPUかクラウドGPUのどちらが安いかは、月間の利用時間で決まります。下の計算機に自分の数値を入れて損益分岐を確認してください。**',
     quickAnswerTop: {
       question: 'ローカルLLMサーバーを構築するのとクラウドGPUを借りるのはどちらが安いですか？',
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '月500時間以上または常時稼働：総所有コストではローカルが有利になることが多い',
         '完全なTCO＝ハードウェア価格＋電気代−売却価値。購入価格÷クラウド料金だけでは不十分',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -835,14 +835,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: 'ハードウェア選定表',
-        content: '具体的な構成を検討する前に、目標モデルサイズと使用パターンをハードウェア階層に当てはめてください。 ミニPCとMacの価格帯はシステム価格の例（米ドル）であり、見積りではありません。GPU行は[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)の出品データ（出典更新日2026-10-15）に基づくカード単体の価格で、システム全体ではありません。48GBの行は中古RTX 3090を2枚（2×1,400〜1,550ドル＝2,800〜3,100ドル）にした場合です。残りのシステム費用は別途かかります。国内の価格は税金や輸入コストで異なります。',
+        content: '具体的な構成を検討する前に、目標モデルサイズと使用パターンをハードウェア階層に当てはめてください。 ミニPCとMacの価格帯はシステム価格の例（米ドル）であり、見積りではありません。GPU行は[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)の出品データ（RTX 4090は出典更新日2026-10-15、RTX 3090は2026-11-23時点のデータ）に基づくカード単体の価格で、システム全体ではありません。48GBの行は中古RTX 3090を2枚（2×1,500〜1,725ドル＝3,000〜3,450ドル）にした場合です。残りのシステム費用は別途かかります。国内の価格は税金や輸入コストで異なります。',
         columns: ['階層', 'VRAM／RAM', '最適用途', '価格帯'],
         rows: [
           { '階層': 'N150ミニPC', 'VRAM／RAM': '16GB RAM', '最適用途': '軽いチャット、7Bまで', '価格帯': '500ドル未満' },
           { '階層': 'Ryzenミニ PC', 'VRAM／RAM': '32〜64GB RAM', '最適用途': '7B〜14B常用、24/7サーバー', '価格帯': '500〜1,000ドル' },
-          { '階層': 'RTX 3090（中古）', 'VRAM／RAM': '24GB VRAM', '最適用途': '30B Q4まで、ここで最も安い24GBカード', '価格帯': '1,400〜1,550ドル（カード単体、中古の売却済み出品）' },
+          { '階層': 'RTX 3090（中古）', 'VRAM／RAM': '24GB VRAM', '最適用途': '30B Q4まで、ここで最も安い24GBカード', '価格帯': '1,500〜1,725ドル（カード単体、中古の売却済み出品）' },
           { '階層': 'RTX 4090', 'VRAM／RAM': '24GB VRAM', '最適用途': '34B Q4まで、RTX 3090より高速', '価格帯': '中古2,575〜3,010ドル、新品2,000〜3,000ドル（カード単体）' },
-          { '階層': '48GB GPU構成（中古RTX 3090×2）', 'VRAM／RAM': '48GB VRAM', '最適用途': '70B Q4まで、開発・研究', '価格帯': '約2,800〜3,100ドル（カード2枚のみ）' },
+          { '階層': '48GB GPU構成（中古RTX 3090×2）', 'VRAM／RAM': '48GB VRAM', '最適用途': '70B Q4まで、開発・研究', '価格帯': '約3,000〜3,450ドル（カード2枚のみ）' },
           { '階層': 'Mac（統合メモリ）', 'VRAM／RAM': '48〜128GB統合', '最適用途': 'MLXで70B以上、低消費電力', '価格帯': '2,000〜4,000ドル以上' },
         ],
       },
@@ -860,11 +860,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '「何を買うべきか」価格帯別',
-        content: '**500ドル未満** — 専用AIハードウェアは購入しないでください。手持ちの機材を使うか、たまの用途にはクラウドGPUをレンタルしてください。\n\n**500〜1,000ドル** — 32GB以上のRAMを積んだRyzenミニPC。[ローカルLLM向けベストAMDミニPC](/ja/local-llms/best-amd-mini-pc-local-llm-2026)と[Beelink SER8レビュー](/ja/smart-home/beelink-ser8-local-ai-review)を参照。\n\n**1,000〜1,800ドル** — より強力なミニPC。[ベストミニPCガイド](/ja/local-llms/best-mini-pcs-local-llm)と、エントリーGPUの参考として[500ドル未満ベストGPUガイド](/ja/local-llms/best-gpu-for-llm-inference-under-500-2026)を参照。\n\n**1,800〜2,500ドル** — 中古RTX 3090構成（予算帯の例。カード単体は[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)で1,400〜1,550ドルと掲載、売却済み出品、出典更新日2026-10-15。残りのシステム費用は別途）。[ローカルLLMワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)を参照。\n\n**3,000〜4,500ドル** — RTX 4090ワークステーション（予算帯の例。カード単体は[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)で新品2,000〜3,000ドル、中古の売却済み2,575〜3,010ドルと掲載、出典更新日2026-10-15。残りのシステム費用は別途）、または大容量の統合メモリを持つMac。[ワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)と[Apple Silicon ローカルLLMガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026)を参照。\n\n**5,000ドル以上** — 48GB以上のVRAM、マルチGPU、ワークステーション級の構成（中古RTX 3090を2枚だけでもInsiderLLMの売却済み出品範囲で約2,800〜3,100ドル。RTX PRO 6000 Blackwell 96GBは[TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html)によると2026-08-13時点で約16,000ドルで掲載）。先に稼働率を計算してください。この階層は継続的な高負荷利用でのみ元が取れます。[PromptQuorumのGPUワークステーション構築ガイド](/ja/power-local-llm/best-workstation-build-local-ai-2026)を参照。\n\nまだ購入する段階ではない場合は、代わりにレンタルという選択肢があります。[クラウドGPUプロバイダーを比較](/ja/power-local-llm/best-cloud-gpu-providers)したり、[RunPodレビュー](/ja/power-local-llm/runpod-review)、[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)、[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)を読んだり、[GPUサーバーホスティング事業者](/ja/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)を確認したりできます。',
+        content: '**500ドル未満** — 専用AIハードウェアは購入しないでください。手持ちの機材を使うか、たまの用途にはクラウドGPUをレンタルしてください。\n\n**500〜1,000ドル** — 32GB以上のRAMを積んだRyzenミニPC。[ローカルLLM向けベストAMDミニPC](/ja/local-llms/best-amd-mini-pc-local-llm-2026)と[Beelink SER8レビュー](/ja/smart-home/beelink-ser8-local-ai-review)を参照。\n\n**1,000〜1,800ドル** — より強力なミニPC。[ベストミニPCガイド](/ja/local-llms/best-mini-pcs-local-llm)と、エントリーGPUの参考として[500ドル未満ベストGPUガイド](/ja/local-llms/best-gpu-for-llm-inference-under-500-2026)を参照。\n\n**1,800〜2,500ドル** — 中古RTX 3090構成（予算帯の例。カード単体は[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)で1,500〜1,725ドルと掲載、売却済み出品、2026-11-23時点のデータ）。この予算帯で残りのシステムに回せるのは約75〜1,000ドルのため、下限では新品一式を組めない可能性があります。[ローカルLLMワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)を参照。\n\n**3,000〜4,500ドル** — RTX 4090ワークステーション（予算帯の例。カード単体は[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)で新品2,000〜3,000ドル、中古の売却済み2,575〜3,010ドルと掲載、出典更新日2026-10-15。残りのシステム費用は別途）、または大容量の統合メモリを持つMac。[ワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)と[Apple Silicon ローカルLLMガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026)を参照。\n\n**5,000ドル以上** — 48GB以上のVRAM、マルチGPU、ワークステーション級の構成（中古RTX 3090を2枚だけでもInsiderLLMの売却済み出品範囲で約3,000〜3,450ドル。RTX PRO 6000 Blackwell 96GBは[TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html)によると2026-08-13時点で約16,000ドルで掲載）。先に稼働率を計算してください。この階層は継続的な高負荷利用でのみ元が取れます。[PromptQuorumのGPUワークステーション構築ガイド](/ja/power-local-llm/best-workstation-build-local-ai-2026)を参照。\n\nまだ購入する段階ではない場合は、代わりにレンタルという選択肢があります。[クラウドGPUプロバイダーを比較](/ja/power-local-llm/best-cloud-gpu-providers)したり、[RunPodレビュー](/ja/power-local-llm/runpod-review)、[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)、[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)を読んだり、[GPUサーバーホスティング事業者](/ja/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)を確認したりできます。',
       },
       hardwarePicks: {
         title: 'カテゴリ別ハードウェアのおすすめ',
-        content: '- **予算重視：** [GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review) — 7Bクラス向けエントリーミニPC\n- **ミドルレンジ：** [Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review) — 7B〜14B、Home Assistant、24/7 Ollamaサーバー。Ryzen代替として[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPUコスパ：** RTX 3090（中古カードは[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)で1,400〜1,550ドルと掲載、2026-10-15更新）— RTX 4090よりカード価格が低い24GB VRAM\n- **GPU性能：** RTX 4090（新品2,000〜3,000ドル、中古の成約は2,575〜3,010ドル、InsiderLLMによる）— RTX 3090より高速だが高価。[ワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)を参照\n- **Appleという選択肢：** 大容量の統合メモリを持つMacで、70B以上のモデルを低消費電力で — [Apple Silicon ローカルLLMガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026)を参照\n\n上記のRTX 3090/4090とAppleのリンクは製品・編集上の参照であり、PromptQuorumにはアフィリエイトプログラムはなく、ハードウェア購入による手数料も受け取っていません。',
+        content: '- **予算重視：** [GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review) — 7Bクラス向けエントリーミニPC\n- **ミドルレンジ：** [Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review) — 7B〜14B、Home Assistant、24/7 Ollamaサーバー。Ryzen代替として[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPUコスパ：** RTX 3090（中古カードは[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)で1,500〜1,725ドルと掲載、2026-11-23時点のデータ）— RTX 4090よりカード価格が低い24GB VRAM\n- **GPU性能：** RTX 4090（新品2,000〜3,000ドル、中古の成約は2,575〜3,010ドル、InsiderLLMによる）— RTX 3090より高速だが高価。[ワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)を参照\n- **Appleという選択肢：** 大容量の統合メモリを持つMacで、70B以上のモデルを低消費電力で — [Apple Silicon ローカルLLMガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026)を参照\n\n上記のRTX 3090/4090とAppleのリンクは製品・編集上の参照であり、PromptQuorumにはアフィリエイトプログラムはなく、ハードウェア購入による手数料も受け取っていません。',
       },
       dontBuy: {
         title: 'ローカルAIハードウェアを購入すべきでない場合',
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RunPodの料金](https://www.runpod.io/pricing)（2026年11月22日確認）',
           '[Vast.aiの料金](https://vast.ai/pricing)と公開オファーAPI（RTX 4090の単一GPUオファー）（2026年11月22日確認）',
           '[Lambdaの料金](https://lambda.com/pricing)（2026年11月22日確認）',
-          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、RTX 4090とRTX 3090の価格帯（2026-10-15更新）',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、RTX 4090の価格帯（2026-10-15更新）とRTX 3090の中古売却済み出品の価格帯（2026-11-23時点のデータ）',
           '[Ollamaの料金](https://ollama.com/pricing)と[Ollamaクラウドのドキュメント](https://docs.ollama.com/cloud)（2026年11月22日確認）',
         ],
       },
@@ -1006,7 +1006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**Hardware local o GPU en la nube alquilada: lo más barato depende sobre todo de tus horas al mes. Introduce tus propios números en la calculadora de abajo.**',
     quickAnswerTop: {
       question: '¿Es más barato construir un servidor LLM local o alquilar GPU en el cloud?',
@@ -1019,7 +1019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ hr/mes o continuo: lo local suele ganar en costo total',
         'TCO completo = precio del hardware + electricidad − reventa, no solo precio ÷ tarifa cloud',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -1079,14 +1079,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: 'Tabla de decisión de hardware',
-        content: 'Relaciona el tamaño de modelo objetivo y tu patrón de uso con un nivel de hardware antes de calcular una configuración concreta. Los rangos de precio de los mini PC y los Mac son precios de sistema de ejemplo en dólares estadounidenses, no cotizaciones. Las filas de GPU muestran solo la tarjeta, según los datos de anuncios de [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15), no un sistema completo; la fila de 48 GB son dos RTX 3090 usadas (2 × 1.400–1.550 $ = 2.800–3.100 $). El resto del sistema se suma. Los precios en tu país pueden variar según impuestos locales.',
+        content: 'Relaciona el tamaño de modelo objetivo y tu patrón de uso con un nivel de hardware antes de calcular una configuración concreta. Los rangos de precio de los mini PC y los Mac son precios de sistema de ejemplo en dólares estadounidenses, no cotizaciones. Las filas de GPU muestran solo la tarjeta, según los datos de anuncios de [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (RTX 4090: fuente actualizada el 2026-10-15; RTX 3090: datos con fecha 2026-11-23), no un sistema completo; la fila de 48 GB son dos RTX 3090 usadas (2 × 1.500–1.725 $ = 3.000–3.450 $). El resto del sistema se suma. Los precios en tu país pueden variar según impuestos locales.',
         columns: ['Nivel', 'VRAM / RAM', 'Mejor para', 'Rango de precio'],
         rows: [
           { Nivel: 'Mini PC N150', 'VRAM / RAM': '16GB RAM', 'Mejor para': 'Chat ligero, hasta 7B', 'Rango de precio': 'Menos de 500 $' },
           { Nivel: 'Mini PC Ryzen', 'VRAM / RAM': '32–64GB RAM', 'Mejor para': '7B–14B diario, servidor 24/7', 'Rango de precio': '500–1.000 $' },
-          { Nivel: 'RTX 3090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Mejor para': 'Hasta 30B Q4, la tarjeta de 24 GB más barata aquí', 'Rango de precio': '1.400–1.550 $ (solo tarjeta, anuncios usados vendidos)' },
+          { Nivel: 'RTX 3090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Mejor para': 'Hasta 30B Q4, la tarjeta de 24 GB más barata aquí', 'Rango de precio': '1.500–1.725 $ (solo tarjeta, anuncios usados vendidos)' },
           { Nivel: 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'Mejor para': 'Hasta 34B Q4, más rápida que la RTX 3090', 'Rango de precio': '2.575–3.010 $ usada, 2.000–3.000 $ nueva (solo tarjeta)' },
-          { Nivel: 'Setup GPU 48GB (2× RTX 3090 usadas)', 'VRAM / RAM': '48GB VRAM', 'Mejor para': 'Hasta 70B Q4, desarrollo', 'Rango de precio': 'unos 2.800–3.100 $ (solo 2 tarjetas)' },
+          { Nivel: 'Setup GPU 48GB (2× RTX 3090 usadas)', 'VRAM / RAM': '48GB VRAM', 'Mejor para': 'Hasta 70B Q4, desarrollo', 'Rango de precio': 'unos 3.000–3.450 $ (solo 2 tarjetas)' },
           { Nivel: 'Mac (memoria unificada)', 'VRAM / RAM': '48–128GB unificada', 'Mejor para': '70B+ vía MLX, bajo consumo', 'Rango de precio': '2.000–4.000 $+' },
         ],
       },
@@ -1104,11 +1104,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '"¿Qué debo comprar?" por rango de precio',
-        content: '**Menos de 500 $** — No compres hardware de IA dedicado. Usa lo que ya tienes o alquila una GPU en la nube para necesidades ocasionales.\n\n**500–1.000 $** — Un mini PC Ryzen con 32 GB+ de RAM. Ve el [mejor mini PC AMD para LLM local](/es/local-llms/best-amd-mini-pc-local-llm-2026) y la [reseña del Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review).\n\n**1.000–1.800 $** — Un mini PC más potente. Ve la [guía de los mejores mini PCs](/es/local-llms/best-mini-pcs-local-llm) y la [guía de mejor GPU bajo 500 $](/es/local-llms/best-gpu-for-llm-inference-under-500-2026) para el contexto de las GPU de entrada.\n\n**1.800–2.500 $** — Una configuración con RTX 3090 usada como banda de presupuesto de ejemplo: la tarjeta sola figuraba a 1.400–1.550 $ según [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (anuncios vendidos, fuente actualizada el 2026-10-15), y el resto del sistema se suma. Ve la [guía de construcción de workstation](/es/local-llms/local-llm-workstation-build).\n\n**3.000–4.500 $** — Una workstation con RTX 4090 como banda de presupuesto de ejemplo (la tarjeta sola figuraba nueva a 2.000–3.000 $ y en anuncios usados vendidos a 2.575–3.010 $ según [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15, más el resto del sistema) o un Mac con memoria unificada grande. Ve la [guía de construcción de workstation](/es/local-llms/local-llm-workstation-build) y la [guía de Apple Silicon](/es/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5.000 $+** — 48 GB+ de VRAM, multi-GPU o clase workstation (dos RTX 3090 usadas solas suman unos 2.800–3.100 $ en el rango de anuncios vendidos de InsiderLLM; una RTX PRO 6000 Blackwell de 96 GB figuraba a unos 16.000 $ según [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) el 2026-08-13). Calcula primero tu utilización: este nivel solo se amortiza con uso intensivo sostenido. Ve la [guía de construcción de workstation GPU de PromptQuorum](/es/power-local-llm/best-workstation-build-local-ai-2026).\n\n¿Aún no estás listo para comprar? Puedes alquilar en su lugar: puedes [comparar proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers), leer la [reseña de RunPod](/es/power-local-llm/runpod-review), la [reseña de Vast.ai](/es/power-local-llm/vast-ai-review) o la [reseña de Clore.ai](/es/power-local-llm/clore-ai-review), o echar un vistazo a los [proveedores de alojamiento de servidores GPU](/es/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
+        content: '**Menos de 500 $** — No compres hardware de IA dedicado. Usa lo que ya tienes o alquila una GPU en la nube para necesidades ocasionales.\n\n**500–1.000 $** — Un mini PC Ryzen con 32 GB+ de RAM. Ve el [mejor mini PC AMD para LLM local](/es/local-llms/best-amd-mini-pc-local-llm-2026) y la [reseña del Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review).\n\n**1.000–1.800 $** — Un mini PC más potente. Ve la [guía de los mejores mini PCs](/es/local-llms/best-mini-pcs-local-llm) y la [guía de mejor GPU bajo 500 $](/es/local-llms/best-gpu-for-llm-inference-under-500-2026) para el contexto de las GPU de entrada.\n\n**1.800–2.500 $** — Una configuración con RTX 3090 usada como banda de presupuesto de ejemplo: la tarjeta sola figuraba a 1.500–1.725 $ según [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (anuncios vendidos, datos con fecha 2026-11-23). Eso deja unos 75–1.000 $ de esta banda para el resto del sistema, así que el extremo inferior puede no alcanzar para un equipo nuevo completo. Ve la [guía de construcción de workstation](/es/local-llms/local-llm-workstation-build).\n\n**3.000–4.500 $** — Una workstation con RTX 4090 como banda de presupuesto de ejemplo (la tarjeta sola figuraba nueva a 2.000–3.000 $ y en anuncios usados vendidos a 2.575–3.010 $ según [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15, más el resto del sistema) o un Mac con memoria unificada grande. Ve la [guía de construcción de workstation](/es/local-llms/local-llm-workstation-build) y la [guía de Apple Silicon](/es/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5.000 $+** — 48 GB+ de VRAM, multi-GPU o clase workstation (dos RTX 3090 usadas solas suman unos 3.000–3.450 $ en el rango de anuncios vendidos de InsiderLLM; una RTX PRO 6000 Blackwell de 96 GB figuraba a unos 16.000 $ según [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) el 2026-08-13). Calcula primero tu utilización: este nivel solo se amortiza con uso intensivo sostenido. Ve la [guía de construcción de workstation GPU de PromptQuorum](/es/power-local-llm/best-workstation-build-local-ai-2026).\n\n¿Aún no estás listo para comprar? Puedes alquilar en su lugar: puedes [comparar proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers), leer la [reseña de RunPod](/es/power-local-llm/runpod-review), la [reseña de Vast.ai](/es/power-local-llm/vast-ai-review) o la [reseña de Clore.ai](/es/power-local-llm/clore-ai-review), o echar un vistazo a los [proveedores de alojamiento de servidores GPU](/es/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       hardwarePicks: {
         title: 'Selecciones de hardware por categoría',
-        content: '- **Económico:** [GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — mini PC de entrada para modelos 7B\n- **Gama media:** [Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, servidor Ollama 24/7; [Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) como alternativa Ryzen\n- **GPU valor:** RTX 3090 (tarjeta usada a 1.400–1.550 $ según [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), actualizado el 2026-10-15) — 24 GB de VRAM a un precio de tarjeta menor que la RTX 4090\n- **GPU rendimiento:** RTX 4090 (nueva 2.000–3.000 $, ofertas usadas vendidas 2.575–3.010 $ según InsiderLLM) — más rápida que la RTX 3090, pero más cara, ve la [guía de construcción de workstation](/es/local-llms/local-llm-workstation-build)\n- **Opción Apple:** Mac con mucha memoria unificada para modelos 70B+ a bajo consumo — ve la [guía de Apple Silicon](/es/local-llms/apple-silicon-local-llm-guide-2026)\n\nLos enlaces de RTX 3090/4090 y Apple de arriba son enlaces de producto/editoriales — PromptQuorum no tiene programa de afiliados y no gana comisión en ninguna compra de hardware.',
+        content: '- **Económico:** [GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — mini PC de entrada para modelos 7B\n- **Gama media:** [Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, servidor Ollama 24/7; [Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) como alternativa Ryzen\n- **GPU valor:** RTX 3090 (tarjeta usada a 1.500–1.725 $ según [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), datos con fecha 2026-11-23) — 24 GB de VRAM a un precio de tarjeta menor que la RTX 4090\n- **GPU rendimiento:** RTX 4090 (nueva 2.000–3.000 $, ofertas usadas vendidas 2.575–3.010 $ según InsiderLLM) — más rápida que la RTX 3090, pero más cara, ve la [guía de construcción de workstation](/es/local-llms/local-llm-workstation-build)\n- **Opción Apple:** Mac con mucha memoria unificada para modelos 70B+ a bajo consumo — ve la [guía de Apple Silicon](/es/local-llms/apple-silicon-local-llm-guide-2026)\n\nLos enlaces de RTX 3090/4090 y Apple de arriba son enlaces de producto/editoriales — PromptQuorum no tiene programa de afiliados y no gana comisión en ninguna compra de hardware.',
       },
       dontBuy: {
         title: 'Cuándo NO deberías comprar hardware de IA local',
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Precios de RunPod](https://www.runpod.io/pricing), leídos el 22 de noviembre de 2026',
           '[Precios de Vast.ai](https://vast.ai/pricing) y su API pública de ofertas (ofertas de RTX 4090 de una sola GPU), leídos el 22 de noviembre de 2026',
           '[Precios de Lambda](https://lambda.com/pricing), leídos el 22 de noviembre de 2026',
-          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), rangos de precio de la RTX 4090 y la RTX 3090 (actualizado el 2026-10-15)',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), rangos de precio de la RTX 4090 (actualizado el 2026-10-15) y rango de anuncios usados vendidos de la RTX 3090 (datos con fecha 2026-11-23)',
           '[Precios de Ollama](https://ollama.com/pricing) y [documentación cloud de Ollama](https://docs.ollama.com/cloud), leídos el 22 de noviembre de 2026',
         ],
       },
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**عتاد محلي أم وحدة GPU سحابية مستأجرة: الأرخص منهما يعتمد غالباً على عدد ساعات استخدامك شهرياً. أدخل أرقامك الخاصة في الحاسبة أدناه لمعرفة نقطة التعادل لديك.**',
     quickAnswerTop: {
       question: 'هل بناء خادم LLM محلي أرخص أم استئجار GPU في السحابة؟',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ ساعة/شهر أو تشغيل مستمر: يتفوق المحلي عادةً في التكلفة الإجمالية',
         'التكلفة الإجمالية الكاملة = سعر الأجهزة + الكهرباء − إعادة البيع، وليس فقط السعر ÷ تعرفة السحابة',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -1323,14 +1323,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: 'جدول قرار الأجهزة',
-        content: 'اربط حجم النموذج المستهدف ونمط استخدامك بفئة أجهزة قبل تسعير تكوين محدد. فئات أسعار الحواسيب المصغّرة وأجهزة Mac أمثلة على أسعار الأنظمة بالدولار الأمريكي وليست عروض أسعار. تعرض صفوف GPU سعر البطاقة وحدها وفق بيانات الإعلانات لدى [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15) لا النظام الكامل؛ وصف 48 GB هو بطاقتا RTX 3090 مستعملتان (2 × 1,400–1,550 = 2,800–3,100 دولار). ويُضاف إلى ذلك بقية النظام. تختلف الأسعار المحلية بحسب الضرائب ورسوم الاستيراد.',
+        content: 'اربط حجم النموذج المستهدف ونمط استخدامك بفئة أجهزة قبل تسعير تكوين محدد. فئات أسعار الحواسيب المصغّرة وأجهزة Mac أمثلة على أسعار الأنظمة بالدولار الأمريكي وليست عروض أسعار. تعرض صفوف GPU سعر البطاقة وحدها وفق بيانات الإعلانات لدى [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (RTX 4090: المصدر محدّث في 2026-10-15؛ RTX 3090: بيانات مؤرخة في 2026-11-23) لا النظام الكامل؛ وصف 48 GB هو بطاقتا RTX 3090 مستعملتان (2 × 1,500–1,725 = 3,000–3,450 دولار). ويُضاف إلى ذلك بقية النظام. تختلف الأسعار المحلية بحسب الضرائب ورسوم الاستيراد.',
         columns: ['الفئة', 'VRAM / RAM', 'الأفضل لـ', 'فئة السعر'],
         rows: [
           { 'الفئة': 'ميني PC بمعالج N150', 'VRAM / RAM': '16 GB RAM', 'الأفضل لـ': 'محادثة خفيفة، حتى 7B', 'فئة السعر': 'أقل من 500 دولار' },
           { 'الفئة': 'ميني PC بمعالج Ryzen', 'VRAM / RAM': '32–64 GB RAM', 'الأفضل لـ': '7B–14B يوميًا، خادم 24/7', 'فئة السعر': '500–1,000 دولار' },
-          { 'الفئة': 'RTX 3090 (مستعملة)', 'VRAM / RAM': '24GB VRAM', 'الأفضل لـ': 'حتى 30B Q4، أرخص بطاقة 24 GB هنا', 'فئة السعر': '1,400–1,550 دولار (البطاقة وحدها، إعلانات مستعملة مباعة)' },
+          { 'الفئة': 'RTX 3090 (مستعملة)', 'VRAM / RAM': '24GB VRAM', 'الأفضل لـ': 'حتى 30B Q4، أرخص بطاقة 24 GB هنا', 'فئة السعر': '1,500–1,725 دولار (البطاقة وحدها، إعلانات مستعملة مباعة)' },
           { 'الفئة': 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'الأفضل لـ': 'حتى 34B Q4، أسرع من RTX 3090', 'فئة السعر': '2,575–3,010 دولار مستعملة، 2,000–3,000 دولار جديدة (البطاقة وحدها)' },
-          { 'الفئة': 'تكوين GPU بـ 48GB (بطاقتا RTX 3090 مستعملتان)', 'VRAM / RAM': '48GB VRAM', 'الأفضل لـ': 'حتى 70B Q4، تطوير وبحث', 'فئة السعر': 'نحو 2,800–3,100 دولار (البطاقتان فقط)' },
+          { 'الفئة': 'تكوين GPU بـ 48GB (بطاقتا RTX 3090 مستعملتان)', 'VRAM / RAM': '48GB VRAM', 'الأفضل لـ': 'حتى 70B Q4، تطوير وبحث', 'فئة السعر': 'نحو 3,000–3,450 دولار (البطاقتان فقط)' },
           { 'الفئة': 'Mac (ذاكرة موحَّدة)', 'VRAM / RAM': '48–128GB موحدة', 'الأفضل لـ': '70B+ عبر MLX، استهلاك منخفض', 'فئة السعر': '2,000–4,000 دولار فأكثر' },
         ],
       },
@@ -1348,11 +1348,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '"ماذا أشتري؟" حسب فئة السعر',
-        content: '**أقل من 500 دولار** — لا تشترِ عتاداً مخصصاً للذكاء الاصطناعي. استخدم ما تملكه، أو استأجر GPU سحابية للاحتياجات العرضية.\n\n**500–1,000 دولار** — حاسوب Ryzen مصغّر بذاكرة 32 GB أو أكثر. راجع [أفضل حاسوب AMD مصغّر للنماذج المحلية](/ar/local-llms/best-amd-mini-pc-local-llm-2026) و[مراجعة Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review).\n\n**1,000–1,800 دولار** — حاسوب مصغّر أقوى. راجع [دليل أفضل الحواسيب المصغّرة](/ar/local-llms/best-mini-pcs-local-llm) و[دليل أفضل GPU تحت 500 دولار](/ar/local-llms/best-gpu-for-llm-inference-under-500-2026) لسياق بطاقات الدخول.\n\n**1,800–2,500 دولار** — تجميعة بطاقة RTX 3090 مستعملة كنطاق ميزانية توضيحي: البطاقة وحدها أُدرجت بـ 1,400–1,550 دولار لدى [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (إعلانات مباعة، المصدر محدّث في 2026-10-15)، ويُضاف إليها بقية النظام. راجع [دليل بناء محطة عمل للنماذج المحلية](/ar/local-llms/local-llm-workstation-build).\n\n**3,000–4,500 دولار** — محطة عمل RTX 4090 كنطاق ميزانية توضيحي (البطاقة وحدها أُدرجت جديدة بـ 2,000–3,000 دولار وفي الإعلانات المستعملة المباعة بـ 2,575–3,010 دولار لدى [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15، إضافة إلى بقية النظام) أو Mac بذاكرة موحّدة كبيرة. راجع [دليل بناء محطة العمل](/ar/local-llms/local-llm-workstation-build) و[دليل Apple Silicon](/ar/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5,000 دولار فأكثر** — ذاكرة VRAM بسعة 48 GB أو أكثر أو عدة بطاقات GPU أو تجميعات بفئة محطات العمل (بطاقتا RTX 3090 مستعملتان وحدهما تبلغان نحو 2,800–3,100 دولار ضمن نطاق الإعلانات المباعة لدى InsiderLLM؛ وأُدرجت RTX PRO 6000 Blackwell بسعة 96 GB بنحو 16,000 دولار وفق [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) في 2026-08-13). احسب نسبة الاستخدام أولاً: لا تسترد هذه الفئة كلفتها إلا مع استخدام مكثف ومستمر. راجع [دليل PromptQuorum لبناء محطة عمل GPU](/ar/power-local-llm/best-workstation-build-local-ai-2026).\n\nإن لم تكن مستعداً للشراء بعد، فالاستئجار بديل متاح: يمكنك [المقارنة بين مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers)، أو قراءة [مراجعة RunPod](/ar/power-local-llm/runpod-review) أو [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review) أو [مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)، أو الاطّلاع على [مزودي استضافة خوادم GPU](/ar/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
+        content: '**أقل من 500 دولار** — لا تشترِ عتاداً مخصصاً للذكاء الاصطناعي. استخدم ما تملكه، أو استأجر GPU سحابية للاحتياجات العرضية.\n\n**500–1,000 دولار** — حاسوب Ryzen مصغّر بذاكرة 32 GB أو أكثر. راجع [أفضل حاسوب AMD مصغّر للنماذج المحلية](/ar/local-llms/best-amd-mini-pc-local-llm-2026) و[مراجعة Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review).\n\n**1,000–1,800 دولار** — حاسوب مصغّر أقوى. راجع [دليل أفضل الحواسيب المصغّرة](/ar/local-llms/best-mini-pcs-local-llm) و[دليل أفضل GPU تحت 500 دولار](/ar/local-llms/best-gpu-for-llm-inference-under-500-2026) لسياق بطاقات الدخول.\n\n**1,800–2,500 دولار** — تجميعة بطاقة RTX 3090 مستعملة كنطاق ميزانية توضيحي: البطاقة وحدها أُدرجت بـ 1,500–1,725 دولار لدى [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (إعلانات مباعة، بيانات مؤرخة في 2026-11-23). وبذلك يتبقى من هذا النطاق نحو 75–1,000 دولار لبقية النظام، فقد لا يكفي حدّه الأدنى لتجميعة جديدة كاملة. راجع [دليل بناء محطة عمل للنماذج المحلية](/ar/local-llms/local-llm-workstation-build).\n\n**3,000–4,500 دولار** — محطة عمل RTX 4090 كنطاق ميزانية توضيحي (البطاقة وحدها أُدرجت جديدة بـ 2,000–3,000 دولار وفي الإعلانات المستعملة المباعة بـ 2,575–3,010 دولار لدى [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15، إضافة إلى بقية النظام) أو Mac بذاكرة موحّدة كبيرة. راجع [دليل بناء محطة العمل](/ar/local-llms/local-llm-workstation-build) و[دليل Apple Silicon](/ar/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5,000 دولار فأكثر** — ذاكرة VRAM بسعة 48 GB أو أكثر أو عدة بطاقات GPU أو تجميعات بفئة محطات العمل (بطاقتا RTX 3090 مستعملتان وحدهما تبلغان نحو 3,000–3,450 دولار ضمن نطاق الإعلانات المباعة لدى InsiderLLM؛ وأُدرجت RTX PRO 6000 Blackwell بسعة 96 GB بنحو 16,000 دولار وفق [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) في 2026-08-13). احسب نسبة الاستخدام أولاً: لا تسترد هذه الفئة كلفتها إلا مع استخدام مكثف ومستمر. راجع [دليل PromptQuorum لبناء محطة عمل GPU](/ar/power-local-llm/best-workstation-build-local-ai-2026).\n\nإن لم تكن مستعداً للشراء بعد، فالاستئجار بديل متاح: يمكنك [المقارنة بين مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers)، أو قراءة [مراجعة RunPod](/ar/power-local-llm/runpod-review) أو [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review) أو [مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)، أو الاطّلاع على [مزودي استضافة خوادم GPU](/ar/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       hardwarePicks: {
         title: 'اختيارات العتاد حسب الفئة',
-        content: '- **اقتصادي:** [GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — حاسوب مصغّر للدخول لنماذج 7B\n- **متوسط:** [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — 7B–14B وHome Assistant وخادم Ollama على مدار الساعة؛ [Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) بديل Ryzen\n- **قيمة GPU:** RTX 3090 (بطاقة مستعملة أُدرجت بـ 1,400–1,550 دولار لدى [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، محدّث في 2026-10-15) — ذاكرة 24 GB بسعر بطاقة أقل من RTX 4090\n- **أداء GPU:** RTX 4090 (جديدة 2,000–3,000 دولار، ومبيعات مستعملة 2,575–3,010 دولار حسب InsiderLLM) — أسرع من RTX 3090 لكنها أغلى، راجع [دليل بناء محطة العمل](/ar/local-llms/local-llm-workstation-build)\n- **خيار Apple:** Mac بذاكرة موحّدة كبيرة لنماذج 70B وأكبر باستهلاك منخفض للطاقة — راجع [دليل Apple Silicon](/ar/local-llms/apple-silicon-local-llm-guide-2026)\n\nروابط RTX 3090/4090 وApple أعلاه مراجع منتجات وتحريرية فقط — ليس لدى PromptQuorum برنامج إحالة ولا تحصل على عمولة على أي شراء عتاد.',
+        content: '- **اقتصادي:** [GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — حاسوب مصغّر للدخول لنماذج 7B\n- **متوسط:** [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — 7B–14B وHome Assistant وخادم Ollama على مدار الساعة؛ [Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) بديل Ryzen\n- **قيمة GPU:** RTX 3090 (بطاقة مستعملة أُدرجت بـ 1,500–1,725 دولار لدى [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، بيانات مؤرخة في 2026-11-23) — ذاكرة 24 GB بسعر بطاقة أقل من RTX 4090\n- **أداء GPU:** RTX 4090 (جديدة 2,000–3,000 دولار، ومبيعات مستعملة 2,575–3,010 دولار حسب InsiderLLM) — أسرع من RTX 3090 لكنها أغلى، راجع [دليل بناء محطة العمل](/ar/local-llms/local-llm-workstation-build)\n- **خيار Apple:** Mac بذاكرة موحّدة كبيرة لنماذج 70B وأكبر باستهلاك منخفض للطاقة — راجع [دليل Apple Silicon](/ar/local-llms/apple-silicon-local-llm-guide-2026)\n\nروابط RTX 3090/4090 وApple أعلاه مراجع منتجات وتحريرية فقط — ليس لدى PromptQuorum برنامج إحالة ولا تحصل على عمولة على أي شراء عتاد.',
       },
       dontBuy: {
         title: 'متى لا يجب عليك شراء أجهزة ذكاء اصطناعي محلية',
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أسعار RunPod](https://www.runpod.io/pricing)، قُرئت في 22 نوفمبر 2026',
           '[أسعار Vast.ai](https://vast.ai/pricing) وواجهة العروض العامة (عروض RTX 4090 ببطاقة GPU واحدة)، قُرئت في 22 نوفمبر 2026',
           '[أسعار Lambda](https://lambda.com/pricing)، قُرئت في 22 نوفمبر 2026',
-          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، نطاقات أسعار RTX 4090 وRTX 3090 (محدّث في 2026-10-15)',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، نطاقات أسعار RTX 4090 (محدّث في 2026-10-15) ونطاق الإعلانات المستعملة المباعة لبطاقة RTX 3090 (بيانات مؤرخة في 2026-11-23)',
           '[أسعار Ollama](https://ollama.com/pricing) و[وثائق Ollama السحابية](https://docs.ollama.com/cloud)، قُرئت في 22 نوفمبر 2026',
         ],
       },
@@ -1494,7 +1494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**本地硬件还是租用云GPU更便宜，主要取决于你每月的使用小时数。请在下方计算器中输入自己的数据，查看盈亏平衡点。**',
     quickAnswerTop: {
       question: '自建本地LLM服务器和租用云GPU哪个更便宜？',
@@ -1507,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '每月500小时以上或全天候：总成本上本地通常更划算',
         '完整TCO＝硬件价格＋电费−转售价值，而非仅用购买价格÷云端费率',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -1567,14 +1567,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: '硬件决策表',
-        content: '在计算具体配置成本之前，先根据目标模型大小和使用模式匹配硬件等级。 迷你主机和Mac的价格档位为系统价格示例（美元），并非报价。GPU行显示的是仅含显卡的价格，依据[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)的挂牌数据（来源更新于2026-10-15），而非整机；48GB一行为两张二手RTX 3090（2×1,400–1,550 = 2,800–3,100美元）。其余系统部件费用另计。各地价格会因税费和进口成本而不同。',
+        content: '在计算具体配置成本之前，先根据目标模型大小和使用模式匹配硬件等级。 迷你主机和Mac的价格档位为系统价格示例（美元），并非报价。GPU行显示的是仅含显卡的价格，依据[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)的挂牌数据（RTX 4090：来源更新于2026-10-15；RTX 3090：数据日期2026-11-23），而非整机；48GB一行为两张二手RTX 3090（2×1,500–1,725 = 3,000–3,450美元）。其余系统部件费用另计。各地价格会因税费和进口成本而不同。',
         columns: ['等级', 'VRAM／RAM', '最适合', '价格区间'],
         rows: [
           { '等级': 'N150迷你主机', 'VRAM／RAM': '16GB RAM', '最适合': '轻量聊天，7B以下', '价格区间': '低于500美元' },
           { '等级': 'Ryzen迷你主机', 'VRAM／RAM': '32–64GB RAM', '最适合': '7B–14B日常使用，24/7服务器', '价格区间': '500–1,000美元' },
-          { '等级': 'RTX 3090（二手）', 'VRAM／RAM': '24GB VRAM', '最适合': '30B Q4以下，此处价格最低的24GB显卡', '价格区间': '1,400–1,550美元（仅显卡，二手已售出挂牌价）' },
+          { '等级': 'RTX 3090（二手）', 'VRAM／RAM': '24GB VRAM', '最适合': '30B Q4以下，此处价格最低的24GB显卡', '价格区间': '1,500–1,725美元（仅显卡，二手已售出挂牌价）' },
           { '等级': 'RTX 4090', 'VRAM／RAM': '24GB VRAM', '最适合': '34B Q4以下，比RTX 3090更快', '价格区间': '二手2,575–3,010美元，新品2,000–3,000美元（仅显卡）' },
-          { '等级': '48GB GPU配置（2×二手RTX 3090）', 'VRAM／RAM': '48GB VRAM', '最适合': '70B Q4以下，开发研究', '价格区间': '约2,800–3,100美元（仅2张显卡）' },
+          { '等级': '48GB GPU配置（2×二手RTX 3090）', 'VRAM／RAM': '48GB VRAM', '最适合': '70B Q4以下，开发研究', '价格区间': '约3,000–3,450美元（仅2张显卡）' },
           { '等级': 'Mac（统一内存）', 'VRAM／RAM': '48–128GB统一', '最适合': '通过MLX运行70B以上，低功耗', '价格区间': '2,000–4,000美元以上' },
         ],
       },
@@ -1592,11 +1592,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '“我该买什么？”按价格档位',
-        content: '**低于500美元** — 不要购买专用AI硬件。使用现有设备，偶尔需要时租用云GPU。\n\n**500–1,000美元** — 配备32GB以上内存的Ryzen迷你主机。参见[本地LLM最佳AMD迷你主机](/zh/local-llms/best-amd-mini-pc-local-llm-2026)和[Beelink SER8评测](/zh/smart-home/beelink-ser8-local-ai-review)。\n\n**1,000–1,800美元** — 性能更强的迷你主机。参见[最佳迷你主机指南](/zh/local-llms/best-mini-pcs-local-llm)，入门GPU背景参见[500美元以下最佳GPU指南](/zh/local-llms/best-gpu-for-llm-inference-under-500-2026)。\n\n**1,800–2,500美元** — 二手RTX 3090整机（预算区间示例：单卡在[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)上标价1,400–1,550美元，为已售出挂牌价，来源更新于2026-10-15；其余系统部件费用另计）。参见[本地LLM工作站搭建指南](/zh/local-llms/local-llm-workstation-build)。\n\n**3,000–4,500美元** — RTX 4090工作站（预算区间示例：单卡在[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)上新品标价2,000–3,000美元、二手已售出挂牌价2,575–3,010美元，来源更新于2026-10-15；其余系统部件费用另计），或大容量统一内存的Mac。参见[工作站搭建指南](/zh/local-llms/local-llm-workstation-build)和[Apple Silicon本地LLM指南](/zh/local-llms/apple-silicon-local-llm-guide-2026)。\n\n**5,000美元以上** — 48GB以上显存、多GPU或工作站级配置（仅两张二手RTX 3090，按InsiderLLM已售出挂牌价范围约2,800–3,100美元；据[TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html)报道，一张RTX PRO 6000 Blackwell 96GB于2026-08-13标价约16,000美元）。请先计算利用率：这一档只有在持续高负载使用时才能回本。参见[PromptQuorum的GPU工作站搭建指南](/zh/power-local-llm/best-workstation-build-local-ai-2026)。\n\n如果暂时不打算购买，也可以选择租用：可以[对比云GPU提供商](/zh/power-local-llm/best-cloud-gpu-providers)，阅读[RunPod评测](/zh/power-local-llm/runpod-review)、[Vast.ai评测](/zh/power-local-llm/vast-ai-review)或[Clore.ai评测](/zh/power-local-llm/clore-ai-review)，也可以查看[GPU服务器托管提供商](/zh/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)。',
+        content: '**低于500美元** — 不要购买专用AI硬件。使用现有设备，偶尔需要时租用云GPU。\n\n**500–1,000美元** — 配备32GB以上内存的Ryzen迷你主机。参见[本地LLM最佳AMD迷你主机](/zh/local-llms/best-amd-mini-pc-local-llm-2026)和[Beelink SER8评测](/zh/smart-home/beelink-ser8-local-ai-review)。\n\n**1,000–1,800美元** — 性能更强的迷你主机。参见[最佳迷你主机指南](/zh/local-llms/best-mini-pcs-local-llm)，入门GPU背景参见[500美元以下最佳GPU指南](/zh/local-llms/best-gpu-for-llm-inference-under-500-2026)。\n\n**1,800–2,500美元** — 二手RTX 3090整机（预算区间示例：单卡在[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)上标价1,500–1,725美元，为已售出挂牌价，数据日期2026-11-23）。这样该预算区间内留给其余部件的只有约75–1,000美元，区间下限可能不够组装一台完整的新机。参见[本地LLM工作站搭建指南](/zh/local-llms/local-llm-workstation-build)。\n\n**3,000–4,500美元** — RTX 4090工作站（预算区间示例：单卡在[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)上新品标价2,000–3,000美元、二手已售出挂牌价2,575–3,010美元，来源更新于2026-10-15；其余系统部件费用另计），或大容量统一内存的Mac。参见[工作站搭建指南](/zh/local-llms/local-llm-workstation-build)和[Apple Silicon本地LLM指南](/zh/local-llms/apple-silicon-local-llm-guide-2026)。\n\n**5,000美元以上** — 48GB以上显存、多GPU或工作站级配置（仅两张二手RTX 3090，按InsiderLLM已售出挂牌价范围约3,000–3,450美元；据[TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html)报道，一张RTX PRO 6000 Blackwell 96GB于2026-08-13标价约16,000美元）。请先计算利用率：这一档只有在持续高负载使用时才能回本。参见[PromptQuorum的GPU工作站搭建指南](/zh/power-local-llm/best-workstation-build-local-ai-2026)。\n\n如果暂时不打算购买，也可以选择租用：可以[对比云GPU提供商](/zh/power-local-llm/best-cloud-gpu-providers)，阅读[RunPod评测](/zh/power-local-llm/runpod-review)、[Vast.ai评测](/zh/power-local-llm/vast-ai-review)或[Clore.ai评测](/zh/power-local-llm/clore-ai-review)，也可以查看[GPU服务器托管提供商](/zh/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)。',
       },
       hardwarePicks: {
         title: '按类别的硬件推荐',
-        content: '- **预算型：** [GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review) — 面向7B级模型的入门迷你主机\n- **中端：** [Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) — 7B–14B、Home Assistant、24/7 Ollama服务器；Ryzen备选为[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPU性价比：** RTX 3090（二手单卡在[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)上标价1,400–1,550美元，更新于2026-10-15）— 24GB显存，单卡价格低于RTX 4090\n- **GPU性能：** RTX 4090（新品2,000–3,000美元，二手成交2,575–3,010美元，来自InsiderLLM）— 比RTX 3090更快但更贵，参见[工作站搭建指南](/zh/local-llms/local-llm-workstation-build)\n- **Apple方案：** 大容量统一内存的Mac，低功耗运行70B以上模型 — 参见[Apple Silicon本地LLM指南](/zh/local-llms/apple-silicon-local-llm-guide-2026)\n\n以上RTX 3090/4090和Apple链接均为普通的产品或编辑性参考——PromptQuorum没有联盟计划，也不会从任何硬件购买中获得佣金。',
+        content: '- **预算型：** [GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review) — 面向7B级模型的入门迷你主机\n- **中端：** [Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) — 7B–14B、Home Assistant、24/7 Ollama服务器；Ryzen备选为[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPU性价比：** RTX 3090（二手单卡在[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)上标价1,500–1,725美元，数据日期2026-11-23）— 24GB显存，单卡价格低于RTX 4090\n- **GPU性能：** RTX 4090（新品2,000–3,000美元，二手成交2,575–3,010美元，来自InsiderLLM）— 比RTX 3090更快但更贵，参见[工作站搭建指南](/zh/local-llms/local-llm-workstation-build)\n- **Apple方案：** 大容量统一内存的Mac，低功耗运行70B以上模型 — 参见[Apple Silicon本地LLM指南](/zh/local-llms/apple-silicon-local-llm-guide-2026)\n\n以上RTX 3090/4090和Apple链接均为普通的产品或编辑性参考——PromptQuorum没有联盟计划，也不会从任何硬件购买中获得佣金。',
       },
       dontBuy: {
         title: '何时不应购买本地AI硬件',
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RunPod价格](https://www.runpod.io/pricing)，读取于2026年11月22日',
           '[Vast.ai价格](https://vast.ai/pricing)及其公开报价API（RTX 4090单GPU报价），读取于2026年11月22日',
           '[Lambda价格](https://lambda.com/pricing)，读取于2026年11月22日',
-          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，RTX 4090和RTX 3090的价格区间（更新于2026-10-15）',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，RTX 4090的价格区间（更新于2026-10-15）和RTX 3090二手已售出挂牌价区间（数据日期2026-11-23）',
           '[Ollama价格](https://ollama.com/pricing)和[Ollama云文档](https://docs.ollama.com/cloud)，读取于2026年11月22日',
         ],
       },
@@ -1738,7 +1738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**Hardware local ou GPU na nuvem alugada: o mais barato depende sobretudo das suas horas por mês. Informe os seus próprios números na calculadora abaixo.**',
     quickAnswerTop: {
       question: 'É mais barato montar um servidor de LLM local ou alugar GPU na nuvem?',
@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mês ou contínuo: o local costuma vencer no custo total',
         'TCO completo = preço do hardware + eletricidade − revenda, não apenas preço ÷ tarifa da nuvem',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -1811,14 +1811,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: 'Tabela de decisão de hardware',
-        content: 'Relacione o tamanho de modelo desejado e seu padrão de uso a um nível de hardware antes de precificar uma configuração específica. As faixas de preço de mini PCs e Macs são preços de sistema de exemplo em dólares americanos, não cotações. As linhas de GPU mostram só a placa, segundo os dados de anúncios da [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15), não um sistema completo; a linha de 48 GB são duas RTX 3090 usadas (2 × US$ 1.400–1.550 = US$ 2.800–3.100). O restante do sistema vem à parte. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+        content: 'Relacione o tamanho de modelo desejado e seu padrão de uso a um nível de hardware antes de precificar uma configuração específica. As faixas de preço de mini PCs e Macs são preços de sistema de exemplo em dólares americanos, não cotações. As linhas de GPU mostram só a placa, segundo os dados de anúncios da [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (RTX 4090: fonte atualizada em 2026-10-15; RTX 3090: dados de 2026-11-23), não um sistema completo; a linha de 48 GB são duas RTX 3090 usadas (2 × US$ 1.500–1.725 = US$ 3.000–3.450). O restante do sistema vem à parte. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         columns: ['Nível', 'VRAM / RAM', 'Melhor para', 'Faixa de preço'],
         rows: [
           { Nível: 'Mini PC N150', 'VRAM / RAM': '16GB RAM', 'Melhor para': 'Chat leve, até 7B', 'Faixa de preço': 'Menos de US$ 500' },
           { Nível: 'Mini PC Ryzen', 'VRAM / RAM': '32–64GB RAM', 'Melhor para': '7B–14B diário, servidor 24/7', 'Faixa de preço': 'US$ 500–1.000' },
-          { Nível: 'RTX 3090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Melhor para': 'Até 30B Q4, a placa de 24 GB mais barata aqui', 'Faixa de preço': 'US$ 1.400–1.550 (só a placa, anúncios usados vendidos)' },
+          { Nível: 'RTX 3090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Melhor para': 'Até 30B Q4, a placa de 24 GB mais barata aqui', 'Faixa de preço': 'US$ 1.500–1.725 (só a placa, anúncios usados vendidos)' },
           { Nível: 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'Melhor para': 'Até 34B Q4, mais rápida que a RTX 3090', 'Faixa de preço': 'US$ 2.575–3.010 usada, US$ 2.000–3.000 nova (só a placa)' },
-          { Nível: 'Setup GPU 48GB (2× RTX 3090 usadas)', 'VRAM / RAM': '48GB VRAM', 'Melhor para': 'Até 70B Q4, desenvolvimento', 'Faixa de preço': 'cerca de US$ 2.800–3.100 (só 2 placas)' },
+          { Nível: 'Setup GPU 48GB (2× RTX 3090 usadas)', 'VRAM / RAM': '48GB VRAM', 'Melhor para': 'Até 70B Q4, desenvolvimento', 'Faixa de preço': 'cerca de US$ 3.000–3.450 (só 2 placas)' },
           { Nível: 'Mac (memória unificada)', 'VRAM / RAM': '48–128GB unificada', 'Melhor para': '70B+ via MLX, baixo consumo', 'Faixa de preço': 'US$ 2.000–4.000+' },
         ],
       },
@@ -1836,11 +1836,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '"O que devo comprar?" por faixa de preço',
-        content: '**Menos de US$ 500** — Não compre hardware de IA dedicado. Use o que você já tem ou alugue uma GPU na nuvem para necessidades ocasionais.\n\n**US$ 500–1.000** — Um mini PC Ryzen com 32 GB+ de RAM. Veja o [melhor mini PC AMD para LLM local](/pt/local-llms/best-amd-mini-pc-local-llm-2026) e a [análise do Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review).\n\n**US$ 1.000–1.800** — Um mini PC mais potente. Veja o [guia dos melhores mini PCs](/pt/local-llms/best-mini-pcs-local-llm) e o [guia da melhor GPU abaixo de US$ 500](/pt/local-llms/best-gpu-for-llm-inference-under-500-2026) para o contexto das GPUs de entrada.\n\n**US$ 1.800–2.500** — Uma montagem com RTX 3090 usada como faixa de orçamento de exemplo: a placa sozinha constava a US$ 1.400–1.550 segundo a [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (anúncios vendidos, fonte atualizada em 2026-10-15), e o restante do sistema vem à parte. Veja o [guia de montagem de workstation](/pt/local-llms/local-llm-workstation-build).\n\n**US$ 3.000–4.500** — Uma workstation com RTX 4090 como faixa de orçamento de exemplo (a placa sozinha constava nova a US$ 2.000–3.000 e em anúncios usados vendidos a US$ 2.575–3.010 segundo a [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15, mais o restante do sistema) ou um Mac com memória unificada grande. Veja o [guia de montagem de workstation](/pt/local-llms/local-llm-workstation-build) e o [guia de Apple Silicon](/pt/local-llms/apple-silicon-local-llm-guide-2026).\n\n**US$ 5.000+** — 48 GB+ de VRAM, multi-GPU ou classe workstation (duas RTX 3090 usadas sozinhas somam cerca de US$ 2.800–3.100 na faixa de anúncios vendidos da InsiderLLM; uma RTX PRO 6000 Blackwell de 96 GB constava a cerca de US$ 16.000 segundo a [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) em 2026-08-13). Calcule antes a sua utilização: essa faixa só se paga com uso intenso e contínuo. Veja o [guia de montagem de workstation GPU da PromptQuorum](/pt/power-local-llm/best-workstation-build-local-ai-2026).\n\nAinda não está pronto para comprar? Você pode alugar em vez disso: pode [comparar provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers), ler a [análise do RunPod](/pt/power-local-llm/runpod-review), a [análise do Vast.ai](/pt/power-local-llm/vast-ai-review) ou a [análise do Clore.ai](/pt/power-local-llm/clore-ai-review), ou ver os [provedores de hospedagem de servidores GPU](/pt/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
+        content: '**Menos de US$ 500** — Não compre hardware de IA dedicado. Use o que você já tem ou alugue uma GPU na nuvem para necessidades ocasionais.\n\n**US$ 500–1.000** — Um mini PC Ryzen com 32 GB+ de RAM. Veja o [melhor mini PC AMD para LLM local](/pt/local-llms/best-amd-mini-pc-local-llm-2026) e a [análise do Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review).\n\n**US$ 1.000–1.800** — Um mini PC mais potente. Veja o [guia dos melhores mini PCs](/pt/local-llms/best-mini-pcs-local-llm) e o [guia da melhor GPU abaixo de US$ 500](/pt/local-llms/best-gpu-for-llm-inference-under-500-2026) para o contexto das GPUs de entrada.\n\n**US$ 1.800–2.500** — Uma montagem com RTX 3090 usada como faixa de orçamento de exemplo: a placa sozinha constava a US$ 1.500–1.725 segundo a [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (anúncios vendidos, dados de 2026-11-23). Sobram assim cerca de US$ 75–1.000 desta faixa para o restante do sistema, então o limite inferior pode não bastar para uma montagem nova completa. Veja o [guia de montagem de workstation](/pt/local-llms/local-llm-workstation-build).\n\n**US$ 3.000–4.500** — Uma workstation com RTX 4090 como faixa de orçamento de exemplo (a placa sozinha constava nova a US$ 2.000–3.000 e em anúncios usados vendidos a US$ 2.575–3.010 segundo a [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15, mais o restante do sistema) ou um Mac com memória unificada grande. Veja o [guia de montagem de workstation](/pt/local-llms/local-llm-workstation-build) e o [guia de Apple Silicon](/pt/local-llms/apple-silicon-local-llm-guide-2026).\n\n**US$ 5.000+** — 48 GB+ de VRAM, multi-GPU ou classe workstation (duas RTX 3090 usadas sozinhas somam cerca de US$ 3.000–3.450 na faixa de anúncios vendidos da InsiderLLM; uma RTX PRO 6000 Blackwell de 96 GB constava a cerca de US$ 16.000 segundo a [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html) em 2026-08-13). Calcule antes a sua utilização: essa faixa só se paga com uso intenso e contínuo. Veja o [guia de montagem de workstation GPU da PromptQuorum](/pt/power-local-llm/best-workstation-build-local-ai-2026).\n\nAinda não está pronto para comprar? Você pode alugar em vez disso: pode [comparar provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers), ler a [análise do RunPod](/pt/power-local-llm/runpod-review), a [análise do Vast.ai](/pt/power-local-llm/vast-ai-review) ou a [análise do Clore.ai](/pt/power-local-llm/clore-ai-review), ou ver os [provedores de hospedagem de servidores GPU](/pt/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       hardwarePicks: {
         title: 'Seleções de hardware por categoria',
-        content: '- **Econômico:** [GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — mini PC de entrada para modelos 7B\n- **Faixa intermediária:** [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, servidor Ollama 24/7; [Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) como alternativa Ryzen\n- **GPU custo-benefício:** RTX 3090 (placa usada a US$ 1.400–1.550 segundo a [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), atualizado em 2026-10-15) — 24 GB de VRAM por um preço de placa menor que o da RTX 4090\n- **GPU desempenho:** RTX 4090 (nova US$ 2.000–3.000, anúncios usados vendidos US$ 2.575–3.010 segundo a InsiderLLM) — mais rápida que a RTX 3090, porém mais cara, veja o [guia de montagem de workstation](/pt/local-llms/local-llm-workstation-build)\n- **Opção Apple:** Mac com muita memória unificada para modelos 70B+ com baixo consumo — veja o [guia de Apple Silicon](/pt/local-llms/apple-silicon-local-llm-guide-2026)\n\nOs links de RTX 3090/4090 e Apple acima são links de produto/editoriais — a PromptQuorum não tem programa de afiliados e não ganha comissão em nenhuma compra de hardware.',
+        content: '- **Econômico:** [GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — mini PC de entrada para modelos 7B\n- **Faixa intermediária:** [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, servidor Ollama 24/7; [Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) como alternativa Ryzen\n- **GPU custo-benefício:** RTX 3090 (placa usada a US$ 1.500–1.725 segundo a [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), dados de 2026-11-23) — 24 GB de VRAM por um preço de placa menor que o da RTX 4090\n- **GPU desempenho:** RTX 4090 (nova US$ 2.000–3.000, anúncios usados vendidos US$ 2.575–3.010 segundo a InsiderLLM) — mais rápida que a RTX 3090, porém mais cara, veja o [guia de montagem de workstation](/pt/local-llms/local-llm-workstation-build)\n- **Opção Apple:** Mac com muita memória unificada para modelos 70B+ com baixo consumo — veja o [guia de Apple Silicon](/pt/local-llms/apple-silicon-local-llm-guide-2026)\n\nOs links de RTX 3090/4090 e Apple acima são links de produto/editoriais — a PromptQuorum não tem programa de afiliados e não ganha comissão em nenhuma compra de hardware.',
       },
       dontBuy: {
         title: 'Quando você NÃO deve comprar hardware de IA local',
@@ -1966,7 +1966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Preços da RunPod](https://www.runpod.io/pricing), lidos em 22 de novembro de 2026',
           '[Preços da Vast.ai](https://vast.ai/pricing) e a sua API pública de ofertas (ofertas de RTX 4090 de uma única GPU), lidos em 22 de novembro de 2026',
           '[Preços da Lambda](https://lambda.com/pricing), lidos em 22 de novembro de 2026',
-          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), faixas de preço da RTX 4090 e da RTX 3090 (atualizado em 2026-10-15)',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), faixas de preço da RTX 4090 (atualizado em 2026-10-15) e faixa de anúncios usados vendidos da RTX 3090 (dados de 2026-11-23)',
           '[Preços do Ollama](https://ollama.com/pricing) e [documentação de nuvem do Ollama](https://docs.ollama.com/cloud), lidos em 22 de novembro de 2026',
         ],
       },
@@ -1982,7 +1982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     leadAnswerBlock: '**로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지는 월 사용 시간이 좌우합니다. 아래 계산기에 직접 숫자를 넣어 손익분기를 확인하십시오.**',
     quickAnswerTop: {
       question: '로컬 LLM 서버를 직접 구축하는 것과 클라우드 GPU를 렌탈하는 것 중 어느 쪽이 더 저렴합니까?',
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '월 500시간 이상 또는 상시 가동: 총비용 기준으로 로컬이 보통 유리',
         '완전한 TCO = 하드웨어 가격 + 전기 요금 − 재판매 가치, 단순히 가격 ÷ 클라우드 요금이 아님',
       ],
-      updatedDate: '2026-11-22',
+      updatedDate: '2026-11-27',
     },
     snippetBlocks: [
       {
@@ -2055,14 +2055,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareDecision: {
         title: '하드웨어 결정 표',
-        content: '구체적인 구성 가격을 산출하기 전에 목표 모델 크기와 사용 패턴을 하드웨어 등급에 맞춰보세요. 미니 PC와 Mac의 가격대는 시스템 가격의 예시(미국 달러)이며 견적이 아닙니다. GPU 행은 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)의 매물 데이터(출처 갱신일 2026-10-15)에 따른 카드 단품 가격이며 시스템 전체가 아닙니다. 48GB 행은 중고 RTX 3090 2장(2 × 1,400~1,550달러 = 2,800~3,100달러)입니다. 나머지 시스템 비용은 별도입니다. 국내 가격은 세금과 수입 비용에 따라 다릅니다.',
+        content: '구체적인 구성 가격을 산출하기 전에 목표 모델 크기와 사용 패턴을 하드웨어 등급에 맞춰보세요. 미니 PC와 Mac의 가격대는 시스템 가격의 예시(미국 달러)이며 견적이 아닙니다. GPU 행은 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)의 매물 데이터(RTX 4090은 출처 갱신일 2026-10-15, RTX 3090은 2026-11-23 기준 데이터)에 따른 카드 단품 가격이며 시스템 전체가 아닙니다. 48GB 행은 중고 RTX 3090 2장(2 × 1,500~1,725달러 = 3,000~3,450달러)입니다. 나머지 시스템 비용은 별도입니다. 국내 가격은 세금과 수입 비용에 따라 다릅니다.',
         columns: ['등급', 'VRAM / RAM', '최적 용도', '가격대'],
         rows: [
           { '등급': 'N150 미니 PC', 'VRAM / RAM': '16GB RAM', '최적 용도': '가벼운 채팅, 7B 이하', '가격대': '500달러 미만' },
           { '등급': 'Ryzen 미니 PC', 'VRAM / RAM': '32~64GB RAM', '최적 용도': '7B~14B 일상 사용, 24/7 서버', '가격대': '500~1,000달러' },
-          { '등급': 'RTX 3090(중고)', 'VRAM / RAM': '24GB VRAM', '최적 용도': '30B Q4까지, 여기서 가장 저렴한 24GB 카드', '가격대': '1,400~1,550달러(카드 단품, 중고 판매 완료 매물)' },
+          { '등급': 'RTX 3090(중고)', 'VRAM / RAM': '24GB VRAM', '최적 용도': '30B Q4까지, 여기서 가장 저렴한 24GB 카드', '가격대': '1,500~1,725달러(카드 단품, 중고 판매 완료 매물)' },
           { '등급': 'RTX 4090', 'VRAM / RAM': '24GB VRAM', '최적 용도': '34B Q4까지, RTX 3090보다 빠름', '가격대': '중고 2,575~3,010달러, 신품 2,000~3,000달러(카드 단품)' },
-          { '등급': '48GB GPU 구성(중고 RTX 3090 2장)', 'VRAM / RAM': '48GB VRAM', '최적 용도': '70B Q4까지, 개발·연구', '가격대': '약 2,800~3,100달러(카드 2장만)' },
+          { '등급': '48GB GPU 구성(중고 RTX 3090 2장)', 'VRAM / RAM': '48GB VRAM', '최적 용도': '70B Q4까지, 개발·연구', '가격대': '약 3,000~3,450달러(카드 2장만)' },
           { '등급': 'Mac(통합 메모리)', 'VRAM / RAM': '48~128GB 통합', '최적 용도': 'MLX로 70B 이상, 저전력', '가격대': '2,000~4,000달러 이상' },
         ],
       },
@@ -2080,11 +2080,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '"무엇을 사야 할까?" 가격대별',
-        content: '**500달러 미만** — 전용 AI 하드웨어는 사지 마십시오. 이미 가진 장비를 쓰거나, 가끔 필요할 때 클라우드 GPU를 임대하십시오.\n\n**500~1,000달러** — RAM 32GB 이상의 Ryzen 미니 PC. [로컬 LLM용 최고의 AMD 미니 PC](/ko/local-llms/best-amd-mini-pc-local-llm-2026)와 [Beelink SER8 리뷰](/ko/smart-home/beelink-ser8-local-ai-review)를 참고하십시오.\n\n**1,000~1,800달러** — 더 강력한 미니 PC. [최고의 미니 PC 가이드](/ko/local-llms/best-mini-pcs-local-llm)와 입문용 GPU 배경으로 [500달러 미만 최고의 GPU 가이드](/ko/local-llms/best-gpu-for-llm-inference-under-500-2026)를 참고하십시오.\n\n**1,800~2,500달러** — 중고 RTX 3090 구성(예산대 예시. 카드 단품은 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에서 1,400~1,550달러로 게재, 판매 완료 매물, 출처 갱신일 2026-10-15이며 나머지 시스템 비용은 별도). [로컬 LLM 워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build)를 참고하십시오.\n\n**3,000~4,500달러** — RTX 4090 워크스테이션(예산대 예시. 카드 단품은 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에서 신품 2,000~3,000달러, 중고 판매 완료 2,575~3,010달러로 게재, 출처 갱신일 2026-10-15이며 나머지 시스템 비용은 별도) 또는 대용량 통합 메모리 Mac. [워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build)와 [Apple Silicon 로컬 LLM 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026)를 참고하십시오.\n\n**5,000달러 이상** — VRAM 48GB 이상, 멀티 GPU 또는 워크스테이션급 구성(중고 RTX 3090 2장만으로도 InsiderLLM 판매 완료 매물 범위에서 약 2,800~3,100달러이며, RTX PRO 6000 Blackwell 96GB는 [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html)에 따르면 2026-08-13 기준 약 16,000달러로 게재). 먼저 가동률을 계산하십시오. 이 구간은 꾸준하고 높은 사용에서만 본전을 뽑습니다. [PromptQuorum의 GPU 워크스테이션 구축 가이드](/ko/power-local-llm/best-workstation-build-local-ai-2026)를 참고하십시오.\n\n아직 구매할 준비가 되지 않았다면 대신 대여할 수 있습니다. [클라우드 GPU 제공업체 비교](/ko/power-local-llm/best-cloud-gpu-providers)를 보시거나 [RunPod 리뷰](/ko/power-local-llm/runpod-review), [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review), [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)를 읽어 보시고, [GPU 서버 호스팅 제공업체](/ko/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)도 확인해 보십시오.',
+        content: '**500달러 미만** — 전용 AI 하드웨어는 사지 마십시오. 이미 가진 장비를 쓰거나, 가끔 필요할 때 클라우드 GPU를 임대하십시오.\n\n**500~1,000달러** — RAM 32GB 이상의 Ryzen 미니 PC. [로컬 LLM용 최고의 AMD 미니 PC](/ko/local-llms/best-amd-mini-pc-local-llm-2026)와 [Beelink SER8 리뷰](/ko/smart-home/beelink-ser8-local-ai-review)를 참고하십시오.\n\n**1,000~1,800달러** — 더 강력한 미니 PC. [최고의 미니 PC 가이드](/ko/local-llms/best-mini-pcs-local-llm)와 입문용 GPU 배경으로 [500달러 미만 최고의 GPU 가이드](/ko/local-llms/best-gpu-for-llm-inference-under-500-2026)를 참고하십시오.\n\n**1,800~2,500달러** — 중고 RTX 3090 구성(예산대 예시. 카드 단품은 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에서 1,500~1,725달러로 게재, 판매 완료 매물, 2026-11-23 기준 데이터). 따라서 이 예산대에서 나머지 시스템에 남는 금액은 약 75~1,000달러이므로, 하한선으로는 완전한 새 구성을 마련하지 못할 수 있습니다. [로컬 LLM 워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build)를 참고하십시오.\n\n**3,000~4,500달러** — RTX 4090 워크스테이션(예산대 예시. 카드 단품은 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에서 신품 2,000~3,000달러, 중고 판매 완료 2,575~3,010달러로 게재, 출처 갱신일 2026-10-15이며 나머지 시스템 비용은 별도) 또는 대용량 통합 메모리 Mac. [워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build)와 [Apple Silicon 로컬 LLM 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026)를 참고하십시오.\n\n**5,000달러 이상** — VRAM 48GB 이상, 멀티 GPU 또는 워크스테이션급 구성(중고 RTX 3090 2장만으로도 InsiderLLM 판매 완료 매물 범위에서 약 3,000~3,450달러이며, RTX PRO 6000 Blackwell 96GB는 [TweakTown](https://www.tweaktown.com/news/113098/nvidias-rtx-pro-6000-blackwell-gpu-price-almost-doubles-reaching-16-000/index.html)에 따르면 2026-08-13 기준 약 16,000달러로 게재). 먼저 가동률을 계산하십시오. 이 구간은 꾸준하고 높은 사용에서만 본전을 뽑습니다. [PromptQuorum의 GPU 워크스테이션 구축 가이드](/ko/power-local-llm/best-workstation-build-local-ai-2026)를 참고하십시오.\n\n아직 구매할 준비가 되지 않았다면 대신 대여할 수 있습니다. [클라우드 GPU 제공업체 비교](/ko/power-local-llm/best-cloud-gpu-providers)를 보시거나 [RunPod 리뷰](/ko/power-local-llm/runpod-review), [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review), [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)를 읽어 보시고, [GPU 서버 호스팅 제공업체](/ko/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)도 확인해 보십시오.',
       },
       hardwarePicks: {
         title: '카테고리별 하드웨어 추천',
-        content: '- **예산형:** [GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — 7B급 모델용 입문 미니 PC\n- **중급:** [Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 7B~14B, Home Assistant, 24/7 Ollama 서버. Ryzen 대안으로 [Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPU 가성비:** RTX 3090(중고 카드는 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에서 1,400~1,550달러로 게재, 2026-10-15 갱신) — RTX 4090보다 카드 가격이 낮은 24GB VRAM\n- **GPU 성능:** RTX 4090(신품 2,000~3,000달러, 중고 거래 2,575~3,010달러, InsiderLLM 기준) — RTX 3090보다 빠르지만 더 비쌉니다. [워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build)를 참고하십시오\n- **Apple 옵션:** 대용량 통합 메모리 Mac으로 70B 이상 모델을 낮은 전력으로 — [Apple Silicon 로컬 LLM 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026)를 참고하십시오\n\n위 RTX 3090/4090 및 Apple 링크는 제품·편집상의 참고 링크이며, PromptQuorum에는 제휴 프로그램이 없고 하드웨어 구매에 대한 수수료도 받지 않습니다.',
+        content: '- **예산형:** [GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — 7B급 모델용 입문 미니 PC\n- **중급:** [Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 7B~14B, Home Assistant, 24/7 Ollama 서버. Ryzen 대안으로 [Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPU 가성비:** RTX 3090(중고 카드는 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에서 1,500~1,725달러로 게재, 2026-11-23 기준 데이터) — RTX 4090보다 카드 가격이 낮은 24GB VRAM\n- **GPU 성능:** RTX 4090(신품 2,000~3,000달러, 중고 거래 2,575~3,010달러, InsiderLLM 기준) — RTX 3090보다 빠르지만 더 비쌉니다. [워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build)를 참고하십시오\n- **Apple 옵션:** 대용량 통합 메모리 Mac으로 70B 이상 모델을 낮은 전력으로 — [Apple Silicon 로컬 LLM 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026)를 참고하십시오\n\n위 RTX 3090/4090 및 Apple 링크는 제품·편집상의 참고 링크이며, PromptQuorum에는 제휴 프로그램이 없고 하드웨어 구매에 대한 수수료도 받지 않습니다.',
       },
       dontBuy: {
         title: '로컬 AI 하드웨어를 구매하지 말아야 할 때',
@@ -2210,7 +2210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RunPod 가격](https://www.runpod.io/pricing), 2026년 11월 22일 확인',
           '[Vast.ai 가격](https://vast.ai/pricing) 및 공개 오퍼 API(RTX 4090 단일 GPU 오퍼), 2026년 11월 22일 확인',
           '[Lambda 가격](https://lambda.com/pricing), 2026년 11월 22일 확인',
-          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), RTX 4090 및 RTX 3090 가격대(2026-10-15 갱신)',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), RTX 4090 가격대(2026-10-15 갱신)와 RTX 3090 중고 판매 완료 매물 가격대(2026-11-23 기준 데이터)',
           '[Ollama 가격](https://ollama.com/pricing) 및 [Ollama 클라우드 문서](https://docs.ollama.com/cloud), 2026년 11월 22일 확인',
         ],
       },

@@ -7,16 +7,17 @@
 // EN block first; other locales render "Coming Soon" until per-market prices
 // are sourced — used-GPU pricing must not be USD-converted across markets.
 //
-// Prices: used RTX 3090 figure reconciled 2026-11-18 to the site-wide house
-// figure (InsiderLLM tracker, updated 2026-10-15); cloud rates re-checked
-// 2026-11-18 against the primary pages (see below) — this
-// figure is now the canonical current-price reference used across every
-// article on the site that prices a used RTX 3090; if you touch this
-// number here, check for drift in the other ~12 files (search '3090' +
-// '$') rather than letting one page diverge again.
-//   Used RTX 3090 $1,400–$1,550 (InsiderLLM tracker, 2026-10-15) — up from
+// Prices: used RTX 3090 figure updated 2026-11-27 from the InsiderLLM tracker
+// (page updated 2026-11-26; sold data note dated 2026-11-23); cloud rates
+// re-checked 2026-11-18 against the primary pages (see below). Other pages on
+// the site price a used RTX 3090 too; if you change this number, check them
+// for drift (search '3090' + '$'). Break-even uses the LOW end of the range
+// ($1,500): hours = price / (rental rate - $0.08 electricity).
+//   Used RTX 3090 $1,500–$1,725, median $1,650, 225 sold listings 13–23
+//     November 2026 (InsiderLLM tracker, 2026-11-23) — up from
 //     roughly $600–$800 in March (XDA Developers, published 2026-03-15; InsiderLLM
 //     itself says $700–850 in spring) during the memory shortage.
+//   RTX 4090 figure ($2,575–$3,010) is still from the 2026-10-15 update.
 //   Cloud RTX 3090 — getdeploying.com provider table (10 providers listed with
 //     prices; the page states a median of $0.25/GPU/hr across on-demand configs,
 //     so no provider count is quoted in the text; lowest in-stock on-demand $0.16;
@@ -46,9 +47,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'RTX 3090 for Local LLMs in 2026: Buy Used or Rent?',
 
     intro: 'The RTX 3090 is one of the lowest-priced ways to get 24 GB of VRAM on a CUDA-capable NVIDIA card under your own desk, and renting the same card in the cloud costs cents per hour. This guide works out where the line between those two options actually falls.',
-    metaDescription: 'A used RTX 3090 costs $1,400–$1,550 in 2026; renting one runs from about $0.16/hour. Here is the buy-vs-rent break-even math on 24 GB of VRAM for local LLMs.',
+    metaDescription: 'A used RTX 3090 costs $1,500–$1,725 in 2026; renting one runs from about $0.16/hour. Here is the buy-vs-rent break-even math on 24 GB of VRAM for local LLMs.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '13 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers and small teams deciding between buying a used 24 GB GPU and renting cloud GPU time for local LLM inference',
@@ -65,20 +66,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Buy a used RTX 3090 if you will run it more than about eight hours a day, every day, or if your data cannot leave your building. Rent one otherwise.** At $1,400–$1,550 used (InsiderLLM tracker, 2026-10-15) against rentals from $0.16 per hour in the cloud, the card only pays for itself under sustained load — and in 2026 it costs more than it did in March, which pushes the break-even further out.',
+    leadAnswerBlock: '**Buy a used RTX 3090 if you will run it more than about eight hours a day, every day, or if your data cannot leave your building. Rent one otherwise.** At $1,500–$1,725 used (InsiderLLM tracker, 2026-11-23) against rentals from $0.16 per hour in the cloud, the card only pays for itself under sustained load — and in 2026 it costs more than it did in March, which pushes the break-even further out.',
 
     quickAnswerTop: {
       en: {
         question: 'Is an RTX 3090 still worth buying for local LLMs?',
-        answer: 'Yes, but only for sustained use or privacy-bound work. A used RTX 3090 gives you 24 GB of VRAM for $1,400–$1,550, which is still one of the lowest-priced routes to running 27B-class models entirely on your own hardware. Renting the same GPU costs from $0.16 per hour, so at light use the cloud is cheaper for years.',
+        answer: 'Yes, but only for sustained use or privacy-bound work. A used RTX 3090 gives you 24 GB of VRAM for $1,500–$1,725, which is still one of the lowest-priced routes to running 27B-class models entirely on your own hardware. Renting the same GPU costs from $0.16 per hour, so at light use the cloud is cheaper for years.',
         bullets: [
           '24 GB VRAM, 936 GB/s bandwidth, 350 W — unchanged since 2020, still one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card',
-          'Used price $1,400–$1,550 (InsiderLLM tracker, 2026-10-15); up from roughly $600–$800 in March (XDA Developers, 2026-03-15) because of the memory shortage',
+          'Used price $1,500–$1,725 (InsiderLLM tracker, 2026-11-23); up from roughly $600–$800 in March (XDA Developers, 2026-03-15) because of the memory shortage',
           'Cloud rental $0.16/hr (lowest in-stock on-demand listing) to $0.50/hr (RunPod Secure); RunPod Community $0.22/hr; median $0.25/hr across on-demand configs of the providers listed on GetDeploying',
-          'Break-even against a $0.25/hr median rental at 2 hours a day is roughly 11 years — at 8 hours a day it is about 2.8',
+          'Break-even against a $0.25/hr median rental at 2 hours a day is roughly 12 years — at 8 hours a day it is about 3',
           'Buy for privacy, latency, always-on agents and constant fine-tuning; rent for bursts and experiments',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -88,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?',
       description: 'Break-even analysis between buying a used NVIDIA RTX 3090 and renting the same GPU from cloud providers for local LLM inference, with 2026 pricing.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -128,9 +129,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Key Takeaways',
         numberedItems: [
-          'A used RTX 3090 costs $1,400–$1,550 and gives you 24 GB of VRAM — still one of the lowest-priced ways to get that much video memory on a CUDA-capable NVIDIA card.',
+          'A used RTX 3090 costs $1,500–$1,725 (InsiderLLM tracker, 2026-11-23) and gives you 24 GB of VRAM — still one of the lowest-priced ways to get that much video memory on a CUDA-capable NVIDIA card.',
           'Renting the identical GPU costs from $0.16/hour at the lowest in-stock on-demand listing and $0.22/hour on RunPod Community, with a median of $0.25/GPU/hour across on-demand configs of the providers listed on GetDeploying; Vast.ai marketplace rates vary by host.',
-          'Once you subtract about $0.08/hour in electricity, buying only wins after roughly 8,300 GPU-hours against a median rental — about 2.8 years at eight hours a day.',
+          'Once you subtract about $0.08/hour in electricity, buying only wins after roughly 8,800 GPU-hours against a median rental — about 3 years at eight hours a day.',
           'The card got more expensive during 2026, not cheaper: it was roughly $600–$800 in March (XDA Developers, 2026-03-15). That moves the break-even further away.',
           'Buy for privacy, offline work, always-on agents and constant fine-tuning. Rent for bursts, experiments and anything you would otherwise leave idle.',
           'Resale can offset part of the purchase price, but it is not guaranteed: used prices rose in 2026 because of the memory shortage and could fall again, so treat any resale value as an upside, not a plan.',
@@ -159,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Under 2 hours a day → rent, and revisit in six months',
-            '8+ hours a day, every day → buy, the card pays back in roughly 3–6 years against a rental',
+            '8+ hours a day, every day → buy, the card pays back in roughly 3–6.4 years against rentals of $0.16–$0.25 per hour',
             'Any data you cannot upload → buy, cost is not the deciding factor',
           ],
         },
@@ -182,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM: 24 GB GDDR6X — enough for a 27B-class model at 4-bit quantization with room for context.',
           'Memory bandwidth: 936 GB/s, which is what actually sets token generation speed on a memory-bound workload.',
           'Power: 350 W card TDP; budget roughly 450 W at the wall for the whole system under inference load.',
-          'Used price: $1,400–$1,550 typical per the InsiderLLM tracker (2026-10-15) — up from roughly $600–$800 in March (XDA Developers, 2026-03-15).',
+          'Used price: $1,500–$1,725 typical per the InsiderLLM tracker (2026-11-23; median $1,650 across 225 sold listings, 2026-11-13 to 2026-11-23) — up from roughly $600–$800 in March (XDA Developers, 2026-03-15).',
           'Cloud rental: $0.16/hour (lowest in-stock on-demand listing) to $0.50/hour (RunPod Secure); median $0.25/GPU/hour across on-demand configs of the providers listed on GetDeploying.',
           'Electricity: at a recent US residential average of $0.18/kWh, running it costs about $0.08/hour.',
         ],
@@ -192,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'What the RTX 3090 Actually Buys You',
         content: [
-          '**The RTX 3090 matters for one reason: 24 GB of VRAM at one of the lowest prices for a CUDA-capable NVIDIA card.** Everything else about the card is unremarkable in 2026 — it is a 2020 design, it draws 350 W, and a current-generation card beats it on every efficiency metric. None of that changes the fact that model weights either fit in video memory or they do not.',
+          '**The RTX 3090 matters for one reason: 24 GB of VRAM at one of the lowest prices for a CUDA-capable NVIDIA card.** Everything else about the card is unremarkable in 2026 — it is a 2020 design, it draws 350 W, and current-generation cards are generally more power-efficient. None of that changes the fact that model weights either fit in video memory or they do not.',
           'VRAM is a cliff, not a slope. A model that fits runs at full speed; a model that overflows by even a gigabyte spills into system RAM and collapses to a fraction of the speed. That makes 24 GB a capability threshold rather than a performance number, and the 3090 is one of the lowest-priced cards that clears it.',
           'The second number that matters is memory bandwidth. Token generation on a quantized model is memory-bound, not compute-bound, so 936 GB/s is a better predictor of how fast it will feel than any CUDA-core count. This is also why the 3090 stays competitive with newer mid-range cards that have more compute but narrower memory buses.',
           'What you get in practice: comfortable headroom for a 27B-class model at 4-bit quantization, fast inference on 7B–14B models with long context, and — with a second card — the ability to hold a 70B-class model in VRAM without offloading.',
@@ -237,7 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Buying Used: What to Check Before You Pay',
         highlight: true,
         content: [
-          '**If you buy, buy used — new RTX 3090 stock can be hard to find and is often priced above used cards, so check current listings yourself; the used market is where the price advantage lives.** At $1,400–$1,550 it is still one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card, and resale can offset part of the cost, though that is not guaranteed.',
+          '**If you buy, buy used — new RTX 3090 stock can be hard to find and is often priced above used cards, so check current listings yourself; the used market is where the price advantage lives.** At $1,500–$1,725 it is still one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card, and resale can offset part of the cost, though that is not guaranteed.',
           'The honest caveat: these cards are about six years old, many of them ex-mining or ex-gaming, sold without warranty by strangers. The failure modes are known and checkable, so the risk is manageable — but it is real, and it is the reason to buy from a seller with returns rather than the cheapest listing you can find.',
         ],
         items: [
@@ -258,14 +259,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB (used)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Check used RTX 3090 prices on eBay',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB (used/refurbished)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Check RTX 3090 stock on Newegg',
           },
         ],
@@ -294,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Why Renting Is the Better Answer More Often Than People Expect',
         content: [
           '**The case for renting is not that it is always cheaper — it is that an idle GPU costs you the same as a busy one.** A card sitting in a desktop that gets used on weekends has already cost its full purchase price. A rented GPU costs nothing between sessions.',
-          'The reasons to rent are concrete rather than philosophical: no upfront outlay, no depreciation risk on a card about six years old, no PSU or case or cooling constraints, no dead weekend when a fan fails. You can also rent a card you would never buy — testing a 70B-class model on two rented GPUs for an afternoon costs a few dollars, against roughly $2,800–$3,100 for a second-hand pair.',
+          'The reasons to rent are concrete rather than philosophical: no upfront outlay, no depreciation risk on a card about six years old, no PSU or case or cooling constraints, no dead weekend when a fan fails. You can also rent a card you would never buy — testing a 70B-class model on two rented GPUs for an afternoon costs a few dollars, against roughly $3,000–$3,450 for a second-hand pair.',
           'The honest counter-argument is that renting has real friction. You upload data to somebody else\'s machine, you wait for an instance, and a host that goes offline mid-job can happen on marketplace listings. Those are not reasons to dismiss it — they are reasons the decision depends on your workload rather than on the hourly rate alone.',
         ],
       },
@@ -323,7 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'RunPod rates re-checked on its model page; the lowest in-stock listing and the multi-provider median come from the GetDeploying table (checked on the date shown as last updated) and may have moved. Vast.ai marketplace rates vary by host; see Vast.ai\'s own pricing page. Cloud GPU rates move weekly — check current pricing before committing.',
+            text: 'RunPod rates re-checked on its model page; the lowest in-stock listing and the multi-provider median come from the GetDeploying table (checked 2026-11-18) and may have moved. Vast.ai marketplace rates vary by host; see Vast.ai\'s own pricing page. Cloud GPU rates move weekly — check current pricing before committing.',
           },
         ],
         affiliateLinks: [
@@ -348,16 +349,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: 'The Break-Even Math',
         content: [
-          '**Against a median $0.25/hour rental, a $1,400 card takes roughly 8,300 GPU-hours to pay for itself — about 2.8 years at eight hours a day, or 11 years at two.** That is the number that should decide the purchase.',
-          'The calculation subtracts what the card costs you to run. At 450 W at the wall and a recent US residential average of $0.18/kWh, local inference costs about $0.08 per hour in electricity, so you are not comparing $1,400 against $0.25/hour — you are comparing it against the roughly $0.17/hour you save.',
-          'Assumptions: $1,400 card, 450 W system draw, $0.18/kWh. Substitute your own electricity rate — it moves the answer more than anything else in the table, and in markets above $0.30/kWh the buy case largely disappears.',
+          '**Against a median $0.25/hour rental, a $1,500 card takes roughly 8,800 GPU-hours to pay for itself — about 3 years at eight hours a day, or 12 years at two.** That is the number that should decide the purchase.',
+          'The calculation subtracts what the card costs you to run. At 450 W at the wall and a recent US residential average of $0.18/kWh, local inference costs about $0.08 per hour in electricity, so you are not comparing $1,500 against $0.25/hour — you are comparing it against the roughly $0.17/hour you save.',
+          'Assumptions: $1,500 card (the low end of the tracker\'s range; at the $1,650 median every period is about 10% longer), 450 W system draw, $0.18/kWh. Substitute your own electricity rate — it moves the answer more than anything else in the table, and in markets above $0.30/kWh the buy case largely disappears.',
         ],
         columns: ['Usage', 'vs $0.16/h', 'vs $0.25/h', 'vs $0.50/h'],
         rows: [
-          { Usage: '2 hours a day', 'vs $0.16/h': '~24 years', 'vs $0.25/h': '~11 years', 'vs $0.50/h': '~4.6 years' },
-          { Usage: '4 hours a day', 'vs $0.16/h': '~12 years', 'vs $0.25/h': '~5.7 years', 'vs $0.50/h': '~2.3 years' },
-          { Usage: '8 hours a day', 'vs $0.16/h': '~6.1 years', 'vs $0.25/h': '~2.8 years', 'vs $0.50/h': '~1.1 years' },
-          { Usage: 'Always on (24/7)', 'vs $0.16/h': '~24 months', 'vs $0.25/h': '~11 months', 'vs $0.50/h': '~4.6 months' },
+          { Usage: '2 hours a day', 'vs $0.16/h': '~26 years', 'vs $0.25/h': '~12 years', 'vs $0.50/h': '~4.9 years' },
+          { Usage: '4 hours a day', 'vs $0.16/h': '~13 years', 'vs $0.25/h': '~6 years', 'vs $0.50/h': '~2.4 years' },
+          { Usage: '8 hours a day', 'vs $0.16/h': '~6.4 years', 'vs $0.25/h': '~3 years', 'vs $0.50/h': '~1.2 years' },
+          { Usage: 'Always on (24/7)', 'vs $0.16/h': '~26 months', 'vs $0.25/h': '~12 months', 'vs $0.50/h': '~4.9 months' },
         ],
         callouts: [
           {
@@ -376,12 +377,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Reader: 'Weekend hobbyist',
             Verdict: 'Rent',
-            Why: 'A few hours a week against a $1,400 outlay is decades from break-even. Rent for a year, and if you find yourself renting daily, buy then — you will also know exactly which card you need.',
+            Why: 'A few hours a week against a $1,500 outlay is decades from break-even. Rent for a year, and if you find yourself renting daily, buy then — you will also know exactly which card you need.',
           },
           {
             Reader: 'Daily heavy user',
             Verdict: 'Buy',
-            Why: 'At eight or more hours a day the card pays back in roughly three to six years against a rental, and resale may offset part of the rest, though it is not guaranteed. The bigger win is behavioural: an owned GPU has no meter running, so you stop rationing experiments.',
+            Why: 'At eight or more hours a day the card pays back in roughly 3 to 6.4 years against rentals of $0.16–$0.25 per hour, and resale may offset part of the rest, though it is not guaranteed. The bigger win is behavioural: an owned GPU has no meter running, so you stop rationing experiments.',
           },
           {
             Reader: 'Small team or startup',
@@ -429,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is the RTX 3090 still worth buying in 2026?',
-            a: 'For sustained local inference, yes — it remains one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card at $1,400–$1,550 used. For light or occasional use, no: renting the same GPU from $0.16 per hour is cheaper for years. The deciding factor is hours of actual use per week, not the specification.',
+            a: 'For sustained local inference, yes — it remains one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card at $1,500–$1,725 used. For light or occasional use, no: renting the same GPU from $0.16 per hour is cheaper for years. The deciding factor is hours of actual use per week, not the specification.',
           },
           {
             q: 'Is the RTX 3090 good for Ollama?',
@@ -449,11 +450,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can two RTX 3090s run a 70B model?',
-            a: 'Yes. Two cards give you 48 GB of VRAM, which holds a 70B-class model at 4-bit quantization without offloading to system RAM. Budget for a power supply of 1,000 W or more (check the card manufacturer\'s documentation for the exact requirement) and a motherboard with two suitable slots — and rent a two-GPU cloud instance for an afternoon first, to confirm the setup does what you need before spending roughly $2,800–$3,100.',
+            a: 'Yes. Two cards give you 48 GB of VRAM, which holds a 70B-class model at 4-bit quantization without offloading to system RAM. Budget for a power supply of 1,000 W or more (check the card manufacturer\'s documentation for the exact requirement) and a motherboard with two suitable slots — and rent a two-GPU cloud instance for an afternoon first, to confirm the setup does what you need before spending roughly $3,000–$3,450.',
           },
           {
             q: 'Why did used RTX 3090 prices go up in 2026?',
-            a: 'A memory shortage pushed GPU prices broadly above their earlier levels during 2026, according to the tracker. The card sold for roughly $600–$800 in March (XDA Developers, 2026-03-15) and $1,400–$1,550 by mid-October (InsiderLLM tracker, 2026-10-15). It is one of the few products about six years old that got more expensive.',
+            a: 'A memory shortage pushed GPU prices broadly above their earlier levels during 2026, according to the tracker. The card sold for roughly $600–$800 in March (XDA Developers, 2026-03-15) and $1,500–$1,725 as of 2026-11-23 (InsiderLLM tracker). It is one of the few products about six years old that got more expensive.',
           },
           {
             q: 'Is it safe to buy a used mining GPU?',
@@ -475,11 +476,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         items: [
           '[RTX 3090 price tracker — new and used price history, Best Value GPU.](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[RTX 3090 cloud pricing across providers, GetDeploying (checked on the date shown as last updated).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[RTX 3090 cloud pricing across providers, GetDeploying (checked 2026-11-18).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[RTX 3090 GPU rental pricing, RunPod.](https://www.runpod.io/gpu-models/rtx-3090)',
           '[A used RTX 3090 is still the best GPU for local AI, XDA Developers.](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly — average residential electricity price, US Energy Information Administration.](https://www.eia.gov/electricity/monthly/)',
-          '[NVIDIA GPU prices rising — price tracker, InsiderLLM (updated 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[NVIDIA GPU prices rising — price tracker, InsiderLLM (RTX 3090 figure dated 2026-11-23; RTX 4090 figure from the 2026-10-15 update).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -490,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best GPUs for Local LLMs: Complete Buying Guide](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — compare the RTX 3090 against current-generation cards across every price tier.',
           '[Used GPUs for Local LLMs: Best Value Picks](/local-llms/used-gpus-for-local-llms) — the wider used-market guide covering the RTX 3060, 3080 and 4090 alongside this card.',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — how the two tools this GPU pairs with actually differ, beyond both sharing a llama.cpp backend.',
-          '[Cheapest Practical Way to Run a 70B Model Locally](/prompt-bites/cheapest-way-to-run-70b-model-locally) — where two RTX 3090s fit into the cheapest 70B setup.',
+          '[Cheapest Practical Way to Run a 70B Model Locally](/prompt-bites/cheapest-way-to-run-70b-model-locally) — how a two-card RTX 3090 build compares with other ways to run a 70B model.',
           '[How Much VRAM for a 70B Model?](/prompt-bites/vram-for-70b-model) — the VRAM arithmetic behind the two-card recommendation above.',
           '[Local LLM Cost Calculator: Build vs Rent](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — run the break-even calculation with your own numbers and hardware.',
           '[rent a cloud GPU instead](/power-local-llm/best-cloud-gpu-providers) — rent by the hour first; the two marketplace reviews are [Vast.ai review](/power-local-llm/vast-ai-review) and [Clore.ai review](/power-local-llm/clore-ai-review).',
@@ -513,9 +514,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'RTX 3090 für lokale LLMs 2026: Gebraucht kaufen oder mieten?',
 
     intro: 'Die RTX 3090 ist einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte unter dem eigenen Schreibtisch — dieselbe Karte in der Cloud zu mieten kostet nur Cent pro Stunde. Dieser Leitfaden zeigt, wo die Grenze zwischen beiden Optionen tatsächlich verläuft.',
-    metaDescription: 'Eine gebrauchte RTX 3090 kostet 2026 1.400–1.550 $, Mieten gibt es ab etwa 0,16 $/Stunde. Hier die Kauf-oder-Miete-Break-even-Rechnung für 24 GB VRAM bei lokalen LLMs.',
+    metaDescription: 'Eine gebrauchte RTX 3090 kostet 2026 1.500–1.725 $, Mieten gibt es ab etwa 0,16 $/Stunde. Hier die Kauf-oder-Miete-Break-even-Rechnung für 24 GB VRAM bei lokalen LLMs.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '13 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und kleine Teams, die zwischen dem Kauf einer gebrauchten 24-GB-GPU und dem Mieten von Cloud-GPU-Zeit für lokale LLM-Inferenz entscheiden müssen',
@@ -532,20 +533,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Kaufen Sie eine gebrauchte RTX 3090, wenn Sie sie mehr als etwa acht Stunden täglich, jeden Tag, nutzen — oder wenn Ihre Daten das Gebäude nicht verlassen dürfen. Andernfalls mieten Sie.** Bei 1.400–1.550 $ gebraucht (InsiderLLM-Tracker, 2026-10-15) gegen Miete ab 0,16 $ pro Stunde in der Cloud rechnet sich die Karte nur bei dauerhafter Auslastung — und 2026 kostet sie mehr als im März, was den Break-even weiter nach hinten verschiebt.',
+    leadAnswerBlock: '**Kaufen Sie eine gebrauchte RTX 3090, wenn Sie sie mehr als etwa acht Stunden täglich, jeden Tag, nutzen — oder wenn Ihre Daten das Gebäude nicht verlassen dürfen. Andernfalls mieten Sie.** Bei 1.500–1.725 $ gebraucht (InsiderLLM-Tracker, 2026-11-23) gegen Miete ab 0,16 $ pro Stunde in der Cloud rechnet sich die Karte nur bei dauerhafter Auslastung — und 2026 kostet sie mehr als im März, was den Break-even weiter nach hinten verschiebt.',
 
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich der Kauf einer RTX 3090 für lokale LLMs noch?',
-        answer: 'Ja, aber nur bei dauerhafter Nutzung oder datenschutzgebundener Arbeit. Eine gebrauchte RTX 3090 liefert 24 GB VRAM für 1.400–1.550 $ — immer noch einer der günstigsten Wege, Modelle der 27B-Klasse vollständig auf eigener Hardware zu betreiben. Dieselbe GPU zu mieten kostet ab 0,16 $ pro Stunde, sodass die Cloud bei geringer Nutzung über Jahre günstiger bleibt.',
+        answer: 'Ja, aber nur bei dauerhafter Nutzung oder datenschutzgebundener Arbeit. Eine gebrauchte RTX 3090 liefert 24 GB VRAM für 1.500–1.725 $ — immer noch einer der günstigsten Wege, Modelle der 27B-Klasse vollständig auf eigener Hardware zu betreiben. Dieselbe GPU zu mieten kostet ab 0,16 $ pro Stunde, sodass die Cloud bei geringer Nutzung über Jahre günstiger bleibt.',
         bullets: [
           '24 GB VRAM, 936 GB/s Bandbreite, 350 W — unverändert seit 2020, immer noch einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte',
-          'Gebrauchtpreis 1.400–1.550 $ (InsiderLLM-Tracker, 2026-10-15); gestiegen von etwa 600–800 $ im März (XDA Developers, 2026-03-15) wegen der Speicherknappheit',
+          'Gebrauchtpreis 1.500–1.725 $ (InsiderLLM-Tracker, 2026-11-23); gestiegen von etwa 600–800 $ im März (XDA Developers, 2026-03-15) wegen der Speicherknappheit',
           'Cloud-Miete 0,16 $/h (niedrigstes lieferbares On-Demand-Angebot) bis 0,50 $/h (RunPod Secure); RunPod Community 0,22 $/h; Median 0,25 $/h über On-Demand-Konfigurationen der bei GetDeploying gelisteten Anbieter',
-          'Break-even gegen eine Median-Miete von 0,25 $/h bei 2 Stunden täglich liegt bei rund 11 Jahren — bei 8 Stunden täglich bei etwa 2,8',
+          'Break-even gegen eine Median-Miete von 0,25 $/h bei 2 Stunden täglich liegt bei rund 12 Jahren — bei 8 Stunden täglich bei etwa 3',
           'Kaufen für Datenschutz, Latenz, dauerhaft laufende Agenten und ständiges Fine-Tuning; mieten für Spitzenlast und Experimente',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -555,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 für lokale LLMs 2026: Kaufen oder mieten?',
       description: 'Break-even-Analyse zwischen dem Kauf einer gebrauchten NVIDIA RTX 3090 und dem Mieten derselben GPU bei Cloud-Anbietern für lokale LLM-Inferenz, mit Preisen von 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -595,9 +596,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Zusammenfassung',
         numberedItems: [
-          'Eine gebrauchte RTX 3090 kostet 1.400–1.550 $ und liefert 24 GB VRAM — immer noch einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte.',
+          'Eine gebrauchte RTX 3090 kostet 1.500–1.725 $ (InsiderLLM-Tracker, 2026-11-23) und liefert 24 GB VRAM — immer noch einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte.',
           'Dieselbe GPU zu mieten kostet ab 0,16 $/Stunde beim niedrigsten lieferbaren On-Demand-Angebot und 0,22 $/Stunde bei RunPod Community, mit einem Median von 0,25 $/GPU/Stunde über On-Demand-Konfigurationen der bei GetDeploying gelisteten Anbieter; die Marktplatzpreise von Vast.ai variieren je nach Host.',
-          'Nach Abzug von etwa 0,08 $/Stunde Stromkosten gewinnt der Kauf erst nach rund 8.300 GPU-Stunden gegenüber einer Median-Miete — etwa 2,8 Jahre bei acht Stunden täglich.',
+          'Nach Abzug von etwa 0,08 $/Stunde Stromkosten gewinnt der Kauf erst nach rund 8.800 GPU-Stunden gegenüber einer Median-Miete — etwa 3 Jahre bei acht Stunden täglich.',
           'Die Karte wurde 2026 teurer, nicht billiger: im März kostete sie etwa 600–800 $ (XDA Developers, 2026-03-15). Das verschiebt den Break-even weiter nach hinten.',
           'Kaufen für Datenschutz, Offline-Arbeit, dauerhaft laufende Agenten und ständiges Fine-Tuning. Mieten für Spitzenlast, Experimente und alles, was sonst ungenutzt bliebe.',
           'Der Wiederverkauf kann einen Teil des Kaufpreises ausgleichen, ist aber nicht garantiert: Die Gebrauchtpreise sind 2026 wegen der Speicherknappheit gestiegen und könnten wieder fallen — betrachten Sie einen Wiederverkaufserlös als Bonus, nicht als Plan.',
@@ -626,7 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Unter 2 Stunden täglich → mieten, in sechs Monaten neu bewerten',
-            '8+ Stunden täglich, jeden Tag → kaufen, die Karte zahlt sich gegenüber einer Miete in etwa 3–6 Jahren aus',
+            '8+ Stunden täglich, jeden Tag → kaufen, die Karte zahlt sich gegenüber Mieten von 0,16–0,25 $ pro Stunde in etwa 3–6,4 Jahren aus',
             'Jegliche Daten, die Sie nicht hochladen dürfen → kaufen, Kosten sind nicht entscheidend',
           ],
         },
@@ -649,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM: 24 GB GDDR6X — genug für ein Modell der 27B-Klasse bei 4-Bit-Quantisierung mit Spielraum für Kontext.',
           'Speicherbandbreite: 936 GB/s — das bestimmt bei speicherbandbreitenlimitierten Aufgaben tatsächlich die Token-Generierungsgeschwindigkeit.',
           'Leistung: 350 W TDP der Karte; rechnen Sie mit rund 450 W am Netzteil für das ganze System unter Inferenzlast.',
-          'Gebrauchtpreis: typisch 1.400–1.550 $ laut InsiderLLM-Tracker (2026-10-15) — gestiegen von etwa 600–800 $ im März (XDA Developers, 2026-03-15).',
+          'Gebrauchtpreis: typisch 1.500–1.725 $ laut InsiderLLM-Tracker (2026-11-23; Median 1.650 $ aus 225 verkauften Angeboten, 2026-11-13 bis 2026-11-23) — gestiegen von etwa 600–800 $ im März (XDA Developers, 2026-03-15).',
           'Cloud-Miete: 0,16 $/Stunde (niedrigstes lieferbares On-Demand-Angebot) bis 0,50 $/Stunde (RunPod Secure); Median 0,25 $/GPU/Stunde über On-Demand-Konfigurationen der bei GetDeploying gelisteten Anbieter.',
           'Strom: beim jüngsten US-Wohnstrom-Durchschnitt von 0,18 $/kWh kostet der Betrieb etwa 0,08 $ pro Stunde.',
         ],
@@ -659,7 +660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'Was die RTX 3090 wirklich bietet',
         content: [
-          '**Die RTX 3090 überzeugt aus einem Grund: 24 GB VRAM zu einem der niedrigsten Preise für eine CUDA-fähige NVIDIA-Karte.** Alles andere an der Karte ist 2026 unspektakulär — sie ist ein Design von 2020, zieht 350 W, und eine aktuelle Karte schlägt sie bei jeder Effizienzkennzahl. Das ändert nichts daran, dass Modellgewichte entweder in den Grafikspeicher passen oder nicht.',
+          '**Die RTX 3090 überzeugt aus einem Grund: 24 GB VRAM zu einem der niedrigsten Preise für eine CUDA-fähige NVIDIA-Karte.** Alles andere an der Karte ist 2026 unspektakulär — sie ist ein Design von 2020, zieht 350 W, und aktuelle Karten sind in der Regel stromeffizienter. Das ändert nichts daran, dass Modellgewichte entweder in den Grafikspeicher passen oder nicht.',
           'VRAM ist eine Klippe, keine Steigung. Ein Modell, das passt, läuft mit voller Geschwindigkeit; ein Modell, das auch nur um ein Gigabyte überläuft, weicht in den Systemspeicher aus und bricht auf einen Bruchteil der Geschwindigkeit ein. Das macht 24 GB zu einer Fähigkeitsschwelle statt zu einer Leistungszahl — und die 3090 ist eine der günstigsten Karten, die sie erreicht.',
           'Die zweite wichtige Zahl ist die Speicherbandbreite. Die Token-Generierung bei einem quantisierten Modell ist speicherbandbreiten-, nicht rechenlimitiert, weshalb 936 GB/s ein besserer Indikator für das gefühlte Tempo ist als jede CUDA-Core-Zahl. Deshalb bleibt die 3090 auch gegenüber neueren Mittelklassekarten mit mehr Rechenleistung, aber schmalerem Speicherbus konkurrenzfähig.',
           'In der Praxis bedeutet das: komfortabler Spielraum für ein Modell der 27B-Klasse bei 4-Bit-Quantisierung, schnelle Inferenz bei 7B–14B-Modellen mit langem Kontext — und mit einer zweiten Karte die Möglichkeit, ein Modell der 70B-Klasse ohne Offloading vollständig im VRAM zu halten.',
@@ -704,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Gebraucht kaufen: Worauf Sie vor dem Kauf achten sollten',
         highlight: true,
         content: [
-          '**Wenn Sie kaufen, kaufen Sie gebraucht — neue RTX 3090 sind mitunter schwer zu finden und oft teurer als gebrauchte Karten, prüfen Sie daher die aktuellen Angebote selbst; der Preisvorteil liegt im Gebrauchtmarkt.** Bei 1.400–1.550 $ ist sie immer noch einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte, und der Wiederverkauf kann einen Teil der Kosten ausgleichen, ist aber nicht garantiert.',
+          '**Wenn Sie kaufen, kaufen Sie gebraucht — neue RTX 3090 sind mitunter schwer zu finden und oft teurer als gebrauchte Karten, prüfen Sie daher die aktuellen Angebote selbst; der Preisvorteil liegt im Gebrauchtmarkt.** Bei 1.500–1.725 $ ist sie immer noch einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte, und der Wiederverkauf kann einen Teil der Kosten ausgleichen, ist aber nicht garantiert.',
           'Der ehrliche Vorbehalt: Das sind etwa sechs Jahre alte Karten, viele davon ex-Mining oder ex-Gaming, ohne Garantie von Privatverkäufern verkauft. Die Fehlerbilder sind bekannt und prüfbar, das Risiko also beherrschbar — aber real, und genau deshalb sollte man bei einem Verkäufer mit Rückgaberecht kaufen statt beim billigsten Angebot.',
         ],
         items: [
@@ -725,14 +726,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB (gebraucht)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Gebrauchtpreise der RTX 3090 bei eBay prüfen',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB (gebraucht/generalüberholt)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'RTX-3090-Bestand bei Newegg prüfen',
           },
         ],
@@ -761,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Warum Mieten häufiger die bessere Antwort ist, als man denkt',
         content: [
           '**Das Argument fürs Mieten ist nicht, dass es immer günstiger ist — es ist, dass eine untätige GPU genauso viel kostet wie eine ausgelastete.** Eine Karte, die in einem Desktop steckt und nur am Wochenende genutzt wird, hat ihren vollen Kaufpreis bereits gekostet. Eine gemietete GPU kostet zwischen den Sitzungen nichts.',
-          'Die Gründe fürs Mieten sind konkret, nicht philosophisch: keine Vorabkosten, kein Wertverlustrisiko bei einer etwa sechs Jahre alten Karte, keine Einschränkungen durch Netzteil, Gehäuse oder Kühlung, kein verlorenes Wochenende, wenn ein Lüfter ausfällt. Man kann auch eine Karte mieten, die man nie kaufen würde — ein Modell der 70B-Klasse für einen Nachmittag auf zwei gemieteten GPUs zu testen kostet ein paar Dollar, gegenüber rund 2.800–3.100 $ für ein gebrauchtes Paar.',
+          'Die Gründe fürs Mieten sind konkret, nicht philosophisch: keine Vorabkosten, kein Wertverlustrisiko bei einer etwa sechs Jahre alten Karte, keine Einschränkungen durch Netzteil, Gehäuse oder Kühlung, kein verlorenes Wochenende, wenn ein Lüfter ausfällt. Man kann auch eine Karte mieten, die man nie kaufen würde — ein Modell der 70B-Klasse für einen Nachmittag auf zwei gemieteten GPUs zu testen kostet ein paar Dollar, gegenüber rund 3.000–3.450 $ für ein gebrauchtes Paar.',
           'Das ehrliche Gegenargument: Mieten bringt echte Reibungsverluste. Sie laden Daten auf fremde Rechner hoch, warten auf eine Instanz, und bei Marktplatz-Angeboten kann es vorkommen, dass ein Host mitten im Job offline geht. Das sind keine Gründe, es abzutun — es sind Gründe, warum die Entscheidung von Ihrer Arbeitslast abhängt, nicht allein vom Stundenpreis.',
         ],
       },
@@ -790,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'RunPod-Preise wurden auf der eigenen Modellseite erneut geprüft; das niedrigste lieferbare Angebot und der Multi-Anbieter-Median stammen aus der GetDeploying-Tabelle (geprüft zum angezeigten Aktualisierungsdatum) und können sich geändert haben. Die Marktplatzpreise von Vast.ai variieren je nach Host; siehe die eigene Preisseite von Vast.ai. Cloud-GPU-Preise ändern sich wöchentlich — prüfen Sie aktuelle Preise, bevor Sie sich festlegen.',
+            text: 'RunPod-Preise wurden auf der eigenen Modellseite erneut geprüft; das niedrigste lieferbare Angebot und der Multi-Anbieter-Median stammen aus der GetDeploying-Tabelle (geprüft am 2026-11-18) und können sich geändert haben. Die Marktplatzpreise von Vast.ai variieren je nach Host; siehe die eigene Preisseite von Vast.ai. Cloud-GPU-Preise ändern sich wöchentlich — prüfen Sie aktuelle Preise, bevor Sie sich festlegen.',
           },
         ],
         affiliateLinks: [
@@ -815,16 +816,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: 'Die Break-even-Rechnung',
         content: [
-          '**Gegen eine Median-Miete von 0,25 $/Stunde braucht eine 1.400-$-Karte rund 8.300 GPU-Stunden, um sich zu amortisieren — etwa 2,8 Jahre bei acht Stunden täglich oder 11 Jahre bei zwei.** Das ist die Zahl, die den Kauf entscheiden sollte.',
-          'Die Rechnung zieht ab, was der Betrieb der Karte kostet. Bei 450 W am Netzteil und einem jüngsten US-Wohnstrom-Durchschnitt von 0,18 $/kWh kostet lokale Inferenz etwa 0,08 $ pro Stunde an Strom — Sie vergleichen also nicht 1.400 $ gegen 0,25 $/Stunde, sondern gegen die rund 0,17 $/Stunde, die Sie tatsächlich sparen.',
-          'Annahmen: 1.400-$-Karte, 450 W Systemverbrauch, 0,18 $/kWh. Setzen Sie Ihren eigenen Strompreis ein — er verändert das Ergebnis stärker als alles andere in der Tabelle, und in Märkten über 0,30 $/kWh verschwindet das Kaufargument weitgehend.',
+          '**Gegen eine Median-Miete von 0,25 $/Stunde braucht eine 1.500-$-Karte rund 8.800 GPU-Stunden, um sich zu amortisieren — etwa 3 Jahre bei acht Stunden täglich oder 12 Jahre bei zwei.** Das ist die Zahl, die den Kauf entscheiden sollte.',
+          'Die Rechnung zieht ab, was der Betrieb der Karte kostet. Bei 450 W am Netzteil und einem jüngsten US-Wohnstrom-Durchschnitt von 0,18 $/kWh kostet lokale Inferenz etwa 0,08 $ pro Stunde an Strom — Sie vergleichen also nicht 1.500 $ gegen 0,25 $/Stunde, sondern gegen die rund 0,17 $/Stunde, die Sie tatsächlich sparen.',
+          'Annahmen: 1.500-$-Karte (unteres Ende der Tracker-Spanne; beim Median von 1.650 $ ist jeder Zeitraum etwa 10 % länger), 450 W Systemverbrauch, 0,18 $/kWh. Setzen Sie Ihren eigenen Strompreis ein — er verändert das Ergebnis stärker als alles andere in der Tabelle, und in Märkten über 0,30 $/kWh verschwindet das Kaufargument weitgehend.',
         ],
         columns: ['Nutzung', 'vs 0,16 $/h', 'vs 0,25 $/h', 'vs 0,50 $/h'],
         rows: [
-          { Nutzung: '2 Stunden täglich', 'vs 0,16 $/h': '~24 Jahre', 'vs 0,25 $/h': '~11 Jahre', 'vs 0,50 $/h': '~4,6 Jahre' },
-          { Nutzung: '4 Stunden täglich', 'vs 0,16 $/h': '~12 Jahre', 'vs 0,25 $/h': '~5,7 Jahre', 'vs 0,50 $/h': '~2,3 Jahre' },
-          { Nutzung: '8 Stunden täglich', 'vs 0,16 $/h': '~6,1 Jahre', 'vs 0,25 $/h': '~2,8 Jahre', 'vs 0,50 $/h': '~1,1 Jahre' },
-          { Nutzung: 'Dauerbetrieb (24/7)', 'vs 0,16 $/h': '~24 Monate', 'vs 0,25 $/h': '~11 Monate', 'vs 0,50 $/h': '~4,6 Monate' },
+          { Nutzung: '2 Stunden täglich', 'vs 0,16 $/h': '~26 Jahre', 'vs 0,25 $/h': '~12 Jahre', 'vs 0,50 $/h': '~4,9 Jahre' },
+          { Nutzung: '4 Stunden täglich', 'vs 0,16 $/h': '~13 Jahre', 'vs 0,25 $/h': '~6 Jahre', 'vs 0,50 $/h': '~2,4 Jahre' },
+          { Nutzung: '8 Stunden täglich', 'vs 0,16 $/h': '~6,4 Jahre', 'vs 0,25 $/h': '~3 Jahre', 'vs 0,50 $/h': '~1,2 Jahre' },
+          { Nutzung: 'Dauerbetrieb (24/7)', 'vs 0,16 $/h': '~26 Monate', 'vs 0,25 $/h': '~12 Monate', 'vs 0,50 $/h': '~4,9 Monate' },
         ],
         callouts: [
           {
@@ -843,12 +844,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Leser: 'Wochenend-Hobbyist',
             Urteil: 'Mieten',
-            Warum: 'Ein paar Stunden pro Woche gegen 1.400 $ Ausgaben sind Jahrzehnte vom Break-even entfernt. Mieten Sie ein Jahr — wenn Sie sich dabei ertappen, täglich zu mieten, kaufen Sie dann, und wissen bereits genau, welche Karte Sie brauchen.',
+            Warum: 'Ein paar Stunden pro Woche gegen 1.500 $ Ausgaben sind Jahrzehnte vom Break-even entfernt. Mieten Sie ein Jahr — wenn Sie sich dabei ertappen, täglich zu mieten, kaufen Sie dann, und wissen bereits genau, welche Karte Sie brauchen.',
           },
           {
             Leser: 'Täglicher Vielnutzer',
             Urteil: 'Kaufen',
-            Warum: 'Bei acht oder mehr Stunden täglich amortisiert sich die Karte gegenüber einer Miete in etwa drei bis sechs Jahren, und der Wiederverkauf kann einen Teil des Rests ausgleichen, ist aber nicht garantiert. Der größere Gewinn ist verhaltensbezogen: Eine eigene GPU hat keinen laufenden Zähler, man hört auf, Experimente zu rationieren.',
+            Warum: 'Bei acht oder mehr Stunden täglich amortisiert sich die Karte gegenüber Mieten von 0,16–0,25 $ pro Stunde in etwa 3 bis 6,4 Jahren, und der Wiederverkauf kann einen Teil des Rests ausgleichen, ist aber nicht garantiert. Der größere Gewinn ist verhaltensbezogen: Eine eigene GPU hat keinen laufenden Zähler, man hört auf, Experimente zu rationieren.',
           },
           {
             Leser: 'Kleines Team oder Startup',
@@ -896,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Lohnt sich die RTX 3090 2026 noch als Kauf?',
-            a: 'Für dauerhafte lokale Inferenz ja — sie bleibt gebraucht einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte bei 1.400–1.550 $. Bei geringer oder gelegentlicher Nutzung nein: Dieselbe GPU ab 0,16 $ pro Stunde zu mieten ist über Jahre günstiger. Entscheidend sind die tatsächlichen Nutzungsstunden pro Woche, nicht die Spezifikation.',
+            a: 'Für dauerhafte lokale Inferenz ja — sie bleibt gebraucht einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte bei 1.500–1.725 $. Bei geringer oder gelegentlicher Nutzung nein: Dieselbe GPU ab 0,16 $ pro Stunde zu mieten ist über Jahre günstiger. Entscheidend sind die tatsächlichen Nutzungsstunden pro Woche, nicht die Spezifikation.',
           },
           {
             q: 'Ist die RTX 3090 gut für Ollama?',
@@ -916,11 +917,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Können zwei RTX 3090 ein 70B-Modell betreiben?',
-            a: 'Ja. Zwei Karten liefern 48 GB VRAM, genug für ein Modell der 70B-Klasse bei 4-Bit-Quantisierung ohne Auslagerung in den Systemspeicher. Kalkulieren Sie ein Netzteil ab 1.000 W (genaue Vorgaben stehen in der Dokumentation des Kartenherstellers) und ein Mainboard mit zwei passenden Slots — und mieten Sie zunächst für einen Nachmittag eine Zwei-GPU-Cloud-Instanz, um zu prüfen, ob das Setup das leistet, was Sie brauchen, bevor Sie rund 2.800–3.100 $ ausgeben.',
+            a: 'Ja. Zwei Karten liefern 48 GB VRAM, genug für ein Modell der 70B-Klasse bei 4-Bit-Quantisierung ohne Auslagerung in den Systemspeicher. Kalkulieren Sie ein Netzteil ab 1.000 W (genaue Vorgaben stehen in der Dokumentation des Kartenherstellers) und ein Mainboard mit zwei passenden Slots — und mieten Sie zunächst für einen Nachmittag eine Zwei-GPU-Cloud-Instanz, um zu prüfen, ob das Setup das leistet, was Sie brauchen, bevor Sie rund 3.000–3.450 $ ausgeben.',
           },
           {
             q: 'Warum sind gebrauchte RTX-3090-Preise 2026 gestiegen?',
-            a: 'Eine Speicherknappheit trieb die GPU-Preise 2026 breit über ihr früheres Niveau, laut dem Tracker. Die Karte kostete im März etwa 600–800 $ (XDA Developers, 2026-03-15) und Mitte Oktober 1.400–1.550 $ (InsiderLLM-Tracker, 2026-10-15). Sie ist eines der wenigen etwa sechs Jahre alten Produkte, das teurer geworden ist.',
+            a: 'Eine Speicherknappheit trieb die GPU-Preise 2026 breit über ihr früheres Niveau, laut dem Tracker. Die Karte kostete im März etwa 600–800 $ (XDA Developers, 2026-03-15) und mit Stand 2026-11-23 1.500–1.725 $ (InsiderLLM-Tracker). Sie ist eines der wenigen etwa sechs Jahre alten Produkte, das teurer geworden ist.',
           },
           {
             q: 'Ist der Kauf einer gebrauchten Mining-GPU sicher?',
@@ -942,11 +943,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quellen',
         items: [
           '[RTX-3090-Preistracker — Preisverlauf neu und gebraucht, Best Value GPU.](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[RTX-3090-Cloud-Preise bei mehreren Anbietern, GetDeploying (geprüft zum angezeigten Aktualisierungsdatum).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[RTX-3090-Cloud-Preise bei mehreren Anbietern, GetDeploying (geprüft am 2026-11-18).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[RTX-3090-GPU-Mietpreise, RunPod.](https://www.runpod.io/gpu-models/rtx-3090)',
           '[Eine gebrauchte RTX 3090 ist noch immer die beste GPU für lokale KI, XDA Developers.](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly — durchschnittlicher Strompreis für Privathaushalte, US Energy Information Administration.](https://www.eia.gov/electricity/monthly/)',
-          '[Preise für NVIDIA-GPUs steigen — Preis-Tracker, InsiderLLM (aktualisiert am 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[Preise für NVIDIA-GPUs steigen — Preis-Tracker, InsiderLLM (RTX-3090-Wert mit Stand 2026-11-23; RTX-4090-Wert aus der Aktualisierung vom 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -957,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Beste GPUs für lokale LLMs: Kompletter Kaufratgeber](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — die RTX 3090 gegen aktuelle Karten in jeder Preisklasse vergleichen.',
           '[Gebrauchte GPUs für lokale LLMs: Beste Preis-Leistungs-Tipps](/de/local-llms/used-gpus-for-local-llms) — der umfassendere Gebrauchtmarkt-Leitfaden zur RTX 3060, 3080 und 4090 neben dieser Karte.',
           '[Ollama vs. LM Studio](/de/local-llms/ollama-vs-lm-studio) — wie sich die beiden Tools, mit denen diese GPU zusammenarbeitet, tatsächlich unterscheiden, jenseits des gemeinsamen llama.cpp-Backends.',
-          '[Günstigster praktischer Weg, ein 70B-Modell lokal zu betreiben](/de/prompt-bites/cheapest-way-to-run-70b-model-locally) — wo zwei RTX 3090 im günstigsten 70B-Setup ihren Platz finden.',
+          '[Günstigster praktischer Weg, ein 70B-Modell lokal zu betreiben](/de/prompt-bites/cheapest-way-to-run-70b-model-locally) — wie sich ein Aufbau mit zwei RTX 3090 zu anderen Wegen verhält, ein 70B-Modell zu betreiben.',
           '[Wie viel VRAM braucht ein 70B-Modell?](/de/prompt-bites/vram-for-70b-model) — die VRAM-Rechnung hinter der obigen Zwei-Karten-Empfehlung.',
           '[Local-LLM-Kostenrechner: Kaufen vs. mieten](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — die Break-even-Rechnung mit Ihren eigenen Zahlen und Ihrer Hardware durchführen.',
           '[stattdessen eine Cloud-GPU mieten](/de/power-local-llm/best-cloud-gpu-providers) — zuerst stundenweise mieten; die beiden Marktplatz-Bewertungen sind [Vast.ai-Bewertung](/de/power-local-llm/vast-ai-review) und [Clore.ai-Bewertung](/de/power-local-llm/clore-ai-review).',
@@ -980,9 +981,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'RTX 3090 pour LLM local 2026 : acheter d\'occasion ou louer ?',
 
     intro: 'La RTX 3090 est l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA, chez soi, et louer cette même carte dans le cloud coûte quelques centimes par heure. Ce guide détermine où se situe réellement la limite entre ces deux options.',
-    metaDescription: 'Une RTX 3090 d\'occasion coûte 1 400–1 550 $ en 2026 ; la location démarre à environ 0,16 $/heure. Voici le calcul du seuil de rentabilité achat vs location pour 24 Go de VRAM en LLM local.',
+    metaDescription: 'Une RTX 3090 d\'occasion coûte 1 500–1 725 $ en 2026 ; la location démarre à environ 0,16 $/heure. Voici le calcul du seuil de rentabilité achat vs location pour 24 Go de VRAM en LLM local.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '13 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs et petites équipes hésitant entre acheter un GPU 24 Go d\'occasion et louer du temps GPU cloud pour l\'inférence LLM locale',
@@ -999,20 +1000,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Achetez une RTX 3090 d\'occasion si vous comptez l\'utiliser plus de huit heures par jour environ, tous les jours, ou si vos données ne peuvent pas quitter vos locaux. Louez-en une sinon.** À 1 400–1 550 $ d\'occasion (suivi InsiderLLM, 2026-10-15) contre une location à partir de 0,16 $ de l\'heure dans le cloud, la carte ne se rentabilise qu\'en usage soutenu — et en 2026 elle coûte plus cher qu\'en mars, ce qui repousse le seuil de rentabilité plus loin.',
+    leadAnswerBlock: '**Achetez une RTX 3090 d\'occasion si vous comptez l\'utiliser plus de huit heures par jour environ, tous les jours, ou si vos données ne peuvent pas quitter vos locaux. Louez-en une sinon.** À 1 500–1 725 $ d\'occasion (suivi InsiderLLM, 2026-11-23) contre une location à partir de 0,16 $ de l\'heure dans le cloud, la carte ne se rentabilise qu\'en usage soutenu — et en 2026 elle coûte plus cher qu\'en mars, ce qui repousse le seuil de rentabilité plus loin.',
 
     quickAnswerTop: {
       fr: {
         question: 'La RTX 3090 vaut-elle encore le coup pour les LLM locaux ?',
-        answer: 'Oui, mais uniquement pour un usage soutenu ou des besoins liés à la confidentialité. Une RTX 3090 d\'occasion offre 24 Go de VRAM pour 1 400–1 550 $, ce qui reste l\'un des moyens les moins coûteux de faire tourner des modèles de classe 27B entièrement sur son propre matériel. Louer le même GPU coûte à partir de 0,16 $ de l\'heure, donc en usage léger le cloud reste moins cher pendant des années.',
+        answer: 'Oui, mais uniquement pour un usage soutenu ou des besoins liés à la confidentialité. Une RTX 3090 d\'occasion offre 24 Go de VRAM pour 1 500–1 725 $, ce qui reste l\'un des moyens les moins coûteux de faire tourner des modèles de classe 27B entièrement sur son propre matériel. Louer le même GPU coûte à partir de 0,16 $ de l\'heure, donc en usage léger le cloud reste moins cher pendant des années.',
         bullets: [
           '24 Go de VRAM, bande passante de 936 Go/s, 350 W — inchangés depuis 2020, toujours l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA',
-          'Prix d\'occasion 1 400–1 550 $ (suivi InsiderLLM, 2026-10-15) ; en hausse depuis environ 600–800 $ en mars (XDA Developers, 2026-03-15) à cause de la pénurie de mémoire',
+          'Prix d\'occasion 1 500–1 725 $ (suivi InsiderLLM, 2026-11-23) ; en hausse depuis environ 600–800 $ en mars (XDA Developers, 2026-03-15) à cause de la pénurie de mémoire',
           'Location cloud 0,16 $/h (tarif à la demande le plus bas en stock) à 0,50 $/h (RunPod Secure) ; RunPod Community 0,22 $/h ; médiane 0,25 $/h sur les configurations à la demande des fournisseurs listés sur GetDeploying',
-          'Le seuil de rentabilité face à une location médiane à 0,25 $/h à raison de 2 h/jour est d\'environ 11 ans — à 8 h/jour, environ 2,8',
+          'Le seuil de rentabilité face à une location médiane à 0,25 $/h à raison de 2 h/jour est d\'environ 12 ans — à 8 h/jour, environ 3',
           'Achetez pour la confidentialité, la latence, les agents actifs en permanence et le fine-tuning régulier ; louez pour les pics d\'usage et les expérimentations',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -1022,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 pour LLM local en 2026 : acheter ou louer ?',
       description: 'Analyse du seuil de rentabilité entre acheter une NVIDIA RTX 3090 d\'occasion et louer le même GPU chez des fournisseurs cloud pour l\'inférence LLM locale, avec les prix 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1062,9 +1063,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Points clés',
         numberedItems: [
-          'Une RTX 3090 d\'occasion coûte 1 400–1 550 $ et offre 24 Go de VRAM — toujours l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA.',
+          'Une RTX 3090 d\'occasion coûte 1 500–1 725 $ (suivi InsiderLLM, 2026-11-23) et offre 24 Go de VRAM — toujours l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA.',
           'Louer le même GPU coûte à partir de 0,16 $/h au tarif à la demande le plus bas en stock et 0,22 $/h sur RunPod Community, avec une médiane de 0,25 $/h par GPU sur les configurations à la demande des fournisseurs listés sur GetDeploying ; les tarifs de la place de marché Vast.ai varient selon l\'hôte.',
-          'Après déduction d\'environ 0,08 $/h d\'électricité, l\'achat ne l\'emporte qu\'après environ 8 300 heures GPU face à une location médiane — environ 2,8 ans à raison de huit heures par jour.',
+          'Après déduction d\'environ 0,08 $/h d\'électricité, l\'achat ne l\'emporte qu\'après environ 8 800 heures GPU face à une location médiane — environ 3 ans à raison de huit heures par jour.',
           'La carte est devenue plus chère en 2026, pas moins chère : elle coûtait environ 600–800 $ en mars (XDA Developers, 2026-03-15). Cela éloigne le seuil de rentabilité.',
           'Achetez pour la confidentialité, le travail hors ligne, les agents actifs en permanence et le fine-tuning régulier. Louez pour les pics d\'usage, les expérimentations et tout ce qui resterait inutilisé.',
           'La revente peut compenser une partie du prix d\'achat, mais elle n\'est pas garantie : les prix d\'occasion ont augmenté en 2026 à cause de la pénurie de mémoire et pourraient rebaisser ; considérez toute valeur de revente comme un plus, pas comme un plan.',
@@ -1093,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Moins de 2 h/jour → louez, et réévaluez dans six mois',
-            '8 h/jour ou plus, tous les jours → achetez, la carte se rentabilise en 3 à 6 ans environ face à une location',
+            '8 h/jour ou plus, tous les jours → achetez, la carte se rentabilise en 3 à 6,4 ans environ face à des locations de 0,16 à 0,25 $ de l\'heure',
             'Toute donnée que vous ne pouvez pas téléverser → achetez, le coût n\'est pas le facteur décisif',
           ],
         },
@@ -1116,7 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM : 24 Go GDDR6X — suffisant pour un modèle de classe 27B en quantification 4 bits avec de la marge pour le contexte.',
           'Bande passante mémoire : 936 Go/s, ce qui détermine en réalité la vitesse de génération de tokens sur une charge limitée par la mémoire.',
           'Puissance : TDP de 350 W pour la carte ; prévoyez environ 450 W à la prise pour l\'ensemble du système en charge d\'inférence.',
-          'Prix d\'occasion : typiquement 1 400–1 550 $ selon le suivi InsiderLLM (2026-10-15) — en hausse depuis environ 600–800 $ en mars (XDA Developers, 2026-03-15).',
+          'Prix d\'occasion : typiquement 1 500–1 725 $ selon le suivi InsiderLLM (2026-11-23 ; médiane de 1 650 $ sur 225 annonces vendues, du 2026-11-13 au 2026-11-23) — en hausse depuis environ 600–800 $ en mars (XDA Developers, 2026-03-15).',
           'Location cloud : 0,16 $/heure (tarif à la demande le plus bas en stock) à 0,50 $/heure (RunPod Secure) ; médiane 0,25 $/heure par GPU sur les configurations à la demande des fournisseurs listés sur GetDeploying.',
           'Électricité : à une moyenne résidentielle US récente de 0,18 $/kWh, l\'exploitation coûte environ 0,08 $ de l\'heure.',
         ],
@@ -1126,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'Ce que la RTX 3090 apporte réellement',
         content: [
-          '**La RTX 3090 se justifie pour une seule raison : 24 Go de VRAM à l\'un des prix les plus bas pour une carte NVIDIA compatible CUDA.** Le reste de la carte n\'a rien d\'exceptionnel en 2026 — conception de 2020, consommation de 350 W, et une carte actuelle la bat sur chaque indicateur d\'efficacité. Cela ne change rien au fait que les poids d\'un modèle tiennent en mémoire vidéo, ou pas.',
+          '**La RTX 3090 se justifie pour une seule raison : 24 Go de VRAM à l\'un des prix les plus bas pour une carte NVIDIA compatible CUDA.** Le reste de la carte n\'a rien d\'exceptionnel en 2026 — conception de 2020, consommation de 350 W, et les cartes actuelles sont en général plus économes en énergie. Cela ne change rien au fait que les poids d\'un modèle tiennent en mémoire vidéo, ou pas.',
           'La VRAM est une falaise, pas une pente. Un modèle qui tient tourne à pleine vitesse ; un modèle qui déborde, même d\'un gigaoctet, bascule dans la mémoire système et s\'effondre à une fraction de la vitesse. Cela fait des 24 Go un seuil de capacité plutôt qu\'un chiffre de performance, et la 3090 est l\'une des cartes les moins coûteuses qui l\'atteint.',
           'Le second chiffre important est la bande passante mémoire. La génération de tokens d\'un modèle quantifié est limitée par la mémoire, pas par le calcul, donc 936 Go/s prédit mieux la sensation de vitesse que n\'importe quel nombre de cœurs CUDA. C\'est aussi pourquoi la 3090 reste compétitive face à des cartes milieu de gamme plus récentes, avec plus de calcul mais un bus mémoire plus étroit.',
           'En pratique : une marge confortable pour un modèle de classe 27B en quantification 4 bits, une inférence rapide sur des modèles 7B–14B avec long contexte, et — avec une seconde carte — la capacité de tenir un modèle de classe 70B en VRAM sans déchargement.',
@@ -1171,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Acheter d\'occasion : ce qu\'il faut vérifier avant de payer',
         highlight: true,
         content: [
-          '**Si vous achetez, achetez d\'occasion — la RTX 3090 neuve peut être difficile à trouver et coûte souvent plus cher que l\'occasion, alors vérifiez vous-même les annonces actuelles ; l\'avantage de prix se trouve sur le marché de l\'occasion.** À 1 400–1 550 $, c\'est toujours l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA, et la revente peut compenser une partie du coût, sans garantie.',
+          '**Si vous achetez, achetez d\'occasion — la RTX 3090 neuve peut être difficile à trouver et coûte souvent plus cher que l\'occasion, alors vérifiez vous-même les annonces actuelles ; l\'avantage de prix se trouve sur le marché de l\'occasion.** À 1 500–1 725 $, c\'est toujours l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA, et la revente peut compenser une partie du coût, sans garantie.',
           'La réserve honnête : ce sont des cartes vieilles d\'environ six ans, souvent issues du minage ou du gaming, vendues sans garantie par des particuliers. Les modes de défaillance sont connus et vérifiables, le risque est donc gérable — mais il est réel, et c\'est pourquoi il vaut mieux acheter chez un vendeur qui accepte les retours plutôt que sur l\'annonce la moins chère trouvée.',
         ],
         items: [
@@ -1192,14 +1193,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24 Go (occasion)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Vérifier les prix de la RTX 3090 d\'occasion sur eBay',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24 Go (occasion/reconditionné)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Vérifier le stock de RTX 3090 sur Newegg',
           },
         ],
@@ -1228,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pourquoi louer est plus souvent la bonne réponse qu\'on ne le pense',
         content: [
           '**L\'argument en faveur de la location n\'est pas qu\'elle est toujours moins chère — c\'est qu\'un GPU inactif coûte autant qu\'un GPU occupé.** Une carte dans un poste utilisé le week-end a déjà coûté son prix d\'achat complet. Un GPU loué ne coûte rien entre deux sessions.',
-          'Les raisons de louer sont concrètes, pas philosophiques : aucun débours initial, aucun risque de dépréciation sur une carte vieille d\'environ six ans, aucune contrainte d\'alimentation, de boîtier ou de refroidissement, aucun week-end perdu quand un ventilateur tombe en panne. On peut aussi louer une carte qu\'on n\'achèterait jamais — tester un modèle de classe 70B sur deux GPU loués pendant un après-midi coûte quelques dollars, contre environ 2 800–3 100 $ pour une paire d\'occasion.',
+          'Les raisons de louer sont concrètes, pas philosophiques : aucun débours initial, aucun risque de dépréciation sur une carte vieille d\'environ six ans, aucune contrainte d\'alimentation, de boîtier ou de refroidissement, aucun week-end perdu quand un ventilateur tombe en panne. On peut aussi louer une carte qu\'on n\'achèterait jamais — tester un modèle de classe 70B sur deux GPU loués pendant un après-midi coûte quelques dollars, contre environ 3 000–3 450 $ pour une paire d\'occasion.',
           'Le contre-argument honnête : louer implique de vraies frictions. On téléverse des données sur la machine de quelqu\'un d\'autre, on attend une instance, et sur les annonces des plateformes de marché, un hôte peut se déconnecter en cours de travail. Ce ne sont pas des raisons d\'écarter la location — ce sont des raisons pour lesquelles la décision dépend de votre charge de travail, pas seulement du tarif horaire.',
         ],
       },
@@ -1257,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Les tarifs RunPod ont été revérifiés sur sa page produit ; le tarif le plus bas en stock et la médiane multi-fournisseurs proviennent du tableau GetDeploying (consulté à la date de mise à jour affichée) et ont pu évoluer. Les tarifs de Vast.ai varient selon l\'hôte ; voir la page de tarifs de Vast.ai elle-même. Les tarifs GPU cloud changent chaque semaine — vérifiez les prix actuels avant de vous engager.',
+            text: 'Les tarifs RunPod ont été revérifiés sur sa page produit ; le tarif le plus bas en stock et la médiane multi-fournisseurs proviennent du tableau GetDeploying (consulté le 2026-11-18) et ont pu évoluer. Les tarifs de Vast.ai varient selon l\'hôte ; voir la page de tarifs de Vast.ai elle-même. Les tarifs GPU cloud changent chaque semaine — vérifiez les prix actuels avant de vous engager.',
           },
         ],
         affiliateLinks: [
@@ -1282,16 +1283,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: 'Le calcul du seuil de rentabilité',
         content: [
-          '**Face à une location médiane à 0,25 $/heure, une carte à 1 400 $ met environ 8 300 heures GPU à se rentabiliser — environ 2,8 ans à huit heures par jour, ou 11 ans à deux heures.** C\'est le chiffre qui devrait guider l\'achat.',
-          'Le calcul déduit ce que coûte l\'exploitation de la carte. À 450 W à la prise et à une moyenne résidentielle US récente de 0,18 $/kWh, l\'inférence locale coûte environ 0,08 $ de l\'heure en électricité — vous ne comparez donc pas 1 400 $ à 0,25 $/heure, mais aux environ 0,17 $/heure que vous économisez réellement.',
-          'Hypothèses : carte à 1 400 $, consommation système de 450 W, 0,18 $/kWh. Substituez votre propre tarif d\'électricité — il fait bouger le résultat plus que tout autre paramètre du tableau, et sur les marchés au-delà de 0,30 $/kWh, l\'argument de l\'achat disparaît largement.',
+          '**Face à une location médiane à 0,25 $/heure, une carte à 1 500 $ met environ 8 800 heures GPU à se rentabiliser — environ 3 ans à huit heures par jour, ou 12 ans à deux heures.** C\'est le chiffre qui devrait guider l\'achat.',
+          'Le calcul déduit ce que coûte l\'exploitation de la carte. À 450 W à la prise et à une moyenne résidentielle US récente de 0,18 $/kWh, l\'inférence locale coûte environ 0,08 $ de l\'heure en électricité — vous ne comparez donc pas 1 500 $ à 0,25 $/heure, mais aux environ 0,17 $/heure que vous économisez réellement.',
+          'Hypothèses : carte à 1 500 $ (bas de la fourchette du suivi ; à la médiane de 1 650 $, chaque durée est environ 10 % plus longue), consommation système de 450 W, 0,18 $/kWh. Substituez votre propre tarif d\'électricité — il fait bouger le résultat plus que tout autre paramètre du tableau, et sur les marchés au-delà de 0,30 $/kWh, l\'argument de l\'achat disparaît largement.',
         ],
         columns: ['Usage', 'vs 0,16 $/h', 'vs 0,25 $/h', 'vs 0,50 $/h'],
         rows: [
-          { Usage: '2 heures/jour', 'vs 0,16 $/h': '~24 ans', 'vs 0,25 $/h': '~11 ans', 'vs 0,50 $/h': '~4,6 ans' },
-          { Usage: '4 heures/jour', 'vs 0,16 $/h': '~12 ans', 'vs 0,25 $/h': '~5,7 ans', 'vs 0,50 $/h': '~2,3 ans' },
-          { Usage: '8 heures/jour', 'vs 0,16 $/h': '~6,1 ans', 'vs 0,25 $/h': '~2,8 ans', 'vs 0,50 $/h': '~1,1 ans' },
-          { Usage: 'Allumé en permanence (24/7)', 'vs 0,16 $/h': '~24 mois', 'vs 0,25 $/h': '~11 mois', 'vs 0,50 $/h': '~4,6 mois' },
+          { Usage: '2 heures/jour', 'vs 0,16 $/h': '~26 ans', 'vs 0,25 $/h': '~12 ans', 'vs 0,50 $/h': '~4,9 ans' },
+          { Usage: '4 heures/jour', 'vs 0,16 $/h': '~13 ans', 'vs 0,25 $/h': '~6 ans', 'vs 0,50 $/h': '~2,4 ans' },
+          { Usage: '8 heures/jour', 'vs 0,16 $/h': '~6,4 ans', 'vs 0,25 $/h': '~3 ans', 'vs 0,50 $/h': '~1,2 ans' },
+          { Usage: 'Allumé en permanence (24/7)', 'vs 0,16 $/h': '~26 mois', 'vs 0,25 $/h': '~12 mois', 'vs 0,50 $/h': '~4,9 mois' },
         ],
         callouts: [
           {
@@ -1310,12 +1311,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Profil: 'Amateur du week-end',
             Verdict: 'Louer',
-            Pourquoi: 'Quelques heures par semaine contre une dépense de 1 400 $, c\'est à des décennies du seuil de rentabilité. Louez pendant un an, et si vous vous surprenez à louer quotidiennement, achetez alors — vous saurez aussi exactement quelle carte il vous faut.',
+            Pourquoi: 'Quelques heures par semaine contre une dépense de 1 500 $, c\'est à des décennies du seuil de rentabilité. Louez pendant un an, et si vous vous surprenez à louer quotidiennement, achetez alors — vous saurez aussi exactement quelle carte il vous faut.',
           },
           {
             Profil: 'Utilisateur intensif quotidien',
             Verdict: 'Acheter',
-            Pourquoi: 'À huit heures par jour ou plus, la carte se rentabilise en trois à six ans environ face à une location, et la revente peut compenser une partie du reste, sans garantie. Le vrai gain est comportemental : un GPU possédé n\'a pas de compteur qui tourne, on arrête de rationner ses expérimentations.',
+            Pourquoi: 'À huit heures par jour ou plus, la carte se rentabilise en 3 à 6,4 ans environ face à des locations de 0,16 à 0,25 $ de l\'heure, et la revente peut compenser une partie du reste, sans garantie. Le vrai gain est comportemental : un GPU possédé n\'a pas de compteur qui tourne, on arrête de rationner ses expérimentations.',
           },
           {
             Profil: 'Petite équipe ou startup',
@@ -1363,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'La RTX 3090 vaut-elle encore l\'achat en 2026 ?',
-            a: 'Pour une inférence locale soutenue, oui — elle reste l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA, à 1 400–1 550 $ d\'occasion. Pour un usage léger ou occasionnel, non : louer le même GPU à partir de 0,16 $ de l\'heure est moins cher pendant des années. Le facteur décisif est le nombre d\'heures d\'usage réel par semaine, pas la fiche technique.',
+            a: 'Pour une inférence locale soutenue, oui — elle reste l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA, à 1 500–1 725 $ d\'occasion. Pour un usage léger ou occasionnel, non : louer le même GPU à partir de 0,16 $ de l\'heure est moins cher pendant des années. Le facteur décisif est le nombre d\'heures d\'usage réel par semaine, pas la fiche technique.',
           },
           {
             q: 'La RTX 3090 est-elle adaptée à Ollama ?',
@@ -1383,11 +1384,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Deux RTX 3090 peuvent-elles faire tourner un modèle 70B ?',
-            a: 'Oui. Deux cartes offrent 48 Go de VRAM, suffisant pour un modèle de classe 70B en quantification 4 bits sans déchargement vers la mémoire système. Prévoyez une alimentation de 1 000 W ou plus (l\'exigence exacte figure dans la documentation du fabricant de la carte) et une carte mère avec deux emplacements adaptés — et louez d\'abord une instance cloud à deux GPU pour un après-midi, afin de confirmer que la configuration répond à vos besoins avant de dépenser environ 2 800–3 100 $.',
+            a: 'Oui. Deux cartes offrent 48 Go de VRAM, suffisant pour un modèle de classe 70B en quantification 4 bits sans déchargement vers la mémoire système. Prévoyez une alimentation de 1 000 W ou plus (l\'exigence exacte figure dans la documentation du fabricant de la carte) et une carte mère avec deux emplacements adaptés — et louez d\'abord une instance cloud à deux GPU pour un après-midi, afin de confirmer que la configuration répond à vos besoins avant de dépenser environ 3 000–3 450 $.',
           },
           {
             q: 'Pourquoi les prix des RTX 3090 d\'occasion ont-ils augmenté en 2026 ?',
-            a: 'Une pénurie de mémoire a fait grimper largement les prix des GPU en 2026, selon le suivi. La carte se vendait environ 600–800 $ en mars (XDA Developers, 2026-03-15) et 1 400–1 550 $ à la mi-octobre (suivi InsiderLLM, 2026-10-15). C\'est l\'un des rares produits d\'environ six ans à être devenu plus cher.',
+            a: 'Une pénurie de mémoire a fait grimper largement les prix des GPU en 2026, selon le suivi. La carte se vendait environ 600–800 $ en mars (XDA Developers, 2026-03-15) et 1 500–1 725 $ au 2026-11-23 (suivi InsiderLLM). C\'est l\'un des rares produits d\'environ six ans à être devenu plus cher.',
           },
           {
             q: 'Est-il prudent d\'acheter un GPU de minage d\'occasion ?',
@@ -1409,11 +1410,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         items: [
           '[Suivi des prix de la RTX 3090 — historique des prix neuf et occasion, Best Value GPU.](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[Prix cloud de la RTX 3090 chez plusieurs fournisseurs, GetDeploying (consulté à la date de mise à jour affichée).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[Prix cloud de la RTX 3090 chez plusieurs fournisseurs, GetDeploying (consulté le 2026-11-18).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[Tarifs de location GPU RTX 3090, RunPod.](https://www.runpod.io/gpu-models/rtx-3090)',
           '[Une RTX 3090 d\'occasion reste le meilleur GPU pour l\'IA locale, XDA Developers.](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly — prix moyen de l\'électricité résidentielle, US Energy Information Administration.](https://www.eia.gov/electricity/monthly/)',
-          '[Prix des GPU NVIDIA en hausse — suivi des prix, InsiderLLM (mis à jour le 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[Prix des GPU NVIDIA en hausse — suivi des prix, InsiderLLM (chiffre de la RTX 3090 daté du 2026-11-23 ; chiffre de la RTX 4090 issu de la mise à jour du 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -1424,7 +1425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Meilleurs GPU pour LLM locaux : guide d\'achat complet](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — comparez la RTX 3090 aux cartes actuelles à chaque niveau de prix.',
           '[GPU d\'occasion pour LLM locaux : meilleurs rapports qualité-prix](/fr/local-llms/used-gpus-for-local-llms) — le guide plus large du marché de l\'occasion couvrant la RTX 3060, la 3080 et la 4090 aux côtés de cette carte.',
           '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) — en quoi les deux outils avec lesquels ce GPU fonctionne diffèrent réellement, au-delà du backend llama.cpp commun.',
-          '[Le moyen le plus économique de faire tourner un modèle 70B en local](/fr/prompt-bites/cheapest-way-to-run-70b-model-locally) — où deux RTX 3090 s\'intègrent dans la configuration 70B la moins chère.',
+          '[Le moyen le plus économique de faire tourner un modèle 70B en local](/fr/prompt-bites/cheapest-way-to-run-70b-model-locally) — comment une configuration à deux RTX 3090 se compare aux autres façons de faire tourner un modèle 70B.',
           '[Combien de VRAM pour un modèle 70B ?](/fr/prompt-bites/vram-for-70b-model) — le calcul de VRAM derrière la recommandation à deux cartes ci-dessus.',
           '[Calculateur de coût LLM local : construire vs louer](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — effectuez le calcul de rentabilité avec vos propres chiffres et votre matériel.',
           '[louer un GPU cloud à la place](/fr/power-local-llm/best-cloud-gpu-providers) — louer à l\'heure d\'abord ; les deux avis sur ces places de marché sont [avis sur Vast.ai](/fr/power-local-llm/vast-ai-review) et [avis sur Clore.ai](/fr/power-local-llm/clore-ai-review).',
@@ -1447,9 +1448,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'RTX 3090 para LLM local 2026: ¿comprar usada o alquilar?',
 
     intro: 'La RTX 3090 es una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA en tu propio equipo, y alquilar la misma tarjeta en la nube cuesta céntimos por hora. Esta guía calcula dónde está realmente el límite entre ambas opciones.',
-    metaDescription: 'Una RTX 3090 usada cuesta 1.400–1.550 $ en 2026; alquilarla cuesta desde unos 0,16 $/hora. Aquí el cálculo de punto de equilibrio comprar vs alquilar para 24 GB de VRAM en LLM local.',
+    metaDescription: 'Una RTX 3090 usada cuesta 1.500–1.725 $ en 2026; alquilarla cuesta desde unos 0,16 $/hora. Aquí el cálculo de punto de equilibrio comprar vs alquilar para 24 GB de VRAM en LLM local.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '13 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores y equipos pequeños que deciden entre comprar una GPU usada de 24 GB o alquilar tiempo de GPU en la nube para inferencia de LLM local',
@@ -1466,20 +1467,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Compra una RTX 3090 usada si vas a usarla más de unas ocho horas al día, todos los días, o si tus datos no pueden salir de tu edificio. Alquila en cualquier otro caso.** A 1.400–1.550 $ usada (rastreador de InsiderLLM, 2026-10-15) frente a un alquiler desde 0,16 $ por hora en la nube, la tarjeta solo se amortiza con uso sostenido — y en 2026 cuesta más que en marzo, lo que aleja el punto de equilibrio.',
+    leadAnswerBlock: '**Compra una RTX 3090 usada si vas a usarla más de unas ocho horas al día, todos los días, o si tus datos no pueden salir de tu edificio. Alquila en cualquier otro caso.** A 1.500–1.725 $ usada (rastreador de InsiderLLM, 2026-11-23) frente a un alquiler desde 0,16 $ por hora en la nube, la tarjeta solo se amortiza con uso sostenido — y en 2026 cuesta más que en marzo, lo que aleja el punto de equilibrio.',
 
     quickAnswerTop: {
       es: {
         question: '¿Aún vale la pena comprar una RTX 3090 para LLM local?',
-        answer: 'Sí, pero solo para uso sostenido o trabajo con restricciones de privacidad. Una RTX 3090 usada ofrece 24 GB de VRAM por 1.400–1.550 $, una de las formas más baratas de ejecutar modelos de clase 27B enteramente en tu propio hardware. Alquilar la misma GPU cuesta desde 0,16 $ por hora, así que con uso ligero la nube es más barata durante años.',
+        answer: 'Sí, pero solo para uso sostenido o trabajo con restricciones de privacidad. Una RTX 3090 usada ofrece 24 GB de VRAM por 1.500–1.725 $, una de las formas más baratas de ejecutar modelos de clase 27B enteramente en tu propio hardware. Alquilar la misma GPU cuesta desde 0,16 $ por hora, así que con uso ligero la nube es más barata durante años.',
         bullets: [
           '24 GB de VRAM, 936 GB/s de ancho de banda, 350 W — sin cambios desde 2020, sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA',
-          'Precio usada 1.400–1.550 $ (rastreador de InsiderLLM, 2026-10-15); en aumento desde unos 600–800 $ en marzo (XDA Developers, 2026-03-15) por la escasez de memoria',
+          'Precio usada 1.500–1.725 $ (rastreador de InsiderLLM, 2026-11-23); en aumento desde unos 600–800 $ en marzo (XDA Developers, 2026-03-15) por la escasez de memoria',
           'Alquiler en la nube de 0,16 $/h (tarifa bajo demanda más baja con stock) a 0,50 $/h (RunPod Secure); RunPod Community 0,22 $/h; mediana de 0,25 $/h en las configuraciones bajo demanda de los proveedores listados en GetDeploying',
-          'El punto de equilibrio frente a un alquiler mediano de 0,25 $/h con 2 horas al día es de unos 11 años — con 8 horas al día, unos 2,8',
+          'El punto de equilibrio frente a un alquiler mediano de 0,25 $/h con 2 horas al día es de unos 12 años — con 8 horas al día, unos 3',
           'Compra para privacidad, latencia, agentes activos permanentemente y ajuste fino constante; alquila para picos de uso y experimentos',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -1489,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 para LLM local en 2026: ¿comprar o alquilar?',
       description: 'Análisis de punto de equilibrio entre comprar una NVIDIA RTX 3090 usada y alquilar la misma GPU en proveedores de nube para inferencia de LLM local, con precios de 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1529,9 +1530,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Puntos clave',
         numberedItems: [
-          'Una RTX 3090 usada cuesta 1.400–1.550 $ y ofrece 24 GB de VRAM — sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA.',
+          'Una RTX 3090 usada cuesta 1.500–1.725 $ (rastreador de InsiderLLM, 2026-11-23) y ofrece 24 GB de VRAM — sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA.',
           'Alquilar la misma GPU cuesta desde 0,16 $/hora en la tarifa bajo demanda más baja con stock y 0,22 $/hora en RunPod Community, con una mediana de 0,25 $/hora por GPU en las configuraciones bajo demanda de los proveedores listados en GetDeploying; las tarifas del marketplace de Vast.ai varían según el host.',
-          'Tras restar unos 0,08 $/hora de electricidad, comprar solo gana después de unas 8.300 horas de GPU frente a un alquiler mediano — unos 2,8 años con ocho horas al día.',
+          'Tras restar unos 0,08 $/hora de electricidad, comprar solo gana después de unas 8.800 horas de GPU frente a un alquiler mediano — unos 3 años con ocho horas al día.',
           'La tarjeta se encareció en 2026, no se abarató: costaba unos 600–800 $ en marzo (XDA Developers, 2026-03-15). Eso aleja el punto de equilibrio.',
           'Compra para privacidad, trabajo sin conexión, agentes activos permanentemente y ajuste fino constante. Alquila para picos de uso, experimentos y todo lo que de otro modo quedaría inactivo.',
           'La reventa puede compensar parte del precio de compra, pero no está garantizada: los precios de segunda mano subieron en 2026 por la escasez de memoria y podrían volver a bajar, así que considera cualquier valor de reventa como un extra, no como un plan.',
@@ -1560,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Menos de 2 horas al día → alquila, y revísalo en seis meses',
-            '8+ horas al día, todos los días → compra, la tarjeta se amortiza en unos 3 a 6 años frente a un alquiler',
+            '8+ horas al día, todos los días → compra, la tarjeta se amortiza en unos 3 a 6,4 años frente a alquileres de 0,16–0,25 $ por hora',
             'Cualquier dato que no puedas subir → compra, el coste no es el factor decisivo',
           ],
         },
@@ -1583,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM: 24 GB GDDR6X — suficiente para un modelo de clase 27B en cuantización de 4 bits con margen para contexto.',
           'Ancho de banda de memoria: 936 GB/s, lo que realmente determina la velocidad de generación de tokens en una carga limitada por memoria.',
           'Potencia: TDP de 350 W de la tarjeta; calcula unos 450 W en el enchufe para todo el sistema bajo carga de inferencia.',
-          'Precio usada: típicamente 1.400–1.550 $ según el rastreador de InsiderLLM (2026-10-15) — en aumento desde unos 600–800 $ en marzo (XDA Developers, 2026-03-15).',
+          'Precio usada: típicamente 1.500–1.725 $ según el rastreador de InsiderLLM (2026-11-23; mediana de 1.650 $ en 225 anuncios vendidos, del 2026-11-13 al 2026-11-23) — en aumento desde unos 600–800 $ en marzo (XDA Developers, 2026-03-15).',
           'Alquiler en la nube: 0,16 $/hora (tarifa bajo demanda más baja con stock) a 0,50 $/hora (RunPod Secure); mediana de 0,25 $/hora por GPU en las configuraciones bajo demanda de los proveedores listados en GetDeploying.',
           'Electricidad: con una media residencial reciente de EE. UU. de 0,18 $/kWh, operarla cuesta unos 0,08 $ por hora.',
         ],
@@ -1593,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'Qué te da realmente la RTX 3090',
         content: [
-          '**La RTX 3090 importa por una razón: 24 GB de VRAM a uno de los precios más bajos para una tarjeta NVIDIA compatible con CUDA.** Todo lo demás de la tarjeta es poco destacable en 2026 — es un diseño de 2020, consume 350 W, y una tarjeta actual la supera en cada métrica de eficiencia. Nada de eso cambia el hecho de que los pesos de un modelo caben en la memoria de video o no caben.',
+          '**La RTX 3090 importa por una razón: 24 GB de VRAM a uno de los precios más bajos para una tarjeta NVIDIA compatible con CUDA.** Todo lo demás de la tarjeta es poco destacable en 2026 — es un diseño de 2020, consume 350 W, y las tarjetas actuales suelen ser más eficientes en consumo. Nada de eso cambia el hecho de que los pesos de un modelo caben en la memoria de video o no caben.',
           'La VRAM es un precipicio, no una pendiente. Un modelo que cabe funciona a máxima velocidad; un modelo que se desborda aunque sea un gigabyte se vuelca en la RAM del sistema y se derrumba a una fracción de la velocidad. Eso hace de los 24 GB un umbral de capacidad, no un número de rendimiento, y la 3090 es una de las tarjetas más baratas que lo cruza.',
           'El segundo número importante es el ancho de banda de memoria. La generación de tokens de un modelo cuantizado está limitada por memoria, no por cómputo, así que 936 GB/s predicen mejor la sensación de velocidad que cualquier recuento de núcleos CUDA. Por eso la 3090 sigue siendo competitiva frente a tarjetas de gama media más nuevas con más cómputo pero un bus de memoria más estrecho.',
           'En la práctica: margen cómodo para un modelo de clase 27B en cuantización de 4 bits, inferencia rápida en modelos de 7B–14B con contexto largo, y — con una segunda tarjeta — la capacidad de mantener un modelo de clase 70B en VRAM sin offloading.',
@@ -1638,7 +1639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comprar usada: qué revisar antes de pagar',
         highlight: true,
         content: [
-          '**Si compras, compra usada — la RTX 3090 nueva puede ser difícil de encontrar y suele costar más que la usada, así que comprueba tú mismo los anuncios actuales; la ventaja de precio está en el mercado de segunda mano.** A 1.400–1.550 $ sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA, y la reventa puede compensar parte del coste, aunque no está garantizada.',
+          '**Si compras, compra usada — la RTX 3090 nueva puede ser difícil de encontrar y suele costar más que la usada, así que comprueba tú mismo los anuncios actuales; la ventaja de precio está en el mercado de segunda mano.** A 1.500–1.725 $ sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA, y la reventa puede compensar parte del coste, aunque no está garantizada.',
           'La advertencia honesta: son tarjetas de unos seis años, muchas ex-minería o ex-gaming, vendidas sin garantía por particulares. Los modos de fallo son conocidos y verificables, así que el riesgo es manejable — pero es real, y por eso conviene comprar a un vendedor con devoluciones en lugar del anuncio más barato que encuentres.',
         ],
         items: [
@@ -1659,14 +1660,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB (usada)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Comprobar precios de RTX 3090 usada en eBay',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB (usada/reacondicionada)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Comprobar stock de RTX 3090 en Newegg',
           },
         ],
@@ -1695,7 +1696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Por qué alquilar es la mejor respuesta con más frecuencia de la esperada',
         content: [
           '**El argumento a favor del alquiler no es que siempre sea más barato — es que una GPU inactiva cuesta lo mismo que una ocupada.** Una tarjeta en un escritorio que se usa los fines de semana ya ha costado su precio de compra completo. Una GPU alquilada no cuesta nada entre sesiones.',
-          'Las razones para alquilar son concretas, no filosóficas: sin desembolso inicial, sin riesgo de depreciación en una tarjeta de unos seis años, sin restricciones de fuente, caja o refrigeración, sin fines de semana perdidos cuando falla un ventilador. También puedes alquilar una tarjeta que nunca comprarías — probar un modelo de clase 70B en dos GPU alquiladas durante una tarde cuesta unos dólares, frente a unos 2.800–3.100 $ por un par usado.',
+          'Las razones para alquilar son concretas, no filosóficas: sin desembolso inicial, sin riesgo de depreciación en una tarjeta de unos seis años, sin restricciones de fuente, caja o refrigeración, sin fines de semana perdidos cuando falla un ventilador. También puedes alquilar una tarjeta que nunca comprarías — probar un modelo de clase 70B en dos GPU alquiladas durante una tarde cuesta unos dólares, frente a unos 3.000–3.450 $ por un par usado.',
           'El contraargumento honesto es que alquilar tiene fricción real. Subes datos a la máquina de otra persona, esperas una instancia, y en los anuncios de marketplace puede ocurrir que un host se desconecte a mitad de trabajo. Esas no son razones para descartarlo — son razones por las que la decisión depende de tu carga de trabajo, no solo de la tarifa por hora.',
         ],
       },
@@ -1724,7 +1725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Las tarifas de RunPod se volvieron a comprobar en su página de modelo; la tarifa más baja con stock y la mediana multiproveedor proceden de la tabla de GetDeploying (consultada en la fecha de actualización mostrada) y pueden haber cambiado. Las tarifas de Vast.ai varían según el host; consulta la página de precios de la propia Vast.ai. Las tarifas de GPU en la nube cambian semanalmente — comprueba los precios actuales antes de comprometerte.',
+            text: 'Las tarifas de RunPod se volvieron a comprobar en su página de modelo; la tarifa más baja con stock y la mediana multiproveedor proceden de la tabla de GetDeploying (consultada el 2026-11-18) y pueden haber cambiado. Las tarifas de Vast.ai varían según el host; consulta la página de precios de la propia Vast.ai. Las tarifas de GPU en la nube cambian semanalmente — comprueba los precios actuales antes de comprometerte.',
           },
         ],
         affiliateLinks: [
@@ -1749,16 +1750,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: 'El cálculo del punto de equilibrio',
         content: [
-          '**Frente a un alquiler mediano de 0,25 $/hora, una tarjeta de 1.400 $ tarda unas 8.300 horas de GPU en amortizarse — unos 2,8 años con ocho horas al día, o 11 años con dos.** Esa es la cifra que debería decidir la compra.',
-          'El cálculo resta lo que cuesta operar la tarjeta. A 450 W en el enchufe y una media residencial reciente de EE. UU. de 0,18 $/kWh, la inferencia local cuesta unos 0,08 $ por hora en electricidad, así que no estás comparando 1.400 $ contra 0,25 $/hora, sino contra los aproximadamente 0,17 $/hora que realmente ahorras.',
-          'Supuestos: tarjeta de 1.400 $, consumo del sistema de 450 W, 0,18 $/kWh. Sustituye tu propia tarifa eléctrica — mueve el resultado más que cualquier otra cosa en la tabla, y en mercados por encima de 0,30 $/kWh el argumento de comprar prácticamente desaparece.',
+          '**Frente a un alquiler mediano de 0,25 $/hora, una tarjeta de 1.500 $ tarda unas 8.800 horas de GPU en amortizarse — unos 3 años con ocho horas al día, o 12 años con dos.** Esa es la cifra que debería decidir la compra.',
+          'El cálculo resta lo que cuesta operar la tarjeta. A 450 W en el enchufe y una media residencial reciente de EE. UU. de 0,18 $/kWh, la inferencia local cuesta unos 0,08 $ por hora en electricidad, así que no estás comparando 1.500 $ contra 0,25 $/hora, sino contra los aproximadamente 0,17 $/hora que realmente ahorras.',
+          'Supuestos: tarjeta de 1.500 $ (extremo bajo del rango del rastreador; con la mediana de 1.650 $ cada plazo es un 10 % más largo aproximadamente), consumo del sistema de 450 W, 0,18 $/kWh. Sustituye tu propia tarifa eléctrica — mueve el resultado más que cualquier otra cosa en la tabla, y en mercados por encima de 0,30 $/kWh el argumento de comprar prácticamente desaparece.',
         ],
         columns: ['Uso', 'vs 0,16 $/h', 'vs 0,25 $/h', 'vs 0,50 $/h'],
         rows: [
-          { Uso: '2 horas al día', 'vs 0,16 $/h': '~24 años', 'vs 0,25 $/h': '~11 años', 'vs 0,50 $/h': '~4,6 años' },
-          { Uso: '4 horas al día', 'vs 0,16 $/h': '~12 años', 'vs 0,25 $/h': '~5,7 años', 'vs 0,50 $/h': '~2,3 años' },
-          { Uso: '8 horas al día', 'vs 0,16 $/h': '~6,1 años', 'vs 0,25 $/h': '~2,8 años', 'vs 0,50 $/h': '~1,1 años' },
-          { Uso: 'Encendida siempre (24/7)', 'vs 0,16 $/h': '~24 meses', 'vs 0,25 $/h': '~11 meses', 'vs 0,50 $/h': '~4,6 meses' },
+          { Uso: '2 horas al día', 'vs 0,16 $/h': '~26 años', 'vs 0,25 $/h': '~12 años', 'vs 0,50 $/h': '~4,9 años' },
+          { Uso: '4 horas al día', 'vs 0,16 $/h': '~13 años', 'vs 0,25 $/h': '~6 años', 'vs 0,50 $/h': '~2,4 años' },
+          { Uso: '8 horas al día', 'vs 0,16 $/h': '~6,4 años', 'vs 0,25 $/h': '~3 años', 'vs 0,50 $/h': '~1,2 años' },
+          { Uso: 'Encendida siempre (24/7)', 'vs 0,16 $/h': '~26 meses', 'vs 0,25 $/h': '~12 meses', 'vs 0,50 $/h': '~4,9 meses' },
         ],
         callouts: [
           {
@@ -1777,12 +1778,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Lector: 'Aficionado de fin de semana',
             Veredicto: 'Alquilar',
-            'Por qué': 'Unas horas a la semana frente a un desembolso de 1.400 $ están a décadas del punto de equilibrio. Alquila durante un año, y si te encuentras alquilando a diario, compra entonces — también sabrás exactamente qué tarjeta necesitas.',
+            'Por qué': 'Unas horas a la semana frente a un desembolso de 1.500 $ están a décadas del punto de equilibrio. Alquila durante un año, y si te encuentras alquilando a diario, compra entonces — también sabrás exactamente qué tarjeta necesitas.',
           },
           {
             Lector: 'Usuario intensivo diario',
             Veredicto: 'Comprar',
-            'Por qué': 'Con ocho o más horas al día la tarjeta se amortiza en unos tres a seis años frente al alquiler, y la reventa puede compensar parte del resto, aunque no está garantizada. La mayor ganancia es de comportamiento: una GPU propia no tiene contador corriendo, así que dejas de racionar experimentos.',
+            'Por qué': 'Con ocho o más horas al día la tarjeta se amortiza en unos 3 a 6,4 años frente a alquileres de 0,16–0,25 $ por hora, y la reventa puede compensar parte del resto, aunque no está garantizada. La mayor ganancia es de comportamiento: una GPU propia no tiene contador corriendo, así que dejas de racionar experimentos.',
           },
           {
             Lector: 'Equipo pequeño o startup',
@@ -1830,7 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Aún vale la pena comprar la RTX 3090 en 2026?',
-            a: 'Para inferencia local sostenida, sí — sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA, a 1.400–1.550 $ usada. Para uso ligero u ocasional, no: alquilar la misma GPU desde 0,16 $ por hora es más barato durante años. El factor decisivo son las horas de uso real por semana, no la ficha técnica.',
+            a: 'Para inferencia local sostenida, sí — sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA, a 1.500–1.725 $ usada. Para uso ligero u ocasional, no: alquilar la misma GPU desde 0,16 $ por hora es más barato durante años. El factor decisivo son las horas de uso real por semana, no la ficha técnica.',
           },
           {
             q: '¿Es buena la RTX 3090 para Ollama?',
@@ -1850,11 +1851,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Pueden dos RTX 3090 ejecutar un modelo de 70B?',
-            a: 'Sí. Dos tarjetas dan 48 GB de VRAM, suficiente para un modelo de clase 70B en cuantización de 4 bits sin descargar a la RAM del sistema. Prevé una fuente de 1.000 W o más (consulta la documentación del fabricante de la tarjeta para el requisito exacto) y una placa base con dos ranuras adecuadas — y alquila primero una instancia en la nube con dos GPU durante una tarde para confirmar que la configuración hace lo que necesitas antes de gastar unos 2.800–3.100 $.',
+            a: 'Sí. Dos tarjetas dan 48 GB de VRAM, suficiente para un modelo de clase 70B en cuantización de 4 bits sin descargar a la RAM del sistema. Prevé una fuente de 1.000 W o más (consulta la documentación del fabricante de la tarjeta para el requisito exacto) y una placa base con dos ranuras adecuadas — y alquila primero una instancia en la nube con dos GPU durante una tarde para confirmar que la configuración hace lo que necesitas antes de gastar unos 3.000–3.450 $.',
           },
           {
             q: '¿Por qué subieron los precios de la RTX 3090 usada en 2026?',
-            a: 'Una escasez de memoria elevó ampliamente los precios de GPU durante 2026, según el rastreador. La tarjeta se vendía por unos 600–800 $ en marzo (XDA Developers, 2026-03-15) y 1.400–1.550 $ a mediados de octubre (rastreador de InsiderLLM, 2026-10-15). Es uno de los pocos productos de unos seis años que se encareció.',
+            a: 'Una escasez de memoria elevó ampliamente los precios de GPU durante 2026, según el rastreador. La tarjeta se vendía por unos 600–800 $ en marzo (XDA Developers, 2026-03-15) y 1.500–1.725 $ a fecha de 2026-11-23 (rastreador de InsiderLLM). Es uno de los pocos productos de unos seis años que se encareció.',
           },
           {
             q: '¿Es seguro comprar una GPU de minería usada?',
@@ -1876,11 +1877,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fuentes',
         items: [
           '[Rastreador de precios de la RTX 3090 — historial de precios nueva y usada, Best Value GPU.](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[Precios en la nube de la RTX 3090 entre varios proveedores, GetDeploying (consultado en la fecha de actualización mostrada).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[Precios en la nube de la RTX 3090 entre varios proveedores, GetDeploying (consultado el 2026-11-18).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[Precios de alquiler de GPU RTX 3090, RunPod.](https://www.runpod.io/gpu-models/rtx-3090)',
           '[Una RTX 3090 usada sigue siendo la mejor GPU para IA local, XDA Developers.](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly — precio medio de electricidad residencial, US Energy Information Administration.](https://www.eia.gov/electricity/monthly/)',
-          '[Los precios de las GPU NVIDIA suben — rastreador de precios, InsiderLLM (actualizado el 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[Los precios de las GPU NVIDIA suben — rastreador de precios, InsiderLLM (dato de la RTX 3090 con fecha 2026-11-23; dato de la RTX 4090 de la actualización 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -1891,7 +1892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Mejores GPU para LLM locales: guía de compra completa](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — compara la RTX 3090 con tarjetas actuales en cada rango de precio.',
           '[GPU usadas para LLM locales: mejores opciones por valor](/es/local-llms/used-gpus-for-local-llms) — la guía más amplia del mercado usado, que cubre la RTX 3060, 3080 y 4090 junto a esta tarjeta.',
           '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) — en qué se diferencian realmente las dos herramientas con las que trabaja esta GPU, más allá de compartir un backend llama.cpp.',
-          '[La forma práctica más barata de ejecutar un modelo 70B localmente](/es/prompt-bites/cheapest-way-to-run-70b-model-locally) — dónde encajan dos RTX 3090 en la configuración 70B más económica.',
+          '[La forma práctica más barata de ejecutar un modelo 70B localmente](/es/prompt-bites/cheapest-way-to-run-70b-model-locally) — cómo se compara un equipo con dos RTX 3090 con otras formas de ejecutar un modelo 70B.',
           '[¿Cuánta VRAM necesita un modelo 70B?](/es/prompt-bites/vram-for-70b-model) — la aritmética de VRAM detrás de la recomendación de dos tarjetas anterior.',
           '[Calculadora de coste de LLM local: comprar vs alquilar](/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — ejecuta el cálculo de punto de equilibrio con tus propias cifras y tu hardware.',
           '[alquilar una GPU en la nube en su lugar](/es/power-local-llm/best-cloud-gpu-providers) — alquila primero por horas; las dos reseñas de mercados son [reseña de Vast.ai](/es/power-local-llm/vast-ai-review) y [reseña de Clore.ai](/es/power-local-llm/clore-ai-review).',
@@ -1914,9 +1915,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'RTX 3090 para LLM local 2026: comprar usada ou alugar?',
 
     intro: 'A RTX 3090 é uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA na sua própria máquina, e alugar a mesma placa na nuvem custa centavos por hora. Este guia calcula onde realmente fica a fronteira entre as duas opções.',
-    metaDescription: 'Uma RTX 3090 usada custa US$ 1.400–1.550 em 2026; alugar custa a partir de cerca de US$ 0,16/hora. Veja o cálculo de ponto de equilíbrio entre comprar e alugar 24 GB de VRAM para LLM local.',
+    metaDescription: 'Uma RTX 3090 usada custa US$ 1.500–1.725 em 2026; alugar custa a partir de cerca de US$ 0,16/hora. Veja o cálculo de ponto de equilíbrio entre comprar e alugar 24 GB de VRAM para LLM local.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '13 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e pequenas equipes decidindo entre comprar uma GPU usada de 24 GB e alugar tempo de GPU na nuvem para inferência de LLM local',
@@ -1933,20 +1934,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Compre uma RTX 3090 usada se você for usá-la mais de cerca de oito horas por dia, todos os dias, ou se seus dados não puderem sair do seu prédio. Alugue nos demais casos.** A US$ 1.400–1.550 usada (rastreador da InsiderLLM, 2026-10-15) contra aluguel a partir de US$ 0,16 por hora na nuvem, a placa só se paga com uso sustentado — e em 2026 ela custa mais do que em março, o que empurra o ponto de equilíbrio mais adiante.',
+    leadAnswerBlock: '**Compre uma RTX 3090 usada se você for usá-la mais de cerca de oito horas por dia, todos os dias, ou se seus dados não puderem sair do seu prédio. Alugue nos demais casos.** A US$ 1.500–1.725 usada (rastreador da InsiderLLM, 2026-11-23) contra aluguel a partir de US$ 0,16 por hora na nuvem, a placa só se paga com uso sustentado — e em 2026 ela custa mais do que em março, o que empurra o ponto de equilíbrio mais adiante.',
 
     quickAnswerTop: {
       pt: {
         question: 'A RTX 3090 ainda vale a pena comprar para LLM local?',
-        answer: 'Sim, mas só para uso sustentado ou trabalho ligado à privacidade. Uma RTX 3090 usada oferece 24 GB de VRAM por US$ 1.400–1.550, ainda um dos caminhos mais baratos para rodar modelos de classe 27B inteiramente no seu próprio hardware. Alugar a mesma GPU custa a partir de US$ 0,16 por hora, então em uso leve a nuvem sai mais barata por anos.',
+        answer: 'Sim, mas só para uso sustentado ou trabalho ligado à privacidade. Uma RTX 3090 usada oferece 24 GB de VRAM por US$ 1.500–1.725, ainda um dos caminhos mais baratos para rodar modelos de classe 27B inteiramente no seu próprio hardware. Alugar a mesma GPU custa a partir de US$ 0,16 por hora, então em uso leve a nuvem sai mais barata por anos.',
         bullets: [
           '24 GB de VRAM, 936 GB/s de largura de banda, 350 W — sem mudanças desde 2020, ainda uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA',
-          'Preço usada US$ 1.400–1.550 (rastreador da InsiderLLM, 2026-10-15); subiu de cerca de US$ 600–800 em março (XDA Developers, 2026-03-15) por causa da escassez de memória',
+          'Preço usada US$ 1.500–1.725 (rastreador da InsiderLLM, 2026-11-23); subiu de cerca de US$ 600–800 em março (XDA Developers, 2026-03-15) por causa da escassez de memória',
           'Aluguel na nuvem de US$ 0,16/h (menor tarifa sob demanda em estoque) a US$ 0,50/h (RunPod Secure); RunPod Community US$ 0,22/h; mediana de US$ 0,25/h nas configurações sob demanda dos provedores listados na GetDeploying',
-          'O ponto de equilíbrio contra um aluguel mediano de US$ 0,25/h com 2 horas por dia é de cerca de 11 anos — com 8 horas por dia, cerca de 2,8',
+          'O ponto de equilíbrio contra um aluguel mediano de US$ 0,25/h com 2 horas por dia é de cerca de 12 anos — com 8 horas por dia, cerca de 3',
           'Compre para privacidade, latência, agentes sempre ativos e ajuste fino constante; alugue para picos de uso e experimentos',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -1956,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 para LLM local em 2026: comprar ou alugar?',
       description: 'Análise de ponto de equilíbrio entre comprar uma NVIDIA RTX 3090 usada e alugar a mesma GPU em provedores de nuvem para inferência de LLM local, com preços de 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1996,9 +1997,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Pontos principais',
         numberedItems: [
-          'Uma RTX 3090 usada custa US$ 1.400–1.550 e oferece 24 GB de VRAM — ainda uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA.',
+          'Uma RTX 3090 usada custa US$ 1.500–1.725 (rastreador da InsiderLLM, 2026-11-23) e oferece 24 GB de VRAM — ainda uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA.',
           'Alugar a mesma GPU custa a partir de US$ 0,16/hora na menor tarifa sob demanda em estoque e US$ 0,22/hora na RunPod Community, com mediana de US$ 0,25/hora por GPU nas configurações sob demanda dos provedores listados na GetDeploying; as tarifas do marketplace da Vast.ai variam conforme o host.',
-          'Depois de descontar cerca de US$ 0,08/hora de energia elétrica, comprar só vence após cerca de 8.300 horas de GPU contra um aluguel mediano — cerca de 2,8 anos com oito horas por dia.',
+          'Depois de descontar cerca de US$ 0,08/hora de energia elétrica, comprar só vence após cerca de 8.800 horas de GPU contra um aluguel mediano — cerca de 3 anos com oito horas por dia.',
           'A placa ficou mais cara em 2026, não mais barata: custava cerca de US$ 600–800 em março (XDA Developers, 2026-03-15). Isso afasta o ponto de equilíbrio.',
           'Compre para privacidade, trabalho offline, agentes sempre ativos e ajuste fino constante. Alugue para picos de uso, experimentos e qualquer coisa que ficaria ociosa.',
           'A revenda pode compensar parte do preço de compra, mas não é garantida: os preços de usadas subiram em 2026 por causa da escassez de memória e podem cair de novo, então trate qualquer valor de revenda como um bônus, não como um plano.',
@@ -2027,7 +2028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Menos de 2 horas por dia → alugue, e reavalie em seis meses',
-            '8+ horas por dia, todos os dias → compre, a placa se paga em cerca de 3 a 6 anos em comparação com o aluguel',
+            '8+ horas por dia, todos os dias → compre, a placa se paga em cerca de 3 a 6,4 anos em comparação com aluguéis de US$ 0,16–0,25 por hora',
             'Qualquer dado que você não possa enviar para fora → compre, o custo não é o fator decisivo',
           ],
         },
@@ -2050,7 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM: 24 GB GDDR6X — suficiente para um modelo de classe 27B em quantização de 4 bits com espaço para contexto.',
           'Largura de banda de memória: 936 GB/s, o que realmente define a velocidade de geração de tokens numa carga limitada por memória.',
           'Potência: TDP de 350 W da placa; conte com cerca de 450 W na tomada para o sistema todo sob carga de inferência.',
-          'Preço usada: tipicamente US$ 1.400–1.550 segundo o rastreador da InsiderLLM (2026-10-15) — subiu de cerca de US$ 600–800 em março (XDA Developers, 2026-03-15).',
+          'Preço usada: tipicamente US$ 1.500–1.725 segundo o rastreador da InsiderLLM (2026-11-23; mediana de US$ 1.650 em 225 anúncios vendidos, de 2026-11-13 a 2026-11-23) — subiu de cerca de US$ 600–800 em março (XDA Developers, 2026-03-15).',
           'Aluguel na nuvem: US$ 0,16/hora (menor tarifa sob demanda em estoque) a US$ 0,50/hora (RunPod Secure); mediana de US$ 0,25/hora por GPU nas configurações sob demanda dos provedores listados na GetDeploying.',
           'Eletricidade: em uma média residencial recente dos EUA de US$ 0,18/kWh, rodá-la custa cerca de US$ 0,08 por hora.',
         ],
@@ -2060,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'O que a RTX 3090 realmente oferece',
         content: [
-          '**A RTX 3090 importa por um motivo: 24 GB de VRAM por um dos preços mais baixos para uma placa NVIDIA compatível com CUDA.** Tudo mais na placa é comum em 2026 — é um projeto de 2020, consome 350 W, e uma placa atual a supera em toda métrica de eficiência. Nada disso muda o fato de que os pesos de um modelo cabem na memória de vídeo ou não cabem.',
+          '**A RTX 3090 importa por um motivo: 24 GB de VRAM por um dos preços mais baixos para uma placa NVIDIA compatível com CUDA.** Tudo mais na placa é comum em 2026 — é um projeto de 2020, consome 350 W, e as placas atuais costumam ser mais eficientes no consumo. Nada disso muda o fato de que os pesos de um modelo cabem na memória de vídeo ou não cabem.',
           'VRAM é um precipício, não uma rampa. Um modelo que cabe roda em velocidade total; um modelo que ultrapassa mesmo em um gigabyte transborda para a RAM do sistema e desaba para uma fração da velocidade. Isso faz dos 24 GB um limiar de capacidade, não um número de desempenho, e a 3090 é uma das placas mais baratas que o alcançam.',
           'O segundo número importante é a largura de banda de memória. A geração de tokens de um modelo quantizado é limitada por memória, não por processamento, então 936 GB/s prevê melhor a sensação de velocidade do que qualquer contagem de núcleos CUDA. É também por isso que a 3090 permanece competitiva com placas intermediárias mais novas que têm mais poder de processamento, mas barramento de memória mais estreito.',
           'Na prática: folga confortável para um modelo de classe 27B em quantização de 4 bits, inferência rápida em modelos de 7B–14B com contexto longo, e — com uma segunda placa — a capacidade de manter um modelo de classe 70B na VRAM sem offloading.',
@@ -2105,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comprando usada: o que verificar antes de pagar',
         highlight: true,
         content: [
-          '**Se você comprar, compre usada — a RTX 3090 nova pode ser difícil de encontrar e costuma custar mais que a usada, então confira você mesmo os anúncios atuais; a vantagem de preço está no mercado usado.** A US$ 1.400–1.550, ainda é uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA, e a revenda pode compensar parte do custo, embora não seja garantida.',
+          '**Se você comprar, compre usada — a RTX 3090 nova pode ser difícil de encontrar e costuma custar mais que a usada, então confira você mesmo os anúncios atuais; a vantagem de preço está no mercado usado.** A US$ 1.500–1.725, ainda é uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA, e a revenda pode compensar parte do custo, embora não seja garantida.',
           'A ressalva honesta: são placas de cerca de seis anos, muitas ex-mineração ou ex-gaming, vendidas sem garantia por particulares. Os modos de falha são conhecidos e verificáveis, então o risco é administrável — mas é real, e por isso vale comprar de um vendedor com política de devolução em vez do anúncio mais barato que você encontrar.',
         ],
         items: [
@@ -2126,14 +2127,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB (usada)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Conferir preços da RTX 3090 usada no eBay',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB (usada/recondicionada)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Conferir estoque da RTX 3090 na Newegg',
           },
         ],
@@ -2162,7 +2163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Por que alugar é a melhor resposta com mais frequência do que se imagina',
         content: [
           '**O argumento a favor do aluguel não é que ele seja sempre mais barato — é que uma GPU ociosa custa o mesmo que uma ocupada.** Uma placa num desktop usado nos fins de semana já custou o preço de compra inteiro. Uma GPU alugada não custa nada entre as sessões.',
-          'As razões para alugar são concretas, não filosóficas: sem desembolso inicial, sem risco de depreciação numa placa de cerca de seis anos, sem restrições de fonte, gabinete ou refrigeração, sem fim de semana perdido quando uma ventoinha falha. Você também pode alugar uma placa que nunca compraria — testar um modelo de classe 70B em duas GPUs alugadas por uma tarde custa alguns dólares, contra cerca de US$ 2.800–3.100 por um par usado.',
+          'As razões para alugar são concretas, não filosóficas: sem desembolso inicial, sem risco de depreciação numa placa de cerca de seis anos, sem restrições de fonte, gabinete ou refrigeração, sem fim de semana perdido quando uma ventoinha falha. Você também pode alugar uma placa que nunca compraria — testar um modelo de classe 70B em duas GPUs alugadas por uma tarde custa alguns dólares, contra cerca de US$ 3.000–3.450 por um par usado.',
           'O contra-argumento honesto é que alugar tem atrito real. Você envia dados para a máquina de outra pessoa, espera por uma instância, e em anúncios de marketplace pode acontecer de um host ficar offline no meio do trabalho. Isso não são motivos para descartar — são motivos pelos quais a decisão depende da sua carga de trabalho, não só da tarifa por hora.',
         ],
       },
@@ -2191,7 +2192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'As tarifas da RunPod foram reverificadas na página de modelo dela; a menor tarifa em estoque e a mediana multiprovedor vêm da tabela da GetDeploying (consultada na data de atualização exibida) e podem ter mudado. As tarifas da Vast.ai variam conforme o host; veja a página de preços da própria Vast.ai. Tarifas de GPU na nuvem mudam semanalmente — verifique os preços atuais antes de se comprometer.',
+            text: 'As tarifas da RunPod foram reverificadas na página de modelo dela; a menor tarifa em estoque e a mediana multiprovedor vêm da tabela da GetDeploying (consultada em 2026-11-18) e podem ter mudado. As tarifas da Vast.ai variam conforme o host; veja a página de preços da própria Vast.ai. Tarifas de GPU na nuvem mudam semanalmente — verifique os preços atuais antes de se comprometer.',
           },
         ],
         affiliateLinks: [
@@ -2216,16 +2217,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: 'O cálculo do ponto de equilíbrio',
         content: [
-          '**Contra um aluguel mediano de US$ 0,25/hora, uma placa de US$ 1.400 leva cerca de 8.300 horas de GPU para se pagar — cerca de 2,8 anos com oito horas por dia, ou 11 anos com duas.** Esse é o número que deveria decidir a compra.',
-          'O cálculo subtrai o que custa operar a placa. A 450 W na tomada e em uma média residencial recente dos EUA de US$ 0,18/kWh, a inferência local custa cerca de US$ 0,08 por hora em eletricidade, então você não está comparando US$ 1.400 contra US$ 0,25/hora, mas contra os cerca de US$ 0,17/hora que realmente economiza.',
-          'Premissas: placa de US$ 1.400, consumo do sistema de 450 W, US$ 0,18/kWh. Substitua pela sua própria tarifa de energia — ela move o resultado mais do que qualquer outra coisa na tabela, e em mercados acima de US$ 0,30/kWh o argumento de comprar praticamente desaparece.',
+          '**Contra um aluguel mediano de US$ 0,25/hora, uma placa de US$ 1.500 leva cerca de 8.800 horas de GPU para se pagar — cerca de 3 anos com oito horas por dia, ou 12 anos com duas.** Esse é o número que deveria decidir a compra.',
+          'O cálculo subtrai o que custa operar a placa. A 450 W na tomada e em uma média residencial recente dos EUA de US$ 0,18/kWh, a inferência local custa cerca de US$ 0,08 por hora em eletricidade, então você não está comparando US$ 1.500 contra US$ 0,25/hora, mas contra os cerca de US$ 0,17/hora que realmente economiza.',
+          'Premissas: placa de US$ 1.500 (limite inferior da faixa do rastreador; na mediana de US$ 1.650 cada prazo fica cerca de 10% mais longo), consumo do sistema de 450 W, US$ 0,18/kWh. Substitua pela sua própria tarifa de energia — ela move o resultado mais do que qualquer outra coisa na tabela, e em mercados acima de US$ 0,30/kWh o argumento de comprar praticamente desaparece.',
         ],
         columns: ['Uso', 'vs US$ 0,16/h', 'vs US$ 0,25/h', 'vs US$ 0,50/h'],
         rows: [
-          { Uso: '2 horas por dia', 'vs US$ 0,16/h': '~24 anos', 'vs US$ 0,25/h': '~11 anos', 'vs US$ 0,50/h': '~4,6 anos' },
-          { Uso: '4 horas por dia', 'vs US$ 0,16/h': '~12 anos', 'vs US$ 0,25/h': '~5,7 anos', 'vs US$ 0,50/h': '~2,3 anos' },
-          { Uso: '8 horas por dia', 'vs US$ 0,16/h': '~6,1 anos', 'vs US$ 0,25/h': '~2,8 anos', 'vs US$ 0,50/h': '~1,1 anos' },
-          { Uso: 'Sempre ligada (24/7)', 'vs US$ 0,16/h': '~24 meses', 'vs US$ 0,25/h': '~11 meses', 'vs US$ 0,50/h': '~4,6 meses' },
+          { Uso: '2 horas por dia', 'vs US$ 0,16/h': '~26 anos', 'vs US$ 0,25/h': '~12 anos', 'vs US$ 0,50/h': '~4,9 anos' },
+          { Uso: '4 horas por dia', 'vs US$ 0,16/h': '~13 anos', 'vs US$ 0,25/h': '~6 anos', 'vs US$ 0,50/h': '~2,4 anos' },
+          { Uso: '8 horas por dia', 'vs US$ 0,16/h': '~6,4 anos', 'vs US$ 0,25/h': '~3 anos', 'vs US$ 0,50/h': '~1,2 anos' },
+          { Uso: 'Sempre ligada (24/7)', 'vs US$ 0,16/h': '~26 meses', 'vs US$ 0,25/h': '~12 meses', 'vs US$ 0,50/h': '~4,9 meses' },
         ],
         callouts: [
           {
@@ -2244,12 +2245,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Leitor: 'Hobbysta de fim de semana',
             Veredito: 'Alugar',
-            'Por quê': 'Algumas horas por semana contra um gasto de US$ 1.400 estão a décadas do ponto de equilíbrio. Alugue por um ano, e se você perceber que está alugando todo dia, compre então — você também vai saber exatamente qual placa precisa.',
+            'Por quê': 'Algumas horas por semana contra um gasto de US$ 1.500 estão a décadas do ponto de equilíbrio. Alugue por um ano, e se você perceber que está alugando todo dia, compre então — você também vai saber exatamente qual placa precisa.',
           },
           {
             Leitor: 'Usuário intenso diário',
             Veredito: 'Comprar',
-            'Por quê': 'Com oito horas ou mais por dia, a placa se paga em cerca de três a seis anos em comparação com o aluguel, e a revenda pode compensar parte do resto, embora não seja garantida. O maior ganho é comportamental: uma GPU própria não tem contador rodando, então você para de racionar experimentos.',
+            'Por quê': 'Com oito horas ou mais por dia, a placa se paga em cerca de 3 a 6,4 anos em comparação com aluguéis de US$ 0,16–0,25 por hora, e a revenda pode compensar parte do resto, embora não seja garantida. O maior ganho é comportamental: uma GPU própria não tem contador rodando, então você para de racionar experimentos.',
           },
           {
             Leitor: 'Time pequeno ou startup',
@@ -2297,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'A RTX 3090 ainda vale a pena comprar em 2026?',
-            a: 'Para inferência local sustentada, sim — continua sendo uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA, a US$ 1.400–1.550 usada. Para uso leve ou ocasional, não: alugar a mesma GPU a partir de US$ 0,16 por hora é mais barato por anos. O fator decisivo são as horas de uso real por semana, não a ficha técnica.',
+            a: 'Para inferência local sustentada, sim — continua sendo uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA, a US$ 1.500–1.725 usada. Para uso leve ou ocasional, não: alugar a mesma GPU a partir de US$ 0,16 por hora é mais barato por anos. O fator decisivo são as horas de uso real por semana, não a ficha técnica.',
           },
           {
             q: 'A RTX 3090 é boa para Ollama?',
@@ -2317,11 +2318,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Duas RTX 3090 conseguem rodar um modelo de 70B?',
-            a: 'Sim. Duas placas dão 48 GB de VRAM, suficiente para um modelo de classe 70B em quantização de 4 bits sem descarregar para a RAM do sistema. Planeje uma fonte de 1.000 W ou mais (consulte a documentação do fabricante da placa para o requisito exato) e uma placa-mãe com dois slots adequados — e alugue primeiro uma instância na nuvem com duas GPUs por uma tarde, para confirmar que a configuração faz o que você precisa antes de gastar cerca de US$ 2.800–3.100.',
+            a: 'Sim. Duas placas dão 48 GB de VRAM, suficiente para um modelo de classe 70B em quantização de 4 bits sem descarregar para a RAM do sistema. Planeje uma fonte de 1.000 W ou mais (consulte a documentação do fabricante da placa para o requisito exato) e uma placa-mãe com dois slots adequados — e alugue primeiro uma instância na nuvem com duas GPUs por uma tarde, para confirmar que a configuração faz o que você precisa antes de gastar cerca de US$ 3.000–3.450.',
           },
           {
             q: 'Por que os preços da RTX 3090 usada subiram em 2026?',
-            a: 'Uma escassez de memória empurrou os preços de GPU amplamente acima dos níveis anteriores durante 2026, segundo o rastreador. A placa era vendida por cerca de US$ 600–800 em março (XDA Developers, 2026-03-15) e US$ 1.400–1.550 em meados de outubro (rastreador da InsiderLLM, 2026-10-15). É um dos poucos produtos de cerca de seis anos que ficou mais caro.',
+            a: 'Uma escassez de memória empurrou os preços de GPU amplamente acima dos níveis anteriores durante 2026, segundo o rastreador. A placa era vendida por cerca de US$ 600–800 em março (XDA Developers, 2026-03-15) e US$ 1.500–1.725 em 2026-11-23 (rastreador da InsiderLLM). É um dos poucos produtos de cerca de seis anos que ficou mais caro.',
           },
           {
             q: 'É seguro comprar uma GPU de mineração usada?',
@@ -2343,11 +2344,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fontes',
         items: [
           '[Rastreador de preços da RTX 3090 — histórico de preços novo e usado, Best Value GPU.](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[Preços na nuvem da RTX 3090 entre vários provedores, GetDeploying (consultado na data de atualização exibida).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[Preços na nuvem da RTX 3090 entre vários provedores, GetDeploying (consultado em 2026-11-18).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[Preços de aluguel de GPU RTX 3090, RunPod.](https://www.runpod.io/gpu-models/rtx-3090)',
           '[Uma RTX 3090 usada ainda é a melhor GPU para IA local, XDA Developers.](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly — preço médio de eletricidade residencial, US Energy Information Administration.](https://www.eia.gov/electricity/monthly/)',
-          '[Preços das GPUs NVIDIA em alta — rastreador de preços, InsiderLLM (atualizado em 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[Preços das GPUs NVIDIA em alta — rastreador de preços, InsiderLLM (dado da RTX 3090 de 2026-11-23; dado da RTX 4090 da atualização de 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -2358,7 +2359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Melhores GPUs para LLMs locais: guia de compra completo](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — compare a RTX 3090 com placas atuais em cada faixa de preço.',
           '[GPUs usadas para LLMs locais: melhores escolhas por custo-benefício](/pt/local-llms/used-gpus-for-local-llms) — o guia mais amplo do mercado usado, cobrindo a RTX 3060, 3080 e 4090 ao lado desta placa.',
           '[Ollama vs LM Studio](/pt/local-llms/ollama-vs-lm-studio) — como as duas ferramentas com que esta GPU trabalha realmente se diferenciam, além de compartilharem um backend llama.cpp.',
-          '[A forma prática mais barata de rodar um modelo 70B localmente](/pt/prompt-bites/cheapest-way-to-run-70b-model-locally) — onde duas RTX 3090 se encaixam na configuração 70B mais barata.',
+          '[A forma prática mais barata de rodar um modelo 70B localmente](/pt/prompt-bites/cheapest-way-to-run-70b-model-locally) — como uma configuração com duas RTX 3090 se compara a outras formas de rodar um modelo 70B.',
           '[Quanta VRAM um modelo 70B precisa?](/pt/prompt-bites/vram-for-70b-model) — a aritmética de VRAM por trás da recomendação de duas placas acima.',
           '[Calculadora de custo de LLM local: montar vs alugar](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — rode o cálculo de ponto de equilíbrio com seus próprios números e hardware.',
           '[alugar uma GPU na nuvem em vez disso](/pt/power-local-llm/best-cloud-gpu-providers) — alugue primeiro por hora; as duas análises de marketplaces são [análise da Vast.ai](/pt/power-local-llm/vast-ai-review) e [análise da Clore.ai](/pt/power-local-llm/clore-ai-review).',
@@ -2381,9 +2382,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'RTX 3090 لنماذج LLM المحلية 2026: شراء مستعملة أم استئجار؟',
 
     intro: 'بطاقة RTX 3090 هي إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA تحت مكتبك، واستئجار البطاقة نفسها عبر السحابة يكلف سنتات قليلة في الساعة. يوضح هذا الدليل أين يقع الخط الفاصل فعليًا بين هذين الخيارين.',
-    metaDescription: 'تكلف بطاقة RTX 3090 المستعملة 1,400–1,550 $ في 2026؛ استئجارها يبدأ من نحو 0.16 $ في الساعة. إليك حساب نقطة التعادل بين الشراء والاستئجار لـ 24 GB من VRAM لنماذج LLM المحلية.',
+    metaDescription: 'تكلف بطاقة RTX 3090 المستعملة 1,500–1,725 $ في 2026؛ استئجارها يبدأ من نحو 0.16 $ في الساعة. إليك حساب نقطة التعادل بين الشراء والاستئجار لـ 24 GB من VRAM لنماذج LLM المحلية.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '13 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون والفرق الصغيرة الذين يقررون بين شراء وحدة معالجة رسومية مستعملة بسعة 24 GB واستئجار وقت GPU سحابي لاستدلال LLM محلي',
@@ -2400,20 +2401,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**اشترِ بطاقة RTX 3090 مستعملة إذا كنت ستستخدمها أكثر من نحو ثماني ساعات يوميًا، كل يوم، أو إذا كانت بياناتك لا يمكنها مغادرة مبناك. استأجر خلاف ذلك.** بسعر 1,400–1,550 $ مستعملة (متتبّع InsiderLLM، 2026-10-15) مقابل استئجار يبدأ من 0.16 $ في الساعة عبر السحابة، لا تُجدي البطاقة اقتصاديًا إلا مع الاستخدام المستمر — وفي 2026 أصبحت أغلى مما كانت عليه في مارس، ما يدفع نقطة التعادل إلى وقت أبعد.',
+    leadAnswerBlock: '**اشترِ بطاقة RTX 3090 مستعملة إذا كنت ستستخدمها أكثر من نحو ثماني ساعات يوميًا، كل يوم، أو إذا كانت بياناتك لا يمكنها مغادرة مبناك. استأجر خلاف ذلك.** بسعر 1,500–1,725 $ مستعملة (متتبّع InsiderLLM، 2026-11-23) مقابل استئجار يبدأ من 0.16 $ في الساعة عبر السحابة، لا تُجدي البطاقة اقتصاديًا إلا مع الاستخدام المستمر — وفي 2026 أصبحت أغلى مما كانت عليه في مارس، ما يدفع نقطة التعادل إلى وقت أبعد.',
 
     quickAnswerTop: {
       ar: {
         question: 'هل ما زالت RTX 3090 تستحق الشراء لتشغيل نماذج LLM محليًا؟',
-        answer: 'نعم، لكن فقط للاستخدام المستمر أو العمل المرتبط بالخصوصية. توفر بطاقة RTX 3090 المستعملة 24 GB من VRAM مقابل 1,400–1,550 $، وهي ما تزال إحدى أرخص الطرق لتشغيل نماذج من فئة 27B بالكامل على عتادك الخاص. استئجار نفس الـ GPU يبدأ من 0.16 $ في الساعة، لذا في حالات الاستخدام الخفيف تبقى السحابة أرخص لسنوات.',
+        answer: 'نعم، لكن فقط للاستخدام المستمر أو العمل المرتبط بالخصوصية. توفر بطاقة RTX 3090 المستعملة 24 GB من VRAM مقابل 1,500–1,725 $، وهي ما تزال إحدى أرخص الطرق لتشغيل نماذج من فئة 27B بالكامل على عتادك الخاص. استئجار نفس الـ GPU يبدأ من 0.16 $ في الساعة، لذا في حالات الاستخدام الخفيف تبقى السحابة أرخص لسنوات.',
         bullets: [
           '24 GB من VRAM، وعرض نطاق ترددي 936 GB/s، واستهلاك 350 W — دون تغيير منذ 2020، وما زالت إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA',
-          'السعر المستعمل 1,400–1,550 $ (متتبّع InsiderLLM، 2026-10-15)؛ ارتفع من نحو 600–800 $ في مارس (XDA Developers، 2026-03-15) بسبب نقص الذاكرة',
+          'السعر المستعمل 1,500–1,725 $ (متتبّع InsiderLLM، 2026-11-23)؛ ارتفع من نحو 600–800 $ في مارس (XDA Developers، 2026-03-15) بسبب نقص الذاكرة',
           'استئجار سحابي من 0.16 $/ساعة (أدنى عرض بالطلب متوفر في المخزون) إلى 0.50 $/ساعة (RunPod Secure)؛ RunPod Community بسعر 0.22 $/ساعة؛ الوسيط 0.25 $/ساعة عبر الإعدادات بالطلب لدى المزوّدين المدرجين في GetDeploying',
-          'نقطة التعادل مقابل استئجار بالسعر الوسيط 0.25 $/ساعة عند ساعتين يوميًا تبلغ نحو 11 عامًا — وعند 8 ساعات يوميًا نحو 2.8 عام',
+          'نقطة التعادل مقابل استئجار بالسعر الوسيط 0.25 $/ساعة عند ساعتين يوميًا تبلغ نحو 12 عامًا — وعند 8 ساعات يوميًا نحو 3 أعوام',
           'اشترِ من أجل الخصوصية، وزمن الاستجابة، والوكلاء الدائمي التشغيل، والضبط الدقيق المستمر؛ استأجر من أجل الاستخدام المتقطع والتجارب',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -2423,7 +2424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'بطاقة RTX 3090 لتشغيل نماذج LLM محليًا في 2026: هل تشتري أم تستأجر؟',
       description: 'تحليل نقطة التعادل بين شراء بطاقة NVIDIA RTX 3090 مستعملة واستئجار نفس الـ GPU من مزوّدي السحابة لاستدلال LLM المحلي، مع أسعار 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -2462,9 +2463,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'النقاط الرئيسية',
         numberedItems: [
-          'تكلف بطاقة RTX 3090 المستعملة 1,400–1,550 $ وتوفر 24 GB من VRAM — ما زالت إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA.',
+          'تكلف بطاقة RTX 3090 المستعملة 1,500–1,725 $ (متتبّع InsiderLLM، 2026-11-23) وتوفر 24 GB من VRAM — ما زالت إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA.',
           'استئجار نفس الـ GPU يكلف من 0.16 $/ساعة في أدنى عرض بالطلب متوفر في المخزون و0.22 $/ساعة على RunPod Community، بوسيط قدره 0.25 $/ساعة لكل GPU عبر الإعدادات بالطلب لدى المزوّدين المدرجين في GetDeploying؛ وتتفاوت أسعار سوق Vast.ai بحسب المضيف.',
-          'بعد خصم نحو 0.08 $/ساعة تكلفة كهرباء، لا يتفوق الشراء إلا بعد نحو 8,300 ساعة GPU مقارنةً باستئجار بالسعر الوسيط — أي نحو 2.8 عام عند ثماني ساعات يوميًا.',
+          'بعد خصم نحو 0.08 $/ساعة تكلفة كهرباء، لا يتفوق الشراء إلا بعد نحو 8,800 ساعة GPU مقارنةً باستئجار بالسعر الوسيط — أي نحو 3 أعوام عند ثماني ساعات يوميًا.',
           'أصبحت البطاقة أغلى في 2026 وليس أرخص: كانت نحو 600–800 $ في مارس (XDA Developers، 2026-03-15). هذا يدفع نقطة التعادل بعيدًا.',
           'اشترِ من أجل الخصوصية، والعمل دون اتصال، والوكلاء الدائمي التشغيل، والضبط الدقيق المستمر. استأجر من أجل الاستخدام المتقطع والتجارب وأي شيء سيبقى خاملًا لولا ذلك.',
           'قد تعوّض إعادة البيع جزءًا من سعر الشراء، لكنها غير مضمونة: ارتفعت أسعار المستعمل في 2026 بسبب نقص الذاكرة وقد تنخفض مجددًا، لذا اعتبر أي قيمة لإعادة البيع مكسبًا إضافيًا لا خطة.',
@@ -2493,7 +2494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'أقل من ساعتين يوميًا ← استأجر، وأعد التقييم بعد ستة أشهر',
-            '8+ ساعات يوميًا، كل يوم ← اشترِ، البطاقة تُسدد تكلفتها خلال نحو 3–6 سنوات مقارنةً بالاستئجار',
+            '8+ ساعات يوميًا، كل يوم ← اشترِ، البطاقة تُسدد تكلفتها خلال نحو 3–6.4 سنوات مقارنةً بإيجار بين 0.16 و0.25 $ في الساعة',
             'أي بيانات لا يمكنك رفعها ← اشترِ، التكلفة ليست العامل الحاسم',
           ],
         },
@@ -2516,7 +2517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM: 24 GB من GDDR6X — كافية لنموذج من فئة 27B بتكميم 4-bit مع مساحة للسياق.',
           'عرض النطاق الترددي للذاكرة: 936 GB/s، وهو ما يحدد فعليًا سرعة توليد الرموز في أعباء محدودة بالذاكرة.',
           'الطاقة: قدرة تصميمية 350 W للبطاقة؛ احسب نحو 450 W من المقبس للنظام كاملًا تحت حمل الاستدلال.',
-          'السعر المستعمل: عادةً 1,400–1,550 $ وفق متتبّع InsiderLLM (2026-10-15) — ارتفع من نحو 600–800 $ في مارس (XDA Developers، 2026-03-15).',
+          'السعر المستعمل: عادةً 1,500–1,725 $ وفق متتبّع InsiderLLM (2026-11-23؛ الوسيط 1,650 $ من 225 عرضًا مباعًا، من 2026-11-13 إلى 2026-11-23) — ارتفع من نحو 600–800 $ في مارس (XDA Developers، 2026-03-15).',
           'الاستئجار السحابي: 0.16 $/ساعة (أدنى عرض بالطلب متوفر في المخزون) إلى 0.50 $/ساعة (RunPod Secure)؛ الوسيط 0.25 $/ساعة لكل GPU عبر الإعدادات بالطلب لدى المزوّدين المدرجين في GetDeploying.',
           'الكهرباء: عند متوسط حديث للاستخدام السكني الأمريكي يبلغ 0.18 $/kWh، يكلف التشغيل نحو 0.08 $ في الساعة.',
         ],
@@ -2526,7 +2527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'ما الذي تقدمه RTX 3090 فعليًا',
         content: [
-          '**تكتسب RTX 3090 أهميتها لسبب واحد: 24 GB من VRAM بأحد أدنى الأسعار لبطاقة NVIDIA تدعم CUDA.** كل شيء آخر في البطاقة عادي في 2026 — فهي تصميم من عام 2020، وتستهلك 350 W، وأي بطاقة حديثة تتفوق عليها في كل مقياس كفاءة. لا شيء من ذلك يغيّر حقيقة أن أوزان النموذج إما تسع في ذاكرة الفيديو أو لا تسع.',
+          '**تكتسب RTX 3090 أهميتها لسبب واحد: 24 GB من VRAM بأحد أدنى الأسعار لبطاقة NVIDIA تدعم CUDA.** كل شيء آخر في البطاقة عادي في 2026 — فهي تصميم من عام 2020، وتستهلك 350 W، والبطاقات الحديثة أكثر كفاءة في استهلاك الطاقة عمومًا. لا شيء من ذلك يغيّر حقيقة أن أوزان النموذج إما تسع في ذاكرة الفيديو أو لا تسع.',
           'الـ VRAM أشبه بجرف وليس منحدرًا. النموذج الذي يسع يعمل بأقصى سرعة؛ والنموذج الذي يتجاوز الحد ولو بغيغابايت واحد ينتقل إلى ذاكرة النظام وينهار إلى جزء بسيط من السرعة. هذا يجعل الـ 24 GB عتبة قدرة لا رقم أداء، وRTX 3090 هي إحدى أرخص البطاقات التي تتجاوز هذه العتبة.',
           'الرقم المهم الثاني هو عرض النطاق الترددي للذاكرة. توليد الرموز في نموذج مكمَّم محدود بالذاكرة لا بالحساب، لذا فإن 936 GB/s مؤشر أفضل على سرعة التجربة من أي عدد لأنوية CUDA. وهذا أيضًا سبب بقاء RTX 3090 منافِسة لبطاقات متوسطة أحدث تملك حسابًا أكبر لكن ناقل ذاكرة أضيق.',
           'من الناحية العملية: هامش مريح لنموذج من فئة 27B بتكميم 4-bit، واستدلال سريع لنماذج 7B–14B بسياق طويل، ومع بطاقة ثانية القدرة على تشغيل نموذج من فئة 70B بالكامل في VRAM دون تفريغ.',
@@ -2571,7 +2572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الشراء المستعمل: ما يجب التحقق منه قبل الدفع',
         highlight: true,
         content: [
-          '**إذا اشتريت، فاشترِ مستعملة — قد يصعب العثور على بطاقات RTX 3090 الجديدة وغالبًا ما تكون أغلى من المستعملة، لذا تحقق من العروض الحالية بنفسك؛ وميزة السعر موجودة في السوق المستعملة.** بسعر 1,400–1,550 $ ما زالت إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA، وقد تعوّض إعادة البيع جزءًا من التكلفة، لكنها غير مضمونة.',
+          '**إذا اشتريت، فاشترِ مستعملة — قد يصعب العثور على بطاقات RTX 3090 الجديدة وغالبًا ما تكون أغلى من المستعملة، لذا تحقق من العروض الحالية بنفسك؛ وميزة السعر موجودة في السوق المستعملة.** بسعر 1,500–1,725 $ ما زالت إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA، وقد تعوّض إعادة البيع جزءًا من التكلفة، لكنها غير مضمونة.',
           'التحفظ الصادق: هذه بطاقات عمرها نحو ست سنوات، كثير منها سبق استخدامها في التعدين أو الألعاب، وتُباع دون ضمان من أفراد. أنماط الأعطال معروفة وقابلة للفحص، لذا فإن المخاطرة قابلة للإدارة — لكنها حقيقية، ولهذا يجدر الشراء من بائع يقبل الإرجاع بدلًا من أرخص إعلان تجده.',
         ],
         items: [
@@ -2592,14 +2593,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB (مستعملة)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'تحقق من أسعار RTX 3090 المستعملة على eBay',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB (مستعملة/مُجدَّدة)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'تحقق من مخزون RTX 3090 على Newegg',
           },
         ],
@@ -2628,7 +2629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'لماذا يكون الاستئجار الإجابة الأفضل أكثر مما يتوقع الناس',
         content: [
           '**الحجة لصالح الاستئجار ليست أنه أرخص دائمًا — بل أن الـ GPU الخامل يكلف مثل الـ GPU المشغول.** بطاقة موضوعة في جهاز مكتبي يُستخدم في عطل نهاية الأسبوع قد كلّفت بالفعل سعر شرائها الكامل. الـ GPU المستأجر لا يكلف شيئًا بين الجلسات.',
-          'أسباب الاستئجار ملموسة لا فلسفية: لا نفقات مسبقة، ولا مخاطر انخفاض قيمة على بطاقة عمرها نحو ست سنوات، ولا قيود مزود طاقة أو هيكل أو تبريد، ولا عطلة نهاية أسبوع ضائعة عند تعطل مروحة. يمكنك أيضًا استئجار بطاقة لن تشتريها أبدًا — تجربة نموذج من فئة 70B على GPU مستأجرتين لبعد ظهر واحد تكلف بضعة دولارات، مقابل نحو 2,800–3,100 $ لزوج مستعمل.',
+          'أسباب الاستئجار ملموسة لا فلسفية: لا نفقات مسبقة، ولا مخاطر انخفاض قيمة على بطاقة عمرها نحو ست سنوات، ولا قيود مزود طاقة أو هيكل أو تبريد، ولا عطلة نهاية أسبوع ضائعة عند تعطل مروحة. يمكنك أيضًا استئجار بطاقة لن تشتريها أبدًا — تجربة نموذج من فئة 70B على GPU مستأجرتين لبعد ظهر واحد تكلف بضعة دولارات، مقابل نحو 3,000–3,450 $ لزوج مستعمل.',
           'الحجة المضادة الصادقة أن الاستئجار يحمل احتكاكًا حقيقيًا. أنت ترفع بياناتك إلى جهاز شخص آخر، وتنتظر توفر نسخة، وفي إدراجات السوق قد يحدث أن ينقطع اتصال المضيف في منتصف المهمة. هذه ليست أسبابًا لرفض الفكرة — بل أسباب لكون القرار يعتمد على عبء عملك لا على السعر بالساعة وحده.',
         ],
       },
@@ -2657,7 +2658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'أُعيد التحقق من أسعار RunPod على صفحة الموديل الخاصة بها؛ أما أدنى عرض متوفر والوسيط متعدد المزوّدين فمصدرهما جدول GetDeploying (رُوجع في تاريخ آخر تحديث المعروض) وقد يكونان تغيّرا. تتفاوت أسعار Vast.ai بحسب المضيف؛ راجع صفحة الأسعار الخاصة بـ Vast.ai. تتغير أسعار GPU السحابي أسبوعيًا — تحقق من الأسعار الحالية قبل الالتزام.',
+            text: 'أُعيد التحقق من أسعار RunPod على صفحة الموديل الخاصة بها؛ أما أدنى عرض متوفر والوسيط متعدد المزوّدين فمصدرهما جدول GetDeploying (رُوجع في 2026-11-18) وقد يكونان تغيّرا. تتفاوت أسعار Vast.ai بحسب المضيف؛ راجع صفحة الأسعار الخاصة بـ Vast.ai. تتغير أسعار GPU السحابي أسبوعيًا — تحقق من الأسعار الحالية قبل الالتزام.',
           },
         ],
         affiliateLinks: [
@@ -2682,16 +2683,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: 'حساب نقطة التعادل',
         content: [
-          '**مقارنة باستئجار بالسعر الوسيط 0.25 $/ساعة، تحتاج بطاقة بـ 1,400 $ نحو 8,300 ساعة GPU لتسترد تكلفتها — نحو 2.8 عام عند ثماني ساعات يوميًا، أو 11 عامًا عند ساعتين.** هذا هو الرقم الذي ينبغي أن يحسم قرار الشراء.',
-          'يخصم الحساب ما تكلفه تشغيل البطاقة. عند 450 W من المقبس ومتوسط حديث للاستخدام السكني في الولايات المتحدة يبلغ 0.18 $/kWh، يكلف الاستدلال المحلي نحو 0.08 $ في الساعة كهرباءً، لذا فأنت لا تقارن 1,400 $ بـ 0.25 $/ساعة، بل بما توفره فعليًا، أي نحو 0.17 $/ساعة.',
-          'الافتراضات: بطاقة بـ 1,400 $، استهلاك نظام 450 W، 0.18 $/kWh. استبدل سعر الكهرباء لديك — فهو يغيّر النتيجة أكثر من أي عامل آخر في الجدول، وفي الأسواق التي تتجاوز 0.30 $/kWh تتلاشى حجة الشراء إلى حد كبير.',
+          '**مقارنة باستئجار بالسعر الوسيط 0.25 $/ساعة، تحتاج بطاقة بـ 1,500 $ نحو 8,800 ساعة GPU لتسترد تكلفتها — نحو 3 أعوام عند ثماني ساعات يوميًا، أو 12 عامًا عند ساعتين.** هذا هو الرقم الذي ينبغي أن يحسم قرار الشراء.',
+          'يخصم الحساب ما تكلفه تشغيل البطاقة. عند 450 W من المقبس ومتوسط حديث للاستخدام السكني في الولايات المتحدة يبلغ 0.18 $/kWh، يكلف الاستدلال المحلي نحو 0.08 $ في الساعة كهرباءً، لذا فأنت لا تقارن 1,500 $ بـ 0.25 $/ساعة، بل بما توفره فعليًا، أي نحو 0.17 $/ساعة.',
+          'الافتراضات: بطاقة بـ 1,500 $ (الحد الأدنى لنطاق المتتبّع؛ وعند الوسيط 1,650 $ تطول كل مدة بنحو 10%)، استهلاك نظام 450 W، 0.18 $/kWh. استبدل سعر الكهرباء لديك — فهو يغيّر النتيجة أكثر من أي عامل آخر في الجدول، وفي الأسواق التي تتجاوز 0.30 $/kWh تتلاشى حجة الشراء إلى حد كبير.',
         ],
         columns: ['الاستخدام', 'مقابل 0.16 $/س', 'مقابل 0.25 $/س', 'مقابل 0.50 $/س'],
         rows: [
-          { الاستخدام: 'ساعتان يوميًا', 'مقابل 0.16 $/س': '~24 عامًا', 'مقابل 0.25 $/س': '~11 عامًا', 'مقابل 0.50 $/س': '~4.6 عام' },
-          { الاستخدام: '4 ساعات يوميًا', 'مقابل 0.16 $/س': '~12 عامًا', 'مقابل 0.25 $/س': '~5.7 عام', 'مقابل 0.50 $/س': '~2.3 عام' },
-          { الاستخدام: '8 ساعات يوميًا', 'مقابل 0.16 $/س': '~6.1 عام', 'مقابل 0.25 $/س': '~2.8 عام', 'مقابل 0.50 $/س': '~1.1 عام' },
-          { الاستخدام: 'تشغيل دائم (24/7)', 'مقابل 0.16 $/س': '~24 شهرًا', 'مقابل 0.25 $/س': '~11 شهرًا', 'مقابل 0.50 $/س': '~4.6 أشهر' },
+          { الاستخدام: 'ساعتان يوميًا', 'مقابل 0.16 $/س': '~26 عامًا', 'مقابل 0.25 $/س': '~12 عامًا', 'مقابل 0.50 $/س': '~4.9 عام' },
+          { الاستخدام: '4 ساعات يوميًا', 'مقابل 0.16 $/س': '~13 عامًا', 'مقابل 0.25 $/س': '~6 أعوام', 'مقابل 0.50 $/س': '~2.4 عام' },
+          { الاستخدام: '8 ساعات يوميًا', 'مقابل 0.16 $/س': '~6.4 عام', 'مقابل 0.25 $/س': '~3 أعوام', 'مقابل 0.50 $/س': '~1.2 عام' },
+          { الاستخدام: 'تشغيل دائم (24/7)', 'مقابل 0.16 $/س': '~26 شهرًا', 'مقابل 0.25 $/س': '~12 شهرًا', 'مقابل 0.50 $/س': '~4.9 أشهر' },
         ],
         callouts: [
           {
@@ -2710,12 +2711,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             القارئ: 'هاوٍ في عطلة نهاية الأسبوع',
             الحكم: 'استأجر',
-            السبب: 'بضع ساعات أسبوعيًا مقابل إنفاق 1,400 $ تبعدك عقودًا عن نقطة التعادل. استأجر لمدة عام، وإذا وجدت نفسك تستأجر يوميًا فاشترِ حينها — وستعرف أيضًا بالضبط أي بطاقة تحتاجها.',
+            السبب: 'بضع ساعات أسبوعيًا مقابل إنفاق 1,500 $ تبعدك عقودًا عن نقطة التعادل. استأجر لمدة عام، وإذا وجدت نفسك تستأجر يوميًا فاشترِ حينها — وستعرف أيضًا بالضبط أي بطاقة تحتاجها.',
           },
           {
             القارئ: 'مستخدم مكثف يوميًا',
             الحكم: 'اشترِ',
-            السبب: 'عند ثماني ساعات أو أكثر يوميًا، تسترد البطاقة تكلفتها خلال ثلاث إلى ست سنوات تقريبًا مقارنةً بالاستئجار، وقد تعوّض إعادة البيع جزءًا من الباقي، لكنها غير مضمونة. المكسب الأكبر سلوكي: الـ GPU المملوك لا يحمل عدّادًا يعمل، فتتوقف عن ترشيد تجاربك.',
+            السبب: 'عند ثماني ساعات أو أكثر يوميًا، تسترد البطاقة تكلفتها خلال 3 إلى 6.4 سنوات تقريبًا مقارنةً بإيجار بين 0.16 و0.25 $ في الساعة، وقد تعوّض إعادة البيع جزءًا من الباقي، لكنها غير مضمونة. المكسب الأكبر سلوكي: الـ GPU المملوك لا يحمل عدّادًا يعمل، فتتوقف عن ترشيد تجاربك.',
           },
           {
             القارئ: 'فريق صغير أو شركة ناشئة',
@@ -2763,7 +2764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل ما زالت RTX 3090 تستحق الشراء في 2026؟',
-            a: 'للاستدلال المحلي المستمر، نعم — تبقى إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA عند 1,400–1,550 $ مستعملة. للاستخدام الخفيف أو العرضي، لا: استئجار نفس الـ GPU بدءًا من 0.16 $ في الساعة أرخص لسنوات. العامل الحاسم هو ساعات الاستخدام الفعلي أسبوعيًا، لا المواصفات.',
+            a: 'للاستدلال المحلي المستمر، نعم — تبقى إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA عند 1,500–1,725 $ مستعملة. للاستخدام الخفيف أو العرضي، لا: استئجار نفس الـ GPU بدءًا من 0.16 $ في الساعة أرخص لسنوات. العامل الحاسم هو ساعات الاستخدام الفعلي أسبوعيًا، لا المواصفات.',
           },
           {
             q: 'هل RTX 3090 جيدة لـ Ollama؟',
@@ -2783,11 +2784,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكن لبطاقتَي RTX 3090 تشغيل نموذج 70B؟',
-            a: 'نعم. تمنحك البطاقتان 48 GB من VRAM، وهو ما يكفي لنموذج من فئة 70B بتكميم 4-bit دون تفريغ إلى ذاكرة النظام. خطّط لمزود طاقة بقدرة 1,000 W أو أكثر (راجع وثائق الشركة المصنّعة للبطاقة لمعرفة المتطلب الدقيق) ولوحة أم بها فتحتان مناسبتان — واستأجر أولًا نسخة سحابية بوحدتَي GPU لبعد ظهر واحد للتأكد من أن الإعداد يفعل ما تحتاجه قبل إنفاق نحو 2,800–3,100 $.',
+            a: 'نعم. تمنحك البطاقتان 48 GB من VRAM، وهو ما يكفي لنموذج من فئة 70B بتكميم 4-bit دون تفريغ إلى ذاكرة النظام. خطّط لمزود طاقة بقدرة 1,000 W أو أكثر (راجع وثائق الشركة المصنّعة للبطاقة لمعرفة المتطلب الدقيق) ولوحة أم بها فتحتان مناسبتان — واستأجر أولًا نسخة سحابية بوحدتَي GPU لبعد ظهر واحد للتأكد من أن الإعداد يفعل ما تحتاجه قبل إنفاق نحو 3,000–3,450 $.',
           },
           {
             q: 'لماذا ارتفعت أسعار RTX 3090 المستعملة في 2026؟',
-            a: 'دفع نقص في الذاكرة أسعار GPU على نطاق واسع فوق مستوياتها السابقة خلال 2026، بحسب المتتبّع. كانت البطاقة تُباع بنحو 600–800 $ في مارس (XDA Developers، 2026-03-15) وبـ 1,400–1,550 $ في منتصف أكتوبر (متتبّع InsiderLLM، 2026-10-15). إنها أحد المنتجات القليلة التي عمرها نحو ست سنوات وأصبحت أغلى.',
+            a: 'دفع نقص في الذاكرة أسعار GPU على نطاق واسع فوق مستوياتها السابقة خلال 2026، بحسب المتتبّع. كانت البطاقة تُباع بنحو 600–800 $ في مارس (XDA Developers، 2026-03-15) وبـ 1,500–1,725 $ بتاريخ 2026-11-23 (متتبّع InsiderLLM). إنها أحد المنتجات القليلة التي عمرها نحو ست سنوات وأصبحت أغلى.',
           },
           {
             q: 'هل شراء GPU تعدين مستعملة آمن؟',
@@ -2809,11 +2810,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المصادر',
         items: [
           '[متتبع أسعار RTX 3090 — سجل الأسعار الجديدة والمستعملة، Best Value GPU.](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[أسعار RTX 3090 السحابية عبر عدة مزوّدين، GetDeploying (رُوجع في تاريخ آخر تحديث المعروض).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[أسعار RTX 3090 السحابية عبر عدة مزوّدين، GetDeploying (رُوجع في 2026-11-18).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[أسعار استئجار GPU RTX 3090، RunPod.](https://www.runpod.io/gpu-models/rtx-3090)',
           '[ما تزال RTX 3090 المستعملة أفضل GPU للذكاء الاصطناعي المحلي، XDA Developers.](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly — متوسط سعر الكهرباء السكنية، US Energy Information Administration.](https://www.eia.gov/electricity/monthly/)',
-          '[ارتفاع أسعار بطاقات NVIDIA GPU — متتبّع الأسعار، InsiderLLM (حُدّث في 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[ارتفاع أسعار بطاقات NVIDIA GPU — متتبّع الأسعار، InsiderLLM (رقم RTX 3090 مؤرّخ في 2026-11-23؛ ورقم RTX 4090 من تحديث 2026-10-15).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -2824,7 +2825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أفضل وحدات GPU لنماذج LLM المحلية: دليل شراء كامل](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — قارن RTX 3090 ببطاقات حديثة عبر كل فئة سعرية.',
           '[وحدات GPU مستعملة لنماذج LLM المحلية: أفضل الخيارات من حيث القيمة](/ar/local-llms/used-gpus-for-local-llms) — الدليل الأوسع للسوق المستعملة، ويغطي RTX 3060 و3080 و4090 إلى جانب هذه البطاقة.',
           '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) — كيف تختلف فعليًا الأداتان اللتان تعمل معهما هذه الـ GPU، بخلاف مشاركتهما واجهة خلفية llama.cpp.',
-          '[أرخص طريقة عملية لتشغيل نموذج 70B محليًا](/ar/prompt-bites/cheapest-way-to-run-70b-model-locally) — أين تناسب بطاقتا RTX 3090 أرخص إعداد لنموذج 70B.',
+          '[أرخص طريقة عملية لتشغيل نموذج 70B محليًا](/ar/prompt-bites/cheapest-way-to-run-70b-model-locally) — كيف يقارن إعداد ببطاقتي RTX 3090 بالطرق الأخرى لتشغيل نموذج 70B.',
           '[كم VRAM يحتاجه نموذج 70B؟](/ar/prompt-bites/vram-for-70b-model) — حساب VRAM وراء توصية البطاقتين أعلاه.',
           '[حاسبة تكلفة LLM المحلية: بناء مقابل استئجار](/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — شغّل حساب نقطة التعادل بأرقامك وعتادك الخاص.',
           '[يستأجروا وحدة معالجة رسومات سحابية بدلاً من ذلك](/ar/power-local-llm/best-cloud-gpu-providers) — الاستئجار بالساعة أولاً؛ ومراجعتا السوقين هما [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review) و[مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review).',
@@ -2847,9 +2848,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'RTX 3090でローカルLLM 2026：中古購入かレンタルか',
 
     intro: 'RTX 3090は、CUDA対応のNVIDIAカードで24GBのVRAMを自宅のデスクの下に置ける、最も安価な方法のひとつです。同じカードをクラウドでレンタルすると1時間あたり数セントで済みます。このガイドでは、両者の境界線が実際どこにあるのかを計算します。',
-    metaDescription: '中古のRTX 3090は2026年に1,400〜1,550ドル。レンタルなら1時間約0.16ドルから。ローカルLLM向け24GB VRAMの購入とレンタルの損益分岐点を計算します。',
+    metaDescription: '中古のRTX 3090は2026年に1,500〜1,725ドル。レンタルなら1時間約0.16ドルから。ローカルLLM向け24GB VRAMの購入とレンタルの損益分岐点を計算します。',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '13分で読める',
     educationalLevel: 'Intermediate',
     audience: '中古の24GB GPUを購入するか、ローカルLLM推論のためにクラウドGPU時間をレンタルするかを検討する開発者や小規模チーム',
@@ -2866,20 +2867,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**1日約8時間以上、毎日使う予定がある、またはデータを建物の外に出せない場合は、中古のRTX 3090を購入してください。それ以外はレンタルが向いています。** 中古1,400〜1,550ドル（InsiderLLMトラッカー、2026-10-15）に対しクラウドのレンタルは1時間0.16ドルからなので、継続的に使い続けて初めて元が取れます。しかも2026年は3月より値上がりしており、損益分岐点は遠のいています。',
+    leadAnswerBlock: '**1日約8時間以上、毎日使う予定がある、またはデータを建物の外に出せない場合は、中古のRTX 3090を購入してください。それ以外はレンタルが向いています。** 中古1,500〜1,725ドル（InsiderLLMトラッカー、2026-11-23）に対しクラウドのレンタルは1時間0.16ドルからなので、継続的に使い続けて初めて元が取れます。しかも2026年は3月より値上がりしており、損益分岐点は遠のいています。',
 
     quickAnswerTop: {
       ja: {
         question: 'ローカルLLM向けにRTX 3090はまだ買う価値がありますか？',
-        answer: 'はい、ただし継続利用やプライバシー制約のある作業に限ります。中古のRTX 3090は1,400〜1,550ドルで24GBのVRAMを提供し、27Bクラスのモデルを自前のハードウェアだけで完全に動かせる、CUDA対応のNVIDIAカードとして最も安価な選択肢のひとつであることは変わりません。同じGPUのレンタルは1時間0.16ドルからで、軽い用途では何年もクラウドの方が安く済みます。',
+        answer: 'はい、ただし継続利用やプライバシー制約のある作業に限ります。中古のRTX 3090は1,500〜1,725ドルで24GBのVRAMを提供し、27Bクラスのモデルを自前のハードウェアだけで完全に動かせる、CUDA対応のNVIDIAカードとして最も安価な選択肢のひとつであることは変わりません。同じGPUのレンタルは1時間0.16ドルからで、軽い用途では何年もクラウドの方が安く済みます。',
         bullets: [
           '24GB VRAM、936GB/sの帯域幅、350W — 2020年から変わらず、依然としてCUDA対応のNVIDIAカードで24GBを手に入れる最も安価な方法のひとつ',
-          '中古価格は1,400〜1,550ドル（InsiderLLMトラッカー、2026-10-15）。メモリ不足の影響で2026年3月の約600〜800ドル（XDA Developers、2026-03-15）から上昇',
+          '中古価格は1,500〜1,725ドル（InsiderLLMトラッカー、2026-11-23）。メモリ不足の影響で2026年3月の約600〜800ドル（XDA Developers、2026-03-15）から上昇',
           'クラウドレンタルは1時間0.16ドル（在庫ありのオンデマンド掲載で最も低い料金）〜0.50ドル（RunPod Secure）。RunPod Communityは1時間0.22ドル。GetDeployingに掲載されたプロバイダーのオンデマンド構成の中央値は1 GPU時間あたり0.25ドル',
-          '1時間0.25ドルの中央値レンタルに対する損益分岐点は、1日2時間利用で約11年、1日8時間利用で約2.8年',
+          '1時間0.25ドルの中央値レンタルに対する損益分岐点は、1日2時間利用で約12年、1日8時間利用で約3年',
           'プライバシー、レイテンシ、常時稼働エージェント、継続的なファインチューニングには購入を。突発的な利用や実験にはレンタルを',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -2889,7 +2890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'ローカルLLM向けRTX 3090（2026年）：購入かレンタルか',
       description: 'ローカルLLM推論のために中古のNVIDIA RTX 3090を購入する場合と、クラウドプロバイダーで同じGPUをレンタルする場合の損益分岐点分析。2026年の価格を反映。',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -2928,9 +2929,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: '重要ポイント',
         numberedItems: [
-          '中古のRTX 3090は1,400〜1,550ドルで24GBのVRAMを提供 — これだけのビデオメモリを手に入れる、CUDA対応のNVIDIAカードとして最も安価な方法のひとつであることは変わりません。',
+          '中古のRTX 3090は1,500〜1,725ドル（InsiderLLMトラッカー、2026-11-23）で24GBのVRAMを提供 — これだけのビデオメモリを手に入れる、CUDA対応のNVIDIAカードとして最も安価な方法のひとつであることは変わりません。',
           '同じGPUのレンタルは、在庫ありのオンデマンド掲載で最も低い料金が1時間0.16ドル、RunPod Communityが1時間0.22ドル。GetDeployingに掲載されたプロバイダーのオンデマンド構成の中央値は1 GPU時間あたり0.25ドルです。Vast.aiのマーケットプレイス料金はホストによって異なります。',
-          '電気代（約1時間0.08ドル）を差し引くと、中央値のレンタルに対して購入が有利になるのは約8,300 GPU時間後 — 1日8時間利用で約2.8年です。',
+          '電気代（約1時間0.08ドル）を差し引くと、中央値のレンタルに対して購入が有利になるのは約8,800 GPU時間後 — 1日8時間利用で約3年です。',
           'このカードは2026年に値下がりではなく値上がりしました。3月は約600〜800ドルでした（XDA Developers、2026-03-15）。これは損益分岐点を遠ざけます。',
           'プライバシー、オフライン作業、常時稼働エージェント、継続的なファインチューニングには購入を。突発的な利用、実験、そうしなければ遊ばせておくだけの用途にはレンタルを。',
           '転売で購入価格の一部を回収できる可能性はありますが、保証はありません。2026年はメモリ不足の影響で中古価格が上昇しており、再び下がる可能性もあるため、転売価値は計画ではなく上振れ要因として考えてください。',
@@ -2959,7 +2960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             '1日2時間未満 → レンタルし、半年後に再検討',
-            '毎日8時間以上 → 購入。レンタルと比べて約3〜6年で元が取れる',
+            '毎日8時間以上 → 購入。1時間0.16〜0.25ドルのレンタルと比べて約3〜6.4年で元が取れる',
             'アップロードできないデータがある → 購入。コストは決め手ではない',
           ],
         },
@@ -2982,7 +2983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM: 24GB GDDR6X — 4bit量子化の27Bクラスモデルをコンテキストの余裕を持って動かせる容量。',
           'メモリ帯域幅: 936GB/s。メモリ律速のワークロードではトークン生成速度を実質的に決める数値。',
           '消費電力: カード単体のTDPは350W。推論負荷時はシステム全体でコンセント側約450Wを見込む。',
-          '中古価格: 一般的に1,400〜1,550ドル（InsiderLLMトラッカー、2026-10-15） — 2026年3月の約600〜800ドル（XDA Developers、2026-03-15）から上昇。',
+          '中古価格: 一般的に1,500〜1,725ドル（InsiderLLMトラッカー、2026-11-23。2026-11-13〜2026-11-23の成約225件の中央値は1,650ドル） — 2026年3月の約600〜800ドル（XDA Developers、2026-03-15）から上昇。',
           'クラウドレンタル: 1時間0.16ドル（在庫ありのオンデマンド掲載で最も低い料金）〜1時間0.50ドル（RunPod Secure）。GetDeployingに掲載されたプロバイダーのオンデマンド構成の中央値は1 GPU時間あたり0.25ドル。',
           '電気代: 最近の米国住宅用平均0.18ドル/kWhでは、稼働コストは1時間約0.08ドル。',
         ],
@@ -2992,7 +2993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'RTX 3090が本当に提供するもの',
         content: [
-          '**RTX 3090が重要な理由はひとつだけです。24GBのVRAMを、CUDA対応のNVIDIAカードとして最も低い価格帯で提供している点です。** それ以外の点では、2026年時点でこのカードに特筆すべきところはありません。2020年設計で350Wを消費し、効率面では現行世代のカードすべてに劣ります。しかし、それでもモデルの重みがビデオメモリに収まるかどうかという事実は変わりません。',
+          '**RTX 3090が重要な理由はひとつだけです。24GBのVRAMを、CUDA対応のNVIDIAカードとして最も低い価格帯で提供している点です。** それ以外の点では、2026年時点でこのカードに特筆すべきところはありません。2020年設計で350Wを消費し、電力効率は一般に現行世代のカードの方が優れています。しかし、それでもモデルの重みがビデオメモリに収まるかどうかという事実は変わりません。',
           'VRAMは坂道ではなく崖です。収まるモデルはフルスピードで動きますが、1GBでもオーバーすればシステムRAMにあふれ出し、速度は一気に落ち込みます。これにより24GBはパフォーマンスの数値ではなく能力のしきい値となり、3090はそのしきい値を超える最も安価なカードのひとつです。',
           '2つ目に重要な数値はメモリ帯域幅です。量子化モデルのトークン生成はコンピュート律速ではなくメモリ律速なので、CUDAコア数よりも936GB/sの方が体感速度を予測しやすい指標です。これが、コンピュート性能は高いがメモリバスが狭い新しいミドルレンジカードに対して、3090が依然として競争力を保てる理由でもあります。',
           '実際には: 4bit量子化の27Bクラスモデルには余裕があり、長いコンテキストの7B〜14Bモデルは高速に推論でき、さらにカードを2枚使えば70BクラスモデルをオフロードなしでフルにVRAM内に収められます。',
@@ -3037,7 +3038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '中古購入：支払う前に確認すべきこと',
         highlight: true,
         content: [
-          '**購入するなら中古を選んでください。RTX 3090の新品は入手しにくく、中古より高いことが多いため、最新の掲載状況はご自身で確認してください。価格の優位性は中古市場にあります。** 1,400〜1,550ドルという価格は、依然としてCUDA対応のNVIDIAカードで24GBを手に入れる最も安価な方法のひとつであり、転売で費用の一部を回収できる可能性もありますが、保証はありません。',
+          '**購入するなら中古を選んでください。RTX 3090の新品は入手しにくく、中古より高いことが多いため、最新の掲載状況はご自身で確認してください。価格の優位性は中古市場にあります。** 1,500〜1,725ドルという価格は、依然としてCUDA対応のNVIDIAカードで24GBを手に入れる最も安価な方法のひとつであり、転売で費用の一部を回収できる可能性もありますが、保証はありません。',
           '正直な留意点として、これらは約6年前のカードであり、多くはマイニングやゲーミングの中古であり、個人から保証なしで販売されます。故障モードは既知で確認可能なのでリスクは管理できますが、実在するリスクです。だからこそ、最安値の出品より返品を受け付ける販売者から買う方がよいのです。',
         ],
         items: [
@@ -3058,14 +3059,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB（中古）',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'eBayで中古RTX 3090の価格を確認',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB（中古／整備済み）',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'NeweggでRTX 3090の在庫を確認',
           },
         ],
@@ -3094,7 +3095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'レンタルの方が想像以上に良い答えになる理由',
         content: [
           '**レンタルを推す理由は「常に安いから」ではなく、「アイドル状態のGPUも稼働中のGPUと同じコストがかかるから」です。** 週末しか使わないデスクトップに入ったカードは、すでに購入価格全額を消費しています。レンタルしたGPUはセッションの合間には何もコストがかかりません。',
-          'レンタルする理由は哲学的ではなく具体的です。初期費用なし、約6年前のカードの値下がりリスクなし、電源やケースや冷却の制約なし、ファンが壊れて週末を無駄にすることもありません。決して買わないようなカードもレンタルできます。70Bクラスのモデルをレンタルした2枚のGPUで半日試すコストは数ドルですが、中古2枚を買えば約2,800〜3,100ドルかかります。',
+          'レンタルする理由は哲学的ではなく具体的です。初期費用なし、約6年前のカードの値下がりリスクなし、電源やケースや冷却の制約なし、ファンが壊れて週末を無駄にすることもありません。決して買わないようなカードもレンタルできます。70Bクラスのモデルをレンタルした2枚のGPUで半日試すコストは数ドルですが、中古2枚を買えば約3,000〜3,450ドルかかります。',
           '正直な反論は、レンタルには実際の摩擦があるということです。他人のマシンにデータをアップロードし、インスタンスの確保を待ち、マーケットプレイスの掲載では、作業途中にホストがオフラインになることもあり得ます。これはレンタルを退ける理由ではなく、時間単価だけでなくワークロード次第で判断すべき理由です。',
         ],
       },
@@ -3123,7 +3124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'RunPodの料金は同社のモデルページで再確認しました。在庫ありの最低料金と複数プロバイダーの中央値はGetDeployingの表に基づくもの（最終更新日として表示される日付に確認）で、変動している可能性があります。Vast.aiの料金はホストによって異なります。Vast.ai自身の料金ページをご覧ください。クラウドGPUの料金は週単位で変動するため、確定前に最新価格を確認してください。',
+            text: 'RunPodの料金は同社のモデルページで再確認しました。在庫ありの最低料金と複数プロバイダーの中央値はGetDeployingの表に基づくもの（2026-11-18に確認）で、変動している可能性があります。Vast.aiの料金はホストによって異なります。Vast.ai自身の料金ページをご覧ください。クラウドGPUの料金は週単位で変動するため、確定前に最新価格を確認してください。',
           },
         ],
         affiliateLinks: [
@@ -3148,16 +3149,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: '損益分岐点の計算',
         content: [
-          '**1時間0.25ドルの中央値レンタルと比較すると、1,400ドルのカードは元を取るのに約8,300 GPU時間かかります。1日8時間利用で約2.8年、1日2時間利用で約11年です。** これは購入を決めるべき数字です。',
-          'この計算はカードの運用コストを差し引いています。コンセント側450W、最近の米国住宅用平均0.18ドル/kWhでは、ローカル推論の電気代は1時間約0.08ドルです。つまり1,400ドルと1時間0.25ドルを比較しているのではなく、実際に節約できる約1時間0.17ドルと比較しているのです。',
-          '前提条件: 1,400ドルのカード、システム消費450W、0.18ドル/kWh。自分の電気料金に置き換えてください。表の中で他のどの要素よりも結果を左右し、0.30ドル/kWhを超える市場では購入の根拠はほぼ消えます。',
+          '**1時間0.25ドルの中央値レンタルと比較すると、1,500ドルのカードは元を取るのに約8,800 GPU時間かかります。1日8時間利用で約3年、1日2時間利用で約12年です。** これは購入を決めるべき数字です。',
+          'この計算はカードの運用コストを差し引いています。コンセント側450W、最近の米国住宅用平均0.18ドル/kWhでは、ローカル推論の電気代は1時間約0.08ドルです。つまり1,500ドルと1時間0.25ドルを比較しているのではなく、実際に節約できる約1時間0.17ドルと比較しているのです。',
+          '前提条件: 1,500ドルのカード（トラッカーの価格帯の下限。中央値の1,650ドルではどの期間も約10%長くなります）、システム消費450W、0.18ドル/kWh。自分の電気料金に置き換えてください。表の中で他のどの要素よりも結果を左右し、0.30ドル/kWhを超える市場では購入の根拠はほぼ消えます。',
         ],
         columns: ['利用時間', 'vs 0.16ドル/h', 'vs 0.25ドル/h', 'vs 0.50ドル/h'],
         rows: [
-          { '利用時間': '1日2時間', 'vs 0.16ドル/h': '約24年', 'vs 0.25ドル/h': '約11年', 'vs 0.50ドル/h': '約4.6年' },
-          { '利用時間': '1日4時間', 'vs 0.16ドル/h': '約12年', 'vs 0.25ドル/h': '約5.7年', 'vs 0.50ドル/h': '約2.3年' },
-          { '利用時間': '1日8時間', 'vs 0.16ドル/h': '約6.1年', 'vs 0.25ドル/h': '約2.8年', 'vs 0.50ドル/h': '約1.1年' },
-          { '利用時間': '常時稼働（24/7）', 'vs 0.16ドル/h': '約24ヶ月', 'vs 0.25ドル/h': '約11ヶ月', 'vs 0.50ドル/h': '約4.6ヶ月' },
+          { '利用時間': '1日2時間', 'vs 0.16ドル/h': '約26年', 'vs 0.25ドル/h': '約12年', 'vs 0.50ドル/h': '約4.9年' },
+          { '利用時間': '1日4時間', 'vs 0.16ドル/h': '約13年', 'vs 0.25ドル/h': '約6年', 'vs 0.50ドル/h': '約2.4年' },
+          { '利用時間': '1日8時間', 'vs 0.16ドル/h': '約6.4年', 'vs 0.25ドル/h': '約3年', 'vs 0.50ドル/h': '約1.2年' },
+          { '利用時間': '常時稼働（24/7）', 'vs 0.16ドル/h': '約26ヶ月', 'vs 0.25ドル/h': '約12ヶ月', 'vs 0.50ドル/h': '約4.9ヶ月' },
         ],
         callouts: [
           {
@@ -3176,12 +3177,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '読者タイプ': '週末だけの趣味利用者',
             結論: 'レンタル',
-            理由: '週に数時間の利用に1,400ドルの支出は、損益分岐点から数十年離れています。まず1年レンタルし、毎日レンタルしていると気づいたらその時に購入しましょう。その頃には必要なカードも正確にわかっているはずです。',
+            理由: '週に数時間の利用に1,500ドルの支出は、損益分岐点から数十年離れています。まず1年レンタルし、毎日レンタルしていると気づいたらその時に購入しましょう。その頃には必要なカードも正確にわかっているはずです。',
           },
           {
             '読者タイプ': '毎日ヘビーに使うユーザー',
             結論: '購入',
-            理由: '1日8時間以上なら、レンタルと比べて約3〜6年で元が取れ、転売で残りの一部を回収できる可能性もありますが、保証はありません。より大きな利点は行動面です。所有するGPUには稼働中のメーターがないため、実験を節約する必要がなくなります。',
+            理由: '1日8時間以上なら、1時間0.16〜0.25ドルのレンタルと比べて約3〜6.4年で元が取れ、転売で残りの一部を回収できる可能性もありますが、保証はありません。より大きな利点は行動面です。所有するGPUには稼働中のメーターがないため、実験を節約する必要がなくなります。',
           },
           {
             '読者タイプ': '小規模チームやスタートアップ',
@@ -3229,7 +3230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年にRTX 3090はまだ買う価値がありますか？',
-            a: '継続的なローカル推論なら、はい。1,400〜1,550ドルの中古で、依然としてCUDA対応のNVIDIAカードで24GBを手に入れる最も安価な方法のひとつです。軽度や一時的な用途なら、いいえ。同じGPUを1時間0.16ドルからレンタルする方が何年も安く済みます。決め手はスペックではなく、週あたりの実際の利用時間です。',
+            a: '継続的なローカル推論なら、はい。1,500〜1,725ドルの中古で、依然としてCUDA対応のNVIDIAカードで24GBを手に入れる最も安価な方法のひとつです。軽度や一時的な用途なら、いいえ。同じGPUを1時間0.16ドルからレンタルする方が何年も安く済みます。決め手はスペックではなく、週あたりの実際の利用時間です。',
           },
           {
             q: 'RTX 3090はOllamaに向いていますか？',
@@ -3249,11 +3250,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RTX 3090を2枚で70Bモデルを動かせますか？',
-            a: 'はい。カード2枚で48GBのVRAMが得られ、システムRAMへのオフロードなしで4bit量子化の70Bクラスモデルを収められます。1,000W以上の電源（正確な要件はカードメーカーのドキュメントで確認してください）と適切な2スロットを備えたマザーボードを用意してください。約2,800〜3,100ドルを費やす前に、まず2GPUのクラウドインスタンスを半日レンタルして構成が要件を満たすか確認することをおすすめします。',
+            a: 'はい。カード2枚で48GBのVRAMが得られ、システムRAMへのオフロードなしで4bit量子化の70Bクラスモデルを収められます。1,000W以上の電源（正確な要件はカードメーカーのドキュメントで確認してください）と適切な2スロットを備えたマザーボードを用意してください。約3,000〜3,450ドルを費やす前に、まず2GPUのクラウドインスタンスを半日レンタルして構成が要件を満たすか確認することをおすすめします。',
           },
           {
             q: '2026年に中古RTX 3090の価格が上昇したのはなぜですか？',
-            a: '2026年にメモリ不足がGPU価格全般をこれまでの水準より押し上げたとトラッカーは伝えています。このカードは3月に約600〜800ドル（XDA Developers、2026-03-15）で販売されていましたが、10月中旬（InsiderLLMトラッカー、2026-10-15）には1,400〜1,550ドルになりました。値上がりした数少ない約6年前の製品のひとつです。',
+            a: '2026年にメモリ不足がGPU価格全般をこれまでの水準より押し上げたとトラッカーは伝えています。このカードは3月に約600〜800ドル（XDA Developers、2026-03-15）で販売されていましたが、2026-11-23時点（InsiderLLMトラッカー）では1,500〜1,725ドルになりました。値上がりした数少ない約6年前の製品のひとつです。',
           },
           {
             q: '中古のマイニングGPUを買っても安全ですか？',
@@ -3275,11 +3276,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '出典',
         items: [
           '[RTX 3090価格トラッカー — 新品・中古の価格推移、Best Value GPU。](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[複数社のRTX 3090クラウド価格、GetDeploying（表示された最終更新日に確認）。](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[複数社のRTX 3090クラウド価格、GetDeploying（2026-11-18に確認）。](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[RTX 3090 GPUレンタル価格、RunPod。](https://www.runpod.io/gpu-models/rtx-3090)',
           '[中古RTX 3090は依然としてローカルAI向け最良のGPU、XDA Developers。](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly — 住宅用電気料金の平均、US Energy Information Administration。](https://www.eia.gov/electricity/monthly/)',
-          '[NVIDIA GPU価格の上昇 — 価格トラッカー、InsiderLLM（2026-10-15更新）。](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[NVIDIA GPU価格の上昇 — 価格トラッカー、InsiderLLM（RTX 3090は2026-11-23時点、RTX 4090は2026-10-15更新時点の数値）。](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -3290,7 +3291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルLLM向けベストGPU：完全購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 価格帯ごとにRTX 3090と現行世代カードを比較。',
           '[ローカルLLM向け中古GPU：コスパの良い選択肢](/ja/local-llms/used-gpus-for-local-llms) — RTX 3060、3080、4090も含めた中古市場の幅広いガイド。',
           '[Ollama対LM Studio](/ja/local-llms/ollama-vs-lm-studio) — 共通のllama.cppバックエンドを超えて、このGPUと組み合わせる2つのツールが実際どう異なるか。',
-          '[70Bモデルをローカルで動かす最も安い実用的な方法](/ja/prompt-bites/cheapest-way-to-run-70b-model-locally) — 最も安い70B構成にRTX 3090 2枚がどう当てはまるか。',
+          '[70Bモデルをローカルで動かす最も安い実用的な方法](/ja/prompt-bites/cheapest-way-to-run-70b-model-locally) — RTX 3090 2枚構成と、70Bモデルを動かす他の方法との比較。',
           '[70Bモデルにはどれだけのvramが必要か](/ja/prompt-bites/vram-for-70b-model) — 上記の2枚構成の推奨の背景にあるVRAM計算。',
           '[ローカルLLMコスト計算機：構築か、レンタルか](/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 自分の数字とハードウェアで損益分岐点計算を実行。',
           '[代わりにクラウドGPUを借りる](/ja/power-local-llm/best-cloud-gpu-providers) — まず時間単位でレンタル。マーケットプレイスのレビューは[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)と[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)です。',
@@ -3313,9 +3314,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '2026年RTX 3090跑本地LLM：买二手还是租？',
 
     intro: 'RTX 3090是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一，而在云端租用同款显卡每小时只需几美分。本指南计算出这两个选项之间的真实分界线在哪里。',
-    metaDescription: '2026年二手RTX 3090售价1,400–1,550美元；租用价格为每小时约0.16美元起。这是本地LLM所需24GB VRAM的买卖平衡点计算。',
+    metaDescription: '2026年二手RTX 3090售价1,500–1,725美元；租用价格为每小时约0.16美元起。这是本地LLM所需24GB VRAM的买卖平衡点计算。',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '阅读约13分钟',
     educationalLevel: 'Intermediate',
     audience: '在购买二手24GB GPU和租用云端GPU时间以进行本地LLM推理之间做决定的开发者与小团队',
@@ -3332,20 +3333,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**如果你每天使用超过约八小时、天天如此，或者数据不能离开你的场所，就购买一块二手RTX 3090；否则就租用。** 二手价格1,400–1,550美元（InsiderLLM追踪数据，2026-10-15），对比云端每小时0.16美元起的租金，这张卡只有在持续高负载使用下才能回本——而2026年它比3月更贵，这把回本点推得更远。',
+    leadAnswerBlock: '**如果你每天使用超过约八小时、天天如此，或者数据不能离开你的场所，就购买一块二手RTX 3090；否则就租用。** 二手价格1,500–1,725美元（InsiderLLM追踪数据，2026-11-23），对比云端每小时0.16美元起的租金，这张卡只有在持续高负载使用下才能回本——而2026年它比3月更贵，这把回本点推得更远。',
 
     quickAnswerTop: {
       zh: {
         question: '本地LLM还值得买RTX 3090吗？',
-        answer: '值得，但仅限于持续使用或有隐私限制的场景。一块二手RTX 3090以1,400–1,550美元提供24GB VRAM，仍是在自有硬件上完整运行27B级模型的最低价方式之一。租用同款GPU每小时0.16美元起，因此在轻度使用下云端多年内都更便宜。',
+        answer: '值得，但仅限于持续使用或有隐私限制的场景。一块二手RTX 3090以1,500–1,725美元提供24GB VRAM，仍是在自有硬件上完整运行27B级模型的最低价方式之一。租用同款GPU每小时0.16美元起，因此在轻度使用下云端多年内都更便宜。',
         bullets: [
           '24GB VRAM、936GB/s带宽、350W——自2020年以来未变，仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一',
-          '二手价格1,400–1,550美元（InsiderLLM追踪数据,2026-10-15）；受内存短缺影响，从3月的约600–800美元（XDA Developers,2026-03-15）上涨',
+          '二手价格1,500–1,725美元（InsiderLLM追踪数据,2026-11-23）；受内存短缺影响，从3月的约600–800美元（XDA Developers,2026-03-15）上涨',
           '云端租用价格从0.16美元/小时（有库存的按需挂牌中的最低价）到0.50美元/小时（RunPod Secure）；RunPod Community为0.22美元/小时；GetDeploying所列供应商按需配置的中位数为0.25美元/小时',
-          '相对0.25美元/小时的中位数租用，每天2小时使用的回本时间约11年——每天8小时约2.8年',
+          '相对0.25美元/小时的中位数租用，每天2小时使用的回本时间约12年——每天8小时约3年',
           '为隐私、延迟、常驻代理和持续微调而购买；为突发需求和实验而租用',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -3355,7 +3356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年本地LLM用RTX 3090：买还是租？',
       description: '针对本地LLM推理，购买二手NVIDIA RTX 3090与在云服务商处租用同款GPU之间的回本点分析，包含2026年价格。',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3394,9 +3395,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: '核心要点',
         numberedItems: [
-          '一块二手RTX 3090售价1,400–1,550美元，提供24GB VRAM——仍是在支持CUDA的NVIDIA显卡上获得这么多显存的最低价方式之一。',
+          '一块二手RTX 3090售价1,500–1,725美元（InsiderLLM追踪数据，2026-11-23），提供24GB VRAM——仍是在支持CUDA的NVIDIA显卡上获得这么多显存的最低价方式之一。',
           '租用同款GPU，有库存的按需挂牌中的最低价为每小时0.16美元起，RunPod Community为每小时0.22美元，GetDeploying所列供应商按需配置的中位数为每GPU小时0.25美元；Vast.ai的市场价格因主机而异。',
-          '扣除约每小时0.08美元的电费后，购买要在约8,300个GPU小时之后才能相对中位数租金胜出——按每天8小时计算约需2.8年。',
+          '扣除约每小时0.08美元的电费后，购买要在约8,800个GPU小时之后才能相对中位数租金胜出——按每天8小时计算约需3年。',
           '这张卡在2026年变贵了，而不是变便宜：3月售价约600–800美元（XDA Developers,2026-03-15）。这使回本点更远。',
           '为隐私、离线工作、常驻代理和持续微调而购买；为突发需求、实验以及原本会闲置不用的场景而租用。',
           '转售可能抵消一部分购买价格,但并无保证：2026年二手价格因内存短缺而上涨,也可能再次下跌,因此请把任何转售价值视为额外收益,而不是计划的一部分。',
@@ -3425,7 +3426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             '每天少于2小时→租用，六个月后重新评估',
-            '每天8小时以上，天天如此→购买，与租用相比大约三到六年回本',
+            '每天8小时以上，天天如此→购买，与每小时0.16–0.25美元的租用相比，大约3到6.4年回本',
             '任何不能上传的数据→购买，成本不是决定因素',
           ],
         },
@@ -3448,7 +3449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM：24GB GDDR6X——足以在4-bit量化下运行27B级模型,并为上下文留出空间。',
           '显存带宽：936GB/s,在受显存带宽限制的负载中,这实际决定了token生成速度。',
           '功耗：显卡本身TDP为350W；推理负载下,整机墙上功耗预算约450W。',
-          '二手价格：通常1,400–1,550美元（InsiderLLM追踪数据,2026-10-15）——较3月的约600–800美元（XDA Developers,2026-03-15）上涨。',
+          '二手价格：通常1,500–1,725美元（InsiderLLM追踪数据,2026-11-23；2026-11-13至2026-11-23的225条成交记录中位数为1,650美元）——较3月的约600–800美元（XDA Developers,2026-03-15）上涨。',
           '云端租用：从每小时0.16美元（有库存的按需挂牌中的最低价）到每小时0.50美元（RunPod Secure）；GetDeploying所列供应商按需配置的中位数为每GPU小时0.25美元。',
           '电费：按近期美国住宅电价均值0.18美元/kWh计算,运行成本约每小时0.08美元。',
         ],
@@ -3458,7 +3459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'RTX 3090真正提供了什么',
         content: [
-          '**RTX 3090重要的原因只有一个：以支持CUDA的NVIDIA显卡中最低价位之一提供24GB VRAM。** 到2026年,这张卡的其他方面都不算突出——它是2020年的设计,功耗350W,当前一代显卡在每项能效指标上都能超过它。但这些都改变不了一个事实：模型权重要么能装进显存,要么装不进。',
+          '**RTX 3090重要的原因只有一个：以支持CUDA的NVIDIA显卡中最低价位之一提供24GB VRAM。** 到2026年,这张卡的其他方面都不算突出——它是2020年的设计,功耗350W,当前一代显卡的能效通常更高。但这些都改变不了一个事实：模型权重要么能装进显存,要么装不进。',
           'VRAM是一道悬崖,不是斜坡。能装下的模型以全速运行；哪怕只超出1GB,模型也会溢出到系统内存,速度骤降到原来的一小部分。这使得24GB成为一个能力门槛,而非性能数字,而3090是跨过这道门槛的最便宜显卡之一。',
           '第二个重要数字是显存带宽。量化模型的token生成受显存带宽限制,而非算力限制,所以936GB/s比任何CUDA核心数都更能预测体感速度。这也是为什么面对算力更强但显存位宽更窄的新款中端显卡,3090依然保持竞争力的原因。',
           '实际效果是：4-bit量化的27B级模型有充裕余量,长上下文的7B–14B模型推理速度快,而加上第二块卡后,还能在无需offload的情况下将70B级模型完整放入显存。',
@@ -3503,7 +3504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '购买二手：付款前该检查什么',
         highlight: true,
         content: [
-          '**如果要买,就买二手——全新的RTX 3090可能不易买到,而且价格往往高于二手卡,请自行查看当前挂牌信息;价格优势就在二手市场。** 1,400–1,550美元的价格使它仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一,转售可能抵消一部分成本,但并无保证。',
+          '**如果要买,就买二手——全新的RTX 3090可能不易买到,而且价格往往高于二手卡,请自行查看当前挂牌信息;价格优势就在二手市场。** 1,500–1,725美元的价格使它仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一,转售可能抵消一部分成本,但并无保证。',
           '一个诚实的提醒：这些是已有约六年历史的显卡,很多来自矿卡或游戏卡,由个人卖家在无保修的情况下出售。故障模式是已知且可检查的,因此风险是可控的——但风险确实存在,这也是为什么应该向接受退货的卖家购买,而不是找最便宜的那条listing。',
         ],
         items: [
@@ -3524,14 +3525,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB（二手）',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: '在eBay查看二手RTX 3090价格',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB（二手／翻新）',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: '在Newegg查看RTX 3090库存',
           },
         ],
@@ -3560,7 +3561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '为什么租用比想象中更常是更好的选择',
         content: [
           '**支持租用的理由不是它总是更便宜——而是一块闲置的GPU和一块繁忙的GPU花费相同。** 一张只在周末使用的桌面显卡,已经付出了全部购买成本。租用的GPU在会话之间不产生任何费用。',
-          '租用的理由是具体的,而非哲学性的：没有前期支出,没有约六年历史显卡的贬值风险,没有电源、机箱或散热的限制,风扇故障也不会毁掉一个周末。你还可以租用一块你永远不会购买的显卡——用两块租来的GPU测试70B级模型一个下午只需几美元,而买一对二手卡大约需要2,800–3,100美元。',
+          '租用的理由是具体的,而非哲学性的：没有前期支出,没有约六年历史显卡的贬值风险,没有电源、机箱或散热的限制,风扇故障也不会毁掉一个周末。你还可以租用一块你永远不会购买的显卡——用两块租来的GPU测试70B级模型一个下午只需几美元,而买一对二手卡大约需要3,000–3,450美元。',
           '诚实的反对意见是,租用确实存在实际摩擦。你要把数据上传到别人的机器上,要等待实例可用,而在市场型平台的挂牌中,可能出现主机在工作中途离线的情况。这些都不是否定租用的理由——而是这个决定应该取决于你的工作负载,而不仅仅是小时费率的理由。',
         ],
       },
@@ -3589,7 +3590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'RunPod的价格已在其机型页面重新核实；有库存的最低价和多供应商中位数来自GetDeploying表格（核实日期以页面显示的最后更新日期为准），可能已有变动。Vast.ai的价格因主机而异，请参见Vast.ai自己的定价页面。云端GPU价格每周都会变动——确定之前请核实当前价格。',
+            text: 'RunPod的价格已在其机型页面重新核实；有库存的最低价和多供应商中位数来自GetDeploying表格（核实日期2026-11-18），可能已有变动。Vast.ai的价格因主机而异，请参见Vast.ai自己的定价页面。云端GPU价格每周都会变动——确定之前请核实当前价格。',
           },
         ],
         affiliateLinks: [
@@ -3614,16 +3615,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: '回本点计算',
         content: [
-          '**相对每小时0.25美元的中位数租金,一张1,400美元的显卡大约需要8,300个GPU小时才能回本——按每天8小时计算约需2.8年,按每天2小时计算约需11年。** 这是应该用来决定购买与否的数字。',
-          '这个计算扣除了运行这张卡的成本。以墙上功耗450W和近期美国住宅电价均值0.18美元/kWh计算,本地推理的电费约为每小时0.08美元,所以你比较的不是1,400美元对0.25美元/小时,而是1,400美元对你实际节省的约0.17美元/小时。',
-          '前提假设：1,400美元的显卡、系统功耗450W、电价0.18美元/kWh。请代入你自己的电价——它比表中任何其他因素都更能左右结果,在电价高于0.30美元/kWh的市场,购买的理由基本上就消失了。',
+          '**相对每小时0.25美元的中位数租金,一张1,500美元的显卡大约需要8,800个GPU小时才能回本——按每天8小时计算约需3年,按每天2小时计算约需12年。** 这是应该用来决定购买与否的数字。',
+          '这个计算扣除了运行这张卡的成本。以墙上功耗450W和近期美国住宅电价均值0.18美元/kWh计算,本地推理的电费约为每小时0.08美元,所以你比较的不是1,500美元对0.25美元/小时,而是1,500美元对你实际节省的约0.17美元/小时。',
+          '前提假设：1,500美元的显卡（追踪价格区间的下限；按中位数1,650美元计算，各回本时间约长10%）、系统功耗450W、电价0.18美元/kWh。请代入你自己的电价——它比表中任何其他因素都更能左右结果,在电价高于0.30美元/kWh的市场,购买的理由基本上就消失了。',
         ],
         columns: ['使用量', '对比0.16美元/h', '对比0.25美元/h', '对比0.50美元/h'],
         rows: [
-          { 使用量: '每天2小时', '对比0.16美元/h': '约24年', '对比0.25美元/h': '约11年', '对比0.50美元/h': '约4.6年' },
-          { 使用量: '每天4小时', '对比0.16美元/h': '约12年', '对比0.25美元/h': '约5.7年', '对比0.50美元/h': '约2.3年' },
-          { 使用量: '每天8小时', '对比0.16美元/h': '约6.1年', '对比0.25美元/h': '约2.8年', '对比0.50美元/h': '约1.1年' },
-          { 使用量: '全天候运行（24/7）', '对比0.16美元/h': '约24个月', '对比0.25美元/h': '约11个月', '对比0.50美元/h': '约4.6个月' },
+          { 使用量: '每天2小时', '对比0.16美元/h': '约26年', '对比0.25美元/h': '约12年', '对比0.50美元/h': '约4.9年' },
+          { 使用量: '每天4小时', '对比0.16美元/h': '约13年', '对比0.25美元/h': '约6年', '对比0.50美元/h': '约2.4年' },
+          { 使用量: '每天8小时', '对比0.16美元/h': '约6.4年', '对比0.25美元/h': '约3年', '对比0.50美元/h': '约1.2年' },
+          { 使用量: '全天候运行（24/7）', '对比0.16美元/h': '约26个月', '对比0.25美元/h': '约12个月', '对比0.50美元/h': '约4.9个月' },
         ],
         callouts: [
           {
@@ -3642,12 +3643,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             读者类型: '周末爱好者',
             结论: '租用',
-            原因: '每周几小时的使用相对1,400美元的支出,离回本点还差几十年。先租一年,如果发现自己天天在租,那时再买——你也会清楚自己到底需要哪张卡。',
+            原因: '每周几小时的使用相对1,500美元的支出,离回本点还差几十年。先租一年,如果发现自己天天在租,那时再买——你也会清楚自己到底需要哪张卡。',
           },
           {
             读者类型: '每日重度用户',
             结论: '购买',
-            原因: '每天八小时以上,与租用相比,这张卡大约三到六年就能回本,转售可能抵消剩余成本的一部分,但并无保证。更大的收益是行为层面的：自有的GPU没有计时器在跑,你就不再需要节制实验。',
+            原因: '每天八小时以上,与每小时0.16–0.25美元的租用相比,这张卡大约3到6.4年就能回本,转售可能抵消剩余成本的一部分,但并无保证。更大的收益是行为层面的：自有的GPU没有计时器在跑,你就不再需要节制实验。',
           },
           {
             读者类型: '小团队或初创公司',
@@ -3695,7 +3696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年RTX 3090还值得购买吗？',
-            a: '对于持续的本地推理来说,值得——它仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一,二手售价1,400–1,550美元。对于轻度或偶尔使用来说,不值得：以每小时0.16美元起租用同款GPU,多年内都更便宜。决定因素是每周实际使用的小时数,而不是规格本身。',
+            a: '对于持续的本地推理来说,值得——它仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一,二手售价1,500–1,725美元。对于轻度或偶尔使用来说,不值得：以每小时0.16美元起租用同款GPU,多年内都更便宜。决定因素是每周实际使用的小时数,而不是规格本身。',
           },
           {
             q: 'RTX 3090适合用于Ollama吗？',
@@ -3715,11 +3716,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '两块RTX 3090能运行70B模型吗？',
-            a: '可以。两张卡合计提供48GB VRAM,足以在不offload到系统内存的情况下容纳一个4-bit量化的70B级模型。请准备1,000W及以上的电源(具体要求请查阅显卡厂商文档),以及带有两个合适插槽的主板——在花费约2,800–3,100美元之前,建议先租用一个双GPU云实例试用一个下午,确认这套配置能满足你的需求。',
+            a: '可以。两张卡合计提供48GB VRAM,足以在不offload到系统内存的情况下容纳一个4-bit量化的70B级模型。请准备1,000W及以上的电源(具体要求请查阅显卡厂商文档),以及带有两个合适插槽的主板——在花费约3,000–3,450美元之前,建议先租用一个双GPU云实例试用一个下午,确认这套配置能满足你的需求。',
           },
           {
             q: '为什么2026年二手RTX 3090价格上涨了？',
-            a: '2026年内存短缺普遍推高了GPU价格(据追踪数据)。这张卡3月售价约600–800美元（XDA Developers,2026-03-15）,到10月中旬已涨至1,400–1,550美元（InsiderLLM追踪数据,2026-10-15）。它是少数几款变贵的约六年历史产品之一。',
+            a: '2026年内存短缺普遍推高了GPU价格(据追踪数据)。这张卡3月售价约600–800美元（XDA Developers,2026-03-15）,截至2026-11-23已涨至1,500–1,725美元（InsiderLLM追踪数据）。它是少数几款变贵的约六年历史产品之一。',
           },
           {
             q: '购买二手矿卡安全吗？',
@@ -3741,11 +3742,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '资料来源',
         items: [
           '[RTX 3090价格追踪——新品与二手价格历史,Best Value GPU。](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[多家供应商的RTX 3090云端价格,GetDeploying（核实日期以页面显示的最后更新日期为准）。](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[多家供应商的RTX 3090云端价格,GetDeploying（核实日期2026-11-18）。](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[RTX 3090 GPU租用价格,RunPod。](https://www.runpod.io/gpu-models/rtx-3090)',
           '[二手RTX 3090仍是本地AI最佳GPU,XDA Developers。](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly——住宅平均电价,US Energy Information Administration。](https://www.eia.gov/electricity/monthly/)',
-          '[NVIDIA GPU价格上涨——价格追踪,InsiderLLM(2026-10-15更新)。](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[NVIDIA GPU价格上涨——价格追踪,InsiderLLM(RTX 3090数据日期2026-11-23；RTX 4090数据来自2026-10-15更新)。](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -3756,7 +3757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地LLM最佳GPU：完整购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 在每个价位段将RTX 3090与当代显卡进行比较。',
           '[本地LLM二手GPU：高性价比之选](/zh/local-llms/used-gpus-for-local-llms) — 更全面的二手市场指南,涵盖RTX 3060、3080和4090与本卡的对比。',
           '[Ollama对比LM Studio](/zh/local-llms/ollama-vs-lm-studio) — 除了共享llama.cpp后端之外,这块GPU搭配的两款工具究竟有何不同。',
-          '[本地运行70B模型最便宜的实用方式](/zh/prompt-bites/cheapest-way-to-run-70b-model-locally) — 两块RTX 3090在最便宜的70B配置中的定位。',
+          '[本地运行70B模型最便宜的实用方式](/zh/prompt-bites/cheapest-way-to-run-70b-model-locally) — 两块RTX 3090的配置与运行70B模型的其他方式相比如何。',
           '[70B模型需要多少VRAM？](/zh/prompt-bites/vram-for-70b-model) — 上述双卡建议背后的VRAM计算。',
           '[本地LLM成本计算器：自建还是租用](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 用你自己的数字和硬件运行回本点计算。',
           '[改为租用云GPU](/zh/power-local-llm/best-cloud-gpu-providers) — 先按小时租用;两个GPU市场的评测见[Vast.ai评测](/zh/power-local-llm/vast-ai-review)和[Clore.ai评测](/zh/power-local-llm/clore-ai-review)。',
@@ -3779,9 +3780,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '2026년 RTX 3090 로컬 LLM: 중고 구매 vs 대여',
 
     intro: 'RTX 3090은 CUDA를 지원하는 NVIDIA 카드로 24GB VRAM을 자신의 책상 아래에 두는 가장 저렴한 방법 중 하나이며, 클라우드에서 같은 카드를 대여하면 시간당 몇 센트면 충분합니다. 이 가이드는 두 선택지 사이의 경계가 실제로 어디에 있는지 계산합니다.',
-    metaDescription: '2026년 중고 RTX 3090 가격은 1,400–1,550달러이며, 대여는 시간당 약 0.16달러부터 시작합니다. 로컬 LLM용 24GB VRAM의 구매 대 대여 손익분기점을 계산합니다.',
+    metaDescription: '2026년 중고 RTX 3090 가격은 1,500–1,725달러이며, 대여는 시간당 약 0.16달러부터 시작합니다. 로컬 LLM용 24GB VRAM의 구매 대 대여 손익분기점을 계산합니다.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-27',
     readTime: '13분 읽기',
     educationalLevel: 'Intermediate',
     audience: '중고 24GB GPU 구매와 로컬 LLM 추론을 위한 클라우드 GPU 시간 대여 사이에서 결정을 내려야 하는 개발자 및 소규모 팀',
@@ -3798,20 +3799,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**하루 약 8시간 이상, 매일 사용할 예정이거나, 데이터가 건물 밖으로 나갈 수 없다면 중고 RTX 3090을 구매하십시오. 그렇지 않다면 대여하십시오.** 중고 1,400–1,550달러(InsiderLLM 트래커, 2026-10-15) 대 시간당 0.16달러부터 시작하는 클라우드 대여를 비교하면, 이 카드는 지속적인 부하에서만 본전을 뽑을 수 있습니다. 게다가 2026년에는 3월보다 가격이 올라 손익분기점이 더 멀어졌습니다.',
+    leadAnswerBlock: '**하루 약 8시간 이상, 매일 사용할 예정이거나, 데이터가 건물 밖으로 나갈 수 없다면 중고 RTX 3090을 구매하십시오. 그렇지 않다면 대여하십시오.** 중고 1,500–1,725달러(InsiderLLM 트래커, 2026-11-23) 대 시간당 0.16달러부터 시작하는 클라우드 대여를 비교하면, 이 카드는 지속적인 부하에서만 본전을 뽑을 수 있습니다. 게다가 2026년에는 3월보다 가격이 올라 손익분기점이 더 멀어졌습니다.',
 
     quickAnswerTop: {
       ko: {
         question: '로컬 LLM용으로 RTX 3090은 아직 구매할 가치가 있습니까?',
-        answer: '네, 다만 지속적인 사용이나 개인정보 보호가 필요한 작업에 한합니다. 중고 RTX 3090은 1,400–1,550달러에 24GB VRAM을 제공하며, 이는 27B급 모델을 자신의 하드웨어에서만 완전히 구동하는 가장 저렴한 방법 중 하나입니다. 같은 GPU를 대여하면 시간당 0.16달러부터이므로, 가벼운 사용에서는 클라우드가 수년간 더 저렴합니다.',
+        answer: '네, 다만 지속적인 사용이나 개인정보 보호가 필요한 작업에 한합니다. 중고 RTX 3090은 1,500–1,725달러에 24GB VRAM을 제공하며, 이는 27B급 모델을 자신의 하드웨어에서만 완전히 구동하는 가장 저렴한 방법 중 하나입니다. 같은 GPU를 대여하면 시간당 0.16달러부터이므로, 가벼운 사용에서는 클라우드가 수년간 더 저렴합니다.',
         bullets: [
           '24GB VRAM, 936GB/s 대역폭, 350W — 2020년 이후 변화 없이 여전히 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나',
-          '중고 가격 1,400–1,550달러 (InsiderLLM 트래커, 2026-10-15); 메모리 부족으로 3월 약 600–800달러(XDA Developers, 2026-03-15)에서 상승',
+          '중고 가격 1,500–1,725달러 (InsiderLLM 트래커, 2026-11-23); 메모리 부족으로 3월 약 600–800달러(XDA Developers, 2026-03-15)에서 상승',
           '클라우드 대여는 시간당 0.16달러(재고가 있는 온디맨드 게시 중 가장 낮은 요금)부터 0.50달러(RunPod Secure)까지; RunPod Community는 시간당 0.22달러; GetDeploying에 게시된 공급업체의 온디맨드 구성 중앙값은 GPU 시간당 0.25달러',
-          '시간당 0.25달러 중앙값 대여 대비 하루 2시간 사용 시 손익분기점은 약 11년, 하루 8시간이면 약 2.8년',
+          '시간당 0.25달러 중앙값 대여 대비 하루 2시간 사용 시 손익분기점은 약 12년, 하루 8시간이면 약 3년',
           '개인정보 보호, 지연 시간, 상시 실행 에이전트, 지속적인 파인튜닝을 위해서는 구매하고, 일시적 사용과 실험을 위해서는 대여하십시오',
         ],
-        updatedDate: '2026-11-18',
+        updatedDate: '2026-11-27',
       },
     },
 
@@ -3821,7 +3822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 로컬 LLM용 RTX 3090: 구매해야 할까, 대여해야 할까',
       description: '로컬 LLM 추론을 위해 중고 NVIDIA RTX 3090을 구매하는 경우와 클라우드 공급업체에서 같은 GPU를 대여하는 경우의 손익분기점 분석, 2026년 가격 기준.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3860,9 +3861,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: '핵심 내용',
         numberedItems: [
-          '중고 RTX 3090은 1,400–1,550달러에 24GB VRAM을 제공합니다 — CUDA를 지원하는 NVIDIA 카드로 이만큼의 비디오 메모리를 확보하는 가장 저렴한 방법 중 하나라는 점은 변하지 않았습니다.',
+          '중고 RTX 3090은 1,500–1,725달러(InsiderLLM 트래커, 2026-11-23)에 24GB VRAM을 제공합니다 — CUDA를 지원하는 NVIDIA 카드로 이만큼의 비디오 메모리를 확보하는 가장 저렴한 방법 중 하나라는 점은 변하지 않았습니다.',
           '같은 GPU를 대여하면 재고가 있는 온디맨드 게시 중 가장 낮은 요금이 시간당 0.16달러, RunPod Community가 시간당 0.22달러이며, GetDeploying에 게시된 공급업체의 온디맨드 구성 중앙값은 GPU 시간당 0.25달러입니다. Vast.ai 마켓플레이스 요금은 호스트에 따라 다릅니다.',
-          '시간당 약 0.08달러의 전기료를 제외하면, 구매는 중앙값 대여 대비 약 8,300 GPU 시간이 지나야 앞서기 시작합니다 — 하루 8시간 기준 약 2.8년입니다.',
+          '시간당 약 0.08달러의 전기료를 제외하면, 구매는 중앙값 대여 대비 약 8,800 GPU 시간이 지나야 앞서기 시작합니다 — 하루 8시간 기준 약 3년입니다.',
           '이 카드는 2026년에 더 저렴해진 것이 아니라 더 비싸졌습니다: 3월에는 약 600–800달러였습니다(XDA Developers, 2026-03-15). 이는 손익분기점을 더 멀리 밀어냅니다.',
           '개인정보 보호, 오프라인 작업, 상시 실행 에이전트, 지속적인 파인튜닝을 위해서는 구매하고, 일시적 사용, 실험, 그리고 그렇지 않으면 방치될 용도를 위해서는 대여하십시오.',
           '재판매로 구매 가격의 일부를 만회할 수 있지만 보장되지는 않습니다. 2026년에는 메모리 부족으로 중고 가격이 올랐고 다시 내려갈 수도 있으므로, 재판매 가치는 계획이 아니라 추가 이익으로 간주하십시오.',
@@ -3891,7 +3892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             '하루 2시간 미만 → 대여하고 6개월 후 재검토',
-            '매일 8시간 이상 → 구매, 대여 대비 약 3~6년 안에 카드가 본전을 뽑습니다',
+            '매일 8시간 이상 → 구매, 시간당 0.16–0.25달러 대여 대비 약 3~6.4년 안에 카드가 본전을 뽑습니다',
             '업로드할 수 없는 데이터가 있다면 → 구매, 비용이 결정 요인이 아닙니다',
           ],
         },
@@ -3914,7 +3915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM: 24GB GDDR6X — 4비트 양자화로 27B급 모델을 컨텍스트 여유를 두고 실행하기에 충분합니다.',
           '메모리 대역폭: 936GB/s로, 메모리 대역폭에 제약받는 워크로드에서 토큰 생성 속도를 실질적으로 결정합니다.',
           '전력: 카드 자체 TDP는 350W; 추론 부하 시 시스템 전체 콘센트 기준 약 450W를 예상하십시오.',
-          '중고 가격: 일반적으로 1,400–1,550달러 (InsiderLLM 트래커, 2026-10-15) — 3월 약 600–800달러(XDA Developers, 2026-03-15)에서 상승.',
+          '중고 가격: 일반적으로 1,500–1,725달러 (InsiderLLM 트래커, 2026-11-23; 2026-11-13부터 2026-11-23까지 판매 완료 225건의 중앙값 1,650달러) — 3월 약 600–800달러(XDA Developers, 2026-03-15)에서 상승.',
           '클라우드 대여: 시간당 0.16달러(재고가 있는 온디맨드 게시 중 가장 낮은 요금)부터 시간당 0.50달러(RunPod Secure)까지; GetDeploying에 게시된 공급업체의 온디맨드 구성 중앙값은 GPU 시간당 0.25달러.',
           '전기료: 최근 미국 주거용 평균 0.18달러/kWh 기준, 운영 비용은 시간당 약 0.08달러.',
         ],
@@ -3924,7 +3925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-card',
         title: 'RTX 3090이 실제로 제공하는 것',
         content: [
-          '**RTX 3090이 중요한 이유는 단 하나입니다: CUDA를 지원하는 NVIDIA 카드 중 가장 낮은 가격대의 하나로 24GB VRAM을 제공한다는 점입니다.** 2026년 기준으로 이 카드의 다른 모든 면은 평범합니다 — 2020년 설계이며 350W를 소비하고, 현세대 카드가 모든 효율성 지표에서 이를 능가합니다. 하지만 그렇다고 해서 모델 가중치가 비디오 메모리에 들어가느냐 마느냐의 사실이 바뀌지는 않습니다.',
+          '**RTX 3090이 중요한 이유는 단 하나입니다: CUDA를 지원하는 NVIDIA 카드 중 가장 낮은 가격대의 하나로 24GB VRAM을 제공한다는 점입니다.** 2026년 기준으로 이 카드의 다른 모든 면은 평범합니다 — 2020년 설계이며 350W를 소비하고, 일반적으로 현세대 카드가 전력 효율이 더 좋습니다. 하지만 그렇다고 해서 모델 가중치가 비디오 메모리에 들어가느냐 마느냐의 사실이 바뀌지는 않습니다.',
           'VRAM은 완만한 경사가 아니라 절벽입니다. 딱 맞는 모델은 최대 속도로 실행되지만, 단 1GB라도 넘치면 시스템 RAM으로 흘러넘쳐 속도가 급격히 떨어집니다. 이 때문에 24GB는 성능 수치가 아니라 능력의 임계값이 되며, 3090은 이 임계값을 넘는 가장 저렴한 카드 중 하나입니다.',
           '두 번째로 중요한 수치는 메모리 대역폭입니다. 양자화된 모델의 토큰 생성은 연산이 아니라 메모리 대역폭에 제약받으므로, 936GB/s가 CUDA 코어 수보다 체감 속도를 더 잘 예측합니다. 이는 또한 연산량은 더 많지만 메모리 버스가 더 좁은 최신 중급 카드들 사이에서도 3090이 경쟁력을 유지하는 이유입니다.',
           '실제로는: 4비트 양자화된 27B급 모델에 여유로운 공간, 긴 컨텍스트에서도 빠른 7B–14B 모델 추론, 그리고 카드를 한 장 더 추가하면 오프로드 없이 70B급 모델을 VRAM에 완전히 유지할 수 있는 능력을 얻습니다.',
@@ -3969,7 +3970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '중고 구매: 결제 전 확인해야 할 사항',
         highlight: true,
         content: [
-          '**구매한다면 중고를 사십시오 — RTX 3090 신품은 구하기 어렵고 중고보다 비싼 경우가 많으므로 현재 매물을 직접 확인하십시오. 가격 이점은 중고 시장에 있습니다.** 1,400–1,550달러라는 가격은 여전히 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나이며, 재판매로 비용의 일부를 만회할 수 있지만 보장되지는 않습니다.',
+          '**구매한다면 중고를 사십시오 — RTX 3090 신품은 구하기 어렵고 중고보다 비싼 경우가 많으므로 현재 매물을 직접 확인하십시오. 가격 이점은 중고 시장에 있습니다.** 1,500–1,725달러라는 가격은 여전히 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나이며, 재판매로 비용의 일부를 만회할 수 있지만 보장되지는 않습니다.',
           '솔직한 유의점: 이들은 약 6년 된 카드이며, 상당수가 채굴 또는 게이밍용으로 사용되었고, 개인 판매자로부터 보증 없이 판매됩니다. 고장 유형은 알려져 있고 점검 가능하므로 위험은 관리할 수 있지만 실재하며, 그렇기 때문에 가장 저렴한 매물보다는 반품이 가능한 판매자에게서 구매해야 합니다.',
         ],
         items: [
@@ -3990,14 +3991,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB (중고)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'eBay에서 중고 RTX 3090 가격 확인',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB (중고/리퍼비시)',
             productCategory: 'gpu',
-            priceRange: '1400-1550',
+            priceRange: '1500-1725',
             label: 'Newegg에서 RTX 3090 재고 확인',
           },
         ],
@@ -4026,7 +4027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '대여가 생각보다 더 자주 더 나은 답인 이유',
         content: [
           '**대여를 지지하는 논거는 항상 더 저렴해서가 아니라, 유휴 상태의 GPU가 바쁜 GPU와 같은 비용이 든다는 점입니다.** 주말에만 사용되는 데스크톱 안의 카드는 이미 전체 구매 가격만큼의 비용을 치른 셈입니다. 대여한 GPU는 세션 사이에 아무 비용도 들지 않습니다.',
-          '대여의 이유는 철학적이지 않고 구체적입니다: 초기 지출 없음, 약 6년 된 카드의 감가상각 위험 없음, 전원·케이스·냉각 제약 없음, 팬이 고장 나도 주말을 날릴 일 없음. 절대 구매하지 않을 카드도 대여할 수 있습니다 — 70B급 모델을 대여한 GPU 두 대로 하루 오후 동안 테스트하는 데는 몇 달러면 되지만, 중고 두 대를 구매하면 약 2,800–3,100달러가 듭니다.',
+          '대여의 이유는 철학적이지 않고 구체적입니다: 초기 지출 없음, 약 6년 된 카드의 감가상각 위험 없음, 전원·케이스·냉각 제약 없음, 팬이 고장 나도 주말을 날릴 일 없음. 절대 구매하지 않을 카드도 대여할 수 있습니다 — 70B급 모델을 대여한 GPU 두 대로 하루 오후 동안 테스트하는 데는 몇 달러면 되지만, 중고 두 대를 구매하면 약 3,000–3,450달러가 듭니다.',
           '솔직한 반론은 대여에 실질적인 마찰이 있다는 것입니다. 다른 누군가의 기기에 데이터를 업로드해야 하고, 인스턴스를 기다려야 하며, 마켓플레이스 게시물에서는 작업 도중 호스트가 오프라인이 되는 일이 있을 수 있습니다. 이는 대여를 무시할 이유가 아니라, 결정이 시간당 요금만이 아니라 워크로드에 달려 있다는 이유입니다.',
         ],
       },
@@ -4055,7 +4056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'RunPod 요금은 자사 모델 페이지에서 다시 확인했습니다. 재고가 있는 최저 요금과 다중 공급업체 중앙값은 GetDeploying 표에서 가져온 것(표시된 최종 업데이트 날짜에 확인)으로 이후 변동되었을 수 있습니다. Vast.ai 요금은 호스트에 따라 다르므로 Vast.ai의 자체 요금 페이지를 참고하십시오. 클라우드 GPU 요금은 매주 변동하므로 결정하기 전에 현재 가격을 확인하십시오.',
+            text: 'RunPod 요금은 자사 모델 페이지에서 다시 확인했습니다. 재고가 있는 최저 요금과 다중 공급업체 중앙값은 GetDeploying 표에서 가져온 것(2026-11-18 확인)으로 이후 변동되었을 수 있습니다. Vast.ai 요금은 호스트에 따라 다르므로 Vast.ai의 자체 요금 페이지를 참고하십시오. 클라우드 GPU 요금은 매주 변동하므로 결정하기 전에 현재 가격을 확인하십시오.',
           },
         ],
         affiliateLinks: [
@@ -4080,16 +4081,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'break-even',
         title: '손익분기점 계산',
         content: [
-          '**시간당 0.25달러의 중앙값 대여와 비교하면, 1,400달러 카드는 본전을 뽑는 데 약 8,300 GPU 시간이 필요합니다 — 하루 8시간이면 약 2.8년, 하루 2시간이면 약 11년입니다.** 이것이 구매를 결정해야 할 수치입니다.',
-          '이 계산은 카드를 운영하는 비용을 차감합니다. 콘센트 기준 450W와 최근 미국 주거용 평균 0.18달러/kWh를 적용하면, 로컬 추론은 전기료로 시간당 약 0.08달러가 듭니다. 따라서 1,400달러와 시간당 0.25달러를 비교하는 것이 아니라, 실제로 절약되는 시간당 약 0.17달러와 비교하는 것입니다.',
-          '가정: 1,400달러 카드, 시스템 소비전력 450W, 0.18달러/kWh. 본인의 전기 요금으로 대체해 보십시오 — 표의 다른 어떤 요소보다 결과를 크게 좌우하며, 0.30달러/kWh를 넘는 시장에서는 구매 논거가 대체로 사라집니다.',
+          '**시간당 0.25달러의 중앙값 대여와 비교하면, 1,500달러 카드는 본전을 뽑는 데 약 8,800 GPU 시간이 필요합니다 — 하루 8시간이면 약 3년, 하루 2시간이면 약 12년입니다.** 이것이 구매를 결정해야 할 수치입니다.',
+          '이 계산은 카드를 운영하는 비용을 차감합니다. 콘센트 기준 450W와 최근 미국 주거용 평균 0.18달러/kWh를 적용하면, 로컬 추론은 전기료로 시간당 약 0.08달러가 듭니다. 따라서 1,500달러와 시간당 0.25달러를 비교하는 것이 아니라, 실제로 절약되는 시간당 약 0.17달러와 비교하는 것입니다.',
+          '가정: 1,500달러 카드(트래커 가격대의 하단. 중앙값 1,650달러에서는 모든 기간이 약 10% 길어집니다), 시스템 소비전력 450W, 0.18달러/kWh. 본인의 전기 요금으로 대체해 보십시오 — 표의 다른 어떤 요소보다 결과를 크게 좌우하며, 0.30달러/kWh를 넘는 시장에서는 구매 논거가 대체로 사라집니다.',
         ],
         columns: ['사용량', '0.16달러/h 대비', '0.25달러/h 대비', '0.50달러/h 대비'],
         rows: [
-          { 사용량: '하루 2시간', '0.16달러/h 대비': '약 24년', '0.25달러/h 대비': '약 11년', '0.50달러/h 대비': '약 4.6년' },
-          { 사용량: '하루 4시간', '0.16달러/h 대비': '약 12년', '0.25달러/h 대비': '약 5.7년', '0.50달러/h 대비': '약 2.3년' },
-          { 사용량: '하루 8시간', '0.16달러/h 대비': '약 6.1년', '0.25달러/h 대비': '약 2.8년', '0.50달러/h 대비': '약 1.1년' },
-          { 사용량: '상시 가동 (24/7)', '0.16달러/h 대비': '약 24개월', '0.25달러/h 대비': '약 11개월', '0.50달러/h 대비': '약 4.6개월' },
+          { 사용량: '하루 2시간', '0.16달러/h 대비': '약 26년', '0.25달러/h 대비': '약 12년', '0.50달러/h 대비': '약 4.9년' },
+          { 사용량: '하루 4시간', '0.16달러/h 대비': '약 13년', '0.25달러/h 대비': '약 6년', '0.50달러/h 대비': '약 2.4년' },
+          { 사용량: '하루 8시간', '0.16달러/h 대비': '약 6.4년', '0.25달러/h 대비': '약 3년', '0.50달러/h 대비': '약 1.2년' },
+          { 사용량: '상시 가동 (24/7)', '0.16달러/h 대비': '약 26개월', '0.25달러/h 대비': '약 12개월', '0.50달러/h 대비': '약 4.9개월' },
         ],
         callouts: [
           {
@@ -4108,12 +4109,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '독자 유형': '주말 취미 사용자',
             결론: '대여',
-            이유: '주당 몇 시간의 사용은 1,400달러 지출과 비교하면 손익분기점에서 수십 년 떨어져 있습니다. 1년간 대여해 보고, 매일 대여하고 있다는 것을 깨달으면 그때 구매하십시오 — 그때쯤이면 어떤 카드가 필요한지도 정확히 알게 될 것입니다.',
+            이유: '주당 몇 시간의 사용은 1,500달러 지출과 비교하면 손익분기점에서 수십 년 떨어져 있습니다. 1년간 대여해 보고, 매일 대여하고 있다는 것을 깨달으면 그때 구매하십시오 — 그때쯤이면 어떤 카드가 필요한지도 정확히 알게 될 것입니다.',
           },
           {
             '독자 유형': '매일 사용하는 헤비 유저',
             결론: '구매',
-            이유: '하루 8시간 이상이면 카드는 대여 대비 약 3~6년 안에 본전을 뽑고, 재판매가 나머지 비용의 일부를 만회해 줄 수 있지만 보장되지는 않습니다. 더 큰 이득은 행동적인 측면입니다: 소유한 GPU에는 돌아가는 계량기가 없으므로 실험을 아낄 필요가 없어집니다.',
+            이유: '하루 8시간 이상이면 카드는 시간당 0.16–0.25달러 대여 대비 약 3~6.4년 안에 본전을 뽑고, 재판매가 나머지 비용의 일부를 만회해 줄 수 있지만 보장되지는 않습니다. 더 큰 이득은 행동적인 측면입니다: 소유한 GPU에는 돌아가는 계량기가 없으므로 실험을 아낄 필요가 없어집니다.',
           },
           {
             '독자 유형': '소규모 팀 또는 스타트업',
@@ -4161,7 +4162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026년에도 RTX 3090은 구매할 가치가 있습니까?',
-            a: '지속적인 로컬 추론이라면 그렇습니다 — 여전히 중고 1,400–1,550달러로 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나입니다. 가볍거나 일시적인 사용이라면 아닙니다: 같은 GPU를 시간당 0.16달러부터 대여하는 것이 수년간 더 저렴합니다. 결정 요인은 사양이 아니라 주당 실제 사용 시간입니다.',
+            a: '지속적인 로컬 추론이라면 그렇습니다 — 여전히 중고 1,500–1,725달러로 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나입니다. 가볍거나 일시적인 사용이라면 아닙니다: 같은 GPU를 시간당 0.16달러부터 대여하는 것이 수년간 더 저렴합니다. 결정 요인은 사양이 아니라 주당 실제 사용 시간입니다.',
           },
           {
             q: 'RTX 3090은 Ollama에 적합합니까?',
@@ -4181,11 +4182,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RTX 3090 두 장으로 70B 모델을 실행할 수 있습니까?',
-            a: '예. 카드 두 장은 48GB VRAM을 제공하며, 이는 시스템 RAM으로 오프로드하지 않고도 4비트 양자화된 70B급 모델을 담기에 충분합니다. 1,000W 이상의 전원 공급장치(정확한 요구 사항은 카드 제조사 문서를 확인하십시오)와 적합한 슬롯 두 개가 있는 메인보드를 준비하십시오 — 그리고 약 2,800–3,100달러를 지출하기 전에 먼저 듀얼 GPU 클라우드 인스턴스를 하루 오후 동안 대여해 이 구성이 필요한 작업을 수행하는지 확인해 보십시오.',
+            a: '예. 카드 두 장은 48GB VRAM을 제공하며, 이는 시스템 RAM으로 오프로드하지 않고도 4비트 양자화된 70B급 모델을 담기에 충분합니다. 1,000W 이상의 전원 공급장치(정확한 요구 사항은 카드 제조사 문서를 확인하십시오)와 적합한 슬롯 두 개가 있는 메인보드를 준비하십시오 — 그리고 약 3,000–3,450달러를 지출하기 전에 먼저 듀얼 GPU 클라우드 인스턴스를 하루 오후 동안 대여해 이 구성이 필요한 작업을 수행하는지 확인해 보십시오.',
           },
           {
             q: '2026년에 중고 RTX 3090 가격이 왜 올랐습니까?',
-            a: '2026년 동안 메모리 부족이 GPU 가격을 전반적으로 이전 수준보다 끌어올렸다고 트래커는 전합니다. 이 카드는 3월에 약 600–800달러(XDA Developers, 2026-03-15)에, 10월 중순에는 1,400–1,550달러(InsiderLLM 트래커, 2026-10-15)에 판매되었습니다. 더 비싸진 몇 안 되는 약 6년 된 제품 중 하나입니다.',
+            a: '2026년 동안 메모리 부족이 GPU 가격을 전반적으로 이전 수준보다 끌어올렸다고 트래커는 전합니다. 이 카드는 3월에 약 600–800달러(XDA Developers, 2026-03-15)에, 2026-11-23 기준으로는 1,500–1,725달러(InsiderLLM 트래커)에 판매되었습니다. 더 비싸진 몇 안 되는 약 6년 된 제품 중 하나입니다.',
           },
           {
             q: '중고 채굴용 GPU를 구매해도 안전합니까?',
@@ -4207,11 +4208,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '출처',
         items: [
           '[RTX 3090 가격 추적기 — 신품 및 중고 가격 이력, Best Value GPU.](https://bestvaluegpu.com/history/new-and-used-rtx-3090-price-history-and-specs/)',
-          '[여러 공급업체의 RTX 3090 클라우드 가격, GetDeploying(표시된 최종 업데이트 날짜에 확인).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
+          '[여러 공급업체의 RTX 3090 클라우드 가격, GetDeploying(2026-11-18 확인).](https://getdeploying.com/gpus/nvidia-rtx-3090)',
           '[RTX 3090 GPU 대여 가격, RunPod.](https://www.runpod.io/gpu-models/rtx-3090)',
           '[중고 RTX 3090은 여전히 로컬 AI를 위한 최고의 GPU다, XDA Developers.](https://www.xda-developers.com/used-rtx-3090-still-best-for-local-ai-in-value/)',
           '[Electric Power Monthly — 주거용 평균 전기 요금, US Energy Information Administration.](https://www.eia.gov/electricity/monthly/)',
-          '[NVIDIA GPU 가격 상승 — 가격 트래커, InsiderLLM(2026-10-15 업데이트).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
+          '[NVIDIA GPU 가격 상승 — 가격 트래커, InsiderLLM(RTX 3090은 2026-11-23 기준, RTX 4090은 2026-10-15 업데이트 기준).](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
         ],
       },
 
@@ -4222,7 +4223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[로컬 LLM을 위한 최고의 GPU: 완전 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 모든 가격대에서 RTX 3090을 최신 카드와 비교합니다.',
           '[로컬 LLM용 중고 GPU: 최고의 가성비 선택](/ko/local-llms/used-gpus-for-local-llms) — 이 카드와 함께 RTX 3060, 3080, 4090을 다루는 더 폭넓은 중고 시장 가이드입니다.',
           '[Ollama 대 LM Studio](/ko/local-llms/ollama-vs-lm-studio) — 두 도구가 공통된 llama.cpp 백엔드를 넘어 실제로 어떻게 다른지 다룹니다.',
-          '[70B 모델을 로컬에서 실행하는 가장 저렴하고 실용적인 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally) — 가장 저렴한 70B 구성에 RTX 3090 두 장이 어떻게 들어맞는지 다룹니다.',
+          '[70B 모델을 로컬에서 실행하는 가장 저렴하고 실용적인 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally) — RTX 3090 두 장 구성을 70B 모델을 실행하는 다른 방법과 비교합니다.',
           '[70B 모델에는 VRAM이 얼마나 필요한가?](/ko/prompt-bites/vram-for-70b-model) — 위의 듀얼 카드 권장 사항 뒤에 있는 VRAM 계산입니다.',
           '[로컬 LLM 비용 계산기: 구축 대 대여](/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 본인의 수치와 하드웨어로 손익분기점 계산을 실행해 보십시오.',
           '[대신 클라우드 GPU를 임대](/ko/power-local-llm/best-cloud-gpu-providers) — 먼저 시간 단위로 대여해 보세요. 마켓플레이스 리뷰는 [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review)와 [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)입니다.',
