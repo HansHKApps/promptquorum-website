@@ -31486,5 +31486,74 @@
       "period": "90d 2026-08-30 to 2026-11-27"
     },
     "deployedAt": null
+  },
+  {
+    "id": "5a24e95e-02e8-4200-bf2b-68accebebf26",
+    "slug": "/pt/prompt-engineering/fundamentals-of-prompt-optimization",
+    "date": "2026-11-27T07:19:03.004Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Melhore a qualidade da IA em 20–40% com 6 alavancas e um processo de 6 etapas. Exemplos antes/depois para GPT-5.6, Claude e Gemini: funciona em todos os modelos.",
+        "new": "Como otimizar prompts com 6 alavancas e um processo de 6 etapas. Veja exemplos antes e depois para GPT-5.6, Claude e Gemini e 7 erros comuns a evitar."
+      }
+    ],
+    "reason": "Locale meta fix: bring field into the per-locale length budget in natural wording (merge only, not yet deployed). Dropped the 20-40% figure from the PT description.",
+    "queries": [
+      "tutorial de ajuste de prompt"
+    ],
+    "baseline": {
+      "position": 8.1,
+      "impressions": 79,
+      "clicks": 2,
+      "ctr": 0.02531645569620253,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e9109877-dfd9-4bac-9ca0-23312830eba2",
+    "slug": "/zh/prompt-engineering/prompt-building-blocks",
+    "date": "2026-11-27T07:19:03.071Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。缺少任何一个都会降低输出质量。包含所有模型通用的可复制模板。",
+        "new": "高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。了解每个部分如何提升输出结果质量，并获取适用于不同AI模型的可复制模板。"
+      }
+    ],
+    "reason": "Locale meta fix: bring field into the per-locale length budget in natural wording (merge only, not yet deployed).",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3c20a0d6-e6e9-49b5-bd27-f8e198ee11ea",
+    "slug": "/prompt-engineering/fundamentals-of-prompt-optimization",
+    "date": "2026-11-27T07:36:12.175Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Improve AI output quality by 20–40% using 6 levers and a 6-step process. Before/after examples for GPT-5.6, Claude, and Gemini — works on all major models.",
+        "new": "How to optimize prompts with 6 levers and a 6-step process. Before/after examples for GPT-5.6, Claude and Gemini, plus 7 common mistakes to avoid."
+      }
+    ],
+    "reason": "Risk-gate pass, 9 locales: removed or hedged unsupported statistics, test and compliance claims; new meta descriptions in 8 locales (EN shown). Not yet deployed.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "846df0dd-e2fe-4134-b4d6-35706d9baaeb",
+    "slug": "/prompt-engineering/prompt-building-blocks",
+    "date": "2026-11-27T07:36:12.209Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "Compliance guarantees and unsourced absolute claims",
+        "new": "Removed or hedged"
+      }
+    ],
+    "reason": "Risk-gate pass, 9 locales: removed unsupported compliance FAQs (de, fr, ja) and hedged absolute and statistical claims. No further title/meta change. Not yet deployed.",
+    "baseline": null,
+    "deployedAt": null
   }
 ]
