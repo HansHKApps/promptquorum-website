@@ -97,7 +97,8 @@ function validatePresentationFile(filePath) {
     if (langMatch) {
       const slidesContent = langMatch[1];
       // Count opening braces for slide objects - very basic check
-      const slideCount = (slidesContent.match(/type:/g) || []).length;
+      // Matches both `type:` and the JSON-style `"type":` some decks use.
+      const slideCount = (slidesContent.match(/\btype["']?\s*:/g) || []).length;
       if (slideCount < 2) {
         ERRORS.push(`${fileName}: Language "${lang}" has fewer than 2 slides - presentation may not work`);
       }

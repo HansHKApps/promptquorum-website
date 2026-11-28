@@ -10993,7 +10993,7 @@
     "title": "Apple Silicon vs GPU NVIDIA para LLMs locais 2026: desempenho, custo e workflow comparados",
     "excerpt": "M5 Max vs RTX 4090: velocidade, custo, consumo e VRAM vs memória unificada. Ponto de cruzamento em ~24 GB: abaixo a NVIDIA é mais rápida; acima, o Apple Silicon.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-18",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -12800,7 +12800,7 @@
   {
     "lang": "en",
     "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
-    "excerpt": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($310–350 used) runs Qwen3 14B at ~9–12 tok/s (est.). New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.",
+    "excerpt": "Best budget GPU for local LLMs 2026: our used pick is the RTX 3060 12GB, sold for $310–350 in the US. New pick: RTX 5060 Ti 16GB. Prices with sources.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/local-llms/best-budget-gpus-local-llm",
@@ -12809,7 +12809,7 @@
   {
     "lang": "de",
     "title": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB & Alternativen",
-    "excerpt": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (310–350 $ gebraucht) betreibt Qwen3 14B mit ca. 9–12 Tok/s (gesch.). Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.",
+    "excerpt": "Beste Budget-GPU für lokale LLMs 2026: gebraucht wählen wir die RTX 3060 12GB, in den USA für 310–350 $ verkauft. Neu: RTX 5060 Ti 16GB. Mit Quellen.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/de/local-llms/best-budget-gpus-local-llm",
@@ -12818,7 +12818,7 @@
   {
     "lang": "fr",
     "title": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB et alternatives",
-    "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (310–350 $ d'occasion), Qwen3 14B à ~9–12 tok/s (est.). Neuf : RTX 5060 Ti 16GB. Tableau complet.",
+    "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : en occasion, la RTX 3060 12 Go, vendue 310–350 $ aux États-Unis. En neuf : RTX 5060 Ti 16 Go. Sources.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/fr/local-llms/best-budget-gpus-local-llm",
@@ -12827,7 +12827,7 @@
   {
     "lang": "ja",
     "title": "ローカルLLM向けおすすめバジェットGPU",
-    "excerpt": "ローカルLLMおすすめGPU：RTX 3060 12GB（米国中古価格約$310–350）でQwen3 14B（推定9-12トークン/秒）ほか7種を実行。VRAMと速度の早見表付き。国内価格は価格.comで確認。",
+    "excerpt": "ローカルLLM向けバジェットGPU 2026：中古はRTX 3060 12GBを選定（米国成約$310〜350）。新品はRTX 5060 Ti 16GB。価格は出典付き。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/ja/local-llms/best-budget-gpus-local-llm",
@@ -12836,7 +12836,7 @@
   {
     "lang": "zh",
     "title": "本地LLM的最佳预算GPU",
-    "excerpt": "RTX 3060 12GB（二手约$310–350）可跑7款本地LLM：Qwen3 14B（估算9-12令牌/秒）、Qwen3 8B（估算16-20令牌/秒）等。附VRAM与速度对照表。",
+    "excerpt": "2026本地LLM预算显卡：二手首选RTX 3060 12GB（美国成交$310–350），全新首选RTX 5060 Ti 16GB。所有价格均注明来源和依据。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/zh/local-llms/best-budget-gpus-local-llm",
@@ -12845,7 +12845,7 @@
   {
     "lang": "es",
     "title": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB",
-    "excerpt": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($310–350 usada) ejecuta Qwen3 14B a ~9–12 tok/s (est.). Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.",
+    "excerpt": "Mejor GPU económica para LLMs locales 2026: usada elegimos la RTX 3060 12GB, vendida a $310–350 en EE. UU. Nueva: RTX 5060 Ti 16GB. Con fuentes.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/es/local-llms/best-budget-gpus-local-llm",
@@ -12854,7 +12854,7 @@
   {
     "lang": "pt",
     "title": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB",
-    "excerpt": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 310–350 usada) roda Qwen3 14B a ~9–12 tok/s (est.). Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.",
+    "excerpt": "Melhor GPU econômica para LLMs locais 2026: usada, escolhemos a RTX 3060 12GB, vendida por US$ 310–350 nos EUA. Nova: RTX 5060 Ti 16GB. Com fontes.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/pt/local-llms/best-budget-gpus-local-llm",
@@ -12863,7 +12863,7 @@
   {
     "lang": "ar",
     "title": "أفضل ⁨GPU⁩ اقتصادية لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060 12GB⁩",
-    "excerpt": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (310–350$ مستعملة) تشغّل Qwen3 14B بنحو 9–12 tok/ث (تقدير). الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.",
+    "excerpt": "أفضل GPU اقتصادية للنماذج المحلية 2026: للمستعملة نختار RTX 3060 12GB، بيعت بين $310–350 في الولايات المتحدة. وللجديدة RTX 5060 Ti 16GB. مع المصادر.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/ar/local-llms/best-budget-gpus-local-llm",
@@ -12872,7 +12872,7 @@
   {
     "lang": "ko",
     "title": "2026 로컬 LLM 예산형 GPU 추천: RTX 3060 12GB",
-    "excerpt": "RTX 3060 12GB: Qwen3 8B 초당 약 16-20토큰(추정). 예산별 GPU 추천, 미국 가격 비교, 국내 가격은 다나와 확인.",
+    "excerpt": "2026 로컬 LLM 보급형 GPU: 중고는 RTX 3060 12GB(미국 체결 $310–350), 신품은 RTX 5060 Ti 16GB를 선택합니다. 가격마다 출처와 근거를 명시합니다.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/ko/local-llms/best-budget-gpus-local-llm",
@@ -14906,7 +14906,7 @@
   {
     "lang": "en",
     "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
-    "excerpt": "Claude Pro costs $20/month. Local setups cost $1,800-4,050 over 5 years incl. power. Llama 3.3 70B at Q4 needs ~43 GB, so two 24 GB GPUs. Full comparison.",
+    "excerpt": "Claude Pro: $20/month. Used GPUs plus power: $1,800-4,050 over 5 years, rest of PC extra. Llama 3.3 70B at Q4 needs ~43 GB, two 24 GB cards.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/local-llms/local-llms-vs-claude-pro",
@@ -14915,7 +14915,7 @@
   {
     "lang": "de",
     "title": "Lokale LLMs vs Claude Pro: Datenschutz, Kosten und Qualität",
-    "excerpt": "Claude Pro kostet 20 $/Monat; lokal 1.800–4.050 $ in 5 Jahren inkl. Strom. Llama 3.3 70B braucht in Q4 ca. 43 GB (zwei 24-GB-GPUs). Vergleich.",
+    "excerpt": "Claude Pro: 20 $/Monat. Gebrauchte GPUs plus Strom: 1.800–4.050 $ in 5 Jahren, ohne Rest-PC. Llama 3.3 70B braucht in Q4 ca. 43 GB (2×24 GB).",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/de/local-llms/local-llms-vs-claude-pro",
@@ -14924,7 +14924,7 @@
   {
     "lang": "fr",
     "title": "LLMs Locaux vs Claude Pro: Confidentialité, Coûts et Qualité",
-    "excerpt": "Claude Pro coûte 20 $/mois ; en local 1 800–4 050 $ sur 5 ans, électricité incluse. Llama 3.3 70B en Q4 : ~43 Go (deux GPU de 24 Go). Comparatif.",
+    "excerpt": "Claude Pro : 20 $/mois. GPU d'occasion et courant : 1 800–4 050 $ sur 5 ans, reste du PC en plus. Llama 3.3 70B en Q4 : ~43 Go (2×24 Go).",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/fr/local-llms/local-llms-vs-claude-pro",
@@ -14933,7 +14933,7 @@
   {
     "lang": "ja",
     "title": "ローカルLLM vs Claude Pro: プライバシー、コスト、品質比較",
-    "excerpt": "Claude Proは月$20。ローカル構成は電気代込みで5年$1,800-4,050。Llama 3.3 70BのQ4は約43 GB、24 GBのGPU2枚が必要です。コストを比較します。",
+    "excerpt": "Claude Proは月$20。中古GPUと電気代だけで5年$1,800-4,050（PC本体は別）。Llama 3.3 70BのQ4は約43 GB、24 GBのGPU2枚が必要です。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/ja/local-llms/local-llms-vs-claude-pro",
@@ -14942,7 +14942,7 @@
   {
     "lang": "zh",
     "title": "本地LLM vs Claude Pro: 隐私、成本与质量对比",
-    "excerpt": "Claude Pro 每月 $20；本地方案含电费 5 年 $1,800-4,050。Llama 3.3 70B 在 Q4 下约需 43 GB，即两张 24 GB 显卡。完整对比。",
+    "excerpt": "Claude Pro 每月 $20。仅二手显卡加电费，5 年即需 $1,800-4,050（整机其余部件另计）。Llama 3.3 70B 在 Q4 下约需 43 GB，即两张 24 GB 显卡。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/zh/local-llms/local-llms-vs-claude-pro",
@@ -14951,7 +14951,7 @@
   {
     "lang": "es",
     "title": "LLMs Locales vs Claude Pro: Privacidad, Costo y Calidad",
-    "excerpt": "Claude Pro cuesta $20/mes; lo local, $1,800-4,050 en 5 años con luz. Llama 3.3 70B en Q4 necesita ~43 GB (dos GPUs de 24 GB). Comparativa completa.",
+    "excerpt": "Claude Pro: $20/mes. GPUs usadas y luz: $1,800-4,050 en 5 años, sin el resto del PC. Llama 3.3 70B en Q4 necesita ~43 GB (dos GPUs de 24 GB).",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/es/local-llms/local-llms-vs-claude-pro",
@@ -14960,7 +14960,7 @@
   {
     "lang": "pt",
     "title": "LLMs Locais vs Claude Pro: Privacidade, Custo e Qualidade",
-    "excerpt": "Claude Pro custa $20/mês; o local custa $1.800-4.050 em 5 anos com energia. Llama 3.3 70B em Q4 exige ~43 GB: duas GPUs de 24 GB. Comparação.",
+    "excerpt": "Claude Pro: $20/mês. GPUs usadas e energia: $1.800-4.050 em 5 anos, sem o resto do PC. Llama 3.3 70B em Q4 exige ~43 GB (duas GPUs de 24 GB).",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/pt/local-llms/local-llms-vs-claude-pro",
@@ -14969,7 +14969,7 @@
   {
     "lang": "ar",
     "title": "نماذج ⁨LLM⁩ المحلية مقابل ⁨Claude Pro⁩: الخصوصية والتكلفة والجودة",
-    "excerpt": "سعر Claude Pro 20$/شهر؛ والإعداد المحلي 1,800–4,050$ على 5 سنوات. يحتاج Llama 3.3 70B بصيغة Q4 نحو 43 GB: بطاقتا GPU بسعة 24 GB.",
+    "excerpt": "سعر Claude Pro 20$/شهر. بطاقات مستعملة مع الكهرباء: 1,800–4,050$ على 5 سنوات دون بقية الحاسوب. يحتاج Llama 3.3 70B بصيغة Q4 نحو 43 GB.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/ar/local-llms/local-llms-vs-claude-pro",
@@ -14978,7 +14978,7 @@
   {
     "lang": "ko",
     "title": "로컬 LLM vs Claude Pro: 프라이버시, 비용, 품질 비교",
-    "excerpt": "Claude Pro는 월 $20입니다. 로컬 구성은 전기료 포함 5년 $1,800-4,050입니다. Llama 3.3 70B(Q4)는 약 43 GB로 24 GB GPU 2장이 필요합니다.",
+    "excerpt": "Claude Pro는 월 $20입니다. 중고 GPU와 전기료만 5년 $1,800-4,050(PC 나머지 별도). Llama 3.3 70B(Q4)는 약 43 GB로 24 GB GPU 2장이 필요합니다.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-28",
     "url": "/ko/local-llms/local-llms-vs-claude-pro",
@@ -16895,7 +16895,7 @@
   {
     "lang": "es",
     "title": "Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware",
-    "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
+    "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-28",
     "url": "/es/local-llms/qwen-local-deployment-guide-2026",
@@ -17012,7 +17012,7 @@
   {
     "lang": "en",
     "title": "Best GPU for LLM Inference Under $500 (2026)",
-    "excerpt": "Our under-$500 pick for local LLMs: Intel Arc B580 12GB for Ollama or llama.cpp, used RTX 3060 12GB for CUDA. Why the 4060 Ti 16GB no longer fits.",
+    "excerpt": "Our under-$500 GPU pick for local LLMs: a used RTX 3060 12GB, sold for $310–350 in the US. Intel Arc B580 prices conflict, so check live listings.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17021,7 +17021,7 @@
   {
     "lang": "de",
     "title": "Beste GPU für LLM-Inferenz unter 500 $ (2026)",
-    "excerpt": "Unsere GPU-Wahl unter 500 $ für lokale LLMs: Arc B580 12GB für Ollama oder llama.cpp, gebrauchte RTX 3060 12GB für CUDA. Warum die 4060 Ti ausscheidet.",
+    "excerpt": "Unsere GPU-Wahl unter 500 $ für lokale LLMs: eine gebrauchte RTX 3060 12GB, in den USA für 310–350 $ verkauft. Zum Arc B580 widersprechen sich die Preise.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/de/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17030,7 +17030,7 @@
   {
     "lang": "fr",
     "title": "Meilleure GPU pour l'inférence LLM à moins de 500 $ (2026)",
-    "excerpt": "Notre GPU sous 500 $ pour LLM local : Arc B580 12 Go avec Ollama ou llama.cpp ; RTX 3060 12 Go d'occasion pour CUDA. Pourquoi la 4060 Ti sort.",
+    "excerpt": "Notre GPU sous 500 $ pour les LLM locaux : une RTX 3060 12 Go d’occasion, vendue 310–350 $ aux États-Unis. Les prix de l’Arc B580 se contredisent.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/fr/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17039,7 +17039,7 @@
   {
     "lang": "ja",
     "title": "500ドル以下のLLM推論向けGPUおすすめランキング（2026年）",
-    "excerpt": "$500以下のローカルLLM向け当サイトの推奨は、Ollamaやllama.cpp中心ならIntel Arc B580 12GB、CUDAが必要なら中古RTX 3060 12GB。4060 Tiが外れた理由も解説。",
+    "excerpt": "$500以下のローカルLLM向けに当サイトが選ぶのは中古RTX 3060 12GB。米国の成約価格は$310〜350。Arc B580の価格は情報源で食い違うため要確認。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/ja/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17048,7 +17048,7 @@
   {
     "lang": "zh",
     "title": "2026年500美元以下LLM推理最佳GPU排行",
-    "excerpt": "500美元以下本地LLM显卡，本站之选：主要用Ollama或llama.cpp选Intel Arc B580 12GB，需要CUDA选二手RTX 3060 12GB。并说明RTX 4060 Ti为何超出预算。",
+    "excerpt": "$500以下本地LLM显卡，本站首选二手RTX 3060 12GB：美国成交价$310–350。Intel Arc B580的价格各来源不一致，购买前请查看实时挂牌信息。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/zh/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17057,7 +17057,7 @@
   {
     "lang": "es",
     "title": "Mejor GPU para inferencia LLM por menos de $500 (2026)",
-    "excerpt": "Nuestra GPU por menos de $500 para LLM local: Arc B580 12GB con Ollama o llama.cpp; RTX 3060 12GB usada para CUDA. Por qué sale la RTX 4060 Ti.",
+    "excerpt": "Nuestra GPU por menos de $500 para LLM locales: una RTX 3060 12GB usada, vendida a $310–350 en EE. UU. Los precios de la Arc B580 no coinciden.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/es/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17066,7 +17066,7 @@
   {
     "lang": "pt",
     "title": "Melhor GPU para inferência de LLM por menos de US$ 500 (2026)",
-    "excerpt": "Nossa GPU até US$ 500 para LLM local: Arc B580 12GB com Ollama ou llama.cpp; RTX 3060 12GB usada para CUDA. Por que a RTX 4060 Ti 16GB saiu.",
+    "excerpt": "Nossa GPU até US$ 500 para LLMs locais: uma RTX 3060 12GB usada, vendida por US$ 310–350 nos EUA. Os preços da Arc B580 não batem; confira os anúncios.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/pt/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17075,7 +17075,7 @@
   {
     "lang": "ar",
     "title": "أفضل ⁨GPU⁩ للاستدلال على نماذج ⁨LLM⁩ بأقل من $⁨500⁩ (⁨2026⁩)",
-    "excerpt": "خيارنا بأقل من $500 لنماذج LLM محلياً: Arc B580 12GB مع Ollama أو llama.cpp، وRTX 3060 12GB مستعملة لـ CUDA. وسبب خروج RTX 4060 Ti.",
+    "excerpt": "اختيارنا بأقل من $500 للنماذج المحلية: RTX 3060 12GB مستعملة، بيعت بين $310–350 في الولايات المتحدة. أسعار Arc B580 متضاربة، فتحقق من العروض.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/ar/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -17084,7 +17084,7 @@
   {
     "lang": "ko",
     "title": "500달러 이하 LLM 추론용 최고 GPU 순위 (2026년)",
-    "excerpt": "$500 이하 로컬 LLM 추천: Ollama·llama.cpp 중심이면 Arc B580 12GB, CUDA가 필요하면 중고 RTX 3060 12GB. 4060 Ti가 빠진 이유도 설명합니다.",
+    "excerpt": "$500 이하 로컬 LLM용으로 저희는 중고 RTX 3060 12GB를 선택합니다. 미국 체결가 $310–350. Arc B580 가격은 출처마다 달라 매물 확인이 필요합니다.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-05-26",
     "url": "/ko/local-llms/best-gpu-for-llm-inference-under-500-2026",
@@ -65936,7 +65936,7 @@
   {
     "lang": "en",
     "title": "Which GPU Near $600 for Local LLMs in 2026?",
-    "excerpt": "The RTX 4060 Ti 16GB is our pick near $600 if you find it at that price; 16GB VRAM is the sweet spot for 14B models. 16GB card prices have swung during the 2026 shortage, so compare current listings.",
+    "excerpt": "Our editorial pick near $600 is the RTX 4060 Ti 16GB, if you find it near that price. A 27 November 2026 US tracker showed no new 16GB card under $600, so compare listings.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/prompt-bites/best-gpu-under-600-local-llm",
@@ -65945,7 +65945,7 @@
   {
     "lang": "de",
     "title": "Welche GPU um 600 $ für lokale LLMs 2026?",
-    "excerpt": "Die RTX 4060 Ti 16 GB ist unsere Wahl um 600 $, wenn Sie sie zu diesem Preis finden; 16 GB VRAM sind der optimale Punkt für 14B-Modelle. Die Preise von 16-GB-Karten schwankten während der Knappheit 2026, vergleichen Sie daher aktuelle Angebote.",
+    "excerpt": "Unsere redaktionelle Wahl um 600 $: die RTX 4060 Ti 16 GB, falls Sie sie zu diesem Preis finden. Ein US-Tracker zeigte am 27.11.2026 keine neue 16-GB-Karte unter 600 $.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/de/prompt-bites/best-gpu-under-600-local-llm",
@@ -65954,7 +65954,7 @@
   {
     "lang": "fr",
     "title": "Quelle GPU autour de 600 $ pour les LLM locaux en 2026 ?",
-    "excerpt": "La RTX 4060 Ti 16 Go est notre choix autour de 600 $ si vous la trouvez à ce prix ; 16 Go de VRAM est le point idéal pour les modèles 14B. Les prix des cartes 16 Go ont fluctué pendant la pénurie de 2026 : comparez les offres actuelles.",
+    "excerpt": "Notre choix éditorial autour de 600 $ : la RTX 4060 Ti 16 Go, si vous la trouvez à ce prix. Au 27/11/2026, un suivi américain ne montrait aucune carte 16 Go neuve sous 600 $.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/fr/prompt-bites/best-gpu-under-600-local-llm",
@@ -65963,7 +65963,7 @@
   {
     "lang": "ja",
     "title": "2026年版 600ドル前後でローカルLLMに向くGPUは？",
-    "excerpt": "RTX 4060 Ti 16GBは、その価格で見つかれば600ドル前後での当サイトの推奨です——16GB VRAMは14Bモデルの最適点です。2026年の品不足の間に16GBカードの価格は変動したため、現在の掲載価格を比較してください。",
+    "excerpt": "600ドル前後の当サイトの編集上の選択は、その価格で見つかる場合のRTX 4060 Ti 16GBです。2026年11月27日の米国の価格表では、600ドル未満の新品16GBカードはありませんでした。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/ja/prompt-bites/best-gpu-under-600-local-llm",
@@ -65972,7 +65972,7 @@
   {
     "lang": "zh",
     "title": "2026年600美元左右本地LLM选哪款GPU？",
-    "excerpt": "RTX 4060 Ti 16GB是我们在600美元左右的首选（前提是能以该价格买到）——16GB显存是14B模型的最佳平衡点。2026年短缺期间16GB显卡价格波动较大，请对比当前报价。",
+    "excerpt": "600美元左右，我们的编辑推荐是RTX 4060 Ti 16GB，前提是能以接近的价格买到。2026年11月27日的美国价格表中，没有低于600美元的全新16GB显卡。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/zh/prompt-bites/best-gpu-under-600-local-llm",
@@ -65981,7 +65981,7 @@
   {
     "lang": "es",
     "title": "¿Qué GPU elegir cerca de 600 $ para LLMs locales en 2026?",
-    "excerpt": "La RTX 4060 Ti 16GB es nuestra opción cerca de 600 $ si la encuentras a ese precio; 16 GB de VRAM es el punto óptimo para modelos 14B. Los precios de las tarjetas de 16 GB han oscilado durante la escasez de 2026, así que compara los anuncios actuales.",
+    "excerpt": "Nuestra elección editorial cerca de 600 $: la RTX 4060 Ti 16GB, si la encuentras a ese precio. El 27/11/2026 un rastreador de EE. UU. no mostraba 16 GB nuevas por menos de 600 $.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/es/prompt-bites/best-gpu-under-600-local-llm",
@@ -65990,7 +65990,7 @@
   {
     "lang": "pt",
     "title": "Qual GPU Escolher Perto de US$ 600 para LLMs Locais em 2026?",
-    "excerpt": "A RTX 4060 Ti 16GB é nossa escolha perto de US$ 600 se você a encontrar nesse preço; 16GB de VRAM é o ponto ideal para modelos 14B. Os preços das placas de 16GB oscilaram durante a escassez de 2026, então compare os anúncios atuais.",
+    "excerpt": "Nossa escolha editorial perto de US$ 600: a RTX 4060 Ti 16GB, se você a achar nesse preço. Em 27/11/2026, um rastreador dos EUA não mostrava 16GB novas abaixo de US$ 600.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/pt/prompt-bites/best-gpu-under-600-local-llm",
@@ -65999,7 +65999,7 @@
   {
     "lang": "ar",
     "title": "أي بطاقة رسومات قرب 600 دولار للنماذج اللغوية المحلية في 2026؟",
-    "excerpt": "بطاقة RTX 4060 Ti 16GB هي اختيارنا قرب 600 دولار إن وجدتها بهذا السعر — 16 جيجابايت VRAM هي النقطة المثلى لنماذج 14B. تذبذبت أسعار بطاقات 16 جيجابايت خلال نقص 2026، لذا قارن القوائم الحالية.",
+    "excerpt": "اختيارنا التحريري قرب 600 دولار هو RTX 4060 Ti 16GB إن وجدتها بسعر قريب. وفي 27 نوفمبر 2026 لم يُظهر متتبع أمريكي أي بطاقة جديدة بسعة 16 جيجابايت بأقل من 600 دولار.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/ar/prompt-bites/best-gpu-under-600-local-llm",
@@ -66008,7 +66008,7 @@
   {
     "lang": "ko",
     "title": "2026년 로컬 LLM용 $600 안팎 GPU는?",
-    "excerpt": "$600 안팎에서 해당 가격에 구할 수 있다면 RTX 4060 Ti 16GB를 추천합니다. 16GB VRAM은 14B 모델의 최적 지점입니다. 2026년 부족 사태 중 16GB 카드 가격이 크게 변동했으니 현재 매물을 비교하세요.",
+    "excerpt": "$600 안팎에서 당사의 편집상 선택은 그 가격에 구할 수 있는 RTX 4060 Ti 16GB입니다. 2026년 11월 27일 미국 가격표에는 $600 미만의 신품 16GB 카드가 없었습니다.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-28",
     "url": "/ko/prompt-bites/best-gpu-under-600-local-llm",
@@ -68690,7 +68690,7 @@
   {
     "lang": "en",
     "title": "Best GPU Under $1,000 for Local LLM Inference?",
-    "excerpt": "Our pick for local LLMs under $1,000: RTX 5070 Ti 16 GB (~$750-900). Used 24 GB RTX 3090 and 4090 cards sit far above that budget in US sold prices.",
+    "excerpt": "Our editorial pick under $1,000 for local LLMs: RTX 5060 Ti 16 GB, listed from $799 new on 27 November 2026 in the US. The RTX 5070 Ti was listed from $1,479.",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/prompt-bites/best-gpu-under-1000-local-llm",
@@ -68699,7 +68699,7 @@
   {
     "lang": "de",
     "title": "Die beste GPU unter 1.000 $ für lokale LLM-Inferenz?",
-    "excerpt": "Unsere Wahl für lokale LLMs unter 1.000 $: RTX 5070 Ti 16 GB (~750-900 $). Gebrauchte RTX 3090 und 4090 mit 24 GB liegen bei US-Verkaufspreisen weit darüber.",
+    "excerpt": "Unsere redaktionelle Wahl unter 1.000 $: RTX 5060 Ti 16 GB, am 27.11.2026 in den USA neu ab 799 $ gelistet. Die RTX 5070 Ti stand dort ab 1.479 $.",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/de/prompt-bites/best-gpu-under-1000-local-llm",
@@ -68708,7 +68708,7 @@
   {
     "lang": "fr",
     "title": "Meilleur GPU à moins de 1 000 $ pour l'inférence LLM locale ?",
-    "excerpt": "Notre choix de GPU pour LLM locaux à moins de 1 000 $ : RTX 5070 Ti 16 Go (~750-900 $). Les 3090 et 4090 de 24 Go d'occasion se vendent bien au-dessus aux États-Unis.",
+    "excerpt": "Notre choix éditorial sous 1 000 $ : la RTX 5060 Ti 16 Go, neuve dès 799 $ aux États-Unis au 27/11/2026. La RTX 5070 Ti y figurait à partir de 1 479 $.",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/fr/prompt-bites/best-gpu-under-1000-local-llm",
@@ -68717,7 +68717,7 @@
   {
     "lang": "ja",
     "title": "ローカルLLM推論に最適な1,000ドル以下のGPUは?",
-    "excerpt": "ローカルLLM向け1,000ドル以下の推奨GPUはRTX 5070 Ti 16GB(約750-900ドル)。中古の24GB RTX 3090と4090は、米国の落札価格では予算を大きく超えます。",
+    "excerpt": "1,000ドル以下の当サイトの編集上の選択はRTX 5060 Ti 16GBです。2026年11月27日の米国価格表で新品799ドルから、RTX 5070 Tiは1,479ドルからでした。",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/ja/prompt-bites/best-gpu-under-1000-local-llm",
@@ -68726,7 +68726,7 @@
   {
     "lang": "zh",
     "title": "1000 美元以下运行本地 LLM 的最佳 GPU 是什么？",
-    "excerpt": "1000 美元以下本地 LLM 推荐 GPU：RTX 5070 Ti 16 GB（约 750-900 美元）。按美国成交价，二手 24 GB RTX 3090 和 4090 远超这一预算。",
+    "excerpt": "1000 美元以下，我们的编辑推荐是 RTX 5060 Ti 16 GB：2026 年 11 月 27 日美国价格表中全新 799 美元起；RTX 5070 Ti 为 1479 美元起。",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/zh/prompt-bites/best-gpu-under-1000-local-llm",
@@ -68735,7 +68735,7 @@
   {
     "lang": "es",
     "title": "¿Cuál es la mejor GPU por menos de $1,000 para inferencia de LLM local?",
-    "excerpt": "Nuestra elección para LLMs locales por menos de $1,000: RTX 5070 Ti 16 GB (~$750-900). Las 3090 y 4090 usadas de 24 GB quedan muy por encima según precios de venta en EE. UU.",
+    "excerpt": "Nuestra elección editorial por menos de $1,000: RTX 5060 Ti 16 GB, nueva desde $799 en EE. UU. el 27/11/2026. La RTX 5070 Ti figuraba desde $1,479.",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/es/prompt-bites/best-gpu-under-1000-local-llm",
@@ -68744,7 +68744,7 @@
   {
     "lang": "pt",
     "title": "Qual a Melhor GPU Abaixo de US$ 1.000 para Inferência de LLM Local?",
-    "excerpt": "Nossa escolha para LLMs locais abaixo de US$ 1.000: RTX 5070 Ti 16 GB (~US$ 750-900). As 3090 e 4090 usadas de 24 GB ficam muito acima nos preços de venda dos EUA.",
+    "excerpt": "Nossa escolha editorial abaixo de US$ 1.000: RTX 5060 Ti 16 GB, nova a partir de US$ 799 nos EUA em 27/11/2026. A RTX 5070 Ti aparecia a partir de US$ 1.479.",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/pt/prompt-bites/best-gpu-under-1000-local-llm",
@@ -68753,7 +68753,7 @@
   {
     "lang": "ar",
     "title": "أفضل GPU بأقل من 1,000 دولار لتشغيل LLM محلي؟",
-    "excerpt": "اختيارنا لـ LLM محلي بأقل من 1,000 دولار: RTX 5070 Ti 16 GB (~750-900 دولار). وتتجاوز RTX 3090 وRTX 4090 المستعملتان (24 GB) هذه الميزانية بكثير وفق أسعار البيع في أمريكا.",
+    "excerpt": "اختيارنا التحريري بأقل من 1,000 دولار: RTX 5060 Ti 16 GB، جديدة من 799 دولارًا في أمريكا بتاريخ 27 نوفمبر 2026، بينما أُدرجت RTX 5070 Ti من 1,479 دولارًا.",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/ar/prompt-bites/best-gpu-under-1000-local-llm",
@@ -68762,7 +68762,7 @@
   {
     "lang": "ko",
     "title": "로컬 LLM 추론에 1,000달러 이하 최적의 GPU는?",
-    "excerpt": "로컬 LLM용 1,000달러 이하 추천 GPU: RTX 5070 Ti 16GB(약 750-900달러). 미국 판매가 기준으로 중고 24GB RTX 3090과 4090은 예산을 크게 넘습니다.",
+    "excerpt": "1,000달러 이하 당사의 편집상 선택은 RTX 5060 Ti 16GB입니다. 2026년 11월 27일 미국 가격표에서 신품 799달러부터였고, RTX 5070 Ti는 1,479달러부터였습니다.",
     "publishDate": "2026-07-14",
     "dateModified": "2026-11-28",
     "url": "/ko/prompt-bites/best-gpu-under-1000-local-llm",
@@ -78896,7 +78896,7 @@
   {
     "lang": "en",
     "title": "Best Hardware for a Local Smart Home + Local AI (2026)",
-    "excerpt": "Best local smart home + AI hardware in 2026: Intel N100 mini PC or Raspberry Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo), SSD storage, and an LLM step-up. Updated pricing.",
+    "excerpt": "Best local smart home + AI hardware in 2026: Intel N100 mini PC or Raspberry Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo), SSD storage, and an LLM step-up. Rough 2026 prices.",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/smart-home/best-hardware-for-local-smart-home",
@@ -78905,7 +78905,7 @@
   {
     "lang": "de",
     "title": "Beste Hardware für ein lokales Smart Home + lokale KI (2026)",
-    "excerpt": "Beste Hardware für lokales Smart Home + KI 2026: Intel-N100-Mini-PC oder Raspberry Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo), SSD-Speicher, LLM-Aufstieg. Aktualisierte Preise.",
+    "excerpt": "Beste Hardware für lokales Smart Home + KI 2026: Intel-N100-Mini-PC oder Raspberry Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo), SSD-Speicher, LLM-Aufstieg. Richtpreise 2026.",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/de/smart-home/best-hardware-for-local-smart-home",
@@ -78914,7 +78914,7 @@
   {
     "lang": "fr",
     "title": "Meilleur Matériel pour une Maison Connectée Locale + IA Locale (2026)",
-    "excerpt": "Meilleur matériel maison connectée locale + IA 2026 : mini-PC Intel N100 ou Raspberry Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo), stockage SSD, montée en gamme LLM. Prix actualisés.",
+    "excerpt": "Meilleur matériel maison connectée locale + IA 2026 : mini-PC Intel N100 ou Raspberry Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo), stockage SSD, montée en gamme LLM. Prix indicatifs.",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/fr/smart-home/best-hardware-for-local-smart-home",
@@ -78923,7 +78923,7 @@
   {
     "lang": "ja",
     "title": "ローカルスマートホーム + ローカルAIに最適なハードウェア（2026）",
-    "excerpt": "ローカルスマートホーム＋AIの最適ハードウェア（2026年）：Intel N100 ミニPC または Raspberry Pi 5 のハブ、Frigate 加速（Intel 内蔵GPU／Hailo）、SSD ストレージ、LLM 用の上位構成を解説。価格情報を更新。",
+    "excerpt": "ローカルスマートホーム＋AIの最適ハードウェア（2026年）：Intel N100 ミニPC または Raspberry Pi 5 のハブ、Frigate 加速（Intel 内蔵GPU／Hailo）、SSD ストレージ、LLM 用の上位構成を解説。目安価格つき。",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/ja/smart-home/best-hardware-for-local-smart-home",
@@ -78932,7 +78932,7 @@
   {
     "lang": "zh",
     "title": "本地智能家居 + 本地 AI 的最佳硬件（2026）",
-    "excerpt": "2026年本地智能家居 + AI 硬件推荐：Intel N100 迷你 PC 或 Raspberry Pi 5 中枢，Frigate 加速方案（Intel 集成显卡/Hailo），SSD 存储，以及本地 LLM 升级选项。含最新价格。",
+    "excerpt": "2026年本地智能家居 + AI 硬件推荐：Intel N100 迷你 PC 或 Raspberry Pi 5 中枢，Frigate 加速方案（Intel 集成显卡/Hailo），SSD 存储，以及本地 LLM 升级选项。含参考价格。",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/zh/smart-home/best-hardware-for-local-smart-home",
@@ -78941,7 +78941,7 @@
   {
     "lang": "es",
     "title": "Mejor Hardware para un Smart Home Local + IA Local (2026)",
-    "excerpt": "Mejor hardware para un smart home local + IA en 2026: hub con mini PC Intel N100 o Raspberry Pi 5, acelerador Frigate (Intel iGPU/Hailo), almacenamiento SSD y salto a LLM. Precios actualizados.",
+    "excerpt": "Mejor hardware para un smart home local + IA en 2026: hub con mini PC Intel N100 o Raspberry Pi 5, acelerador Frigate (Intel iGPU/Hailo), almacenamiento SSD y salto a LLM. Precios orientativos.",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/es/smart-home/best-hardware-for-local-smart-home",
@@ -78950,7 +78950,7 @@
   {
     "lang": "pt",
     "title": "Melhor Hardware para uma Casa Inteligente Local + IA Local (2026)",
-    "excerpt": "Melhor hardware para casa inteligente local + IA em 2026: hub mini PC Intel N100 ou Raspberry Pi 5, acelerador do Frigate (iGPU Intel/Hailo), armazenamento SSD e um passo seguinte para LLM. Preços atualizados.",
+    "excerpt": "Melhor hardware para casa inteligente local + IA em 2026: hub mini PC Intel N100 ou Raspberry Pi 5, acelerador do Frigate (iGPU Intel/Hailo), armazenamento SSD e um passo seguinte para LLM. Preços aproximados.",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/pt/smart-home/best-hardware-for-local-smart-home",
@@ -78959,7 +78959,7 @@
   {
     "lang": "ar",
     "title": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي المحلي (⁨2026⁩)",
-    "excerpt": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM. أسعار محدّثة.",
+    "excerpt": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM. أسعار تقريبية لعام 2026.",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/ar/smart-home/best-hardware-for-local-smart-home",
@@ -78968,7 +78968,7 @@
   {
     "lang": "ko",
     "title": "로컬 스마트 홈 + 로컬 AI를 위한 최고의 하드웨어 (2026)",
-    "excerpt": "2026년 로컬 스마트 홈 + AI 최고의 하드웨어: Intel N100 미니 PC 또는 Raspberry Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo), SSD 스토리지, LLM 업그레이드 경로. 최신 가격 반영.",
+    "excerpt": "2026년 로컬 스마트 홈 + AI 최고의 하드웨어: Intel N100 미니 PC 또는 Raspberry Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo), SSD 스토리지, LLM 업그레이드 경로. 2026년 참고 가격.",
     "publishDate": "2026-06-04",
     "dateModified": "2026-11-28",
     "url": "/ko/smart-home/best-hardware-for-local-smart-home",

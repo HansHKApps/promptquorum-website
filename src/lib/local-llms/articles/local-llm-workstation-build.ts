@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       current_hardware_mentioned: ['RTX 3090', 'RTX 4090', 'RTX 5090', 'RTX PRO 6000 Blackwell', 'Threadripper 9960X', 'Threadripper 9970X', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
       current_models_mentioned: ['Llama 3.3 70B', 'gpt-oss 120b', 'gpt-oss 20b'],
       seoTitle: 'Local LLM PC Build 2026: Workstation, GPU, RAM, PSU, Cost',
-      intro: "In US sold listings from October 2026 (InsiderLLM tracker), two used RTX 4090 cards cost about $5,150–6,020, GPUs only. A Threadripper build adds the CPU (from $1,499 at AMD's launch price), registered DDR5 memory, a 1,300–1,600 W power supply, cooling and storage, so a complete machine starts above $4,500.",
+      intro: 'Two used RTX 3090 cards cost about $3,000–3,450 in US eBay sold listings of 13–23 November 2026; two used RTX 4090 cost about $5,150–6,020 (October 2026, InsiderLLM). With the 3090 pair and a Threadripper 9960X ($1,499 at AMD\'s launch price), the GPUs and CPU alone start near $4,500, before motherboard, registered DDR5 memory, a 1,300–1,600 W power supply, cooling, storage and case.',
       metaDescription: 'Build a local LLM PC or workstation: 48 GB of VRAM for 70B models, 64 GB RAM, PSU sizing and sourced 2026 prices for dual RTX 3090, 4090 and 5090.',
       publishDate: '2026-04-05',
       leadAnswerBlock: "**A local LLM workstation for 70B models needs about 48 GB of GPU memory: Llama 3.3 70B is 43 GB at Q4, so one 24 GB card cannot hold it and two can. In InsiderLLM's data on US eBay sold listings from 13–23 November 2026, two used RTX 3090 cards cost about $3,000–3,450.**",
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'VRAM target: Llama 3.3 70B at Q4 is a [43 GB download](https://ollama.com/library/llama3.3), so plan for 48 GB of GPU memory (two 24 GB cards) and expect about 5 GB left for context.',
-            'GPUs: two used RTX 3090 (about $1,500–1,725 each, US sold listings of 13–23 November 2026) are the lowest-priced 48 GB route in the tracked data; two used RTX 4090 cost about $2,575–3,010 each (US sold, October 2026); two new RTX 5090 (about $4,500–4,700 each at US retail; the source gives no date for this range) give 64 GB.',
+            'GPUs: two used RTX 3090 (about $1,500–1,725 each, US sold listings of 13–23 November 2026) are the lowest-priced 48 GB route in the tracked data; two used RTX 4090 cost about $2,575–3,010 each (US sold, October 2026); two used RTX 5090 (about $5,660–6,200 each, US sold listings of 6–25 November 2026) give 64 GB.',
             'NVLink: NVIDIA lists no NVLink on the [RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) and [RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/); the RTX 3090 supports a bridge. llama.cpp, Ollama and vLLM split a model across GPUs over PCIe without it.',
             'CPU: a Threadripper 9960X ($1,499 launch price) or 9970X ($2,499) on TRX50 offers up to 80 PCIe 5.0 lanes; a Ryzen desktop board with two x8 slots also runs two GPUs.',
             'RAM: 64 GB is enough when the model sits in VRAM. Hardware Busters reported DDR5 prices up about 500% in the 12 months to August 2026 and one 128 GB kit listed at $3,399, so buy 64 GB first.',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: 'Dual-GPU Parts List With Sourced Prices',
-          content: "**GPUs and CPU alone start near $4,500: two used RTX 3090 ($3,000–3,450) plus a Threadripper 9960X ($1,499 at AMD's launch price), before motherboard, memory, PSU, cooling, storage and case.** PromptQuorum has not built or benchmarked this configuration. GPU prices come from InsiderLLM (US market): used RTX 3090 from its [used GPU buying guide](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (median $1,650; 225 eBay US sold listings, 13–23 November 2026), used RTX 4090 from its [price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 sold listings, October 2026), and the new RTX 5090 retail range from the same tracker, which gives no date for it; CPU prices are AMD launch prices reported by [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999); parts without a tracked price say so. All prices are US dollars from US listings; prices and availability differ in other countries.",
+          content: "**GPUs and CPU alone start near $4,500: two used RTX 3090 ($3,000–3,450) plus a Threadripper 9960X ($1,499 at AMD's launch price), before motherboard, memory, PSU, cooling, storage and case.** PromptQuorum has not built or benchmarked this configuration. GPU prices come from InsiderLLM (US market): used RTX 3090 from its [used GPU buying guide](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (median $1,650; 225 eBay US sold listings, 13–23 November 2026), used RTX 4090 from its [price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 sold listings, October 2026), and used RTX 5090 from the same tracker (111 US eBay sold listings, 6–25 November 2026); CPU prices are AMD launch prices reported by [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999); parts without a tracked price say so. All prices are US dollars from US listings; prices and availability differ in other countries.",
           rows: [
             { 'Component': 'GPUs', 'Pick': '2× used RTX 3090 24 GB', 'Price': '$3,000–3,450', 'Why': '48 GB pool; NVLink bridge supported' },
             { 'Component': 'GPUs (alternative)', 'Pick': '2× used RTX 4090 24 GB', 'Price': '$5,150–6,020', 'Why': 'Faster prompt processing; no NVLink' },
@@ -128,12 +128,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'RTX 3090, 4090, 5090 and RTX PRO 6000 Compared',
-          content: "**For 48 GB, used RTX 3090 cards are the lowest-priced pair in the tracked data; two RTX 5090 reach 64 GB at about 2.6 to 3.1 times that price, and one RTX PRO 6000 reaches 96 GB on a single card.** Power ratings are NVIDIA's board power for each card.",
+          content: "**For 48 GB, used RTX 3090 cards are the lowest-priced pair in the tracked data; two RTX 5090 reach 64 GB at about 3.3 to 4.1 times that price, and one RTX PRO 6000 reaches 96 GB on a single card.** Power ratings are NVIDIA's board power for each card.",
           rows: [
             { 'Setup': '2× RTX 3090 (used)', 'VRAM': '48 GB', 'GPU price': '$3,000–3,450', 'Rated power': '700 W', 'NVLink': 'Bridge supported' },
             { 'Setup': '2× RTX 4090 (used)', 'VRAM': '48 GB', 'GPU price': '$5,150–6,020', 'Rated power': '900 W', 'NVLink': 'No' },
-            { 'Setup': '1× RTX 5090 (new)', 'VRAM': '32 GB', 'GPU price': '$4,500–4,700', 'Rated power': '575 W', 'NVLink': 'No' },
-            { 'Setup': '2× RTX 5090 (new)', 'VRAM': '64 GB', 'GPU price': '$9,000–9,400', 'Rated power': '1,150 W', 'NVLink': 'No' },
+            { 'Setup': '1× RTX 5090 (used)', 'VRAM': '32 GB', 'GPU price': '$5,660–6,200', 'Rated power': '575 W', 'NVLink': 'No' },
+            { 'Setup': '2× RTX 5090 (used)', 'VRAM': '64 GB', 'GPU price': '$11,320–12,400', 'Rated power': '1,150 W', 'NVLink': 'No' },
             { 'Setup': '1× RTX PRO 6000', 'VRAM': '96 GB', 'GPU price': 'About $16,000', 'Rated power': '600 W max', 'NVLink': 'Not applicable' },
           ],
           columns: ['Setup', 'VRAM', 'GPU price', 'Rated power', 'NVLink'],
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**RTX PRO 6000 price:** TweakTown reported on 2026-08-13 that NVIDIA listed the card at $16,000, up from $8,565 at launch. NVIDIA rates it at 600 W maximum.',
           ],
           callouts: [
-            { type: '📌 Key Point', text: 'GPU prices in this table are US-market tracker or press figures, not quotes: the used-card ranges and the RTX PRO 6000 report are dated, while the source gives no date for the new RTX 5090 retail range. Check current listings, and read [Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms) before buying a used card.' },
+            { type: '📌 Key Point', text: 'GPU prices in this table are US-market tracker or press figures, not quotes: used-card ranges are sold listings from October or November 2026 and the RTX PRO 6000 report is from August 2026. The same tracker put new sealed RTX 5090 cards at about $4,500 in August 2026, an older figure that is not used in the table. Check current listings, and read [Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms) before buying a used card.' },
           ],
         },
         'cooling': {
@@ -214,11 +214,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Mixing GPU models.** vLLM tensor parallelism shards weights evenly, so the card with less memory limits the pair. Buy identical cards.',
             '**Buying 128 GB of DDR5 first.** A model that sits in VRAM does not need it, and DDR5 prices were rising in 2026. Start at 64 GB.',
             '**Sizing the PSU from one card.** NVIDIA\'s 850 W figure for the RTX 4090 is for one card. Add both cards and the CPU, then add headroom.',
-            '**Leaving electricity out of the cost.** 900 W running continuously is 7,884 kWh a year: about $1,180 at an example rate of $0.15/kWh and about $2,760 at $0.35/kWh. Real draw during inference is usually below rated power and a workstation rarely runs 24/7, so treat this as an upper bound.',
+            '**Leaving electricity out of the cost.** The two RTX 4090 alone, at their 900 W rating and running continuously, are 7,884 kWh a year: about $1,180 at an example rate of $0.15/kWh and about $2,760 at $0.35/kWh. CPU and the rest of the machine come on top; real inference draw is usually below the rating and a workstation rarely runs 24/7, so measure your own.',
             '**Buying used cards untested.** Used GPUs may have no warranty and carry wear; test both cards under load in the first days.',
           ],
           callouts: [
-            { type: '⚠️ Warning', text: 'A second card does not raise the speed of a model that already fits in one card; it raises the size of model you can load. Try a single-card or offload setup first.' },
+            { type: '⚠️ Warning', text: 'Do not expect a second card to speed up a single chat with a model that already fits on one card; its main gain is the size of model you can load (batched multi-user serving with tensor parallelism is a different case). Try a single-card or offload setup first.' },
           ],
         },
         'faqSection': {
@@ -230,11 +230,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Do I need a Threadripper, or is a Ryzen 9 enough?', a: "For inference a Ryzen desktop platform is enough when the board runs both GPUs at x8/x8 and has room for two large cards; the [dual-GPU $2,700 build](/local-llms/local-llm-pc-build-2000) uses that layout. A Threadripper adds up to 80 PCIe 5.0 lanes, quad-channel memory and more cores for CPU-side work, at $1,499 (9960X) or $2,499 (9970X) launch prices and a 350 W TDP." },
             { q: 'Should I use NVLink to join two GPUs?', a: "You cannot on the RTX 4090 or RTX 5090: NVIDIA lists no NVLink on either. The RTX 3090 supports a bridge, but llama.cpp, Ollama and vLLM split a model over PCIe without one, and the gain from NVLink depends on the engine and batch size." },
             { q: 'Can one RTX 5090 run a 70B model?', a: "Not entirely in VRAM. The RTX 5090 has 32 GB and the Llama 3.3 70B Q4 file is 43 GB, so about 11 GB or more runs from system RAM, which is much slower. A 32B-class model at Q4 (about 20 GB) fits on one card." },
-            { q: 'Dual RTX 3090 or dual RTX 4090?', a: "Both give 48 GB. In InsiderLLM data on US sold listings (RTX 3090: 13–23 November 2026; RTX 4090: October 2026) the pair costs about $3,000–3,450 (RTX 3090, used) against $5,150–6,020 (RTX 4090, used). The RTX 4090 processes prompts faster in developer-reported llama.cpp tests (11,993 versus 5,175 tok/s on a 7B test), uses 900 W against 700 W for the pair, and has no NVLink; the RTX 3090 supports a bridge. Used cards may have no warranty." },
+            { q: 'Dual RTX 3090 or dual RTX 4090?', a: "Both give 48 GB. In InsiderLLM data on US sold listings (RTX 3090: 13–23 November 2026; RTX 4090: October 2026) the pair costs about $3,000–3,450 (RTX 3090, used) against $5,150–6,020 (RTX 4090, used). The RTX 4090 processes prompts faster in developer-reported llama.cpp tests (11,993 versus 5,175 tok/s on a 7B test), as a pair is rated at 900 W against 700 W, and has no NVLink; the RTX 3090 supports a bridge. Used cards may have no warranty." },
             { q: 'Should I buy a prebuilt workstation or build one?', a: "Building lets you choose each part but leaves compatibility checks, price tracking and warranty to you; a prebuilt gives one seller to call. Whichever you pick, compare VRAM per card and in total, PCIe lanes per slot, PSU rating against the summed GPU ratings, and cooling. Unified-memory machines such as the Mac Studio are a third option." },
             { q: 'How much electricity does a dual-GPU workstation use?', a: "Rated power is 700 W (2× RTX 3090) to 900 W (2× RTX 4090) for the cards plus 350 W for a Threadripper. At a continuous 900 W, a year is 7,884 kWh; multiply by your tariff. Real inference draw is usually below the rating and idle draw is far lower, so measure with a plug-in power meter." },
             { q: 'When is a workstation cheaper than renting cloud GPUs?', a: "Break-even hours equal the purchase price divided by the hourly cloud price minus your hourly electricity cost. The fewer hours you run each month, the longer break-even takes. Use current rates in the [build-versus-rent calculator](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) and the [cloud GPU comparison](/local-llms/cloud-gpu-rental-comparison-2026)." },
-            { q: 'Is now a good time to buy GPUs and RAM?', a: "Prices are volatile. The tracker lists the new RTX 5090 at US retail around $4,500–4,700, without a date for that range, against a $1,999 MSRP, Hardware Busters reported DDR5 up roughly 500% in a year (2026-08-18) and TweakTown reported the RTX PRO 6000 at $16,000, up from $8,565 at launch (2026-08-13). Nobody can promise the direction. Buy for the model size you need now, and consider renting while prices are high." },
+            { q: 'Is now a good time to buy GPUs and RAM?', a: "Prices are volatile. InsiderLLM puts used RTX 5090 cards at $5,660–6,200 (median $6,000; 111 US eBay sold listings, 6–25 November 2026) against a $1,999 MSRP, Hardware Busters reported DDR5 up roughly 500% in a year (2026-08-18) and TweakTown reported the RTX PRO 6000 at $16,000, up from $8,565 at launch (2026-08-13). Nobody can promise the direction. Buy for the model size you need now, and consider renting while prices are high." },
           ],
         },
         'relatedReading': {
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — board power and NVLink bridge support.',
             '[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — 96 GB memory and 600 W maximum power.',
             '[InsiderLLM used GPU buying guide](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — used RTX 3090 prices: 225 eBay US sold listings, 13–23 November 2026.',
-            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — used RTX 4090 sold listings (October 2026) and the undated new RTX 5090 retail range (checked 2026-11-27).',
+            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — used RTX 4090 sold listings (October 2026) and used RTX 5090 sold listings (6–25 November 2026), checked 2026-11-28.',
             '[llama.cpp CUDA scoreboard, discussion 15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — developer-reported 7B generation and prompt-processing speeds.',
             '[Tom\'s Hardware: Threadripper 9000 launch](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — launch prices, 350 W TDP, PCIe lanes.',
             '[Hardware Busters: DDR5 prices up 500%](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — memory price report of 2026-08-18.',
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-workstation-build-overview-hero-de.webp',
       dateModified: '2026-11-28',
       seoTitle: 'LLM-PC bauen 2026: Workstation mit GPU, RAM, Netzteil',
-      intro: "In verkauften US-Angeboten vom Oktober 2026 (InsiderLLM-Tracker) kosten zwei gebrauchte RTX 4090 etwa $5,150–6,020, nur die GPUs. Ein Threadripper-Aufbau kommt mit der CPU (ab $1,499 zum Einführungspreis von AMD), registriertem DDR5-Speicher, einem Netzteil mit 1.300–1.600 W, Kühlung und Speicherplatz hinzu, sodass ein komplettes System bei über $4,500 beginnt.",
+      intro: 'Zwei gebrauchte RTX 3090 kosten in verkauften US-eBay-Angeboten vom 13.–23. November 2026 etwa $3,000–3,450, zwei gebrauchte RTX 4090 etwa $5,150–6,020 (Oktober 2026, InsiderLLM). Mit dem 3090-Paar und einem Threadripper 9960X ($1,499 zum Einführungspreis von AMD) beginnen allein GPUs und CPU bei etwa $4,500 – ohne Mainboard, registrierten DDR5-Speicher, Netzteil mit 1.300–1.600 W, Kühlung, Datenspeicher und Gehäuse.',
       metaDescription: 'LLM-PC als Workstation bauen: 48 GB VRAM für 70B-Modelle, 64 GB RAM, Netzteil-Auslegung und belegte Preise 2026 für Dual-RTX-3090-, 4090- und 5090-Builds.',
       publishDate: '2026-04-05',
       leadAnswerBlock: "**Eine lokale LLM-Workstation für 70B-Modelle braucht rund 48 GB GPU-Speicher: Llama 3.3 70B ist bei Q4 43 GB groß, eine 24-GB-Karte nimmt es nicht auf, zwei Karten schon. Laut InsiderLLM-Daten zu verkauften US-eBay-Angeboten vom 13.–23. November 2026 kosten zwei gebrauchte RTX 3090 etwa $3,000–3,450.**",
@@ -311,7 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'VRAM-Ziel: Llama 3.3 70B bei Q4 ist ein [Download von 43 GB](https://ollama.com/library/llama3.3). Planen Sie daher 48 GB GPU-Speicher ein (zwei 24-GB-Karten) und rechnen Sie mit etwa 5 GB Rest für den Kontext.',
-            'GPUs: Zwei gebrauchte RTX 3090 (je etwa $1,500–1,725, verkaufte US-Angebote vom 13.–23. November 2026) sind in den erfassten Daten der günstigste Weg zu 48 GB; zwei gebrauchte RTX 4090 kosten je etwa $2,575–3,010 (in den USA verkauft, Oktober 2026); zwei neue RTX 5090 (je etwa $4,500–4,700 im US-Neuhandel; die Quelle nennt für diese Spanne kein Datum) bieten 64 GB.',
+            'GPUs: Zwei gebrauchte RTX 3090 (je etwa $1,500–1,725, verkaufte US-Angebote vom 13.–23. November 2026) sind in den erfassten Daten der günstigste Weg zu 48 GB; zwei gebrauchte RTX 4090 kosten je etwa $2,575–3,010 (in den USA verkauft, Oktober 2026); zwei gebrauchte RTX 5090 (je etwa $5,660–6,200, verkaufte US-Angebote vom 6.–25. November 2026) bieten 64 GB.',
             'NVLink: NVIDIA führt bei der [RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) und der [RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) kein NVLink auf; die RTX 3090 unterstützt eine Brücke. llama.cpp, Ollama und vLLM verteilen ein Modell auch ohne NVLink über PCIe auf mehrere GPUs.',
             'CPU: Ein Threadripper 9960X ($1,499 Einführungspreis) oder 9970X ($2,499) auf TRX50 bietet bis zu 80 PCIe-5.0-Lanes; auch ein Ryzen-Desktopboard mit zwei x8-Slots betreibt zwei GPUs.',
             'RAM: 64 GB genügen, wenn das Modell im VRAM liegt. Hardware Busters meldete, die DDR5-Preise seien in den 12 Monaten bis August 2026 um etwa 500 % gestiegen und ein 128-GB-Kit sei mit $3,399 gelistet gewesen; kaufen Sie daher zuerst 64 GB.',
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: 'Teileliste für zwei GPUs mit belegten Preisen',
-          content: "**GPUs und CPU allein beginnen bei etwa $4,500: zwei gebrauchte RTX 3090 ($3,000–3,450) plus ein Threadripper 9960X ($1,499 zum Einführungspreis von AMD), noch ohne Mainboard, Speicher, Netzteil, Kühlung, Datenspeicher und Gehäuse.** PromptQuorum hat diese Konfiguration weder gebaut noch gemessen. Die GPU-Preise stammen von InsiderLLM (US-Markt): gebrauchte RTX 3090 aus dem [Kaufratgeber für gebrauchte GPUs](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (Median $1,650; 225 verkaufte Angebote auf eBay US, 13.–23. November 2026), gebrauchte RTX 4090 aus dem [Preis-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 verkaufte Angebote, Oktober 2026) und die Spanne für neue RTX 5090 im Handel aus demselben Tracker, der dafür kein Datum nennt; die CPU-Preise sind AMD-Einführungspreise, über die [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) berichtet hat; Teile ohne erfassten Preis sind als solche gekennzeichnet. Alle Preise sind US-Dollar-Preise aus US-Angeboten; Preise und Verfügbarkeit weichen in anderen Ländern ab.",
+          content: "**GPUs und CPU allein beginnen bei etwa $4,500: zwei gebrauchte RTX 3090 ($3,000–3,450) plus ein Threadripper 9960X ($1,499 zum Einführungspreis von AMD), noch ohne Mainboard, Speicher, Netzteil, Kühlung, Datenspeicher und Gehäuse.** PromptQuorum hat diese Konfiguration weder gebaut noch gemessen. Die GPU-Preise stammen von InsiderLLM (US-Markt): gebrauchte RTX 3090 aus dem [Kaufratgeber für gebrauchte GPUs](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (Median $1,650; 225 verkaufte Angebote auf eBay US, 13.–23. November 2026), gebrauchte RTX 4090 aus dem [Preis-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 verkaufte Angebote, Oktober 2026) und gebrauchte RTX 5090 aus demselben Tracker (111 verkaufte Angebote auf eBay US, 6.–25. November 2026); die CPU-Preise sind AMD-Einführungspreise, über die [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) berichtet hat; Teile ohne erfassten Preis sind als solche gekennzeichnet. Alle Preise sind US-Dollar-Preise aus US-Angeboten; Preise und Verfügbarkeit weichen in anderen Ländern ab.",
           rows: [
             { 'Komponente': 'GPUs', 'Auswahl': '2× RTX 3090 24 GB (gebraucht)', 'Preis': '$3,000–3,450', 'Begründung': '48-GB-Pool; NVLink-Brücke unterstützt' },
             { 'Komponente': 'GPUs (Alternative)', 'Auswahl': '2× RTX 4090 24 GB (gebraucht)', 'Preis': '$5,150–6,020', 'Begründung': 'Schnellere Prompt-Verarbeitung; kein NVLink' },
@@ -388,12 +388,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'RTX 3090, 4090, 5090 und RTX PRO 6000 im Vergleich',
-          content: "**Für 48 GB sind gebrauchte RTX 3090 in den erfassten Daten das günstigste Paar; zwei RTX 5090 erreichen 64 GB zum etwa 2,6- bis 3,1-Fachen dieses Preises, und eine RTX PRO 6000 erreicht 96 GB auf einer einzelnen Karte.** Die Leistungsangaben sind die Board-Leistung der jeweiligen Karte laut NVIDIA.",
+          content: "**Für 48 GB sind gebrauchte RTX 3090 in den erfassten Daten das günstigste Paar; zwei RTX 5090 erreichen 64 GB zum etwa 3,3- bis 4,1-Fachen dieses Preises, und eine RTX PRO 6000 erreicht 96 GB auf einer einzelnen Karte.** Die Leistungsangaben sind die Board-Leistung der jeweiligen Karte laut NVIDIA.",
           rows: [
             { 'Aufbau': '2× RTX 3090 (gebraucht)', 'VRAM': '48 GB', 'GPU-Preis': '$3,000–3,450', 'Nennleistung': '700 W', 'NVLink': 'Brücke unterstützt' },
             { 'Aufbau': '2× RTX 4090 (gebraucht)', 'VRAM': '48 GB', 'GPU-Preis': '$5,150–6,020', 'Nennleistung': '900 W', 'NVLink': 'Nein' },
-            { 'Aufbau': '1× RTX 5090 (neu)', 'VRAM': '32 GB', 'GPU-Preis': '$4,500–4,700', 'Nennleistung': '575 W', 'NVLink': 'Nein' },
-            { 'Aufbau': '2× RTX 5090 (neu)', 'VRAM': '64 GB', 'GPU-Preis': '$9,000–9,400', 'Nennleistung': '1.150 W', 'NVLink': 'Nein' },
+            { 'Aufbau': '1× RTX 5090 (gebraucht)', 'VRAM': '32 GB', 'GPU-Preis': '$5,660–6,200', 'Nennleistung': '575 W', 'NVLink': 'Nein' },
+            { 'Aufbau': '2× RTX 5090 (gebraucht)', 'VRAM': '64 GB', 'GPU-Preis': '$11,320–12,400', 'Nennleistung': '1.150 W', 'NVLink': 'Nein' },
             { 'Aufbau': '1× RTX PRO 6000', 'VRAM': '96 GB', 'GPU-Preis': 'Etwa $16,000', 'Nennleistung': 'Max. 600 W', 'NVLink': 'Nicht zutreffend' },
           ],
           columns: ['Aufbau', 'VRAM', 'GPU-Preis', 'Nennleistung', 'NVLink'],
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Preis der RTX PRO 6000:** TweakTown meldete am 2026-08-13, NVIDIA habe die Karte mit $16,000, nach $8,565 zum Marktstart, gelistet. NVIDIA gibt sie mit maximal 600 W an.',
           ],
           callouts: [
-            { type: '📌 Kernpunkt', text: 'Die GPU-Preise in dieser Tabelle sind Tracker- oder Presseangaben zum US-Markt, keine Preisangebote: Die Spannen für gebrauchte Karten und der Bericht zur RTX PRO 6000 sind datiert, für die Handelspreisspanne der neuen RTX 5090 nennt die Quelle kein Datum. Prüfen Sie aktuelle Angebote und lesen Sie [Gebrauchte GPUs für lokale LLMs](/de/local-llms/used-gpus-for-local-llms), bevor Sie eine gebrauchte Karte kaufen.' },
+            { type: '📌 Kernpunkt', text: 'Die GPU-Preise in dieser Tabelle sind Tracker- oder Presseangaben zum US-Markt, keine Preisangebote: Die Spannen für gebrauchte Karten stammen aus verkauften Angeboten vom Oktober bzw. November 2026, der Bericht zur RTX PRO 6000 vom August 2026. Derselbe Tracker nannte im August 2026 für neue, versiegelte RTX 5090 etwa $4,500; diese ältere Angabe wird in der Tabelle nicht verwendet. Prüfen Sie aktuelle Angebote und lesen Sie [Gebrauchte GPUs für lokale LLMs](/de/local-llms/used-gpus-for-local-llms), bevor Sie eine gebrauchte Karte kaufen.' },
           ],
         },
         'cooling': {
@@ -474,11 +474,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**GPU-Modelle mischen.** Die Tensor-Parallelität von vLLM verteilt die Gewichte gleichmäßig, sodass die Karte mit weniger Speicher das Paar begrenzt. Kaufen Sie identische Karten.',
             '**Zuerst 128 GB DDR5 kaufen.** Ein Modell, das im VRAM liegt, braucht sie nicht, und die DDR5-Preise stiegen 2026. Beginnen Sie mit 64 GB.',
             '**Das Netzteil nach einer Karte auslegen.** Die 850 W, die NVIDIA für die RTX 4090 nennt, gelten für eine Karte. Addieren Sie beide Karten und die CPU und rechnen Sie dann Reserve dazu.',
-            '**Den Strom bei den Kosten vergessen.** 900 W im Dauerbetrieb sind 7.884 kWh pro Jahr: etwa $1,180 bei einem Beispielpreis von $0.15/kWh und etwa $2,760 bei $0.35/kWh. Die tatsächliche Leistungsaufnahme bei der Inferenz liegt meist unter der Nennleistung, und eine Workstation läuft selten rund um die Uhr; betrachten Sie dies daher als Obergrenze.',
+            '**Den Strom bei den Kosten vergessen.** Allein die zwei RTX 4090 ergeben mit ihren 900 W Nennleistung im Dauerbetrieb 7.884 kWh pro Jahr: etwa $1,180 bei einem Beispielpreis von $0.15/kWh und etwa $2,760 bei $0.35/kWh. CPU und übriges System kommen hinzu; die tatsächliche Leistungsaufnahme bei der Inferenz liegt meist unter der Nennleistung, und eine Workstation läuft selten rund um die Uhr, messen Sie daher selbst.',
             '**Gebrauchte Karten ungetestet kaufen.** Gebrauchte GPUs haben womöglich keine Garantie und können Verschleiß aufweisen; testen Sie beide Karten in den ersten Tagen unter Last.',
           ],
           callouts: [
-            { type: '⚠️ Warnung', text: 'Eine zweite Karte erhöht nicht die Geschwindigkeit eines Modells, das bereits in eine Karte passt; sie erhöht die Größe des Modells, das Sie laden können. Probieren Sie zuerst einen Aufbau mit einer Karte oder mit Auslagerung aus.' },
+            { type: '⚠️ Warnung', text: 'Erwarten Sie nicht, dass eine zweite Karte einen einzelnen Chat mit einem Modell beschleunigt, das bereits in eine Karte passt; ihr Hauptnutzen ist die Größe des Modells, das Sie laden können (gebündelter Mehrbenutzerbetrieb mit Tensor-Parallelität ist ein anderer Fall). Probieren Sie zuerst einen Aufbau mit einer Karte oder mit Auslagerung aus.' },
           ],
         },
         'faqSection': {
@@ -490,11 +490,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Brauche ich einen Threadripper oder reicht ein Ryzen 9?', a: "Für die Inferenz genügt eine Ryzen-Desktopplattform, wenn das Board beide GPUs mit x8/x8 betreibt und Platz für zwei große Karten hat; der [Dual-GPU-Build für $2,700](/de/local-llms/local-llm-pc-build-2000) nutzt dieses Layout. Ein Threadripper bringt bis zu 80 PCIe-5.0-Lanes, Quad-Channel-Speicher und mehr Kerne für CPU-seitige Aufgaben, zu Einführungspreisen von $1,499 (9960X) oder $2,499 (9970X) und mit 350 W TDP." },
             { q: 'Sollte ich NVLink nutzen, um zwei GPUs zu koppeln?', a: "Bei der RTX 4090 und der RTX 5090 können Sie das nicht: NVIDIA führt bei keiner der beiden NVLink auf. Die RTX 3090 unterstützt eine Brücke, doch llama.cpp, Ollama und vLLM verteilen ein Modell auch ohne sie über PCIe, und der Gewinn durch NVLink hängt von Engine und Batch-Größe ab." },
             { q: 'Kann eine einzelne RTX 5090 ein 70B-Modell ausführen?', a: "Nicht vollständig im VRAM. Die RTX 5090 hat 32 GB, und die Datei von Llama 3.3 70B Q4 ist 43 GB groß, sodass etwa 11 GB oder mehr aus dem Arbeitsspeicher laufen, was deutlich langsamer ist. Ein Modell der 32B-Klasse bei Q4 (etwa 20 GB) passt auf eine Karte." },
-            { q: 'Zwei RTX 3090 oder zwei RTX 4090?', a: "Beide bieten 48 GB. Laut InsiderLLM-Daten zu verkauften US-Angeboten (RTX 3090: 13.–23. November 2026; RTX 4090: Oktober 2026) kostet das Paar etwa $3,000–3,450 (RTX 3090, gebraucht) gegenüber $5,150–6,020 (RTX 4090, gebraucht). Die RTX 4090 verarbeitet Prompts in von Entwicklern gemeldeten llama.cpp-Tests schneller (11.993 gegenüber 5.175 tok/s bei einem 7B-Test), nimmt als Paar 900 W statt 700 W auf und hat kein NVLink; die RTX 3090 unterstützt eine Brücke. Gebrauchte Karten haben womöglich keine Garantie." },
+            { q: 'Zwei RTX 3090 oder zwei RTX 4090?', a: "Beide bieten 48 GB. Laut InsiderLLM-Daten zu verkauften US-Angeboten (RTX 3090: 13.–23. November 2026; RTX 4090: Oktober 2026) kostet das Paar etwa $3,000–3,450 (RTX 3090, gebraucht) gegenüber $5,150–6,020 (RTX 4090, gebraucht). Die RTX 4090 verarbeitet Prompts in von Entwicklern gemeldeten llama.cpp-Tests schneller (11.993 gegenüber 5.175 tok/s bei einem 7B-Test), ist als Paar mit 900 W statt 700 W angegeben und hat kein NVLink; die RTX 3090 unterstützt eine Brücke. Gebrauchte Karten haben womöglich keine Garantie." },
             { q: 'Sollte ich eine Fertig-Workstation kaufen oder selbst bauen?', a: "Beim Selbstbau wählen Sie jedes Teil selbst, müssen sich aber um Kompatibilitätsprüfungen, Preisbeobachtung und Garantie kümmern; ein Fertig-PC gibt Ihnen einen Verkäufer als Ansprechpartner. Vergleichen Sie in beiden Fällen VRAM pro Karte und insgesamt, PCIe-Lanes pro Slot, Netzteilleistung gegenüber der Summe der GPU-Nennleistungen und die Kühlung. Systeme mit Unified Memory wie der Mac Studio sind eine dritte Option." },
             { q: 'Wie viel Strom verbraucht eine Workstation mit zwei GPUs?', a: "Die Nennleistung beträgt 700 W (2× RTX 3090) bis 900 W (2× RTX 4090) für die Karten plus 350 W für einen Threadripper. Bei dauerhaft 900 W sind das im Jahr 7.884 kWh; multiplizieren Sie mit Ihrem Tarif. Die tatsächliche Leistungsaufnahme bei der Inferenz liegt meist unter der Nennleistung, und im Leerlauf ist sie deutlich niedriger; messen Sie daher mit einem Zwischenstecker-Strommessgerät." },
             { q: 'Ab wann ist eine Workstation günstiger als gemietete Cloud-GPUs?', a: "Die Break-even-Stunden entsprechen dem Kaufpreis geteilt durch den stündlichen Cloud-Preis abzüglich Ihrer stündlichen Stromkosten. Je weniger Stunden Sie pro Monat laufen lassen, desto länger dauert der Break-even. Verwenden Sie aktuelle Preise im [Kauf-oder-Miete-Rechner](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026) und im [Cloud-GPU-Vergleich](/de/local-llms/cloud-gpu-rental-comparison-2026)." },
-            { q: 'Ist jetzt ein guter Zeitpunkt, GPUs und RAM zu kaufen?', a: "Die Preise schwanken stark. Der Tracker führt die neue RTX 5090 im US-Handel ohne Datum für diese Spanne bei etwa $4,500–4,700 gegenüber $1,999 UVP, Hardware Busters meldete DDR5 um rund 500 % innerhalb eines Jahres gestiegen (2026-08-18), und TweakTown meldete die RTX PRO 6000 mit $16,000, nach $8,565 zum Marktstart (2026-08-13). Niemand kann die Richtung zusichern. Kaufen Sie für die Modellgröße, die Sie jetzt brauchen, und erwägen Sie das Mieten, solange die Preise hoch sind." },
+            { q: 'Ist jetzt ein guter Zeitpunkt, GPUs und RAM zu kaufen?', a: "Die Preise schwanken stark. InsiderLLM nennt für gebrauchte RTX 5090 $5,660–6,200 (Median $6,000; 111 verkaufte Angebote auf eBay US, 6.–25. November 2026) bei $1,999 UVP, Hardware Busters meldete DDR5 um rund 500 % innerhalb eines Jahres gestiegen (2026-08-18), und TweakTown meldete die RTX PRO 6000 mit $16,000, nach $8,565 zum Marktstart (2026-08-13). Niemand kann die Richtung zusichern. Kaufen Sie für die Modellgröße, die Sie jetzt brauchen, und erwägen Sie das Mieten, solange die Preise hoch sind." },
           ],
         },
         'relatedReading': {
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — Board-Leistung und Unterstützung der NVLink-Brücke.',
             '[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — 96 GB Speicher und 600 W Maximalleistung.',
             '[InsiderLLM: Kaufratgeber für gebrauchte GPUs](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — Preise gebrauchter RTX 3090: 225 verkaufte Angebote auf eBay US, 13.–23. November 2026.',
-            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — verkaufte gebrauchte RTX 4090 (Oktober 2026) und die undatierte US-Handelspreisspanne der neuen RTX 5090 (geprüft am 2026-11-27).',
+            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — verkaufte gebrauchte RTX 4090 (Oktober 2026) und verkaufte gebrauchte RTX 5090 (6.–25. November 2026), geprüft am 2026-11-28.',
             '[llama.cpp CUDA scoreboard, discussion 15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — von Entwicklern gemeldete Geschwindigkeiten für 7B bei Generierung und Prompt-Verarbeitung.',
             "[Tom's Hardware: Threadripper 9000 launch](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — Einführungspreise, 350 W TDP, PCIe-Lanes.",
             '[Hardware Busters: DDR5 prices up 500%](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — Bericht zu den Speicherpreisen vom 2026-08-18.',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-workstation-build-overview-hero-fr.webp',
       dateModified: '2026-11-28',
       seoTitle: 'Station de travail LLM local 2026 : GPU, RAM, coût',
-      intro: "Dans les ventes conclues aux États-Unis en octobre 2026 (suivi InsiderLLM), deux RTX 4090 d'occasion coûtent environ $5,150–6,020, GPU seuls. Une configuration Threadripper ajoute le processeur (à partir de $1,499 au prix de lancement d'AMD), de la mémoire DDR5 registered, une alimentation de 1 300–1 600 W, le refroidissement et le stockage : une machine complète démarre donc au-dessus de $4,500.",
+      intro: 'Deux RTX 3090 d\'occasion coûtent environ $3,000–3,450 d\'après les ventes conclues sur eBay US du 13 au 23 novembre 2026, et deux RTX 4090 d\'occasion environ $5,150–6,020 (octobre 2026, InsiderLLM). Avec la paire de 3090 et un Threadripper 9960X ($1,499 au prix de lancement d\'AMD), les GPU et le processeur seuls démarrent près de $4,500, avant la carte mère, la mémoire DDR5 registered, l\'alimentation de 1 300–1 600 W, le refroidissement, le stockage et le boîtier.',
       metaDescription: "Montez une station de travail LLM local : 48 GB de VRAM pour modèles 70B, 64 GB de RAM, alimentation et prix 2026 sourcés pour double RTX 3090, 4090, 5090.",
       publishDate: '2026-04-05',
       leadAnswerBlock: "**Une station de travail LLM local pour modèles 70B demande environ 48 GB de mémoire GPU : Llama 3.3 70B pèse 43 GB en Q4, une carte de 24 GB ne suffit pas, deux oui. D'après les données d'InsiderLLM sur les ventes conclues sur eBay US du 13 au 23 novembre 2026, deux RTX 3090 d'occasion coûtent environ $3,000–3,450.**",
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             "VRAM visée : Llama 3.3 70B en Q4 pèse [43 GB au téléchargement](https://ollama.com/library/llama3.3) ; prévoyez 48 GB de mémoire GPU (deux cartes de 24 GB) et comptez sur environ 5 GB restants pour le contexte.",
-            "GPU : deux RTX 3090 d'occasion (environ $1,500–1,725 pièce, ventes conclues aux États-Unis du 13 au 23 novembre 2026) sont la voie à 48 GB la moins chère dans les données suivies ; deux RTX 4090 d'occasion coûtent environ $2,575–3,010 pièce (ventes aux États-Unis, octobre 2026) ; deux RTX 5090 neuves (environ $4,500–4,700 pièce au détail aux États-Unis ; la source ne date pas cette fourchette) donnent 64 GB.",
+            "GPU : deux RTX 3090 d'occasion (environ $1,500–1,725 pièce, ventes conclues aux États-Unis du 13 au 23 novembre 2026) sont la voie à 48 GB la moins chère dans les données suivies ; deux RTX 4090 d'occasion coûtent environ $2,575–3,010 pièce (ventes aux États-Unis, octobre 2026) ; deux RTX 5090 d'occasion (environ $5,660–6,200 pièce, ventes conclues aux États-Unis du 6 au 25 novembre 2026) donnent 64 GB.",
             "NVLink : NVIDIA ne mentionne aucun NVLink sur la [RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) ni sur la [RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) ; la RTX 3090 accepte un pont. llama.cpp, Ollama et vLLM répartissent un modèle sur plusieurs GPU via PCIe, sans pont.",
             "Processeur : un Threadripper 9960X ($1,499 au lancement) ou 9970X ($2,499) sur TRX50 offre jusqu'à 80 lignes PCIe 5.0 ; une carte mère Ryzen grand public avec deux slots x8 fait aussi tourner deux GPU.",
             "RAM : 64 GB suffisent quand le modèle tient en VRAM. Hardware Busters a rapporté une hausse d'environ 500 % des prix de la DDR5 sur les 12 mois jusqu'en août 2026 et un kit de 128 GB affiché à $3,399 ; achetez donc d'abord 64 GB.",
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: 'Liste de pièces double GPU avec prix sourcés',
-          content: "**Les GPU et le processeur seuls démarrent près de $4,500 : deux RTX 3090 d'occasion ($3,000–3,450) plus un Threadripper 9960X ($1,499 au prix de lancement d'AMD), avant carte mère, mémoire, alimentation, refroidissement, stockage et boîtier.** PromptQuorum n'a ni monté ni testé cette configuration. Les prix des GPU proviennent d'InsiderLLM (marché américain) : la RTX 3090 d'occasion de son [guide d'achat des GPU d'occasion](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (médiane $1,650 ; 225 ventes conclues sur eBay US, 13–23 novembre 2026), la RTX 4090 d'occasion de son [suivi des prix](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 ventes, octobre 2026) et la fourchette au détail de la RTX 5090 neuve du même suivi, qui ne la date pas ; les prix des processeurs sont les prix de lancement d'AMD rapportés par [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) ; les pièces sans prix suivi l'indiquent. Tous les prix sont en dollars américains, issus d'annonces américaines ; prix et disponibilité diffèrent dans les autres pays.",
+          content: "**Les GPU et le processeur seuls démarrent près de $4,500 : deux RTX 3090 d'occasion ($3,000–3,450) plus un Threadripper 9960X ($1,499 au prix de lancement d'AMD), avant carte mère, mémoire, alimentation, refroidissement, stockage et boîtier.** PromptQuorum n'a ni monté ni testé cette configuration. Les prix des GPU proviennent d'InsiderLLM (marché américain) : la RTX 3090 d'occasion de son [guide d'achat des GPU d'occasion](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (médiane $1,650 ; 225 ventes conclues sur eBay US, 13–23 novembre 2026), la RTX 4090 d'occasion de son [suivi des prix](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 ventes, octobre 2026) et la RTX 5090 d'occasion du même suivi (111 ventes conclues sur eBay US, 6–25 novembre 2026) ; les prix des processeurs sont les prix de lancement d'AMD rapportés par [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) ; les pièces sans prix suivi l'indiquent. Tous les prix sont en dollars américains, issus d'annonces américaines ; prix et disponibilité diffèrent dans les autres pays.",
           rows: [
             { 'Composant': 'GPU', 'Choix': "2× RTX 3090 24 GB d'occasion", 'Prix': '$3,000–3,450', 'Pourquoi': 'Pool de 48 GB ; pont NVLink pris en charge' },
             { 'Composant': 'GPU (alternative)', 'Choix': "2× RTX 4090 24 GB d'occasion", 'Prix': '$5,150–6,020', 'Pourquoi': 'Traitement du prompt plus rapide ; pas de NVLink' },
@@ -648,12 +648,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'Comparatif RTX 3090, 4090, 5090 et RTX PRO 6000',
-          content: "**Pour 48 GB, les RTX 3090 d'occasion forment la paire la moins chère des données suivies ; deux RTX 5090 atteignent 64 GB pour environ 2.6 à 3.1 fois ce prix, et une seule RTX PRO 6000 atteint 96 GB sur une carte unique.** Les puissances nominales sont les puissances de carte indiquées par NVIDIA pour chaque modèle.",
+          content: "**Pour 48 GB, les RTX 3090 d'occasion forment la paire la moins chère des données suivies ; deux RTX 5090 atteignent 64 GB pour environ 3.3 à 4.1 fois ce prix, et une seule RTX PRO 6000 atteint 96 GB sur une carte unique.** Les puissances nominales sont les puissances de carte indiquées par NVIDIA pour chaque modèle.",
           rows: [
             { 'Configuration': '2× RTX 3090 (occasion)', 'VRAM': '48 GB', 'Prix GPU': '$3,000–3,450', 'Puissance nominale': '700 W', 'NVLink': 'Pont pris en charge' },
             { 'Configuration': '2× RTX 4090 (occasion)', 'VRAM': '48 GB', 'Prix GPU': '$5,150–6,020', 'Puissance nominale': '900 W', 'NVLink': 'Non' },
-            { 'Configuration': '1× RTX 5090 (neuve)', 'VRAM': '32 GB', 'Prix GPU': '$4,500–4,700', 'Puissance nominale': '575 W', 'NVLink': 'Non' },
-            { 'Configuration': '2× RTX 5090 (neuves)', 'VRAM': '64 GB', 'Prix GPU': '$9,000–9,400', 'Puissance nominale': '1 150 W', 'NVLink': 'Non' },
+            { 'Configuration': '1× RTX 5090 (occasion)', 'VRAM': '32 GB', 'Prix GPU': '$5,660–6,200', 'Puissance nominale': '575 W', 'NVLink': 'Non' },
+            { 'Configuration': '2× RTX 5090 (occasion)', 'VRAM': '64 GB', 'Prix GPU': '$11,320–12,400', 'Puissance nominale': '1 150 W', 'NVLink': 'Non' },
             { 'Configuration': '1× RTX PRO 6000', 'VRAM': '96 GB', 'Prix GPU': 'Environ $16,000', 'Puissance nominale': '600 W max.', 'NVLink': 'Sans objet' },
           ],
           columns: ['Configuration', 'VRAM', 'Prix GPU', 'Puissance nominale', 'NVLink'],
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "**Prix de la RTX PRO 6000 :** TweakTown a rapporté le 2026-08-13 que NVIDIA affichait la carte à $16,000, contre $8,565 au lancement. NVIDIA indique une puissance maximale de 600 W.",
           ],
           callouts: [
-            { type: '📌 Point clé', text: "Les prix des GPU de ce tableau sont des chiffres du marché américain issus d'un suivi ou de la presse, et non des devis : les fourchettes d'occasion et l'article sur la RTX PRO 6000 sont datés, mais la source ne date pas la fourchette au détail de la RTX 5090 neuve. Vérifiez les annonces actuelles et lisez [GPU d'occasion pour LLM locaux](/fr/local-llms/used-gpus-for-local-llms) avant d'acheter une carte d'occasion." },
+            { type: '📌 Point clé', text: "Les prix des GPU de ce tableau sont des chiffres du marché américain issus d'un suivi ou de la presse, et non des devis : les fourchettes d'occasion viennent de ventes conclues en octobre ou novembre 2026 et l'article sur la RTX PRO 6000 date d'août 2026. Le même suivi situait les RTX 5090 neuves scellées à environ $4,500 en août 2026, un chiffre plus ancien non repris dans le tableau. Vérifiez les annonces actuelles et lisez [GPU d'occasion pour LLM locaux](/fr/local-llms/used-gpus-for-local-llms) avant d'acheter une carte d'occasion." },
           ],
         },
         'cooling': {
@@ -734,11 +734,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "**Mélanger des modèles de GPU.** Le parallélisme tensoriel de vLLM répartit les poids à parts égales : la carte qui a le moins de mémoire limite la paire. Achetez des cartes identiques.",
             "**Acheter d'abord 128 GB de DDR5.** Un modèle qui tient en VRAM n'en a pas besoin, et les prix de la DDR5 montaient en 2026. Commencez à 64 GB.",
             "**Dimensionner l'alimentation à partir d'une seule carte.** Le chiffre de 850 W de NVIDIA pour la RTX 4090 vaut pour une carte. Additionnez les deux cartes et le processeur, puis ajoutez une marge.",
-            "**Oublier l'électricité dans le coût.** 900 W en continu représentent 7 884 kWh par an : environ $1,180 pour un tarif d'exemple de $0.15/kWh et environ $2,760 à $0.35/kWh. La consommation réelle pendant l'inférence est généralement inférieure à la puissance nominale et une station tourne rarement 24 h/24, 7 j/7 : voyez-y une borne supérieure.",
+            "**Oublier l'électricité dans le coût.** Les deux RTX 4090 seules, à leur puissance nominale de 900 W en continu, représentent 7 884 kWh par an : environ $1,180 pour un tarif d'exemple de $0.15/kWh et environ $2,760 à $0.35/kWh. Le processeur et le reste de la machine s'y ajoutent ; la consommation réelle en inférence est généralement inférieure à la valeur nominale et une station tourne rarement 24 h/24, 7 j/7 : mesurez la vôtre.",
             "**Acheter des cartes d'occasion sans les tester.** Les GPU d'occasion peuvent n'avoir aucune garantie et présenter de l'usure ; testez les deux cartes en charge dès les premiers jours.",
           ],
           callouts: [
-            { type: '⚠️ Avertissement', text: "Une seconde carte n'accélère pas un modèle qui tient déjà dans une seule carte ; elle augmente la taille des modèles que vous pouvez charger. Essayez d'abord une configuration à une carte ou avec déchargement." },
+            { type: '⚠️ Avertissement', text: "N'attendez pas d'une seconde carte qu'elle accélère une conversation unique avec un modèle qui tient déjà sur une seule carte ; son principal apport est la taille des modèles que vous pouvez charger (le service multi-utilisateur par lots avec parallélisme tensoriel est un autre cas). Essayez d'abord une configuration à une carte ou avec déchargement." },
           ],
         },
         'faqSection': {
@@ -750,11 +750,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: "Faut-il un Threadripper, ou un Ryzen 9 suffit-il ?", a: "Pour l'inférence, une plateforme Ryzen grand public suffit quand la carte fait tourner les deux GPU en x8/x8 et a de la place pour deux grandes cartes ; la [configuration double GPU à $2,700](/fr/local-llms/local-llm-pc-build-2000) utilise cette disposition. Un Threadripper apporte jusqu'à 80 lignes PCIe 5.0, une mémoire quadruple canal et davantage de cœurs pour le travail côté CPU, à $1,499 (9960X) ou $2,499 (9970X) au lancement et avec un TDP de 350 W." },
             { q: "Faut-il utiliser NVLink pour relier deux GPU ?", a: "C'est impossible sur la RTX 4090 ou la RTX 5090 : NVIDIA n'en mentionne aucun sur ces cartes. La RTX 3090 accepte un pont, mais llama.cpp, Ollama et vLLM répartissent un modèle via PCIe sans pont, et le gain apporté par NVLink dépend du moteur et de la taille de lot." },
             { q: "Une seule RTX 5090 peut-elle faire tourner un modèle 70B ?", a: "Pas entièrement en VRAM. La RTX 5090 a 32 GB et le fichier Llama 3.3 70B en Q4 pèse 43 GB, donc environ 11 GB ou plus tournent depuis la RAM système, ce qui est bien plus lent. Un modèle de classe 32B en Q4 (environ 20 GB) tient sur une seule carte." },
-            { q: "Double RTX 3090 ou double RTX 4090 ?", a: "Les deux donnent 48 GB. Selon les données d'InsiderLLM sur les ventes conclues aux États-Unis (RTX 3090 : 13–23 novembre 2026 ; RTX 4090 : octobre 2026), la paire coûte environ $3,000–3,450 (RTX 3090, occasion) contre $5,150–6,020 (RTX 4090, occasion). La RTX 4090 traite les prompts plus vite dans les tests llama.cpp rapportés par des développeurs (11 993 contre 5 175 tok/s sur un test 7B), consomme 900 W contre 700 W pour la paire et n'a pas de NVLink ; la RTX 3090 accepte un pont. Les cartes d'occasion peuvent n'avoir aucune garantie." },
+            { q: "Double RTX 3090 ou double RTX 4090 ?", a: "Les deux donnent 48 GB. Selon les données d'InsiderLLM sur les ventes conclues aux États-Unis (RTX 3090 : 13–23 novembre 2026 ; RTX 4090 : octobre 2026), la paire coûte environ $3,000–3,450 (RTX 3090, occasion) contre $5,150–6,020 (RTX 4090, occasion). La RTX 4090 traite les prompts plus vite dans les tests llama.cpp rapportés par des développeurs (11 993 contre 5 175 tok/s sur un test 7B), affiche pour la paire une puissance nominale de 900 W contre 700 W et n'a pas de NVLink ; la RTX 3090 accepte un pont. Les cartes d'occasion peuvent n'avoir aucune garantie." },
             { q: "Vaut-il mieux acheter une station prête à l'emploi ou la monter soi-même ?", a: "Monter soi-même permet de choisir chaque pièce, mais laisse à votre charge les vérifications de compatibilité, le suivi des prix et la garantie ; une station prête à l'emploi donne un seul vendeur à appeler. Quel que soit votre choix, comparez la VRAM par carte et au total, les lignes PCIe par slot, la puissance de l'alimentation face à la somme des puissances GPU, et le refroidissement. Les machines à mémoire unifiée comme le Mac Studio sont une troisième option." },
             { q: "Quelle quantité d'électricité consomme une station de travail à double GPU ?", a: "La puissance nominale est de 700 W (2× RTX 3090) à 900 W (2× RTX 4090) pour les cartes, plus 350 W pour un Threadripper. À 900 W en continu, une année représente 7 884 kWh ; multipliez par votre tarif. La consommation réelle en inférence est généralement inférieure à la valeur nominale et celle au repos est bien plus faible : mesurez avec un wattmètre de prise." },
             { q: "Quand une station de travail revient-elle moins cher que la location de GPU cloud ?", a: "Le nombre d'heures de rentabilité égale le prix d'achat divisé par le prix horaire du cloud moins votre coût horaire d'électricité. Moins vous utilisez la machine chaque mois, plus le seuil de rentabilité est long à atteindre. Utilisez les tarifs actuels dans le [calculateur achat contre location](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026) et le [comparatif de GPU cloud](/fr/local-llms/cloud-gpu-rental-comparison-2026)." },
-            { q: "Est-ce le bon moment pour acheter des GPU et de la RAM ?", a: "Les prix sont volatils. Le suivi affiche la RTX 5090 neuve au détail aux États-Unis autour de $4,500–4,700, sans dater cette fourchette, contre un prix conseillé de $1,999. Hardware Busters a rapporté une DDR5 en hausse d'environ 500 % en un an (2026-08-18) et TweakTown a rapporté la RTX PRO 6000 à $16,000, contre $8,565 au lancement (2026-08-13). Personne ne peut promettre la direction à venir. Achetez pour la taille de modèle dont vous avez besoin maintenant et envisagez la location tant que les prix sont élevés." },
+            { q: "Est-ce le bon moment pour acheter des GPU et de la RAM ?", a: "Les prix sont volatils. InsiderLLM situe la RTX 5090 d'occasion à $5,660–6,200 (médiane $6,000 ; 111 ventes conclues sur eBay US, 6–25 novembre 2026), contre un prix conseillé de $1,999. Hardware Busters a rapporté une DDR5 en hausse d'environ 500 % en un an (2026-08-18) et TweakTown a rapporté la RTX PRO 6000 à $16,000, contre $8,565 au lancement (2026-08-13). Personne ne peut promettre la direction à venir. Achetez pour la taille de modèle dont vous avez besoin maintenant et envisagez la location tant que les prix sont élevés." },
           ],
         },
         'relatedReading': {
@@ -782,7 +782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — puissance de carte et prise en charge du pont NVLink.",
             "[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — 96 GB de mémoire et puissance maximale de 600 W.",
             "[Guide InsiderLLM des GPU d'occasion](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — prix de la RTX 3090 d'occasion : 225 ventes conclues sur eBay US, 13–23 novembre 2026.",
-            "[Suivi des prix de GPU d'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — ventes de RTX 4090 d'occasion (octobre 2026) et fourchette au détail non datée de la RTX 5090 neuve aux États-Unis (vérifié le 2026-11-27).",
+            "[Suivi des prix de GPU d'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — ventes de RTX 4090 d'occasion (octobre 2026) et de RTX 5090 d'occasion (6–25 novembre 2026), vérifié le 2026-11-28.",
             "[Classement CUDA de llama.cpp, discussion 15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — vitesses de génération et de traitement du prompt en 7B rapportées par des développeurs.",
             "[Tom's Hardware : lancement des Threadripper 9000](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — prix de lancement, TDP de 350 W, lignes PCIe.",
             "[Hardware Busters : prix de la DDR5 en hausse de 500 %](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — rapport sur le prix de la mémoire du 2026-08-18.",
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-workstation-build-overview-hero-ja.webp',
       dateModified: '2026-11-28',
       seoTitle: 'ローカルLLM ワークステーション自作 2026：GPU・費用',
-      intro: "2026年10月の米国の販売済み出品（InsiderLLMトラッカー）では、中古RTX 4090は2枚で約$5,150–6,020です（GPUのみの金額）。Threadripper構成ではこれにCPU（AMD発表時の価格で$1,499から）、RDIMMのDDR5メモリ、1,300–1,600 Wの電源、冷却、ストレージが加わるため、完成マシンは$4,500超から始まります。",
+      intro: '2026年11月13〜23日の米国eBay販売済み出品では、中古RTX 3090は2枚で約$3,000–3,450、中古RTX 4090は2枚で約$5,150–6,020です（2026年10月、InsiderLLM）。3090の2枚とThreadripper 9960X（AMD発表時の価格で$1,499）の場合、GPUとCPUだけで$4,500前後から始まり、マザーボード、RDIMMのDDR5メモリ、1,300–1,600 Wの電源、冷却、ストレージ、ケースは別です。',
       metaDescription: 'ローカルLLM用ワークステーションの組み方。70Bモデル向けの48 GB VRAM、64 GB RAM、電源容量の目安と、RTX 3090・4090・5090構成の2026年の出典付き価格を解説します。',
       publishDate: '2026-04-05',
       leadAnswerBlock: "**70Bモデル向けのローカルLLMワークステーションには、約48 GBのGPUメモリが必要です。Llama 3.3 70BのQ4版は43 GBあるため、24 GBのカード1枚では載らず、2枚なら載ります。InsiderLLMがまとめた2026年11月13〜23日の米国eBay販売済み出品では、中古RTX 3090を2枚で約$3,000–3,450です。**",
@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'VRAMの目標：Llama 3.3 70BのQ4版は[43 GBのダウンロード](https://ollama.com/library/llama3.3)です。GPUメモリは48 GB（24 GBカード2枚）を見込み、コンテキスト用に残るのは約5 GBです。',
-            'GPU：追跡データで最も安く48 GBを確保できるのは中古RTX 3090の2枚構成（1枚あたり約$1,500–1,725、2026年11月13〜23日の米国販売済み出品）です。中古RTX 4090は1枚あたり約$2,575–3,010（米国販売済み、2026年10月）、新品RTX 5090の2枚構成（米国の小売で1枚あたり約$4,500–4,700。情報源はこの価格帯の日付を示していません）なら64 GBになります。',
+            'GPU：追跡データで最も安く48 GBを確保できるのは中古RTX 3090の2枚構成（1枚あたり約$1,500–1,725、2026年11月13〜23日の米国販売済み出品）です。中古RTX 4090は1枚あたり約$2,575–3,010（米国販売済み、2026年10月）、中古RTX 5090の2枚構成（1枚あたり約$5,660–6,200、2026年11月6〜25日の米国販売済み出品）なら64 GBになります。',
             'NVLink：NVIDIAは[RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)と[RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)にNVLinkを記載していません。RTX 3090はブリッジに対応します。llama.cpp、Ollama、vLLMはNVLinkなしでもPCIe経由でモデルを複数GPUに分割できます。',
             'CPU：TRX50プラットフォームのThreadripper 9960X（発表時価格$1,499）または9970X（$2,499）は最大80レーンのPCIe 5.0を備えます。x8スロットを2本持つRyzenデスクトップ用ボードでも2枚のGPUを動かせます。',
             'RAM：モデルがVRAMに収まるなら64 GBで十分です。Hardware Bustersは、DDR5の価格が2026年8月までの12か月で約500%上昇し、128 GBキットが$3,399で掲載されたと報じています。まず64 GBから購入してください。',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: '出典付き価格で見るデュアルGPUのパーツ構成',
-          content: "**GPUとCPUだけで$4,500前後から始まります。中古RTX 3090を2枚（$3,000–3,450）とThreadripper 9960X（AMD発表時の価格で$1,499）の合計で、マザーボード、メモリ、電源、冷却、ストレージ、ケースは別です。** PromptQuorumはこの構成を組んだことも、ベンチマークを取ったこともありません。GPUの価格はInsiderLLM（米国市場）によるものです。中古RTX 3090は[中古GPU購入ガイド](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)（中央値$1,650、eBay米国の販売済み出品225件、2026年11月13〜23日）、中古RTX 4090は[価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（販売済み216件、2026年10月）、新品RTX 5090の小売価格帯は同じトラッカーの値で、日付は示されていません。CPUの価格は[Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999)が報じたAMDの発表時価格です。追跡している価格がないパーツはその旨を記しています。価格はすべて米国の出品に基づく米ドルで、他の国では価格や在庫状況が異なります。",
+          content: "**GPUとCPUだけで$4,500前後から始まります。中古RTX 3090を2枚（$3,000–3,450）とThreadripper 9960X（AMD発表時の価格で$1,499）の合計で、マザーボード、メモリ、電源、冷却、ストレージ、ケースは別です。** PromptQuorumはこの構成を組んだことも、ベンチマークを取ったこともありません。GPUの価格はInsiderLLM（米国市場）によるものです。中古RTX 3090は[中古GPU購入ガイド](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)（中央値$1,650、eBay米国の販売済み出品225件、2026年11月13〜23日）、中古RTX 4090は[価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（販売済み216件、2026年10月）、中古RTX 5090は同じトラッカー（eBay米国の販売済み出品111件、2026年11月6〜25日）の値です。CPUの価格は[Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999)が報じたAMDの発表時価格です。追跡している価格がないパーツはその旨を記しています。価格はすべて米国の出品に基づく米ドルで、他の国では価格や在庫状況が異なります。",
           rows: [
             { 'パーツ': 'GPU', '選択肢': '中古RTX 3090 24 GB×2', '価格': '$3,000–3,450', '理由': '48 GBのプール。NVLinkブリッジ対応' },
             { 'パーツ': 'GPU（代替）', '選択肢': '中古RTX 4090 24 GB×2', '価格': '$5,150–6,020', '理由': 'プロンプト処理が速い。NVLinkなし' },
@@ -908,12 +908,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'RTX 3090・4090・5090・RTX PRO 6000の比較',
-          content: "**48 GBを得るなら、追跡データで最も安いのは中古RTX 3090のペアです。RTX 5090を2枚にすると64 GBになりますが、価格は約2.6〜3.1倍で、RTX PRO 6000なら1枚で96 GBになります。** 定格電力は、各カードについてNVIDIAが示すボード電力です。",
+          content: "**48 GBを得るなら、追跡データで最も安いのは中古RTX 3090のペアです。RTX 5090を2枚にすると64 GBになりますが、価格は約3.3〜4.1倍で、RTX PRO 6000なら1枚で96 GBになります。** 定格電力は、各カードについてNVIDIAが示すボード電力です。",
           rows: [
             { '構成': 'RTX 3090×2（中古）', 'VRAM': '48 GB', 'GPU価格': '$3,000–3,450', '定格電力': '700 W', 'NVLink': 'ブリッジ対応' },
             { '構成': 'RTX 4090×2（中古）', 'VRAM': '48 GB', 'GPU価格': '$5,150–6,020', '定格電力': '900 W', 'NVLink': 'なし' },
-            { '構成': 'RTX 5090×1（新品）', 'VRAM': '32 GB', 'GPU価格': '$4,500–4,700', '定格電力': '575 W', 'NVLink': 'なし' },
-            { '構成': 'RTX 5090×2（新品）', 'VRAM': '64 GB', 'GPU価格': '$9,000–9,400', '定格電力': '1,150 W', 'NVLink': 'なし' },
+            { '構成': 'RTX 5090×1（中古）', 'VRAM': '32 GB', 'GPU価格': '$5,660–6,200', '定格電力': '575 W', 'NVLink': 'なし' },
+            { '構成': 'RTX 5090×2（中古）', 'VRAM': '64 GB', 'GPU価格': '$11,320–12,400', '定格電力': '1,150 W', 'NVLink': 'なし' },
             { '構成': 'RTX PRO 6000×1', 'VRAM': '96 GB', 'GPU価格': '約$16,000', '定格電力': '最大600 W', 'NVLink': '該当なし' },
           ],
           columns: ['構成', 'VRAM', 'GPU価格', '定格電力', 'NVLink'],
@@ -923,7 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**RTX PRO 6000の価格：** TweakTownは2026-08-13に、NVIDIAがこのカードを$16,000としており、発売時の$8,565から上がったと報じました。NVIDIAは最大電力を600 Wとしています。',
           ],
           callouts: [
-            { type: '📌 重要ポイント', text: 'この表のGPU価格はトラッカーまたは報道による米国市場の数値で、見積もりではありません。中古カードの価格帯とRTX PRO 6000の報道には日付がありますが、新品RTX 5090の小売価格帯には情報源に日付がありません。最新の出品を確認し、中古カードを買う前に[ローカルLLM向けの中古GPU](/ja/local-llms/used-gpus-for-local-llms)をお読みください。' },
+            { type: '📌 重要ポイント', text: 'この表のGPU価格はトラッカーまたは報道による米国市場の数値で、見積もりではありません。中古カードの価格帯は2026年10月または11月の販売済み出品、RTX PRO 6000の報道は2026年8月のものです。同じトラッカーは2026年8月に新品未開封のRTX 5090を約$4,500としていましたが、この古い数値は表では使っていません。最新の出品を確認し、中古カードを買う前に[ローカルLLM向けの中古GPU](/ja/local-llms/used-gpus-for-local-llms)をお読みください。' },
           ],
         },
         'cooling': {
@@ -994,11 +994,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**異なるGPUモデルを混在させる。** vLLMのテンソル並列は重みを均等に分割するため、メモリの少ないカードがペア全体の上限になります。同じカードを2枚買ってください。',
             '**先に128 GBのDDR5を買う。** VRAMに収まるモデルには不要で、DDR5の価格は2026年に上昇していました。64 GBから始めてください。',
             '**電源をカード1枚分で見積もる。** RTX 4090についてNVIDIAが示す850 Wはカード1枚の場合の数字です。2枚のカードとCPUを合計し、さらに余裕を加えてください。',
-            '**電気代を費用に入れ忘れる。** 900 Wを連続で動かすと年間7,884 kWhで、約$1,180（電力料金を例として$0.15/kWhとした場合）、約$2,760（$0.35/kWhの場合）です。推論中の実際の消費電力は通常、定格より低く、ワークステーションが24時間365日動き続けることもまれなので、上限の目安として捉えてください。',
+            '**電気代を費用に入れ忘れる。** RTX 4090の2枚だけでも、定格900 Wで連続稼働すると年間7,884 kWhで、約$1,180（電力料金を例として$0.15/kWhとした場合）、約$2,760（$0.35/kWhの場合）です。これにCPUなど本体の残りの分が加わります。推論中の実際の消費電力は通常、定格より低く、ワークステーションが24時間365日動き続けることもまれなので、ご自身の環境で計測してください。',
             '**中古カードを検証せずに使う。** 中古GPUは保証がない場合があり、摩耗もあります。最初の数日のうちに、2枚とも負荷をかけてテストしてください。',
           ],
           callouts: [
-            { type: '⚠️ 警告', text: '2枚目のカードを足しても、すでに1枚に収まるモデルの速度は上がりません。載せられるモデルの大きさが上がるだけです。まず1枚構成かオフロード構成を試してください。' },
+            { type: '⚠️ 警告', text: 'すでに1枚に収まるモデルとの1対1のチャットが、2枚目のカードで速くなるとは期待しないでください。主な利点は載せられるモデルが大きくなることです（テンソル並列で複数ユーザーをバッチ処理する場合は別です）。まず1枚構成かオフロード構成を試してください。' },
           ],
         },
         'faqSection': {
@@ -1010,11 +1010,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Threadripperは必要ですか、それともRyzen 9で足りますか？', a: "推論用途なら、ボードが2枚のGPUをx8/x8で動かせて、大型カード2枚分の余裕があれば、Ryzenのデスクトッププラットフォームで足ります。[デュアルGPUの$2,700構成](/ja/local-llms/local-llm-pc-build-2000)もこのレイアウトです。Threadripperは最大80レーンのPCIe 5.0、クアッドチャネルメモリ、CPU側の処理向けの多いコア数が加わり、発表時価格は$1,499（9960X）または$2,499（9970X）、TDPは350 Wです。" },
             { q: '2枚のGPUをつなぐのにNVLinkを使うべきですか？', a: "RTX 4090とRTX 5090では使えません。NVIDIAはどちらにもNVLinkを記載していません。RTX 3090はブリッジに対応しますが、llama.cpp、Ollama、vLLMはブリッジなしでもPCIe経由でモデルを分割でき、NVLinkで得られる効果はエンジンとバッチサイズによって変わります。" },
             { q: 'RTX 5090 1枚で70Bモデルは動きますか？', a: "VRAMだけでは載りません。RTX 5090は32 GBで、Llama 3.3 70BのQ4ファイルは43 GBあるため、約11 GB以上がシステムRAMから実行され、大幅に遅くなります。Q4の32Bクラスのモデル（約20 GB）なら1枚に載ります。" },
-            { q: 'RTX 3090を2枚とRTX 4090を2枚では、どちらがよいですか？', a: "どちらも48 GBになります。InsiderLLMの米国販売済み出品データ（RTX 3090は2026年11月13〜23日、RTX 4090は2026年10月）では、ペアの価格はRTX 3090（中古）が約$3,000–3,450、RTX 4090（中古）が$5,150–6,020です。開発者が報告したllama.cppのテストではRTX 4090の方がプロンプト処理が速く（7Bテストで11,993対5,175 tok/s）、ペアの消費電力は900 W対700 Wで、NVLinkはありません。RTX 3090はブリッジに対応します。中古カードには保証がない場合があります。" },
+            { q: 'RTX 3090を2枚とRTX 4090を2枚では、どちらがよいですか？', a: "どちらも48 GBになります。InsiderLLMの米国販売済み出品データ（RTX 3090は2026年11月13〜23日、RTX 4090は2026年10月）では、ペアの価格はRTX 3090（中古）が約$3,000–3,450、RTX 4090（中古）が$5,150–6,020です。開発者が報告したllama.cppのテストではRTX 4090の方がプロンプト処理が速く（7Bテストで11,993対5,175 tok/s）、ペアの定格電力は900 W対700 Wで、NVLinkはありません。RTX 3090はブリッジに対応します。中古カードには保証がない場合があります。" },
             { q: 'BTOのワークステーションを買うべきですか、自作すべきですか？', a: "自作ならパーツを自由に選べますが、互換性の確認、価格の追跡、保証の手続きは自分で行うことになります。BTOなら問い合わせ先が1社で済みます。どちらを選ぶ場合も、カード1枚あたりと合計のVRAM、スロットごとのPCIeレーン数、GPU定格の合計に対する電源容量、冷却を比較してください。Mac Studioのようなユニファイドメモリ機が3つ目の選択肢です。" },
             { q: 'デュアルGPUのワークステーションはどれくらい電気を使いますか？', a: "カードの定格電力は700 W（RTX 3090を2枚）から900 W（RTX 4090を2枚）で、Threadripperが別に350 Wです。900 Wを連続で動かした場合、1年で7,884 kWhになるので、ご自身の電力料金を掛けてください。推論中の実際の消費電力は通常、定格より低く、アイドル時はさらに大幅に低くなるため、プラグイン式の電力計で計測してください。" },
             { q: 'ワークステーションがクラウドGPUのレンタルより安くなるのはいつですか？', a: "損益分岐の時間は、購入価格を「クラウドの1時間あたり料金から1時間あたりの電気代を引いた額」で割った値です。毎月の稼働時間が少ないほど、分岐点までに時間がかかります。[自作とレンタルの費用計算ツール](/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026)と[クラウドGPUの比較](/ja/local-llms/cloud-gpu-rental-comparison-2026)で、最新の料金を使って計算してください。" },
-            { q: '今はGPUとRAMを買うのに良い時期ですか？', a: "価格は変動が大きい状況です。トラッカーは新品RTX 5090の米国小売価格を約$4,500–4,700と掲載しており（この価格帯に日付はありません）、希望小売価格は$1,999です。Hardware BustersはDDR5が1年で約500%上昇したと報じ（2026-08-18）、TweakTownはRTX PRO 6000が$16,000で、発売時の$8,565から上がったと報じました（2026-08-13）。今後の方向は誰にも約束できません。今必要なモデルサイズに合わせて購入し、価格が高い間はレンタルも検討してください。" },
+            { q: '今はGPUとRAMを買うのに良い時期ですか？', a: "価格は変動が大きい状況です。InsiderLLMによると、中古RTX 5090は$5,660–6,200です（中央値$6,000、米国eBayの販売済み出品111件、2026年11月6〜25日）。希望小売価格は$1,999です。Hardware BustersはDDR5が1年で約500%上昇したと報じ（2026-08-18）、TweakTownはRTX PRO 6000が$16,000で、発売時の$8,565から上がったと報じました（2026-08-13）。今後の方向は誰にも約束できません。今必要なモデルサイズに合わせて購入し、価格が高い間はレンタルも検討してください。" },
           ],
         },
         'relatedReading': {
@@ -1042,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — ボード電力とNVLinkブリッジへの対応。',
             '[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — 96 GBのメモリと最大600 Wの電力。',
             '[InsiderLLM 中古GPU購入ガイド](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — 中古RTX 3090の価格：eBay米国の販売済み出品225件、2026年11月13〜23日。',
-            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 中古RTX 4090の販売済み価格（2026年10月）と、日付のない新品RTX 5090の米国小売価格帯（2026-11-27確認）。',
+            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 中古RTX 4090（2026年10月）と中古RTX 5090（2026年11月6〜25日）の販売済み価格（2026-11-28確認）。',
             '[llama.cpp CUDA scoreboard, discussion 15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — 開発者が報告した7Bの生成速度とプロンプト処理速度。',
             "[Tom's Hardware: Threadripper 9000 launch](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — 発表時価格、TDP 350 W、PCIeレーン数。",
             '[Hardware Busters: DDR5 prices up 500%](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — 2026-08-18付のメモリ価格に関する報道。',
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-workstation-build-overview-hero-zh.webp',
       dateModified: '2026-11-28',
       seoTitle: '本地LLM工作站装机2026：GPU、内存、电源与成本',
-      intro: "在2026年10月的美国成交数据中（InsiderLLM追踪页），两张二手RTX 4090约$5,150–6,020，仅为GPU价格。采用Threadripper平台时，还要加上CPU（AMD发布价起价$1,499）、registered DDR5内存、1,300–1,600 W电源、散热和存储，所以整机起价高于$4,500。",
+      intro: '在2026年11月13–23日的eBay美国站成交数据中，两张二手RTX 3090约$3,000–3,450；两张二手RTX 4090约$5,150–6,020（2026年10月，InsiderLLM）。以两张3090加一颗Threadripper 9960X（AMD发布价$1,499）计算，仅GPU和CPU就接近$4,500，主板、registered DDR5内存、1,300–1,600 W电源、散热、存储和机箱还要另算。',
       metaDescription: '搭建本地LLM工作站：70B模型需约48 GB显存，另含64 GB内存、电源选型，以及双RTX 3090、4090、5090方案的2026年有来源价格。',
       publishDate: '2026-04-05',
       leadAnswerBlock: "**运行70B模型的本地LLM工作站需要约48 GB显存：Llama 3.3 70B的Q4版本下载体积为43 GB，一张24 GB显卡装不下，两张可以。根据InsiderLLM整理的2026年11月13–23日eBay美国站成交数据，两张二手RTX 3090约$3,000–3,450。**",
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             '显存目标：Llama 3.3 70B的Q4版本是[43 GB的下载文件](https://ollama.com/library/llama3.3)，因此应规划48 GB显存（两张24 GB显卡），上下文大约只剩5 GB可用。',
-            'GPU：在追踪数据中，两张二手RTX 3090（每张约$1,500–1,725，2026年11月13–23日美国成交价）是达到48 GB的最低价方案；两张二手RTX 4090每张约$2,575–3,010（美国成交价，2026年10月）；两张全新RTX 5090（美国零售价每张约$4,500–4,700，来源未标注该区间的日期）可达64 GB。',
+            'GPU：在追踪数据中，两张二手RTX 3090（每张约$1,500–1,725，2026年11月13–23日美国成交价）是达到48 GB的最低价方案；两张二手RTX 4090每张约$2,575–3,010（美国成交价，2026年10月）；两张二手RTX 5090（每张约$5,660–6,200，2026年11月6–25日美国成交价）可达64 GB。',
             'NVLink：NVIDIA官网未列出[RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)和[RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)的NVLink支持；RTX 3090支持桥接器。llama.cpp、Ollama和vLLM无需NVLink，即可通过PCIe把模型拆分到多张GPU上。',
             'CPU：TRX50平台上的Threadripper 9960X（发布价$1,499）或9970X（$2,499）最多提供80条PCIe 5.0通道；带两个x8插槽的Ryzen桌面主板同样可以运行两张GPU。',
             '内存：模型放在显存里时，64 GB内存就够用。Hardware Busters报道，截至2026年8月的12个月内DDR5价格上涨约500%，一套128 GB内存套装标价$3,399，所以建议先买64 GB。',
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: '双GPU配件清单与有来源的价格',
-          content: "**仅GPU加CPU就接近$4,500：两张二手RTX 3090（$3,000–3,450）加一颗Threadripper 9960X（AMD发布价$1,499），这还没算主板、内存、电源、散热、存储和机箱。** PromptQuorum没有组装或测试过这套配置。GPU价格来自InsiderLLM（美国市场）：二手RTX 3090出自其[二手GPU选购指南](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)（中位数$1,650；eBay美国站225笔成交，2026年11月13–23日），二手RTX 4090出自其[价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（216笔成交，2026年10月），全新RTX 5090零售价区间也出自该追踪页，但来源未标注日期；CPU价格为[Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999)报道的AMD发布价；没有追踪价格的配件会明确注明。所有价格均为美国列表的美元价格；其他国家和地区的价格与供货情况有所不同。",
+          content: "**仅GPU加CPU就接近$4,500：两张二手RTX 3090（$3,000–3,450）加一颗Threadripper 9960X（AMD发布价$1,499），这还没算主板、内存、电源、散热、存储和机箱。** PromptQuorum没有组装或测试过这套配置。GPU价格来自InsiderLLM（美国市场）：二手RTX 3090出自其[二手GPU选购指南](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)（中位数$1,650；eBay美国站225笔成交，2026年11月13–23日），二手RTX 4090出自其[价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（216笔成交，2026年10月），二手RTX 5090也出自该追踪页（eBay美国站111笔成交，2026年11月6–25日）；CPU价格为[Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999)报道的AMD发布价；没有追踪价格的配件会明确注明。所有价格均为美国列表的美元价格；其他国家和地区的价格与供货情况有所不同。",
           rows: [
             { '配件': 'GPU', '选择': '2× 二手RTX 3090 24 GB', '价格': '$3,000–3,450', '理由': '48 GB显存池；支持NVLink桥接器' },
             { '配件': 'GPU（备选）', '选择': '2× 二手RTX 4090 24 GB', '价格': '$5,150–6,020', '理由': '提示词处理更快；无NVLink' },
@@ -1168,12 +1168,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'RTX 3090、4090、5090与RTX PRO 6000对比',
-          content: "**要凑够48 GB，二手RTX 3090是追踪数据中最便宜的组合；两张RTX 5090可达64 GB，价格约为前者的2.6至3.1倍，而一张RTX PRO 6000单卡就能达到96 GB。** 额定功率为NVIDIA公布的各显卡板卡功耗。",
+          content: "**要凑够48 GB，二手RTX 3090是追踪数据中最便宜的组合；两张RTX 5090可达64 GB，价格约为前者的3.3至4.1倍，而一张RTX PRO 6000单卡就能达到96 GB。** 额定功率为NVIDIA公布的各显卡板卡功耗。",
           rows: [
             { '配置': '2× RTX 3090（二手）', '显存': '48 GB', 'GPU价格': '$3,000–3,450', '额定功率': '700 W', 'NVLink': '支持桥接器' },
             { '配置': '2× RTX 4090（二手）', '显存': '48 GB', 'GPU价格': '$5,150–6,020', '额定功率': '900 W', 'NVLink': '无' },
-            { '配置': '1× RTX 5090（全新）', '显存': '32 GB', 'GPU价格': '$4,500–4,700', '额定功率': '575 W', 'NVLink': '无' },
-            { '配置': '2× RTX 5090（全新）', '显存': '64 GB', 'GPU价格': '$9,000–9,400', '额定功率': '1,150 W', 'NVLink': '无' },
+            { '配置': '1× RTX 5090（二手）', '显存': '32 GB', 'GPU价格': '$5,660–6,200', '额定功率': '575 W', 'NVLink': '无' },
+            { '配置': '2× RTX 5090（二手）', '显存': '64 GB', 'GPU价格': '$11,320–12,400', '额定功率': '1,150 W', 'NVLink': '无' },
             { '配置': '1× RTX PRO 6000', '显存': '96 GB', 'GPU价格': '约$16,000', '额定功率': '最高600 W', 'NVLink': '不适用' },
           ],
           columns: ['配置', '显存', 'GPU价格', '额定功率', 'NVLink'],
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**RTX PRO 6000价格：** TweakTown在2026-08-13报道，NVIDIA将这张显卡标价$16,000, 上市时为$8,565。NVIDIA标称其最大功率为600 W。',
           ],
           callouts: [
-            { type: '📌 要点', text: '此表中的GPU价格是行情追踪或媒体报道的美国市场数据，不是报价：二手显卡价格区间和RTX PRO 6000的报道带有日期，而全新RTX 5090零售价区间在来源中没有标注日期。请查看当前行情，购买二手显卡前请先阅读[本地LLM用二手GPU](/zh/local-llms/used-gpus-for-local-llms)。' },
+            { type: '📌 要点', text: '此表中的GPU价格是行情追踪或媒体报道的美国市场数据，不是报价：二手显卡价格区间来自2026年10月或11月的成交数据，RTX PRO 6000的报道为2026年8月。同一追踪页在2026年8月给出的全新未拆封RTX 5090价格约为$4,500，这一较早的数字未用于本表。请查看当前行情，购买二手显卡前请先阅读[本地LLM用二手GPU](/zh/local-llms/used-gpus-for-local-llms)。' },
           ],
         },
         'cooling': {
@@ -1254,11 +1254,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**混用不同型号的GPU。** vLLM张量并行会均匀分片权重，显存较小的那张会限制整对显卡。请买相同的显卡。',
             '**一上来就买128 GB的DDR5。** 放在显存里的模型用不上这么多内存，而且2026年DDR5价格一直在上涨。从64 GB起步。',
             '**按一张显卡估算电源。** NVIDIA为RTX 4090给出的850 W是针对一张显卡的。请把两张显卡和CPU加在一起，再留出余量。',
-            '**成本里漏掉电费。** 900 W持续运行一年是7,884 kWh：约$1,180（示例电价$0.15/kWh），约$2,760（电价$0.35/kWh）。推理时的实际功耗通常低于额定功率，工作站也很少24小时不停运行，所以请把它当作上限。',
+            '**成本里漏掉电费。** 仅两张RTX 4090按900 W额定功率持续运行，一年就是7,884 kWh：约$1,180（示例电价$0.15/kWh），约$2,760（电价$0.35/kWh）。CPU和整机其余部分还要另加；推理时的实际功耗通常低于额定功率，工作站也很少24小时不停运行，所以请实测自己的功耗。',
             '**购买二手显卡不做测试。** 二手GPU可能没有保修且有磨损；请在最初几天让两张卡都在负载下测试。',
           ],
           callouts: [
-            { type: '⚠️ 警告', text: '第二张显卡不会提高一个已经能装进单卡的模型的速度；它提高的是你能加载的模型大小。请先试试单卡或卸载（offload）方案。' },
+            { type: '⚠️ 警告', text: '不要指望第二张显卡能让一个单卡就装得下的模型在单个对话中变快；它的主要收益是能加载更大的模型（用张量并行批量服务多个用户则是另一种情况）。请先试试单卡或卸载（offload）方案。' },
           ],
         },
         'faqSection': {
@@ -1270,11 +1270,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '一定要用Threadripper吗，Ryzen 9够不够？', a: "做推理的话，只要主板能让两张GPU以x8/x8运行，并且有空间容纳两张大显卡，Ryzen桌面平台就够用；[双GPU $2,700装机方案](/zh/local-llms/local-llm-pc-build-2000)用的就是这种布局。Threadripper则提供最多80条PCIe 5.0通道、四通道内存和更多CPU端任务可用的核心，发布价为$1,499（9960X）或$2,499（9970X），TDP为350 W。" },
             { q: '需要用NVLink把两张GPU连起来吗？', a: "RTX 4090和RTX 5090上做不到：NVIDIA官网未列出这两张显卡的NVLink支持。RTX 3090支持桥接器，但llama.cpp、Ollama和vLLM无需桥接器就能通过PCIe拆分模型，而NVLink带来的提升取决于推理引擎和批大小。" },
             { q: '一张RTX 5090能运行70B模型吗？', a: "无法完全放进显存。RTX 5090有32 GB，而Llama 3.3 70B的Q4文件为43 GB，所以约11 GB或更多要放到系统内存里运行，速度慢得多。Q4的32B级模型（约20 GB）可以放进一张卡。" },
-            { q: '选双RTX 3090还是双RTX 4090？', a: "两者都是48 GB。在InsiderLLM的美国成交数据中（RTX 3090：2026年11月13–23日；RTX 4090：2026年10月），这一对的价格约为$3,000–3,450（RTX 3090，二手）对$5,150–6,020（RTX 4090，二手）。在开发者报告的llama.cpp测试中，RTX 4090的提示词处理更快（7B测试中为11,993对5,175 tok/s），这一对的功率为900 W，而3090为700 W，并且没有NVLink；RTX 3090支持桥接器。二手显卡可能没有保修。" },
+            { q: '选双RTX 3090还是双RTX 4090？', a: "两者都是48 GB。在InsiderLLM的美国成交数据中（RTX 3090：2026年11月13–23日；RTX 4090：2026年10月），这一对的价格约为$3,000–3,450（RTX 3090，二手）对$5,150–6,020（RTX 4090，二手）。在开发者报告的llama.cpp测试中，RTX 4090的提示词处理更快（7B测试中为11,993对5,175 tok/s），这一对的额定功率为900 W，而两张3090为700 W，并且没有NVLink；RTX 3090支持桥接器。二手显卡可能没有保修。" },
             { q: '应该买整机工作站成品还是自己组装？', a: "自己组装可以挑选每个部件，但兼容性检查、价格追踪和保修都要自己负责；整机成品则只需联系一个卖家。无论选哪种，都要比较每张显卡和总计的显存、每个插槽的PCIe通道数、电源额定功率与GPU额定功率总和的对比，以及散热。Mac Studio这类统一内存机器是第三种选择。" },
             { q: '双GPU工作站要耗多少电？', a: "显卡的额定功率为700 W（2× RTX 3090）到900 W（2× RTX 4090），Threadripper再加350 W。按持续900 W计算，一年是7,884 kWh；再乘以你的电价即可。推理时的实际功耗通常低于额定值，待机功耗则低得多，所以请用插座式功率计实测。" },
             { q: '什么时候工作站比租用云GPU更划算？', a: "回本小时数等于购买价格除以（每小时云端价格减去你的每小时电费）。你每月运行的小时数越少，回本所需时间越长。请在[自建与租用成本计算器](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026)和[云GPU对比](/zh/local-llms/cloud-gpu-rental-comparison-2026)中使用当前价格。" },
-            { q: '现在是买GPU和内存的好时机吗？', a: "价格波动很大。追踪数据中全新RTX 5090的美国零售价约$4,500–4,700（该区间未标注日期），而建议零售价为$1,999；Hardware Busters报道DDR5一年内上涨约500%（2026-08-18），TweakTown报道RTX PRO 6000为$16,000, 上市时为$8,565（2026-08-13）。没有人能保证走势方向。请按你现在需要的模型大小来买，价格高企时也可以考虑先租用。" },
+            { q: '现在是买GPU和内存的好时机吗？', a: "价格波动很大。InsiderLLM数据显示二手RTX 5090为$5,660–6,200（中位数$6,000；eBay美国站111笔成交，2026年11月6–25日），而建议零售价为$1,999；Hardware Busters报道DDR5一年内上涨约500%（2026-08-18），TweakTown报道RTX PRO 6000为$16,000, 上市时为$8,565（2026-08-13）。没有人能保证走势方向。请按你现在需要的模型大小来买，价格高企时也可以考虑先租用。" },
           ],
         },
         'relatedReading': {
@@ -1302,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — 板卡功耗和NVLink桥接器支持。',
             '[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — 96 GB显存和600 W最大功率。',
             '[InsiderLLM二手GPU选购指南](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — 二手RTX 3090价格：eBay美国站225笔成交，2026年11月13–23日。',
-            '[InsiderLLM GPU价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 二手RTX 4090成交价（2026年10月）和未标注日期的全新RTX 5090美国零售价区间（2026-11-27核对）。',
+            '[InsiderLLM GPU价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 二手RTX 4090成交价（2026年10月）和二手RTX 5090成交价（2026年11月6–25日）（2026-11-28核对）。',
             '[llama.cpp CUDA成绩榜，讨论15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — 开发者报告的7B生成和提示词处理速度。',
             '[Tom\'s Hardware：Threadripper 9000发布](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — 发布价、350 W TDP、PCIe通道数。',
             '[Hardware Busters：DDR5价格上涨500%](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — 2026-08-18的内存价格报道。',
@@ -1321,7 +1321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-workstation-build-overview-hero-es.webp',
       dateModified: '2026-11-28',
       seoTitle: 'Estación de trabajo para LLM local 2026: GPU, RAM, PSU',
-      intro: "En las ventas completadas en EE. UU. en octubre de 2026 (rastreador de InsiderLLM), dos RTX 4090 usadas cuestan unos $5,150–6,020, solo las GPU. Un equipo con Threadripper suma la CPU (desde $1,499 al precio de lanzamiento de AMD), memoria DDR5 registrada, una fuente de 1,300–1,600 W, refrigeración y almacenamiento, de modo que un equipo completo parte de más de $4,500.",
+      intro: 'Dos RTX 3090 usadas cuestan unos $3,000–3,450 según las ventas completadas en eBay EE. UU. del 13 al 23 de noviembre de 2026, y dos RTX 4090 usadas unos $5,150–6,020 (octubre de 2026, InsiderLLM). Con el par de 3090 y un Threadripper 9960X ($1,499 al precio de lanzamiento de AMD), solo las GPU y la CPU parten cerca de $4,500, antes de placa base, memoria DDR5 registrada, fuente de 1,300–1,600 W, refrigeración, almacenamiento y gabinete.',
       metaDescription: 'Arma una estación de trabajo para LLM local: 48 GB de VRAM para modelos de 70B, 64 GB de RAM, PSU y precios 2026 con fuente para RTX 3090, 4090 y 5090.',
       publishDate: '2026-04-05',
       leadAnswerBlock: "**Una estación de trabajo para LLM local de 70B necesita unos 48 GB de memoria de GPU: Llama 3.3 70B pesa 43 GB en Q4; una tarjeta de 24 GB no basta, dos sí. Según los datos de InsiderLLM sobre ventas completadas en eBay EE. UU. del 13 al 23 de noviembre de 2026, dos RTX 3090 usadas cuestan unos $3,000–3,450.**",
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'Objetivo de VRAM: Llama 3.3 70B en Q4 es una [descarga de 43 GB](https://ollama.com/library/llama3.3), así que planea 48 GB de memoria de GPU (dos tarjetas de 24 GB) y cuenta con unos 5 GB libres para el contexto.',
-            'GPU: dos RTX 3090 usadas (unos $1,500–1,725 cada una, ventas en EE. UU. del 13 al 23 de noviembre de 2026) son la vía de 48 GB más barata en los datos del tracker; dos RTX 4090 usadas cuestan unos $2,575–3,010 cada una (ventas en EE. UU., octubre de 2026); dos RTX 5090 nuevas (unos $4,500–4,700 cada una en tiendas de EE. UU.; la fuente no fecha este rango) dan 64 GB.',
+            'GPU: dos RTX 3090 usadas (unos $1,500–1,725 cada una, ventas en EE. UU. del 13 al 23 de noviembre de 2026) son la vía de 48 GB más barata en los datos del tracker; dos RTX 4090 usadas cuestan unos $2,575–3,010 cada una (ventas en EE. UU., octubre de 2026); dos RTX 5090 usadas (unos $5,660–6,200 cada una, ventas en EE. UU. del 6 al 25 de noviembre de 2026) dan 64 GB.',
             'NVLink: NVIDIA no lista NVLink en la [RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) ni en la [RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/); la RTX 3090 admite un puente. llama.cpp, Ollama y vLLM reparten un modelo entre varias GPU por PCIe sin necesitarlo.',
             'CPU: un Threadripper 9960X ($1,499 de precio de lanzamiento) o 9970X ($2,499) en TRX50 ofrece hasta 80 líneas PCIe 5.0; una placa Ryzen de escritorio con dos ranuras x8 también puede mover dos GPU.',
             'RAM: 64 GB bastan cuando el modelo cabe en la VRAM. Hardware Busters reportó que los precios de la DDR5 subieron cerca de un 500% en los 12 meses hasta agosto de 2026 y que un kit de 128 GB se listó en $3,399, así que compra primero 64 GB.',
@@ -1383,7 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: 'Lista de piezas con dos GPU y precios con fuente',
-          content: "**Solo las GPU y la CPU parten cerca de $4,500: dos RTX 3090 usadas ($3,000–3,450) más un Threadripper 9960X ($1,499 al precio de lanzamiento de AMD), antes de placa base, memoria, PSU, refrigeración, almacenamiento y gabinete.** PromptQuorum no ha armado ni probado esta configuración. Los precios de las GPU provienen de InsiderLLM (mercado de EE. UU.): la RTX 3090 usada, de su [guía de compra de GPU usadas](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (mediana de $1,650; 225 ventas completadas en eBay EE. UU., 13–23 de noviembre de 2026); la RTX 4090 usada, de su [tracker de precios](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 ventas, octubre de 2026); y el rango en tiendas de la RTX 5090 nueva, del mismo tracker, que no lo fecha; los precios de las CPU son precios de lanzamiento de AMD reportados por [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999); las piezas sin precio rastreado lo indican. Todos los precios son dólares estadounidenses de listados de EE. UU.; los precios y la disponibilidad difieren en otros países. Los precios en tu país pueden variar según impuestos locales.",
+          content: "**Solo las GPU y la CPU parten cerca de $4,500: dos RTX 3090 usadas ($3,000–3,450) más un Threadripper 9960X ($1,499 al precio de lanzamiento de AMD), antes de placa base, memoria, PSU, refrigeración, almacenamiento y gabinete.** PromptQuorum no ha armado ni probado esta configuración. Los precios de las GPU provienen de InsiderLLM (mercado de EE. UU.): la RTX 3090 usada, de su [guía de compra de GPU usadas](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (mediana de $1,650; 225 ventas completadas en eBay EE. UU., 13–23 de noviembre de 2026); la RTX 4090 usada, de su [tracker de precios](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 ventas, octubre de 2026); y la RTX 5090 usada, del mismo tracker (111 ventas completadas en eBay EE. UU., 6–25 de noviembre de 2026); los precios de las CPU son precios de lanzamiento de AMD reportados por [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999); las piezas sin precio rastreado lo indican. Todos los precios son dólares estadounidenses de listados de EE. UU.; los precios y la disponibilidad difieren en otros países. Los precios en tu país pueden variar según impuestos locales.",
           rows: [
             { 'Componente': 'GPU', 'Elección': '2× RTX 3090 usadas de 24 GB', 'Precio': '$3,000–3,450', 'Motivo': 'Pool de 48 GB; admite puente NVLink' },
             { 'Componente': 'GPU (alternativa)', 'Elección': '2× RTX 4090 usadas de 24 GB', 'Precio': '$5,150–6,020', 'Motivo': 'Procesamiento de prompts más rápido; sin NVLink' },
@@ -1428,12 +1428,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'Comparativa de RTX 3090, 4090, 5090 y RTX PRO 6000',
-          content: "**Para 48 GB, las RTX 3090 usadas son el par más barato en los datos del tracker; dos RTX 5090 llegan a 64 GB por un precio entre 2.6 y 3.1 veces mayor, aproximadamente, y una RTX PRO 6000 llega a 96 GB en una sola tarjeta.** Las potencias nominales son la potencia de placa que indica NVIDIA para cada tarjeta.",
+          content: "**Para 48 GB, las RTX 3090 usadas son el par más barato en los datos del tracker; dos RTX 5090 llegan a 64 GB por un precio entre 3.3 y 4.1 veces mayor, aproximadamente, y una RTX PRO 6000 llega a 96 GB en una sola tarjeta.** Las potencias nominales son la potencia de placa que indica NVIDIA para cada tarjeta.",
           rows: [
             { 'Configuración': '2× RTX 3090 (usadas)', 'VRAM': '48 GB', 'Precio de GPU': '$3,000–3,450', 'Potencia nominal': '700 W', 'NVLink': 'Admite puente' },
             { 'Configuración': '2× RTX 4090 (usadas)', 'VRAM': '48 GB', 'Precio de GPU': '$5,150–6,020', 'Potencia nominal': '900 W', 'NVLink': 'No' },
-            { 'Configuración': '1× RTX 5090 (nueva)', 'VRAM': '32 GB', 'Precio de GPU': '$4,500–4,700', 'Potencia nominal': '575 W', 'NVLink': 'No' },
-            { 'Configuración': '2× RTX 5090 (nuevas)', 'VRAM': '64 GB', 'Precio de GPU': '$9,000–9,400', 'Potencia nominal': '1,150 W', 'NVLink': 'No' },
+            { 'Configuración': '1× RTX 5090 (usada)', 'VRAM': '32 GB', 'Precio de GPU': '$5,660–6,200', 'Potencia nominal': '575 W', 'NVLink': 'No' },
+            { 'Configuración': '2× RTX 5090 (usadas)', 'VRAM': '64 GB', 'Precio de GPU': '$11,320–12,400', 'Potencia nominal': '1,150 W', 'NVLink': 'No' },
             { 'Configuración': '1× RTX PRO 6000', 'VRAM': '96 GB', 'Precio de GPU': 'Unos $16,000', 'Potencia nominal': '600 W máx.', 'NVLink': 'No aplica' },
           ],
           columns: ['Configuración', 'VRAM', 'Precio de GPU', 'Potencia nominal', 'NVLink'],
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Precio de la RTX PRO 6000:** TweakTown reportó el 2026-08-13 que NVIDIA listó la tarjeta en $16,000, frente a $8,565 en su lanzamiento. NVIDIA le asigna un máximo de 600 W.',
           ],
           callouts: [
-            { type: '📌 Punto clave', text: 'Los precios de GPU de esta tabla son cifras del mercado de EE. UU. tomadas de un tracker o de la prensa, no cotizaciones: los rangos de tarjetas usadas y la noticia sobre la RTX PRO 6000 tienen fecha, pero la fuente no fecha el rango en tiendas de la RTX 5090 nueva. Revisa los listados actuales y lee [GPU usadas para LLM locales](/es/local-llms/used-gpus-for-local-llms) antes de comprar una tarjeta usada.' },
+            { type: '📌 Punto clave', text: 'Los precios de GPU de esta tabla son cifras del mercado de EE. UU. tomadas de un tracker o de la prensa, no cotizaciones: los rangos de tarjetas usadas son ventas completadas de octubre o noviembre de 2026 y la noticia sobre la RTX PRO 6000 es de agosto de 2026. El mismo tracker situaba las RTX 5090 nuevas selladas en unos $4,500 en agosto de 2026, una cifra anterior que la tabla no usa. Revisa los listados actuales y lee [GPU usadas para LLM locales](/es/local-llms/used-gpus-for-local-llms) antes de comprar una tarjeta usada.' },
           ],
         },
         'cooling': {
@@ -1514,11 +1514,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Mezclar modelos de GPU.** El paralelismo de tensores de vLLM reparte los pesos por igual, así que la tarjeta con menos memoria limita al par. Compra tarjetas idénticas.',
             '**Comprar primero 128 GB de DDR5.** Un modelo que cabe en la VRAM no los necesita, y los precios de la DDR5 estaban subiendo en 2026. Empieza con 64 GB.',
             '**Dimensionar la PSU a partir de una sola tarjeta.** La cifra de 850 W de NVIDIA para la RTX 4090 corresponde a una tarjeta. Suma ambas tarjetas y la CPU, y luego añade margen.',
-            '**Dejar la electricidad fuera del costo.** 900 W en funcionamiento continuo son 7,884 kWh al año: unos $1,180 con una tarifa de ejemplo de $0.15/kWh y unos $2,760 con $0.35/kWh. El consumo real durante la inferencia suele ser menor que la potencia nominal y una estación de trabajo rara vez funciona las 24 horas, todos los días, así que toma esto como un límite superior.',
+            '**Dejar la electricidad fuera del costo.** Solo las dos RTX 4090, a su potencia nominal de 900 W en funcionamiento continuo, son 7,884 kWh al año: unos $1,180 con una tarifa de ejemplo de $0.15/kWh y unos $2,760 con $0.35/kWh. La CPU y el resto del equipo se suman aparte; el consumo real durante la inferencia suele ser menor que el nominal y una estación de trabajo rara vez funciona las 24 horas, así que mide el tuyo.',
             '**Comprar tarjetas usadas sin probarlas.** Las GPU usadas pueden no tener garantía y presentar desgaste; prueba ambas tarjetas bajo carga durante los primeros días.',
           ],
           callouts: [
-            { type: '⚠️ Advertencia', text: 'Una segunda tarjeta no aumenta la velocidad de un modelo que ya cabe en una sola; aumenta el tamaño del modelo que puedes cargar. Prueba primero con una sola tarjeta o con una configuración de descarga a la RAM.' },
+            { type: '⚠️ Advertencia', text: 'No esperes que una segunda tarjeta acelere un solo chat con un modelo que ya cabe en una; su principal ventaja es el tamaño del modelo que puedes cargar (servir a muchos usuarios en lotes con paralelismo de tensores es otro caso). Prueba primero con una sola tarjeta o con una configuración de descarga a la RAM.' },
           ],
         },
         'faqSection': {
@@ -1530,11 +1530,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '¿Necesito un Threadripper o basta con un Ryzen 9?', a: "Para inferencia basta una plataforma Ryzen de escritorio cuando la placa ejecuta ambas GPU a x8/x8 y tiene espacio para dos tarjetas grandes; el [PC con dos GPU de $2,700](/es/local-llms/local-llm-pc-build-2000) usa ese esquema. Un Threadripper añade hasta 80 líneas PCIe 5.0, memoria de cuatro canales y más núcleos para el trabajo del lado de la CPU, con precios de lanzamiento de $1,499 (9960X) o $2,499 (9970X) y un TDP de 350 W." },
             { q: '¿Debo usar NVLink para unir dos GPU?', a: "No puedes en la RTX 4090 ni en la RTX 5090: NVIDIA no lista NVLink en ninguna de las dos. La RTX 3090 admite un puente, pero llama.cpp, Ollama y vLLM reparten un modelo por PCIe sin él, y la ganancia de NVLink depende del motor y del tamaño de lote." },
             { q: '¿Puede una sola RTX 5090 ejecutar un modelo de 70B?', a: "No por completo en VRAM. La RTX 5090 tiene 32 GB y el archivo de Llama 3.3 70B en Q4 pesa 43 GB, así que unos 11 GB o más se ejecutan desde la RAM del sistema, lo cual es mucho más lento. Un modelo de clase 32B en Q4 (unos 20 GB) sí cabe en una sola tarjeta." },
-            { q: '¿Dos RTX 3090 o dos RTX 4090?', a: "Ambas dan 48 GB. Según los datos de InsiderLLM sobre ventas en EE. UU. (RTX 3090: 13–23 de noviembre de 2026; RTX 4090: octubre de 2026), el par cuesta unos $3,000–3,450 (RTX 3090, usadas) frente a $5,150–6,020 (RTX 4090, usadas). La RTX 4090 procesa los prompts más rápido en pruebas de llama.cpp reportadas por desarrolladores (11,993 frente a 5,175 tok/s en una prueba de 7B), consume 900 W frente a 700 W del par y no tiene NVLink; la RTX 3090 admite un puente. Las tarjetas usadas pueden no tener garantía." },
+            { q: '¿Dos RTX 3090 o dos RTX 4090?', a: "Ambas dan 48 GB. Según los datos de InsiderLLM sobre ventas en EE. UU. (RTX 3090: 13–23 de noviembre de 2026; RTX 4090: octubre de 2026), el par cuesta unos $3,000–3,450 (RTX 3090, usadas) frente a $5,150–6,020 (RTX 4090, usadas). La RTX 4090 procesa los prompts más rápido en pruebas de llama.cpp reportadas por desarrolladores (11,993 frente a 5,175 tok/s en una prueba de 7B), como par tiene una potencia nominal de 900 W frente a 700 W y no tiene NVLink; la RTX 3090 admite un puente. Las tarjetas usadas pueden no tener garantía." },
             { q: '¿Me conviene comprar una estación de trabajo prearmada o armarla yo?', a: "Armarla te deja elegir cada pieza, pero te encarga las comprobaciones de compatibilidad, el seguimiento de precios y la garantía; un equipo prearmado te da un solo vendedor al que llamar. Elijas lo que elijas, compara la VRAM por tarjeta y en total, las líneas PCIe por ranura, la potencia de la PSU frente a la suma de las potencias nominales de las GPU, y la refrigeración. Los equipos de memoria unificada, como el Mac Studio, son una tercera opción." },
             { q: '¿Cuánta electricidad consume una estación de trabajo con dos GPU?', a: "La potencia nominal es de 700 W (2× RTX 3090) a 900 W (2× RTX 4090) para las tarjetas, más 350 W de un Threadripper. A 900 W continuos, un año son 7,884 kWh; multiplica por tu tarifa. El consumo real durante la inferencia suele ser menor que la potencia nominal y en reposo es mucho más bajo, así que mídelo con un medidor de consumo de enchufe." },
             { q: '¿Cuándo sale más barata una estación de trabajo que alquilar GPU en la nube?', a: "Las horas de punto de equilibrio equivalen al precio de compra dividido entre el precio por hora en la nube menos tu costo de electricidad por hora. Cuantas menos horas uses al mes, más tarda en llegar el punto de equilibrio. Usa las tarifas actuales en la [calculadora de comprar o alquilar](/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026) y en la [comparativa de GPU en la nube](/es/local-llms/cloud-gpu-rental-comparison-2026)." },
-            { q: '¿Es buen momento para comprar GPU y RAM?', a: "Los precios son volátiles. El tracker lista la RTX 5090 nueva en tiendas de EE. UU. en torno a $4,500–4,700, sin fechar ese rango, frente a $1,999 de precio de lista, Hardware Busters reportó la DDR5 con una subida cercana al 500% en un año (2026-08-18) y TweakTown reportó la RTX PRO 6000 a $16,000, frente a $8,565 en su lanzamiento (2026-08-13). Nadie puede prometer hacia dónde irán. Compra para el tamaño de modelo que necesitas ahora y considera alquilar mientras los precios estén altos." },
+            { q: '¿Es buen momento para comprar GPU y RAM?', a: "Los precios son volátiles. InsiderLLM sitúa la RTX 5090 usada en $5,660–6,200 (mediana de $6,000; 111 ventas completadas en eBay EE. UU., 6–25 de noviembre de 2026), frente a $1,999 de precio de lista, Hardware Busters reportó la DDR5 con una subida cercana al 500% en un año (2026-08-18) y TweakTown reportó la RTX PRO 6000 a $16,000, frente a $8,565 en su lanzamiento (2026-08-13). Nadie puede prometer hacia dónde irán. Compra para el tamaño de modelo que necesitas ahora y considera alquilar mientras los precios estén altos." },
           ],
         },
         'relatedReading': {
@@ -1562,7 +1562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — potencia de placa y compatibilidad con puente NVLink.',
             '[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — 96 GB de memoria y 600 W de potencia máxima.',
             '[Guía de InsiderLLM de GPU usadas](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — precios de la RTX 3090 usada: 225 ventas completadas en eBay EE. UU., 13–23 de noviembre de 2026.',
-            '[Tracker de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — ventas de RTX 4090 usadas (octubre de 2026) y rango sin fecha en tiendas de EE. UU. de la RTX 5090 nueva (consultado el 2026-11-27).',
+            '[Tracker de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — ventas de RTX 4090 usadas (octubre de 2026) y de RTX 5090 usadas (6–25 de noviembre de 2026), consultado el 2026-11-28.',
             '[Marcador CUDA de llama.cpp, discusión 15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — velocidades de generación y de procesamiento de prompts con 7B reportadas por desarrolladores.',
             '[Tom\'s Hardware: lanzamiento de Threadripper 9000](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — precios de lanzamiento, TDP de 350 W, líneas PCIe.',
             '[Hardware Busters: la DDR5 sube un 500%](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — informe de precios de memoria del 2026-08-18.',
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-workstation-build-overview-hero-ar.webp',
       dateModified: '2026-11-28',
       seoTitle: 'محطة عمل LLM محلية 2026: GPU وRAM وPSU والتكلفة',
-      intro: "في المبيعات المنفَّذة في السوق الأمريكية خلال أكتوبر 2026 (متتبّع InsiderLLM)، تكلفة بطاقتي RTX 4090 مستعملتين نحو $5,150–6,020 للبطاقات فقط. ويضيف تجميع Threadripper المعالج (من $1,499 بسعر الإطلاق لدى AMD) وذاكرة DDR5 المسجّلة (registered) ومزود طاقة بقدرة 1,300–1,600 W والتبريد والتخزين، فيبدأ الجهاز الكامل من أكثر من $4,500.",
+      intro: 'تكلفة بطاقتي RTX 3090 مستعملتين نحو $3,000–3,450 بحسب المبيعات المنفَّذة على eBay الأمريكي بين 13 و23 نوفمبر 2026، وتكلفة بطاقتي RTX 4090 مستعملتين نحو $5,150–6,020 (أكتوبر 2026، InsiderLLM). ومع زوج RTX 3090 ومعالج Threadripper 9960X ($1,499 بسعر الإطلاق لدى AMD) تبدأ البطاقات والمعالج وحدهما قرب $4,500، قبل اللوحة الأم وذاكرة DDR5 المسجّلة (registered) ومزود طاقة بقدرة 1,300–1,600 W والتبريد والتخزين والهيكل.',
       metaDescription: 'دليل تجميع محطة عمل لنماذج LLM محلية: 48 GB من VRAM لنماذج 70B وذاكرة RAM بسعة 64 GB وحجم مزود الطاقة وأسعار 2026 الموثقة لبطاقات RTX.',
       publishDate: '2026-04-05',
       leadAnswerBlock: "**تحتاج محطة عمل لنماذج LLM محلية بحجم 70B إلى نحو 48 GB من ذاكرة GPU: حجم Llama 3.3 70B بتكميم Q4 هو 43 GB، فلا تتسع له بطاقة واحدة بسعة 24 GB وتتسع له بطاقتان. وبحسب بيانات InsiderLLM عن المبيعات المنفَّذة على eBay الأمريكي بين 13 و23 نوفمبر 2026، تكلفة بطاقتي RTX 3090 مستعملتين نحو $3,000–3,450.**",
@@ -1611,7 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'هدف VRAM: نموذج Llama 3.3 70B بتكميم Q4 هو [تنزيل بحجم 43 GB](https://ollama.com/library/llama3.3)، لذا خطّط لـ 48 GB من ذاكرة GPU (بطاقتان بسعة 24 GB لكل منهما) وتوقّع بقاء نحو 5 GB للسياق.',
-            'بطاقات GPU: بطاقتا RTX 3090 مستعملتان (نحو $1,500–1,725 للواحدة، مبيعات منفَّذة في الولايات المتحدة بين 13 و23 نوفمبر 2026) هما أقل طريق سعرًا إلى 48 GB في البيانات المتتبَّعة؛ وتكلفة بطاقتي RTX 4090 مستعملتين نحو $2,575–3,010 للواحدة (مبيعات أمريكية، أكتوبر 2026)؛ وبطاقتا RTX 5090 جديدتان (نحو $4,500–4,700 للواحدة بسعر التجزئة الأمريكي؛ ولا يذكر المصدر تاريخًا لهذا النطاق) تعطيان 64 GB.',
+            'بطاقات GPU: بطاقتا RTX 3090 مستعملتان (نحو $1,500–1,725 للواحدة، مبيعات منفَّذة في الولايات المتحدة بين 13 و23 نوفمبر 2026) هما أقل طريق سعرًا إلى 48 GB في البيانات المتتبَّعة؛ وتكلفة بطاقتي RTX 4090 مستعملتين نحو $2,575–3,010 للواحدة (مبيعات أمريكية، أكتوبر 2026)؛ وبطاقتا RTX 5090 مستعملتان (نحو $5,660–6,200 للواحدة، مبيعات منفَّذة في الولايات المتحدة بين 6 و25 نوفمبر 2026) تعطيان 64 GB.',
             'NVLink: لا تذكر NVIDIA وجود NVLink في [RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) و[RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)؛ أما RTX 3090 فتدعم جسرًا. تقسّم llama.cpp وOllama وvLLM النموذج على بطاقات GPU عبر PCIe من دونه.',
             'المعالج: يوفّر Threadripper 9960X (سعر الإطلاق $1,499) أو 9970X ($2,499) على منصة TRX50 ما يصل إلى 80 مسار PCIe 5.0؛ كما تشغّل لوحة Ryzen المكتبية ذات فتحتين x8 بطاقتي GPU أيضًا.',
             'الذاكرة RAM: تكفي 64 GB عندما يكون النموذج في VRAM. أفاد Hardware Busters بأن أسعار DDR5 ارتفعت بنحو 500% خلال 12 شهرًا حتى أغسطس 2026 وبأن مجموعة واحدة بسعة 128 GB أُدرجت بسعر $3,399، لذا اشترِ 64 GB أولًا.',
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: 'قائمة قطع ببطاقتي رسوميات مع أسعار موثقة',
-          content: "**تبدأ البطاقات والمعالج وحدهما قرب $4,500: بطاقتا RTX 3090 مستعملتان ($3,000–3,450) إضافة إلى Threadripper 9960X ($1,499 بسعر الإطلاق لدى AMD)، قبل اللوحة الأم والذاكرة ومزود الطاقة والتبريد والتخزين والهيكل.** لم تبنِ PromptQuorum هذا التكوين ولم تختبره بمقاييس الأداء. أسعار البطاقات من InsiderLLM (السوق الأمريكية): سعر RTX 3090 المستعملة من [دليل شراء البطاقات المستعملة](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (الوسيط $1,650؛ 225 عملية بيع منفَّذة على eBay الأمريكي، 13–23 نوفمبر 2026)، وسعر RTX 4090 المستعملة من [متتبّع الأسعار](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 عملية بيع، أكتوبر 2026)، ونطاق التجزئة لبطاقة RTX 5090 الجديدة من المتتبّع نفسه الذي لا يذكر له تاريخًا؛ وأسعار المعالجات هي أسعار إطلاق AMD كما نقلتها [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999)؛ والقطع التي لا يوجد لها سعر متتبَّع يُذكر ذلك فيها. جميع الأسعار بالدولار الأمريكي من قوائم السوق الأمريكية؛ وتختلف الأسعار والتوافر في الدول الأخرى، وتتفاوت الأسعار المحلية بحسب الرسوم الجمركية على الاستيراد.",
+          content: "**تبدأ البطاقات والمعالج وحدهما قرب $4,500: بطاقتا RTX 3090 مستعملتان ($3,000–3,450) إضافة إلى Threadripper 9960X ($1,499 بسعر الإطلاق لدى AMD)، قبل اللوحة الأم والذاكرة ومزود الطاقة والتبريد والتخزين والهيكل.** لم تبنِ PromptQuorum هذا التكوين ولم تختبره بمقاييس الأداء. أسعار البطاقات من InsiderLLM (السوق الأمريكية): سعر RTX 3090 المستعملة من [دليل شراء البطاقات المستعملة](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (الوسيط $1,650؛ 225 عملية بيع منفَّذة على eBay الأمريكي، 13–23 نوفمبر 2026)، وسعر RTX 4090 المستعملة من [متتبّع الأسعار](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 عملية بيع، أكتوبر 2026)، وسعر RTX 5090 المستعملة من المتتبّع نفسه (111 عملية بيع منفَّذة على eBay الأمريكي، 6–25 نوفمبر 2026)؛ وأسعار المعالجات هي أسعار إطلاق AMD كما نقلتها [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999)؛ والقطع التي لا يوجد لها سعر متتبَّع يُذكر ذلك فيها. جميع الأسعار بالدولار الأمريكي من قوائم السوق الأمريكية؛ وتختلف الأسعار والتوافر في الدول الأخرى، وتتفاوت الأسعار المحلية بحسب الرسوم الجمركية على الاستيراد.",
           rows: [
             { 'المكوّن': 'بطاقات GPU', 'الاختيار': '2× RTX 3090 بسعة 24 GB (مستعملة)', 'السعر': '$3,000–3,450', 'السبب': 'مجمّع بسعة 48 GB؛ جسر NVLink مدعوم' },
             { 'المكوّن': 'بطاقات GPU (بديل)', 'الاختيار': '2× RTX 4090 بسعة 24 GB (مستعملة)', 'السعر': '$5,150–6,020', 'السبب': 'معالجة أسرع للمطالبات؛ بلا NVLink' },
@@ -1688,12 +1688,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'مقارنة RTX 3090 وRTX 4090 وRTX 5090 وRTX PRO 6000',
-          content: "**للوصول إلى 48 GB، تُعد بطاقات RTX 3090 المستعملة أقل الأزواج سعرًا في البيانات المتتبَّعة؛ وتصل بطاقتا RTX 5090 إلى 64 GB بنحو 2.6 إلى 3.1 أضعاف هذا السعر، وتصل بطاقة RTX PRO 6000 واحدة إلى 96 GB.** القدرات المقدّرة هي قدرة اللوحة التي تعلنها NVIDIA لكل بطاقة.",
+          content: "**للوصول إلى 48 GB، تُعد بطاقات RTX 3090 المستعملة أقل الأزواج سعرًا في البيانات المتتبَّعة؛ وتصل بطاقتا RTX 5090 إلى 64 GB بنحو 3.3 إلى 4.1 أضعاف هذا السعر، وتصل بطاقة RTX PRO 6000 واحدة إلى 96 GB.** القدرات المقدّرة هي قدرة اللوحة التي تعلنها NVIDIA لكل بطاقة.",
           rows: [
             { 'التكوين': '2× RTX 3090 (مستعملة)', 'VRAM': '48 GB', 'سعر GPU': '$3,000–3,450', 'القدرة المقدّرة': '700 W', 'NVLink': 'الجسر مدعوم' },
             { 'التكوين': '2× RTX 4090 (مستعملة)', 'VRAM': '48 GB', 'سعر GPU': '$5,150–6,020', 'القدرة المقدّرة': '900 W', 'NVLink': 'لا' },
-            { 'التكوين': '1× RTX 5090 (جديدة)', 'VRAM': '32 GB', 'سعر GPU': '$4,500–4,700', 'القدرة المقدّرة': '575 W', 'NVLink': 'لا' },
-            { 'التكوين': '2× RTX 5090 (جديدة)', 'VRAM': '64 GB', 'سعر GPU': '$9,000–9,400', 'القدرة المقدّرة': '1,150 W', 'NVLink': 'لا' },
+            { 'التكوين': '1× RTX 5090 (مستعملة)', 'VRAM': '32 GB', 'سعر GPU': '$5,660–6,200', 'القدرة المقدّرة': '575 W', 'NVLink': 'لا' },
+            { 'التكوين': '2× RTX 5090 (مستعملة)', 'VRAM': '64 GB', 'سعر GPU': '$11,320–12,400', 'القدرة المقدّرة': '1,150 W', 'NVLink': 'لا' },
             { 'التكوين': '1× RTX PRO 6000', 'VRAM': '96 GB', 'سعر GPU': 'نحو $16,000', 'القدرة المقدّرة': '600 W كحد أقصى', 'NVLink': 'لا ينطبق' },
           ],
           columns: ['التكوين', 'VRAM', 'سعر GPU', 'القدرة المقدّرة', 'NVLink'],
@@ -1703,7 +1703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**سعر RTX PRO 6000:** أفاد موقع TweakTown في 2026-08-13 بأن NVIDIA أدرجت البطاقة بسعر $16,000, بعد أن كان $8,565 عند الإطلاق. وتحدد NVIDIA قدرتها القصوى بـ 600 W.',
           ],
           callouts: [
-            { type: '📌 نقطة رئيسية', text: 'أسعار GPU في هذا الجدول أرقام للسوق الأمريكية من المتتبّع أو من تقارير صحفية، وليست عروض أسعار: نطاقات البطاقات المستعملة وتقرير RTX PRO 6000 مؤرخة، أما نطاق التجزئة لبطاقة RTX 5090 الجديدة فلا يذكر المصدر له تاريخًا. تحقّق من القوائم الحالية، واقرأ [بطاقات GPU المستعملة لنماذج LLM المحلية](/ar/local-llms/used-gpus-for-local-llms) قبل شراء بطاقة مستعملة.' },
+            { type: '📌 نقطة رئيسية', text: 'أسعار GPU في هذا الجدول أرقام للسوق الأمريكية من المتتبّع أو من تقارير صحفية، وليست عروض أسعار: نطاقات البطاقات المستعملة مبيعات منفَّذة من أكتوبر أو نوفمبر 2026، وتقرير RTX PRO 6000 من أغسطس 2026. وقد قدّر المتتبّع نفسه سعر بطاقة RTX 5090 الجديدة المغلقة بنحو $4,500 في أغسطس 2026، وهو رقم أقدم لا يستخدمه الجدول. تحقّق من القوائم الحالية، واقرأ [بطاقات GPU المستعملة لنماذج LLM المحلية](/ar/local-llms/used-gpus-for-local-llms) قبل شراء بطاقة مستعملة.' },
           ],
         },
         'cooling': {
@@ -1774,11 +1774,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**خلط طرازات GPU.** يوزّع التوازي الموتّري في vLLM الأوزان بالتساوي، فتحدّ البطاقة الأقل ذاكرة من قدرة الزوج. اشترِ بطاقتين متطابقتين.',
             '**شراء 128 GB من DDR5 أولًا.** النموذج الموجود في VRAM لا يحتاج إليها، وكانت أسعار DDR5 ترتفع في 2026. ابدأ بـ 64 GB.',
             '**تحديد حجم مزود الطاقة من بطاقة واحدة.** رقم NVIDIA البالغ 850 W لـ RTX 4090 هو لبطاقة واحدة. اجمع البطاقتين والمعالج ثم أضف هامشًا.',
-            '**إغفال الكهرباء من التكلفة.** تشغيل 900 W باستمرار يعني 7,884 kWh في السنة: نحو $1,180 بسعر افتراضي قدره $0.15/kWh ونحو $2,760 بسعر $0.35/kWh. والاستهلاك الفعلي أثناء الاستدلال أقل عادةً من القدرة المقدّرة، وقلّما تعمل محطة العمل 24 ساعة على مدار الأسبوع، لذا اعتبر هذا حدًا أعلى.',
+            '**إغفال الكهرباء من التكلفة.** بطاقتا RTX 4090 وحدهما، بقدرتهما المقدّرة 900 W وبتشغيل مستمر، تعنيان 7,884 kWh في السنة: نحو $1,180 بسعر افتراضي قدره $0.15/kWh ونحو $2,760 بسعر $0.35/kWh. ويُضاف إلى ذلك استهلاك المعالج وبقية الجهاز؛ والاستهلاك الفعلي أثناء الاستدلال أقل عادةً من القدرة المقدّرة، وقلّما تعمل محطة العمل على مدار الساعة، لذا قِس استهلاكك.',
             '**شراء بطاقات مستعملة دون اختبار.** قد لا يكون لبطاقات GPU المستعملة ضمان وقد يكون بها تآكل؛ اختبر البطاقتين تحت الحِمل في الأيام الأولى.',
           ],
           callouts: [
-            { type: '⚠️ تحذير', text: 'البطاقة الثانية لا ترفع سرعة نموذج يتسع أصلًا في بطاقة واحدة؛ إنما ترفع حجم النموذج الذي يمكنك تحميله. جرّب أولًا إعدادًا ببطاقة واحدة أو بتفريغ جزء من النموذج إلى المعالج (offload).' },
+            { type: '⚠️ تحذير', text: 'لا تتوقع أن تسرّع بطاقة ثانية محادثة واحدة مع نموذج يتسع أصلًا في بطاقة واحدة؛ فمكسبها الأساسي هو حجم النموذج الذي يمكنك تحميله (أما خدمة عدة مستخدمين على دفعات بالتوازي الموتّري فحالة مختلفة). جرّب أولًا إعدادًا ببطاقة واحدة أو بتفريغ جزء من النموذج إلى المعالج (offload).' },
           ],
         },
         'faqSection': {
@@ -1790,11 +1790,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'هل أحتاج إلى Threadripper أم يكفي Ryzen 9؟', a: "للاستدلال تكفي منصة Ryzen المكتبية عندما تشغّل اللوحة البطاقتين بسرعة x8/x8 وتتسع لبطاقتين كبيرتين؛ ويستخدم [تجميع ببطاقتي GPU بـ $2,700](/ar/local-llms/local-llm-pc-build-2000) هذا التخطيط. ويضيف Threadripper ما يصل إلى 80 مسار PCIe 5.0 وذاكرة رباعية القنوات وأنوية أكثر للأعمال على جانب المعالج، بسعري إطلاق $1,499 (9960X) أو $2,499 (9970X) واستهلاك TDP بقدرة 350 W." },
             { q: 'هل أستخدم NVLink لربط بطاقتي GPU؟', a: "لا يمكنك ذلك في RTX 4090 أو RTX 5090: فـ NVIDIA لا تذكر وجود NVLink في أي منهما. وتدعم RTX 3090 جسرًا، لكن llama.cpp وOllama وvLLM تقسّم النموذج عبر PCIe من دونه، ويعتمد مكسب NVLink على المحرّك وحجم الدفعة." },
             { q: 'هل تشغّل بطاقة RTX 5090 واحدة نموذج 70B؟', a: "ليس بالكامل في VRAM. تبلغ سعة RTX 5090 ما قدره 32 GB وملف Llama 3.3 70B بتكميم Q4 حجمه 43 GB، فيعمل نحو 11 GB أو أكثر من ذاكرة النظام RAM، وهذا أبطأ بكثير. أما نموذج من فئة 32B بتكميم Q4 (نحو 20 GB) فيتسع في بطاقة واحدة." },
-            { q: 'بطاقتا RTX 3090 أم بطاقتا RTX 4090؟', a: "كلاهما يعطي 48 GB. في بيانات InsiderLLM عن المبيعات المنفَّذة في السوق الأمريكية (RTX 3090: من 13 إلى 23 نوفمبر 2026؛ RTX 4090: أكتوبر 2026) تبلغ تكلفة الزوج نحو $3,000–3,450 (RTX 3090 مستعملة) مقابل $5,150–6,020 (RTX 4090 مستعملة). تعالج RTX 4090 المطالبات أسرع في اختبارات llama.cpp التي أبلغ عنها المطورون (11,993 مقابل 5,175 tok/s في اختبار نموذج 7B)، وتستهلك 900 W مقابل 700 W للزوج، ولا تدعم NVLink؛ أما RTX 3090 فتدعم جسرًا. وقد لا يكون للبطاقات المستعملة ضمان." },
+            { q: 'بطاقتا RTX 3090 أم بطاقتا RTX 4090؟', a: "كلاهما يعطي 48 GB. في بيانات InsiderLLM عن المبيعات المنفَّذة في السوق الأمريكية (RTX 3090: من 13 إلى 23 نوفمبر 2026؛ RTX 4090: أكتوبر 2026) تبلغ تكلفة الزوج نحو $3,000–3,450 (RTX 3090 مستعملة) مقابل $5,150–6,020 (RTX 4090 مستعملة). تعالج RTX 4090 المطالبات أسرع في اختبارات llama.cpp التي أبلغ عنها المطورون (11,993 مقابل 5,175 tok/s في اختبار نموذج 7B)، وتبلغ القدرة المقدّرة لزوجها 900 W مقابل 700 W، ولا تدعم NVLink؛ أما RTX 3090 فتدعم جسرًا. وقد لا يكون للبطاقات المستعملة ضمان." },
             { q: 'هل أشتري محطة عمل جاهزة أم أجمّعها بنفسي؟', a: "يتيح لك التجميع اختيار كل قطعة لكنه يترك لك فحص التوافق وتتبع الأسعار والضمان؛ أما الجهاز الجاهز فيعطيك بائعًا واحدًا تتصل به. وأيًّا اخترت، قارن VRAM لكل بطاقة وفي المجموع، ومسارات PCIe لكل فتحة، وقدرة مزود الطاقة مقابل مجموع القدرات المقدّرة لبطاقات GPU، والتبريد. وأجهزة الذاكرة الموحّدة مثل Mac Studio خيار ثالث." },
             { q: 'كم تستهلك محطة عمل ببطاقتي GPU من الكهرباء؟', a: "القدرة المقدّرة للبطاقتين من 700 W (2× RTX 3090) إلى 900 W (2× RTX 4090) إضافة إلى 350 W لمعالج Threadripper. وعند 900 W باستمرار تبلغ السنة 7,884 kWh؛ اضرب ذلك في تعرفة الكهرباء لديك. والاستهلاك الفعلي أثناء الاستدلال أقل عادةً من القدرة المقدّرة واستهلاك الخمول أقل بكثير، فقِس بجهاز قياس طاقة يوصَل بالمقبس." },
             { q: 'متى تكون محطة العمل أرخص من استئجار بطاقات GPU سحابية؟', a: "ساعات التعادل تساوي سعر الشراء مقسومًا على سعر الساعة السحابي مطروحًا منه تكلفة الكهرباء لديك في الساعة. وكلما قلّت الساعات التي تشغّل فيها الجهاز كل شهر طال زمن الوصول إلى التعادل. استخدم الأسعار الحالية في [حاسبة البناء مقابل الإيجار](/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026) و[مقارنة GPU السحابية](/ar/local-llms/cloud-gpu-rental-comparison-2026)." },
-            { q: 'هل هذا وقت مناسب لشراء بطاقات GPU وذاكرة RAM؟', a: "الأسعار متقلبة. يدرج المتتبّع بطاقة RTX 5090 الجديدة بسعر التجزئة الأمريكي بنحو $4,500–4,700، دون تاريخ لهذا النطاق، مقابل سعر توصية مصنّع قدره $1,999 (MSRP)، وأفاد Hardware Busters بارتفاع DDR5 بنحو 500% خلال عام (2026-08-18)، وأفاد TweakTown بأن RTX PRO 6000 بسعر $16,000, بعد أن كان $8,565 عند الإطلاق (2026-08-13). ولا أحد يستطيع الوعد باتجاه الأسعار. اشترِ بحسب حجم النموذج الذي تحتاجه الآن، وفكّر في الاستئجار ما دامت الأسعار مرتفعة." },
+            { q: 'هل هذا وقت مناسب لشراء بطاقات GPU وذاكرة RAM؟', a: "الأسعار متقلبة. يقدّر InsiderLLM سعر RTX 5090 المستعملة بـ $5,660–6,200 (الوسيط $6,000؛ 111 عملية بيع منفَّذة على eBay الأمريكي، 6–25 نوفمبر 2026)، مقابل سعر توصية مصنّع قدره $1,999 (MSRP)، وأفاد Hardware Busters بارتفاع DDR5 بنحو 500% خلال عام (2026-08-18)، وأفاد TweakTown بأن RTX PRO 6000 بسعر $16,000, بعد أن كان $8,565 عند الإطلاق (2026-08-13). ولا أحد يستطيع الوعد باتجاه الأسعار. اشترِ بحسب حجم النموذج الذي تحتاجه الآن، وفكّر في الاستئجار ما دامت الأسعار مرتفعة." },
           ],
         },
         'relatedReading': {
@@ -1822,7 +1822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — قدرة اللوحة ودعم جسر NVLink.',
             '[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — ذاكرة 96 GB وقدرة قصوى 600 W.',
             '[دليل InsiderLLM لبطاقات GPU المستعملة](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — أسعار RTX 3090 المستعملة: 225 عملية بيع منفَّذة على eBay الأمريكي، 13–23 نوفمبر 2026.',
-            '[متتبّع أسعار GPU من InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — مبيعات RTX 4090 المستعملة (أكتوبر 2026) ونطاق التجزئة الأمريكي غير المؤرخ لبطاقة RTX 5090 الجديدة (تمت المراجعة في 2026-11-27).',
+            '[متتبّع أسعار GPU من InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — مبيعات RTX 4090 المستعملة (أكتوبر 2026) وRTX 5090 المستعملة (6–25 نوفمبر 2026)، تمت المراجعة في 2026-11-28.',
             '[لوحة نتائج llama.cpp لـ CUDA، النقاش 15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — سرعات التوليد ومعالجة المطالبات لنموذج 7B كما أبلغ عنها المطورون.',
             "[Tom's Hardware: إطلاق Threadripper 9000](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — أسعار الإطلاق واستهلاك TDP بقدرة 350 W ومسارات PCIe.",
             '[Hardware Busters: ارتفاع أسعار DDR5 بنسبة 500%](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — تقرير أسعار الذاكرة بتاريخ 2026-08-18.',
@@ -1841,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-workstation-build-overview-hero-pt.webp',
       dateModified: '2026-11-28',
       seoTitle: 'Estação de trabalho para LLM local 2026: GPU, RAM, custo',
-      intro: "Nas vendas concluídas nos EUA em outubro de 2026 (rastreador da InsiderLLM), duas RTX 4090 usadas custam cerca de $5,150–6,020, só as GPUs. Uma montagem com Threadripper soma a CPU (a partir de $1,499 no preço de lançamento da AMD), memória DDR5 registrada, uma fonte de 1,300–1,600 W, refrigeração e armazenamento, então uma máquina completa começa acima de $4,500.",
+      intro: 'Duas RTX 3090 usadas custam cerca de $3,000–3,450 nas vendas concluídas no eBay dos EUA de 13 a 23 de novembro de 2026, e duas RTX 4090 usadas cerca de $5,150–6,020 (outubro de 2026, InsiderLLM). Com o par de 3090 e um Threadripper 9960X ($1,499 no preço de lançamento da AMD), só as GPUs e a CPU já começam perto de $4,500, antes de placa-mãe, memória DDR5 registrada, fonte de 1,300–1,600 W, refrigeração, armazenamento e gabinete.',
       metaDescription: 'Monte uma estação de trabalho para LLM local: 48 GB de VRAM para modelos 70B, 64 GB de RAM, fonte e preços de 2026 com fonte para RTX 3090, 4090 e 5090.',
       publishDate: '2026-04-05',
       leadAnswerBlock: "**Uma estação de trabalho de LLM local para 70B precisa de uns 48 GB de memória de GPU: o Llama 3.3 70B tem 43 GB em Q4; uma placa de 24 GB não basta, duas sim. Segundo os dados da InsiderLLM sobre vendas concluídas no eBay dos EUA de 13 a 23 de novembro de 2026, duas RTX 3090 usadas custam cerca de $3,000–3,450.**",
@@ -1871,7 +1871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'Meta de VRAM: o Llama 3.3 70B em Q4 é um [download de 43 GB](https://ollama.com/library/llama3.3), então planeje 48 GB de memória de GPU (duas placas de 24 GB) e espere sobrar cerca de 5 GB para o contexto.',
-            'GPUs: duas RTX 3090 usadas (cerca de $1,500–1,725 cada, vendas nos EUA de 13 a 23 de novembro de 2026) são o caminho de 48 GB mais barato nos dados rastreados; duas RTX 4090 usadas custam cerca de $2,575–3,010 cada (vendas nos EUA, outubro de 2026); duas RTX 5090 novas (cerca de $4,500–4,700 cada no varejo dos EUA; a fonte não informa a data dessa faixa) dão 64 GB.',
+            'GPUs: duas RTX 3090 usadas (cerca de $1,500–1,725 cada, vendas nos EUA de 13 a 23 de novembro de 2026) são o caminho de 48 GB mais barato nos dados rastreados; duas RTX 4090 usadas custam cerca de $2,575–3,010 cada (vendas nos EUA, outubro de 2026); duas RTX 5090 usadas (cerca de $5,660–6,200 cada, vendas nos EUA de 6 a 25 de novembro de 2026) dão 64 GB.',
             'NVLink: a NVIDIA não lista NVLink na [RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) nem na [RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/); a RTX 3090 aceita uma ponte. llama.cpp, Ollama e vLLM dividem um modelo entre GPUs via PCIe sem ela.',
             'CPU: um Threadripper 9960X ($1,499 de preço de lançamento) ou 9970X ($2,499) em TRX50 oferece até 80 lanes PCIe 5.0; uma placa-mãe Ryzen com dois slots x8 também roda duas GPUs.',
             'RAM: 64 GB bastam quando o modelo fica na VRAM. A Hardware Busters informou que os preços da DDR5 subiram cerca de 500% nos 12 meses até agosto de 2026 e que um kit de 128 GB apareceu a $3,399, então compre 64 GB primeiro.',
@@ -1903,7 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: 'Lista de peças com duas GPUs e preços com fonte',
-          content: "**Só as GPUs e a CPU já começam perto de $4,500: duas RTX 3090 usadas ($3,000–3,450) mais um Threadripper 9960X ($1,499 no preço de lançamento da AMD), antes de placa-mãe, memória, fonte, refrigeração, armazenamento e gabinete.** A PromptQuorum não montou nem testou esta configuração. Os preços das GPUs vêm da InsiderLLM (mercado dos EUA): a RTX 3090 usada, do [guia de compra de GPUs usadas](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (mediana de $1,650; 225 vendas concluídas no eBay dos EUA, 13–23 de novembro de 2026); a RTX 4090 usada, do [rastreador de preços](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 vendas, outubro de 2026); e a faixa de varejo da RTX 5090 nova, do mesmo rastreador, que não informa a data; os preços das CPUs são preços de lançamento da AMD divulgados pela [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999); as peças sem preço rastreado indicam isso. Todos os preços são em dólares americanos de anúncios dos EUA; preços e disponibilidade variam em outros países, e no Brasil os preços podem variar bastante devido a impostos de importação.",
+          content: "**Só as GPUs e a CPU já começam perto de $4,500: duas RTX 3090 usadas ($3,000–3,450) mais um Threadripper 9960X ($1,499 no preço de lançamento da AMD), antes de placa-mãe, memória, fonte, refrigeração, armazenamento e gabinete.** A PromptQuorum não montou nem testou esta configuração. Os preços das GPUs vêm da InsiderLLM (mercado dos EUA): a RTX 3090 usada, do [guia de compra de GPUs usadas](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) (mediana de $1,650; 225 vendas concluídas no eBay dos EUA, 13–23 de novembro de 2026); a RTX 4090 usada, do [rastreador de preços](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (216 vendas, outubro de 2026); e a RTX 5090 usada, do mesmo rastreador (111 vendas concluídas no eBay dos EUA, 6–25 de novembro de 2026); os preços das CPUs são preços de lançamento da AMD divulgados pela [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999); as peças sem preço rastreado indicam isso. Todos os preços são em dólares americanos de anúncios dos EUA; preços e disponibilidade variam em outros países, e no Brasil os preços podem variar bastante devido a impostos de importação.",
           rows: [
             { 'Componente': 'GPUs', 'Escolha': '2× RTX 3090 24 GB usadas', 'Preço': '$3,000–3,450', 'Por quê': 'Pool de 48 GB; ponte NVLink suportada' },
             { 'Componente': 'GPUs (alternativa)', 'Escolha': '2× RTX 4090 24 GB usadas', 'Preço': '$5,150–6,020', 'Por quê': 'Processamento de prompt mais rápido; sem NVLink' },
@@ -1948,12 +1948,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'RTX 3090, 4090, 5090 e RTX PRO 6000 comparadas',
-          content: "**Para 48 GB, as RTX 3090 usadas são o par mais barato nos dados rastreados; duas RTX 5090 chegam a 64 GB por cerca de 2.6 a 3.1 vezes esse preço, e uma RTX PRO 6000 chega a 96 GB em uma única placa.** As potências nominais são a potência da placa informada pela NVIDIA para cada modelo.",
+          content: "**Para 48 GB, as RTX 3090 usadas são o par mais barato nos dados rastreados; duas RTX 5090 chegam a 64 GB por cerca de 3.3 a 4.1 vezes esse preço, e uma RTX PRO 6000 chega a 96 GB em uma única placa.** As potências nominais são a potência da placa informada pela NVIDIA para cada modelo.",
           rows: [
             { 'Configuração': '2× RTX 3090 (usadas)', 'VRAM': '48 GB', 'Preço das GPUs': '$3,000–3,450', 'Potência nominal': '700 W', 'NVLink': 'Ponte suportada' },
             { 'Configuração': '2× RTX 4090 (usadas)', 'VRAM': '48 GB', 'Preço das GPUs': '$5,150–6,020', 'Potência nominal': '900 W', 'NVLink': 'Não' },
-            { 'Configuração': '1× RTX 5090 (nova)', 'VRAM': '32 GB', 'Preço das GPUs': '$4,500–4,700', 'Potência nominal': '575 W', 'NVLink': 'Não' },
-            { 'Configuração': '2× RTX 5090 (novas)', 'VRAM': '64 GB', 'Preço das GPUs': '$9,000–9,400', 'Potência nominal': '1,150 W', 'NVLink': 'Não' },
+            { 'Configuração': '1× RTX 5090 (usada)', 'VRAM': '32 GB', 'Preço das GPUs': '$5,660–6,200', 'Potência nominal': '575 W', 'NVLink': 'Não' },
+            { 'Configuração': '2× RTX 5090 (usadas)', 'VRAM': '64 GB', 'Preço das GPUs': '$11,320–12,400', 'Potência nominal': '1,150 W', 'NVLink': 'Não' },
             { 'Configuração': '1× RTX PRO 6000', 'VRAM': '96 GB', 'Preço das GPUs': 'Cerca de $16,000', 'Potência nominal': '600 W no máximo', 'NVLink': 'Não se aplica' },
           ],
           columns: ['Configuração', 'VRAM', 'Preço das GPUs', 'Potência nominal', 'NVLink'],
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Preço da RTX PRO 6000:** a TweakTown informou em 2026-08-13 que a NVIDIA listou a placa a $16,000, contra $8,565 no lançamento. A NVIDIA indica 600 W de potência máxima.',
           ],
           callouts: [
-            { type: '📌 Ponto-chave', text: 'Os preços de GPU desta tabela são números do mercado dos EUA vindos de rastreadores ou da imprensa, e não cotações: as faixas de placas usadas e a notícia sobre a RTX PRO 6000 têm data, mas a fonte não informa a data da faixa de varejo da RTX 5090 nova. Confira os anúncios atuais e leia [GPUs usadas para LLMs locais](/pt/local-llms/used-gpus-for-local-llms) antes de comprar uma placa usada.' },
+            { type: '📌 Ponto-chave', text: 'Os preços de GPU desta tabela são números do mercado dos EUA vindos de rastreadores ou da imprensa, e não cotações: as faixas de placas usadas são vendas concluídas de outubro ou novembro de 2026 e a notícia sobre a RTX PRO 6000 é de agosto de 2026. O mesmo rastreador colocava as RTX 5090 novas lacradas em cerca de $4,500 em agosto de 2026, um número mais antigo que a tabela não usa. Confira os anúncios atuais e leia [GPUs usadas para LLMs locais](/pt/local-llms/used-gpus-for-local-llms) antes de comprar uma placa usada.' },
           ],
         },
         'cooling': {
@@ -2034,11 +2034,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Misturar modelos de GPU.** O paralelismo de tensores do vLLM divide os pesos por igual, então a placa com menos memória limita o par. Compre placas idênticas.',
             '**Comprar 128 GB de DDR5 primeiro.** Um modelo que fica na VRAM não precisa disso, e os preços da DDR5 estavam subindo em 2026. Comece com 64 GB.',
             '**Dimensionar a fonte a partir de uma placa só.** O número de 850 W da NVIDIA para a RTX 4090 vale para uma placa. Some as duas placas e a CPU e depois acrescente folga.',
-            '**Deixar a eletricidade fora do custo.** 900 W em uso contínuo dão 7,884 kWh por ano: cerca de $1,180 a uma tarifa de exemplo de $0.15/kWh e cerca de $2,760 a $0.35/kWh. O consumo real durante a inferência costuma ficar abaixo da potência nominal e uma workstation raramente roda 24 horas por dia, então trate isso como um limite superior.',
+            '**Deixar a eletricidade fora do custo.** Só as duas RTX 4090, na potência nominal de 900 W em uso contínuo, dão 7,884 kWh por ano: cerca de $1,180 a uma tarifa de exemplo de $0.15/kWh e cerca de $2,760 a $0.35/kWh. A CPU e o resto da máquina vêm por cima; o consumo real na inferência costuma ficar abaixo do nominal e uma workstation raramente roda 24 horas por dia, então meça o seu.',
             '**Comprar placas usadas sem testar.** Placas usadas podem não ter garantia e ter desgaste; teste as duas sob carga nos primeiros dias.',
           ],
           callouts: [
-            { type: '⚠️ Aviso', text: 'Uma segunda placa não aumenta a velocidade de um modelo que já cabe em uma só; ela aumenta o tamanho do modelo que você consegue carregar. Experimente primeiro uma configuração com uma placa ou com offload.' },
+            { type: '⚠️ Aviso', text: 'Não espere que uma segunda placa acelere uma única conversa com um modelo que já cabe em uma só; o principal ganho é o tamanho do modelo que você consegue carregar (atender vários usuários em lote com paralelismo de tensores é outro caso). Experimente primeiro uma configuração com uma placa ou com offload.' },
           ],
         },
         'faqSection': {
@@ -2050,11 +2050,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Preciso de um Threadripper ou um Ryzen 9 basta?', a: "Para inferência, uma plataforma Ryzen de desktop basta quando a placa-mãe roda as duas GPUs em x8/x8 e tem espaço para duas placas grandes; a [montagem com duas GPUs de $2,700](/pt/local-llms/local-llm-pc-build-2000) usa esse layout. Um Threadripper traz até 80 lanes PCIe 5.0, memória de quatro canais e mais núcleos para trabalho na CPU, a preços de lançamento de $1,499 (9960X) ou $2,499 (9970X) e um TDP de 350 W." },
             { q: 'Devo usar NVLink para juntar duas GPUs?', a: "Na RTX 4090 ou na RTX 5090 você não pode: a NVIDIA não lista NVLink em nenhuma das duas. A RTX 3090 aceita uma ponte, mas llama.cpp, Ollama e vLLM dividem um modelo via PCIe sem ela, e o ganho do NVLink depende do engine e do tamanho do lote." },
             { q: 'Uma RTX 5090 roda um modelo 70B?', a: "Não inteiramente na VRAM. A RTX 5090 tem 32 GB e o arquivo do Llama 3.3 70B Q4 tem 43 GB, então cerca de 11 GB ou mais rodam a partir da RAM do sistema, que é bem mais lenta. Um modelo da classe 32B em Q4 (cerca de 20 GB) cabe em uma placa." },
-            { q: 'Duas RTX 3090 ou duas RTX 4090?', a: "As duas dão 48 GB. Nos dados da InsiderLLM sobre vendas nos EUA (RTX 3090: 13–23 de novembro de 2026; RTX 4090: outubro de 2026), o par custa cerca de $3,000–3,450 (RTX 3090, usada) contra $5,150–6,020 (RTX 4090, usada). A RTX 4090 processa prompts mais rápido em testes do llama.cpp reportados por desenvolvedores (11,993 contra 5,175 tok/s em um teste com 7B), consome 900 W contra 700 W do par e não tem NVLink; a RTX 3090 aceita uma ponte. Placas usadas podem não ter garantia." },
+            { q: 'Duas RTX 3090 ou duas RTX 4090?', a: "As duas dão 48 GB. Nos dados da InsiderLLM sobre vendas nos EUA (RTX 3090: 13–23 de novembro de 2026; RTX 4090: outubro de 2026), o par custa cerca de $3,000–3,450 (RTX 3090, usada) contra $5,150–6,020 (RTX 4090, usada). A RTX 4090 processa prompts mais rápido em testes do llama.cpp reportados por desenvolvedores (11,993 contra 5,175 tok/s em um teste com 7B), como par tem potência nominal de 900 W contra 700 W e não tem NVLink; a RTX 3090 aceita uma ponte. Placas usadas podem não ter garantia." },
             { q: 'Devo comprar uma workstation pronta ou montar uma?', a: "Montar permite escolher cada peça, mas deixa com você a verificação de compatibilidade, o acompanhamento de preços e a garantia; uma máquina pronta dá um único vendedor para acionar. Qualquer que seja a escolha, compare a VRAM por placa e no total, as lanes PCIe por slot, a potência da fonte em relação à soma das potências das GPUs e a refrigeração. Máquinas de memória unificada, como o Mac Studio, são uma terceira opção." },
             { q: 'Quanta energia elétrica uma workstation com duas GPUs consome?', a: "A potência nominal é de 700 W (2× RTX 3090) a 900 W (2× RTX 4090) para as placas, mais 350 W de um Threadripper. A 900 W contínuos, um ano dá 7,884 kWh; multiplique pela sua tarifa. O consumo real na inferência costuma ficar abaixo da potência nominal e o consumo em repouso é bem menor, então meça com um medidor de energia de tomada." },
             { q: 'Quando uma workstation sai mais barata do que alugar GPUs na nuvem?', a: "As horas de ponto de equilíbrio são iguais ao preço de compra dividido pelo preço por hora na nuvem menos o seu custo de eletricidade por hora. Quanto menos horas você usa por mês, mais demora o ponto de equilíbrio. Use as tarifas atuais na [calculadora de montar versus alugar](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026) e na [comparação de GPUs na nuvem](/pt/local-llms/cloud-gpu-rental-comparison-2026)." },
-            { q: 'Agora é um bom momento para comprar GPUs e RAM?', a: "Os preços são voláteis. O rastreador lista a RTX 5090 nova no varejo dos EUA em torno de $4,500–4,700, sem data para essa faixa, contra um preço sugerido de $1,999; a Hardware Busters informou a DDR5 cerca de 500% mais cara em um ano (2026-08-18) e a TweakTown informou a RTX PRO 6000 a $16,000, contra $8,565 no lançamento (2026-08-13). Ninguém pode prometer a direção. Compre para o tamanho de modelo de que você precisa agora e considere alugar enquanto os preços estiverem altos." },
+            { q: 'Agora é um bom momento para comprar GPUs e RAM?', a: "Os preços são voláteis. A InsiderLLM coloca a RTX 5090 usada em $5,660–6,200 (mediana de $6,000; 111 vendas concluídas no eBay dos EUA, 6–25 de novembro de 2026), contra um preço sugerido de $1,999; a Hardware Busters informou a DDR5 cerca de 500% mais cara em um ano (2026-08-18) e a TweakTown informou a RTX PRO 6000 a $16,000, contra $8,565 no lançamento (2026-08-13). Ninguém pode prometer a direção. Compre para o tamanho de modelo de que você precisa agora e considere alugar enquanto os preços estiverem altos." },
           ],
         },
         'relatedReading': {
@@ -2082,7 +2082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — potência da placa e suporte a ponte NVLink.',
             '[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — 96 GB de memória e 600 W de potência máxima.',
             '[Guia da InsiderLLM de GPUs usadas](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — preços da RTX 3090 usada: 225 vendas concluídas no eBay dos EUA, 13–23 de novembro de 2026.',
-            '[Rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — vendas de RTX 4090 usadas (outubro de 2026) e faixa de varejo sem data, nos EUA, da RTX 5090 nova (consultado em 2026-11-27).',
+            '[Rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — vendas de RTX 4090 usadas (outubro de 2026) e de RTX 5090 usadas (6–25 de novembro de 2026), consultado em 2026-11-28.',
             '[Placar CUDA do llama.cpp, discussão 15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — velocidades de geração e de processamento de prompt com 7B reportadas por desenvolvedores.',
             '[Tom\'s Hardware: lançamento do Threadripper 9000](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — preços de lançamento, TDP de 350 W, lanes PCIe.',
             '[Hardware Busters: preços de DDR5 sobem 500%](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — relatório de preços de memória de 2026-08-18.',
@@ -2101,7 +2101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-workstation-build-overview-hero-ko.webp',
       dateModified: '2026-11-28',
       seoTitle: '로컬 LLM 워크스테이션 구축 2026: GPU·RAM·PSU·비용',
-      intro: "2026년 10월 미국 판매 완료 기준(InsiderLLM 트래커)으로 중고 RTX 4090 두 장은 약 $5,150–6,020이며, 이는 GPU만의 가격입니다. Threadripper 구성에는 CPU(AMD 출시가 기준 $1,499부터), 레지스터드 DDR5 메모리, 1,300–1,600 W 파워 서플라이, 쿨링, 스토리지가 추가되므로 완성된 시스템은 $4,500 이상에서 시작합니다.",
+      intro: '2026년 11월 13~23일 미국 eBay 판매 완료 기준으로 중고 RTX 3090 두 장은 약 $3,000–3,450, 중고 RTX 4090 두 장은 약 $5,150–6,020입니다(2026년 10월, InsiderLLM). 3090 두 장과 Threadripper 9960X(AMD 출시가 $1,499)를 기준으로 GPU와 CPU만으로 $4,500 근처에서 시작하며, 메인보드, 레지스터드 DDR5 메모리, 1,300–1,600 W 파워 서플라이, 쿨링, 스토리지, 케이스는 별도입니다.',
       metaDescription: '70B 모델용 로컬 LLM 워크스테이션 구축 가이드: VRAM 48 GB, RAM 64 GB, PSU 산정, 듀얼 RTX 3090·4090·5090 구성의 출처 있는 2026년 가격.',
       publishDate: '2026-04-05',
       leadAnswerBlock: "**70B 모델용 로컬 LLM 워크스테이션에는 약 48 GB의 GPU 메모리가 필요합니다. Llama 3.3 70B의 Q4 다운로드 크기가 43 GB이므로 24 GB 카드 한 장으로는 올릴 수 없고, 두 장이면 가능합니다. InsiderLLM이 집계한 2026년 11월 13~23일 미국 eBay 판매 완료 기준으로 중고 RTX 3090 두 장은 약 $3,000–3,450입니다.**",
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'VRAM 목표: Q4의 Llama 3.3 70B는 [43 GB 다운로드](https://ollama.com/library/llama3.3)이므로 48 GB의 GPU 메모리(24 GB 카드 두 장)를 계획하시고, 컨텍스트에 쓸 여유는 약 5 GB로 예상하십시오.',
-            'GPU: 추적된 데이터에서는 중고 RTX 3090 두 장(장당 약 $1,500–1,725, 2026년 11월 13~23일 미국 판매 완료가)이 가장 저렴한 48 GB 구성입니다. 중고 RTX 4090 두 장은 장당 약 $2,575–3,010(미국 판매 완료, 2026년 10월)이고, 신품 RTX 5090 두 장(미국 소매가 장당 약 $4,500–4,700, 출처에 이 가격대의 날짜는 없습니다)은 64 GB를 제공합니다.',
+            'GPU: 추적된 데이터에서는 중고 RTX 3090 두 장(장당 약 $1,500–1,725, 2026년 11월 13~23일 미국 판매 완료가)이 가장 저렴한 48 GB 구성입니다. 중고 RTX 4090 두 장은 장당 약 $2,575–3,010(미국 판매 완료, 2026년 10월)이고, 중고 RTX 5090 두 장(장당 약 $5,660–6,200, 2026년 11월 6~25일 미국 판매 완료가)은 64 GB를 제공합니다.',
             'NVLink: NVIDIA는 [RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)과 [RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)에 NVLink를 명시하지 않으며, RTX 3090은 브리지를 지원합니다. llama.cpp, Ollama, vLLM은 NVLink 없이도 PCIe로 모델을 여러 GPU에 나눕니다.',
             'CPU: TRX50 플랫폼의 Threadripper 9960X(출시가 $1,499) 또는 9970X($2,499)는 최대 80개의 PCIe 5.0 레인을 제공합니다. x8 슬롯 두 개를 갖춘 Ryzen 데스크톱 보드로도 GPU 두 장을 구동할 수 있습니다.',
             'RAM: 모델이 VRAM에 올라간다면 64 GB로 충분합니다. Hardware Busters는 DDR5 가격이 2026년 8월까지 12개월간 약 500% 올랐고 128 GB 키트 하나가 $3,399에 등록되었다고 보도했으므로, 먼저 64 GB를 구매하십시오.',
@@ -2163,7 +2163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'parts-list': {
           id: 'parts-list',
           title: '출처가 있는 가격의 듀얼 GPU 부품 목록',
-          content: "**GPU와 CPU만으로도 $4,500 근처에서 시작합니다. 중고 RTX 3090 두 장($3,000–3,450)과 Threadripper 9960X(AMD 출시가 $1,499)를 합한 금액이며, 메인보드, 메모리, PSU, 쿨링, 스토리지, 케이스는 제외한 값입니다.** PromptQuorum은 이 구성을 직접 조립하거나 벤치마크하지 않았습니다. GPU 가격은 InsiderLLM(미국 시장) 자료입니다. 중고 RTX 3090은 [중고 GPU 구매 가이드](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)(중앙값 $1,650, 미국 eBay 판매 완료 225건, 2026년 11월 13~23일), 중고 RTX 4090은 [가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(판매 완료 216건, 2026년 10월), 신품 RTX 5090 소매 가격대는 같은 트래커의 값이며 날짜는 표시되어 있지 않습니다. CPU 가격은 [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999)가 보도한 AMD 출시가에서 가져왔으며, 추적된 가격이 없는 부품은 그렇게 표시했습니다. 모든 가격은 미국 매물 기준의 미국 달러이며, 다른 국가에서는 가격과 구매 가능 여부가 다릅니다.",
+          content: "**GPU와 CPU만으로도 $4,500 근처에서 시작합니다. 중고 RTX 3090 두 장($3,000–3,450)과 Threadripper 9960X(AMD 출시가 $1,499)를 합한 금액이며, 메인보드, 메모리, PSU, 쿨링, 스토리지, 케이스는 제외한 값입니다.** PromptQuorum은 이 구성을 직접 조립하거나 벤치마크하지 않았습니다. GPU 가격은 InsiderLLM(미국 시장) 자료입니다. 중고 RTX 3090은 [중고 GPU 구매 가이드](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/)(중앙값 $1,650, 미국 eBay 판매 완료 225건, 2026년 11월 13~23일), 중고 RTX 4090은 [가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(판매 완료 216건, 2026년 10월), 중고 RTX 5090은 같은 트래커(미국 eBay 판매 완료 111건, 2026년 11월 6~25일)의 값입니다. CPU 가격은 [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999)가 보도한 AMD 출시가에서 가져왔으며, 추적된 가격이 없는 부품은 그렇게 표시했습니다. 모든 가격은 미국 매물 기준의 미국 달러이며, 다른 국가에서는 가격과 구매 가능 여부가 다릅니다.",
           rows: [
             { '부품': 'GPU', '선택': '중고 RTX 3090 24 GB 2장', '가격': '$3,000–3,450', '이유': '48 GB 메모리 풀, NVLink 브리지 지원' },
             { '부품': 'GPU (대안)', '선택': '중고 RTX 4090 24 GB 2장', '가격': '$5,150–6,020', '이유': '더 빠른 프롬프트 처리, NVLink 없음' },
@@ -2208,12 +2208,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'gpu-pairs': {
           id: 'gpu-pairs',
           title: 'RTX 3090, 4090, 5090, RTX PRO 6000 비교',
-          content: "**48 GB 기준으로는 중고 RTX 3090 두 장이 추적된 데이터에서 가장 저렴한 조합입니다. RTX 5090 두 장은 약 2.6~3.1배 가격에 64 GB에 이르고, RTX PRO 6000 한 장은 단일 카드로 96 GB에 이릅니다.** 정격 전력은 각 카드에 대한 NVIDIA의 보드 전력입니다.",
+          content: "**48 GB 기준으로는 중고 RTX 3090 두 장이 추적된 데이터에서 가장 저렴한 조합입니다. RTX 5090 두 장은 약 3.3~4.1배 가격에 64 GB에 이르고, RTX PRO 6000 한 장은 단일 카드로 96 GB에 이릅니다.** 정격 전력은 각 카드에 대한 NVIDIA의 보드 전력입니다.",
           rows: [
             { '구성': 'RTX 3090 2장 (중고)', 'VRAM': '48 GB', 'GPU 가격': '$3,000–3,450', '정격 전력': '700 W', 'NVLink': '브리지 지원' },
             { '구성': 'RTX 4090 2장 (중고)', 'VRAM': '48 GB', 'GPU 가격': '$5,150–6,020', '정격 전력': '900 W', 'NVLink': '없음' },
-            { '구성': 'RTX 5090 1장 (신품)', 'VRAM': '32 GB', 'GPU 가격': '$4,500–4,700', '정격 전력': '575 W', 'NVLink': '없음' },
-            { '구성': 'RTX 5090 2장 (신품)', 'VRAM': '64 GB', 'GPU 가격': '$9,000–9,400', '정격 전력': '1,150 W', 'NVLink': '없음' },
+            { '구성': 'RTX 5090 1장 (중고)', 'VRAM': '32 GB', 'GPU 가격': '$5,660–6,200', '정격 전력': '575 W', 'NVLink': '없음' },
+            { '구성': 'RTX 5090 2장 (중고)', 'VRAM': '64 GB', 'GPU 가격': '$11,320–12,400', '정격 전력': '1,150 W', 'NVLink': '없음' },
             { '구성': 'RTX PRO 6000 1장', 'VRAM': '96 GB', 'GPU 가격': '약 $16,000', '정격 전력': '최대 600 W', 'NVLink': '해당 없음' },
           ],
           columns: ['구성', 'VRAM', 'GPU 가격', '정격 전력', 'NVLink'],
@@ -2223,7 +2223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**RTX PRO 6000 가격:** TweakTown은 2026-08-13에 NVIDIA가 이 카드를 $16,000, 즉 출시 당시 $8,565에서 오른 가격에 등록했다고 보도했습니다. NVIDIA는 이 카드의 최대 전력을 600 W로 표기합니다.',
           ],
           callouts: [
-            { type: '📌 핵심 포인트', text: '이 표의 GPU 가격은 트래커나 언론 보도에 나온 미국 시장 수치이며 견적이 아닙니다. 중고 카드 가격대와 RTX PRO 6000 보도에는 날짜가 있지만, 신품 RTX 5090 소매 가격대는 출처에 날짜가 없습니다. 현재 매물을 확인하시고, 중고 카드를 사기 전에 [로컬 LLM용 중고 GPU](/ko/local-llms/used-gpus-for-local-llms)를 읽어 보십시오.' },
+            { type: '📌 핵심 포인트', text: '이 표의 GPU 가격은 트래커나 언론 보도에 나온 미국 시장 수치이며 견적이 아닙니다. 중고 카드 가격대는 2026년 10월 또는 11월의 판매 완료가이고, RTX PRO 6000 보도는 2026년 8월 자료입니다. 같은 트래커는 2026년 8월에 미개봉 신품 RTX 5090을 약 $4,500로 제시했지만, 이 이전 수치는 표에 사용하지 않았습니다. 현재 매물을 확인하시고, 중고 카드를 사기 전에 [로컬 LLM용 중고 GPU](/ko/local-llms/used-gpus-for-local-llms)를 읽어 보십시오.' },
           ],
         },
         'cooling': {
@@ -2294,11 +2294,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**서로 다른 GPU 모델 혼용하기.** vLLM 텐서 병렬 처리는 가중치를 균등하게 샤딩하므로 메모리가 적은 카드가 한 쌍의 한계를 정합니다. 동일한 카드를 구매하십시오.',
             '**DDR5 128 GB를 먼저 사기.** VRAM에 올라가는 모델에는 필요하지 않으며 DDR5 가격은 2026년에 오르는 추세였습니다. 64 GB로 시작하십시오.',
             '**카드 한 장을 기준으로 PSU 산정하기.** RTX 4090에 대한 NVIDIA의 850 W 수치는 카드 한 장 기준입니다. 두 카드와 CPU를 모두 더한 다음 여유분을 더하십시오.',
-            '**전기 요금을 비용에서 빼기.** 900 W를 연속으로 가동하면 연간 7,884 kWh입니다. 예시 요금으로는 약 $1,180($0.15/kWh), 약 $2,760($0.35/kWh)입니다. 추론 중 실제 소비 전력은 보통 정격보다 낮고 워크스테이션을 24시간 가동하는 경우도 드물므로, 이 값은 상한으로 보십시오.',
+            '**전기 요금을 비용에서 빼기.** RTX 4090 두 장만 정격 900 W로 연속 가동해도 연간 7,884 kWh입니다. 예시 요금으로는 약 $1,180($0.15/kWh), 약 $2,760($0.35/kWh)입니다. CPU와 나머지 시스템 전력은 여기에 더해집니다. 추론 중 실제 소비 전력은 보통 정격보다 낮고 워크스테이션을 24시간 가동하는 경우도 드물므로 직접 측정하십시오.',
             '**중고 카드를 테스트 없이 사기.** 중고 GPU는 보증이 없을 수 있고 마모가 있으므로 처음 며칠 동안 두 카드를 부하 상태에서 테스트하십시오.',
           ],
           callouts: [
-            { type: '⚠️ 경고', text: '두 번째 카드는 이미 카드 한 장에 들어가는 모델의 속도를 높이지 않으며, 올릴 수 있는 모델의 크기를 키웁니다. 먼저 단일 카드 또는 오프로드 구성을 시도해 보십시오.' },
+            { type: '⚠️ 경고', text: '카드 한 장에 이미 들어가는 모델과의 단일 대화가 두 번째 카드로 빨라질 것이라고 기대하지 마십시오. 주된 이득은 올릴 수 있는 모델의 크기가 커지는 것입니다(텐서 병렬 처리로 여러 사용자를 배치 처리하는 경우는 다릅니다). 먼저 단일 카드 또는 오프로드 구성을 시도해 보십시오.' },
           ],
         },
         'faqSection': {
@@ -2310,11 +2310,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Threadripper가 꼭 필요합니까, 아니면 Ryzen 9으로 충분합니까?', a: "추론용으로는 보드가 두 GPU를 x8/x8로 구동하고 큰 카드 두 장이 들어갈 공간이 있다면 Ryzen 데스크톱 플랫폼으로 충분합니다. [듀얼 GPU $2,700 구성](/ko/local-llms/local-llm-pc-build-2000)이 이 구성을 사용합니다. Threadripper는 최대 80개의 PCIe 5.0 레인, 쿼드 채널 메모리, CPU 측 작업을 위한 더 많은 코어를 더해 주며, 출시가는 $1,499(9960X) 또는 $2,499(9970X), TDP는 350 W입니다." },
             { q: '두 GPU를 연결하려면 NVLink를 써야 합니까?', a: "RTX 4090이나 RTX 5090에서는 쓸 수 없습니다. NVIDIA는 두 카드 모두에 NVLink를 명시하지 않습니다. RTX 3090은 브리지를 지원하지만 llama.cpp, Ollama, vLLM은 브리지 없이도 PCIe로 모델을 나누며, NVLink로 얻는 이득은 엔진과 배치 크기에 따라 달라집니다." },
             { q: 'RTX 5090 한 장으로 70B 모델을 실행할 수 있습니까?', a: "전부 VRAM에서 실행하는 것은 불가능합니다. RTX 5090은 32 GB이고 Llama 3.3 70B Q4 파일은 43 GB이므로 약 11 GB 이상이 시스템 RAM에서 실행되어 훨씬 느립니다. Q4의 32B급 모델(약 20 GB)은 카드 한 장에 들어갑니다." },
-            { q: '듀얼 RTX 3090과 듀얼 RTX 4090 중 무엇이 낫습니까?', a: "둘 다 48 GB를 제공합니다. InsiderLLM의 미국 판매 완료 데이터(RTX 3090: 2026년 11월 13~23일, RTX 4090: 2026년 10월)에서 한 쌍의 가격은 약 $3,000–3,450(RTX 3090, 중고) 대 $5,150–6,020(RTX 4090, 중고)입니다. 개발자가 보고한 llama.cpp 테스트에서 RTX 4090은 프롬프트를 더 빠르게 처리하고(7B 테스트에서 11,993 대 5,175 tok/s), 한 쌍 기준 소비 전력은 900 W 대 700 W이며, NVLink가 없습니다. RTX 3090은 브리지를 지원합니다. 중고 카드는 보증이 없을 수 있습니다." },
+            { q: '듀얼 RTX 3090과 듀얼 RTX 4090 중 무엇이 낫습니까?', a: "둘 다 48 GB를 제공합니다. InsiderLLM의 미국 판매 완료 데이터(RTX 3090: 2026년 11월 13~23일, RTX 4090: 2026년 10월)에서 한 쌍의 가격은 약 $3,000–3,450(RTX 3090, 중고) 대 $5,150–6,020(RTX 4090, 중고)입니다. 개발자가 보고한 llama.cpp 테스트에서 RTX 4090은 프롬프트를 더 빠르게 처리하고(7B 테스트에서 11,993 대 5,175 tok/s), 한 쌍 기준 정격 전력은 900 W 대 700 W이며, NVLink가 없습니다. RTX 3090은 브리지를 지원합니다. 중고 카드는 보증이 없을 수 있습니다." },
             { q: '완제품 워크스테이션을 사야 합니까, 직접 조립해야 합니까?', a: "직접 조립하면 부품을 하나하나 고를 수 있지만 호환성 확인, 가격 추적, 보증은 직접 감당해야 합니다. 완제품은 문의할 판매처가 한 곳입니다. 어느 쪽이든 카드당 및 전체 VRAM, 슬롯당 PCIe 레인 수, GPU 정격 합계 대비 PSU 정격, 쿨링을 비교하십시오. Mac Studio 같은 통합 메모리 머신이 세 번째 선택지입니다." },
             { q: '듀얼 GPU 워크스테이션은 전기를 얼마나 사용합니까?', a: "정격 전력은 카드만 700 W(RTX 3090 2장)에서 900 W(RTX 4090 2장)이며, Threadripper는 여기에 350 W가 더해집니다. 900 W를 연속으로 쓰면 1년에 7,884 kWh이며, 여기에 적용 요금을 곱하십시오. 추론 중 실제 소비 전력은 보통 정격보다 낮고 유휴 시 소비 전력은 훨씬 낮으므로, 플러그형 전력 측정기로 직접 측정하십시오." },
             { q: '워크스테이션이 클라우드 GPU 대여보다 저렴해지는 시점은 언제입니까?', a: "손익분기 시간은 구매 가격을 '시간당 클라우드 요금에서 시간당 전기 요금을 뺀 값'으로 나눈 값입니다. 매달 가동하는 시간이 적을수록 손익분기까지 더 오래 걸립니다. [구매 대 대여 계산기](/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026)와 [클라우드 GPU 비교](/ko/local-llms/cloud-gpu-rental-comparison-2026)에서 현재 요금을 사용하십시오." },
-            { q: '지금이 GPU와 RAM을 사기에 좋은 시기입니까?', a: "가격 변동이 큽니다. 트래커는 신품 RTX 5090의 미국 소매가를 약 $4,500–4,700(이 가격대에는 날짜가 없습니다)으로 표시하는데 이는 권장 소비자 가격 $1,999보다 높고, Hardware Busters는 DDR5가 1년간 약 500% 올랐다고 보도했으며(2026-08-18), TweakTown은 RTX PRO 6000이 $16,000, 출시 당시 $8,565에서 오른 가격이라고 보도했습니다(2026-08-13). 앞으로의 방향은 누구도 장담할 수 없습니다. 지금 필요한 모델 크기에 맞춰 구매하시고, 가격이 높은 동안에는 대여도 고려하십시오." },
+            { q: '지금이 GPU와 RAM을 사기에 좋은 시기입니까?', a: "가격 변동이 큽니다. InsiderLLM은 중고 RTX 5090을 $5,660–6,200(중앙값 $6,000, 미국 eBay 판매 완료 111건, 2026년 11월 6~25일)로 집계했는데 이는 권장 소비자 가격 $1,999보다 높고, Hardware Busters는 DDR5가 1년간 약 500% 올랐다고 보도했으며(2026-08-18), TweakTown은 RTX PRO 6000이 $16,000, 출시 당시 $8,565에서 오른 가격이라고 보도했습니다(2026-08-13). 앞으로의 방향은 누구도 장담할 수 없습니다. 지금 필요한 모델 크기에 맞춰 구매하시고, 가격이 높은 동안에는 대여도 고려하십시오." },
           ],
         },
         'relatedReading': {
@@ -2342,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[NVIDIA GeForce RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) — 보드 전력과 NVLink 브리지 지원.',
             '[NVIDIA RTX PRO 6000 Blackwell](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/) — 96 GB 메모리와 최대 600 W 전력.',
             '[InsiderLLM 중고 GPU 구매 가이드](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — 중고 RTX 3090 가격: 미국 eBay 판매 완료 225건, 2026년 11월 13~23일.',
-            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 중고 RTX 4090 판매 완료가(2026년 10월)와 날짜가 없는 신품 RTX 5090 미국 소매 가격대(2026-11-27 확인).',
+            '[InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 중고 RTX 4090(2026년 10월)과 중고 RTX 5090(2026년 11월 6~25일) 판매 완료가(2026-11-28 확인).',
             '[llama.cpp CUDA scoreboard, discussion 15013](https://github.com/ggml-org/llama.cpp/discussions/15013) — 개발자가 보고한 7B 생성 및 프롬프트 처리 속도.',
             '[Tom\'s Hardware: Threadripper 9000 launch](https://www.tomshardware.com/pc-components/cpus/threadripper-9000-cpus-will-revive-the-hedt-market-on-july-31-starting-at-usd1-499-for-24-cores-the-flagship-64-core-chip-will-set-you-back-usd4-999) — 출시가, TDP 350 W, PCIe 레인.',
             '[Hardware Busters: DDR5 prices up 500%](https://hwbusters.com/news/ddr5-memory-prices-are-up-500-in-a-year-and-a-128gb-kit-now-lists-at-3399/) — 2026-08-18자 메모리 가격 보도.',

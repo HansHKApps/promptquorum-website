@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best Hardware for a Local Smart Home + Local AI (2026)',
     seoTitle: 'Best Local Smart Home + AI Hardware (2026)',
     intro:
-      'The best hardware for a local smart home follows one decision: an Intel N100/N150 mini PC or a Raspberry Pi 5 runs the Home Assistant hub, an Intel iGPU (OpenVINO) or a Hailo-8L M.2 module accelerates Frigate camera detection, an SSD or NAS stores recordings, and a used RTX 3090 box is the step-up for running a local LLM. This guide picks each layer, prices every tier at current 2026 rates, and helps you choose for HA-only versus HA-plus-AI so you buy once instead of twice.',
+      'The best hardware for a local smart home follows one decision: an Intel N100/N150 mini PC or a Raspberry Pi 5 runs the Home Assistant hub, an Intel iGPU (OpenVINO) or a Hailo-8L M.2 module accelerates Frigate camera detection, an SSD or NAS stores recordings, and a used RTX 3090 box is the step-up for running a local LLM. This guide picks each layer, gives rough 2026 prices for the tiers, and helps you choose for HA-only versus HA-plus-AI so you buy once instead of twice.',
     metaDescription:
-      'Best local smart home + AI hardware in 2026: Intel N100 mini PC or Raspberry Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo), SSD storage, and an LLM step-up. Updated pricing.',
+      'Best local smart home + AI hardware in 2026: Intel N100 mini PC or Raspberry Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo), SSD storage, and an LLM step-up. Rough 2026 prices.',
     twitterDescription:
-      'Local smart home hardware in 2026: Intel N100 mini PC or Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo-8L), SSD storage, used RTX 3090 for a local LLM. Current 2026 prices.',
+      'Local smart home hardware in 2026: Intel N100 mini PC or Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo-8L), SSD storage, used RTX 3090 for a local LLM. Rough 2026 prices.',
     readTime: '11 min read',
     educationalLevel: 'Intermediate',
     audience: 'Buyers choosing hardware to run Home Assistant and local AI',
@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hub: an Intel N100/N150 mini PC (~$385–500) or a Raspberry Pi 5 (~$180–385, up sharply on a DRAM shortage) runs Home Assistant',
           'Frigate: an Intel iGPU (OpenVINO, built into most mini PCs), a Hailo-8L M.2 module (~$70), or a Hailo-8 M.2 (~$170–200) accelerates camera detection — Frigate\'s hardware documentation lists Hailo and Intel OpenVINO among supported detectors and no longer recommends the Google Coral for most new installs; a Coral you own still works',
           'Storage: an SSD for recordings, or a NAS (Synology DS225+ ~$340, DS925+ ~$640, UGREEN NASync DXP4800 Plus ~$580) once you run several cameras',
-          'Local LLM step-up: a Ryzen mini PC (32GB RAM recommended; Beelink SER8 24GB list price $799, check 32GB) or a used RTX 3090 (~$1,500–1,725 in sold listings per the InsiderLLM tracker, 2026-11-23)',
+          'Local LLM step-up: a Ryzen mini PC (32GB RAM recommended; Beelink SER8 24GB list price $799, check 32GB) or a used RTX 3090 (~$1,500–1,725 in US eBay sold listings per the InsiderLLM tracker, 2026-11-23)',
           'Decide HA-only vs HA + cameras + local AI before buying — it changes the right box, and buying the mini PC now beats replacing a Pi later',
         ],
       },
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your goal': 'Home Assistant only', 'Buy this': '[Home Assistant Green or Raspberry Pi 5](#raspberry-pi)', 'Est. price': '$199 (Green) / $180–385 (Pi 5)' },
           { 'Your goal': 'HA + Frigate cameras', 'Buy this': '[Intel N100/N150 mini PC](#mini-pc)', 'Est. price': '~$385–500' },
           { 'Your goal': 'HA + a local LLM', 'Buy this': '[Ryzen mini PC, 32GB RAM](#mini-pc)', 'Est. price': 'from ~$799 (24GB list; check 32GB)' },
-          { 'Your goal': 'HA + a larger local LLM', 'Buy this': '[Used RTX 3090 server](#server)', 'Est. price': '~$1,500–1,725 (GPU only; InsiderLLM 2026-11-23)' },
+          { 'Your goal': 'HA + a larger local LLM', 'Buy this': '[Used RTX 3090 server](#server)', 'Est. price': '~$1,500–1,725 (GPU only; US, InsiderLLM 2026-11-23)' },
         ],
         tableFormat: true,
         note: 'Prices are rough and move — GPU and DRAM pricing especially has been volatile this year. The RTX 3090 figure is US eBay listing data from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (data dated 2026-11-23: median $1,650 across 225 sold listings, 13–23 November 2026), not a quote. Mini-PC figures are Beelink store list prices and our mini PC guide\'s N150 range, checked 2026-10-25. Check the linked listing before buying. Other prices are rough figures, not quotes; some linked pages show no price or a different one, so check a current retailer before buying.',
@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A dedicated server with a discrete GPU is the step-up for running a larger local LLM alongside many cameras.** It offers the most headroom at higher cost and power — and GPU prices moved a lot in 2026, so treat the figures below as a snapshot, not a fixed number.',
         items: [
-          'A used RTX 3090 (24GB VRAM) is a common choice for local LLMs because of its VRAM. The [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (page updated 2026-11-26) listed used sold listings at about $1,500–1,725 (median $1,650 across 225 sold listings, 13–23 November 2026; data dated 2026-11-23) — US eBay listing data, not a quote or offer. Q4-quantized models up to roughly 70B may be possible depending on quantization, context size, and offloading; treat this as a capability range, not a guarantee for every 70B model.',
+          'A used RTX 3090 (24GB VRAM) is a common choice for local LLMs because of its VRAM. The [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (checked 2026-11-28) listed used sold listings at about $1,500–1,725 (median $1,650 across 225 sold listings, 13–23 November 2026; data dated 2026-11-23) — US eBay listing data, not a quote or offer. Q4-quantized models up to roughly 70B may be possible depending on quantization, context size, and offloading; treat this as a capability range, not a guarantee for every 70B model. The default 70B download of Llama 3.3 is about 43 GB ([Ollama: llama3.3](https://ollama.com/library/llama3.3)), more than the card\'s 24 GB, so part of such a model has to run from system RAM, which is much slower.',
           'A used RTX 3060 (12GB) is the budget alternative for a discrete-GPU box — it can handle 7B–13B models, depending on quantization, without the RTX 3090\'s VRAM headroom or price.',
           'Best for many cameras, a larger LLM, and multiple users. Higher power draw and cost than a mini PC — see the power-consumption section below before committing to this tier.',
           'Overkill for a basic smart home — reserve for heavy local-AI use, and keep the Home Assistant hub on a separate low-power box for reliability (see One Box or Two? below).',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: 'A 350 W GPU in a continuously running server needs a correctly sized quality power supply, good ventilation and sensible placement. Used cards may carry wear and no warranty, so inspect the seller\'s terms. Follow the manufacturer\'s guidance; this is not electrical advice.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
-        imageCaption: 'Local LLM capacity by hardware tier: Raspberry Pi 5 runs only tiny models, an Intel N100/N150 Mini PC handles small models, a Ryzen Mini PC (32GB RAM) runs 7B–8B models, and a used RTX 3090 (24GB VRAM) scales to about 70B at Q4 quantization depending on setup.',
+        imageCaption: 'Local LLM capacity by hardware tier: Raspberry Pi 5 runs only tiny models, an Intel N100/N150 Mini PC handles small models, a Ryzen Mini PC (32GB RAM) runs 7B–8B models, and a used RTX 3090 (24GB VRAM) reaches about 70B at Q4 only by offloading part of the model to system RAM, which is much slower.',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -246,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Hardware': 'Intel N100/N150 mini PC', 'Relative price': 'Medium', 'HA-only': 'Yes', 'Can run a local LLM': 'Small models', 'Frigate acceleration': 'Intel iGPU (OpenVINO)' },
           { 'Hardware': 'Ryzen mini PC', 'Relative price': 'Medium', 'HA-only': 'Yes', 'Can run a local LLM': 'Yes (7B–8B)', 'Frigate acceleration': 'iGPU or Hailo M.2' },
           { 'Hardware': 'NAS', 'Relative price': 'Medium–High', 'HA-only': 'Yes (container)', 'Can run a local LLM': 'Depends on hardware', 'Frigate acceleration': 'Depends on model' },
-          { 'Hardware': 'Server + used RTX 3090', 'Relative price': 'High', 'HA-only': 'Yes', 'Can run a local LLM': 'Yes (up to ~70B, quantization-dependent)', 'Frigate acceleration': 'Discrete GPU' },
+          { 'Hardware': 'Server + used RTX 3090', 'Relative price': 'High', 'HA-only': 'Yes', 'Can run a local LLM': 'Yes (about 70B only with RAM offload, slow)', 'Frigate acceleration': 'Discrete GPU' },
         ],
         note: 'For power draw per tier, see [Power Consumption](#power) above; for whether to run everything on one box, see [One Box or Two?](#one-or-two).',
       },
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Stack': 'HA + cameras + large local AI', 'Hub': '[N150 mini PC (kept separate for reliability)](#mini-pc)', 'Frigate accelerator': '[Hailo-8](#frigate-accelerator)', 'AI': '[Used RTX 3090 server, run separately](#server)', 'Est. total': '~$2,055–2,425 (excl. host PC)' },
         ],
         tableFormat: true,
-        note: 'The last stack keeps the Home Assistant hub on its own low-power box and runs the RTX 3090 as a separate machine — see [One Box or Two?](#one-or-two) for why. The total adds a used RTX 3090 ($1,500–1,725, InsiderLLM tracker, 2026-11-23), an N150 mini PC (~$385–500) and a Hailo-8 (~$170–200): $2,055–2,425 from low to high. It excludes the host PC (CPU, board, PSU, RAM, case) the GPU needs. Other prices are rough figures, not quotes; some linked pages show no price or a different one, so check a current retailer before buying.',
+        note: 'The last stack keeps the Home Assistant hub on its own low-power box and runs the RTX 3090 as a separate machine — see [One Box or Two?](#one-or-two) for why. The total adds a used RTX 3090 ($1,500–1,725, US sold listings, InsiderLLM tracker, 2026-11-23), an N150 mini PC (~$385–500) and a Hailo-8 (~$170–200): $2,055–2,425 from low to high. It excludes the host PC (CPU, board, PSU, RAM, case) the GPU needs. Other prices are rough figures, not quotes; some linked pages show no price or a different one, so check a current retailer before buying.',
       },
       faqSection: {
         id: 'faq',
@@ -349,11 +349,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي المحلي (⁨2026⁩)',
     seoTitle: 'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي (⁨2026⁩)',
     intro:
-      'تتبع أفضل أجهزة المنزل الذكي المحلي قرارًا واحدًا: يشغّل mini PC بمعالج Intel N100/N150 أو Raspberry Pi 5 مركز Home Assistant، ويسرّع iGPU من Intel (عبر OpenVINO) أو وحدة Hailo-8L بصيغة M.2 كشف كاميرات Frigate، ويخزّن SSD أو NAS التسجيلات، ويكون صندوق RTX 3090 مستعمل هو الترقية لتشغيل نموذج LLM محلي. يختار هذا الدليل كل طبقة، ويسعّر كل فئة بأسعار 2026 الحالية، ويساعدك على الاختيار بين HA فقط أو HA مع الذكاء الاصطناعي حتى تشتري مرة واحدة لا مرتين.',
+      'تتبع أفضل أجهزة المنزل الذكي المحلي قرارًا واحدًا: يشغّل mini PC بمعالج Intel N100/N150 أو Raspberry Pi 5 مركز Home Assistant، ويسرّع iGPU من Intel (عبر OpenVINO) أو وحدة Hailo-8L بصيغة M.2 كشف كاميرات Frigate، ويخزّن SSD أو NAS التسجيلات، ويكون صندوق RTX 3090 مستعمل هو الترقية لتشغيل نموذج LLM محلي. يختار هذا الدليل كل طبقة، ويقدّم أسعارًا تقريبية لعام 2026 لكل فئة، ويساعدك على الاختيار بين HA فقط أو HA مع الذكاء الاصطناعي حتى تشتري مرة واحدة لا مرتين.',
     metaDescription:
-      'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM. أسعار محدّثة.',
+      'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM. أسعار تقريبية لعام 2026.',
     twitterDescription:
-      'أجهزة المنزل الذكي المحلي 2026: مركز mini PC بمعالج Intel N100 أو Pi 5، مسرّع Frigate (Intel iGPU/Hailo-8L)، تخزين SSD، وRTX 3090 مستعمل لنموذج LLM محلي. أسعار 2026 المحدّثة.',
+      'أجهزة المنزل الذكي المحلي 2026: مركز mini PC بمعالج Intel N100 أو Pi 5، مسرّع Frigate (Intel iGPU/Hailo-8L)، تخزين SSD، وRTX 3090 مستعمل لنموذج LLM محلي. أسعار تقريبية لعام 2026.',
     readTime: '11 دقيقة للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المشترون الذين يختارون أجهزة لتشغيل Home Assistant والذكاء الاصطناعي المحلي',
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المركز: mini PC بمعالج Intel N100/N150 (بحدود ‎$385–500‎) أو Raspberry Pi 5 (بحدود ‎$180–385‎، ارتفع بشدة بسبب نقص ذاكرة DRAM) يشغّل Home Assistant',
           'Frigate: iGPU من Intel (مدمجة في معظم أجهزة mini PC، عبر OpenVINO)، أو وحدة Hailo-8L بصيغة M.2 (بحدود ‎$70‎)، أو Hailo-8 بصيغة M.2 (بحدود ‎$170–200‎) تسرّع كشف الكاميرا — تذكر وثائق عتاد Frigate كلًا من Hailo وIntel OpenVINO ضمن الكواشف المدعومة، ولم تعد توصي بـ Google Coral لمعظم عمليات التثبيت الجديدة، أما جهاز Coral الذي تملكه فيظل يعمل',
           'التخزين: SSD للتسجيلات، أو NAS (‎Synology DS225+‎ بحدود ‎$340‎، ‎DS925+‎ بحدود ‎$640‎، ‎UGREEN NASync DXP4800 Plus‎ بحدود ‎$580‎) عند تشغيل عدة كاميرات',
-          'ترقية LLM محلي: mini PC بمعالج Ryzen (يُنصح بـ 32GB RAM؛ السعر المعلن لـ Beelink SER8 بسعة 24GB هو ‎$799‎، وتحقق من سعر 32GB) أو RTX 3090 مستعملة (نحو ‎$1,500–1,725‎ في قوائم البيع المكتملة حسب متتبّع InsiderLLM، 2026-11-23)',
+          'ترقية LLM محلي: mini PC بمعالج Ryzen (يُنصح بـ 32GB RAM؛ السعر المعلن لـ Beelink SER8 بسعة 24GB هو ‎$799‎، وتحقق من سعر 32GB) أو RTX 3090 مستعملة (نحو ‎$1,500–1,725‎ في قوائم البيع المكتملة على eBay الأمريكي حسب متتبّع InsiderLLM، 2026-11-23)',
           'قرر HA فقط أم HA + كاميرات + ذكاء اصطناعي محلي قبل الشراء — يغيّر ذلك الجهاز المناسب، وشراء mini PC الآن أفضل من استبدال Pi لاحقًا',
         ],
       },
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'هدفك': 'Home Assistant فقط', 'اشترِ هذا': '[Home Assistant Green أو Raspberry Pi 5](#raspberry-pi)', 'السعر التقديري': '‎$199‎ (Green) / ‎$180–385‎ (Pi 5)' },
           { 'هدفك': 'HA + كاميرات Frigate', 'اشترِ هذا': '[mini PC بمعالج Intel N100/N150](#mini-pc)', 'السعر التقديري': 'بحدود ‎$385–500‎' },
           { 'هدفك': 'HA + نموذج LLM محلي', 'اشترِ هذا': '[mini PC بمعالج Ryzen، 32GB RAM](#mini-pc)', 'السعر التقديري': 'من نحو ‎$799‎ (24GB؛ تحقق من 32GB)' },
-          { 'هدفك': 'HA + نموذج LLM محلي أكبر', 'اشترِ هذا': '[خادم RTX 3090 مستعمل](#server)', 'السعر التقديري': 'بحدود ‎$1,500–1,725‎ (GPU فقط؛ InsiderLLM 2026-11-23)' },
+          { 'هدفك': 'HA + نموذج LLM محلي أكبر', 'اشترِ هذا': '[خادم RTX 3090 مستعمل](#server)', 'السعر التقديري': 'بحدود ‎$1,500–1,725‎ (GPU فقط؛ السوق الأمريكية، InsiderLLM 2026-11-23)' },
         ],
         tableFormat: true,
         note: 'الأسعار تقريبية وتتغيّر — أسعار GPU وذاكرة DRAM كانت متقلبة بشكل خاص هذا العام. رقم RTX 3090 من بيانات قوائم eBay الأمريكية في [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (بيانات بتاريخ 2026-11-23: الوسيط ‎$1,650‎ عبر 225 قائمة بيع مكتملة بين 13 و23 نوفمبر 2026)، وليس عرض سعر؛ وقد تختلف الأسعار في بلدك حسب الضرائب والرسوم الجمركية. أرقام أجهزة mini PC هي الأسعار المعلنة في متجر Beelink ونطاق N150 في دليلنا لأجهزة mini PC، وتم التحقق منها في 2026-10-25. تحقق من السعر في الإعلان المرتبط قبل الشراء. أما الأسعار الأخرى فهي أرقام تقريبية وليست عروض أسعار؛ بعض الصفحات المرتبطة لا تعرض سعرًا أو تعرض سعرًا مختلفًا، لذا تحقق لدى بائع حالي قبل الشراء.',
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**الخادم المخصص مع GPU منفصلة هو الترقية لتشغيل نموذج LLM محلي أكبر إلى جانب كاميرات كثيرة.** يوفر أكبر حيّز بتكلفة واستهلاك طاقة أعلى — وقد تحرّكت أسعار GPU كثيرًا في 2026، لذا اعتبر الأرقام أدناه لقطة لحظية وليست قيمة ثابتة.',
         items: [
-          'RTX 3090 مستعمل (24GB VRAM) خيار شائع للنماذج اللغوية المحلية بفضل ذاكرته الكبيرة. يذكر [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (الصفحة محدّثة في 2026-11-26) أن قوائم البيع المستعملة المكتملة بلغت نحو ‎$1,500–1,725‎ (الوسيط ‎$1,650‎ عبر 225 قائمة بيع مكتملة بين 13 و23 نوفمبر 2026؛ بيانات بتاريخ 2026-11-23) — بيانات eBay الأمريكية، وليست عرض سعر. قد تكون النماذج المرمّزة بـ Q4 حتى نحو 70B ممكنة حسب طريقة الترميز وحجم السياق ونقل جزء من النموذج إلى CPU وذاكرة النظام (offloading)؛ اعتبر هذا نطاق قدرة، لا ضمانًا لكل نموذج 70B.',
+          'RTX 3090 مستعمل (24GB VRAM) خيار شائع للنماذج اللغوية المحلية بفضل ذاكرته الكبيرة. يذكر [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (تم التحقق في 2026-11-28) أن قوائم البيع المستعملة المكتملة بلغت نحو ‎$1,500–1,725‎ (الوسيط ‎$1,650‎ عبر 225 قائمة بيع مكتملة بين 13 و23 نوفمبر 2026؛ بيانات بتاريخ 2026-11-23) — بيانات eBay الأمريكية، وليست عرض سعر. قد تكون النماذج المرمّزة بـ Q4 حتى نحو 70B ممكنة حسب طريقة الترميز وحجم السياق ونقل جزء من النموذج إلى CPU وذاكرة النظام (offloading)؛ اعتبر هذا نطاق قدرة، لا ضمانًا لكل نموذج 70B. يبلغ حجم التنزيل الافتراضي لنموذج Llama 3.3 70B نحو 43GB ([Ollama: llama3.3](https://ollama.com/library/llama3.3))، أي أكبر من ذاكرة البطاقة البالغة 24GB، لذا يجب تشغيل جزء من نموذج كهذا من ذاكرة النظام، وهو أبطأ بكثير.',
           'RTX 3060 مستعمل (12GB) هو البديل الاقتصادي لصندوق GPU منفصلة — يمكنه التعامل مع نماذج 7B–13B حسب الترميز، دون حيّز VRAM أو سعر RTX 3090.',
           'الأفضل لكاميرات كثيرة ونموذج LLM أكبر ومستخدمين متعددين. استهلاك طاقة وتكلفة أعلى من mini PC — راجع قسم استهلاك الطاقة أدناه قبل الالتزام بهذه الفئة.',
           'مبالغة لمنزل ذكي أساسي — احتفظ به للاستخدام الكثيف للذكاء الاصطناعي المحلي، وأبقِ مركز Home Assistant على صندوق منفصل منخفض الطاقة للموثوقية (انظر صندوق واحد أم اثنان؟ أدناه).',
@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: 'تحتاج بطاقة GPU بقدرة 350 واط في خادم يعمل باستمرار إلى مزوّد طاقة عالي الجودة بقدرة مناسبة، وتهوية جيدة، ومكان وضع مدروس. قد تكون البطاقات المستعملة متآكلة وبلا ضمان، لذا افحص شروط البائع. اتبع إرشادات الشركة المصنّعة؛ هذه ليست استشارة كهربائية.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-ar.svg',
-        imageCaption: 'سعة نموذج LLM محلي حسب فئة الأجهزة: يشغّل Raspberry Pi 5 نماذج صغيرة جدًا فقط، ويتعامل mini PC بمعالج Intel N100/N150 مع نماذج صغيرة، ويشغّل mini PC بمعالج Ryzen (32GB RAM) نماذج 7B–8B، ويصل RTX 3090 مستعمل (24GB VRAM) إلى نحو 70B بترميز Q4 حسب الإعداد.',
+        imageCaption: 'سعة نموذج LLM محلي حسب فئة الأجهزة: يشغّل Raspberry Pi 5 نماذج صغيرة جدًا فقط، ويتعامل mini PC بمعالج Intel N100/N150 مع نماذج صغيرة، ويشغّل mini PC بمعالج Ryzen (32GB RAM) نماذج 7B–8B، ولا يصل RTX 3090 مستعمل (24GB VRAM) إلى نحو 70B بترميز Q4 إلا بنقل جزء من النموذج إلى ذاكرة النظام، وهو أبطأ بكثير.',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأجهزة': 'mini PC بمعالج Intel N100/N150', 'السعر النسبي': 'متوسط', 'HA فقط': 'نعم', 'يمكنه تشغيل نموذج LLM محلي': 'نماذج صغيرة', 'تسريع Frigate': 'Intel iGPU (OpenVINO)' },
           { 'الأجهزة': 'mini PC بمعالج Ryzen', 'السعر النسبي': 'متوسط', 'HA فقط': 'نعم', 'يمكنه تشغيل نموذج LLM محلي': 'نعم (7B–8B)', 'تسريع Frigate': 'iGPU أو Hailo M.2' },
           { 'الأجهزة': 'NAS', 'السعر النسبي': 'متوسط-مرتفع', 'HA فقط': 'نعم (حاوية)', 'يمكنه تشغيل نموذج LLM محلي': 'يعتمد على الأجهزة', 'تسريع Frigate': 'يعتمد على الطراز' },
-          { 'الأجهزة': 'خادم + RTX 3090 مستعمل', 'السعر النسبي': 'مرتفع', 'HA فقط': 'نعم', 'يمكنه تشغيل نموذج LLM محلي': 'نعم (حتى نحو 70B، حسب الترميز)', 'تسريع Frigate': 'GPU منفصلة' },
+          { 'الأجهزة': 'خادم + RTX 3090 مستعمل', 'السعر النسبي': 'مرتفع', 'HA فقط': 'نعم', 'يمكنه تشغيل نموذج LLM محلي': 'نعم (نحو 70B فقط مع offloading إلى RAM، ببطء)', 'تسريع Frigate': 'GPU منفصلة' },
         ],
         note: 'لاستهلاك الطاقة حسب الفئة، راجع [استهلاك الطاقة](#power) أعلاه؛ ولمعرفة ما إذا كان يستحق تشغيل كل شيء على صندوق واحد، راجع [صندوق واحد أم اثنان؟](#one-or-two).',
       },
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'التجميعة': 'HA + كاميرات + ذكاء اصطناعي محلي كبير', 'المركز': '[mini PC بمعالج N150 (يبقى منفصلًا للموثوقية)](#mini-pc)', 'مسرّع Frigate': '[Hailo-8](#frigate-accelerator)', 'الذكاء الاصطناعي': '[خادم RTX 3090 مستعمل، يعمل بشكل منفصل](#server)', 'الإجمالي التقديري': 'بحدود ‎$2,055–2,425‎ (دون الحاسوب المضيف)' },
         ],
         tableFormat: true,
-        note: 'تُبقي التجميعة الأخيرة مركز Home Assistant على صندوقه الخاص منخفض الطاقة وتشغّل RTX 3090 كجهاز منفصل — راجع [صندوق واحد أم اثنان؟](#one-or-two) لمعرفة السبب. يجمع الإجمالي RTX 3090 مستعملة (‎$1,500–1,725‎، متتبّع InsiderLLM، 2026-11-23) وmini PC بمعالج N150 (بحدود ‎$385–500‎) وHailo-8 (بحدود ‎$170–200‎): من ‎$2,055‎ إلى ‎$2,425‎. ولا يشمل الحاسوب المضيف (CPU واللوحة الأم ومزوّد الطاقة وRAM والهيكل) الذي تحتاجه GPU. أما الأسعار الأخرى فهي أرقام تقريبية وليست عروض أسعار؛ بعض الصفحات المرتبطة لا تعرض سعرًا أو تعرض سعرًا مختلفًا، لذا تحقق لدى بائع حالي قبل الشراء.',
+        note: 'تُبقي التجميعة الأخيرة مركز Home Assistant على صندوقه الخاص منخفض الطاقة وتشغّل RTX 3090 كجهاز منفصل — راجع [صندوق واحد أم اثنان؟](#one-or-two) لمعرفة السبب. يجمع الإجمالي RTX 3090 مستعملة (‎$1,500–1,725‎، قوائم البيع الأمريكية، متتبّع InsiderLLM، 2026-11-23) وmini PC بمعالج N150 (بحدود ‎$385–500‎) وHailo-8 (بحدود ‎$170–200‎): من ‎$2,055‎ إلى ‎$2,425‎. ولا يشمل الحاسوب المضيف (CPU واللوحة الأم ومزوّد الطاقة وRAM والهيكل) الذي تحتاجه GPU. أما الأسعار الأخرى فهي أرقام تقريبية وليست عروض أسعار؛ بعض الصفحات المرتبطة لا تعرض سعرًا أو تعرض سعرًا مختلفًا، لذا تحقق لدى بائع حالي قبل الشراء.',
       },
       faqSection: {
         id: 'faq',
@@ -686,11 +686,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Beste Hardware für ein lokales Smart Home + lokale KI (2026)',
     seoTitle: 'Beste Hardware: lokales Smart Home + KI (2026)',
     intro:
-      'Die beste Hardware für ein lokales Smart Home folgt einer Entscheidung: Ein Mini-PC mit Intel N100/N150 oder ein Raspberry Pi 5 betreibt den Home-Assistant-Hub, eine Intel-iGPU (OpenVINO) oder ein Hailo-8L-M.2-Modul beschleunigt die Frigate-Kameraerkennung, eine SSD oder ein NAS speichert die Aufnahmen, und ein gebrauchtes RTX-3090-Gerät ist der Aufstieg für ein lokales LLM. Dieser Leitfaden wählt jede Schicht mit aktuellen Preisen für 2026 und hilft bei der Wahl zwischen nur-HA und HA-plus-KI, damit Sie nur einmal statt zweimal kaufen.',
+      'Die beste Hardware für ein lokales Smart Home folgt einer Entscheidung: Ein Mini-PC mit Intel N100/N150 oder ein Raspberry Pi 5 betreibt den Home-Assistant-Hub, eine Intel-iGPU (OpenVINO) oder ein Hailo-8L-M.2-Modul beschleunigt die Frigate-Kameraerkennung, eine SSD oder ein NAS speichert die Aufnahmen, und ein gebrauchtes RTX-3090-Gerät ist der Aufstieg für ein lokales LLM. Dieser Leitfaden wählt jede Schicht mit Richtpreisen für 2026 und hilft bei der Wahl zwischen nur-HA und HA-plus-KI, damit Sie nur einmal statt zweimal kaufen.',
     metaDescription:
-      'Beste Hardware für lokales Smart Home + KI 2026: Intel-N100-Mini-PC oder Raspberry Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo), SSD-Speicher, LLM-Aufstieg. Aktualisierte Preise.',
+      'Beste Hardware für lokales Smart Home + KI 2026: Intel-N100-Mini-PC oder Raspberry Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo), SSD-Speicher, LLM-Aufstieg. Richtpreise 2026.',
     twitterDescription:
-      'Hardware für ein lokales Smart Home 2026: Intel-N100-Mini-PC oder Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo-8L), SSD-Speicher, gebrauchte RTX 3090 fürs LLM. Aktuelle Preise 2026.',
+      'Hardware für ein lokales Smart Home 2026: Intel-N100-Mini-PC oder Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo-8L), SSD-Speicher, gebrauchte RTX 3090 fürs LLM. Richtpreise 2026.',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die Hardware für Home Assistant und lokale KI wählen',
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihr Ziel': 'Nur Home Assistant', 'Das kaufen': '[Home Assistant Green oder Raspberry Pi 5](#raspberry-pi)', 'Geschätzter Preis': '199 $ (Green) / 180–385 $ (Pi 5)' },
           { 'Ihr Ziel': 'HA + Frigate-Kameras', 'Das kaufen': '[Intel-N100/N150-Mini-PC](#mini-pc)', 'Geschätzter Preis': 'ca. 385–500 $' },
           { 'Ihr Ziel': 'HA + ein lokales LLM', 'Das kaufen': '[Ryzen-Mini-PC, 32 GB RAM](#mini-pc)', 'Geschätzter Preis': 'ab ca. 799 $ (24 GB Liste; 32 GB prüfen)' },
-          { 'Ihr Ziel': 'HA + ein größeres lokales LLM', 'Das kaufen': '[Server mit gebrauchter RTX 3090](#server)', 'Geschätzter Preis': 'ca. 1.500–1.725 $ (nur GPU; InsiderLLM 2026-11-23)' },
+          { 'Ihr Ziel': 'HA + ein größeres lokales LLM', 'Das kaufen': '[Server mit gebrauchter RTX 3090](#server)', 'Geschätzter Preis': 'ca. 1.500–1.725 $ (nur GPU; US, InsiderLLM 2026-11-23)' },
         ],
         tableFormat: true,
         note: 'Die Preise sind Richtwerte und ändern sich – vor allem GPU- und DRAM-Preise waren dieses Jahr sehr volatil. Der RTX-3090-Wert stammt aus US-eBay-Angebotsdaten des [GPU-Preis-Trackers von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Datenstand 2026-11-23: Median 1.650 $ aus 225 verkauften Angeboten, 13.–23. November 2026), nicht aus einem Angebot; in Deutschland können die Preise abweichen. Die Mini-PC-Werte sind Listenpreise des Beelink-Shops und die N150-Spanne unseres Mini-PC-Ratgebers, geprüft am 2026-10-25. Prüfen Sie den Preis im verlinkten Angebot vor dem Kauf. Die übrigen Preise sind grobe Richtwerte, keine Angebote; manche verlinkten Seiten zeigen keinen oder einen anderen Preis, prüfen Sie daher vor dem Kauf einen aktuellen Händler. Alle Preise sind US-Referenzpreise in USD und können in Ihrem Land abweichen.',
@@ -856,7 +856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Ein dedizierter Server mit dedizierter GPU ist der Aufstieg, um ein größeres lokales LLM neben vielen Kameras zu betreiben.** Er bietet die meisten Reserven bei höheren Kosten und höherem Stromverbrauch – und GPU-Preise haben sich 2026 stark bewegt, betrachten Sie die folgenden Zahlen daher als Momentaufnahme, nicht als festen Wert.',
         items: [
-          'Eine gebrauchte RTX 3090 (24 GB VRAM) ist wegen ihres VRAM eine gängige Wahl für lokale LLMs. Der [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Seite aktualisiert am 2026-11-26) nannte für gebrauchte Karten Verkaufsangebote von etwa 1.500–1.725 $ (Median 1.650 $ aus 225 verkauften Angeboten, 13.–23. November 2026; Datenstand 2026-11-23) – US-eBay-Angebotsdaten, kein Preisangebot; in Deutschland können die Preise abweichen. Q4-quantisierte Modelle bis etwa 70B sind je nach Quantisierung, Kontextgröße und Offloading möglicherweise machbar; betrachten Sie das als Fähigkeitsbereich, nicht als Garantie für jedes 70B-Modell.',
+          'Eine gebrauchte RTX 3090 (24 GB VRAM) ist wegen ihres VRAM eine gängige Wahl für lokale LLMs. Der [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (geprüft am 2026-11-28) nannte für gebrauchte Karten Verkaufsangebote von etwa 1.500–1.725 $ (Median 1.650 $ aus 225 verkauften Angeboten, 13.–23. November 2026; Datenstand 2026-11-23) – US-eBay-Angebotsdaten, kein Preisangebot; in Deutschland können die Preise abweichen. Q4-quantisierte Modelle bis etwa 70B sind je nach Quantisierung, Kontextgröße und Offloading möglicherweise machbar; betrachten Sie das als Fähigkeitsbereich, nicht als Garantie für jedes 70B-Modell. Der Standard-Download von Llama 3.3 70B ist etwa 43 GB groß ([Ollama: llama3.3](https://ollama.com/library/llama3.3)), mehr als die 24 GB der Karte; ein Teil eines solchen Modells muss daher aus dem Arbeitsspeicher laufen, was deutlich langsamer ist.',
           'Eine gebrauchte RTX 3060 (12 GB) ist die günstigere Alternative für ein Gerät mit diskreter GPU – sie kann je nach Quantisierung 7B–13B-Modelle bewältigen, ohne die VRAM-Reserven oder den Preis der RTX 3090.',
           'Am besten für viele Kameras, ein größeres LLM und mehrere Nutzer. Höherer Stromverbrauch und höhere Kosten als ein Mini-PC – lesen Sie den Abschnitt zum Stromverbrauch unten, bevor Sie sich für diese Stufe entscheiden.',
           'Überdimensioniert für ein einfaches Smart Home – reservieren Sie ihn für intensive lokale KI-Nutzung und halten Sie den Home-Assistant-Hub für Zuverlässigkeit auf einem separaten, stromsparenden Gerät (siehe Ein Gerät oder zwei? unten).',
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: 'Eine 350-W-GPU in einem dauerhaft laufenden Server braucht ein passend dimensioniertes Qualitätsnetzteil, gute Belüftung und einen sinnvollen Aufstellort. Gebrauchte Karten können Verschleiß aufweisen und haben keine Garantie, prüfen Sie daher die Bedingungen des Verkäufers. Befolgen Sie die Herstellerangaben; das ist keine Elektroberatung.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-de.svg',
-        imageCaption: 'Lokale LLM-Kapazität je Hardware-Stufe: Ein Raspberry Pi 5 läuft nur mit winzigen Modellen, ein Intel-N100/N150-Mini-PC bewältigt kleine Modelle, ein Ryzen-Mini-PC (32 GB RAM) läuft mit 7B–8B-Modellen, und eine gebrauchte RTX 3090 (24 GB VRAM) skaliert je nach Setup auf etwa 70B bei Q4-Quantisierung.',
+        imageCaption: 'Lokale LLM-Kapazität je Hardware-Stufe: Ein Raspberry Pi 5 läuft nur mit winzigen Modellen, ein Intel-N100/N150-Mini-PC bewältigt kleine Modelle, ein Ryzen-Mini-PC (32 GB RAM) läuft mit 7B–8B-Modellen, und eine gebrauchte RTX 3090 (24 GB VRAM) erreicht etwa 70B bei Q4 nur, wenn ein Teil des Modells in den Arbeitsspeicher ausgelagert wird – deutlich langsamer.',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Hardware': 'Intel-N100/N150-Mini-PC', 'Relativer Preis': 'Mittel', 'Nur-HA': 'Ja', 'Kann ein lokales LLM betreiben': 'Kleine Modelle', 'Frigate-Beschleunigung': 'Intel-iGPU (OpenVINO)' },
           { 'Hardware': 'Ryzen-Mini-PC', 'Relativer Preis': 'Mittel', 'Nur-HA': 'Ja', 'Kann ein lokales LLM betreiben': 'Ja (7B–8B)', 'Frigate-Beschleunigung': 'iGPU oder Hailo M.2' },
           { 'Hardware': 'NAS', 'Relativer Preis': 'Mittel–hoch', 'Nur-HA': 'Ja (Container)', 'Kann ein lokales LLM betreiben': 'Hängt von der Hardware ab', 'Frigate-Beschleunigung': 'Hängt vom Modell ab' },
-          { 'Hardware': 'Server + gebrauchte RTX 3090', 'Relativer Preis': 'Hoch', 'Nur-HA': 'Ja', 'Kann ein lokales LLM betreiben': 'Ja (bis ~70B, je nach Quantisierung)', 'Frigate-Beschleunigung': 'Dedizierte GPU' },
+          { 'Hardware': 'Server + gebrauchte RTX 3090', 'Relativer Preis': 'Hoch', 'Nur-HA': 'Ja', 'Kann ein lokales LLM betreiben': 'Ja (~70B nur mit RAM-Offloading, langsam)', 'Frigate-Beschleunigung': 'Dedizierte GPU' },
         ],
         note: 'Zum Stromverbrauch je Stufe siehe [Stromverbrauch](#power) oben; ob sich alles auf einem Gerät lohnt, siehe [Ein Gerät oder zwei?](#one-or-two).',
       },
@@ -949,7 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Setup': 'HA + Kameras + große lokale KI', 'Hub': '[N150-Mini-PC (für Zuverlässigkeit separat gehalten)](#mini-pc)', 'Frigate-Beschleuniger': '[Hailo-8](#frigate-accelerator)', 'KI': '[Server mit gebrauchter RTX 3090, separat betrieben](#server)', 'Geschätzte Gesamtkosten': 'ca. 2.055–2.425 $ (ohne Host-Rechner)' },
         ],
         tableFormat: true,
-        note: 'Das letzte Setup hält den Home-Assistant-Hub auf seinem eigenen stromsparenden Gerät und betreibt die RTX 3090 als separate Maschine – warum, steht bei [Ein Gerät oder zwei?](#one-or-two). Die Summe addiert eine gebrauchte RTX 3090 (1.500–1.725 $, InsiderLLM-Tracker, 2026-11-23), einen N150-Mini-PC (ca. 385–500 $) und ein Hailo-8 (ca. 170–200 $): 2.055 bis 2.425 $ von unten nach oben. Nicht enthalten ist der Host-Rechner (CPU, Mainboard, Netzteil, RAM, Gehäuse), den die GPU braucht. Die übrigen Preise sind grobe Richtwerte, keine Angebote; manche verlinkten Seiten zeigen keinen oder einen anderen Preis, prüfen Sie daher vor dem Kauf einen aktuellen Händler. Alle Preise sind US-Referenzpreise in USD und können in Ihrem Land abweichen.',
+        note: 'Das letzte Setup hält den Home-Assistant-Hub auf seinem eigenen stromsparenden Gerät und betreibt die RTX 3090 als separate Maschine – warum, steht bei [Ein Gerät oder zwei?](#one-or-two). Die Summe addiert eine gebrauchte RTX 3090 (1.500–1.725 $, US-Verkäufe, InsiderLLM-Tracker, 2026-11-23), einen N150-Mini-PC (ca. 385–500 $) und ein Hailo-8 (ca. 170–200 $): 2.055 bis 2.425 $ von unten nach oben. Nicht enthalten ist der Host-Rechner (CPU, Mainboard, Netzteil, RAM, Gehäuse), den die GPU braucht. Die übrigen Preise sind grobe Richtwerte, keine Angebote; manche verlinkten Seiten zeigen keinen oder einen anderen Preis, prüfen Sie daher vor dem Kauf einen aktuellen Händler. Alle Preise sind US-Referenzpreise in USD und können in Ihrem Land abweichen.',
       },
       faqSection: {
         id: 'faq',
@@ -1023,11 +1023,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mejor Hardware para un Smart Home Local + IA Local (2026)',
     seoTitle: 'Mejor Hardware: Smart Home Local + IA (2026)',
     intro:
-      'El mejor hardware para un smart home local sigue una decisión: un mini PC Intel N100/N150 o una Raspberry Pi 5 ejecuta el hub de Home Assistant, una iGPU Intel (OpenVINO) o un módulo Hailo-8L M.2 acelera la detección de cámaras de Frigate, un SSD o NAS almacena las grabaciones, y un equipo con RTX 3090 usada es el salto para ejecutar un LLM local. Esta guía elige cada capa, con precios actualizados a 2026, y te ayuda a decidir entre solo-HA y HA-más-IA para comprar una sola vez, no dos.',
+      'El mejor hardware para un smart home local sigue una decisión: un mini PC Intel N100/N150 o una Raspberry Pi 5 ejecuta el hub de Home Assistant, una iGPU Intel (OpenVINO) o un módulo Hailo-8L M.2 acelera la detección de cámaras de Frigate, un SSD o NAS almacena las grabaciones, y un equipo con RTX 3090 usada es el salto para ejecutar un LLM local. Esta guía elige cada capa, con precios orientativos de 2026, y te ayuda a decidir entre solo-HA y HA-más-IA para comprar una sola vez, no dos.',
     metaDescription:
-      'Mejor hardware para un smart home local + IA en 2026: hub con mini PC Intel N100 o Raspberry Pi 5, acelerador Frigate (Intel iGPU/Hailo), almacenamiento SSD y salto a LLM. Precios actualizados.',
+      'Mejor hardware para un smart home local + IA en 2026: hub con mini PC Intel N100 o Raspberry Pi 5, acelerador Frigate (Intel iGPU/Hailo), almacenamiento SSD y salto a LLM. Precios orientativos.',
     twitterDescription:
-      'Hardware para un smart home local en 2026: hub con mini PC Intel N100 o Pi 5, acelerador Frigate (Intel iGPU/Hailo-8L), almacenamiento SSD, RTX 3090 usada para un LLM local. Precios actualizados de 2026.',
+      'Hardware para un smart home local en 2026: hub con mini PC Intel N100 o Pi 5, acelerador Frigate (Intel iGPU/Hailo-8L), almacenamiento SSD, RTX 3090 usada para un LLM local. Precios orientativos de 2026.',
     readTime: '11 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores que eligen hardware para Home Assistant e IA local',
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hub: un mini PC Intel N100/N150 (~$385–500) o una Raspberry Pi 5 (~$180–385, muy al alza por la escasez de memoria DRAM) ejecuta Home Assistant',
           'Frigate: una iGPU Intel (OpenVINO, integrada en la mayoría de mini PC), un módulo Hailo-8L M.2 (~$70) o un Hailo-8 M.2 (~$170–200) acelera la detección de cámaras — la documentación de hardware de Frigate incluye Hailo e Intel OpenVINO entre los detectores compatibles y ya no recomienda el Google Coral para la mayoría de instalaciones nuevas; un Coral que ya tengas sigue funcionando',
           'Almacenamiento: un SSD para grabaciones, o un NAS (Synology DS225+ ~$340, DS925+ ~$640, UGREEN NASync DXP4800 Plus ~$580) en cuanto uses varias cámaras',
-          'Salto a LLM local: un mini PC Ryzen (32 GB de RAM recomendados; Beelink SER8 de 24 GB: precio de lista $799, comprueba el de 32 GB) o una RTX 3090 usada (~$1,500–1,725 en listados vendidos, según el rastreador de InsiderLLM, 2026-11-23)',
+          'Salto a LLM local: un mini PC Ryzen (32 GB de RAM recomendados; Beelink SER8 de 24 GB: precio de lista $799, comprueba el de 32 GB) o una RTX 3090 usada (~$1,500–1,725 en listados vendidos de eBay EE. UU., según el rastreador de InsiderLLM, 2026-11-23)',
           'Decide entre solo-HA o HA + cámaras + IA local antes de comprar: cambia el equipo adecuado, y comprar el mini PC ahora es mejor que sustituir una Pi después',
         ],
       },
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu objetivo': 'Solo Home Assistant', 'Compra esto': '[Home Assistant Green o Raspberry Pi 5](#raspberry-pi)', 'Precio estimado': '$199 (Green) / $180–385 (Pi 5)' },
           { 'Tu objetivo': 'HA + cámaras Frigate', 'Compra esto': '[Mini PC Intel N100/N150](#mini-pc)', 'Precio estimado': '~$385–500' },
           { 'Tu objetivo': 'HA + un LLM local', 'Compra esto': '[Mini PC Ryzen, 32 GB de RAM](#mini-pc)', 'Precio estimado': 'desde ~$799 (lista 24 GB; mira 32 GB)' },
-          { 'Tu objetivo': 'HA + un LLM local más grande', 'Compra esto': '[Servidor con RTX 3090 usada](#server)', 'Precio estimado': '~$1,500–1,725 (solo GPU; InsiderLLM 2026-11-23)' },
+          { 'Tu objetivo': 'HA + un LLM local más grande', 'Compra esto': '[Servidor con RTX 3090 usada](#server)', 'Precio estimado': '~$1,500–1,725 (solo GPU; EE. UU., InsiderLLM 2026-11-23)' },
         ],
         tableFormat: true,
         note: 'Los precios son orientativos y cambian — los precios de GPU y DRAM han sido especialmente volátiles este año. La cifra de la RTX 3090 son datos de listados de eBay EE. UU. del [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (datos del 2026-11-23: mediana de $1,650 en 225 listados vendidos, del 13 al 23 de noviembre de 2026), no una cotización; los precios en tu país pueden variar según impuestos locales. Las cifras de mini PC son precios de lista de la tienda de Beelink y el rango N150 de nuestra guía de mini PC, comprobados el 2026-10-25. Comprueba el precio en la publicación antes de comprar. Los demás precios son cifras orientativas, no cotizaciones; algunas páginas enlazadas no muestran precio o muestran otro, así que consulta una tienda actual antes de comprar. Todos los precios son precios de referencia de EE. UU. en USD y pueden diferir en tu país.',
@@ -1193,7 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un servidor dedicado con una GPU discreta es el salto para ejecutar un LLM local más grande junto a muchas cámaras.** Ofrece el mayor margen a mayor coste y consumo — y el precio de las GPU se ha movido mucho en 2026, así que trata las cifras siguientes como una instantánea, no como un valor fijo.',
         items: [
-          'Una RTX 3090 usada (24 GB de VRAM) es una opción habitual para LLM locales por su VRAM. El [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (página actualizada el 2026-11-26) recogía listados vendidos de segunda mano de unos $1,500–1,725 (mediana de $1,650 en 225 listados vendidos, del 13 al 23 de noviembre de 2026; datos del 2026-11-23) — datos de eBay EE. UU., no una cotización ni una oferta; los precios en tu país pueden variar según impuestos locales. Los modelos cuantizados en Q4 de hasta unos 70B pueden ser posibles según la cuantización, el tamaño de contexto y el offloading; considéralo un rango de capacidad, no una garantía para todo modelo de 70B.',
+          'Una RTX 3090 usada (24 GB de VRAM) es una opción habitual para LLM locales por su VRAM. El [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (comprobado el 2026-11-28) recogía listados vendidos de segunda mano de unos $1,500–1,725 (mediana de $1,650 en 225 listados vendidos, del 13 al 23 de noviembre de 2026; datos del 2026-11-23) — datos de eBay EE. UU., no una cotización ni una oferta; los precios en tu país pueden variar según impuestos locales. Los modelos cuantizados en Q4 de hasta unos 70B pueden ser posibles según la cuantización, el tamaño de contexto y el offloading; considéralo un rango de capacidad, no una garantía para todo modelo de 70B. La descarga predeterminada de Llama 3.3 70B ocupa unos 43 GB ([Ollama: llama3.3](https://ollama.com/library/llama3.3)), más que los 24 GB de la tarjeta, así que parte de un modelo así debe ejecutarse desde la RAM del sistema, mucho más lento.',
           'Una RTX 3060 usada (12 GB) es la alternativa económica para un equipo con GPU discreta — puede gestionar modelos de 7B–13B según la cuantización, aunque sin el margen de VRAM ni el precio de la RTX 3090.',
           'Mejor para muchas cámaras, un LLM más grande y varios usuarios. Mayor consumo y coste que un mini PC — consulta la sección de consumo eléctrico más abajo antes de comprometerte con este nivel.',
           'Excesivo para un smart home básico — resérvalo para uso intensivo de IA local, y mantén el hub de Home Assistant en un equipo aparte de bajo consumo por fiabilidad (ver ¿Un equipo o dos? más abajo).',
@@ -1204,7 +1204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: 'Una GPU de 350 W en un servidor que funciona de forma continua necesita una fuente de alimentación de calidad bien dimensionada, buena ventilación y una ubicación adecuada. Las tarjetas usadas pueden tener desgaste y no tener garantía, así que revisa las condiciones del vendedor. Sigue las indicaciones del fabricante; esto no es asesoramiento eléctrico.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-es.svg',
-        imageCaption: 'Capacidad de LLM local por nivel de hardware: una Raspberry Pi 5 solo ejecuta modelos diminutos, un mini PC Intel N100/N150 gestiona modelos pequeños, un mini PC Ryzen (32 GB de RAM) ejecuta modelos de 7B–8B, y una RTX 3090 usada (24 GB de VRAM) escala hasta unos 70B en cuantización Q4 según la configuración.',
+        imageCaption: 'Capacidad de LLM local por nivel de hardware: una Raspberry Pi 5 solo ejecuta modelos diminutos, un mini PC Intel N100/N150 gestiona modelos pequeños, un mini PC Ryzen (32 GB de RAM) ejecuta modelos de 7B–8B, y una RTX 3090 usada (24 GB de VRAM) solo llega a unos 70B en Q4 descargando parte del modelo a la RAM del sistema, mucho más lento.',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -1257,7 +1257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Hardware': 'Mini PC Intel N100/N150', 'Precio relativo': 'Medio', 'Solo-HA': 'Sí', 'Puede ejecutar un LLM local': 'Modelos pequeños', 'Aceleración de Frigate': 'iGPU Intel (OpenVINO)' },
           { 'Hardware': 'Mini PC Ryzen', 'Precio relativo': 'Medio', 'Solo-HA': 'Sí', 'Puede ejecutar un LLM local': 'Sí (7B–8B)', 'Aceleración de Frigate': 'iGPU o Hailo M.2' },
           { 'Hardware': 'NAS', 'Precio relativo': 'Medio–alto', 'Solo-HA': 'Sí (contenedor)', 'Puede ejecutar un LLM local': 'Depende del hardware', 'Aceleración de Frigate': 'Depende del modelo' },
-          { 'Hardware': 'Servidor + RTX 3090 usada', 'Precio relativo': 'Alto', 'Solo-HA': 'Sí', 'Puede ejecutar un LLM local': 'Sí (hasta ~70B, según cuantización)', 'Aceleración de Frigate': 'GPU discreta' },
+          { 'Hardware': 'Servidor + RTX 3090 usada', 'Precio relativo': 'Alto', 'Solo-HA': 'Sí', 'Puede ejecutar un LLM local': 'Sí (~70B solo con offloading a RAM, lento)', 'Aceleración de Frigate': 'GPU discreta' },
         ],
         note: 'Para el consumo eléctrico por nivel, consulta [Consumo eléctrico](#power) arriba; para saber si conviene ejecutarlo todo en un solo equipo, consulta [¿Un equipo o dos?](#one-or-two).',
       },
@@ -1286,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuración': 'HA + cámaras + IA local grande', 'Hub': '[Mini PC N150 (mantenido aparte por fiabilidad)](#mini-pc)', 'Acelerador de Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Servidor con RTX 3090 usada, aparte](#server)', 'Total estimado': '~$2,055–2,425 (sin el PC anfitrión)' },
         ],
         tableFormat: true,
-        note: 'La última configuración mantiene el hub de Home Assistant en su propio equipo de bajo consumo y ejecuta la RTX 3090 como una máquina aparte — consulta [¿Un equipo o dos?](#one-or-two) para saber por qué. El total suma una RTX 3090 usada ($1,500–1,725, rastreador de InsiderLLM, 2026-11-23), un mini PC N150 (~$385–500) y un Hailo-8 (~$170–200): de $2,055 a $2,425. No incluye el PC anfitrión (CPU, placa, fuente, RAM, caja) que la GPU necesita. Los demás precios son cifras orientativas, no cotizaciones; algunas páginas enlazadas no muestran precio o muestran otro, así que consulta una tienda actual antes de comprar. Todos los precios son precios de referencia de EE. UU. en USD y pueden diferir en tu país.',
+        note: 'La última configuración mantiene el hub de Home Assistant en su propio equipo de bajo consumo y ejecuta la RTX 3090 como una máquina aparte — consulta [¿Un equipo o dos?](#one-or-two) para saber por qué. El total suma una RTX 3090 usada ($1,500–1,725, ventas en EE. UU., rastreador de InsiderLLM, 2026-11-23), un mini PC N150 (~$385–500) y un Hailo-8 (~$170–200): de $2,055 a $2,425. No incluye el PC anfitrión (CPU, placa, fuente, RAM, caja) que la GPU necesita. Los demás precios son cifras orientativas, no cotizaciones; algunas páginas enlazadas no muestran precio o muestran otro, así que consulta una tienda actual antes de comprar. Todos los precios son precios de referencia de EE. UU. en USD y pueden diferir en tu país.',
       },
       faqSection: {
         id: 'faq',
@@ -1360,11 +1360,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 스마트 홈 + 로컬 AI를 위한 최고의 하드웨어 (2026)',
     seoTitle: '로컬 스마트 홈 + AI를 위한 최고의 하드웨어 (2026)',
     intro:
-      '로컬 스마트 홈에 최적인 하드웨어는 하나의 결정으로 정리됩니다. Intel N100/N150 미니 PC 또는 Raspberry Pi 5가 Home Assistant 허브를 실행하고, Intel 내장 GPU(OpenVINO) 또는 Hailo-8L M.2 모듈이 Frigate 카메라 감지를 가속하며, SSD 또는 NAS가 녹화 영상을 저장하고, 중고 RTX 3090 서버가 로컬 LLM을 실행하기 위한 상위 단계입니다. 이 가이드는 각 계층을 선택하고 2026년 현재 가격을 단계별로 제시하며, HA 단독과 HA+AI 중 무엇을 고를지 안내하여 두 번이 아니라 한 번에 제대로 구매하도록 돕습니다.',
+      '로컬 스마트 홈에 최적인 하드웨어는 하나의 결정으로 정리됩니다. Intel N100/N150 미니 PC 또는 Raspberry Pi 5가 Home Assistant 허브를 실행하고, Intel 내장 GPU(OpenVINO) 또는 Hailo-8L M.2 모듈이 Frigate 카메라 감지를 가속하며, SSD 또는 NAS가 녹화 영상을 저장하고, 중고 RTX 3090 서버가 로컬 LLM을 실행하기 위한 상위 단계입니다. 이 가이드는 각 계층을 선택하고 2026년 기준의 대략적인 가격을 단계별로 제시하며, HA 단독과 HA+AI 중 무엇을 고를지 안내하여 두 번이 아니라 한 번에 제대로 구매하도록 돕습니다.',
     metaDescription:
-      '2026년 로컬 스마트 홈 + AI 최고의 하드웨어: Intel N100 미니 PC 또는 Raspberry Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo), SSD 스토리지, LLM 업그레이드 경로. 최신 가격 반영.',
+      '2026년 로컬 스마트 홈 + AI 최고의 하드웨어: Intel N100 미니 PC 또는 Raspberry Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo), SSD 스토리지, LLM 업그레이드 경로. 2026년 참고 가격.',
     twitterDescription:
-      '2026년 로컬 스마트 홈 하드웨어: Intel N100 미니 PC 또는 Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo-8L), SSD 스토리지, 로컬 LLM용 중고 RTX 3090. 2026년 최신 가격.',
+      '2026년 로컬 스마트 홈 하드웨어: Intel N100 미니 PC 또는 Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo-8L), SSD 스토리지, 로컬 LLM용 중고 RTX 3090. 2026년 참고 가격.',
     readTime: '11분 분량',
     educationalLevel: 'Intermediate',
     audience: 'Home Assistant와 로컬 AI 실행을 위한 하드웨어를 선택하는 구매자',
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '허브: Intel N100/N150 미니 PC(약 $385–500) 또는 Raspberry Pi 5(약 $180–385, D램 공급 부족으로 급등)가 Home Assistant를 실행합니다',
           'Frigate: 대부분의 미니 PC에 내장된 Intel 내장 GPU(OpenVINO), Hailo-8L M.2 모듈(약 $70), 또는 Hailo-8 M.2(약 $170–200)가 카메라 감지를 가속합니다 — Frigate 하드웨어 문서는 지원 감지기로 Hailo와 Intel OpenVINO를 나열하며, 대부분의 신규 설치에는 Google Coral을 더 이상 권장하지 않습니다. 이미 보유한 Coral은 계속 작동합니다',
           '스토리지: 녹화 영상은 SSD, 카메라가 늘어나면(Synology DS225+ 약 $340, DS925+ 약 $640, UGREEN NASync DXP4800 Plus 약 $580) NAS',
-          '로컬 LLM 업그레이드: Ryzen 미니 PC(RAM 32GB 권장, Beelink SER8 24GB 정가 $799, 32GB는 별도 확인) 또는 중고 RTX 3090(InsiderLLM 트래커 2026-11-23 기준 판매 완료 기록 약 $1,500–1,725)',
+          '로컬 LLM 업그레이드: Ryzen 미니 PC(RAM 32GB 권장, Beelink SER8 24GB 정가 $799, 32GB는 별도 확인) 또는 중고 RTX 3090(InsiderLLM 트래커 2026-11-23 기준 eBay 미국 판매 완료 기록 약 $1,500–1,725)',
           '구매 전에 HA 단독인지 HA + 카메라 + 로컬 AI인지 결정하십시오. 그 선택이 적합한 기기를 바꾸며, 나중에 Pi를 교체하기보다 지금 미니 PC를 구매하는 것이 더 낫습니다',
         ],
       },
@@ -1438,7 +1438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '목표': 'Home Assistant만 사용', '구매할 것': '[Home Assistant Green 또는 Raspberry Pi 5](#raspberry-pi)', '예상 가격': '$199 (Green) / $180–385 (Pi 5)' },
           { '목표': 'HA + Frigate 카메라', '구매할 것': '[Intel N100/N150 미니 PC](#mini-pc)', '예상 가격': '약 $385–500' },
           { '목표': 'HA + 로컬 LLM', '구매할 것': '[Ryzen 미니 PC, RAM 32GB](#mini-pc)', '예상 가격': '약 $799부터 (24GB 정가, 32GB 확인)' },
-          { '목표': 'HA + 더 큰 로컬 LLM', '구매할 것': '[중고 RTX 3090 서버](#server)', '예상 가격': '약 $1,500–1,725 (GPU만; InsiderLLM 2026-11-23)' },
+          { '목표': 'HA + 더 큰 로컬 LLM', '구매할 것': '[중고 RTX 3090 서버](#server)', '예상 가격': '약 $1,500–1,725 (GPU만; 미국, InsiderLLM 2026-11-23)' },
         ],
         tableFormat: true,
         note: '가격은 대략적인 값이며 변동됩니다 — 특히 GPU와 D램 가격은 올해 변동성이 컸습니다. RTX 3090 수치는 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(2026-11-23자 데이터: 2026년 11월 13~23일 판매 완료 기록 225건의 중앙값 $1,650)의 eBay 미국 목록 데이터이며 견적이 아닙니다. 한국에서는 가격이 다를 수 있습니다. 미니 PC 수치는 Beelink 공식 스토어 정가와 당사 미니 PC 가이드의 N150 가격대이며 2026-10-25에 확인했습니다. 구매 전 링크된 매물의 실제 가격을 확인하십시오. 그 밖의 가격은 대략적인 참고값이며 견적이 아닙니다. 일부 링크 페이지에는 가격이 없거나 다를 수 있으므로 구매 전에 현재 판매처를 확인하십시오.',
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**개별 GPU를 갖춘 전용 서버는 많은 카메라와 함께 더 큰 로컬 LLM을 실행하기 위한 업그레이드 경로입니다.** 더 높은 비용과 전력으로 가장 많은 여유를 제공합니다 — 2026년에는 GPU 가격이 크게 변동했으므로 아래 수치는 고정값이 아니라 특정 시점의 스냅샷으로 보십시오.',
         items: [
-          '중고 RTX 3090(VRAM 24GB)은 VRAM 덕분에 로컬 LLM에 많이 쓰이는 선택입니다. [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(페이지 갱신일 2026-11-26)는 중고 판매 완료 기록을 약 $1,500–1,725로 집계했습니다(2026년 11월 13~23일 225건, 중앙값 $1,650, 2026-11-23자 데이터) — eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다. 한국에서는 가격이 다를 수 있습니다. 양자화 방식, 컨텍스트 크기, 오프로딩에 따라 Q4 양자화로 최대 약 70B 모델까지 가능할 수 있습니다. 이는 모든 70B 모델을 보장하는 것이 아니라 대략적인 성능 범위로 여기십시오.',
+          '중고 RTX 3090(VRAM 24GB)은 VRAM 덕분에 로컬 LLM에 많이 쓰이는 선택입니다. [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(2026-11-28 확인)는 중고 판매 완료 기록을 약 $1,500–1,725로 집계했습니다(2026년 11월 13~23일 225건, 중앙값 $1,650, 2026-11-23자 데이터) — eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다. 한국에서는 가격이 다를 수 있습니다. 양자화 방식, 컨텍스트 크기, 오프로딩에 따라 Q4 양자화로 최대 약 70B 모델까지 가능할 수 있습니다. 이는 모든 70B 모델을 보장하는 것이 아니라 대략적인 성능 범위로 여기십시오. Llama 3.3 70B의 기본 다운로드 크기는 약 43GB([Ollama: llama3.3](https://ollama.com/library/llama3.3))로 카드의 24GB보다 크므로, 이런 모델은 일부를 시스템 RAM에서 실행해야 하며 훨씬 느립니다.',
           '중고 RTX 3060(12GB)은 개별 GPU 기기의 예산형 대안이며, RTX 3090만큼의 VRAM 여유나 가격은 아니지만 양자화에 따라 7B–13B 모델을 처리할 수 있습니다.',
           '카메라가 많거나, 대형 LLM을 실행하거나, 여러 사용자가 있는 경우에 가장 적합합니다. 미니 PC보다 전력 소비와 비용이 높습니다 — 이 등급에 투자하기 전에 아래 전력 소비 섹션을 참조하십시오.',
           '기본적인 스마트 홈에는 과도합니다. 대용량 로컬 AI 사용에 예약하고, 안정성을 위해 Home Assistant 허브는 별도의 저전력 기기에 유지하십시오(아래 "기기 하나 대 두 개?" 참조).',
@@ -1541,7 +1541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: '연속 가동되는 서버의 350W GPU에는 용량이 알맞은 품질 좋은 파워서플라이, 충분한 환기, 적절한 설치 위치가 필요합니다. 중고 카드는 마모가 있을 수 있고 보증이 없을 수 있으므로 판매자의 조건을 확인하십시오. 제조사의 안내를 따르십시오. 이는 전기 관련 자문이 아닙니다.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-ko.svg',
-        imageCaption: '하드웨어 등급별 로컬 LLM 용량: Raspberry Pi 5는 아주 작은 모델만 실행하고, Intel N100/N150 미니 PC는 소형 모델을 처리하며, Ryzen 미니 PC(RAM 32GB)는 7B–8B 모델을 실행하고, 중고 RTX 3090(VRAM 24GB)은 구성에 따라 Q4 양자화 기준 최대 약 70B까지 확장됩니다.',
+        imageCaption: '하드웨어 등급별 로컬 LLM 용량: Raspberry Pi 5는 아주 작은 모델만 실행하고, Intel N100/N150 미니 PC는 소형 모델을 처리하며, Ryzen 미니 PC(RAM 32GB)는 7B–8B 모델을 실행하고, 중고 RTX 3090(VRAM 24GB)은 모델 일부를 시스템 RAM으로 오프로딩해야만 Q4 기준 약 70B를 실행할 수 있으며, 훨씬 느립니다.',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -1594,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '하드웨어': 'Intel N100/N150 미니 PC', '상대적 가격': '중가', 'HA 단독': '가능', '로컬 LLM 실행 가능': '소형 모델', 'Frigate 가속': 'Intel 내장 GPU(OpenVINO)' },
           { '하드웨어': 'Ryzen 미니 PC', '상대적 가격': '중가', 'HA 단독': '가능', '로컬 LLM 실행 가능': '가능 (7B–8B)', 'Frigate 가속': '내장 GPU 또는 Hailo M.2' },
           { '하드웨어': 'NAS', '상대적 가격': '중~고가', 'HA 단독': '가능 (컨테이너)', '로컬 LLM 실행 가능': '하드웨어에 따라 다름', 'Frigate 가속': '모델에 따라 다름' },
-          { '하드웨어': '서버 + 중고 RTX 3090', '상대적 가격': '고가', 'HA 단독': '가능', '로컬 LLM 실행 가능': '가능 (최대 약 70B, 양자화에 따라 다름)', 'Frigate 가속': '개별 GPU' },
+          { '하드웨어': '서버 + 중고 RTX 3090', '상대적 가격': '고가', 'HA 단독': '가능', '로컬 LLM 실행 가능': '가능 (약 70B는 RAM 오프로딩 필요, 느림)', 'Frigate 가속': '개별 GPU' },
         ],
         note: '등급별 전력 소비는 위의 [전력 소비](#power)를, 모든 것을 한 기기에서 실행할지 여부는 [기기 하나 대 두 개?](#one-or-two)를 참조하십시오.',
       },
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '구성': 'HA + 카메라 + 대형 로컬 AI', '허브': '[N150 미니 PC (안정성을 위해 분리)](#mini-pc)', 'Frigate 가속기': '[Hailo-8](#frigate-accelerator)', 'AI': '[중고 RTX 3090 서버, 별도 운영](#server)', '예상 총액': '약 $2,055–2,425 (호스트 PC 제외)' },
         ],
         tableFormat: true,
-        note: '마지막 구성은 Home Assistant 허브를 자체 저전력 기기에 유지하고 RTX 3090을 별도 기기로 운영합니다 — 이유는 [기기 하나 대 두 개?](#one-or-two)를 참조하십시오. 이 합계는 중고 RTX 3090($1,500–1,725, InsiderLLM 트래커 2026-11-23), N150 미니 PC(약 $385–500), Hailo-8(약 $170–200)을 더한 값으로 $2,055–2,425입니다. GPU에 필요한 호스트 PC(CPU, 메인보드, 파워, RAM, 케이스)는 포함되지 않습니다. 그 밖의 가격은 대략적인 참고값이며 견적이 아닙니다. 일부 링크 페이지에는 가격이 없거나 다를 수 있으므로 구매 전에 현재 판매처를 확인하십시오.',
+        note: '마지막 구성은 Home Assistant 허브를 자체 저전력 기기에 유지하고 RTX 3090을 별도 기기로 운영합니다 — 이유는 [기기 하나 대 두 개?](#one-or-two)를 참조하십시오. 이 합계는 중고 RTX 3090($1,500–1,725, 미국 판매 완료 기록, InsiderLLM 트래커 2026-11-23), N150 미니 PC(약 $385–500), Hailo-8(약 $170–200)을 더한 값으로 $2,055–2,425입니다. GPU에 필요한 호스트 PC(CPU, 메인보드, 파워, RAM, 케이스)는 포함되지 않습니다. 그 밖의 가격은 대략적인 참고값이며 견적이 아닙니다. 일부 링크 페이지에는 가격이 없거나 다를 수 있으므로 구매 전에 현재 판매처를 확인하십시오.',
       },
       faqSection: {
         id: 'faq',
@@ -1697,11 +1697,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Meilleur Matériel pour une Maison Connectée Locale + IA Locale (2026)',
     seoTitle: 'Meilleur Matériel : Maison Connectée Locale + IA (2026)',
     intro:
-      'Le meilleur matériel pour une maison connectée locale suit une seule logique : un mini-PC Intel N100/N150 ou une Raspberry Pi 5 fait tourner le hub Home Assistant, une iGPU Intel (OpenVINO) ou un module Hailo-8L M.2 accélère la détection de caméras Frigate, un SSD ou un NAS stocke les enregistrements, et un boîtier RTX 3090 d\'occasion constitue la montée en gamme pour un LLM local. Ce guide détaille chaque couche, avec les prix actualisés pour 2026, et vous aide à choisir entre HA seul et HA plus IA pour n\'acheter qu\'une fois, pas deux.',
+      'Le meilleur matériel pour une maison connectée locale suit une seule logique : un mini-PC Intel N100/N150 ou une Raspberry Pi 5 fait tourner le hub Home Assistant, une iGPU Intel (OpenVINO) ou un module Hailo-8L M.2 accélère la détection de caméras Frigate, un SSD ou un NAS stocke les enregistrements, et un boîtier RTX 3090 d\'occasion constitue la montée en gamme pour un LLM local. Ce guide détaille chaque couche, avec des prix indicatifs pour 2026, et vous aide à choisir entre HA seul et HA plus IA pour n\'acheter qu\'une fois, pas deux.',
     metaDescription:
-      'Meilleur matériel maison connectée locale + IA 2026 : mini-PC Intel N100 ou Raspberry Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo), stockage SSD, montée en gamme LLM. Prix actualisés.',
+      'Meilleur matériel maison connectée locale + IA 2026 : mini-PC Intel N100 ou Raspberry Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo), stockage SSD, montée en gamme LLM. Prix indicatifs.',
     twitterDescription:
-      'Matériel pour une maison connectée locale en 2026 : mini-PC Intel N100 ou Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo-8L), stockage SSD, RTX 3090 d\'occasion pour un LLM local. Prix actualisés 2026.',
+      'Matériel pour une maison connectée locale en 2026 : mini-PC Intel N100 ou Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo-8L), stockage SSD, RTX 3090 d\'occasion pour un LLM local. Prix indicatifs 2026.',
     readTime: '11 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Acheteurs choisissant du matériel pour Home Assistant et l\'IA locale',
@@ -1761,7 +1761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hub : un mini-PC Intel N100/N150 (environ 385–500 $) ou une Raspberry Pi 5 (environ 180–385 $, en forte hausse à cause d\'une pénurie de mémoire DRAM) fait tourner Home Assistant',
           'Frigate : une iGPU Intel (OpenVINO, intégrée à la plupart des mini-PC), un module Hailo-8L M.2 (environ 70 $) ou un Hailo-8 M.2 (environ 170–200 $) accélère la détection de caméras — la documentation matérielle de Frigate cite Hailo et Intel OpenVINO parmi les détecteurs pris en charge et ne recommande plus le Google Coral pour la plupart des nouvelles installations ; un Coral existant fonctionne toujours',
           'Stockage : un SSD pour les enregistrements, ou un NAS (Synology DS225+ environ 340 $, DS925+ environ 640 $, UGREEN NASync DXP4800 Plus environ 580 $) dès que vous exploitez plusieurs caméras',
-          'Montée en gamme LLM local : un mini-PC Ryzen (32 Go de RAM conseillés ; Beelink SER8 en 24 Go : prix catalogue 799 $, à vérifier en 32 Go) ou une RTX 3090 d\'occasion (environ 1 500–1 725 $ en annonces vendues, selon le suivi d\'InsiderLLM, 2026-11-23)',
+          'Montée en gamme LLM local : un mini-PC Ryzen (32 Go de RAM conseillés ; Beelink SER8 en 24 Go : prix catalogue 799 $, à vérifier en 32 Go) ou une RTX 3090 d\'occasion (environ 1 500–1 725 $ en annonces eBay États-Unis vendues, selon le suivi d\'InsiderLLM, 2026-11-23)',
           'Décidez HA-seul vs HA + caméras + IA locale avant d\'acheter — cela change la bonne machine, et acheter le mini-PC maintenant vaut mieux que remplacer une Pi plus tard',
         ],
       },
@@ -1775,7 +1775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre objectif': 'Home Assistant seul', 'Achetez ceci': '[Home Assistant Green ou Raspberry Pi 5](#raspberry-pi)', 'Prix estimé': '199 $ (Green) / 180–385 $ (Pi 5)' },
           { 'Votre objectif': 'HA + caméras Frigate', 'Achetez ceci': '[Mini-PC Intel N100/N150](#mini-pc)', 'Prix estimé': 'environ 385–500 $' },
           { 'Votre objectif': 'HA + un LLM local', 'Achetez ceci': '[Mini-PC Ryzen, 32 Go de RAM](#mini-pc)', 'Prix estimé': 'dès env. 799 $ (24 Go ; vérifier 32 Go)' },
-          { 'Votre objectif': 'HA + un LLM local plus grand', 'Achetez ceci': '[Serveur RTX 3090 d\'occasion](#server)', 'Prix estimé': 'environ 1 500–1 725 $ (GPU seul ; InsiderLLM 2026-11-23)' },
+          { 'Votre objectif': 'HA + un LLM local plus grand', 'Achetez ceci': '[Serveur RTX 3090 d\'occasion](#server)', 'Prix estimé': 'environ 1 500–1 725 $ (GPU seul ; US, InsiderLLM 2026-11-23)' },
         ],
         tableFormat: true,
         note: 'Les prix sont indicatifs et évoluent — les prix des GPU et de la DRAM en particulier ont été volatils cette année. Le chiffre de la RTX 3090 provient de données d\'annonces eBay États-Unis du [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (données du 2026-11-23 : médiane de 1 650 $ sur 225 annonces vendues, du 13 au 23 novembre 2026), pas d\'un devis ; les prix en France varient selon les taxes et les frais d\'importation. Les chiffres des mini-PC sont les prix catalogue de la boutique Beelink et la fourchette N150 de notre guide des mini-PC, vérifiés le 2026-10-25. Vérifiez le prix sur l\'annonce avant d\'acheter. Les autres prix sont des ordres de grandeur, pas des devis ; certaines pages liées n\'affichent aucun prix ou un prix différent, vérifiez donc auprès d\'un revendeur actuel avant d\'acheter. Tous les prix sont des prix de référence américains en USD et peuvent différer dans votre pays.',
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un serveur dédié avec un GPU dédié constitue la montée en gamme pour exécuter un LLM local plus grand aux côtés de nombreuses caméras.** Il offre le plus de marge à un coût et une consommation supérieurs — et les prix des GPU ont beaucoup bougé en 2026, donc traitez les chiffres ci-dessous comme un instantané, pas une valeur fixe.',
         items: [
-          'Une RTX 3090 d\'occasion (24 Go de VRAM) est un choix courant pour les LLM locaux grâce à sa VRAM. Le [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (page mise à jour le 2026-11-26) relevait des annonces vendues d\'occasion d\'environ 1 500–1 725 $ (médiane de 1 650 $ sur 225 annonces vendues, du 13 au 23 novembre 2026 ; données du 2026-11-23) — données eBay États-Unis, ni devis ni offre ; les prix en France varient selon les taxes et les frais d\'importation. Des modèles quantifiés en Q4 jusqu\'à environ 70B peuvent être possibles selon la quantification, la taille de contexte et l\'offloading ; considérez cela comme une plage de capacité, pas une garantie pour tout modèle de 70B.',
+          'Une RTX 3090 d\'occasion (24 Go de VRAM) est un choix courant pour les LLM locaux grâce à sa VRAM. Le [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (vérifié le 2026-11-28) relevait des annonces vendues d\'occasion d\'environ 1 500–1 725 $ (médiane de 1 650 $ sur 225 annonces vendues, du 13 au 23 novembre 2026 ; données du 2026-11-23) — données eBay États-Unis, ni devis ni offre ; les prix en France varient selon les taxes et les frais d\'importation. Des modèles quantifiés en Q4 jusqu\'à environ 70B peuvent être possibles selon la quantification, la taille de contexte et l\'offloading ; considérez cela comme une plage de capacité, pas une garantie pour tout modèle de 70B. Le téléchargement par défaut de Llama 3.3 70B pèse environ 43 Go ([Ollama: llama3.3](https://ollama.com/library/llama3.3)), soit plus que les 24 Go de la carte : une partie d\'un tel modèle doit donc tourner depuis la RAM système, ce qui est bien plus lent.',
           'Une RTX 3060 d\'occasion (12 Go) est l\'alternative économique pour une machine à GPU dédié — elle peut gérer des modèles de 7B à 13B selon la quantification, sans la marge de VRAM ni le prix de la RTX 3090.',
           'Idéal pour de nombreuses caméras, un LLM plus grand et plusieurs utilisateurs. Consommation et coût supérieurs à un mini-PC — consultez la section sur la consommation électrique ci-dessous avant de vous engager sur ce niveau.',
           'Surdimensionné pour une maison connectée basique — réservez-le à un usage intensif d\'IA locale, et gardez le hub Home Assistant sur une machine séparée à faible consommation pour la fiabilité (voir Une machine ou deux ? ci-dessous).',
@@ -1878,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: 'Un GPU de 350 W dans un serveur fonctionnant en continu nécessite une alimentation de qualité correctement dimensionnée, une bonne ventilation et un emplacement judicieux. Les cartes d\'occasion peuvent présenter de l\'usure et ne pas avoir de garantie : examinez les conditions du vendeur. Suivez les consignes du fabricant ; ceci ne constitue pas un conseil électrique.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-fr.svg',
-        imageCaption: 'Capacité de LLM local par niveau de matériel : une Raspberry Pi 5 ne fait tourner que des modèles minuscules, un mini-PC Intel N100/N150 gère de petits modèles, un mini-PC Ryzen (32 Go de RAM) fait tourner des modèles de 7B à 8B, et une RTX 3090 d\'occasion (24 Go de VRAM) monte jusqu\'à environ 70B en quantification Q4 selon la configuration.',
+        imageCaption: 'Capacité de LLM local par niveau de matériel : une Raspberry Pi 5 ne fait tourner que des modèles minuscules, un mini-PC Intel N100/N150 gère de petits modèles, un mini-PC Ryzen (32 Go de RAM) fait tourner des modèles de 7B à 8B, et une RTX 3090 d\'occasion (24 Go de VRAM) n\'atteint environ 70B en Q4 qu\'en déchargeant une partie du modèle dans la RAM système, ce qui est bien plus lent.',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -1931,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Matériel': 'Mini-PC Intel N100/N150', 'Prix relatif': 'Moyen', 'HA-seul': 'Oui', 'Peut exécuter un LLM local': 'Petits modèles', 'Accélération Frigate': 'iGPU Intel (OpenVINO)' },
           { 'Matériel': 'Mini-PC Ryzen', 'Prix relatif': 'Moyen', 'HA-seul': 'Oui', 'Peut exécuter un LLM local': 'Oui (7B–8B)', 'Accélération Frigate': 'iGPU ou Hailo M.2' },
           { 'Matériel': 'NAS', 'Prix relatif': 'Moyen–élevé', 'HA-seul': 'Oui (conteneur)', 'Peut exécuter un LLM local': 'Dépend du matériel', 'Accélération Frigate': 'Dépend du modèle' },
-          { 'Matériel': 'Serveur + RTX 3090 d\'occasion', 'Prix relatif': 'Élevé', 'HA-seul': 'Oui', 'Peut exécuter un LLM local': 'Oui (jusqu\'à ~70B, selon la quantification)', 'Accélération Frigate': 'GPU dédié' },
+          { 'Matériel': 'Serveur + RTX 3090 d\'occasion', 'Prix relatif': 'Élevé', 'HA-seul': 'Oui', 'Peut exécuter un LLM local': 'Oui (~70B seulement avec déchargement en RAM, lent)', 'Accélération Frigate': 'GPU dédié' },
         ],
         note: 'Pour la consommation électrique par niveau, voir [Consommation électrique](#power) ci-dessus ; pour savoir s\'il vaut mieux tout faire tourner sur une seule machine, voir [Une machine ou deux ?](#one-or-two).',
       },
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuration': 'HA + caméras + IA locale volumineuse', 'Hub': '[Mini-PC N150 (gardé séparé pour la fiabilité)](#mini-pc)', 'Accélérateur Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Serveur RTX 3090 d\'occasion, séparé](#server)', 'Total estimé': 'environ 2 055–2 425 $ (hors PC hôte)' },
         ],
         tableFormat: true,
-        note: 'La dernière configuration garde le hub Home Assistant sur sa propre machine basse consommation et fait tourner la RTX 3090 comme une machine séparée — voir [Une machine ou deux ?](#one-or-two) pour comprendre pourquoi. Le total additionne une RTX 3090 d\'occasion (1 500–1 725 $, suivi d\'InsiderLLM, 2026-11-23), un mini-PC N150 (environ 385–500 $) et un Hailo-8 (environ 170–200 $) : de 2 055 à 2 425 $. Il exclut le PC hôte (CPU, carte mère, alimentation, RAM, boîtier) dont le GPU a besoin. Les autres prix sont des ordres de grandeur, pas des devis ; certaines pages liées n\'affichent aucun prix ou un prix différent, vérifiez donc auprès d\'un revendeur actuel avant d\'acheter. Tous les prix sont des prix de référence américains en USD et peuvent différer dans votre pays.',
+        note: 'La dernière configuration garde le hub Home Assistant sur sa propre machine basse consommation et fait tourner la RTX 3090 comme une machine séparée — voir [Une machine ou deux ?](#one-or-two) pour comprendre pourquoi. Le total additionne une RTX 3090 d\'occasion (1 500–1 725 $, ventes aux États-Unis, suivi d\'InsiderLLM, 2026-11-23), un mini-PC N150 (environ 385–500 $) et un Hailo-8 (environ 170–200 $) : de 2 055 à 2 425 $. Il exclut le PC hôte (CPU, carte mère, alimentation, RAM, boîtier) dont le GPU a besoin. Les autres prix sont des ordres de grandeur, pas des devis ; certaines pages liées n\'affichent aucun prix ou un prix différent, vérifiez donc auprès d\'un revendeur actuel avant d\'acheter. Tous les prix sont des prix de référence américains en USD et peuvent différer dans votre pays.',
       },
       faqSection: {
         id: 'faq',
@@ -2034,11 +2034,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカルスマートホーム + ローカルAIに最適なハードウェア（2026）',
     seoTitle: '最適なハードウェア：ローカルSH + AI（2026）',
     intro:
-      'ローカルスマートホームに最適なハードウェアは、次の判断に従います。ハブは Intel N100/N150 ミニPC または Raspberry Pi 5、Frigate のカメラ検出は Intel 内蔵GPU（OpenVINO）または Hailo-8L M.2 モジュールで加速し、録画は SSD または NAS に保存、ローカルLLM を動かしたいなら中古の RTX 3090 搭載機がその上位選択肢です。本ガイドは各層を選び、2026年時点の最新価格を示し、HAのみか HA＋AI かの判断を助けます——一度で正しく買い、二度買わずに済むように。',
+      'ローカルスマートホームに最適なハードウェアは、次の判断に従います。ハブは Intel N100/N150 ミニPC または Raspberry Pi 5、Frigate のカメラ検出は Intel 内蔵GPU（OpenVINO）または Hailo-8L M.2 モジュールで加速し、録画は SSD または NAS に保存、ローカルLLM を動かしたいなら中古の RTX 3090 搭載機がその上位選択肢です。本ガイドは各層を選び、2026年時点の目安価格を示し、HAのみか HA＋AI かの判断を助けます——一度で正しく買い、二度買わずに済むように。',
     metaDescription:
-      'ローカルスマートホーム＋AIの最適ハードウェア（2026年）：Intel N100 ミニPC または Raspberry Pi 5 のハブ、Frigate 加速（Intel 内蔵GPU／Hailo）、SSD ストレージ、LLM 用の上位構成を解説。価格情報を更新。',
+      'ローカルスマートホーム＋AIの最適ハードウェア（2026年）：Intel N100 ミニPC または Raspberry Pi 5 のハブ、Frigate 加速（Intel 内蔵GPU／Hailo）、SSD ストレージ、LLM 用の上位構成を解説。目安価格つき。',
     twitterDescription:
-      'ローカルスマートホームのハードウェア（2026年）：ハブは Intel N100 ミニPC または Pi 5、Frigate 加速は Intel 内蔵GPU／Hailo-8L、SSD ストレージ、ローカルLLM は中古 RTX 3090。2026年最新価格。',
+      'ローカルスマートホームのハードウェア（2026年）：ハブは Intel N100 ミニPC または Pi 5、Frigate 加速は Intel 内蔵GPU／Hailo-8L、SSD ストレージ、ローカルLLM は中古 RTX 3090。2026年の目安価格。',
     readTime: '11分で読める',
     educationalLevel: 'Intermediate',
     audience: 'Home Assistant とローカルAIを動かすハードウェアを選ぶ購入者',
@@ -2098,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ハブ：Intel N100/N150 ミニPC（約$385〜500）または Raspberry Pi 5（約$180〜385、DRAM不足で大幅値上がり）が Home Assistant を動かす',
           'Frigate：多くのミニPCに内蔵された Intel 内蔵GPU（OpenVINO 経由）、Hailo-8L M.2 モジュール（約$70）、または Hailo-8 M.2（約$170〜200）がカメラ検出を加速——Frigate のハードウェア文書は対応検出器として Hailo と Intel OpenVINO を挙げ、多くの新規インストールでは Google Coral を推奨していません（所有済みの Coral は引き続き使えます）',
           'ストレージ：録画は SSD、カメラが増えたら（Synology DS225+ 約$340、DS925+ 約$640、UGREEN NASync DXP4800 Plus 約$580）NAS へ',
-          'ローカルLLM の上位構成：Ryzen ミニPC（RAM 32GB推奨。Beelink SER8 の24GB構成の定価は$799、32GBは要確認）または中古 RTX 3090（InsiderLLMトラッカーの2026-11-23付データによると販売済み出品は約$1,500-1,725）',
+          'ローカルLLM の上位構成：Ryzen ミニPC（RAM 32GB推奨。Beelink SER8 の24GB構成の定価は$799、32GBは要確認）または中古 RTX 3090（InsiderLLMトラッカーの2026-11-23付データによるとeBay米国の販売済み出品は約$1,500-1,725）',
           '購入前に HAのみ 対 HA＋カメラ＋ローカルAI を決める——適切な機器が変わり、後で Pi を買い替えるより今ミニPCを買う方が得です',
         ],
       },
@@ -2112,7 +2112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '目的': 'Home Assistant のみ', 'これを買う': '[Home Assistant Green または Raspberry Pi 5](#raspberry-pi)', '目安価格': '約$199（Green）／約$180〜385（Pi 5）' },
           { '目的': 'HA＋Frigate カメラ', 'これを買う': '[Intel N100/N150 ミニPC](#mini-pc)', '目安価格': '約$385〜500' },
           { '目的': 'HA＋ローカルLLM', 'これを買う': '[Ryzen ミニPC、RAM 32GB](#mini-pc)', '目安価格': '約$799から（24GB定価、32GBは要確認）' },
-          { '目的': 'HA＋より大きなローカルLLM', 'これを買う': '[中古 RTX 3090 サーバー](#server)', '目安価格': '約$1,500〜1,725（GPUのみ；InsiderLLM 2026-11-23）' },
+          { '目的': 'HA＋より大きなローカルLLM', 'これを買う': '[中古 RTX 3090 サーバー](#server)', '目安価格': '約$1,500〜1,725（GPUのみ；米国、InsiderLLM 2026-11-23）' },
         ],
         tableFormat: true,
         note: '価格は目安で変動します——特に GPU とDRAMの価格は今年変動が大きいです。RTX 3090の数値は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（2026-11-23付のデータ：2026年11月13〜23日の販売済み出品225件の中央値は$1,650）にあるeBay米国の出品データで、見積もりではありません。日本での価格は税や輸入コストにより異なります。ミニPCの数値は Beelink 公式ストアの定価と当サイトのミニPCガイドの N150 価格帯で、2026-10-25に確認したものです。購入前にリンク先の実際の価格を確認してください。 その他の価格は大まかな目安で、見積もりではありません。リンク先に価格がない、または異なる場合があるため、購入前に現在の販売店で確認してください。すべての価格は米国の参考価格（USD）であり、お住まいの国では異なる場合があります。',
@@ -2204,7 +2204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**ディスクリートGPUを搭載した専用サーバーは、多数のカメラと並行してより大きなローカルLLM を動かすための上位構成です。** より高いコストと消費電力で最大の余裕を提供します——2026年はGPU価格の変動が大きいため、以下の数字はある時点のスナップショットとして捉えてください。',
         items: [
-          '中古の RTX 3090（VRAM 24GB）はVRAMの大きさからローカルLLMでよく選ばれています。[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（ページ更新日：2026-11-26）は、中古の販売済み出品を約$1,500-1,725としていました（2026年11月13〜23日の225件、中央値$1,650、2026-11-23付のデータ）——eBay米国の出品データで、見積もりやオファーではありません。日本での価格は税や輸入コストにより異なります。量子化方式、コンテキストサイズ、オフロード次第では、Q4量子化で約70Bまでのモデルが動く可能性があります——これは目安の範囲であり、すべての70Bモデルを保証するものではありません。',
+          '中古の RTX 3090（VRAM 24GB）はVRAMの大きさからローカルLLMでよく選ばれています。[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（2026-11-28に確認）は、中古の販売済み出品を約$1,500-1,725としていました（2026年11月13〜23日の225件、中央値$1,650、2026-11-23付のデータ）——eBay米国の出品データで、見積もりやオファーではありません。日本での価格は税や輸入コストにより異なります。量子化方式、コンテキストサイズ、オフロード次第では、Q4量子化で約70Bまでのモデルが動く可能性があります——これは目安の範囲であり、すべての70Bモデルを保証するものではありません。Llama 3.3 70Bの標準ダウンロードは約43GB（[Ollama: llama3.3](https://ollama.com/library/llama3.3)）で、カードの24GBを超えます。そのため、このようなモデルは一部をシステムRAMで動かすことになり、大幅に遅くなります。',
           '中古の RTX 3060（12GB）はディスクリートGPU機の予算重視の代替で、RTX 3090ほどのVRAM余裕や価格ではありませんが、量子化方式によっては7B〜13Bモデルを扱えます。',
           '多数のカメラ、より大きな LLM、複数ユーザーに最適。ミニPCより消費電力もコストも高くなります——この構成に踏み切る前に、下記の消費電力のセクションを確認してください。',
           '基本的なスマートホームには過剰——重いローカルAI用途に取っておき、信頼性のために Home Assistant のハブは別の低消費電力機に分けましょう（下記「一台か二台か？」を参照）。',
@@ -2215,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: '連続稼働するサーバーの350W GPUには、容量が適切で品質の良い電源ユニット、十分な換気、適切な設置場所が必要です。中古カードは消耗している可能性があり保証もないことがあるため、販売者の条件を確認してください。メーカーの指示に従ってください。これは電気工事に関する助言ではありません。' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-ja.svg',
-        imageCaption: 'ハードウェア階層別のローカルLLM容量：Raspberry Pi 5 は極小モデルのみ、Intel N100/N150 ミニPC は小型モデルを処理、Ryzen ミニPC（RAM 32GB）は 7B〜8B モデルを実行、中古 RTX 3090（VRAM 24GB）は構成次第で Q4 量子化で約70Bまで対応します。',
+        imageCaption: 'ハードウェア階層別のローカルLLM容量：Raspberry Pi 5 は極小モデルのみ、Intel N100/N150 ミニPC は小型モデルを処理、Ryzen ミニPC（RAM 32GB）は 7B〜8B モデルを実行、中古 RTX 3090（VRAM 24GB）で Q4 量子化の約70Bを動かすには、モデルの一部をシステムRAMにオフロードする必要があり、大幅に遅くなります。',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -2268,7 +2268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ハードウェア': 'Intel N100/N150 ミニPC', '相対価格': '中', 'HAのみ': '可', 'ローカルLLMを動かせるか': '小型モデル', 'Frigate 加速': 'Intel 内蔵GPU（OpenVINO）' },
           { 'ハードウェア': 'Ryzen ミニPC', '相対価格': '中', 'HAのみ': '可', 'ローカルLLMを動かせるか': '可（7B〜8B）', 'Frigate 加速': '内蔵GPU または Hailo M.2' },
           { 'ハードウェア': 'NAS', '相対価格': '中〜高', 'HAのみ': '可（コンテナ）', 'ローカルLLMを動かせるか': 'ハードウェア次第', 'Frigate 加速': 'モデル次第' },
-          { 'ハードウェア': 'サーバー＋中古 RTX 3090', '相対価格': '高', 'HAのみ': '可', 'ローカルLLMを動かせるか': '可（約70Bまで、量子化次第）', 'Frigate 加速': 'ディスクリートGPU' },
+          { 'ハードウェア': 'サーバー＋中古 RTX 3090', '相対価格': '高', 'HAのみ': '可', 'ローカルLLMを動かせるか': '可（約70BはRAMへのオフロードが必要で低速）', 'Frigate 加速': 'ディスクリートGPU' },
         ],
         note: '各階層の消費電力は上記[消費電力](#power)を、すべてを一台にまとめるべきかは[一台か二台か？](#one-or-two)を参照。',
       },
@@ -2297,7 +2297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '構成': 'HA＋カメラ＋大型ローカルAI', 'ハブ': '[N150 ミニPC（信頼性のため分離）](#mini-pc)', 'Frigate 加速器': '[Hailo-8](#frigate-accelerator)', 'AI': '[中古 RTX 3090 サーバー、別稼働](#server)', '目安合計': '約$2,055〜2,425（ホストPC除く）' },
         ],
         tableFormat: true,
-        note: '最後の構成では、Home Assistant のハブを専用の低消費電力機に残し、RTX 3090 は別マシンとして稼働させます——理由は[一台か二台か？](#one-or-two)を参照。この合計は、中古RTX 3090（$1,500-1,725、InsiderLLMトラッカー、2026-11-23）、N150ミニPC（約$385-500）、Hailo-8（約$170-200）の合算で、$2,055-2,425です。GPUに必要なホストPC（CPU、マザーボード、電源、RAM、ケース）は含みません。 その他の価格は大まかな目安で、見積もりではありません。リンク先に価格がない、または異なる場合があるため、購入前に現在の販売店で確認してください。すべての価格は米国の参考価格（USD）であり、お住まいの国では異なる場合があります。',
+        note: '最後の構成では、Home Assistant のハブを専用の低消費電力機に残し、RTX 3090 は別マシンとして稼働させます——理由は[一台か二台か？](#one-or-two)を参照。この合計は、中古RTX 3090（$1,500-1,725、米国の販売済み出品、InsiderLLMトラッカー、2026-11-23）、N150ミニPC（約$385-500）、Hailo-8（約$170-200）の合算で、$2,055-2,425です。GPUに必要なホストPC（CPU、マザーボード、電源、RAM、ケース）は含みません。 その他の価格は大まかな目安で、見積もりではありません。リンク先に価格がない、または異なる場合があるため、購入前に現在の販売店で確認してください。すべての価格は米国の参考価格（USD）であり、お住まいの国では異なる場合があります。',
       },
       faqSection: {
         id: 'faq',
@@ -2370,11 +2370,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Melhor Hardware para uma Casa Inteligente Local + IA Local (2026)',
     seoTitle: 'Melhor Hardware: Casa Inteligente Local + IA (2026)',
     intro:
-      'O melhor hardware para uma casa inteligente local segue uma única decisão: um mini PC Intel N100/N150 ou uma Raspberry Pi 5 roda o hub Home Assistant, uma iGPU Intel (OpenVINO) ou um módulo Hailo-8L M.2 acelera a detecção de câmeras do Frigate, um SSD ou NAS armazena as gravações, e um servidor com RTX 3090 usada é o passo seguinte para rodar um LLM local. Este guia escolhe cada camada, com preços atualizados para 2026, e ajuda você a decidir entre só-HA e HA-mais-IA para comprar uma vez, não duas.',
+      'O melhor hardware para uma casa inteligente local segue uma única decisão: um mini PC Intel N100/N150 ou uma Raspberry Pi 5 roda o hub Home Assistant, uma iGPU Intel (OpenVINO) ou um módulo Hailo-8L M.2 acelera a detecção de câmeras do Frigate, um SSD ou NAS armazena as gravações, e um servidor com RTX 3090 usada é o passo seguinte para rodar um LLM local. Este guia escolhe cada camada, com preços aproximados de 2026, e ajuda você a decidir entre só-HA e HA-mais-IA para comprar uma vez, não duas.',
     metaDescription:
-      'Melhor hardware para casa inteligente local + IA em 2026: hub mini PC Intel N100 ou Raspberry Pi 5, acelerador do Frigate (iGPU Intel/Hailo), armazenamento SSD e um passo seguinte para LLM. Preços atualizados.',
+      'Melhor hardware para casa inteligente local + IA em 2026: hub mini PC Intel N100 ou Raspberry Pi 5, acelerador do Frigate (iGPU Intel/Hailo), armazenamento SSD e um passo seguinte para LLM. Preços aproximados.',
     twitterDescription:
-      'Hardware para casa inteligente local em 2026: hub mini PC Intel N100 ou Pi 5, acelerador do Frigate (iGPU Intel/Hailo-8L), armazenamento SSD, RTX 3090 usada para um LLM local. Preços atualizados de 2026.',
+      'Hardware para casa inteligente local em 2026: hub mini PC Intel N100 ou Pi 5, acelerador do Frigate (iGPU Intel/Hailo-8L), armazenamento SSD, RTX 3090 usada para um LLM local. Preços aproximados de 2026.',
     readTime: '11 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores escolhendo hardware para Home Assistant e IA local',
@@ -2434,7 +2434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hub: um mini PC Intel N100/N150 (~$385–500) ou uma Raspberry Pi 5 (~$180–385, em alta forte por causa de uma escassez de memória DRAM) roda o Home Assistant',
           'Frigate: uma iGPU Intel (OpenVINO, embutida na maioria dos mini PCs), um módulo Hailo-8L M.2 (~$70) ou Hailo-8 M.2 (~$170–200) acelera a detecção de câmeras — a documentação de hardware do Frigate lista Hailo e Intel OpenVINO entre os detectores compatíveis e não recomenda mais o Google Coral para a maioria das novas instalações; um Coral que você já tem continua funcionando',
           'Armazenamento: um SSD para as gravações, ou um NAS (Synology DS225+ ~$340, DS925+ ~$640, UGREEN NASync DXP4800 Plus ~$580) a partir de várias câmeras',
-          'Passo seguinte para LLM local: um mini PC Ryzen (32GB de RAM recomendados; Beelink SER8 de 24GB: preço de tabela $799, confira o de 32GB) ou uma RTX 3090 usada (~$1.500–1.725 em listagens vendidas, segundo o monitor da InsiderLLM, 2026-11-23)',
+          'Passo seguinte para LLM local: um mini PC Ryzen (32GB de RAM recomendados; Beelink SER8 de 24GB: preço de tabela $799, confira o de 32GB) ou uma RTX 3090 usada (~$1.500–1.725 em listagens vendidas do eBay EUA, segundo o monitor da InsiderLLM, 2026-11-23)',
           'Decida só-HA vs HA + câmeras + IA local antes de comprar — isso muda o equipamento certo, e comprar o mini PC agora é melhor do que trocar a Pi depois',
         ],
       },
@@ -2448,7 +2448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Seu objetivo': 'Só Home Assistant', 'Compre isto': '[Home Assistant Green ou Raspberry Pi 5](#raspberry-pi)', 'Preço estimado': '$199 (Green) / $180–385 (Pi 5)' },
           { 'Seu objetivo': 'HA + câmeras Frigate', 'Compre isto': '[Mini PC Intel N100/N150](#mini-pc)', 'Preço estimado': '~$385–500' },
           { 'Seu objetivo': 'HA + um LLM local', 'Compre isto': '[Mini PC Ryzen, 32GB de RAM](#mini-pc)', 'Preço estimado': 'a partir de ~$799 (24GB; ver 32GB)' },
-          { 'Seu objetivo': 'HA + um LLM local maior', 'Compre isto': '[Servidor com RTX 3090 usada](#server)', 'Preço estimado': '~$1.500–1.725 (só a GPU; InsiderLLM 2026-11-23)' },
+          { 'Seu objetivo': 'HA + um LLM local maior', 'Compre isto': '[Servidor com RTX 3090 usada](#server)', 'Preço estimado': '~$1.500–1.725 (só a GPU; EUA, InsiderLLM 2026-11-23)' },
         ],
         tableFormat: true,
         note: 'Os preços são aproximados e mudam — GPU e memória DRAM têm oscilado bastante este ano. O valor da RTX 3090 vem de dados de listagens do eBay EUA no [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (dados de 2026-11-23: mediana de $1.650 em 225 listagens vendidas, de 13 a 23 de novembro de 2026), não de uma cotação; os preços no Brasil podem variar bastante devido a impostos de importação. Os valores de mini PC são preços de tabela da loja da Beelink e a faixa N150 do nosso guia de mini PCs, verificados em 2026-10-25. Confira o preço no anúncio antes de comprar. Os demais preços são valores aproximados, não cotações; algumas páginas vinculadas não mostram preço ou mostram outro, então confira uma loja atual antes de comprar. Todos os preços são preços de referência dos EUA em USD e podem ser diferentes no seu país.',
@@ -2540,7 +2540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Um servidor dedicado com GPU dedicada é o passo seguinte para rodar um LLM local maior ao lado de muitas câmeras.** Ele oferece a maior folga a maior custo e consumo — e o preço das GPUs mudou bastante em 2026, então trate os números abaixo como um retrato do momento, não um valor fixo.',
         items: [
-          'Uma RTX 3090 usada (24GB de VRAM) é uma escolha comum para LLMs locais por causa da VRAM. O [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (página atualizada em 2026-11-26) registrava listagens usadas vendidas de cerca de $1.500–1.725 (mediana de $1.650 em 225 listagens vendidas, de 13 a 23 de novembro de 2026; dados de 2026-11-23) — dados do eBay EUA, sem ser cotação nem oferta; os preços no Brasil podem variar bastante devido a impostos de importação. Modelos com quantização Q4 de até cerca de 70B podem ser possíveis dependendo da quantização, do tamanho de contexto e do offloading; trate isso como uma faixa de capacidade, não uma garantia para todo modelo de 70B.',
+          'Uma RTX 3090 usada (24GB de VRAM) é uma escolha comum para LLMs locais por causa da VRAM. O [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (verificado em 2026-11-28) registrava listagens usadas vendidas de cerca de $1.500–1.725 (mediana de $1.650 em 225 listagens vendidas, de 13 a 23 de novembro de 2026; dados de 2026-11-23) — dados do eBay EUA, sem ser cotação nem oferta; os preços no Brasil podem variar bastante devido a impostos de importação. Modelos com quantização Q4 de até cerca de 70B podem ser possíveis dependendo da quantização, do tamanho de contexto e do offloading; trate isso como uma faixa de capacidade, não uma garantia para todo modelo de 70B. O download padrão do Llama 3.3 70B tem cerca de 43GB ([Ollama: llama3.3](https://ollama.com/library/llama3.3)), mais que os 24GB da placa, então parte de um modelo assim precisa rodar na RAM do sistema, o que é bem mais lento.',
           'Uma RTX 3060 usada (12GB) é a alternativa econômica para um equipamento com GPU dedicada — pode lidar com modelos de 7B–13B, dependendo da quantização, sem a folga de VRAM (nem o preço) da RTX 3090.',
           'Melhor para muitas câmeras, um LLM maior e vários usuários. Maior consumo e custo que um mini PC — veja a seção de consumo de energia abaixo antes de investir nesse nível.',
           'Exagero para uma casa inteligente básica — reserve para uso intenso de IA local, e mantenha o hub do Home Assistant em um equipamento separado de baixo consumo para mais confiabilidade (veja Um equipamento ou dois? abaixo).',
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: 'Uma GPU de 350 W em um servidor que roda continuamente precisa de uma fonte de qualidade com dimensionamento correto, boa ventilação e um local de instalação adequado. Placas usadas podem ter desgaste e não ter garantia, então confira as condições do vendedor. Siga as orientações do fabricante; isto não é aconselhamento elétrico.' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-pt.svg',
-        imageCaption: 'Capacidade de LLM local por nível de hardware: um Raspberry Pi 5 só roda modelos minúsculos, um mini PC Intel N100/N150 lida com modelos pequenos, um mini PC Ryzen (32GB de RAM) roda modelos de 7B–8B, e uma RTX 3090 usada (24GB de VRAM) chega a cerca de 70B em quantização Q4 dependendo da configuração.',
+        imageCaption: 'Capacidade de LLM local por nível de hardware: um Raspberry Pi 5 só roda modelos minúsculos, um mini PC Intel N100/N150 lida com modelos pequenos, um mini PC Ryzen (32GB de RAM) roda modelos de 7B–8B, e uma RTX 3090 usada (24GB de VRAM) só chega a cerca de 70B em Q4 fazendo offloading de parte do modelo para a RAM do sistema, o que é bem mais lento.',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -2604,7 +2604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Hardware': 'Mini PC Intel N100/N150', 'Preço relativo': 'Médio', 'Só-HA': 'Sim', 'Pode rodar um LLM local': 'Modelos pequenos', 'Aceleração do Frigate': 'iGPU Intel (OpenVINO)' },
           { 'Hardware': 'Mini PC Ryzen', 'Preço relativo': 'Médio', 'Só-HA': 'Sim', 'Pode rodar um LLM local': 'Sim (7B–8B)', 'Aceleração do Frigate': 'iGPU ou Hailo M.2' },
           { 'Hardware': 'NAS', 'Preço relativo': 'Médio–alto', 'Só-HA': 'Sim (contêiner)', 'Pode rodar um LLM local': 'Depende do hardware', 'Aceleração do Frigate': 'Depende do modelo' },
-          { 'Hardware': 'Servidor + RTX 3090 usada', 'Preço relativo': 'Alto', 'Só-HA': 'Sim', 'Pode rodar um LLM local': 'Sim (até ~70B, dependendo da quantização)', 'Aceleração do Frigate': 'GPU dedicada' },
+          { 'Hardware': 'Servidor + RTX 3090 usada', 'Preço relativo': 'Alto', 'Só-HA': 'Sim', 'Pode rodar um LLM local': 'Sim (~70B só com offloading para a RAM, lento)', 'Aceleração do Frigate': 'GPU dedicada' },
         ],
         note: 'Para o consumo de energia por nível, veja [Consumo de energia](#power) acima; para saber se vale rodar tudo em um único equipamento, veja [Um equipamento ou dois?](#one-or-two).',
       },
@@ -2633,7 +2633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuração': 'HA + câmeras + IA local grande', 'Hub': '[Mini PC N150 (mantido separado por confiabilidade)](#mini-pc)', 'Acelerador do Frigate': '[Hailo-8](#frigate-accelerator)', 'IA': '[Servidor com RTX 3090 usada, rodando separado](#server)', 'Total estimado': '~$2.055–2.425 (sem o PC anfitrião)' },
         ],
         tableFormat: true,
-        note: 'A última configuração mantém o hub do Home Assistant em seu próprio equipamento de baixo consumo e roda a RTX 3090 como uma máquina separada — veja [Um equipamento ou dois?](#one-or-two) para entender o motivo. O total soma uma RTX 3090 usada ($1.500–1.725, monitor da InsiderLLM, 2026-11-23), um mini PC N150 (~$385–500) e um Hailo-8 (~$170–200): de $2.055 a $2.425. Não inclui o PC anfitrião (CPU, placa-mãe, fonte, RAM, gabinete) de que a GPU precisa. Os demais preços são valores aproximados, não cotações; algumas páginas vinculadas não mostram preço ou mostram outro, então confira uma loja atual antes de comprar. Todos os preços são preços de referência dos EUA em USD e podem ser diferentes no seu país.',
+        note: 'A última configuração mantém o hub do Home Assistant em seu próprio equipamento de baixo consumo e roda a RTX 3090 como uma máquina separada — veja [Um equipamento ou dois?](#one-or-two) para entender o motivo. O total soma uma RTX 3090 usada ($1.500–1.725, vendas nos EUA, monitor da InsiderLLM, 2026-11-23), um mini PC N150 (~$385–500) e um Hailo-8 (~$170–200): de $2.055 a $2.425. Não inclui o PC anfitrião (CPU, placa-mãe, fonte, RAM, gabinete) de que a GPU precisa. Os demais preços são valores aproximados, não cotações; algumas páginas vinculadas não mostram preço ou mostram outro, então confira uma loja atual antes de comprar. Todos os preços são preços de referência dos EUA em USD e podem ser diferentes no seu país.',
       },
       faqSection: {
         id: 'faq',
@@ -2706,11 +2706,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地智能家居 + 本地 AI 的最佳硬件（2026）',
     seoTitle: '最佳硬件：本地智能家居 + AI（2026）',
     intro:
-      '本地智能家居的最佳硬件遵循一个思路：用 Intel N100/N150 迷你 PC 或 Raspberry Pi 5 运行 Home Assistant 中枢，用 Intel 集成显卡（OpenVINO）或 Hailo-8L M.2 模块加速 Frigate 摄像头检测，用 SSD 或 NAS 存储录像，若想运行本地 LLM，则用二手 RTX 3090 主机升级。本指南逐层给出选择，按 2026 年最新价格标注每一档，并帮你在仅-HA 与 HA-加-AI 之间做决定，让你一次买对，而不是买两次。',
+      '本地智能家居的最佳硬件遵循一个思路：用 Intel N100/N150 迷你 PC 或 Raspberry Pi 5 运行 Home Assistant 中枢，用 Intel 集成显卡（OpenVINO）或 Hailo-8L M.2 模块加速 Frigate 摄像头检测，用 SSD 或 NAS 存储录像，若想运行本地 LLM，则用二手 RTX 3090 主机升级。本指南逐层给出选择，为各档给出 2026 年的参考价格，并帮你在仅-HA 与 HA-加-AI 之间做决定，让你一次买对，而不是买两次。',
     metaDescription:
-      '2026年本地智能家居 + AI 硬件推荐：Intel N100 迷你 PC 或 Raspberry Pi 5 中枢，Frigate 加速方案（Intel 集成显卡/Hailo），SSD 存储，以及本地 LLM 升级选项。含最新价格。',
+      '2026年本地智能家居 + AI 硬件推荐：Intel N100 迷你 PC 或 Raspberry Pi 5 中枢，Frigate 加速方案（Intel 集成显卡/Hailo），SSD 存储，以及本地 LLM 升级选项。含参考价格。',
     twitterDescription:
-      '2026本地智能家居硬件：Intel N100 迷你 PC 或 Pi 5 中枢，Frigate 加速用 Intel 集成显卡或 Hailo-8L，SSD 存储，二手 RTX 3090 跑本地 LLM。2026年最新价格。',
+      '2026本地智能家居硬件：Intel N100 迷你 PC 或 Pi 5 中枢，Frigate 加速用 Intel 集成显卡或 Hailo-8L，SSD 存储，二手 RTX 3090 跑本地 LLM。2026年参考价格。',
     readTime: '阅读约11分钟',
     educationalLevel: 'Intermediate',
     audience: '为运行 Home Assistant 和本地 AI 选购硬件的人',
@@ -2770,7 +2770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '中枢：Intel N100/N150 迷你 PC（约 385–500 美元）或 Raspberry Pi 5（约 180–385 美元，受内存芯片短缺影响大幅涨价）运行 Home Assistant',
           'Frigate：Intel 集成显卡（内置于大多数迷你 PC，经由 OpenVINO）、Hailo-8L M.2 模块（约 70 美元）或 Hailo-8 M.2（约 170–200 美元）加速摄像头检测——Frigate 硬件文档在支持的检测器中列出了 Hailo 和 Intel OpenVINO，对多数新安装不再推荐 Google Coral；已有的 Coral 仍能使用',
           '存储：录像用 SSD，摄像头多起来（Synology DS225+ 约 340 美元、DS925+ 约 640 美元、UGREEN NASync DXP4800 Plus 约 580 美元）后再上 NAS',
-          '本地 LLM 升级：Ryzen 迷你 PC（建议 32GB 内存；Beelink SER8 24GB 版标价 799 美元，32GB 版请另行核对）或二手 RTX 3090（InsiderLLM 追踪页 2026-11-23 的成交记录约 1,500–1,725 美元）',
+          '本地 LLM 升级：Ryzen 迷你 PC（建议 32GB 内存；Beelink SER8 24GB 版标价 799 美元，32GB 版请另行核对）或二手 RTX 3090（InsiderLLM 追踪页 2026-11-23 的 eBay 美国成交记录约 1,500–1,725 美元）',
           '购买前先决定仅-HA 还是 HA + 摄像头 + 本地 AI——这会改变合适的设备，现在直接买迷你 PC 比以后换掉 Pi 更划算',
         ],
       },
@@ -2784,7 +2784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的目标': '仅 Home Assistant', '该买': '[Home Assistant Green 或 Raspberry Pi 5](#raspberry-pi)', '预估价格': '199 美元（Green）/ 180–385 美元（Pi 5）' },
           { '你的目标': 'HA + Frigate 摄像头', '该买': '[Intel N100/N150 迷你 PC](#mini-pc)', '预估价格': '约 385–500 美元' },
           { '你的目标': 'HA + 本地 LLM', '该买': '[Ryzen 迷你 PC，32GB 内存](#mini-pc)', '预估价格': '约 799 美元起（24GB 标价，32GB 需核对）' },
-          { '你的目标': 'HA + 更大的本地 LLM', '该买': '[二手 RTX 3090 服务器](#server)', '预估价格': '约 1,500–1,725 美元（仅 GPU；InsiderLLM 2026-11-23）' },
+          { '你的目标': 'HA + 更大的本地 LLM', '该买': '[二手 RTX 3090 服务器](#server)', '预估价格': '约 1,500–1,725 美元（仅 GPU；美国，InsiderLLM 2026-11-23）' },
         ],
         tableFormat: true,
         note: '以上价格为大致水平，会持续变化——尤其是 GPU 和内存芯片价格今年波动很大。RTX 3090 的数字来自 [InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（数据日期 2026-11-23：2026 年 11 月 13–23 日 225 条成交记录的中位数为 1,650 美元）的 eBay 美国挂牌数据，并非报价；不同地区的价格可能有差异。迷你 PC 的数字为 Beelink 官方商店标价以及本站迷你 PC 指南中的 N150 价格区间，查看日期 2026-10-25。下单前请核对链接页面的实际价格。 其他价格只是大致参考，并非报价；部分链接页面没有价格或价格不同，购买前请向在售商家核对。',
@@ -2876,7 +2876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**搭配独立 GPU 的专用服务器，是在运行大量摄像头的同时运行更大本地 LLM 的升级方案。** 它以更高的成本和功耗提供最大的余量——2026 年 GPU 价格波动很大，所以下面的数字只是一个快照，不是固定值。',
         items: [
-          '二手 RTX 3090（24GB 显存）是本地 LLM 的常见选择，因为显存大。[InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（页面更新于 2026-11-26）列出的二手成交记录约为 1,500–1,725 美元（2026 年 11 月 13–23 日共 225 条，中位数 1,650 美元；数据日期 2026-11-23）——eBay 美国挂牌数据，并非报价或要约；不同地区的价格可能有差异。视量化方式、上下文长度和卸载策略而定，Q4 量化下最高约 70B 的模型或许可行；把这理解为一个能力区间，而不是对每个 70B 模型的保证。',
+          '二手 RTX 3090（24GB 显存）是本地 LLM 的常见选择，因为显存大。[InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（2026-11-28 查看）列出的二手成交记录约为 1,500–1,725 美元（2026 年 11 月 13–23 日共 225 条，中位数 1,650 美元；数据日期 2026-11-23）——eBay 美国挂牌数据，并非报价或要约；不同地区的价格可能有差异。视量化方式、上下文长度和卸载策略而定，Q4 量化下最高约 70B 的模型或许可行；把这理解为一个能力区间，而不是对每个 70B 模型的保证。Llama 3.3 70B 的默认下载版本约 43GB（[Ollama: llama3.3](https://ollama.com/library/llama3.3)），超过显卡的 24GB，因此这类模型必须有一部分在系统内存中运行，速度会慢很多。',
           '二手 RTX 3060（12GB）是独立 GPU 主机的预算之选——视量化方式而定可处理 7B–13B 模型，只是没有 RTX 3090 那样的显存余量或对应的高价。',
           '最适合大量摄像头、更大的 LLM 和多个用户的场景。功耗和成本都高于迷你 PC——投入这一档之前请先看下面的功耗部分。',
           '对基础智能家居而言过于强大——留给繁重的本地 AI 用途，并把 Home Assistant 中枢放在单独的低功耗设备上以保证可靠性（见下方"一台还是两台？"）。',
@@ -2887,7 +2887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: '在持续运行的服务器中使用 350W GPU，需要容量合适的优质电源、良好的通风和合理的摆放位置。二手显卡可能存在损耗且无保修，请查看卖家条款。请遵循制造商的指引；这不构成电气方面的建议。' }],
         image: '/images/best-hardware-for-local-smart-home-llm-capacity-zh.svg',
-        imageCaption: '各硬件等级的本地 LLM 容量：Raspberry Pi 5 只能运行极小模型，Intel N100/N150 迷你 PC 可处理小型模型，Ryzen 迷你 PC（32GB 内存）可运行 7B–8B 模型，二手 RTX 3090（24GB 显存）在 Q4 量化下视配置可扩展到约 70B。',
+        imageCaption: '各硬件等级的本地 LLM 容量：Raspberry Pi 5 只能运行极小模型，Intel N100/N150 迷你 PC 可处理小型模型，Ryzen 迷你 PC（32GB 内存）可运行 7B–8B 模型，二手 RTX 3090（24GB 显存）只有把部分模型卸载到系统内存，才能在 Q4 量化下运行约 70B 的模型，速度会慢很多。',
       },
       dontOverspend: {
         id: 'dont-overspend',
@@ -2940,7 +2940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '硬件': 'Intel N100/N150 迷你 PC', '相对价格': '中', '仅-HA': '可', '能否运行本地 LLM': '小型模型', 'Frigate 加速': 'Intel 集成显卡（OpenVINO）' },
           { '硬件': 'Ryzen 迷你 PC', '相对价格': '中', '仅-HA': '可', '能否运行本地 LLM': '可（7B–8B）', 'Frigate 加速': '集成显卡或 Hailo M.2' },
           { '硬件': 'NAS', '相对价格': '中–高', '仅-HA': '可（容器）', '能否运行本地 LLM': '取决于硬件', 'Frigate 加速': '取决于机型' },
-          { '硬件': '服务器 + 二手 RTX 3090', '相对价格': '高', '仅-HA': '可', '能否运行本地 LLM': '可（最高约 70B，视量化而定）', 'Frigate 加速': '独立 GPU' },
+          { '硬件': '服务器 + 二手 RTX 3090', '相对价格': '高', '仅-HA': '可', '能否运行本地 LLM': '可（约 70B 需卸载到内存，速度慢）', 'Frigate 加速': '独立 GPU' },
         ],
         note: '各档的功耗详见上方[功耗](#power)；是否所有东西都放在一台设备上，详见[一台还是两台？](#one-or-two)。',
       },
@@ -2969,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '组合': 'HA + 摄像头 + 大型本地 AI', '中枢': '[N150 迷你 PC（为可靠性单独运行）](#mini-pc)', 'Frigate 加速器': '[Hailo-8](#frigate-accelerator)', 'AI': '[二手 RTX 3090 服务器，单独运行](#server)', '预估总价': '约 2,055–2,425 美元（不含主机）' },
         ],
         tableFormat: true,
-        note: '最后一套组合把 Home Assistant 中枢留在自己的低功耗设备上，把 RTX 3090 当作一台独立机器运行——原因见[一台还是两台？](#one-or-two)。该总价为二手 RTX 3090（1,500–1,725 美元，InsiderLLM 追踪页 2026-11-23）、N150 迷你 PC（约 385–500 美元）与 Hailo-8（约 170–200 美元）之和：2,055–2,425 美元；不含 GPU 所需的主机（CPU、主板、电源、内存、机箱）。 其他价格只是大致参考，并非报价；部分链接页面没有价格或价格不同，购买前请向在售商家核对。',
+        note: '最后一套组合把 Home Assistant 中枢留在自己的低功耗设备上，把 RTX 3090 当作一台独立机器运行——原因见[一台还是两台？](#one-or-two)。该总价为二手 RTX 3090（1,500–1,725 美元，美国成交记录，InsiderLLM 追踪页 2026-11-23）、N150 迷你 PC（约 385–500 美元）与 Hailo-8（约 170–200 美元）之和：2,055–2,425 美元；不含 GPU 所需的主机（CPU、主板、电源、内存、机箱）。 其他价格只是大致参考，并非报价；部分链接页面没有价格或价格不同，购买前请向在售商家核对。',
       },
       faqSection: {
         id: 'faq',

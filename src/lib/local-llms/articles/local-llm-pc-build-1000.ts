@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local LLM PC Build Under $1,000 With a Used GPU (2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-en.webp',
     seoTitle: 'Local LLM PC Build Under $1,000 With a Used GPU (2026)',
-    intro: '**A PC with a used RTX 3060 12GB, Ryzen 5 7600, and 32GB DDR5 RAM runs 7B–14B models at Q4 and totals about $940, under $1,000.** VRAM is the main limiting factor for local LLM inference, so this build spends its GPU budget on a card with 12GB of VRAM at a used price of about $330 (from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), figure dated 2026-11-26) and keeps the other parts modest. A 14B model at Q4 (about 9-10GB) fits in 12GB; 32B-class models do not fit entirely and need CPU offload, which is much slower. This guide lists the exact components, why each one was chosen over the alternatives, and which speed figures are sourced. The other parts are the page\'s own estimates, and the total holds only for a used card: a new RTX 3060 12GB listed at about $450 on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18) would bring it to about $1,060.',
+    intro: '**A PC with a used RTX 3060 12GB, Ryzen 5 7600, and 32GB DDR5 RAM runs 7B–14B models at Q4 and totals about $940, under $1,000.** VRAM is the main limiting factor for local LLM inference, so this build spends its GPU budget on a card with 12GB of VRAM at a used price of about $330 (from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), figure dated 2026-11-26) and keeps the other parts modest. A 14B model at Q4 (about 9-10GB) fits in 12GB; 32B-class models do not fit entirely and need CPU offload, which is much slower. This guide lists the exact components, why each one was chosen over the alternatives, and which speed figures are sourced. The other parts are the page\'s own estimates, and the total holds only for a used card: a new RTX 3060 12GB listed at about $460 on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28) would bring it to about $1,070.',
     metaDescription: 'Local LLM PC build under $1,000 (about $940): used RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Runs 7B-14B at Q4. Full 2026 parts list, sourced GPU price.',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -42,19 +42,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Total build cost: ~$940.** Used RTX 3060 12GB (~$330), Ryzen 5 7600 ($180), 32GB DDR5-6000 ($90), 1TB Gen4 NVMe ($70), B650 mATX board ($130), 650W 80+ Gold PSU ($75), mATX case ($65). The GPU price is from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (used, figure dated 2026-11-26); the other parts are the page\'s own estimates. A new RTX 3060 12GB (about $450 on gpuprix, 2026-11-18) would raise the total to about $1,060.',
+          '**Total build cost: ~$940.** Used RTX 3060 12GB (~$330), Ryzen 5 7600 ($180), 32GB DDR5-6000 ($90), 1TB Gen4 NVMe ($70), B650 mATX board ($130), 650W 80+ Gold PSU ($75), mATX case ($65). The GPU price is from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (used, figure dated 2026-11-26); the other parts are the page\'s own estimates. A new RTX 3060 12GB (about $460 on gpuprix, 2026-11-28) would raise the total to about $1,070.',
           '**12GB VRAM is the target at this budget, not raw GPU speed.** A card with 12GB of VRAM can run models that an equally priced faster card with 8GB cannot, because model size, not shader count, decides what fits at all.',
           '**7B models: 75.6 tok/s** (llama.cpp discussion #15013, Llama 2 7B Q4_0 token generation, community-reported). 14B models at Q4 (~9-10GB) fit in 12GB with limited context headroom; other speeds are indicative only and not measured by PromptQuorum.',
-          '**32B and 70B models do not fit entirely.** A 32B model at Q4 typically needs about 20GB and a 70B model ~40GB of VRAM; this build tops out around 14B on the GPU alone. See the dual-GPU build (about $2,700) for 32B-class models (70B at Q4 needs about 43GB and still does not fit in 32GB).',
+          '**32B and 70B models do not fit entirely.** A 32B model at Q4 typically needs about 20GB and a 70B model ~43GB of VRAM; this build tops out around 14B on the GPU alone. See the dual-GPU build (about $2,700) for 32B-class models (70B at Q4 needs about 43GB and still does not fit in 32GB).',
           '**32GB system RAM, not 16GB.** Model loading, OS overhead, and any CPU-offloaded layers need headroom beyond the GPU; 16GB can lead to swapping on 14B+ models.',
-          '**Avoid:** 8GB GPUs (RTX 5060, RTX 4060 Ti 8GB) — they cap out at 7B and cannot grow into 13B-14B without a full GPU swap.',
+          '**Avoid:** 8GB GPUs (RTX 5060, RTX 4060 Ti 8GB) — fully on the GPU they are mostly limited to 7B-class models, and 13B-14B models generally need CPU offload or a different card.',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: 'What This Budget Is Actually Buying',
         content: [
-          '**Local LLM inference speed is bottlenecked by VRAM capacity first, memory bandwidth second, and compute (CUDA cores) a distant third.** A model that does not fit in VRAM either fails to load or spills into system RAM, which sharply lowers throughput. At $1,000, the most effective allocation is to put the GPU first and keep everything else modest — this is why the CPU here is a $180 mid-range part, not a $350 flagship.',
+          '**VRAM capacity decides first whether a local model can run fully on the GPU; memory bandwidth and compute then shape how fast it runs.** A model that does not fit in VRAM either fails to load or spills into system RAM, which sharply lowers throughput. At $1,000, this build puts the GPU first and keeps everything else modest — this is why the CPU here is a $180 mid-range part, not a $350 flagship.',
           'This build assumes single-model inference (one model loaded at a time via Ollama, LM Studio, or llama.cpp), not concurrent multi-user serving. For serving multiple simultaneous requests, VRAM requirements scale up further and a $1,000 budget is not realistic.',
         ],
         snippetBlocks: [
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Full Parts List',
-        content: 'Prices are estimated US prices and will vary by region and retailer. Prices for RAM and SSD swing, and an increase of more than $60 across the parts would push the total past $1,000. The GPU price (used RTX 3060 12GB, about $330) is from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (figure dated 2026-11-26); the other parts are the page\'s own estimates. Total: about $940 ($330 + $180 + $90 + $70 + $130 + $75 + $65). This holds for a used card only: a new RTX 3060 12GB listed at about $450 on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18) would bring the total to about $1,060.',
+        content: 'Prices are estimated US prices and will vary by region and retailer. Prices for RAM and SSD swing, and an increase of more than $60 across the parts would push the total past $1,000. The GPU price (used RTX 3060 12GB, about $330) is from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (figure dated 2026-11-26); the other parts are the page\'s own estimates. Total: about $940 ($330 + $180 + $90 + $70 + $130 + $75 + $65). This holds for a used card only: a new RTX 3060 12GB listed at about $460 on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28) would bring the total to about $1,070.',
         columns: ['Component', 'Pick', 'Price', 'Why'],
         rows: [
           { 'Component': 'GPU', 'Pick': 'Used RTX 3060 12GB', 'Price': '~$330', 'Why': '12GB VRAM fits 7B-14B at Q4; 32B does not fit entirely' },
@@ -83,13 +83,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Why a Used RTX 3060 12GB at This Budget',
         content: [
           '**At this budget, VRAM per dollar decides the GPU choice, and 8GB cards are a false saving for local LLM work.** The RTX 3060 was sold in a 12GB version, which is why it is used here despite its age: an 8GB card cannot comfortably fit anything past a 7B model at Q4 with a usable context length. Make sure the listing says 12GB, because an 8GB RTX 3060 variant also exists.',
-          'VRAM headroom also matters for context length: a 7B model itself needs about 4-4.5GB at Q4, but a 16K-token context adds another 1-2GB of KV cache. On an 8GB card that leaves almost nothing; on the 12GB card there is room for a 7B model and a long context, and a 14B model fits with a shorter one.',
+          'VRAM headroom also matters for context length: a 7B model itself needs about 4-4.5GB at Q4, but a 16K-token context adds another 1-2GB of KV cache. On an 8GB card that leaves almost nothing; on the 12GB card there is room for a 7B model and a long context, and a 14B model fits with a shorter one. These context figures are rough estimates that depend on the model and settings.',
         ],
         items: [
-          '**RTX 3060 12GB (used, about $330, this build):** 12GB VRAM at the lowest sourced price; used price from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (range $310-350, median $330, figure dated 2026-11-26). New or renewed cards list higher: $450 new and $420 Amazon renewed on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18).',
-          '**RTX 4060 Ti 16GB (about $430-450 per the InsiderLLM tracker, condition not stated):** 16GB VRAM, but [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) lists it far higher ($843 new, 2026-11-17), so the price is uncertain; even at the tracker price the total would be about $1,040-1,060. Check live listings.',
-          '**RTX 5060 Ti 16GB (about $800 new: lowest new listing shown on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), checked 2026-11-28; $829.99 on Amazon US per [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27):** The 16GB upgrade option; in place of the used RTX 3060 it would raise this build\'s total by about $470-500, to about $1,410-1,440.',
-          '**Used RTX 3090 24GB (about $1,500-1,725, [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** More VRAM, but the card alone costs more than the whole $1,000 budget, so it is out of scope for this build.',
+          '**RTX 3060 12GB (used, about $330, this build):** 12GB VRAM at the lowest sourced price; used price from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (range $310-350, median $330, 209 eBay US sold listings, 2026-11-17 to 2026-11-26; figure dated 2026-11-26). New or renewed cards list higher: $460 new and $420 Amazon renewed on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28).',
+          '**RTX 4060 Ti 16GB (about $430-450 per the InsiderLLM tracker, condition not stated):** 16GB VRAM, but [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) lists it far higher (in-stock new cards from $764, checked 2026-11-28), so the price is uncertain; even at the tracker price the total would be about $1,040-1,060. Check live listings.',
+          '**RTX 5060 Ti 16GB (about $800 new: lowest new listing shown on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), checked 2026-11-28; $849.99 on Amazon US per [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27):** The 16GB upgrade option; in place of the used RTX 3060 it would raise this build\'s total by about $470-520, to about $1,410-1,460.',
+          '**Used RTX 3090 24GB (about $1,500-1,725 in US sold listings, 2026-11-13 to 2026-11-23; [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** More VRAM, but the card alone costs more than the whole $1,000 budget, so it is out of scope for this build.',
         ],
       },
       performance: {
@@ -100,9 +100,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Model Size': '7B-8B', 'VRAM Used (Q4)': '~4.5-5GB', 'Tokens/sec': '75.6 (Llama 2 7B Q4_0, #15013)', 'Fits Comfortably?': 'Yes — full context headroom' },
           { 'Model Size': '13B-14B', 'VRAM Used (Q4)': '~9-10GB', 'Tokens/sec': 'Lower than 7B; no sourced figure', 'Fits Comfortably?': 'Yes — limited context headroom' },
-          { 'Model Size': '20B (MoE, ~4B active)', 'VRAM Used (Q4)': '~12GB', 'Tokens/sec': 'No sourced figure', 'Fits Comfortably?': 'Tight — little room left for context' },
+          { 'Model Size': '20B (MoE, ~4B active)', 'VRAM Used (Q4)': '~14GB (gpt-oss:20b)', 'Tokens/sec': 'No sourced figure', 'Fits Comfortably?': 'No — the download is larger than 12GB; expect CPU offload' },
           { 'Model Size': '32B', 'VRAM Used (Q4)': '~19-20GB', 'Tokens/sec': 'No sourced figure', 'Fits Comfortably?': 'No — needs CPU offload, much slower' },
-          { 'Model Size': '70B', 'VRAM Used (Q4)': '~40GB', 'Tokens/sec': 'N/A', 'Fits Comfortably?': 'Does not fit — not even in the dual-GPU build (32GB)' },
+          { 'Model Size': '70B', 'VRAM Used (Q4)': '~43GB', 'Tokens/sec': 'N/A', 'Fits Comfortably?': 'Does not fit — not even in the dual-GPU build (32GB)' },
         ],
       },
       assembly: {
@@ -119,8 +119,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Upgrade Path',
         content: [
-          'This build is designed so the GPU is the only part worth replacing later. The B650 motherboard supports a second PCIe slot (typically x4 electrical) for adding a second GPU down the line, though tensor-split multi-GPU inference needs at least x8/x8 to avoid a PCIe bandwidth bottleneck — see the dual-GPU build (about $2,700) for a board chosen with that in mind.',
-          'The most straightforward upgrade is swapping the GPU for one with more VRAM when budget allows. An RTX 5060 Ti 16GB (about $800-830 new per gpuprix, 2026-11-28, and BasketPrice, 2026-11-27) adds 4GB of VRAM but would push the build over $1,000, and a used RTX 3090 24GB (about $1,500-1,725) is out of this build\'s budget. The Ryzen 5 7600 and 32GB RAM are not the limit for such a swap; check the new card\'s power requirement against the 650W PSU in the manufacturer specification.',
+          'This build is designed so the GPU is the only part worth replacing later. Many B650 boards have a second PCIe slot, often wired at x4 electrical, so check the manual of the board you buy. For a second GPU, prefer a board that documents an x8/x8 split: an x4 slot has half the lanes of x8, and how much that slows a split model depends on the runtime, split mode and settings, which this page has not measured. Check the power supply before you add a card. See the dual-GPU build (about $2,700) for a configuration planned around two GPUs.',
+          'The most straightforward upgrade is swapping the GPU for one with more VRAM when budget allows. An RTX 5060 Ti 16GB (about $800-850 new per gpuprix, 2026-11-28, and BasketPrice, 2026-11-27) adds 4GB of VRAM but would push the build over $1,000, and a used RTX 3090 24GB (about $1,500-1,725) is out of this build\'s budget. The Ryzen 5 7600 and 32GB RAM are not the limit for such a swap; check the new card\'s power requirement against the 650W PSU in the manufacturer specification.',
         ],
       },
       whereToBuy: {
@@ -129,11 +129,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Prices and stock vary by region, and EU/UK listed prices include VAT.** The links below are plain product-search links per region; they carry no affiliate tags and earn no commission.',
         items: [
-          '**United States:** Amazon and Newegg have the widest stock. Used RTX 3060 and RTX 4090 cards are common; new flagship stock is thin, and the RTX 5090 is often sold out at list price.',
-          '**Germany:** Amazon.de and Mindfactory.de; expect roughly 19% VAT in listed prices, and German GPU prices that often run above US figures.',
-          '**France:** Amazon.fr and LDLC; pricing is similar to Germany with 20% VAT, and flagship stock has been intermittent.',
-          '**Japan:** Amazon.co.jp and Kakaku.com for price comparison; new-card pricing tracks the US, with thinner used-card supply.',
-          '**China:** JD.com is the reference marketplace; high-end GPU availability and pricing differ substantially from Western markets.',
+          '**United States:** Amazon and Newegg are places to compare. Check both new and used listings; the RTX 5090 may not be available at list price.',
+          '**Germany:** Amazon.de and Mindfactory.de; expect 19% VAT in listed prices, and German GPU prices that can differ from US figures.',
+          '**France:** Amazon.fr and LDLC; listed prices include 20% VAT. Check current prices and stock.',
+          '**Japan:** Amazon.co.jp and Kakaku.com for price comparison; this page has not tracked Japanese prices.',
+          '**China:** JD.com is one marketplace to check; high-end GPU availability and pricing can differ from Western markets.',
         ],
         callouts: [
           {
@@ -174,8 +174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Buying an 8GB GPU to save money (including the 8GB RTX 3060 variant, which is not the card in this build) — the VRAM ceiling this creates cannot be fixed with software and forces a GPU replacement later, costing more overall.',
           'Overspending on the CPU (e.g., a Ryzen 7 instead of Ryzen 5) while running an 8GB or 12GB GPU — CPU choice has almost no effect on tokens/sec once a model fits in VRAM.',
-          'Skipping EXPO/XMP RAM profile setup in BIOS, leaving DDR5-6000 kits running at 4800 — a free performance loss that costs nothing to fix.',
-          'Undersizing the PSU to save $20-30 — GPU power draw spikes briefly well above its rated TDP under sustained load, and on some builds a 550W unit leaves little headroom for transient spikes; check the manufacturer specification.',
+          'Skipping EXPO/XMP RAM profile setup in BIOS leaves a DDR5-6000 kit at a lower default speed. This matters mainly when model layers run on the CPU. These profiles are memory overclocking, so check your board and CPU documentation before you enable one.',
+          'Undersizing the PSU to save $20-30 — GPU power draw spikes briefly well above its rated TDP under sustained load, and on some builds a 550W unit leaves little headroom for transient spikes; check the manufacturer specification. This is general information, not electrical advice; if you are unsure, have a qualified technician check the build and your power circuit.',
         ],
       },
       faqSection: {
@@ -183,15 +183,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Can a $1,000 PC run local LLMs well?', a: 'For 7B-14B models, yes; larger models need more VRAM. With a used RTX 3060 12GB at about $330, this build totals about $940, and 12GB of VRAM fits 14B models at Q4. 32B-class models do not fit entirely in 12GB.' },
-          { q: 'Why does this build spend so much on the GPU relative to the CPU?', a: 'Local LLM inference speed depends almost entirely on GPU VRAM capacity and memory bandwidth. A faster CPU does not increase tokens/sec once a model is loaded into VRAM, so a mid-range CPU and a strong GPU beat a strong CPU and a weak GPU for this specific workload.' },
-          { q: 'Is 12GB VRAM enough for local LLMs in 2026?', a: '12GB fits 7B-8B models at Q4 with room for long context and 14B models at Q4 (about 9-10GB) with a shorter context. It does not fit 32B-class models (typically about 20GB at Q4) or 70B-class models (roughly 40GB at Q4) entirely; a GPU with 24GB of VRAM is the realistic starting point for fully GPU-resident 32B-class models; a 16GB card fits 14B comfortably but still needs CPU offload for 32B.' },
-          { q: 'Can I use an 8GB GPU instead to save money?', a: 'You can, but it limits you to 7B models with minimal context headroom — a hard ceiling you cannot raise without replacing the card. The savings from an 8GB card are not worth losing access to 13B-14B models.' },
+          { q: 'Why does this build spend so much on the GPU relative to the CPU?', a: 'When a model runs fully on the GPU, speed depends mainly on the GPU and its memory bandwidth, and VRAM capacity decides which models fit. A faster CPU usually adds little in that case, so for this workload the build spends on the GPU rather than the CPU.' },
+          { q: 'Is 12GB VRAM enough for local LLMs in 2026?', a: '12GB fits 7B-8B models at Q4 with room for long context and 14B models at Q4 (about 9-10GB) with a shorter context. It does not fit 32B-class models (typically about 20GB at Q4) or 70B-class models (roughly 43GB at Q4) entirely; a GPU with 24GB of VRAM is the realistic starting point for fully GPU-resident 32B-class models; a 16GB card fits 14B comfortably but still needs CPU offload for 32B.' },
+          { q: 'Can I use an 8GB GPU instead to save money?', a: 'You can, but fully on the GPU it mostly limits you to 7B-class models with little context headroom, and the card\'s VRAM cannot be expanded. Larger models need CPU offload, which is much slower, or a different card. That is why this build uses a 12GB card.' },
           { q: 'How much RAM do I actually need alongside a 12GB VRAM GPU?', a: '32GB system RAM. This covers OS overhead, model file caching during load, and any layers offloaded to CPU for models that slightly exceed VRAM capacity.' },
           { q: 'Will this build run 32B models well?', a: 'No, not entirely on the GPU. A 32B model at Q4 typically needs about 20GB, more than the 12GB card has, so part of it must be offloaded to system RAM, which is much slower; there is no sourced speed figure for that setup. For fully GPU-resident 32B-class models, a GPU with 24GB of VRAM is the realistic starting point; a 16GB card still needs CPU offload.' },
           { q: 'What software should I run on this build?', a: 'Ollama or LM Studio are the simplest starting points — both detect an NVIDIA GPU such as the RTX 3060 12GB automatically and handle Q4 quantization. llama.cpp directly gives more control over quantization format and context settings.' },
-          { q: 'Can this build be upgraded to run 70B models later?', a: 'Not with a single GPU — 70B at Q4 needs ~40GB VRAM. The clearest upgrade path is either swapping to a used RTX 3090 24GB (still not quite enough for full 70B) or adding a second GPU for VRAM pooling, which the dual-GPU build (about $2,700) covers directly; its 32GB runs 32B-class models, while 70B at Q4 (about 43GB) still does not fit.' },
+          { q: 'Can this build be upgraded to run 70B models later?', a: 'Not with a single GPU — 70B at Q4 needs ~43GB VRAM. The clearest upgrade path is either swapping to a used RTX 3090 24GB (still not quite enough for full 70B) or adding a second GPU for VRAM pooling, which the dual-GPU build (about $2,700) covers directly; its 32GB runs 32B-class models, while 70B at Q4 (about 43GB) still does not fit. Check the power supply before either option: the 650W unit in this build was chosen for one RTX 3060 12GB.' },
           { q: 'Does the motherboard chipset (B650 vs B850) matter for local LLM inference?', a: 'Not for a single-GPU build. B650 provides a PCIe 4.0 x16 slot, which is what the GPU needs; the chipset differences between B650 and newer boards matter more for multi-GPU PCIe lane allocation than for single-GPU LLM inference.' },
-          { q: 'Is a used GPU a better value than a new one at this budget?', a: 'At this budget, yes: the used RTX 3060 12GB (about $330 per the InsiderLLM tracker) keeps the total at about $940, while a new RTX 3060 12GB (about $450 on gpuprix) would bring it to about $1,060. A used card carries more risk, so check the seller\'s return policy. A used RTX 3090 24GB is a real VRAM upgrade but costs more than this build\'s whole GPU budget and pushes the total past $2,000 — it belongs in a higher tier.' },
+          { q: 'Is a used GPU a better value than a new one at this budget?', a: 'At this budget, yes: the used RTX 3060 12GB (about $330 per the InsiderLLM tracker) keeps the total at about $940, while a new RTX 3060 12GB (about $460 on gpuprix) would bring it to about $1,070. A used card carries more risk, so check the seller\'s return policy. A used RTX 3090 24GB is a real VRAM upgrade but costs more than this build\'s whole GPU budget and pushes the total past $2,000 — it belongs in a higher tier.' },
         ],
       },
       relatedReading: {
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama model library and VRAM requirements](https://ollama.com/library)',
           '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix: RTX 3060 12GB price page](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix: RTX 5060 Ti 16GB US listings (checked 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice: RTX 5060 Ti US prices (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[Ollama qwen3:32b model page (20GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)',
+          '[Ollama qwen3:32b model page (20GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)', '[Ollama gpt-oss:20b model page (14GB)](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -246,10 +246,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': 'Can a $1,000 PC run local LLMs well?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For 7B-14B models, yes; larger models need more VRAM. With a used RTX 3060 12GB at about $330, this build totals about $940, and 12GB of VRAM fits 14B models at Q4. 32B-class models do not fit entirely in 12GB.' } },
-        { '@type': 'Question', 'name': 'Is 12GB VRAM enough for local LLMs in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB fits 7B-8B models at Q4 with room for long context and 14B models at Q4 (about 9-10GB) with a shorter context. It does not fit 32B-class models (typically about 20GB at Q4) or 70B-class models (roughly 40GB at Q4) entirely; a GPU with 24GB of VRAM is the realistic starting point for fully GPU-resident 32B-class models; a 16GB card fits 14B comfortably but still needs CPU offload for 32B.' } },
-        { '@type': 'Question', 'name': 'Can I use an 8GB GPU instead to save money?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'You can, but it limits you to 7B models with minimal context headroom — a hard ceiling you cannot raise without replacing the card. The savings from an 8GB card are not worth losing access to 13B-14B models.' } },
+        { '@type': 'Question', 'name': 'Is 12GB VRAM enough for local LLMs in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB fits 7B-8B models at Q4 with room for long context and 14B models at Q4 (about 9-10GB) with a shorter context. It does not fit 32B-class models (typically about 20GB at Q4) or 70B-class models (roughly 43GB at Q4) entirely; a GPU with 24GB of VRAM is the realistic starting point for fully GPU-resident 32B-class models; a 16GB card fits 14B comfortably but still needs CPU offload for 32B.' } },
+        { '@type': 'Question', 'name': 'Can I use an 8GB GPU instead to save money?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'You can, but fully on the GPU it mostly limits you to 7B-class models with little context headroom, and the card\'s VRAM cannot be expanded. Larger models need CPU offload, which is much slower, or a different card. That is why this build uses a 12GB card.' } },
         { '@type': 'Question', 'name': 'How much RAM do I actually need alongside a 12GB VRAM GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': '32GB system RAM. This covers OS overhead, model file caching during load, and any layers offloaded to CPU for models that slightly exceed VRAM capacity.' } },
-        { '@type': 'Question', 'name': 'Can this build be upgraded to run 70B models later?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not with a single GPU — 70B at Q4 needs ~40GB VRAM. The clearest upgrade path is either swapping to a used RTX 3090 24GB or adding a second GPU for VRAM pooling, which the dual-GPU build (about $2,700) covers directly; its 32GB runs 32B-class models, while 70B at Q4 (about 43GB) still does not fit.' } },
+        { '@type': 'Question', 'name': 'Can this build be upgraded to run 70B models later?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not with a single GPU — 70B at Q4 needs ~43GB VRAM. The clearest upgrade path is either swapping to a used RTX 3090 24GB (still not quite enough for full 70B) or adding a second GPU for VRAM pooling, which the dual-GPU build (about $2,700) covers directly; its 32GB runs 32B-class models, while 70B at Q4 (about 43GB) still does not fit. Check the power supply before either option: the 650W unit in this build was chosen for one RTX 3060 12GB.' } },
       ],
     },
     itemListSchema: {
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Build de PC para LLM local por menos de $1,000 con GPU usada (2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-es.webp',
     seoTitle: 'Build de PC para LLM local por menos de $1,000 con GPU usada (2026)',
-    intro: '**Una PC con una RTX 3060 12GB usada, un Ryzen 5 7600 y 32GB de RAM DDR5 ejecuta modelos de 7B a 14B en Q4 y suma unos $940, menos de $1,000.** La VRAM es el principal factor limitante para la inferencia de LLM local, así que este build destina su presupuesto de GPU a una tarjeta con 12GB de VRAM a un precio de segunda mano de unos $330 (del [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), dato con fecha 2026-11-26) y mantiene modestos los demás componentes. Un modelo de 14B en Q4 (unos 9-10GB) cabe en 12GB; los modelos de clase 32B no caben por completo y requieren descargar capas a la CPU, lo cual es mucho más lento. Esta guía detalla los componentes exactos, por qué se eligió cada uno frente a las alternativas y qué cifras de velocidad tienen fuente. El resto de piezas son estimaciones propias de esta página, y el total solo se cumple con una tarjeta usada: una RTX 3060 12GB nueva, listada en unos $450 en [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18), lo llevaría a unos $1,060.',
+    intro: '**Una PC con una RTX 3060 12GB usada, un Ryzen 5 7600 y 32GB de RAM DDR5 ejecuta modelos de 7B a 14B en Q4 y suma unos $940, menos de $1,000.** La VRAM es el principal factor limitante para la inferencia de LLM local, así que este build destina su presupuesto de GPU a una tarjeta con 12GB de VRAM a un precio de segunda mano de unos $330 (del [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), dato con fecha 2026-11-26) y mantiene modestos los demás componentes. Un modelo de 14B en Q4 (unos 9-10GB) cabe en 12GB; los modelos de clase 32B no caben por completo y requieren descargar capas a la CPU, lo cual es mucho más lento. Esta guía detalla los componentes exactos, por qué se eligió cada uno frente a las alternativas y qué cifras de velocidad tienen fuente. El resto de piezas son estimaciones propias de esta página, y el total solo se cumple con una tarjeta usada: una RTX 3060 12GB nueva, listada en unos $460 en [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28), lo llevaría a unos $1,070.',
     metaDescription: 'Build de PC para LLM local por menos de $1,000 (unos $940): RTX 3060 12GB usada, Ryzen 5 7600, 32GB DDR5. Ejecuta 7B-14B en Q4. Lista de componentes 2026.',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -308,19 +308,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Costo total del build: ~$940.** RTX 3060 12GB usada (~$330), Ryzen 5 7600 ($180), 32GB DDR5-6000 ($90), 1TB NVMe Gen4 ($70), placa B650 mATX ($130), fuente 650W 80+ Gold ($75), gabinete mATX ($65). El precio de la GPU proviene del [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (usada, dato con fecha 2026-11-26); el resto de piezas son estimaciones propias de esta página. Una RTX 3060 12GB nueva (unos $450 en gpuprix, 2026-11-18) elevaría el total a unos $1,060.',
+          '**Costo total del build: ~$940.** RTX 3060 12GB usada (~$330), Ryzen 5 7600 ($180), 32GB DDR5-6000 ($90), 1TB NVMe Gen4 ($70), placa B650 mATX ($130), fuente 650W 80+ Gold ($75), gabinete mATX ($65). El precio de la GPU proviene del [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (usada, dato con fecha 2026-11-26); el resto de piezas son estimaciones propias de esta página. Una RTX 3060 12GB nueva (unos $460 en gpuprix, 2026-11-28) elevaría el total a unos $1,070.',
           '**12GB de VRAM es el objetivo con este presupuesto, no la velocidad bruta de la GPU.** Una tarjeta con 12GB de VRAM puede ejecutar modelos que una tarjeta más rápida del mismo precio con 8GB no puede, porque el tamaño del modelo, no la cantidad de shaders, decide qué es lo que cabe.',
           '**Modelos de 7B: 75.6 tok/s** (discusión #15013 de llama.cpp, generación de tokens con Llama 2 7B Q4_0, reportada por la comunidad). Los modelos de 14B en Q4 (~9-10GB) caben en 12GB con poco margen para contexto; las demás velocidades son solo indicativas y no fueron medidas por PromptQuorum.',
-          '**Los modelos de 32B y 70B no caben por completo.** Un modelo de 32B en Q4 necesita normalmente unos 20GB y uno de 70B ~40GB de VRAM; este build llega hasta unos 14B solo en la GPU. Consulta el build dual-GPU (unos $2,700) para modelos de clase 32B (70B en Q4 necesita unos 43GB y sigue sin caber en 32GB).',
+          '**Los modelos de 32B y 70B no caben por completo.** Un modelo de 32B en Q4 necesita normalmente unos 20GB y uno de 70B ~43GB de VRAM; este build llega hasta unos 14B solo en la GPU. Consulta el build dual-GPU (unos $2,700) para modelos de clase 32B (70B en Q4 necesita unos 43GB y sigue sin caber en 32GB).',
           '**32GB de RAM de sistema, no 16GB.** La carga del modelo, el overhead del sistema operativo y cualquier capa descargada a la CPU necesitan margen adicional más allá de la GPU; 16GB puede provocar swapping en modelos de 14B o más.',
-          '**Evita:** las GPUs de 8GB (RTX 5060, RTX 4060 Ti 8GB) — se limitan a 7B y no pueden crecer hacia 13B-14B sin reemplazar toda la tarjeta.',
+          '**Evita:** las GPUs de 8GB (RTX 5060, RTX 4060 Ti 8GB) — por completo en la GPU se limitan casi siempre a la clase 7B; los 13B-14B suelen requerir descarga a la CPU u otra tarjeta.',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: 'Qué Compra Realmente Este Presupuesto',
         content: [
-          '**La velocidad de inferencia de un LLM local está limitada primero por la capacidad de VRAM, en segundo lugar por el ancho de banda de memoria, y en un lejano tercer lugar por el cómputo (núcleos CUDA).** Un modelo que no cabe en la VRAM no carga o se derrama hacia la RAM del sistema, lo que reduce mucho el rendimiento. Con $1,000, la asignación más eficaz es poner primero la GPU y mantener modesto todo lo demás — por eso la CPU aquí es un componente de gama media de $180, no un modelo tope de gama de $350.',
+          '**La capacidad de VRAM decide primero si un modelo local puede ejecutarse por completo en la GPU; el ancho de banda de memoria y el cómputo influyen después en la velocidad.** Un modelo que no cabe en la VRAM no carga o se derrama hacia la RAM del sistema, lo que reduce mucho el rendimiento. Con $1,000, este build pone primero la GPU y mantiene modesto todo lo demás — por eso la CPU aquí es un componente de gama media de $180, no un modelo tope de gama de $350.',
           'Este build asume inferencia de un solo modelo (un modelo cargado a la vez a través de Ollama, LM Studio o llama.cpp), no servicio concurrente para múltiples usuarios. Para atender varias solicitudes simultáneas, los requisitos de VRAM aumentan aún más y un presupuesto de $1,000 deja de ser realista.',
         ],
         snippetBlocks: [
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Lista de Componentes Completa',
-        content: 'Los precios son precios estimados en EE. UU. y varían según región y tienda. Los precios de la RAM y del SSD fluctúan, y un aumento de más de $60 en las piezas llevaría el total por encima de $1,000. El precio de la GPU (RTX 3060 12GB usada, unos $330) proviene del [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (dato con fecha 2026-11-26); el resto de piezas son estimaciones propias de esta página. Total: unos $940 ($330 + $180 + $90 + $70 + $130 + $75 + $65). Esto vale solo para una tarjeta usada: una RTX 3060 12GB nueva, listada en unos $450 en [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18), llevaría el total a unos $1,060.',
+        content: 'Los precios son precios estimados en EE. UU. y varían según región y tienda. Los precios de la RAM y del SSD fluctúan, y un aumento de más de $60 en las piezas llevaría el total por encima de $1,000. El precio de la GPU (RTX 3060 12GB usada, unos $330) proviene del [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (dato con fecha 2026-11-26); el resto de piezas son estimaciones propias de esta página. Total: unos $940 ($330 + $180 + $90 + $70 + $130 + $75 + $65). Esto vale solo para una tarjeta usada: una RTX 3060 12GB nueva, listada en unos $460 en [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28), llevaría el total a unos $1,070.',
         columns: ['Componente', 'Elección', 'Precio', 'Por qué'],
         rows: [
           { 'Componente': 'GPU', 'Elección': 'RTX 3060 12GB usada', 'Precio': '~$330', 'Por qué': '12GB de VRAM alojan 7B-14B en Q4; 32B no cabe por completo' },
@@ -349,13 +349,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Por Qué una RTX 3060 12GB Usada con Este Presupuesto',
         content: [
           '**Con este presupuesto, la VRAM por dólar decide la GPU, y las tarjetas de 8GB son un falso ahorro para trabajo con LLMs locales.** La RTX 3060 se vendió en una versión de 12GB, por eso se usa aquí a pesar de su antigüedad: una tarjeta de 8GB no puede alojar con comodidad nada más allá de un modelo de 7B en Q4 con un largo de contexto usable. Asegúrate de que el anuncio diga 12GB, porque también existe una variante RTX 3060 de 8GB.',
-          'El margen de VRAM también importa para el largo de contexto: un modelo de 7B por sí solo necesita unos 4-4.5GB en Q4, pero un contexto de 16K tokens añade otro 1-2GB de caché KV. En una tarjeta de 8GB eso deja casi nada; en la de 12GB hay espacio para un modelo de 7B y un contexto largo, y un modelo de 14B cabe con uno más corto.',
+          'El margen de VRAM también importa para el largo de contexto: un modelo de 7B por sí solo necesita unos 4-4.5GB en Q4, pero un contexto de 16K tokens añade otro 1-2GB de caché KV. En una tarjeta de 8GB eso deja casi nada; en la de 12GB hay espacio para un modelo de 7B y un contexto largo, y un modelo de 14B cabe con uno más corto. Estas cifras de contexto son estimaciones aproximadas que dependen del modelo y de los ajustes.',
         ],
         items: [
-          '**RTX 3060 12GB (usada, unos $330, este build):** 12GB de VRAM al precio más bajo con fuente; precio de segunda mano según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (rango $310-350, mediana $330, dato con fecha 2026-11-26). Las tarjetas nuevas o reacondicionadas cuestan más: $450 nueva y $420 reacondicionada en Amazon según [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18).',
-          '**RTX 4060 Ti 16GB (unos $430-450 según el rastreador de InsiderLLM, estado no indicado):** 16GB de VRAM, pero [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) la lista mucho más cara ($843 nueva, 2026-11-17), por lo que el precio es incierto; incluso al precio del rastreador el total sería de unos $1,040-1,060. Revisa los listados actuales.',
-          '**RTX 5060 Ti 16GB (unos $800 nueva: la oferta nueva más barata que mostraba [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), consultado el 2026-11-28; $829.99 en Amazon EE. UU. según [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27):** La opción de actualización a 16GB; en lugar de la RTX 3060 usada elevaría el total de este build en unos $470-500, hasta unos $1,410-1,440.',
-          '**RTX 3090 24GB usada (~$1,500-1,725, [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** Más VRAM, pero la tarjeta sola cuesta más que todo el presupuesto de $1,000, así que queda fuera de este build.',
+          '**RTX 3060 12GB (usada, unos $330, este build):** 12GB de VRAM al precio más bajo con fuente; precio de segunda mano según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (rango $310-350, mediana $330, 209 ventas completadas en eBay US, del 2026-11-17 al 2026-11-26; dato con fecha 2026-11-26). Las tarjetas nuevas o reacondicionadas cuestan más: $460 nueva y $420 reacondicionada en Amazon según [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28).',
+          '**RTX 4060 Ti 16GB (unos $430-450 según el rastreador de InsiderLLM, estado no indicado):** 16GB de VRAM, pero [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) la lista mucho más cara (tarjetas nuevas en stock desde $764, consultado el 2026-11-28), por lo que el precio es incierto; incluso al precio del rastreador el total sería de unos $1,040-1,060. Revisa los listados actuales.',
+          '**RTX 5060 Ti 16GB (unos $800 nueva: la oferta nueva más barata que mostraba [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), consultado el 2026-11-28; $849.99 en Amazon EE. UU. según [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27):** La opción de actualización a 16GB; en lugar de la RTX 3060 usada elevaría el total de este build en unos $470-520, hasta unos $1,410-1,460.',
+          '**RTX 3090 24GB usada (~$1,500-1,725 en ventas completadas en EE. UU. del 2026-11-13 al 2026-11-23; [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** Más VRAM, pero la tarjeta sola cuesta más que todo el presupuesto de $1,000, así que queda fuera de este build.',
         ],
       },
       performance: {
@@ -366,9 +366,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tamaño del Modelo': '7B-8B', 'VRAM Usada (Q4)': '~4.5-5GB', 'Tokens/s': '75.6 (Llama 2 7B Q4_0, #15013)', '¿Cabe Bien?': 'Sí — margen completo de contexto' },
           { 'Tamaño del Modelo': '13B-14B', 'VRAM Usada (Q4)': '~9-10GB', 'Tokens/s': 'Menos que 7B; sin cifra con fuente', '¿Cabe Bien?': 'Sí — poco margen de contexto' },
-          { 'Tamaño del Modelo': '20B (MoE, ~4B activos)', 'VRAM Usada (Q4)': '~12GB', 'Tokens/s': 'Sin cifra con fuente', '¿Cabe Bien?': 'Justo — queda poco espacio para contexto' },
+          { 'Tamaño del Modelo': '20B (MoE, ~4B activos)', 'VRAM Usada (Q4)': '~14GB (gpt-oss:20b)', 'Tokens/s': 'Sin cifra con fuente', '¿Cabe Bien?': 'No — la descarga supera los 12GB; cuenta con descarga a la CPU' },
           { 'Tamaño del Modelo': '32B', 'VRAM Usada (Q4)': '~19-20GB', 'Tokens/s': 'Sin cifra con fuente', '¿Cabe Bien?': 'No — requiere descarga a CPU, mucho más lento' },
-          { 'Tamaño del Modelo': '70B', 'VRAM Usada (Q4)': '~40GB', 'Tokens/s': 'N/D', '¿Cabe Bien?': 'No cabe — ni siquiera en el build dual-GPU (32GB)' },
+          { 'Tamaño del Modelo': '70B', 'VRAM Usada (Q4)': '~43GB', 'Tokens/s': 'N/D', '¿Cabe Bien?': 'No cabe — ni siquiera en el build dual-GPU (32GB)' },
         ],
       },
       assembly: {
@@ -385,8 +385,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Ruta de Actualización',
         content: [
-          'Este build está diseñado para que la GPU sea el único componente que valga la pena reemplazar más adelante. La placa B650 soporta una segunda ranura PCIe (típicamente x4 eléctrica) para añadir una segunda GPU en el futuro, aunque la inferencia multi-GPU con tensor-split necesita al menos x8/x8 para evitar un cuello de botella de ancho de banda PCIe — consulta el build dual-GPU (unos $2,700) para una placa elegida con eso en mente.',
-          'La actualización más directa es cambiar la GPU por una con más VRAM cuando el presupuesto lo permita. Una RTX 5060 Ti 16GB (unos $800-830 nueva según gpuprix, 2026-11-28, y BasketPrice, 2026-11-27) añade 4GB de VRAM pero llevaría el build por encima de $1,000, y una RTX 3090 24GB usada (~$1,500-1,725) queda fuera del presupuesto de este build. El Ryzen 5 7600 y los 32GB de RAM no son el límite para ese cambio; compara el consumo de la nueva tarjeta con la fuente de 650W en la especificación del fabricante.',
+          'Este build está diseñado para que la GPU sea el único componente que valga la pena reemplazar más adelante. Muchas placas B650 tienen una segunda ranura PCIe, a menudo cableada a x4 eléctrica, así que revisa el manual de la placa que compres. Para una segunda GPU, es preferible una placa que documente una división x8/x8: una ranura x4 tiene la mitad de líneas que una x8, y cuánto frena un modelo dividido depende del runtime, del modo de división y de los ajustes, algo que esta página no ha medido. Revisa la fuente antes de añadir una tarjeta. Consulta el build dual-GPU (unos $2,700) para una configuración pensada para dos GPUs.',
+          'La actualización más directa es cambiar la GPU por una con más VRAM cuando el presupuesto lo permita. Una RTX 5060 Ti 16GB (unos $800-850 nueva según gpuprix, 2026-11-28, y BasketPrice, 2026-11-27) añade 4GB de VRAM pero llevaría el build por encima de $1,000, y una RTX 3090 24GB usada (~$1,500-1,725) queda fuera del presupuesto de este build. El Ryzen 5 7600 y los 32GB de RAM no son el límite para ese cambio; compara el consumo de la nueva tarjeta con la fuente de 650W en la especificación del fabricante.',
         ],
       },
       whereToBuy: {
@@ -395,11 +395,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Los precios y la disponibilidad varían por región, y los precios en la UE incluyen IVA.** Los enlaces de abajo son simples enlaces de búsqueda de productos por región; no llevan etiquetas de afiliado y no generan comisión.',
         items: [
-          '**España:** Amazon.es y PcComponentes tienen el stock más amplio. Las tarjetas de segunda mano RTX 3060 y RTX 4090 se encuentran en Wallapop y Milanuncios.',
-          '**México:** Amazon.com.mx y Mercado Libre son las referencias principales; los precios incluyen IVA y pueden variar por tipo de cambio.',
-          '**Argentina, Colombia y resto de Latinoamérica:** Mercado Libre es el marketplace de referencia en toda la región; verifica siempre los precios actualizados ya que el tipo de cambio afecta significativamente el costo final.',
-          '**Comparador de precios:** Idealo.es es el estándar para comparar precios de tarjetas nuevas en España — verifica ahí la fuente más barata actualmente.',
-          '**Disponibilidad:** las tarjetas de gama alta (RTX 4090, RTX 5090) están intermitentemente agotadas en 2026, y la RTX 5090 suele estar agotada al precio de lista; espera precios fluctuantes y verifica varios distribuidores.',
+          '**España:** Amazon.es y PcComponentes son tiendas donde comparar. Para segunda mano, consulta Wallapop y Milanuncios.',
+          '**México:** Amazon.com.mx y Mercado Libre son opciones donde comparar; revisa si el precio incluye IVA y ten en cuenta que puede variar con el tipo de cambio.',
+          '**Argentina, Colombia y resto de Latinoamérica:** Mercado Libre es un marketplace donde comparar en la región; verifica siempre los precios actualizados, ya que el tipo de cambio puede afectar el costo final.',
+          '**Comparador de precios:** Idealo.es sirve para comparar precios de tarjetas nuevas en España; revisa allí las ofertas actuales.',
+          '**Disponibilidad:** las tarjetas de gama alta (RTX 4090, RTX 5090) pueden estar agotadas, y la RTX 5090 puede no estar disponible al precio de lista; espera precios fluctuantes y verifica varios distribuidores.',
         ],
         callouts: [
           {
@@ -440,8 +440,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Comprar una GPU de 8GB para ahorrar dinero (incluida la variante RTX 3060 de 8GB, que no es la tarjeta de este build) — el límite de VRAM que esto crea no se puede solucionar con software y obliga a reemplazar la GPU más adelante, costando más en total.',
           'Gastar de más en la CPU (por ejemplo, un Ryzen 7 en lugar de un Ryzen 5) mientras se usa una GPU de 8GB o 12GB — la elección de CPU casi no afecta los tokens/s una vez que un modelo cabe en la VRAM.',
-          'Saltarse la configuración del perfil EXPO/XMP de RAM en la BIOS, dejando los kits DDR5-6000 corriendo a 4800 — una pérdida de rendimiento gratuita que no cuesta nada arreglar.',
-          'Subdimensionar la fuente para ahorrar $20-30 — el consumo de la GPU tiene picos breves bien por encima de su TDP nominal bajo carga sostenida, y en algunos builds una unidad de 550W deja poco margen para picos transitorios; consulta la especificación del fabricante.',
+          'Sin activar el perfil EXPO/XMP en la BIOS, un kit DDR5-6000 se queda a una velocidad predeterminada inferior. Esto importa sobre todo cuando hay capas del modelo ejecutándose en la CPU. Estos perfiles son overclocking de memoria: consulta la documentación de tu placa y tu CPU antes de activar uno.',
+          'Subdimensionar la fuente para ahorrar $20-30 — el consumo de la GPU tiene picos breves bien por encima de su TDP nominal bajo carga sostenida, y en algunos builds una unidad de 550W deja poco margen para picos transitorios; consulta la especificación del fabricante. Esto es información general, no asesoría eléctrica; si tienes dudas, pide a un técnico cualificado que revise el equipo y tu circuito eléctrico.',
         ],
       },
       faqSection: {
@@ -449,15 +449,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas Frecuentes',
         faqs: [
           { q: '¿Puede una PC de $1,000 ejecutar bien LLMs locales?', a: 'Para modelos de 7B a 14B, sí; los modelos más grandes necesitan más VRAM. Con una RTX 3060 12GB usada de unos $330, este build suma unos $940, y 12GB de VRAM alojan modelos de 14B en Q4. Los modelos de clase 32B no caben por completo en 12GB.' },
-          { q: '¿Por qué este build gasta tanto en la GPU en relación con la CPU?', a: 'La velocidad de inferencia de un LLM local depende casi por completo de la capacidad de VRAM de la GPU y el ancho de banda de memoria. Una CPU más rápida no aumenta los tokens/s una vez que un modelo está cargado en la VRAM, así que una CPU de gama media y una GPU fuerte superan a una CPU fuerte con una GPU débil para esta carga de trabajo específica.' },
-          { q: '¿Son 12GB de VRAM suficientes para LLMs locales en 2026?', a: '12GB alojan modelos de 7B-8B en Q4 con espacio para contexto largo y modelos de 14B en Q4 (unos 9-10GB) con un contexto más corto. No alojan por completo modelos de clase 32B (normalmente unos 20GB en Q4) ni de clase 70B (unos 40GB en Q4); una GPU con 24GB de VRAM es el punto de partida realista para modelos de clase 32B que corran por completo en la GPU; una tarjeta de 16GB aloja modelos de 14B con holgura, pero para 32B sigue necesitando descarga a la CPU.' },
-          { q: '¿Puedo usar una GPU de 8GB en su lugar para ahorrar dinero?', a: 'Puedes, pero te limita a modelos de 7B con un margen de contexto mínimo — un límite duro que no puedes elevar sin reemplazar la tarjeta. El ahorro con una tarjeta de 8GB no vale la pena si pierdes acceso a modelos de 13B-14B.' },
+          { q: '¿Por qué este build gasta tanto en la GPU en relación con la CPU?', a: 'Cuando un modelo se ejecuta por completo en la GPU, la velocidad depende sobre todo de la GPU y de su ancho de banda de memoria, y la capacidad de VRAM decide qué modelos caben. En ese caso una CPU más rápida suele aportar poco, así que para esta carga de trabajo el build gasta en la GPU antes que en la CPU.' },
+          { q: '¿Son 12GB de VRAM suficientes para LLMs locales en 2026?', a: '12GB alojan modelos de 7B-8B en Q4 con espacio para contexto largo y modelos de 14B en Q4 (unos 9-10GB) con un contexto más corto. No alojan por completo modelos de clase 32B (normalmente unos 20GB en Q4) ni de clase 70B (unos 43GB en Q4); una GPU con 24GB de VRAM es el punto de partida realista para modelos de clase 32B que corran por completo en la GPU; una tarjeta de 16GB aloja modelos de 14B con holgura, pero para 32B sigue necesitando descarga a la CPU.' },
+          { q: '¿Puedo usar una GPU de 8GB en su lugar para ahorrar dinero?', a: 'Puedes, pero por completo en la GPU te limita casi siempre a la clase 7B con poco margen de contexto, y la VRAM de la tarjeta no se puede ampliar. Los modelos más grandes requieren descarga a la CPU, mucho más lenta, u otra tarjeta. Por eso este build usa una tarjeta de 12GB.' },
           { q: '¿Cuánta RAM necesito en realidad junto a una GPU con 12GB de VRAM?', a: '32GB de RAM de sistema. Esto cubre el overhead del sistema operativo, el cacheo del archivo del modelo durante la carga, y cualquier capa descargada a la CPU para modelos que exceden ligeramente la capacidad de VRAM.' },
           { q: '¿Este build ejecutará bien modelos de 32B?', a: 'No, no por completo en la GPU. Un modelo de 32B en Q4 necesita normalmente unos 20GB, más de los 12GB de la tarjeta, así que parte debe descargarse a la RAM del sistema, lo cual es mucho más lento; no hay una cifra de velocidad con fuente para esa configuración. Para modelos de clase 32B que corran por completo en la GPU, el punto de partida realista es una GPU con 24GB de VRAM; una tarjeta de 16GB sigue necesitando descarga a la CPU.' },
           { q: '¿Qué software debería usar con este build?', a: 'Ollama o LM Studio son los puntos de partida más simples — ambos detectan automáticamente una GPU NVIDIA como la RTX 3060 12GB y manejan la cuantización Q4. llama.cpp directamente da más control sobre el formato de cuantización y los ajustes de contexto.' },
-          { q: '¿Se puede actualizar este build para ejecutar modelos de 70B más adelante?', a: 'No con una sola GPU — 70B en Q4 necesita ~40GB de VRAM. La ruta de actualización más clara es cambiar a una RTX 3090 24GB usada (aún no del todo suficiente para 70B completo) o añadir una segunda GPU para agrupar VRAM, lo cual cubre directamente el build dual-GPU (unos $2,700); sus 32GB ejecutan modelos de clase 32B, pero 70B en Q4 (unos 43GB) sigue sin caber.' },
+          { q: '¿Se puede actualizar este build para ejecutar modelos de 70B más adelante?', a: 'No con una sola GPU — 70B en Q4 necesita ~43GB de VRAM. La ruta de actualización más clara es cambiar a una RTX 3090 24GB usada (aún no del todo suficiente para 70B completo) o añadir una segunda GPU para agrupar VRAM, lo cual cubre directamente el build dual-GPU (unos $2,700); sus 32GB ejecutan modelos de clase 32B, pero 70B en Q4 (unos 43GB) sigue sin caber. Revisa la fuente antes de cualquiera de las dos opciones: la de 650W de este build se eligió para una sola RTX 3060 12GB.' },
           { q: '¿Importa el chipset de la placa base (B650 vs B850) para la inferencia de LLM local?', a: 'No para un build de una sola GPU. B650 ofrece una ranura PCIe 4.0 x16, que es lo que necesita la GPU; las diferencias de chipset entre B650 y placas más nuevas importan más para la asignación de líneas PCIe multi-GPU que para inferencia de LLM de una sola GPU.' },
-          { q: '¿Es una GPU usada mejor valor que una nueva con este presupuesto?', a: 'Con este presupuesto, sí: la RTX 3060 12GB usada (unos $330 según el rastreador de InsiderLLM) mantiene el total en unos $940, mientras que una RTX 3060 12GB nueva (unos $450 en gpuprix) lo llevaría a unos $1,060. Una tarjeta usada conlleva más riesgo, así que revisa la política de devoluciones del vendedor. Una RTX 3090 24GB usada es una mejora real en VRAM, pero cuesta más que todo el presupuesto de GPU de este build y eleva el total por encima de $2,000 — pertenece a un nivel mayor.' },
+          { q: '¿Es una GPU usada mejor valor que una nueva con este presupuesto?', a: 'Con este presupuesto, sí: la RTX 3060 12GB usada (unos $330 según el rastreador de InsiderLLM) mantiene el total en unos $940, mientras que una RTX 3060 12GB nueva (unos $460 en gpuprix) lo llevaría a unos $1,070. Una tarjeta usada conlleva más riesgo, así que revisa la política de devoluciones del vendedor. Una RTX 3090 24GB usada es una mejora real en VRAM, pero cuesta más que todo el presupuesto de GPU de este build y eleva el total por encima de $2,000 — pertenece a un nivel mayor.' },
         ],
       },
       relatedReading: {
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Biblioteca de modelos de Ollama y requisitos de VRAM](https://ollama.com/library)',
           '[Discusión #15013 de llama.cpp: rendimiento en NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix: página de precios de la RTX 3060 12GB](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix: ofertas de la RTX 5060 Ti 16GB en EE. UU. (consultado el 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice: precios de la RTX 5060 Ti en EE. UU. (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[Página del modelo qwen3:32b en Ollama (20GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)',
+          '[Página del modelo qwen3:32b en Ollama (20GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)', '[Página del modelo gpt-oss:20b en Ollama (14GB)](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -512,10 +512,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/es/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': '¿Puede una PC de $1,000 ejecutar bien LLMs locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para modelos de 7B a 14B, sí; los modelos más grandes necesitan más VRAM. Con una RTX 3060 12GB usada de unos $330, este build suma unos $940, y 12GB de VRAM alojan modelos de 14B en Q4. Los modelos de clase 32B no caben por completo en 12GB.' } },
-        { '@type': 'Question', 'name': '¿Son 12GB de VRAM suficientes para LLMs locales en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB alojan modelos de 7B-8B en Q4 con espacio para contexto largo y modelos de 14B en Q4 (unos 9-10GB) con un contexto más corto. No alojan por completo modelos de clase 32B (normalmente unos 20GB en Q4) ni de clase 70B (unos 40GB en Q4); una GPU con 24GB de VRAM es el punto de partida realista para modelos de clase 32B que corran por completo en la GPU; una tarjeta de 16GB aloja modelos de 14B con holgura, pero para 32B sigue necesitando descarga a la CPU.' } },
-        { '@type': 'Question', 'name': '¿Puedo usar una GPU de 8GB en su lugar para ahorrar dinero?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Puedes, pero te limita a modelos de 7B con un margen de contexto mínimo — un límite duro que no puedes elevar sin reemplazar la tarjeta. El ahorro con una tarjeta de 8GB no vale la pena si pierdes acceso a modelos de 13B-14B.' } },
+        { '@type': 'Question', 'name': '¿Son 12GB de VRAM suficientes para LLMs locales en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB alojan modelos de 7B-8B en Q4 con espacio para contexto largo y modelos de 14B en Q4 (unos 9-10GB) con un contexto más corto. No alojan por completo modelos de clase 32B (normalmente unos 20GB en Q4) ni de clase 70B (unos 43GB en Q4); una GPU con 24GB de VRAM es el punto de partida realista para modelos de clase 32B que corran por completo en la GPU; una tarjeta de 16GB aloja modelos de 14B con holgura, pero para 32B sigue necesitando descarga a la CPU.' } },
+        { '@type': 'Question', 'name': '¿Puedo usar una GPU de 8GB en su lugar para ahorrar dinero?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Puedes, pero por completo en la GPU te limita casi siempre a la clase 7B con poco margen de contexto, y la VRAM de la tarjeta no se puede ampliar. Los modelos más grandes requieren descarga a la CPU, mucho más lenta, u otra tarjeta. Por eso este build usa una tarjeta de 12GB.' } },
         { '@type': 'Question', 'name': '¿Cuánta RAM necesito en realidad junto a una GPU con 12GB de VRAM?', 'acceptedAnswer': { '@type': 'Answer', 'text': '32GB de RAM de sistema. Esto cubre el overhead del sistema operativo, el cacheo del archivo del modelo durante la carga, y cualquier capa descargada a la CPU para modelos que exceden ligeramente la capacidad de VRAM.' } },
-        { '@type': 'Question', 'name': '¿Se puede actualizar este build para ejecutar modelos de 70B más adelante?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No con una sola GPU — 70B en Q4 necesita ~40GB de VRAM. La ruta de actualización más clara es cambiar a una RTX 3090 24GB usada o añadir una segunda GPU para agrupar VRAM, lo cual cubre directamente el build dual-GPU (unos $2,700); sus 32GB ejecutan modelos de clase 32B, pero 70B en Q4 (unos 43GB) sigue sin caber.' } },
+        { '@type': 'Question', 'name': '¿Se puede actualizar este build para ejecutar modelos de 70B más adelante?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No con una sola GPU — 70B en Q4 necesita ~43GB de VRAM. La ruta de actualización más clara es cambiar a una RTX 3090 24GB usada (aún no del todo suficiente para 70B completo) o añadir una segunda GPU para agrupar VRAM, lo cual cubre directamente el build dual-GPU (unos $2,700); sus 32GB ejecutan modelos de clase 32B, pero 70B en Q4 (unos 43GB) sigue sin caber. Revisa la fuente antes de cualquiera de las dos opciones: la de 650W de este build se eligió para una sola RTX 3060 12GB.' } },
       ],
     },
     itemListSchema: {
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '중고 GPU로 $1,000 미만 로컬 LLM PC 빌드(2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-ko.webp',
     seoTitle: '중고 GPU로 $1,000 미만 로컬 LLM PC 빌드(2026)',
-    intro: '**중고 RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5 RAM을 탑재한 PC는 7B~14B 모델을 Q4에서 실행하며 총비용은 약 $940으로 $1,000 미만입니다.** VRAM은 로컬 LLM 추론의 주된 제약 요소이므로, 이 빌드는 GPU 예산을 중고가 약 $330인 12GB VRAM 카드에 사용하고([InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 가격 데이터 기준일 2026-11-26) 나머지 부품은 소박하게 구성합니다. Q4의 14B 모델(약 9-10GB)은 12GB에 들어가지만, 32B급 모델은 완전히 들어가지 않아 CPU로 일부를 오프로드해야 하며 속도가 크게 느려집니다. 이 가이드는 정확한 부품 구성, 각 부품을 대안보다 선택한 이유, 그리고 출처가 있는 속도 수치를 안내합니다. 나머지 부품은 이 페이지의 자체 추정치이며, 총액은 중고 카드일 때만 성립합니다. 2026-11-18 기준 [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)에 약 $450으로 등록된 새 RTX 3060 12GB를 선택하면 총액은 약 $1,060이 됩니다.',
+    intro: '**중고 RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5 RAM을 탑재한 PC는 7B~14B 모델을 Q4에서 실행하며 총비용은 약 $940으로 $1,000 미만입니다.** VRAM은 로컬 LLM 추론의 주된 제약 요소이므로, 이 빌드는 GPU 예산을 중고가 약 $330인 12GB VRAM 카드에 사용하고([InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 가격 데이터 기준일 2026-11-26) 나머지 부품은 소박하게 구성합니다. Q4의 14B 모델(약 9-10GB)은 12GB에 들어가지만, 32B급 모델은 완전히 들어가지 않아 CPU로 일부를 오프로드해야 하며 속도가 크게 느려집니다. 이 가이드는 정확한 부품 구성, 각 부품을 대안보다 선택한 이유, 그리고 출처가 있는 속도 수치를 안내합니다. 나머지 부품은 이 페이지의 자체 추정치이며, 총액은 중고 카드일 때만 성립합니다. 2026-11-28 기준 [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)에 약 $460으로 등록된 새 RTX 3060 12GB를 선택하면 총액은 약 $1,070이 됩니다.',
     metaDescription: '$1,000 미만 로컬 LLM PC 빌드(약 $940): 중고 RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Q4에서 7B-14B 실행. 2026 부품 목록.',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -574,19 +574,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**총 빌드 비용: 약 $940.** 중고 RTX 3060 12GB(약 $330), Ryzen 5 7600($180), 32GB DDR5-6000($90), 1TB Gen4 NVMe($70), B650 mATX 보드($130), 650W 80+ Gold PSU($75), mATX 케이스($65). GPU 가격은 [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(중고, 가격 데이터 기준일 2026-11-26)에서 가져왔으며, 나머지 부품은 이 페이지의 자체 추정치입니다. 새 RTX 3060 12GB(2026-11-18 기준 gpuprix 약 $450)를 선택하면 총액은 약 $1,060이 됩니다.',
+          '**총 빌드 비용: 약 $940.** 중고 RTX 3060 12GB(약 $330), Ryzen 5 7600($180), 32GB DDR5-6000($90), 1TB Gen4 NVMe($70), B650 mATX 보드($130), 650W 80+ Gold PSU($75), mATX 케이스($65). GPU 가격은 [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(중고, 가격 데이터 기준일 2026-11-26)에서 가져왔으며, 나머지 부품은 이 페이지의 자체 추정치입니다. 새 RTX 3060 12GB(2026-11-28 기준 gpuprix 약 $460)를 선택하면 총액은 약 $1,070이 됩니다.',
           '**이 예산에서 목표는 GPU 원시 속도가 아니라 12GB VRAM입니다.** 12GB VRAM 카드는 같은 가격의 더 빠른 8GB 카드가 실행할 수 없는 모델을 실행할 수 있습니다. 무엇이 들어가는지는 셰이더 수가 아니라 모델 크기가 결정하기 때문입니다.',
           '**7B 모델: 75.6 tok/s**(llama.cpp discussion #15013, Llama 2 7B Q4_0 토큰 생성, 커뮤니티 보고). Q4의 14B 모델(약 9-10GB)은 컨텍스트 여유가 제한적이나 12GB에 들어갑니다. 그 외 속도는 참고용일 뿐이며 PromptQuorum이 측정한 값이 아닙니다.',
-          '**32B와 70B 모델은 완전히 들어가지 않습니다.** Q4의 32B 모델은 일반적으로 약 20GB, 70B 모델은 약 40GB VRAM이 필요합니다. 이 빌드는 GPU만으로는 약 14B가 한계입니다. 32B급 모델은 듀얼 GPU 빌드(약 $2,700)를 참고하십시오(Q4의 70B는 약 43GB가 필요하여 32GB에도 들어가지 않습니다).',
+          '**32B와 70B 모델은 완전히 들어가지 않습니다.** Q4의 32B 모델은 일반적으로 약 20GB, 70B 모델은 약 43GB VRAM이 필요합니다. 이 빌드는 GPU만으로는 약 14B가 한계입니다. 32B급 모델은 듀얼 GPU 빌드(약 $2,700)를 참고하십시오(Q4의 70B는 약 43GB가 필요하여 32GB에도 들어가지 않습니다).',
           '**시스템 RAM은 16GB가 아니라 32GB가 필요합니다.** 모델 로딩, OS 오버헤드, CPU로 오프로드되는 레이어는 GPU를 넘어서는 여유 공간이 필요하며, 16GB는 14B 이상의 모델에서 스와핑을 유발합니다.',
-          '**피해야 할 것:** 8GB GPU(RTX 5060, RTX 4060 Ti 8GB) — 7B에서 한계에 도달하며, GPU를 전부 교체하지 않고는 13B~14B로 확장할 수 없습니다.',
+          '**피해야 할 것:** 8GB GPU(RTX 5060, RTX 4060 Ti 8GB) — GPU에서 온전히 실행할 때는 대체로 7B급까지이며, 13B~14B는 보통 CPU 오프로드나 다른 카드가 필요합니다.',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: '이 예산으로 실제로 구매하는 것',
         content: [
-          '**로컬 LLM 추론 속도는 먼저 VRAM 용량, 다음으로 메모리 대역폭에 의해 제한되며, 연산 성능(CUDA 코어)은 한참 뒤입니다.** VRAM에 들어가지 않는 모델은 로드에 실패하거나 시스템 RAM으로 넘쳐 처리량이 크게 떨어집니다. $1,000 예산에서는 GPU를 우선하고 나머지는 소박하게 구성하는 것이 가장 효과적인 배분입니다. 그래서 이 빌드의 CPU는 $350짜리 플래그십이 아니라 $180짜리 중급 제품입니다.',
+          '**로컬 모델을 GPU에서 온전히 실행할 수 있는지는 먼저 VRAM 용량이 결정하며, 그다음 메모리 대역폭과 연산 성능이 속도에 영향을 줍니다.** VRAM에 들어가지 않는 모델은 로드에 실패하거나 시스템 RAM으로 넘쳐 처리량이 크게 떨어집니다. $1,000 예산에서 이 빌드는 GPU를 우선하고 나머지는 소박하게 구성합니다. 그래서 CPU는 $350짜리 플래그십이 아니라 $180짜리 중급 제품입니다.',
           '이 빌드는 단일 모델 추론(Ollama, LM Studio, llama.cpp를 통해 한 번에 하나의 모델을 로드)을 전제로 하며, 동시 다중 사용자 서빙은 고려하지 않습니다. 동시 다발적인 여러 요청을 서빙하려면 VRAM 요구량이 더욱 커지므로 $1,000 예산으로는 현실적이지 않습니다.',
         ],
         snippetBlocks: [
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: '전체 부품 목록',
-        content: '가격은 미국 추정 가격이며 지역과 판매처에 따라 다릅니다. RAM과 SSD 가격은 변동이 크며, 부품 가격이 합계 $60 넘게 오르면 총액이 $1,000을 넘게 됩니다. GPU 가격(중고 RTX 3060 12GB, 약 $330)은 [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(가격 데이터 기준일 2026-11-26)에서 가져왔으며, 나머지 부품은 이 페이지의 자체 추정치입니다. 합계: 약 $940($330 + $180 + $90 + $70 + $130 + $75 + $65). 이는 중고 카드일 때만 성립합니다. 2026-11-18 기준 [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)에 약 $450으로 등록된 새 RTX 3060 12GB를 선택하면 합계는 약 $1,060이 됩니다.',
+        content: '가격은 미국 추정 가격이며 지역과 판매처에 따라 다릅니다. RAM과 SSD 가격은 변동이 크며, 부품 가격이 합계 $60 넘게 오르면 총액이 $1,000을 넘게 됩니다. GPU 가격(중고 RTX 3060 12GB, 약 $330)은 [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(가격 데이터 기준일 2026-11-26)에서 가져왔으며, 나머지 부품은 이 페이지의 자체 추정치입니다. 합계: 약 $940($330 + $180 + $90 + $70 + $130 + $75 + $65). 이는 중고 카드일 때만 성립합니다. 2026-11-28 기준 [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)에 약 $460으로 등록된 새 RTX 3060 12GB를 선택하면 합계는 약 $1,070이 됩니다.',
         columns: ['부품', '선택', '가격', '이유'],
         rows: [
           { '부품': 'GPU', '선택': '중고 RTX 3060 12GB', '가격': '~$330', '이유': '12GB VRAM으로 Q4에서 7B-14B 실행 가능, 32B는 완전히 들어가지 않음' },
@@ -615,13 +615,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '이 예산에서 중고 RTX 3060 12GB를 선택하는 이유',
         content: [
           '**이 예산에서는 달러당 VRAM이 GPU 선택을 좌우하며, 8GB 카드는 로컬 LLM 작업에서 잘못된 절약입니다.** RTX 3060은 12GB 버전으로 판매되었으며, 출시 시점이 오래되었음에도 여기서 사용하는 이유가 그것입니다. 8GB 카드는 사용 가능한 컨텍스트 길이로 Q4의 7B 모델 이상을 편안하게 수용하지 못합니다. 8GB RTX 3060 변형도 존재하므로 매물에 12GB라고 표기되어 있는지 확인하십시오.',
-          'VRAM 여유는 컨텍스트 길이에도 중요합니다. 7B 모델 자체는 Q4에서 약 4-4.5GB가 필요하지만 16K 토큰 컨텍스트는 KV 캐시로 1-2GB를 더 사용합니다. 8GB 카드에서는 거의 남지 않으며, 12GB 카드에서는 7B 모델과 긴 컨텍스트를 함께 담을 수 있고 14B 모델도 더 짧은 컨텍스트로 들어갑니다.',
+          'VRAM 여유는 컨텍스트 길이에도 중요합니다. 7B 모델 자체는 Q4에서 약 4-4.5GB가 필요하지만 16K 토큰 컨텍스트는 KV 캐시로 1-2GB를 더 사용합니다. 8GB 카드에서는 거의 남지 않으며, 12GB 카드에서는 7B 모델과 긴 컨텍스트를 함께 담을 수 있고 14B 모델도 더 짧은 컨텍스트로 들어갑니다. 이 컨텍스트 수치는 대략적인 추정치이며 모델과 설정에 따라 달라집니다.',
         ],
         items: [
-          '**RTX 3060 12GB(중고, 약 $330, 이 빌드):** 출처가 있는 가격 중 가장 낮은 12GB VRAM. 중고 가격은 [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(범위 $310-350, 중앙값 $330, 가격 데이터 기준일 2026-11-26) 기준입니다. 새 제품이나 리퍼 제품은 더 비쌉니다. [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) 기준 새 제품 $450, Amazon 리퍼 $420입니다(2026-11-18).',
-          '**RTX 4060 Ti 16GB(InsiderLLM 트래커 기준 약 $430-450, 상태 미표기):** 16GB VRAM이지만 [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb)는 훨씬 높게 등록하고 있어(새 제품 $843, 2026-11-17) 가격이 불확실합니다. 트래커 가격이라 해도 총액은 약 $1,040-1,060이 됩니다. 실시간 매물을 확인하십시오.',
-          '**RTX 5060 Ti 16GB(새 제품 약 $800: [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)에 표시된 새 제품 최저 등재가, 2026-11-28 확인; [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) 기준 Amazon 미국 $829.99, 2026-11-27):** 16GB로 업그레이드하는 옵션입니다. 중고 RTX 3060 대신 사용하면 이 빌드의 총액이 약 $470-500 늘어 약 $1,410-1,440가 됩니다.',
-          '**중고 RTX 3090 24GB(약 $1,500-1,725, [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** VRAM은 더 많지만 카드 하나가 $1,000 예산 전체보다 비싸므로 이 빌드의 범위를 벗어납니다.',
+          '**RTX 3060 12GB(중고, 약 $330, 이 빌드):** 출처가 있는 가격 중 가장 낮은 12GB VRAM. 중고 가격은 [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(범위 $310-350, 중앙값 $330, eBay 미국 판매 완료 209건, 2026-11-17~2026-11-26, 가격 데이터 기준일 2026-11-26) 기준입니다. 새 제품이나 리퍼 제품은 더 비쌉니다. [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) 기준 새 제품 $460, Amazon 리퍼 $420입니다(2026-11-28).',
+          '**RTX 4060 Ti 16GB(InsiderLLM 트래커 기준 약 $430-450, 상태 미표기):** 16GB VRAM이지만 [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb)는 훨씬 높게 등록하고 있어(재고가 있는 새 제품 $764부터, 2026-11-28 확인) 가격이 불확실합니다. 트래커 가격이라 해도 총액은 약 $1,040-1,060이 됩니다. 실시간 매물을 확인하십시오.',
+          '**RTX 5060 Ti 16GB(새 제품 약 $800: [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)에 표시된 새 제품 최저 등재가, 2026-11-28 확인; [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) 기준 Amazon 미국 $849.99, 2026-11-27):** 16GB로 업그레이드하는 옵션입니다. 중고 RTX 3060 대신 사용하면 이 빌드의 총액이 약 $470-520 늘어 약 $1,410-1,460가 됩니다.',
+          '**중고 RTX 3090 24GB(2026-11-13~2026-11-23 미국 판매 완료가 약 $1,500-1,725, [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** VRAM은 더 많지만 카드 하나가 $1,000 예산 전체보다 비싸므로 이 빌드의 범위를 벗어납니다.',
         ],
       },
       performance: {
@@ -632,9 +632,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '모델 크기': '7B-8B', 'VRAM 사용량(Q4)': '약 4.5-5GB', '초당 토큰': '75.6 (Llama 2 7B Q4_0, #15013)', '편안하게 실행 가능?': '예 — 컨텍스트 여유 공간 충분' },
           { '모델 크기': '13B-14B', 'VRAM 사용량(Q4)': '약 9-10GB', '초당 토큰': '7B보다 낮음, 출처 수치 없음', '편안하게 실행 가능?': '예 — 컨텍스트 여유 제한적' },
-          { '모델 크기': '20B (MoE, 활성 약 4B)', 'VRAM 사용량(Q4)': '약 12GB', '초당 토큰': '출처 수치 없음', '편안하게 실행 가능?': '빠듯함 — 컨텍스트 여유 거의 없음' },
+          { '모델 크기': '20B (MoE, 활성 약 4B)', 'VRAM 사용량(Q4)': '약 14GB (gpt-oss:20b)', '초당 토큰': '출처 수치 없음', '편안하게 실행 가능?': '아니요 — 다운로드 크기가 12GB를 넘어 CPU 오프로드가 필요할 것으로 예상됨' },
           { '모델 크기': '32B', 'VRAM 사용량(Q4)': '약 19-20GB', '초당 토큰': '출처 수치 없음', '편안하게 실행 가능?': '아니요 — CPU 오프로드 필요, 훨씬 느림' },
-          { '모델 크기': '70B', 'VRAM 사용량(Q4)': '약 40GB', '초당 토큰': 'N/A', '편안하게 실행 가능?': '실행 불가 — 듀얼 GPU 빌드(32GB)에서도 들어가지 않음' },
+          { '모델 크기': '70B', 'VRAM 사용량(Q4)': '약 43GB', '초당 토큰': 'N/A', '편안하게 실행 가능?': '실행 불가 — 듀얼 GPU 빌드(32GB)에서도 들어가지 않음' },
         ],
       },
       assembly: {
@@ -651,8 +651,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: '업그레이드 경로',
         content: [
-          '이 빌드는 나중에 교체할 가치가 있는 부품이 GPU 하나뿐이도록 설계되었습니다. B650 메인보드는 두 번째 PCIe 슬롯(대개 전기적으로 x4)을 지원하여 이후 두 번째 GPU를 추가할 수 있지만, 텐서 분할 멀티 GPU 추론은 PCIe 대역폭 병목을 피하려면 최소 x8/x8이 필요합니다 — 이를 염두에 두고 선택한 보드는 듀얼 GPU 빌드(약 $2,700)를 참고하시기 바랍니다.',
-          '가장 간단한 업그레이드는 예산이 허락할 때 VRAM이 더 큰 GPU로 교체하는 것입니다. RTX 5060 Ti 16GB(gpuprix(2026-11-28)와 BasketPrice(2026-11-27) 기준 새 제품 약 $800-830)는 VRAM을 4GB 늘려 주지만 빌드 총액이 $1,000을 넘게 되며, 중고 RTX 3090 24GB(약 $1,500-1,725)는 이 빌드의 예산을 벗어납니다. Ryzen 5 7600과 32GB RAM은 이러한 교체의 제약이 아니지만, 새 카드의 전력 요구 사항을 650W PSU와 비교해 제조사 사양에서 확인하십시오.',
+          '이 빌드는 나중에 교체할 가치가 있는 부품이 GPU 하나뿐이도록 설계되었습니다. 많은 B650 보드에는 두 번째 PCIe 슬롯이 있지만 전기적으로 x4로 배선된 경우가 많으므로 구매할 보드의 설명서를 확인하십시오. 두 번째 GPU를 추가하려면 x8/x8 분할을 명시한 보드를 고르는 편이 좋습니다. x4 슬롯은 레인 수가 x8의 절반이며, 분할한 모델이 얼마나 느려지는지는 런타임, 분할 방식, 설정에 따라 다르고 이 페이지에서는 측정하지 않았습니다. 카드를 추가하기 전에 파워도 확인하십시오. GPU 두 장을 전제로 한 구성은 듀얼 GPU 빌드(약 $2,700)를 참고하십시오.',
+          '가장 간단한 업그레이드는 예산이 허락할 때 VRAM이 더 큰 GPU로 교체하는 것입니다. RTX 5060 Ti 16GB(gpuprix(2026-11-28)와 BasketPrice(2026-11-27) 기준 새 제품 약 $800-850)는 VRAM을 4GB 늘려 주지만 빌드 총액이 $1,000을 넘게 되며, 중고 RTX 3090 24GB(약 $1,500-1,725)는 이 빌드의 예산을 벗어납니다. Ryzen 5 7600과 32GB RAM은 이러한 교체의 제약이 아니지만, 새 카드의 전력 요구 사항을 650W PSU와 비교해 제조사 사양에서 확인하십시오.',
         ],
       },
       whereToBuy: {
@@ -661,11 +661,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**가격과 재고는 지역에 따라 다르며 EU 표시 가격에는 VAT가 포함됩니다.** 아래 링크는 지역별 제품 검색 링크입니다. 제휴 태그가 없으며 커미션이 발생하지 않습니다.',
         items: [
-          '**한국:** 다나와, 에누리, Auction, 11번가가 광범위한 재고를 보유하고 있습니다. 중고 RTX 3060과 RTX 4090은 중고나라와 당근마켓에서 구할 수 있습니다.',
+          '**한국:** 다나와, 에누리, Auction, 11번가에서 비교할 수 있습니다. 중고 카드는 중고나라와 당근마켓에서 확인하십시오.',
           '**일본:** Amazon.co.jp와 Yodobashi Camera, Ark PC가 주요 참고처입니다. 가격에 소비세가 포함됩니다.',
-          '**미국:** Amazon.com과 Newegg는 가장 광범위한 재고를 보유하고 있으며, 중고는 eBay를 확인하십시오. RTX 5090은 출시 가격으로는 자주 품절됩니다.',
-          '**가격 비교:** 다나와 (한국)나 Idealo (EU)는 현재 최저가를 확인하기 위한 표준입니다.',
-          '**가용성:** 고급형 카드 (RTX 4090, RTX 5090)는 2026년에 간헐적으로 품절 상태입니다. 변동하는 가격을 예상하고 여러 유통업체를 확인하십시오.',
+          '**미국:** Amazon.com과 Newegg에서 비교하고, 중고는 eBay를 확인하십시오. RTX 5090은 출시 가격으로는 구하지 못할 수 있습니다.',
+          '**가격 비교:** 다나와(한국)나 Idealo(EU)에서 현재 가격을 비교할 수 있습니다.',
+          '**가용성:** 고급형 카드(RTX 4090, RTX 5090)는 품절일 수 있습니다. 가격 변동을 예상하고 여러 판매처를 확인하십시오.',
         ],
         callouts: [
           {
@@ -706,8 +706,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '비용을 아끼려고 8GB GPU를 구매하는 것(이 빌드의 카드가 아닌 8GB RTX 3060 변형 포함) — 이로 인한 VRAM 한계는 소프트웨어로 해결할 수 없고 나중에 GPU를 교체해야 하므로 전체 비용이 더 커집니다.',
           '8GB나 12GB GPU를 사용하면서 CPU에 과도하게 투자하는 것(예: Ryzen 5 대신 Ryzen 7) — 모델이 일단 VRAM에 맞으면 CPU 선택은 초당 토큰 수에 거의 영향을 주지 않습니다.',
-          'BIOS에서 EXPO/XMP RAM 프로필 설정을 건너뛰어 DDR5-6000 키트가 4800으로 동작하게 두는 것 — 고치는 데 비용이 들지 않는 공짜 성능 손실입니다.',
-          '$20-30을 아끼려고 PSU 용량을 줄이는 것 — GPU 전력 소비는 지속 부하 상태에서 정격 TDP를 잠깐씩 크게 웃돌며, 일부 빌드에서는 550W 유닛이 순간적인 스파이크에 대한 여유가 적으니 제조사 사양을 확인하십시오.',
+          'BIOS에서 EXPO/XMP RAM 프로필을 설정하지 않으면 DDR5-6000 키트는 더 낮은 기본 속도로 동작합니다. 이는 주로 모델 레이어가 CPU에서 실행될 때 영향이 있습니다. 이 프로필은 메모리 오버클럭이므로 활성화하기 전에 메인보드와 CPU 문서를 확인하십시오.',
+          '$20-30을 아끼려고 PSU 용량을 줄이는 것 — GPU 전력 소비는 지속 부하 상태에서 정격 TDP를 잠깐씩 크게 웃돌며, 일부 빌드에서는 550W 유닛이 순간적인 스파이크에 대한 여유가 적으니 제조사 사양을 확인하십시오. 이 내용은 일반 정보이며 전기 관련 조언이 아닙니다. 확실하지 않다면 자격을 갖춘 기술자에게 시스템과 전원 회로를 점검받으십시오.',
         ],
       },
       faqSection: {
@@ -715,15 +715,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: '$1,000 PC로 로컬 LLM을 잘 실행할 수 있습니까?', a: '7B-14B 모델은 가능하며, 더 큰 모델은 더 많은 VRAM이 필요합니다. 약 $330의 중고 RTX 3060 12GB로 이 빌드의 총액은 약 $940이고, 12GB VRAM에는 Q4의 14B 모델이 들어갑니다. 32B급 모델은 12GB에 완전히 들어가지 않습니다.' },
-          { q: '이 빌드는 왜 CPU보다 GPU에 이렇게 많은 비용을 투입합니까?', a: '로컬 LLM 추론 속도는 거의 전적으로 GPU VRAM 용량과 메모리 대역폭에 달려 있습니다. 모델이 VRAM에 로드되고 나면 더 빠른 CPU라도 초당 토큰 수를 늘리지 못하므로, 이 특정 워크로드에서는 중급 CPU와 강력한 GPU 조합이 강력한 CPU와 약한 GPU 조합을 이깁니다.' },
-          { q: '2026년 로컬 LLM에 12GB VRAM이면 충분합니까?', a: '12GB는 Q4의 7B-8B 모델을 긴 컨텍스트와 함께, Q4의 14B 모델(약 9-10GB)을 더 짧은 컨텍스트로 수용합니다. 32B급 모델(Q4에서 일반적으로 약 20GB)이나 70B급 모델(Q4에서 약 40GB)은 완전히 수용하지 못하며, 완전히 GPU에 올라가는 32B급 모델에는 24GB VRAM의 GPU가 현실적인 출발점이며, 16GB 카드는 14B 모델을 여유 있게 수용하지만 32B에는 여전히 CPU 오프로드가 필요합니다.' },
-          { q: '비용을 아끼려고 8GB GPU를 대신 사용해도 됩니까?', a: '가능하지만 컨텍스트 여유가 최소인 7B 모델로 제한되며, 카드를 교체하지 않고는 올릴 수 없는 확고한 한계입니다. 8GB 카드로 아끼는 비용은 13B-14B 모델을 사용하지 못하는 손실만큼의 가치가 없습니다.' },
+          { q: '이 빌드는 왜 CPU보다 GPU에 이렇게 많은 비용을 투입합니까?', a: '모델이 GPU에서 온전히 실행될 때 속도는 주로 GPU와 그 메모리 대역폭에 달려 있고, 어떤 모델이 들어가는지는 VRAM 용량이 결정합니다. 이 경우 더 빠른 CPU의 효과는 대체로 작으므로, 이 빌드는 이 작업 부하에서 CPU보다 GPU에 비용을 씁니다.' },
+          { q: '2026년 로컬 LLM에 12GB VRAM이면 충분합니까?', a: '12GB는 Q4의 7B-8B 모델을 긴 컨텍스트와 함께, Q4의 14B 모델(약 9-10GB)을 더 짧은 컨텍스트로 수용합니다. 32B급 모델(Q4에서 일반적으로 약 20GB)이나 70B급 모델(Q4에서 약 43GB)은 완전히 수용하지 못하며, 완전히 GPU에 올라가는 32B급 모델에는 24GB VRAM의 GPU가 현실적인 출발점이며, 16GB 카드는 14B 모델을 여유 있게 수용하지만 32B에는 여전히 CPU 오프로드가 필요합니다.' },
+          { q: '비용을 아끼려고 8GB GPU를 대신 사용해도 됩니까?', a: '가능하지만 GPU에서 온전히 실행할 때는 대체로 컨텍스트 여유가 적은 7B급까지이며, 카드의 VRAM은 확장할 수 없습니다. 더 큰 모델에는 속도가 크게 느려지는 CPU 오프로드나 다른 카드가 필요합니다. 그래서 이 빌드는 12GB 카드를 사용합니다.' },
           { q: '12GB VRAM GPU와 함께 실제로 RAM이 얼마나 필요합니까?', a: '시스템 RAM 32GB입니다. OS 오버헤드, 로딩 중 모델 파일 캐싱, 그리고 VRAM 용량을 약간 초과하는 모델에서 CPU로 오프로드되는 레이어를 충당합니다.' },
           { q: '이 빌드는 32B 모델을 잘 실행합니까?', a: '아니요, GPU만으로는 완전히 실행되지 않습니다. Q4의 32B 모델은 일반적으로 약 20GB가 필요해 카드의 12GB를 넘기 때문에 일부를 시스템 RAM으로 오프로드해야 하며 속도가 크게 느려집니다. 이 구성에 대해 출처가 있는 속도 수치는 없습니다. 완전히 GPU에 올라가는 32B급 모델에는 24GB VRAM의 GPU가 현실적인 출발점이며, 16GB 카드는 여전히 CPU 오프로드가 필요합니다.' },
           { q: '이 빌드에서 어떤 소프트웨어를 실행해야 합니까?', a: 'Ollama 또는 LM Studio가 가장 간단한 출발점입니다. 둘 다 RTX 3060 12GB 같은 NVIDIA GPU를 자동으로 감지하고 Q4 양자화를 처리합니다. llama.cpp를 직접 사용하면 양자화 형식과 컨텍스트 설정을 더 세밀하게 제어할 수 있습니다.' },
-          { q: '이 빌드를 나중에 70B 모델을 실행하도록 업그레이드할 수 있습니까?', a: '단일 GPU로는 불가능합니다 — Q4의 70B는 약 40GB VRAM이 필요합니다. 가장 확실한 업그레이드 경로는 중고 RTX 3090 24GB로 교체하거나(그래도 완전한 70B에는 살짝 부족) VRAM 풀링을 위한 두 번째 GPU를 추가하는 것이며, 이는 듀얼 GPU 빌드(약 $2,700)에서 직접 다룹니다. 32GB로 32B급 모델을 실행할 수 있지만, Q4의 70B(약 43GB)는 여전히 들어가지 않습니다.' },
+          { q: '이 빌드를 나중에 70B 모델을 실행하도록 업그레이드할 수 있습니까?', a: '단일 GPU로는 불가능합니다 — Q4의 70B는 약 43GB VRAM이 필요합니다. 가장 확실한 업그레이드 경로는 중고 RTX 3090 24GB로 교체하거나(그래도 완전한 70B에는 살짝 부족) VRAM 풀링을 위한 두 번째 GPU를 추가하는 것이며, 이는 듀얼 GPU 빌드(약 $2,700)에서 직접 다룹니다. 32GB로 32B급 모델을 실행할 수 있지만, Q4의 70B(약 43GB)는 여전히 들어가지 않습니다. 어느 방법이든 먼저 파워를 확인하십시오. 이 빌드의 650W 파워는 RTX 3060 12GB 한 장을 기준으로 골랐습니다.' },
           { q: '메인보드 칩셋(B650 대 B850)이 로컬 LLM 추론에 영향을 줍니까?', a: '단일 GPU 빌드에서는 영향이 없습니다. B650은 GPU에 필요한 PCIe 4.0 x16 슬롯을 제공하며, B650과 신형 보드의 칩셋 차이는 단일 GPU LLM 추론보다 멀티 GPU PCIe 레인 할당에서 더 중요합니다.' },
-          { q: '이 예산에서는 중고 GPU가 새 GPU보다 가성비가 좋습니까?', a: '이 예산에서는 그렇습니다. 중고 RTX 3060 12GB(InsiderLLM 트래커 기준 약 $330)는 총액을 약 $940으로 유지하지만, 새 RTX 3060 12GB(gpuprix 기준 약 $450)는 약 $1,060으로 올립니다. 중고 카드는 위험이 더 크므로 판매자의 반품 정책을 확인하십시오. 중고 RTX 3090 24GB는 실질적인 VRAM 업그레이드이지만 이 빌드의 GPU 예산 전체보다 비싸고 총액을 $2,000 이상으로 올리므로 더 높은 예산 구간에 속합니다.' },
+          { q: '이 예산에서는 중고 GPU가 새 GPU보다 가성비가 좋습니까?', a: '이 예산에서는 그렇습니다. 중고 RTX 3060 12GB(InsiderLLM 트래커 기준 약 $330)는 총액을 약 $940으로 유지하지만, 새 RTX 3060 12GB(gpuprix 기준 약 $460)는 약 $1,070으로 올립니다. 중고 카드는 위험이 더 크므로 판매자의 반품 정책을 확인하십시오. 중고 RTX 3090 24GB는 실질적인 VRAM 업그레이드이지만 이 빌드의 GPU 예산 전체보다 비싸고 총액을 $2,000 이상으로 올리므로 더 높은 예산 구간에 속합니다.' },
         ],
       },
       relatedReading: {
@@ -747,7 +747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama 모델 라이브러리 및 VRAM 요구사항](https://ollama.com/library)',
           '[llama.cpp discussion #15013: NVIDIA CUDA 성능](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix: RTX 3060 12GB 가격 페이지](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix: RTX 5060 Ti 16GB 미국 등재가(2026-11-28 확인)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice: RTX 5060 Ti 미국 가격(2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[Ollama qwen3:32b 모델 페이지(20GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)',
+          '[Ollama qwen3:32b 모델 페이지(20GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)', '[Ollama gpt-oss:20b 모델 페이지(14GB)](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -778,10 +778,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/ko/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': '$1,000 PC로 로컬 LLM을 잘 실행할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '7B-14B 모델은 가능하며, 더 큰 모델은 더 많은 VRAM이 필요합니다. 약 $330의 중고 RTX 3060 12GB로 이 빌드의 총액은 약 $940이고, 12GB VRAM에는 Q4의 14B 모델이 들어갑니다. 32B급 모델은 12GB에 완전히 들어가지 않습니다.' } },
-        { '@type': 'Question', 'name': '2026년 로컬 LLM에 12GB VRAM이면 충분합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB는 Q4의 7B-8B 모델을 긴 컨텍스트와 함께, Q4의 14B 모델(약 9-10GB)을 더 짧은 컨텍스트로 수용합니다. 32B급 모델(Q4에서 일반적으로 약 20GB)이나 70B급 모델(Q4에서 약 40GB)은 완전히 수용하지 못하며, 완전히 GPU에 올라가는 32B급 모델에는 24GB VRAM의 GPU가 현실적인 출발점이며, 16GB 카드는 14B 모델을 여유 있게 수용하지만 32B에는 여전히 CPU 오프로드가 필요합니다.' } },
-        { '@type': 'Question', 'name': '비용을 아끼려고 8GB GPU를 대신 사용해도 됩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '가능하지만 컨텍스트 여유가 최소인 7B 모델로 제한되며, 카드를 교체하지 않고는 올릴 수 없는 확고한 한계입니다. 8GB 카드로 아끼는 비용은 13B-14B 모델을 사용하지 못하는 손실만큼의 가치가 없습니다.' } },
+        { '@type': 'Question', 'name': '2026년 로컬 LLM에 12GB VRAM이면 충분합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB는 Q4의 7B-8B 모델을 긴 컨텍스트와 함께, Q4의 14B 모델(약 9-10GB)을 더 짧은 컨텍스트로 수용합니다. 32B급 모델(Q4에서 일반적으로 약 20GB)이나 70B급 모델(Q4에서 약 43GB)은 완전히 수용하지 못하며, 완전히 GPU에 올라가는 32B급 모델에는 24GB VRAM의 GPU가 현실적인 출발점이며, 16GB 카드는 14B 모델을 여유 있게 수용하지만 32B에는 여전히 CPU 오프로드가 필요합니다.' } },
+        { '@type': 'Question', 'name': '비용을 아끼려고 8GB GPU를 대신 사용해도 됩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '가능하지만 GPU에서 온전히 실행할 때는 대체로 컨텍스트 여유가 적은 7B급까지이며, 카드의 VRAM은 확장할 수 없습니다. 더 큰 모델에는 속도가 크게 느려지는 CPU 오프로드나 다른 카드가 필요합니다. 그래서 이 빌드는 12GB 카드를 사용합니다.' } },
         { '@type': 'Question', 'name': '12GB VRAM GPU와 함께 실제로 RAM이 얼마나 필요합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '시스템 RAM 32GB입니다. OS 오버헤드, 로딩 중 모델 파일 캐싱, 그리고 VRAM 용량을 약간 초과하는 모델에서 CPU로 오프로드되는 레이어를 충당합니다.' } },
-        { '@type': 'Question', 'name': '이 빌드를 나중에 70B 모델을 실행하도록 업그레이드할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '단일 GPU로는 불가능합니다 — Q4의 70B는 약 40GB VRAM이 필요합니다. 가장 확실한 업그레이드 경로는 중고 RTX 3090 24GB로 교체하거나 VRAM 풀링을 위한 두 번째 GPU를 추가하는 것이며, 이는 듀얼 GPU 빌드(약 $2,700)에서 직접 다룹니다. 32GB로 32B급 모델을 실행할 수 있지만, Q4의 70B(약 43GB)는 여전히 들어가지 않습니다.' } },
+        { '@type': 'Question', 'name': '이 빌드를 나중에 70B 모델을 실행하도록 업그레이드할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '단일 GPU로는 불가능합니다 — Q4의 70B는 약 43GB VRAM이 필요합니다. 가장 확실한 업그레이드 경로는 중고 RTX 3090 24GB로 교체하거나(그래도 완전한 70B에는 살짝 부족) VRAM 풀링을 위한 두 번째 GPU를 추가하는 것이며, 이는 듀얼 GPU 빌드(약 $2,700)에서 직접 다룹니다. 32GB로 32B급 모델을 실행할 수 있지만, Q4의 70B(약 43GB)는 여전히 들어가지 않습니다. 어느 방법이든 먼저 파워를 확인하십시오. 이 빌드의 650W 파워는 RTX 3060 12GB 한 장을 기준으로 골랐습니다.' } },
       ],
     },
     itemListSchema: {
@@ -812,7 +812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'تجميع كمبيوتر LLM محلي بأقل من 1,000 دولار مع GPU مستعملة (2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-ar.webp',
     seoTitle: 'تجميع كمبيوتر LLM محلي بأقل من 1,000 دولار مع GPU مستعملة (2026)',
-    intro: '**كمبيوتر مزوّد ببطاقة RTX 3060 12GB مستعملة ومعالج Ryzen 5 7600 وذاكرة 32GB DDR5 يشغّل نماذج 7B–14B بتكميم Q4 وتبلغ تكلفته الإجمالية نحو 940 دولارات، أي أقل من 1,000 دولار.** تُعدّ VRAM العامل المحدِّد الرئيسي لاستدلال LLM المحلي، لذا يخصّص هذا التجميع ميزانية GPU لبطاقة بذاكرة 12GB بسعر مستعمل يقارب 330 دولار (من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، بيانات بتاريخ 2026-11-26) ويُبقي بقية القطع متواضعة. نموذج 14B بتكميم Q4 (نحو 9-10GB) يتسع في 12GB، أما نماذج فئة 32B فلا تتسع بالكامل وتحتاج إلى تفريغ جزئي إلى CPU، وهو أبطأ بكثير. يسرد هذا الدليل المكوّنات بدقة، وسبب اختيار كل منها على البدائل، وأي أرقام للسرعة لها مصدر. بقية القطع تقديرات خاصة بهذه الصفحة، والإجمالي صحيح فقط مع بطاقة مستعملة: بطاقة RTX 3060 12GB جديدة مُدرجة بنحو 450 دولاراً على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18) سترفع الإجمالي إلى نحو 1,060 دولار.',
+    intro: '**كمبيوتر مزوّد ببطاقة RTX 3060 12GB مستعملة ومعالج Ryzen 5 7600 وذاكرة 32GB DDR5 يشغّل نماذج 7B–14B بتكميم Q4 وتبلغ تكلفته الإجمالية نحو 940 دولارات، أي أقل من 1,000 دولار.** تُعدّ VRAM العامل المحدِّد الرئيسي لاستدلال LLM المحلي، لذا يخصّص هذا التجميع ميزانية GPU لبطاقة بذاكرة 12GB بسعر مستعمل يقارب 330 دولار (من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، بيانات بتاريخ 2026-11-26) ويُبقي بقية القطع متواضعة. نموذج 14B بتكميم Q4 (نحو 9-10GB) يتسع في 12GB، أما نماذج فئة 32B فلا تتسع بالكامل وتحتاج إلى تفريغ جزئي إلى CPU، وهو أبطأ بكثير. يسرد هذا الدليل المكوّنات بدقة، وسبب اختيار كل منها على البدائل، وأي أرقام للسرعة لها مصدر. بقية القطع تقديرات خاصة بهذه الصفحة، والإجمالي صحيح فقط مع بطاقة مستعملة: بطاقة RTX 3060 12GB جديدة مُدرجة بنحو 460 دولاراً على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28) سترفع الإجمالي إلى نحو 1,070 دولار.',
     metaDescription: 'تجميع كمبيوتر LLM محلي بأقل من 1,000 دولار (نحو 940 دولارات): RTX 3060 12GB مستعملة + Ryzen 5 7600 + 32GB DDR5. يشغّل 7B-14B بتكميم Q4. قائمة قطع 2026.',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -840,19 +840,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**تكلفة التجميع الإجمالية: نحو 940 دولارات.** RTX 3060 12GB مستعملة (نحو 330 دولار)، Ryzen 5 7600 (180 دولاراً)، 32GB DDR5-6000 (90 دولاراً)، 1TB NVMe Gen4 (70 دولاراً)، لوحة أم B650 mATX (130 دولاراً)، مزوّد طاقة 650W 80+ Gold (75 دولاراً)، صندوق mATX (65 دولاراً). سعر GPU من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (مستعملة، بيانات بتاريخ 2026-11-26)؛ وبقية القطع تقديرات خاصة بهذه الصفحة. بطاقة RTX 3060 12GB جديدة (نحو 450 دولاراً على gpuprix، 2026-11-18) سترفع الإجمالي إلى نحو 1,060 دولار.',
+          '**تكلفة التجميع الإجمالية: نحو 940 دولارات.** RTX 3060 12GB مستعملة (نحو 330 دولار)، Ryzen 5 7600 (180 دولاراً)، 32GB DDR5-6000 (90 دولاراً)، 1TB NVMe Gen4 (70 دولاراً)، لوحة أم B650 mATX (130 دولاراً)، مزوّد طاقة 650W 80+ Gold (75 دولاراً)، صندوق mATX (65 دولاراً). سعر GPU من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (مستعملة، بيانات بتاريخ 2026-11-26)؛ وبقية القطع تقديرات خاصة بهذه الصفحة. بطاقة RTX 3060 12GB جديدة (نحو 460 دولاراً على gpuprix، 2026-11-28) سترفع الإجمالي إلى نحو 1,070 دولار.',
           '**الهدف بهذه الميزانية هو 12GB من VRAM، لا سرعة GPU الخام.** بطاقة بذاكرة 12GB تشغّل نماذج لا تستطيع بطاقة أسرع بالسعر نفسه وبذاكرة 8GB تشغيلها، لأن حجم النموذج، لا عدد المعالجات، هو ما يحدد ما يتسع أصلاً.',
           '**نماذج 7B: 75.6 tok/s** (نقاش llama.cpp رقم 15013، توليد الرموز على Llama 2 7B Q4_0، أبلغ عنها المجتمع). نماذج 14B بتكميم Q4 (~9-10GB) تتسع في 12GB بهامش سياق محدود؛ أما بقية السرعات فتقريبية فقط ولم تقِسها PromptQuorum.',
-          '**نماذج 32B و70B لا تتسع بالكامل.** نموذج 32B بتكميم Q4 يحتاج عادةً إلى نحو 20GB ونموذج 70B إلى ~40GB من VRAM؛ ويبلغ هذا التجميع نحو 14B على GPU وحدها. راجع التجميع بثنائي GPU (نحو 2,700 دولار) لنماذج فئة 32B (يحتاج 70B عند Q4 إلى نحو 43GB ولا يتسع أيضاً في 32GB).',
+          '**نماذج 32B و70B لا تتسع بالكامل.** نموذج 32B بتكميم Q4 يحتاج عادةً إلى نحو 20GB ونموذج 70B إلى ~43GB من VRAM؛ ويبلغ هذا التجميع نحو 14B على GPU وحدها. راجع التجميع بثنائي GPU (نحو 2,700 دولار) لنماذج فئة 32B (يحتاج 70B عند Q4 إلى نحو 43GB ولا يتسع أيضاً في 32GB).',
           '**ذاكرة نظام 32GB، وليست 16GB.** يحتاج تحميل النموذج وأعباء نظام التشغيل وأي طبقات مُفرَّغة على CPU إلى هامش يتجاوز ما توفره GPU وحدها؛ قد تؤدي 16GB إلى تبديل (swapping) على نماذج 14B فما فوق.',
-          '**تجنّب:** بطاقات GPU بذاكرة 8GB (RTX 5060، RTX 4060 Ti 8GB) — تبلغ أقصاها عند 7B ولا يمكنها الانتقال إلى 13B-14B دون استبدال GPU بالكامل.',
+          '**تجنّب:** بطاقات GPU بذاكرة 8GB (RTX 5060، RTX 4060 Ti 8GB) — عند العمل بالكامل على GPU تقتصر غالباً على فئة 7B، وتحتاج نماذج 13B-14B عادةً إلى تفريغ إلى CPU أو إلى بطاقة أخرى.',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: 'ما الذي تشتريه هذه الميزانية فعلياً',
         content: [
-          '**تتحدد سرعة استدلال LLM المحلي أولاً بسعة VRAM، وثانياً بعرض نطاق الذاكرة، وثالثاً بفارق كبير بقدرة الحوسبة (أنوية CUDA).** النموذج الذي لا يتسع في VRAM إما يفشل تحميله أو يفيض إلى ذاكرة النظام فينخفض الأداء بشدة. بميزانية 1,000 دولار، أكثر توزيع فعالية هو تقديم GPU وإبقاء كل شيء آخر متواضعاً — ولهذا فإن CPU هنا قطعة متوسطة بـ 180 دولاراً لا نموذجاً رائداً بـ 350 دولاراً.',
+          '**سعة VRAM هي ما يحدد أولاً هل يمكن للنموذج المحلي أن يعمل بالكامل على GPU، ثم يؤثر عرض نطاق الذاكرة وقدرة الحوسبة في سرعته.** النموذج الذي لا يتسع في VRAM إما يفشل تحميله أو يفيض إلى ذاكرة النظام فينخفض الأداء بشدة. بميزانية 1,000 دولار، يقدّم هذا التجميع GPU ويُبقي كل شيء آخر متواضعاً — ولهذا فإن CPU هنا قطعة متوسطة بـ 180 دولاراً لا نموذجاً رائداً بـ 350 دولاراً.',
           'يفترض هذا التجميع استدلال نموذج واحد في كل مرة (نموذج واحد محمّل في وقت واحد عبر Ollama أو LM Studio أو llama.cpp)، وليس خدمة متعددة المستخدمين المتزامنة. لخدمة طلبات متزامنة متعددة، ترتفع متطلبات VRAM أكثر، وتصبح ميزانية 1,000 دولار غير واقعية.',
         ],
         snippetBlocks: [
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'قائمة القطع الكاملة',
-        content: 'الأسعار هي أسعار أمريكية تقديرية وتختلف حسب المنطقة والمتجر. تتذبذب أسعار RAM وSSD، وأي زيادة تتجاوز 60 دولاراً في القطع تدفع الإجمالي فوق 1,000 دولار. سعر GPU (RTX 3060 12GB مستعملة، نحو 330 دولار) من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (بيانات بتاريخ 2026-11-26)؛ وبقية القطع تقديرات خاصة بهذه الصفحة. الإجمالي: نحو 940 دولارات (330 + 180 + 90 + 70 + 130 + 75 + 65 دولاراً). يصح هذا مع بطاقة مستعملة فقط: بطاقة RTX 3060 12GB جديدة مُدرجة بنحو 450 دولاراً على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18) سترفع الإجمالي إلى نحو 1,060 دولار.',
+        content: 'الأسعار هي أسعار أمريكية تقديرية وتختلف حسب المنطقة والمتجر. تتذبذب أسعار RAM وSSD، وأي زيادة تتجاوز 60 دولاراً في القطع تدفع الإجمالي فوق 1,000 دولار. سعر GPU (RTX 3060 12GB مستعملة، نحو 330 دولار) من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (بيانات بتاريخ 2026-11-26)؛ وبقية القطع تقديرات خاصة بهذه الصفحة. الإجمالي: نحو 940 دولارات (330 + 180 + 90 + 70 + 130 + 75 + 65 دولاراً). يصح هذا مع بطاقة مستعملة فقط: بطاقة RTX 3060 12GB جديدة مُدرجة بنحو 460 دولاراً على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28) سترفع الإجمالي إلى نحو 1,070 دولار.',
         columns: ['المكوّن', 'الاختيار', 'السعر', 'السبب'],
         rows: [
           { 'المكوّن': 'GPU', 'الاختيار': 'RTX 3060 12GB مستعملة', 'السعر': '~$330', 'السبب': '12GB من VRAM تتسع لـ 7B-14B بتكميم Q4؛ و32B لا تتسع بالكامل' },
@@ -881,13 +881,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'لماذا RTX 3060 12GB مستعملة بهذه الميزانية',
         content: [
           '**بهذه الميزانية، تحدد VRAM لكل دولار اختيار GPU، وبطاقات 8GB توفير زائف لعمل LLM المحلي.** بيعت RTX 3060 بنسخة 12GB، ولهذا تُستخدم هنا رغم قدمها: بطاقة 8GB لا تتسع بارتياح لأي شيء يتجاوز نموذج 7B بتكميم Q4 مع طول سياق قابل للاستخدام. تأكد أن الإعلان يذكر 12GB، لأن هناك أيضاً نسخة RTX 3060 بذاكرة 8GB.',
-          'يهم هامش VRAM أيضاً لطول السياق: نموذج 7B نفسه يحتاج نحو 4-4.5GB بتكميم Q4، لكن سياقاً بطول 16K رمز يضيف 1-2GB أخرى من ذاكرة KV. على بطاقة 8GB لا يتبقى شيء تقريباً؛ وعلى بطاقة 12GB يوجد متسع لنموذج 7B وسياق طويل، ويتسع نموذج 14B بسياق أقصر.',
+          'يهم هامش VRAM أيضاً لطول السياق: نموذج 7B نفسه يحتاج نحو 4-4.5GB بتكميم Q4، لكن سياقاً بطول 16K رمز يضيف 1-2GB أخرى من ذاكرة KV. على بطاقة 8GB لا يتبقى شيء تقريباً؛ وعلى بطاقة 12GB يوجد متسع لنموذج 7B وسياق طويل، ويتسع نموذج 14B بسياق أقصر. أرقام السياق هذه تقديرات تقريبية تعتمد على النموذج والإعدادات.',
         ],
         items: [
-          '**RTX 3060 12GB (مستعملة، نحو 330 دولار، هذا التجميع):** 12GB من VRAM بأدنى سعر له مصدر؛ سعر المستعملة من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (النطاق 310-350 دولاراً، بوسيط 330 دولاراً، بيانات بتاريخ 2026-11-26). البطاقات الجديدة أو المجدّدة أغلى: 450 دولاراً جديدة و420 دولاراً مجدّدة من Amazon حسب [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18).',
-          '**RTX 4060 Ti 16GB (نحو 430-450 دولاراً حسب متتبع InsiderLLM، الحالة غير مذكورة):** 16GB من VRAM، لكن [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) تدرجها بسعر أعلى بكثير (843 دولاراً جديدة، 2026-11-17)، فالسعر غير مؤكد؛ وحتى بسعر المتتبع سيبلغ الإجمالي نحو 1,040-1,060 دولار. راجع الإعلانات الحالية.',
-          '**RTX 5060 Ti 16GB (نحو 800 دولار جديدة: أدنى عرض لبطاقة جديدة ظاهر على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)، تم التحقق في 2026-11-28؛ و829.99 دولاراً على Amazon الولايات المتحدة وفق [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)، 2026-11-27):** خيار الترقية إلى 16GB؛ وعند استخدامها بدلاً من RTX 3060 المستعملة يرتفع إجمالي هذا التجميع بنحو 470-500 دولار، ليصل إلى نحو 1,410-1,440 دولاراً.',
-          '**RTX 3090 24GB مستعملة (نحو 1,500-1,725 دولار، [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، 2026-11-23):** VRAM أكبر، لكن البطاقة وحدها تكلّف أكثر من ميزانية الـ 1,000 دولار كاملة، فهي خارج نطاق هذا التجميع.',
+          '**RTX 3060 12GB (مستعملة، نحو 330 دولار، هذا التجميع):** 12GB من VRAM بأدنى سعر له مصدر؛ سعر المستعملة من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (النطاق 310-350 دولاراً، بوسيط 330 دولاراً، 209 عمليات بيع مكتملة على eBay الأمريكي من 2026-11-17 إلى 2026-11-26؛ بيانات بتاريخ 2026-11-26). البطاقات الجديدة أو المجدّدة أغلى: 460 دولاراً جديدة و420 دولاراً مجدّدة من Amazon حسب [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28).',
+          '**RTX 4060 Ti 16GB (نحو 430-450 دولاراً حسب متتبع InsiderLLM، الحالة غير مذكورة):** 16GB من VRAM، لكن [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) تدرجها بسعر أعلى بكثير (البطاقات الجديدة المتوفرة تبدأ من 764 دولاراً، تم التحقق في 2026-11-28)، فالسعر غير مؤكد؛ وحتى بسعر المتتبع سيبلغ الإجمالي نحو 1,040-1,060 دولار. راجع الإعلانات الحالية.',
+          '**RTX 5060 Ti 16GB (نحو 800 دولار جديدة: أدنى عرض لبطاقة جديدة ظاهر على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)، تم التحقق في 2026-11-28؛ و849.99 دولاراً على Amazon الولايات المتحدة وفق [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)، 2026-11-27):** خيار الترقية إلى 16GB؛ وعند استخدامها بدلاً من RTX 3060 المستعملة يرتفع إجمالي هذا التجميع بنحو 470-520 دولار، ليصل إلى نحو 1,410-1,460 دولاراً.',
+          '**RTX 3090 24GB مستعملة (نحو 1,500-1,725 دولار في مبيعات أمريكية مكتملة من 2026-11-13 إلى 2026-11-23، [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، 2026-11-23):** VRAM أكبر، لكن البطاقة وحدها تكلّف أكثر من ميزانية الـ 1,000 دولار كاملة، فهي خارج نطاق هذا التجميع.',
         ],
       },
       performance: {
@@ -898,9 +898,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'حجم النموذج': '7B-8B', 'VRAM المستخدمة (Q4)': '~4.5-5GB', 'رموز/ثانية': '75.6 (Llama 2 7B Q4_0، #15013)', 'يتناسب بارتياح؟': 'نعم — هامش سياق كامل' },
           { 'حجم النموذج': '13B-14B', 'VRAM المستخدمة (Q4)': '~9-10GB', 'رموز/ثانية': 'أقل من 7B؛ لا رقم له مصدر', 'يتناسب بارتياح؟': 'نعم — هامش سياق محدود' },
-          { 'حجم النموذج': '20B (MoE، ~4B نشط)', 'VRAM المستخدمة (Q4)': '~12GB', 'رموز/ثانية': 'لا رقم له مصدر', 'يتناسب بارتياح؟': 'بالكاد — مساحة قليلة للسياق' },
+          { 'حجم النموذج': '20B (MoE، ~4B نشط)', 'VRAM المستخدمة (Q4)': '~14GB (gpt-oss:20b)', 'رموز/ثانية': 'لا رقم له مصدر', 'يتناسب بارتياح؟': 'لا — حجم التنزيل أكبر من 12GB؛ توقّع تفريغاً إلى CPU' },
           { 'حجم النموذج': '32B', 'VRAM المستخدمة (Q4)': '~19-20GB', 'رموز/ثانية': 'لا رقم له مصدر', 'يتناسب بارتياح؟': 'لا — يحتاج تفريغاً إلى CPU وأبطأ بكثير' },
-          { 'حجم النموذج': '70B', 'VRAM المستخدمة (Q4)': '~40GB', 'رموز/ثانية': 'غير متاح', 'يتناسب بارتياح؟': 'لا يتناسب — حتى في التجميع بثنائي GPU (32GB)' },
+          { 'حجم النموذج': '70B', 'VRAM المستخدمة (Q4)': '~43GB', 'رموز/ثانية': 'غير متاح', 'يتناسب بارتياح؟': 'لا يتناسب — حتى في التجميع بثنائي GPU (32GB)' },
         ],
       },
       assembly: {
@@ -917,8 +917,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'مسار الترقية',
         content: [
-          'صُمم هذا التجميع بحيث تكون GPU القطعة الوحيدة التي تستحق الاستبدال لاحقاً. تدعم اللوحة الأم B650 منفذ PCIe ثانٍ (عادةً x4 كهربائياً) لإضافة GPU ثانية لاحقاً، رغم أن استدلال multi-GPU بتقسيم tensor يحتاج إلى x8/x8 على الأقل لتجنّب عنق زجاجة في عرض نطاق PCIe — راجع التجميع بثنائي GPU (نحو 2,700 دولار) للوحة أم اختيرت مع مراعاة ذلك.',
-          'أبسط ترقية هي استبدال GPU بأخرى ذات VRAM أكبر عندما تسمح الميزانية. بطاقة RTX 5060 Ti 16GB (نحو 800-830 دولاراً جديدة وفق gpuprix، 2026-11-28، وBasketPrice، 2026-11-27) تضيف 4GB من VRAM لكنها سترفع التجميع فوق 1,000 دولار، وبطاقة RTX 3090 24GB مستعملة (نحو 1,500-1,725 دولار) خارج ميزانية هذا التجميع. لا يمثل Ryzen 5 7600 وذاكرة 32GB عائقاً لهذا الاستبدال؛ طابق احتياج البطاقة الجديدة من الطاقة مع مزوّد 650W في مواصفات الشركة المصنّعة.',
+          'صُمم هذا التجميع بحيث تكون GPU القطعة الوحيدة التي تستحق الاستبدال لاحقاً. تضم لوحات B650 كثيرة منفذ PCIe ثانياً يكون غالباً موصولاً بوضع x4 كهربائياً، فراجع دليل اللوحة التي تشتريها. لإضافة GPU ثانية يُفضَّل اختيار لوحة توثّق تقسيم x8/x8: منفذ x4 له نصف عدد مسارات x8، ويعتمد مقدار إبطائه للنموذج المقسَّم على بيئة التشغيل وطريقة التقسيم والإعدادات، ولم تقِسه هذه الصفحة. تحقق من مزود الطاقة قبل إضافة بطاقة. راجع التجميع بثنائي GPU (نحو 2,700 دولار) للاطلاع على إعداد مخطط لبطاقتين.',
+          'أبسط ترقية هي استبدال GPU بأخرى ذات VRAM أكبر عندما تسمح الميزانية. بطاقة RTX 5060 Ti 16GB (نحو 800-850 دولاراً جديدة وفق gpuprix، 2026-11-28، وBasketPrice، 2026-11-27) تضيف 4GB من VRAM لكنها سترفع التجميع فوق 1,000 دولار، وبطاقة RTX 3090 24GB مستعملة (نحو 1,500-1,725 دولار) خارج ميزانية هذا التجميع. لا يمثل Ryzen 5 7600 وذاكرة 32GB عائقاً لهذا الاستبدال؛ طابق احتياج البطاقة الجديدة من الطاقة مع مزوّد 650W في مواصفات الشركة المصنّعة.',
         ],
       },
       whereToBuy: {
@@ -927,12 +927,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**تختلف الأسعار والتوافر بين المناطق، والأسعار المعروضة في الاتحاد الأوروبي تتضمن ضريبة القيمة المضافة.** الروابط أدناه روابط بحث عن المنتجات لكل منطقة، ولا تحمل علامات تابعة ولا تدرّ عمولة.',
         items: [
-          '**الولايات المتحدة:** Amazon وNewegg لديهما أوسع مخزون. بطاقات RTX 3060 وRTX 4090 المستعملة شائعة؛ مخزون الطرازات الرائدة الجديد شحيح، وRTX 5090 غالباً ما تنفد بسعر القائمة.',
-          '**ألمانيا:** Amazon.de وMindfactory.de؛ توقّع نحو 19% ضريبة قيمة مضافة ضمن الأسعار المعروضة، وأسعار GPU الألمانية تفوق الأرقام الأمريكية.',
-          '**فرنسا:** Amazon.fr وLDLC؛ الأسعار مشابهة لألمانيا مع ضريبة 20%، ومخزون الطرازات الرائدة متقطع.',
-          '**اليابان:** Amazon.co.jp وKakaku.com لمقارنة الأسعار؛ أسعار البطاقات الجديدة تتبع الأسعار الأمريكية، مع عرض أضيق من البطاقات المستعملة.',
-          '**الصين:** JD.com هو السوق المرجعي؛ توافر GPU الراقية وأسعارها يختلفان كثيراً عن الأسواق الغربية.',
-          '**الشرق الأوسط وشمال إفريقيا:** Amazon.ae والمستوردون المحليون. الأسعار عادةً أعلى من الأسعار الأمريكية؛ لم نرصد أسعاراً محلية لهذا الدليل، فتحقق من عروض البائعين مباشرة.',
+          '**الولايات المتحدة:** يمكنك المقارنة في Amazon وNewegg. تحقّق من عروض الجديد والمستعمل؛ وقد لا تتوفر RTX 5090 بسعر القائمة.',
+          '**ألمانيا:** Amazon.de وMindfactory.de؛ توقّع 19% ضريبة قيمة مضافة ضمن الأسعار المعروضة، وقد تختلف أسعار GPU الألمانية عن الأرقام الأمريكية.',
+          '**فرنسا:** Amazon.fr وLDLC؛ تشمل الأسعار المعروضة ضريبة 20%. تحقّق من الأسعار والمخزون الحاليين.',
+          '**اليابان:** Amazon.co.jp وKakaku.com لمقارنة الأسعار؛ لم تتتبّع هذه الصفحة الأسعار اليابانية.',
+          '**الصين:** JD.com أحد الأسواق التي يمكن مراجعتها؛ وقد يختلف توافر GPU الراقية وأسعارها عن الأسواق الغربية.',
+          '**الشرق الأوسط وشمال إفريقيا:** Amazon.ae والمستوردون المحليون. قد تختلف الأسعار عن الأسعار الأمريكية؛ لم نرصد أسعاراً محلية لهذا الدليل، فتحقق من عروض البائعين مباشرة.',
         ],
         callouts: [
           {
@@ -973,8 +973,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'شراء GPU بذاكرة 8GB لتوفير المال (بما في ذلك نسخة RTX 3060 بذاكرة 8GB التي ليست بطاقة هذا التجميع) — سقف VRAM الناتج لا يمكن إصلاحه ببرنامج ويجبرك على استبدال GPU لاحقاً بتكلفة أكبر إجمالاً.',
           'الإفراط في الإنفاق على CPU (مثل Ryzen 7 بدلاً من Ryzen 5) مع تشغيل GPU بذاكرة 8GB أو 12GB — اختيار CPU ليس له تأثير يُذكر على tok/s بمجرد أن يتناسب النموذج مع VRAM.',
-          'تخطّي إعداد ملف تعريف EXPO/XMP لذاكرة RAM في BIOS، تاركاً أطقم DDR5-6000 تعمل بسرعة 4800 — خسارة أداء مجانية لا تكلف شيئاً لإصلاحها.',
-          'تقليل حجم مزود الطاقة لتوفير 20-30 دولاراً — يرتفع سحب طاقة GPU بشكل مفاجئ إلى ما يتجاوز TDP المقدَّر تحت الحمل المستمر، وفي بعض التجميعات تترك وحدة 550W هامشاً ضئيلاً للارتفاعات اللحظية؛ راجع مواصفات الشركة المصنّعة.',
+          'من دون ضبط ملف EXPO/XMP لذاكرة RAM في BIOS يبقى طقم DDR5-6000 على سرعة افتراضية أدنى. ويؤثر ذلك أساساً عندما تعمل طبقات من النموذج على CPU. هذه الملفات تُعد كسراً لسرعة الذاكرة، فراجع وثائق اللوحة الأم والمعالج قبل تفعيل أحدها.',
+          'تقليل حجم مزود الطاقة لتوفير 20-30 دولاراً — يرتفع سحب طاقة GPU بشكل مفاجئ إلى ما يتجاوز TDP المقدَّر تحت الحمل المستمر، وفي بعض التجميعات تترك وحدة 550W هامشاً ضئيلاً للارتفاعات اللحظية؛ راجع مواصفات الشركة المصنّعة. هذه معلومات عامة وليست نصيحة كهربائية؛ إذا لم تكن متأكدًا فاطلب من فني مؤهل فحص التجميع ودائرتك الكهربائية.',
         ],
       },
       faqSection: {
@@ -982,15 +982,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل يستطيع كمبيوتر بميزانية 1,000 دولار تشغيل نماذج LLM المحلية بشكل جيد؟', a: 'لنماذج 7B-14B نعم؛ أما النماذج الأكبر فتحتاج إلى مزيد من VRAM. مع RTX 3060 12GB مستعملة بنحو 330 دولار يبلغ إجمالي هذا التجميع نحو 940 دولارات، وتتسع 12GB من VRAM لنماذج 14B بتكميم Q4. نماذج فئة 32B لا تتسع بالكامل في 12GB.' },
-          { q: 'لماذا ينفق هذا التجميع الكثير على GPU مقارنة بـ CPU؟', a: 'تعتمد سرعة استدلال نماذج LLM المحلية بشكل شبه كامل على سعة VRAM في GPU وعرض النطاق الترددي للذاكرة. لا يزيد CPU الأسرع من tok/s بمجرد تحميل النموذج في VRAM، لذا يتفوق CPU متوسط المدى مع GPU قوية على CPU قوية مع GPU ضعيفة في هذا العبء المحدد.' },
-          { q: 'هل تكفي 12GB من VRAM لنماذج LLM المحلية في 2026؟', a: 'تتسع 12GB لنماذج 7B-8B بتكميم Q4 مع سياق طويل ولنماذج 14B بتكميم Q4 (نحو 9-10GB) بسياق أقصر. ولا تتسع بالكامل لنماذج فئة 32B (عادةً نحو 20GB بتكميم Q4) ولا فئة 70B (نحو 40GB بتكميم Q4)؛ ووحدة GPU بذاكرة VRAM تبلغ 24GB هي نقطة البداية الواقعية لتشغيل نماذج فئة 32B بالكامل على GPU؛ أما بطاقة 16GB فتتسع لنماذج 14B بارتياح لكنها ما زالت تحتاج إلى تفريغ جزء من نموذج 32B إلى CPU.' },
-          { q: 'هل يمكنني استخدام GPU بذاكرة 8GB بدلاً من ذلك لتوفير المال؟', a: 'يمكنك ذلك، لكنه يحصرك في نماذج 7B بهامش سياق ضئيل — سقف صارم لا يمكن رفعه دون استبدال البطاقة. لا يستحق توفير بطاقة 8GB خسارة القدرة على تشغيل نماذج 13B-14B.' },
+          { q: 'لماذا ينفق هذا التجميع الكثير على GPU مقارنة بـ CPU؟', a: 'عندما يعمل النموذج بالكامل على GPU تعتمد السرعة أساساً على GPU وعرض نطاق ذاكرتها، وتحدد سعة VRAM النماذج التي تتسع. وفي هذه الحالة لا يضيف CPU الأسرع عادةً إلا القليل، لذا ينفق هذا التجميع على GPU لا على CPU في هذا العبء.' },
+          { q: 'هل تكفي 12GB من VRAM لنماذج LLM المحلية في 2026؟', a: 'تتسع 12GB لنماذج 7B-8B بتكميم Q4 مع سياق طويل ولنماذج 14B بتكميم Q4 (نحو 9-10GB) بسياق أقصر. ولا تتسع بالكامل لنماذج فئة 32B (عادةً نحو 20GB بتكميم Q4) ولا فئة 70B (نحو 43GB بتكميم Q4)؛ ووحدة GPU بذاكرة VRAM تبلغ 24GB هي نقطة البداية الواقعية لتشغيل نماذج فئة 32B بالكامل على GPU؛ أما بطاقة 16GB فتتسع لنماذج 14B بارتياح لكنها ما زالت تحتاج إلى تفريغ جزء من نموذج 32B إلى CPU.' },
+          { q: 'هل يمكنني استخدام GPU بذاكرة 8GB بدلاً من ذلك لتوفير المال؟', a: 'يمكنك ذلك، لكن العمل بالكامل على GPU يحصرك غالباً في فئة 7B بهامش سياق ضئيل، ولا يمكن توسيع VRAM في البطاقة. تحتاج النماذج الأكبر إلى تفريغ إلى CPU، وهو أبطأ بكثير، أو إلى بطاقة أخرى. لهذا يستخدم هذا التجميع بطاقة 12GB.' },
           { q: 'كم من ذاكرة RAM أحتاج فعلياً إلى جانب GPU بذاكرة 12GB من VRAM؟', a: '32GB من ذاكرة النظام. يغطي ذلك حِمل نظام التشغيل وتخزين ملف النموذج مؤقتاً أثناء التحميل وأي طبقات تُفرَّغ إلى CPU للنماذج التي تتجاوز سعة VRAM قليلاً.' },
           { q: 'هل سيشغّل هذا التجميع نماذج 32B بشكل جيد؟', a: 'لا، ليس بالكامل على GPU. نموذج 32B بتكميم Q4 يحتاج عادةً نحو 20GB، أي أكثر من 12GB في البطاقة، فيجب تفريغ جزء منه إلى ذاكرة النظام وهو أبطأ بكثير؛ ولا يوجد رقم سرعة له مصدر لهذا الإعداد. لتشغيل نماذج فئة 32B بالكامل على GPU فإن نقطة البداية الواقعية هي GPU بذاكرة VRAM تبلغ 24GB؛ وبطاقة 16GB ما زالت تحتاج إلى تفريغ إلى CPU.' },
           { q: 'ما البرنامج الذي ينبغي تشغيله على هذا التجميع؟', a: 'Ollama أو LM Studio هما أبسط نقطتي بداية — كلاهما يكتشف بطاقة NVIDIA مثل RTX 3060 12GB تلقائياً ويتولى تكميم Q4. أما llama.cpp مباشرة فيمنح تحكماً أكبر في صيغة التكميم وإعدادات السياق.' },
-          { q: 'هل يمكن ترقية هذا التجميع لتشغيل نماذج 70B لاحقاً؟', a: 'ليس بـ GPU واحدة — يحتاج 70B عند Q4 نحو 40GB من VRAM. مسار الترقية الأوضح هو إما استبدالها بـ RTX 3090 24GB مستعملة (لا تزال غير كافية تماماً لـ 70B الكامل) أو إضافة GPU ثانية لتجميع VRAM، وهو ما يغطيه التجميع بثنائي GPU (نحو 2,700 دولار) مباشرةً؛ فذاكرته 32GB تشغّل نماذج فئة 32B، بينما لا يتسع 70B عند Q4 (نحو 43GB) فيها.' },
+          { q: 'هل يمكن ترقية هذا التجميع لتشغيل نماذج 70B لاحقاً؟', a: 'ليس بـ GPU واحدة — يحتاج 70B عند Q4 نحو 43GB من VRAM. مسار الترقية الأوضح هو إما استبدالها بـ RTX 3090 24GB مستعملة (لا تزال غير كافية تماماً لـ 70B الكامل) أو إضافة GPU ثانية لتجميع VRAM، وهو ما يغطيه التجميع بثنائي GPU (نحو 2,700 دولار) مباشرةً؛ فذاكرته 32GB تشغّل نماذج فئة 32B، بينما لا يتسع 70B عند Q4 (نحو 43GB) فيها. تحقق من مزود الطاقة قبل أي من الخيارين: فقد اختير مزود 650W في هذا التجميع لبطاقة RTX 3060 12GB واحدة.' },
           { q: 'هل تؤثر شريحة اللوحة الأم (B650 مقابل B850) على استدلال LLM المحلي؟', a: 'ليس لتجميع بـ GPU واحدة. توفّر B650 منفذ PCIe 4.0 x16، وهو ما تحتاجه GPU؛ تهم الفروق بين شرائح B650 واللوحات الأحدث أكثر لتوزيع مسارات PCIe في تجميعات multi-GPU منها لاستدلال LLM بـ GPU واحدة.' },
-          { q: 'هل GPU المستعملة أفضل قيمة من الجديدة بهذه الميزانية؟', a: 'بهذه الميزانية نعم: بطاقة RTX 3060 12GB المستعملة (نحو 330 دولار حسب متتبع InsiderLLM) تُبقي الإجمالي عند نحو 940 دولارات، بينما ستدفعه RTX 3060 12GB الجديدة (نحو 450 دولاراً على gpuprix) إلى نحو 1,060 دولار. البطاقة المستعملة أكثر مخاطرة، فتحقق من سياسة الإرجاع لدى البائع. وRTX 3090 24GB المستعملة ترقية حقيقية في VRAM لكنها تكلّف أكثر من ميزانية GPU الكاملة لهذا التجميع وترفع الإجمالي فوق 2,000 دولار — فمكانها فئة ميزانية أعلى.' },
+          { q: 'هل GPU المستعملة أفضل قيمة من الجديدة بهذه الميزانية؟', a: 'بهذه الميزانية نعم: بطاقة RTX 3060 12GB المستعملة (نحو 330 دولار حسب متتبع InsiderLLM) تُبقي الإجمالي عند نحو 940 دولارات، بينما ستدفعه RTX 3060 12GB الجديدة (نحو 460 دولاراً على gpuprix) إلى نحو 1,070 دولار. البطاقة المستعملة أكثر مخاطرة، فتحقق من سياسة الإرجاع لدى البائع. وRTX 3090 24GB المستعملة ترقية حقيقية في VRAM لكنها تكلّف أكثر من ميزانية GPU الكاملة لهذا التجميع وترفع الإجمالي فوق 2,000 دولار — فمكانها فئة ميزانية أعلى.' },
         ],
       },
       relatedReading: {
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مكتبة نماذج Ollama ومتطلبات VRAM](https://ollama.com/library)',
           '[نقاش llama.cpp رقم 15013: الأداء على NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix: صفحة أسعار RTX 3060 12GB](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix: عروض RTX 5060 Ti 16GB في الولايات المتحدة (تم التحقق في 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice: أسعار RTX 5060 Ti في الولايات المتحدة (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[صفحة نموذج qwen3:32b في Ollama (20GB، Q4_K_M)](https://ollama.com/library/qwen3:32b)',
+          '[صفحة نموذج qwen3:32b في Ollama (20GB، Q4_K_M)](https://ollama.com/library/qwen3:32b)', '[صفحة نموذج gpt-oss:20b في Ollama (14GB)](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -1045,10 +1045,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/ar/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': 'هل يستطيع كمبيوتر بميزانية 1,000 دولار تشغيل نماذج LLM المحلية بشكل جيد؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لنماذج 7B-14B نعم؛ أما النماذج الأكبر فتحتاج إلى مزيد من VRAM. مع RTX 3060 12GB مستعملة بنحو 330 دولار يبلغ إجمالي هذا التجميع نحو 940 دولارات، وتتسع 12GB من VRAM لنماذج 14B بتكميم Q4. نماذج فئة 32B لا تتسع بالكامل في 12GB.' } },
-        { '@type': 'Question', 'name': 'هل تكفي 12GB من VRAM لنماذج LLM المحلية في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تتسع 12GB لنماذج 7B-8B بتكميم Q4 مع سياق طويل ولنماذج 14B بتكميم Q4 (نحو 9-10GB) بسياق أقصر. ولا تتسع بالكامل لنماذج فئة 32B (عادةً نحو 20GB بتكميم Q4) ولا فئة 70B (نحو 40GB بتكميم Q4)؛ ووحدة GPU بذاكرة VRAM تبلغ 24GB هي نقطة البداية الواقعية لتشغيل نماذج فئة 32B بالكامل على GPU؛ أما بطاقة 16GB فتتسع لنماذج 14B بارتياح لكنها ما زالت تحتاج إلى تفريغ جزء من نموذج 32B إلى CPU.' } },
-        { '@type': 'Question', 'name': 'هل يمكنني استخدام GPU بذاكرة 8GB بدلاً من ذلك لتوفير المال؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يمكنك ذلك، لكنه يحصرك في نماذج 7B بهامش سياق ضئيل — سقف صارم لا يمكن رفعه دون استبدال البطاقة. لا يستحق توفير بطاقة 8GB خسارة القدرة على تشغيل نماذج 13B-14B.' } },
+        { '@type': 'Question', 'name': 'هل تكفي 12GB من VRAM لنماذج LLM المحلية في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تتسع 12GB لنماذج 7B-8B بتكميم Q4 مع سياق طويل ولنماذج 14B بتكميم Q4 (نحو 9-10GB) بسياق أقصر. ولا تتسع بالكامل لنماذج فئة 32B (عادةً نحو 20GB بتكميم Q4) ولا فئة 70B (نحو 43GB بتكميم Q4)؛ ووحدة GPU بذاكرة VRAM تبلغ 24GB هي نقطة البداية الواقعية لتشغيل نماذج فئة 32B بالكامل على GPU؛ أما بطاقة 16GB فتتسع لنماذج 14B بارتياح لكنها ما زالت تحتاج إلى تفريغ جزء من نموذج 32B إلى CPU.' } },
+        { '@type': 'Question', 'name': 'هل يمكنني استخدام GPU بذاكرة 8GB بدلاً من ذلك لتوفير المال؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يمكنك ذلك، لكن العمل بالكامل على GPU يحصرك غالباً في فئة 7B بهامش سياق ضئيل، ولا يمكن توسيع VRAM في البطاقة. تحتاج النماذج الأكبر إلى تفريغ إلى CPU، وهو أبطأ بكثير، أو إلى بطاقة أخرى. لهذا يستخدم هذا التجميع بطاقة 12GB.' } },
         { '@type': 'Question', 'name': 'كم من ذاكرة RAM أحتاج فعلياً إلى جانب GPU بذاكرة 12GB من VRAM؟', 'acceptedAnswer': { '@type': 'Answer', 'text': '32GB من ذاكرة النظام. يغطي ذلك حِمل نظام التشغيل وتخزين ملف النموذج مؤقتاً أثناء التحميل وأي طبقات تُفرَّغ إلى CPU للنماذج التي تتجاوز سعة VRAM قليلاً.' } },
-        { '@type': 'Question', 'name': 'هل يمكن ترقية هذا التجميع لتشغيل نماذج 70B لاحقاً؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس بـ GPU واحدة — يحتاج 70B عند Q4 نحو 40GB من VRAM. مسار الترقية الأوضح هو إما استبدالها بـ RTX 3090 24GB مستعملة أو إضافة GPU ثانية لتجميع VRAM، وهو ما يغطيه التجميع بثنائي GPU (نحو 2,700 دولار) مباشرةً؛ فذاكرته 32GB تشغّل نماذج فئة 32B، بينما لا يتسع 70B عند Q4 (نحو 43GB) فيها.' } },
+        { '@type': 'Question', 'name': 'هل يمكن ترقية هذا التجميع لتشغيل نماذج 70B لاحقاً؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس بـ GPU واحدة — يحتاج 70B عند Q4 نحو 43GB من VRAM. مسار الترقية الأوضح هو إما استبدالها بـ RTX 3090 24GB مستعملة (لا تزال غير كافية تماماً لـ 70B الكامل) أو إضافة GPU ثانية لتجميع VRAM، وهو ما يغطيه التجميع بثنائي GPU (نحو 2,700 دولار) مباشرةً؛ فذاكرته 32GB تشغّل نماذج فئة 32B، بينما لا يتسع 70B عند Q4 (نحو 43GB) فيها. تحقق من مزود الطاقة قبل أي من الخيارين: فقد اختير مزود 650W في هذا التجميع لبطاقة RTX 3060 12GB واحدة.' } },
       ],
     },
     itemListSchema: {
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026年二手显卡$1,000以下本地LLM PC构建',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-zh.webp',
     seoTitle: '2026年二手显卡$1,000以下本地LLM PC构建',
-    intro: '**一台搭载二手RTX 3060 12GB、Ryzen 5 7600和32GB DDR5内存的PC，可在Q4下运行7B-14B模型，总价约$940，低于$1,000。**显存是本地LLM推理的主要限制因素，因此本构建把GPU预算花在一张二手价约$330的12GB显存显卡上（来自[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，价格数据日期2026-11-26），其余配件则保持精简。Q4下的14B模型（约9-10GB）可放入12GB；32B级模型无法完全放入，需要部分卸载到CPU，速度会慢得多。本指南列出具体配件、每项选择优于其他方案的原因，以及哪些速度数据有来源。其余配件为本页自行估算的价格，且总价仅在购买二手显卡时成立：2026-11-18在[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)上标价约$450的全新RTX 3060 12GB会使总价升至约$1,060。',
+    intro: '**一台搭载二手RTX 3060 12GB、Ryzen 5 7600和32GB DDR5内存的PC，可在Q4下运行7B-14B模型，总价约$940，低于$1,000。**显存是本地LLM推理的主要限制因素，因此本构建把GPU预算花在一张二手价约$330的12GB显存显卡上（来自[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，价格数据日期2026-11-26），其余配件则保持精简。Q4下的14B模型（约9-10GB）可放入12GB；32B级模型无法完全放入，需要部分卸载到CPU，速度会慢得多。本指南列出具体配件、每项选择优于其他方案的原因，以及哪些速度数据有来源。其余配件为本页自行估算的价格，且总价仅在购买二手显卡时成立：2026-11-28在[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)上标价约$460的全新RTX 3060 12GB会使总价升至约$1,070。',
     metaDescription: '$1,000以下本地LLM PC构建（约$940）：二手RTX 3060 12GB + Ryzen 5 7600 + 32GB DDR5。Q4下运行7B-14B。2026配件清单。',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -1107,19 +1107,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**总构建成本：约$940。**二手RTX 3060 12GB（约$330）、Ryzen 5 7600（$180）、32GB DDR5-6000（$90）、1TB Gen4 NVMe（$70）、B650 mATX主板（$130）、650W 80+ Gold电源（$75）、mATX机箱（$65）。GPU价格来自[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（二手，价格数据日期2026-11-26）；其余配件为本页自行估算。全新RTX 3060 12GB（2026-11-18在gpuprix上约$450）会使总价升至约$1,060。',
+          '**总构建成本：约$940。**二手RTX 3060 12GB（约$330）、Ryzen 5 7600（$180）、32GB DDR5-6000（$90）、1TB Gen4 NVMe（$70）、B650 mATX主板（$130）、650W 80+ Gold电源（$75）、mATX机箱（$65）。GPU价格来自[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（二手，价格数据日期2026-11-26）；其余配件为本页自行估算。全新RTX 3060 12GB（2026-11-28在gpuprix上约$460）会使总价升至约$1,070。',
           '**此预算下的目标是12GB显存，而非GPU原始速度。**12GB显存的显卡能运行同价位更快但仅有8GB显存的显卡无法运行的模型，因为决定能否放得下的是模型大小，而不是着色器数量。',
           '**7B模型：75.6 tok/s**（llama.cpp讨论#15013，Llama 2 7B Q4_0的Token生成，社区上报）。Q4下的14B模型（约9-10GB）可放入12GB，但上下文余量有限；其他速度仅供参考，并非PromptQuorum实测。',
-          '**32B和70B模型无法完全放入。**Q4下32B模型通常约需20GB，70B模型约需40GB显存；本构建仅靠GPU最高约到14B。32B级模型请参见双GPU构建方案（约$2,700）（70B在Q4下约需43GB，放入32GB仍然不够）。',
+          '**32B和70B模型无法完全放入。**Q4下32B模型通常约需20GB，70B模型约需43GB显存；本构建仅靠GPU最高约到14B。32B级模型请参见双GPU构建方案（约$2,700）（70B在Q4下约需43GB，放入32GB仍然不够）。',
           '**系统内存需要32GB，而非16GB。** 模型加载、操作系统开销以及任何CPU卸载层都需要GPU之外的余量；16GB内存在运行14B以上模型时可能引发交换。',
-          '**避免：** 8GB显存GPU（RTX 5060、RTX 4060 Ti 8GB）——它们的上限为7B，若不整体更换GPU则无法扩展到13B-14B。',
+          '**避免：** 8GB显存GPU（RTX 5060、RTX 4060 Ti 8GB）——完全在GPU上运行时基本限于7B级模型，13B-14B通常需要CPU卸载或换卡。',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: '这笔预算实际买到了什么',
         content: [
-          '**本地LLM推理速度首先受显存容量限制，其次是内存带宽，计算能力（CUDA核心）则远远排在第三。**放不进显存的模型要么无法加载，要么溢出到系统内存，吞吐量大幅下降。在$1,000预算下，最有效的分配是优先投入GPU，其余配件保持精简——这就是这里的CPU选用$180的中端型号，而不是$350旗舰型号的原因。',
+          '**本地模型能否完全在GPU上运行，首先取决于显存容量；之后内存带宽和算力影响运行速度。**放不进显存的模型要么无法加载，要么溢出到系统内存，吞吐量大幅下降。在$1,000预算下，本构建优先投入GPU，其余配件保持精简——这就是这里的CPU选用$180的中端型号，而不是$350旗舰型号的原因。',
           '本构建假定为单模型推理（通过Ollama、LM Studio或llama.cpp一次加载一个模型），而非并发多用户服务。若要同时处理多个请求，显存需求会进一步上升，$1,000预算并不现实。',
         ],
         snippetBlocks: [
@@ -1130,7 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: '完整配件清单',
-        content: '价格为美国估算价格，会因地区和零售商而异。RAM和SSD的价格波动较大，配件价格合计上涨超过$60就会使总价超过$1,000。GPU价格（二手RTX 3060 12GB，约$330）来自[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（价格数据日期2026-11-26）；其余配件为本页自行估算。合计：约$940（$330 + $180 + $90 + $70 + $130 + $75 + $65）。这仅在购买二手显卡时成立：2026-11-18在[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)上标价约$450的全新RTX 3060 12GB会使合计升至约$1,060。',
+        content: '价格为美国估算价格，会因地区和零售商而异。RAM和SSD的价格波动较大，配件价格合计上涨超过$60就会使总价超过$1,000。GPU价格（二手RTX 3060 12GB，约$330）来自[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（价格数据日期2026-11-26）；其余配件为本页自行估算。合计：约$940（$330 + $180 + $90 + $70 + $130 + $75 + $65）。这仅在购买二手显卡时成立：2026-11-28在[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)上标价约$460的全新RTX 3060 12GB会使合计升至约$1,070。',
         columns: ['配件', '选择', '价格', '原因'],
         rows: [
           { '配件': 'GPU', '选择': '二手RTX 3060 12GB', '价格': '~$330', '原因': '12GB显存可在Q4下运行7B-14B；32B无法完全放入' },
@@ -1148,13 +1148,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '为什么在此预算下选择二手RTX 3060 12GB',
         content: [
           '**在此预算下，每美元显存决定GPU的选择，8GB显卡对本地LLM工作而言是虚假的节省。**RTX 3060曾以12GB版本发售，这正是尽管型号较老仍选用它的原因：8GB显卡在保持可用上下文长度时，很难舒适容纳超过Q4下7B模型的任何东西。请确认商品页写明12GB，因为市面上还有8GB版本的RTX 3060。',
-          '显存余量对上下文长度同样重要：7B模型本身在Q4下约需4-4.5GB，但16K Token的上下文还要额外占用1-2GB的KV缓存。在8GB显卡上几乎所剩无几；在12GB显卡上，可同时容纳7B模型和较长上下文，14B模型则可配合较短上下文放入。',
+          '显存余量对上下文长度同样重要：7B模型本身在Q4下约需4-4.5GB，但16K Token的上下文还要额外占用1-2GB的KV缓存。在8GB显卡上几乎所剩无几；在12GB显卡上，可同时容纳7B模型和较长上下文，14B模型则可配合较短上下文放入。以上上下文数据为粗略估算，取决于模型和设置。',
         ],
         items: [
-          '**RTX 3060 12GB（二手，约$330，本构建）：**有来源的最低价12GB显存；二手价来自[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（区间$310-350，中位数$330，价格数据日期2026-11-26）。全新或翻新卡标价更高：据[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)，全新$450、Amazon翻新$420（2026-11-18）。',
-          '**RTX 4060 Ti 16GB（据InsiderLLM价格追踪页约$430-450，未说明成色）：**16GB显存，但[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb)标价高得多（全新$843，2026-11-17），因此价格不确定；即使按追踪页价格，总价也约为$1,040-1,060。请查看实时报价。',
-          '**RTX 5060 Ti 16GB（全新约$800：[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)上显示的最低全新报价，2026-11-28查看；据[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)，美国亚马逊为$829.99，2026-11-27）：**这是升级到16GB的选项；用它替换二手RTX 3060，本构建总价将增加约$470-500，达到约$1,410-1,440。',
-          '**二手RTX 3090 24GB（约$1,500-1,725，[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，2026-11-23）：**显存更大，但仅这一张卡就比整个$1,000预算还贵，因此超出本构建的范围。',
+          '**RTX 3060 12GB（二手，约$330，本构建）：**有来源的最低价12GB显存；二手价来自[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（区间$310-350，中位数$330，209条美国eBay成交记录，2026-11-17至2026-11-26；价格数据日期2026-11-26）。全新或翻新卡标价更高：据[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)，全新$460、Amazon翻新$420（2026-11-28）。',
+          '**RTX 4060 Ti 16GB（据InsiderLLM价格追踪页约$430-450，未说明成色）：**16GB显存，但[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb)标价高得多（有货的全新卡$764起，2026-11-28查看），因此价格不确定；即使按追踪页价格，总价也约为$1,040-1,060。请查看实时报价。',
+          '**RTX 5060 Ti 16GB（全新约$800：[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)上显示的最低全新报价，2026-11-28查看；据[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)，美国亚马逊为$849.99，2026-11-27）：**这是升级到16GB的选项；用它替换二手RTX 3060，本构建总价将增加约$470-520，达到约$1,410-1,460。',
+          '**二手RTX 3090 24GB（2026-11-13至2026-11-23美国成交价约$1,500-1,725，[InsiderLLM价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，2026-11-23）：**显存更大，但仅这一张卡就比整个$1,000预算还贵，因此超出本构建的范围。',
         ],
       },
       performance: {
@@ -1165,9 +1165,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '模型规模': '7B-8B', 'Q4显存占用': '~4.5-5GB', '每秒Token数': '75.6（Llama 2 7B Q4_0，#15013）', '是否舒适运行？': '是——上下文余量充足' },
           { '模型规模': '13B-14B', 'Q4显存占用': '~9-10GB', '每秒Token数': '低于7B；无有来源数据', '是否舒适运行？': '是——上下文余量有限' },
-          { '模型规模': '20B（MoE，约4B激活）', 'Q4显存占用': '~12GB', '每秒Token数': '无有来源数据', '是否舒适运行？': '紧张——几乎没有上下文余量' },
+          { '模型规模': '20B（MoE，约4B激活）', 'Q4显存占用': '~14GB（gpt-oss:20b）', '每秒Token数': '无有来源数据', '是否舒适运行？': '否——下载大小超过12GB，预计需要CPU卸载' },
           { '模型规模': '32B', 'Q4显存占用': '~19-20GB', '每秒Token数': '无有来源数据', '是否舒适运行？': '否——需要CPU卸载，慢得多' },
-          { '模型规模': '70B', 'Q4显存占用': '~40GB', '每秒Token数': '不适用', '是否舒适运行？': '无法运行——即使双GPU构建方案（32GB）也放不下' },
+          { '模型规模': '70B', 'Q4显存占用': '~43GB', '每秒Token数': '不适用', '是否舒适运行？': '无法运行——即使双GPU构建方案（32GB）也放不下' },
         ],
       },
       assembly: {
@@ -1184,8 +1184,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: '升级路径',
         content: [
-          '本构建的设计理念是，日后唯一值得更换的部件就是GPU。B650主板支持第二个PCIe插槽（通常为x4电气规格），可用于后续加装第二张GPU，不过tensor-split多GPU推理至少需要x8/x8才能避免PCIe带宽瓶颈——为此专门选择主板的方案请参见双GPU构建方案（约$2,700）。',
-          '最直接的升级是在预算允许时把GPU换成显存更大的型号。RTX 5060 Ti 16GB（据gpuprix（2026-11-28）和BasketPrice（2026-11-27），全新约$800-830）可增加4GB显存，但会使整机超过$1,000；二手RTX 3090 24GB（约$1,500-1,725）则超出本构建的预算。Ryzen 5 7600和32GB内存不是这类更换的瓶颈；请对照厂商规格，核对新卡的供电需求与650W电源是否匹配。',
+          '本构建的设计理念是，日后唯一值得更换的部件就是GPU。许多B650主板有第二个PCIe插槽，但电气上往往只接x4，请查阅所购主板的说明书。若要加装第二张GPU，最好选择明确标注x8/x8拆分的主板：x4插槽的通道数只有x8的一半，它会让拆分后的模型慢多少，取决于运行时、拆分方式和设置，本页未做测量。加装显卡前请先核对电源。按双GPU规划的配置请参见双GPU构建方案（约$2,700）。',
+          '最直接的升级是在预算允许时把GPU换成显存更大的型号。RTX 5060 Ti 16GB（据gpuprix（2026-11-28）和BasketPrice（2026-11-27），全新约$800-850）可增加4GB显存，但会使整机超过$1,000；二手RTX 3090 24GB（约$1,500-1,725）则超出本构建的预算。Ryzen 5 7600和32GB内存不是这类更换的瓶颈；请对照厂商规格，核对新卡的供电需求与650W电源是否匹配。',
         ],
       },
       whereToBuy: {
@@ -1194,11 +1194,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**价格和库存因地区而异，欧盟标价含增值税。** 下方链接是按地区的普通商品搜索链接；它们不带联盟标签，也不产生佣金。',
         items: [
-          '**美国：** Amazon 和 Newegg 货源最广。二手 RTX 3060 和 RTX 4090 显卡常见；全新旗舰货源稀少，RTX 5090 在标价下常常缺货。',
-          '**德国：** Amazon.de 和 Mindfactory.de；标价通常含约 19% 增值税，德国显卡价格高于美国。',
-          '**法国：** Amazon.fr 和 LDLC；价格与德国相近，含 20% 增值税，旗舰货源时断时续。',
-          '**日本：** Amazon.co.jp 和 Kakaku.com 用于比价；全新显卡价格跟随美国，二手货源较少。',
-          '**中国：** 全新显卡看京东和淘宝，二手 RTX 4090 与 RTX 3060 主要在闲鱼成交；高端显卡的供货和价格与西方市场差异显著。',
+          '**美国：** 可在 Amazon 和 Newegg 比价。请同时查看全新和二手报价；RTX 5090 可能无法按标价买到。',
+          '**德国：** Amazon.de 和 Mindfactory.de；标价通常含 19% 增值税，德国显卡价格可能与美国不同。',
+          '**法国：** Amazon.fr 和 LDLC；标价含 20% 增值税。请查看当前价格和库存。',
+          '**日本：** Amazon.co.jp 和 Kakaku.com 用于比价；本页未追踪日本价格。',
+          '**中国：** 全新显卡可看京东和淘宝，二手 RTX 4090 与 RTX 3060 可在闲鱼查看；高端显卡的供货和价格可能与西方市场不同。',
         ],
         callouts: [
           {
@@ -1239,8 +1239,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '为省钱购买8GB GPU（包括并非本构建所用的8GB版RTX 3060）——由此产生的显存上限无法通过软件解决，之后还得更换GPU，总花费反而更高。',
           '在使用8GB或12GB显存GPU的同时，在CPU上超支（例如选择Ryzen 7而非Ryzen 5）——一旦模型能装入显存，CPU的选择对每秒Token数几乎没有影响。',
-          '跳过BIOS中的EXPO/XMP内存配置文件设置，导致DDR5-6000套装以4800运行——这是白白损失的性能，修复却不花一分钱。',
-          '为省$20-30而选用功率不足的电源——GPU在持续负载下功耗会短暂大幅超过额定TDP，在部分构建中，550W电源对瞬时峰值的余量较小，请查阅厂商规格。',
+          '如果不在BIOS中设置EXPO/XMP内存配置文件，DDR5-6000套装会以较低的默认速度运行。这主要在部分模型层运行于CPU时才有影响。这类配置属于内存超频，启用前请先查阅主板和CPU文档。',
+          '为省$20-30而选用功率不足的电源——GPU在持续负载下功耗会短暂大幅超过额定TDP，在部分构建中，550W电源对瞬时峰值的余量较小，请查阅厂商规格。以上为一般性信息，不构成电气方面的建议；如不确定，请让有资质的技术人员检查整机和供电线路。',
         ],
       },
       faqSection: {
@@ -1248,15 +1248,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: '$1,000的PC能很好地运行本地LLM吗？', a: '对7B-14B模型可以；更大的模型需要更多显存。使用约$330的二手RTX 3060 12GB，本构建总价约$940，12GB显存可在Q4下容纳14B模型。32B级模型无法完全放入12GB。' },
-          { q: '为什么本构建在GPU上的花费相对CPU高出这么多？', a: '本地LLM推理速度几乎完全取决于GPU显存容量和内存带宽。一旦模型加载进显存，更快的CPU并不会提升每秒Token数，因此对于这一特定工作负载，中端CPU搭配强劲GPU胜过强劲CPU搭配弱势GPU。' },
-          { q: '2026年12GB显存对本地LLM够用吗？', a: '12GB可在Q4下容纳7B-8B模型并保留较长上下文，也可容纳Q4下的14B模型（约9-10GB），但上下文较短。它无法完全容纳32B级模型（Q4下通常约20GB）或70B级模型（Q4下约40GB）；要让32B级模型完全运行在GPU上，24GB显存的显卡才是现实的起点；16GB显卡可以从容运行14B模型，但运行32B仍需CPU卸载。' },
-          { q: '我可以改用8GB的GPU来省钱吗？', a: '可以，但这会把你限制在上下文余量极小的7B模型上——这是一个不更换显卡就无法提高的硬上限。8GB显卡省下的钱，不值得以失去13B-14B模型为代价。' },
+          { q: '为什么本构建在GPU上的花费相对CPU高出这么多？', a: '当模型完全在GPU上运行时，速度主要取决于GPU及其显存带宽，而能装下哪些模型由显存容量决定。这种情况下更快的CPU通常帮助不大，因此针对这一工作负载，本构建把预算花在GPU而非CPU上。' },
+          { q: '2026年12GB显存对本地LLM够用吗？', a: '12GB可在Q4下容纳7B-8B模型并保留较长上下文，也可容纳Q4下的14B模型（约9-10GB），但上下文较短。它无法完全容纳32B级模型（Q4下通常约20GB）或70B级模型（Q4下约43GB）；要让32B级模型完全运行在GPU上，24GB显存的显卡才是现实的起点；16GB显卡可以从容运行14B模型，但运行32B仍需CPU卸载。' },
+          { q: '我可以改用8GB的GPU来省钱吗？', a: '可以，但完全在GPU上运行时基本限于7B级模型，上下文余量很小，而且显卡的显存无法扩充。更大的模型需要速度慢得多的CPU卸载，或者换一张卡。因此本构建选用12GB显卡。' },
           { q: '搭配12GB显存的GPU，我实际需要多少内存？', a: '32GB系统内存。这可覆盖操作系统开销、加载时的模型文件缓存，以及对略微超出显存容量的模型卸载到CPU的层。' },
           { q: '这套构建能很好地运行32B模型吗？', a: '不能，无法完全在GPU上运行。Q4下的32B模型通常约需20GB，超过显卡的12GB，因此部分层必须卸载到系统内存，速度会慢得多；该配置没有有来源的速度数据。要让32B级模型完全运行在GPU上，现实的起点是24GB显存的GPU；16GB显卡仍需CPU卸载。' },
           { q: '这套构建应该运行什么软件？', a: 'Ollama或LM Studio是最简单的起点——两者都会自动识别RTX 3060 12GB这类NVIDIA GPU并处理Q4量化。直接使用llama.cpp则可以更好地控制量化格式和上下文设置。' },
-          { q: '本构建以后能升级到运行70B模型吗？', a: '单张GPU无法做到——70B在Q4下需要约40GB显存。最直接的升级路径是更换为二手RTX 3090 24GB（对完整70B仍略显不足），或加装第二张GPU进行显存池化，这正是双GPU构建方案（约$2,700）所覆盖的内容；其32GB可运行32B级模型，而70B在Q4下（约43GB）仍然放不下。' },
+          { q: '本构建以后能升级到运行70B模型吗？', a: '单张GPU无法做到——70B在Q4下需要约43GB显存。最直接的升级路径是更换为二手RTX 3090 24GB（对完整70B仍略显不足），或加装第二张GPU进行显存池化，这正是双GPU构建方案（约$2,700）所覆盖的内容；其32GB可运行32B级模型，而70B在Q4下（约43GB）仍然放不下。无论选哪种方式，都请先核对电源：本构建的650W电源是按一张RTX 3060 12GB选配的。' },
           { q: '主板芯片组（B650对比B850）对本地LLM推理有影响吗？', a: '对单GPU构建没有影响。B650提供了GPU所需的PCIe 4.0 x16插槽；B650与更新主板之间的芯片组差异，对多GPU的PCIe通道分配影响更大，对单GPU LLM推理的影响较小。' },
-          { q: '在这个预算下，二手GPU比全新GPU更划算吗？', a: '在这个预算下是的：二手RTX 3060 12GB（据InsiderLLM价格追踪页约$330）可把总价保持在约$940，而全新RTX 3060 12GB（据gpuprix约$450）会使总价升至约$1,060。二手显卡风险更高，请查看卖家的退货政策。二手RTX 3090 24GB是实打实的显存升级，但仅显卡就超出本构建整个GPU预算，并使总价超过$2,000——它属于更高的预算档位。' },
+          { q: '在这个预算下，二手GPU比全新GPU更划算吗？', a: '在这个预算下是的：二手RTX 3060 12GB（据InsiderLLM价格追踪页约$330）可把总价保持在约$940，而全新RTX 3060 12GB（据gpuprix约$460）会使总价升至约$1,070。二手显卡风险更高，请查看卖家的退货政策。二手RTX 3090 24GB是实打实的显存升级，但仅显卡就超出本构建整个GPU预算，并使总价超过$2,000——它属于更高的预算档位。' },
         ],
       },
       relatedReading: {
@@ -1280,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama模型库与显存需求](https://ollama.com/library)',
           '[llama.cpp讨论#15013：NVIDIA CUDA性能](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix：RTX 3060 12GB价格页](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix：RTX 5060 Ti 16GB美国报价（2026-11-28查看）](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice：RTX 5060 Ti美国价格（2026-11-27）](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[Ollama qwen3:32b模型页面（20GB，Q4_K_M）](https://ollama.com/library/qwen3:32b)',
+          '[Ollama qwen3:32b模型页面（20GB，Q4_K_M）](https://ollama.com/library/qwen3:32b)', '[Ollama gpt-oss:20b模型页面（14GB）](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -1311,10 +1311,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': '$1,000的PC能很好地运行本地LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '对7B-14B模型可以；更大的模型需要更多显存。使用约$330的二手RTX 3060 12GB，本构建总价约$940，12GB显存可在Q4下容纳14B模型。32B级模型无法完全放入12GB。' } },
-        { '@type': 'Question', 'name': '2026年12GB显存对本地LLM够用吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB可在Q4下容纳7B-8B模型并保留较长上下文，也可容纳Q4下的14B模型（约9-10GB），但上下文较短。它无法完全容纳32B级模型（Q4下通常约20GB）或70B级模型（Q4下约40GB）；要让32B级模型完全运行在GPU上，24GB显存的显卡才是现实的起点；16GB显卡可以从容运行14B模型，但运行32B仍需CPU卸载。' } },
-        { '@type': 'Question', 'name': '我可以改用8GB的GPU来省钱吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，但这会把你限制在上下文余量极小的7B模型上——这是一个不更换显卡就无法提高的硬上限。8GB显卡省下的钱，不值得以失去13B-14B模型为代价。' } },
+        { '@type': 'Question', 'name': '2026年12GB显存对本地LLM够用吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB可在Q4下容纳7B-8B模型并保留较长上下文，也可容纳Q4下的14B模型（约9-10GB），但上下文较短。它无法完全容纳32B级模型（Q4下通常约20GB）或70B级模型（Q4下约43GB）；要让32B级模型完全运行在GPU上，24GB显存的显卡才是现实的起点；16GB显卡可以从容运行14B模型，但运行32B仍需CPU卸载。' } },
+        { '@type': 'Question', 'name': '我可以改用8GB的GPU来省钱吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，但完全在GPU上运行时基本限于7B级模型，上下文余量很小，而且显卡的显存无法扩充。更大的模型需要速度慢得多的CPU卸载，或者换一张卡。因此本构建选用12GB显卡。' } },
         { '@type': 'Question', 'name': '搭配12GB显存的GPU，我实际需要多少内存？', 'acceptedAnswer': { '@type': 'Answer', 'text': '32GB系统内存。这可覆盖操作系统开销、加载时的模型文件缓存，以及对略微超出显存容量的模型卸载到CPU的层。' } },
-        { '@type': 'Question', 'name': '本构建以后能升级到运行70B模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '单张GPU无法做到——70B在Q4下需要约40GB显存。最直接的升级路径是更换为二手RTX 3090 24GB，或加装第二张GPU进行显存池化，这正是双GPU构建方案（约$2,700）所覆盖的内容；其32GB可运行32B级模型，而70B在Q4下（约43GB）仍然放不下。' } },
+        { '@type': 'Question', 'name': '本构建以后能升级到运行70B模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '单张GPU无法做到——70B在Q4下需要约43GB显存。最直接的升级路径是更换为二手RTX 3090 24GB（对完整70B仍略显不足），或加装第二张GPU进行显存池化，这正是双GPU构建方案（约$2,700）所覆盖的内容；其32GB可运行32B级模型，而70B在Q4下（约43GB）仍然放不下。无论选哪种方式，都请先核对电源：本构建的650W电源是按一张RTX 3060 12GB选配的。' } },
       ],
     },
     itemListSchema: {
@@ -1345,7 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '中古GPUで$1,000以下のローカルLLM PCビルド（2026年）',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-ja.webp',
     seoTitle: '中古GPUで$1,000以下のローカルLLM PCビルド（2026年）',
-    intro: '**中古のRTX 3060 12GB、Ryzen 5 7600、32GB DDR5 RAMを搭載したPCは、7B〜14BモデルをQ4で実行でき、総額は約$940、つまり$1,000未満です。**VRAMはローカルLLM推論の主な制約要因です。そのため、このビルドではGPU予算を中古価格約$330の12GB VRAMカードに充て（[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)より、価格データの日付は2026-11-26）、他のパーツは控えめに構成しています。Q4の14Bモデル（約9〜10GB）は12GBに収まりますが、32Bクラスのモデルは完全には収まらず、CPUへのオフロードが必要になり、速度が大きく低下します。このガイドでは、具体的なパーツ構成、各パーツを代替案より選んだ理由、そして出典のある速度の数値を示します。他のパーツは本ページ独自の見積もりで、総額は中古カードの場合にのみ成立します。2026-11-18時点で[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)に約$450で掲載されている新品のRTX 3060 12GBを選ぶと、総額は約$1,060になります。',
+    intro: '**中古のRTX 3060 12GB、Ryzen 5 7600、32GB DDR5 RAMを搭載したPCは、7B〜14BモデルをQ4で実行でき、総額は約$940、つまり$1,000未満です。**VRAMはローカルLLM推論の主な制約要因です。そのため、このビルドではGPU予算を中古価格約$330の12GB VRAMカードに充て（[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)より、価格データの日付は2026-11-26）、他のパーツは控えめに構成しています。Q4の14Bモデル（約9〜10GB）は12GBに収まりますが、32Bクラスのモデルは完全には収まらず、CPUへのオフロードが必要になり、速度が大きく低下します。このガイドでは、具体的なパーツ構成、各パーツを代替案より選んだ理由、そして出典のある速度の数値を示します。他のパーツは本ページ独自の見積もりで、総額は中古カードの場合にのみ成立します。2026-11-28時点で[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)に約$460で掲載されている新品のRTX 3060 12GBを選ぶと、総額は約$1,070になります。',
     metaDescription: '$1,000未満のローカルLLM PCビルド（約$940）：中古RTX 3060 12GB + Ryzen 5 7600 + 32GB DDR5。Q4で7B〜14Bを実行。2026年版パーツ一覧。',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -1373,19 +1373,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**総ビルド費用：約$940。**中古RTX 3060 12GB（約$330）、Ryzen 5 7600（$180）、32GB DDR5-6000（$90）、1TB Gen4 NVMe（$70）、B650 mATXマザーボード（$130）、650W 80+ Gold電源（$75）、mATXケース（$65）。GPU価格は[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（中古、価格データの日付：2026-11-26）によるもので、他のパーツは本ページ独自の見積もりです。新品のRTX 3060 12GB（2026-11-18時点でgpuprixに約$450）を選ぶと、総額は約$1,060になります。',
+          '**総ビルド費用：約$940。**中古RTX 3060 12GB（約$330）、Ryzen 5 7600（$180）、32GB DDR5-6000（$90）、1TB Gen4 NVMe（$70）、B650 mATXマザーボード（$130）、650W 80+ Gold電源（$75）、mATXケース（$65）。GPU価格は[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（中古、価格データの日付：2026-11-26）によるもので、他のパーツは本ページ独自の見積もりです。新品のRTX 3060 12GB（2026-11-28時点でgpuprixに約$460）を選ぶと、総額は約$1,070になります。',
           '**この予算での目標はGPUの生の速度ではなく、12GBのVRAMです。**12GB VRAMのカードは、同価格でより高速な8GBカードでは実行できないモデルを実行できます。何が収まるかを決めるのは、シェーダー数ではなくモデルサイズだからです。',
           '**7Bモデル：75.6 tok/s**（llama.cppディスカッション#15013、Llama 2 7B Q4_0のトークン生成、コミュニティ報告）。Q4の14Bモデル（約9〜10GB）はコンテキストの余裕が限られますが12GBに収まります。その他の速度はあくまで目安であり、PromptQuorumが測定したものではありません。',
-          '**32Bと70Bのモデルは完全には収まりません。**Q4の32Bモデルは通常約20GB、70Bモデルは約40GBのVRAMが必要です。このビルドはGPUのみでは約14Bが上限です。32BクラスのモデルについてはデュアルGPUビルド（約$2,700）を参照してください（Q4の70Bは約43GBが必要で、32GBにも収まりません）。',
+          '**32Bと70Bのモデルは完全には収まりません。**Q4の32Bモデルは通常約20GB、70Bモデルは約43GBのVRAMが必要です。このビルドはGPUのみでは約14Bが上限です。32BクラスのモデルについてはデュアルGPUビルド（約$2,700）を参照してください（Q4の70Bは約43GBが必要で、32GBにも収まりません）。',
           '**システムRAMは16GBではなく32GB。** モデルの読み込み、OSのオーバーヘッド、CPUオフロードされるレイヤーにはGPU分を超える余裕が必要 — 16GBでは14B以上のモデルでスワップが発生することがあります。',
-          '**避けるべき：** 8GB GPU（RTX 5060、RTX 4060 Ti 8GB）— 7Bで頭打ちになり、GPUを丸ごと交換しない限り13B〜14Bへ拡張できません。',
+          '**避けるべき：** 8GB GPU（RTX 5060、RTX 4060 Ti 8GB）— GPU上で完全に動かせるのはおおむね7Bクラスまでで、13B〜14Bには通常CPUオフロードか別のカードが必要です。',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: 'この予算で実際に何が買えるのか',
         content: [
-          '**ローカルLLMの推論速度は、まずVRAM容量、次にメモリ帯域幅によって制約され、演算性能（CUDAコア）は遠く及ばない3番目です。**VRAMに収まらないモデルは、ロードに失敗するか、システムRAMにあふれてスループットが大きく低下します。$1,000の予算では、GPUを最優先し、他は控えめに構成するのが最も効果的な配分です。このビルドのCPUが$350のフラッグシップではなく$180のミドルレンジ製品なのはそのためです。',
+          '**ローカルモデルをGPU上で完全に動かせるかは、まずVRAM容量で決まります。そのうえで速度にはメモリ帯域幅と演算性能が影響します。**VRAMに収まらないモデルは、ロードに失敗するか、システムRAMにあふれてスループットが大きく低下します。このビルドは$1,000の予算でGPUを最優先し、他は控えめに構成しています。CPUが$350のフラッグシップではなく$180のミドルレンジ製品なのはそのためです。',
           'このビルドは単一モデル推論（Ollama、LM Studio、またはllama.cpp経由で一度に1つのモデルを読み込む）を前提としており、同時マルチユーザーサービングは想定していません。複数の同時リクエストを処理する場合、VRAM要件はさらに増大し、$1,000の予算では現実的ではありません。',
         ],
         snippetBlocks: [
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: '完全パーツリスト',
-        content: '価格は米国の推定価格であり、地域や販売店によって異なります。RAMとSSDの価格は変動しやすく、パーツ合計が$60を超えて上がると総額が$1,000を超えます。GPU価格（中古RTX 3060 12GB、約$330）は[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（価格データの日付：2026-11-26）によるもので、他のパーツは本ページ独自の見積もりです。合計：約$940（$330 + $180 + $90 + $70 + $130 + $75 + $65）。これは中古カードの場合にのみ成立します。2026-11-18時点で[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)に約$450で掲載されている新品のRTX 3060 12GBを選ぶと、合計は約$1,060になります。',
+        content: '価格は米国の推定価格であり、地域や販売店によって異なります。RAMとSSDの価格は変動しやすく、パーツ合計が$60を超えて上がると総額が$1,000を超えます。GPU価格（中古RTX 3060 12GB、約$330）は[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（価格データの日付：2026-11-26）によるもので、他のパーツは本ページ独自の見積もりです。合計：約$940（$330 + $180 + $90 + $70 + $130 + $75 + $65）。これは中古カードの場合にのみ成立します。2026-11-28時点で[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)に約$460で掲載されている新品のRTX 3060 12GBを選ぶと、合計は約$1,070になります。',
         columns: ['パーツ', '選択', '価格', '理由'],
         rows: [
           { 'パーツ': 'GPU', '選択': '中古RTX 3060 12GB', '価格': '~$330', '理由': '12GB VRAMでQ4の7B〜14Bが収まる。32Bは完全には収まらない' },
@@ -1414,13 +1414,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'この予算で中古RTX 3060 12GBを選ぶ理由',
         content: [
           '**この予算ではドルあたりのVRAMがGPU選びを左右し、8GBカードはローカルLLM用途では見かけだけの節約です。**RTX 3060には12GB版が販売されており、発売から年月が経っていてもここで採用している理由はそこにあります。8GBカードでは、実用的なコンテキスト長を保ったままQ4の7Bモデルを超えるものを快適に収めることができません。8GB版のRTX 3060も存在するため、出品情報に12GBと記載されているか確認してください。',
-          'VRAMの余裕はコンテキスト長にも影響します。7Bモデル自体はQ4で約4〜4.5GBですが、16Kトークンのコンテキストはさらに1〜2GBのKVキャッシュを使います。8GBカードではほとんど余りませんが、12GBカードなら7Bモデルと長いコンテキストの両方を収める余地があり、14Bモデルも短めのコンテキストなら収まります。',
+          'VRAMの余裕はコンテキスト長にも影響します。7Bモデル自体はQ4で約4〜4.5GBですが、16Kトークンのコンテキストはさらに1〜2GBのKVキャッシュを使います。8GBカードではほとんど余りませんが、12GBカードなら7Bモデルと長いコンテキストの両方を収める余地があり、14Bモデルも短めのコンテキストなら収まります。これらのコンテキストの数値は大まかな見積もりで、モデルと設定によって変わります。',
         ],
         items: [
-          '**RTX 3060 12GB（中古、約$330、このビルド）：**出典のある価格で最安の12GB VRAM。中古価格は[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（範囲$310〜350、中央値$330、価格データの日付：2026-11-26）によります。新品や整備済み品はより高く、[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)では新品$450、Amazon整備済み品$420です（2026-11-18）。',
-          '**RTX 4060 Ti 16GB（InsiderLLMトラッカーで約$430〜450、状態の記載なし）：**16GB VRAMですが、[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb)ははるかに高い価格を掲載しており（新品$843、2026-11-17）、価格は不確実です。トラッカーの価格でも総額は約$1,040〜1,060になります。最新の出品情報を確認してください。',
-          '**RTX 5060 Ti 16GB（新品約$800：[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)に表示された新品の最安掲載、2026-11-28確認。[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)ではAmazon米国で$829.99、2026-11-27）：**16GBへのアップグレード候補です。中古RTX 3060の代わりに使うと、このビルドの総額は約$470〜500増え、約$1,410〜1,440になります。',
-          '**中古RTX 3090 24GB（約$1,500〜1,725、[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、2026-11-23）：**VRAMは多いものの、カード単体で$1,000の予算全体より高価なため、このビルドの範囲外です。',
+          '**RTX 3060 12GB（中古、約$330、このビルド）：**出典のある価格で最安の12GB VRAM。中古価格は[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（範囲$310〜350、中央値$330、eBay米国の成約209件、2026-11-17〜2026-11-26。価格データの日付：2026-11-26）によります。新品や整備済み品はより高く、[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)では新品$460、Amazon整備済み品$420です（2026-11-28）。',
+          '**RTX 4060 Ti 16GB（InsiderLLMトラッカーで約$430〜450、状態の記載なし）：**16GB VRAMですが、[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb)ははるかに高い価格を掲載しており（在庫ありの新品は$764から、2026-11-28確認）、価格は不確実です。トラッカーの価格でも総額は約$1,040〜1,060になります。最新の出品情報を確認してください。',
+          '**RTX 5060 Ti 16GB（新品約$800：[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)に表示された新品の最安掲載、2026-11-28確認。[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)ではAmazon米国で$849.99、2026-11-27）：**16GBへのアップグレード候補です。中古RTX 3060の代わりに使うと、このビルドの総額は約$470〜520増え、約$1,410〜1,460になります。',
+          '**中古RTX 3090 24GB（2026-11-13〜2026-11-23の米国成約価格で約$1,500〜1,725、[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、2026-11-23）：**VRAMは多いものの、カード単体で$1,000の予算全体より高価なため、このビルドの範囲外です。',
         ],
       },
       performance: {
@@ -1431,9 +1431,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'モデルサイズ': '7B〜8B', 'VRAM使用量（Q4）': '約4.5〜5GB', 'トークン/秒': '75.6（Llama 2 7B Q4_0、#15013）', '快適に収まるか？': 'はい — コンテキストに十分な余裕' },
           { 'モデルサイズ': '13B〜14B', 'VRAM使用量（Q4）': '約9〜10GB', 'トークン/秒': '7Bより低い。出典の数値なし', '快適に収まるか？': 'はい — コンテキストの余裕は限定的' },
-          { 'モデルサイズ': '20B（MoE、アクティブ約4B）', 'VRAM使用量（Q4）': '約12GB', 'トークン/秒': '出典の数値なし', '快適に収まるか？': 'ぎりぎり — コンテキストの余地はわずか' },
+          { 'モデルサイズ': '20B（MoE、アクティブ約4B）', 'VRAM使用量（Q4）': '約14GB（gpt-oss:20b）', 'トークン/秒': '出典の数値なし', '快適に収まるか？': 'いいえ — ダウンロードサイズが12GBを超えるため、CPUオフロードが必要になる見込み' },
           { 'モデルサイズ': '32B', 'VRAM使用量（Q4）': '約19〜20GB', 'トークン/秒': '出典の数値なし', '快適に収まるか？': 'いいえ — CPUオフロードが必要で大幅に低速' },
-          { 'モデルサイズ': '70B', 'VRAM使用量（Q4）': '約40GB', 'トークン/秒': 'N/A', '快適に収まるか？': '収まらない — デュアルGPUビルド（32GB）でも不可' },
+          { 'モデルサイズ': '70B', 'VRAM使用量（Q4）': '約43GB', 'トークン/秒': 'N/A', '快適に収まるか？': '収まらない — デュアルGPUビルド（32GB）でも不可' },
         ],
       },
       assembly: {
@@ -1450,8 +1450,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'アップグレードパス',
         content: [
-          'このビルドは、後で交換する価値があるパーツがGPUだけになるよう設計されています。B650マザーボードは2本目のPCIeスロット（通常x4動作）をサポートし、将来的に2枚目のGPUを追加できますが、テンソル分割によるマルチGPU推論にはPCIe帯域幅のボトルネックを避けるため少なくともx8/x8が必要です — その点を考慮したボードについてはデュアルGPUビルド（約$2,700）を参照してください。',
-          '最も手軽なアップグレードは、予算が許すときにVRAMの大きいGPUへ交換することです。RTX 5060 Ti 16GB（gpuprix（2026-11-28）とBasketPrice（2026-11-27）で新品約$800〜830）はVRAMが4GB増えますが、ビルド総額が$1,000を超えます。中古RTX 3090 24GB（約$1,500〜1,725）はこのビルドの予算外です。Ryzen 5 7600と32GB RAMはこうした交換の制約にはなりませんが、新しいカードの電力要件を650W電源と照らし、メーカー仕様で確認してください。',
+          'このビルドは、後で交換する価値があるパーツがGPUだけになるよう設計されています。多くのB650ボードには2本目のPCIeスロットがありますが、電気的にはx4配線であることが多いため、購入するボードのマニュアルを確認してください。2枚目のGPUを追加するなら、x8/x8分割を明記したボードが望ましいです。x4スロットのレーン数はx8の半分で、分割したモデルがどれだけ遅くなるかはランタイム、分割方式、設定によって異なり、このページでは計測していません。カードを追加する前に電源も確認してください。GPU 2枚を前提にした構成はデュアルGPUビルド（約$2,700）を参照してください。',
+          '最も手軽なアップグレードは、予算が許すときにVRAMの大きいGPUへ交換することです。RTX 5060 Ti 16GB（gpuprix（2026-11-28）とBasketPrice（2026-11-27）で新品約$800〜850）はVRAMが4GB増えますが、ビルド総額が$1,000を超えます。中古RTX 3090 24GB（約$1,500〜1,725）はこのビルドの予算外です。Ryzen 5 7600と32GB RAMはこうした交換の制約にはなりませんが、新しいカードの電力要件を650W電源と照らし、メーカー仕様で確認してください。',
         ],
       },
       whereToBuy: {
@@ -1460,11 +1460,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**価格と在庫は地域によって異なり、EUの表示価格には付加価値税（VAT）が含まれます。** 以下のリンクは地域別の製品検索リンクで、アフィリエイトタグは付いておらず、手数料は発生しません。',
         items: [
-          '**日本：** Amazon.co.jpとドスパラ・パソコン工房・TSUKUMOがグラフィックカードの主な購入先です。',
-          '**価格比較：** Kakaku.com（価格.com）は日本で新品価格を比較する標準であり、現在最も安い購入先をそこで確認してください。',
-          '**自作系ショップ：** アーク（Ark）などの自作PC専門店は、ハイエンドGPUの在庫がオンライン小売より早く入ることがあります。',
-          '**中古：** メルカリやヤフオク！は日本のGPUの主な中古市場です — ただし2026年は中古が新品より確実に安いとは限らないため、新品の価格と必ず比べてください。',
-          '**在庫状況：** ハイエンドカード（RTX 4090、RTX 5090）は2026年には時折品薄で、価格は変動し、為替の影響も受けます。RTX 5090は定価では売り切れていることも多いため、複数の小売店を確認してください。',
+          '**日本：** Amazon.co.jpやドスパラ・パソコン工房・TSUKUMOでグラフィックカードを比較できます。',
+          '**価格比較：** Kakaku.com（価格.com）で日本の新品価格を比較し、最新の掲載内容を確認してください。',
+          '**自作系ショップ：** アーク（Ark）などの自作PC専門店も確認先になります。',
+          '**中古：** メルカリやヤフオク！でも日本の中古GPUを確認できます。中古が新品より安いとは限らないため、新品の価格と必ず比べてください。',
+          '**在庫状況：** ハイエンドカード（RTX 4090、RTX 5090）は品薄になることがあり、価格は変動します。RTX 5090は定価で買えない場合があるため、複数の小売店を確認してください。',
         ],
         callouts: [
           {
@@ -1505,8 +1505,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '費用を抑えるために8GB GPUを買うこと（このビルドのカードではない8GB版RTX 3060を含む） — これによって生じるVRAMの上限はソフトウェアでは解決できず、後でGPUを交換することになり、結局は総額が高くなります。',
           '8GBまたは12GBのGPUを使いながらCPUに過剰投資すること（例：Ryzen 5の代わりにRyzen 7）— モデルがVRAMに収まっている限り、CPUの選択はトークン/秒にほとんど影響しません。',
-          'BIOSでEXPO/XMPのRAMプロファイル設定をスキップし、DDR5-6000キットを4800のまま動作させること — 無料で得られる性能を放置しているだけです。',
-          '$20〜30を節約するために電源を過小に選ぶこと — 持続負荷時のGPU消費電力は定格TDPを大きく上回る瞬間的なスパイクを見せることがあり、構成によっては550Wのユニットでは瞬間的なスパイクへの余裕が少ないため、メーカー仕様をご確認ください。',
+          'BIOSでEXPO/XMPプロファイルを設定しないと、DDR5-6000キットは低い既定の速度のまま動作します。影響が出るのは主に、モデルのレイヤーがCPU側で動く場合です。これらのプロファイルはメモリのオーバークロックにあたるため、有効にする前にマザーボードとCPUの資料を確認してください。',
+          '$20〜30を節約するために電源を過小に選ぶこと — 持続負荷時のGPU消費電力は定格TDPを大きく上回る瞬間的なスパイクを見せることがあり、構成によっては550Wのユニットでは瞬間的なスパイクへの余裕が少ないため、メーカー仕様をご確認ください。これは一般的な情報であり、電気に関する助言ではありません。不安な場合は、資格を持つ技術者に構成と電源回路を確認してもらってください。',
         ],
       },
       faqSection: {
@@ -1514,15 +1514,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'ローカルLLMを$1,000のPCで快適に実行できますか？', a: '7B〜14Bモデルなら可能で、より大きなモデルにはもっと多くのVRAMが必要です。約$330の中古RTX 3060 12GBで、このビルドの総額は約$940となり、12GB VRAMにはQ4の14Bモデルが収まります。32Bクラスのモデルは12GBには完全には収まりません。' },
-          { q: 'なぜこのビルドはCPUよりGPUに多くの予算を割くのですか？', a: 'ローカルLLM推論の速度は、ほぼ全面的にGPUのVRAM容量とメモリ帯域幅に依存します。モデルがVRAMに読み込まれた後は、CPUを高速化してもトークン/秒は増えません。そのため、このワークロードではミドルレンジCPU＋強力なGPUの組み合わせが、強力なCPU＋弱いGPUに勝ります。' },
-          { q: '2026年のローカルLLMに12GB VRAMで足りますか？', a: '12GBには、Q4の7B〜8Bモデルを長いコンテキストとともに、Q4の14Bモデル（約9〜10GB）をより短いコンテキストで収められます。32Bクラスのモデル（Q4で通常約20GB）や70Bクラスのモデル（Q4で約40GB）は完全には収まらず、GPUに完全に載せる32Bクラスには24GB VRAMのGPUが現実的な出発点で、16GBカードは14Bモデルを余裕をもって収められますが、32BではCPUオフロードが必要です。' },
-          { q: '費用を抑えるために代わりに8GB GPUを使えますか？', a: '使えますが、コンテキストの余裕が最小の7Bモデルに限定されます。カードを交換しない限り引き上げられない明確な上限です。8GBカードで節約できる分は、13B〜14Bモデルが使えなくなる損失に見合いません。' },
+          { q: 'なぜこのビルドはCPUよりGPUに多くの予算を割くのですか？', a: 'モデルがGPU上で完全に動く場合、速度は主にGPUとそのメモリ帯域幅に左右され、どのモデルが収まるかはVRAM容量で決まります。この場合、CPUを高速化しても効果は通常小さいため、このビルドはこの用途ではCPUよりGPUに予算を使います。' },
+          { q: '2026年のローカルLLMに12GB VRAMで足りますか？', a: '12GBには、Q4の7B〜8Bモデルを長いコンテキストとともに、Q4の14Bモデル（約9〜10GB）をより短いコンテキストで収められます。32Bクラスのモデル（Q4で通常約20GB）や70Bクラスのモデル（Q4で約43GB）は完全には収まらず、GPUに完全に載せる32Bクラスには24GB VRAMのGPUが現実的な出発点で、16GBカードは14Bモデルを余裕をもって収められますが、32BではCPUオフロードが必要です。' },
+          { q: '費用を抑えるために代わりに8GB GPUを使えますか？', a: '使えますが、GPU上で完全に動かせるのはおおむね7Bクラスまでで、コンテキストの余裕もわずかです。カードのVRAMは増設できません。より大きなモデルには、大幅に低速になるCPUオフロードか、別のカードが必要です。そのため、このビルドでは12GBカードを使います。' },
           { q: '12GB VRAMのGPUと組み合わせて、実際にどれくらいのRAMが必要ですか？', a: 'システムRAMは32GBです。OSのオーバーヘッド、ロード中のモデルファイルのキャッシュ、そしてVRAM容量をわずかに超えるモデルでCPUにオフロードされるレイヤーをまかなえます。' },
           { q: 'このビルドは32Bモデルをうまく実行できますか？', a: 'いいえ、GPUだけでは完全には実行できません。Q4の32Bモデルは通常約20GBが必要で、カードの12GBを超えるため、一部をシステムRAMにオフロードする必要があり、大幅に低速になります。この構成について出典のある速度の数値はありません。GPUに完全に載せる32Bクラスには24GB VRAMのGPUが現実的な出発点で、16GBカードではCPUオフロードが必要です。' },
           { q: 'このビルドではどのソフトウェアを動かすべきですか？', a: 'OllamaまたはLM Studioが最も簡単な出発点です。どちらもRTX 3060 12GBのようなNVIDIA GPUを自動検出し、Q4量子化を処理します。llama.cppを直接使うと、量子化形式やコンテキスト設定をより細かく制御できます。' },
-          { q: 'このビルドは後で70Bモデルを実行できるようアップグレードできますか？', a: '単一GPUでは不可能です — Q4での70Bは約40GBのVRAMを必要とします。最も明確なアップグレードパスは、中古RTX 3090 24GBへの交換（それでもフル70Bにはわずかに不足）、または2枚目のGPUを追加してVRAMをプールすることで、後者はデュアルGPUビルド（約$2,700）で直接扱っています。32GBで32Bクラスのモデルは動かせますが、Q4の70B（約43GB）は依然として収まりません。' },
+          { q: 'このビルドは後で70Bモデルを実行できるようアップグレードできますか？', a: '単一GPUでは不可能です — Q4での70Bは約43GBのVRAMを必要とします。最も明確なアップグレードパスは、中古RTX 3090 24GBへの交換（それでもフル70Bにはわずかに不足）、または2枚目のGPUを追加してVRAMをプールすることで、後者はデュアルGPUビルド（約$2,700）で直接扱っています。32GBで32Bクラスのモデルは動かせますが、Q4の70B（約43GB）は依然として収まりません。どちらの場合も先に電源を確認してください。このビルドの650W電源はRTX 3060 12GB 1枚を前提に選んでいます。' },
           { q: 'マザーボードのチップセット（B650かB850か）はローカルLLM推論に影響しますか？', a: '単一GPUビルドでは影響しません。B650はGPUが必要とするPCIe 4.0 x16スロットを提供します。B650と新しいボードとのチップセットの違いは、単一GPUのLLM推論よりもマルチGPUのPCIeレーン割り当てに大きく影響します。' },
-          { q: 'この予算では、中古GPUのほうが新品より価値が高いですか？', a: 'この予算ではそうです。中古RTX 3060 12GB（InsiderLLMトラッカーで約$330）なら総額は約$940に収まりますが、新品のRTX 3060 12GB（gpuprixで約$450）では約$1,060になります。中古カードはリスクが高いため、販売者の返品ポリシーを確認してください。中古RTX 3090 24GBは確かなVRAM増強ですが、このビルドのGPU予算全体より高価で、総額を$2,000超にするため、より上の予算帯に属します。' },
+          { q: 'この予算では、中古GPUのほうが新品より価値が高いですか？', a: 'この予算ではそうです。中古RTX 3060 12GB（InsiderLLMトラッカーで約$330）なら総額は約$940に収まりますが、新品のRTX 3060 12GB（gpuprixで約$460）では約$1,070になります。中古カードはリスクが高いため、販売者の返品ポリシーを確認してください。中古RTX 3090 24GBは確かなVRAM増強ですが、このビルドのGPU予算全体より高価で、総額を$2,000超にするため、より上の予算帯に属します。' },
         ],
       },
       relatedReading: {
@@ -1546,7 +1546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollamaモデルライブラリと VRAM要件](https://ollama.com/library)',
           '[llama.cppディスカッション#15013：NVIDIA CUDAでの性能](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix：RTX 3060 12GB価格ページ](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix：RTX 5060 Ti 16GBの米国掲載価格（2026-11-28確認）](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice：RTX 5060 Tiの米国価格（2026-11-27）](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[Ollama qwen3:32bモデルページ（20GB、Q4_K_M）](https://ollama.com/library/qwen3:32b)',
+          '[Ollama qwen3:32bモデルページ（20GB、Q4_K_M）](https://ollama.com/library/qwen3:32b)', '[Ollama gpt-oss:20bモデルページ（14GB）](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -1577,10 +1577,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': 'ローカルLLMを$1,000のPCで快適に実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '7B〜14Bモデルなら可能で、より大きなモデルにはもっと多くのVRAMが必要です。約$330の中古RTX 3060 12GBで、このビルドの総額は約$940となり、12GB VRAMにはQ4の14Bモデルが収まります。32Bクラスのモデルは12GBには完全には収まりません。' } },
-        { '@type': 'Question', 'name': '2026年のローカルLLMに12GB VRAMで足りますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GBには、Q4の7B〜8Bモデルを長いコンテキストとともに、Q4の14Bモデル（約9〜10GB）をより短いコンテキストで収められます。32Bクラスのモデル（Q4で通常約20GB）や70Bクラスのモデル（Q4で約40GB）は完全には収まらず、GPUに完全に載せる32Bクラスには24GB VRAMのGPUが現実的な出発点で、16GBカードは14Bモデルを余裕をもって収められますが、32BではCPUオフロードが必要です。' } },
-        { '@type': 'Question', 'name': '費用を抑えるために代わりに8GB GPUを使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '使えますが、コンテキストの余裕が最小の7Bモデルに限定されます。カードを交換しない限り引き上げられない明確な上限です。8GBカードで節約できる分は、13B〜14Bモデルが使えなくなる損失に見合いません。' } },
+        { '@type': 'Question', 'name': '2026年のローカルLLMに12GB VRAMで足りますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GBには、Q4の7B〜8Bモデルを長いコンテキストとともに、Q4の14Bモデル（約9〜10GB）をより短いコンテキストで収められます。32Bクラスのモデル（Q4で通常約20GB）や70Bクラスのモデル（Q4で約43GB）は完全には収まらず、GPUに完全に載せる32Bクラスには24GB VRAMのGPUが現実的な出発点で、16GBカードは14Bモデルを余裕をもって収められますが、32BではCPUオフロードが必要です。' } },
+        { '@type': 'Question', 'name': '費用を抑えるために代わりに8GB GPUを使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '使えますが、GPU上で完全に動かせるのはおおむね7Bクラスまでで、コンテキストの余裕もわずかです。カードのVRAMは増設できません。より大きなモデルには、大幅に低速になるCPUオフロードか、別のカードが必要です。そのため、このビルドでは12GBカードを使います。' } },
         { '@type': 'Question', 'name': '12GB VRAMのGPUと組み合わせて、実際にどれくらいのRAMが必要ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'システムRAMは32GBです。OSのオーバーヘッド、ロード中のモデルファイルのキャッシュ、そしてVRAM容量をわずかに超えるモデルでCPUにオフロードされるレイヤーをまかなえます。' } },
-        { '@type': 'Question', 'name': 'このビルドは後で70Bモデルを実行できるようアップグレードできますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '単一GPUでは不可能です — Q4での70Bは約40GBのVRAMを必要とします。最も明確なアップグレードパスは、中古RTX 3090 24GBへの交換、または2枚目のGPUを追加してVRAMをプールすることで、後者はデュアルGPUビルド（約$2,700）で直接扱っています。32GBで32Bクラスのモデルは動かせますが、Q4の70B（約43GB）は依然として収まりません。' } },
+        { '@type': 'Question', 'name': 'このビルドは後で70Bモデルを実行できるようアップグレードできますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '単一GPUでは不可能です — Q4での70Bは約43GBのVRAMを必要とします。最も明確なアップグレードパスは、中古RTX 3090 24GBへの交換（それでもフル70Bにはわずかに不足）、または2枚目のGPUを追加してVRAMをプールすることで、後者はデュアルGPUビルド（約$2,700）で直接扱っています。32GBで32Bクラスのモデルは動かせますが、Q4の70B（約43GB）は依然として収まりません。どちらの場合も先に電源を確認してください。このビルドの650W電源はRTX 3060 12GB 1枚を前提に選んでいます。' } },
       ],
     },
     itemListSchema: {
@@ -1611,7 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokaler LLM-PC-Build unter 1.000 $ mit gebrauchter GPU (2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-de.webp',
     seoTitle: 'Lokaler LLM-PC-Build unter 1.000 $ mit gebrauchter GPU (2026)',
-    intro: '**Ein PC mit gebrauchter RTX 3060 12GB, Ryzen 5 7600 und 32GB DDR5-RAM führt 7B–14B-Modelle bei Q4 aus und kostet zusammen ca. 940 $, also unter 1.000 $ (US-Preise; in Deutschland vermutlich höher).** VRAM ist der wichtigste limitierende Faktor für lokale LLM-Inferenz, daher fließt das GPU-Budget dieses Builds in eine Karte mit 12 GB VRAM zum Gebrauchtpreis von ca. 330 $ (laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Preisstand: 2026-11-26); die übrigen Teile bleiben bewusst bescheiden. Ein 14B-Modell bei Q4 (ca. 9–10 GB) passt in 12 GB; Modelle der 32B-Klasse passen nicht vollständig hinein und müssen teilweise auf die CPU ausgelagert werden, was deutlich langsamer ist. Dieser Leitfaden listet die genauen Komponenten, begründet jede Wahl gegenüber den Alternativen und nennt, welche Geschwindigkeitsangaben belegt sind. Die übrigen Teile sind eigene Schätzungen dieser Seite, und die Summe gilt nur für eine gebrauchte Karte: Eine neue RTX 3060 12GB, bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) mit ca. 450 $ gelistet (2026-11-18), würde sie auf ca. 1.060 $ erhöhen.',
+    intro: '**Ein PC mit gebrauchter RTX 3060 12GB, Ryzen 5 7600 und 32GB DDR5-RAM führt 7B–14B-Modelle bei Q4 aus und kostet zusammen ca. 940 $, also unter 1.000 $ (US-Preise; in Deutschland vermutlich höher).** VRAM ist der wichtigste limitierende Faktor für lokale LLM-Inferenz, daher fließt das GPU-Budget dieses Builds in eine Karte mit 12 GB VRAM zum Gebrauchtpreis von ca. 330 $ (laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Preisstand: 2026-11-26); die übrigen Teile bleiben bewusst bescheiden. Ein 14B-Modell bei Q4 (ca. 9–10 GB) passt in 12 GB; Modelle der 32B-Klasse passen nicht vollständig hinein und müssen teilweise auf die CPU ausgelagert werden, was deutlich langsamer ist. Dieser Leitfaden listet die genauen Komponenten, begründet jede Wahl gegenüber den Alternativen und nennt, welche Geschwindigkeitsangaben belegt sind. Die übrigen Teile sind eigene Schätzungen dieser Seite, und die Summe gilt nur für eine gebrauchte Karte: Eine neue RTX 3060 12GB, bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) mit ca. 460 $ gelistet (2026-11-28), würde sie auf ca. 1.070 $ erhöhen.',
     metaDescription: 'Lokaler LLM-PC-Build unter 1.000 $ (ca. 940 $, US-Preise): gebrauchte RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Läuft mit 7B–14B bei Q4. Teileliste 2026.',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -1639,19 +1639,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Gesamtkosten des Builds: ca. 940 $ (US-Preise; in Deutschland vermutlich höher).** Gebrauchte RTX 3060 12GB (ca. 330 $), Ryzen 5 7600 (180 $), 32GB DDR5-6000 (90 $), 1TB Gen4 NVMe (70 $), B650-mATX-Board (130 $), 650W-80+-Gold-Netzteil (75 $), mATX-Gehäuse (65 $). Der GPU-Preis stammt aus dem [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (gebraucht, Preisstand: 2026-11-26); die übrigen Teile sind eigene Schätzungen dieser Seite. Eine neue RTX 3060 12GB (ca. 450 $ bei gpuprix, 2026-11-18) würde die Summe auf ca. 1.060 $ erhöhen.',
+          '**Gesamtkosten des Builds: ca. 940 $ (US-Preise; in Deutschland vermutlich höher).** Gebrauchte RTX 3060 12GB (ca. 330 $), Ryzen 5 7600 (180 $), 32GB DDR5-6000 (90 $), 1TB Gen4 NVMe (70 $), B650-mATX-Board (130 $), 650W-80+-Gold-Netzteil (75 $), mATX-Gehäuse (65 $). Der GPU-Preis stammt aus dem [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (gebraucht, Preisstand: 2026-11-26); die übrigen Teile sind eigene Schätzungen dieser Seite. Eine neue RTX 3060 12GB (ca. 460 $ bei gpuprix, 2026-11-28) würde die Summe auf ca. 1.070 $ erhöhen.',
           '**12 GB VRAM sind bei diesem Budget das Ziel, nicht die reine GPU-Geschwindigkeit.** Eine Karte mit 12 GB VRAM führt Modelle aus, die eine gleich teure, schnellere Karte mit 8 GB nicht ausführen kann, weil die Modellgröße — nicht die Shader-Anzahl — überhaupt erst entscheidet, was passt.',
           '**7B-Modelle: 75,6 Tok/s** (llama.cpp-Diskussion #15013, Token-Generierung mit Llama 2 7B Q4_0, von der Community gemeldet). 14B-Modelle bei Q4 (~9–10 GB) passen mit begrenztem Kontext-Spielraum in 12 GB; alle übrigen Geschwindigkeiten sind nur orientierend und nicht von PromptQuorum gemessen.',
-          '**32B- und 70B-Modelle passen nicht vollständig.** Ein 32B-Modell bei Q4 benötigt in der Regel ca. 20 GB, ein 70B-Modell ca. 40 GB VRAM; dieser Build erreicht allein auf der GPU maximal etwa 14B. Siehe den Dual-GPU-Build (ca. 2.700 $) für Modelle der 32B-Klasse (70B bei Q4 benötigt ca. 43 GB und passt auch in 32 GB nicht).',
+          '**32B- und 70B-Modelle passen nicht vollständig.** Ein 32B-Modell bei Q4 benötigt in der Regel ca. 20 GB, ein 70B-Modell ca. 43 GB VRAM; dieser Build erreicht allein auf der GPU maximal etwa 14B. Siehe den Dual-GPU-Build (ca. 2.700 $) für Modelle der 32B-Klasse (70B bei Q4 benötigt ca. 43 GB und passt auch in 32 GB nicht).',
           '**32 GB System-RAM, nicht 16 GB.** Modell-Ladevorgänge, OS-Overhead und alle CPU-ausgelagerten Layer benötigen Spielraum über die GPU hinaus; 16 GB können bei Modellen ab 14B zu Swapping führen.',
-          '**Vermeiden:** GPUs mit 8 GB (RTX 5060, RTX 4060 Ti 8GB) — sie erreichen maximal 7B und können ohne kompletten GPU-Tausch nicht auf 13B–14B wachsen.',
+          '**Vermeiden:** GPUs mit 8 GB (RTX 5060, RTX 4060 Ti 8GB) — vollständig auf der GPU sind sie meist auf die 7B-Klasse beschränkt; 13B–14B brauchen in der Regel CPU-Auslagerung oder eine andere Karte.',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: 'Wofür dieses Budget tatsächlich ausgegeben wird',
         content: [
-          '**Die Geschwindigkeit lokaler LLM-Inferenz wird zuerst durch die VRAM-Kapazität begrenzt, an zweiter Stelle durch die Speicherbandbreite und erst mit großem Abstand durch die Rechenleistung (CUDA-Kerne).** Ein Modell, das nicht in den VRAM passt, lädt entweder gar nicht oder weicht in den System-RAM aus, was den Durchsatz deutlich senkt. Bei 1.000 $ ist die wirksamste Verteilung, die GPU an die erste Stelle zu setzen und alles andere bescheiden zu halten — deshalb ist die CPU hier eine 180-$-Mittelklasse-Komponente und kein Flaggschiff für 350 $.',
+          '**Die VRAM-Kapazität entscheidet zuerst, ob ein lokales Modell vollständig auf der GPU laufen kann; Speicherbandbreite und Rechenleistung bestimmen dann, wie schnell es läuft.** Ein Modell, das nicht in den VRAM passt, lädt entweder gar nicht oder weicht in den System-RAM aus, was den Durchsatz deutlich senkt. Bei 1.000 $ setzt dieser Build die GPU an die erste Stelle und hält alles andere bescheiden — deshalb ist die CPU hier eine 180-$-Mittelklasse-Komponente und kein Flaggschiff für 350 $.',
           'Dieser Build geht von Einzelmodell-Inferenz aus (ein geladenes Modell zur Zeit über Ollama, LM Studio oder llama.cpp), nicht von gleichzeitigem Multi-User-Serving. Für das Bedienen mehrerer gleichzeitiger Anfragen steigen die VRAM-Anforderungen weiter, und ein Budget von 1.000 $ ist dafür nicht realistisch.',
         ],
         snippetBlocks: [
@@ -1662,10 +1662,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Vollständige Teileliste',
-        content: 'Die Preise sind geschätzte US-Preise (in Deutschland vermutlich höher) und variieren je nach Region und Händler. Die Preise für RAM und SSD schwanken; steigen die Teile um mehr als 60 $, liegt die Summe über 1.000 $. Der GPU-Preis (gebrauchte RTX 3060 12GB, ca. 330 $) stammt aus dem [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Preisstand: 2026-11-26); die übrigen Teile sind eigene Schätzungen dieser Seite. Summe: ca. 940 $ (330 $ + 180 $ + 90 $ + 70 $ + 130 $ + 75 $ + 65 $). Das gilt nur für eine gebrauchte Karte: Eine neue RTX 3060 12GB, bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) mit ca. 450 $ gelistet (2026-11-18), würde die Summe auf ca. 1.060 $ erhöhen.',
+        content: 'Die Preise sind geschätzte US-Preise (in Deutschland vermutlich höher) und variieren je nach Region und Händler. Die Preise für RAM und SSD schwanken; steigen die Teile um mehr als 60 $, liegt die Summe über 1.000 $. Der GPU-Preis (gebrauchte RTX 3060 12GB, ca. 330 $) stammt aus dem [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Preisstand: 2026-11-26); die übrigen Teile sind eigene Schätzungen dieser Seite. Summe: ca. 940 $ (330 $ + 180 $ + 90 $ + 70 $ + 130 $ + 75 $ + 65 $). Das gilt nur für eine gebrauchte Karte: Eine neue RTX 3060 12GB, bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) mit ca. 460 $ gelistet (2026-11-28), würde die Summe auf ca. 1.070 $ erhöhen.',
         columns: ['Komponente', 'Wahl', 'Preis', 'Warum'],
         rows: [
-          { 'Komponente': 'GPU', 'Wahl': 'Gebrauchte RTX 3060 12GB', 'Preis': 'ca. 330 $', 'Warum': '12 GB VRAM passen 7B–14B bei Q4; 32B passt nicht vollständig' },
+          { 'Komponente': 'GPU', 'Wahl': 'Gebrauchte RTX 3060 12GB', 'Preis': 'ca. 330 $', 'Warum': '7B–14B bei Q4 passen in 12 GB VRAM; 32B passt nicht vollständig' },
           { 'Komponente': 'CPU', 'Wahl': 'AMD Ryzen 5 7600', 'Preis': '180 $', 'Warum': '6 Kerne reichen für Einzelmodell-Inferenz; die CPU ist nicht der Flaschenhals' },
           { 'Komponente': 'RAM', 'Wahl': '32GB DDR5-6000 (2×16GB)', 'Preis': '90 $', 'Warum': 'Spielraum für OS, Modell-Laden und alle CPU-ausgelagerten Layer' },
           { 'Komponente': 'Speicher', 'Wahl': '1TB NVMe Gen4 SSD', 'Preis': '70 $', 'Warum': 'Schnelle Ladezeiten; eine 5-Modell-Bibliothek belegt ca. 40–60 GB bei Q4' },
@@ -1679,14 +1679,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-this-gpu',
         title: 'Warum eine gebrauchte RTX 3060 12GB bei diesem Budget',
         content: [
-          '**Bei diesem Budget entscheidet VRAM pro Dollar über die GPU-Wahl, und 8-GB-Karten sind bei lokaler LLM-Arbeit eine trügerische Ersparnis.** Die RTX 3060 wurde in einer 12-GB-Version verkauft, weshalb sie hier trotz ihres Alters eingesetzt wird: Eine 8-GB-Karte passt kaum über ein 7B-Modell bei Q4 mit nutzbarer Kontextlänge hinaus. Achten Sie darauf, dass im Angebot 12 GB steht, denn es gibt auch eine RTX-3060-Variante mit 8 GB.',
-          'VRAM-Spielraum ist auch für die Kontextlänge relevant: Ein 7B-Modell selbst benötigt bei Q4 etwa 4–4,5 GB, aber ein 16K-Token-Kontext fügt weitere 1–2 GB KV-Cache hinzu. Auf einer 8-GB-Karte bleibt dafür fast nichts übrig; auf der 12-GB-Karte ist Platz für ein 7B-Modell mit langem Kontext, und ein 14B-Modell passt mit kürzerem Kontext.',
+          '**Bei diesem Budget entscheidet VRAM pro Dollar über die GPU-Wahl, und 8-GB-Karten sind bei lokaler LLM-Arbeit eine trügerische Ersparnis.** Die RTX 3060 wurde in einer 12-GB-Version verkauft, weshalb sie hier trotz ihres Alters eingesetzt wird: Eine 8-GB-Karte reicht bei nutzbarer Kontextlänge kaum über ein 7B-Modell bei Q4 hinaus. Achten Sie darauf, dass im Angebot 12 GB steht, denn es gibt auch eine RTX-3060-Variante mit 8 GB.',
+          'VRAM-Spielraum ist auch für die Kontextlänge relevant: Ein 7B-Modell selbst benötigt bei Q4 etwa 4–4,5 GB, aber ein 16K-Token-Kontext fügt weitere 1–2 GB KV-Cache hinzu. Auf einer 8-GB-Karte bleibt dafür fast nichts übrig; auf der 12-GB-Karte ist Platz für ein 7B-Modell mit langem Kontext, und ein 14B-Modell passt mit kürzerem Kontext. Diese Kontextwerte sind grobe Schätzungen und hängen von Modell und Einstellungen ab.',
         ],
         items: [
-          '**RTX 3060 12GB (gebraucht, ca. 330 $, dieser Build):** 12 GB VRAM zum niedrigsten belegten Preis; Gebrauchtpreis laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Spanne 310–350 $, Median 330 $, Preisstand: 2026-11-26). Neue oder generalüberholte Karten sind teurer: 450 $ neu und 420 $ bei Amazon Renewed laut [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18).',
-          '**RTX 4060 Ti 16GB (ca. 430–450 $ laut InsiderLLM-Tracker, Zustand nicht angegeben):** 16 GB VRAM, doch [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) listet sie deutlich höher (843 $ neu, 2026-11-17), der Preis ist also unsicher; selbst zum Tracker-Preis läge die Summe bei ca. 1.040–1.060 $. Aktuelle Angebote prüfen.',
-          '**RTX 5060 Ti 16GB (neu ca. 800 $: günstigstes angezeigtes Neuangebot bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), geprüft am 2026-11-28; 829,99 $ bei Amazon US laut [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27):** Die Upgrade-Option mit 16 GB; anstelle der gebrauchten RTX 3060 würde sie die Summe dieses Builds um etwa 470–500 $ auf rund 1.410–1.440 $ erhöhen.',
-          '**Gebrauchte RTX 3090 24GB (ca. 1.500–1.725 $, [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** Mehr VRAM, doch die Karte allein kostet mehr als das gesamte 1.000-$-Budget und liegt damit außerhalb dieses Builds.',
+          '**RTX 3060 12GB (gebraucht, ca. 330 $, dieser Build):** 12 GB VRAM zum niedrigsten belegten Preis; Gebrauchtpreis laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Spanne 310–350 $, Median 330 $, 209 abgeschlossene eBay-US-Verkäufe, 2026-11-17 bis 2026-11-26; Preisstand: 2026-11-26). Neue oder generalüberholte Karten sind teurer: 460 $ neu und 420 $ bei Amazon Renewed laut [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28).',
+          '**RTX 4060 Ti 16GB (ca. 430–450 $ laut InsiderLLM-Tracker, Zustand nicht angegeben):** 16 GB VRAM, doch [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) listet sie deutlich höher (neue, als verfügbar gezeigte Karten ab 764 $, geprüft am 2026-11-28), der Preis ist also unsicher; selbst zum Tracker-Preis läge die Summe bei ca. 1.040–1.060 $. Aktuelle Angebote prüfen.',
+          '**RTX 5060 Ti 16GB (neu ca. 800 $: günstigstes angezeigtes Neuangebot bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), geprüft am 2026-11-28; 849,99 $ bei Amazon US laut [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27):** Die Upgrade-Option mit 16 GB; anstelle der gebrauchten RTX 3060 würde sie die Summe dieses Builds um etwa 470–520 $ auf rund 1.410–1.460 $ erhöhen.',
+          '**Gebrauchte RTX 3090 24GB (ca. 1.500–1.725 $ in abgeschlossenen US-Verkäufen vom 2026-11-13 bis 2026-11-23; [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** Mehr VRAM, doch die Karte allein kostet mehr als das gesamte 1.000-$-Budget und liegt damit außerhalb dieses Builds.',
         ],
       },
       performance: {
@@ -1697,9 +1697,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Modellgröße': '7B-8B', 'VRAM-Nutzung (Q4)': '~4,5-5GB', 'Tokens/Sek.': '75,6 (Llama 2 7B Q4_0, #15013)', 'Passt komfortabel?': 'Ja — voller Kontext-Spielraum' },
           { 'Modellgröße': '13B-14B', 'VRAM-Nutzung (Q4)': '~9-10GB', 'Tokens/Sek.': 'Unter 7B; kein belegter Wert', 'Passt komfortabel?': 'Ja — begrenzter Kontext-Spielraum' },
-          { 'Modellgröße': '20B (MoE, ~4B aktiv)', 'VRAM-Nutzung (Q4)': '~12GB', 'Tokens/Sek.': 'Kein belegter Wert', 'Passt komfortabel?': 'Knapp — wenig Platz für Kontext' },
+          { 'Modellgröße': '20B (MoE, ~4B aktiv)', 'VRAM-Nutzung (Q4)': '~14GB (gpt-oss:20b)', 'Tokens/Sek.': 'Kein belegter Wert', 'Passt komfortabel?': 'Nein — der Download ist größer als 12 GB; mit CPU-Auslagerung rechnen' },
           { 'Modellgröße': '32B', 'VRAM-Nutzung (Q4)': '~19-20GB', 'Tokens/Sek.': 'Kein belegter Wert', 'Passt komfortabel?': 'Nein — braucht CPU-Auslagerung, deutlich langsamer' },
-          { 'Modellgröße': '70B', 'VRAM-Nutzung (Q4)': '~40GB', 'Tokens/Sek.': 'N/A', 'Passt komfortabel?': 'Passt nicht — auch nicht in den Dual-GPU-Build (32GB)' },
+          { 'Modellgröße': '70B', 'VRAM-Nutzung (Q4)': '~43GB', 'Tokens/Sek.': 'N/A', 'Passt komfortabel?': 'Passt nicht — auch nicht in den Dual-GPU-Build (32GB)' },
         ],
       },
       assembly: {
@@ -1716,8 +1716,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Aufrüstpfad',
         content: [
-          'Dieser Build ist so konzipiert, dass später nur die GPU austauschwürdig ist. Das B650-Mainboard unterstützt einen zweiten PCIe-Slot (typischerweise x4 elektrisch) für eine spätere zweite GPU, wobei Tensor-Split-Multi-GPU-Inferenz mindestens x8/x8 benötigt, um einen PCIe-Bandbreiten-Flaschenhals zu vermeiden — siehe den Dual-GPU-Build (ca. 2.700 $) für ein bewusst dafür ausgewähltes Mainboard.',
-          'Das naheliegendste Upgrade ist der Tausch der GPU gegen eine mit mehr VRAM, sobald das Budget es zulässt. Eine RTX 5060 Ti 16GB (neu ca. 800–830 $ laut gpuprix, 2026-11-28, und BasketPrice, 2026-11-27) bringt 4 GB mehr VRAM, würde den Build aber über 1.000 $ heben, und eine gebrauchte RTX 3090 24GB (ca. 1.500–1.725 $) liegt außerhalb des Budgets dieses Builds. Ryzen 5 7600 und 32 GB RAM sind für einen solchen Tausch nicht der limitierende Faktor; den Leistungsbedarf der neuen Karte mit dem 650W-Netzteil anhand der Herstellerangabe abgleichen.',
+          'Dieser Build ist so konzipiert, dass später nur die GPU austauschwürdig ist. Viele B650-Boards haben einen zweiten PCIe-Slot, der elektrisch oft nur mit x4 angebunden ist; prüfen Sie daher das Handbuch des Boards, das Sie kaufen. Für eine zweite GPU ist ein Board mit dokumentierter x8/x8-Aufteilung vorzuziehen: Ein x4-Slot hat halb so viele Lanes wie x8, und wie stark das ein aufgeteiltes Modell bremst, hängt von Laufzeitumgebung, Split-Modus und Einstellungen ab; diese Seite hat es nicht gemessen. Prüfen Sie vor dem Einbau einer weiteren Karte das Netzteil. Eine auf zwei GPUs ausgelegte Konfiguration zeigt der Dual-GPU-Build (ca. 2.700 $).',
+          'Das naheliegendste Upgrade ist der Tausch der GPU gegen eine mit mehr VRAM, sobald das Budget es zulässt. Eine RTX 5060 Ti 16GB (neu ca. 800–850 $ laut gpuprix, 2026-11-28, und BasketPrice, 2026-11-27) bringt 4 GB mehr VRAM, würde den Build aber über 1.000 $ heben, und eine gebrauchte RTX 3090 24GB (ca. 1.500–1.725 $) liegt außerhalb des Budgets dieses Builds. Ryzen 5 7600 und 32 GB RAM sind für einen solchen Tausch nicht der limitierende Faktor; den Leistungsbedarf der neuen Karte mit dem 650W-Netzteil anhand der Herstellerangabe abgleichen.',
         ],
       },
       whereToBuy: {
@@ -1726,11 +1726,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Preise und Verfügbarkeit schwanken je Region; in Deutschland und der EU enthalten die Listenpreise die Mehrwertsteuer.** Die folgenden Links sind reine Produkt-Suchlinks pro Region; sie tragen keine Affiliate-Kennungen und erzeugen keine Provision.',
         items: [
-          '**Deutschland:** Mindfactory.de und alternate.de sind neben Amazon.de etablierte Anlaufstellen für Grafikkarten; deutsche Preise liegen häufig über den US-Werten.',
-          '**Gebrauchtmarkt:** eBay Kleinanzeigen ist ein großer deutscher Gebrauchtmarkt für GPUs. Gebrauchte Karten sind nicht mehr verlässlich günstiger als neue — vergleichen Sie beide und bevorzugen Sie Verkäufer mit Rückgaberecht.',
+          '**Deutschland:** Mindfactory.de und alternate.de sind neben Amazon.de Anlaufstellen für Grafikkarten; deutsche Preise können von den US-Werten abweichen.',
+          '**Gebrauchtmarkt:** Auf Kleinanzeigen finden sich gebrauchte GPUs. Gebrauchte Karten sind nicht automatisch günstiger als neue — vergleichen Sie beide und bevorzugen Sie Verkäufer mit Rückgaberecht.',
           '**Österreich & Schweiz:** Geizhals.at und digitec.ch decken den DACH-Raum ab; Preise und Verfügbarkeit weichen leicht von Deutschland ab.',
-          '**Preisvergleich:** Geizhals.de ist der Standard für den Preisvergleich neuer Karten in Deutschland — prüfen Sie dort die aktuell günstigste Bezugsquelle.',
-          '**Verfügbarkeit:** High-End-Karten (RTX 4090, RTX 5090) sind 2026 zeitweise knapp, die RTX 5090 ist zum Listenpreis oft ausverkauft; rechnen Sie mit schwankenden Preisen und prüfen Sie mehrere Händler.',
+          '**Preisvergleich:** Auf Geizhals.de lassen sich die Preise neuer Karten in Deutschland vergleichen — prüfen Sie dort die aktuellen Angebote.',
+          '**Verfügbarkeit:** High-End-Karten (RTX 4090, RTX 5090) können zeitweise knapp sein, und die RTX 5090 ist zum Listenpreis womöglich nicht erhältlich; rechnen Sie mit schwankenden Preisen und prüfen Sie mehrere Händler.',
         ],
         callouts: [
           {
@@ -1771,8 +1771,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Eine 8-GB-GPU kaufen, um Geld zu sparen (auch die 8-GB-Variante der RTX 3060, die nicht die Karte dieses Builds ist) — die dadurch entstehende VRAM-Grenze lässt sich nicht per Software beheben und erzwingt später einen GPU-Tausch, was insgesamt mehr kostet.',
           'Zu viel Geld in die CPU stecken (z. B. einen Ryzen 7 statt Ryzen 5) bei einer 8-GB- oder 12-GB-GPU — die CPU-Wahl hat fast keinen Einfluss auf Tokens/Sek., sobald ein Modell in den VRAM passt.',
-          'Das EXPO/XMP-RAM-Profil im BIOS nicht einrichten, wodurch DDR5-6000-Kits mit 4800 MT/s laufen — ein kostenloser Leistungsverlust, der sich ohne Zusatzkosten beheben lässt.',
-          'Das Netzteil zu knapp dimensionieren, um 20–30 $ zu sparen — der Stromverbrauch der GPU springt unter Dauerlast kurzzeitig deutlich über die TDP-Angabe, und ein 550W-Netzteil lässt bei manchen Builds wenig Spielraum für kurzzeitige Spitzen; Herstellerangabe prüfen.',
+          'Ohne EXPO/XMP-Profil im BIOS bleibt ein DDR5-6000-Kit bei einem niedrigeren Standardtakt. Das spielt vor allem eine Rolle, wenn Modell-Layer auf der CPU laufen. Diese Profile sind eine Speicher-Übertaktung; prüfen Sie vor dem Aktivieren die Dokumentation von Mainboard und CPU.',
+          'Das Netzteil zu knapp dimensionieren, um 20–30 $ zu sparen — der Stromverbrauch der GPU springt unter Dauerlast kurzzeitig deutlich über die TDP-Angabe, und ein 550W-Netzteil lässt bei manchen Builds wenig Spielraum für kurzzeitige Spitzen; Herstellerangabe prüfen. Dies sind allgemeine Informationen und keine elektrotechnische Beratung; lassen Sie im Zweifel eine qualifizierte Fachkraft den Aufbau und Ihren Stromkreis prüfen.',
         ],
       },
       faqSection: {
@@ -1780,15 +1780,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Kann ein PC für 1.000 $ lokale LLMs gut ausführen?', a: 'Für 7B–14B-Modelle ja; größere Modelle brauchen mehr VRAM. Mit einer gebrauchten RTX 3060 12GB für ca. 330 $ kostet dieser Build insgesamt ca. 940 $ (US-Preise; in Deutschland vermutlich höher), und 12 GB VRAM nehmen 14B-Modelle bei Q4 auf. Modelle der 32B-Klasse passen nicht vollständig in 12 GB.' },
-          { q: 'Warum gibt dieser Build relativ so viel für die GPU im Vergleich zur CPU aus?', a: 'Die Geschwindigkeit lokaler LLM-Inferenz hängt fast ausschließlich von der GPU-VRAM-Kapazität und der Speicherbandbreite ab. Eine schnellere CPU erhöht die Tokens/Sek. nicht, sobald ein Modell in den VRAM geladen ist — deshalb schlägt eine Mittelklasse-CPU mit starker GPU eine starke CPU mit schwacher GPU bei genau dieser Arbeitslast.' },
-          { q: 'Reichen 12 GB VRAM für lokale LLMs im Jahr 2026?', a: '12 GB nehmen 7B–8B-Modelle bei Q4 mit Platz für langen Kontext auf und 14B-Modelle bei Q4 (ca. 9–10 GB) mit kürzerem Kontext. Modelle der 32B-Klasse (in der Regel ca. 20 GB bei Q4) und der 70B-Klasse (ca. 40 GB bei Q4) passen nicht vollständig hinein; für die 32B-Klasse ist eine GPU mit 24 GB VRAM der realistische Einstieg, wenn das Modell vollständig auf der GPU laufen soll; eine 16-GB-Karte nimmt 14B-Modelle komfortabel auf, braucht für 32B aber weiterhin CPU-Auslagerung.' },
-          { q: 'Kann ich stattdessen eine 8-GB-GPU nehmen, um Geld zu sparen?', a: 'Sie können, aber das beschränkt Sie auf 7B-Modelle mit minimalem Kontext-Spielraum — eine harte Grenze, die ohne Kartentausch nicht anhebbar ist. Die Ersparnis einer 8-GB-Karte lohnt den Verlust des Zugangs zu 13B–14B-Modellen nicht.' },
+          { q: 'Warum gibt dieser Build relativ so viel für die GPU im Vergleich zur CPU aus?', a: 'Läuft ein Modell vollständig auf der GPU, hängt die Geschwindigkeit vor allem von der GPU und ihrer Speicherbandbreite ab, und die VRAM-Kapazität entscheidet, welche Modelle passen. Eine schnellere CPU bringt dann meist wenig, deshalb gibt dieser Build bei dieser Arbeitslast mehr für die GPU als für die CPU aus.' },
+          { q: 'Reichen 12 GB VRAM für lokale LLMs im Jahr 2026?', a: '12 GB nehmen 7B–8B-Modelle bei Q4 mit Platz für langen Kontext auf und 14B-Modelle bei Q4 (ca. 9–10 GB) mit kürzerem Kontext. Modelle der 32B-Klasse (in der Regel ca. 20 GB bei Q4) und der 70B-Klasse (ca. 43 GB bei Q4) passen nicht vollständig hinein; für die 32B-Klasse ist eine GPU mit 24 GB VRAM der realistische Einstieg, wenn das Modell vollständig auf der GPU laufen soll; eine 16-GB-Karte nimmt 14B-Modelle komfortabel auf, braucht für 32B aber weiterhin CPU-Auslagerung.' },
+          { q: 'Kann ich stattdessen eine 8-GB-GPU nehmen, um Geld zu sparen?', a: 'Ja, aber vollständig auf der GPU sind Sie damit meist auf die 7B-Klasse mit wenig Kontext-Spielraum beschränkt, und der VRAM der Karte lässt sich nicht erweitern. Größere Modelle brauchen CPU-Auslagerung, die deutlich langsamer ist, oder eine andere Karte. Deshalb setzt dieser Build auf eine 12-GB-Karte.' },
           { q: 'Wie viel RAM brauche ich tatsächlich neben einer GPU mit 12 GB VRAM?', a: '32 GB System-RAM. Das deckt OS-Overhead, das Zwischenspeichern der Modelldatei beim Laden und alle Layer ab, die bei Modellen, die den VRAM leicht überschreiten, auf die CPU ausgelagert werden.' },
           { q: 'Führt dieser Build 32B-Modelle gut aus?', a: 'Nein, nicht vollständig auf der GPU. Ein 32B-Modell bei Q4 benötigt in der Regel ca. 20 GB und damit mehr als die 12 GB der Karte, sodass ein Teil in den System-RAM ausgelagert werden muss, was deutlich langsamer ist; für diese Konfiguration gibt es keinen belegten Geschwindigkeitswert. Für die 32B-Klasse vollständig auf der GPU ist eine GPU mit 24 GB VRAM der realistische Einstieg; eine 16-GB-Karte braucht weiterhin CPU-Auslagerung.' },
           { q: 'Welche Software sollte ich auf diesem Build ausführen?', a: 'Ollama oder LM Studio sind die einfachsten Einstiegspunkte — beide erkennen eine NVIDIA-GPU wie die RTX 3060 12GB automatisch und übernehmen die Q4-Quantisierung. llama.cpp direkt bietet mehr Kontrolle über Quantisierungsformat und Kontexteinstellungen.' },
-          { q: 'Lässt sich dieser Build später auf 70B-Modelle aufrüsten?', a: 'Nicht mit einer einzelnen GPU — 70B bei Q4 benötigt ca. 40 GB VRAM. Der klarste Aufrüstpfad ist entweder der Wechsel zu einer gebrauchten RTX 3090 24GB (reicht immer noch nicht ganz für volles 70B) oder das Hinzufügen einer zweiten GPU für VRAM-Pooling, was der Dual-GPU-Build (ca. 2.700 $) direkt behandelt; seine 32 GB führen Modelle der 32B-Klasse aus, 70B bei Q4 (ca. 43 GB) passt jedoch weiterhin nicht.' },
+          { q: 'Lässt sich dieser Build später auf 70B-Modelle aufrüsten?', a: 'Nicht mit einer einzelnen GPU — 70B bei Q4 benötigt ca. 43 GB VRAM. Der klarste Aufrüstpfad ist entweder der Wechsel zu einer gebrauchten RTX 3090 24GB (reicht immer noch nicht ganz für volles 70B) oder das Hinzufügen einer zweiten GPU für VRAM-Pooling, was der Dual-GPU-Build (ca. 2.700 $) direkt behandelt; seine 32 GB führen Modelle der 32B-Klasse aus, 70B bei Q4 (ca. 43 GB) passt jedoch weiterhin nicht. Prüfen Sie vor beiden Optionen das Netzteil: Das 650-W-Netzteil dieses Builds wurde für eine RTX 3060 12GB ausgewählt.' },
           { q: 'Spielt der Mainboard-Chipsatz (B650 vs. B850) für lokale LLM-Inferenz eine Rolle?', a: 'Nicht bei einem Single-GPU-Build. B650 bietet einen PCIe-4.0-x16-Slot, den die GPU benötigt; die Unterschiede zwischen B650 und neueren Boards betreffen eher die PCIe-Lane-Aufteilung bei Multi-GPU als Single-GPU-LLM-Inferenz.' },
-          { q: 'Ist eine gebrauchte GPU bei diesem Budget das bessere Preis-Leistungs-Verhältnis als eine neue?', a: 'Bei diesem Budget ja: Die gebrauchte RTX 3060 12GB (ca. 330 $ laut InsiderLLM-Tracker) hält die Summe bei ca. 940 $, während eine neue RTX 3060 12GB (ca. 450 $ bei gpuprix) sie auf ca. 1.060 $ erhöhen würde. Eine gebrauchte Karte birgt mehr Risiko; prüfen Sie daher die Rückgaberegeln des Verkäufers. Eine gebrauchte RTX 3090 24GB ist ein echtes VRAM-Upgrade, kostet aber mehr als das gesamte GPU-Budget dieses Builds und hebt die Summe über 2.000 $ — sie gehört in eine höhere Budgetstufe.' },
+          { q: 'Ist eine gebrauchte GPU bei diesem Budget das bessere Preis-Leistungs-Verhältnis als eine neue?', a: 'Bei diesem Budget ja: Die gebrauchte RTX 3060 12GB (ca. 330 $ laut InsiderLLM-Tracker) hält die Summe bei ca. 940 $, während eine neue RTX 3060 12GB (ca. 460 $ bei gpuprix) sie auf ca. 1.070 $ erhöhen würde. Eine gebrauchte Karte birgt mehr Risiko; prüfen Sie daher die Rückgaberegeln des Verkäufers. Eine gebrauchte RTX 3090 24GB ist ein echtes VRAM-Upgrade, kostet aber mehr als das gesamte GPU-Budget dieses Builds und hebt die Summe über 2.000 $ — sie gehört in eine höhere Budgetstufe.' },
         ],
       },
       relatedReading: {
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama-Modellbibliothek und VRAM-Anforderungen](https://ollama.com/library)',
           '[llama.cpp-Diskussion #15013: Leistung auf NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix: Preisseite der RTX 3060 12GB](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix: US-Angebote zur RTX 5060 Ti 16GB (geprüft am 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice: US-Preise zur RTX 5060 Ti (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[Ollama-Modellseite qwen3:32b (20 GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)',
+          '[Ollama-Modellseite qwen3:32b (20 GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)', '[Ollama-Modellseite gpt-oss:20b (14 GB)](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -1843,10 +1843,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/de/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': 'Kann ein PC für 1.000 $ lokale LLMs gut ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für 7B–14B-Modelle ja; größere Modelle brauchen mehr VRAM. Mit einer gebrauchten RTX 3060 12GB für ca. 330 $ kostet dieser Build insgesamt ca. 940 $ (US-Preise; in Deutschland vermutlich höher), und 12 GB VRAM nehmen 14B-Modelle bei Q4 auf. Modelle der 32B-Klasse passen nicht vollständig in 12 GB.' } },
-        { '@type': 'Question', 'name': 'Reichen 12 GB VRAM für lokale LLMs im Jahr 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12 GB nehmen 7B–8B-Modelle bei Q4 mit Platz für langen Kontext auf und 14B-Modelle bei Q4 (ca. 9–10 GB) mit kürzerem Kontext. Modelle der 32B-Klasse (in der Regel ca. 20 GB bei Q4) und der 70B-Klasse (ca. 40 GB bei Q4) passen nicht vollständig hinein; für die 32B-Klasse ist eine GPU mit 24 GB VRAM der realistische Einstieg, wenn das Modell vollständig auf der GPU laufen soll; eine 16-GB-Karte nimmt 14B-Modelle komfortabel auf, braucht für 32B aber weiterhin CPU-Auslagerung.' } },
-        { '@type': 'Question', 'name': 'Kann ich stattdessen eine 8-GB-GPU nehmen, um Geld zu sparen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sie können, aber das beschränkt Sie auf 7B-Modelle mit minimalem Kontext-Spielraum — eine harte Grenze, die ohne Kartentausch nicht anhebbar ist. Die Ersparnis einer 8-GB-Karte lohnt den Verlust des Zugangs zu 13B–14B-Modellen nicht.' } },
+        { '@type': 'Question', 'name': 'Reichen 12 GB VRAM für lokale LLMs im Jahr 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12 GB nehmen 7B–8B-Modelle bei Q4 mit Platz für langen Kontext auf und 14B-Modelle bei Q4 (ca. 9–10 GB) mit kürzerem Kontext. Modelle der 32B-Klasse (in der Regel ca. 20 GB bei Q4) und der 70B-Klasse (ca. 43 GB bei Q4) passen nicht vollständig hinein; für die 32B-Klasse ist eine GPU mit 24 GB VRAM der realistische Einstieg, wenn das Modell vollständig auf der GPU laufen soll; eine 16-GB-Karte nimmt 14B-Modelle komfortabel auf, braucht für 32B aber weiterhin CPU-Auslagerung.' } },
+        { '@type': 'Question', 'name': 'Kann ich stattdessen eine 8-GB-GPU nehmen, um Geld zu sparen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, aber vollständig auf der GPU sind Sie damit meist auf die 7B-Klasse mit wenig Kontext-Spielraum beschränkt, und der VRAM der Karte lässt sich nicht erweitern. Größere Modelle brauchen CPU-Auslagerung, die deutlich langsamer ist, oder eine andere Karte. Deshalb setzt dieser Build auf eine 12-GB-Karte.' } },
         { '@type': 'Question', 'name': 'Wie viel RAM brauche ich tatsächlich neben einer GPU mit 12 GB VRAM?', 'acceptedAnswer': { '@type': 'Answer', 'text': '32 GB System-RAM. Das deckt OS-Overhead, das Zwischenspeichern der Modelldatei beim Laden und alle Layer ab, die bei Modellen, die den VRAM leicht überschreiten, auf die CPU ausgelagert werden.' } },
-        { '@type': 'Question', 'name': 'Lässt sich dieser Build später auf 70B-Modelle aufrüsten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht mit einer einzelnen GPU — 70B bei Q4 benötigt ca. 40 GB VRAM. Der klarste Aufrüstpfad ist entweder der Wechsel zu einer gebrauchten RTX 3090 24GB oder das Hinzufügen einer zweiten GPU für VRAM-Pooling, was der Dual-GPU-Build (ca. 2.700 $) direkt behandelt; seine 32 GB führen Modelle der 32B-Klasse aus, 70B bei Q4 (ca. 43 GB) passt jedoch weiterhin nicht.' } },
+        { '@type': 'Question', 'name': 'Lässt sich dieser Build später auf 70B-Modelle aufrüsten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht mit einer einzelnen GPU — 70B bei Q4 benötigt ca. 43 GB VRAM. Der klarste Aufrüstpfad ist entweder der Wechsel zu einer gebrauchten RTX 3090 24GB (reicht immer noch nicht ganz für volles 70B) oder das Hinzufügen einer zweiten GPU für VRAM-Pooling, was der Dual-GPU-Build (ca. 2.700 $) direkt behandelt; seine 32 GB führen Modelle der 32B-Klasse aus, 70B bei Q4 (ca. 43 GB) passt jedoch weiterhin nicht. Prüfen Sie vor beiden Optionen das Netzteil: Das 650-W-Netzteil dieses Builds wurde für eine RTX 3060 12GB ausgewählt.' } },
       ],
     },
     itemListSchema: {
@@ -1877,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'PC pour LLM local à moins de $1,000 avec GPU d\'occasion (2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-fr.webp',
     seoTitle: 'PC pour LLM local à moins de $1,000 avec GPU d\'occasion (2026)',
-    intro: '**Un PC avec une RTX 3060 12 Go d\'occasion, un Ryzen 5 7600 et 32 Go de RAM DDR5 fait tourner les modèles 7B–14B en Q4 pour environ $940 au total, soit moins de $1,000.** La VRAM est le principal facteur limitant de l\'inférence LLM locale ; cette configuration consacre donc son budget GPU à une carte de 12 Go de VRAM à un prix d\'occasion d\'environ $330 (d\'après le [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), données datées du 2026-11-26) et garde des autres pièces modestes. Un modèle 14B en Q4 (environ 9-10 Go) tient dans 12 Go ; les modèles de classe 32B ne tiennent pas entièrement et nécessitent un déport partiel sur le CPU, nettement plus lent. Ce guide détaille les composants exacts, pourquoi chacun a été choisi plutôt que les alternatives, et quelles vitesses sont sourcées. Les autres pièces sont des estimations propres à cette page, et le total ne vaut que pour une carte d\'occasion : une RTX 3060 12 Go neuve, listée à environ $450 sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18), le porterait à environ $1,060.',
+    intro: '**Un PC avec une RTX 3060 12 Go d\'occasion, un Ryzen 5 7600 et 32 Go de RAM DDR5 fait tourner les modèles 7B–14B en Q4 pour environ $940 au total, soit moins de $1,000.** La VRAM est le principal facteur limitant de l\'inférence LLM locale ; cette configuration consacre donc son budget GPU à une carte de 12 Go de VRAM à un prix d\'occasion d\'environ $330 (d\'après le [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), données datées du 2026-11-26) et garde les autres pièces modestes. Un modèle 14B en Q4 (environ 9-10 Go) tient dans 12 Go ; les modèles de classe 32B ne tiennent pas entièrement et nécessitent un déport partiel sur le CPU, nettement plus lent. Ce guide détaille les composants exacts, pourquoi chacun a été choisi plutôt que les alternatives, et quelles vitesses sont sourcées. Les autres pièces sont des estimations propres à cette page, et le total ne vaut que pour une carte d\'occasion : une RTX 3060 12 Go neuve, listée à environ $460 sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28), le porterait à environ $1,070.',
     metaDescription: 'Configuration PC LLM local à moins de $1,000 (environ $940) : RTX 3060 12 Go d\'occasion, Ryzen 5 7600, 32 Go DDR5. Modèles 7B-14B en Q4. Liste de pièces 2026.',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -1905,19 +1905,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Coût total de la configuration : ~$940.** RTX 3060 12 Go d\'occasion (~$330), Ryzen 5 7600 ($180), 32 Go DDR5-6000 ($90), NVMe Gen4 1 To ($70), carte mère B650 mATX ($130), alimentation 650W 80+ Gold ($75), boîtier mATX ($65). Le prix du GPU provient du [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (occasion, données datées du 2026-11-26) ; les autres pièces sont des estimations propres à cette page. Une RTX 3060 12 Go neuve (environ $450 sur gpuprix, 2026-11-18) porterait le total à environ $1,060.',
+          '**Coût total de la configuration : ~$940.** RTX 3060 12 Go d\'occasion (~$330), Ryzen 5 7600 ($180), 32 Go DDR5-6000 ($90), NVMe Gen4 1 To ($70), carte mère B650 mATX ($130), alimentation 650W 80+ Gold ($75), boîtier mATX ($65). Le prix du GPU provient du [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (occasion, données datées du 2026-11-26) ; les autres pièces sont des estimations propres à cette page. Une RTX 3060 12 Go neuve (environ $460 sur gpuprix, 2026-11-28) porterait le total à environ $1,070.',
           '**12 Go de VRAM est l\'objectif avec ce budget, pas la vitesse brute du GPU.** Une carte de 12 Go de VRAM exécute des modèles qu\'une carte plus rapide au même prix mais limitée à 8 Go ne peut pas charger, car c\'est la taille du modèle, pas le nombre de shaders, qui décide de ce qui tient ou non.',
           '**Modèles 7B : 75.6 tok/s** (discussion llama.cpp #15013, génération de tokens sur Llama 2 7B Q4_0, rapportée par la communauté). Les modèles 14B en Q4 (~9-10 Go) tiennent dans 12 Go avec une marge de contexte limitée ; les autres vitesses sont uniquement indicatives et non mesurées par PromptQuorum.',
-          '**Les modèles 32B et 70B ne tiennent pas entièrement.** Un modèle 32B en Q4 nécessite généralement environ 20 Go et un modèle 70B environ 40 Go de VRAM ; cette configuration plafonne autour de 14B sur le GPU seul. Voir la configuration à double GPU (environ $2,700) pour les modèles de classe 32B (le 70B en Q4 nécessite environ 43 Go et ne tient toujours pas dans 32 Go).',
+          '**Les modèles 32B et 70B ne tiennent pas entièrement.** Un modèle 32B en Q4 nécessite généralement environ 20 Go et un modèle 70B environ 43 Go de VRAM ; cette configuration plafonne autour de 14B sur le GPU seul. Voir la configuration à double GPU (environ $2,700) pour les modèles de classe 32B (le 70B en Q4 nécessite environ 43 Go et ne tient toujours pas dans 32 Go).',
           '**32 Go de RAM système, pas 16 Go.** Le chargement du modèle, la charge du système d\'exploitation et toute couche déchargée sur le CPU nécessitent de la marge au-delà du GPU ; 16 Go peuvent provoquer du swap sur les modèles 14B et plus.',
-          '**À éviter :** les GPU 8 Go (RTX 5060, RTX 4060 Ti 8 Go) — ils plafonnent à 7B et ne peuvent pas évoluer vers 13B-14B sans remplacer entièrement le GPU.',
+          '**À éviter :** les GPU 8 Go (RTX 5060, RTX 4060 Ti 8 Go) — entièrement sur le GPU, ils sont surtout limités à la classe 7B ; les 13B-14B demandent en général un déport CPU ou une autre carte.',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: 'Ce que ce budget achète réellement',
         content: [
-          '**La vitesse d\'inférence d\'un LLM local est limitée d\'abord par la capacité de VRAM, ensuite par la bande passante mémoire, et très loin derrière par la puissance de calcul (cœurs CUDA).** Un modèle qui ne tient pas dans la VRAM ne se charge pas ou déborde dans la RAM système, ce qui réduit fortement le débit. Avec $1,000, la répartition la plus efficace consiste à placer le GPU en premier et à garder le reste modeste — c\'est pourquoi le CPU est ici un modèle milieu de gamme à $180 et non un modèle haut de gamme à $350.',
+          '**La capacité de VRAM détermine d\'abord si un modèle local peut tourner entièrement sur le GPU ; la bande passante mémoire et la puissance de calcul influencent ensuite sa vitesse.** Un modèle qui ne tient pas dans la VRAM ne se charge pas ou déborde dans la RAM système, ce qui réduit fortement le débit. Avec $1,000, cette configuration place le GPU en premier et garde le reste modeste — c\'est pourquoi le CPU est ici un modèle milieu de gamme à $180 et non un modèle haut de gamme à $350.',
           'Cette configuration suppose une inférence à modèle unique (un seul modèle chargé à la fois via Ollama, LM Studio ou llama.cpp), pas un service concurrent multi-utilisateurs. Pour servir plusieurs requêtes simultanées, les besoins en VRAM augmentent encore et un budget de $1,000 n\'est pas réaliste.',
         ],
         snippetBlocks: [
@@ -1928,7 +1928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Liste de pièces complète',
-        content: 'Les prix sont des prix américains estimés et varient selon la région et le revendeur. Les prix de la RAM et du SSD fluctuent ; une hausse de plus de $60 sur les pièces ferait dépasser $1,000 au total. Le prix du GPU (RTX 3060 12 Go d\'occasion, environ $330) provient du [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (données datées du 2026-11-26) ; les autres pièces sont des estimations propres à cette page. Total : environ $940 ($330 + $180 + $90 + $70 + $130 + $75 + $65). Cela ne vaut que pour une carte d\'occasion : une RTX 3060 12 Go neuve, listée à environ $450 sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18), porterait le total à environ $1,060.',
+        content: 'Les prix sont des prix américains estimés et varient selon la région et le revendeur. Les prix de la RAM et du SSD fluctuent ; une hausse de plus de $60 sur les pièces ferait dépasser $1,000 au total. Le prix du GPU (RTX 3060 12 Go d\'occasion, environ $330) provient du [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (données datées du 2026-11-26) ; les autres pièces sont des estimations propres à cette page. Total : environ $940 ($330 + $180 + $90 + $70 + $130 + $75 + $65). Cela ne vaut que pour une carte d\'occasion : une RTX 3060 12 Go neuve, listée à environ $460 sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28), porterait le total à environ $1,070.',
         columns: ['Composant', 'Choix', 'Prix', 'Pourquoi'],
         rows: [
           { 'Composant': 'GPU', 'Choix': 'RTX 3060 12 Go d\'occasion', 'Prix': '~$330', 'Pourquoi': '12 Go de VRAM logent 7B-14B en Q4 ; 32B ne tient pas entièrement' },
@@ -1946,13 +1946,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pourquoi une RTX 3060 12 Go d\'occasion avec ce budget',
         content: [
           '**Avec ce budget, la VRAM par dollar décide du choix du GPU, et les cartes de 8 Go sont une fausse économie pour le travail LLM local.** La RTX 3060 a été vendue en version 12 Go, ce qui explique son choix ici malgré son âge : une carte de 8 Go ne loge confortablement rien au-delà d\'un modèle 7B en Q4 avec une longueur de contexte utilisable. Vérifiez que l\'annonce indique bien 12 Go, car il existe aussi une variante RTX 3060 de 8 Go.',
-          'La marge de VRAM compte aussi pour la longueur de contexte : un modèle 7B occupe à lui seul environ 4-4.5 Go en Q4, mais un contexte de 16K tokens ajoute 1-2 Go de cache KV. Sur une carte de 8 Go, il ne reste presque rien ; sur la carte de 12 Go, il y a de la place pour un modèle 7B et un long contexte, et un modèle 14B tient avec un contexte plus court.',
+          'La marge de VRAM compte aussi pour la longueur de contexte : un modèle 7B occupe à lui seul environ 4-4.5 Go en Q4, mais un contexte de 16K tokens ajoute 1-2 Go de cache KV. Sur une carte de 8 Go, il ne reste presque rien ; sur la carte de 12 Go, il y a de la place pour un modèle 7B et un long contexte, et un modèle 14B tient avec un contexte plus court. Ces chiffres de contexte sont des estimations approximatives qui dépendent du modèle et des réglages.',
         ],
         items: [
-          '**RTX 3060 12 Go (d\'occasion, environ $330, cette configuration) :** 12 Go de VRAM au prix sourcé le plus bas ; prix d\'occasion d\'après le [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fourchette $310-350, médiane $330, données datées du 2026-11-26). Les cartes neuves ou reconditionnées coûtent plus cher : $450 neuve et $420 reconditionnée Amazon sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18).',
-          '**RTX 4060 Ti 16 Go (environ $430-450 d\'après le suivi d\'InsiderLLM, état non précisé) :** 16 Go de VRAM, mais [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) la liste bien plus cher ($843 neuve, 2026-11-17) ; le prix est donc incertain, et même au prix du suivi le total serait d\'environ $1,040-1,060. Vérifiez les annonces actuelles.',
-          '**RTX 5060 Ti 16 Go (environ $800 neuve : offre neuve la moins chère affichée sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), consulté le 2026-11-28 ; $829.99 sur Amazon États-Unis selon [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27) :** L\'option de mise à niveau à 16 Go ; à la place de la RTX 3060 d\'occasion, elle augmenterait le total de cette configuration d\'environ $470-500, pour atteindre environ $1,410-1,440.',
-          '**RTX 3090 24 Go d\'occasion (environ $1,500-1,725, [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23) :** Plus de VRAM, mais la carte seule coûte plus que tout le budget de $1,000 ; elle sort donc du cadre de cette configuration.',
+          '**RTX 3060 12 Go (d\'occasion, environ $330, cette configuration) :** 12 Go de VRAM au prix sourcé le plus bas ; prix d\'occasion d\'après le [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fourchette $310-350, médiane $330, 209 ventes conclues sur eBay US, du 2026-11-17 au 2026-11-26 ; données datées du 2026-11-26). Les cartes neuves ou reconditionnées coûtent plus cher : $460 neuve et $420 reconditionnée Amazon sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28).',
+          '**RTX 4060 Ti 16 Go (environ $430-450 d\'après le suivi d\'InsiderLLM, état non précisé) :** 16 Go de VRAM, mais [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) la liste bien plus cher (cartes neuves en stock à partir de $764, consulté le 2026-11-28) ; le prix est donc incertain, et même au prix du suivi le total serait d\'environ $1,040-1,060. Vérifiez les annonces actuelles.',
+          '**RTX 5060 Ti 16 Go (environ $800 neuve : offre neuve la moins chère affichée sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), consulté le 2026-11-28 ; $849.99 sur Amazon États-Unis selon [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27) :** L\'option de mise à niveau à 16 Go ; à la place de la RTX 3060 d\'occasion, elle augmenterait le total de cette configuration d\'environ $470-520, pour atteindre environ $1,410-1,460.',
+          '**RTX 3090 24 Go d\'occasion (environ $1,500-1,725 en ventes conclues aux États-Unis du 2026-11-13 au 2026-11-23 ; [suivi d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23) :** Plus de VRAM, mais la carte seule coûte plus que tout le budget de $1,000 ; elle sort donc du cadre de cette configuration.',
         ],
       },
       performance: {
@@ -1963,9 +1963,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Taille du modèle': '7B-8B', 'VRAM utilisée (Q4)': '~4.5-5 Go', 'Tokens/s': '75.6 (Llama 2 7B Q4_0, #15013)', 'Loge confortablement ?': 'Oui — pleine marge de contexte' },
           { 'Taille du modèle': '13B-14B', 'VRAM utilisée (Q4)': '~9-10 Go', 'Tokens/s': 'Moins que 7B ; pas de chiffre sourcé', 'Loge confortablement ?': 'Oui — marge de contexte limitée' },
-          { 'Taille du modèle': '20B (MoE, ~4B actifs)', 'VRAM utilisée (Q4)': '~12 Go', 'Tokens/s': 'Pas de chiffre sourcé', 'Loge confortablement ?': 'Juste — peu de place pour le contexte' },
+          { 'Taille du modèle': '20B (MoE, ~4B actifs)', 'VRAM utilisée (Q4)': '~14 Go (gpt-oss:20b)', 'Tokens/s': 'Pas de chiffre sourcé', 'Loge confortablement ?': 'Non — le téléchargement dépasse 12 Go ; prévoir un déport CPU' },
           { 'Taille du modèle': '32B', 'VRAM utilisée (Q4)': '~19-20 Go', 'Tokens/s': 'Pas de chiffre sourcé', 'Loge confortablement ?': 'Non — déport CPU requis, bien plus lent' },
-          { 'Taille du modèle': '70B', 'VRAM utilisée (Q4)': '~40 Go', 'Tokens/s': 'N/A', 'Loge confortablement ?': 'Ne tient pas — même pas dans la configuration à double GPU (32 Go)' },
+          { 'Taille du modèle': '70B', 'VRAM utilisée (Q4)': '~43 Go', 'Tokens/s': 'N/A', 'Loge confortablement ?': 'Ne tient pas — même pas dans la configuration à double GPU (32 Go)' },
         ],
       },
       assembly: {
@@ -1982,8 +1982,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Voie d\'évolution',
         content: [
-          'Cette configuration est conçue pour que le GPU soit le seul composant à remplacer plus tard. La carte mère B650 supporte un second slot PCIe (généralement x4 électrique) pour ajouter un second GPU ultérieurement, bien que l\'inférence multi-GPU en tensor-split nécessite au moins du x8/x8 pour éviter un goulot d\'étranglement de bande passante PCIe — voir la configuration à double GPU (environ $2,700) pour une carte mère choisie en tenant compte de cela.',
-          'La mise à niveau la plus directe consiste à remplacer le GPU par un modèle avec plus de VRAM quand le budget le permet. Une RTX 5060 Ti 16 Go (environ $800-830 neuve selon gpuprix, 2026-11-28, et BasketPrice, 2026-11-27) ajoute 4 Go de VRAM mais ferait dépasser $1,000 à la configuration, et une RTX 3090 24 Go d\'occasion (environ $1,500-1,725) sort du budget de cette configuration. Le Ryzen 5 7600 et les 32 Go de RAM ne sont pas la limite pour un tel remplacement ; comparez la consommation de la nouvelle carte à l\'alimentation 650W dans la spécification du fabricant.',
+          'Cette configuration est conçue pour que le GPU soit le seul composant à remplacer plus tard. De nombreuses cartes B650 ont un second slot PCIe, souvent câblé en x4 électrique : vérifiez le manuel de la carte que vous achetez. Pour un second GPU, préférez une carte qui documente une répartition x8/x8 : un slot x4 a deux fois moins de voies qu\'un x8, et le ralentissement d\'un modèle réparti dépend du moteur, du mode de répartition et des réglages, ce que cette page n\'a pas mesuré. Vérifiez l\'alimentation avant d\'ajouter une carte. Voir la configuration à double GPU (environ $2,700) pour un montage prévu pour deux GPU.',
+          'La mise à niveau la plus directe consiste à remplacer le GPU par un modèle avec plus de VRAM quand le budget le permet. Une RTX 5060 Ti 16 Go (environ $800-850 neuve selon gpuprix, 2026-11-28, et BasketPrice, 2026-11-27) ajoute 4 Go de VRAM mais ferait dépasser $1,000 à la configuration, et une RTX 3090 24 Go d\'occasion (environ $1,500-1,725) sort du budget de cette configuration. Le Ryzen 5 7600 et les 32 Go de RAM ne sont pas la limite pour un tel remplacement ; comparez la consommation de la nouvelle carte à l\'alimentation 650W dans la spécification du fabricant.',
         ],
       },
       whereToBuy: {
@@ -1992,11 +1992,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Les prix et la disponibilité varient selon la région, et les prix affichés dans l\'UE incluent la TVA.** Les liens ci-dessous sont de simples liens de recherche de produits par région ; ils ne portent aucune balise d\'affiliation et ne génèrent aucune commission.',
         items: [
-          '**France :** Amazon.fr et LDLC offrent le plus large stock ; Materiel.net et Top Achat sont aussi des références pour les cartes graphiques.',
-          '**Comparateur de prix :** Idealo.fr et Geizhals.eu sont les standards pour comparer les prix du neuf en France — vérifiez-y la source la moins chère actuellement.',
+          '**France :** Amazon.fr, LDLC, Materiel.net et Top Achat permettent de comparer les cartes graphiques.',
+          '**Comparateur de prix :** Idealo.fr et Geizhals.eu permettent de comparer les prix du neuf — vérifiez-y les offres actuelles.',
           '**Belgique et Suisse :** Alternate.be et Digitec.ch couvrent les marchés francophones voisins ; les prix et la disponibilité diffèrent légèrement de la France.',
-          '**Occasion :** LeBonCoin est un grand marché français de l\'occasion pour les GPU — comparez-y le neuf et l\'occasion, car l\'occasion n\'est plus fiablement moins chère.',
-          '**Disponibilité :** les cartes haut de gamme (RTX 4090, RTX 5090) sont par moments en rupture en 2026, et le RTX 5090 est souvent épuisé au prix catalogue ; attendez-vous à des prix fluctuants et vérifiez plusieurs revendeurs.',
+          '**Occasion :** LeBonCoin propose des GPU d\'occasion — comparez-y le neuf et l\'occasion, car l\'occasion n\'est pas forcément moins chère.',
+          '**Disponibilité :** les cartes haut de gamme (RTX 4090, RTX 5090) peuvent être en rupture, et la RTX 5090 n\'est pas forcément disponible au prix catalogue ; attendez-vous à des prix fluctuants et vérifiez plusieurs revendeurs.',
         ],
         callouts: [
           {
@@ -2036,9 +2036,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erreurs courantes à ce budget',
         items: [
           'Acheter un GPU de 8 Go pour économiser (y compris la variante RTX 3060 de 8 Go, qui n\'est pas la carte de cette configuration) — le plafond de VRAM ainsi créé ne se corrige pas par logiciel et force un remplacement du GPU plus tard, pour un coût total plus élevé.',
-          'Surinvestir dans le CPU (par exemple un Ryzen 7 au lieu d\'un Ryzen 5) tout en utilisant un GPU 8 Go ou 12 Go — le choix du CPU a presque aucun effet sur les tokens/s une fois qu\'un modèle tient dans la VRAM.',
-          'Sauter la configuration du profil RAM EXPO/XMP dans le BIOS, laissant les kits DDR5-6000 tourner à 4800 — une perte de performance gratuite qui ne coûte rien à corriger.',
-          'Sous-dimensionner l\'alimentation pour économiser $20-30 — la consommation du GPU pique brièvement bien au-dessus de son TDP nominal sous charge soutenue, et sur certaines configurations une unité 550W laisse peu de marge pour les pics transitoires ; consultez la spécification du fabricant.',
+          'Surinvestir dans le CPU (par exemple un Ryzen 7 au lieu d\'un Ryzen 5) tout en utilisant un GPU 8 Go ou 12 Go — le choix du CPU n\'a presque aucun effet sur les tokens/s une fois qu\'un modèle tient dans la VRAM.',
+          'Sans profil EXPO/XMP activé dans le BIOS, un kit DDR5-6000 reste à une vitesse par défaut inférieure. Cela compte surtout quand des couches du modèle tournent sur le CPU. Ces profils sont un overclocking mémoire : consultez la documentation de la carte mère et du CPU avant d\'en activer un.',
+          'Sous-dimensionner l\'alimentation pour économiser $20-30 — la consommation du GPU pique brièvement bien au-dessus de son TDP nominal sous charge soutenue, et sur certaines configurations une unité 550W laisse peu de marge pour les pics transitoires ; consultez la spécification du fabricant. Il s\'agit d\'informations générales et non d\'un conseil électrique ; en cas de doute, faites vérifier la machine et votre circuit par un technicien qualifié.',
         ],
       },
       faqSection: {
@@ -2046,15 +2046,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Un PC à $1,000 peut-il faire tourner correctement des LLM locaux ?', a: 'Pour les modèles 7B–14B, oui ; les modèles plus grands demandent plus de VRAM. Avec une RTX 3060 12 Go d\'occasion à environ $330, cette configuration totalise environ $940, et 12 Go de VRAM logent les modèles 14B en Q4. Les modèles de classe 32B ne tiennent pas entièrement dans 12 Go.' },
-          { q: 'Pourquoi cette configuration dépense-t-elle autant sur le GPU par rapport au CPU ?', a: 'La vitesse d\'inférence LLM locale dépend presque entièrement de la capacité de VRAM du GPU et de la bande passante mémoire. Un CPU plus rapide n\'augmente pas les tokens/s une fois qu\'un modèle est chargé en VRAM, donc un CPU milieu de gamme associé à un GPU puissant bat un CPU puissant associé à un GPU faible pour cette charge de travail spécifique.' },
-          { q: '12 Go de VRAM suffisent-ils pour les LLM locaux en 2026 ?', a: '12 Go logent les modèles 7B-8B en Q4 avec de la place pour un long contexte et les modèles 14B en Q4 (environ 9-10 Go) avec un contexte plus court. Ils ne logent pas entièrement les modèles de classe 32B (généralement environ 20 Go en Q4) ni de classe 70B (environ 40 Go en Q4) ; un GPU de 24 Go de VRAM est le point de départ réaliste pour faire tenir entièrement un modèle de classe 32B sur le GPU ; une carte de 16 Go loge confortablement les modèles 14B mais exige encore un déport CPU pour le 32B.' },
-          { q: 'Puis-je utiliser un GPU de 8 Go à la place pour économiser ?', a: 'C\'est possible, mais cela vous limite aux modèles 7B avec une marge de contexte minimale — un plafond rigide qu\'on ne relève qu\'en remplaçant la carte. L\'économie d\'une carte de 8 Go ne vaut pas la perte d\'accès aux modèles 13B-14B.' },
+          { q: 'Pourquoi cette configuration dépense-t-elle autant sur le GPU par rapport au CPU ?', a: 'Quand un modèle tourne entièrement sur le GPU, la vitesse dépend surtout du GPU et de sa bande passante mémoire, et la capacité de VRAM décide quels modèles tiennent. Un CPU plus rapide apporte alors généralement peu : pour cette charge de travail, la configuration dépense donc sur le GPU plutôt que sur le CPU.' },
+          { q: '12 Go de VRAM suffisent-ils pour les LLM locaux en 2026 ?', a: '12 Go logent les modèles 7B-8B en Q4 avec de la place pour un long contexte et les modèles 14B en Q4 (environ 9-10 Go) avec un contexte plus court. Ils ne logent pas entièrement les modèles de classe 32B (généralement environ 20 Go en Q4) ni de classe 70B (environ 43 Go en Q4) ; un GPU de 24 Go de VRAM est le point de départ réaliste pour faire tenir entièrement un modèle de classe 32B sur le GPU ; une carte de 16 Go loge confortablement les modèles 14B mais exige encore un déport CPU pour le 32B.' },
+          { q: 'Puis-je utiliser un GPU de 8 Go à la place pour économiser ?', a: 'C\'est possible, mais entièrement sur le GPU cela vous limite surtout à la classe 7B, avec peu de marge de contexte, et la VRAM de la carte ne peut pas être étendue. Les modèles plus grands demandent un déport CPU, nettement plus lent, ou une autre carte. C\'est pourquoi cette configuration utilise une carte de 12 Go.' },
           { q: 'De combien de RAM ai-je réellement besoin avec un GPU de 12 Go de VRAM ?', a: '32 Go de RAM système. Cela couvre la surcharge de l\'OS, la mise en cache du fichier du modèle pendant le chargement et les couches déportées sur le CPU pour les modèles qui dépassent légèrement la capacité de VRAM.' },
           { q: 'Cette configuration fera-t-elle tourner correctement les modèles 32B ?', a: 'Non, pas entièrement sur le GPU. Un modèle 32B en Q4 nécessite généralement environ 20 Go, plus que les 12 Go de la carte ; une partie doit donc être déportée dans la RAM système, ce qui est nettement plus lent, et il n\'existe pas de vitesse sourcée pour ce cas. Pour faire tenir entièrement la classe 32B sur le GPU, le point de départ réaliste est un GPU de 24 Go de VRAM ; une carte de 16 Go exige encore un déport CPU.' },
           { q: 'Quel logiciel faire tourner sur cette configuration ?', a: 'Ollama ou LM Studio sont les points de départ les plus simples — tous deux détectent automatiquement un GPU NVIDIA comme la RTX 3060 12 Go et gèrent la quantification Q4. llama.cpp en direct offre plus de contrôle sur le format de quantification et les paramètres de contexte.' },
-          { q: 'Cette configuration peut-elle être améliorée pour faire tourner des modèles 70B plus tard ?', a: 'Pas avec un seul GPU — le 70B en Q4 nécessite environ 40 Go de VRAM. La voie d\'évolution la plus claire est soit de passer à une RTX 3090 24 Go d\'occasion (toujours pas tout à fait suffisant pour un 70B complet), soit d\'ajouter un second GPU pour la mise en commun de VRAM, ce que la configuration à double GPU (environ $2,700) couvre directement ; ses 32 Go font tourner les modèles de classe 32B, mais le 70B en Q4 (environ 43 Go) ne tient toujours pas.' },
+          { q: 'Cette configuration peut-elle être améliorée pour faire tourner des modèles 70B plus tard ?', a: 'Pas avec un seul GPU — le 70B en Q4 nécessite environ 43 Go de VRAM. La voie d\'évolution la plus claire est soit de passer à une RTX 3090 24 Go d\'occasion (toujours pas tout à fait suffisant pour un 70B complet), soit d\'ajouter un second GPU pour la mise en commun de VRAM, ce que la configuration à double GPU (environ $2,700) couvre directement ; ses 32 Go font tourner les modèles de classe 32B, mais le 70B en Q4 (environ 43 Go) ne tient toujours pas. Vérifiez l\'alimentation avant l\'une ou l\'autre option : le bloc de 650W de cette configuration a été choisi pour une seule RTX 3060 12 Go.' },
           { q: 'Le chipset de la carte mère (B650 vs B850) compte-t-il pour l\'inférence LLM locale ?', a: 'Pas pour une configuration mono-GPU. Le B650 fournit un slot PCIe 4.0 x16, ce dont le GPU a besoin ; les différences de chipset entre le B650 et les cartes plus récentes comptent davantage pour l\'allocation des voies PCIe multi-GPU que pour l\'inférence LLM mono-GPU.' },
-          { q: 'Un GPU d\'occasion est-il un meilleur choix qu\'un GPU neuf avec ce budget ?', a: 'Avec ce budget, oui : la RTX 3060 12 Go d\'occasion (environ $330 d\'après le suivi d\'InsiderLLM) maintient le total à environ $940, alors qu\'une RTX 3060 12 Go neuve (environ $450 sur gpuprix) le porterait à environ $1,060. Une carte d\'occasion comporte plus de risques ; vérifiez donc la politique de retour du vendeur. Une RTX 3090 24 Go d\'occasion est un vrai gain de VRAM, mais coûte plus que tout le budget GPU de cette configuration et fait dépasser $2,000 au total — elle relève d\'un palier supérieur.' },
+          { q: 'Un GPU d\'occasion est-il un meilleur choix qu\'un GPU neuf avec ce budget ?', a: 'Avec ce budget, oui : la RTX 3060 12 Go d\'occasion (environ $330 d\'après le suivi d\'InsiderLLM) maintient le total à environ $940, alors qu\'une RTX 3060 12 Go neuve (environ $460 sur gpuprix) le porterait à environ $1,070. Une carte d\'occasion comporte plus de risques ; vérifiez donc la politique de retour du vendeur. Une RTX 3090 24 Go d\'occasion est un vrai gain de VRAM, mais coûte plus que tout le budget GPU de cette configuration et fait dépasser $2,000 au total — elle relève d\'un palier supérieur.' },
         ],
       },
       relatedReading: {
@@ -2078,7 +2078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Bibliothèque de modèles Ollama et besoins en VRAM](https://ollama.com/library)',
           '[Discussion llama.cpp #15013 : performances sur NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix : page de prix de la RTX 3060 12 Go](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix : offres de la RTX 5060 Ti 16 Go aux États-Unis (consulté le 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice : prix de la RTX 5060 Ti aux États-Unis (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[Page du modèle qwen3:32b sur Ollama (20 Go, Q4_K_M)](https://ollama.com/library/qwen3:32b)',
+          '[Page du modèle qwen3:32b sur Ollama (20 Go, Q4_K_M)](https://ollama.com/library/qwen3:32b)', '[Page du modèle gpt-oss:20b sur Ollama (14 Go)](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -2109,10 +2109,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': 'Un PC à $1,000 peut-il faire tourner correctement des LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les modèles 7B–14B, oui ; les modèles plus grands demandent plus de VRAM. Avec une RTX 3060 12 Go d\'occasion à environ $330, cette configuration totalise environ $940, et 12 Go de VRAM logent les modèles 14B en Q4. Les modèles de classe 32B ne tiennent pas entièrement dans 12 Go.' } },
-        { '@type': 'Question', 'name': '12 Go de VRAM suffisent-ils pour les LLM locaux en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12 Go logent les modèles 7B-8B en Q4 avec de la place pour un long contexte et les modèles 14B en Q4 (environ 9-10 Go) avec un contexte plus court. Ils ne logent pas entièrement les modèles de classe 32B (généralement environ 20 Go en Q4) ni de classe 70B (environ 40 Go en Q4) ; un GPU de 24 Go de VRAM est le point de départ réaliste pour faire tenir entièrement un modèle de classe 32B sur le GPU ; une carte de 16 Go loge confortablement les modèles 14B mais exige encore un déport CPU pour le 32B.' } },
-        { '@type': 'Question', 'name': 'Puis-je utiliser un GPU de 8 Go à la place pour économiser ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'C\'est possible, mais cela vous limite aux modèles 7B avec une marge de contexte minimale — un plafond rigide qu\'on ne relève qu\'en remplaçant la carte. L\'économie d\'une carte de 8 Go ne vaut pas la perte d\'accès aux modèles 13B-14B.' } },
+        { '@type': 'Question', 'name': '12 Go de VRAM suffisent-ils pour les LLM locaux en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12 Go logent les modèles 7B-8B en Q4 avec de la place pour un long contexte et les modèles 14B en Q4 (environ 9-10 Go) avec un contexte plus court. Ils ne logent pas entièrement les modèles de classe 32B (généralement environ 20 Go en Q4) ni de classe 70B (environ 43 Go en Q4) ; un GPU de 24 Go de VRAM est le point de départ réaliste pour faire tenir entièrement un modèle de classe 32B sur le GPU ; une carte de 16 Go loge confortablement les modèles 14B mais exige encore un déport CPU pour le 32B.' } },
+        { '@type': 'Question', 'name': 'Puis-je utiliser un GPU de 8 Go à la place pour économiser ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'C\'est possible, mais entièrement sur le GPU cela vous limite surtout à la classe 7B, avec peu de marge de contexte, et la VRAM de la carte ne peut pas être étendue. Les modèles plus grands demandent un déport CPU, nettement plus lent, ou une autre carte. C\'est pourquoi cette configuration utilise une carte de 12 Go.' } },
         { '@type': 'Question', 'name': 'De combien de RAM ai-je réellement besoin avec un GPU de 12 Go de VRAM ?', 'acceptedAnswer': { '@type': 'Answer', 'text': '32 Go de RAM système. Cela couvre la surcharge de l\'OS, la mise en cache du fichier du modèle pendant le chargement et les couches déportées sur le CPU pour les modèles qui dépassent légèrement la capacité de VRAM.' } },
-        { '@type': 'Question', 'name': 'Cette configuration peut-elle être améliorée pour faire tourner des modèles 70B plus tard ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pas avec un seul GPU — le 70B en Q4 nécessite environ 40 Go de VRAM. La voie d\'évolution la plus claire est soit de passer à une RTX 3090 24 Go d\'occasion, soit d\'ajouter un second GPU pour la mise en commun de VRAM, ce que la configuration à double GPU (environ $2,700) couvre directement ; ses 32 Go font tourner les modèles de classe 32B, mais le 70B en Q4 (environ 43 Go) ne tient toujours pas.' } },
+        { '@type': 'Question', 'name': 'Cette configuration peut-elle être améliorée pour faire tourner des modèles 70B plus tard ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pas avec un seul GPU — le 70B en Q4 nécessite environ 43 Go de VRAM. La voie d\'évolution la plus claire est soit de passer à une RTX 3090 24 Go d\'occasion (toujours pas tout à fait suffisant pour un 70B complet), soit d\'ajouter un second GPU pour la mise en commun de VRAM, ce que la configuration à double GPU (environ $2,700) couvre directement ; ses 32 Go font tourner les modèles de classe 32B, mais le 70B en Q4 (environ 43 Go) ne tient toujours pas. Vérifiez l\'alimentation avant l\'une ou l\'autre option : le bloc de 650W de cette configuration a été choisi pour une seule RTX 3060 12 Go.' } },
       ],
     },
     itemListSchema: {
@@ -2143,7 +2143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Build de PC para LLM local por menos de $1.000 com GPU usada (2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-pt.webp',
     seoTitle: 'Build de PC para LLM local por menos de $1.000 com GPU usada (2026)',
-    intro: '**Um PC com uma RTX 3060 12GB usada, um Ryzen 5 7600 e 32GB de RAM DDR5 executa modelos de 7B a 14B em Q4 e soma cerca de $940, menos de $1.000.** A VRAM é o principal fator limitante da inferência de LLM local, então este build destina seu orçamento de GPU a uma placa com 12GB de VRAM a um preço de usada de cerca de $330 (do [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), dado com data de 2026-11-26) e mantém as demais peças modestas. Um modelo de 14B em Q4 (cerca de 9-10GB) cabe em 12GB; modelos da classe 32B não cabem por completo e exigem descarregar camadas para a CPU, o que é muito mais lento. Este guia lista os componentes exatos, por que cada um foi escolhido em vez das alternativas e quais números de velocidade têm fonte. As demais peças são estimativas próprias desta página, e o total só vale para uma placa usada: uma RTX 3060 12GB nova, listada a cerca de $450 no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18), levaria o total a cerca de $1.060. Os preços são dos EUA; no Brasil os valores podem variar bastante devido a impostos de importação.',
+    intro: '**Um PC com uma RTX 3060 12GB usada, um Ryzen 5 7600 e 32GB de RAM DDR5 executa modelos de 7B a 14B em Q4 e soma cerca de $940, menos de $1.000.** A VRAM é o principal fator limitante da inferência de LLM local, então este build destina seu orçamento de GPU a uma placa com 12GB de VRAM a um preço de usada de cerca de $330 (do [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), dado com data de 2026-11-26) e mantém as demais peças modestas. Um modelo de 14B em Q4 (cerca de 9-10GB) cabe em 12GB; modelos da classe 32B não cabem por completo e exigem descarregar camadas para a CPU, o que é muito mais lento. Este guia lista os componentes exatos, por que cada um foi escolhido em vez das alternativas e quais números de velocidade têm fonte. As demais peças são estimativas próprias desta página, e o total só vale para uma placa usada: uma RTX 3060 12GB nova, listada a cerca de $460 no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28), levaria o total a cerca de $1.070. Os preços são dos EUA; no Brasil os valores podem variar bastante devido a impostos de importação.',
     metaDescription: 'Build de PC para LLM local por menos de $1.000 (cerca de $940): RTX 3060 12GB usada, Ryzen 5 7600, 32GB DDR5. Roda 7B-14B em Q4. Lista de peças 2026.',
     publishDate: '2026-07-18',
     dateModified: '2026-11-28',
@@ -2171,19 +2171,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Custo total do build: ~$940.** RTX 3060 12GB usada (~$330), Ryzen 5 7600 ($180), 32GB DDR5-6000 ($90), NVMe Gen4 de 1TB ($70), placa-mãe B650 mATX ($130), fonte 650W 80+ Gold ($75), gabinete mATX ($65). O preço da GPU vem do [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (usada, dado com data de 2026-11-26); as demais peças são estimativas próprias desta página. Uma RTX 3060 12GB nova (cerca de $450 no gpuprix, 2026-11-18) elevaria o total para cerca de $1.060.',
+          '**Custo total do build: ~$940.** RTX 3060 12GB usada (~$330), Ryzen 5 7600 ($180), 32GB DDR5-6000 ($90), NVMe Gen4 de 1TB ($70), placa-mãe B650 mATX ($130), fonte 650W 80+ Gold ($75), gabinete mATX ($65). O preço da GPU vem do [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (usada, dado com data de 2026-11-26); as demais peças são estimativas próprias desta página. Uma RTX 3060 12GB nova (cerca de $460 no gpuprix, 2026-11-28) elevaria o total para cerca de $1.070.',
           '**12GB de VRAM é o objetivo com este orçamento, não a velocidade bruta da GPU.** Uma placa com 12GB de VRAM roda modelos que uma placa mais rápida de mesmo preço, mas com 8GB, não roda, porque o tamanho do modelo, e não a quantidade de shaders, decide o que cabe.',
           '**Modelos de 7B: 75.6 tok/s** (discussão #15013 do llama.cpp, geração de tokens com Llama 2 7B Q4_0, reportada pela comunidade). Modelos de 14B em Q4 (~9-10GB) cabem em 12GB com pouca folga de contexto; as demais velocidades são apenas indicativas e não foram medidas pela PromptQuorum.',
-          '**Modelos de 32B e 70B não cabem por completo.** Um modelo de 32B em Q4 normalmente precisa de cerca de 20GB e um de 70B de ~40GB de VRAM; este build chega a cerca de 14B apenas na GPU. Veja o build dual-GPU (cerca de $2.700) para modelos da classe 32B (70B em Q4 precisa de cerca de 43GB e continua sem caber em 32GB).',
+          '**Modelos de 32B e 70B não cabem por completo.** Um modelo de 32B em Q4 normalmente precisa de cerca de 20GB e um de 70B de ~43GB de VRAM; este build chega a cerca de 14B apenas na GPU. Veja o build dual-GPU (cerca de $2.700) para modelos da classe 32B (70B em Q4 precisa de cerca de 43GB e continua sem caber em 32GB).',
           '**32GB de RAM do sistema, não 16GB.** O carregamento do modelo, a sobrecarga do sistema operacional e quaisquer camadas transferidas para a CPU precisam de margem além da GPU; 16GB pode causar swapping em modelos 14B+.',
-          '**Evite:** GPUs de 8GB (RTX 5060, RTX 4060 Ti 8GB) — elas ficam limitadas a 7B e não conseguem crescer para 13B-14B sem uma troca completa de GPU.',
+          '**Evite:** GPUs de 8GB (RTX 5060, RTX 4060 Ti 8GB) — inteiramente na GPU, ficam em geral limitadas à classe 7B; modelos 13B-14B costumam exigir descarga para a CPU ou outra placa.',
         ],
       },
       'what-youre-buying': {
         id: 'what-youre-buying',
         title: 'O Que Este Orçamento Realmente Compra',
         content: [
-          '**A velocidade de inferência de um LLM local é limitada primeiro pela capacidade de VRAM, depois pela largura de banda de memória e, bem distante, pelo poder de computação (núcleos CUDA).** Um modelo que não cabe na VRAM não carrega ou transborda para a RAM do sistema, reduzindo muito o desempenho. Com $1.000, a alocação mais eficaz é colocar a GPU em primeiro lugar e manter todo o resto modesto — por isso a CPU aqui é uma peça de nível médio de $180, e não um topo de linha de $350.',
+          '**A capacidade de VRAM decide primeiro se um modelo local consegue rodar inteiramente na GPU; a largura de banda de memória e o poder de computação influenciam depois a velocidade.** Um modelo que não cabe na VRAM não carrega ou transborda para a RAM do sistema, reduzindo muito o desempenho. Com $1.000, este build coloca a GPU em primeiro lugar e mantém todo o resto modesto — por isso a CPU aqui é uma peça de nível médio de $180, e não um topo de linha de $350.',
           'Este build pressupõe inferência de modelo único (um modelo carregado por vez via Ollama, LM Studio ou llama.cpp), não atendimento concorrente multiusuário. Para atender múltiplas requisições simultâneas, os requisitos de VRAM aumentam ainda mais e um orçamento de $1.000 não é realista.',
         ],
         snippetBlocks: [
@@ -2194,7 +2194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Lista Completa de Peças',
-        content: 'Os preços são preços estimados dos EUA e variam conforme a região e a loja. Os preços de RAM e SSD oscilam; um aumento de mais de $60 nas peças levaria o total acima de $1.000. O preço da GPU (RTX 3060 12GB usada, cerca de $330) vem do [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (dado com data de 2026-11-26); as demais peças são estimativas próprias desta página. Total: cerca de $940 ($330 + $180 + $90 + $70 + $130 + $75 + $65). Isso vale apenas para uma placa usada: uma RTX 3060 12GB nova, listada a cerca de $450 no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18), levaria o total a cerca de $1.060. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+        content: 'Os preços são preços estimados dos EUA e variam conforme a região e a loja. Os preços de RAM e SSD oscilam; um aumento de mais de $60 nas peças levaria o total acima de $1.000. O preço da GPU (RTX 3060 12GB usada, cerca de $330) vem do [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (dado com data de 2026-11-26); as demais peças são estimativas próprias desta página. Total: cerca de $940 ($330 + $180 + $90 + $70 + $130 + $75 + $65). Isso vale apenas para uma placa usada: uma RTX 3060 12GB nova, listada a cerca de $460 no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28), levaria o total a cerca de $1.070. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         columns: ['Componente', 'Escolha', 'Preço', 'Por Quê'],
         rows: [
           { 'Componente': 'GPU', 'Escolha': 'RTX 3060 12GB usada', 'Preço': '~$330', 'Por Quê': '12GB de VRAM comportam 7B-14B em Q4; 32B não cabe por completo' },
@@ -2212,13 +2212,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Por Que uma RTX 3060 12GB Usada com Este Orçamento',
         content: [
           '**Com este orçamento, a VRAM por dólar decide a escolha da GPU, e placas de 8GB são uma falsa economia para trabalho com LLMs locais.** A RTX 3060 foi vendida em uma versão de 12GB, e é por isso que ela é usada aqui apesar da idade: uma placa de 8GB não comporta confortavelmente nada além de um modelo de 7B em Q4 com um comprimento de contexto utilizável. Confirme que o anúncio diz 12GB, pois também existe uma variante da RTX 3060 com 8GB.',
-          'A folga de VRAM também importa para o comprimento de contexto: um modelo de 7B sozinho precisa de cerca de 4-4.5GB em Q4, mas um contexto de 16K tokens acrescenta mais 1-2GB de cache KV. Em uma placa de 8GB sobra quase nada; na de 12GB há espaço para um modelo de 7B e um contexto longo, e um modelo de 14B cabe com um contexto mais curto.',
+          'A folga de VRAM também importa para o comprimento de contexto: um modelo de 7B sozinho precisa de cerca de 4-4.5GB em Q4, mas um contexto de 16K tokens acrescenta mais 1-2GB de cache KV. Em uma placa de 8GB sobra quase nada; na de 12GB há espaço para um modelo de 7B e um contexto longo, e um modelo de 14B cabe com um contexto mais curto. Esses números de contexto são estimativas aproximadas que dependem do modelo e das configurações.',
         ],
         items: [
-          '**RTX 3060 12GB (usada, cerca de $330, este build):** 12GB de VRAM pelo menor preço com fonte; preço de usada conforme o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (faixa $310-350, mediana $330, dado com data de 2026-11-26). Placas novas ou recondicionadas custam mais: $450 nova e $420 recondicionada na Amazon segundo o [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-18).',
-          '**RTX 4060 Ti 16GB (cerca de $430-450 segundo o rastreador da InsiderLLM, condição não informada):** 16GB de VRAM, mas o [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) a lista bem mais cara ($843 nova, 2026-11-17), então o preço é incerto; mesmo ao preço do rastreador o total seria de cerca de $1.040-1.060. Confira os anúncios atuais.',
-          '**RTX 5060 Ti 16GB (cerca de $800 nova: oferta nova mais barata exibida no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), consultado em 2026-11-28; $829,99 na Amazon EUA segundo o [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27):** A opção de upgrade para 16GB; no lugar da RTX 3060 usada, elevaria o total deste build em cerca de $470-500, para cerca de $1.410-1.440.',
-          '**RTX 3090 24GB usada (cerca de $1.500-1.725, [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** Mais VRAM, mas só a placa custa mais que todo o orçamento de $1.000, então fica fora deste build.',
+          '**RTX 3060 12GB (usada, cerca de $330, este build):** 12GB de VRAM pelo menor preço com fonte; preço de usada conforme o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (faixa $310-350, mediana $330, 209 vendas concluídas no eBay US, de 2026-11-17 a 2026-11-26; dado com data de 2026-11-26). Placas novas ou recondicionadas custam mais: $460 nova e $420 recondicionada na Amazon segundo o [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb) (2026-11-28).',
+          '**RTX 4060 Ti 16GB (cerca de $430-450 segundo o rastreador da InsiderLLM, condição não informada):** 16GB de VRAM, mas o [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb) a lista bem mais cara (placas novas em estoque a partir de $764, consultado em 2026-11-28), então o preço é incerto; mesmo ao preço do rastreador o total seria de cerca de $1.040-1.060. Confira os anúncios atuais.',
+          '**RTX 5060 Ti 16GB (cerca de $800 nova: oferta nova mais barata exibida no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb), consultado em 2026-11-28; $849,99 na Amazon EUA segundo o [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti), 2026-11-27):** A opção de upgrade para 16GB; no lugar da RTX 3060 usada, elevaria o total deste build em cerca de $470-520, para cerca de $1.410-1.460.',
+          '**RTX 3090 24GB usada (cerca de $1.500-1.725 em vendas concluídas nos EUA de 2026-11-13 a 2026-11-23; [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23):** Mais VRAM, mas só a placa custa mais que todo o orçamento de $1.000, então fica fora deste build.',
         ],
       },
       performance: {
@@ -2229,9 +2229,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tamanho do Modelo': '7B-8B', 'VRAM Usada (Q4)': '~4.5-5GB', 'Tokens/seg': '75.6 (Llama 2 7B Q4_0, #15013)', 'Cabe Confortavelmente?': 'Sim — folga total de contexto' },
           { 'Tamanho do Modelo': '13B-14B', 'VRAM Usada (Q4)': '~9-10GB', 'Tokens/seg': 'Menos que 7B; sem número com fonte', 'Cabe Confortavelmente?': 'Sim — pouca folga de contexto' },
-          { 'Tamanho do Modelo': '20B (MoE, ~4B ativos)', 'VRAM Usada (Q4)': '~12GB', 'Tokens/seg': 'Sem número com fonte', 'Cabe Confortavelmente?': 'Justo — sobra pouco espaço para contexto' },
+          { 'Tamanho do Modelo': '20B (MoE, ~4B ativos)', 'VRAM Usada (Q4)': '~14GB (gpt-oss:20b)', 'Tokens/seg': 'Sem número com fonte', 'Cabe Confortavelmente?': 'Não — o download passa de 12GB; conte com descarga para a CPU' },
           { 'Tamanho do Modelo': '32B', 'VRAM Usada (Q4)': '~19-20GB', 'Tokens/seg': 'Sem número com fonte', 'Cabe Confortavelmente?': 'Não — exige descarga para CPU, bem mais lento' },
-          { 'Tamanho do Modelo': '70B', 'VRAM Usada (Q4)': '~40GB', 'Tokens/seg': 'N/A', 'Cabe Confortavelmente?': 'Não cabe — nem no build dual-GPU (32GB)' },
+          { 'Tamanho do Modelo': '70B', 'VRAM Usada (Q4)': '~43GB', 'Tokens/seg': 'N/A', 'Cabe Confortavelmente?': 'Não cabe — nem no build dual-GPU (32GB)' },
         ],
       },
       assembly: {
@@ -2248,8 +2248,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Caminho de Upgrade',
         content: [
-          'Este build foi projetado para que a GPU seja a única peça que vale a pena substituir depois. A placa-mãe B650 suporta um segundo slot PCIe (tipicamente x4 elétrico) para adicionar uma segunda GPU no futuro, embora a inferência multi-GPU com tensor-split precise de pelo menos x8/x8 para evitar um gargalo de largura de banda PCIe — veja o build dual-GPU (cerca de $2.700) para uma placa escolhida com isso em mente.',
-          'O upgrade mais direto é trocar a GPU por uma com mais VRAM quando o orçamento permitir. Uma RTX 5060 Ti 16GB (cerca de $800-830 nova segundo o gpuprix, 2026-11-28, e o BasketPrice, 2026-11-27) acrescenta 4GB de VRAM, mas levaria o build acima de $1.000, e uma RTX 3090 24GB usada (cerca de $1.500-1.725) fica fora do orçamento deste build. O Ryzen 5 7600 e os 32GB de RAM não são o limite para essa troca; compare o consumo da nova placa com a fonte de 650W na especificação do fabricante.',
+          'Este build foi projetado para que a GPU seja a única peça que vale a pena substituir depois. Muitas placas B650 têm um segundo slot PCIe, muitas vezes ligado em x4 elétrico, então confira o manual da placa que você comprar. Para uma segunda GPU, prefira uma placa que documente a divisão x8/x8: um slot x4 tem metade das lanes de um x8, e quanto isso desacelera um modelo dividido depende do runtime, do modo de divisão e das configurações, o que esta página não mediu. Confira a fonte antes de adicionar uma placa. Veja o build dual-GPU (cerca de $2.700) para uma configuração planejada para duas GPUs.',
+          'O upgrade mais direto é trocar a GPU por uma com mais VRAM quando o orçamento permitir. Uma RTX 5060 Ti 16GB (cerca de $800-850 nova segundo o gpuprix, 2026-11-28, e o BasketPrice, 2026-11-27) acrescenta 4GB de VRAM, mas levaria o build acima de $1.000, e uma RTX 3090 24GB usada (cerca de $1.500-1.725) fica fora do orçamento deste build. O Ryzen 5 7600 e os 32GB de RAM não são o limite para essa troca; compare o consumo da nova placa com a fonte de 650W na especificação do fabricante.',
         ],
       },
       whereToBuy: {
@@ -2258,11 +2258,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Os preços e a disponibilidade variam por região, e os preços na UE incluem IVA.** Os links abaixo são links simples de pesquisa de produtos por região; não carregam tags de afiliado e não geram comissão.',
         items: [
-          '**Brasil:** Kabum, Pichau e Terabyteshop têm o estoque mais amplo. As RTX 3060 e RTX 4090 usadas aparecem no Mercado Livre; os preços incluem impostos de importação que elevam os valores acima dos EUA.',
-          '**Mercado de usados (Brasil):** O Mercado Livre é o principal marketplace para GPUs usadas no Brasil. Compare sempre o preço de uma placa usada verificada com o de uma nova e prefira vendedores com devolução ou garantia.',
-          '**Argentina, Colômbia e restante da América Latina:** O Mercado Livre é a referência em toda a região; verifique sempre os preços atualizados, pois a taxa de câmbio afeta significativamente o custo final.',
-          '**Comparador de preços:** O Buscapé e o Zoom são referência para comparar preços de placas novas no Brasil — verifique lá a fonte mais barata atualmente.',
-          '**Disponibilidade:** Placas de alta faixa (RTX 4090, RTX 5090) têm disponibilidade intermitente em 2026; a RTX 5090 costuma esgotar pelo preço de lista; espere preços flutuantes e verifique vários distribuidores.',
+          '**Brasil:** Kabum, Pichau e Terabyteshop são lojas para comparar. RTX 3060 e RTX 4090 usadas podem ser encontradas no Mercado Livre; os preços podem ficar acima dos dos EUA por causa de impostos de importação.',
+          '**Mercado de usados (Brasil):** O Mercado Livre é um marketplace com GPUs usadas no Brasil. Compare sempre o preço de uma placa usada verificada com o de uma nova e prefira vendedores com devolução ou garantia.',
+          '**Argentina, Colômbia e restante da América Latina:** O Mercado Livre é uma opção para comparar na região; verifique sempre os preços atualizados, pois a taxa de câmbio pode afetar o custo final.',
+          '**Comparador de preços:** O Buscapé e o Zoom servem para comparar preços de placas novas no Brasil — verifique lá as ofertas atuais.',
+          '**Disponibilidade:** Placas de alta faixa (RTX 4090, RTX 5090) podem estar esgotadas, e a RTX 5090 pode não estar disponível pelo preço de lista; espere preços flutuantes e verifique vários distribuidores.',
         ],
         callouts: [
           {
@@ -2303,8 +2303,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Comprar uma GPU de 8GB para economizar (inclusive a variante RTX 3060 de 8GB, que não é a placa deste build) — o teto de VRAM criado não pode ser resolvido com software e força a troca da GPU depois, custando mais no total.',
           'Gastar demais na CPU (por exemplo, um Ryzen 7 em vez de um Ryzen 5) enquanto usa uma GPU de 8GB ou 12GB — a escolha da CPU quase não afeta os tokens/seg quando um modelo já cabe na VRAM.',
-          'Pular a configuração do perfil EXPO/XMP da RAM na BIOS, deixando kits DDR5-6000 rodando a 4800 — uma perda de desempenho gratuita que não custa nada para corrigir.',
-          'Subdimensionar a fonte para economizar $20-30 — o consumo de energia da GPU tem picos breves bem acima do TDP nominal sob carga sustentada, e em alguns builds uma unidade de 550W deixa pouca margem para picos transitórios; consulte a especificação do fabricante.',
+          'Sem ativar o perfil EXPO/XMP na BIOS, um kit DDR5-6000 fica em uma velocidade padrão menor. Isso importa principalmente quando há camadas do modelo rodando na CPU. Esses perfis são overclock de memória: consulte a documentação da placa-mãe e da CPU antes de ativar um.',
+          'Subdimensionar a fonte para economizar $20-30 — o consumo de energia da GPU tem picos breves bem acima do TDP nominal sob carga sustentada, e em alguns builds uma unidade de 550W deixa pouca margem para picos transitórios; consulte a especificação do fabricante. Estas são informações gerais, não orientação elétrica; em caso de dúvida, peça a um técnico qualificado que confira a montagem e o seu circuito elétrico.',
         ],
       },
       faqSection: {
@@ -2312,15 +2312,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas Frequentes',
         faqs: [
           { q: 'Um PC de $1.000 consegue rodar LLMs locais bem?', a: 'Para modelos de 7B a 14B, sim; modelos maiores precisam de mais VRAM. Com uma RTX 3060 12GB usada a cerca de $330, este build soma cerca de $940, e 12GB de VRAM comportam modelos de 14B em Q4. Modelos da classe 32B não cabem por completo em 12GB.' },
-          { q: 'Por que este build gasta tanto na GPU em relação à CPU?', a: 'A velocidade de inferência de LLM local depende quase inteiramente da capacidade de VRAM e da largura de banda de memória da GPU. Uma CPU mais rápida não aumenta os tokens/seg depois que um modelo é carregado na VRAM, então uma CPU intermediária e uma GPU forte superam uma CPU forte e uma GPU fraca para essa carga de trabalho específica.' },
-          { q: '12GB de VRAM são suficientes para LLMs locais em 2026?', a: '12GB comportam modelos de 7B-8B em Q4 com espaço para contexto longo e modelos de 14B em Q4 (cerca de 9-10GB) com um contexto mais curto. Não comportam por completo modelos da classe 32B (normalmente cerca de 20GB em Q4) nem da classe 70B (cerca de 40GB em Q4); uma GPU com 24GB de VRAM é o ponto de partida realista para modelos da classe 32B totalmente na GPU; uma placa de 16GB comporta modelos de 14B com folga, mas ainda precisa de descarga para a CPU no 32B.' },
-          { q: 'Posso usar uma GPU de 8GB para economizar?', a: 'Pode, mas isso limita você a modelos de 7B com folga mínima de contexto — um teto rígido que só se eleva trocando a placa. A economia de uma placa de 8GB não compensa perder o acesso a modelos de 13B-14B.' },
+          { q: 'Por que este build gasta tanto na GPU em relação à CPU?', a: 'Quando um modelo roda inteiramente na GPU, a velocidade depende principalmente da GPU e da sua largura de banda de memória, e a capacidade de VRAM decide quais modelos cabem. Nesse caso, uma CPU mais rápida costuma acrescentar pouco; por isso, para essa carga de trabalho, o build gasta na GPU em vez da CPU.' },
+          { q: '12GB de VRAM são suficientes para LLMs locais em 2026?', a: '12GB comportam modelos de 7B-8B em Q4 com espaço para contexto longo e modelos de 14B em Q4 (cerca de 9-10GB) com um contexto mais curto. Não comportam por completo modelos da classe 32B (normalmente cerca de 20GB em Q4) nem da classe 70B (cerca de 43GB em Q4); uma GPU com 24GB de VRAM é o ponto de partida realista para modelos da classe 32B totalmente na GPU; uma placa de 16GB comporta modelos de 14B com folga, mas ainda precisa de descarga para a CPU no 32B.' },
+          { q: 'Posso usar uma GPU de 8GB para economizar?', a: 'Pode, mas inteiramente na GPU isso limita você, em geral, à classe 7B com pouca folga de contexto, e a VRAM da placa não pode ser ampliada. Modelos maiores exigem descarga para a CPU, bem mais lenta, ou outra placa. Por isso este build usa uma placa de 12GB.' },
           { q: 'Quanta RAM eu realmente preciso junto com uma GPU de 12GB de VRAM?', a: '32GB de RAM de sistema. Isso cobre a sobrecarga do sistema operacional, o cache do arquivo do modelo durante o carregamento e quaisquer camadas descarregadas para a CPU em modelos que excedem um pouco a capacidade de VRAM.' },
           { q: 'Este build roda bem modelos de 32B?', a: 'Não, não por completo na GPU. Um modelo de 32B em Q4 normalmente precisa de cerca de 20GB, mais que os 12GB da placa, então parte dele precisa ser descarregada para a RAM do sistema, o que é muito mais lento; não há número de velocidade com fonte para essa configuração. Para a classe 32B totalmente na GPU, o ponto de partida realista é uma GPU com 24GB de VRAM; uma placa de 16GB ainda precisa de descarga para a CPU.' },
           { q: 'Que software devo rodar neste build?', a: 'Ollama ou LM Studio são os pontos de partida mais simples — ambos detectam automaticamente uma GPU NVIDIA como a RTX 3060 12GB e cuidam da quantização Q4. O llama.cpp direto dá mais controle sobre o formato de quantização e as configurações de contexto.' },
-          { q: 'Este build pode ser atualizado para rodar modelos 70B depois?', a: 'Não com uma única GPU — 70B em Q4 precisa de ~40GB de VRAM. O caminho de upgrade mais claro é trocar para uma RTX 3090 24GB usada (ainda não o suficiente para 70B completo) ou adicionar uma segunda GPU para pooling de VRAM, o que o build dual-GPU (cerca de $2.700) cobre diretamente; seus 32GB rodam modelos da classe 32B, mas 70B em Q4 (cerca de 43GB) continua sem caber.' },
+          { q: 'Este build pode ser atualizado para rodar modelos 70B depois?', a: 'Não com uma única GPU — 70B em Q4 precisa de ~43GB de VRAM. O caminho de upgrade mais claro é trocar para uma RTX 3090 24GB usada (ainda não o suficiente para 70B completo) ou adicionar uma segunda GPU para pooling de VRAM, o que o build dual-GPU (cerca de $2.700) cobre diretamente; seus 32GB rodam modelos da classe 32B, mas 70B em Q4 (cerca de 43GB) continua sem caber. Confira a fonte antes de qualquer uma das opções: a de 650W deste build foi escolhida para uma única RTX 3060 12GB.' },
           { q: 'O chipset da placa-mãe (B650 vs B850) importa para a inferência de LLM local?', a: 'Não para um build de GPU única. O B650 fornece um slot PCIe 4.0 x16, que é o que a GPU precisa; as diferenças de chipset entre o B650 e placas mais novas importam mais para a alocação de lanes PCIe em multi-GPU do que para inferência de LLM com GPU única.' },
-          { q: 'Uma GPU usada vale mais a pena que uma nova com este orçamento?', a: 'Com este orçamento, sim: a RTX 3060 12GB usada (cerca de $330 segundo o rastreador da InsiderLLM) mantém o total em cerca de $940, enquanto uma RTX 3060 12GB nova (cerca de $450 no gpuprix) o levaria a cerca de $1.060. Uma placa usada traz mais risco, então confira a política de devolução do vendedor. Uma RTX 3090 24GB usada é um ganho real de VRAM, mas custa mais que todo o orçamento de GPU deste build e leva o total acima de $2.000 — pertence a uma faixa de orçamento maior.' },
+          { q: 'Uma GPU usada vale mais a pena que uma nova com este orçamento?', a: 'Com este orçamento, sim: a RTX 3060 12GB usada (cerca de $330 segundo o rastreador da InsiderLLM) mantém o total em cerca de $940, enquanto uma RTX 3060 12GB nova (cerca de $460 no gpuprix) o levaria a cerca de $1.070. Uma placa usada traz mais risco, então confira a política de devolução do vendedor. Uma RTX 3090 24GB usada é um ganho real de VRAM, mas custa mais que todo o orçamento de GPU deste build e leva o total acima de $2.000 — pertence a uma faixa de orçamento maior.' },
         ],
       },
       relatedReading: {
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Biblioteca de modelos do Ollama e requisitos de VRAM](https://ollama.com/library)',
           '[Discussão #15013 do llama.cpp: desempenho em NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013)',
           '[gpuprix: página de preços da RTX 3060 12GB](https://gpuprix.com/us/gpus/geforce-rtx-3060-12gb)', '[gpuprix: ofertas da RTX 5060 Ti 16GB nos EUA (consultado em 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)', '[BasketPrice: preços da RTX 5060 Ti nos EUA (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
-          '[Página do modelo qwen3:32b no Ollama (20GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)',
+          '[Página do modelo qwen3:32b no Ollama (20GB, Q4_K_M)](https://ollama.com/library/qwen3:32b)', '[Página do modelo gpt-oss:20b no Ollama (14GB)](https://ollama.com/library/gpt-oss:20b)',
         ],
       },
     },
@@ -2375,10 +2375,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-pc-build-1000',
       'mainEntity': [
         { '@type': 'Question', 'name': 'Um PC de $1.000 consegue rodar LLMs locais bem?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para modelos de 7B a 14B, sim; modelos maiores precisam de mais VRAM. Com uma RTX 3060 12GB usada a cerca de $330, este build soma cerca de $940, e 12GB de VRAM comportam modelos de 14B em Q4. Modelos da classe 32B não cabem por completo em 12GB.' } },
-        { '@type': 'Question', 'name': '12GB de VRAM são suficientes para LLMs locais em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB comportam modelos de 7B-8B em Q4 com espaço para contexto longo e modelos de 14B em Q4 (cerca de 9-10GB) com um contexto mais curto. Não comportam por completo modelos da classe 32B (normalmente cerca de 20GB em Q4) nem da classe 70B (cerca de 40GB em Q4); uma GPU com 24GB de VRAM é o ponto de partida realista para modelos da classe 32B totalmente na GPU; uma placa de 16GB comporta modelos de 14B com folga, mas ainda precisa de descarga para a CPU no 32B.' } },
-        { '@type': 'Question', 'name': 'Posso usar uma GPU de 8GB para economizar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pode, mas isso limita você a modelos de 7B com folga mínima de contexto — um teto rígido que só se eleva trocando a placa. A economia de uma placa de 8GB não compensa perder o acesso a modelos de 13B-14B.' } },
+        { '@type': 'Question', 'name': '12GB de VRAM são suficientes para LLMs locais em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': '12GB comportam modelos de 7B-8B em Q4 com espaço para contexto longo e modelos de 14B em Q4 (cerca de 9-10GB) com um contexto mais curto. Não comportam por completo modelos da classe 32B (normalmente cerca de 20GB em Q4) nem da classe 70B (cerca de 43GB em Q4); uma GPU com 24GB de VRAM é o ponto de partida realista para modelos da classe 32B totalmente na GPU; uma placa de 16GB comporta modelos de 14B com folga, mas ainda precisa de descarga para a CPU no 32B.' } },
+        { '@type': 'Question', 'name': 'Posso usar uma GPU de 8GB para economizar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pode, mas inteiramente na GPU isso limita você, em geral, à classe 7B com pouca folga de contexto, e a VRAM da placa não pode ser ampliada. Modelos maiores exigem descarga para a CPU, bem mais lenta, ou outra placa. Por isso este build usa uma placa de 12GB.' } },
         { '@type': 'Question', 'name': 'Quanta RAM eu realmente preciso junto com uma GPU de 12GB de VRAM?', 'acceptedAnswer': { '@type': 'Answer', 'text': '32GB de RAM de sistema. Isso cobre a sobrecarga do sistema operacional, o cache do arquivo do modelo durante o carregamento e quaisquer camadas descarregadas para a CPU em modelos que excedem um pouco a capacidade de VRAM.' } },
-        { '@type': 'Question', 'name': 'Este build pode ser atualizado para rodar modelos 70B depois?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não com uma única GPU — 70B em Q4 precisa de ~40GB de VRAM. O caminho de upgrade mais claro é trocar para uma RTX 3090 24GB usada ou adicionar uma segunda GPU para pooling de VRAM, o que o build dual-GPU (cerca de $2.700) cobre diretamente; seus 32GB rodam modelos da classe 32B, mas 70B em Q4 (cerca de 43GB) continua sem caber.' } },
+        { '@type': 'Question', 'name': 'Este build pode ser atualizado para rodar modelos 70B depois?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não com uma única GPU — 70B em Q4 precisa de ~43GB de VRAM. O caminho de upgrade mais claro é trocar para uma RTX 3090 24GB usada (ainda não o suficiente para 70B completo) ou adicionar uma segunda GPU para pooling de VRAM, o que o build dual-GPU (cerca de $2.700) cobre diretamente; seus 32GB rodam modelos da classe 32B, mas 70B em Q4 (cerca de 43GB) continua sem caber. Confira a fonte antes de qualquer uma das opções: a de 650W deste build foi escolhida para uma única RTX 3060 12GB.' } },
       ],
     },
     itemListSchema: {

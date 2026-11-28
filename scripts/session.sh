@@ -23,7 +23,11 @@
 #   scripts/session.sh drop <name>     # remove worktree, archive branch, no merge
 set -uo pipefail
 
-REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# REPO is always the MAIN checkout (first entry of `git worktree list`), even when
+# this script is run from inside a session worktree. Otherwise `finish` and `drop`
+# delete their own REPO and the archive/branch-delete steps fail.
+REPO="$(git -C "$(dirname "${BASH_SOURCE[0]}")" worktree list --porcelain | sed -n '1s/^worktree //p')"
+[ -n "$REPO" ] || { echo "error: cannot locate the main checkout" >&2; exit 1; }
 ROOT="${PQ_SESSION_ROOT:-$HOME/pq-sessions}"
 BASE_PORT="${PQ_BASE_PORT:-3400}"
 

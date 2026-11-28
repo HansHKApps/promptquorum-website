@@ -113,7 +113,7 @@
         h2: "TLDR",
         items: [
           "VRAM target: Llama 3.3 70B at Q4 is a 43 GB download, so plan for 48 GB of GPU memory (two 24 GB cards) and expect about 5 GB left for context.",
-          "GPUs: two used RTX 3090 (about $1,500–1,725 each, US sold listings of 13–23 November 2026) are the lowest-priced 48 GB route in the tracked data; two used RTX 4090 cost about $2,575–3,010 each (US sold, October 2026); two new RTX 5090 (about $4,500–4,700 each at US retail; the source gives no date for this range) give 64 GB.",
+          "GPUs: two used RTX 3090 (about $1,500–1,725 each, US sold listings of 13–23 November 2026) are the lowest-priced 48 GB route in the tracked data; two used RTX 4090 cost about $2,575–3,010 each (US sold, October 2026); two used RTX 5090 (about $5,660–6,200 each, US sold listings of 6–25 November 2026) give 64 GB.",
           "NVLink: NVIDIA lists no NVLink on the RTX 4090 and RTX 5090; the RTX 3090 supports a bridge. llama.cpp, Ollama and vLLM split a model across GPUs over PCIe without it."
         ]
       },
@@ -254,7 +254,7 @@
       {
         type: "table",
         h2: "RTX 3090, 4090, 5090 and RTX PRO 6000 Compared",
-        intro: "For 48 GB, used RTX 3090 cards are the lowest-priced pair in the tracked data; two RTX 5090 reach 64 GB at about 2.6 to 3.1 times that price, and one RTX PRO 6000 reaches 96 GB on a single card.",
+        intro: "For 48 GB, used RTX 3090 cards are the lowest-priced pair in the tracked data; two RTX 5090 reach 64 GB at about 3.3 to 4.1 times that price, and one RTX PRO 6000 reaches 96 GB on a single card.",
         columns: [
           "Setup",
           "VRAM",
@@ -278,16 +278,16 @@
             NVLink: "No"
           },
           {
-            Setup: "1× RTX 5090 (new)",
+            Setup: "1× RTX 5090 (used)",
             VRAM: "32 GB",
-            "GPU price": "$4,500–4,700",
+            "GPU price": "$5,660–6,200",
             "Rated power": "575 W",
             NVLink: "No"
           },
           {
-            Setup: "2× RTX 5090 (new)",
+            Setup: "2× RTX 5090 (used)",
             VRAM: "64 GB",
-            "GPU price": "$9,000–9,400",
+            "GPU price": "$11,320–12,400",
             "Rated power": "1,150 W",
             NVLink: "No"
           },
@@ -362,7 +362,7 @@
           "<strong>Mixing GPU models.</strong> vLLM tensor parallelism shards weights evenly, so the card with less memory limits the pair. Buy identical cards.",
           "<strong>Buying 128 GB of DDR5 first.</strong> A model that sits in VRAM does not need it, and DDR5 prices were rising in 2026. Start at 64 GB.",
           "<strong>Sizing the PSU from one card.</strong> NVIDIA's 850 W figure for the RTX 4090 is for one card. Add both cards and the CPU, then add headroom.",
-          "<strong>Leaving electricity out of the cost.</strong> 900 W running continuously is 7,884 kWh a year: about $1,180 at an example rate of $0.15/kWh and about $2,760 at $0.35/kWh. Real draw during inference is usually below rated power and a workstation rarely runs 24/7, so treat this as an upper bound."
+          "<strong>Leaving electricity out of the cost.</strong> The two RTX 4090 alone, at their 900 W rating and running continuously, are 7,884 kWh a year: about $1,180 at an example rate of $0.15/kWh and about $2,760 at $0.35/kWh. CPU and the rest of the machine come on top; real inference draw is usually below the rating and a workstation rarely runs 24/7, so measure your own."
         ]
       },
       {
@@ -414,7 +414,7 @@
         h2: "Zusammenfassung",
         items: [
           "VRAM-Ziel: Llama 3.3 70B bei Q4 ist ein Download von 43 GB. Planen Sie daher 48 GB GPU-Speicher ein (zwei 24-GB-Karten) und rechnen Sie mit etwa 5 GB Rest für den Kontext.",
-          "GPUs: Zwei gebrauchte RTX 3090 (je etwa $1,500–1,725, verkaufte US-Angebote vom 13.–23. November 2026) sind in den erfassten Daten der günstigste Weg zu 48 GB; zwei gebrauchte RTX 4090 kosten je etwa $2,575–3,010 (in den USA verkauft, Oktober 2026); zwei neue RTX 5090 (je etwa $4,500–4,700 im US-Neuhandel; die Quelle nennt für diese Spanne kein Datum) bieten 64 GB.",
+          "GPUs: Zwei gebrauchte RTX 3090 (je etwa $1,500–1,725, verkaufte US-Angebote vom 13.–23. November 2026) sind in den erfassten Daten der günstigste Weg zu 48 GB; zwei gebrauchte RTX 4090 kosten je etwa $2,575–3,010 (in den USA verkauft, Oktober 2026); zwei gebrauchte RTX 5090 (je etwa $5,660–6,200, verkaufte US-Angebote vom 6.–25. November 2026) bieten 64 GB.",
           "NVLink: NVIDIA führt bei der RTX 4090 und der RTX 5090 kein NVLink auf; die RTX 3090 unterstützt eine Brücke. llama.cpp, Ollama und vLLM verteilen ein Modell auch ohne NVLink über PCIe auf mehrere GPUs."
         ]
       },
@@ -555,7 +555,7 @@
       {
         type: "table",
         h2: "RTX 3090, 4090, 5090 und RTX PRO 6000 im Vergleich",
-        intro: "Für 48 GB sind gebrauchte RTX 3090 in den erfassten Daten das günstigste Paar; zwei RTX 5090 erreichen 64 GB zum etwa 2,6- bis 3,1-Fachen dieses Preises, und eine RTX PRO 6000 erreicht 96 GB auf einer einzelnen Karte.",
+        intro: "Für 48 GB sind gebrauchte RTX 3090 in den erfassten Daten das günstigste Paar; zwei RTX 5090 erreichen 64 GB zum etwa 3,3- bis 4,1-Fachen dieses Preises, und eine RTX PRO 6000 erreicht 96 GB auf einer einzelnen Karte.",
         columns: [
           "Aufbau",
           "VRAM",
@@ -579,16 +579,16 @@
             NVLink: "Nein"
           },
           {
-            Aufbau: "1× RTX 5090 (neu)",
+            Aufbau: "1× RTX 5090 (gebraucht)",
             VRAM: "32 GB",
-            "GPU-Preis": "$4,500–4,700",
+            "GPU-Preis": "$5,660–6,200",
             Nennleistung: "575 W",
             NVLink: "Nein"
           },
           {
-            Aufbau: "2× RTX 5090 (neu)",
+            Aufbau: "2× RTX 5090 (gebraucht)",
             VRAM: "64 GB",
-            "GPU-Preis": "$9,000–9,400",
+            "GPU-Preis": "$11,320–12,400",
             Nennleistung: "1.150 W",
             NVLink: "Nein"
           },
@@ -663,7 +663,7 @@
           "<strong>GPU-Modelle mischen.</strong> Die Tensor-Parallelität von vLLM verteilt die Gewichte gleichmäßig, sodass die Karte mit weniger Speicher das Paar begrenzt. Kaufen Sie identische Karten.",
           "<strong>Zuerst 128 GB DDR5 kaufen.</strong> Ein Modell, das im VRAM liegt, braucht sie nicht, und die DDR5-Preise stiegen 2026. Beginnen Sie mit 64 GB.",
           "<strong>Das Netzteil nach einer Karte auslegen.</strong> Die 850 W, die NVIDIA für die RTX 4090 nennt, gelten für eine Karte. Addieren Sie beide Karten und die CPU und rechnen Sie dann Reserve dazu.",
-          "<strong>Den Strom bei den Kosten vergessen.</strong> 900 W im Dauerbetrieb sind 7.884 kWh pro Jahr: etwa $1,180 bei einem Beispielpreis von $0.15/kWh und etwa $2,760 bei $0.35/kWh. Die tatsächliche Leistungsaufnahme bei der Inferenz liegt meist unter der Nennleistung, und eine Workstation läuft selten rund um die Uhr; betrachten Sie dies daher als Obergrenze."
+          "<strong>Den Strom bei den Kosten vergessen.</strong> Allein die zwei RTX 4090 ergeben mit ihren 900 W Nennleistung im Dauerbetrieb 7.884 kWh pro Jahr: etwa $1,180 bei einem Beispielpreis von $0.15/kWh und etwa $2,760 bei $0.35/kWh. CPU und übriges System kommen hinzu; die tatsächliche Leistungsaufnahme bei der Inferenz liegt meist unter der Nennleistung, und eine Workstation läuft selten rund um die Uhr, messen Sie daher selbst."
         ]
       },
       {
@@ -715,7 +715,7 @@
         h2: "Points clés",
         items: [
           "VRAM visée : Llama 3.3 70B en Q4 pèse 43 GB au téléchargement ; prévoyez 48 GB de mémoire GPU (deux cartes de 24 GB) et comptez sur environ 5 GB restants pour le contexte.",
-          "GPU : deux RTX 3090 d'occasion (environ $1,500–1,725 pièce, ventes conclues aux États-Unis du 13 au 23 novembre 2026) sont la voie à 48 GB la moins chère dans les données suivies ; deux RTX 4090 d'occasion coûtent environ $2,575–3,010 pièce (ventes aux États-Unis, octobre 2026) ; deux RTX 5090 neuves (environ $4,500–4,700 pièce au détail aux États-Unis ; la source ne date pas cette fourchette) donnent 64 GB.",
+          "GPU : deux RTX 3090 d'occasion (environ $1,500–1,725 pièce, ventes conclues aux États-Unis du 13 au 23 novembre 2026) sont la voie à 48 GB la moins chère dans les données suivies ; deux RTX 4090 d'occasion coûtent environ $2,575–3,010 pièce (ventes aux États-Unis, octobre 2026) ; deux RTX 5090 d'occasion (environ $5,660–6,200 pièce, ventes conclues aux États-Unis du 6 au 25 novembre 2026) donnent 64 GB.",
           "NVLink : NVIDIA ne mentionne aucun NVLink sur la RTX 4090 ni sur la RTX 5090 ; la RTX 3090 accepte un pont. llama.cpp, Ollama et vLLM répartissent un modèle sur plusieurs GPU via PCIe, sans pont."
         ]
       },
@@ -856,7 +856,7 @@
       {
         type: "table",
         h2: "Comparatif RTX 3090, 4090, 5090 et RTX PRO 6000",
-        intro: "Pour 48 GB, les RTX 3090 d'occasion forment la paire la moins chère des données suivies ; deux RTX 5090 atteignent 64 GB pour environ 2.6 à 3.1 fois ce prix, et une seule RTX PRO 6000 atteint 96 GB sur une carte unique.",
+        intro: "Pour 48 GB, les RTX 3090 d'occasion forment la paire la moins chère des données suivies ; deux RTX 5090 atteignent 64 GB pour environ 3.3 à 4.1 fois ce prix, et une seule RTX PRO 6000 atteint 96 GB sur une carte unique.",
         columns: [
           "Configuration",
           "VRAM",
@@ -880,16 +880,16 @@
             NVLink: "Non"
           },
           {
-            Configuration: "1× RTX 5090 (neuve)",
+            Configuration: "1× RTX 5090 (occasion)",
             VRAM: "32 GB",
-            "Prix GPU": "$4,500–4,700",
+            "Prix GPU": "$5,660–6,200",
             "Puissance nominale": "575 W",
             NVLink: "Non"
           },
           {
-            Configuration: "2× RTX 5090 (neuves)",
+            Configuration: "2× RTX 5090 (occasion)",
             VRAM: "64 GB",
-            "Prix GPU": "$9,000–9,400",
+            "Prix GPU": "$11,320–12,400",
             "Puissance nominale": "1 150 W",
             NVLink: "Non"
           },
@@ -964,7 +964,7 @@
           "<strong>Mélanger des modèles de GPU.</strong> Le parallélisme tensoriel de vLLM répartit les poids à parts égales : la carte qui a le moins de mémoire limite la paire. Achetez des cartes identiques.",
           "<strong>Acheter d'abord 128 GB de DDR5.</strong> Un modèle qui tient en VRAM n'en a pas besoin, et les prix de la DDR5 montaient en 2026. Commencez à 64 GB.",
           "<strong>Dimensionner l'alimentation à partir d'une seule carte.</strong> Le chiffre de 850 W de NVIDIA pour la RTX 4090 vaut pour une carte. Additionnez les deux cartes et le processeur, puis ajoutez une marge.",
-          "<strong>Oublier l'électricité dans le coût.</strong> 900 W en continu représentent 7 884 kWh par an : environ $1,180 pour un tarif d'exemple de $0.15/kWh et environ $2,760 à $0.35/kWh. La consommation réelle pendant l'inférence est généralement inférieure à la puissance nominale et une station tourne rarement 24 h/24, 7 j/7 : voyez-y une borne supérieure."
+          "<strong>Oublier l'électricité dans le coût.</strong> Les deux RTX 4090 seules, à leur puissance nominale de 900 W en continu, représentent 7 884 kWh par an : environ $1,180 pour un tarif d'exemple de $0.15/kWh et environ $2,760 à $0.35/kWh. Le processeur et le reste de la machine s'y ajoutent ; la consommation réelle en inférence est généralement inférieure à la valeur nominale et une station tourne rarement 24 h/24, 7 j/7 : mesurez la vôtre."
         ]
       },
       {
@@ -1016,7 +1016,7 @@
         h2: "重要ポイント",
         items: [
           "VRAMの目標：Llama 3.3 70BのQ4版は43 GBのダウンロードです。GPUメモリは48 GB（24 GBカード2枚）を見込み、コンテキスト用に残るのは約5 GBです。",
-          "GPU：追跡データで最も安く48 GBを確保できるのは中古RTX 3090の2枚構成（1枚あたり約$1,500–1,725、2026年11月13〜23日の米国販売済み出品）です。中古RTX 4090は1枚あたり約$2,575–3,010（米国販売済み、2026年10月）、新品RTX 5090の2枚構成（米国の小売で1枚あたり約$4,500–4,700。情報源はこの価格帯の日付を示していません）なら64 GBになります。",
+          "GPU：追跡データで最も安く48 GBを確保できるのは中古RTX 3090の2枚構成（1枚あたり約$1,500–1,725、2026年11月13〜23日の米国販売済み出品）です。中古RTX 4090は1枚あたり約$2,575–3,010（米国販売済み、2026年10月）、中古RTX 5090の2枚構成（1枚あたり約$5,660–6,200、2026年11月6〜25日の米国販売済み出品）なら64 GBになります。",
           "NVLink：NVIDIAはRTX 4090とRTX 5090にNVLinkを記載していません。RTX 3090はブリッジに対応します。llama.cpp、Ollama、vLLMはNVLinkなしでもPCIe経由でモデルを複数GPUに分割できます。"
         ]
       },
@@ -1157,7 +1157,7 @@
       {
         type: "table",
         h2: "RTX 3090・4090・5090・RTX PRO 6000の比較",
-        intro: "48 GBを得るなら、追跡データで最も安いのは中古RTX 3090のペアです。RTX 5090を2枚にすると64 GBになりますが、価格は約2.6〜3.1倍で、RTX PRO 6000なら1枚で96 GBになります。",
+        intro: "48 GBを得るなら、追跡データで最も安いのは中古RTX 3090のペアです。RTX 5090を2枚にすると64 GBになりますが、価格は約3.3〜4.1倍で、RTX PRO 6000なら1枚で96 GBになります。",
         columns: [
           "構成",
           "VRAM",
@@ -1181,16 +1181,16 @@
             NVLink: "なし"
           },
           {
-            "構成": "RTX 5090×1（新品）",
+            "構成": "RTX 5090×1（中古）",
             VRAM: "32 GB",
-            "GPU価格": "$4,500–4,700",
+            "GPU価格": "$5,660–6,200",
             "定格電力": "575 W",
             NVLink: "なし"
           },
           {
-            "構成": "RTX 5090×2（新品）",
+            "構成": "RTX 5090×2（中古）",
             VRAM: "64 GB",
-            "GPU価格": "$9,000–9,400",
+            "GPU価格": "$11,320–12,400",
             "定格電力": "1,150 W",
             NVLink: "なし"
           },
@@ -1265,7 +1265,7 @@
           "<strong>異なるGPUモデルを混在させる。</strong> vLLMのテンソル並列は重みを均等に分割するため、メモリの少ないカードがペア全体の上限になります。同じカードを2枚買ってください。",
           "<strong>先に128 GBのDDR5を買う。</strong> VRAMに収まるモデルには不要で、DDR5の価格は2026年に上昇していました。64 GBから始めてください。",
           "<strong>電源をカード1枚分で見積もる。</strong> RTX 4090についてNVIDIAが示す850 Wはカード1枚の場合の数字です。2枚のカードとCPUを合計し、さらに余裕を加えてください。",
-          "<strong>電気代を費用に入れ忘れる。</strong> 900 Wを連続で動かすと年間7,884 kWhで、約$1,180（電力料金を例として$0.15/kWhとした場合）、約$2,760（$0.35/kWhの場合）です。推論中の実際の消費電力は通常、定格より低く、ワークステーションが24時間365日動き続けることもまれなので、上限の目安として捉えてください。"
+          "<strong>電気代を費用に入れ忘れる。</strong> RTX 4090の2枚だけでも、定格900 Wで連続稼働すると年間7,884 kWhで、約$1,180（電力料金を例として$0.15/kWhとした場合）、約$2,760（$0.35/kWhの場合）です。これにCPUなど本体の残りの分が加わります。推論中の実際の消費電力は通常、定格より低く、ワークステーションが24時間365日動き続けることもまれなので、ご自身の環境で計測してください。"
         ]
       },
       {
@@ -1317,7 +1317,7 @@
         h2: "核心要点",
         items: [
           "显存目标：Llama 3.3 70B的Q4版本是43 GB的下载文件，因此应规划48 GB显存（两张24 GB显卡），上下文大约只剩5 GB可用。",
-          "GPU：在追踪数据中，两张二手RTX 3090（每张约$1,500–1,725，2026年11月13–23日美国成交价）是达到48 GB的最低价方案；两张二手RTX 4090每张约$2,575–3,010（美国成交价，2026年10月）；两张全新RTX 5090（美国零售价每张约$4,500–4,700，来源未标注该区间的日期）可达64 GB。",
+          "GPU：在追踪数据中，两张二手RTX 3090（每张约$1,500–1,725，2026年11月13–23日美国成交价）是达到48 GB的最低价方案；两张二手RTX 4090每张约$2,575–3,010（美国成交价，2026年10月）；两张二手RTX 5090（每张约$5,660–6,200，2026年11月6–25日美国成交价）可达64 GB。",
           "NVLink：NVIDIA官网未列出RTX 4090和RTX 5090的NVLink支持；RTX 3090支持桥接器。llama.cpp、Ollama和vLLM无需NVLink，即可通过PCIe把模型拆分到多张GPU上。"
         ]
       },
@@ -1458,7 +1458,7 @@
       {
         type: "table",
         h2: "RTX 3090、4090、5090与RTX PRO 6000对比",
-        intro: "要凑够48 GB，二手RTX 3090是追踪数据中最便宜的组合；两张RTX 5090可达64 GB，价格约为前者的2.6至3.1倍，而一张RTX PRO 6000单卡就能达到96 GB。",
+        intro: "要凑够48 GB，二手RTX 3090是追踪数据中最便宜的组合；两张RTX 5090可达64 GB，价格约为前者的3.3至4.1倍，而一张RTX PRO 6000单卡就能达到96 GB。",
         columns: [
           "配置",
           "显存",
@@ -1482,16 +1482,16 @@
             NVLink: "无"
           },
           {
-            "配置": "1× RTX 5090（全新）",
+            "配置": "1× RTX 5090（二手）",
             "显存": "32 GB",
-            "GPU价格": "$4,500–4,700",
+            "GPU价格": "$5,660–6,200",
             "额定功率": "575 W",
             NVLink: "无"
           },
           {
-            "配置": "2× RTX 5090（全新）",
+            "配置": "2× RTX 5090（二手）",
             "显存": "64 GB",
-            "GPU价格": "$9,000–9,400",
+            "GPU价格": "$11,320–12,400",
             "额定功率": "1,150 W",
             NVLink: "无"
           },
@@ -1566,7 +1566,7 @@
           "<strong>混用不同型号的GPU。</strong> vLLM张量并行会均匀分片权重，显存较小的那张会限制整对显卡。请买相同的显卡。",
           "<strong>一上来就买128 GB的DDR5。</strong> 放在显存里的模型用不上这么多内存，而且2026年DDR5价格一直在上涨。从64 GB起步。",
           "<strong>按一张显卡估算电源。</strong> NVIDIA为RTX 4090给出的850 W是针对一张显卡的。请把两张显卡和CPU加在一起，再留出余量。",
-          "<strong>成本里漏掉电费。</strong> 900 W持续运行一年是7,884 kWh：约$1,180（示例电价$0.15/kWh），约$2,760（电价$0.35/kWh）。推理时的实际功耗通常低于额定功率，工作站也很少24小时不停运行，所以请把它当作上限。"
+          "<strong>成本里漏掉电费。</strong> 仅两张RTX 4090按900 W额定功率持续运行，一年就是7,884 kWh：约$1,180（示例电价$0.15/kWh），约$2,760（电价$0.35/kWh）。CPU和整机其余部分还要另加；推理时的实际功耗通常低于额定功率，工作站也很少24小时不停运行，所以请实测自己的功耗。"
         ]
       },
       {
@@ -1618,7 +1618,7 @@
         h2: "Puntos clave",
         items: [
           "Objetivo de VRAM: Llama 3.3 70B en Q4 es una descarga de 43 GB, así que planea 48 GB de memoria de GPU (dos tarjetas de 24 GB) y cuenta con unos 5 GB libres para el contexto.",
-          "GPU: dos RTX 3090 usadas (unos $1,500–1,725 cada una, ventas en EE. UU. del 13 al 23 de noviembre de 2026) son la vía de 48 GB más barata en los datos del tracker; dos RTX 4090 usadas cuestan unos $2,575–3,010 cada una (ventas en EE. UU., octubre de 2026); dos RTX 5090 nuevas (unos $4,500–4,700 cada una en tiendas de EE. UU.; la fuente no fecha este rango) dan 64 GB.",
+          "GPU: dos RTX 3090 usadas (unos $1,500–1,725 cada una, ventas en EE. UU. del 13 al 23 de noviembre de 2026) son la vía de 48 GB más barata en los datos del tracker; dos RTX 4090 usadas cuestan unos $2,575–3,010 cada una (ventas en EE. UU., octubre de 2026); dos RTX 5090 usadas (unos $5,660–6,200 cada una, ventas en EE. UU. del 6 al 25 de noviembre de 2026) dan 64 GB.",
           "NVLink: NVIDIA no lista NVLink en la RTX 4090 ni en la RTX 5090; la RTX 3090 admite un puente. llama.cpp, Ollama y vLLM reparten un modelo entre varias GPU por PCIe sin necesitarlo."
         ]
       },
@@ -1759,7 +1759,7 @@
       {
         type: "table",
         h2: "Comparativa de RTX 3090, 4090, 5090 y RTX PRO 6000",
-        intro: "Para 48 GB, las RTX 3090 usadas son el par más barato en los datos del tracker; dos RTX 5090 llegan a 64 GB por un precio entre 2.6 y 3.1 veces mayor, aproximadamente, y una RTX PRO 6000 llega a 96 GB en una sola tarjeta.",
+        intro: "Para 48 GB, las RTX 3090 usadas son el par más barato en los datos del tracker; dos RTX 5090 llegan a 64 GB por un precio entre 3.3 y 4.1 veces mayor, aproximadamente, y una RTX PRO 6000 llega a 96 GB en una sola tarjeta.",
         columns: [
           "Configuración",
           "VRAM",
@@ -1783,16 +1783,16 @@
             NVLink: "No"
           },
           {
-            "Configuración": "1× RTX 5090 (nueva)",
+            "Configuración": "1× RTX 5090 (usada)",
             VRAM: "32 GB",
-            "Precio de GPU": "$4,500–4,700",
+            "Precio de GPU": "$5,660–6,200",
             "Potencia nominal": "575 W",
             NVLink: "No"
           },
           {
-            "Configuración": "2× RTX 5090 (nuevas)",
+            "Configuración": "2× RTX 5090 (usadas)",
             VRAM: "64 GB",
-            "Precio de GPU": "$9,000–9,400",
+            "Precio de GPU": "$11,320–12,400",
             "Potencia nominal": "1,150 W",
             NVLink: "No"
           },
@@ -1867,7 +1867,7 @@
           "<strong>Mezclar modelos de GPU.</strong> El paralelismo de tensores de vLLM reparte los pesos por igual, así que la tarjeta con menos memoria limita al par. Compra tarjetas idénticas.",
           "<strong>Comprar primero 128 GB de DDR5.</strong> Un modelo que cabe en la VRAM no los necesita, y los precios de la DDR5 estaban subiendo en 2026. Empieza con 64 GB.",
           "<strong>Dimensionar la PSU a partir de una sola tarjeta.</strong> La cifra de 850 W de NVIDIA para la RTX 4090 corresponde a una tarjeta. Suma ambas tarjetas y la CPU, y luego añade margen.",
-          "<strong>Dejar la electricidad fuera del costo.</strong> 900 W en funcionamiento continuo son 7,884 kWh al año: unos $1,180 con una tarifa de ejemplo de $0.15/kWh y unos $2,760 con $0.35/kWh. El consumo real durante la inferencia suele ser menor que la potencia nominal y una estación de trabajo rara vez funciona las 24 horas, todos los días, así que toma esto como un límite superior."
+          "<strong>Dejar la electricidad fuera del costo.</strong> Solo las dos RTX 4090, a su potencia nominal de 900 W en funcionamiento continuo, son 7,884 kWh al año: unos $1,180 con una tarifa de ejemplo de $0.15/kWh y unos $2,760 con $0.35/kWh. La CPU y el resto del equipo se suman aparte; el consumo real durante la inferencia suele ser menor que el nominal y una estación de trabajo rara vez funciona las 24 horas, así que mide el tuyo."
         ]
       },
       {
@@ -1919,7 +1919,7 @@
         h2: "Pontos principais",
         items: [
           "Meta de VRAM: o Llama 3.3 70B em Q4 é um download de 43 GB, então planeje 48 GB de memória de GPU (duas placas de 24 GB) e espere sobrar cerca de 5 GB para o contexto.",
-          "GPUs: duas RTX 3090 usadas (cerca de $1,500–1,725 cada, vendas nos EUA de 13 a 23 de novembro de 2026) são o caminho de 48 GB mais barato nos dados rastreados; duas RTX 4090 usadas custam cerca de $2,575–3,010 cada (vendas nos EUA, outubro de 2026); duas RTX 5090 novas (cerca de $4,500–4,700 cada no varejo dos EUA; a fonte não informa a data dessa faixa) dão 64 GB.",
+          "GPUs: duas RTX 3090 usadas (cerca de $1,500–1,725 cada, vendas nos EUA de 13 a 23 de novembro de 2026) são o caminho de 48 GB mais barato nos dados rastreados; duas RTX 4090 usadas custam cerca de $2,575–3,010 cada (vendas nos EUA, outubro de 2026); duas RTX 5090 usadas (cerca de $5,660–6,200 cada, vendas nos EUA de 6 a 25 de novembro de 2026) dão 64 GB.",
           "NVLink: a NVIDIA não lista NVLink na RTX 4090 nem na RTX 5090; a RTX 3090 aceita uma ponte. llama.cpp, Ollama e vLLM dividem um modelo entre GPUs via PCIe sem ela."
         ]
       },
@@ -2060,7 +2060,7 @@
       {
         type: "table",
         h2: "RTX 3090, 4090, 5090 e RTX PRO 6000 comparadas",
-        intro: "Para 48 GB, as RTX 3090 usadas são o par mais barato nos dados rastreados; duas RTX 5090 chegam a 64 GB por cerca de 2.6 a 3.1 vezes esse preço, e uma RTX PRO 6000 chega a 96 GB em uma única placa.",
+        intro: "Para 48 GB, as RTX 3090 usadas são o par mais barato nos dados rastreados; duas RTX 5090 chegam a 64 GB por cerca de 3.3 a 4.1 vezes esse preço, e uma RTX PRO 6000 chega a 96 GB em uma única placa.",
         columns: [
           "Configuração",
           "VRAM",
@@ -2084,16 +2084,16 @@
             NVLink: "Não"
           },
           {
-            "Configuração": "1× RTX 5090 (nova)",
+            "Configuração": "1× RTX 5090 (usada)",
             VRAM: "32 GB",
-            "Preço das GPUs": "$4,500–4,700",
+            "Preço das GPUs": "$5,660–6,200",
             "Potência nominal": "575 W",
             NVLink: "Não"
           },
           {
-            "Configuração": "2× RTX 5090 (novas)",
+            "Configuração": "2× RTX 5090 (usadas)",
             VRAM: "64 GB",
-            "Preço das GPUs": "$9,000–9,400",
+            "Preço das GPUs": "$11,320–12,400",
             "Potência nominal": "1,150 W",
             NVLink: "Não"
           },
@@ -2168,7 +2168,7 @@
           "<strong>Misturar modelos de GPU.</strong> O paralelismo de tensores do vLLM divide os pesos por igual, então a placa com menos memória limita o par. Compre placas idênticas.",
           "<strong>Comprar 128 GB de DDR5 primeiro.</strong> Um modelo que fica na VRAM não precisa disso, e os preços da DDR5 estavam subindo em 2026. Comece com 64 GB.",
           "<strong>Dimensionar a fonte a partir de uma placa só.</strong> O número de 850 W da NVIDIA para a RTX 4090 vale para uma placa. Some as duas placas e a CPU e depois acrescente folga.",
-          "<strong>Deixar a eletricidade fora do custo.</strong> 900 W em uso contínuo dão 7,884 kWh por ano: cerca de $1,180 a uma tarifa de exemplo de $0.15/kWh e cerca de $2,760 a $0.35/kWh. O consumo real durante a inferência costuma ficar abaixo da potência nominal e uma workstation raramente roda 24 horas por dia, então trate isso como um limite superior."
+          "<strong>Deixar a eletricidade fora do custo.</strong> Só as duas RTX 4090, na potência nominal de 900 W em uso contínuo, dão 7,884 kWh por ano: cerca de $1,180 a uma tarifa de exemplo de $0.15/kWh e cerca de $2,760 a $0.35/kWh. A CPU e o resto da máquina vêm por cima; o consumo real na inferência costuma ficar abaixo do nominal e uma workstation raramente roda 24 horas por dia, então meça o seu."
         ]
       },
       {
@@ -2220,7 +2220,7 @@
         h2: "النقاط الرئيسية",
         items: [
           "هدف VRAM: نموذج Llama 3.3 70B بتكميم Q4 هو تنزيل بحجم 43 GB، لذا خطّط لـ 48 GB من ذاكرة GPU (بطاقتان بسعة 24 GB لكل منهما) وتوقّع بقاء نحو 5 GB للسياق.",
-          "بطاقات GPU: بطاقتا RTX 3090 مستعملتان (نحو $1,500–1,725 للواحدة، مبيعات منفَّذة في الولايات المتحدة بين 13 و23 نوفمبر 2026) هما أقل طريق سعرًا إلى 48 GB في البيانات المتتبَّعة؛ وتكلفة بطاقتي RTX 4090 مستعملتين نحو $2,575–3,010 للواحدة (مبيعات أمريكية، أكتوبر 2026)؛ وبطاقتا RTX 5090 جديدتان (نحو $4,500–4,700 للواحدة بسعر التجزئة الأمريكي؛ ولا يذكر المصدر تاريخًا لهذا النطاق) تعطيان 64 GB.",
+          "بطاقات GPU: بطاقتا RTX 3090 مستعملتان (نحو $1,500–1,725 للواحدة، مبيعات منفَّذة في الولايات المتحدة بين 13 و23 نوفمبر 2026) هما أقل طريق سعرًا إلى 48 GB في البيانات المتتبَّعة؛ وتكلفة بطاقتي RTX 4090 مستعملتين نحو $2,575–3,010 للواحدة (مبيعات أمريكية، أكتوبر 2026)؛ وبطاقتا RTX 5090 مستعملتان (نحو $5,660–6,200 للواحدة، مبيعات منفَّذة في الولايات المتحدة بين 6 و25 نوفمبر 2026) تعطيان 64 GB.",
           "NVLink: لا تذكر NVIDIA وجود NVLink في RTX 4090 وRTX 5090؛ أما RTX 3090 فتدعم جسرًا. تقسّم llama.cpp وOllama وvLLM النموذج على بطاقات GPU عبر PCIe من دونه."
         ]
       },
@@ -2361,7 +2361,7 @@
       {
         type: "table",
         h2: "مقارنة RTX 3090 وRTX 4090 وRTX 5090 وRTX PRO 6000",
-        intro: "للوصول إلى 48 GB، تُعد بطاقات RTX 3090 المستعملة أقل الأزواج سعرًا في البيانات المتتبَّعة؛ وتصل بطاقتا RTX 5090 إلى 64 GB بنحو 2.6 إلى 3.1 أضعاف هذا السعر، وتصل بطاقة RTX PRO 6000 واحدة إلى 96 GB.",
+        intro: "للوصول إلى 48 GB، تُعد بطاقات RTX 3090 المستعملة أقل الأزواج سعرًا في البيانات المتتبَّعة؛ وتصل بطاقتا RTX 5090 إلى 64 GB بنحو 3.3 إلى 4.1 أضعاف هذا السعر، وتصل بطاقة RTX PRO 6000 واحدة إلى 96 GB.",
         columns: [
           "التكوين",
           "VRAM",
@@ -2385,16 +2385,16 @@
             NVLink: "لا"
           },
           {
-            "التكوين": "1× RTX 5090 (جديدة)",
+            "التكوين": "1× RTX 5090 (مستعملة)",
             VRAM: "32 GB",
-            "سعر GPU": "$4,500–4,700",
+            "سعر GPU": "$5,660–6,200",
             "القدرة المقدّرة": "575 W",
             NVLink: "لا"
           },
           {
-            "التكوين": "2× RTX 5090 (جديدة)",
+            "التكوين": "2× RTX 5090 (مستعملة)",
             VRAM: "64 GB",
-            "سعر GPU": "$9,000–9,400",
+            "سعر GPU": "$11,320–12,400",
             "القدرة المقدّرة": "1,150 W",
             NVLink: "لا"
           },
@@ -2469,7 +2469,7 @@
           "<strong>خلط طرازات GPU.</strong> يوزّع التوازي الموتّري في vLLM الأوزان بالتساوي، فتحدّ البطاقة الأقل ذاكرة من قدرة الزوج. اشترِ بطاقتين متطابقتين.",
           "<strong>شراء 128 GB من DDR5 أولًا.</strong> النموذج الموجود في VRAM لا يحتاج إليها، وكانت أسعار DDR5 ترتفع في 2026. ابدأ بـ 64 GB.",
           "<strong>تحديد حجم مزود الطاقة من بطاقة واحدة.</strong> رقم NVIDIA البالغ 850 W لـ RTX 4090 هو لبطاقة واحدة. اجمع البطاقتين والمعالج ثم أضف هامشًا.",
-          "<strong>إغفال الكهرباء من التكلفة.</strong> تشغيل 900 W باستمرار يعني 7,884 kWh في السنة: نحو $1,180 بسعر افتراضي قدره $0.15/kWh ونحو $2,760 بسعر $0.35/kWh. والاستهلاك الفعلي أثناء الاستدلال أقل عادةً من القدرة المقدّرة، وقلّما تعمل محطة العمل 24 ساعة على مدار الأسبوع، لذا اعتبر هذا حدًا أعلى."
+          "<strong>إغفال الكهرباء من التكلفة.</strong> بطاقتا RTX 4090 وحدهما، بقدرتهما المقدّرة 900 W وبتشغيل مستمر، تعنيان 7,884 kWh في السنة: نحو $1,180 بسعر افتراضي قدره $0.15/kWh ونحو $2,760 بسعر $0.35/kWh. ويُضاف إلى ذلك استهلاك المعالج وبقية الجهاز؛ والاستهلاك الفعلي أثناء الاستدلال أقل عادةً من القدرة المقدّرة، وقلّما تعمل محطة العمل على مدار الساعة، لذا قِس استهلاكك."
         ]
       },
       {
@@ -2521,7 +2521,7 @@
         h2: "핵심 내용",
         items: [
           "VRAM 목표: Q4의 Llama 3.3 70B는 43 GB 다운로드이므로 48 GB의 GPU 메모리(24 GB 카드 두 장)를 계획하시고, 컨텍스트에 쓸 여유는 약 5 GB로 예상하십시오.",
-          "GPU: 추적된 데이터에서는 중고 RTX 3090 두 장(장당 약 $1,500–1,725, 2026년 11월 13~23일 미국 판매 완료가)이 가장 저렴한 48 GB 구성입니다. 중고 RTX 4090 두 장은 장당 약 $2,575–3,010(미국 판매 완료, 2026년 10월)이고, 신품 RTX 5090 두 장(미국 소매가 장당 약 $4,500–4,700, 출처에 이 가격대의 날짜는 없습니다)은 64 GB를 제공합니다.",
+          "GPU: 추적된 데이터에서는 중고 RTX 3090 두 장(장당 약 $1,500–1,725, 2026년 11월 13~23일 미국 판매 완료가)이 가장 저렴한 48 GB 구성입니다. 중고 RTX 4090 두 장은 장당 약 $2,575–3,010(미국 판매 완료, 2026년 10월)이고, 중고 RTX 5090 두 장(장당 약 $5,660–6,200, 2026년 11월 6~25일 미국 판매 완료가)은 64 GB를 제공합니다.",
           "NVLink: NVIDIA는 RTX 4090과 RTX 5090에 NVLink를 명시하지 않으며, RTX 3090은 브리지를 지원합니다. llama.cpp, Ollama, vLLM은 NVLink 없이도 PCIe로 모델을 여러 GPU에 나눕니다."
         ]
       },
@@ -2662,7 +2662,7 @@
       {
         type: "table",
         h2: "RTX 3090, 4090, 5090, RTX PRO 6000 비교",
-        intro: "48 GB 기준으로는 중고 RTX 3090 두 장이 추적된 데이터에서 가장 저렴한 조합입니다. RTX 5090 두 장은 약 2.6~3.1배 가격에 64 GB에 이르고, RTX PRO 6000 한 장은 단일 카드로 96 GB에 이릅니다.",
+        intro: "48 GB 기준으로는 중고 RTX 3090 두 장이 추적된 데이터에서 가장 저렴한 조합입니다. RTX 5090 두 장은 약 3.3~4.1배 가격에 64 GB에 이르고, RTX PRO 6000 한 장은 단일 카드로 96 GB에 이릅니다.",
         columns: [
           "구성",
           "VRAM",
@@ -2686,16 +2686,16 @@
             NVLink: "없음"
           },
           {
-            "구성": "RTX 5090 1장 (신품)",
+            "구성": "RTX 5090 1장 (중고)",
             VRAM: "32 GB",
-            "GPU 가격": "$4,500–4,700",
+            "GPU 가격": "$5,660–6,200",
             "정격 전력": "575 W",
             NVLink: "없음"
           },
           {
-            "구성": "RTX 5090 2장 (신품)",
+            "구성": "RTX 5090 2장 (중고)",
             VRAM: "64 GB",
-            "GPU 가격": "$9,000–9,400",
+            "GPU 가격": "$11,320–12,400",
             "정격 전력": "1,150 W",
             NVLink: "없음"
           },
@@ -2770,7 +2770,7 @@
           "<strong>서로 다른 GPU 모델 혼용하기.</strong> vLLM 텐서 병렬 처리는 가중치를 균등하게 샤딩하므로 메모리가 적은 카드가 한 쌍의 한계를 정합니다. 동일한 카드를 구매하십시오.",
           "<strong>DDR5 128 GB를 먼저 사기.</strong> VRAM에 올라가는 모델에는 필요하지 않으며 DDR5 가격은 2026년에 오르는 추세였습니다. 64 GB로 시작하십시오.",
           "<strong>카드 한 장을 기준으로 PSU 산정하기.</strong> RTX 4090에 대한 NVIDIA의 850 W 수치는 카드 한 장 기준입니다. 두 카드와 CPU를 모두 더한 다음 여유분을 더하십시오.",
-          "<strong>전기 요금을 비용에서 빼기.</strong> 900 W를 연속으로 가동하면 연간 7,884 kWh입니다. 예시 요금으로는 약 $1,180($0.15/kWh), 약 $2,760($0.35/kWh)입니다. 추론 중 실제 소비 전력은 보통 정격보다 낮고 워크스테이션을 24시간 가동하는 경우도 드물므로, 이 값은 상한으로 보십시오."
+          "<strong>전기 요금을 비용에서 빼기.</strong> RTX 4090 두 장만 정격 900 W로 연속 가동해도 연간 7,884 kWh입니다. 예시 요금으로는 약 $1,180($0.15/kWh), 약 $2,760($0.35/kWh)입니다. CPU와 나머지 시스템 전력은 여기에 더해집니다. 추론 중 실제 소비 전력은 보통 정격보다 낮고 워크스테이션을 24시간 가동하는 경우도 드물므로 직접 측정하십시오."
         ]
       },
       {

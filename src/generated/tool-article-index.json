@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 204,
+    "totalCount": 203,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 117,
+    "totalCount": 116,
     "capped": true
   },
   "LocalAI": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 196,
+    "totalCount": 195,
     "capped": true
   },
   "Atomic Chat": {
@@ -14639,14 +14639,6 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "local-llm-cost-calculator-build-vs-rent-2026",
-        "title": "Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026",
-        "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
-        "dateModified": "2026-11-28",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
         "slug": "local-llms-vs-claude-pro",
         "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
         "url": "/local-llms/local-llms-vs-claude-pro",
@@ -14700,9 +14692,17 @@
         "url": "/power-local-llm/weesper-neon-flow-review",
         "dateModified": "2026-11-27",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weesper-transcribe-review",
+        "title": "Weesper Transcribe Review: Offline File Transcription for Mac",
+        "url": "/power-local-llm/weesper-transcribe-review",
+        "dateModified": "2026-11-27",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 299,
+    "totalCount": 298,
     "capped": true
   },
   "Qdrant": {

@@ -240,47 +240,47 @@ const SPECS = {
   "best-gpu-for-llm-inference-under-500-2026-overview": {
     "en": {
       "title": "Best GPU for LLM Inference Under $500 (2026)",
-      "subtitle": "The best budget GPU for local LLM inference under $500 is the RTX 4060 Ti 16GB (~$424): its 16 GB VR",
+      "highlights": ["Our pick: used RTX 3060 12GB", "Sold in the US: $310–350", "Arc B580: price unclear"],
       "footer": "PromptQuorum Guide"
     },
     "de": {
-      "title": "Beste GPU für LLM-Inferenz unter 500 € (2026)",
-      "subtitle": "Die beste Budget-GPU für lokale LLM-Inferenz ist die RTX 4060 Ti 16GB (~520 €): 16 GB VRAM führen 14",
+      "title": "Beste GPU für LLM-Inferenz unter 500 $ (2026)",
+      "highlights": ["Unsere Wahl: RTX 3060 gebraucht", "In den USA verkauft: 310–350 $", "Arc B580: Preis unklar"],
       "footer": "PromptQuorum-Leitfaden"
     },
     "fr": {
-      "title": "Meilleure GPU pour l'inférence LLM à moins de 500 € (2026)",
-      "subtitle": "La meilleure GPU budget pour l'inférence LLM locale sous 500 € est la RTX 4060 Ti 16 Go (~520 €) : s",
+      "title": "Meilleure GPU pour LLM sous 500 $ (2026)",
+      "highlights": ["Notre choix : RTX 3060 occasion", "Vendue aux US : 310–350 $", "Arc B580 : prix incertain"],
       "footer": "Guide PromptQuorum"
     },
     "ja": {
-      "title": "500ドル以下のLLM推論向けGPUおすすめランキング（2026年）",
-      "subtitle": "$500以下のローカルLLM推論に最良のバジェットGPUはRTX 4060 Ti 16GB（~¥88,000）：16GB VRAMで14BモデルをQ4で完全にGPU内実行。RTX 3060 12GB（",
+      "title": "$500以下のLLM推論向けGPU（2026年）",
+      "highlights": ["当サイトの選定：中古RTX 3060", "米国成約：$310〜350", "Arc B580：価格は不明確"],
       "footer": "PromptQuorumガイド"
     },
     "zh": {
-      "title": "2026年500美元以下LLM推理最佳GPU排行",
-      "subtitle": "500美元以下本地LLM推理的最佳预算GPU是RTX 4060 Ti 16GB（~$424）：16GB显存可将14B模型Q4完全放入GPU运行。RTX 3060 12GB（~$339）是更便宜的次选。",
+      "title": "$500以下本地LLM推理GPU（2026）",
+      "highlights": ["本站首选：二手RTX 3060", "美国成交价：$310–350", "Arc B580：价格不明"],
       "footer": "PromptQuorum 指南"
     },
     "es": {
-      "title": "Mejor GPU para inferencia LLM por menos de 500 € (2026)",
-      "subtitle": "La mejor GPU económica para inferencia LLM local por menos de 500 € es la RTX 4060 Ti 16GB (~520 €):",
+      "title": "Mejor GPU para inferencia LLM por menos de $500 (2026)",
+      "highlights": ["Elegimos: RTX 3060 12GB usada", "Vendida en EE. UU.: $310–350", "Arc B580: precio dudoso"],
       "footer": "Guía de PromptQuorum"
     },
     "pt": {
-      "title": "Melhor GPU para inferência de LLM por menos de US$ 500 (2026)",
-      "subtitle": "A melhor GPU econômica para inferência de LLM local por menos de US$ 500 é a RTX 4060 Ti 16GB (~R$ 3",
+      "title": "Melhor GPU para LLM por até US$ 500 (2026)",
+      "highlights": ["Nossa escolha: RTX 3060 usada", "Vendida nos EUA: US$ 310–350", "Arc B580: preço incerto"],
       "footer": "Guia PromptQuorum"
     },
     "ar": {
-      "title": "أفضل ⁨GPU⁩ للاستدلال على نماذج ⁨LLM⁩ بأقل من $⁨500⁩ (⁨2026⁩)",
-      "subtitle": "أفضل ⁨GPU⁩ اقتصادية للاستدلال المحلي على ⁨LLM⁩ بأقل من $⁨500⁩ هي ⁨RTX 4060 Ti 16GB⁩ (~$⁨424⁩): تشغّل",
+      "title": "أفضل GPU لنماذج LLM بأقل من $500 (2026)",
+      "highlights": ["خيارنا هو RTX 3060 مستعملة", "سعر البيع في أمريكا $310–350", "سعر Arc B580 غير مؤكد"],
       "footer": "دليل PromptQuorum"
     },
     "ko": {
-      "title": "500달러 이하 LLM 추론용 최고 GPU 순위 (2026년)",
-      "subtitle": "$500 이하 로컬 LLM 추론에 가장 좋은 보급형 GPU는 RTX 4060 Ti 16GB(~$424)입니다. 16GB VRAM으로 14B 모델을 Q4로 GPU 내에서 완전히 실행",
+      "title": "$500 이하 LLM 추론용 GPU (2026)",
+      "highlights": ["저희의 선택: 중고 3060", "미국 체결가 $310–350", "Arc B580: 가격 불확실"],
       "footer": "PromptQuorum 가이드"
     }
   },
@@ -478,7 +478,7 @@ async function generate(basename, lang, spec) {
   const res = await fetch(`${BASE}/api/hero-image`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ lang, title: spec.title, subtitle: spec.subtitle, footer: spec.footer }),
+    body: JSON.stringify({ lang, title: spec.title, subtitle: spec.subtitle, highlights: spec.highlights, footer: spec.footer }),
   });
   if (!res.ok) throw new Error(`${basename}/${lang}: HTTP ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());

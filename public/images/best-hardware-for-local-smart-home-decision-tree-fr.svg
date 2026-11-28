@@ -48,7 +48,7 @@
   <rect x="610" y="248" width="140" height="4" rx="0" fill="#34A853"/>
   <text x="680" y="276" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">Serveur RTX 3090</text>
   <text x="680" y="294" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">24 Go VRAM</text>
-  <text x="680" y="308" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">LLM local jusqu'à ~70B</text>
+  <text x="680" y="308" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">70B : offload requis</text>
 
   <text x="400" y="345" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Deux questions déterminent le boîtier : ajouter des caméras Frigate, et ajouter un LLM local.</text>
   <text x="400" y="362" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Quatre chemins mènent à un Raspberry Pi 5, un mini PC Ryzen, un mini PC Intel N100/N150, ou un serveur RTX 3090.</text>
