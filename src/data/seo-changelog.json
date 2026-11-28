@@ -32002,7 +32002,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "99d626cc-a5f1-40c9-8a94-4009a3f7c52b",
@@ -32017,7 +32021,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "85738084-e69b-4cb0-bf08-1df31a0f1ede",
@@ -32032,7 +32040,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a0d22e7d-9292-4fc7-8db0-8ce8488e6e1a",
@@ -32047,7 +32059,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "2fed2f16-8ea5-4204-ba8f-c8b74e62daee",
@@ -32062,7 +32078,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "bddeb0e8-9302-4a07-96e0-2239b153fa8f",
@@ -32077,7 +32097,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "5086e6cc-2de2-4222-8aa3-ec72a3317de5",
@@ -32092,7 +32116,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "2db87a45-1403-4f11-87db-e7bd920f80c0",
@@ -32107,7 +32135,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a116e412-687d-4679-bcd9-6c85aa04390d",
@@ -32122,7 +32154,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "75f48cae-5259-44d2-af27-c98e17c21923",
@@ -32137,7 +32173,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "2d86770b-2f90-48bd-929e-d3f39df78cc9",
@@ -32152,7 +32192,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "65efc023-13fa-4e80-bb7b-fbc9ced4157e",
@@ -32167,7 +32211,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "637198b3-1baf-4653-86ae-86b486f3683d",
@@ -32182,7 +32230,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "283e247e-06f3-49c7-a03c-01c27f0953e1",
@@ -32197,7 +32249,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "92213485-dd50-4339-9274-b7e194447999",
@@ -32212,7 +32268,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ef57a464-dbfb-4f26-988b-20b2b5d16c81",
@@ -32227,7 +32287,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "df2a7062-dc6f-40d7-8566-a63589b7d48c",
@@ -32242,7 +32306,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "19c4f6ee-1587-4ada-80fa-541dba4e137e",
@@ -32257,7 +32325,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "bcde3032-d7c2-4f30-ac41-ab37c3fcc11b",
@@ -32272,7 +32344,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ae894af3-881d-447e-ad7b-f298542fe10a",
@@ -32287,7 +32363,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ce1a06da-ff35-43e8-ae12-220d9c67c6d1",
@@ -32302,7 +32382,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "0a5f5ca6-0e61-471a-9b43-3c45029042c0",
@@ -32317,7 +32401,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "89f1f381-a7ff-4406-8c85-2fb017f3770b",
@@ -32332,7 +32420,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "87ab2d5b-8aa7-4ddb-8aad-cf7c04273522",
@@ -32347,7 +32439,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "15ba951a-0ab3-46df-b95d-1c5779a6ded8",
@@ -32362,7 +32458,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "74f2d1f5-4eb4-4c31-9055-5957459ea29c",
@@ -32377,7 +32477,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "85401e37-e3ab-46c9-ae84-e86e89f1b576",
@@ -32402,7 +32506,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "81fbcd2b-9b77-4caf-a990-34c707ece813",
@@ -32427,7 +32535,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "fa76b064-7b23-41bf-9634-f6eb3ed55c1a",
@@ -32452,7 +32564,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "d3f2aa89-f188-4ff4-868a-6d17dc9d3156",
@@ -32477,7 +32593,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "8a30b73e-7f42-4053-b8a8-b086e6093df8",
@@ -32502,7 +32622,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f177902c-ea6f-4daa-a6b3-0c2686755b51",
@@ -32527,7 +32651,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "0355e69a-2a8e-4ba5-8ec2-3103dd83edd8",
@@ -32552,7 +32680,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "414a0edd-af15-40a1-913b-0bf08804cb14",
@@ -32577,7 +32709,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "b0ba3e00-2e36-4173-9a2b-669c3dd01a4d",
@@ -32602,7 +32738,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "2fe6546a-e510-40e4-8313-72b4943603a6",
@@ -32617,7 +32757,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "17c7f16a-3734-44fe-b8d6-220f03397a45",
@@ -32632,7 +32776,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "4b212036-3f82-4993-ac2e-99aae8bf8700",
@@ -32647,7 +32795,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "41edd344-fc90-43e8-ab3d-79625a752c0a",
@@ -32662,7 +32814,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "98972538-012e-4c02-8277-1637c17657e4",
@@ -32677,7 +32833,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a24334f1-dfaa-4bbe-af65-99f8fdb29f3f",
@@ -32692,7 +32852,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "10f6e900-1c49-4cb0-ae54-66d071bb6ad7",
@@ -32707,7 +32871,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "27c7a863-0fcb-43a4-b241-644f82addb2c",
@@ -32722,7 +32890,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "2145e8fe-f14d-4390-949f-977f2c7a7b0c",
@@ -32737,7 +32909,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "50bb06b7-997f-4e0a-9a8e-10e96fb7b251",
@@ -32752,7 +32928,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "73dd1ae6-4254-4cb8-9b38-21a6f434bb54",
@@ -32767,7 +32947,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "acf16d9a-db6b-42ca-a421-1d8b36eb6347",
@@ -32782,7 +32966,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ee9aba8f-c869-40b1-a8de-f7a571998a56",
@@ -32797,7 +32985,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "2ba932bf-e203-4cce-aeb5-642585453f7b",
@@ -32812,7 +33004,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e8620452-9f86-4e9c-8d0d-0448af8f6bd8",
@@ -32827,7 +33023,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ba326d28-7b2f-42b2-abac-b34ff539b043",
@@ -32842,7 +33042,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "581df24e-5410-48e9-892e-8eb1bfb6177e",
@@ -32857,7 +33061,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "0498d870-1c7f-4dbc-9b8e-827b6bd885a1",
@@ -32872,7 +33080,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ce0335a8-fe0b-49ca-8caa-4a0b974a05ae",
@@ -32887,7 +33099,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "bb5ed1d6-356e-4cca-b0c9-f92eccb9ba48",
@@ -32902,7 +33118,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "bf699910-9a49-4d02-a126-608270171dbd",
@@ -32927,7 +33147,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "deadd2fe-bbbf-4989-9281-c20f20007d0b",
@@ -32952,7 +33176,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "4645d647-2ae6-4bca-b6be-1fdfd5f72449",
@@ -32977,7 +33205,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "7c03c095-decb-43d5-aace-cc5653523674",
@@ -33002,7 +33234,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "8a2c7159-a76d-4dae-8cff-d0cce81c7d39",
@@ -33027,7 +33263,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "8a3510fd-306e-41b1-8b48-6944336d618e",
@@ -33052,7 +33292,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "83bac8cc-8d64-4862-bb6c-1ab1ebd608e0",
@@ -33077,7 +33321,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "776a5c0b-49b3-466c-a3da-96cec4677162",
@@ -33102,7 +33350,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "9549d7a3-aaba-48a3-868d-d5c52e816d8a",
@@ -33127,7 +33379,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "5cee8b74-5ab9-4850-9ac1-a132c478c978",
@@ -33142,7 +33398,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f3457feb-c8a7-4165-bfa7-077742118e66",
@@ -33157,7 +33417,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "d51e4b08-63e8-4557-bc8a-528041212f8e",
@@ -33172,7 +33436,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e67a2483-679c-492c-b8e6-f119bb9ada63",
@@ -33187,7 +33455,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "9acff178-b986-4aa6-9870-80400dd44e03",
@@ -33202,7 +33474,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "c47268b0-6821-4bd2-b1ca-7e41b1bd16ba",
@@ -33217,7 +33493,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "85af13a7-c536-4dd0-ae6a-24ed0c501fb8",
@@ -33232,7 +33512,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "8b56276f-0c1a-466b-a1f3-1aadf219bd29",
@@ -33247,7 +33531,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "9590cc80-5f44-44b1-b2e8-dd9b40d8d89b",
@@ -33262,7 +33550,11 @@
     ],
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f36d53ac-6b4a-4994-b52d-8584075a6016",
