@@ -1369,6 +1369,51 @@ t('fine-tuning: wishes reach the lesson prompt as data, angle brackets are remov
   }
 })
 
+t('rereading: which segments open, saved AI answers, restored data, documentation, texts in all languages', async () => {
+  const { canReviewLesson, addSavedAnswer, clearLessonContent, openLesson, SAVED_ANSWERS_PER_LESSON, SAVED_ANSWER_MAX_CHARS } = await import('../src/lib/academy/progress')
+  const { migrateAcademyState } = await import('../src/lib/academy/store')
+  const { encodeBackup, decodeBackup, summarize } = await import('../src/lib/academy/cabinet')
+  const { REVIEW_COPY } = await import('../src/components/academy/copy/review')
+  type P = import('../src/lib/academy/types').Programme
+  const lesson = (id: string, written: boolean) => ({ id, title: id, topic: id, estimatedMinutes: 5, objectiveIds: [0], sections: written ? [{ heading: 'h', body: 'b' }] : [], furtherReading: [] })
+  const prog = {
+    id: 'p1', subject: 's', language: 'en', createdAt: '2026-11-27', testMode: 'none', objectives: ['o'],
+    lessons: [lesson('a', true), lesson('b', false), lesson('c', true), lesson('d', true), lesson('e', true)],
+    progress: { currentLesson: 2, lessonStatus: { a: 'done', c: 'viewed', e: 'done' }, quizResults: [], secondsSpent: 0, startedAt: '2026-11-27' },
+  } as never as P
+  assert.deepEqual(prog.lessons.map((_, i) => canReviewLesson(prog, i)), [true, false, false, false, true], 'earlier written or finished; never the current, an unwritten or a not yet reached one')
+  assert.equal(canReviewLesson(prog, 9), false)
+  assert.equal(canReviewLesson(openLesson(prog, 3), 2), true, 'a viewed lesson behind the current one can be reread')
+
+  const answer = { source: 'wand' as const, sectionIndex: 0, question: 'q', answer: 'x'.repeat(SAVED_ANSWER_MAX_CHARS + 10), at: 'now' }
+  let saved = addSavedAnswer(prog, 'a', answer)
+  assert.equal(saved.aiAnswers?.a[0].answer.length, SAVED_ANSWER_MAX_CHARS)
+  for (let i = 0; i < SAVED_ANSWERS_PER_LESSON + 3; i++) saved = addSavedAnswer(saved, 'a', { ...answer, question: `q${i}` })
+  assert.equal(saved.aiAnswers?.a.length, SAVED_ANSWERS_PER_LESSON)
+  assert.equal(saved.aiAnswers?.a.at(-1)?.question, `q${SAVED_ANSWERS_PER_LESSON + 2}`, 'the oldest makes room')
+  assert.equal(addSavedAnswer(prog, 'final', answer), prog, 'final-test answers are not kept')
+  assert.equal(addSavedAnswer(prog, 'a', { ...answer, answer: '  ' }), prog)
+  saved = addSavedAnswer(saved, 'c', answer)
+  assert.deepEqual(Object.keys(clearLessonContent(saved, 0).aiAnswers ?? {}), ['c'], 'a rewritten lesson loses its saved answers only')
+
+  const restore = (aiAnswers: unknown) => migrateAcademyState({ version: 1, view: 'programme', programme: { ...prog, aiAnswers } }).programme
+  assert.equal(restore(undefined)?.aiAnswers, undefined, 'older stored programmes load unchanged')
+  for (const bad of ['text', 5, [], null, { a: 'x' }, { a: [null, 3, { source: 'other', question: 'q', answer: 'a' }] }]) assert.equal(restore(bad)?.aiAnswers, undefined, JSON.stringify(bad))
+  const links = ['javascript:alert(1)', 'data:text/html,x', '//evil.example', 'https://example.com/a', '/local-llms/x'].map((url) => ({ title: 't', url }))
+  assert.deepEqual(restore({ a: [{ source: 'tutor', question: 'q', answer: 'a', sources: links }] })?.aiAnswers?.a[0].sources?.map((s) => s.url), ['https://example.com/a', '/local-llms/x'])
+
+  const kept = addSavedAnswer(prog, 'a', { ...answer, answer: 'SECRET-AI-ANSWER' })
+  const back = decodeBackup(await encodeBackup([{ ...summarize(kept), updatedAt: 'now', programme: kept }]))
+  assert.equal(back[0].programme.aiAnswers?.a[0].answer, 'SECRET-AI-ANSWER', 'the cabinet backup carries saved answers')
+  const source = readFileSync('src/lib/academy/documentation.ts', 'utf8')
+  assert.ok(!source.includes('aiAnswers'), 'course documentation leaves AI answers out')
+
+  const reviewUi = ['LessonReview', 'LessonContent', 'QuizReview', 'LessonProgress'].map((f) => readFileSync(`src/components/academy/${f}.tsx`, 'utf8')).join('\n')
+  assert.ok(!/TutorPanel|SectionWand|loadLesson|prefetchLesson|fetch\(|markLessonDone|openLesson/.test(reviewUi), 'rereading can neither ask, generate nor change progress')
+
+  for (const l of ALL_LANGS) for (const [k, v] of Object.entries(REVIEW_COPY[l])) assert.ok(v.trim(), `${l}.${k}`)
+})
+
 void Promise.all(pending).then(() => {if (failed) {
   console.log(`\n${failed} test(s) failed`)
   process.exit(1)

@@ -12,6 +12,7 @@ import { ReadAloud } from '@/components/ReadAloud'
 import { Markdown } from '@/components/askhans/markdown'
 import { cleanTutorText, tutorCost, TUTOR_CAP_LESSON, TUTOR_CAP_PROGRAMME, type TutorTrigger } from '@/lib/academy/tutor'
 import { ACADEMY_TUTOR_OK_KEY } from '@/lib/academy/config'
+import { addSavedAnswer } from '@/lib/academy/progress'
 import type { Programme } from '@/lib/academy/types'
 import { Content } from './Content'
 import type { AcademyCopy } from './copy'
@@ -150,6 +151,8 @@ export function SectionWand({
           setTurns((prev) => prev.map((x, i) => (i === prev.length - 1 ? { ...x, content: shownText } : x)))
         }
         if (!text.trim() || text.includes('\u0000')) throw new Error('tutor')
+        const saved = { source: 'wand' as const, sectionIndex: index, question: shown, answer: text, at: new Date().toISOString() }
+        update((st) => (st.programme?.id === programme.id ? { ...st, programme: addSavedAnswer(st.programme, lessonKey, saved) } : st))
       } catch {
         setTurns((prev) => prev.slice(0, -2))
         setError(t.error)
@@ -157,7 +160,7 @@ export function SectionWand({
         setBusy(false)
       }
     },
-    [busy, used, usedHere, t, sx, turns, update, lessonKey, lessonTitle, section, programme.language, programme.subject, programme.objectives],
+    [busy, used, usedHere, t, sx, turns, update, lessonKey, lessonTitle, section, index, programme.id, programme.language, programme.subject, programme.objectives],
   )
 
   const choose = (a: Action) => {
