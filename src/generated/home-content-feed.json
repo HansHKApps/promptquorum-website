@@ -11344,7 +11344,7 @@
     "title": "Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama",
     "excerpt": "Run 70B across 2 GPUs: 2× RTX 4090 (48 GB combined) hold Llama 3.3 70B at Q4. vLLM tensor parallelism, Ollama auto-split, NVLink vs PCIe, US prices.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -11353,7 +11353,7 @@
     "title": "Multi-GPU Lokale LLMs 2026: 70B-Modelle auf 2+ GPUs mit vLLM und Ollama ausführen",
     "excerpt": "70B auf 2 GPUs: 2× RTX 4090 (48 GB) fassen Llama 3.3 70B in Q4. vLLM-Tensor-Parallelität, Ollama-Auto-Split, NVLink vs. PCIe, US-Preise im Vergleich.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -11362,7 +11362,7 @@
     "title": "Multi-GPU LLMs Locaux 2026 : Exécuter les Modèles 70B sur 2+ GPUs avec vLLM et Ollama",
     "excerpt": "70B sur 2 GPU : 2× RTX 4090 (48 Go) accueillent Llama 3.3 70B en Q4. Parallélisme tensoriel vLLM, auto-split Ollama, NVLink vs PCIe et prix américains.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -11371,7 +11371,7 @@
     "title": "マルチGPU ローカルLLMs 2026: 2+ GPUsで70Bモデルを実行する（vLLM + Ollama）",
     "excerpt": "2基のGPUで70Bを実行：RTX 4090 2枚（合計48 GB）でLlama 3.3 70BをQ4で保持。vLLMテンソル並列、Ollama自動分割、NVLinkとPCIeの違い、米国価格。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -11380,7 +11380,7 @@
     "title": "多GPU本地LLMs 2026：在2+个GPU上运行70B模型（vLLM和Ollama）",
     "excerpt": "用2块GPU运行70B：2× RTX 4090（合计48 GB）可容纳Llama 3.3 70B（Q4）。vLLM张量并行、Ollama自动拆分、NVLink与PCIe对比及美国价格。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -11389,7 +11389,7 @@
     "title": "Multi-GPU LLMs Locales 2026: Ejecuta Modelos 70B en 2+ GPUs con vLLM y Ollama",
     "excerpt": "Ejecuta 70B en 2 GPUs: 2× RTX 4090 (48 GB) alojan Llama 3.3 70B en Q4. Paralelismo de vLLM, auto-split de Ollama, NVLink vs PCIe y precios de EE. UU.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -11398,7 +11398,7 @@
     "title": "Multi-GPU LLMs Locais 2026: Execute Modelos 70B em 2+ GPUs com vLLM e Ollama",
     "excerpt": "70B em 2 GPUs: 2× RTX 4090 (48 GB) comportam o Llama 3.3 70B em Q4. Paralelismo do vLLM, divisão automática do Ollama, NVLink vs PCIe.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -11407,7 +11407,7 @@
     "title": "نماذج ⁨LLM⁩ المحلية متعددة ⁨GPU 2026⁩: شغّل نماذج ⁨70B⁩ على ⁨2+ GPU⁩ بـ ⁨vLLM⁩ و⁨Ollama⁩",
     "excerpt": "شغّل 70B على 2 GPU: بطاقتا RTX 4090 (48 GB) تحتويان Llama 3.3 70B بصيغة Q4. توازي vLLM، تقسيم Ollama التلقائي، NVLink مقابل PCIe.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -11416,7 +11416,7 @@
     "title": "멀티 GPU 로컬 LLM 2026: vLLM과 Ollama로 2개 이상의 GPU에서 70B 모델 실행하기",
     "excerpt": "GPU 2개로 70B 실행: RTX 4090 2개(합산 48 GB)로 Llama 3.3 70B(Q4) 구동. vLLM 텐서 병렬화, Ollama 자동 분할, NVLink 대 PCIe, 미국 가격.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/multi-gpu-local-llms",
     "cluster": "local-llms"
   },
@@ -12883,7 +12883,7 @@
     "title": "RTX 5090 vs RTX 4090 for Local LLM Inference",
     "excerpt": "RTX 5090 vs RTX 4090 for local LLMs: llama.cpp 7B speed, 24 GB vs 32 GB VRAM, card price per tok/s and upgrade advice at 2026 street prices.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -12892,7 +12892,7 @@
     "title": "RTX 5090 vs RTX 4090 für lokale LLM-Inferenz",
     "excerpt": "RTX 5090 vs RTX 4090 für lokale LLMs: llama.cpp-7B-Tempo, 24 GB vs. 32 GB VRAM, Kartenpreis pro Token/s und Upgrade-Empfehlung zu Preisen von 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -12901,7 +12901,7 @@
     "title": "RTX 5090 vs RTX 4090 pour l'inférence LLM locale",
     "excerpt": "RTX 5090 vs RTX 4090 pour LLMs locaux : vitesse sur un test llama.cpp 7B, VRAM 24 Go vs 32 Go, prix par tok/s et conseils de mise à niveau prix 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -12910,7 +12910,7 @@
     "title": "ローカルLLM推論向け RTX 5090 vs RTX 4090",
     "excerpt": "RTX 5090とRTX 4090をローカルLLM向けに比較。llama.cppの7B速度、VRAM 24GB対32GB、1 tok/sあたりのカード価格、2026年の実売価格での判断ガイド。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -12919,7 +12919,7 @@
     "title": "本地LLM推理：RTX 5090 对比 RTX 4090",
     "excerpt": "RTX 5090对比RTX 4090本地LLM：llama.cpp 7B速度、24GB对32GB VRAM、每tok/s显卡价格，以及按2026年市场价的升级建议。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -12928,7 +12928,7 @@
     "title": "RTX 5090 vs RTX 4090 para Inferencia LLM Local",
     "excerpt": "RTX 5090 vs RTX 4090 para LLMs locales: velocidad en una prueba 7B de llama.cpp, VRAM de 24 GB vs 32 GB, precio por tok/s y guía de actualización en 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -12937,7 +12937,7 @@
     "title": "RTX 5090 vs RTX 4090 para Inferência de LLM Local",
     "excerpt": "RTX 5090 vs RTX 4090 para LLMs locais: velocidade em teste 7B do llama.cpp, VRAM de 24 GB vs 32 GB, preço por tok/s e guia de upgrade com preços de 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -12946,7 +12946,7 @@
     "title": "⁨RTX 5090⁩ مقابل ⁨RTX 4090⁩ لاستدلال ⁨LLM⁩ المحلي",
     "excerpt": "⁨RTX 5090⁩ مقابل ⁨RTX 4090⁩ لنماذج LLM المحلية: سرعة 7B، وVRAM بسعة 24GB مقابل 32GB، وسعر البطاقة لكل ⁨tok/s⁩، ودليل الترقية بأسعار 2026.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -12955,7 +12955,7 @@
     "title": "RTX 5090 vs RTX 4090: 로컬 LLM 추론에 최적인 GPU는?",
     "excerpt": "RTX 5090과 RTX 4090 로컬 LLM 비교: llama.cpp 7B 속도, VRAM 24GB 대 32GB, tok/s당 카드 가격, 2026년 실거래가 기준 업그레이드 가이드.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/rtx-5090-vs-rtx-4090-local-llm",
     "cluster": "local-llms"
   },
@@ -15070,7 +15070,7 @@
     "title": "EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud",
     "excerpt": "Compare EU GDPR-compliant cloud GPU providers in 2026: Hetzner, Scaleway, OVHcloud. Pricing, data residency, AI Act compliance verified.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -15079,7 +15079,7 @@
     "title": "EU-Cloud-GPU mit DSGVO 2026: Hetzner vs Scaleway vs OVHcloud",
     "excerpt": "EU-Cloud-GPU-Anbieter mit DSGVO-Konformität 2026: souveräne KI-Infrastruktur in Europa. Scaleway, OVHcloud und Hetzner im Vergleich.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -15088,7 +15088,7 @@
     "title": "GPU Cloud RGPD UE 2026 : Hetzner vs Scaleway vs OVHcloud",
     "excerpt": "Fournisseurs GPU cloud conformes RGPD pour UE : Hetzner (€184/mois forfaitaire, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Résidence UE, DPA, Schrems II.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -15097,7 +15097,7 @@
     "title": "EU GDPR準拠クラウドGPU 2026：Hetzner・Scaleway・OVHcloud比較",
     "excerpt": "EU顧客向けGDPR準拠クラウドGPUプロバイダー：Hetzner（月額¥26,700定額、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。データレジデンス、DPA、Schrems II準拠。",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -15106,7 +15106,7 @@
     "title": "2026欧盟GDPR合规云GPU指南：Hetzner、Scaleway、OVHcloud对比",
     "excerpt": "欧盟GDPR合规云GPU提供商对比：Hetzner（$200/月固定价格、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。数据驻留、DPA、Schrems II合规。",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -15115,7 +15115,7 @@
     "title": "GPU Cloud RGPD UE 2026: Hetzner vs Scaleway vs OVHcloud",
     "excerpt": "Proveedores de GPU cloud conformes con el RGPD en 2026: Hetzner, Scaleway, OVHcloud. Precios, residencia de datos y cumplimiento del Acta de IA de la UE.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -15124,7 +15124,7 @@
     "title": "GPU Cloud com Conformidade 2026: Hetzner vs Scaleway vs OVHcloud",
     "excerpt": "Provedores de GPU cloud conformes com LGPD/GDPR em 2026: Hetzner, Scaleway, OVHcloud. Preços, residência de dados e conformidade com a Lei de IA da UE.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -15133,7 +15133,7 @@
     "title": "⁨GPU⁩ سحابية ممتثلة لـ ⁨GDPR⁩ في الاتحاد الأوروبي ⁨2026⁩: ⁨Hetzner⁩ مقابل ⁨Scaleway⁩ مقابل ⁨OVHcloud⁩",
     "excerpt": "⁨Hetzner GPU⁩ بـ ⁨184⁩ يورو/شهر، ⁨Scaleway H100⁩ بـ ⁨0.50⁩–⁨2.50⁩ يورو/ساعة، ⁨OVHcloud⁩: مقارنة مزودين أوروبيين بمخاطر ⁨Schrems-II⁩ منخفضة للاتحاد الأوروبي.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -15142,7 +15142,7 @@
     "title": "EU GDPR 클라우드 GPU 2026: Hetzner vs Scaleway vs OVHcloud",
     "excerpt": "2026년 EU GDPR 준수 클라우드 GPU 공급업체 비교: Hetzner, Scaleway, OVHcloud. 가격, 데이터 상주, EU AI 법 준수 여부 검증.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/eu-cloud-gpu-gdpr-2026",
     "cluster": "local-llms"
   },
@@ -65854,82 +65854,82 @@
   },
   {
     "lang": "en",
-    "title": "RTX 3060 12GB: Best GPU Under $300 for Local LLMs (2026)",
-    "excerpt": "Used RTX 3060 12GB now runs $350+ (2026 memory shortage) — still the top 12GB pick for local LLMs. See today's price and the real under-$300 option.",
+    "title": "RTX 3060 12GB for Local LLMs: Is It Still Under $300? (2026)",
+    "excerpt": "A used RTX 3060 12GB sold for $310–350 in the US, above $300. Under that line we dated a new 10GB Arc B570. See price sources and which models fit.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
-    "title": "RTX 3060 12GB: Beste GPU unter 300 € für lokale LLMs (2026)",
-    "excerpt": "Gebrauchte RTX 3060 12GB kostet jetzt deutlich mehr (Speicherknappheit 2026) — weiterhin die beste 12-GB-Wahl für lokale LLMs. Aktuellen Preis und die echte 300-€-Alternative ansehen.",
+    "title": "RTX 3060 12GB für lokale LLMs: noch unter 300 $? (2026)",
+    "excerpt": "Gebraucht wurde die RTX 3060 12GB in den USA für 310–350 $ verkauft. Unter 300 $ fanden wir datiert die neue Arc B570 10GB. Mit Preisquellen.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/de/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
-    "title": "RTX 3060 12 Go : meilleure GPU à moins de 300 € pour les LLM locaux (2026)",
-    "excerpt": "La RTX 3060 12 Go d'occasion coûte désormais bien plus (pénurie de mémoire 2026) — toujours la meilleure GPU 12 Go pour LLM locaux. Voir le prix actuel et la vraie alternative sous 300 €.",
+    "title": "RTX 3060 12 Go pour LLM locaux : encore sous 300 $ ? (2026)",
+    "excerpt": "D’occasion, la RTX 3060 12 Go s’est vendue 310–350 $ aux États-Unis. Sous 300 $, nous datons l’Arc B570 10 Go neuve. Prix sourcés et modèles compatibles.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/fr/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
-    "title": "RTX 3060 12GB：300ドル以下でローカルLLMに最適なGPUは（2026年版）",
-    "excerpt": "中古RTX 3060 12GBは2026年のメモリ不足で価格が上昇——それでもローカルLLM向け12GB最良GPUです。現在の価格と本当に300ドル以下で買える選択肢を確認してください。",
+    "title": "RTX 3060 12GBでローカルLLM：今も300ドル以下で買えるのか（2026年版）",
+    "excerpt": "中古RTX 3060 12GBの米国成約価格は310〜350ドルで300ドル超。300ドル以下では新品Arc B570 10GBを日付付きで確認しました。価格の出典と動くモデルを紹介します。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/ja/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
-    "title": "RTX 3060 12GB：300美元以下本地LLM最佳GPU（2026年）",
-    "excerpt": "二手RTX 3060 12GB因2026年显存短缺价格大涨——仍是本地LLM最佳12GB显卡。查看当前价格，以及真正300美元以下的替代方案。",
+    "title": "RTX 3060 12GB跑本地LLM：还能在300美元以内买到吗？（2026年）",
+    "excerpt": "二手RTX 3060 12GB在美国的成交价为310–350美元，已超过300美元。300美元以内，我们查到有日期记录的是全新Arc B570 10GB。附价格来源与可运行的模型规模。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/zh/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
-    "title": "RTX 3060 12GB: ¿mejor GPU por menos de 300 $ para LLMs locales (2026)",
-    "excerpt": "La RTX 3060 12GB de segunda mano ahora cuesta mucho más (escasez de memoria 2026) — sigue siendo la mejor GPU de 12 GB para LLMs locales. Ve el precio actual y la alternativa real bajo 300 $.",
+    "title": "RTX 3060 12GB para LLM locales: ¿sigue bajo $300? (2026)",
+    "excerpt": "La RTX 3060 12GB usada se vendió a $310–350 en EE. UU. Por debajo de $300 fechamos la Arc B570 10GB nueva. Consulta fuentes de precio y modelos.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/es/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
-    "title": "RTX 3060 12GB: Melhor GPU Abaixo de US$ 300 para LLMs Locais (2026)",
-    "excerpt": "A RTX 3060 12GB usada agora custa muito mais (escassez de memória 2026) — ainda a melhor GPU de 12GB para LLMs locais. Veja o preço atual e a alternativa real abaixo de US$ 300.",
+    "title": "RTX 3060 12GB para LLMs locais: ainda abaixo de US$ 300? (2026)",
+    "excerpt": "A RTX 3060 12GB usada foi vendida por US$ 310–350 nos EUA. Abaixo de US$ 300, datamos a Arc B570 10GB nova. Veja fontes de preço e quais modelos cabem.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/pt/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
-    "title": "RTX 3060 12GB: أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية (2026)",
-    "excerpt": "أصبحت بطاقة RTX 3060 12GB المستعملة أغلى بكثير (نقص الذاكرة 2026) — لكنها تبقى أفضل بطاقة 12 جيجابايت للنماذج اللغوية المحلية. تحقق من السعر الحالي والبديل الحقيقي بأقل من 300 دولار.",
+    "title": "RTX 3060 12GB للنماذج المحلية: هل ما زالت تحت 300 دولار؟ (2026)",
+    "excerpt": "بيعت RTX 3060 12GB المستعملة بين 310 و350 دولارًا في أمريكا. وتحت 300 دولار وثّقنا بطاقة Arc B570 10GB الجديدة. اطلع على مصادر الأسعار والنماذج المناسبة.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/ar/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
-    "title": "RTX 3060 12GB: 로컬 LLM용 300달러 이하 최고의 GPU는（2026년）",
-    "excerpt": "중고 RTX 3060 12GB는 2026년 메모리 부족으로 가격이 크게 올랐습니다 — 그래도 로컬 LLM용 최고의 12GB GPU입니다. 현재 가격과 실제 300달러 이하 대안을 확인하십시오.",
+    "title": "RTX 3060 12GB 로컬 LLM: 아직 300달러 이하입니까? (2026년)",
+    "excerpt": "중고 RTX 3060 12GB의 미국 실거래가는 310~350달러로 300달러를 넘습니다. 300달러 이하에서는 신품 Arc B570 10GB를 날짜와 함께 확인했습니다. 가격 출처와 실행 가능한 모델을 정리합니다.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-28",
     "url": "/ko/prompt-bites/best-gpu-under-300-local-llm",
     "cluster": "prompt-bites"
   },
@@ -68852,81 +68852,81 @@
   {
     "lang": "en",
     "title": "Best Intel Arc GPU for Local LLMs?",
-    "excerpt": "Intel Arc B580 12GB is the best Intel Arc GPU for local LLMs — current prices, setup reality (IPEX-LLM vs native Ollama), and how it compares to an RTX 3060 12GB.",
+    "excerpt": "Our Intel Arc pick for local LLMs is the B580 12GB, but we found no current price under $300. See Arc B570 and A770 prices and the software setup.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Die beste Intel-Arc-GPU für lokale LLMs?",
-    "excerpt": "Intel Arc B580 12GB ist die beste Intel-Arc-GPU für lokale LLMs — aktuelle Preise, Einrichtungsaufwand (IPEX-LLM vs. natives Ollama) und Vergleich zur RTX 3060 12GB.",
+    "excerpt": "Unsere Intel-Arc-Wahl für lokale LLMs ist die B580 12GB, doch aktuell fanden wir keinen Preis unter 300 $. Arc-B570- und A770-Preise plus Software.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/de/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Meilleur GPU Intel Arc pour les LLM locaux ?",
-    "excerpt": "L'Intel Arc B580 12 Go est le meilleur GPU Intel Arc pour les LLM locaux — prix actuels, réalité de l'installation (IPEX-LLM vs Ollama natif) et comparaison avec la RTX 3060 12 Go.",
+    "excerpt": "Notre choix Intel Arc pour les LLM locaux est la B580 12 Go, mais aucun prix actuel sous 300 $. Prix des Arc B570 et A770, et configuration logicielle.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/fr/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "ローカルLLMに最適なIntel Arc GPUは?",
-    "excerpt": "Intel Arc B580 12GBはローカルLLMに最適なIntel Arc GPUです — 現行価格、セットアップの実態(IPEX-LLM vs Ollamaネイティブ)、RTX 3060 12GBとの比較。",
+    "excerpt": "ローカルLLM向けのIntel Arcは当サイトではB580 12GBを選びますが、現在300ドル未満の価格は未確認です。B570・A770の価格とOllama、llama.cppの設定を解説します。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/ja/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "本地 LLM 的最佳 Intel Arc GPU 是什么？",
-    "excerpt": "Intel Arc B580 12GB 是本地 LLM 的最佳 Intel Arc GPU——查看当前价格、真实的配置体验（IPEX-LLM 对比原生 Ollama），以及与 RTX 3060 12GB 的对比。",
+    "excerpt": "跑本地LLM的Intel Arc我们选B580 12GB，但当前没查到低于300美元的价格。附Arc B570、A770价格，以及Ollama和llama.cpp的软件配置要点。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/zh/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Cuál es la Mejor GPU Intel Arc para LLMs Locales?",
-    "excerpt": "La Intel Arc B580 12GB es la mejor GPU Intel Arc para LLMs locales — precios actuales, realidad de configuración (IPEX-LLM vs Ollama nativo) y comparación con la RTX 3060 12GB.",
+    "excerpt": "Nuestra Intel Arc para LLM locales es la B580 12GB, pero no hallamos precio actual bajo $300. Precios de la Arc B570 y A770, y configuración del software.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/es/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "Qual a Melhor GPU Intel Arc para LLMs Locais?",
-    "excerpt": "A Intel Arc B580 12GB é a melhor GPU Intel Arc para LLMs locais — preços atuais, realidade da configuração (IPEX-LLM vs Ollama nativo) e comparação com a RTX 3060 12GB.",
+    "excerpt": "Nossa Intel Arc para LLMs locais é a B580 12GB, mas não achamos preço atual abaixo de US$ 300. Preços da Arc B570 e A770 e a configuração do software.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/pt/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "أفضل بطاقة Intel Arc لتشغيل LLM محليًا؟",
-    "excerpt": "بطاقة Intel Arc B580 12GB هي أفضل بطاقة Intel Arc لتشغيل LLM محليًا — الأسعار الحالية، وواقع الإعداد (IPEX-LLM مقابل Ollama الأصلي)، ومقارنتها بـ RTX 3060 12GB.",
+    "excerpt": "اختيارنا من Intel Arc للنماذج المحلية هو B580 12GB، لكن لم نجد له سعرًا حاليًا تحت 300 دولار. أسعار B570 وA770 وإعداد البرمجيات.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/ar/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM에 최적의 Intel Arc GPU는?",
-    "excerpt": "Intel Arc B580 12GB가 로컬 LLM에 최적의 Intel Arc GPU입니다 — 현재 가격, 설정 실태(IPEX-LLM vs 네이티브 Ollama), RTX 3060 12GB와의 비교.",
+    "excerpt": "로컬 LLM용 Intel Arc는 B580 12GB를 고르지만, 현재 300달러 미만 가격은 확인하지 못했습니다. Arc B570·A770 가격과 소프트웨어 설정을 정리합니다.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-28",
     "url": "/ko/prompt-bites/best-intel-arc-gpu-local-llm",
     "cluster": "prompt-bites"
   },
