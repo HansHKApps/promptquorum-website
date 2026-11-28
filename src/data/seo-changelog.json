@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -35709,5 +35709,1225 @@
       "t14": "2026-12-11",
       "t28": "2026-12-25"
     }
+  },
+  {
+    "id": "afcaa9e6-186c-4ca6-b9cd-d7a7e5236766",
+    "slug": "/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.558Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($310–350 used) runs Qwen3 14B at ~9–12 tok/s (est.). New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.",
+        "new": "Best budget GPU for local LLMs 2026: our used pick is the RTX 3060 12GB, sold for $310–350 in the US. New pick: RTX 5060 Ti 16GB. Prices with sources."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.74,
+      "impressions": 66876,
+      "clicks": 471,
+      "ctr": 0.007042885340032299,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d8f47d68-f56c-46ee-bc21-20153199c6e1",
+    "slug": "/es/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.591Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($310–350 usada) ejecuta Qwen3 14B a ~9–12 tok/s (est.). Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.",
+        "new": "Mejor GPU económica para LLMs locales 2026: usada elegimos la RTX 3060 12GB, vendida a $310–350 en EE. UU. Nueva: RTX 5060 Ti 16GB. Con fuentes."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.38,
+      "impressions": 5085,
+      "clicks": 86,
+      "ctr": 0.016912487708947887,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "78d1d967-d0c4-42a9-8fa7-d4fe262ce960",
+    "slug": "/ar/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.624Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (310–350$ مستعملة) تشغّل Qwen3 14B بنحو 9–12 tok/ث (تقدير). الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.",
+        "new": "أفضل GPU اقتصادية للنماذج المحلية 2026: للمستعملة نختار RTX 3060 12GB، بيعت بين $310–350 في الولايات المتحدة. وللجديدة RTX 5060 Ti 16GB. مع المصادر."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.25,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f01c966a-5466-464a-bf93-b4210f3fc03a",
+    "slug": "/pt/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.657Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 310–350 usada) roda Qwen3 14B a ~9–12 tok/s (est.). Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.",
+        "new": "Melhor GPU econômica para LLMs locais 2026: usada, escolhemos a RTX 3060 12GB, vendida por US$ 310–350 nos EUA. Nova: RTX 5060 Ti 16GB. Com fontes."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.29,
+      "impressions": 5317,
+      "clicks": 51,
+      "ctr": 0.009591875117547489,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "908e2314-894d-498d-b941-7a2b63899620",
+    "slug": "/de/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.690Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (310–350 $ gebraucht) betreibt Qwen3 14B mit ca. 9–12 Tok/s (gesch.). Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.",
+        "new": "Beste Budget-GPU für lokale LLMs 2026: gebraucht wählen wir die RTX 3060 12GB, in den USA für 310–350 $ verkauft. Neu: RTX 5060 Ti 16GB. Mit Quellen."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 4.78,
+      "impressions": 3547,
+      "clicks": 91,
+      "ctr": 0.025655483507189172,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "94005d5e-f882-436b-b534-c64333aec29c",
+    "slug": "/fr/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.724Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (310–350 $ d'occasion), Qwen3 14B à ~9–12 tok/s (est.). Neuf : RTX 5060 Ti 16GB. Tableau complet.",
+        "new": "Meilleur GPU économique pour LLM locaux 2026 : en occasion, la RTX 3060 12 Go, vendue 310–350 $ aux États-Unis. En neuf : RTX 5060 Ti 16 Go. Sources."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.74,
+      "impressions": 667,
+      "clicks": 11,
+      "ctr": 0.01649175412293853,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b32713d2-f030-43d3-b9d9-81f8f3b2eded",
+    "slug": "/ja/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.757Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ローカルLLMおすすめGPU：RTX 3060 12GB（米国中古価格約$310–350）でQwen3 14B（推定9-12トークン/秒）ほか7種を実行。VRAMと速度の早見表付き。国内価格は価格.comで確認。",
+        "new": "ローカルLLM向けバジェットGPU 2026：中古はRTX 3060 12GBを選定（米国成約$310〜350）。新品はRTX 5060 Ti 16GB。価格は出典付き。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 7.34,
+      "impressions": 2193,
+      "clicks": 36,
+      "ctr": 0.016415868673050615,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "82a84b12-9b02-4013-8ac1-5df6bc847259",
+    "slug": "/zh/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.790Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "RTX 3060 12GB（二手约$310–350）可跑7款本地LLM：Qwen3 14B（估算9-12令牌/秒）、Qwen3 8B（估算16-20令牌/秒）等。附VRAM与速度对照表。",
+        "new": "2026本地LLM预算显卡：二手首选RTX 3060 12GB（美国成交$310–350），全新首选RTX 5060 Ti 16GB。所有价格均注明来源和依据。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.55,
+      "impressions": 1560,
+      "clicks": 38,
+      "ctr": 0.02435897435897436,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6c4723f4-9b99-43cd-bd69-17613259b45e",
+    "slug": "/ko/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T11:54:11.823Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "RTX 3060 12GB: Qwen3 8B 초당 약 16-20토큰(추정). 예산별 GPU 추천, 미국 가격 비교, 국내 가격은 다나와 확인.",
+        "new": "2026 로컬 LLM 보급형 GPU: 중고는 RTX 3060 12GB(미국 체결 $310–350), 신품은 RTX 5060 Ti 16GB를 선택합니다. 가격마다 출처와 근거를 명시합니다."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.3,
+      "impressions": 1484,
+      "clicks": 70,
+      "ctr": 0.04716981132075472,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ca849ede-dac8-4d6b-8942-130664b8a40c",
+    "slug": "/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:11.857Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best GPU Under $500 for LLM Inference (2026) + 4060 Ti Price",
+        "new": "Best GPU Under $500 for Local LLMs (2026): RTX 3060 12GB"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Our under-$500 pick for local LLMs: Intel Arc B580 12GB for Ollama or llama.cpp, used RTX 3060 12GB for CUDA. Why the 4060 Ti 16GB no longer fits.",
+        "new": "Our under-$500 GPU pick for local LLMs: a used RTX 3060 12GB, sold for $310–350 in the US. Intel Arc B580 prices conflict, so check live listings."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 7.55,
+      "impressions": 4025,
+      "clicks": 15,
+      "ctr": 0.0037267080745341614,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7dd9c805-aca1-4af7-9d7e-2d7e357e2715",
+    "slug": "/es/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:11.892Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejor GPU bajo $500 para LLM (2026) + precio RTX 4060 Ti",
+        "new": "Mejor GPU por menos de $500 para LLM locales (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Nuestra GPU por menos de $500 para LLM local: Arc B580 12GB con Ollama o llama.cpp; RTX 3060 12GB usada para CUDA. Por qué sale la RTX 4060 Ti.",
+        "new": "Nuestra GPU por menos de $500 para LLM locales: una RTX 3060 12GB usada, vendida a $310–350 en EE. UU. Los precios de la Arc B580 no coinciden."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.25,
+      "impressions": 132,
+      "clicks": 4,
+      "ctr": 0.030303030303030304,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7d212660-6a77-4663-94b9-60781fb61e81",
+    "slug": "/ar/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:11.926Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل ⁨GPU⁩ بأقل من $⁨500⁩ لـ⁨LLM⁩ (⁨2026⁩) + سعر ⁨RTX 4060 Ti⁩",
+        "new": "أفضل GPU بأقل من $500 للنماذج المحلية (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "خيارنا بأقل من $500 لنماذج LLM محلياً: Arc B580 12GB مع Ollama أو llama.cpp، وRTX 3060 12GB مستعملة لـ CUDA. وسبب خروج RTX 4060 Ti.",
+        "new": "اختيارنا بأقل من $500 للنماذج المحلية: RTX 3060 12GB مستعملة، بيعت بين $310–350 في الولايات المتحدة. أسعار Arc B580 متضاربة، فتحقق من العروض."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 11.18,
+      "impressions": 11,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "dc192029-8267-48e0-ac52-6dfadc042353",
+    "slug": "/pt/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:11.960Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhor GPU até US$ 500 para LLM (2026) + preço RTX 4060 Ti",
+        "new": "Melhor GPU até US$ 500 para LLMs locais (2026): RTX 3060"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Nossa GPU até US$ 500 para LLM local: Arc B580 12GB com Ollama ou llama.cpp; RTX 3060 12GB usada para CUDA. Por que a RTX 4060 Ti 16GB saiu.",
+        "new": "Nossa GPU até US$ 500 para LLMs locais: uma RTX 3060 12GB usada, vendida por US$ 310–350 nos EUA. Os preços da Arc B580 não batem; confira os anúncios."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 7.27,
+      "impressions": 106,
+      "clicks": 1,
+      "ctr": 0.009433962264150943,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "cf93487d-2b4e-4f05-b16d-a2cac5fcdac3",
+    "slug": "/de/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:11.994Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste GPU unter 500 $ für LLM (2026) + RTX 4060 Ti Preis",
+        "new": "Beste GPU unter 500 $ für lokale LLMs (2026): RTX 3060"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Unsere GPU-Wahl unter 500 $ für lokale LLMs: Arc B580 12GB für Ollama oder llama.cpp, gebrauchte RTX 3060 12GB für CUDA. Warum die 4060 Ti ausscheidet.",
+        "new": "Unsere GPU-Wahl unter 500 $ für lokale LLMs: eine gebrauchte RTX 3060 12GB, in den USA für 310–350 $ verkauft. Zum Arc B580 widersprechen sich die Preise."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.12,
+      "impressions": 1592,
+      "clicks": 41,
+      "ctr": 0.025753768844221106,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "939ea176-0701-4454-b24f-febd8fec3626",
+    "slug": "/fr/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:12.029Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleure GPU sous 500 $ pour LLM (2026) + prix RTX 4060 Ti",
+        "new": "Meilleure GPU sous 500 $ pour LLM locaux (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Notre GPU sous 500 $ pour LLM local : Arc B580 12 Go avec Ollama ou llama.cpp ; RTX 3060 12 Go d'occasion pour CUDA. Pourquoi la 4060 Ti sort.",
+        "new": "Notre GPU sous 500 $ pour les LLM locaux : une RTX 3060 12 Go d’occasion, vendue 310–350 $ aux États-Unis. Les prix de l’Arc B580 se contredisent."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.17,
+      "impressions": 376,
+      "clicks": 4,
+      "ctr": 0.010638297872340425,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7748e317-d659-4e54-ae0d-bd4252ec7240",
+    "slug": "/ja/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:12.063Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年$500以下LLM推論GPU + RTX 4060 Ti価格",
+        "new": "$500以下のローカルLLM向けGPU（2026年）：中古RTX 3060"
+      },
+      {
+        "field": "metaDescription",
+        "old": "$500以下のローカルLLM向け当サイトの推奨は、Ollamaやllama.cpp中心ならIntel Arc B580 12GB、CUDAが必要なら中古RTX 3060 12GB。4060 Tiが外れた理由も解説。",
+        "new": "$500以下のローカルLLM向けに当サイトが選ぶのは中古RTX 3060 12GB。米国の成約価格は$310〜350。Arc B580の価格は情報源で食い違うため要確認。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 8.07,
+      "impressions": 382,
+      "clicks": 9,
+      "ctr": 0.02356020942408377,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1fcb0c62-6982-4d60-aa5e-9dc73e9a8e41",
+    "slug": "/zh/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:12.097Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年500美元以下LLM推理最佳GPU + RTX 4060 Ti价格",
+        "new": "$500以下本地LLM显卡推荐（2026）：二手RTX 3060 12GB"
+      },
+      {
+        "field": "metaDescription",
+        "old": "500美元以下本地LLM显卡，本站之选：主要用Ollama或llama.cpp选Intel Arc B580 12GB，需要CUDA选二手RTX 3060 12GB。并说明RTX 4060 Ti为何超出预算。",
+        "new": "$500以下本地LLM显卡，本站首选二手RTX 3060 12GB：美国成交价$310–350。Intel Arc B580的价格各来源不一致，购买前请查看实时挂牌信息。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.97,
+      "impressions": 286,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b4475cef-ff20-416d-8db2-f5607be3d41e",
+    "slug": "/ko/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T11:54:12.137Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026년 $500 이하 LLM 추론 GPU + RTX 4060 Ti 가격",
+        "new": "$500 이하 로컬 LLM GPU (2026): 중고 RTX 3060"
+      },
+      {
+        "field": "metaDescription",
+        "old": "$500 이하 로컬 LLM 추천: Ollama·llama.cpp 중심이면 Arc B580 12GB, CUDA가 필요하면 중고 RTX 3060 12GB. 4060 Ti가 빠진 이유도 설명합니다.",
+        "new": "$500 이하 로컬 LLM용으로 저희는 중고 RTX 3060 12GB를 선택합니다. 미국 체결가 $310–350. Arc B580 가격은 출처마다 달라 매물 확인이 필요합니다."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 7.22,
+      "impressions": 230,
+      "clicks": 3,
+      "ctr": 0.013043478260869565,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e93e7e69-e731-4508-9213-3e15096bc768",
+    "slug": "/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.176Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro costs $20/month. Local setups cost $1,800-4,050 over 5 years incl. power. Llama 3.3 70B at Q4 needs ~43 GB, so two 24 GB GPUs. Full comparison.",
+        "new": "Claude Pro: $20/month. Used GPUs plus power: $1,800-4,050 over 5 years, rest of PC extra. Llama 3.3 70B at Q4 needs ~43 GB, two 24 GB cards."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "queries": [
+      "local llm vs claude",
+      "local ai vs claude",
+      "claude vs local llm"
+    ],
+    "baseline": {
+      "position": 5.01,
+      "impressions": 6294,
+      "clicks": 58,
+      "ctr": 0.009215125516364792,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6184cca5-afa7-444e-8495-fa2d3df9377e",
+    "slug": "/es/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.210Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro cuesta $20/mes; lo local, $1,800-4,050 en 5 años con luz. Llama 3.3 70B en Q4 necesita ~43 GB (dos GPUs de 24 GB). Comparativa completa.",
+        "new": "Claude Pro: $20/mes. GPUs usadas y luz: $1,800-4,050 en 5 años, sin el resto del PC. Llama 3.3 70B en Q4 necesita ~43 GB (dos GPUs de 24 GB)."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.33,
+      "impressions": 585,
+      "clicks": 9,
+      "ctr": 0.015384615384615385,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f9850b95-8dc0-40b2-8e0b-24f2c2d89d55",
+    "slug": "/ar/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.243Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "سعر Claude Pro 20$/شهر؛ والإعداد المحلي 1,800–4,050$ على 5 سنوات. يحتاج Llama 3.3 70B بصيغة Q4 نحو 43 GB: بطاقتا GPU بسعة 24 GB.",
+        "new": "سعر Claude Pro 20$/شهر. بطاقات مستعملة مع الكهرباء: 1,800–4,050$ على 5 سنوات دون بقية الحاسوب. يحتاج Llama 3.3 70B بصيغة Q4 نحو 43 GB."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 8.37,
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "346986e8-1717-4067-ad6a-1ff92ec9a22b",
+    "slug": "/pt/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.277Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro custa $20/mês; o local custa $1.800-4.050 em 5 anos com energia. Llama 3.3 70B em Q4 exige ~43 GB: duas GPUs de 24 GB. Comparação.",
+        "new": "Claude Pro: $20/mês. GPUs usadas e energia: $1.800-4.050 em 5 anos, sem o resto do PC. Llama 3.3 70B em Q4 exige ~43 GB (duas GPUs de 24 GB)."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 8.86,
+      "impressions": 526,
+      "clicks": 6,
+      "ctr": 0.011406844106463879,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "07e2bc8e-94ca-4dff-bce8-4b68349701e5",
+    "slug": "/de/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.310Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro kostet 20 $/Monat; lokal 1.800–4.050 $ in 5 Jahren inkl. Strom. Llama 3.3 70B braucht in Q4 ca. 43 GB (zwei 24-GB-GPUs). Vergleich.",
+        "new": "Claude Pro: 20 $/Monat. Gebrauchte GPUs plus Strom: 1.800–4.050 $ in 5 Jahren, ohne Rest-PC. Llama 3.3 70B braucht in Q4 ca. 43 GB (2×24 GB)."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "queries": [
+      "llm claude",
+      "claude llms",
+      "claude als lokales llm"
+    ],
+    "baseline": {
+      "position": 6.58,
+      "impressions": 2610,
+      "clicks": 45,
+      "ctr": 0.017241379310344827,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "15f2f4a9-0ae2-45f2-a1a6-83502236746b",
+    "slug": "/fr/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.344Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro coûte 20 $/mois ; en local 1 800–4 050 $ sur 5 ans, électricité incluse. Llama 3.3 70B en Q4 : ~43 Go (deux GPU de 24 Go). Comparatif.",
+        "new": "Claude Pro : 20 $/mois. GPU d'occasion et courant : 1 800–4 050 $ sur 5 ans, reste du PC en plus. Llama 3.3 70B en Q4 : ~43 Go (2×24 Go)."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "queries": [
+      "claude llm local",
+      "local llm vs claude",
+      "claude local llm"
+    ],
+    "baseline": {
+      "position": 6.32,
+      "impressions": 1304,
+      "clicks": 26,
+      "ctr": 0.019938650306748466,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a8bc11ba-7268-49df-b394-3240b2f667c4",
+    "slug": "/ja/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.378Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Proは月$20。ローカル構成は電気代込みで5年$1,800-4,050。Llama 3.3 70BのQ4は約43 GB、24 GBのGPU2枚が必要です。コストを比較します。",
+        "new": "Claude Proは月$20。中古GPUと電気代だけで5年$1,800-4,050（PC本体は別）。Llama 3.3 70BのQ4は約43 GB、24 GBのGPU2枚が必要です。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 9.62,
+      "impressions": 888,
+      "clicks": 26,
+      "ctr": 0.02927927927927928,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e1509aa6-0b6d-4b55-a01f-81d860f3364b",
+    "slug": "/zh/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.412Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro 每月 $20；本地方案含电费 5 年 $1,800-4,050。Llama 3.3 70B 在 Q4 下约需 43 GB，即两张 24 GB 显卡。完整对比。",
+        "new": "Claude Pro 每月 $20。仅二手显卡加电费，5 年即需 $1,800-4,050（整机其余部件另计）。Llama 3.3 70B 在 Q4 下约需 43 GB，即两张 24 GB 显卡。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.08,
+      "impressions": 25,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "48b61178-ddc2-44dd-a9a0-980c7b654c29",
+    "slug": "/ko/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T11:54:12.447Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro는 월 $20입니다. 로컬 구성은 전기료 포함 5년 $1,800-4,050입니다. Llama 3.3 70B(Q4)는 약 43 GB로 24 GB GPU 2장이 필요합니다.",
+        "new": "Claude Pro는 월 $20입니다. 중고 GPU와 전기료만 5년 $1,800-4,050(PC 나머지 별도). Llama 3.3 70B(Q4)는 약 43 GB로 24 GB GPU 2장이 필요합니다."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.69,
+      "impressions": 426,
+      "clicks": 13,
+      "ctr": 0.03051643192488263,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "44c5bce7-9d56-42ef-864e-570f59ed8873",
+    "slug": "/es/local-llms/qwen-local-deployment-guide-2026",
+    "date": "2026-11-28T11:54:12.481Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
+        "new": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.55,
+      "impressions": 3612,
+      "clicks": 26,
+      "ctr": 0.007198228128460687,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "22b005a3-5abd-4091-a01d-213107e96ab2",
+    "slug": "/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.515Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Our pick for local LLMs under $1,000: RTX 5070 Ti 16 GB (~$750-900). Used 24 GB RTX 3090 and 4090 cards sit far above that budget in US sold prices.",
+        "new": "Our editorial pick under $1,000 for local LLMs: RTX 5060 Ti 16 GB, listed from $799 new on 27 November 2026 in the US. The RTX 5070 Ti was listed from $1,479."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "queries": [
+      "best gpu for local llm inference 2026",
+      "what is the cheapest gpu for llm inference in 2026?",
+      "best cheap gpu for llm"
+    ],
+    "baseline": {
+      "position": 7.53,
+      "impressions": 403,
+      "clicks": 3,
+      "ctr": 0.007444168734491315,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f9c2d37b-efe0-4a47-941d-0d9d916cce41",
+    "slug": "/ar/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.548Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "اختيارنا لـ LLM محلي بأقل من 1,000 دولار: RTX 5070 Ti 16 GB (~750-900 دولار). وتتجاوز RTX 3090 وRTX 4090 المستعملتان (24 GB) هذه الميزانية بكثير وفق أسعار البيع في أمريكا.",
+        "new": "اختيارنا التحريري بأقل من 1,000 دولار: RTX 5060 Ti 16 GB، جديدة من 799 دولارًا في أمريكا بتاريخ 27 نوفمبر 2026، بينما أُدرجت RTX 5070 Ti من 1,479 دولارًا."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 4.5,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "db5c90e8-8845-4ad9-8b2a-6bbef2182be7",
+    "slug": "/de/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.582Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Unsere Wahl für lokale LLMs unter 1.000 $: RTX 5070 Ti 16 GB (~750-900 $). Gebrauchte RTX 3090 und 4090 mit 24 GB liegen bei US-Verkaufspreisen weit darüber.",
+        "new": "Unsere redaktionelle Wahl unter 1.000 $: RTX 5060 Ti 16 GB, am 27.11.2026 in den USA neu ab 799 $ gelistet. Die RTX 5070 Ti stand dort ab 1.479 $."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 2.2,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ecc571f7-f6db-4640-a738-88c3f3100e6c",
+    "slug": "/es/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.616Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Nuestra elección para LLMs locales por menos de $1,000: RTX 5070 Ti 16 GB (~$750-900). Las 3090 y 4090 usadas de 24 GB quedan muy por encima según precios de venta en EE. UU.",
+        "new": "Nuestra elección editorial por menos de $1,000: RTX 5060 Ti 16 GB, nueva desde $799 en EE. UU. el 27/11/2026. La RTX 5070 Ti figuraba desde $1,479."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.03,
+      "impressions": 35,
+      "clicks": 1,
+      "ctr": 0.02857142857142857,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "131bf7bb-835c-445e-b4d1-3c79031b17d7",
+    "slug": "/fr/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.649Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Notre choix de GPU pour LLM locaux à moins de 1 000 $ : RTX 5070 Ti 16 Go (~750-900 $). Les 3090 et 4090 de 24 Go d'occasion se vendent bien au-dessus aux États-Unis.",
+        "new": "Notre choix éditorial sous 1 000 $ : la RTX 5060 Ti 16 Go, neuve dès 799 $ aux États-Unis au 27/11/2026. La RTX 5070 Ti y figurait à partir de 1 479 $."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.41,
+      "impressions": 32,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a775bcee-bb9b-4f45-91de-c1bf35110521",
+    "slug": "/ja/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.682Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ローカルLLM向け1,000ドル以下の推奨GPUはRTX 5070 Ti 16GB(約750-900ドル)。中古の24GB RTX 3090と4090は、米国の落札価格では予算を大きく超えます。",
+        "new": "1,000ドル以下の当サイトの編集上の選択はRTX 5060 Ti 16GBです。2026年11月27日の米国価格表で新品799ドルから、RTX 5070 Tiは1,479ドルからでした。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.5,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e83298dd-c3e1-4e7a-a25d-7ea980620adb",
+    "slug": "/ko/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.720Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "로컬 LLM용 1,000달러 이하 추천 GPU: RTX 5070 Ti 16GB(약 750-900달러). 미국 판매가 기준으로 중고 24GB RTX 3090과 4090은 예산을 크게 넘습니다.",
+        "new": "1,000달러 이하 당사의 편집상 선택은 RTX 5060 Ti 16GB입니다. 2026년 11월 27일 미국 가격표에서 신품 799달러부터였고, RTX 5070 Ti는 1,479달러부터였습니다."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 8.32,
+      "impressions": 19,
+      "clicks": 1,
+      "ctr": 0.05263157894736842,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ed9d2574-0496-4f85-a4f5-289acff39f3e",
+    "slug": "/pt/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.754Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Nossa escolha para LLMs locais abaixo de US$ 1.000: RTX 5070 Ti 16 GB (~US$ 750-900). As 3090 e 4090 usadas de 24 GB ficam muito acima nos preços de venda dos EUA.",
+        "new": "Nossa escolha editorial abaixo de US$ 1.000: RTX 5060 Ti 16 GB, nova a partir de US$ 799 nos EUA em 27/11/2026. A RTX 5070 Ti aparecia a partir de US$ 1.479."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7f043f06-8f67-4137-ab36-d17daea58460",
+    "slug": "/zh/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T11:54:12.787Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "1000 美元以下本地 LLM 推荐 GPU：RTX 5070 Ti 16 GB（约 750-900 美元）。按美国成交价，二手 24 GB RTX 3090 和 4090 远超这一预算。",
+        "new": "1000 美元以下，我们的编辑推荐是 RTX 5060 Ti 16 GB：2026 年 11 月 27 日美国价格表中全新 799 美元起；RTX 5070 Ti 为 1479 美元起。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.42,
+      "impressions": 12,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "85aa8811-f231-4fef-84e9-5695a7f50ddb",
+    "slug": "/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:12.820Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "The RTX 4060 Ti 16GB is our pick near $600 if you find it at that price; 16GB VRAM is the sweet spot for 14B models. 16GB card prices have swung during the 2026 shortage, so compare current listings.",
+        "new": "Our editorial pick near $600 is the RTX 4060 Ti 16GB, if you find it near that price. A 27 November 2026 US tracker showed no new 16GB card under $600, so compare listings."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.73,
+      "impressions": 1562,
+      "clicks": 13,
+      "ctr": 0.008322663252240717,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a19cb2e6-dad1-4347-b68b-83e16037f977",
+    "slug": "/de/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:12.853Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Die RTX 4060 Ti 16 GB ist unsere Wahl um 600 $, wenn Sie sie zu diesem Preis finden; 16 GB VRAM sind der optimale Punkt für 14B-Modelle. Die Preise von 16-GB-Karten schwankten während der Knappheit 2026, vergleichen Sie daher aktuelle Angebote.",
+        "new": "Unsere redaktionelle Wahl um 600 $: die RTX 4060 Ti 16 GB, falls Sie sie zu diesem Preis finden. Ein US-Tracker zeigte am 27.11.2026 keine neue 16-GB-Karte unter 600 $."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.95,
+      "impressions": 22,
+      "clicks": 1,
+      "ctr": 0.045454545454545456,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ac34faf4-21e4-48cc-8899-72399a566d3d",
+    "slug": "/fr/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:12.885Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "La RTX 4060 Ti 16 Go est notre choix autour de 600 $ si vous la trouvez à ce prix ; 16 Go de VRAM est le point idéal pour les modèles 14B. Les prix des cartes 16 Go ont fluctué pendant la pénurie de 2026 : comparez les offres actuelles.",
+        "new": "Notre choix éditorial autour de 600 $ : la RTX 4060 Ti 16 Go, si vous la trouvez à ce prix. Au 27/11/2026, un suivi américain ne montrait aucune carte 16 Go neuve sous 600 $."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.19,
+      "impressions": 21,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "18d75638-44ec-4ca2-b33c-4af1f27e136f",
+    "slug": "/ja/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:12.919Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "RTX 4060 Ti 16GBは、その価格で見つかれば600ドル前後での当サイトの推奨です——16GB VRAMは14Bモデルの最適点です。2026年の品不足の間に16GBカードの価格は変動したため、現在の掲載価格を比較してください。",
+        "new": "600ドル前後の当サイトの編集上の選択は、その価格で見つかる場合のRTX 4060 Ti 16GBです。2026年11月27日の米国の価格表では、600ドル未満の新品16GBカードはありませんでした。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.92,
+      "impressions": 53,
+      "clicks": 1,
+      "ctr": 0.018867924528301886,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1de6c459-f1ff-4288-9724-17f143d885cf",
+    "slug": "/zh/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:12.952Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "RTX 4060 Ti 16GB是我们在600美元左右的首选（前提是能以该价格买到）——16GB显存是14B模型的最佳平衡点。2026年短缺期间16GB显卡价格波动较大，请对比当前报价。",
+        "new": "600美元左右，我们的编辑推荐是RTX 4060 Ti 16GB，前提是能以接近的价格买到。2026年11月27日的美国价格表中，没有低于600美元的全新16GB显卡。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 7.32,
+      "impressions": 93,
+      "clicks": 1,
+      "ctr": 0.010752688172043012,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f2231847-29f3-47d8-817a-2900e015da4d",
+    "slug": "/es/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:12.987Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "La RTX 4060 Ti 16GB es nuestra opción cerca de 600 $ si la encuentras a ese precio; 16 GB de VRAM es el punto óptimo para modelos 14B. Los precios de las tarjetas de 16 GB han oscilado durante la escasez de 2026, así que compara los anuncios actuales.",
+        "new": "Nuestra elección editorial cerca de 600 $: la RTX 4060 Ti 16GB, si la encuentras a ese precio. El 27/11/2026 un rastreador de EE. UU. no mostraba 16 GB nuevas por menos de 600 $."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5,
+      "impressions": 48,
+      "clicks": 1,
+      "ctr": 0.020833333333333332,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6ed2d25d-60de-4432-9887-60e825656973",
+    "slug": "/ar/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:13.020Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "بطاقة RTX 4060 Ti 16GB هي اختيارنا قرب 600 دولار إن وجدتها بهذا السعر — 16 جيجابايت VRAM هي النقطة المثلى لنماذج 14B. تذبذبت أسعار بطاقات 16 جيجابايت خلال نقص 2026، لذا قارن القوائم الحالية.",
+        "new": "اختيارنا التحريري قرب 600 دولار هو RTX 4060 Ti 16GB إن وجدتها بسعر قريب. وفي 27 نوفمبر 2026 لم يُظهر متتبع أمريكي أي بطاقة جديدة بسعة 16 جيجابايت بأقل من 600 دولار."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 3.67,
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6274adfc-3e05-499f-a1cb-8925786d58d3",
+    "slug": "/pt/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:13.055Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "A RTX 4060 Ti 16GB é nossa escolha perto de US$ 600 se você a encontrar nesse preço; 16GB de VRAM é o ponto ideal para modelos 14B. Os preços das placas de 16GB oscilaram durante a escassez de 2026, então compare os anúncios atuais.",
+        "new": "Nossa escolha editorial perto de US$ 600: a RTX 4060 Ti 16GB, se você a achar nesse preço. Em 27/11/2026, um rastreador dos EUA não mostrava 16GB novas abaixo de US$ 600."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 8.11,
+      "impressions": 47,
+      "clicks": 1,
+      "ctr": 0.02127659574468085,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7abfae37-6638-4ed0-93ab-4bfdb7c945f6",
+    "slug": "/ko/prompt-bites/best-gpu-under-600-local-llm",
+    "date": "2026-11-28T11:54:13.089Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "$600 안팎에서 해당 가격에 구할 수 있다면 RTX 4060 Ti 16GB를 추천합니다. 16GB VRAM은 14B 모델의 최적 지점입니다. 2026년 부족 사태 중 16GB 카드 가격이 크게 변동했으니 현재 매물을 비교하세요.",
+        "new": "$600 안팎에서 당사의 편집상 선택은 그 가격에 구할 수 있는 RTX 4060 Ti 16GB입니다. 2026년 11월 27일 미국 가격표에는 $600 미만의 신품 16GB 카드가 없었습니다."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 5.68,
+      "impressions": 352,
+      "clicks": 18,
+      "ctr": 0.05113636363636364,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "41b11384-4f81-48fe-9f48-b6d19cff9919",
+    "slug": "/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.122Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best local smart home + AI hardware in 2026: Intel N100 mini PC or Raspberry Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo), SSD storage, and an LLM step-up. Updated pricing.",
+        "new": "Best local smart home + AI hardware in 2026: Intel N100 mini PC or Raspberry Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo), SSD storage, and an LLM step-up. Rough 2026 prices."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.26,
+      "impressions": 8695,
+      "clicks": 156,
+      "ctr": 0.017941345600920068,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c4e4bbed-5112-45eb-9f23-7f432f89e4f7",
+    "slug": "/ar/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.156Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM. أسعار محدّثة.",
+        "new": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM. أسعار تقريبية لعام 2026."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 7,
+      "impressions": 222,
+      "clicks": 3,
+      "ctr": 0.013513513513513514,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6aedb9fd-a7bb-4466-99fd-cfe9b9da02ab",
+    "slug": "/de/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.189Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Beste Hardware für lokales Smart Home + KI 2026: Intel-N100-Mini-PC oder Raspberry Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo), SSD-Speicher, LLM-Aufstieg. Aktualisierte Preise.",
+        "new": "Beste Hardware für lokales Smart Home + KI 2026: Intel-N100-Mini-PC oder Raspberry Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo), SSD-Speicher, LLM-Aufstieg. Richtpreise 2026."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.44,
+      "impressions": 1315,
+      "clicks": 41,
+      "ctr": 0.0311787072243346,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5f9ef2aa-367f-42d8-9479-704f3dd6b553",
+    "slug": "/es/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.222Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mejor hardware para un smart home local + IA en 2026: hub con mini PC Intel N100 o Raspberry Pi 5, acelerador Frigate (Intel iGPU/Hailo), almacenamiento SSD y salto a LLM. Precios actualizados.",
+        "new": "Mejor hardware para un smart home local + IA en 2026: hub con mini PC Intel N100 o Raspberry Pi 5, acelerador Frigate (Intel iGPU/Hailo), almacenamiento SSD y salto a LLM. Precios orientativos."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 7.13,
+      "impressions": 383,
+      "clicks": 8,
+      "ctr": 0.020887728459530026,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3d3edaa7-c8b9-436f-9ace-9beb17c6d655",
+    "slug": "/ko/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.254Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026년 로컬 스마트 홈 + AI 최고의 하드웨어: Intel N100 미니 PC 또는 Raspberry Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo), SSD 스토리지, LLM 업그레이드 경로. 최신 가격 반영.",
+        "new": "2026년 로컬 스마트 홈 + AI 최고의 하드웨어: Intel N100 미니 PC 또는 Raspberry Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo), SSD 스토리지, LLM 업그레이드 경로. 2026년 참고 가격."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 8.38,
+      "impressions": 112,
+      "clicks": 7,
+      "ctr": 0.0625,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a25cc77c-0570-4489-8c5a-17af0951e926",
+    "slug": "/fr/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.287Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Meilleur matériel maison connectée locale + IA 2026 : mini-PC Intel N100 ou Raspberry Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo), stockage SSD, montée en gamme LLM. Prix actualisés.",
+        "new": "Meilleur matériel maison connectée locale + IA 2026 : mini-PC Intel N100 ou Raspberry Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo), stockage SSD, montée en gamme LLM. Prix indicatifs."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.81,
+      "impressions": 495,
+      "clicks": 11,
+      "ctr": 0.022222222222222223,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a66bc758-e033-4c1f-893c-a24002d78f0e",
+    "slug": "/ja/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.320Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ローカルスマートホーム＋AIの最適ハードウェア（2026年）：Intel N100 ミニPC または Raspberry Pi 5 のハブ、Frigate 加速（Intel 内蔵GPU／Hailo）、SSD ストレージ、LLM 用の上位構成を解説。価格情報を更新。",
+        "new": "ローカルスマートホーム＋AIの最適ハードウェア（2026年）：Intel N100 ミニPC または Raspberry Pi 5 のハブ、Frigate 加速（Intel 内蔵GPU／Hailo）、SSD ストレージ、LLM 用の上位構成を解説。目安価格つき。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.04,
+      "impressions": 28,
+      "clicks": 1,
+      "ctr": 0.03571428571428571,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "891480bc-00f2-465a-a59b-68a779c2adbf",
+    "slug": "/pt/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.353Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Melhor hardware para casa inteligente local + IA em 2026: hub mini PC Intel N100 ou Raspberry Pi 5, acelerador do Frigate (iGPU Intel/Hailo), armazenamento SSD e um passo seguinte para LLM. Preços atualizados.",
+        "new": "Melhor hardware para casa inteligente local + IA em 2026: hub mini PC Intel N100 ou Raspberry Pi 5, acelerador do Frigate (iGPU Intel/Hailo), armazenamento SSD e um passo seguinte para LLM. Preços aproximados."
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.31,
+      "impressions": 68,
+      "clicks": 2,
+      "ctr": 0.029411764705882353,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d14f853a-4f91-4429-9e04-caf9261b96f9",
+    "slug": "/zh/smart-home/best-hardware-for-local-smart-home",
+    "date": "2026-11-28T11:54:13.387Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年本地智能家居 + AI 硬件推荐：Intel N100 迷你 PC 或 Raspberry Pi 5 中枢，Frigate 加速方案（Intel 集成显卡/Hailo），SSD 存储，以及本地 LLM 升级选项。含最新价格。",
+        "new": "2026年本地智能家居 + AI 硬件推荐：Intel N100 迷你 PC 或 Raspberry Pi 5 中枢，Frigate 加速方案（Intel 集成显卡/Hailo），SSD 存储，以及本地 LLM 升级选项。含参考价格。"
+      }
+    ],
+    "reason": "Full-read GPU risk check: dated prices, re-ranked under-500/under-1000 picks, unsupported claims removed.",
+    "baseline": {
+      "position": 6.3,
+      "impressions": 815,
+      "clicks": 30,
+      "ctr": 0.03680981595092025,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
   }
 ]
