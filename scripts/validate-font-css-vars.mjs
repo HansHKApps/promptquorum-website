@@ -3,7 +3,7 @@
 /**
  * Font CSS variable usage validator.
  *
- * Guards against a font being declared via next/font/google or next/font/local
+ * Guards against a font being declared (in src/fonts/*.css, or via a next/font loader)
  * (a `variable: '--font-x'` loader call) with zero matching CSS-variable usage
  * anywhere in the codebase — the exact "declared but unused" state that made
  * the 2026-07-26 removal of Noto Sans KR legitimate (commit 6fd2a8e59: the
@@ -66,6 +66,7 @@ function readLines(relPath) {
 
 const FONT_IMPORT_PATTERN = /from\s+['"]next\/font\/(google|local)['"]/;
 const VARIABLE_DECL_PATTERN = /variable:\s*['"](--[\w-]+)['"]/;
+const CSS_DECL_PATTERN = /^\s*(--font-[\w-]+)\s*:/;
 
 function main() {
   const files = [];
@@ -81,13 +82,15 @@ function main() {
   const declarations = []; // { variable, file, line (1-indexed) }
 
   for (const file of files) {
-    if (!file.endsWith('.ts') && !file.endsWith('.tsx')) continue;
+    // Self-hosted fonts declare their variable in src/fonts/*.css (`--font-x: "Family", ...;`).
+    const isFontCss = file.startsWith(`src${path.sep}fonts${path.sep}`) && file.endsWith('.css');
+    if (!isFontCss && !file.endsWith('.ts') && !file.endsWith('.tsx')) continue;
     const lines = readLines(file);
     const content = lines.join('\n');
-    if (!FONT_IMPORT_PATTERN.test(content)) continue;
+    if (!isFontCss && !FONT_IMPORT_PATTERN.test(content)) continue;
 
     lines.forEach((lineText, idx) => {
-      const m = lineText.match(VARIABLE_DECL_PATTERN);
+      const m = lineText.match(isFontCss ? CSS_DECL_PATTERN : VARIABLE_DECL_PATTERN);
       if (m) {
         declarations.push({ variable: m[1], file, line: idx + 1 });
       }
@@ -95,7 +98,7 @@ function main() {
   }
 
   if (declarations.length === 0) {
-    console.log('⚠️  No next/font/google or next/font/local loader calls with a `variable:` found under src/ — nothing to validate.');
+    console.log('⚠️  No font variable declarations found under src/ — nothing to validate.');
     process.exit(0);
   }
 
