@@ -386,6 +386,7 @@ import { app as app_libretranslate } from './apps/libretranslate'
 import { app as app_humla } from './apps/humla'
 import { app as app_llmfit } from './apps/llmfit'
 import { app as app_orca } from './apps/orca'
+import { app as app_valo } from './apps/valo'
 import { app as app_reactive_resume } from './apps/reactive-resume'
 import { app as app_t3_code } from './apps/t3-code'
 import { app as app_paperclip } from './apps/paperclip'
@@ -734,6 +735,7 @@ export const localAiApps: ToolRecord[] = [
   app_humla,
   app_llmfit,
   app_orca,
+  app_valo,
   app_reactive_resume,
   app_t3_code,
   app_paperclip,

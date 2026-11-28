@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 397,
+    "totalCount": 398,
     "capped": true
   },
   "llama.cpp": {
@@ -13565,6 +13565,76 @@
     "totalCount": 2,
     "capped": false
   },
+  "Valo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "valo-review",
+        "title": "Valo Review: One Desktop Workspace for Claude, Codex and Local AI",
+        "url": "/power-local-llm/valo-review",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-llms-for-creative-writing",
+        "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
+        "url": "/local-llms/best-local-llms-for-creative-writing",
+        "dateModified": "2026-11-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "small-local-llm-models",
+        "title": "Best Small Local LLMs 2026: Top 4B Models and the Smallest to Run Locally",
+        "url": "/local-llms/small-local-llm-models",
+        "dateModified": "2026-10-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-ai-code-review-vs-coderabbit-2026",
+        "title": "Local AI Code Review vs. CodeRabbit: Is DIY Worth It?",
+        "url": "/local-llms/local-ai-code-review-vs-coderabbit",
+        "dateModified": "2026-09-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "qwen-local-gdpr-setup-guide-2026",
+        "title": "How to Set Up Qwen Locally for GDPR-Compliant Workflows",
+        "url": "/local-llms/qwen-local-gdpr-setup-guide-2026",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 8,
+    "capped": false
+  },
   "Reactive Resume": {
     "articles": [
       {
@@ -14561,6 +14631,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "valo-review",
+        "title": "Valo Review: One Desktop Workspace for Claude, Codex and Local AI",
+        "url": "/power-local-llm/valo-review",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-video-generation-vs-cloud",
         "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
         "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
@@ -14622,17 +14700,9 @@
         "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
         "dateModified": "2026-11-22",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "renting-gpu-cloud-vs-buying-on-prem-enterprise-ai",
-        "title": "Renting GPU Cloud vs Buying On-Prem Hardware for Enterprise AI (2026)",
-        "url": "/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai",
-        "dateModified": "2026-11-22",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 298,
+    "totalCount": 299,
     "capped": true
   },
   "Qdrant": {

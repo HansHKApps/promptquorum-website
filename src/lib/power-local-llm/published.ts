@@ -846,6 +846,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'humla-review',
   'llmfit-review',
   'orca-review',
+  'valo-review',
 
 ])
 
