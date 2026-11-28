@@ -205,7 +205,7 @@ export default function RootLayout({
                   "@id": "https://www.promptquorum.com/#software",
                   "name": "PromptQuorum",
                   "alternateName": "Prompt Quorum",
-                  "description": "Prompt optimization and prompt management software. Send one structured prompt simultaneously to GPT-4o, Claude, Gemini, Mistral, Llama, DeepSeek and 25+ AI models. Compare parallel responses and run consensus analysis: hallucination detection, contradiction scoring, best-answer extraction. 9 prompt engineering frameworks. Supports local LLMs (Ollama, LM Studio) for fully private offline inference. Free — bring your own API key, no account required.",
+                  "description": "Prompt optimization and prompt management software. Send one structured prompt simultaneously to GPT-4o, Claude, Gemini, Mistral, Llama, DeepSeek and 25+ AI models. Compare parallel responses and run consensus analysis: hallucination detection, contradiction scoring, best-answer extraction. 9 prompt engineering frameworks. Supports local LLMs (Ollama, LM Studio) for offline inference on your own hardware. Free — bring your own API key, no account required.",
                   "url": "https://www.promptquorum.com",
                   "downloadUrl": "https://www.promptquorum.com/download",
                   "applicationCategory": "AIApplication",

@@ -45,7 +45,7 @@ export const translations = {
     // FAQ
     faqTitle: "Privacy-First Local Workflow—FAQs",
     faq1Question: "Is PromptQuorum free?",
-    faq1Answer: "Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.",
+    faq1Answer: "Yes. PromptQuorum is free to use. You can bring your own API key or use a local LLM.",
     faq2Question: "How does privacy work?",
     faq2Answer: "You decide where your data goes. Keep everything local with LM Studio or Ollama, or use your own API keys. PromptQuorum is as private as you set it up.",
     faq3Question: "Which AI providers are supported?",
@@ -367,7 +367,7 @@ export const translations = {
     // FAQ
     faqTitle: "Haeufig gestellte Fragen",
     faq1Question: "Ist PromptQuorum kostenlos?",
-    faq1Answer: "Ja. PromptQuorum ist kostenlos nutzbar. Sie koennen Ihren eigenen API-Key mitbringen, einen lokalen LLM verwenden oder unseren begrenzten kostenlosen Backend-Service zur Prompt-Optimierung testen.",
+    faq1Answer: "Ja. PromptQuorum ist kostenlos nutzbar. Sie können Ihren eigenen API-Schlüssel mitbringen oder ein lokales LLM verwenden.",
     faq2Question: "Wie funktioniert der Datenschutz?",
     faq2Answer: "Sie entscheiden, wohin Ihre Daten gehen. Alles lokal mit LM Studio oder Ollama halten oder Ihre eigenen API-Keys verwenden. PromptQuorum ist so privat, wie Sie es einrichten.",
     faq3Question: "Welche KI-Anbieter werden unterstuetzt?",
@@ -697,7 +697,7 @@ export const translations = {
     // FAQ
     faqTitle: "Questions frequentes",
     faq1Question: "PromptQuorum est-il gratuit?",
-    faq1Answer: "Oui. PromptQuorum est gratuit. Vous pouvez apporter votre propre cle API, utiliser un LLM local, ou tester notre service backend gratuit limite pour l'optimisation des prompts.",
+    faq1Answer: "Oui. PromptQuorum est gratuit. Vous pouvez apporter votre propre clé API ou utiliser un LLM local.",
     faq2Question: "Comment fonctionne la confidentialite?",
     faq2Answer: "Vous decidez ou vont vos donnees. Tout garder local avec LM Studio ou Ollama, ou utiliser vos propres cles API. PromptQuorum est aussi prive que vous le configurez.",
     faq3Question: "Quels fournisseurs IA sont pris en charge?",
@@ -1019,7 +1019,7 @@ export const translations = {
     // FAQ
     faqTitle: "よくある質問",
     faq1Question: "PromptQuorumは有料ですか？",
-    faq1Answer: "いいえ。PromptQuorumは無料で使用できます。持ち込みAPIキーを使ったり、ローカルLLMを使ったり、試用ベースで限られた無料バックエンドサービスを使用できます。",
+    faq1Answer: "はい。PromptQuorumは無料でご利用いただけます。ご自身のAPIキーを持ち込むか、ローカルLLMをご利用いただけます。",
     faq2Question: "プライバシーはどうなりますか？",
     faq2Answer: "データの行先を自分で選択できます。LM StudioやOllamaで完全にローカルに保つ、または持ち込みAPIキー使用。PromptQuorumはあなたが設定した通りにプライベートです。",
     faq3Question: "どのAIプロバイダーがサポートされていますか？",
@@ -1341,7 +1341,7 @@ export const translations = {
     // FAQ
     faqTitle: "常见问题",
     faq1Question: "PromptQuorum免费吗？",
-    faq1Answer: "是的。PromptQuorum免费使用。您可以自带API密钥、使用本地LLM，或试用我们有限免费的后端服务进行提示词优化。",
+    faq1Answer: "是的。PromptQuorum 免费使用。您可以使用自己的 API 密钥或本地 LLM。",
     faq2Question: "隐私如何运作？",
     faq2Answer: "您决定数据去向。使用LM Studio或Ollama保持一切本地化，或使用您自己的API密钥。PromptQuorum的隐私程度由您设置。",
     faq3Question: "支持哪些AI提供商？",
@@ -1663,7 +1663,7 @@ export const translations = {
     // FAQ
     faqTitle: "Preguntas frecuentes sobre el flujo de trabajo local y privado",
     faq1Question: "¿PromptQuorum es gratuito?",
-    faq1Answer: "Sí. PromptQuorum es gratuito. Puedes traer tu propia clave API, usar un LLM local, o probar nuestro servicio backend gratuito limitado para optimización de prompts.",
+    faq1Answer: "Sí. PromptQuorum es gratuito. Puedes usar tu propia clave de API o un LLM local.",
     faq2Question: "¿Cómo funciona la privacidad?",
     faq2Answer: "Tú decides a dónde van tus datos. Mantén todo local con LM Studio u Ollama, o usa tus propias claves API. PromptQuorum es tan privado como tú lo configures.",
     faq3Question: "¿Qué proveedores de IA son compatibles?",
@@ -1985,7 +1985,7 @@ export const translations = {
     // FAQ
     faqTitle: "Perguntas frequentes sobre fluxo de trabalho local e privado",
     faq1Question: "O PromptQuorum é gratuito?",
-    faq1Answer: "Sim. O PromptQuorum é gratuito. Você pode trazer sua própria chave de API, usar um LLM local ou experimentar nosso serviço de back-end gratuito e limitado para otimização de prompts.",
+    faq1Answer: "Sim. O PromptQuorum é gratuito. Você pode usar sua própria chave de API ou um LLM local.",
     faq2Question: "Como funciona a privacidade?",
     faq2Answer: "Você decide para onde vão seus dados. Mantenha tudo local com LM Studio ou Ollama, ou use suas próprias chaves de API. O PromptQuorum é tão privado quanto você o configurar.",
     faq3Question: "Quais provedores de IA são compatíveis?",
@@ -2307,7 +2307,7 @@ export const translations = {
     // FAQ
     faqTitle: "أسئلة شائعة حول سير العمل المحلي الذي يحافظ على الخصوصية",
     faq1Question: "هل PromptQuorum مجاني؟",
-    faq1Answer: "نعم. PromptQuorum مجاني. يمكنك إحضار مفتاح API الخاص بك، أو استخدام LLM محلي، أو تجربة خدمتنا الخلفية المجانية المحدودة لتحسين البرامج النصية.",
+    faq1Answer: "نعم. PromptQuorum مجاني الاستخدام. يمكنك استخدام مفتاح API الخاص بك أو نموذج لغوي محلي.",
     faq2Question: "كيف تعمل الخصوصية؟",
     faq2Answer: "أنت من يقرر إلى أين تذهب بياناتك. احتفظ بكل شيء محليًا مع LM Studio أو Ollama، أو استخدم مفاتيح API الخاصة بك. PromptQuorum بالغ الخصوصية بالقدر الذي تُعدِّه أنت.",
     faq3Question: "ما مزودو الذكاء الاصطناعي المدعومون؟",
@@ -2629,7 +2629,7 @@ export const translations = {
     // FAQ
     faqTitle: "개인 정보 보호 우선 로컬 워크플로 — FAQ",
     faq1Question: "PromptQuorum은 무료입니까?",
-    faq1Answer: "예. PromptQuorum은 무료로 사용하실 수 있습니다. 자체 API 키를 사용하거나 로컬 LLM을 사용하거나 테스트 목적으로 제한된 무료 백엔드 서비스를 이용하실 수 있습니다.",
+    faq1Answer: "네. PromptQuorum은 무료로 사용할 수 있습니다. 자신의 API 키를 사용하거나 로컬 LLM을 사용할 수 있습니다.",
     faq2Question: "개인 정보 보호는 어떻게 작동합니까?",
     faq2Answer: "데이터 전송 위치를 직접 결정하십시오. LM Studio 또는 Ollama로 모든 것을 로컬에 유지하거나 자체 API 키를 사용하십시오. PromptQuorum의 개인 정보 보호 수준은 사용자가 설정하는 방식에 따라 달라집니다.",
     faq3Question: "지원되는 AI 제공업체는 무엇입니까?",
