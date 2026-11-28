@@ -166,7 +166,7 @@
     "title": "What Is Prompt Engineering? — PromptQuorum Guide",
     "excerpt": "Prompt engineering: designing text inputs for reliable AI outputs. Learn role prompting, chain-of-thought, few-shot techniques for ChatGPT, Claude, Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -175,7 +175,7 @@
     "title": "Was ist Prompt Engineering? — PromptQuorum Leitfaden",
     "excerpt": "Prompt Engineering 2026: die Technik für verlässlichere KI-Ausgaben. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -184,7 +184,7 @@
     "title": "Qu'est-ce que le Prompt Engineering ? — Guide PromptQuorum",
     "excerpt": "Ingénierie de prompt : définition, principes et techniques (chain-of-thought, few-shot), puis comparaison avec le fine-tuning et le RAG pour ChatGPT et Claude.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -193,7 +193,7 @@
     "title": "プロンプトエンジニアリングとは？",
     "excerpt": "プロンプトエンジニアリングはAI出力の品質を左右する技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で読めます。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -202,7 +202,7 @@
     "title": "什么是提示工程？ — PromptQuorum 指南",
     "excerpt": "提示工程是影响AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -211,7 +211,7 @@
     "title": "¿Qué es el Prompt Engineering? — Guía PromptQuorum",
     "excerpt": "Prompt engineering en 2026: diseña entradas de texto para resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT y Claude.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -220,7 +220,7 @@
     "title": "O que é Prompt Engineering? — Guia PromptQuorum",
     "excerpt": "Aprenda prompt engineering em 2026: crie instruções melhores para obter resultados confiáveis no ChatGPT, Claude e Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -229,7 +229,7 @@
     "title": "ما هي هندسة الطلبات؟ — دليل ⁨PromptQuorum⁩",
     "excerpt": "هندسة الطلبات: صمّم المدخلات النصية للحصول على نتائج موثوقة من ⁨LLMs⁩. تعلّم ⁨role prompting⁩ و⁨chain-of-thought⁩ و⁨few-shot⁩ لـ ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Ollama⁩.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -238,7 +238,7 @@
     "title": "프롬프트 엔지니어링이란? — PromptQuorum 가이드",
     "excerpt": "프롬프트 엔지니어링: 신뢰할 수 있는 AI 출력을 위한 텍스트 입력 설계. ChatGPT, Claude, Ollama를 위한 역할 프롬프팅, 사고 연쇄, 퓨샷 기법을 학습하십시오.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
