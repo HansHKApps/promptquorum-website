@@ -41,7 +41,7 @@
   <rect x="410" y="248" width="140" height="4" rx="0" fill="#F4B400"/>
   <text x="480" y="272" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Intel N100/N150</text>
   <text x="480" y="286" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Mini PC</text>
-  <text x="480" y="304" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">كرت مدمج (OpenVIلا)</text>
+  <text x="480" y="304" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">كرت مدمج (OpenVINO)</text>
 
   <!-- Box 4: خادم RTX 3090 -->
   <rect x="610" y="248" width="140" height="68" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="1.5"/>

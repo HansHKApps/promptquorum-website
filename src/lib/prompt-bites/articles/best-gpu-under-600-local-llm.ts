@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Which GPU Near $600 for Local LLMs 2026 | Prompt Bites',
     metaDescription: 'The RTX 4060 Ti 16GB is our pick near $600 if you find it at that price; 16GB VRAM is the sweet spot for 14B models. 16GB card prices have swung during the 2026 shortage, so compare current listings.',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16GB VRAM comfortably runs 14B models at Q4 — a tier above 12GB cards.',
           'The newer RTX 5060 Ti 16GB was listed from $679 on Amazon US (Wccftech, 2026-01-27) during the 2026 memory shortage — compare both 16GB cards at current prices rather than assuming newer is better.',
-          'A used RTX 3090 24GB now typically sells for $1,500-1,725 (InsiderLLM tracker, 2026-11-23) — no longer realistically obtainable under this budget.',
+          'Used RTX 3090 24GB cards sold for $1,500-1,725 on US eBay (median $1,650; InsiderLLM, 13-23 November 2026, excluding shipping) — at least $900 above this budget.',
         ],
         updatedDate: '2026-11',
       },
@@ -52,16 +52,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Our pick: NVIDIA RTX 4060 Ti 16GB — 16GB VRAM clears 14B models at Q4 with real context headroom',
           '16GB is the sweet spot: a 14B model at Q4 needs roughly 9-10GB, leaving 6GB for context and tooling',
           'NVIDIA lists 165 or 160 W total graphics power and a 550 W minimum system power for the RTX 4060 Ti — check your power supply before buying',
-          'Check current prices before buying: our buying guide lists the RTX 4060 Ti 16GB at about $650 used asking and about $790 new, the newer RTX 5060 Ti 16GB was listed from $679 on Amazon US (Wccftech, 2026-01-27), and used RTX 3090 24GB now typically runs $1,500-1,725 (InsiderLLM, 2026-11-23) — treat $600 as a guide, not a guarantee',
+          'Check current prices before buying: our buying guide lists the RTX 4060 Ti 16GB at about $650 used asking and about $790 new, the newer RTX 5060 Ti 16GB was listed from $679 on Amazon US (Wccftech, 2026-01-27), and used RTX 3090 24GB cards sold for $1,500-1,725 (InsiderLLM, 13-23 November 2026) — treat $600 as a guide, not a guarantee',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Our Pick: NVIDIA RTX 4060 Ti 16GB',
         content: [
-          '<strong>The NVIDIA RTX 4060 Ti 16GB is our pick for local LLMs near a $600 budget because 16GB of VRAM is the sweet spot for 14B models — large enough to run them at Q4 with room for a long context window.</strong> The catch is price: 16GB card prices have swung during the 2026 memory shortage, and our buying guide lists this card at about $650 used asking and about $790 new (three listings), so it can sit above $600. Treat the budget line as a guide, not a guarantee. Our pick applies if you can find the 4060 Ti 16GB at or near $600 (check current listings); the RTX 5060 Ti 16GB is the faster card if the two cost about the same.',
+          '<strong>The NVIDIA RTX 4060 Ti 16GB is our pick for local LLMs near a $600 budget because 16GB of VRAM is the sweet spot for 14B models — large enough to run them at Q4 with room for a long context window.</strong> The catch is price: 16GB card prices have swung during the 2026 memory shortage, and our buying guide lists this card at about $650 used asking and about $790 new (three listings), so it can sit above $600. Treat the budget line as a guide, not a guarantee. Our pick applies if you can find the 4060 Ti 16GB at or near $600 (check current listings); the RTX 5060 Ti 16GB is the faster card if the two cost about the same. Price sources differ: the InsiderLLM price tracker puts the RTX 4060 Ti 16GB at about $430-450 and its used-GPU buying guide at $450-550, and neither states a date or price basis for this card.',
           'A 14B model needs roughly 9-10GB of VRAM at Q4 (a sizing estimate, not a measurement). The 16GB on the RTX 4060 Ti leaves 6GB for the context window and runtime overhead — enough for a 16K-token context without spilling into slow CPU offload. A 12GB card runs the same model but with almost no context headroom.',
-          'NVIDIA lists 165 or 160 W total graphics power and a 550 W minimum system power for the RTX 4060 Ti, so check your power supply before buying. Choose a used RTX 3060 12GB instead only if budget is the deciding factor and you accept tight context limits — but check the newer RTX 5060 Ti 16GB and used RTX 3090 24GB current prices before ruling them out too; GPU pricing has moved a lot in 2026 and can shift again.',
+          'NVIDIA lists 165 or 160 W total graphics power and a 550 W minimum system power for the RTX 4060 Ti, so check your power supply before buying. Choose a used RTX 3060 12GB instead only if budget is the deciding factor and you accept tight context limits — but check the current price of the newer RTX 5060 Ti 16GB before ruling it out. A used RTX 3090 24GB, at $1,500-1,725 in US eBay sales, is not an option near $600.',
         ],
         affiliateLinks: [
           {
@@ -93,9 +93,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['GPU', 'VRAM', 'Largest model', 'Power', 'Notes'],
         rows: [
           { GPU: 'RTX 4060 Ti 16GB', VRAM: '16GB', 'Largest model': '14B at Q4, long context', Power: '165 W per the manufacturer specifications', Notes: 'Our pick — ~$650 used / ~$790 new (our buying guide)' },
-          { GPU: 'RTX 3060 12GB (used)', VRAM: '12GB', 'Largest model': '14B at Q4, short context', Power: '170 W per the manufacturer specifications', Notes: 'Budget tier — see our sub-$300 GPU guide' },
+          { GPU: 'RTX 3060 12GB (used)', VRAM: '12GB', 'Largest model': '14B at Q4, short context', Power: '170 W per the manufacturer specifications', Notes: 'Budget tier — see our budget GPU guide' },
           { GPU: 'RTX 5060 Ti 16GB', VRAM: '16GB', 'Largest model': '14B at Q4/Q5, long context', Power: '~180 W per the manufacturer specifications', Notes: 'Newer — listed from $679 on Amazon US (Wccftech, 2026-01-27)' },
-          { GPU: 'RTX 3090 24GB (used)', VRAM: '24GB', 'Largest model': '30B+, partial 70B', Power: '350 W per the manufacturer specifications', Notes: 'Now typically $1,500-1,725 — over budget' },
+          { GPU: 'RTX 3090 24GB (used)', VRAM: '24GB', 'Largest model': '30B+, partial 70B', Power: '350 W per the manufacturer specifications', Notes: 'Sold $1,500-1,725, 13-23 Nov 2026 — over budget' },
         ],
       },
       faq: {
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can the RTX 4060 Ti 16GB run a 30B model?',
-            a: 'A 30B model at Q4 needs roughly 18-20GB of VRAM, so it does not fit fully in 16GB — it will run with partial CPU offload at much lower speed. For 30B+ models you need a 24GB card, but check current used RTX 3090 prices first: it now typically runs $1,500-1,725, well over this budget.',
+            a: 'A 30B model at Q4 needs roughly 18-20GB of VRAM, so it does not fit fully in 16GB — it will run with partial CPU offload at much lower speed. To run a 30B model fully on the GPU, plan on a 24GB card. A used RTX 3090 24GB is far above this budget: US eBay sales were $1,500-1,725 (median $1,650; 225 sales, 13-23 November 2026, excluding shipping, per InsiderLLM).',
           },
         ],
       },
@@ -124,6 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
+          '[InsiderLLM: used GPU buying guide](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — used RTX 3090: 225 US eBay sales, 13-23 November 2026; RTX 4060 Ti 16GB price figure',
           '[InsiderLLM: NVIDIA GPU prices rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — used RTX 3090 price range, data dated 2026-11-23 (page updated 2026-11-26)',
           '[Wccftech: RTX 5060 Ti 16 GB retail prices](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — listing from $679 on Amazon US (2026-01-27)',
           '[NVIDIA: GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — total graphics power (165 or 160 W) and minimum system power (550 W)',
@@ -149,7 +150,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Welche GPU um 600 $ für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'Die RTX 4060 Ti 16 GB ist unsere Wahl um 600 $, wenn Sie sie zu diesem Preis finden; 16 GB VRAM sind der optimale Punkt für 14B-Modelle. Die Preise von 16-GB-Karten schwankten während der Knappheit 2026, vergleichen Sie daher aktuelle Angebote.',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -178,7 +179,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16 GB VRAM führt 14B-Modelle bei Q4 komfortabel aus — eine Stufe über 12-GB-Karten.',
           'Die neuere RTX 5060 Ti 16 GB wurde während der Speicherknappheit 2026 ab 679 $ bei Amazon US gelistet (Wccftech, 27.01.2026) — vergleichen Sie beide 16-GB-Karten zu aktuellen Preisen, statt neuer automatisch als besser anzunehmen.',
-          'Eine gebrauchte RTX 3090 24 GB kostet inzwischen typischerweise 1.500-1.725 $ (InsiderLLM-Tracker, 23.11.2026) — bei diesem Budget realistisch nicht mehr erreichbar.',
+          'Gebrauchte RTX-3090-Karten mit 24 GB wurden auf eBay in den USA für 1.500-1.725 $ verkauft (Median 1.650 $; InsiderLLM, 13.-23.11.2026, ohne Versand) — mindestens 900 $ über diesem Budget.',
         ],
         updatedDate: '2026-11',
       },
@@ -191,16 +192,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Unsere Wahl: NVIDIA RTX 4060 Ti 16 GB — 16 GB VRAM bewältigt 14B-Modelle bei Q4 mit echtem Kontext-Spielraum',
           '16 GB ist der optimale Punkt: Ein 14B-Modell bei Q4 benötigt rund 9-10 GB, es bleiben 6 GB für Kontext und Werkzeuge',
           'NVIDIA nennt für die RTX 4060 Ti 165 oder 160 W Gesamtgrafikleistung und mindestens 550 W Systemleistung — Netzteil vor dem Kauf prüfen',
-          'Aktuelle Preise vor dem Kauf prüfen: Unsere Kaufberatung führt die RTX 4060 Ti 16 GB in US-Angaben mit rund 650 $ gebraucht (Angebotspreis) und rund 790 $ neu, die neuere RTX 5060 Ti 16 GB wurde ab 679 $ bei Amazon US gelistet (Wccftech, 27.01.2026), und gebrauchte RTX 3090 24 GB kostet inzwischen typischerweise 1.500-1.725 $ (InsiderLLM, 23.11.2026) — verstehen Sie die Budgetgrenze als Richtwert, nicht als Garantie',
+          'Aktuelle Preise vor dem Kauf prüfen: Unsere Kaufberatung führt die RTX 4060 Ti 16 GB in US-Angaben mit rund 650 $ gebraucht (Angebotspreis) und rund 790 $ neu, die neuere RTX 5060 Ti 16 GB wurde ab 679 $ bei Amazon US gelistet (Wccftech, 27.01.2026), und gebrauchte RTX-3090-Karten mit 24 GB wurden für 1.500-1.725 $ verkauft (InsiderLLM, 13.-23.11.2026) — verstehen Sie die Budgetgrenze als Richtwert, nicht als Garantie',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Unsere Wahl: NVIDIA RTX 4060 Ti 16 GB',
         content: [
-          '<strong>Die NVIDIA RTX 4060 Ti 16 GB ist unsere Wahl für lokale LLMs bei einem Budget um 600 $, weil 16 GB VRAM der optimale Punkt für 14B-Modelle ist — groß genug, um sie bei Q4 mit Platz für ein langes Kontextfenster auszuführen.</strong> Der Haken ist der Preis: Die Preise von 16-GB-Karten schwankten während der Speicherknappheit 2026, und unsere Kaufberatung führt diese Karte in US-Angaben mit rund 650 $ gebraucht (Angebotspreis) und rund 790 $ neu (drei Angebote). Verstehen Sie die Budgetgrenze als Richtwert, nicht als Garantie; die Preise im deutschen Handel (inkl. MwSt.) können abweichen, prüfen Sie daher die aktuellen Händlerpreise in Euro. Unsere Wahl gilt, wenn Sie die RTX 4060 Ti 16 GB zu oder nahe 600 $ finden (aktuelle Angebote prüfen); die RTX 5060 Ti 16 GB ist die schnellere Karte, wenn beide ungefähr dasselbe kosten.',
+          '<strong>Die NVIDIA RTX 4060 Ti 16 GB ist unsere Wahl für lokale LLMs bei einem Budget um 600 $, weil 16 GB VRAM der optimale Punkt für 14B-Modelle ist — groß genug, um sie bei Q4 mit Platz für ein langes Kontextfenster auszuführen.</strong> Der Haken ist der Preis: Die Preise von 16-GB-Karten schwankten während der Speicherknappheit 2026, und unsere Kaufberatung führt diese Karte in US-Angaben mit rund 650 $ gebraucht (Angebotspreis) und rund 790 $ neu (drei Angebote). Verstehen Sie die Budgetgrenze als Richtwert, nicht als Garantie; die Preise im deutschen Handel (inkl. MwSt.) können abweichen, prüfen Sie daher die aktuellen Händlerpreise in Euro. Unsere Wahl gilt, wenn Sie die RTX 4060 Ti 16 GB zu oder nahe 600 $ finden (aktuelle Angebote prüfen); die RTX 5060 Ti 16 GB ist die schnellere Karte, wenn beide ungefähr dasselbe kosten. Die Preisquellen weichen ab: Der InsiderLLM-Preistracker nennt für die RTX 4060 Ti 16 GB rund 430-450 $, der InsiderLLM-Ratgeber zum Gebrauchtkauf 450-550 $; beide geben für diese Karte weder Datum noch Preisgrundlage an.',
           'Ein 14B-Modell benötigt bei Q4 rund 9-10 GB VRAM (eine Größenschätzung, keine Messung). Die 16 GB der RTX 4060 Ti lassen 6 GB für das Kontextfenster und Laufzeit-Overhead übrig — genug für einen 16K-Token-Kontext, ohne in langsames CPU-Offload abzurutschen. Eine 12-GB-Karte führt dasselbe Modell aus, aber mit fast keinem Kontext-Spielraum.',
-          'NVIDIA nennt für die RTX 4060 Ti 165 oder 160 W Gesamtgrafikleistung und mindestens 550 W Systemleistung; prüfen Sie daher Ihr Netzteil vor dem Kauf. Wählen Sie stattdessen eine gebrauchte RTX 3060 12 GB nur, wenn das Budget der entscheidende Faktor ist und Sie enge Kontextgrenzen akzeptieren — prüfen Sie aber die aktuellen Preise der neueren RTX 5060 Ti 16 GB und der gebrauchten RTX 3090 24 GB, bevor Sie diese ausschließen; die GPU-Preise haben sich 2026 stark bewegt und können sich erneut verschieben.',
+          'NVIDIA nennt für die RTX 4060 Ti 165 oder 160 W Gesamtgrafikleistung und mindestens 550 W Systemleistung; prüfen Sie daher Ihr Netzteil vor dem Kauf. Wählen Sie stattdessen eine gebrauchte RTX 3060 12 GB nur, wenn das Budget der entscheidende Faktor ist und Sie enge Kontextgrenzen akzeptieren — prüfen Sie aber den aktuellen Preis der neueren RTX 5060 Ti 16 GB, bevor Sie diese ausschließen. Eine gebrauchte RTX 3090 24 GB ist mit US-Verkaufspreisen von 1.500-1.725 $ bei einem Budget um 600 $ keine Option.',
         ],
         affiliateLinks: [
           {
@@ -234,7 +235,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { GPU: 'RTX 4060 Ti 16 GB', VRAM: '16 GB', 'Größtes Modell': '14B bei Q4, langer Kontext', Leistung: '165 W laut Herstellerangaben', Hinweise: 'Unsere Wahl — ca. 650 $ gebraucht / 790 $ neu (US)' },
           { GPU: 'RTX 3060 12 GB (gebraucht)', VRAM: '12 GB', 'Größtes Modell': '14B bei Q4, kurzer Kontext', Leistung: '170 W laut Herstellerangaben', Hinweise: 'Budget-Klasse — siehe unseren Budget-Leitfaden' },
           { GPU: 'RTX 5060 Ti 16 GB', VRAM: '16 GB', 'Größtes Modell': '14B bei Q4/Q5, langer Kontext', Leistung: '~180 W laut Herstellerangaben', Hinweise: 'Neuer — ab 679 $ bei Amazon US gelistet (Wccftech, 27.01.2026)' },
-          { GPU: 'RTX 3090 24 GB (gebraucht)', VRAM: '24 GB', 'Größtes Modell': '30B+, teilweise 70B', Leistung: '350 W laut Herstellerangaben', Hinweise: 'Inzwischen typischerweise 1.500-1.725 $ — über Budget' },
+          { GPU: 'RTX 3090 24 GB (gebraucht)', VRAM: '24 GB', 'Größtes Modell': '30B+, teilweise 70B', Leistung: '350 W laut Herstellerangaben', Hinweise: 'Verkauft für 1.500-1.725 $, 13.-23.11.2026 — über Budget' },
         ],
       },
       faq: {
@@ -255,7 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann die RTX 4060 Ti 16 GB ein 30B-Modell ausführen?',
-            a: 'Ein 30B-Modell bei Q4 benötigt rund 18-20 GB VRAM und passt damit nicht vollständig in 16 GB — es läuft mit teilweisem CPU-Offload und deutlich geringerer Geschwindigkeit. Für 30B+-Modelle brauchen Sie eine 24-GB-Karte, aber prüfen Sie zuerst die aktuellen Preise für gebrauchte RTX-3090-Karten: sie liegen inzwischen typischerweise bei 1.500-1.725 $, weit über diesem Budget.',
+            a: 'Ein 30B-Modell bei Q4 benötigt rund 18-20 GB VRAM und passt damit nicht vollständig in 16 GB — es läuft mit teilweisem CPU-Offload und deutlich geringerer Geschwindigkeit. Um ein 30B-Modell vollständig auf der GPU auszuführen, sollten Sie mit einer 24-GB-Karte planen. Eine gebrauchte RTX 3090 24 GB liegt weit über diesem Budget: Auf eBay in den USA wurde sie für 1.500-1.725 $ verkauft (Median 1.650 $; 225 Verkäufe, 13.-23.11.2026, ohne Versand, laut InsiderLLM).',
           },
         ],
       },
@@ -263,6 +264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
+          '[InsiderLLM: Ratgeber zum GPU-Gebrauchtkauf](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — gebrauchte RTX 3090: 225 eBay-Verkäufe in den USA, 13.-23.11.2026; Preisangabe zur RTX 4060 Ti 16 GB',
           '[InsiderLLM: NVIDIA-GPU-Preise steigen](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — Preisspanne gebrauchter RTX 3090, Datenstand 23.11.2026 (Seite aktualisiert am 26.11.2026)',
           '[Wccftech: Einzelhandelspreise der RTX 5060 Ti 16 GB](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — Amazon-US-Listing ab 679 $ (27.01.2026)',
           '[NVIDIA: GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — Gesamtgrafikleistung (165 oder 160 W) und Mindest-Systemleistung (550 W)',
@@ -288,7 +290,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Quelle GPU autour de 600 $ pour LLM local 2026 | Prompt Bites',
     metaDescription: 'La RTX 4060 Ti 16 Go est notre choix autour de 600 $ si vous la trouvez à ce prix ; 16 Go de VRAM est le point idéal pour les modèles 14B. Les prix des cartes 16 Go ont fluctué pendant la pénurie de 2026 : comparez les offres actuelles.',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -317,7 +319,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16 Go de VRAM fait tourner confortablement les modèles 14B en Q4 — un cran au-dessus des cartes 12 Go.',
           'La nouvelle RTX 5060 Ti 16 Go a été listée à partir de 679 $ sur Amazon US (Wccftech, 27/01/2026) pendant la pénurie de mémoire de 2026 — comparez les deux cartes 16 Go aux prix actuels plutôt que de supposer que plus récent signifie meilleur.',
-          'Une RTX 3090 24 Go d\'occasion se vend désormais typiquement 1 500-1 725 $ (InsiderLLM, 23/11/2026) — plus vraiment accessible à ce budget.',
+          'Des RTX 3090 24 Go d\'occasion se sont vendues 1 500-1 725 $ sur eBay aux États-Unis (médiane 1 650 $ ; InsiderLLM, 13-23 novembre 2026, hors frais de port) — au moins 900 $ au-dessus de ce budget.',
         ],
         updatedDate: '2026-11',
       },
@@ -330,16 +332,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Notre choix : NVIDIA RTX 4060 Ti 16 Go — 16 Go de VRAM fait tourner les modèles 14B en Q4 avec une vraie marge de contexte',
           '16 Go est le point idéal : un modèle 14B en Q4 nécessite environ 9-10 Go, laissant 6 Go pour le contexte et les outils',
           'NVIDIA indique 165 ou 160 W de puissance graphique totale et 550 W de puissance système minimale pour la RTX 4060 Ti — vérifiez votre alimentation avant d\'acheter',
-          'Vérifiez les prix actuels avant d\'acheter : notre guide d\'achat liste la RTX 4060 Ti 16 Go, en données américaines, à environ 650 $ d\'occasion (prix demandé) et environ 790 $ neuve, la nouvelle RTX 5060 Ti 16 Go a été listée à partir de 679 $ sur Amazon US (Wccftech, 27/01/2026), et la RTX 3090 24 Go d\'occasion coûte désormais typiquement 1 500-1 725 $ (InsiderLLM, 23/11/2026) — considérez la limite de budget comme un repère, pas une garantie',
+          'Vérifiez les prix actuels avant d\'acheter : notre guide d\'achat liste la RTX 4060 Ti 16 Go, en données américaines, à environ 650 $ d\'occasion (prix demandé) et environ 790 $ neuve, la nouvelle RTX 5060 Ti 16 Go a été listée à partir de 679 $ sur Amazon US (Wccftech, 27/01/2026), et des RTX 3090 24 Go d\'occasion se sont vendues 1 500-1 725 $ (InsiderLLM, 13-23 novembre 2026) — considérez la limite de budget comme un repère, pas une garantie',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Notre choix : NVIDIA RTX 4060 Ti 16 Go',
         content: [
-          '<strong>La NVIDIA RTX 4060 Ti 16 Go est notre choix pour les LLM locaux avec un budget autour de 600 $, car 16 Go de VRAM est le point idéal pour les modèles 14B — assez grand pour les faire tourner en Q4 avec de la place pour une longue fenêtre de contexte.</strong> Le point faible est le prix : les prix des cartes 16 Go ont fluctué pendant la pénurie de mémoire de 2026, et notre guide d\'achat liste cette carte, en données américaines, à environ 650 $ d\'occasion (prix demandé) et environ 790 $ neuve (trois annonces). Considérez la limite de budget comme un repère, pas une garantie ; les prix en euros (TVA incluse) chez les revendeurs peuvent différer, vérifiez-les avant d\'acheter. Notre choix vaut si vous trouvez la RTX 4060 Ti 16 Go à environ 600 $ (vérifiez les annonces actuelles) ; si les deux cartes coûtent à peu près pareil, la RTX 5060 Ti 16 Go est la plus rapide.',
+          '<strong>La NVIDIA RTX 4060 Ti 16 Go est notre choix pour les LLM locaux avec un budget autour de 600 $, car 16 Go de VRAM est le point idéal pour les modèles 14B — assez grand pour les faire tourner en Q4 avec de la place pour une longue fenêtre de contexte.</strong> Le point faible est le prix : les prix des cartes 16 Go ont fluctué pendant la pénurie de mémoire de 2026, et notre guide d\'achat liste cette carte, en données américaines, à environ 650 $ d\'occasion (prix demandé) et environ 790 $ neuve (trois annonces). Considérez la limite de budget comme un repère, pas une garantie ; les prix en euros (TVA incluse) chez les revendeurs peuvent différer, vérifiez-les avant d\'acheter. Notre choix vaut si vous trouvez la RTX 4060 Ti 16 Go à environ 600 $ (vérifiez les annonces actuelles) ; si les deux cartes coûtent à peu près pareil, la RTX 5060 Ti 16 Go est la plus rapide. Les sources de prix divergent : le suivi de prix InsiderLLM situe la RTX 4060 Ti 16 Go vers 430-450 $, et son guide d\'achat d\'occasion à 450-550 $ ; aucun des deux n\'indique de date ni de base de prix pour cette carte.',
           'Un modèle 14B nécessite environ 9-10 Go de VRAM en Q4 (estimation de dimensionnement, pas une mesure). Les 16 Go de la RTX 4060 Ti laissent 6 Go pour la fenêtre de contexte et la surcharge d\'exécution — assez pour un contexte de 16K tokens sans basculer vers un lent offload CPU. Une carte 12 Go fait tourner le même modèle, mais avec presque aucune marge de contexte.',
-          'NVIDIA indique 165 ou 160 W de puissance graphique totale et 550 W de puissance système minimale pour la RTX 4060 Ti ; vérifiez donc votre alimentation avant d\'acheter. Choisissez plutôt une RTX 3060 12 Go d\'occasion seulement si le budget est le facteur décisif et que vous acceptez des limites de contexte serrées — mais vérifiez les prix actuels de la nouvelle RTX 5060 Ti 16 Go et de la RTX 3090 24 Go d\'occasion avant de les écarter ; les prix des GPU ont beaucoup bougé en 2026 et peuvent encore évoluer.',
+          'NVIDIA indique 165 ou 160 W de puissance graphique totale et 550 W de puissance système minimale pour la RTX 4060 Ti ; vérifiez donc votre alimentation avant d\'acheter. Choisissez plutôt une RTX 3060 12 Go d\'occasion seulement si le budget est le facteur décisif et que vous acceptez des limites de contexte serrées — mais vérifiez le prix actuel de la nouvelle RTX 5060 Ti 16 Go avant de l\'écarter. Une RTX 3090 24 Go d\'occasion, vendue 1 500-1 725 $ sur eBay aux États-Unis, n\'est pas une option autour de 600 $.',
         ],
         affiliateLinks: [
           {
@@ -373,7 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { GPU: 'RTX 4060 Ti 16 Go', VRAM: '16 Go', 'Modèle max': '14B en Q4, long contexte', Consommation: '165 W selon les spécifications du fabricant', Remarques: 'Notre choix — ~650 $ occasion / ~790 $ neuve (US)' },
           { GPU: 'RTX 3060 12 Go (occasion)', VRAM: '12 Go', 'Modèle max': '14B en Q4, contexte court', Consommation: '170 W selon les spécifications du fabricant', Remarques: 'Palier budget — voir notre guide budget' },
           { GPU: 'RTX 5060 Ti 16 Go', VRAM: '16 Go', 'Modèle max': '14B en Q4/Q5, long contexte', Consommation: '~180 W selon les spécifications du fabricant', Remarques: 'Plus récente — listée dès 679 $ sur Amazon US (Wccftech, 27/01/2026)' },
-          { GPU: 'RTX 3090 24 Go (occasion)', VRAM: '24 Go', 'Modèle max': '30B+, 70B partiel', Consommation: '350 W selon les spécifications du fabricant', Remarques: 'Désormais typiquement 1 500-1 725 $ — hors budget' },
+          { GPU: 'RTX 3090 24 Go (occasion)', VRAM: '24 Go', 'Modèle max': '30B+, 70B partiel', Consommation: '350 W selon les spécifications du fabricant', Remarques: 'Vendue 1 500-1 725 $, 13-23/11/2026 — hors budget' },
         ],
       },
       faq: {
@@ -394,7 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'La RTX 4060 Ti 16 Go peut-elle faire tourner un modèle 30B ?',
-            a: 'Un modèle 30B en Q4 nécessite environ 18-20 Go de VRAM, il ne tient donc pas entièrement dans 16 Go — il tournera avec un offload CPU partiel à une vitesse bien plus faible. Pour les modèles 30B+, il faut une carte 24 Go, mais vérifiez d\'abord les prix actuels des RTX 3090 d\'occasion : elles coûtent désormais typiquement 1 500-1 725 $, bien au-delà de ce budget.',
+            a: 'Un modèle 30B en Q4 nécessite environ 18-20 Go de VRAM, il ne tient donc pas entièrement dans 16 Go — il tournera avec un offload CPU partiel à une vitesse bien plus faible. Pour faire tourner un modèle 30B entièrement sur le GPU, prévoyez une carte 24 Go. Une RTX 3090 24 Go d\'occasion dépasse largement ce budget : elle s\'est vendue 1 500-1 725 $ sur eBay aux États-Unis (médiane 1 650 $ ; 225 ventes, 13-23 novembre 2026, hors frais de port, selon InsiderLLM).',
           },
         ],
       },
@@ -402,6 +404,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
+          '[InsiderLLM : guide d\'achat de GPU d\'occasion](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — RTX 3090 d\'occasion : 225 ventes eBay aux États-Unis, 13-23 novembre 2026 ; prix indiqué pour la RTX 4060 Ti 16 Go',
           '[InsiderLLM : hausse des prix des GPU NVIDIA](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — fourchette de prix de la RTX 3090 d\'occasion, données du 23/11/2026 (page mise à jour le 26/11/2026)',
           '[Wccftech : prix de détail de la RTX 5060 Ti 16 Go](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — annonce sur Amazon US à partir de 679 $ (27/01/2026)',
           '[NVIDIA : GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — puissance graphique totale (165 ou 160 W) et puissance système minimale (550 W)',
@@ -427,7 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '600ドル前後のローカルLLM向けGPU 2026 | Prompt Bites',
     metaDescription: 'RTX 4060 Ti 16GBは、その価格で見つかれば600ドル前後での当サイトの推奨です——16GB VRAMは14Bモデルの最適点です。2026年の品不足の間に16GBカードの価格は変動したため、現在の掲載価格を比較してください。',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -456,7 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16GB VRAMは14BモデルをQ4で快適に動かします——12GBカードより一段上です。',
           '新型のRTX 5060 Ti 16GBは、2026年のメモリ不足の間にAmazon米国で679ドルから掲載されました（Wccftech、2026-01-27）——新しいほうが良いと決めつけず、現在の価格で16GBの2枚を比較してください。',
-          '中古RTX 3090 24GBは現在通常1,500〜1,725ドル（InsiderLLMトラッカー、2026-11-23）で取引されており、この予算では現実的に手が届きません。',
+          '中古RTX 3090 24GBの米国eBayでの落札価格は1,500〜1,725ドル（中央値1,650ドル、InsiderLLM、2026年11月13〜23日、送料別）で、この予算を900ドル以上上回ります。',
         ],
         updatedDate: '2026-11',
       },
@@ -469,16 +472,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '当サイトの選択：NVIDIA RTX 4060 Ti 16GB——16GB VRAMで14BモデルをQ4で実際のコンテキスト余裕を持って処理',
           '16GBが最適点：14BモデルはQ4で約9〜10GBが必要で、コンテキストとツール用に6GBが残る',
           'NVIDIAはRTX 4060 Tiの総グラフィックス電力を165Wまたは160W、最低システム電源を550Wと公表——購入前に電源を確認',
-          '購入前に現在の価格を確認：当サイトの購入ガイドではRTX 4060 Ti 16GBは中古の希望価格が約650ドル、新品が約790ドル、新型RTX 5060 Ti 16GBはAmazon米国で679ドルから掲載（Wccftech、2026-01-27）、中古RTX 3090 24GBは現在通常1,500〜1,725ドル（InsiderLLM、2026-11-23）——600ドルは目安であり保証ではありません',
+          '購入前に現在の価格を確認：当サイトの購入ガイドではRTX 4060 Ti 16GBは中古の希望価格が約650ドル、新品が約790ドル、新型RTX 5060 Ti 16GBはAmazon米国で679ドルから掲載（Wccftech、2026-01-27）、中古RTX 3090 24GBの落札価格は1,500〜1,725ドル（InsiderLLM、2026年11月13〜23日）——600ドルは目安であり保証ではありません',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: '当サイトの選択：NVIDIA RTX 4060 Ti 16GB',
         content: [
-          '<strong>NVIDIA RTX 4060 Ti 16GBは、600ドル前後の予算でローカルLLM向けに当サイトが選ぶ一枚です。16GBのVRAMが14Bモデルの最適点だからです——Q4で長いコンテキストウィンドウの余裕を持って動かせるだけの大きさです。</strong> 注意点は価格です。2026年のメモリ不足の間に16GBカードの価格は変動し、当サイトの購入ガイドではこのカードは中古の希望価格が約650ドル、新品が約790ドル（3件の掲載）なので、600ドルを上回ることがあります。予算ラインは目安であり、保証ではありません。当サイトの選択は、RTX 4060 Ti 16GBを600ドル前後で見つけられる場合のものです（現在の掲載価格を確認してください）。両者がほぼ同価格なら、より高速なのはRTX 5060 Ti 16GBです。',
+          '<strong>NVIDIA RTX 4060 Ti 16GBは、600ドル前後の予算でローカルLLM向けに当サイトが選ぶ一枚です。16GBのVRAMが14Bモデルの最適点だからです——Q4で長いコンテキストウィンドウの余裕を持って動かせるだけの大きさです。</strong> 注意点は価格です。2026年のメモリ不足の間に16GBカードの価格は変動し、当サイトの購入ガイドではこのカードは中古の希望価格が約650ドル、新品が約790ドル（3件の掲載）なので、600ドルを上回ることがあります。予算ラインは目安であり、保証ではありません。当サイトの選択は、RTX 4060 Ti 16GBを600ドル前後で見つけられる場合のものです（現在の掲載価格を確認してください）。両者がほぼ同価格なら、より高速なのはRTX 5060 Ti 16GBです。価格の情報源には差があります。InsiderLLMの価格トラッカーはRTX 4060 Ti 16GBを約430〜450ドル、同サイトの中古GPU購入ガイドは450〜550ドルとしていますが、どちらもこのカードの価格の日付と根拠を示していません。',
           '14BモデルはQ4で約9〜10GBのVRAMが必要です（サイズの目安であり、実測値ではありません）。RTX 4060 Tiの16GBは、コンテキストウィンドウとランタイムのオーバーヘッド用に6GBを残します——遅いCPUオフロードに頼らずに16Kトークンのコンテキストを扱うのに十分です。12GBカードでも同じモデルを動かせますが、コンテキストの余裕はほとんどありません。',
-          'NVIDIAはRTX 4060 Tiの総グラフィックス電力を165Wまたは160W、最低システム電源を550Wと公表しているため、購入前に電源を確認してください。中古のRTX 3060 12GBを選ぶのは、予算が決定要因であり、狭いコンテキスト制限を受け入れられる場合のみにしてください——ただし、除外する前に新型RTX 5060 Ti 16GBと中古RTX 3090 24GBの現在の価格も確認してください。GPU価格は2026年に大きく変動しており、今後も変わる可能性があります。',
+          'NVIDIAはRTX 4060 Tiの総グラフィックス電力を165Wまたは160W、最低システム電源を550Wと公表しているため、購入前に電源を確認してください。中古のRTX 3060 12GBを選ぶのは、予算が決定要因であり、狭いコンテキスト制限を受け入れられる場合のみにしてください——ただし、新型RTX 5060 Ti 16GBは除外する前に現在の価格を確認してください。中古RTX 3090 24GBは米国eBayの落札価格が1,500〜1,725ドルで、600ドル前後の予算では選択肢になりません。',
         ],
         affiliateLinks: [
           {
@@ -510,9 +513,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['GPU', 'VRAM', '最大対応モデル', '消費電力', '備考'],
         rows: [
           { GPU: 'RTX 4060 Ti 16GB', VRAM: '16GB', 最大対応モデル: '14B、Q4、長いコンテキスト', 消費電力: '165 W（メーカー仕様による）', 備考: '当サイトの選択——中古約650ドル/新品約790ドル' },
-          { GPU: 'RTX 3060 12GB（中古）', VRAM: '12GB', 最大対応モデル: '14B、Q4、短いコンテキスト', 消費電力: '170 W（メーカー仕様による）', 備考: '予算階層——300ドル以下ガイドを参照' },
+          { GPU: 'RTX 3060 12GB（中古）', VRAM: '12GB', 最大対応モデル: '14B、Q4、短いコンテキスト', 消費電力: '170 W（メーカー仕様による）', 備考: '予算階層——予算向けガイドを参照' },
           { GPU: 'RTX 5060 Ti 16GB', VRAM: '16GB', 最大対応モデル: '14B、Q4/Q5、長いコンテキスト', 消費電力: '約180 W（メーカー仕様による）', 備考: 'より新しい——Amazon米国で679ドルから掲載（Wccftech、2026-01-27）' },
-          { GPU: 'RTX 3090 24GB（中古）', VRAM: '24GB', 最大対応モデル: '30B以上、70B一部', 消費電力: '350 W（メーカー仕様による）', 備考: '現在通常1,500〜1,725ドル——予算超過' },
+          { GPU: 'RTX 3090 24GB（中古）', VRAM: '24GB', 最大対応モデル: '30B以上、70B一部', 消費電力: '350 W（メーカー仕様による）', 備考: '落札1,500〜1,725ドル（2026/11/13〜23）——予算超過' },
         ],
       },
       faq: {
@@ -533,7 +536,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'RTX 4060 Ti 16GBで30Bモデルを動かせますか？',
-            a: '30BモデルはQ4で約18〜20GBのVRAMが必要なため、16GBには完全には収まりません——部分的なCPUオフロードで、はるかに低速で動作します。30B以上のモデルには24GBカードが必要ですが、まず中古RTX 3090の現在の価格を確認してください。現在は通常1,500〜1,725ドルで、この予算を大きく超えています。',
+            a: '30BモデルはQ4で約18〜20GBのVRAMが必要なため、16GBには完全には収まりません——部分的なCPUオフロードで、はるかに低速で動作します。30BモデルをGPUだけで動かすには、24GBカードを想定してください。中古RTX 3090 24GBはこの予算を大きく超えます。米国eBayの落札価格は1,500〜1,725ドルでした（中央値1,650ドル、225件、2026年11月13〜23日、送料別、InsiderLLM調べ）。',
           },
         ],
       },
@@ -541,6 +544,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: '情報源',
         items: [
+          '[InsiderLLM：中古GPU購入ガイド](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — 中古RTX 3090：米国eBayの落札225件（2026年11月13〜23日）、RTX 4060 Ti 16GBの価格の記載',
           '[InsiderLLM：NVIDIA GPU価格の上昇](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 中古RTX 3090の価格帯、2026-11-23時点のデータ（ページは2026-11-26更新）',
           '[Wccftech：RTX 5060 Ti 16GBの小売価格](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — Amazon米国で679ドルからの掲載（2026-01-27）',
           '[NVIDIA：GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — 総グラフィックス電力（165Wまたは160W）と最低システム電源（550W）',
@@ -566,7 +570,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '600美元左右本地LLM GPU选择 2026 | Prompt Bites',
     metaDescription: 'RTX 4060 Ti 16GB是我们在600美元左右的首选（前提是能以该价格买到）——16GB显存是14B模型的最佳平衡点。2026年短缺期间16GB显卡价格波动较大，请对比当前报价。',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -595,7 +599,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16GB显存可在Q4下舒适运行14B模型——比12GB显卡高一档。',
           '新款RTX 5060 Ti 16GB在2026年显存短缺期间在Amazon美国标价679美元起（Wccftech，2026-01-27）——请按当前价格对比两款16GB显卡，而不是默认越新越好。',
-          '二手RTX 3090 24GB现在通常售价1500至1725美元（InsiderLLM追踪，2026-11-23）——在这个预算下已经难以企及。',
+          '二手RTX 3090 24GB在美国eBay的成交价为1500至1725美元（中位数1650美元；InsiderLLM，2026年11月13日至23日，不含运费），比本预算至少高出900美元。',
         ],
         updatedDate: '2026-11',
       },
@@ -608,16 +612,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '我们的选择：NVIDIA RTX 4060 Ti 16GB——16GB显存可在Q4下运行14B模型并留有实际的上下文余量',
           '16GB是最佳平衡点：14B模型在Q4下大约需要9至10GB，剩余6GB可用于上下文和工具',
           'NVIDIA公布RTX 4060 Ti的总显卡功耗为165W或160W，最低系统电源为550W——购买前请检查你的电源',
-          '购买前请查看当前价格：我们的购买指南列出RTX 4060 Ti 16GB二手挂牌价约650美元、全新约790美元，新款RTX 5060 Ti 16GB在Amazon美国标价679美元起（Wccftech，2026-01-27），二手RTX 3090 24GB现在通常要1500至1725美元（InsiderLLM，2026-11-23）——请把600美元当作参考而非保证',
+          '购买前请查看当前价格：我们的购买指南列出RTX 4060 Ti 16GB二手挂牌价约650美元、全新约790美元，新款RTX 5060 Ti 16GB在Amazon美国标价679美元起（Wccftech，2026-01-27），二手RTX 3090 24GB的成交价为1500至1725美元（InsiderLLM，2026年11月13日至23日）——请把600美元当作参考而非保证',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: '我们的选择：NVIDIA RTX 4060 Ti 16GB',
         content: [
-          '<strong>NVIDIA RTX 4060 Ti 16GB是我们为预算在600美元左右的本地LLM用户推荐的显卡，因为16GB显存是14B模型的最佳平衡点——足够在Q4下运行它们，并为较长的上下文窗口留出空间。</strong> 问题在于价格：2026年显存短缺期间16GB显卡价格波动较大，我们的购买指南列出这款显卡二手挂牌价约650美元、全新约790美元（三条挂牌），因此可能高于600美元。请把预算线当作参考，而非保证。只有在能以600美元左右买到RTX 4060 Ti 16GB时，我们的选择才成立（请查看当前报价）；如果两者价格相近，RTX 5060 Ti 16GB是更快的显卡。',
+          '<strong>NVIDIA RTX 4060 Ti 16GB是我们为预算在600美元左右的本地LLM用户推荐的显卡，因为16GB显存是14B模型的最佳平衡点——足够在Q4下运行它们，并为较长的上下文窗口留出空间。</strong> 问题在于价格：2026年显存短缺期间16GB显卡价格波动较大，我们的购买指南列出这款显卡二手挂牌价约650美元、全新约790美元（三条挂牌），因此可能高于600美元。请把预算线当作参考，而非保证。只有在能以600美元左右买到RTX 4060 Ti 16GB时，我们的选择才成立（请查看当前报价）；如果两者价格相近，RTX 5060 Ti 16GB是更快的显卡。各价格来源存在差异：InsiderLLM价格追踪页给出的RTX 4060 Ti 16GB价格约为430至450美元，该网站的二手显卡购买指南则给出450至550美元，两者都没有说明该卡价格的日期和依据。',
           '一个14B模型在Q4下大约需要9至10GB显存（这是容量估算，并非实测值）。RTX 4060 Ti的16GB留出了6GB用于上下文窗口和运行时开销——足以支持16K token的上下文，而不必转向缓慢的CPU卸载。12GB显卡也能运行同一个模型，但几乎没有上下文余量。',
-          'NVIDIA公布RTX 4060 Ti的总显卡功耗为165W或160W、最低系统电源为550W，因此购买前请检查你的电源。只有在预算是决定性因素、且你能接受较窄的上下文限制时，才应改选二手RTX 3060 12GB——但在排除新款RTX 5060 Ti 16GB和二手RTX 3090 24GB之前，请先查看它们的当前价格；2026年GPU价格波动很大，未来仍可能变化。',
+          'NVIDIA公布RTX 4060 Ti的总显卡功耗为165W或160W、最低系统电源为550W，因此购买前请检查你的电源。只有在预算是决定性因素、且你能接受较窄的上下文限制时，才应改选二手RTX 3060 12GB——但在排除新款RTX 5060 Ti 16GB之前，请先查看它的当前价格。二手RTX 3090 24GB在美国eBay的成交价为1500至1725美元，在600美元左右的预算下并不是可选项。',
         ],
         affiliateLinks: [
           {
@@ -649,9 +653,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['显卡', '显存', '最大可运行模型', '功耗', '备注'],
         rows: [
           { 显卡: 'RTX 4060 Ti 16GB', 显存: '16GB', 最大可运行模型: '14B，Q4，长上下文', 功耗: '165 W（依据厂商规格）', 备注: '我们的选择——二手约650美元/全新约790美元' },
-          { 显卡: 'RTX 3060 12GB（二手）', 显存: '12GB', 最大可运行模型: '14B，Q4，短上下文', 功耗: '170 W（依据厂商规格）', 备注: '预算档位——参见我们的300美元以下指南' },
+          { 显卡: 'RTX 3060 12GB（二手）', 显存: '12GB', 最大可运行模型: '14B，Q4，短上下文', 功耗: '170 W（依据厂商规格）', 备注: '预算档位——参见我们的预算指南' },
           { 显卡: 'RTX 5060 Ti 16GB', 显存: '16GB', 最大可运行模型: '14B，Q4/Q5，长上下文', 功耗: '约180 W（依据厂商规格）', 备注: '更新——在Amazon美国标价679美元起（Wccftech，2026-01-27）' },
-          { 显卡: 'RTX 3090 24GB（二手）', 显存: '24GB', 最大可运行模型: '30B以上，部分70B', 功耗: '350 W（依据厂商规格）', 备注: '现在通常1500至1725美元——超出预算' },
+          { 显卡: 'RTX 3090 24GB（二手）', 显存: '24GB', 最大可运行模型: '30B以上，部分70B', 功耗: '350 W（依据厂商规格）', 备注: '成交价1500至1725美元（2026/11/13–23）——超出预算' },
         ],
       },
       faq: {
@@ -672,7 +676,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'RTX 4060 Ti 16GB能运行30B模型吗？',
-            a: '30B模型在Q4下大约需要18至20GB显存，因此无法完全装入16GB——它会以部分CPU卸载的方式运行，速度会慢得多。要运行30B以上的模型，你需要24GB显卡，但请先查看二手RTX 3090的当前价格：现在通常是1500至1725美元，远超这个预算。',
+            a: '30B模型在Q4下大约需要18至20GB显存，因此无法完全装入16GB——它会以部分CPU卸载的方式运行，速度会慢得多。要让30B模型完全在GPU上运行，应按24GB显卡来规划。二手RTX 3090 24GB远超本预算：美国eBay成交价为1500至1725美元（中位数1650美元；225笔成交，2026年11月13日至23日，不含运费，数据来自InsiderLLM）。',
           },
         ],
       },
@@ -680,6 +684,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: '来源',
         items: [
+          '[InsiderLLM：二手显卡购买指南](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — 二手RTX 3090：美国eBay的225笔成交（2026年11月13日至23日）；RTX 4060 Ti 16GB的价格数字',
           '[InsiderLLM：NVIDIA GPU价格上涨](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 二手RTX 3090价格区间，数据日期2026-11-23（页面2026-11-26更新）',
           '[Wccftech：RTX 5060 Ti 16GB零售价格](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — Amazon美国上679美元起的挂牌价（2026-01-27）',
           '[NVIDIA：GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — 总显卡功耗（165W或160W）与最低系统电源（550W）',
@@ -705,7 +710,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qué GPU elegir cerca de 600 $ para LLM local 2026 | Prompt Bites',
     metaDescription: 'La RTX 4060 Ti 16GB es nuestra opción cerca de 600 $ si la encuentras a ese precio; 16 GB de VRAM es el punto óptimo para modelos 14B. Los precios de las tarjetas de 16 GB han oscilado durante la escasez de 2026, así que compara los anuncios actuales.',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -734,7 +739,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16 GB de VRAM ejecuta cómodamente modelos 14B en Q4 — un nivel por encima de las tarjetas de 12 GB.',
           'La nueva RTX 5060 Ti 16GB se listó desde 679 $ en Amazon EE. UU. (Wccftech, 2026-01-27) durante la escasez de memoria de 2026 — compara ambas tarjetas de 16 GB a precios actuales en lugar de dar por hecho que lo más nuevo es mejor.',
-          'Una RTX 3090 24GB de segunda mano suele venderse ahora por 1.500-1.725 $ (InsiderLLM, 2026-11-23) — ya no es realmente accesible con este presupuesto.',
+          'Las RTX 3090 24GB de segunda mano se vendieron por 1.500-1.725 $ en eBay EE. UU. (mediana 1.650 $; InsiderLLM, 13-23 de noviembre de 2026, sin envío): al menos 900 $ por encima de este presupuesto.',
         ],
         updatedDate: '2026-11',
       },
@@ -747,16 +752,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Nuestra elección: NVIDIA RTX 4060 Ti 16GB — 16 GB de VRAM ejecuta modelos 14B en Q4 con margen real de contexto',
           '16 GB es el punto óptimo: un modelo 14B en Q4 necesita unos 9-10 GB, dejando 6 GB para contexto y herramientas',
           'NVIDIA indica 165 o 160 W de potencia gráfica total y 550 W de potencia mínima del sistema para la RTX 4060 Ti — revisa tu fuente antes de comprar',
-          'Consulta los precios actuales antes de comprar: nuestra guía de compra lista la RTX 4060 Ti 16GB en torno a 650 $ de segunda mano (precio pedido) y en torno a 790 $ nueva, la nueva RTX 5060 Ti 16GB se listó desde 679 $ en Amazon EE. UU. (Wccftech, 2026-01-27), y la RTX 3090 24GB de segunda mano ahora suele costar 1.500-1.725 $ (InsiderLLM, 2026-11-23) — trata 600 $ como referencia, no como garantía',
+          'Consulta los precios actuales antes de comprar: nuestra guía de compra lista la RTX 4060 Ti 16GB en torno a 650 $ de segunda mano (precio pedido) y en torno a 790 $ nueva, la nueva RTX 5060 Ti 16GB se listó desde 679 $ en Amazon EE. UU. (Wccftech, 2026-01-27), y las RTX 3090 24GB de segunda mano se vendieron por 1.500-1.725 $ (InsiderLLM, 13-23 de noviembre de 2026) — trata 600 $ como referencia, no como garantía',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Nuestra elección: NVIDIA RTX 4060 Ti 16GB',
         content: [
-          '<strong>La NVIDIA RTX 4060 Ti 16GB es nuestra elección para LLMs locales con un presupuesto cercano a 600 $ porque 16 GB de VRAM es el punto óptimo para modelos 14B — lo bastante grande para ejecutarlos en Q4 con espacio para una ventana de contexto larga.</strong> El problema es el precio: los precios de las tarjetas de 16 GB han oscilado durante la escasez de memoria de 2026, y nuestra guía de compra lista esta tarjeta en torno a 650 $ de segunda mano (precio pedido) y en torno a 790 $ nueva (tres anuncios), por lo que puede quedar por encima de 600 $. Trata el límite de presupuesto como referencia, no como garantía. Nuestra elección vale si encuentras la RTX 4060 Ti 16GB en torno a 600 $ (consulta los anuncios actuales); si ambas cuestan parecido, la RTX 5060 Ti 16GB es la tarjeta más rápida.',
+          '<strong>La NVIDIA RTX 4060 Ti 16GB es nuestra elección para LLMs locales con un presupuesto cercano a 600 $ porque 16 GB de VRAM es el punto óptimo para modelos 14B — lo bastante grande para ejecutarlos en Q4 con espacio para una ventana de contexto larga.</strong> El problema es el precio: los precios de las tarjetas de 16 GB han oscilado durante la escasez de memoria de 2026, y nuestra guía de compra lista esta tarjeta en torno a 650 $ de segunda mano (precio pedido) y en torno a 790 $ nueva (tres anuncios), por lo que puede quedar por encima de 600 $. Trata el límite de presupuesto como referencia, no como garantía. Nuestra elección vale si encuentras la RTX 4060 Ti 16GB en torno a 600 $ (consulta los anuncios actuales); si ambas cuestan parecido, la RTX 5060 Ti 16GB es la tarjeta más rápida. Las fuentes de precios discrepan: el rastreador de precios de InsiderLLM sitúa la RTX 4060 Ti 16GB en unos 430-450 $ y su guía de GPUs usadas en 450-550 $; ninguno indica fecha ni base de precio para esta tarjeta.',
           'Un modelo 14B necesita unos 9-10 GB de VRAM en Q4 (una estimación de tamaño, no una medición). Los 16 GB de la RTX 4060 Ti dejan 6 GB para la ventana de contexto y la sobrecarga en tiempo de ejecución — suficiente para un contexto de 16K tokens sin recurrir a un lento offload a CPU. Una tarjeta de 12 GB ejecuta el mismo modelo, pero con casi ningún margen de contexto.',
-          'NVIDIA indica 165 o 160 W de potencia gráfica total y 550 W de potencia mínima del sistema para la RTX 4060 Ti, así que revisa tu fuente de alimentación antes de comprar. Elige en su lugar una RTX 3060 12GB de segunda mano solo si el presupuesto es el factor decisivo y aceptas límites de contexto ajustados — pero comprueba los precios actuales de la nueva RTX 5060 Ti 16GB y de la RTX 3090 24GB de segunda mano antes de descartarlas; los precios de las GPU se han movido mucho en 2026 y pueden volver a cambiar.',
+          'NVIDIA indica 165 o 160 W de potencia gráfica total y 550 W de potencia mínima del sistema para la RTX 4060 Ti, así que revisa tu fuente de alimentación antes de comprar. Elige en su lugar una RTX 3060 12GB de segunda mano solo si el presupuesto es el factor decisivo y aceptas límites de contexto ajustados — pero comprueba el precio actual de la nueva RTX 5060 Ti 16GB antes de descartarla. Una RTX 3090 24GB de segunda mano, vendida por 1.500-1.725 $ en eBay EE. UU., no es una opción cerca de 600 $.',
         ],
         affiliateLinks: [
           {
@@ -788,9 +793,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['GPU', 'VRAM', 'Modelo máximo', 'Consumo', 'Notas'],
         rows: [
           { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Modelo máximo': '14B en Q4, contexto largo', Consumo: '165 W según las especificaciones del fabricante', Notas: 'Nuestra elección — ~650 $ 2ª mano / ~790 $ nueva' },
-          { GPU: 'RTX 3060 12GB (2ª mano)', VRAM: '12 GB', 'Modelo máximo': '14B en Q4, contexto corto', Consumo: '170 W según las especificaciones del fabricante', Notas: 'Nivel económico — ver nuestra guía bajo 300 $' },
+          { GPU: 'RTX 3060 12GB (2ª mano)', VRAM: '12 GB', 'Modelo máximo': '14B en Q4, contexto corto', Consumo: '170 W según las especificaciones del fabricante', Notas: 'Nivel económico — ver nuestra guía económica' },
           { GPU: 'RTX 5060 Ti 16GB', VRAM: '16 GB', 'Modelo máximo': '14B en Q4/Q5, contexto largo', Consumo: '~180 W según las especificaciones del fabricante', Notas: 'Más reciente — listada desde 679 $ en Amazon EE. UU. (Wccftech, 2026-01-27)' },
-          { GPU: 'RTX 3090 24GB (2ª mano)', VRAM: '24 GB', 'Modelo máximo': '30B+, 70B parcial', Consumo: '350 W según las especificaciones del fabricante', Notas: 'Ahora suele costar 1.500-1.725 $ — fuera de presupuesto' },
+          { GPU: 'RTX 3090 24GB (2ª mano)', VRAM: '24 GB', 'Modelo máximo': '30B+, 70B parcial', Consumo: '350 W según las especificaciones del fabricante', Notas: 'Vendida por 1.500-1.725 $, 13-23/11/2026: fuera de presupuesto' },
         ],
       },
       faq: {
@@ -811,7 +816,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puede la RTX 4060 Ti 16GB ejecutar un modelo 30B?',
-            a: 'Un modelo 30B en Q4 necesita unos 18-20 GB de VRAM, así que no cabe por completo en 16 GB — funcionará con offload parcial a CPU y una velocidad mucho menor. Para modelos 30B+ necesitas una tarjeta de 24 GB, pero primero consulta los precios actuales de la RTX 3090 de segunda mano: ahora suele costar 1.500-1.725 $, muy por encima de este presupuesto.',
+            a: 'Un modelo 30B en Q4 necesita unos 18-20 GB de VRAM, así que no cabe por completo en 16 GB — funcionará con offload parcial a CPU y una velocidad mucho menor. Para ejecutar un modelo 30B por completo en la GPU, cuenta con una tarjeta de 24 GB. Una RTX 3090 24GB de segunda mano queda muy por encima de este presupuesto: en eBay EE. UU. se vendió por 1.500-1.725 $ (mediana 1.650 $; 225 ventas, 13-23 de noviembre de 2026, sin envío, según InsiderLLM).',
           },
         ],
       },
@@ -819,6 +824,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
+          '[InsiderLLM: guía de compra de GPUs usadas](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — RTX 3090 usada: 225 ventas en eBay EE. UU., 13-23 de noviembre de 2026; precio indicado para la RTX 4060 Ti 16GB',
           '[InsiderLLM: suben los precios de las GPU NVIDIA](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — rango de precios de la RTX 3090 de segunda mano, datos del 2026-11-23 (página actualizada el 2026-11-26)',
           '[Wccftech: precios de venta de la RTX 5060 Ti 16 GB](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — anuncio en Amazon EE. UU. desde 679 $ (2026-01-27)',
           '[NVIDIA: GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — potencia gráfica total (165 o 160 W) y potencia mínima del sistema (550 W)',
@@ -844,7 +850,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أي بطاقة رسومات قرب 600 دولار للنماذج اللغوية المحلية 2026 | Prompt Bites',
     metaDescription: 'بطاقة RTX 4060 Ti 16GB هي اختيارنا قرب 600 دولار إن وجدتها بهذا السعر — 16 جيجابايت VRAM هي النقطة المثلى لنماذج 14B. تذبذبت أسعار بطاقات 16 جيجابايت خلال نقص 2026، لذا قارن القوائم الحالية.',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -873,7 +879,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'تشغّل ذاكرة 16 جيجابايت VRAM نماذج 14B بصيغة Q4 بارتياح — درجة أعلى من بطاقات 12 جيجابايت.',
           'أُدرجت RTX 5060 Ti 16GB الأحدث بسعر يبدأ من 679 دولارًا على Amazon الأمريكي (Wccftech، 2026-01-27) خلال نقص الذاكرة في 2026 — قارن بطاقتي 16 جيجابايت بالأسعار الحالية بدلًا من افتراض أن الأحدث أفضل.',
-          'تُباع RTX 3090 24GB المستعملة الآن عادةً بسعر 1,500-1,725 دولار (InsiderLLM، 2026-11-23) — لم تعد في متناول هذه الميزانية عمليًا.',
+          'بيعت بطاقات RTX 3090 24GB المستعملة على eBay الأمريكي بسعر 1,500-1,725 دولاراً (الوسيط 1,650 دولاراً؛ InsiderLLM، 13-23 نوفمبر 2026، دون الشحن)، أي بما لا يقل عن 900 دولار فوق هذه الميزانية.',
         ],
         updatedDate: '2026-11',
       },
@@ -886,16 +892,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'اختيارنا: NVIDIA RTX 4060 Ti 16GB — تشغّل 16 جيجابايت VRAM نماذج 14B بصيغة Q4 بهامش حقيقي للسياق',
           '16 جيجابايت هي النقطة المثلى: يحتاج نموذج 14B بصيغة Q4 إلى نحو 9-10 جيجابايت، ما يترك 6 جيجابايت للسياق والأدوات',
           'تذكر NVIDIA أن إجمالي قدرة البطاقة الرسومية لـ RTX 4060 Ti هو 165 أو 160 واط وأن الحد الأدنى لقدرة النظام 550 واط — تحقق من مزود الطاقة قبل الشراء',
-          'تحقق من الأسعار الحالية قبل الشراء: يُدرج دليل الشراء لدينا RTX 4060 Ti 16GB بنحو 650 دولارًا مستعملة (سعر مطلوب) ونحو 790 دولارًا جديدة، وأُدرجت RTX 5060 Ti 16GB الأحدث بسعر يبدأ من 679 دولارًا على Amazon الأمريكي خلال نقص الذاكرة في 2026 (Wccftech، 2026-01-27)، أي فوق هذه الميزانية، وتصل RTX 3090 24GB المستعملة الآن عادةً إلى 1,500-1,725 دولار (InsiderLLM، 2026-11-23) — اعتبر 600 دولار مرجعًا إرشاديًا لا ضمانًا',
+          'تحقق من الأسعار الحالية قبل الشراء: يُدرج دليل الشراء لدينا RTX 4060 Ti 16GB بنحو 650 دولارًا مستعملة (سعر مطلوب) ونحو 790 دولارًا جديدة، وأُدرجت RTX 5060 Ti 16GB الأحدث بسعر يبدأ من 679 دولارًا على Amazon الأمريكي خلال نقص الذاكرة في 2026 (Wccftech، 2026-01-27)، أي فوق هذه الميزانية، وبيعت بطاقات RTX 3090 24GB المستعملة بسعر 1,500-1,725 دولاراً (InsiderLLM، 13-23 نوفمبر 2026) — اعتبر 600 دولار مرجعًا إرشاديًا لا ضمانًا',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'اختيارنا: NVIDIA RTX 4060 Ti 16GB',
         content: [
-          '<strong>بطاقة NVIDIA RTX 4060 Ti 16GB هي اختيارنا للنماذج اللغوية المحلية بميزانية قرب 600 دولار لأن 16 جيجابايت VRAM هي النقطة المثلى لنماذج 14B — كبيرة بما يكفي لتشغيلها بصيغة Q4 مع مساحة لنافذة سياق طويلة.</strong> المشكلة في السعر: تذبذبت أسعار بطاقات 16 جيجابايت خلال نقص الذاكرة في 2026، ويُدرج دليل الشراء لدينا هذه البطاقة بنحو 650 دولارًا مستعملة (سعر مطلوب) ونحو 790 دولارًا جديدة (ثلاث قوائم)، لذا قد تتجاوز 600 دولار. اعتبر خط الميزانية مرجعًا إرشاديًا لا ضمانًا. ينطبق اختيارنا إذا وجدت RTX 4060 Ti 16GB بسعر قرب 600 دولار (راجع القوائم الحالية)؛ وإذا تقارب سعر البطاقتين فإن RTX 5060 Ti 16GB هي البطاقة الأسرع.',
+          '<strong>بطاقة NVIDIA RTX 4060 Ti 16GB هي اختيارنا للنماذج اللغوية المحلية بميزانية قرب 600 دولار لأن 16 جيجابايت VRAM هي النقطة المثلى لنماذج 14B — كبيرة بما يكفي لتشغيلها بصيغة Q4 مع مساحة لنافذة سياق طويلة.</strong> المشكلة في السعر: تذبذبت أسعار بطاقات 16 جيجابايت خلال نقص الذاكرة في 2026، ويُدرج دليل الشراء لدينا هذه البطاقة بنحو 650 دولارًا مستعملة (سعر مطلوب) ونحو 790 دولارًا جديدة (ثلاث قوائم)، لذا قد تتجاوز 600 دولار. اعتبر خط الميزانية مرجعًا إرشاديًا لا ضمانًا. ينطبق اختيارنا إذا وجدت RTX 4060 Ti 16GB بسعر قرب 600 دولار (راجع القوائم الحالية)؛ وإذا تقارب سعر البطاقتين فإن RTX 5060 Ti 16GB هي البطاقة الأسرع. وتتباين مصادر الأسعار: يضع متتبع أسعار InsiderLLM بطاقة RTX 4060 Ti 16GB عند نحو 430-450 دولاراً، ويضعها دليل الموقع لشراء البطاقات المستعملة عند 450-550 دولاراً، ولا يذكر أي منهما تاريخ سعر هذه البطاقة أو أساسه.',
           'يحتاج نموذج 14B إلى نحو 9-10 جيجابايت VRAM بصيغة Q4 (تقدير للحجم وليس قياسًا). تترك ذاكرة 16 جيجابايت في RTX 4060 Ti مساحة 6 جيجابايت لنافذة السياق وأعباء وقت التشغيل — كافية لسياق بحجم 16 ألف رمز دون الانتقال إلى تحميل جزئي بطيء على المعالج. تشغّل بطاقة 12 جيجابايت النموذج نفسه لكن بهامش سياق شبه معدوم.',
-          'تذكر NVIDIA أن إجمالي قدرة البطاقة الرسومية لـ RTX 4060 Ti هو 165 أو 160 واط وأن الحد الأدنى لقدرة النظام 550 واط، لذا تحقق من مزود الطاقة قبل الشراء. اختر بطاقة RTX 3060 12GB المستعملة بدلًا منها فقط إذا كانت الميزانية هي العامل الحاسم وتقبل حدود سياق ضيقة — لكن تحقق من الأسعار الحالية لبطاقة RTX 5060 Ti 16GB الأحدث وRTX 3090 24GB المستعملة قبل استبعادهما؛ فقد تحركت أسعار البطاقات الرسومية كثيرًا في 2026 وقد تتغير مجددًا.',
+          'تذكر NVIDIA أن إجمالي قدرة البطاقة الرسومية لـ RTX 4060 Ti هو 165 أو 160 واط وأن الحد الأدنى لقدرة النظام 550 واط، لذا تحقق من مزود الطاقة قبل الشراء. اختر بطاقة RTX 3060 12GB المستعملة بدلًا منها فقط إذا كانت الميزانية هي العامل الحاسم وتقبل حدود سياق ضيقة — لكن تحقق من السعر الحالي لبطاقة RTX 5060 Ti 16GB الأحدث قبل استبعادها. أما RTX 3090 24GB المستعملة، التي بيعت على eBay الأمريكي بسعر 1,500-1,725 دولاراً، فليست خياراً بميزانية قرب 600 دولار.',
         ],
         affiliateLinks: [
           {
@@ -927,9 +933,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['البطاقة', 'VRAM', 'أكبر نموذج', 'الطاقة', 'ملاحظات'],
         rows: [
           { البطاقة: 'RTX 4060 Ti 16GB', VRAM: '16 جيجابايت', 'أكبر نموذج': '14B بصيغة Q4، سياق طويل', الطاقة: '165 واط وفق مواصفات الشركة المصنّعة', ملاحظات: 'اختيارنا — ~650 دولارًا مستعملة / ~790 جديدة' },
-          { البطاقة: 'RTX 3060 12GB (مستعملة)', VRAM: '12 جيجابايت', 'أكبر نموذج': '14B بصيغة Q4، سياق قصير', الطاقة: '170 واط وفق مواصفات الشركة المصنّعة', ملاحظات: 'الفئة الاقتصادية — راجع دليلنا لأقل من 300 دولار' },
+          { البطاقة: 'RTX 3060 12GB (مستعملة)', VRAM: '12 جيجابايت', 'أكبر نموذج': '14B بصيغة Q4، سياق قصير', الطاقة: '170 واط وفق مواصفات الشركة المصنّعة', ملاحظات: 'الفئة الاقتصادية — راجع دليلنا الاقتصادي' },
           { البطاقة: 'RTX 5060 Ti 16GB', VRAM: '16 جيجابايت', 'أكبر نموذج': '14B بصيغة Q4/Q5، سياق طويل', الطاقة: '~180 واط وفق مواصفات الشركة المصنّعة', ملاحظات: 'أحدث — أُدرجت من 679 دولارًا على Amazon الأمريكي (Wccftech، 2026-01-27)' },
-          { البطاقة: 'RTX 3090 24GB (مستعملة)', VRAM: '24 جيجابايت', 'أكبر نموذج': '30B فأكثر، 70B جزئيًا', الطاقة: '350 واط وفق مواصفات الشركة المصنّعة', ملاحظات: 'الآن عادةً 1,500-1,725 دولار — يتجاوز الميزانية' },
+          { البطاقة: 'RTX 3090 24GB (مستعملة)', VRAM: '24 جيجابايت', 'أكبر نموذج': '30B فأكثر، 70B جزئيًا', الطاقة: '350 واط وفق مواصفات الشركة المصنّعة', ملاحظات: 'بيعت بـ 1,500-1,725 دولاراً (13-23/11/2026) — فوق الميزانية' },
         ],
       },
       faq: {
@@ -950,7 +956,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل يمكن لـ RTX 4060 Ti 16GB تشغيل نموذج 30B؟',
-            a: 'يحتاج نموذج 30B بصيغة Q4 إلى نحو 18-20 جيجابايت VRAM، لذا لا يتسع بالكامل في 16 جيجابايت — سيعمل بتحميل جزئي على المعالج وبسرعة أقل بكثير. للنماذج 30B فأكثر، تحتاج إلى بطاقة 24 جيجابايت، لكن تحقق أولًا من الأسعار الحالية لبطاقات RTX 3090 المستعملة: تصل الآن عادةً إلى 1,500-1,725 دولار، أعلى بكثير من هذه الميزانية.',
+            a: 'يحتاج نموذج 30B بصيغة Q4 إلى نحو 18-20 جيجابايت VRAM، لذا لا يتسع بالكامل في 16 جيجابايت — سيعمل بتحميل جزئي على المعالج وبسرعة أقل بكثير. لتشغيل نموذج 30B بالكامل على البطاقة، خطط لبطاقة بسعة 24 جيجابايت. وبطاقة RTX 3090 24GB المستعملة تتجاوز هذه الميزانية بكثير: فقد بيعت على eBay الأمريكي بسعر 1,500-1,725 دولاراً (الوسيط 1,650 دولاراً؛ 225 عملية بيع، 13-23 نوفمبر 2026، دون الشحن، وفق InsiderLLM).',
           },
         ],
       },
@@ -958,6 +964,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
+          '[InsiderLLM: دليل شراء البطاقات المستعملة](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — RTX 3090 المستعملة: 225 عملية بيع على eBay الأمريكي، 13-23 نوفمبر 2026؛ والسعر المذكور للبطاقة RTX 4060 Ti 16GB',
           '[InsiderLLM: ارتفاع أسعار بطاقات NVIDIA الرسومية](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — نطاق سعر RTX 3090 المستعملة، بيانات بتاريخ 2026-11-23 (الصفحة محدّثة في 2026-11-26)',
           '[Wccftech: أسعار التجزئة لبطاقة RTX 5060 Ti 16 GB](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — قائمة بسعر يبدأ من 679 دولارًا على Amazon الأمريكي (2026-01-27)',
           '[NVIDIA: GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — إجمالي قدرة البطاقة (165 أو 160 واط) والحد الأدنى لقدرة النظام (550 واط)',
@@ -983,7 +990,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qual GPU Escolher Perto de US$ 600 para LLM Local 2026 | Prompt Bites',
     metaDescription: 'A RTX 4060 Ti 16GB é nossa escolha perto de US$ 600 se você a encontrar nesse preço; 16GB de VRAM é o ponto ideal para modelos 14B. Os preços das placas de 16GB oscilaram durante a escassez de 2026, então compare os anúncios atuais.',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -1012,7 +1019,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16GB de VRAM roda confortavelmente modelos 14B em Q4 — um nível acima das placas de 12GB.',
           'A nova RTX 5060 Ti 16GB foi listada a partir de US$ 679 na Amazon EUA (Wccftech, 2026-01-27) durante a escassez de memória de 2026 — compare as duas placas de 16GB aos preços atuais em vez de supor que a mais nova é melhor.',
-          'Uma RTX 3090 24GB usada agora costuma custar US$ 1.500-1.725 (InsiderLLM, 2026-11-23) — não é mais realisticamente acessível com esse orçamento.',
+          'Placas RTX 3090 24GB usadas foram vendidas por US$ 1.500-1.725 no eBay dos EUA (mediana de US$ 1.650; InsiderLLM, 13-23 de novembro de 2026, sem frete) — pelo menos US$ 900 acima deste orçamento.',
         ],
         updatedDate: '2026-11',
       },
@@ -1025,16 +1032,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Nossa escolha: NVIDIA RTX 4060 Ti 16GB — 16GB de VRAM roda modelos 14B em Q4 com folga real de contexto',
           '16GB é o ponto ideal: um modelo 14B em Q4 precisa de cerca de 9-10GB, deixando 6GB para contexto e ferramentas',
           'A NVIDIA informa 165 ou 160 W de potência gráfica total e 550 W de potência mínima do sistema para a RTX 4060 Ti — confira sua fonte antes de comprar',
-          'Confira os preços atuais antes de comprar: nosso guia de compra lista a RTX 4060 Ti 16GB por cerca de US$ 650 usada (preço pedido) e cerca de US$ 790 nova, a nova RTX 5060 Ti 16GB foi listada a partir de US$ 679 na Amazon EUA (Wccftech, 2026-01-27), e a RTX 3090 24GB usada agora costuma custar US$ 1.500-1.725 (InsiderLLM, 2026-11-23) — trate US$ 600 como referência, não como garantia',
+          'Confira os preços atuais antes de comprar: nosso guia de compra lista a RTX 4060 Ti 16GB por cerca de US$ 650 usada (preço pedido) e cerca de US$ 790 nova, a nova RTX 5060 Ti 16GB foi listada a partir de US$ 679 na Amazon EUA (Wccftech, 2026-01-27), e placas RTX 3090 24GB usadas foram vendidas por US$ 1.500-1.725 (InsiderLLM, 13-23 de novembro de 2026) — trate US$ 600 como referência, não como garantia',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Nossa Escolha: NVIDIA RTX 4060 Ti 16GB',
         content: [
-          '<strong>A NVIDIA RTX 4060 Ti 16GB é a nossa escolha para LLMs locais com orçamento próximo de US$ 600 porque 16GB de VRAM são o ponto ideal para modelos 14B — grande o suficiente para rodá-los em Q4 com espaço para uma janela de contexto longa.</strong> O ponto de atenção é o preço: os preços das placas de 16GB oscilaram durante a escassez de memória de 2026, e nosso guia de compra lista esta placa por cerca de US$ 650 usada (preço pedido) e cerca de US$ 790 nova (três anúncios), então ela pode ficar acima de US$ 600. Trate o limite de orçamento como referência, não como garantia. Nossa escolha vale se você encontrar a RTX 4060 Ti 16GB perto de US$ 600 (confira os anúncios atuais); se as duas custarem parecido, a RTX 5060 Ti 16GB é a placa mais rápida.',
+          '<strong>A NVIDIA RTX 4060 Ti 16GB é a nossa escolha para LLMs locais com orçamento próximo de US$ 600 porque 16GB de VRAM são o ponto ideal para modelos 14B — grande o suficiente para rodá-los em Q4 com espaço para uma janela de contexto longa.</strong> O ponto de atenção é o preço: os preços das placas de 16GB oscilaram durante a escassez de memória de 2026, e nosso guia de compra lista esta placa por cerca de US$ 650 usada (preço pedido) e cerca de US$ 790 nova (três anúncios), então ela pode ficar acima de US$ 600. Trate o limite de orçamento como referência, não como garantia. Nossa escolha vale se você encontrar a RTX 4060 Ti 16GB perto de US$ 600 (confira os anúncios atuais); se as duas custarem parecido, a RTX 5060 Ti 16GB é a placa mais rápida. As fontes de preço divergem: o rastreador de preços da InsiderLLM coloca a RTX 4060 Ti 16GB em cerca de US$ 430-450, e o guia de GPUs usadas do mesmo site, em US$ 450-550; nenhum informa data nem base de preço para essa placa.',
           'Um modelo 14B precisa de cerca de 9-10GB de VRAM em Q4 (uma estimativa de dimensionamento, não uma medição). Os 16GB da RTX 4060 Ti deixam 6GB para a janela de contexto e a sobrecarga de execução — suficiente para um contexto de 16K tokens sem recorrer a um offload lento para CPU. Uma placa de 12GB roda o mesmo modelo, mas com quase nenhuma folga de contexto.',
-          'A NVIDIA informa 165 ou 160 W de potência gráfica total e 550 W de potência mínima do sistema para a RTX 4060 Ti, então confira sua fonte de alimentação antes de comprar. Escolha uma RTX 3060 12GB usada em vez disso somente se o orçamento for o fator decisivo e você aceitar limites de contexto apertados — mas confira os preços atuais da nova RTX 5060 Ti 16GB e da RTX 3090 24GB usada antes de descartá-las; os preços de GPU se moveram muito em 2026 e podem mudar de novo.',
+          'A NVIDIA informa 165 ou 160 W de potência gráfica total e 550 W de potência mínima do sistema para a RTX 4060 Ti, então confira sua fonte de alimentação antes de comprar. Escolha uma RTX 3060 12GB usada em vez disso somente se o orçamento for o fator decisivo e você aceitar limites de contexto apertados — mas confira o preço atual da nova RTX 5060 Ti 16GB antes de descartá-la. Uma RTX 3090 24GB usada, vendida por US$ 1.500-1.725 no eBay dos EUA, não é uma opção perto de US$ 600.',
         ],
         affiliateLinks: [
           {
@@ -1066,9 +1073,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['GPU', 'VRAM', 'Maior modelo', 'Consumo', 'Observações'],
         rows: [
           { GPU: 'RTX 4060 Ti 16GB', VRAM: '16GB', 'Maior modelo': '14B em Q4, contexto longo', Consumo: '165 W conforme as especificações do fabricante', Observações: 'Nossa escolha — ~US$ 650 usada / ~US$ 790 nova' },
-          { GPU: 'RTX 3060 12GB (usada)', VRAM: '12GB', 'Maior modelo': '14B em Q4, contexto curto', Consumo: '170 W conforme as especificações do fabricante', Observações: 'Faixa econômica — veja nosso guia abaixo de US$ 300' },
+          { GPU: 'RTX 3060 12GB (usada)', VRAM: '12GB', 'Maior modelo': '14B em Q4, contexto curto', Consumo: '170 W conforme as especificações do fabricante', Observações: 'Faixa econômica — veja nosso guia econômico' },
           { GPU: 'RTX 5060 Ti 16GB', VRAM: '16GB', 'Maior modelo': '14B em Q4/Q5, contexto longo', Consumo: '~180 W conforme as especificações do fabricante', Observações: 'Mais nova — listada a partir de US$ 679 na Amazon EUA (Wccftech, 2026-01-27)' },
-          { GPU: 'RTX 3090 24GB (usada)', VRAM: '24GB', 'Maior modelo': '30B+, 70B parcial', Consumo: '350 W conforme as especificações do fabricante', Observações: 'Agora custa tipicamente US$ 1.500-1.725 — acima do orçamento' },
+          { GPU: 'RTX 3090 24GB (usada)', VRAM: '24GB', 'Maior modelo': '30B+, 70B parcial', Consumo: '350 W conforme as especificações do fabricante', Observações: 'Vendida por US$ 1.500-1.725, 13-23/11/2026 — fora do orçamento' },
         ],
       },
       faq: {
@@ -1089,7 +1096,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'A RTX 4060 Ti 16GB consegue rodar um modelo 30B?',
-            a: 'Um modelo 30B em Q4 precisa de cerca de 18-20GB de VRAM, então não cabe totalmente em 16GB — ele rodará com offload parcial para CPU e velocidade bem menor. Para modelos 30B+, você precisa de uma placa de 24GB, mas confira antes os preços atuais da RTX 3090 usada: agora custa tipicamente US$ 1.500-1.725, bem acima desse orçamento.',
+            a: 'Um modelo 30B em Q4 precisa de cerca de 18-20GB de VRAM, então não cabe totalmente em 16GB — ele rodará com offload parcial para CPU e velocidade bem menor. Para rodar um modelo 30B inteiramente na GPU, conte com uma placa de 24GB. Uma RTX 3090 24GB usada fica muito acima desse orçamento: no eBay dos EUA foi vendida por US$ 1.500-1.725 (mediana de US$ 1.650; 225 vendas, 13-23 de novembro de 2026, sem frete, segundo a InsiderLLM).',
           },
         ],
       },
@@ -1097,6 +1104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
+          '[InsiderLLM: guia de compra de GPUs usadas](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — RTX 3090 usada: 225 vendas no eBay dos EUA, 13-23 de novembro de 2026; valor informado para a RTX 4060 Ti 16GB',
           '[InsiderLLM: preços de GPUs NVIDIA em alta](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — faixa de preço da RTX 3090 usada, dados de 2026-11-23 (página atualizada em 2026-11-26)',
           '[Wccftech: preços de varejo da RTX 5060 Ti 16 GB](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — anúncio a partir de US$ 679 na Amazon EUA (2026-01-27)',
           '[NVIDIA: GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — potência gráfica total (165 ou 160 W) e potência mínima do sistema (550 W)',
@@ -1122,7 +1130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '로컬 LLM용 $600 안팎 GPU 2026 | Prompt Bites',
     metaDescription: '$600 안팎에서 해당 가격에 구할 수 있다면 RTX 4060 Ti 16GB를 추천합니다. 16GB VRAM은 14B 모델의 최적 지점입니다. 2026년 부족 사태 중 16GB 카드 가격이 크게 변동했으니 현재 매물을 비교하세요.',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -1152,7 +1160,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16GB VRAM은 Q4로 14B 모델을 쾌적하게 실행합니다 — 12GB 카드보다 한 단계 위입니다.',
           '신형 RTX 5060 Ti 16GB는 2026년 메모리 부족 사태 중 Amazon 미국에서 $679부터 등록되었습니다(Wccftech, 2026-01-27) — 더 새롭다고 가정하지 말고 두 16GB 카드를 현재 가격으로 비교하세요.',
-          '중고 RTX 3090 24GB는 현재 일반적으로 $1,500-1,725(InsiderLLM, 2026-11-23)에 거래됩니다 — 이 예산으로는 현실적으로 접근하기 어렵습니다.',
+          '중고 RTX 3090 24GB는 미국 eBay에서 $1,500-1,725에 판매되었습니다(중앙값 $1,650, InsiderLLM, 2026년 11월 13–23일, 배송비 제외). 이 예산보다 최소 $900 높습니다.',
         ],
         updatedDate: '2026-11',
       },
@@ -1165,16 +1173,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '당사의 선택: NVIDIA RTX 4060 Ti 16GB — 16GB VRAM으로 Q4에서 14B 모델을 실질적인 컨텍스트 여유와 함께 실행',
           '16GB가 최적: 14B 모델은 Q4에서 약 9-10GB가 필요하며, 6GB가 컨텍스트와 도구용으로 남습니다',
           'NVIDIA는 RTX 4060 Ti의 총 그래픽 전력을 165W 또는 160W, 최소 시스템 전력을 550W로 표기 — 구매 전 전원 공급 장치를 확인하세요',
-          '구매 전 현재 가격을 확인하세요: 당사 구매 가이드는 RTX 4060 Ti 16GB를 중고 호가 약 $650, 신품 약 $790으로 집계하고, 신형 RTX 5060 Ti 16GB는 Amazon 미국에서 $679부터 등록되었으며(Wccftech, 2026-01-27), 중고 RTX 3090 24GB는 현재 일반적으로 $1,500-1,725입니다(InsiderLLM, 2026-11-23) — $600은 참고선이며 보장이 아닙니다',
+          '구매 전 현재 가격을 확인하세요: 당사 구매 가이드는 RTX 4060 Ti 16GB를 중고 호가 약 $650, 신품 약 $790으로 집계하고, 신형 RTX 5060 Ti 16GB는 Amazon 미국에서 $679부터 등록되었으며(Wccftech, 2026-01-27), 중고 RTX 3090 24GB는 $1,500-1,725에 판매되었습니다(InsiderLLM, 2026년 11월 13–23일) — $600은 참고선이며 보장이 아닙니다',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: '당사의 선택: NVIDIA RTX 4060 Ti 16GB',
         content: [
-          '<strong>NVIDIA RTX 4060 Ti 16GB는 $600 안팎 예산의 로컬 LLM용으로 당사가 고른 카드입니다. 16GB VRAM이 14B 모델의 최적 지점이기 때문입니다 — Q4로 실행하면서 넓은 컨텍스트 창을 위한 여유 공간을 확보할 만큼 충분히 큽니다.</strong> 관건은 가격입니다. 2026년 메모리 부족 사태 중 16GB 카드 가격이 크게 변동했으며, 당사 구매 가이드는 이 카드를 중고 호가 약 $650, 신품 약 $790(3건의 매물)으로 집계하므로 $600을 넘을 수 있습니다. 예산 기준은 참고선이며 보장이 아닙니다. 당사의 선택은 RTX 4060 Ti 16GB를 $600 안팎에서 찾을 수 있을 때 해당하며(현재 매물을 확인하세요), 두 카드 가격이 비슷하다면 더 빠른 카드는 RTX 5060 Ti 16GB입니다.',
+          '<strong>NVIDIA RTX 4060 Ti 16GB는 $600 안팎 예산의 로컬 LLM용으로 당사가 고른 카드입니다. 16GB VRAM이 14B 모델의 최적 지점이기 때문입니다 — Q4로 실행하면서 넓은 컨텍스트 창을 위한 여유 공간을 확보할 만큼 충분히 큽니다.</strong> 관건은 가격입니다. 2026년 메모리 부족 사태 중 16GB 카드 가격이 크게 변동했으며, 당사 구매 가이드는 이 카드를 중고 호가 약 $650, 신품 약 $790(3건의 매물)으로 집계하므로 $600을 넘을 수 있습니다. 예산 기준은 참고선이며 보장이 아닙니다. 당사의 선택은 RTX 4060 Ti 16GB를 $600 안팎에서 찾을 수 있을 때 해당하며(현재 매물을 확인하세요), 두 카드 가격이 비슷하다면 더 빠른 카드는 RTX 5060 Ti 16GB입니다. 가격 출처마다 차이가 있습니다. InsiderLLM 가격 트래커는 RTX 4060 Ti 16GB를 약 $430-450, 같은 사이트의 중고 GPU 구매 가이드는 $450-550로 안내하지만, 두 곳 모두 이 카드 가격의 날짜와 산출 기준을 밝히지 않습니다.',
           '14B 모델은 Q4 기준 약 9-10GB의 VRAM이 필요합니다(크기 추정치이며 측정값이 아닙니다). RTX 4060 Ti의 16GB는 컨텍스트 창과 런타임 오버헤드를 위해 6GB를 남겨둡니다 — 느린 CPU 오프로드에 의존하지 않고 16K 토큰 컨텍스트를 처리하기에 충분합니다. 12GB 카드도 동일한 모델을 실행하지만 컨텍스트 여유가 거의 없습니다.',
-          'NVIDIA는 RTX 4060 Ti의 총 그래픽 전력을 165W 또는 160W, 최소 시스템 전력을 550W로 표기하므로 구매 전에 전원 공급 장치를 확인하세요. 예산이 결정적 요인이고 좁은 컨텍스트 제한을 받아들일 수 있는 경우에만 중고 RTX 3060 12GB를 선택하세요 — 다만 배제하기 전에 신형 RTX 5060 Ti 16GB와 중고 RTX 3090 24GB의 현재 가격도 확인하세요. 2026년 GPU 가격은 크게 변동했고 다시 바뀔 수 있습니다.',
+          'NVIDIA는 RTX 4060 Ti의 총 그래픽 전력을 165W 또는 160W, 최소 시스템 전력을 550W로 표기하므로 구매 전에 전원 공급 장치를 확인하세요. 예산이 결정적 요인이고 좁은 컨텍스트 제한을 받아들일 수 있는 경우에만 중고 RTX 3060 12GB를 선택하세요 — 다만 신형 RTX 5060 Ti 16GB는 배제하기 전에 현재 가격을 확인하세요. 중고 RTX 3090 24GB는 미국 eBay 판매가가 $1,500-1,725이므로 $600 안팎 예산에서는 선택지가 아닙니다.',
         ],
         affiliateLinks: [
           {
@@ -1217,7 +1225,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'VRAM': '12GB',
             '최대 모델': '14B Q4, 짧은 컨텍스트',
             '소비전력': '170 W (제조사 사양 기준)',
-            '비고': '예산 등급 — $300 이하 가이드 참조',
+            '비고': '예산 등급 — 예산형 가이드 참조',
           },
           {
             'GPU': 'RTX 5060 Ti 16GB',
@@ -1231,7 +1239,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'VRAM': '24GB',
             '최대 모델': '30B+, 70B 일부',
             '소비전력': '350 W (제조사 사양 기준)',
-            '비고': '현재 일반적으로 $1,500-1,725 — 예산 초과',
+            '비고': '판매가 $1,500-1,725 (2026/11/13–23) — 예산 초과',
           },
         ],
       },
@@ -1253,7 +1261,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'RTX 4060 Ti 16GB로 30B 모델을 실행할 수 있습니까?',
-            a: 'Q4 양자화의 30B 모델은 약 18-20GB VRAM이 필요하므로 16GB에 완전히 들어가지 않습니다 — 부분 CPU 오프로드로 실행되며 속도가 크게 떨어집니다. 30B 이상 모델에는 24GB 카드가 필요하지만, 먼저 중고 RTX 3090의 현재 가격을 확인하세요. 현재 일반적으로 $1,500-1,725으로 이 예산을 크게 초과합니다.',
+            a: 'Q4 양자화의 30B 모델은 약 18-20GB VRAM이 필요하므로 16GB에 완전히 들어가지 않습니다 — 부분 CPU 오프로드로 실행되며 속도가 크게 떨어집니다. 30B 모델을 GPU에서 전부 실행하려면 24GB 카드를 고려해야 합니다. 중고 RTX 3090 24GB는 이 예산을 크게 넘습니다. 미국 eBay 판매가는 $1,500-1,725였습니다(중앙값 $1,650, 225건, 2026년 11월 13–23일, 배송비 제외, InsiderLLM 기준).',
           },
         ],
       },
@@ -1261,6 +1269,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
+          '[InsiderLLM: 중고 GPU 구매 가이드](https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/) — 중고 RTX 3090: 미국 eBay 판매 225건(2026년 11월 13–23일), RTX 4060 Ti 16GB 가격 수치',
           '[InsiderLLM: NVIDIA GPU 가격 상승](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) — 중고 RTX 3090 가격대, 2026-11-23자 데이터 (페이지 업데이트 2026-11-26)',
           '[Wccftech: RTX 5060 Ti 16GB 소매 가격](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) — Amazon 미국에서 $679부터 등록 (2026-01-27)',
           '[NVIDIA: GeForce RTX 4060 / 4060 Ti](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/) — 총 그래픽 전력(165W 또는 160W)과 최소 시스템 전력(550W)',
