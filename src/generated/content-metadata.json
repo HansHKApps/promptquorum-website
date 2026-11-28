@@ -1669,7 +1669,7 @@
       "images": []
     },
     "private-local-ai-for-business": {
-      "dateModified": "2026-11-23",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -2825,7 +2825,7 @@
       ]
     },
     "how-much-unified-memory-for-local-llm": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2840,16 +2840,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-hero-en.webp",
-          "title": "Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 Mini 3.8B fits every tier, Llama 3.1 8B is tight at 16GB, Gemma 3 12B needs 36GB minimum, Qwen3 32B needs 64GB, and Llama 3.3 70B needs 128GB."
-        },
-        {
-          "url": "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-en.webp",
-          "title": "Buying decision tree for unified memory: 36GB for a single 13B model, 64GB if you also run vision/STT/TTS alongside it or want 32B Q5, and 128GB only if you specifically need 70B Q5 models."
-        }
-      ]
+      "images": []
     },
     "mlx-vs-ollama-vs-llama-cpp-mac": {
       "dateModified": "2026-11-09",
@@ -7901,7 +7892,7 @@
       "images": []
     },
     "vultr-digitalocean-upcloud-gpu-cloud": {
-      "dateModified": "2026-11-22",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-11-22",
       "hasSections": true,

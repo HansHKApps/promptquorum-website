@@ -99,6 +99,11 @@ write strategies strategy techniques technique frameworks better versus enterpri
   .split(/\s+/))
 // "vs" is deliberately absent: "LM Studio vs Ollama" is fine in every locale.
 
+/** Phrases that are intentional in one file only (framework step names stay in English). */
+const FILE_ALLOWED = {
+  'src/lib/prompt-engineering/articles/risen-framework.ts': ['Next Steps'],
+}
+
 const norm = (s) => s.replace(/\s+/g, ' ').trim().toLowerCase()
 const latinWords = (s) => s.match(/[A-Za-z]{2,}(?:['’][A-Za-z]+)?/g) ?? []
 const stripAllowed = (s) => s.replace(ALLOWED_RE, ' | ')
@@ -264,6 +269,8 @@ function main() {
       const known = new Set(old.map((f) => `${f.lang}|${f.key}|${f.value}`))
       found = found.filter((f) => !known.has(`${f.lang}|${f.key}|${f.value}`))
     }
+    const allowedHere = FILE_ALLOWED[file] ?? []
+    found = found.filter((f) => !(f.rule === 'english-phrase' && f.phrases.every((x) => allowedHere.includes(x))))
     findings.push(...found)
   }
   if (locale) findings = findings.filter((f) => f.lang === locale)

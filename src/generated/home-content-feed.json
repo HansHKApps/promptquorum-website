@@ -11909,81 +11909,81 @@
   {
     "lang": "en",
     "title": "Private Local AI For Business: On-Premises Deployment Without Cloud",
-    "excerpt": "On-premises AI breaks even near 41M tokens/month: ~$205/mo (RTX 5090) vs $1,000/mo GPT-5.6 API at 200M tokens. Can help meet GDPR and HIPAA needs.",
+    "excerpt": "On-prem AI vs GPT-5.6 Terra breaks even near 41M tokens/month: ~$205/mo for RTX 5090, power and cooling, host PC excluded. GDPR and HIPAA notes.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Private lokale KI für Unternehmen: On-Premises-Bereitstellung ohne Cloud",
-    "excerpt": "Private lokale KI für Unternehmen: On-Premises-LLMs ohne Cloud. Break-even ca. 41 Mio. Token/Monat, Datenschutz-Überlegungen, Setup für den Mittelstand.",
+    "excerpt": "Lokale KI vs. GPT-5.6 Terra: Break-even ca. 41 Mio. Token/Monat. Gerechnet sind RTX 5090, Strom und Kühlung, ohne Host-PC. Mit DSGVO-Hinweisen.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "IA Locale Privée Pour Les Entreprises : Déploiement On-Premises Sans Cloud",
-    "excerpt": "IA sur site rentable dès ~41M tokens/mois : ~205 $/mois (RTX 5090) vs 1 000 $/mois API GPT-5.6 à 200M. Peut aider à répondre aux exigences RGPD et HIPAA.",
+    "excerpt": "IA sur site face à GPT-5.6 Terra : point mort vers 41M tokens/mois, ~205 $/mois (RTX 5090, courant, froid), PC hôte exclu. Repères RGPD et HIPAA.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "プライベート・ローカルAI for ビジネス：オンプレミス展開ガイド 2026",
-    "excerpt": "オンプレミスAIは月約4,100万トークンで損益分岐：RTX 5090構成は約$205/月、GPT-5.6 APIは2億トークンで$1,000/月。GDPR・HIPAA対応の検討に役立ちます。",
+    "title": "企業向けプライベート・ローカルAI：オンプレミス展開ガイド 2026",
+    "excerpt": "オンプレミスAIはGPT-5.6 Terra比で月約4,100万トークンが損益分岐。月約$205はRTX 5090・電気・冷却のみで本体PCは別。GDPR・HIPAAも解説。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "企业本地私有AI：保持数据主权与成本控制的On-Premises部署指南 2026",
-    "excerpt": "本地部署AI约在月4,100万token盈亏平衡：RTX 5090方案约$205/月，GPT-5.6 API在月2亿token时为$1,000/月。可帮助满足GDPR、HIPAA等要求。",
+    "excerpt": "本地AI对比GPT-5.6 Terra，约月4,100万token盈亏平衡。约$205/月仅含RTX 5090、电力和冷却，不含主机。附GDPR与HIPAA要点。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "IA Local Privada para Empresas: Despliegue On-Premises sin la Nube",
-    "excerpt": "La IA on-premises es rentable desde unos 41M tokens/mes: ~$205/mes (RTX 5090) frente a $1.000/mes de API GPT-5.6 a 200M. Puede ayudar con GDPR e HIPAA.",
+    "excerpt": "IA on-premises frente a GPT-5.6 Terra: equilibrio en unos 41M tokens/mes, ~$205/mes (RTX 5090, luz y frío), sin el equipo anfitrión. GDPR e HIPAA.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "IA Local Privada para Empresas: Implantação On-Premises sem a Nuvem",
-    "excerpt": "IA on-premises é viável a partir de ~41M tokens/mês: ~$205/mês com uma RTX 5090 vs $1.000/mês da API GPT-5.6 a 200M. Pode ajudar a atender LGPD e HIPAA.",
+    "excerpt": "IA on-premises vs GPT-5.6 Terra: equilíbrio em ~41M tokens/mês, ~$205/mês (RTX 5090, energia e refrigeração), sem o servidor. Notas de LGPD e HIPAA.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "الذكاء الاصطناعي المحلي الخاص للشركات: نشر في الموقع دون السحابة",
-    "excerpt": "التعادل قرب 41 مليون token/شهر: نحو 205 دولارات/شهر (RTX 5090) مقابل 1,000 دولار/شهر لـ API GPT-5.6 عند 200 مليون token. قد يساعد في حماية البيانات.",
+    "excerpt": "التعادل قرب 41 مليون token/شهر مقابل GPT-5.6 Terra: نحو 205 دولارات/شهر لبطاقة RTX 5090 والكهرباء والتبريد، دون الحاسوب المضيف.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "비즈니스를 위한 프라이빗 로컬 AI: 클라우드 없이 온프레미스 배포",
-    "excerpt": "온프레미스 AI는 월 약 4,100만 토큰에서 손익분기: RTX 5090 구성 월 약 $205 vs GPT-5.6 API 월 2억 토큰 기준 $1,000. GDPR·HIPAA 검토에 도움이 됩니다.",
+    "excerpt": "온프레미스 AI는 GPT-5.6 Terra 대비 월 약 4,100만 토큰에서 손익분기. 월 약 $205는 RTX 5090·전기·냉각만 포함하며 호스트 PC는 제외입니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-23",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/private-local-ai-for-business",
     "cluster": "local-llms"
   },
@@ -15635,81 +15635,81 @@
   {
     "lang": "en",
     "title": "How Much Unified Memory for Local LLMs? 16GB vs 36GB vs 64GB vs 128GB (2026)",
-    "excerpt": "Unified memory IS your Mac's VRAM — GPU accesses the whole pool. 16GB fits Phi, 36GB fits 8B, 64GB fits 32B, 128GB fits 70B. Full Q4/Q5/Q8 sizing chart.",
+    "excerpt": "Unified memory is your Mac's VRAM, with a GPU limit. 16GB fits Phi, 36GB fits 8B, 64GB fits 32B, 128GB fits 70B. Full Q4/Q5/Q8 sizing chart.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Wie viel Unified Memory für lokale LLMs? 16 GB vs 36 GB vs 64 GB vs 128 GB (2026)",
-    "excerpt": "Unified Memory IST der VRAM Ihres Macs — die GPU nutzt den gesamten Pool. 16GB für Phi, 36GB für 8B, 64GB für 32B, 128GB für 70B. Vollständige Q4/Q5/Q8-Tabelle.",
+    "excerpt": "Unified Memory ist der VRAM Ihres Macs, mit GPU-Limit. 16GB für Phi, 36GB für 8B, 64GB für 32B, 128GB für 70B. Vollständige Q4/Q5/Q8-Tabelle.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Quelle mémoire unifiée pour les LLM locaux ? 16 Go vs 36 Go vs 64 Go vs 128 Go (2026)",
-    "excerpt": "La mémoire unifiée EST la VRAM de votre Mac — le GPU accède à tout le pool. 16Go pour Phi, 36Go pour 8B, 64Go pour 32B, 128Go pour 70B. Tableau Q4/Q5/Q8 complet.",
+    "excerpt": "La mémoire unifiée est la VRAM du Mac, avec limite GPU. 16Go pour Phi, 36Go pour 8B, 64Go pour 32B, 128Go pour 70B. Tableau Q4/Q5/Q8 complet.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカルLLMに必要なユニファイドメモリは？16GB vs 36GB vs 64GB vs 128GB（2026年）",
-    "excerpt": "ユニファイドメモリはMacのVRAM——GPUはプール全体にアクセス。16GBでPhi、36GBで8B、64GBで32B、128GBで70Bが動作。Q4/Q5/Q8完全サイジング表。",
+    "excerpt": "ユニファイドメモリはMacのVRAM——CPUとGPUで共有（GPUには上限あり）。16GBでPhi、36GBで8B、64GBで32B、128GBで70Bが動作。Q4/Q5/Q8完全サイジング表。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "本地LLM需要多少统一内存？16GB vs 36GB vs 64GB vs 128GB（2026）",
-    "excerpt": "统一内存就是Mac的VRAM——GPU可访问整个内存池。16GB适配Phi，36GB适配8B，64GB适配32B，128GB适配70B。完整Q4/Q5/Q8选型表。",
+    "excerpt": "统一内存就是Mac的VRAM——CPU与GPU共享（GPU有上限）。16GB适配Phi，36GB适配8B，64GB适配32B，128GB适配70B。完整Q4/Q5/Q8选型表。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "¿Cuánta memoria unificada necesitas para LLMs locales? 16GB vs 36GB vs 64GB vs 128GB (2026)",
-    "excerpt": "La memoria unificada ES la VRAM de tu Mac — la GPU accede a todo el conjunto. 16GB para Phi, 36GB para 8B, 64GB para 32B, 128GB para 70B. Tabla Q4/Q5/Q8 completa.",
+    "excerpt": "La memoria unificada es la VRAM del Mac, con límite de GPU. 16GB para Phi, 36GB para 8B, 64GB para 32B, 128GB para 70B. Tabla Q4/Q5/Q8 completa.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Quanta memória unificada você precisa para LLMs locais? 16GB vs 36GB vs 64GB vs 128GB (2026)",
-    "excerpt": "Execute modelos de 3.8B a 405B no Apple Silicon: 16GB (Phi), 36GB (8B), 64GB (32B), 128GB (70B). Tabela Q4/Q5/Q8, overhead explicado, dicas de compra.",
+    "excerpt": "Memória unificada no Apple Silicon: 16GB (7B, justo), 36GB (13B), 64GB (32B Q5), 128GB (70B Q5). Tabela Q4/Q5/Q8, overhead e dicas de compra.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "كم تحتاج من الذاكرة الموحدة لنماذج ⁨LLM⁩ المحلية؟ ⁨16GB⁩ مقابل ⁨36GB⁩ مقابل ⁨64GB⁩ مقابل ⁨128GB⁩ (⁨2026⁩)",
-    "excerpt": "الذاكرة الموحدة هي VRAM جهاز Mac — تصل وحدة الرسومات إلى المجمّع بالكامل. ⁨16GB⁩ تتسع لنماذج ⁨Phi⁩، و⁨36GB⁩ لـ ⁨8B⁩، و⁨64GB⁩ لـ ⁨32B⁩، و⁨128GB⁩ لـ ⁨70B⁩. جدول ⁨Q4/Q5/Q8⁩ الكامل.",
+    "excerpt": "الذاكرة الموحدة هي VRAM جهاز Mac مع حد لوحدة الرسومات. ⁨16GB⁩ لـ ⁨Phi⁩، ⁨36GB⁩ لـ ⁨8B⁩، ⁨64GB⁩ لـ ⁨32B⁩، ⁨128GB⁩ لـ ⁨70B⁩. جدول ⁨Q4/Q5/Q8⁩.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM에 통합 메모리 얼마나 필요할까요? 16GB vs 36GB vs 64GB vs 128GB (2026)",
-    "excerpt": "통합 메모리는 Mac의 VRAM입니다 — GPU가 전체 풀에 접근합니다. 16GB는 Phi, 36GB는 8B, 64GB는 32B, 128GB는 70B용. 완전한 Q4/Q5/Q8 크기 표.",
+    "excerpt": "통합 메모리는 Mac의 VRAM이며 GPU 한도가 있습니다. 16GB는 Phi, 36GB는 8B, 64GB는 32B, 128GB는 70B용. 완전한 Q4/Q5/Q8 크기 표.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/how-much-unified-memory-for-local-llm",
     "cluster": "local-llms"
   },
@@ -27139,7 +27139,7 @@
     "title": "Vultr vs DigitalOcean vs UpCloud for GPU Workloads (2026)",
     "excerpt": "Vultr vs DigitalOcean vs UpCloud GPU cloud 2026: verified DigitalOcean hourly prices, GPU lines, EU regions, Kubernetes, billing and GDPR notes. Checked 2026-11-22.",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },
@@ -27148,7 +27148,7 @@
     "title": "Vultr vs. DigitalOcean vs. UpCloud für GPU-Workloads (2026)",
     "excerpt": "Vultr vs. DigitalOcean vs. UpCloud GPU-Cloud 2026: verifizierte DigitalOcean-Stundenpreise, GPU-Linien, EU-Regionen, Abrechnung und DSGVO-Hinweise.",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },
@@ -27157,7 +27157,7 @@
     "title": "Vultr, DigitalOcean ou UpCloud pour vos charges GPU (2026)",
     "excerpt": "Vultr, DigitalOcean ou UpCloud pour le GPU cloud en 2026 : prix horaires DigitalOcean vérifiés, gammes de GPU, régions UE, Kubernetes et RGPD.",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },
@@ -27166,7 +27166,7 @@
     "title": "Vultr・DigitalOcean・UpCloudのGPU比較（2026）",
     "excerpt": "Vultr・DigitalOcean・UpCloudのGPUクラウドを比較（2026）：確認済みのDigitalOcean時間料金、GPUの種類、EUリージョン、課金とGDPRを解説。",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },
@@ -27175,7 +27175,7 @@
     "title": "Vultr、DigitalOcean 与 UpCloud 的 GPU 工作负载对比（2026）",
     "excerpt": "Vultr、DigitalOcean 与 UpCloud GPU 云对比 2026：已核实的 DigitalOcean 每小时价格、GPU 产品线、欧盟区域、计费与 GDPR 说明。",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },
@@ -27184,7 +27184,7 @@
     "title": "Vultr vs DigitalOcean vs UpCloud para cargas con GPU (2026)",
     "excerpt": "Vultr vs DigitalOcean vs UpCloud GPU 2026: precios verificados de DigitalOcean, GPUs, regiones UE, Kubernetes, facturación y RGPD. Consultado 2026-11-22.",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },
@@ -27193,7 +27193,7 @@
     "title": "Vultr vs DigitalOcean vs UpCloud para Cargas de GPU (2026)",
     "excerpt": "Vultr vs DigitalOcean vs UpCloud GPU 2026: preços por hora da DigitalOcean verificados, GPUs, regiões na UE, Kubernetes e cobrança. Conferido 2026-11-22.",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },
@@ -27202,7 +27202,7 @@
     "title": "Vultr مقابل DigitalOcean مقابل UpCloud لأعمال GPU (2026)",
     "excerpt": "Vultr وDigitalOcean وUpCloud لسحابة GPU 2026: أسعار DigitalOcean المتحقق منها، وخطوط GPU، ومناطق EU، وKubernetes، وGDPR. فُحصت 2026-11-22.",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },
@@ -27211,7 +27211,7 @@
     "title": "Vultr vs DigitalOcean vs UpCloud GPU 워크로드 비교 (2026)",
     "excerpt": "Vultr·DigitalOcean·UpCloud GPU 클라우드 2026: DigitalOcean 시간당 가격, GPU 라인업, EU 리전, 과금·GDPR. 2026-11-22 확인.",
     "publishDate": "2026-11-22",
-    "dateModified": "2026-11-22",
+    "dateModified": "2026-11-28",
     "url": "/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
     "cluster": "power-local-llm"
   },

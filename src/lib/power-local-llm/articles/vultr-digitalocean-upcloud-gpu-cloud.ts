@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu cloud for llm inference',
     ],
     leadAnswerBlock:
-      '**DigitalOcean is the only one of the three whose full GPU hourly price table PromptQuorum read on 2026-11-22: GPU Droplets run from $0.76 per GPU per hour (RTX 4000 Ada, 20 GB) to $4.47 (HGX H200, 141 GB), billed per second with a 5-minute minimum.** Vultr lists A16, A40, A100, L40S, HGX B200, GH200 and AMD Instinct GPUs, with a documented starting price of $0.471 per hour (A16 configuration; GPUs per configuration not verified). UpCloud documents L40S and B200 spot plans and announced H100, B200, L4, RTX Pro 6000 and B300 GPUs in its changelog; its prices were not read by PromptQuorum. PromptQuorum\'s assessment: pick the provider where your other workloads already run, and use a [dedicated GPU marketplace](/power-local-llm/best-cloud-gpu-providers) when only raw price matters.',
+      '**DigitalOcean is the only one of the three whose full GPU hourly price table PromptQuorum read on 2026-11-22: on-demand GPU Droplets run from $0.76 per GPU per hour (RTX 4000 Ada, 20 GB) to $4.47 (HGX H200, 141 GB), billed per second with a 5-minute minimum.** Vultr lists A16, A40, A100, L40S, HGX B200, GH200 and AMD Instinct GPUs, with a documented starting price of $0.471 per hour (A16 configuration; GPUs per configuration not verified). UpCloud documents L40S and B200 spot plans and announced H100, B200, L4, RTX Pro 6000 and B300 GPUs in its changelog; its prices were not read by PromptQuorum. PromptQuorum\'s assessment: pick the provider where your other workloads already run, and use a [dedicated GPU marketplace](/power-local-llm/best-cloud-gpu-providers) when only raw price matters.',
     quickAnswerTop: {
       en: {
         question: 'Which is better for GPU workloads: Vultr, DigitalOcean or UpCloud?',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Use one of these three if:**',
           'Your app, database or Kubernetes cluster already runs on Vultr, DigitalOcean or UpCloud and you want GPUs in the same account',
           'You want hourly billing with no hardware to manage, and a published hourly price table (DigitalOcean; Vultr and UpCloud tables were not read here)',
-          'You need EU-based infrastructure and want a provider that describes its EU data handling (see the regions section)',
+          'You need an EU location and DigitalOcean\'s listed AMS3 (Amsterdam) region and data processing agreement fit your needs (Vultr\'s EU GPU regions and GDPR terms were not verified, and UpCloud\'s privacy pages could not be read; see the regions section)',
           '**Skip them if:**',
           'You only want the lowest hourly GPU price: compare marketplaces in the [best cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) overview first',
           'You need a verified price today for Vultr or UpCloud GPUs: their pricing pages returned an error to PromptQuorum\'s automated fetch on 2026-11-22, so confirm live prices manually',
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Scorecard',
         content:
-          '**PromptQuorum assessment, based on each provider\'s own pricing pages and documentation, not a hands-on lab test of any GPU server.** Scores rate fit for LLM inference and fine-tuning on a general-purpose cloud. Price clarity, ease of setup, reliability and support / docs are not rated because PromptQuorum has no data to score them.',
+          '**PromptQuorum assessment, based on each provider\'s own pricing pages and documentation, not a hands-on lab test of any GPU server.** No fit scores are given. Price clarity, ease of setup, reliability and support / docs are not rated because PromptQuorum has no data to score them; the table only adds a count of the GPU models listed.',
         columns: ['Category', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { Category: 'Price clarity', Vultr: 'Not rated', DigitalOcean: 'Not rated', UpCloud: 'Not rated' },
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Category: 'GPU models listed', Vultr: '9 models', DigitalOcean: '10 models', UpCloud: '6 models' },
           { Category: 'Support / docs', Vultr: 'Not rated', DigitalOcean: 'Not rated', UpCloud: 'Not rated' },
         ],
-        note: 'PromptQuorum assessment. These scores are editorial judgments from published provider information; PromptQuorum did not benchmark or operate GPU servers at these providers. GPU models listed = number of distinct GPU models named in each provider\'s docs or pricing page read on 2026-11-22; it is a count, not a quality rating.',
+        note: 'PromptQuorum did not benchmark or operate GPU servers at these providers. GPU models listed = number of distinct GPU models named in each provider\'s docs or pricing page read on 2026-11-22; it is a count, not a quality rating. Counts for Vultr and UpCloud may be incomplete because some of their pages could not be fetched.',
       },
       tldr: {
         id: 'tldr',
@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          '**Choose DigitalOcean if you want a published hourly GPU price table and a Droplet-based workflow; choose Vultr if its documented GPUs (for example NVIDIA GH200, A16 or AMD Instinct) fit your workload; choose UpCloud if a Finland-based provider matters to you.** All three are sensible when your other infrastructure is already there.\n\nIf the goal is the lowest possible hourly price, marketplaces are the usual first stop for the lowest hourly price. Compare the marketplaces in [best cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) and the [RunPod vs Vast.ai pricing](/prompt-bites/runpod-vs-vastai-pricing) comparison instead.\n\nPromptQuorum read only DigitalOcean\'s full price table; the Vultr and UpCloud prices were not read by PromptQuorum, so no price comparison is made. That is not a statement that DigitalOcean is cheaper.',
+          '**Choose DigitalOcean if you want the one hourly GPU price table PromptQuorum read in full (the Vultr and UpCloud tables were not read here) and a Droplet-based workflow; choose Vultr if its documented GPUs (for example NVIDIA GH200, A16 or AMD Instinct) fit your workload; choose UpCloud if a Finland-based provider matters to you.** All three are sensible when your other infrastructure is already there.\n\nIf the goal is the lowest possible hourly price, marketplaces are the usual first stop for the lowest hourly price. Compare the marketplaces in [best cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) and the [RunPod vs Vast.ai pricing](/prompt-bites/runpod-vs-vastai-pricing) comparison instead.\n\nPromptQuorum read only DigitalOcean\'s full price table; the Vultr and UpCloud prices were not read by PromptQuorum, so no price comparison is made. That is not a statement that DigitalOcean is cheaper.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: 'Which Models Fit',
         content:
-          '**Match the GPU memory (VRAM) to the model size first; the provider comes second.** PromptQuorum\'s planning rules below follow the repo\'s VRAM guides ([how much VRAM local LLMs need](/local-llms/how-much-vram-local-llm), [DeepSeek-R1 distill VRAM cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet)); they are estimates, not benchmark results.',
+          '**Match the GPU memory (VRAM) to the model size first; the provider comes second.** PromptQuorum\'s planning rules below follow our VRAM guides ([how much VRAM local LLMs need](/local-llms/how-much-vram-local-llm), [DeepSeek-R1 distill VRAM cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet)); they are estimates, not benchmark results.',
         columns: ['GPU memory', 'Listed examples', 'Typical fit'],
         rows: [
           { 'GPU memory': '16 GB', 'Listed examples': 'Vultr A16', 'Typical fit': '7B-8B models at 4-bit' },
@@ -207,9 +207,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Check region, data-processing terms and billing rules before moving real data.** Facts below come from provider documentation read on 2026-11-22; this is not legal advice.',
         items: [
-          '**Hardware source:** according to their own descriptions, all three operate their own cloud infrastructure; none is a peer-to-peer marketplace of third-party hosts.',
           '**DigitalOcean regions:** the GPU Droplet page lists NYC2, TOR1, ATL1, RIC1 and AMS3 (Amsterdam) and says more data centers are coming. Bare-metal GPU servers are listed in NYC1 and AMS3. Availability can vary by GPU, so confirm in the control panel.',
-          '**DigitalOcean data processing:** its [data processing agreement](https://www.digitalocean.com/legal/data-processing-agreement) covers the GDPR; for transfers outside the EEA it relies on the EU-U.S. Data Privacy Framework certification and otherwise on Standard Contractual Clauses; the framework\'s legal status can change. The GPU Droplet page makes no GDPR statement; it describes DigitalOcean products as "HIPAA-eligible and SOC 2 compliant" without naming a report or its scope. Check DigitalOcean\'s trust documentation and confirm HIPAA terms with DigitalOcean before relying on them.',
+          '**DigitalOcean data processing:** its [data processing agreement](https://www.digitalocean.com/legal/data-processing-agreement) references the GDPR; for transfers outside the EEA it relies on the EU-U.S. Data Privacy Framework certification and otherwise on Standard Contractual Clauses; the framework\'s legal status can change. The GPU Droplet page makes no GDPR statement; it describes DigitalOcean products as "HIPAA-eligible and SOC 2 compliant" without naming a report or its scope. Check DigitalOcean\'s trust documentation and confirm HIPAA terms with DigitalOcean before relying on them.',
           '**UpCloud:** PromptQuorum could not read UpCloud\'s security and privacy pages on 2026-11-22 (the fetch returned an error), so confirm directly that your chosen GPU location is in the EU before relying on it. Its docs do not state which regions offer spot GPUs.',
           '**Vultr:** GPU region availability and GDPR terms were not verified; the Vultr docs link to a separate regions page.',
           '**Billing and cancellation:** DigitalOcean bills powered-off GPU Droplets until you destroy them. Vultr bills GPU instances on calendar-month hours. UpCloud spot servers keep billing attached storage and reserved IPs while stopped and give credit for the unused hour only if UpCloud stops the server.',
@@ -271,8 +270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Read from provider pages:** DigitalOcean GPU Droplet prices, regions listed and bare-metal terms; Vultr GPU model list, A16 starting price and billing rule; UpCloud spot rules and GPU changelog entries.',
           '**Not verified:** Vultr and UpCloud pages returned an error to PromptQuorum\'s automated fetch on 2026-11-22, so their other prices, regions and Vultr GDPR terms are left out rather than guessed.',
-          '**PromptQuorum assessment:** the scorecard, model-fit planning and recommendations are editorial judgment, not benchmark results.',
-          '**Refresh:** prices are re-checked monthly; the checked date appears next to every price.',
+          '**PromptQuorum assessment:** model-fit planning and recommendations are editorial judgment, not benchmark results. The scorecard gives no fit scores; its only filled row counts the GPU models listed.',
+          '**Refresh:** prices are due for a monthly re-check; the date of the last price check is stated above the pricing table.',
         ],
       },
       faqSection: {
@@ -290,7 +289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Are these providers cheaper than RunPod or Vast.ai?', a: 'PromptQuorum has not verified that. They are general-purpose clouds aimed at teams that want GPUs in the same account as other services; marketplaces are often where buyers look for the lowest hourly rate. Compare live prices on each page.' },
           { q: 'Which is best for a 70B model?', a: 'A 70B model at 4-bit generally needs around 40 GB or more of VRAM, so a 48 GB GPU is tight and an 80 GB or larger GPU gives headroom. DigitalOcean lists the HGX H100 (80 GB) at $4.41 per GPU-hour on demand (checked 2026-11-22).' },
           { q: 'Does a stopped GPU server still cost money?', a: 'On DigitalOcean, powered-off GPU Droplets are still billed until destroyed (per the provider\'s docs, checked 2026-11-22). On UpCloud, attached storage and reserved IPs keep billing while a spot server is stopped. Destroy servers you no longer need.' },
-          { q: 'Are the scores a lab test?', a: 'No. The scores are PromptQuorum assessments from published provider information. PromptQuorum did not benchmark GPU servers at these providers.' },
+          { q: 'Is this comparison a lab test?', a: 'No. It is based on provider pages and documentation. No fit scores are given, and the recommendations are PromptQuorum\'s assessment. PromptQuorum did not benchmark GPU servers at these providers.' },
         ],
       },
       relatedReading: {
@@ -311,12 +310,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr vs DigitalOcean vs UpCloud for GPU Workloads (2026)',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr vs DigitalOcean vs UpCloud for GPU Workloads (2026)',
+      description:
         'A comparison of GPU cloud offerings from Vultr, DigitalOcean and UpCloud based on each provider\'s own pages, checked 2026-11-22. DigitalOcean on-demand GPU Droplets range from $0.76 to $4.47 per GPU per hour; Vultr and UpCloud prices could not be fully verified. PromptQuorum assessment, not a hands-on lab test.',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'en',
       image: buildOgImageObject(OG_SLUG, 'en'),
       author: authorPerson(),
@@ -327,23 +326,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'GPU cloud servers: Vultr, DigitalOcean, UpCloud',
-        serviceType: 'Cloud GPU servers',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
   de: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -373,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu cloud für llm inferenz',
     ],
     leadAnswerBlock:
-      '**DigitalOcean ist der einzige der drei Anbieter, dessen vollständige GPU-Stundenpreistabelle PromptQuorum am 2026-11-22 gelesen hat: GPU Droplets kosten von 0,76 $ pro GPU und Stunde (RTX 4000 Ada, 20 GB) bis 4,47 $ (HGX H200, 141 GB), abgerechnet pro Sekunde mit 5 Minuten Minimum.** Vultr listet A16-, A40-, A100-, L40S-, HGX-B200-, GH200- und AMD-Instinct-GPUs, mit einem dokumentierten Startpreis von 0,471 $ pro Stunde (A16-Konfiguration; GPUs pro Konfiguration nicht verifiziert). UpCloud dokumentiert L40S- und B200-Spot-Pläne und hat H100-, B200-, L4-, RTX-Pro-6000- und B300-GPUs in seinem Changelog angekündigt; die Preise hat PromptQuorum nicht gelesen. Einschätzung von PromptQuorum: Wählen Sie den Anbieter, bei dem Ihre übrigen Workloads schon laufen, und nutzen Sie einen [spezialisierten GPU-Marktplatz](/de/power-local-llm/best-cloud-gpu-providers), wenn nur der reine Preis zählt.',
+      '**DigitalOcean ist der einzige der drei Anbieter, dessen vollständige GPU-Stundenpreistabelle PromptQuorum am 2026-11-22 gelesen hat: On-Demand-GPU-Droplets kosten von 0,76 $ pro GPU und Stunde (RTX 4000 Ada, 20 GB) bis 4,47 $ (HGX H200, 141 GB), abgerechnet pro Sekunde mit 5 Minuten Minimum.** Vultr listet A16-, A40-, A100-, L40S-, HGX-B200-, GH200- und AMD-Instinct-GPUs, mit einem dokumentierten Startpreis von 0,471 $ pro Stunde (A16-Konfiguration; GPUs pro Konfiguration nicht verifiziert). UpCloud dokumentiert L40S- und B200-Spot-Pläne und hat H100-, B200-, L4-, RTX-Pro-6000- und B300-GPUs in seinem Changelog angekündigt; die Preise hat PromptQuorum nicht gelesen. Einschätzung von PromptQuorum: Wählen Sie den Anbieter, bei dem Ihre übrigen Workloads schon laufen, und nutzen Sie einen [spezialisierten GPU-Marktplatz](/de/power-local-llm/best-cloud-gpu-providers), wenn nur der reine Preis zählt.',
     quickAnswerTop: {
       de: {
         question: 'Was ist für GPU-Workloads besser: Vultr, DigitalOcean oder UpCloud?',
@@ -419,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Einen der drei nutzen, wenn:**',
           'Ihre App, Datenbank oder Ihr Kubernetes-Cluster bereits bei Vultr, DigitalOcean oder UpCloud läuft und Sie GPUs im selben Konto wollen',
           'Sie stündliche Abrechnung ohne Hardwareverwaltung und eine veröffentlichte Stundenpreistabelle wünschen (DigitalOcean; die Tabellen von Vultr und UpCloud wurden hier nicht gelesen)',
-          'Sie Infrastruktur in der EU brauchen und einen Anbieter wollen, der seinen Umgang mit EU-Daten beschreibt (siehe Abschnitt zu den Regionen)',
+          'Sie einen EU-Standort brauchen und die von DigitalOcean gelistete Region AMS3 (Amsterdam) samt Auftragsverarbeitungsvereinbarung zu Ihren Anforderungen passt (EU-GPU-Regionen und DSGVO-Bedingungen von Vultr wurden nicht verifiziert, die Datenschutzseiten von UpCloud ließen sich nicht lesen; siehe Abschnitt zu den Regionen)',
           '**Überspringen, wenn:**',
           'Sie nur den niedrigsten GPU-Stundenpreis wollen: Vergleichen Sie zuerst die Marktplätze im Überblick über die [besten Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers)',
           'Sie heute einen verifizierten Preis für Vultr- oder UpCloud-GPUs brauchen: Deren Preisseiten lieferten bei PromptQuorums automatisiertem Abruf am 2026-11-22 einen Fehler, bestätigen Sie die aktuellen Preise daher manuell',
@@ -431,7 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Scorecard',
         content:
-          '**Einschätzung von PromptQuorum auf Basis der eigenen Preisseiten und Dokumentation jedes Anbieters, kein praktischer Labortest eines GPU-Servers.** Die Bewertungen beurteilen die Eignung für LLM-Inferenz und Fine-Tuning in einer Allzweck-Cloud. Preistransparenz, Einrichtungsaufwand, Zuverlässigkeit und Support / Doku sind nicht bewertet, weil PromptQuorum dafür keine Daten hat.',
+          '**Einschätzung von PromptQuorum auf Basis der eigenen Preisseiten und Dokumentation jedes Anbieters, kein praktischer Labortest eines GPU-Servers.** Es werden keine Eignungsnoten vergeben. Preistransparenz, Einrichtungsaufwand, Zuverlässigkeit und Support / Doku sind nicht bewertet, weil PromptQuorum dafür keine Daten hat; die Tabelle ergänzt nur eine Zählung der gelisteten GPU-Modelle.',
         columns: ['Kategorie', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { Kategorie: 'Preistransparenz', Vultr: 'Nicht bewertet', DigitalOcean: 'Nicht bewertet', UpCloud: 'Nicht bewertet' },
@@ -440,7 +434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Kategorie: 'GPU-Modelle gelistet', Vultr: '9 Modelle', DigitalOcean: '10 Modelle', UpCloud: '6 Modelle' },
           { Kategorie: 'Support / Doku', Vultr: 'Nicht bewertet', DigitalOcean: 'Nicht bewertet', UpCloud: 'Nicht bewertet' },
         ],
-        note: 'Einschätzung von PromptQuorum. Diese Bewertungen sind redaktionelle Urteile auf Grundlage veröffentlichter Anbieterinformationen; PromptQuorum hat bei diesen Anbietern keine GPU-Server gebenchmarkt oder betrieben. GPU-Modelle gelistet = Anzahl verschiedener GPU-Modelle, die in der Doku oder Preisseite des Anbieters am 2026-11-22 genannt werden; das ist eine Zählung, keine Qualitätsbewertung.',
+        note: 'PromptQuorum hat bei diesen Anbietern keine GPU-Server gebenchmarkt oder betrieben. GPU-Modelle gelistet = Anzahl verschiedener GPU-Modelle, die in der Doku oder Preisseite des Anbieters am 2026-11-22 genannt werden; das ist eine Zählung, keine Qualitätsbewertung. Die Zahlen für Vultr und UpCloud sind möglicherweise unvollständig, weil sich einige ihrer Seiten nicht abrufen ließen.',
       },
       tldr: {
         id: 'tldr',
@@ -459,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          '**Wählen Sie DigitalOcean, wenn Sie eine veröffentlichte GPU-Stundenpreistabelle und einen Droplet-basierten Workflow wollen; wählen Sie Vultr, wenn dessen dokumentierte GPUs (zum Beispiel NVIDIA GH200, A16 oder AMD Instinct) zu Ihrer Workload passen; wählen Sie UpCloud, wenn Ihnen ein Anbieter mit Sitz in Finnland wichtig ist.** Alle drei sind sinnvoll, wenn Ihre übrige Infrastruktur bereits dort liegt.\n\nWenn das Ziel der niedrigstmögliche Stundenpreis ist, sind Marktplätze meist die erste Anlaufstelle. Vergleichen Sie stattdessen die Marktplätze unter [beste Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) und den Vergleich der [Preise von RunPod und Vast.ai](/de/prompt-bites/runpod-vs-vastai-pricing).\n\nPromptQuorum hat nur die vollständige Preistabelle von DigitalOcean gelesen; die Preise von Vultr und UpCloud hat PromptQuorum nicht gelesen, daher erfolgt kein Preisvergleich. Das ist keine Aussage, dass DigitalOcean günstiger ist.',
+          '**Wählen Sie DigitalOcean, wenn Sie die einzige GPU-Stundenpreistabelle, die PromptQuorum vollständig gelesen hat (die Tabellen von Vultr und UpCloud wurden hier nicht gelesen), und einen Droplet-basierten Workflow wollen; wählen Sie Vultr, wenn dessen dokumentierte GPUs (zum Beispiel NVIDIA GH200, A16 oder AMD Instinct) zu Ihrer Workload passen; wählen Sie UpCloud, wenn Ihnen ein Anbieter mit Sitz in Finnland wichtig ist.** Alle drei sind sinnvoll, wenn Ihre übrige Infrastruktur bereits dort liegt.\n\nWenn das Ziel der niedrigstmögliche Stundenpreis ist, sind Marktplätze meist die erste Anlaufstelle. Vergleichen Sie stattdessen die Marktplätze unter [beste Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) und den Vergleich der [Preise von RunPod und Vast.ai](/de/prompt-bites/runpod-vs-vastai-pricing).\n\nPromptQuorum hat nur die vollständige Preistabelle von DigitalOcean gelesen; die Preise von Vultr und UpCloud hat PromptQuorum nicht gelesen, daher erfolgt kein Preisvergleich. Das ist keine Aussage, dass DigitalOcean günstiger ist.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -503,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: 'Welche Modelle passen',
         content:
-          '**Passen Sie zuerst den GPU-Speicher (VRAM) an die Modellgröße an; der Anbieter kommt danach.** Die folgenden Planungsregeln von PromptQuorum folgen den VRAM-Leitfäden des Repositorys ([wie viel VRAM lokale LLMs brauchen](/de/local-llms/how-much-vram-local-llm), [VRAM-Spickzettel für DeepSeek-R1-Distills](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet)); es sind Schätzungen, keine Benchmarkergebnisse.',
+          '**Passen Sie zuerst den GPU-Speicher (VRAM) an die Modellgröße an; der Anbieter kommt danach.** Die folgenden Planungsregeln von PromptQuorum folgen unseren VRAM-Leitfäden ([wie viel VRAM lokale LLMs brauchen](/de/local-llms/how-much-vram-local-llm), [VRAM-Spickzettel für DeepSeek-R1-Distills](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet)); es sind Schätzungen, keine Benchmarkergebnisse.',
         columns: ['GPU-Speicher', 'Gelistete Beispiele', 'Typische Eignung'],
         rows: [
           { 'GPU-Speicher': '16 GB', 'Gelistete Beispiele': 'Vultr A16', 'Typische Eignung': '7B–8B-Modelle mit 4 Bit' },
@@ -536,9 +530,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Prüfen Sie Region, Auftragsverarbeitungsbedingungen und Abrechnungsregeln, bevor Sie echte Daten verschieben.** Die folgenden Fakten stammen aus Anbieterdokumentation, gelesen am 2026-11-22; dies ist keine Rechtsberatung.',
         items: [
-          '**Herkunft der Hardware:** Nach eigener Darstellung betreiben alle drei eigene Cloud-Infrastruktur; keiner ist ein Peer-to-Peer-Marktplatz mit Hosts Dritter.',
           '**DigitalOcean-Regionen:** Die GPU-Droplet-Seite listet NYC2, TOR1, ATL1, RIC1 und AMS3 (Amsterdam) und sagt, dass weitere Rechenzentren folgen. Bare-Metal-GPU-Server sind in NYC1 und AMS3 gelistet. Die Verfügbarkeit kann je GPU variieren, bestätigen Sie sie daher im Control Panel.',
-          '**DigitalOcean-Datenverarbeitung:** Die [Auftragsverarbeitungsvereinbarung](https://www.digitalocean.com/legal/data-processing-agreement) deckt die DSGVO ab; für Übermittlungen außerhalb des EWR stützt sie sich auf die Zertifizierung nach dem EU-U.S. Data Privacy Framework und andernfalls auf Standardvertragsklauseln; der Rechtsstatus des Frameworks kann sich ändern. Die GPU-Droplet-Seite enthält keine DSGVO-Aussage; sie beschreibt DigitalOcean-Produkte als „HIPAA-eligible and SOC 2 compliant“ (HIPAA-geeignet und SOC-2-konform), ohne einen Bericht oder dessen Umfang zu nennen. Prüfen Sie die Trust-Dokumentation von DigitalOcean und klären Sie HIPAA-Bedingungen mit DigitalOcean, bevor Sie sich darauf verlassen.',
+          '**DigitalOcean-Datenverarbeitung:** Die [Auftragsverarbeitungsvereinbarung](https://www.digitalocean.com/legal/data-processing-agreement) verweist auf die DSGVO; für Übermittlungen außerhalb des EWR stützt sie sich auf die Zertifizierung nach dem EU-U.S. Data Privacy Framework und andernfalls auf Standardvertragsklauseln; der Rechtsstatus des Frameworks kann sich ändern. Die GPU-Droplet-Seite enthält keine DSGVO-Aussage; sie beschreibt DigitalOcean-Produkte als „HIPAA-eligible and SOC 2 compliant“ (HIPAA-geeignet und SOC-2-konform), ohne einen Bericht oder dessen Umfang zu nennen. Prüfen Sie die Trust-Dokumentation von DigitalOcean und klären Sie HIPAA-Bedingungen mit DigitalOcean, bevor Sie sich darauf verlassen.',
           '**UpCloud:** PromptQuorum konnte die Seiten von UpCloud zu Sicherheit und Datenschutz am 2026-11-22 nicht lesen (der Abruf lieferte einen Fehler); bestätigen Sie daher direkt, dass Ihr gewählter GPU-Standort in der EU liegt, bevor Sie sich darauf verlassen. Die Doku nennt nicht, in welchen Regionen Spot-GPUs verfügbar sind.',
           '**Vultr:** GPU-Regionen und DSGVO-Bedingungen wurden nicht verifiziert; die Vultr-Doku verweist auf eine separate Regionenseite.',
           '**Abrechnung und Kündigung:** DigitalOcean berechnet ausgeschaltete GPU Droplets, bis Sie sie zerstören. Vultr rechnet GPU-Instanzen nach Stunden des Kalendermonats ab. Bei UpCloud-Spot-Servern laufen angehängter Speicher und reservierte IPs im gestoppten Zustand weiter auf, und eine Gutschrift für die ungenutzte Stunde gibt es nur, wenn UpCloud den Server stoppt.',
@@ -600,8 +593,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Von Anbieterseiten gelesen:** DigitalOcean-GPU-Droplet-Preise, gelistete Regionen und Bare-Metal-Bedingungen; Vultr-GPU-Modellliste, Startpreis der A16 und Abrechnungsregel; UpCloud-Spot-Regeln und GPU-Changelog-Einträge.',
           '**Nicht verifiziert:** Die Seiten von Vultr und UpCloud lieferten bei PromptQuorums automatisiertem Abruf am 2026-11-22 einen Fehler, daher wurden deren übrige Preise, Regionen und die DSGVO-Bedingungen von Vultr ausgelassen, statt sie zu raten.',
-          '**Einschätzung von PromptQuorum:** Die Scorecard, die Planung der Modelleignung und die Empfehlungen sind redaktionelle Urteile, keine Benchmarkergebnisse.',
-          '**Aktualisierung:** Die Preise werden monatlich neu geprüft; das Prüfdatum steht neben jedem Preis.',
+          '**Einschätzung von PromptQuorum:** Die Planung der Modelleignung und die Empfehlungen sind redaktionelle Urteile, keine Benchmarkergebnisse. Die Scorecard vergibt keine Eignungsnoten; ihre einzige ausgefüllte Zeile zählt die gelisteten GPU-Modelle.',
+          '**Aktualisierung:** Die Preise sollen monatlich neu geprüft werden; das Datum der letzten Preisprüfung steht über der Preistabelle.',
         ],
       },
       faqSection: {
@@ -619,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Sind diese Anbieter günstiger als RunPod oder Vast.ai?', a: 'PromptQuorum hat das nicht verifiziert. Es sind Allzweck-Clouds für Teams, die GPUs im selben Konto wie andere Dienste wollen; Marktplätze sind oft die Anlaufstelle, wenn Käufer den niedrigsten Stundenpreis suchen. Vergleichen Sie die aktuellen Preise auf den jeweiligen Seiten.' },
           { q: 'Was passt am besten für ein 70B-Modell?', a: 'Ein 70B-Modell mit 4 Bit braucht in der Regel etwa 40 GB VRAM oder mehr; eine 48-GB-GPU ist daher knapp, und eine GPU mit 80 GB oder mehr bietet Reserve. DigitalOcean listet die HGX H100 (80 GB) mit 4,41 $ pro GPU-Stunde On-Demand (geprüft am 2026-11-22).' },
           { q: 'Kostet ein gestoppter GPU-Server weiter Geld?', a: 'Bei DigitalOcean werden ausgeschaltete GPU Droplets weiter berechnet, bis sie zerstört werden (laut Anbieter-Doku, geprüft am 2026-11-22). Bei UpCloud laufen angehängter Speicher und reservierte IPs weiter auf, während ein Spot-Server gestoppt ist. Zerstören Sie Server, die Sie nicht mehr brauchen.' },
-          { q: 'Sind die Bewertungen ein Labortest?', a: 'Nein. Die Bewertungen sind Einschätzungen von PromptQuorum auf Basis veröffentlichter Anbieterinformationen. PromptQuorum hat bei diesen Anbietern keine GPU-Server gebenchmarkt.' },
+          { q: 'Ist dieser Vergleich ein Labortest?', a: 'Nein. Er beruht auf Anbieterseiten und Dokumentation. Es werden keine Eignungsnoten vergeben, und die Empfehlungen sind Einschätzungen von PromptQuorum. PromptQuorum hat bei diesen Anbietern keine GPU-Server gebenchmarkt.' },
         ],
       },
       relatedReading: {
@@ -640,12 +633,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr vs. DigitalOcean vs. UpCloud für GPU-Workloads (2026)',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr vs. DigitalOcean vs. UpCloud für GPU-Workloads (2026)',
+      description:
         'Ein Vergleich der GPU-Cloud-Angebote von Vultr, DigitalOcean und UpCloud auf Basis der eigenen Seiten jedes Anbieters, geprüft am 2026-11-22. DigitalOcean GPU Droplets On-Demand kosten zwischen 0,76 $ und 4,47 $ pro GPU und Stunde; die Preise von Vultr und UpCloud ließen sich nicht vollständig verifizieren. Einschätzung von PromptQuorum, kein praktischer Labortest.',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'de',
       image: buildOgImageObject(OG_SLUG, 'de'),
       author: authorPerson(),
@@ -656,23 +649,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'GPU-Cloud-Server: Vultr, DigitalOcean, UpCloud',
-        serviceType: 'Cloud-GPU-Server',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
   fr: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -702,7 +690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu cloud pour inférence llm',
     ],
     leadAnswerBlock:
-      '**DigitalOcean est le seul des trois dont PromptQuorum a lu le tableau complet des prix horaires GPU le 2026-11-22 : les GPU Droplets vont de 0,76 $ par GPU et par heure (RTX 4000 Ada, 20 Go) à 4,47 $ (HGX H200, 141 Go), facturés à la seconde avec un minimum de 5 minutes.** Vultr liste des GPU A16, A40, A100, L40S, HGX B200, GH200 et AMD Instinct, avec un prix de départ documenté de 0,471 $ par heure (configuration A16 ; nombre de GPU par configuration non vérifié). UpCloud documente des offres spot L40S et B200 et a annoncé dans son journal des modifications des GPU H100, B200, L4, RTX Pro 6000 et B300 ; PromptQuorum n\'a pas lu ses prix. Évaluation de PromptQuorum : choisissez le fournisseur où tournent déjà vos autres charges, et utilisez une [place de marché de GPU dédiée](/fr/power-local-llm/best-cloud-gpu-providers) quand seul le prix brut compte.',
+      '**DigitalOcean est le seul des trois dont PromptQuorum a lu le tableau complet des prix horaires GPU le 2026-11-22 : les GPU Droplets à la demande vont de 0,76 $ par GPU et par heure (RTX 4000 Ada, 20 Go) à 4,47 $ (HGX H200, 141 Go), facturés à la seconde avec un minimum de 5 minutes.** Vultr liste des GPU A16, A40, A100, L40S, HGX B200, GH200 et AMD Instinct, avec un prix de départ documenté de 0,471 $ par heure (configuration A16 ; nombre de GPU par configuration non vérifié). UpCloud documente des offres spot L40S et B200 et a annoncé dans son journal des modifications des GPU H100, B200, L4, RTX Pro 6000 et B300 ; PromptQuorum n\'a pas lu ses prix. Évaluation de PromptQuorum : choisissez le fournisseur où tournent déjà vos autres charges, et utilisez une [place de marché de GPU dédiée](/fr/power-local-llm/best-cloud-gpu-providers) quand seul le prix brut compte.',
     quickAnswerTop: {
       fr: {
         question: 'Lequel choisir pour des charges GPU : Vultr, DigitalOcean ou UpCloud ?',
@@ -748,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Choisissez l\'un de ces trois si :**',
           'Votre application, votre base de données ou votre cluster Kubernetes tourne déjà chez Vultr, DigitalOcean ou UpCloud et vous voulez des GPU dans le même compte',
           'Vous voulez une facturation à l\'heure sans matériel à gérer, et une grille de prix horaires publiée (DigitalOcean ; les grilles de Vultr et d\'UpCloud n\'ont pas été lues ici)',
-          'Vous avez besoin d\'une infrastructure basée dans l\'UE et d\'un fournisseur qui décrit son traitement des données dans l\'UE (voir la section sur les régions)',
+          'Vous avez besoin d\'un emplacement dans l\'UE, et la région AMS3 (Amsterdam) ainsi que l\'accord de traitement des données de DigitalOcean vous conviennent (les régions GPU dans l\'UE et les conditions RGPD de Vultr n\'ont pas été vérifiées, et les pages de confidentialité d\'UpCloud n\'ont pas pu être lues ; voir la section sur les régions)',
           '**Évitez-les si :**',
           'Vous voulez seulement le prix horaire de GPU le plus bas : comparez d\'abord les places de marché dans la vue d\'ensemble des [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers)',
           'Vous avez besoin d\'un prix vérifié dès aujourd\'hui pour les GPU de Vultr ou d\'UpCloud : leurs pages de tarifs ont renvoyé une erreur à la récupération automatisée de PromptQuorum le 2026-11-22, confirmez donc les prix en vigueur manuellement',
@@ -760,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Notation',
         content:
-          '**Évaluation de PromptQuorum, fondée sur les pages de tarifs et la documentation de chaque fournisseur, et non sur un test pratique en laboratoire d\'un serveur GPU.** Les notes évaluent l\'adéquation pour l\'inférence et le fine-tuning de LLM sur un cloud généraliste. La clarté des prix, la facilité de mise en place, la fiabilité et le support / la documentation ne sont pas notés, car PromptQuorum n\'a pas de données pour les évaluer.',
+          '**Évaluation de PromptQuorum, fondée sur les pages de tarifs et la documentation de chaque fournisseur, et non sur un test pratique en laboratoire d\'un serveur GPU.** Aucune note d\'adéquation n\'est attribuée. La clarté des prix, la facilité de mise en place, la fiabilité et le support / la documentation ne sont pas notés, car PromptQuorum n\'a pas de données pour les évaluer ; le tableau ajoute seulement un décompte des modèles de GPU listés.',
         columns: ['Catégorie', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { 'Catégorie': 'Clarté des prix', 'Vultr': 'Non noté', 'DigitalOcean': 'Non noté', 'UpCloud': 'Non noté' },
@@ -769,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Catégorie': 'Modèles de GPU listés', 'Vultr': '9 modèles', 'DigitalOcean': '10 modèles', 'UpCloud': '6 modèles' },
           { 'Catégorie': 'Support / documentation', 'Vultr': 'Non noté', 'DigitalOcean': 'Non noté', 'UpCloud': 'Non noté' },
         ],
-        note: 'Évaluation de PromptQuorum. Ces notes sont des jugements éditoriaux fondés sur des informations publiées par les fournisseurs ; PromptQuorum n\'a ni testé ni exploité de serveurs GPU chez ces fournisseurs. Modèles de GPU listés = nombre de modèles de GPU distincts cités dans la documentation ou la page de tarifs de chaque fournisseur, lue le 2026-11-22 ; c\'est un décompte, pas une note de qualité.',
+        note: 'PromptQuorum n\'a ni testé ni exploité de serveurs GPU chez ces fournisseurs. Modèles de GPU listés = nombre de modèles de GPU distincts cités dans la documentation ou la page de tarifs de chaque fournisseur, lue le 2026-11-22 ; c\'est un décompte, pas une note de qualité. Les décomptes de Vultr et d\'UpCloud sont peut-être incomplets, car certaines de leurs pages n\'ont pas pu être récupérées.',
       },
       tldr: {
         id: 'tldr',
@@ -788,7 +776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          '**Choisissez DigitalOcean si vous voulez une grille publiée de prix horaires GPU et un flux de travail basé sur les Droplets ; choisissez Vultr si les GPU qu\'il documente (par exemple NVIDIA GH200, A16 ou AMD Instinct) conviennent à votre charge de travail ; choisissez UpCloud si un fournisseur basé en Finlande compte pour vous.** Les trois se défendent quand le reste de votre infrastructure s\'y trouve déjà.\n\nSi l\'objectif est le prix horaire le plus bas possible, les places de marché sont en général la première étape. Comparez plutôt les places de marché dans les [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) et la comparaison des [tarifs RunPod vs Vast.ai](/fr/prompt-bites/runpod-vs-vastai-pricing).\n\nPromptQuorum n\'a lu que le tableau de prix complet de DigitalOcean ; les prix de Vultr et d\'UpCloud n\'ont pas été lus par PromptQuorum : aucune comparaison de prix n\'est donc faite. Cela ne signifie pas que DigitalOcean est moins cher.',
+          '**Choisissez DigitalOcean si vous voulez la seule grille de prix horaires GPU que PromptQuorum a lue en entier (celles de Vultr et d\'UpCloud n\'ont pas été lues ici) et un flux de travail basé sur les Droplets ; choisissez Vultr si les GPU qu\'il documente (par exemple NVIDIA GH200, A16 ou AMD Instinct) conviennent à votre charge de travail ; choisissez UpCloud si un fournisseur basé en Finlande compte pour vous.** Les trois se défendent quand le reste de votre infrastructure s\'y trouve déjà.\n\nSi l\'objectif est le prix horaire le plus bas possible, les places de marché sont en général la première étape. Comparez plutôt les places de marché dans les [meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) et la comparaison des [tarifs RunPod vs Vast.ai](/fr/prompt-bites/runpod-vs-vastai-pricing).\n\nPromptQuorum n\'a lu que le tableau de prix complet de DigitalOcean ; les prix de Vultr et d\'UpCloud n\'ont pas été lus par PromptQuorum : aucune comparaison de prix n\'est donc faite. Cela ne signifie pas que DigitalOcean est moins cher.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -832,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: 'Quels modèles tiennent',
         content:
-          '**Adaptez d\'abord la mémoire du GPU (VRAM) à la taille du modèle ; le fournisseur vient ensuite.** Les règles de dimensionnement de PromptQuorum ci-dessous suivent les guides VRAM du dépôt ([combien de VRAM pour un LLM local](/fr/local-llms/how-much-vram-local-llm), [aide-mémoire VRAM des distillations DeepSeek-R1](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet)) ; ce sont des estimations, pas des résultats de benchmark.',
+          '**Adaptez d\'abord la mémoire du GPU (VRAM) à la taille du modèle ; le fournisseur vient ensuite.** Les règles de dimensionnement de PromptQuorum ci-dessous suivent nos guides VRAM ([combien de VRAM pour un LLM local](/fr/local-llms/how-much-vram-local-llm), [aide-mémoire VRAM des distillations DeepSeek-R1](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet)) ; ce sont des estimations, pas des résultats de benchmark.',
         columns: ['Mémoire GPU', 'Exemples listés', 'Adéquation typique'],
         rows: [
           { 'Mémoire GPU': '16 Go', 'Exemples listés': 'Vultr A16', 'Adéquation typique': 'Modèles 7B-8B en 4 bits' },
@@ -865,9 +853,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Vérifiez la région, les conditions de traitement des données et les règles de facturation avant de déplacer des données réelles.** Les faits ci-dessous proviennent de la documentation des fournisseurs lue le 2026-11-22 ; ce n\'est pas un avis juridique.',
         items: [
-          '**Origine du matériel :** selon leurs propres descriptions, tous les trois exploitent leur propre infrastructure cloud ; aucun n\'est une place de marché pair à pair d\'hôtes tiers.',
           '**Régions DigitalOcean :** la page des GPU Droplets liste NYC2, TOR1, ATL1, RIC1 et AMS3 (Amsterdam) et indique que d\'autres centres de données arrivent. Les serveurs GPU bare metal sont listés à NYC1 et AMS3. La disponibilité peut varier selon le GPU : confirmez-la dans le panneau de contrôle.',
-          '**Traitement des données chez DigitalOcean :** son [accord de traitement des données](https://www.digitalocean.com/legal/data-processing-agreement) couvre le RGPD ; pour les transferts hors de l\'EEE, il s\'appuie sur la certification EU-U.S. Data Privacy Framework et, à défaut, sur les clauses contractuelles types ; le statut juridique de ce cadre peut changer. La page des GPU Droplets ne fait aucune déclaration sur le RGPD ; elle décrit les produits DigitalOcean comme « HIPAA-eligible and SOC 2 compliant » (éligibles HIPAA et conformes SOC 2), sans citer de rapport ni son périmètre. Consultez la documentation de confiance de DigitalOcean et confirmez avec DigitalOcean les conditions HIPAA avant de vous y fier.',
+          '**Traitement des données chez DigitalOcean :** son [accord de traitement des données](https://www.digitalocean.com/legal/data-processing-agreement) fait référence au RGPD ; pour les transferts hors de l\'EEE, il s\'appuie sur la certification EU-U.S. Data Privacy Framework et, à défaut, sur les clauses contractuelles types ; le statut juridique de ce cadre peut changer. La page des GPU Droplets ne fait aucune déclaration sur le RGPD ; elle décrit les produits DigitalOcean comme « HIPAA-eligible and SOC 2 compliant » (éligibles HIPAA et conformes SOC 2), sans citer de rapport ni son périmètre. Consultez la documentation de confiance de DigitalOcean et confirmez avec DigitalOcean les conditions HIPAA avant de vous y fier.',
           '**UpCloud :** PromptQuorum n\'a pas pu lire les pages sécurité et confidentialité d\'UpCloud le 2026-11-22 (la récupération a renvoyé une erreur) ; confirmez donc directement que l\'emplacement du GPU choisi est dans l\'UE avant de vous y fier. Sa documentation n\'indique pas quelles régions proposent des GPU spot.',
           '**Vultr :** la disponibilité des GPU par région et les conditions RGPD n\'ont pas été vérifiées ; la documentation de Vultr renvoie vers une page de régions distincte.',
           '**Facturation et résiliation :** DigitalOcean facture les GPU Droplets éteints jusqu\'à ce que vous les détruisiez. Vultr facture les instances GPU sur les heures du mois calendaire. Les serveurs spot d\'UpCloud continuent de facturer le stockage attaché et les IP réservées à l\'arrêt, et accordent un crédit pour l\'heure non utilisée seulement si UpCloud arrête le serveur.',
@@ -929,8 +916,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lu sur les pages des fournisseurs :** prix des GPU Droplets DigitalOcean, régions listées et conditions bare metal ; liste des modèles de GPU de Vultr, prix de départ A16 et règle de facturation ; règles spot d\'UpCloud et entrées de son journal des modifications GPU.',
           '**Non vérifié :** les pages de Vultr et d\'UpCloud ont renvoyé une erreur à la récupération automatisée de PromptQuorum le 2026-11-22 ; leurs autres prix, leurs régions et les conditions RGPD de Vultr sont donc omis plutôt que devinés.',
-          '**Évaluation de PromptQuorum :** la notation, le dimensionnement des modèles et les recommandations sont un jugement éditorial, pas des résultats de benchmark.',
-          '**Actualisation :** les prix sont revérifiés chaque mois ; la date de vérification figure à côté de chaque prix.',
+          '**Évaluation de PromptQuorum :** le dimensionnement des modèles et les recommandations relèvent d\'un jugement éditorial, et ne sont pas des résultats de benchmark. La notation n\'attribue aucune note d\'adéquation ; sa seule ligne remplie compte les modèles de GPU listés.',
+          '**Actualisation :** les prix doivent être revérifiés chaque mois ; la date de la dernière vérification est indiquée au-dessus du tableau des tarifs.',
         ],
       },
       faqSection: {
@@ -948,7 +935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ces fournisseurs sont-ils moins chers que RunPod ou Vast.ai ?', a: 'PromptQuorum ne l\'a pas vérifié. Ce sont des clouds généralistes destinés aux équipes qui veulent des GPU dans le même compte que d\'autres services ; les places de marché sont souvent l\'endroit où les acheteurs cherchent le tarif horaire le plus bas. Comparez les prix en vigueur sur chaque page.' },
           { q: 'Lequel convient le mieux pour un modèle 70B ?', a: 'Un modèle 70B en 4 bits demande en général environ 40 Go de VRAM ou plus : un GPU de 48 Go est juste et un GPU de 80 Go ou plus offre de la marge. DigitalOcean liste le HGX H100 (80 Go) à 4,41 $ par GPU-heure à la demande (consulté le 2026-11-22).' },
           { q: 'Un serveur GPU arrêté coûte-t-il encore de l\'argent ?', a: 'Chez DigitalOcean, les GPU Droplets éteints sont encore facturés jusqu\'à leur destruction (selon la documentation du fournisseur, vérifié le 2026-11-22). Chez UpCloud, le stockage attaché et les IP réservées continuent d\'être facturés pendant qu\'un serveur spot est arrêté. Détruisez les serveurs dont vous n\'avez plus besoin.' },
-          { q: 'Les notes sont-elles issues d\'un test en laboratoire ?', a: 'Non. Les notes sont des évaluations de PromptQuorum fondées sur des informations publiées par les fournisseurs. PromptQuorum n\'a pas testé de serveurs GPU chez ces fournisseurs.' },
+          { q: 'Cette comparaison est-elle un test en laboratoire ?', a: 'Non. Elle repose sur les pages et la documentation des fournisseurs. Aucune note d\'adéquation n\'est attribuée, et les recommandations sont une évaluation de PromptQuorum. PromptQuorum n\'a pas testé de serveurs GPU chez ces fournisseurs.' },
         ],
       },
       relatedReading: {
@@ -969,12 +956,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr, DigitalOcean ou UpCloud pour vos charges GPU (2026)',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr, DigitalOcean ou UpCloud pour vos charges GPU (2026)',
+      description:
         'Comparaison des offres de GPU cloud de Vultr, DigitalOcean et UpCloud d\'après les pages de chaque fournisseur, consultées le 2026-11-22. Les GPU Droplets DigitalOcean à la demande vont de 0,76 $ à 4,47 $ par GPU et par heure ; les prix de Vultr et d\'UpCloud n\'ont pas pu être entièrement vérifiés. Évaluation de PromptQuorum, et non un test pratique en laboratoire.',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'fr',
       image: buildOgImageObject(OG_SLUG, 'fr'),
       author: authorPerson(),
@@ -985,23 +972,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'Serveurs GPU cloud : Vultr, DigitalOcean, UpCloud',
-        serviceType: 'Serveurs GPU cloud',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
   es: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -1031,7 +1013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'nube gpu para inferencia de llm',
     ],
     leadAnswerBlock:
-      '**DigitalOcean es el único de los tres cuya tabla completa de precios de GPU por hora leyó PromptQuorum el 2026-11-22: los GPU Droplets van desde $0,76 por GPU y hora (RTX 4000 Ada, 20 GB) hasta $4,47 (HGX H200, 141 GB), con facturación por segundo y un mínimo de 5 minutos.** Vultr lista GPUs A16, A40, A100, L40S, HGX B200, GH200 y AMD Instinct, con un precio inicial documentado de $0,471 por hora (configuración A16; GPUs por configuración sin verificar). UpCloud documenta planes spot con L40S y B200 y ha anunciado en su changelog GPUs H100, B200, L4, RTX Pro 6000 y B300; PromptQuorum no leyó sus precios. Valoración de PromptQuorum: elige el proveedor donde ya se ejecutan tus otras cargas y usa un [marketplace de GPUs dedicado](/es/power-local-llm/best-cloud-gpu-providers) cuando solo importe el precio bruto.',
+      '**DigitalOcean es el único de los tres cuya tabla completa de precios de GPU por hora leyó PromptQuorum el 2026-11-22: los GPU Droplets bajo demanda van desde $0,76 por GPU y hora (RTX 4000 Ada, 20 GB) hasta $4,47 (HGX H200, 141 GB), con facturación por segundo y un mínimo de 5 minutos.** Vultr lista GPUs A16, A40, A100, L40S, HGX B200, GH200 y AMD Instinct, con un precio inicial documentado de $0,471 por hora (configuración A16; GPUs por configuración sin verificar). UpCloud documenta planes spot con L40S y B200 y ha anunciado en su changelog GPUs H100, B200, L4, RTX Pro 6000 y B300; PromptQuorum no leyó sus precios. Valoración de PromptQuorum: elige el proveedor donde ya se ejecutan tus otras cargas y usa un [marketplace de GPUs dedicado](/es/power-local-llm/best-cloud-gpu-providers) cuando solo importe el precio bruto.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es mejor para cargas con GPU: Vultr, DigitalOcean o UpCloud?',
@@ -1077,7 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Usa uno de estos tres si:**',
           'Tu app, base de datos o clúster de Kubernetes ya se ejecuta en Vultr, DigitalOcean o UpCloud y quieres las GPUs en la misma cuenta',
           'Quieres facturación por hora sin hardware que gestionar y una tabla de precios por hora publicada (DigitalOcean; las tablas de Vultr y UpCloud no se leyeron aquí)',
-          'Necesitas infraestructura en la UE y quieres un proveedor que describa cómo trata los datos en la UE (consulta la sección de regiones)',
+          'Necesitas una ubicación en la UE y te encajan la región AMS3 (Ámsterdam) y el acuerdo de tratamiento de datos de DigitalOcean (las regiones de GPU en la UE y los términos del RGPD de Vultr no se verificaron, y las páginas de privacidad de UpCloud no se pudieron leer; consulta la sección de regiones)',
           '**Evítalos si:**',
           'Solo quieres el precio de GPU por hora más bajo: compara antes los marketplaces de la guía de los [mejores proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers)',
           'Necesitas hoy un precio verificado de las GPUs de Vultr o UpCloud: sus páginas de precios devolvieron un error a la obtención automática de PromptQuorum el 2026-11-22, así que confirma los precios vigentes a mano',
@@ -1089,7 +1071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Puntuación',
         content:
-          '**Valoración de PromptQuorum, basada en las propias páginas de precios y la documentación de cada proveedor, no en una prueba práctica de laboratorio de ningún servidor con GPU.** Las puntuaciones valoran la idoneidad para inferencia y fine-tuning de LLMs en una nube de uso general. La claridad de precios, la facilidad de configuración, la fiabilidad y el soporte y docs no se puntúan porque PromptQuorum no tiene datos para valorarlos.',
+          '**Valoración de PromptQuorum, basada en las propias páginas de precios y la documentación de cada proveedor, no en una prueba práctica de laboratorio de ningún servidor con GPU.** No se asignan puntuaciones de idoneidad. La claridad de precios, la facilidad de configuración, la fiabilidad y el soporte y docs no se puntúan porque PromptQuorum no tiene datos para valorarlos; la tabla solo añade un recuento de los modelos de GPU listados.',
         columns: ['Categoría', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { 'Categoría': 'Claridad de precios', 'Vultr': 'Sin puntuar', 'DigitalOcean': 'Sin puntuar', 'UpCloud': 'Sin puntuar' },
@@ -1098,7 +1080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Categoría': 'Modelos de GPU listados', 'Vultr': '9 modelos', 'DigitalOcean': '10 modelos', 'UpCloud': '6 modelos' },
           { 'Categoría': 'Soporte y docs', 'Vultr': 'Sin puntuar', 'DigitalOcean': 'Sin puntuar', 'UpCloud': 'Sin puntuar' },
         ],
-        note: 'Valoración de PromptQuorum. Estas puntuaciones son juicios editoriales a partir de información publicada por los proveedores; PromptQuorum no hizo benchmarks ni operó servidores con GPU en estos proveedores. Modelos de GPU listados = número de modelos de GPU distintos que aparecen en la documentación o la página de precios de cada proveedor leída el 2026-11-22; es un recuento, no una valoración de calidad.',
+        note: 'PromptQuorum no hizo benchmarks ni operó servidores con GPU en estos proveedores. Modelos de GPU listados = número de modelos de GPU distintos que aparecen en la documentación o la página de precios de cada proveedor leída el 2026-11-22; es un recuento, no una valoración de calidad. Los recuentos de Vultr y UpCloud pueden estar incompletos porque algunas de sus páginas no se pudieron obtener.',
       },
       tldr: {
         id: 'tldr',
@@ -1117,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          '**Elige DigitalOcean si quieres una tabla publicada de precios de GPU por hora y un flujo de trabajo basado en Droplets; elige Vultr si las GPUs que documenta (por ejemplo NVIDIA GH200, A16 o AMD Instinct) encajan con tu carga de trabajo; elige UpCloud si te importa que el proveedor tenga sede en Finlandia.** Los tres son razonables cuando el resto de tu infraestructura ya está allí.\n\nSi el objetivo es el precio por hora más bajo posible, los marketplaces suelen ser la primera parada. Compara en su lugar los marketplaces de los [mejores proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers) y la comparativa de [precios RunPod vs Vast.ai](/es/prompt-bites/runpod-vs-vastai-pricing).\n\nPromptQuorum solo leyó la tabla completa de precios de DigitalOcean; los precios de Vultr y UpCloud no los leyó PromptQuorum, así que no se hace ninguna comparación de precios. Eso no significa que DigitalOcean sea más barata.',
+          '**Elige DigitalOcean si quieres la única tabla de precios de GPU por hora que PromptQuorum leyó completa (las de Vultr y UpCloud no se leyeron aquí) y un flujo de trabajo basado en Droplets; elige Vultr si las GPUs que documenta (por ejemplo NVIDIA GH200, A16 o AMD Instinct) encajan con tu carga de trabajo; elige UpCloud si te importa que el proveedor tenga sede en Finlandia.** Los tres son razonables cuando el resto de tu infraestructura ya está allí.\n\nSi el objetivo es el precio por hora más bajo posible, los marketplaces suelen ser la primera parada. Compara en su lugar los marketplaces de los [mejores proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers) y la comparativa de [precios RunPod vs Vast.ai](/es/prompt-bites/runpod-vs-vastai-pricing).\n\nPromptQuorum solo leyó la tabla completa de precios de DigitalOcean; los precios de Vultr y UpCloud no los leyó PromptQuorum, así que no se hace ninguna comparación de precios. Eso no significa que DigitalOcean sea más barata.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -1161,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: 'Qué modelos caben',
         content:
-          '**Ajusta primero la memoria de la GPU (VRAM) al tamaño del modelo; el proveedor viene después.** Las reglas de planificación de PromptQuorum de abajo siguen las guías de VRAM del repositorio ([cuánta VRAM necesitan los LLMs locales](/es/local-llms/how-much-vram-local-llm), [hoja de referencia de VRAM de los destilados de DeepSeek-R1](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet)); son estimaciones, no resultados de benchmarks.',
+          '**Ajusta primero la memoria de la GPU (VRAM) al tamaño del modelo; el proveedor viene después.** Las reglas de planificación de PromptQuorum de abajo siguen nuestras guías de VRAM ([cuánta VRAM necesitan los LLMs locales](/es/local-llms/how-much-vram-local-llm), [hoja de referencia de VRAM de los destilados de DeepSeek-R1](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet)); son estimaciones, no resultados de benchmarks.',
         columns: ['Memoria de GPU', 'Ejemplos listados', 'Ajuste típico'],
         rows: [
           { 'Memoria de GPU': '16 GB', 'Ejemplos listados': 'Vultr A16', 'Ajuste típico': 'Modelos de 7B-8B en 4 bits' },
@@ -1194,9 +1176,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Comprueba la región, los términos de tratamiento de datos y las reglas de facturación antes de mover datos reales.** Los hechos de abajo proceden de la documentación de los proveedores leída el 2026-11-22; esto no es asesoramiento legal.',
         items: [
-          '**Origen del hardware:** según sus propias descripciones, los tres operan su propia infraestructura en la nube; ninguno es un marketplace entre pares de hosts de terceros.',
           '**Regiones de DigitalOcean:** la página de GPU Droplets lista NYC2, TOR1, ATL1, RIC1 y AMS3 (Ámsterdam) y dice que vendrán más centros de datos. Los servidores bare metal con GPU figuran en NYC1 y AMS3. La disponibilidad puede variar según la GPU, así que confírmala en el panel de control.',
-          '**Tratamiento de datos en DigitalOcean:** su [acuerdo de tratamiento de datos](https://www.digitalocean.com/legal/data-processing-agreement) cubre el RGPD; para transferencias fuera del EEE se apoya en la certificación del EU-U.S. Data Privacy Framework y, en su defecto, en Cláusulas Contractuales Tipo; el estatus jurídico de ese marco puede cambiar. La página de GPU Droplets no hace ninguna declaración sobre el RGPD; describe los productos de DigitalOcean como "HIPAA-eligible and SOC 2 compliant" (aptos para HIPAA y conformes con SOC 2), sin citar un informe ni su alcance. Consulta la documentación de confianza de DigitalOcean y confirma con DigitalOcean las condiciones de HIPAA antes de confiar en ello.',
+          '**Tratamiento de datos en DigitalOcean:** su [acuerdo de tratamiento de datos](https://www.digitalocean.com/legal/data-processing-agreement) hace referencia al RGPD; para transferencias fuera del EEE se apoya en la certificación del EU-U.S. Data Privacy Framework y, en su defecto, en Cláusulas Contractuales Tipo; el estatus jurídico de ese marco puede cambiar. La página de GPU Droplets no hace ninguna declaración sobre el RGPD; describe los productos de DigitalOcean como "HIPAA-eligible and SOC 2 compliant" (aptos para HIPAA y conformes con SOC 2), sin citar un informe ni su alcance. Consulta la documentación de confianza de DigitalOcean y confirma con DigitalOcean las condiciones de HIPAA antes de confiar en ello.',
           '**UpCloud:** PromptQuorum no pudo leer las páginas de seguridad y privacidad de UpCloud el 2026-11-22 (la obtención devolvió un error), así que confirma directamente que la ubicación de GPU que elijas está en la UE antes de fiarte. Sus docs no indican qué regiones ofrecen GPUs spot.',
           '**Vultr:** la disponibilidad de GPU por región y los términos del RGPD no se verificaron; los docs de Vultr enlazan a una página de regiones aparte.',
           '**Facturación y cancelación:** DigitalOcean factura los GPU Droplets apagados hasta que los destruyes. Vultr factura las instancias con GPU por horas del mes natural. Los servidores spot de UpCloud siguen facturando el almacenamiento adjunto y las IPs reservadas mientras están detenidos y dan crédito por la hora no usada solo si es UpCloud quien detiene el servidor.',
@@ -1258,8 +1239,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Leído en páginas de los proveedores:** precios de GPU Droplets de DigitalOcean, regiones listadas y términos de bare metal; lista de modelos de GPU de Vultr, precio inicial de A16 y regla de facturación; reglas spot de UpCloud y entradas de su changelog de GPUs.',
           '**No verificado:** las páginas de Vultr y UpCloud devolvieron un error a la obtención automática de PromptQuorum el 2026-11-22, así que sus demás precios, regiones y los términos del RGPD de Vultr se dejan fuera en lugar de adivinarlos.',
-          '**Valoración de PromptQuorum:** la puntuación, la planificación de ajuste de modelos y las recomendaciones son criterio editorial, no resultados de benchmarks.',
-          '**Actualización:** los precios se revisan cada mes; la fecha de consulta aparece junto a cada precio.',
+          '**Valoración de PromptQuorum:** la planificación de ajuste de modelos y las recomendaciones son criterio editorial, no resultados de benchmarks. La tabla de puntuación no asigna notas de idoneidad; su única fila rellenada cuenta los modelos de GPU listados.',
+          '**Actualización:** los precios deben revisarse cada mes; la fecha de la última consulta figura encima de la tabla de precios.',
         ],
       },
       faqSection: {
@@ -1277,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Son más baratos estos proveedores que RunPod o Vast.ai?', a: 'PromptQuorum no lo ha verificado. Son nubes de uso general dirigidas a equipos que quieren GPUs en la misma cuenta que otros servicios; los marketplaces suelen ser donde los compradores buscan la tarifa por hora más baja. Compara los precios vigentes en cada página.' },
           { q: '¿Cuál es mejor para un modelo de 70B?', a: 'Un modelo de 70B en 4 bits suele necesitar alrededor de 40 GB o más de VRAM, así que una GPU de 48 GB es justa y una de 80 GB o más da margen. DigitalOcean lista la HGX H100 (80 GB) a $4,41 por GPU-hora bajo demanda (consultado el 2026-11-22).' },
           { q: '¿Sigue costando dinero un servidor con GPU detenido?', a: 'En DigitalOcean, los GPU Droplets apagados se siguen facturando hasta que se destruyen (según la documentación del proveedor, comprobado el 2026-11-22). En UpCloud, el almacenamiento adjunto y las IPs reservadas siguen facturándose mientras un servidor spot está detenido. Destruye los servidores que ya no necesites.' },
-          { q: '¿Son las puntuaciones una prueba de laboratorio?', a: 'No. Las puntuaciones son valoraciones de PromptQuorum a partir de información publicada por los proveedores. PromptQuorum no hizo benchmarks de servidores con GPU en estos proveedores.' },
+          { q: '¿Es esta comparativa una prueba de laboratorio?', a: 'No. Se basa en las páginas y la documentación de los proveedores. No se asignan puntuaciones de idoneidad, y las recomendaciones son una valoración de PromptQuorum. PromptQuorum no hizo benchmarks de servidores con GPU en estos proveedores.' },
         ],
       },
       relatedReading: {
@@ -1298,12 +1279,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr vs DigitalOcean vs UpCloud para cargas con GPU (2026)',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr vs DigitalOcean vs UpCloud para cargas con GPU (2026)',
+      description:
         'Comparativa de las ofertas de GPU en la nube de Vultr, DigitalOcean y UpCloud basada en las propias páginas de cada proveedor, consultadas el 2026-11-22. Los GPU Droplets bajo demanda de DigitalOcean van de $0,76 a $4,47 por GPU y hora; los precios de Vultr y UpCloud no se pudieron verificar por completo. Valoración de PromptQuorum, no una prueba práctica de laboratorio.',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'es',
       image: buildOgImageObject(OG_SLUG, 'es'),
       author: authorPerson(),
@@ -1314,23 +1295,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'Servidores con GPU en la nube: Vultr, DigitalOcean, UpCloud',
-        serviceType: 'Servidores con GPU en la nube',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
   ja: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -1360,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'llm 推論 gpu クラウド',
     ],
     leadAnswerBlock:
-      '**3社のうち、2026-11-22にPromptQuorumがGPUの時間単価の全一覧を読み取ったのはDigitalOceanだけです。GPU Dropletは、GPU1基あたり1時間0.76ドル（RTX 4000 Ada、20GB）から4.47ドル（HGX H200、141GB）で、秒単位課金、最低5分です。** Vultrは、A16、A40、A100、L40S、HGX B200、GH200、AMD Instinct GPUを掲載し、ドキュメントに記載された開始価格は1時間0.471ドル（A16構成。構成ごとのGPU数は未確認）です。UpCloudは、L40SとB200のスポットプランを記載し、変更履歴でH100、B200、L4、RTX Pro 6000、B300のGPUを発表していますが、料金はPromptQuorumでは読み取っていません。PromptQuorumの評価：他のワークロードがすでに動いているプロバイダーを選び、価格だけが重要な場合は[専用のGPUマーケットプレイス](/ja/power-local-llm/best-cloud-gpu-providers)を使ってください。',
+      '**3社のうち、2026-11-22にPromptQuorumがGPUの時間単価の全一覧を読み取ったのはDigitalOceanだけです。オンデマンドのGPU Dropletは、GPU1基あたり1時間0.76ドル（RTX 4000 Ada、20GB）から4.47ドル（HGX H200、141GB）で、秒単位課金、最低5分です。** Vultrは、A16、A40、A100、L40S、HGX B200、GH200、AMD Instinct GPUを掲載し、ドキュメントに記載された開始価格は1時間0.471ドル（A16構成。構成ごとのGPU数は未確認）です。UpCloudは、L40SとB200のスポットプランを記載し、変更履歴でH100、B200、L4、RTX Pro 6000、B300のGPUを発表していますが、料金はPromptQuorumでは読み取っていません。PromptQuorumの評価：他のワークロードがすでに動いているプロバイダーを選び、価格だけが重要な場合は[専用のGPUマーケットプレイス](/ja/power-local-llm/best-cloud-gpu-providers)を使ってください。',
     quickAnswerTop: {
       ja: {
         question: 'GPU用途では、Vultr、DigitalOcean、UpCloudのどれがよいですか？',
@@ -1406,7 +1382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**この3社のどれかを使う場合：**',
           'アプリ、データベース、KubernetesクラスターがすでにVultr、DigitalOcean、UpCloudのいずれかで動いていて、同じアカウントでGPUを使いたい',
           '管理するハードウェアなしで時間単位の課金を使いたく、公開されている時間単価の料金表も欲しい（DigitalOcean。VultrとUpCloudの料金表はここでは読み取っていません）',
-          'EUのインフラが必要で、EUでのデータの扱いを説明しているプロバイダーを選びたい（リージョンの項目を参照）',
+          'EU内の拠点が必要で、DigitalOceanが掲載するAMS3（アムステルダム）リージョンとデータ処理契約が要件に合う（VultrのEUのGPUリージョンとGDPRの条件は未確認で、UpCloudのプライバシーページは読み取れませんでした。リージョンの項目を参照）',
           '**見送る場合：**',
           'GPUの時間単価の最安値だけが欲しい：まず[おすすめクラウドGPUプロバイダー](/ja/power-local-llm/best-cloud-gpu-providers)の概要でマーケットプレイスを比較してください',
           'VultrまたはUpCloudのGPUの確認済み料金が今すぐ必要：両社の料金ページは2026-11-22のPromptQuorumの自動取得でエラーを返したため、最新の料金は手動で確認してください',
@@ -1418,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'スコアカード',
         content:
-          '**PromptQuorumの評価です。各プロバイダー自身の料金ページとドキュメントに基づくもので、GPUサーバーの実機ラボテストではありません。** スコアは、汎用クラウド上でのLLMの推論とファインチューニングへの適合度を示します。料金の分かりやすさ、導入のしやすさ、信頼性、サポート／ドキュメントは、評価に使えるデータがないため評価していません。',
+          '**PromptQuorumの評価です。各プロバイダー自身の料金ページとドキュメントに基づくもので、GPUサーバーの実機ラボテストではありません。** 適合度のスコアは付けていません。料金の分かりやすさ、導入のしやすさ、信頼性、サポート／ドキュメントは、評価に使えるデータがないため評価していません。表に加えているのは、掲載GPUモデル数の集計だけです。',
         columns: ['項目', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { '項目': '料金の分かりやすさ', 'Vultr': '未評価', 'DigitalOcean': '未評価', 'UpCloud': '未評価' },
@@ -1427,7 +1403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': '掲載GPUモデル数', 'Vultr': '9モデル', 'DigitalOcean': '10モデル', 'UpCloud': '6モデル' },
           { '項目': 'サポート／ドキュメント', 'Vultr': '未評価', 'DigitalOcean': '未評価', 'UpCloud': '未評価' },
         ],
-        note: 'PromptQuorumの評価です。このスコアは公開されているプロバイダー情報に基づく編集上の判断であり、PromptQuorumがこれらのプロバイダーでGPUサーバーのベンチマークや運用を行った結果ではありません。掲載GPUモデル数は、2026-11-22に読み取った各プロバイダーのドキュメントまたは料金ページに記載された異なるGPUモデルの数です。数を数えたものであり、品質の評価ではありません。',
+        note: 'PromptQuorumは、これらのプロバイダーでGPUサーバーのベンチマークや運用を行っていません。掲載GPUモデル数は、2026-11-22に読み取った各プロバイダーのドキュメントまたは料金ページに記載された異なるGPUモデルの数です。数を数えたものであり、品質の評価ではありません。VultrとUpCloudは一部のページを取得できなかったため、両社の数は不完全な可能性があります。',
       },
       tldr: {
         id: 'tldr',
@@ -1446,7 +1422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総合評価',
         content:
-          '**公開されているGPUの時間単価表とDropletベースのワークフローが欲しいならDigitalOcean、Vultrがドキュメントに載せているGPU（例：NVIDIA GH200、A16、AMD Instinct）がワークロードに合うならVultr、フィンランド拠点のプロバイダーが重要ならUpCloudを選びましょう。** 他のインフラがすでにそこにあるなら、3社とも妥当な選択です。\n\n1時間あたりの最安値が目的なら、マーケットプレイスが最初の選択肢になるのが一般的です。代わりに、[おすすめクラウドGPUプロバイダー](/ja/power-local-llm/best-cloud-gpu-providers)のマーケットプレイスと、[RunPodとVast.aiの料金比較](/ja/prompt-bites/runpod-vs-vastai-pricing)をご覧ください。\n\nPromptQuorumが全料金表を読み取ったのはDigitalOceanだけで、VultrとUpCloudの料金は読み取っていないため、料金の比較は行っていません。DigitalOceanのほうが安いという意味ではありません。',
+          '**PromptQuorumが全体を読み取れた唯一のGPU時間単価表（VultrとUpCloudの料金表はここでは読み取っていません）とDropletベースのワークフローが欲しいならDigitalOcean、Vultrがドキュメントに載せているGPU（例：NVIDIA GH200、A16、AMD Instinct）がワークロードに合うならVultr、フィンランド拠点のプロバイダーが重要ならUpCloudを選びましょう。** 他のインフラがすでにそこにあるなら、3社とも妥当な選択です。\n\n1時間あたりの最安値が目的なら、マーケットプレイスが最初の選択肢になるのが一般的です。代わりに、[おすすめクラウドGPUプロバイダー](/ja/power-local-llm/best-cloud-gpu-providers)のマーケットプレイスと、[RunPodとVast.aiの料金比較](/ja/prompt-bites/runpod-vs-vastai-pricing)をご覧ください。\n\nPromptQuorumが全料金表を読み取ったのはDigitalOceanだけで、VultrとUpCloudの料金は読み取っていないため、料金の比較は行っていません。DigitalOceanのほうが安いという意味ではありません。',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -1523,9 +1499,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**実際のデータを移す前に、リージョン、データ処理の条件、課金ルールを確認してください。** 以下の事実は2026-11-22に読んだプロバイダーのドキュメントに基づきます。法的助言ではありません。',
         items: [
-          '**ハードウェアの出どころ：** 各社の説明によると、3社とも自社のクラウドインフラを運用しており、第三者のホストによるピアツーピア型のマーケットプレイスではありません。',
           '**DigitalOceanのリージョン：** GPU Dropletのページには、NYC2、TOR1、ATL1、RIC1、AMS3（アムステルダム）が載っており、今後データセンターが増えるとされています。ベアメタルのGPUサーバーはNYC1とAMS3に掲載されています。提供状況はGPUによって異なる場合があるため、コントロールパネルで確認してください。',
-          '**DigitalOceanのデータ処理：** [データ処理契約](https://www.digitalocean.com/legal/data-processing-agreement)はGDPRを対象としています。EEA外への移転については、EU-U.S. Data Privacy Frameworkの認証に依拠し、それ以外は標準契約条項に依拠しますが、このフレームワークの法的地位は変わる可能性があります。GPU DropletのページにはGDPRに関する記載がなく、DigitalOceanの製品を「HIPAA-eligible and SOC 2 compliant」（HIPAA対応可能でSOC 2準拠）と説明していますが、報告書やその範囲は示していません。DigitalOceanのトラスト関連ドキュメントを確認し、HIPAAの条件はDigitalOceanに確認してから頼ってください。',
+          '**DigitalOceanのデータ処理：** [データ処理契約](https://www.digitalocean.com/legal/data-processing-agreement)はGDPRに言及しています。EEA外への移転については、EU-U.S. Data Privacy Frameworkの認証に依拠し、それ以外は標準契約条項に依拠しますが、このフレームワークの法的地位は変わる可能性があります。GPU DropletのページにはGDPRに関する記載がなく、DigitalOceanの製品を「HIPAA-eligible and SOC 2 compliant」（HIPAA対応可能でSOC 2準拠）と説明していますが、報告書やその範囲は示していません。DigitalOceanのトラスト関連ドキュメントを確認し、HIPAAの条件はDigitalOceanに確認してから頼ってください。',
           '**UpCloud：** PromptQuorumは2026-11-22にUpCloudのセキュリティとプライバシーのページを読み取れなかったため（取得はエラーを返しました）、選んだGPUの設置場所がEU内であることを直接確認してから利用してください。ドキュメントには、どのリージョンでスポットGPUが提供されるかは記載されていません。',
           '**Vultr：** GPUのリージョンの提供状況とGDPRの条件は確認していません。Vultrのドキュメントは、別のリージョンのページにリンクしています。',
           '**課金と解約：** DigitalOceanは、電源オフのGPU Dropletを破棄するまで課金します。Vultrは、GPUインスタンスを暦月の稼働時間で課金します。UpCloudのスポットサーバーは、停止中も接続されたストレージと予約済みIPの課金が続き、UpCloudがサーバーを停止した場合に限り、未使用の1時間分がクレジットされます。',
@@ -1587,8 +1562,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**プロバイダーのページで読み取った内容：** DigitalOceanのGPU Droplet料金、掲載リージョン、ベアメタルの条件。VultrのGPUモデル一覧、A16の開始価格、課金ルール。UpCloudのスポットのルールとGPUの変更履歴の記載。',
           '**未確認：** VultrとUpCloudのページは2026-11-22のPromptQuorumの自動取得でエラーを返したため、両社のその他の料金、リージョン、VultrのGDPRの条件は、推測せずに記載していません。',
-          '**PromptQuorumの評価：** スコアカード、モデル適合の目安、推奨は編集上の判断であり、ベンチマーク結果ではありません。',
-          '**更新：** 料金は毎月再確認し、すべての料金の横に確認日を記載しています。',
+          '**PromptQuorumの評価：** モデル適合の目安と推奨は編集上の判断であり、ベンチマーク結果ではありません。スコアカードには適合度のスコアはなく、値を記入している行は掲載GPUモデル数だけです。',
+          '**更新：** 料金は毎月再確認する予定です。直近の確認日は料金表の上に記載しています。',
         ],
       },
       faqSection: {
@@ -1606,7 +1581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'これらのプロバイダーはRunPodやVast.aiより安いですか？', a: 'PromptQuorumはそれを確認していません。これらは、他のサービスと同じアカウントでGPUを使いたいチーム向けの汎用クラウドで、1時間あたりの最安値を探す場合はマーケットプレイスを見るのが一般的です。各ページの最新料金を比較してください。' },
           { q: '70Bモデルにはどれが向いていますか？', a: '70Bモデルを4ビットで動かすには、一般に約40GB以上のVRAMが必要なため、48GBのGPUはぎりぎりで、80GB以上のGPUなら余裕があります。DigitalOceanはHGX H100（80GB）をオンデマンドでGPU1時間あたり4.41ドルと記載しています（2026-11-22確認）。' },
           { q: '停止したGPUサーバーにも費用がかかりますか？', a: 'DigitalOceanでは、電源オフのGPU Dropletも破棄するまで課金されます（プロバイダーのドキュメントによる、2026-11-22確認）。UpCloudでは、スポットサーバーの停止中も、接続されたストレージと予約済みIPの課金が続きます。不要になったサーバーは破棄してください。' },
-          { q: 'スコアはラボテストの結果ですか？', a: 'いいえ。スコアは、公開されているプロバイダー情報に基づくPromptQuorumの評価です。PromptQuorumはこれらのプロバイダーのGPUサーバーでベンチマークを行っていません。' },
+          { q: 'この比較はラボテストの結果ですか？', a: 'いいえ。各プロバイダーのページとドキュメントに基づいています。適合度のスコアは付けておらず、推奨はPromptQuorumの評価です。PromptQuorumはこれらのプロバイダーのGPUサーバーでベンチマークを行っていません。' },
         ],
       },
       relatedReading: {
@@ -1627,12 +1602,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr・DigitalOcean・UpCloudのGPU比較（2026）',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr・DigitalOcean・UpCloudのGPU比較（2026）',
+      description:
         'Vultr、DigitalOcean、UpCloudのGPUクラウドを、各社自身のページ（2026-11-22確認）に基づいて比較しました。DigitalOceanのオンデマンドGPU DropletはGPU1基あたり1時間0.76〜4.47ドルで、VultrとUpCloudの料金は完全には確認できませんでした。PromptQuorumの評価であり、実機ラボテストではありません。',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'ja',
       image: buildOgImageObject(OG_SLUG, 'ja'),
       author: authorPerson(),
@@ -1643,23 +1618,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'GPUクラウドサーバー：Vultr、DigitalOcean、UpCloud',
-        serviceType: 'クラウドGPUサーバー',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
   zh: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -1689,7 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '用于 llm 推理的 gpu 云',
     ],
     leadAnswerBlock:
-      '**三家中只有 DigitalOcean 的完整 GPU 每小时价格表由 PromptQuorum 在 2026-11-22 读取过：GPU Droplet 每张 GPU 每小时 $0.76（RTX 4000 Ada，20 GB）至 $4.47（HGX H200，141 GB），按秒计费，最低计费 5 分钟。** Vultr 列出 A16、A40、A100、L40S、HGX B200、GH200 和 AMD Instinct GPU，文档中的起步价为每小时 $0.471（A16 配置；每种配置的 GPU 数量未核实）。UpCloud 在文档中列出 L40S 和 B200 Spot 套餐，并在更新日志中宣布了 H100、B200、L4、RTX Pro 6000 和 B300 GPU；其价格 PromptQuorum 未读取。PromptQuorum 的评估：选择你其他工作负载已经所在的服务商；如果只看原始价格，请使用[专门的 GPU 市场](/zh/power-local-llm/best-cloud-gpu-providers)。',
+      '**三家中只有 DigitalOcean 的完整 GPU 每小时价格表由 PromptQuorum 在 2026-11-22 读取过：按需 GPU Droplet 每张 GPU 每小时 $0.76（RTX 4000 Ada，20 GB）至 $4.47（HGX H200，141 GB），按秒计费，最低计费 5 分钟。** Vultr 列出 A16、A40、A100、L40S、HGX B200、GH200 和 AMD Instinct GPU，文档中的起步价为每小时 $0.471（A16 配置；每种配置的 GPU 数量未核实）。UpCloud 在文档中列出 L40S 和 B200 Spot 套餐，并在更新日志中宣布了 H100、B200、L4、RTX Pro 6000 和 B300 GPU；其价格 PromptQuorum 未读取。PromptQuorum 的评估：选择你其他工作负载已经所在的服务商；如果只看原始价格，请使用[专门的 GPU 市场](/zh/power-local-llm/best-cloud-gpu-providers)。',
     quickAnswerTop: {
       zh: {
         question: 'Vultr、DigitalOcean 和 UpCloud，哪个更适合 GPU 工作负载？',
@@ -1735,7 +1705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**适合使用这三家之一的情形：**',
           '你的应用、数据库或 Kubernetes 集群已经运行在 Vultr、DigitalOcean 或 UpCloud 上，并希望在同一账户中使用 GPU',
           '你想要按小时计费、无需管理硬件，并且有已公布的每小时价格表（DigitalOcean；Vultr 和 UpCloud 的价格表此处未读取）',
-          '你需要欧盟境内的基础设施，并希望服务商说明其欧盟数据处理方式（见区域部分）',
+          '你需要欧盟境内的节点，且 DigitalOcean 列出的 AMS3（阿姆斯特丹）区域和数据处理协议符合你的要求（Vultr 的欧盟 GPU 区域和 GDPR 条款未核实，UpCloud 的隐私页面无法读取；见区域部分）',
           '**建议跳过的情形：**',
           '你只想要最低的 GPU 每小时价格：请先在[最佳云 GPU 服务商](/zh/power-local-llm/best-cloud-gpu-providers)总览中比较市场型方案',
           '你今天就需要 Vultr 或 UpCloud GPU 的已核实价格：它们的定价页在 2026-11-22 对 PromptQuorum 的自动抓取返回了错误，请手动确认实时价格',
@@ -1747,7 +1717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '评分卡',
         content:
-          '**PromptQuorum 评估，依据各服务商自己的定价页和文档，并非对任何 GPU 服务器的实机实验室测试。** 评分衡量其在通用云上做 LLM 推理和微调的适配程度。价格清晰度、上手难度、可靠性和支持 / 文档未评分，因为 PromptQuorum 没有可用于评分的数据。',
+          '**PromptQuorum 评估，依据各服务商自己的定价页和文档，并非对任何 GPU 服务器的实机实验室测试。** 本文不给出适配评分。价格清晰度、上手难度、可靠性和支持 / 文档未评分，因为 PromptQuorum 没有可用于评分的数据；表格仅另外列出所列 GPU 型号的数量。',
         columns: ['类别', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { '类别': '价格清晰度', 'Vultr': '未评分', 'DigitalOcean': '未评分', 'UpCloud': '未评分' },
@@ -1756,7 +1726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '类别': '列出的 GPU 型号数', 'Vultr': '9 个型号', 'DigitalOcean': '10 个型号', 'UpCloud': '6 个型号' },
           { '类别': '支持 / 文档', 'Vultr': '未评分', 'DigitalOcean': '未评分', 'UpCloud': '未评分' },
         ],
-        note: 'PromptQuorum 评估。这些评分是依据服务商公开信息作出的编辑判断；PromptQuorum 没有对这些服务商的 GPU 服务器做基准测试，也没有实际运行过。列出的 GPU 型号数 = 2026-11-22 读取的各服务商文档或价格页中列出的不同 GPU 型号数量；这是计数，不是质量评分。',
+        note: 'PromptQuorum 没有对这些服务商的 GPU 服务器做基准测试，也没有实际运行过。列出的 GPU 型号数 = 2026-11-22 读取的各服务商文档或价格页中列出的不同 GPU 型号数量；这是计数，不是质量评分。由于部分页面无法抓取，Vultr 和 UpCloud 的数量可能不完整。',
       },
       tldr: {
         id: 'tldr',
@@ -1775,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          '**如果你想要已公布的 GPU 每小时价格表和基于 Droplet 的工作流，选 DigitalOcean；如果 Vultr 文档列出的 GPU（例如 NVIDIA GH200、A16 或 AMD Instinct）适合你的工作负载，选 Vultr；如果总部位于芬兰的服务商对你很重要，选 UpCloud。** 当你的其他基础设施已经在那里时，三者都说得通。\n\n如果目标是尽可能低的每小时价格，市场型方案通常是首选。请改为比较[最佳云 GPU 服务商](/zh/power-local-llm/best-cloud-gpu-providers)中的市场型方案，以及 [RunPod 与 Vast.ai 价格对比](/zh/prompt-bites/runpod-vs-vastai-pricing)。\n\nPromptQuorum 只读取了 DigitalOcean 的完整价格表，没有读取 Vultr 和 UpCloud 的价格，因此不做价格比较。这并不是说 DigitalOcean 更便宜。',
+          '**如果你想要 PromptQuorum 完整读取过的唯一一份 GPU 每小时价格表（Vultr 和 UpCloud 的价格表此处未读取）和基于 Droplet 的工作流，选 DigitalOcean；如果 Vultr 文档列出的 GPU（例如 NVIDIA GH200、A16 或 AMD Instinct）适合你的工作负载，选 Vultr；如果总部位于芬兰的服务商对你很重要，选 UpCloud。** 当你的其他基础设施已经在那里时，三者都说得通。\n\n如果目标是尽可能低的每小时价格，市场型方案通常是首选。请改为比较[最佳云 GPU 服务商](/zh/power-local-llm/best-cloud-gpu-providers)中的市场型方案，以及 [RunPod 与 Vast.ai 价格对比](/zh/prompt-bites/runpod-vs-vastai-pricing)。\n\nPromptQuorum 只读取了 DigitalOcean 的完整价格表，没有读取 Vultr 和 UpCloud 的价格，因此不做价格比较。这并不是说 DigitalOcean 更便宜。',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -1852,9 +1822,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**在迁入真实数据之前，请先核对区域、数据处理条款和计费规则。** 以下事实来自 2026-11-22 阅读的服务商文档；这不是法律建议。',
         items: [
-          '**硬件来源：** 据各家自述，三家都运营自己的云基础设施；没有一家是第三方主机的点对点市场。',
           '**DigitalOcean 区域：** GPU Droplet 页面列出 NYC2、TOR1、ATL1、RIC1 和 AMS3（阿姆斯特丹），并称将有更多数据中心。裸金属 GPU 服务器列在 NYC1 和 AMS3。可用性可能因 GPU 而异，请在控制面板中确认。',
-          '**DigitalOcean 数据处理：** 其[数据处理协议](https://www.digitalocean.com/legal/data-processing-agreement)涵盖 GDPR；对于向欧洲经济区以外的传输，它依赖欧美数据隐私框架认证，否则依赖标准合同条款；该框架的法律地位可能发生变化。GPU Droplet 页面没有 GDPR 声明；它把 DigitalOcean 的产品描述为“HIPAA-eligible and SOC 2 compliant”（符合 HIPAA 资格且符合 SOC 2），但没有说明具体报告或适用范围。请查阅 DigitalOcean 的信任文档，并在依赖前向 DigitalOcean 确认 HIPAA 条款。',
+          '**DigitalOcean 数据处理：** 其[数据处理协议](https://www.digitalocean.com/legal/data-processing-agreement)提及 GDPR；对于向欧洲经济区以外的传输，它依赖欧美数据隐私框架认证，否则依赖标准合同条款；该框架的法律地位可能发生变化。GPU Droplet 页面没有 GDPR 声明；它把 DigitalOcean 的产品描述为“HIPAA-eligible and SOC 2 compliant”（符合 HIPAA 资格且符合 SOC 2），但没有说明具体报告或适用范围。请查阅 DigitalOcean 的信任文档，并在依赖前向 DigitalOcean 确认 HIPAA 条款。',
           '**UpCloud：** 2026-11-22 PromptQuorum 无法读取 UpCloud 的安全与隐私页面（抓取返回了错误），因此请直接确认你选择的 GPU 位置在欧盟境内，再决定是否依赖它。其文档没有说明哪些区域提供 Spot GPU。',
           '**Vultr：** GPU 区域可用性和 GDPR 条款未核实；Vultr 文档链接到一个单独的区域页面。',
           '**计费与取消：** DigitalOcean 对已关机的 GPU Droplet 持续计费，直到你销毁它们。Vultr 按日历月小时数对 GPU 实例计费。UpCloud 的 Spot 服务器在停止期间仍会对挂载的存储和预留 IP 计费，只有当服务器是被 UpCloud 停止时，才会为未用完的那一小时给予抵扣。',
@@ -1916,8 +1885,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**已从服务商页面读取：** DigitalOcean GPU Droplet 价格、列出的区域和裸金属条款；Vultr 的 GPU 型号列表、A16 起步价和计费规则；UpCloud 的 Spot 规则和 GPU 更新日志条目。',
           '**未核实：** Vultr 和 UpCloud 的页面在 2026-11-22 对 PromptQuorum 的自动抓取返回了错误，因此它们的其他价格、区域和 Vultr 的 GDPR 条款一律略去，而不是靠猜测。',
-          '**PromptQuorum 评估：** 评分卡、模型适配规划和建议是编辑判断，不是基准测试结果。',
-          '**刷新：** 价格每月重新核查；核实日期会出现在每个价格旁边。',
+          '**PromptQuorum 评估：** 模型适配规划和建议是编辑判断，不是基准测试结果。评分卡不给出适配评分；唯一填写了数值的一行是所列 GPU 型号的数量。',
+          '**刷新：** 价格计划每月重新核查；最近一次核查日期标注在价格表上方。',
         ],
       },
       faqSection: {
@@ -1935,7 +1904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '这些服务商比 RunPod 或 Vast.ai 便宜吗？', a: 'PromptQuorum 没有核实这一点。它们是通用型云，面向希望在与其他服务相同的账户中使用 GPU 的团队；买家通常会去市场型平台寻找最低的每小时价格。请在各页面上比较实时价格。' },
           { q: '哪个最适合 70B 模型？', a: '4-bit 的 70B 模型通常需要约 40 GB 或更多显存，因此 48 GB 的 GPU 较紧，80 GB 或更大的 GPU 才有余量。DigitalOcean 列出 HGX H100（80 GB）按需每 GPU 小时 $4.41（核实于 2026-11-22）。' },
           { q: '已停止的 GPU 服务器还会产生费用吗？', a: '在 DigitalOcean 上，已关机的 GPU Droplet 在销毁前仍会计费（依据服务商文档，2026-11-22 核对）。在 UpCloud 上，Spot 服务器停止期间，挂载的存储和预留 IP 仍会计费。请销毁你不再需要的服务器。' },
-          { q: '这些评分是实验室测试吗？', a: '不是。这些评分是 PromptQuorum 依据服务商公开信息作出的评估。PromptQuorum 没有对这些服务商的 GPU 服务器做基准测试。' },
+          { q: '这篇对比是实验室测试吗？', a: '不是。本文依据服务商页面和文档撰写。本文不给出适配评分，建议属于 PromptQuorum 的评估。PromptQuorum 没有对这些服务商的 GPU 服务器做基准测试。' },
         ],
       },
       relatedReading: {
@@ -1956,12 +1925,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr、DigitalOcean 与 UpCloud 的 GPU 工作负载对比（2026）',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr、DigitalOcean 与 UpCloud 的 GPU 工作负载对比（2026）',
+      description:
         '依据各服务商自己页面（核实于 2026-11-22）对 Vultr、DigitalOcean 和 UpCloud 的 GPU 云产品所作的对比。DigitalOcean 按需 GPU Droplet 每张 GPU 每小时 $0.76 至 $4.47；Vultr 和 UpCloud 的价格无法完全核实。PromptQuorum 评估，并非实机实验室测试。',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'zh',
       image: buildOgImageObject(OG_SLUG, 'zh'),
       author: authorPerson(),
@@ -1972,23 +1941,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'GPU 云服务器：Vultr、DigitalOcean、UpCloud',
-        serviceType: '云 GPU 服务器',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
   ko: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -1998,7 +1962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/vultr-digitalocean-upcloud-gpu-cloud-overview-hero-ko.webp',
     affiliateDisclosure: true,
     title: 'Vultr vs DigitalOcean vs UpCloud GPU 워크로드 비교 (2026)',
-    seoTitle: 'Vultr·DigitalOcean·UpCloud GPU (2026)',
+    seoTitle: 'Vultr·DigitalOcean·UpCloud GPU 비교 2026',
     intro:
       'Vultr, DigitalOcean, UpCloud는 일반 가상 머신, Kubernetes, 스토리지와 함께 GPU 서버를 추가한 범용 클라우드 제공업체입니다. 이미 그곳에서 워크로드를 운영하며 같은 계정에서 GPU를 쓰고 싶은 팀에 적합하고, 가장 저렴한 시간당 요금을 찾는 사용자에게는 맞지 않습니다(그 경우에는 [최고의 클라우드 GPU 제공업체](/ko/power-local-llm/best-cloud-gpu-providers) 개요를 참고하십시오). 이 페이지는 2026-11-22에 확인한 각 제공업체의 자체 가격 페이지와 문서만 사용해 세 곳을 비교합니다. DigitalOcean은 전체 시간당 가격표를 공개합니다. Vultr와 UpCloud의 페이지는 2026-11-22 PromptQuorum의 자동 가져오기에서 오류를 반환했으므로, 두 곳의 가격 대부분은 추측하지 않고 "미확인"으로 표시했습니다.',
     metaDescription:
@@ -2018,7 +1982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'llm 추론용 gpu 클라우드',
     ],
     leadAnswerBlock:
-      '**세 곳 중 PromptQuorum이 2026-11-22에 GPU 시간당 가격표 전체를 읽은 곳은 DigitalOcean뿐입니다. GPU Droplet은 GPU당 시간당 $0.76(RTX 4000 Ada, 20 GB)부터 $4.47(HGX H200, 141 GB)까지이며, 초 단위로 과금하고 최소 5분입니다.** Vultr는 A16, A40, A100, L40S, HGX B200, GH200, AMD Instinct GPU를 제공하며 문서에 나온 시작 가격은 시간당 $0.471(A16 구성, 구성별 GPU 수는 미확인)입니다. UpCloud는 L40S와 B200 스팟 플랜을 문서화하고 변경 로그에서 H100, B200, L4, RTX Pro 6000, B300 GPU를 발표했지만 가격은 PromptQuorum이 읽지 않았습니다. PromptQuorum의 평가: 다른 워크로드가 이미 운영 중인 제공업체를 고르고, 가격만 중요하다면 [전용 GPU 마켓플레이스](/ko/power-local-llm/best-cloud-gpu-providers)를 이용하십시오.',
+      '**세 곳 중 PromptQuorum이 2026-11-22에 GPU 시간당 가격표 전체를 읽은 곳은 DigitalOcean뿐입니다. 온디맨드 GPU Droplet은 GPU당 시간당 $0.76(RTX 4000 Ada, 20 GB)부터 $4.47(HGX H200, 141 GB)까지이며, 초 단위로 과금하고 최소 5분입니다.** Vultr는 A16, A40, A100, L40S, HGX B200, GH200, AMD Instinct GPU를 목록에 올리고 있으며 문서에 나온 시작 가격은 시간당 $0.471(A16 구성, 구성별 GPU 수는 미확인)입니다. UpCloud는 L40S와 B200 스팟 플랜을 문서화하고 변경 로그에서 H100, B200, L4, RTX Pro 6000, B300 GPU를 발표했지만 가격은 PromptQuorum이 읽지 않았습니다. PromptQuorum의 평가: 다른 워크로드가 이미 운영 중인 제공업체를 고르고, 가격만 중요하다면 [전용 GPU 마켓플레이스](/ko/power-local-llm/best-cloud-gpu-providers)를 이용하십시오.',
     quickAnswerTop: {
       ko: {
         question: 'GPU 워크로드에는 Vultr, DigitalOcean, UpCloud 중 어느 쪽이 더 좋습니까?',
@@ -2026,7 +1990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '나머지 스택이 어디에 있는지에 따라 다릅니다. DigitalOcean은 PromptQuorum이 읽을 수 있었던 유일한 전체 GPU 가격표를 공개하며(2026-11-22 확인: 온디맨드 GPU당 시간당 $0.76–$4.47) 1-GPU와 8-GPU Droplet을 제공합니다. Vultr는 AMD Instinct와 NVIDIA GH200을 포함한 긴 GPU 목록을 문서화하고 있지만 가격 페이지를 가져올 수 없어 문서에서 시작 가격 하나만 읽었습니다. UpCloud는 핀란드 기반이며 온디맨드와 스팟 플랜의 GPU 서버를 제공하지만 가격은 마찬가지로 확인하지 못했습니다. PromptQuorum은 세 곳의 가격을 GPU 마켓플레이스와 비교하지 않았습니다. 세 곳은 컴퓨팅, Kubernetes, 스토리지를 하나의 계정에서 쓰는 것을 중시하는 팀을 위한 선택입니다.',
         bullets: [
           'DigitalOcean: 확인한 온디맨드 가격 GPU당 시간당 $0.76(RTX 4000 Ada)–$4.47(HGX H200), 초 단위 과금',
-          'Vultr: A16, A40, A100, L40S, HGX B200, GH200, AMD MI300X/MI325X/MI355X 제공, 문서에 나온 시작 가격(Vultr 문서) 시간당 $0.471',
+          'Vultr: A16, A40, A100, L40S, HGX B200, GH200, AMD MI300X/MI325X/MI355X 게재, 문서에 나온 시작 가격(Vultr 문서) 시간당 $0.471',
           'UpCloud: L40S와 B200 스팟 플랜 문서화, 변경 로그에서 H100, B200, L4, RTX Pro 6000, B300 발표, 가격 미확인',
           '스팟 또는 인터럽터블 GPU는 DigitalOcean과 UpCloud에 있으며 프로덕션 서빙에는 사용하지 마십시오',
           '가격은 바뀝니다. 주문 전에 각 제공업체 페이지에서 확인하십시오',
@@ -2063,8 +2027,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**이 세 곳 중 하나를 선택해야 하는 경우:**',
           '앱, 데이터베이스, Kubernetes 클러스터가 이미 Vultr, DigitalOcean, UpCloud에서 운영 중이며 같은 계정에서 GPU를 쓰고 싶습니다',
-          '관리할 하드웨어 없이 시간 단위 과금을 원하고, 공개된 시간당 가격표가 필요합니다(DigitalOcean, Vultr와 UpCloud의 가격표는 여기서 읽지 않았습니다)',
-          'EU 기반 인프라가 필요하고 EU 데이터 처리 방식을 설명하는 제공업체를 원합니다(리전 섹션 참조)',
+          '관리할 하드웨어 없이 시간 단위 과금을 원하고, 공개된 시간당 가격표가 필요합니다(DigitalOcean이 해당됩니다. Vultr와 UpCloud의 가격표는 여기서 읽지 않았습니다)',
+          'EU 내 위치가 필요하며, DigitalOcean이 표시한 AMS3(암스테르담) 리전과 데이터 처리 계약이 요건에 맞습니다(Vultr의 EU GPU 리전과 GDPR 약관은 확인하지 못했고 UpCloud의 개인정보 페이지는 읽을 수 없었습니다. 리전 섹션 참조)',
           '**건너뛰어야 하는 경우:**',
           '가장 저렴한 GPU 시간당 가격만 원합니다. 먼저 [최고의 클라우드 GPU 제공업체](/ko/power-local-llm/best-cloud-gpu-providers) 개요에서 마켓플레이스를 비교하십시오',
           '오늘 기준으로 확인된 Vultr나 UpCloud GPU 가격이 필요합니다. 두 곳의 가격 페이지가 2026-11-22 PromptQuorum의 자동 가져오기에서 오류를 반환했으므로 실시간 가격을 직접 확인하십시오',
@@ -2076,7 +2040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '평가 점수표',
         content:
-          '**PromptQuorum 평가이며, 각 제공업체의 자체 가격 페이지와 문서를 근거로 합니다. 어떤 GPU 서버도 직접 실험실에서 테스트한 결과가 아닙니다.** 점수는 범용 클라우드에서의 LLM 추론과 파인튜닝 적합도를 평가합니다. 가격 명확성, 설정 용이성, 안정성, 지원 / 문서는 PromptQuorum에 평가할 데이터가 없으므로 평가하지 않았습니다.',
+          '**PromptQuorum 평가이며, 각 제공업체의 자체 가격 페이지와 문서를 근거로 합니다. 어떤 GPU 서버도 직접 실험실에서 테스트한 결과가 아닙니다.** 적합도 점수는 매기지 않습니다. 가격 명확성, 설정 용이성, 안정성, 지원 / 문서는 PromptQuorum에 평가할 데이터가 없으므로 평가하지 않았으며, 표에는 게재된 GPU 모델 수만 추가로 집계했습니다.',
         columns: ['항목', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { '항목': '가격 명확성', 'Vultr': '미평가', 'DigitalOcean': '미평가', 'UpCloud': '미평가' },
@@ -2085,7 +2049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '게재된 GPU 모델 수', 'Vultr': '9개 모델', 'DigitalOcean': '10개 모델', 'UpCloud': '6개 모델' },
           { '항목': '지원 / 문서', 'Vultr': '미평가', 'DigitalOcean': '미평가', 'UpCloud': '미평가' },
         ],
-        note: 'PromptQuorum 평가입니다. 이 점수는 공개된 제공업체 정보에 근거한 편집 판단이며, PromptQuorum이 이 제공업체들의 GPU 서버를 벤치마크하거나 운영한 것은 아닙니다. 게재된 GPU 모델 수 = 2026-11-22에 읽은 각 제공업체의 문서 또는 가격 페이지에 명시된 서로 다른 GPU 모델의 수이며, 개수일 뿐 품질 평가가 아닙니다.',
+        note: 'PromptQuorum은 이 제공업체들의 GPU 서버를 벤치마크하거나 운영하지 않았습니다. 게재된 GPU 모델 수 = 2026-11-22에 읽은 각 제공업체의 문서 또는 가격 페이지에 명시된 서로 다른 GPU 모델의 수이며, 개수일 뿐 품질 평가가 아닙니다. Vultr와 UpCloud는 일부 페이지를 가져올 수 없었으므로 두 곳의 개수는 불완전할 수 있습니다.',
       },
       tldr: {
         id: 'tldr',
@@ -2104,7 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          '**공개된 GPU 시간당 가격표와 Droplet 기반 워크플로를 원하면 DigitalOcean, Vultr가 문서화한 GPU(예: NVIDIA GH200, A16, AMD Instinct)가 워크로드에 맞으면 Vultr, 핀란드 기반 제공업체가 중요하면 UpCloud를 선택하십시오.** 세 곳 모두 다른 인프라가 이미 그곳에 있을 때 합리적인 선택입니다.\n\n가능한 한 낮은 시간당 가격이 목표라면 마켓플레이스가 보통 가장 먼저 살펴볼 곳입니다. 대신 [최고의 클라우드 GPU 제공업체](/ko/power-local-llm/best-cloud-gpu-providers)의 마켓플레이스와 [RunPod vs Vast.ai 가격 비교](/ko/prompt-bites/runpod-vs-vastai-pricing)를 비교하십시오.\n\nPromptQuorum은 DigitalOcean의 전체 가격표만 읽었고 Vultr와 UpCloud의 가격은 읽지 않았으므로 가격 비교는 하지 않습니다. DigitalOcean이 더 저렴하다는 뜻은 아닙니다.',
+          '**PromptQuorum이 전체를 읽은 유일한 GPU 시간당 가격표(Vultr와 UpCloud의 가격표는 여기서 읽지 않았습니다)와 Droplet 기반 워크플로를 원하면 DigitalOcean, Vultr가 문서화한 GPU(예: NVIDIA GH200, A16, AMD Instinct)가 워크로드에 맞으면 Vultr, 핀란드 기반 제공업체가 중요하면 UpCloud를 선택하십시오.** 세 곳 모두 다른 인프라가 이미 그곳에 있을 때 합리적인 선택입니다.\n\n가능한 한 낮은 시간당 가격이 목표라면 마켓플레이스가 보통 가장 먼저 살펴볼 곳입니다. 대신 [최고의 클라우드 GPU 제공업체](/ko/power-local-llm/best-cloud-gpu-providers)의 마켓플레이스와 [RunPod vs Vast.ai 가격 비교](/ko/prompt-bites/runpod-vs-vastai-pricing)를 비교하십시오.\n\nPromptQuorum은 DigitalOcean의 전체 가격표만 읽었고 Vultr와 UpCloud의 가격은 읽지 않았으므로 가격 비교는 하지 않습니다. DigitalOcean이 더 저렴하다는 뜻은 아닙니다.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -2148,7 +2112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: '적합한 모델',
         content:
-          '**먼저 GPU 메모리(VRAM)를 모델 크기에 맞추고, 제공업체는 그다음에 고르십시오.** 아래 PromptQuorum의 계획 기준은 저장소의 VRAM 가이드([로컬 LLM에 필요한 VRAM](/ko/local-llms/how-much-vram-local-llm), [DeepSeek-R1 distill VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet))를 따르며, 벤치마크 결과가 아닌 추정치입니다.',
+          '**먼저 GPU 메모리(VRAM)를 모델 크기에 맞추고, 제공업체는 그다음에 고르십시오.** 아래 PromptQuorum의 계획 기준은 당사의 VRAM 가이드([로컬 LLM에 필요한 VRAM](/ko/local-llms/how-much-vram-local-llm), [DeepSeek-R1 distill VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet))를 따르며, 벤치마크 결과가 아닌 추정치입니다.',
         columns: ['GPU 메모리', '표시된 예시', '일반적인 적합 범위'],
         rows: [
           { 'GPU 메모리': '16 GB', '표시된 예시': 'Vultr A16', '일반적인 적합 범위': '4비트 7B-8B 모델' },
@@ -2181,9 +2145,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**실제 데이터를 옮기기 전에 리전, 데이터 처리 약관, 과금 규정을 확인하십시오.** 아래 사실은 2026-11-22에 읽은 제공업체 문서에서 가져왔으며 법률 자문이 아닙니다.',
         items: [
-          '**하드웨어 출처:** 각 사의 설명에 따르면 세 곳 모두 자체 클라우드 인프라를 운영하며, 제3자 호스트의 피어 투 피어 마켓플레이스는 아닙니다.',
           '**DigitalOcean 리전:** GPU Droplet 페이지에는 NYC2, TOR1, ATL1, RIC1, AMS3(암스테르담)이 표시되어 있으며 데이터 센터가 더 추가될 예정이라고 나와 있습니다. 베어메탈 GPU 서버는 NYC1과 AMS3에 표시되어 있습니다. 제공 여부는 GPU별로 다를 수 있으므로 제어판에서 확인하십시오.',
-          '**DigitalOcean 데이터 처리:** [데이터 처리 계약](https://www.digitalocean.com/legal/data-processing-agreement)은 GDPR을 다루며, EEA 밖으로의 전송에는 EU-U.S. Data Privacy Framework 인증에 의존하고 그렇지 않은 경우 표준 계약 조항(Standard Contractual Clauses)에 의존합니다. 이 프레임워크의 법적 지위는 바뀔 수 있습니다. GPU Droplet 페이지에는 GDPR에 대한 언급이 없으며, DigitalOcean 제품을 "HIPAA-eligible and SOC 2 compliant"(HIPAA 적용 대상이며 SOC 2 준수)라고 설명할 뿐 보고서나 그 범위는 밝히지 않습니다. DigitalOcean의 신뢰 관련 문서를 확인하고, 의존하기 전에 HIPAA 조건을 DigitalOcean에 확인하십시오.',
+          '**DigitalOcean 데이터 처리:** [데이터 처리 계약](https://www.digitalocean.com/legal/data-processing-agreement)은 GDPR을 언급하며, EEA 밖으로의 전송에는 EU-U.S. Data Privacy Framework 인증에 의존하고 그렇지 않은 경우 표준 계약 조항(Standard Contractual Clauses)에 의존합니다. 이 프레임워크의 법적 지위는 바뀔 수 있습니다. GPU Droplet 페이지에는 GDPR에 대한 언급이 없으며, DigitalOcean 제품을 "HIPAA-eligible and SOC 2 compliant"(HIPAA 적용 대상이며 SOC 2 준수)라고 설명할 뿐 보고서나 그 범위는 밝히지 않습니다. DigitalOcean의 신뢰 관련 문서를 확인하고, 의존하기 전에 HIPAA 조건을 DigitalOcean에 확인하십시오.',
           '**UpCloud:** PromptQuorum은 2026-11-22에 UpCloud의 보안 및 개인정보 페이지를 읽을 수 없었으므로(가져오기가 오류를 반환했습니다), 선택한 GPU 위치가 EU에 있는지 직접 확인한 뒤에 사용하십시오. 문서에는 어느 리전에서 스팟 GPU를 제공하는지 나와 있지 않습니다.',
           '**Vultr:** GPU 리전 제공 여부와 GDPR 약관은 확인하지 못했습니다. Vultr 문서는 별도의 리전 페이지로 연결됩니다.',
           '**과금과 해지:** DigitalOcean은 전원이 꺼진 GPU Droplet을 삭제할 때까지 과금합니다. Vultr는 GPU 인스턴스를 달력 월 사용 시간으로 과금합니다. UpCloud 스팟 서버는 중지된 동안에도 연결된 스토리지와 예약된 IP에 계속 과금하며, UpCloud가 서버를 중지한 경우에만 사용하지 않은 시간을 크레딧으로 제공합니다.',
@@ -2245,8 +2208,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**제공업체 페이지에서 읽은 내용:** DigitalOcean GPU Droplet 가격, 표시된 리전, 베어메탈 조건. Vultr GPU 모델 목록, A16 시작 가격, 과금 규정. UpCloud 스팟 규정과 GPU 변경 로그 항목.',
           '**미확인:** Vultr와 UpCloud의 페이지가 2026-11-22 PromptQuorum의 자동 가져오기에서 오류를 반환했으므로, 두 곳의 다른 가격, 리전, Vultr GDPR 약관은 추측하지 않고 제외했습니다.',
-          '**PromptQuorum 평가:** 점수표, 모델 적합성 계획, 권장 사항은 벤치마크 결과가 아닌 편집 판단입니다.',
-          '**갱신:** 가격은 매월 다시 확인하며, 모든 가격 옆에 확인 날짜가 표시됩니다.',
+          '**PromptQuorum 평가:** 모델 적합성 계획과 권장 사항은 벤치마크 결과가 아닌 편집 판단입니다. 점수표에는 적합도 점수가 없으며, 값이 채워진 행은 게재된 GPU 모델 수뿐입니다.',
+          '**갱신:** 가격은 매월 다시 확인할 예정이며, 마지막 확인 날짜는 가격표 위에 표시합니다.',
         ],
       },
       faqSection: {
@@ -2260,11 +2223,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'DigitalOcean에 EU GPU 리전이 있습니까?', a: 'GPU Droplet 페이지에는 데이터 센터 중 하나로 AMS3(암스테르담)이 표시되어 있으며, 베어메탈 GPU 서버는 NYC1과 AMS3에 표시되어 있습니다. EU 배포를 계획하기 전에 선택한 GPU의 제공 여부를 제어판에서 확인하십시오.' },
           { q: 'DigitalOcean의 데이터 처리 계약은 GDPR에 대해 무엇이라고 말합니까?', a: 'DigitalOcean은 GDPR을 언급하는 데이터 처리 계약을 공개하며, EEA 밖으로의 전송에는 EU-U.S. Data Privacy Framework 또는 표준 계약 조항에 의존합니다. 이 프레임워크의 법적 지위는 바뀔 수 있습니다. GPU Droplet 페이지 자체에는 GDPR에 대한 언급이 없습니다. 법률 자문이 아니므로 개인정보 보호 책임자에게 문의하십시오.' },
           { q: '이 제공업체들에서 GPU와 함께 Kubernetes를 실행할 수 있습니까?', a: 'DigitalOcean은 GPU Droplet이 자사 Kubernetes 서비스와 통합된다고 안내하고, UpCloud는 Managed Kubernetes용 GPU Nodes 페이지를 문서화합니다. Vultr의 Kubernetes GPU 지원은 여기서 확인하지 못했습니다.' },
-          { q: 'DigitalOcean은 베어메탈 GPU 서버를 제공합니까?', a: '네. NVIDIA H100, H200 또는 AMD MI300X를 탑재한 8-GPU 서버를 NYC1과 AMS3에 제공합니다. DigitalOcean 영업팀을 통한 계약으로 프로비저닝되고, 가격은 표시되지 않으며, Paperspace 계정을 통해 과금됩니다(제공업체 문서 기준, 2026-11-22 확인).' },
+          { q: 'DigitalOcean은 베어메탈 GPU 서버를 제공합니까?', a: '네. NVIDIA H100, H200 또는 AMD MI300X를 탑재한 8-GPU 서버가 NYC1과 AMS3에 표시되어 있습니다. DigitalOcean 영업팀을 통한 계약으로 프로비저닝되고, 가격은 표시되지 않으며, Paperspace 계정을 통해 과금됩니다(제공업체 문서 기준, 2026-11-22 확인).' },
           { q: '이 제공업체들은 RunPod나 Vast.ai보다 저렴합니까?', a: 'PromptQuorum은 이를 확인하지 않았습니다. 이들은 다른 서비스와 같은 계정에서 GPU를 쓰려는 팀을 위한 범용 클라우드이며, 시간당 최저 요금은 보통 마켓플레이스에서 찾습니다. 각 페이지에서 실시간 가격을 비교하십시오.' },
           { q: '70B 모델에는 어느 쪽이 가장 좋습니까?', a: '4비트 70B 모델은 일반적으로 VRAM이 약 40 GB 이상 필요하므로 48 GB GPU는 빠듯하고 80 GB 이상 GPU가 여유를 줍니다. DigitalOcean은 HGX H100(80 GB)을 온디맨드 GPU당 시간당 $4.41로 표시합니다(2026-11-22 확인).' },
           { q: '중지한 GPU 서버에도 비용이 듭니까?', a: 'DigitalOcean에서는 전원이 꺼진 GPU Droplet도 삭제할 때까지 과금됩니다(제공업체 문서 기준, 2026-11-22 확인). UpCloud에서는 스팟 서버가 중지된 동안에도 연결된 스토리지와 예약된 IP가 계속 과금됩니다. 더 이상 필요 없는 서버는 삭제하십시오.' },
-          { q: '이 점수는 실험실 테스트입니까?', a: '아닙니다. 점수는 공개된 제공업체 정보에 근거한 PromptQuorum의 평가입니다. PromptQuorum은 이 제공업체들의 GPU 서버를 벤치마크하지 않았습니다.' },
+          { q: '이 비교는 실험실 테스트입니까?', a: '아닙니다. 제공업체의 페이지와 문서를 근거로 합니다. 적합도 점수는 매기지 않으며, 권장 사항은 PromptQuorum의 평가입니다. PromptQuorum은 이 제공업체들의 GPU 서버를 벤치마크하지 않았습니다.' },
         ],
       },
       relatedReading: {
@@ -2285,12 +2248,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr vs DigitalOcean vs UpCloud GPU 워크로드 비교 (2026)',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr vs DigitalOcean vs UpCloud GPU 워크로드 비교 (2026)',
+      description:
         '2026-11-22에 확인한 각 제공업체의 자체 페이지를 근거로 Vultr, DigitalOcean, UpCloud의 GPU 클라우드 제품을 비교했습니다. DigitalOcean 온디맨드 GPU Droplet은 GPU당 시간당 $0.76에서 $4.47까지이며, Vultr와 UpCloud의 가격은 완전히 확인하지 못했습니다. 직접 실험실에서 테스트한 결과가 아닌 PromptQuorum의 평가입니다.',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'ko',
       image: buildOgImageObject(OG_SLUG, 'ko'),
       author: authorPerson(),
@@ -2301,23 +2264,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'GPU 클라우드 서버: Vultr, DigitalOcean, UpCloud',
-        serviceType: '클라우드 GPU 서버',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
   pt: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -2347,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu na nuvem para inferência de llm',
     ],
     leadAnswerBlock:
-      '**A DigitalOcean é a única dos três cuja tabela completa de preços de GPU por hora o PromptQuorum leu em 2026-11-22: os GPU Droplets custam de US$ 0,76 por GPU por hora (RTX 4000 Ada, 20 GB) a US$ 4,47 (HGX H200, 141 GB), com cobrança por segundo e mínimo de 5 minutos.** A Vultr lista GPUs A16, A40, A100, L40S, HGX B200, GH200 e AMD Instinct, com preço inicial documentado de US$ 0,471 por hora (configuração A16; GPUs por configuração não verificadas). A UpCloud documenta planos spot com L40S e B200 e anunciou no changelog GPUs H100, B200, L4, RTX Pro 6000 e B300; o PromptQuorum não leu os preços dela. Avaliação do PromptQuorum: escolha o provedor em que suas outras cargas de trabalho já rodam e use um [marketplace dedicado de GPU](/pt/power-local-llm/best-cloud-gpu-providers) quando só o preço bruto importar.',
+      '**A DigitalOcean é a única dos três cuja tabela completa de preços de GPU por hora o PromptQuorum leu em 2026-11-22: os GPU Droplets sob demanda custam de US$ 0,76 por GPU por hora (RTX 4000 Ada, 20 GB) a US$ 4,47 (HGX H200, 141 GB), com cobrança por segundo e mínimo de 5 minutos.** A Vultr lista GPUs A16, A40, A100, L40S, HGX B200, GH200 e AMD Instinct, com preço inicial documentado de US$ 0,471 por hora (configuração A16; GPUs por configuração não verificadas). A UpCloud documenta planos spot com L40S e B200 e anunciou no changelog GPUs H100, B200, L4, RTX Pro 6000 e B300; o PromptQuorum não leu os preços dela. Avaliação do PromptQuorum: escolha o provedor em que suas outras cargas de trabalho já rodam e use um [marketplace dedicado de GPU](/pt/power-local-llm/best-cloud-gpu-providers) quando só o preço bruto importar.',
     quickAnswerTop: {
       pt: {
         question: 'Qual é melhor para cargas de GPU: Vultr, DigitalOcean ou UpCloud?',
@@ -2393,7 +2351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Use um destes três se:**',
           'Seu aplicativo, banco de dados ou cluster Kubernetes já roda na Vultr, na DigitalOcean ou na UpCloud e você quer GPUs na mesma conta',
           'Você quer cobrança por hora sem hardware para gerenciar e uma tabela publicada de preços por hora (DigitalOcean; as tabelas da Vultr e da UpCloud não foram lidas aqui)',
-          'Você precisa de infraestrutura na UE e quer um provedor que descreva o tratamento de dados na UE (veja a seção de regiões)',
+          'Você precisa de uma localização na UE e a região AMS3 (Amsterdã) e o acordo de processamento de dados da DigitalOcean atendem ao que você precisa (as regiões de GPU na UE e os termos de GDPR da Vultr não foram verificados, e as páginas de privacidade da UpCloud não puderam ser lidas; veja a seção de regiões)',
           '**Evite-os se:**',
           'Você só quer o menor preço de GPU por hora: compare antes os marketplaces no panorama dos [melhores provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers)',
           'Você precisa hoje de um preço verificado das GPUs da Vultr ou da UpCloud: as páginas de preços delas retornaram erro à consulta automatizada do PromptQuorum em 2026-11-22, então confirme os preços atuais manualmente',
@@ -2405,7 +2363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Scorecard',
         content:
-          '**Avaliação do PromptQuorum, baseada nas páginas de preços e na documentação de cada provedor, e não em um teste prático em laboratório de qualquer servidor com GPU.** As notas medem a adequação para inferência e fine-tuning de LLMs em uma nuvem de uso geral. Clareza de preço, facilidade de configuração, confiabilidade e suporte / docs não foram avaliados, porque o PromptQuorum não tem dados para pontuá-los.',
+          '**Avaliação do PromptQuorum, baseada nas páginas de preços e na documentação de cada provedor, e não em um teste prático em laboratório de qualquer servidor com GPU.** Não são dadas notas de adequação. Clareza de preço, facilidade de configuração, confiabilidade e suporte / docs não foram avaliados, porque o PromptQuorum não tem dados para pontuá-los; a tabela acrescenta apenas uma contagem dos modelos de GPU listados.',
         columns: ['Categoria', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { Categoria: 'Clareza de preço', Vultr: 'Não avaliado', DigitalOcean: 'Não avaliado', UpCloud: 'Não avaliado' },
@@ -2414,7 +2372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Categoria: 'Modelos de GPU listados', Vultr: '9 modelos', DigitalOcean: '10 modelos', UpCloud: '6 modelos' },
           { Categoria: 'Suporte / docs', Vultr: 'Não avaliado', DigitalOcean: 'Não avaliado', UpCloud: 'Não avaliado' },
         ],
-        note: 'Avaliação do PromptQuorum. Estas notas são julgamentos editoriais a partir de informações publicadas pelos provedores; o PromptQuorum não fez benchmark nem operou servidores com GPU nesses provedores. Modelos de GPU listados = número de modelos de GPU distintos citados na documentação ou na página de preços de cada provedor lida em 2026-11-22; é uma contagem, não uma nota de qualidade.',
+        note: 'O PromptQuorum não fez benchmark nem operou servidores com GPU nesses provedores. Modelos de GPU listados = número de modelos de GPU distintos citados na documentação ou na página de preços de cada provedor lida em 2026-11-22; é uma contagem, não uma nota de qualidade. As contagens da Vultr e da UpCloud podem estar incompletas porque algumas páginas delas não puderam ser consultadas.',
       },
       tldr: {
         id: 'tldr',
@@ -2433,7 +2391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          '**Escolha a DigitalOcean se quiser uma tabela publicada de preços de GPU por hora e um fluxo baseado em Droplets; escolha a Vultr se as GPUs que ela documenta (por exemplo NVIDIA GH200, A16 ou AMD Instinct) atenderem à sua carga de trabalho; escolha a UpCloud se um provedor sediado na Finlândia for importante para você.** Os três fazem sentido quando sua outra infraestrutura já está lá.\n\nSe o objetivo é o menor preço possível por hora, os marketplaces costumam ser a primeira parada. Compare os marketplaces nos [melhores provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) e a comparação de [preços RunPod vs Vast.ai](/pt/prompt-bites/runpod-vs-vastai-pricing).\n\nO PromptQuorum leu apenas a tabela completa de preços da DigitalOcean; os preços da Vultr e da UpCloud não foram lidos pelo PromptQuorum, então nenhuma comparação de preços é feita. Isso não significa que a DigitalOcean seja mais barata.',
+          '**Escolha a DigitalOcean se quiser a única tabela de preços de GPU por hora que o PromptQuorum leu por completo (as da Vultr e da UpCloud não foram lidas aqui) e um fluxo baseado em Droplets; escolha a Vultr se as GPUs que ela documenta (por exemplo NVIDIA GH200, A16 ou AMD Instinct) atenderem à sua carga de trabalho; escolha a UpCloud se um provedor sediado na Finlândia for importante para você.** Os três fazem sentido quando sua outra infraestrutura já está lá.\n\nSe o objetivo é o menor preço possível por hora, os marketplaces costumam ser a primeira parada. Compare os marketplaces nos [melhores provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) e a comparação de [preços RunPod vs Vast.ai](/pt/prompt-bites/runpod-vs-vastai-pricing).\n\nO PromptQuorum leu apenas a tabela completa de preços da DigitalOcean; os preços da Vultr e da UpCloud não foram lidos pelo PromptQuorum, então nenhuma comparação de preços é feita. Isso não significa que a DigitalOcean seja mais barata.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -2477,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'inference-fit',
         title: 'Quais Modelos Cabem',
         content:
-          '**Combine primeiro a memória da GPU (VRAM) com o tamanho do modelo; o provedor vem depois.** As regras de planejamento do PromptQuorum abaixo seguem os guias de VRAM do repositório ([quanta VRAM os LLMs locais precisam](/pt/local-llms/how-much-vram-local-llm), [tabela de VRAM dos modelos DeepSeek-R1 distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet)); são estimativas, e não resultados de benchmark.',
+          '**Combine primeiro a memória da GPU (VRAM) com o tamanho do modelo; o provedor vem depois.** As regras de planejamento do PromptQuorum abaixo seguem os nossos guias de VRAM ([quanta VRAM os LLMs locais precisam](/pt/local-llms/how-much-vram-local-llm), [tabela de VRAM dos modelos DeepSeek-R1 distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet)); são estimativas, e não resultados de benchmark.',
         columns: ['Memória da GPU', 'Exemplos listados', 'Adequação típica'],
         rows: [
           { 'Memória da GPU': '16 GB', 'Exemplos listados': 'Vultr A16', 'Adequação típica': 'Modelos de 7B-8B em 4 bits' },
@@ -2510,9 +2468,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Verifique região, termos de tratamento de dados e regras de cobrança antes de mover dados reais.** Os fatos abaixo vêm da documentação dos provedores lida em 2026-11-22; isto não é aconselhamento jurídico.',
         items: [
-          '**Origem do hardware:** segundo as próprias descrições deles, os três operam a própria infraestrutura de nuvem; nenhum é um marketplace peer-to-peer de hosts de terceiros.',
           '**Regiões da DigitalOcean:** a página de GPU Droplets lista NYC2, TOR1, ATL1, RIC1 e AMS3 (Amsterdã) e diz que mais data centers estão a caminho. Os servidores bare metal com GPU estão listados em NYC1 e AMS3. A disponibilidade pode variar por GPU, então confirme no painel de controle.',
-          '**Tratamento de dados da DigitalOcean:** seu [acordo de processamento de dados](https://www.digitalocean.com/legal/data-processing-agreement) cobre o GDPR; para transferências para fora do EEE, ele se apoia na certificação do EU-U.S. Data Privacy Framework e, em outros casos, nas Cláusulas Contratuais Padrão; o status jurídico desse framework pode mudar. A página de GPU Droplets não faz declaração sobre o GDPR; ela descreve os produtos da DigitalOcean como "HIPAA-eligible and SOC 2 compliant" (elegíveis para HIPAA e compatíveis com SOC 2), sem citar um relatório nem seu escopo. Consulte a documentação de confiança da DigitalOcean e confirme com a DigitalOcean os termos de HIPAA antes de contar com isso.',
+          '**Tratamento de dados da DigitalOcean:** seu [acordo de processamento de dados](https://www.digitalocean.com/legal/data-processing-agreement) faz referência ao GDPR; para transferências para fora do EEE, ele se apoia na certificação do EU-U.S. Data Privacy Framework e, em outros casos, nas Cláusulas Contratuais Padrão; o status jurídico desse framework pode mudar. A página de GPU Droplets não faz declaração sobre o GDPR; ela descreve os produtos da DigitalOcean como "HIPAA-eligible and SOC 2 compliant" (elegíveis para HIPAA e compatíveis com SOC 2), sem citar um relatório nem seu escopo. Consulte a documentação de confiança da DigitalOcean e confirme com a DigitalOcean os termos de HIPAA antes de contar com isso.',
           '**UpCloud:** o PromptQuorum não conseguiu ler as páginas de segurança e privacidade da UpCloud em 2026-11-22 (a consulta retornou erro); confirme diretamente que o local de GPU escolhido fica na UE antes de depender dele. A documentação não informa quais regiões oferecem GPUs spot.',
           '**Vultr:** a disponibilidade de GPU por região e os termos de GDPR não foram verificados; a documentação da Vultr aponta para uma página separada de regiões.',
           '**Cobrança e cancelamento:** a DigitalOcean cobra GPU Droplets desligados até você destruí-los. A Vultr cobra instâncias de GPU pelas horas do mês corrente. Os servidores spot da UpCloud continuam cobrando armazenamento anexado e IPs reservados enquanto parados, e dão crédito pela hora não usada só se a UpCloud parar o servidor.',
@@ -2574,8 +2531,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lido nas páginas dos provedores:** preços de GPU Droplets da DigitalOcean, regiões listadas e termos de bare metal; lista de modelos de GPU da Vultr, preço inicial da A16 e regra de cobrança; regras de spot da UpCloud e entradas do changelog de GPUs.',
           '**Não verificado:** as páginas da Vultr e da UpCloud retornaram erro à consulta automatizada do PromptQuorum em 2026-11-22, então os demais preços, regiões e termos de GDPR da Vultr foram omitidos em vez de estimados.',
-          '**Avaliação do PromptQuorum:** o scorecard, o planejamento de adequação de modelos e as recomendações são julgamento editorial, e não resultados de benchmark.',
-          '**Atualização:** os preços são reconferidos todo mês; a data de verificação aparece ao lado de cada preço.',
+          '**Avaliação do PromptQuorum:** o planejamento de adequação de modelos e as recomendações são julgamento editorial, e não resultados de benchmark. O scorecard não dá notas de adequação; a única linha preenchida conta os modelos de GPU listados.',
+          '**Atualização:** os preços devem ser reconferidos todo mês; a data da última verificação aparece acima da tabela de preços.',
         ],
       },
       faqSection: {
@@ -2593,7 +2550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Esses provedores são mais baratos que a RunPod ou a Vast.ai?', a: 'O PromptQuorum não verificou isso. São nuvens de uso geral voltadas a equipes que querem GPUs na mesma conta de outros serviços; os marketplaces costumam ser onde os compradores procuram a menor tarifa por hora. Compare os preços atuais em cada página.' },
           { q: 'Qual é a melhor para um modelo de 70B?', a: 'Um modelo de 70B em 4 bits geralmente precisa de cerca de 40 GB ou mais de VRAM, então uma GPU de 48 GB é justa e uma GPU de 80 GB ou maior dá folga. A DigitalOcean lista a HGX H100 (80 GB) a US$ 4,41 por GPU-hora sob demanda (conferido em 2026-11-22).' },
           { q: 'Um servidor com GPU parado ainda custa dinheiro?', a: 'Na DigitalOcean, GPU Droplets desligados continuam sendo cobrados até serem destruídos (conforme a documentação do provedor, verificado em 2026-11-22). Na UpCloud, o armazenamento anexado e os IPs reservados continuam cobrando enquanto um servidor spot está parado. Destrua os servidores de que você não precisa mais.' },
-          { q: 'As notas são um teste de laboratório?', a: 'Não. As notas são avaliações do PromptQuorum a partir de informações publicadas pelos provedores. O PromptQuorum não fez benchmark de servidores com GPU nesses provedores.' },
+          { q: 'Esta comparação é um teste de laboratório?', a: 'Não. Ela se baseia nas páginas e na documentação dos provedores. Não são dadas notas de adequação, e as recomendações são uma avaliação do PromptQuorum. O PromptQuorum não fez benchmark de servidores com GPU nesses provedores.' },
         ],
       },
       relatedReading: {
@@ -2614,12 +2571,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr vs DigitalOcean vs UpCloud para Cargas de GPU (2026)',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr vs DigitalOcean vs UpCloud para Cargas de GPU (2026)',
+      description:
         'Uma comparação das ofertas de GPU na nuvem da Vultr, da DigitalOcean e da UpCloud, com base nas páginas de cada provedor, conferidas em 2026-11-22. Os GPU Droplets sob demanda da DigitalOcean variam de US$ 0,76 a US$ 4,47 por GPU por hora; os preços da Vultr e da UpCloud não puderam ser totalmente verificados. Avaliação do PromptQuorum, e não um teste prático em laboratório.',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'pt-BR',
       image: buildOgImageObject(OG_SLUG, 'pt'),
       author: authorPerson(),
@@ -2630,23 +2587,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'Servidores de GPU na nuvem: Vultr, DigitalOcean, UpCloud',
-        serviceType: 'Servidores de GPU na nuvem',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
   ar: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-11-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2026-12-22',
     last_full_refresh: '2026-11-22',
     next_seo_review_due: '2026-12-22',
@@ -2676,7 +2628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'سحابة gpu لاستدلال llm',
     ],
     leadAnswerBlock:
-      '**DigitalOcean هي الوحيدة من الثلاثة التي قرأت PromptQuorum جدول أسعار GPU الكامل لديها بالساعة بتاريخ 2026-11-22: تبدأ GPU Droplets من $0.76 لكل GPU في الساعة (RTX 4000 Ada، ‏20 GB) حتى $4.47 (HGX H200، ‏141 GB)، وتُفوتر بالثانية بحد أدنى 5 دقائق.** وتُدرج Vultr وحدات A16 وA40 وA100 وL40S وHGX B200 وGH200 وAMD Instinct، بسعر بداية موثق قدره $0.471 في الساعة (تهيئة A16؛ لم يُتحقق من عدد وحدات GPU في كل تهيئة). وتوثّق UpCloud خطط L40S وB200 الفورية (spot) وأعلنت في سجل تغييراتها عن وحدات H100 وB200 وL4 وRTX Pro 6000 وB300؛ ولم تقرأ PromptQuorum أسعارها. تقييم PromptQuorum: اختر المزود الذي تعمل عليه أحمالك الأخرى أصلًا، واستخدم [سوق GPU متخصصًا](/ar/power-local-llm/best-cloud-gpu-providers) حين يكون السعر الخام وحده ما يهمك.',
+      '**DigitalOcean هي الوحيدة من الثلاثة التي قرأت PromptQuorum جدول أسعار GPU الكامل لديها بالساعة بتاريخ 2026-11-22: تبدأ GPU Droplets عند الطلب من $0.76 لكل GPU في الساعة (RTX 4000 Ada، ‏20 GB) حتى $4.47 (HGX H200، ‏141 GB)، وتُفوتر بالثانية بحد أدنى 5 دقائق.** وتُدرج Vultr وحدات A16 وA40 وA100 وL40S وHGX B200 وGH200 وAMD Instinct، بسعر بداية موثق قدره $0.471 في الساعة (تهيئة A16؛ لم يُتحقق من عدد وحدات GPU في كل تهيئة). وتوثّق UpCloud خطط L40S وB200 الفورية (spot) وأعلنت في سجل تغييراتها عن وحدات H100 وB200 وL4 وRTX Pro 6000 وB300؛ ولم تقرأ PromptQuorum أسعارها. تقييم PromptQuorum: اختر المزود الذي تعمل عليه أحمالك الأخرى أصلًا، واستخدم [سوق GPU متخصصًا](/ar/power-local-llm/best-cloud-gpu-providers) حين يكون السعر الخام وحده ما يهمك.',
     quickAnswerTop: {
       ar: {
         question: 'أيها أفضل لأعمال GPU: Vultr أم DigitalOcean أم UpCloud؟',
@@ -2722,7 +2674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**استخدم واحدة من هذه الثلاثة إذا:**',
           'كان تطبيقك أو قاعدة بياناتك أو عنقود Kubernetes يعمل أصلًا على Vultr أو DigitalOcean أو UpCloud وتريد وحدات GPU في الحساب نفسه',
           'كنت تريد فوترة بالساعة دون عتاد تديره، وجدول أسعار بالساعة منشورًا (DigitalOcean؛ ولم تُقرأ جداول Vultr وUpCloud هنا)',
-          'كنت تحتاج بنية تحتية في الاتحاد الأوروبي وتريد مزودًا يصف تعامله مع البيانات الأوروبية (راجع قسم المناطق)',
+          'كنت تحتاج موقعًا داخل الاتحاد الأوروبي وتناسبك منطقة AMS3 (أمستردام) المُدرجة لدى DigitalOcean واتفاقية معالجة البيانات لديها (لم يُتحقق من مناطق GPU الأوروبية ولا من شروط GDPR لدى Vultr، وتعذّرت قراءة صفحات الخصوصية لدى UpCloud؛ راجع قسم المناطق)',
           '**تخطَّها إذا:**',
           'كنت تريد أقل سعر GPU بالساعة فقط: قارن الأسواق أولًا في نظرة [أفضل مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers)',
           'كنت تحتاج سعرًا متحققًا منه اليوم لوحدات GPU لدى Vultr أو UpCloud: أعادت صفحتا أسعارهما خطأً عند الجلب الآلي من PromptQuorum بتاريخ 2026-11-22، فتأكد من الأسعار الحالية يدويًا',
@@ -2734,7 +2686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'بطاقة التقييم',
         content:
-          '**تقييم PromptQuorum، مبني على صفحات أسعار كل مزود ووثائقه، وليس اختبارًا عمليًا في مختبر لأي خادم GPU.** تقيّم الدرجات الملاءمة لاستدلال LLM والضبط الدقيق على سحابة عامة الغرض. ولم تُقيَّم درجات وضوح الأسعار وسهولة الإعداد والموثوقية والدعم / الوثائق لأن PromptQuorum لا تملك بيانات لتقييمها.',
+          '**تقييم PromptQuorum، مبني على صفحات أسعار كل مزود ووثائقه، وليس اختبارًا عمليًا في مختبر لأي خادم GPU.** لا تُمنح درجات للملاءمة. ولم يُقيَّم وضوح الأسعار وسهولة الإعداد والموثوقية والدعم / الوثائق لأن PromptQuorum لا تملك بيانات لتقييمها؛ ولا يضيف الجدول سوى عدد نماذج GPU المُدرجة.',
         columns: ['الفئة', 'Vultr', 'DigitalOcean', 'UpCloud'],
         rows: [
           { 'الفئة': 'وضوح الأسعار', 'Vultr': 'غير مقيَّم', 'DigitalOcean': 'غير مقيَّم', 'UpCloud': 'غير مقيَّم' },
@@ -2743,7 +2695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الفئة': 'نماذج GPU المُدرجة', 'Vultr': '9 نماذج', 'DigitalOcean': '10 نماذج', 'UpCloud': '6 نماذج' },
           { 'الفئة': 'الدعم / الوثائق', 'Vultr': 'غير مقيَّم', 'DigitalOcean': 'غير مقيَّم', 'UpCloud': 'غير مقيَّم' },
         ],
-        note: 'تقييم PromptQuorum. هذه الدرجات أحكام تحريرية من معلومات منشورة عن المزودين؛ ولم تُجرِ PromptQuorum اختبارات أداء لخوادم GPU لدى هؤلاء المزودين ولم تشغّلها. نماذج GPU المُدرجة = عدد نماذج GPU المختلفة المذكورة في وثائق كل مزود أو صفحة أسعاره التي قُرئت بتاريخ 2026-11-22؛ وهو عدد وليس تقييم جودة.',
+        note: 'لم تُجرِ PromptQuorum اختبارات أداء لخوادم GPU لدى هؤلاء المزودين ولم تشغّلها. نماذج GPU المُدرجة = عدد نماذج GPU المختلفة المذكورة في وثائق كل مزود أو صفحة أسعاره التي قُرئت بتاريخ 2026-11-22؛ وهو عدد وليس تقييم جودة. وقد يكون العدد لدى Vultr وUpCloud غير مكتمل لأن بعض صفحاتهما تعذّر جلبها.',
       },
       tldr: {
         id: 'tldr',
@@ -2762,7 +2714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم',
         content:
-          '**اختر DigitalOcean إذا أردت جدول أسعار GPU بالساعة منشورًا وسير عمل قائمًا على Droplets؛ واختر Vultr إذا كانت وحدات GPU الموثقة لديها (مثل NVIDIA GH200 أو A16 أو AMD Instinct) تناسب حملك؛ واختر UpCloud إذا كان مزود مقره فنلندا يهمّك.** الثلاثة معقولة حين تكون بقية بنيتك التحتية لديها أصلًا.\n\nإذا كان الهدف أقل سعر ممكن بالساعة، فالأسواق هي المحطة الأولى المعتادة. قارن الأسواق في [أفضل مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) ومقارنة [أسعار RunPod وVast.ai](/ar/prompt-bites/runpod-vs-vastai-pricing) بدلًا من ذلك.\n\nوقرأت PromptQuorum جدول أسعار DigitalOcean الكامل فقط ولم تقرأ أسعار Vultr وUpCloud، فلا تُجرى مقارنة أسعار. وهذا ليس تصريحًا بأن DigitalOcean أرخص.',
+          '**اختر DigitalOcean إذا أردت جدول أسعار GPU بالساعة الوحيد الذي قرأته PromptQuorum كاملًا (لم تُقرأ جداول Vultr وUpCloud هنا) وسير عمل قائمًا على Droplets؛ واختر Vultr إذا كانت وحدات GPU الموثقة لديها (مثل NVIDIA GH200 أو A16 أو AMD Instinct) تناسب حملك؛ واختر UpCloud إذا كان مزود مقره فنلندا يهمّك.** الثلاثة معقولة حين تكون بقية بنيتك التحتية لديها أصلًا.\n\nإذا كان الهدف أقل سعر ممكن بالساعة، فالأسواق هي المحطة الأولى المعتادة. قارن الأسواق في [أفضل مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) ومقارنة [أسعار RunPod وVast.ai](/ar/prompt-bites/runpod-vs-vastai-pricing) بدلًا من ذلك.\n\nوقرأت PromptQuorum جدول أسعار DigitalOcean الكامل فقط ولم تقرأ أسعار Vultr وUpCloud، فلا تُجرى مقارنة أسعار. وهذا ليس تصريحًا بأن DigitalOcean أرخص.',
       },
       howItWorks: {
         id: 'how-it-works',
@@ -2839,9 +2791,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**تحقق من المنطقة وشروط معالجة البيانات وقواعد الفوترة قبل نقل بيانات حقيقية.** الحقائق أدناه من وثائق المزودين التي قُرئت بتاريخ 2026-11-22؛ وهذا ليس استشارة قانونية.',
         items: [
-          '**مصدر العتاد:** بحسب أوصافها الذاتية، تشغّل الثلاثة بنيتها السحابية التحتية الخاصة؛ ولا أحد منها سوق نظير إلى نظير لمضيفين من أطراف ثالثة.',
           '**مناطق DigitalOcean:** تُدرج صفحة GPU Droplets المواقع NYC2 وTOR1 وATL1 وRIC1 وAMS3 (أمستردام) وتذكر أن مزيدًا من مراكز البيانات قادم. وتُدرج خوادم GPU من نوع bare metal في NYC1 وAMS3. وقد تختلف الإتاحة بحسب GPU، فتأكد في لوحة التحكم.',
-          '**معالجة البيانات لدى DigitalOcean:** تغطي [اتفاقية معالجة البيانات](https://www.digitalocean.com/legal/data-processing-agreement) لديها GDPR؛ وللنقل خارج المنطقة الاقتصادية الأوروبية تعتمد على شهادة EU-U.S. Data Privacy Framework، وإلا فعلى البنود التعاقدية القياسية (Standard Contractual Clauses)؛ وقد يتغير الوضع القانوني لهذا الإطار. ولا تتضمن صفحة GPU Droplets أي بيان عن GDPR؛ وهي تصف منتجات DigitalOcean بأنها "HIPAA-eligible and SOC 2 compliant" (مؤهلة لـ HIPAA ومتوافقة مع SOC 2) دون ذكر تقرير أو نطاقه. راجع وثائق الثقة لدى DigitalOcean وأكّد شروط HIPAA معها قبل الاعتماد عليها.',
+          '**معالجة البيانات لدى DigitalOcean:** تشير [اتفاقية معالجة البيانات](https://www.digitalocean.com/legal/data-processing-agreement) لديها إلى GDPR؛ وللنقل خارج المنطقة الاقتصادية الأوروبية تعتمد على شهادة EU-U.S. Data Privacy Framework، وإلا فعلى البنود التعاقدية القياسية (Standard Contractual Clauses)؛ وقد يتغير الوضع القانوني لهذا الإطار. ولا تتضمن صفحة GPU Droplets أي بيان عن GDPR؛ وهي تصف منتجات DigitalOcean بأنها "HIPAA-eligible and SOC 2 compliant" (مؤهلة لـ HIPAA ومتوافقة مع SOC 2) دون ذكر تقرير أو نطاقه. راجع وثائق الثقة لدى DigitalOcean وأكّد شروط HIPAA معها قبل الاعتماد عليها.',
           '**UpCloud:** تعذّر على PromptQuorum قراءة صفحتي الأمان والخصوصية لدى UpCloud بتاريخ 2026-11-22 (أعاد الجلب خطأً)، فتأكد مباشرة من أن موقع GPU الذي اخترته داخل الاتحاد الأوروبي قبل الاعتماد عليه. ولا تذكر وثائقها أي المناطق تقدم GPU الفورية.',
           '**Vultr:** لم يُتحقق من إتاحة GPU في المناطق ولا من شروط GDPR؛ وتربط وثائق Vultr بصفحة مناطق منفصلة.',
           '**الفوترة والإلغاء:** تُفوتر DigitalOcean GPU Droplets المُطفأة حتى تدمّرها. وتُفوتر Vultr نُسخ GPU على ساعات الشهر التقويمي. وتواصل الخوادم الفورية لدى UpCloud فوترة التخزين المرفق وعناوين IP المحجوزة أثناء إيقافها، وتمنح رصيدًا عن الساعة غير المستخدمة فقط إذا أوقفت UpCloud الخادم.',
@@ -2903,8 +2854,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**قُرئ من صفحات المزودين:** أسعار GPU Droplets لدى DigitalOcean، والمناطق المُدرجة وشروط bare metal؛ وقائمة طُرز GPU لدى Vultr وسعر البداية لـ A16 وقاعدة الفوترة؛ وقواعد UpCloud الفورية وإدخالات سجل تغييرات GPU.',
           '**لم يُتحقق منه:** أعادت صفحتا Vultr وUpCloud خطأً عند الجلب الآلي من PromptQuorum بتاريخ 2026-11-22، فتُركت أسعارهما الأخرى ومناطقهما وشروط GDPR لدى Vultr دون ذكر بدل التخمين.',
-          '**تقييم PromptQuorum:** بطاقة التقييم وتخطيط ملاءمة النماذج والتوصيات حكم تحريري، وليست نتائج اختبارات أداء.',
-          '**التحديث:** تُعاد مراجعة الأسعار شهريًا؛ ويظهر تاريخ الفحص بجانب كل سعر.',
+          '**تقييم PromptQuorum:** تخطيط ملاءمة النماذج والتوصيات حكم تحريري، وليست نتائج اختبارات أداء. ولا تمنح بطاقة التقييم درجات للملاءمة؛ فالصف الوحيد المملوء فيها يحصي نماذج GPU المُدرجة.',
+          '**التحديث:** من المقرر مراجعة الأسعار شهريًا؛ ويرد تاريخ آخر فحص أعلى جدول الأسعار.',
         ],
       },
       faqSection: {
@@ -2922,7 +2873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل هؤلاء المزودون أرخص من RunPod أو Vast.ai؟', a: 'لم تتحقق PromptQuorum من ذلك. فهي سحابات عامة الغرض موجهة للفرق التي تريد GPU في الحساب نفسه مع الخدمات الأخرى؛ أما الأسواق فغالبًا ما يبحث فيها المشترون عن أقل سعر بالساعة. قارن الأسعار الحالية في كل صفحة.' },
           { q: 'أي منها الأفضل لنموذج 70B؟', a: 'يحتاج نموذج 70B بتكميم 4-bit عمومًا إلى نحو 40 GB أو أكثر من VRAM، فبطاقة 48 GB بالكاد تكفي، وبطاقة 80 GB أو أكبر تمنح هامشًا. وتُدرج DigitalOcean وحدة HGX H100 (80 GB) بسعر $4.41 لكل GPU-ساعة عند الطلب (جرى التحقق بتاريخ 2026-11-22).' },
           { q: 'هل يظل خادم GPU المتوقف يكلّف مالًا؟', a: 'لدى DigitalOcean، تظل GPU Droplets المُطفأة تُفوتر حتى تُدمَّر (بحسب وثائق المزود، جرى التحقق بتاريخ 2026-11-22). ولدى UpCloud، يواصل التخزين المرفق وعناوين IP المحجوزة الفوترة بينما يكون الخادم الفوري متوقفًا. دمّر الخوادم التي لم تعد تحتاجها.' },
-          { q: 'هل الدرجات اختبار مختبري؟', a: 'لا. الدرجات تقييمات من PromptQuorum مستمدة من معلومات منشورة عن المزودين. ولم تجرِ PromptQuorum اختبارات أداء لخوادم GPU لدى هؤلاء المزودين.' },
+          { q: 'هل هذه المقارنة اختبار مختبري؟', a: 'لا. فهي تستند إلى صفحات المزودين ووثائقهم. ولا تُمنح درجات للملاءمة، والتوصيات تقييم من PromptQuorum. ولم تجرِ PromptQuorum اختبارات أداء لخوادم GPU لدى هؤلاء المزودين.' },
         ],
       },
       relatedReading: {
@@ -2943,12 +2894,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'Review',
-      name: 'Vultr مقابل DigitalOcean مقابل UpCloud لأعمال GPU (2026)',
-      reviewBody:
+      '@type': 'TechArticle',
+      headline: 'Vultr مقابل DigitalOcean مقابل UpCloud لأعمال GPU (2026)',
+      description:
         'مقارنة بين عروض سحابة GPU لدى Vultr وDigitalOcean وUpCloud مبنية على صفحات كل مزود نفسه، فُحصت بتاريخ 2026-11-22. تتراوح GPU Droplets عند الطلب لدى DigitalOcean من $0.76 إلى $4.47 لكل GPU في الساعة؛ أما أسعار Vultr وUpCloud فلم يمكن التحقق منها كاملةً. تقييم PromptQuorum، وليس اختبارًا عمليًا في مختبر.',
       datePublished: '2026-11-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       inLanguage: 'ar',
       image: buildOgImageObject(OG_SLUG, 'ar'),
       author: authorPerson(),
@@ -2959,16 +2910,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud',
-      itemReviewed: {
-        '@type': 'Service',
-        name: 'خوادم GPU السحابية: Vultr وDigitalOcean وUpCloud',
-        serviceType: 'خوادم GPU سحابية',
-        provider: [
-          { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
-          { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
-          { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
-        ],
-      },
+      mentions: [
+        { '@type': 'Organization', name: 'Vultr', url: 'https://www.vultr.com/' },
+        { '@type': 'Organization', name: 'DigitalOcean', url: 'https://www.digitalocean.com/' },
+        { '@type': 'Organization', name: 'UpCloud', url: 'https://upcloud.com/' },
+      ],
     },
   },
 }

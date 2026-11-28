@@ -33355,5 +33355,94 @@
     "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "f36d53ac-6b4a-4994-b52d-8584075a6016",
+    "slug": "/de/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T09:26:35.249Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Unified Memory = VRAM: 16GB=7B, 64GB=32B, 128GB=70B (2026)",
+        "new": "Unified Memory ist VRAM: 16GB=7B, 64GB=32B, 128GB=70B 2026"
+      }
+    ],
+    "reason": "German seoTitle was identical to the English one; minimal change",
+    "queries": [
+      "128gb unified ram",
+      "64 gb unified memory",
+      "36 gb ram"
+    ],
+    "baseline": {
+      "position": 5.33,
+      "impressions": 2760,
+      "clicks": 39,
+      "ctr": 0.014130434782608696,
+      "period": "90d to 2026-11-28"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0e3cf850-5831-4e4c-a767-09cb7caa1187",
+    "slug": "/ja/local-llms/private-local-ai-for-business",
+    "date": "2026-11-28T09:26:35.367Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "プライベート・ローカルAI for ビジネス：オンプレミス展開ガイド 2026",
+        "new": "企業向けプライベート・ローカルAI：オンプレミス展開ガイド 2026"
+      }
+    ],
+    "reason": "Japanese title contained untranslated English (data-free)",
+    "baseline": {
+      "position": 11.44,
+      "impressions": 18,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d to 2026-11-28"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "4bd461b6-44f6-4c60-b702-e00e9f5f19d7",
+    "slug": "/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
+    "date": "2026-11-28T09:26:35.498Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Vultr·DigitalOcean·UpCloud GPU (2026)",
+        "new": "Vultr·DigitalOcean·UpCloud GPU 비교 2026"
+      }
+    ],
+    "reason": "Korean seoTitle had no Korean text (data-free)",
+    "baseline": {
+      "position": 6.75,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d to 2026-11-28"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2753df8a-a536-443a-87a1-c7ad19381b76",
+    "slug": "/ja/download",
+    "date": "2026-11-28T09:26:35.610Z",
+    "fields": [
+      {
+        "field": "downloadMetaTitle",
+        "old": "PromptQuorum for Mac & Windows をダウンロード | 無料",
+        "new": "Mac・Windows版PromptQuorumをダウンロード｜無料"
+      }
+    ],
+    "reason": "Japanese meta title contained untranslated English (no GSC data)",
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d to 2026-11-28"
+    },
+    "deployedAt": null
   }
 ]

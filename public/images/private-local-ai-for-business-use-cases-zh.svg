@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">本地部署AI：各行业用途</dc:title>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">© PromptQuorum 2026</dc:rights>
+    <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">https://www.promptquorum.com/zh/local-llms/private-local-ai-for-business</dc:source>
+  </metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">本地部署AI：各行业用途</text>
+  <rect x="40" y="70" width="140" height="280" rx="6" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <circle cx="110" cy="100" r="20" fill="#9C27B0"/>
+  <text x="110" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">🏥</text>
+  <text x="110" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">医疗</text>
+  <text x="110" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">医疗NLP</text>
+  <text x="110" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">病历摘要</text>
+  <text x="110" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C27B0" text-anchor="middle">HIPAA安全措施</text>
+  <text x="110" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">支持数据</text>
+  <text x="110" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">本地处理</text>
+  <rect x="210" y="70" width="140" height="280" rx="6" fill="#E3F2FD" stroke="#1976D2" stroke-width="2"/>
+  <circle cx="280" cy="100" r="20" fill="#1976D2"/>
+  <text x="280" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">💰</text>
+  <text x="280" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">金融</text>
+  <text x="280" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">风险评估</text>
+  <text x="280" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">合规分析</text>
+  <text x="280" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1976D2" text-anchor="middle">数据安全</text>
+  <text x="280" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">可避免向云端</text>
+  <text x="280" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">传输数据</text>
+  <rect x="380" y="70" width="140" height="280" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+  <circle cx="450" cy="100" r="20" fill="#7B1FA2"/>
+  <text x="450" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">⚖️</text>
+  <text x="450" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">法律</text>
+  <text x="450" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">文档审阅</text>
+  <text x="450" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">合同分析</text>
+  <text x="450" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#7B1FA2" text-anchor="middle">审计跟踪</text>
+  <text x="450" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">记录访问</text>
+  <text x="450" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">与审计日志</text>
+  <rect x="550" y="70" width="210" height="280" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="655" cy="100" r="20" fill="#388E3C"/>
+  <text x="655" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">🏭</text>
+  <text x="655" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">制造与政府</text>
+  <text x="655" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">预测性维护</text>
+  <text x="655" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">质量控制</text>
+  <text x="655" y="204" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">涉密处理</text>
+  <text x="655" y="236" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#388E3C" text-anchor="middle">专有数据</text>
+  <text x="655" y="258" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">可保留在本地</text>
+  <text x="792" y="390" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>
