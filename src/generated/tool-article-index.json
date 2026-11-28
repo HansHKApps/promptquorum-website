@@ -11,9 +11,41 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-budget-gpus-local-llm",
         "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
         "url": "/local-llms/best-budget-gpus-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-mini-pcs-local-llm",
+        "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
+        "url": "/local-llms/best-mini-pcs-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-models-apple-silicon-2026",
+        "title": "Best Ollama Models for Apple Silicon 2026: Recommendations for 16GB, 36GB, 64GB, 128GB",
+        "url": "/local-llms/best-models-apple-silicon-2026",
         "dateModified": "2026-11-28",
         "tier": "about"
       },
@@ -48,38 +80,6 @@
         "url": "/local-llms/local-llm-workstation-build",
         "dateModified": "2026-11-28",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide",
-        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-11-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llms-vs-chatgpt-plus",
-        "title": "Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers",
-        "url": "/local-llms/local-llms-vs-chatgpt-plus",
-        "dateModified": "2026-11-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llms-vs-claude-pro",
-        "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
-        "url": "/local-llms/local-llms-vs-claude-pro",
-        "dateModified": "2026-11-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mac-vs-windows-vs-linux-local-llm",
-        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
-        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
-        "dateModified": "2026-11-27",
-        "tier": "about"
       }
     ],
     "totalCount": 398,
@@ -93,6 +93,14 @@
         "title": "llama.cpp: What It Is, How to Install, First Command",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-28",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
         "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "dateModified": "2026-11-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-workstation-build-local-ai-2026",
-        "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
-        "url": "/power-local-llm/best-workstation-build-local-ai-2026",
         "dateModified": "2026-11-27",
         "tier": "about"
       }
@@ -838,6 +838,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "m5-pro-max-llm-benchmarks-2026",
+        "title": "M5 Pro vs M5 Max for Local LLMs 2026: Specs and Speed Estimates",
+        "url": "/local-llms/m5-pro-max-llm-benchmarks-2026",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
@@ -852,17 +860,9 @@
         "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
-        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "LM Studio": {
@@ -873,6 +873,14 @@
         "title": "LM Studio Review: The GUI-First Local AI Desktop App",
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
+        "dateModified": "2026-11-28",
         "tier": "about"
       },
       {
@@ -936,14 +944,6 @@
         "slug": "genoffice-review",
         "title": "GenOffice Review: Open-Source AI Office Suite for Word, Excel and PowerPoint Files",
         "url": "/power-local-llm/genoffice-review",
-        "dateModified": "2026-11-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp",
-        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-        "url": "/power-local-llm/local-ai-agents-with-mcp",
         "dateModified": "2026-11-20",
         "tier": "about"
       }
@@ -1540,19 +1540,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mac-mini-m5-local-ai-server",
+        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
+        "url": "/local-llms/mac-mini-m5-local-ai-server",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "alpaca-review",
         "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
         "url": "/power-local-llm/alpaca-review",
         "dateModified": "2026-11-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mac-mini-m5-local-ai-server",
-        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
-        "url": "/local-llms/mac-mini-m5-local-ai-server",
-        "dateModified": "2026-11-09",
         "tier": "mentioned"
       },
       {
@@ -5518,7 +5518,7 @@
         "slug": "mac-mini-m5-local-ai-server",
         "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
         "url": "/local-llms/mac-mini-m5-local-ai-server",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       },
       {
@@ -7170,6 +7170,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "animatediff-video-generation-guide-2026",
         "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
@@ -7223,14 +7231,6 @@
         "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
         "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
@@ -9313,6 +9313,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "replace-zapier-with-local-ai-agents",
+        "title": "Replace Zapier With Local AI Agents: How to Build 5 Workflows (2026)",
+        "url": "/power-local-llm/replace-zapier-with-local-ai-agents",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -9364,14 +9372,6 @@
         "slug": "local-llm-email-and-calendar-automation",
         "title": "Local AI for Email and Calendar: Triage Without Sending Data to Google (2026)",
         "url": "/power-local-llm/local-llm-email-and-calendar-automation",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "replace-zapier-with-local-ai-agents",
-        "title": "Replace Zapier With Local AI Agents: 5 Workflows That Save $30/Month (2026)",
-        "url": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "dateModified": "2026-08-27",
         "tier": "about"
       },
@@ -11945,6 +11945,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "local-llms-vs-claude-pro",
         "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
         "url": "/local-llms/local-llms-vs-claude-pro",
@@ -11982,17 +11990,9 @@
         "url": "/power-local-llm/animatediff-video-generation-guide",
         "dateModified": "2026-11-22",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
-        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
-        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
-        "dateModified": "2026-11-21",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 73,
+    "totalCount": 72,
     "capped": true
   },
   "Newelle": {
@@ -12089,6 +12089,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "mac-mini-m5-local-ai-server",
+        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
+        "url": "/local-llms/mac-mini-m5-local-ai-server",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "replace-zapier-with-local-ai-agents",
+        "title": "Replace Zapier With Local AI Agents: How to Build 5 Workflows (2026)",
+        "url": "/power-local-llm/replace-zapier-with-local-ai-agents",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
@@ -12142,25 +12158,9 @@
         "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
         "dateModified": "2026-11-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-11-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-security-privacy-checklist",
-        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
-        "url": "/local-llms/local-llm-security-privacy-checklist",
-        "dateModified": "2026-11-15",
-        "tier": "about"
       }
     ],
-    "totalCount": 115,
+    "totalCount": 114,
     "capped": true
   },
   "Sokuji": {
@@ -13036,7 +13036,7 @@
         "slug": "mac-mini-m5-local-ai-server",
         "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
         "url": "/local-llms/mac-mini-m5-local-ai-server",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       }
     ],
@@ -14470,6 +14470,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
@@ -14491,14 +14499,6 @@
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-11-10",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
@@ -14631,6 +14631,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "local-llm-cost-calculator-build-vs-rent-2026",
         "title": "Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026",
         "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -14690,14 +14698,6 @@
         "slug": "weesper-neon-flow-review",
         "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
         "url": "/power-local-llm/weesper-neon-flow-review",
-        "dateModified": "2026-11-27",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "weesper-transcribe-review",
-        "title": "Weesper Transcribe Review: Offline File Transcription for Mac",
-        "url": "/power-local-llm/weesper-transcribe-review",
         "dateModified": "2026-11-27",
         "tier": "mentioned"
       }

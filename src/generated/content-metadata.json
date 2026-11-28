@@ -2085,7 +2085,7 @@
       "images": []
     },
     "best-mini-pcs-local-llm": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2100,28 +2100,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/best-mini-pcs-local-llm-mac-mini-perf-en.svg",
-          "title": "Mac mini generations compared: the new M6 (from $899) caps at 32 GB unified memory and cannot fit 70B models; the new M5 Pro (from $1,699) scales to 64 GB. The outgoing M4 Pro (64 GB, $2,299) ran 70B at 10–15 tok/s."
-        },
-        {
-          "url": "/images/best-mini-pcs-local-llm-framework-comparison-en.svg",
-          "title": "Framework Desktop vs previous-generation Mac mini M4 Pro: Framework runs Llama 3.3 70B at 20–25 tok/s with 128 GB unified memory for $1,999; the outgoing M4 Pro delivered 10–15 tok/s with 64 GB for $2,299. No independent benchmark exists yet for the new M5 Pro Mac mini (64 GB max, from $1,699)."
-        },
-        {
-          "url": "/images/best-mini-pcs-local-llm-platform-value-hero-en.webp",
-          "title": "Mini PC platform value comparison: ASUS PN51 with RTX 5060 Ti delivers best value at ~$900; Intel NUC 13 with Thunderbolt eGPU dock costs ~$1,300 for premium build quality."
-        },
-        {
-          "url": "/images/best-mini-pcs-local-llm-gpu-compatibility-hero-en.webp",
-          "title": "GPU compatibility table for mini-ITX cases: RTX 5060 Ti 16 GB fits all cases at 217mm for $450–500; RTX 5070 and RTX 4070 require case measurement."
-        },
-        {
-          "url": "/images/best-mini-pcs-local-llm-cooling-guide-en.svg",
-          "title": "Mini PC cooling guide: 4 steps — monitor GPU temps via GPU-Z/HWiNFO64, undervolt via MSI Afterburner (–50 mV saves 5–10°C), replace fans with Noctua/BeQuiet! ($50–80), optimize case airflow."
-        }
-      ]
+      "images": []
     },
     "best-amd-mini-pc-local-llm-2026": {
       "dateModified": "2026-11-14",
@@ -2744,7 +2723,7 @@
       "images": []
     },
     "apple-silicon-m5-local-llm": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -2759,19 +2738,10 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/apple-silicon-m5-local-llm-config-comparison-hero-en.webp",
-          "title": "Mac Studio no longer offers an M5 Pro tier -- the Mac mini is now the cheapest way to get an M5 Pro chip."
-        },
-        {
-          "url": "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-en.webp",
-          "title": "Apple's advantage grows with model size; NVIDIA's advantage grows with raw speed and ecosystem breadth."
-        }
-      ]
+      "images": []
     },
     "apple-silicon-local-llm-guide-2026": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2786,19 +2756,10 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.webp",
-          "title": "When buying, prioritize memory bandwidth over GPU core count -- it is the real bottleneck for LLM inference."
-        },
-        {
-          "url": "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.webp",
-          "title": "24/7 inference, estimated: ~$35/year on Mac Mini M6 vs. ~$400/year on a desktop RTX 4090 -- roughly 10x at $0.15/kWh (illustrative, not measured)."
-        }
-      ]
+      "images": []
     },
     "m5-pro-max-llm-benchmarks-2026": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2813,16 +2774,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-hero-en.webp",
-          "title": "Tokens/sec by model size: M5 Pro reaches 50–60 tok/s on Llama 3.1 8B Q4 and 8–12 tok/s on 70B Q4; M5 Max nearly doubles both to 100–120 tok/s and 16–22 tok/s; RTX 4090 leads 8B at 80–100 tok/s but cannot fit 70B in its 24GB VRAM."
-        },
-        {
-          "url": "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-hero-en.webp",
-          "title": "M5 Pro vs M5 Max buying guide: M5 Pro (64GB, 307 GB/s, 25–45W) suits 8B–32B models in a Mac Mini (from $1,699, Apple US starting price); M5 Max (128GB, 614 GB/s, 60–100W) is one of few consumer options for regular 70B inference on a single machine in a Mac Studio."
-        }
-      ]
+      "images": []
     },
     "how-much-unified-memory-for-local-llm": {
       "dateModified": "2026-11-28",
@@ -2897,7 +2849,7 @@
       ]
     },
     "best-models-apple-silicon-2026": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2912,19 +2864,10 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/best-models-apple-silicon-2026-by-tier-hero-en.webp",
-          "title": "Best Model by Mac Memory Tier -- Updated quarterly -- last verified August 2026"
-        },
-        {
-          "url": "/images/best-models-apple-silicon-2026-quality-benchmarks-hero-en.webp",
-          "title": "Model Quality Benchmarks (2026) -- MMLU and average score"
-        }
-      ]
+      "images": []
     },
     "mac-mini-m5-local-ai-server": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2939,16 +2882,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/mac-mini-m5-local-ai-server-memory-tier-capacity-en.svg",
-          "title": "Mac Mini M6 (32GB max) vs M5 Pro (64GB max) memory ceiling vs max model capacity: the 32GB M6 fits a single LLM plus one light service, while the 64GB M5 Pro comfortably runs a 32B model alongside Whisper, RAG, and a voice assistant simultaneously."
-        },
-        {
-          "url": "/images/mac-mini-m5-local-ai-server-power-draw-by-workload-en.svg",
-          "title": "Mac Mini M5 Pro estimated power draw by workload: 8W idle, 25-35W on Llama 8B inference, 40-55W on Qwen3 32B inference — versus 200-300W for a desktop RTX 4070. Estimates, not independently measured — hardware on sale since September 22, 2026."
-        }
-      ]
+      "images": []
     },
     "apple-silicon-whisper-metal-benchmark": {
       "dateModified": "2026-11-19",
@@ -5729,7 +5663,7 @@
       ]
     },
     "best-mac-for-local-ai-2026": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5748,10 +5682,6 @@
         {
           "url": "/images/best-mac-for-local-ai-2026-comparison-table-hero-en.webp",
           "title": "Mac Mini M6 32 GB (~$1,300) and M5 Pro 64 GB (~$2,700) versus MacBook Pro 16\" M5 Pro/M5 Max versus Mac Studio M5 Max 64-128 GB (~$3,500-$5,100) and M5 Ultra (from $5,499, 256 GB ~$9,500, up to 512 GB)."
-        },
-        {
-          "url": "/images/best-mac-for-local-ai-2026-memory-by-model-hero-en.webp",
-          "title": "Unified memory by model size at Q4_K_M: 8B needs 8-9 GB, 13-14B needs 11-13 GB, 34B needs 21-25 GB, 70B Q4 needs 39-42 GB, and 70B Q5 or concurrent models need 50-70+ GB."
         }
       ]
     },
@@ -6964,7 +6894,7 @@
       ]
     },
     "replace-zapier-with-local-ai-agents": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,

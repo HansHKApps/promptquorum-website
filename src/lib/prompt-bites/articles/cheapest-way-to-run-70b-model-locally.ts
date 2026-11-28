@@ -107,20 +107,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Main catch': 'Asking price, not sales',
           },
           {
+            Setup: 'Mac mini M5 Pro 64 GB',
+            'Price (USD)': '$2,699 (15-core, 512 GB)',
+            'Speed (tok/s)': '~4–5 (estimate)',
+            'Main catch': '$1,699 base has 24 GB',
+          },
+          {
             Setup: '2× used RTX 3090',
             'Price (USD)': '$3,000–3,450, cards only',
             'Speed (tok/s)': '19.5–31.9 (third party)',
             'Main catch': 'Two large, power-hungry cards',
           },
           {
-            Setup: 'Mac mini M5 Pro 64 GB',
-            'Price (USD)': '$3,199 (18-core, 1 TB)',
-            'Speed (tok/s)': '~4–5 (estimate)',
-            'Main catch': '$1,699 base has 24 GB',
-          },
-          {
             Setup: 'Mac Studio M5 Max 64 GB+',
-            'Price (USD)': 'Above the $2,499 base',
+            'Price (USD)': '$3,499 (40-core GPU)',
             'Speed (tok/s)': '~9–11 (estimate)',
             'Main catch': 'Base model has 36 GB',
           },
@@ -174,8 +174,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Easiest: Apple Silicon Mac with 64 GB or More',
         content: [
           'If you do not want to build a dual-GPU PC, an Apple Silicon Mac is simpler: the model sits in unified memory, so there is no splitting between two cards and no multi-GPU driver setup. Aim for at least 64 GB for a 70B Q4_K_M model.',
-          '<strong>$1,699 is not the price of a 64 GB Mac mini.</strong> It is the price of the M5 Pro Mac mini with 24 GB (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>); 64 GB is a build-to-order upgrade. <a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a> listed a 64 GB configuration with the 18-core CPU and a 1 TB SSD at $3,199 on 21 September 2026. Another chip or SSD choice may cost less; we have not verified Apple\'s upgrade price, so check Apple\'s store. The base M6 Mac mini starts at $899 and stops at 32 GB, which is too small.',
-          'Apple lists 307 GB/s of memory bandwidth for the M5 Pro Mac mini (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>), and our <a href="/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70B hardware guide</a> estimates about 4–5 tok/s. The Mac Studio M5 Max starts at $2,499 with 36 GB, also too small, and goes up to 128 GB at up to 614 GB/s (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). The same guide estimates about 9–11 tok/s for it. We have not verified its 64 GB price. Both speeds are estimates, not benchmarks.',
+          '<strong>$1,699 is not the price of a 64 GB Mac mini.</strong> It is the price of the M5 Pro Mac mini with 24 GB (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>); 64 GB is a build-to-order upgrade. The cheapest 64 GB Mac mini is $2,699: the M5 Pro with the 15-core CPU and a 512 GB SSD, $1,699 for the base model plus $1,000 for 64 GB, according to <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Daring Fireball\'s configuration table</a> of 25 August 2026. With the 18-core CPU and a 1 TB SSD, the 64 GB configuration is $3,199. These are US prices, so check Apple\'s store before ordering. The base M6 Mac mini starts at $899 and stops at 32 GB, which is too small.',
+          'Apple lists 307 GB/s of memory bandwidth for the M5 Pro Mac mini (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>), and our <a href="/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70B hardware guide</a> estimates about 4–5 tok/s. The Mac Studio M5 Max starts at $2,499 with 36 GB, also too small, and goes up to 128 GB at up to 614 GB/s (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). The same guide estimates about 9–11 tok/s for it. The same Daring Fireball table puts its 64 GB configuration, with the 40-core GPU, at $3,499. Both speeds are estimates, not benchmarks.',
           'A MacBook Pro with 64 GB or more is the portable option; check its current price.',
           '<strong>Consider a Mac if:</strong> one simple machine matters more to you than price or speed. <strong>Skip it if:</strong> price or speed decides, because other routes here cost less or have higher published speeds.',
         ],
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can the new Mac mini run a 70B model?',
-            a: 'Only an M5 Pro with 64 GB. The $1,699 base model has 24 GB, and 64 GB costs extra: Fstoppers listed an 18-core, 1 TB, 64 GB configuration at $3,199 on 21 September 2026. The M6 Mac mini stops at 32 GB. Our guide estimates about 4–5 tok/s for the 64 GB M5 Pro.',
+            a: 'Only an M5 Pro with 64 GB. The $1,699 base model has 24 GB, and 64 GB costs extra. The cheapest 64 GB configuration (15-core CPU, 512 GB SSD) is $2,699, according to Daring Fireball\'s configuration table of 25 August 2026. The M6 Mac mini stops at 32 GB. Our guide estimates about 4–5 tok/s for the 64 GB M5 Pro.',
           },
           {
             q: 'What is the most cost-efficient way to serve a 70B model to several users?',
@@ -408,20 +408,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             Haupthaken: 'Angebotspreis, kein Verkauf',
           },
           {
+            Setup: 'Mac mini M5 Pro 64 GB',
+            'Preis (USD)': '2.699 $ (15 Kerne, 512 GB)',
+            'Tempo (Tok/s)': '~4–5 (Schätzung)',
+            Haupthaken: '1.699-$-Basis hat 24 GB',
+          },
+          {
             Setup: '2× gebrauchte RTX 3090',
             'Preis (USD)': '3.000–3.450 $, nur Karten',
             'Tempo (Tok/s)': '19,5–31,9 (Drittanbieter)',
             Haupthaken: 'Zwei große, stromhungrige Karten',
           },
           {
-            Setup: 'Mac mini M5 Pro 64 GB',
-            'Preis (USD)': '3.199 $ (18 Kerne, 1 TB)',
-            'Tempo (Tok/s)': '~4–5 (Schätzung)',
-            Haupthaken: '1.699-$-Basis hat 24 GB',
-          },
-          {
             Setup: 'Mac Studio M5 Max ab 64 GB',
-            'Preis (USD)': 'Über der 2.499-$-Basis',
+            'Preis (USD)': '3.499 $ (40-Kern-GPU)',
             'Tempo (Tok/s)': '~9–11 (Schätzung)',
             Haupthaken: 'Basismodell hat 36 GB',
           },
@@ -475,8 +475,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Am einfachsten: Apple-Silicon-Mac mit mindestens 64 GB',
         content: [
           'Wenn Sie keinen PC mit zwei GPUs bauen möchten, ist ein Apple-Silicon-Mac einfacher: Das Modell liegt im Unified Memory, es wird nicht auf zwei Karten verteilt, und es braucht kein Multi-GPU-Treiber-Setup. Planen Sie für ein 70B-Q4_K_M-Modell mindestens 64 GB ein.',
-          '<strong>1.699 $ ist nicht der Preis eines Mac mini mit 64 GB.</strong> So viel kostet der Mac mini M5 Pro mit 24 GB (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>); 64 GB sind ein Upgrade bei der Bestellung. <a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a> listete am 21. September 2026 eine 64-GB-Konfiguration mit 18-Kern-CPU und 1-TB-SSD für 3.199 $. Mit anderem Chip oder kleinerer SSD kann es weniger kosten; Apples Aufpreis haben wir nicht verifiziert, prüfen Sie daher Apples Shop. Der Basis-Mac-mini mit M6 startet bei 899 $, endet bei 32 GB und ist damit zu klein.',
-          'Für den Mac mini M5 Pro nennt Apple 307 GB/s Speicherbandbreite (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>); unser <a href="/de/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70B-Hardware-Leitfaden</a> schätzt etwa 4–5 Tok/s. Der Mac Studio M5 Max startet bei 2.499 $ mit 36 GB – ebenfalls zu klein – und lässt sich auf bis zu 128 GB mit bis zu 614 GB/s ausbauen (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). Derselbe Leitfaden schätzt dafür etwa 9–11 Tok/s. Den Preis der 64-GB-Version haben wir nicht verifiziert. Beide Tempowerte sind Schätzungen, keine Benchmarks.',
+          '<strong>1.699 $ ist nicht der Preis eines Mac mini mit 64 GB.</strong> So viel kostet der Mac mini M5 Pro mit 24 GB (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>); 64 GB sind ein Upgrade bei der Bestellung. Der günstigste Mac mini mit 64 GB kostet 2.699 $: der M5 Pro mit 15-Kern-CPU und 512-GB-SSD, also 1.699 $ für das Basismodell plus 1.000 $ für 64 GB, laut der <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Konfigurationstabelle von Daring Fireball</a> vom 25. August 2026. Mit 18-Kern-CPU und 1-TB-SSD kostet die 64-GB-Konfiguration 3.199 $. Das sind US-Preise; prüfen Sie vor der Bestellung Apples Shop. Der Basis-Mac-mini mit M6 startet bei 899 $, endet bei 32 GB und ist damit zu klein.',
+          'Für den Mac mini M5 Pro nennt Apple 307 GB/s Speicherbandbreite (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>); unser <a href="/de/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70B-Hardware-Leitfaden</a> schätzt etwa 4–5 Tok/s. Der Mac Studio M5 Max startet bei 2.499 $ mit 36 GB – ebenfalls zu klein – und lässt sich auf bis zu 128 GB mit bis zu 614 GB/s ausbauen (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). Derselbe Leitfaden schätzt dafür etwa 9–11 Tok/s. Dieselbe Tabelle von Daring Fireball nennt für die 64-GB-Konfiguration mit 40-Kern-GPU 3.499 $. Beide Tempowerte sind Schätzungen, keine Benchmarks.',
           'Ein MacBook Pro ab 64 GB ist die tragbare Variante; prüfen Sie den aktuellen Preis.',
           '<strong>Ein Mac passt, wenn:</strong> Ihnen ein einfaches Einzelgerät wichtiger ist als Preis oder Tempo. <strong>Nicht, wenn:</strong> Preis oder Tempo entscheiden, denn andere Wege hier kosten weniger oder haben höhere veröffentlichte Geschwindigkeiten.',
         ],
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann der neue Mac mini ein 70B-Modell betreiben?',
-            a: 'Nur ein M5 Pro mit 64 GB. Das Basismodell für 1.699 $ hat 24 GB, 64 GB kosten Aufpreis: Fstoppers listete am 21. September 2026 eine Konfiguration mit 18 Kernen, 1 TB und 64 GB für 3.199 $. Der Mac mini M6 endet bei 32 GB. Unser Leitfaden schätzt für den M5 Pro mit 64 GB etwa 4–5 Tok/s.',
+            a: 'Nur ein M5 Pro mit 64 GB. Das Basismodell für 1.699 $ hat 24 GB, 64 GB kosten Aufpreis. Die günstigste 64-GB-Konfiguration (15-Kern-CPU, 512-GB-SSD) kostet laut der Konfigurationstabelle von Daring Fireball vom 25. August 2026 2.699 $. Der Mac mini M6 endet bei 32 GB. Unser Leitfaden schätzt für den M5 Pro mit 64 GB etwa 4–5 Tok/s.',
           },
           {
             q: 'Wie stellt man ein 70B-Modell am kosteneffizientesten für mehrere Nutzer bereit?',
@@ -709,20 +709,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Principal défaut': 'Prix demandé, pas de vente',
           },
           {
+            Configuration: 'Mac mini M5 Pro 64 Go',
+            'Prix (USD)': '2 699 $ (15 cœurs, 512 Go)',
+            'Vitesse (tok/s)': '~4–5 (estimation)',
+            'Principal défaut': 'Base à 1 699 $ : 24 Go',
+          },
+          {
             Configuration: '2× RTX 3090 d\'occasion',
             'Prix (USD)': '3 000–3 450 $, cartes seules',
             'Vitesse (tok/s)': '19.5–31.9 (test tiers)',
             'Principal défaut': 'Deux grosses cartes gourmandes',
           },
           {
-            Configuration: 'Mac mini M5 Pro 64 Go',
-            'Prix (USD)': '3 199 $ (18 cœurs, 1 To)',
-            'Vitesse (tok/s)': '~4–5 (estimation)',
-            'Principal défaut': 'Base à 1 699 $ : 24 Go',
-          },
-          {
             Configuration: 'Mac Studio M5 Max 64 Go+',
-            'Prix (USD)': 'Plus que la base à 2 499 $',
+            'Prix (USD)': '3 499 $ (GPU 40 cœurs)',
             'Vitesse (tok/s)': '~9–11 (estimation)',
             'Principal défaut': 'Modèle de base : 36 Go',
           },
@@ -776,8 +776,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Le plus simple : un Mac Apple Silicon d\'au moins 64 Go',
         content: [
           'Si vous ne voulez pas monter un PC à deux GPU, un Mac Apple Silicon est plus simple : le modèle réside en mémoire unifiée, sans répartition entre deux cartes ni pilotes multi-GPU à configurer. Visez au moins 64 Go pour un 70B en Q4_K_M.',
-          '<strong>1 699 $ n\'est pas le prix d\'un Mac mini 64 Go.</strong> C\'est celui du Mac mini M5 Pro avec 24 Go (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>) ; les 64 Go sont une option à la commande. Le 21 septembre 2026, <a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a> indiquait 3 199 $ pour une configuration 64 Go avec CPU 18 cœurs et SSD de 1 To. Un autre choix de puce ou de SSD peut coûter moins ; nous n\'avons pas vérifié le tarif de l\'option chez Apple, consultez donc sa boutique. Le Mac mini M6 de base démarre à 899 $ et plafonne à 32 Go, ce qui est trop peu.',
-          'Pour le Mac mini M5 Pro, Apple annonce 307 GB/s de bande passante mémoire (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>) et notre <a href="/fr/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">guide matériel 70B</a> estime environ 4–5 tok/s. Le Mac Studio M5 Max démarre à 2 499 $ avec 36 Go, également trop peu, et monte jusqu\'à 128 Go à 614 GB/s au maximum (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). Le même guide l\'estime à environ 9–11 tok/s. Nous n\'avons pas vérifié le prix de sa version 64 Go. Ces deux vitesses sont des estimations, pas des mesures.',
+          '<strong>1 699 $ n\'est pas le prix d\'un Mac mini 64 Go.</strong> C\'est celui du Mac mini M5 Pro avec 24 Go (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>) ; les 64 Go sont une option à la commande. Le Mac mini 64 Go le moins cher coûte 2 699 $ : M5 Pro avec CPU 15 cœurs et SSD de 512 Go, soit 1 699 $ pour le modèle de base plus 1 000 $ pour les 64 Go, selon le <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">tableau des configurations de Daring Fireball</a> du 25 août 2026. Avec le CPU 18 cœurs et un SSD de 1 To, la configuration 64 Go coûte 3 199 $. Ce sont des prix américains : vérifiez la boutique Apple avant de commander. Le Mac mini M6 de base démarre à 899 $ et plafonne à 32 Go, ce qui est trop peu.',
+          'Pour le Mac mini M5 Pro, Apple annonce 307 GB/s de bande passante mémoire (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>) et notre <a href="/fr/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">guide matériel 70B</a> estime environ 4–5 tok/s. Le Mac Studio M5 Max démarre à 2 499 $ avec 36 Go, également trop peu, et monte jusqu\'à 128 Go à 614 GB/s au maximum (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). Le même guide l\'estime à environ 9–11 tok/s. Le même tableau de Daring Fireball affiche 3 499 $ pour sa configuration 64 Go avec GPU 40 cœurs. Ces deux vitesses sont des estimations, pas des mesures.',
           'Un MacBook Pro d\'au moins 64 Go est la version portable ; vérifiez son prix actuel.',
           '<strong>Un Mac convient si :</strong> une machine unique et simple compte plus que le prix ou la vitesse. <strong>Évitez-le si :</strong> le prix ou la vitesse décident, car d\'autres solutions de cette page coûtent moins ou affichent des vitesses publiées supérieures.',
         ],
@@ -875,7 +875,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Le nouveau Mac mini peut-il faire tourner un modèle 70B ?',
-            a: 'Seulement un M5 Pro avec 64 Go. Le modèle de base à 1 699 $ a 24 Go et les 64 Go sont en supplément : le 21 septembre 2026, Fstoppers indiquait 3 199 $ pour une configuration 18 cœurs, 1 To et 64 Go. Le Mac mini M6 plafonne à 32 Go. Notre guide estime environ 4–5 tok/s pour le M5 Pro 64 Go.',
+            a: 'Seulement un M5 Pro avec 64 Go. Le modèle de base à 1 699 $ a 24 Go et les 64 Go sont en supplément. D\'après le tableau des configurations de Daring Fireball du 25 août 2026, la configuration 64 Go la moins chère (CPU 15 cœurs, SSD 512 Go) coûte 2 699 $. Le Mac mini M6 plafonne à 32 Go. Notre guide estime environ 4–5 tok/s pour le M5 Pro 64 Go.',
           },
           {
             q: 'Comment servir un modèle 70B à plusieurs utilisateurs au meilleur coût ?',
@@ -995,18 +995,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           { 構成: '中古Quadro RTX 8000 48GB', '価格（USD）': '出品価格約2,500ドル、カードのみ', '速度（tok/s）': '確認した値なし', 主な難点: '成約ではなく出品価格' },
           {
+            構成: 'Mac mini M5 Pro 64GB',
+            '価格（USD）': '2,699ドル（15コア、512GB）',
+            '速度（tok/s）': '約4〜5（推定）',
+            主な難点: '1,699ドルの基本構成は24GB',
+          },
+          {
             構成: '中古RTX 3090 ×2',
             '価格（USD）': '3,000〜3,450ドル、カードのみ',
             '速度（tok/s）': '19.5〜31.9（第三者）',
             主な難点: '大型で消費電力が大きい2枚',
           },
-          {
-            構成: 'Mac mini M5 Pro 64GB',
-            '価格（USD）': '3,199ドル（18コア、1TB）',
-            '速度（tok/s）': '約4〜5（推定）',
-            主な難点: '1,699ドルの基本構成は24GB',
-          },
-          { 構成: 'Mac Studio M5 Max 64GB以上', '価格（USD）': '基本構成2,499ドルより上', '速度（tok/s）': '約9〜11（推定）', 主な難点: '基本モデルは36GB' },
+          { 構成: 'Mac Studio M5 Max 64GB以上', '価格（USD）': '3,499ドル（40コアGPU）', '速度（tok/s）': '約9〜11（推定）', 主な難点: '基本モデルは36GB' },
           { 構成: 'クラウドGPU 48GB', '価格（USD）': '1時間0.33ドルから', '速度（tok/s）': '比較なし', 主な難点: 'ローカルではない' },
         ],
       },
@@ -1052,8 +1052,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '最も簡単：64GB以上のApple Silicon Mac',
         content: [
           'GPU 2枚のPCを組みたくない場合は、Apple Silicon Macの方が簡単です。モデルはユニファイドメモリに置かれるため、2枚のカードへの分割やマルチGPUのドライバ設定は不要です。70B Q4_K_Mには64GB以上を目安にしてください。',
-          '<strong>1,699ドルは64GB版Mac miniの価格ではありません。</strong> これは24GBのM5 Pro Mac miniの価格で（<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>）、64GBは注文時のアップグレードです。<a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a>は2026年9月21日、18コアCPU・1TB SSDの64GB構成を3,199ドルと掲載しました。チップやSSDの選び方次第で安くなる可能性があります。Appleのアップグレード料金は未確認のため、Appleのストアで確認してください。基本のM6 Mac miniは899ドルからですが、最大32GBのため容量が足りません。',
-          'Appleが公表するM5 Pro Mac miniのメモリ帯域は307 GB/sで（<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>）、当サイトの<a href="/ja/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70Bハードウェアガイド</a>では約4〜5 tok/sと推定しています。Mac Studio M5 Maxは36GBで2,499ドルからですが、これも容量不足です。最大128GB、帯域は最大614 GB/sです（<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>）。同ガイドの推定は約9〜11 tok/sです。64GB版の価格は未確認です。どちらの速度も推定値で、ベンチマークではありません。',
+          '<strong>1,699ドルは64GB版Mac miniの価格ではありません。</strong> これは24GBのM5 Pro Mac miniの価格で（<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>）、64GBは注文時のアップグレードです。64GB版で最も安いMac miniは2,699ドルです。15コアCPU・512GB SSDのM5 Proで、基本モデル1,699ドルに64GBへの追加分1,000ドルを加えた価格です（<a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Daring Fireballの構成価格表</a>、2026年8月25日）。18コアCPU・1TB SSDの64GB構成は3,199ドルです。いずれも米国価格のため、注文前にAppleのストアで確認してください。基本のM6 Mac miniは899ドルからですが、最大32GBのため容量が足りません。',
+          'Appleが公表するM5 Pro Mac miniのメモリ帯域は307 GB/sで（<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>）、当サイトの<a href="/ja/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70Bハードウェアガイド</a>では約4〜5 tok/sと推定しています。Mac Studio M5 Maxは36GBで2,499ドルからですが、これも容量不足です。最大128GB、帯域は最大614 GB/sです（<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>）。同ガイドの推定は約9〜11 tok/sです。同じDaring Fireballの価格表では、40コアGPUの64GB構成は3,499ドルです。どちらの速度も推定値で、ベンチマークではありません。',
           '持ち運びたい場合は64GB以上のMacBook Proが選択肢です。現在の価格を確認してください。',
           '<strong>Macが向いている人：</strong>価格や速度より、シンプルな1台を重視する人。<strong>向いていない人：</strong>価格か速度で決める人。このページには、より安い方法や公表速度が高い方法があります。',
         ],
@@ -1151,7 +1151,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '新しいMac miniで70Bモデルは動きますか？',
-            a: '64GBのM5 Proのみです。1,699ドルの基本モデルは24GBで、64GBは追加料金です。Fstoppersは2026年9月21日、18コア・1TB・64GBの構成を3,199ドルと掲載しました。M6 Mac miniは最大32GBです。当サイトのガイドでは、64GBのM5 Proで約4〜5 tok/sと推定しています。',
+            a: '64GBのM5 Proのみです。1,699ドルの基本モデルは24GBで、64GBは追加料金です。Daring Fireballの構成価格表（2026年8月25日）によると、最も安い64GB構成（15コアCPU、512GB SSD）は2,699ドルです。M6 Mac miniは最大32GBです。当サイトのガイドでは、64GBのM5 Proで約4〜5 tok/sと推定しています。',
           },
           {
             q: '70Bモデルを複数ユーザーに提供する最も費用対効果の高い方法は？',
@@ -1286,20 +1286,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Principal pega': 'Precio pedido, no de venta',
           },
           {
+            Configuración: 'Mac mini M5 Pro 64 GB',
+            'Precio (USD)': '2.699 $ (15 núcleos, 512 GB)',
+            'Velocidad (tok/s)': '~4–5 (estimación)',
+            'Principal pega': 'La base de 1.699 $ tiene 24 GB',
+          },
+          {
             Configuración: '2× RTX 3090 usadas',
             'Precio (USD)': '3.000–3.450 $, solo tarjetas',
             'Velocidad (tok/s)': '19.5–31.9 (terceros)',
             'Principal pega': 'Dos tarjetas grandes y voraces',
           },
           {
-            Configuración: 'Mac mini M5 Pro 64 GB',
-            'Precio (USD)': '3.199 $ (18 núcleos, 1 TB)',
-            'Velocidad (tok/s)': '~4–5 (estimación)',
-            'Principal pega': 'La base de 1.699 $ tiene 24 GB',
-          },
-          {
             Configuración: 'Mac Studio M5 Max 64 GB+',
-            'Precio (USD)': 'Más que la base de 2.499 $',
+            'Precio (USD)': '3.499 $ (GPU de 40 núcleos)',
             'Velocidad (tok/s)': '~9–11 (estimación)',
             'Principal pega': 'El modelo base tiene 36 GB',
           },
@@ -1353,8 +1353,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Lo más sencillo: un Mac Apple Silicon con 64 GB o más',
         content: [
           'Si no quieres montar un PC con dos GPU, un Mac Apple Silicon es más sencillo: el modelo está en la memoria unificada, sin repartirlo entre dos tarjetas ni configurar controladores multi-GPU. Apunta a 64 GB como mínimo para un 70B en Q4_K_M.',
-          '<strong>1.699 $ no es el precio de un Mac mini de 64 GB.</strong> Es el del Mac mini M5 Pro con 24 GB (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>); los 64 GB son una ampliación al configurar la compra. <a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a> listó el 21 de septiembre de 2026 una configuración de 64 GB con CPU de 18 núcleos y SSD de 1 TB por 3.199 $. Con otro chip o SSD puede costar menos; no hemos verificado el precio de la ampliación de Apple, así que consulta su tienda. El Mac mini M6 base parte de 899 $ y se queda en 32 GB, que no bastan.',
-          'Para el Mac mini M5 Pro, Apple indica 307 GB/s de ancho de banda de memoria (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>) y nuestra <a href="/es/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">guía de hardware para 70B</a> estima unos 4–5 tok/s. El Mac Studio M5 Max parte de 2.499 $ con 36 GB, también insuficientes, y llega hasta 128 GB con un máximo de 614 GB/s (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). La misma guía le estima unos 9–11 tok/s. No hemos verificado el precio de su versión de 64 GB. Ambas velocidades son estimaciones, no mediciones.',
+          '<strong>1.699 $ no es el precio de un Mac mini de 64 GB.</strong> Es el del Mac mini M5 Pro con 24 GB (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>); los 64 GB son una ampliación al configurar la compra. El Mac mini de 64 GB más barato cuesta 2.699 $: el M5 Pro con CPU de 15 núcleos y SSD de 512 GB, es decir, 1.699 $ del modelo base más 1.000 $ por los 64 GB, según la <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">tabla de configuraciones de Daring Fireball</a> del 25 de agosto de 2026. Con la CPU de 18 núcleos y SSD de 1 TB, la configuración de 64 GB cuesta 3.199 $. Son precios de EE. UU.; consulta la tienda de Apple antes de comprar. El Mac mini M6 base parte de 899 $ y se queda en 32 GB, que no bastan.',
+          'Para el Mac mini M5 Pro, Apple indica 307 GB/s de ancho de banda de memoria (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>) y nuestra <a href="/es/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">guía de hardware para 70B</a> estima unos 4–5 tok/s. El Mac Studio M5 Max parte de 2.499 $ con 36 GB, también insuficientes, y llega hasta 128 GB con un máximo de 614 GB/s (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). La misma guía le estima unos 9–11 tok/s. La misma tabla de Daring Fireball sitúa su configuración de 64 GB, con GPU de 40 núcleos, en 3.499 $. Ambas velocidades son estimaciones, no mediciones.',
           'Un MacBook Pro con 64 GB o más es la opción portátil; consulta su precio actual.',
           '<strong>Un Mac encaja si:</strong> un equipo único y sencillo te importa más que el precio o la velocidad. <strong>Descártalo si:</strong> deciden el precio o la velocidad, porque otras vías de esta página cuestan menos o tienen velocidades publicadas más altas.',
         ],
@@ -1452,7 +1452,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puede el nuevo Mac mini ejecutar un modelo 70B?',
-            a: 'Solo un M5 Pro con 64 GB. El modelo base de 1.699 $ tiene 24 GB y los 64 GB se pagan aparte: Fstoppers listó el 21 de septiembre de 2026 una configuración de 18 núcleos, 1 TB y 64 GB por 3.199 $. El Mac mini M6 se queda en 32 GB. Nuestra guía estima unos 4–5 tok/s para el M5 Pro de 64 GB.',
+            a: 'Solo un M5 Pro con 64 GB. El modelo base de 1.699 $ tiene 24 GB y los 64 GB se pagan aparte. Según la tabla de configuraciones de Daring Fireball del 25 de agosto de 2026, la configuración de 64 GB más barata (CPU de 15 núcleos, SSD de 512 GB) cuesta 2.699 $. El Mac mini M6 se queda en 32 GB. Nuestra guía estima unos 4–5 tok/s para el M5 Pro de 64 GB.',
           },
           {
             q: '¿Cuál es la forma más rentable de servir un modelo 70B a varios usuarios?',
@@ -1561,9 +1561,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 配置: '1× 二手RTX 3090 + 卸载', '价格（美元）': '1,500–1,725美元，仅显卡', '速度（tok/s）': '约1–5（估算）', 主要缺点: '部分模型放在CPU上' },
           { 配置: 'GMKtec EVO-X2 64GB', '价格（美元）': '2,199.99美元，整机', '速度（tok/s）': '约4–6（同系列芯片引用值）', 主要缺点: '内存偏紧且焊死' },
           { 配置: '二手Quadro RTX 8000 48GB', '价格（美元）': '挂牌约2,500美元，仅显卡', '速度（tok/s）': '无已核实数据', 主要缺点: '是挂牌价而非成交价' },
+          { 配置: 'Mac mini M5 Pro 64GB', '价格（美元）': '2,699美元（15核，512GB）', '速度（tok/s）': '约4–5（估算）', 主要缺点: '1,699美元基础款仅24GB' },
           { 配置: '2× 二手RTX 3090', '价格（美元）': '3,000–3,450美元，仅显卡', '速度（tok/s）': '19.5–31.9（第三方）', 主要缺点: '两张大型高功耗显卡' },
-          { 配置: 'Mac mini M5 Pro 64GB', '价格（美元）': '3,199美元（18核，1TB）', '速度（tok/s）': '约4–5（估算）', 主要缺点: '1,699美元基础款仅24GB' },
-          { 配置: 'Mac Studio M5 Max 64GB以上', '价格（美元）': '高于2,499美元基础款', '速度（tok/s）': '约9–11（估算）', 主要缺点: '基础款为36GB' },
+          { 配置: 'Mac Studio M5 Max 64GB以上', '价格（美元）': '3,499美元（40核GPU）', '速度（tok/s）': '约9–11（估算）', 主要缺点: '基础款为36GB' },
           { 配置: '云GPU 48GB', '价格（美元）': '每小时0.33美元起', '速度（tok/s）': '未比较', 主要缺点: '并非本地运行' },
         ],
       },
@@ -1609,8 +1609,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '最简单：64GB及以上的Apple Silicon Mac',
         content: [
           '如果不想组装双GPU电脑，Apple Silicon Mac更省事：模型放在统一内存中，无需拆分到两张卡，也不用配置多GPU驱动。运行70B Q4_K_M建议至少64GB。',
-          '<strong>1,699美元并不是64GB版Mac mini的价格。</strong> 它是24GB版M5 Pro Mac mini的价格（<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>）；64GB需要在下单时升级。<a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a>在2026年9月21日列出一款18核CPU、1TB固态硬盘的64GB配置，价格3,199美元。选择其他芯片或硬盘可能更便宜；我们未核实Apple的升级价格，请以Apple商店为准。基础款M6 Mac mini起价899美元，最高仅32GB，容量不够。',
-          'Apple公布的M5 Pro Mac mini内存带宽为307 GB/s（<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>），本站<a href="/zh/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70B硬件指南</a>估算约4–5 tok/s。Mac Studio M5 Max起价2,499美元，仅36GB，同样不够；最高可配128GB，带宽最高614 GB/s（<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>）。同一指南估算其约9–11 tok/s。我们未核实其64GB版本的价格。这两个速度都是估算值，不是实测。',
+          '<strong>1,699美元并不是64GB版Mac mini的价格。</strong> 它是24GB版M5 Pro Mac mini的价格（<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>）；64GB需要在下单时升级。最便宜的64GB版Mac mini售价2,699美元：15核CPU、512GB固态硬盘的M5 Pro，即基础款1,699美元加上64GB内存升级费1,000美元，数据来自2026年8月25日的<a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Daring Fireball配置价格表</a>。18核CPU、1TB固态硬盘的64GB配置为3,199美元。以上为美国价格，下单前请以Apple商店为准。基础款M6 Mac mini起价899美元，最高仅32GB，容量不够。',
+          'Apple公布的M5 Pro Mac mini内存带宽为307 GB/s（<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>），本站<a href="/zh/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70B硬件指南</a>估算约4–5 tok/s。Mac Studio M5 Max起价2,499美元，仅36GB，同样不够；最高可配128GB，带宽最高614 GB/s（<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>）。同一指南估算其约9–11 tok/s。同一份Daring Fireball价格表显示，其40核GPU的64GB配置为3,499美元。这两个速度都是估算值，不是实测。',
           '需要便携可选64GB及以上的MacBook Pro，请查看当前价格。',
           '<strong>适合Mac的情况：</strong>相比价格和速度，您更看重一台简单的机器。<strong>不适合的情况：</strong>由价格或速度决定时，本页其他方案更便宜或公开速度更高。',
         ],
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '新款Mac mini能运行70B模型吗？',
-            a: '只有64GB的M5 Pro可以。1,699美元的基础款为24GB，64GB需加价：Fstoppers在2026年9月21日列出18核、1TB、64GB配置为3,199美元。M6 Mac mini最高32GB。本站指南估算64GB版M5 Pro约4–5 tok/s。',
+            a: '只有64GB的M5 Pro可以。1,699美元的基础款为24GB，64GB需加价。根据Daring Fireball在2026年8月25日发布的配置价格表，最便宜的64GB配置（15核CPU、512GB固态硬盘）为2,699美元。M6 Mac mini最高32GB。本站指南估算64GB版M5 Pro约4–5 tok/s。',
           },
           {
             q: '为多个用户提供70B模型服务，怎样最划算？',
@@ -1837,20 +1837,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Principal porém': 'Preço pedido, não de venda',
           },
           {
+            Configuração: 'Mac mini M5 Pro 64 GB',
+            'Preço (USD)': 'US$ 2.699 (15 núcleos, 512 GB)',
+            'Velocidade (tok/s)': '~4–5 (estimativa)',
+            'Principal porém': 'Base de US$ 1.699 tem 24 GB',
+          },
+          {
             Configuração: '2× RTX 3090 usadas',
             'Preço (USD)': 'US$ 3.000–3.450, só placas',
             'Velocidade (tok/s)': '19.5–31.9 (terceiros)',
             'Principal porém': 'Duas placas grandes e gastonas',
           },
           {
-            Configuração: 'Mac mini M5 Pro 64 GB',
-            'Preço (USD)': 'US$ 3.199 (18 núcleos, 1 TB)',
-            'Velocidade (tok/s)': '~4–5 (estimativa)',
-            'Principal porém': 'Base de US$ 1.699 tem 24 GB',
-          },
-          {
             Configuração: 'Mac Studio M5 Max 64 GB+',
-            'Preço (USD)': 'Acima da base de US$ 2.499',
+            'Preço (USD)': 'US$ 3.499 (GPU de 40 núcleos)',
             'Velocidade (tok/s)': '~9–11 (estimativa)',
             'Principal porém': 'Modelo base tem 36 GB',
           },
@@ -1904,8 +1904,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Mais simples: um Mac Apple Silicon com 64 GB ou mais',
         content: [
           'Se você não quer montar um PC com duas GPUs, um Mac Apple Silicon é mais simples: o modelo fica na memória unificada, sem divisão entre duas placas e sem configurar drivers multi-GPU. Mire em pelo menos 64 GB para um 70B em Q4_K_M.',
-          '<strong>US$ 1.699 não é o preço de um Mac mini de 64 GB.</strong> É o preço do Mac mini M5 Pro com 24 GB (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>); os 64 GB são um upgrade na hora da configuração. Em 21 de setembro de 2026, o <a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a> listou uma configuração de 64 GB com CPU de 18 núcleos e SSD de 1 TB por US$ 3.199. Com outro chip ou SSD o valor pode ser menor; não verificamos o preço do upgrade na Apple, então consulte a loja. O Mac mini M6 básico parte de US$ 899 e para em 32 GB, o que é pouco.',
-          'Para o Mac mini M5 Pro, a Apple informa 307 GB/s de largura de banda de memória (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>), e nosso <a href="/pt/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">guia de hardware para 70B</a> estima cerca de 4–5 tok/s. O Mac Studio M5 Max parte de US$ 2.499 com 36 GB, também insuficientes, e chega a 128 GB com até 614 GB/s (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). O mesmo guia estima cerca de 9–11 tok/s para ele. Não verificamos o preço da versão de 64 GB. As duas velocidades são estimativas, não medições.',
+          '<strong>US$ 1.699 não é o preço de um Mac mini de 64 GB.</strong> É o preço do Mac mini M5 Pro com 24 GB (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>); os 64 GB são um upgrade na hora da configuração. O Mac mini de 64 GB mais barato custa US$ 2.699: M5 Pro com CPU de 15 núcleos e SSD de 512 GB, ou seja, US$ 1.699 do modelo base mais US$ 1.000 pelos 64 GB, segundo a <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">tabela de configurações do Daring Fireball</a> de 25 de agosto de 2026. Com a CPU de 18 núcleos e SSD de 1 TB, a configuração de 64 GB custa US$ 3.199. São preços dos EUA; confira a loja da Apple antes de comprar. O Mac mini M6 básico parte de US$ 899 e para em 32 GB, o que é pouco.',
+          'Para o Mac mini M5 Pro, a Apple informa 307 GB/s de largura de banda de memória (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>), e nosso <a href="/pt/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">guia de hardware para 70B</a> estima cerca de 4–5 tok/s. O Mac Studio M5 Max parte de US$ 2.499 com 36 GB, também insuficientes, e chega a 128 GB com até 614 GB/s (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). O mesmo guia estima cerca de 9–11 tok/s para ele. A mesma tabela do Daring Fireball indica US$ 3.499 para a configuração de 64 GB com GPU de 40 núcleos. As duas velocidades são estimativas, não medições.',
           'Um MacBook Pro com 64 GB ou mais é a versão portátil; confira o preço atual.',
           '<strong>Um Mac faz sentido se:</strong> uma máquina única e simples importa mais que preço ou velocidade. <strong>Descarte se:</strong> preço ou velocidade decidem, porque outros caminhos desta página custam menos ou têm velocidades publicadas maiores.',
         ],
@@ -2003,7 +2003,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'O novo Mac mini consegue rodar um modelo 70B?',
-            a: 'Só um M5 Pro com 64 GB. O modelo base de US$ 1.699 tem 24 GB, e os 64 GB custam à parte: em 21 de setembro de 2026, o Fstoppers listou uma configuração de 18 núcleos, 1 TB e 64 GB por US$ 3.199. O Mac mini M6 para em 32 GB. Nosso guia estima cerca de 4–5 tok/s para o M5 Pro de 64 GB.',
+            a: 'Só um M5 Pro com 64 GB. O modelo base de US$ 1.699 tem 24 GB, e os 64 GB custam à parte. Segundo a tabela de configurações do Daring Fireball de 25 de agosto de 2026, a configuração de 64 GB mais barata (CPU de 15 núcleos, SSD de 512 GB) custa US$ 2.699. O Mac mini M6 para em 32 GB. Nosso guia estima cerca de 4–5 tok/s para o M5 Pro de 64 GB.',
           },
           {
             q: 'Qual é a forma com melhor custo-benefício de servir um modelo 70B para vários usuários?',
@@ -2138,20 +2138,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'العيب الأبرز': 'سعر طلب لا سعر بيع',
           },
           {
+            الإعداد: 'Mac mini M5 Pro 64 جيجابايت',
+            'السعر (USD)': '2,699$ (15 نواة، 512 جيجابايت)',
+            'السرعة (رمز/ثانية)': '~4–5 (تقدير)',
+            'العيب الأبرز': 'أساس 1,699$ بسعة 24 فقط',
+          },
+          {
             الإعداد: '2× RTX 3090 مستعملة',
             'السعر (USD)': '3,000–3,450$ للبطاقات',
             'السرعة (رمز/ثانية)': '19.5–31.9 (طرف ثالث)',
             'العيب الأبرز': 'بطاقتان كبيرتان شرهتان للطاقة',
           },
           {
-            الإعداد: 'Mac mini M5 Pro 64 جيجابايت',
-            'السعر (USD)': '3,199$ (18 نواة، 1 تيرابايت)',
-            'السرعة (رمز/ثانية)': '~4–5 (تقدير)',
-            'العيب الأبرز': 'أساس 1,699$ بسعة 24 فقط',
-          },
-          {
             الإعداد: 'Mac Studio M5 Max 64 فأكثر',
-            'السعر (USD)': 'أعلى من أساس 2,499$',
+            'السعر (USD)': '3,499$ (GPU بـ40 نواة)',
             'السرعة (رمز/ثانية)': '~9–11 (تقدير)',
             'العيب الأبرز': 'الطراز الأساسي 36 جيجابايت',
           },
@@ -2205,8 +2205,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'الأبسط: جهاز Mac بمعالج Apple Silicon وذاكرة 64 جيجابايت فأكثر',
         content: [
           'إذا لم ترغب في تجميع حاسوب ببطاقتين، فجهاز Mac بمعالج Apple Silicon أبسط: يوضع النموذج في الذاكرة الموحّدة دون تقسيمه على بطاقتين ودون إعداد تعريفات متعددة البطاقات. استهدف 64 جيجابايت على الأقل لنموذج 70B بصيغة Q4_K_M.',
-          '<strong>1,699 دولارًا ليست سعر Mac mini بذاكرة 64 جيجابايت.</strong> إنها سعر Mac mini بمعالج M5 Pro وذاكرة 24 جيجابايت (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>)، أما 64 جيجابايت فترقية تُختار عند الطلب. أدرج <a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a> في 21 سبتمبر 2026 تهيئة بذاكرة 64 جيجابايت ومعالج بـ18 نواة وSSD بسعة 1 تيرابايت بسعر 3,199 دولارًا. وقد يقل السعر مع رقاقة أو SSD مختلفين؛ ولم نتحقق من سعر الترقية لدى Apple، فراجع متجرها. أما Mac mini الأساسي بمعالج M6 فيبدأ من 899 دولارًا ويقف عند 32 جيجابايت، وهي غير كافية.',
-          'تذكر Apple لجهاز Mac mini M5 Pro عرض نطاق للذاكرة قدره 307 GB/s (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>)، ويقدّر <a href="/ar/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">دليلنا لعتاد 70B</a> نحو 4–5 رمز/ثانية. ويبدأ Mac Studio M5 Max من 2,499 دولارًا بذاكرة 36 جيجابايت، وهي غير كافية أيضًا، ويصل إلى 128 جيجابايت بعرض نطاق حتى 614 GB/s (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). ويقدّر الدليل نفسه له نحو 9–11 رمز/ثانية. لم نتحقق من سعر نسخة 64 جيجابايت. والسرعتان تقديران لا قياسان.',
+          '<strong>1,699 دولارًا ليست سعر Mac mini بذاكرة 64 جيجابايت.</strong> إنها سعر Mac mini بمعالج M5 Pro وذاكرة 24 جيجابايت (<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>)، أما 64 جيجابايت فترقية تُختار عند الطلب. وأرخص Mac mini بذاكرة 64 جيجابايت سعره 2,699 دولارًا: طراز M5 Pro بمعالج ذي 15 نواة وSSD بسعة 512 جيجابايت، أي 1,699 دولارًا للطراز الأساسي زائد 1,000 دولار لذاكرة 64 جيجابايت، وفق <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">جدول التهيئات لدى Daring Fireball</a> المؤرخ 25 أغسطس 2026. أما تهيئة 64 جيجابايت بمعالج ذي 18 نواة وSSD بسعة 1 تيرابايت فسعرها 3,199 دولارًا. وهذه أسعار أمريكية، فراجع متجر Apple قبل الطلب. أما Mac mini الأساسي بمعالج M6 فيبدأ من 899 دولارًا ويقف عند 32 جيجابايت، وهي غير كافية.',
+          'تذكر Apple لجهاز Mac mini M5 Pro عرض نطاق للذاكرة قدره 307 GB/s (<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>)، ويقدّر <a href="/ar/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">دليلنا لعتاد 70B</a> نحو 4–5 رمز/ثانية. ويبدأ Mac Studio M5 Max من 2,499 دولارًا بذاكرة 36 جيجابايت، وهي غير كافية أيضًا، ويصل إلى 128 جيجابايت بعرض نطاق حتى 614 GB/s (<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). ويقدّر الدليل نفسه له نحو 9–11 رمز/ثانية. ويحدد جدول Daring Fireball نفسه سعر تهيئة 64 جيجابايت بمعالج رسوميات ذي 40 نواة بمبلغ 3,499 دولارًا. والسرعتان تقديران لا قياسان.',
           'جهاز MacBook Pro بذاكرة 64 جيجابايت فأكثر هو الخيار المحمول؛ تحقق من سعره الحالي.',
           '<strong>يناسبك Mac إذا:</strong> كان جهاز واحد بسيط أهم لديك من السعر أو السرعة. <strong>لا يناسبك إذا:</strong> كان السعر أو السرعة هما الحاسمين، ففي هذه الصفحة طرق أرخص أو بسرعات منشورة أعلى.',
         ],
@@ -2304,7 +2304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل يستطيع Mac mini الجديد تشغيل نموذج 70B؟',
-            a: 'فقط طراز M5 Pro بذاكرة 64 جيجابايت. فالطراز الأساسي بسعر 1,699 دولارًا يحمل 24 جيجابايت، و64 جيجابايت بتكلفة إضافية: أدرج Fstoppers في 21 سبتمبر 2026 تهيئة بـ18 نواة و1 تيرابايت و64 جيجابايت بسعر 3,199 دولارًا. ويقف Mac mini M6 عند 32 جيجابايت. ويقدّر دليلنا لطراز M5 Pro بذاكرة 64 نحو 4–5 رمز/ثانية.',
+            a: 'فقط طراز M5 Pro بذاكرة 64 جيجابايت. فالطراز الأساسي بسعر 1,699 دولارًا يحمل 24 جيجابايت، و64 جيجابايت بتكلفة إضافية. ووفق جدول التهيئات لدى Daring Fireball المؤرخ 25 أغسطس 2026، فإن أرخص تهيئة بذاكرة 64 جيجابايت (معالج 15 نواة وSSD بسعة 512 جيجابايت) سعرها 2,699 دولارًا. ويقف Mac mini M6 عند 32 جيجابايت. ويقدّر دليلنا لطراز M5 Pro بذاكرة 64 نحو 4–5 رمز/ثانية.',
           },
           {
             q: 'ما الطريقة الأعلى جدوى من حيث التكلفة لتقديم نموذج 70B لعدة مستخدمين؟',
@@ -2434,20 +2434,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             '주요 단점': '거래가가 아닌 판매 호가',
           },
           {
+            구성: 'Mac mini M5 Pro 64GB',
+            '가격(USD)': '2,699달러(15코어, 512GB)',
+            '속도(tok/s)': '약 4~5(추정)',
+            '주요 단점': '1,699달러 기본형은 24GB',
+          },
+          {
             구성: '중고 RTX 3090 2장',
             '가격(USD)': '3,000~3,450달러, 카드만',
             '속도(tok/s)': '19.5~31.9(제3자)',
             '주요 단점': '크고 전력 소모가 큰 카드 2장',
           },
           {
-            구성: 'Mac mini M5 Pro 64GB',
-            '가격(USD)': '3,199달러(18코어, 1TB)',
-            '속도(tok/s)': '약 4~5(추정)',
-            '주요 단점': '1,699달러 기본형은 24GB',
-          },
-          {
             구성: 'Mac Studio M5 Max 64GB 이상',
-            '가격(USD)': '2,499달러 기본형보다 높음',
+            '가격(USD)': '3,499달러(40코어 GPU)',
             '속도(tok/s)': '약 9~11(추정)',
             '주요 단점': '기본 모델은 36GB',
           },
@@ -2496,8 +2496,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '가장 간단함: 64GB 이상 Apple Silicon Mac',
         content: [
           'GPU 2장짜리 PC를 조립하고 싶지 않다면 Apple Silicon Mac이 더 간단합니다. 모델이 통합 메모리에 올라가므로 두 카드로 나누거나 멀티 GPU 드라이버를 설정할 필요가 없습니다. 70B Q4_K_M에는 64GB 이상을 권장합니다.',
-          '<strong>1,699달러는 64GB Mac mini의 가격이 아닙니다.</strong> 24GB M5 Pro Mac mini의 가격이며(<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>), 64GB는 주문 시 업그레이드입니다. <a href="https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700" class="text-primary hover:underline">Fstoppers</a>는 2026년 9월 21일 18코어 CPU와 1TB SSD를 갖춘 64GB 구성을 3,199달러로 게재했습니다. 칩이나 SSD 선택에 따라 더 저렴할 수 있습니다. Apple의 업그레이드 가격은 확인하지 못했으므로 Apple 스토어에서 확인하십시오. 기본 M6 Mac mini는 899달러부터이지만 최대 32GB여서 부족합니다.',
-          'Apple이 밝힌 M5 Pro Mac mini의 메모리 대역폭은 307 GB/s이며(<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>), 당사의 <a href="/ko/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70B 하드웨어 가이드</a>는 약 4~5 tok/s로 추정합니다. Mac Studio M5 Max는 36GB 기준 2,499달러부터인데 이 역시 부족하며, 최대 128GB·최대 614 GB/s까지 구성할 수 있습니다(<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). 같은 가이드의 추정은 약 9~11 tok/s입니다. 64GB 버전 가격은 확인하지 못했습니다. 두 속도 모두 벤치마크가 아닌 추정치입니다.',
+          '<strong>1,699달러는 64GB Mac mini의 가격이 아닙니다.</strong> 24GB M5 Pro Mac mini의 가격이며(<a href="https://www.macrumors.com/roundup/mac-mini/" class="text-primary hover:underline">MacRumors</a>), 64GB는 주문 시 업그레이드입니다. 가장 저렴한 64GB Mac mini는 2,699달러입니다. 15코어 CPU와 512GB SSD를 갖춘 M5 Pro로, 기본 모델 1,699달러에 64GB 업그레이드 1,000달러를 더한 가격입니다(<a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Daring Fireball 구성 가격표</a>, 2026년 8월 25일). 18코어 CPU와 1TB SSD를 갖춘 64GB 구성은 3,199달러입니다. 미국 가격이므로 주문 전에 Apple 스토어에서 확인하십시오. 기본 M6 Mac mini는 899달러부터이지만 최대 32GB여서 부족합니다.',
+          'Apple이 밝힌 M5 Pro Mac mini의 메모리 대역폭은 307 GB/s이며(<a href="https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/" class="text-primary hover:underline">Apple Newsroom</a>), 당사의 <a href="/ko/local-llms/70b-models-consumer-hardware" class="text-primary hover:underline">70B 하드웨어 가이드</a>는 약 4~5 tok/s로 추정합니다. Mac Studio M5 Max는 36GB 기준 2,499달러부터인데 이 역시 부족하며, 최대 128GB·최대 614 GB/s까지 구성할 수 있습니다(<a href="https://9to5mac.com/2026/08/25/apple-unveils-next-generation-mac-studio-with-m5-max-and-m5-ultra/" class="text-primary hover:underline">9to5Mac</a>). 같은 가이드의 추정은 약 9~11 tok/s입니다. 같은 Daring Fireball 가격표에 따르면 40코어 GPU를 갖춘 64GB 구성은 3,499달러입니다. 두 속도 모두 벤치마크가 아닌 추정치입니다.',
           '휴대용이 필요하면 64GB 이상의 MacBook Pro가 선택지입니다. 현재 가격을 확인하십시오.',
           '<strong>Mac이 맞는 경우:</strong> 가격이나 속도보다 간단한 한 대가 중요할 때. <strong>맞지 않는 경우:</strong> 가격이나 속도로 결정할 때. 이 페이지의 다른 방법이 더 저렴하거나 공개된 속도가 더 높습니다.',
         ],
@@ -2595,7 +2595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '신형 Mac mini로 70B 모델을 실행할 수 있습니까?',
-            a: '64GB M5 Pro만 가능합니다. 1,699달러 기본 모델은 24GB이고 64GB는 추가 비용이 듭니다. Fstoppers는 2026년 9월 21일 18코어·1TB·64GB 구성을 3,199달러로 게재했습니다. M6 Mac mini는 최대 32GB입니다. 당사 가이드는 64GB M5 Pro를 약 4~5 tok/s로 추정합니다.',
+            a: '64GB M5 Pro만 가능합니다. 1,699달러 기본 모델은 24GB이고 64GB는 추가 비용이 듭니다. Daring Fireball 구성 가격표(2026년 8월 25일)에 따르면 가장 저렴한 64GB 구성(15코어 CPU, 512GB SSD)은 2,699달러입니다. M6 Mac mini는 최대 32GB입니다. 당사 가이드는 64GB M5 Pro를 약 4~5 tok/s로 추정합니다.',
           },
           {
             q: '여러 사용자에게 70B 모델을 제공할 때 비용 효율이 가장 높은 방법은 무엇입니까?',
