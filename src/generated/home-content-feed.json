@@ -15068,7 +15068,7 @@
   {
     "lang": "en",
     "title": "EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud",
-    "excerpt": "Compare EU GDPR-compliant cloud GPU providers in 2026: Hetzner, Scaleway, OVHcloud. Pricing, data residency, AI Act compliance verified.",
+    "excerpt": "Cloud GPU providers in the EU compared for GDPR work: Hetzner, Scaleway, OVHcloud and others. What to check in the DPA, locations and sub-processors.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/local-llms/eu-cloud-gpu-gdpr-2026",
@@ -15077,7 +15077,7 @@
   {
     "lang": "de",
     "title": "EU-Cloud-GPU mit DSGVO 2026: Hetzner vs Scaleway vs OVHcloud",
-    "excerpt": "EU-Cloud-GPU-Anbieter mit DSGVO-Konformität 2026: souveräne KI-Infrastruktur in Europa. Scaleway, OVHcloud und Hetzner im Vergleich.",
+    "excerpt": "Cloud-GPU-Anbieter in der EU für DSGVO-relevante Arbeit: Hetzner, Scaleway, OVHcloud und weitere. Was Sie bei AVV, Standorten und Subunternehmern prüfen.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/de/local-llms/eu-cloud-gpu-gdpr-2026",
@@ -15086,7 +15086,7 @@
   {
     "lang": "fr",
     "title": "GPU Cloud RGPD UE 2026 : Hetzner vs Scaleway vs OVHcloud",
-    "excerpt": "Fournisseurs GPU cloud conformes RGPD pour UE : Hetzner (€184/mois forfaitaire, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Résidence UE, DPA, Schrems II.",
+    "excerpt": "Fournisseurs de GPU cloud dans l’UE pour des traitements RGPD : Hetzner, Scaleway, OVHcloud et d’autres. DPA, lieux et sous-traitants à vérifier.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/fr/local-llms/eu-cloud-gpu-gdpr-2026",
@@ -15095,7 +15095,7 @@
   {
     "lang": "ja",
     "title": "EU GDPR準拠クラウドGPU 2026：Hetzner・Scaleway・OVHcloud比較",
-    "excerpt": "EU顧客向けGDPR準拠クラウドGPUプロバイダー：Hetzner（月額¥26,700定額、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。データレジデンス、DPA、Schrems II準拠。",
+    "excerpt": "GDPRに関わる処理向けのEUのクラウドGPU事業者：Hetzner、Scaleway、OVHcloudなど。DPA、データの所在地、再委託先で確認すべき点を整理します。",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/ja/local-llms/eu-cloud-gpu-gdpr-2026",
@@ -15104,7 +15104,7 @@
   {
     "lang": "zh",
     "title": "2026欧盟GDPR合规云GPU指南：Hetzner、Scaleway、OVHcloud对比",
-    "excerpt": "欧盟GDPR合规云GPU提供商对比：Hetzner（$200/月固定价格、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。数据驻留、DPA、Schrems II合规。",
+    "excerpt": "面向GDPR相关处理的欧盟云GPU提供商：Hetzner、Scaleway、OVHcloud等。整理DPA、数据中心位置和次级处理者方面需要核对的要点。",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/zh/local-llms/eu-cloud-gpu-gdpr-2026",
@@ -15113,7 +15113,7 @@
   {
     "lang": "es",
     "title": "GPU Cloud RGPD UE 2026: Hetzner vs Scaleway vs OVHcloud",
-    "excerpt": "Proveedores de GPU cloud conformes con el RGPD en 2026: Hetzner, Scaleway, OVHcloud. Precios, residencia de datos y cumplimiento del Acta de IA de la UE.",
+    "excerpt": "Proveedores de GPU en la nube en la UE para trabajo con RGPD: Hetzner, Scaleway, OVHcloud y otros. Qué revisar en el DPA, ubicaciones y subencargados.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/es/local-llms/eu-cloud-gpu-gdpr-2026",
@@ -15121,8 +15121,8 @@
   },
   {
     "lang": "pt",
-    "title": "GPU Cloud com Conformidade 2026: Hetzner vs Scaleway vs OVHcloud",
-    "excerpt": "Provedores de GPU cloud conformes com LGPD/GDPR em 2026: Hetzner, Scaleway, OVHcloud. Preços, residência de dados e conformidade com a Lei de IA da UE.",
+    "title": "GPU Cloud na UE e proteção de dados: Hetzner vs Scaleway vs OVHcloud",
+    "excerpt": "Provedores de GPU cloud na UE para trabalho com GDPR e LGPD: Hetzner, Scaleway, OVHcloud e outros. O que conferir no DPA, locais e suboperadores.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/pt/local-llms/eu-cloud-gpu-gdpr-2026",
@@ -15131,7 +15131,7 @@
   {
     "lang": "ar",
     "title": "⁨GPU⁩ سحابية ممتثلة لـ ⁨GDPR⁩ في الاتحاد الأوروبي ⁨2026⁩: ⁨Hetzner⁩ مقابل ⁨Scaleway⁩ مقابل ⁨OVHcloud⁩",
-    "excerpt": "⁨Hetzner GPU⁩ بـ ⁨184⁩ يورو/شهر، ⁨Scaleway H100⁩ بـ ⁨0.50⁩–⁨2.50⁩ يورو/ساعة، ⁨OVHcloud⁩: مقارنة مزودين أوروبيين بمخاطر ⁨Schrems-II⁩ منخفضة للاتحاد الأوروبي.",
+    "excerpt": "مزودو GPU السحابية في الاتحاد الأوروبي للمعالجة الخاضعة لـ GDPR: Hetzner وScaleway وOVHcloud وغيرهم. ما يجب التحقق منه في DPA والمواقع.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/ar/local-llms/eu-cloud-gpu-gdpr-2026",
@@ -15140,7 +15140,7 @@
   {
     "lang": "ko",
     "title": "EU GDPR 클라우드 GPU 2026: Hetzner vs Scaleway vs OVHcloud",
-    "excerpt": "2026년 EU GDPR 준수 클라우드 GPU 공급업체 비교: Hetzner, Scaleway, OVHcloud. 가격, 데이터 상주, EU AI 법 준수 여부 검증.",
+    "excerpt": "GDPR 관련 처리를 위한 EU 클라우드 GPU 공급업체: Hetzner, Scaleway, OVHcloud 등. DPA, 데이터 센터 위치, 하위 처리자 확인 사항을 정리합니다.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-28",
     "url": "/ko/local-llms/eu-cloud-gpu-gdpr-2026",
