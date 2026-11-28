@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -34056,7 +34056,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "1b4b0a1f-dd45-4305-a94a-89b2a4a9c01b",
@@ -34076,7 +34080,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "27b4f28c-85eb-4dd9-a09a-739c65577434",
@@ -34096,7 +34104,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "d7e482a9-d787-49f5-aaee-f7217794b1c3",
@@ -34116,7 +34128,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "edf36fd6-340b-441b-a625-207051dd46ec",
@@ -34136,7 +34152,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ab7547e3-89b3-4cfb-bce8-9a1456e7d44b",
@@ -34156,7 +34176,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "c204f61e-e21b-4017-81b8-daa7347b93bf",
@@ -34171,7 +34195,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ebaa6911-5c46-482e-ba68-98f28907c9fd",
@@ -34191,7 +34219,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "5499db17-2e9f-4e73-8334-168794b2a21f",
@@ -34211,7 +34243,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "c758f814-d897-4eb5-861d-8d7206ad168b",
@@ -34226,7 +34262,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "1d9150ba-72f8-422c-ac01-7601b52d9be5",
@@ -34241,7 +34281,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "86b7659e-15b5-4b06-a966-8ac3d4a72ac8",
@@ -34256,7 +34300,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "7fcab5e0-abb2-4ad2-b8a5-01d034a60eb2",
@@ -34271,7 +34319,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "fae9633b-3808-4271-affc-262f4808a0b1",
@@ -34286,7 +34338,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "77cc2d18-da29-4dc9-9422-2049754ee6ed",
@@ -34301,7 +34357,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "cebbc5ad-cb8a-46a0-8614-dfde04e554d4",
@@ -34316,7 +34376,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "cfb384f1-2314-4c20-84f5-33e6d5d669f3",
@@ -34331,7 +34395,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a88a9f4f-fa14-4539-b5c3-de546950eb0a",
@@ -34346,7 +34414,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f1b8b4a8-e16e-4082-a830-016c4bb9b3f1",
@@ -34371,7 +34443,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "41dffb29-eee8-43f8-afb8-4d2e52850005",
@@ -34396,7 +34472,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "9f0e12fc-50d4-4aec-ac3c-005a223db36c",
@@ -34421,7 +34501,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e98d80e8-7dc0-4f64-a92a-fe80fd0a56de",
@@ -34446,7 +34530,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "848ea6f4-5226-4770-b1f6-4dba2f6add2e",
@@ -34471,7 +34559,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "6900987f-b0eb-4bcd-9208-49382fc0cfe4",
@@ -34496,7 +34588,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "5879043c-f062-4919-a86a-9305d1dc8854",
@@ -34521,7 +34617,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "9cfc21b0-860a-45a1-9611-3981b1d12d7d",
@@ -34546,7 +34646,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f33026a9-f90e-4006-bab1-5fbb73ccb0b1",
@@ -34571,7 +34675,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f7c6e35e-cbd0-46e5-8f01-390a5e965667",
@@ -34586,7 +34694,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "98308b5d-0282-4920-8fb2-2f8bc23b6be8",
@@ -34601,7 +34713,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "30edbb8c-8e8e-4673-9afc-4a75c64a88c0",
@@ -34616,7 +34732,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "76f336ed-7cff-4328-b321-44bd8d8ec1c3",
@@ -34631,7 +34751,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "5e6a8f74-331a-49b3-baec-3fb7d2eb0d3b",
@@ -34651,7 +34775,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "3ba1de82-2077-42bd-b06e-a7acd8f2e53a",
@@ -34676,7 +34804,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "878cdcc5-4176-41b2-b1e1-67d9ff352ef5",
@@ -34701,7 +34833,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "5581e03c-cbf9-459c-aff1-0e846590d904",
@@ -34726,7 +34862,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "41ec636e-89e5-4256-9406-445e6cefe4c1",
@@ -34751,7 +34891,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "675c3ab3-c260-4bcb-b86c-806203af2724",
@@ -34776,7 +34920,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "fd7fa6ee-7d70-4c5c-8bfd-d9bc5223ca4e",
@@ -34801,7 +34949,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f25adac4-5397-4f4a-9f12-e67ed3c69c36",
@@ -34826,7 +34978,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "48dde61f-881e-4525-9473-3b78076940f3",
@@ -34851,7 +35007,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "608a23bc-feeb-452d-9fc6-3283a8294f83",
@@ -34866,7 +35026,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "7515b182-5f1f-4270-aac3-281452c330df",
@@ -34881,7 +35045,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "5f1f867f-4ff8-4a46-acc2-34780d75aa69",
@@ -34896,7 +35064,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ee132996-3914-4e99-8e6e-ea9ce8b6d2ec",
@@ -34911,7 +35083,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "4380d227-7dfc-40bb-bde1-91976e2fe351",
@@ -34926,7 +35102,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a073653b-5239-4db5-8e81-c6852c30e37c",
@@ -34941,7 +35121,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ba63a2d1-8864-4441-a89d-14269e87a3dc",
@@ -34956,7 +35140,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a269af60-2806-4a44-8a25-5ac828c3704e",
@@ -34971,7 +35159,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e8098ce7-e8fc-4765-8b29-252c79f41aa9",
@@ -34986,7 +35178,11 @@
     ],
     "reason": "Open-items correction 2026-11-28 (Mac prices, speed estimates, unsupported test claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "322fbfbc-c42a-497a-bc81-823198d5b72b",
