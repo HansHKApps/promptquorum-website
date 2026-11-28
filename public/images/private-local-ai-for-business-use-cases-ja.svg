@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">オンプレミスAI：業界別の用途</dc:title>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">© PromptQuorum 2026</dc:rights>
+    <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">https://www.promptquorum.com/ja/local-llms/private-local-ai-for-business</dc:source>
+  </metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">オンプレミスAI：業界別の用途</text>
+  <rect x="40" y="70" width="140" height="280" rx="6" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <circle cx="110" cy="100" r="20" fill="#9C27B0"/>
+  <text x="110" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">🏥</text>
+  <text x="110" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">医療</text>
+  <text x="110" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">医療NLP</text>
+  <text x="110" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">メモの要約</text>
+  <text x="110" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C27B0" text-anchor="middle">HIPAAの保護措置</text>
+  <text x="110" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">データのローカル</text>
+  <text x="110" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">管理を支援</text>
+  <rect x="210" y="70" width="140" height="280" rx="6" fill="#E3F2FD" stroke="#1976D2" stroke-width="2"/>
+  <circle cx="280" cy="100" r="20" fill="#1976D2"/>
+  <text x="280" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">💰</text>
+  <text x="280" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">金融</text>
+  <text x="280" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">リスク評価</text>
+  <text x="280" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">コンプライアンス分析</text>
+  <text x="280" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1976D2" text-anchor="middle">データセキュリティ</text>
+  <text x="280" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">クラウド送信を</text>
+  <text x="280" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">回避できる場合あり</text>
+  <rect x="380" y="70" width="140" height="280" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+  <circle cx="450" cy="100" r="20" fill="#7B1FA2"/>
+  <text x="450" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">⚖️</text>
+  <text x="450" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">法務</text>
+  <text x="450" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">文書レビュー</text>
+  <text x="450" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">契約分析</text>
+  <text x="450" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#7B1FA2" text-anchor="middle">監査ログ</text>
+  <text x="450" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">アクセスと監査の</text>
+  <text x="450" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">記録</text>
+  <rect x="550" y="70" width="210" height="280" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="655" cy="100" r="20" fill="#388E3C"/>
+  <text x="655" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">🏭</text>
+  <text x="655" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">製造・行政</text>
+  <text x="655" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">予知保全</text>
+  <text x="655" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">品質管理</text>
+  <text x="655" y="204" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">機密処理</text>
+  <text x="655" y="236" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#388E3C" text-anchor="middle">独自データ</text>
+  <text x="655" y="258" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">社内に保持できます</text>
+  <text x="792" y="390" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>

@@ -39,6 +39,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import ts from 'typescript';
 import { changedArticleFiles } from './changed-article-files.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -90,49 +91,49 @@ function findArticleDirs() {
   return dirs.sort();
 }
 
-/** Same block-splitting contract as validate-affiliate-disclosure.mjs. */
-function splitLangBlocks(content) {
-  const lines = content.split('\n');
-  const starts = [];
-  const langKeyRe = new RegExp(`^  (${LANGS.join('|')}):\\s*{\\s*$`);
-  for (let i = 0; i < lines.length; i++) {
-    const m = lines[i].match(langKeyRe);
-    if (m) starts.push({ lang: m[1], startLine: i });
-  }
-  return starts.map(({ lang, startLine }, i) => ({
-    lang,
-    startLine: startLine + 1,
-    text: lines.slice(startLine, i + 1 < starts.length ? starts[i + 1].startLine : lines.length).join('\n'),
-  }));
-}
-
 /**
- * Read a single-quoted TS string value for `key`. Counts the rendered length:
- * an escaped \' is one character to a reader, and \uXXXX escapes are one glyph.
+ * Every locale block in a file: any `en: {...}` / `de: {...}` property (and
+ * `x.de = {...}` assignment) that carries seoTitle or metaDescription. Read through
+ * the TypeScript AST, so indentation and one-line objects do not matter. The old
+ * line-based splitter only saw keys indented by exactly two spaces and silently
+ * skipped every other block.
  */
-function readField(blockText, key) {
-  // Values may be single-quoted, double-quoted or backticked. French blocks in
-  // particular use double quotes so the text can contain an apostrophe
-  // ("L'énergie solaire..."), and reading only single quotes silently skipped
-  // 82 fields, 69 of them French.
-  const re = new RegExp(`(?<![A-Za-z0-9_])${key}:\\s*(['"\`])`);
-  const m = re.exec(blockText);
-  if (!m) return null;
-  const quote = m[1];
-  let i = m.index + m[0].length;
-  let out = '';
-  while (i < blockText.length) {
-    const c = blockText[i];
-    if (c === '\\') {
-      if (blockText.slice(i + 1, i + 2) === 'u') {
-        out += 'X'; i += 6; continue;
-      }
-      out += blockText[i + 1]; i += 2; continue;
+export function readLangBlocks(content, file = 'x.ts') {
+  const sf = ts.createSourceFile(file, content, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
+  const blocks = [];
+  const unwrap = (n) => {
+    while (n && (ts.isAsExpression(n) || ts.isParenthesizedExpression(n) || ts.isSatisfiesExpression?.(n))) n = n.expression;
+    return n;
+  };
+  const nameOf = (n) => (n && (ts.isIdentifier(n) || ts.isStringLiteralLike(n)) ? n.text : null);
+  // The rendered string, so an escaped quote or \uXXXX counts as one character.
+  const valueOf = (n) => {
+    n = unwrap(n);
+    if (ts.isStringLiteralLike(n)) return n.text;
+    if (ts.isTemplateExpression(n)) return n.head.text + n.templateSpans.map((x) => ' 0 ' + x.literal.text).join('');
+    return null;
+  };
+  const add = (lang, init) => {
+    const obj = unwrap(init);
+    if (!lang || !LANGS.includes(lang) || !obj || !ts.isObjectLiteralExpression(obj)) return;
+    const fields = {};
+    for (const p of obj.properties) {
+      if (!ts.isPropertyAssignment(p)) continue;
+      const key = nameOf(p.name);
+      if (key !== 'seoTitle' && key !== 'metaDescription') continue;
+      const v = valueOf(p.initializer);
+      if (v !== null) fields[key] = v;
     }
-    if (c === quote) return out;
-    out += c; i += 1;
-  }
-  return null;
+    if (Object.keys(fields).length) blocks.push({ lang, fields });
+  };
+  const visit = (node) => {
+    if (ts.isPropertyAssignment(node)) add(nameOf(node.name), node.initializer);
+    else if (ts.isBinaryExpression(node) && node.operatorToken.kind === ts.SyntaxKind.EqualsToken
+      && ts.isPropertyAccessExpression(node.left)) add(node.left.name.text, node.right);
+    ts.forEachChild(node, visit);
+  };
+  visit(sf);
+  return blocks;
 }
 
 const findings = [];
@@ -146,13 +147,13 @@ for (const dir of findArticleDirs()) {
     const file = path.relative(process.cwd(), abs);
     if (CHANGED && !CHANGED.has(path.relative(path.resolve(__dirname, '..'), abs).split(path.sep).join('/'))) continue;
     const content = fs.readFileSync(abs, 'utf-8');
-    for (const block of splitLangBlocks(content)) {
+    for (const block of readLangBlocks(content, file)) {
       if (ONLY_LOCALE && block.lang !== ONLY_LOCALE) continue;
       const budget = BUDGETS[block.lang];
       if (!budget) continue;
       const [tMin, tMax, dMin, dMax] = budget;
 
-      const title = readField(block.text, 'seoTitle');
+      const title = block.fields.seoTitle ?? null;
       if (title !== null) {
         checkedTitles += 1;
         if (title.length > tMax) {
@@ -164,7 +165,7 @@ for (const dir of findArticleDirs()) {
         }
       }
 
-      const desc = readField(block.text, 'metaDescription');
+      const desc = block.fields.metaDescription ?? null;
       if (desc !== null) {
         checkedDescs += 1;
         if (desc.length > dMax) {

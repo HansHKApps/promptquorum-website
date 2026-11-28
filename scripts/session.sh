@@ -133,6 +133,11 @@ cmd_finish() {
   [ "$dirty" = "0" ] || { git -C "$dir" status --short; die "$dirty uncommitted change(s) in $slug - commit or discard them first"; }
 
   git -C "$REPO" fetch -q origin
+  # Block a merge that would add an untranslated title: merges to main skip PR checks.
+  if [ -f "$dir/scripts/validate-localized-titles.mjs" ]; then
+    (cd "$dir" && node scripts/validate-localized-titles.mjs --changed=origin/main --strict) \
+      || die "title check failed in $slug - fix the untranslated title(s), commit, then retry"
+  fi
   # Merge in a throwaway worktree so no session's checkout is touched.
   local tmp="/tmp/pq-finish-$slug"
   rm -rf "$tmp"

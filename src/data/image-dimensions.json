@@ -24734,91 +24734,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-ar.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-de.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-en.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-es.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-fr.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-ja.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-ko.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-pt.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-zh.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
   "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -44994,36 +44909,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/private-local-ai-for-business-cost-breakeven-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-latency-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-on-prem-vs-cloud-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-on-prem-vs-cloud-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-on-prem-vs-cloud-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/private-local-ai-for-business-on-prem-vs-cloud-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
   "/images/private-local-ai-for-business-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -45069,12 +44954,47 @@
     "width": 1200,
     "height": 675
   },
+  "/images/private-local-ai-for-business-use-cases-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/private-local-ai-for-business-use-cases-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/private-local-ai-for-business-use-cases-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
   },
   "/images/private-local-ai-for-business-use-cases-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/private-local-ai-for-business-use-cases-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/private-local-ai-for-business-use-cases-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/private-local-ai-for-business-use-cases-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/private-local-ai-for-business-use-cases-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/private-local-ai-for-business-use-cases-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400

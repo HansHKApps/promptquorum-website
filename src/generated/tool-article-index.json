@@ -14646,6 +14646,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "vultr-digitalocean-upcloud-gpu-cloud",
+        "title": "Vultr vs DigitalOcean vs UpCloud for GPU Workloads (2026)",
+        "url": "/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "local-llms-vs-claude-pro",
         "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
@@ -14691,14 +14699,6 @@
         "title": "Weesper Transcribe Review: Offline File Transcription for Mac",
         "url": "/power-local-llm/weesper-transcribe-review",
         "dateModified": "2026-11-27",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-llm-api-gateway-2026",
-        "title": "LiteLLM vs OpenRouter vs Portkey: Best LLM Gateway 2026",
-        "url": "/local-llms/best-llm-api-gateway",
-        "dateModified": "2026-11-22",
         "tier": "mentioned"
       }
     ],

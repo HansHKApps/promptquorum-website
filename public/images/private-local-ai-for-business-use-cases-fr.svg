@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">IA sur site : usages par secteur</dc:title>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">© PromptQuorum 2026</dc:rights>
+    <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">https://www.promptquorum.com/fr/local-llms/private-local-ai-for-business</dc:source>
+  </metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">IA sur site : usages par secteur</text>
+  <rect x="40" y="70" width="140" height="280" rx="6" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <circle cx="110" cy="100" r="20" fill="#9C27B0"/>
+  <text x="110" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">🏥</text>
+  <text x="110" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Santé</text>
+  <text x="110" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">NLP médical</text>
+  <text x="110" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Résumés de notes</text>
+  <text x="110" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C27B0" text-anchor="middle">Mesures HIPAA</text>
+  <text x="110" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Facilite le traitement</text>
+  <text x="110" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">local des données</text>
+  <rect x="210" y="70" width="140" height="280" rx="6" fill="#E3F2FD" stroke="#1976D2" stroke-width="2"/>
+  <circle cx="280" cy="100" r="20" fill="#1976D2"/>
+  <text x="280" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">💰</text>
+  <text x="280" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Finance</text>
+  <text x="280" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Évaluation des risques</text>
+  <text x="280" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Analyse de conformité</text>
+  <text x="280" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1976D2" text-anchor="middle">Sécurité des données</text>
+  <text x="280" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Peut éviter l’envoi</text>
+  <text x="280" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">vers le cloud</text>
+  <rect x="380" y="70" width="140" height="280" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+  <circle cx="450" cy="100" r="20" fill="#7B1FA2"/>
+  <text x="450" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">⚖️</text>
+  <text x="450" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Juridique</text>
+  <text x="450" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Revue de documents</text>
+  <text x="450" y="188" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Analyse de contrats</text>
+  <text x="450" y="220" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#7B1FA2" text-anchor="middle">Journaux d’audit</text>
+  <text x="450" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Journalisation des</text>
+  <text x="450" y="256" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">accès et audits</text>
+  <rect x="550" y="70" width="210" height="280" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="655" cy="100" r="20" fill="#388E3C"/>
+  <text x="655" y="108" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">🏭</text>
+  <text x="655" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Industrie et</text>
+  <text x="655" y="162" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">secteur public</text>
+  <text x="655" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Maintenance prédictive</text>
+  <text x="655" y="206" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Contrôle qualité</text>
+  <text x="655" y="222" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Traitement classifié</text>
+  <text x="655" y="254" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#388E3C" text-anchor="middle">Données propriétaires</text>
+  <text x="655" y="276" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Peuvent rester sur site</text>
+  <text x="792" y="390" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>
