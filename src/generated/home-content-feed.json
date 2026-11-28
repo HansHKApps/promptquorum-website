@@ -10939,7 +10939,7 @@
     "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
     "excerpt": "M5 Max vs RTX 4090 and RTX 5090: speed, cost, power, VRAM vs unified memory. Crossover ~24GB: NVIDIA faster below; above, Apple is one of few options.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -10948,7 +10948,7 @@
     "title": "Apple Silicon vs NVIDIA GPU für lokale LLMs 2026: Performance, Kosten, Workflow im Vergleich",
     "excerpt": "M5 Max vs RTX 4090: Geschwindigkeit, Kosten, Stromverbrauch, VRAM vs Unified Memory. Wendepunkt bei 24 GB. Vollständiger Vergleich für lokale LLMs.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -10957,7 +10957,7 @@
     "title": "Apple Silicon vs NVIDIA GPU pour les LLMs locaux 2026 : Performance, coûts, workflow comparés",
     "excerpt": "M5 Max vs RTX 4090 : vitesse, coûts, consommation d'énergie, VRAM vs mémoire unifiée. Point de basculement à 24 GB. Comparaison complète.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -10966,7 +10966,7 @@
     "title": "2026年 Apple SiliconとNVIDIA GPUのローカルLLM比較：性能、コスト、ワークフロー",
     "excerpt": "M5 Max vs RTX 4090：性能、コスト、消費電力、VRAM vs Unified Memory比較。分岐点24GB。以下ではNVIDIA高速、以上ではApple Silicon。ベンチマーク、TCO分析、完全比較。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -10975,7 +10975,7 @@
     "title": "2026年Apple Silicon vs NVIDIA GPU本地大模型对比：性能、成本、工作流",
     "excerpt": "M5 Max vs RTX 4090：性能、成本、功耗、VRAM对统一内存对比。转折点24GB。24GB以下NVIDIA更快，以上则是Apple Silicon。完整基准、TCO分析、工作流对比。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -10984,7 +10984,7 @@
     "title": "Apple Silicon vs NVIDIA GPU para LLMs locales 2026: Rendimiento, Costo, Workflow Comparados",
     "excerpt": "M5 Max vs RTX 4090: velocidad, costo, consumo y VRAM vs memoria unificada. Cruce a ~24 GB: NVIDIA más rápida por debajo; por encima, Apple Silicon.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -11002,7 +11002,7 @@
     "title": "⁨Apple Silicon⁩ مقابل ⁨GPU⁩ من ⁨NVIDIA⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: الأداء والتكلفة وتدفق العمل",
     "excerpt": "⁨M5 Max⁩ مقابل ⁨RTX 4090⁩: التقاطع عند ⁨24 GB⁩. دونها تتفوق ⁨NVIDIA⁩؛ فوقها ⁨Apple Silicon⁩. مقارنة السرعة والتكلفة والطاقة.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -11011,7 +11011,7 @@
     "title": "2026년 Apple Silicon vs NVIDIA GPU 로컬 LLM 비교: 성능, 비용, 워크플로우",
     "excerpt": "M5 Max vs RTX 4090: 속도, 비용, 전력, VRAM 대 통합 메모리 비교. 분기점 약 24GB. 24GB 미만에서는 NVIDIA 우세, 초과 시 Apple Silicon. 전체 비교 분석.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
     "cluster": "local-llms"
   },
@@ -11101,7 +11101,7 @@
     "title": "Best GPUs for Local LLMs in 2026: VRAM Tiers, Speed and Prices",
     "excerpt": "In community llama.cpp tests a 7B model runs at 177 tok/s on an RTX 5070 Ti and 186 on an RTX 4090. Compare GPUs by VRAM, speed and observed prices.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -11110,7 +11110,7 @@
     "title": "Beste GPUs für lokale LLMs 2026: VRAM-Stufen, Geschwindigkeit und Preise",
     "excerpt": "In Community-Tests mit llama.cpp läuft ein 7B-Modell mit 177 Token/s auf einer RTX 5070 Ti und 186 auf einer RTX 4090. GPUs nach VRAM, Tempo und Preis.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -11119,7 +11119,7 @@
     "title": "Meilleurs GPU pour LLM locaux en 2026 : paliers de VRAM, vitesse et prix",
     "excerpt": "Dans les tests communautaires llama.cpp, un modèle 7B tourne à 177 tok/s sur une RTX 5070 Ti et 186 sur une RTX 4090. GPU comparés : VRAM, vitesse, prix.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -11128,7 +11128,7 @@
     "title": "ローカルLLM向けGPUおすすめ2026：VRAM別の速度と価格",
     "excerpt": "llama.cppのコミュニティ計測では7BモデルがRTX 5070 Tiで177 tok/s、RTX 4090で186 tok/s。VRAM別にGPUの速度と観測価格を比較します。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -11137,7 +11137,7 @@
     "title": "2026本地LLM显卡推荐：按显存分档看速度与价格",
     "excerpt": "llama.cpp社区测试中，7B模型在RTX 5070 Ti上达177 tok/s，在RTX 4090上为186 tok/s。按显存、速度和观测价格对比各档显卡。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -11146,7 +11146,7 @@
     "title": "Mejores GPUs para LLMs locales en 2026: niveles de VRAM, velocidad y precios",
     "excerpt": "En pruebas comunitarias de llama.cpp, un modelo 7B corre a 177 tok/s en una RTX 5070 Ti y a 186 en una RTX 4090. Compara GPUs por VRAM, velocidad y precio.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -11155,7 +11155,7 @@
     "title": "Melhores GPUs para LLMs locais em 2026: faixas de VRAM, velocidade e preços",
     "excerpt": "Em testes da comunidade com llama.cpp, um modelo 7B roda a 177 tok/s em uma RTX 5070 Ti e a 186 em uma RTX 4090. Compare GPUs por VRAM, velocidade e preço.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -11164,7 +11164,7 @@
     "title": "أفضل GPU لنماذج LLM المحلية في 2026: فئات VRAM والسرعة والأسعار",
     "excerpt": "في اختبارات llama.cpp المجتمعية يعمل نموذج 7B بسرعة 177 tok/s على RTX 5070 Ti و186 على RTX 4090. قارن بطاقات GPU بحسب VRAM والسرعة والسعر المرصود.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -11173,7 +11173,7 @@
     "title": "2026 로컬 LLM GPU 추천: VRAM별 속도와 가격",
     "excerpt": "llama.cpp 커뮤니티 테스트에서 7B 모델은 RTX 5070 Ti에서 177 tok/s, RTX 4090에서 186 tok/s였습니다. VRAM별 GPU 속도와 관측 가격을 비교합니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/best-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -12964,7 +12964,7 @@
     "title": "Used GPUs for Local LLMs: Buying Guide",
     "excerpt": "Used GPUs for local LLMs: RTX 3060, 3080, 3090 and 4090 price ranges, where to buy, mining-card risks and how to test a card before you pay.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -12973,7 +12973,7 @@
     "title": "Gebrauchte GPUs für lokale LLMs: Preise, Risiken und Tests",
     "excerpt": "Gebrauchte GPUs für lokale LLMs: Preisbereiche für RTX 3060, 3080, 3090 und 4090, wo kaufen, Risiken bei Mining-Karten und wie Sie eine Karte vor dem Kauf testen.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -12982,7 +12982,7 @@
     "title": "GPU d'occasion pour LLMs locaux : guide d'achat",
     "excerpt": "GPU d'occasion pour LLM locaux : fourchettes de prix des RTX 3060, 3080, 3090 et 4090, où acheter, risques des cartes de minage et comment tester avant de payer.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -12991,7 +12991,7 @@
     "title": "ローカルLLM向け中古GPU：購入ガイド",
     "excerpt": "ローカルLLM向け中古GPU：RTX 3060、3080、3090、4090の価格帯（米国市場の目安）、購入先、マイニングカードのリスク、購入前のテスト方法を解説します。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -13000,7 +13000,7 @@
     "title": "本地LLM二手GPU：选购指南",
     "excerpt": "本地LLM二手GPU选购：RTX 3060、3080、3090、4090价格区间（美国市场参考）、购买渠道、矿卡风险，以及付款前如何测试显卡。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -13009,7 +13009,7 @@
     "title": "GPUs de segunda mano para LLMs locales: Guía de compra",
     "excerpt": "GPUs de segunda mano para LLMs locales: rangos de precio de RTX 3060, 3080, 3090 y 4090, dónde comprar, riesgos de las tarjetas de minería y cómo probarlas.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -13018,7 +13018,7 @@
     "title": "GPUs usadas para LLMs locais: Guia de compra",
     "excerpt": "GPUs usadas para LLMs locais: faixas de preço da RTX 3060, 3080, 3090 e 4090, onde comprar, riscos das placas de mineração e como testar antes de pagar.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -13027,7 +13027,7 @@
     "title": "وحدات ⁨GPU⁩ المستعملة لنماذج ⁨LLM⁩ المحلية: دليل الشراء",
     "excerpt": "⁨GPU⁩ مستعملة لنماذج ⁨LLM⁩ المحلية: نطاقات أسعار ⁨RTX 3060⁩ و⁨3080⁩ و⁨3090⁩ و⁨4090⁩، وأين تشتري، ومخاطر بطاقات التعدين، وكيف تختبر البطاقة قبل الدفع.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -13036,7 +13036,7 @@
     "title": "중고 GPU로 로컬 LLM 구동하기: 구매 가이드",
     "excerpt": "로컬 LLM용 중고 GPU: RTX 3060, 3080, 3090, 4090 가격대(미국 시장 기준), 구매처, 채굴용 카드 리스크, 구매 전 테스트 방법을 정리했습니다.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/used-gpus-for-local-llms",
     "cluster": "local-llms"
   },
@@ -14908,7 +14908,7 @@
     "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
     "excerpt": "Claude Pro costs $20/month. Local setups cost $1,800-4,050 over 5 years incl. power. Llama 3.3 70B at Q4 needs ~43 GB, so two 24 GB GPUs. Full comparison.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -14917,7 +14917,7 @@
     "title": "Lokale LLMs vs Claude Pro: Datenschutz, Kosten und Qualität",
     "excerpt": "Claude Pro kostet 20 $/Monat; lokal 1.800–4.050 $ in 5 Jahren inkl. Strom. Llama 3.3 70B braucht in Q4 ca. 43 GB (zwei 24-GB-GPUs). Vergleich.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -14926,7 +14926,7 @@
     "title": "LLMs Locaux vs Claude Pro: Confidentialité, Coûts et Qualité",
     "excerpt": "Claude Pro coûte 20 $/mois ; en local 1 800–4 050 $ sur 5 ans, électricité incluse. Llama 3.3 70B en Q4 : ~43 Go (deux GPU de 24 Go). Comparatif.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -14935,7 +14935,7 @@
     "title": "ローカルLLM vs Claude Pro: プライバシー、コスト、品質比較",
     "excerpt": "Claude Proは月$20。ローカル構成は電気代込みで5年$1,800-4,050。Llama 3.3 70BのQ4は約43 GB、24 GBのGPU2枚が必要です。コストを比較します。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -14944,7 +14944,7 @@
     "title": "本地LLM vs Claude Pro: 隐私、成本与质量对比",
     "excerpt": "Claude Pro 每月 $20；本地方案含电费 5 年 $1,800-4,050。Llama 3.3 70B 在 Q4 下约需 43 GB，即两张 24 GB 显卡。完整对比。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -14953,7 +14953,7 @@
     "title": "LLMs Locales vs Claude Pro: Privacidad, Costo y Calidad",
     "excerpt": "Claude Pro cuesta $20/mes; lo local, $1,800-4,050 en 5 años con luz. Llama 3.3 70B en Q4 necesita ~43 GB (dos GPUs de 24 GB). Comparativa completa.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -14962,7 +14962,7 @@
     "title": "LLMs Locais vs Claude Pro: Privacidade, Custo e Qualidade",
     "excerpt": "Claude Pro custa $20/mês; o local custa $1.800-4.050 em 5 anos com energia. Llama 3.3 70B em Q4 exige ~43 GB: duas GPUs de 24 GB. Comparação.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -14971,7 +14971,7 @@
     "title": "نماذج ⁨LLM⁩ المحلية مقابل ⁨Claude Pro⁩: الخصوصية والتكلفة والجودة",
     "excerpt": "سعر Claude Pro 20$/شهر؛ والإعداد المحلي 1,800–4,050$ على 5 سنوات. يحتاج Llama 3.3 70B بصيغة Q4 نحو 43 GB: بطاقتا GPU بسعة 24 GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -14980,7 +14980,7 @@
     "title": "로컬 LLM vs Claude Pro: 프라이버시, 비용, 품질 비교",
     "excerpt": "Claude Pro는 월 $20입니다. 로컬 구성은 전기료 포함 5년 $1,800-4,050입니다. Llama 3.3 70B(Q4)는 약 43 GB로 24 GB GPU 2장이 필요합니다.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/local-llms-vs-claude-pro",
     "cluster": "local-llms"
   },
@@ -16850,9 +16850,9 @@
   {
     "lang": "en",
     "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-    "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5, Coder and VL locally. VRAM needs, Ollama and LM Studio setup, Q4_K_M speeds and hardware tiers for every budget.",
+    "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5, Coder and VL locally. VRAM needs, Ollama and LM Studio setup, Q4_K_M quantization and hardware tiers for every budget.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16861,34 +16861,34 @@
     "title": "Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Coder & VL je Hardware-Stufe",
     "excerpt": "Qwen 3.6 27B läuft lokal mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b`. VRAM-Bedarf je Modellgröße, Coder- und VL-Varianten, Hardware-Tiers.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Coder et VL par niveau matériel",
-    "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
+    "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, quantification Q4_K_M et guide par niveau matériel.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Coder・VLを全ハードウェア階層で動かす",
-    "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
+    "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM Studioのセットアップ、Q4_K_M量子化、ハードウェア階層別の選び方を解説します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Qwen本地部署指南2026：Qwen 3.6 27B、Coder和VL各硬件层级完整指南",
-    "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
+    "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化说明，以及各硬件预算档位的配置建议。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16897,7 +16897,7 @@
     "title": "Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware",
     "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16906,25 +16906,25 @@
     "title": "Guia de implantação local do Qwen 2026: Qwen 3.6 27B, Coder e VL por nível de hardware",
     "excerpt": "Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2.5-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "دليل النشر المحلي لـ Qwen 2026: Qwen 3.6 27B وCoder وVL على كل مستوى أجهزة",
-    "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
+    "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وتكميم Q4_K_M ودليل مستويات الأجهزة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Qwen 로컬 배포 가이드 2026: Qwen 3.6 27B, Coder & VL 하드웨어 티어별 실행 방법",
-    "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
+    "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 양자화, 하드웨어 티어 가이드를 제공합니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -23818,7 +23818,7 @@
     "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
     "excerpt": "A used RTX 3090 costs $1,500–$1,725 in 2026; renting one runs from about $0.16/hour. Here is the buy-vs-rent break-even math on 24 GB of VRAM for local LLMs.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -23827,7 +23827,7 @@
     "title": "RTX 3090 für lokale LLMs 2026: Kaufen oder mieten?",
     "excerpt": "Eine gebrauchte RTX 3090 kostet 2026 1.500–1.725 $, Mieten gibt es ab etwa 0,16 $/Stunde. Hier die Kauf-oder-Miete-Break-even-Rechnung für 24 GB VRAM bei lokalen LLMs.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -23836,7 +23836,7 @@
     "title": "RTX 3090 pour LLM local en 2026 : acheter ou louer ?",
     "excerpt": "Une RTX 3090 d'occasion coûte 1 500–1 725 $ en 2026 ; la location démarre à environ 0,16 $/heure. Voici le calcul du seuil de rentabilité achat vs location pour 24 Go de VRAM en LLM local.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -23845,7 +23845,7 @@
     "title": "ローカルLLM向けRTX 3090（2026年）：購入かレンタルか",
     "excerpt": "中古のRTX 3090は2026年に1,500〜1,725ドル。レンタルなら1時間約0.16ドルから。ローカルLLM向け24GB VRAMの購入とレンタルの損益分岐点を計算します。",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -23854,7 +23854,7 @@
     "title": "2026年本地LLM用RTX 3090：买还是租？",
     "excerpt": "2026年二手RTX 3090售价1,500–1,725美元；租用价格为每小时约0.16美元起。这是本地LLM所需24GB VRAM的买卖平衡点计算。",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -23863,7 +23863,7 @@
     "title": "RTX 3090 para LLM local en 2026: ¿comprar o alquilar?",
     "excerpt": "Una RTX 3090 usada cuesta 1.500–1.725 $ en 2026; alquilarla cuesta desde unos 0,16 $/hora. Aquí el cálculo de punto de equilibrio comprar vs alquilar para 24 GB de VRAM en LLM local.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -23872,7 +23872,7 @@
     "title": "RTX 3090 para LLM local em 2026: comprar ou alugar?",
     "excerpt": "Uma RTX 3090 usada custa US$ 1.500–1.725 em 2026; alugar custa a partir de cerca de US$ 0,16/hora. Veja o cálculo de ponto de equilíbrio entre comprar e alugar 24 GB de VRAM para LLM local.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -23881,7 +23881,7 @@
     "title": "بطاقة RTX 3090 لتشغيل نماذج LLM محليًا في 2026: هل تشتري أم تستأجر؟",
     "excerpt": "تكلف بطاقة RTX 3090 المستعملة 1,500–1,725 $ في 2026؛ استئجارها يبدأ من نحو 0.16 $ في الساعة. إليك حساب نقطة التعادل بين الشراء والاستئجار لـ 24 GB من VRAM لنماذج LLM المحلية.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -23890,7 +23890,7 @@
     "title": "2026년 로컬 LLM용 RTX 3090: 구매해야 할까, 대여해야 할까",
     "excerpt": "2026년 중고 RTX 3090 가격은 1,500–1,725달러이며, 대여는 시간당 약 0.16달러부터 시작합니다. 로컬 LLM용 24GB VRAM의 구매 대 대여 손익분기점을 계산합니다.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/power-local-llm/rtx-3090-local-llm-buy-or-rent",
     "cluster": "power-local-llm"
   },
@@ -26572,7 +26572,7 @@
     "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
     "excerpt": "Local AI video models (Wan 2.2, LTX-2, HunyuanVideo) are free to download if your GPU can run them. How they compare with invideo's cloud service.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26581,7 +26581,7 @@
     "title": "Invideo vs. lokale KI-Videogenerierung: Die eine kostet eine GPU plus Ihr Wochenende – die andere ein Cloud-Abo",
     "excerpt": "Lokale KI-Videomodelle (Wan 2.2, LTX-2, HunyuanVideo) sind gratis ladbar, wenn Ihre GPU sie schafft. So unterscheiden sie sich von invideos Cloud-Dienst.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26590,7 +26590,7 @@
     "title": "Invideo vs vidéo IA locale : l'une coûte un GPU et votre week-end, l'autre un abonnement cloud",
     "excerpt": "Les modèles de vidéo IA locale (Wan 2.2, LTX-2, HunyuanVideo) se téléchargent gratuitement si votre GPU suit. Comparaison avec le cloud d'invideo.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26599,7 +26599,7 @@
     "title": "Invideo vs ローカルAI動画生成：一方はGPUと週末の時間、もう一方はクラウドの定額契約",
     "excerpt": "ローカルAI動画モデル（Wan 2.2、LTX-2、HunyuanVideo）は、対応GPUがあれば無料でダウンロードして使えます。invideoのクラウドサービスとの違いを、VRAMとライセンスの面から比較します。",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26608,7 +26608,7 @@
     "title": "Invideo 与本地 AI 视频对比：一个要付出 GPU 加你的周末，另一个是云端订阅",
     "excerpt": "本地 AI 视频模型(Wan 2.2、LTX-2、HunyuanVideo)只要 GPU 够用就能免费下载。本文从显存、许可证和工作流角度对比它们与 invideo 云端服务。",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26617,7 +26617,7 @@
     "title": "Invideo vs. IA de Video Local: Una Cuesta una GPU Más Tu Fin de Semana — la Otra, una Suscripción en la Nube",
     "excerpt": "Los modelos de video IA local (Wan 2.2, LTX-2, HunyuanVideo) se descargan gratis si tu GPU puede con ellos. Así se comparan con la nube de invideo.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26626,7 +26626,7 @@
     "title": "Invideo vs Vídeo IA Local: Um Custa uma GPU Mais o Seu Fim de Semana — o Outro, uma Assinatura na Nuvem",
     "excerpt": "Modelos de vídeo IA locais (Wan 2.2, LTX-2, HunyuanVideo) podem ser baixados de graça se sua GPU aguentar. Veja a comparação com a nuvem do invideo.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26635,7 +26635,7 @@
     "title": "Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: أحدهما يكلّفك معالج رسومات وعطلتك، والآخر اشتراكًا سحابيًا",
     "excerpt": "نماذج الفيديو المحلية (Wan 2.2 وLTX-2 وHunyuanVideo) مجانية التنزيل إن كان معالج رسوماتك يشغّلها. إليك مقارنتها بخدمة invideo السحابية.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26644,7 +26644,7 @@
     "title": "Invideo vs 로컬 AI 비디오: 한쪽은 GPU와 주말 시간, 다른 한쪽은 클라우드 구독",
     "excerpt": "로컬 AI 비디오 모델(Wan 2.2, LTX-2, HunyuanVideo)은 GPU가 지원하면 무료로 내려받을 수 있습니다. invideo 클라우드 서비스와 비교합니다.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -65938,7 +65938,7 @@
     "title": "Which GPU Near $600 for Local LLMs in 2026?",
     "excerpt": "The RTX 4060 Ti 16GB is our pick near $600 if you find it at that price; 16GB VRAM is the sweet spot for 14B models. 16GB card prices have swung during the 2026 shortage, so compare current listings.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -65947,7 +65947,7 @@
     "title": "Welche GPU um 600 $ für lokale LLMs 2026?",
     "excerpt": "Die RTX 4060 Ti 16 GB ist unsere Wahl um 600 $, wenn Sie sie zu diesem Preis finden; 16 GB VRAM sind der optimale Punkt für 14B-Modelle. Die Preise von 16-GB-Karten schwankten während der Knappheit 2026, vergleichen Sie daher aktuelle Angebote.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -65956,7 +65956,7 @@
     "title": "Quelle GPU autour de 600 $ pour les LLM locaux en 2026 ?",
     "excerpt": "La RTX 4060 Ti 16 Go est notre choix autour de 600 $ si vous la trouvez à ce prix ; 16 Go de VRAM est le point idéal pour les modèles 14B. Les prix des cartes 16 Go ont fluctué pendant la pénurie de 2026 : comparez les offres actuelles.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -65965,7 +65965,7 @@
     "title": "2026年版 600ドル前後でローカルLLMに向くGPUは？",
     "excerpt": "RTX 4060 Ti 16GBは、その価格で見つかれば600ドル前後での当サイトの推奨です——16GB VRAMは14Bモデルの最適点です。2026年の品不足の間に16GBカードの価格は変動したため、現在の掲載価格を比較してください。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -65974,7 +65974,7 @@
     "title": "2026年600美元左右本地LLM选哪款GPU？",
     "excerpt": "RTX 4060 Ti 16GB是我们在600美元左右的首选（前提是能以该价格买到）——16GB显存是14B模型的最佳平衡点。2026年短缺期间16GB显卡价格波动较大，请对比当前报价。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -65983,7 +65983,7 @@
     "title": "¿Qué GPU elegir cerca de 600 $ para LLMs locales en 2026?",
     "excerpt": "La RTX 4060 Ti 16GB es nuestra opción cerca de 600 $ si la encuentras a ese precio; 16 GB de VRAM es el punto óptimo para modelos 14B. Los precios de las tarjetas de 16 GB han oscilado durante la escasez de 2026, así que compara los anuncios actuales.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -65992,7 +65992,7 @@
     "title": "Qual GPU Escolher Perto de US$ 600 para LLMs Locais em 2026?",
     "excerpt": "A RTX 4060 Ti 16GB é nossa escolha perto de US$ 600 se você a encontrar nesse preço; 16GB de VRAM é o ponto ideal para modelos 14B. Os preços das placas de 16GB oscilaram durante a escassez de 2026, então compare os anúncios atuais.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -66001,7 +66001,7 @@
     "title": "أي بطاقة رسومات قرب 600 دولار للنماذج اللغوية المحلية في 2026؟",
     "excerpt": "بطاقة RTX 4060 Ti 16GB هي اختيارنا قرب 600 دولار إن وجدتها بهذا السعر — 16 جيجابايت VRAM هي النقطة المثلى لنماذج 14B. تذبذبت أسعار بطاقات 16 جيجابايت خلال نقص 2026، لذا قارن القوائم الحالية.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -66010,7 +66010,7 @@
     "title": "2026년 로컬 LLM용 $600 안팎 GPU는?",
     "excerpt": "$600 안팎에서 해당 가격에 구할 수 있다면 RTX 4060 Ti 16GB를 추천합니다. 16GB VRAM은 14B 모델의 최적 지점입니다. 2026년 부족 사태 중 16GB 카드 가격이 크게 변동했으니 현재 매물을 비교하세요.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/prompt-bites/best-gpu-under-600-local-llm",
     "cluster": "prompt-bites"
   },
@@ -68690,81 +68690,81 @@
   {
     "lang": "en",
     "title": "Best GPU Under $1,000 for Local LLM Inference?",
-    "excerpt": "Our pick for local LLMs under $1,000: RTX 5070 Ti 16 GB (~$750-900). A used RTX 4090 is listed at ~$2,575-3,010 per the InsiderLLM tracker (2026-10-15); the used 24 GB RTX 4090 and 3090 no longer fit the budget.",
+    "excerpt": "Our pick for local LLMs under $1,000: RTX 5070 Ti 16 GB (~$750-900). Used 24 GB RTX 3090 and 4090 cards sit far above that budget in US sold prices.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Die beste GPU unter 1.000 $ für lokale LLM-Inferenz?",
-    "excerpt": "Unsere Wahl für lokale LLMs unter 1.000 $: RTX 5070 Ti 16 GB (~750-900 $). Gebrauchte RTX 4090 laut InsiderLLM-Tracker ~2.575-3.010 $ (2026-10-15); gebrauchte 24-GB-RTX-4090/3090 sprengen das Budget.",
+    "excerpt": "Unsere Wahl für lokale LLMs unter 1.000 $: RTX 5070 Ti 16 GB (~750-900 $). Gebrauchte RTX 3090 und 4090 mit 24 GB liegen bei US-Verkaufspreisen weit darüber.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Meilleur GPU à moins de 1 000 $ pour l'inférence LLM locale ?",
-    "excerpt": "Notre choix de GPU pour LLM locaux à moins de 1 000 $ : RTX 5070 Ti 16 Go (~750-900 $). Une RTX 4090 d'occasion est listée à ~2 575-3 010 $ (suivi InsiderLLM, 2026-10-15) ; les 4090 et 3090 de 24 Go d'occasion sortent du budget.",
+    "excerpt": "Notre choix de GPU pour LLM locaux à moins de 1 000 $ : RTX 5070 Ti 16 Go (~750-900 $). Les 3090 et 4090 de 24 Go d'occasion se vendent bien au-dessus aux États-Unis.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "ローカルLLM推論に最適な1,000ドル以下のGPUは?",
-    "excerpt": "ローカルLLM向け1,000ドル以下の推奨GPUはRTX 5070 Ti 16GB(約750-900ドル)。中古RTX 4090はInsiderLLMトラッカーで約2,575-3,010ドル(2026-10-15)、中古の24GB RTX 4090と3090は予算外です。",
+    "excerpt": "ローカルLLM向け1,000ドル以下の推奨GPUはRTX 5070 Ti 16GB(約750-900ドル)。中古の24GB RTX 3090と4090は、米国の落札価格では予算を大きく超えます。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "1000 美元以下运行本地 LLM 的最佳 GPU 是什么？",
-    "excerpt": "1000 美元以下本地 LLM 推荐 GPU：RTX 5070 Ti 16 GB（约 750-900 美元）。二手 RTX 4090 在 InsiderLLM 追踪中约 2575-3010 美元（2026-10-15），二手 24 GB RTX 4090 和 3090 已超出预算。",
+    "excerpt": "1000 美元以下本地 LLM 推荐 GPU：RTX 5070 Ti 16 GB（约 750-900 美元）。按美国成交价，二手 24 GB RTX 3090 和 4090 远超这一预算。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Cuál es la mejor GPU por menos de $1,000 para inferencia de LLM local?",
-    "excerpt": "Nuestra elección para LLMs locales por menos de $1,000: RTX 5070 Ti 16 GB (~$750-900). Una RTX 4090 usada figura en ~$2,575-3,010 según InsiderLLM (2026-10-15); las 4090 y 3090 usadas de 24 GB ya no caben.",
+    "excerpt": "Nuestra elección para LLMs locales por menos de $1,000: RTX 5070 Ti 16 GB (~$750-900). Las 3090 y 4090 usadas de 24 GB quedan muy por encima según precios de venta en EE. UU.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "Qual a Melhor GPU Abaixo de US$ 1.000 para Inferência de LLM Local?",
-    "excerpt": "Nossa escolha para LLMs locais abaixo de US$ 1.000: RTX 5070 Ti 16 GB (~US$ 750-900). Uma RTX 4090 usada aparece a ~US$ 2.575-3.010 no rastreador do InsiderLLM (2026-10-15); as 4090 e 3090 usadas de 24 GB saem do orçamento.",
+    "excerpt": "Nossa escolha para LLMs locais abaixo de US$ 1.000: RTX 5070 Ti 16 GB (~US$ 750-900). As 3090 e 4090 usadas de 24 GB ficam muito acima nos preços de venda dos EUA.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "أفضل GPU بأقل من 1,000 دولار لتشغيل LLM محلي؟",
-    "excerpt": "اختيارنا لـ LLM محلي بأقل من 1,000 دولار: RTX 5070 Ti 16 GB (~750-900 دولار). RTX 4090 المستعملة مدرجة بنحو 2,575-3,010 دولار وفق متتبع InsiderLLM (2026-10-15)؛ وRTX 4090 وRTX 3090 المستعملتان بسعة 24 GB خارج الميزانية.",
+    "excerpt": "اختيارنا لـ LLM محلي بأقل من 1,000 دولار: RTX 5070 Ti 16 GB (~750-900 دولار). وتتجاوز RTX 3090 وRTX 4090 المستعملتان (24 GB) هذه الميزانية بكثير وفق أسعار البيع في أمريكا.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM 추론에 1,000달러 이하 최적의 GPU는?",
-    "excerpt": "로컬 LLM용 1,000달러 이하 추천 GPU: RTX 5070 Ti 16GB(약 750-900달러). 중고 RTX 4090은 InsiderLLM 트래커에 약 2,575-3,010달러로 실려 있으며(2026-10-15), 중고 24GB RTX 4090과 3090은 예산 밖입니다.",
+    "excerpt": "로컬 LLM용 1,000달러 이하 추천 GPU: RTX 5070 Ti 16GB(약 750-900달러). 미국 판매가 기준으로 중고 24GB RTX 3090과 4090은 예산을 크게 넘습니다.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/prompt-bites/best-gpu-under-1000-local-llm",
     "cluster": "prompt-bites"
   },
@@ -78898,7 +78898,7 @@
     "title": "Best Hardware for a Local Smart Home + Local AI (2026)",
     "excerpt": "Best local smart home + AI hardware in 2026: Intel N100 mini PC or Raspberry Pi 5 hub, Frigate accelerator (Intel iGPU/Hailo), SSD storage, and an LLM step-up. Updated pricing.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78907,7 +78907,7 @@
     "title": "Beste Hardware für ein lokales Smart Home + lokale KI (2026)",
     "excerpt": "Beste Hardware für lokales Smart Home + KI 2026: Intel-N100-Mini-PC oder Raspberry Pi 5 als Hub, Frigate-Beschleuniger (Intel iGPU/Hailo), SSD-Speicher, LLM-Aufstieg. Aktualisierte Preise.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/de/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78916,7 +78916,7 @@
     "title": "Meilleur Matériel pour une Maison Connectée Locale + IA Locale (2026)",
     "excerpt": "Meilleur matériel maison connectée locale + IA 2026 : mini-PC Intel N100 ou Raspberry Pi 5 comme hub, accélérateur Frigate (iGPU Intel/Hailo), stockage SSD, montée en gamme LLM. Prix actualisés.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/fr/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78925,7 +78925,7 @@
     "title": "ローカルスマートホーム + ローカルAIに最適なハードウェア（2026）",
     "excerpt": "ローカルスマートホーム＋AIの最適ハードウェア（2026年）：Intel N100 ミニPC または Raspberry Pi 5 のハブ、Frigate 加速（Intel 内蔵GPU／Hailo）、SSD ストレージ、LLM 用の上位構成を解説。価格情報を更新。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ja/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78934,7 +78934,7 @@
     "title": "本地智能家居 + 本地 AI 的最佳硬件（2026）",
     "excerpt": "2026年本地智能家居 + AI 硬件推荐：Intel N100 迷你 PC 或 Raspberry Pi 5 中枢，Frigate 加速方案（Intel 集成显卡/Hailo），SSD 存储，以及本地 LLM 升级选项。含最新价格。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/zh/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78943,7 +78943,7 @@
     "title": "Mejor Hardware para un Smart Home Local + IA Local (2026)",
     "excerpt": "Mejor hardware para un smart home local + IA en 2026: hub con mini PC Intel N100 o Raspberry Pi 5, acelerador Frigate (Intel iGPU/Hailo), almacenamiento SSD y salto a LLM. Precios actualizados.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/es/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78952,7 +78952,7 @@
     "title": "Melhor Hardware para uma Casa Inteligente Local + IA Local (2026)",
     "excerpt": "Melhor hardware para casa inteligente local + IA em 2026: hub mini PC Intel N100 ou Raspberry Pi 5, acelerador do Frigate (iGPU Intel/Hailo), armazenamento SSD e um passo seguinte para LLM. Preços atualizados.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/pt/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78961,7 +78961,7 @@
     "title": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي المحلي (⁨2026⁩)",
     "excerpt": "أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي 2026: مركز mini PC بمعالج Intel N100 أو Raspberry Pi 5، مسرّع Frigate (Intel iGPU/Hailo)، تخزين SSD، وترقية LLM. أسعار محدّثة.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ar/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },
@@ -78970,7 +78970,7 @@
     "title": "로컬 스마트 홈 + 로컬 AI를 위한 최고의 하드웨어 (2026)",
     "excerpt": "2026년 로컬 스마트 홈 + AI 최고의 하드웨어: Intel N100 미니 PC 또는 Raspberry Pi 5 허브, Frigate 가속기(Intel iGPU/Hailo), SSD 스토리지, LLM 업그레이드 경로. 최신 가격 반영.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-11-27",
+    "dateModified": "2026-11-28",
     "url": "/ko/smart-home/best-hardware-for-local-smart-home",
     "cluster": "smart-home"
   },

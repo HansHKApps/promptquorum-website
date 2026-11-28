@@ -1354,7 +1354,7 @@
       ]
     },
     "apple-silicon-vs-nvidia-gpu-local-llm": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -1399,7 +1399,7 @@
       ]
     },
     "best-gpus-for-local-llms": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1995,7 +1995,7 @@
       ]
     },
     "used-gpus-for-local-llms": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2615,7 +2615,7 @@
       "images": []
     },
     "local-llms-vs-claude-pro": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -3128,7 +3128,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -6837,7 +6837,7 @@
       ]
     },
     "rtx-3090-local-llm-buy-or-rent": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-09-01",
       "hasSections": true,
@@ -7696,7 +7696,7 @@
       ]
     },
     "local-ai-video-generation-vs-cloud": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-08-21",
       "hasSections": true,
@@ -16506,7 +16506,7 @@
       "images": []
     },
     "bestGpuUnder600LocalLlm": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -17136,7 +17136,7 @@
       "images": []
     },
     "bestGpuUnder1000LocalLlm": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -18421,7 +18421,7 @@
       "images": []
     },
     "best-hardware-for-local-smart-home": {
-      "dateModified": "2026-11-27",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,

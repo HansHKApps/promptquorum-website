@@ -105,6 +105,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-gpus-for-local-llms",
+        "title": "Best GPUs for Local LLMs in 2026: VRAM Tiers, Speed and Prices",
+        "url": "/local-llms/best-gpus-for-local-llms",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "local-llm-pc-build-1000",
         "title": "Local LLM PC Build Under $1,000 With a Used GPU (2026)",
         "url": "/local-llms/local-llm-pc-build-1000",
@@ -125,22 +141,6 @@
         "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
         "url": "/local-llms/local-llm-workstation-build",
         "dateModified": "2026-11-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-gpus-for-local-llms",
-        "title": "Best GPUs for Local LLMs in 2026: VRAM Tiers, Speed and Prices",
-        "url": "/local-llms/best-gpus-for-local-llms",
-        "dateModified": "2026-11-27",
         "tier": "about"
       },
       {
@@ -893,18 +893,10 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "mac-vs-windows-vs-linux-local-llm",
-        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
-        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
-        "dateModified": "2026-11-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "about"
       },
       {
@@ -912,6 +904,14 @@
         "slug": "rtx-3090-local-llm-buy-or-rent",
         "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
         "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mac-vs-windows-vs-linux-local-llm",
+        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
+        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
         "dateModified": "2026-11-27",
         "tier": "about"
       },
@@ -1334,7 +1334,7 @@
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       },
       {
@@ -2336,7 +2336,7 @@
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       },
       {
@@ -3442,7 +3442,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 41,
     "capped": true
   },
   "ShellGPT": {
@@ -7260,7 +7260,7 @@
         "slug": "local-ai-video-generation-vs-cloud",
         "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
         "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "about"
       },
       {
@@ -7602,7 +7602,7 @@
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       },
       {
@@ -7678,7 +7678,7 @@
         "slug": "local-ai-video-generation-vs-cloud",
         "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
         "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       },
       {
@@ -9930,7 +9930,7 @@
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       }
     ],
@@ -11956,15 +11956,7 @@
         "slug": "local-llms-vs-claude-pro",
         "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
         "url": "/local-llms/local-llms-vs-claude-pro",
-        "dateModified": "2026-11-27",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mac-vs-windows-vs-linux-local-llm",
-        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
-        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       },
       {
@@ -11972,7 +11964,7 @@
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-11-27",
+        "dateModified": "2026-11-28",
         "tier": "mentioned"
       },
       {
@@ -11980,6 +11972,14 @@
         "slug": "local-ai-video-generation-vs-cloud",
         "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
         "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mac-vs-windows-vs-linux-local-llm",
+        "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
+        "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
         "dateModified": "2026-11-27",
         "tier": "mentioned"
       },
@@ -12089,9 +12089,25 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "mac-mini-m5-local-ai-server",
         "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
         "url": "/local-llms/mac-mini-m5-local-ai-server",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
         "dateModified": "2026-11-28",
         "tier": "about"
       },
@@ -12105,25 +12121,9 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
         "slug": "mac-vs-windows-vs-linux-local-llm",
         "title": "Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared",
         "url": "/local-llms/mac-vs-windows-vs-linux-local-llm",
-        "dateModified": "2026-11-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-video-generation-vs-cloud",
-        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
-        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
         "dateModified": "2026-11-27",
         "tier": "about"
       },
@@ -14646,6 +14646,30 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llms-vs-claude-pro",
+        "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
+        "url": "/local-llms/local-llms-vs-claude-pro",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rtx-3090-local-llm-buy-or-rent",
+        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
+        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "valo-review",
         "title": "Valo Review: One Desktop Workspace for Claude, Codex and Local AI",
@@ -14662,34 +14686,10 @@
         "tier": "mentioned"
       },
       {
-        "cluster": "local-llms",
-        "slug": "local-llms-vs-claude-pro",
-        "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
-        "url": "/local-llms/local-llms-vs-claude-pro",
-        "dateModified": "2026-11-27",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-video-generation-vs-cloud",
-        "title": "Invideo vs Local AI Video: One Costs a GPU Plus Your Weekend — the Other a Cloud Subscription",
-        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
-        "dateModified": "2026-11-27",
-        "tier": "mentioned"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "local-ai-workstation-build-guide",
         "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
         "url": "/power-local-llm/local-ai-workstation-build-guide",
-        "dateModified": "2026-11-27",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rtx-3090-local-llm-buy-or-rent",
-        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
-        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
         "dateModified": "2026-11-27",
         "tier": "mentioned"
       },
