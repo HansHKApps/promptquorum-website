@@ -673,7 +673,7 @@ export default function PtPQAppsPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
-                <span className="text-text-secondary">Privacidade em primeiro lugar: execução totalmente offline, sem necessidade de cadastro, nada sai do seu dispositivo</span>
+                <span className="text-text-secondary">Opção local: execute prompts em LLMs locais sem cadastro; os prompts enviados a modelos na nuvem vão para os respectivos provedores</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
