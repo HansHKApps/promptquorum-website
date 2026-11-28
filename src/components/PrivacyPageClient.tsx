@@ -6,7 +6,7 @@ import { translations, type Language } from '@/translations'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { BackLink } from '@/components/BackLink'
 
-const EFFECTIVE_DATE = '20 November 2026'
+const EFFECTIVE_DATE = '27 November 2026'
 const CONTROLLER = 'PromptQuorum'
 const CONTROLLER_EMAIL = 'hello@promptquorum.com'
 const SITE_URL = 'https://www.promptquorum.com'
@@ -54,7 +54,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             {t.privacyPageTitle}
           </h1>
           <p className="text-sm font-mono text-text-secondary">
-            {t.privacyEffectiveDate} <time dateTime="2026-11-20">{EFFECTIVE_DATE}</time> &nbsp;·&nbsp; {t.privacyController} {CONTROLLER} &nbsp;·&nbsp; {t.privacyContact} {CONTROLLER_EMAIL}
+            {t.privacyEffectiveDate} <time dateTime="2026-11-27">{EFFECTIVE_DATE}</time> &nbsp;·&nbsp; {t.privacyController} {CONTROLLER} &nbsp;·&nbsp; {t.privacyContact} {CONTROLLER_EMAIL}
           </p>
         </div>
 

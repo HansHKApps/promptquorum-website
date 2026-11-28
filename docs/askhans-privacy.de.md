@@ -18,6 +18,9 @@ Der Text Ihrer Frage und der bisherige Verlauf des aktuellen Gesprächs werden a
 Achtung: Die Hosting-Protokolle von Vercel können Anfrageinhalte enthalten (Entscheidung Betreiber 2026-11-07: so dokumentieren); es gelten die Speicherfristen von Vercel.
 Bitte geben Sie keine personenbezogenen Daten ein.
 
+**a1) „Das erklären“ (ergänzt 2026-11-27) — nur beim Klick auf die Schaltfläche.**
+Markiert jemand Text auf einer Seite oder in einer Ask-Hans-Antwort und klickt auf „Das erklären“, werden auf demselben Weg wie in a) zusätzlich übermittelt: der markierte Text (max. 600 Zeichen), Text aus der Umgebung (max. 3.500 Zeichen: benachbarte Absätze, Zwischenüberschrift, bei kurzen Begriffen eine frühere Fundstelle) sowie Seitentitel und Pfad (ohne Query-Parameter). Das Markieren allein sendet nichts. Der Umgebungstext geht nur mit dieser Anfrage an das Modell und wird nicht Teil des Gesprächsverlaufs; der markierte Text erscheint als Frage. Technik: `src/components/askhans/ExplainSelection.tsx`, `src/lib/askhans/explain.ts`. Rechtsgrundlage wie a). Der Einwilligungstext im Chatfenster (Statistik) ist unverändert, daher keine neue Versionsnummer.
+
 **b) Technische Begrenzung von Anfragen (Rate Limit) — immer.**
 Zum Schutz vor Missbrauch wird kurzzeitig ein **gehashter** Schlüssel aus Ihrer IP-Adresse (mit geheimem Salz) im Arbeitsspeicher-Dienst
 (Upstash Redis) vorgehalten. Die IP-Adresse selbst wird dafür nicht gespeichert oder protokolliert. Ebenso wird pro anonymer
