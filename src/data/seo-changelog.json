@@ -31810,13 +31810,25 @@
         "new": "Learn the Single Step Prompt Method: pack role, objective, context, constraints, and output format into one message you can test, save, and reuse."
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 6.92,
+      "impressions": 810,
+      "clicks": 8,
+      "ctr": 0.009876543209876543,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
       "t28": "2026-12-25"
-    }
+    },
+    "queries": [
+      "prompt single",
+      "single prompt",
+      "?",
+      "a single prompt"
+    ]
   },
   {
     "id": "3276b875-563b-4366-9326-92b31a8e1135",
@@ -31829,13 +31841,25 @@
         "new": "Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen: so schreiben, testen und speichern Sie wiederverwendbare Prompts."
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 6.14,
+      "impressions": 169,
+      "clicks": 3,
+      "ctr": 0.01775147928994083,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
       "t28": "2026-12-25"
-    }
+    },
+    "queries": [
+      "prompt single",
+      "single prompt",
+      "single promt",
+      "step by step prompting"
+    ]
   },
   {
     "id": "d5f71151-b74d-4eec-b51c-b22a61e6294d",
@@ -31848,13 +31872,25 @@
         "new": "Aprende el Método de Prompt de Un Solo Paso: reúne rol, objetivo, contexto, restricciones y formato de output en un mensaje que puedes probar y reutilizar."
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 6.82,
+      "impressions": 296,
+      "clicks": 3,
+      "ctr": 0.010135135135135136,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
       "t28": "2026-12-25"
-    }
+    },
+    "queries": [
+      "single prompt",
+      "ejemplos de encadenamiento de prompts",
+      "one-shot prompting",
+      "prompt step"
+    ]
   },
   {
     "id": "eecd8b4f-0439-449d-96ec-e5b1b509cb55",
@@ -31867,8 +31903,14 @@
         "new": "اجمع الدور والهدف والسياق والقيود وتنسيق المخرج في رسالة واحدة يمكنك اختبارها وحفظها وإعادة استخدامها مع نماذج مثل ⁨GPT⁩ و⁨Claude⁩ و⁨Ollama⁩."
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 7.65,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0.0,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
@@ -31886,13 +31928,22 @@
         "new": "Aprenda o Método de Prompt de Passo Único: reúna papel, objetivo, contexto, restrições e formato de saída em uma mensagem que você testa e reutiliza."
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 8.33,
+      "impressions": 27,
+      "clicks": 1,
+      "ctr": 0.037037037037037035,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
       "t28": "2026-12-25"
-    }
+    },
+    "queries": [
+      "prompt step"
+    ]
   },
   {
     "id": "7ab68089-85b5-406a-9e53-bd849cffa21d",
@@ -31905,13 +31956,25 @@
         "new": "Réunissez rôle, objectif, contexte, contraintes et format de sortie dans un seul prompt que vous pouvez tester, enregistrer et réutiliser."
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 11.98,
+      "impressions": 59,
+      "clicks": 0,
+      "ctr": 0.0,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
       "t28": "2026-12-25"
-    }
+    },
+    "queries": [
+      "méthode actif prompt",
+      "méthode de prompt",
+      "méthode prompt",
+      "prompt message"
+    ]
   },
   {
     "id": "0cf35129-f613-4b00-9e0f-ec2ca2eb4d0f",
@@ -31924,13 +31987,22 @@
         "new": "ロール・目的・コンテキスト・制約・出力形式を1つのプロンプトにまとめる手法です。書き方、テスト、テンプレート化の手順と、ほかのフレームワークとの違いを解説します。"
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 4.82,
+      "impressions": 74,
+      "clicks": 1,
+      "ctr": 0.013513513513513514,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
       "t28": "2026-12-25"
-    }
+    },
+    "queries": [
+      "site:www.promptquorum.com/ja/prompt-engineering"
+    ]
   },
   {
     "id": "e3cfe3fb-8cf2-43bf-b35c-74a8af6230a2",
@@ -31943,13 +32015,22 @@
         "new": "单步提示法把角色、目标、上下文、约束条件和输出格式写进一条提示词。了解如何编写、测试、保存为模板并重复使用，以及它与其他提示框架的区别。"
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 10.12,
+      "impressions": 513,
+      "clicks": 0,
+      "ctr": 0.0,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
       "t28": "2026-12-25"
-    }
+    },
+    "queries": [
+      "复杂任务分步提示结构"
+    ]
   },
   {
     "id": "7fb34148-61a0-4e4a-81b1-1065e880f86c",
@@ -31962,13 +32043,24 @@
         "new": "역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담아, 테스트하고 저장해 다시 쓸 수 있는 단일 단계 프롬프트를 작성하는 방법입니다."
       }
     ],
-    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
-    "baseline": null,
+    "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline backfilled 2026-11-28 from pre-deploy data.",
+    "baseline": {
+      "position": 7.14,
+      "impressions": 146,
+      "clicks": 7,
+      "ctr": 0.04794520547945205,
+      "period": "90d 2026-08-29 to 2026-11-26"
+    },
     "deployedAt": "2026-11-27",
     "measure": {
       "t14": "2026-12-11",
       "t28": "2026-12-25"
-    }
+    },
+    "queries": [
+      "prompt",
+      "반복적 프롬프트 기술",
+      "프롬프팅"
+    ]
   },
   {
     "id": "1b5c5071-ba90-4b61-a3ca-b485ac12188b",

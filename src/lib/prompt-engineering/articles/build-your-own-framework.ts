@@ -25,9 +25,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'Build a custom framework when you add the same 3+ modifications to every prompt in a workflow',
       '3–6 components: fewer is a technique, more creates friction and gets skipped',
-      'Test on 10 real prompts before documenting — frameworks built from theory fail in practice',
-      'REPAIR framework reduced onboarding from 2 weeks to 3 days for one support team',
-      'Consistency scores improved from 64% to 89% within the first month of using a custom framework',
+      'Test on 10 real prompts before documenting — frameworks built from theory often fail in practice',
+      'Illustrative example: REPAIR, a 5-component framework for a hypothetical support team',
+      'To judge a custom framework, score the same test prompts before and after against criteria set in advance',
       'Cross-model test on GPT-5.6 and Claude Sonnet 5 before standardizing',
     ],
     toc: [
@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Build Your Own Prompt Framework: 5-Step Design Process',
       description: 'Learn when and how to build a custom prompt framework: 5-step design process from goal to documentation. With worked REPAIR example for support teams.',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['custom prompt framework', 'build prompt framework', 'prompt engineering framework', 'prompt design', 'team prompting'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -67,7 +67,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          'Build a custom prompt framework when you repeatedly add the same 3+ components to every prompt in a workflow. Use 3–6 components, test on 10 real prompts before documenting, and verify cross-model reliability. The REPAIR example shows how a support team cut onboarding from 2 weeks to 3 days.',
+          'Build a custom prompt framework when you repeatedly add the same 3+ components to every prompt in a workflow. Use 3–6 components, test on 10 real prompts before documenting, and verify cross-model reliability. The REPAIR example, a hypothetical illustration, shows how a support team\'s recurring prompt additions can become framework components.',
         ],
       },
       key_takeaways: {
@@ -75,7 +75,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Build a custom framework when you add the same 3+ components to every prompt in a workflow',
           'Use 3–6 components: fewer is a technique, more creates friction and gets skipped',
-          'Test on 10 real prompts before documenting — frameworks built from theory fail in practice',
+          'Test on 10 real prompts before documenting — frameworks built from theory often fail in practice',
           'Verify cross-model reliability on GPT-5.6 and Claude Sonnet 5 before standardizing',
           'Store the framework spec in version control with a template and 3 annotated examples',
           'Measure onboarding time and consistency scores to confirm the framework is working',
@@ -144,9 +144,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'support_example',
         title: 'Example: Building a Framework for a Support Team',
         content: [
-          '**A support team\'s custom framework — named REPAIR — consists of 5 components: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Standard frameworks like CO-STAR and CRAFT don\'t include escalation logic or policy anchoring, which every support prompt requires.',
-          'The team started by noticing they manually added the same elements to every CO-STAR prompt: the agent\'s specific role tier, the applicable SLA policy, and a conditional escalation path if the issue exceeded tier-1 scope. After 3 weeks, those additions were formalized as framework components.',
-          'The resulting REPAIR template:',
+          '**REPAIR is an illustrative framework for a hypothetical support team, with 5 components: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** CO-STAR and CRAFT define no dedicated component for escalation logic or policy anchoring, which this team\'s support prompts would need.',
+          'Suppose the team notices that it manually adds the same elements to every CO-STAR prompt: the agent\'s role tier, the applicable SLA policy, and a conditional escalation path for issues beyond tier-1 scope. Because these additions keep recurring, they are candidates for fixed framework components.',
+          'The illustrative REPAIR template:',
         ],
         items: [
           'R (Role): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
@@ -158,18 +158,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       support_example_part2: {
         content: [
-          'Time to onboard new agents dropped from 2 weeks to 3 days after the REPAIR framework was documented and added to the team\'s prompt library. Prompt consistency scores (measured via Braintrust evaluation) improved from 64% to 89% within the first month.',
+          'Because this example is hypothetical, it has no results to report. To check whether your own framework helps, run the same test prompts before and after introducing it, score both sets against criteria you define in advance, and note how long new team members need to write acceptable prompts.',
           'Use a custom framework when you can name the pattern clearly and show it applies across your workflow. Avoid naming a framework just to have one — an unnamed, consistent 4-component structure you use daily is a framework even without an acronym.',
         ],
         callouts: [
-          { type: 'tip', label: 'Measure the impact', text: 'Track onboarding time and consistency scores before and after deploying a custom framework. If neither improves within 4 weeks, the framework needs refinement — not more documentation.' },
+          { type: 'tip', label: 'Measure the impact', text: 'Track onboarding time and consistency scores before and after deploying a custom framework. If neither improves after a review period you set in advance, refine the framework before adding more documentation.' },
         ],
       },
       common_mistakes: {
         id: 'common_mistakes',
         title: 'Common Mistakes When Building Custom Frameworks',
         content: [
-          '**The most common mistake is building a framework before testing 20+ real prompts manually.** Frameworks built from theory rather than observed patterns include components that sound important but get skipped in practice — which trains the team to ignore framework sections.',
+          '**A frequent mistake is building a framework before testing at least 10 real prompts.** Frameworks built from theory rather than observed patterns can include components that sound important but get skipped in practice, and the team may start ignoring framework sections.',
         ],
         mistakes: [
           {
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/build-your-own-framework-overview-hero-de.webp',
     title: 'Eigenes Prompt-Framework erstellen: 5-Schritte-Prozess (2026)',
     seoTitle: 'Eigenes Prompt-Framework entwickeln: 5-Schritte-Anleitung',
-    intro: 'Wenn Standardframeworks wie CO-STAR, CRAFT und RISEN nicht zu Ihrem Workflow passen, liefert ein maßgeschneidertes Prompt-Framework eine wiederverwendbare, testbare Struktur. Diese Anleitung erklärt, wann ein eigenes Framework sinnvoll ist, wie der 5-Schritte-Prozess funktioniert und zeigt ein konkretes Praxisbeispiel.',
+    intro: 'Wenn Standardframeworks wie CO-STAR, CRAFT und RISEN nicht zu Ihrem Workflow passen, liefert ein maßgeschneidertes Prompt-Framework eine wiederverwendbare, testbare Struktur. Diese Anleitung erklärt, wann ein eigenes Framework sinnvoll ist, wie der 5-Schritte-Prozess funktioniert und zeigt ein veranschaulichendes Beispiel.',
     metaDescription: 'Eigenes Prompt-Framework in 5 Schritten: Ziel, 3–6 Komponenten, an 10 Prompts testen, verfeinern, dokumentieren. Mit REPAIR-Beispiel für Support-Teams.',
     ogDescription: 'Eigenes Prompt-Framework in 5 Schritten: Ziel definieren, 3–6 Komponenten identifizieren, an 10 Prompts testen, verfeinern, dokumentieren. Modellübergreifende Tests mit PromptQuorum.',
     twitterDescription: 'Standardframeworks passen nicht? Eigenes Framework in 5 Schritten. REPAIR-Beispiel für Support-Teams. 3–6 Komponenten, 10-Prompt-Validierung.',
@@ -273,14 +273,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'Eigenes Framework erstellen, wenn dieselben 3+ Modifikationen bei jedem Prompt im Workflow vorgenommen werden',
       '3–6 Komponenten: weniger ist eine Technik, mehr erzeugt Reibung',
       'An 10 realen Prompts testen, bevor dokumentiert wird',
-      'REPAIR-Framework reduzierte das Onboarding von 2 Wochen auf 3 Tage',
-      'Konsistenz-Scores verbesserten sich von 64 % auf 89 % innerhalb des ersten Monats',
+      'Veranschaulichendes Beispiel: REPAIR, ein Framework mit 5 Komponenten für ein fiktives Support-Team',
+      'Zur Bewertung dieselben Testprompts vorher und nachher nach vorab festgelegten Kriterien benoten',
       'Modellübergreifend auf GPT-5.6 und Claude Sonnet 5 testen vor der Standardisierung',
     ],
     toc: [
       { label: 'Framework vs. Technik', anchor: 'framework_vs_technique' },
       { label: 'Wann ein eigenes Framework sinnvoll ist', anchor: 'when_to_build' },
       { label: 'Eigenes Framework in 5 Schritten', anchor: 'five_step_process' },
+      { label: 'Beispiel: REPAIR-Framework für Support-Teams', anchor: 'support_example' },
       { label: 'Häufige Fehler', anchor: 'common_mistakes' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
       { label: 'Weiterführende Artikel', anchor: 'related_reading' },
@@ -294,7 +295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Eigenes Prompt-Framework erstellen: 5-Schritte-Prozess (2026)',
       description: 'Eigenes Prompt-Framework in 5 Schritten erstellen: Ziel definieren, 3–6 Komponenten identifizieren, an 10 Prompts testen, verfeinern, dokumentieren.',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['eigenes Prompt-Framework', 'Prompt-Framework erstellen', 'Prompt Engineering Framework', 'Prompt-Design', 'Team-Prompting'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -313,7 +314,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          'Entwickeln Sie ein eigenes Prompt-Framework, wenn Sie dieselben 3+ Komponenten bei jedem Prompt in einem Workflow hinzufügen. Verwenden Sie 3–6 Komponenten, testen Sie an 10 realen Prompts vor der Dokumentation und überprüfen Sie die modellübergreifende Zuverlässigkeit. Das REPAIR-Beispiel zeigt, wie ein Support-Team das Onboarding von 2 Wochen auf 3 Tage reduziert hat.',
+          'Entwickeln Sie ein eigenes Prompt-Framework, wenn Sie dieselben 3+ Komponenten bei jedem Prompt in einem Workflow hinzufügen. Verwenden Sie 3–6 Komponenten, testen Sie an 10 realen Prompts vor der Dokumentation und überprüfen Sie die modellübergreifende Zuverlässigkeit. Das REPAIR-Beispiel ist hypothetisch und zeigt, wie wiederkehrende Prompt-Ergänzungen eines Support-Teams zu Framework-Komponenten werden können.',
         ],
       },
       key_takeaways: {
@@ -374,11 +375,35 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { type: 'warning', label: 'Schritt 3 nicht überspringen', text: 'Ohne den Test an 10 realen Prompts enthält das Framework fast immer Komponenten, die unter Zeitdruck übersprungen werden. Erst testen, dann dokumentieren.' },
         ],
       },
+      support_example: {
+        id: 'support_example',
+        title: 'Beispiel: Ein Framework für ein Support-Team',
+        content: [
+          '**REPAIR ist ein veranschaulichendes Framework für ein fiktives Support-Team mit 5 Komponenten: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** CO-STAR und CRAFT sehen keine eigene Komponente für Eskalationslogik oder den Verweis auf Richtlinien vor, die die Support-Prompts dieses Teams benötigen würden.',
+          'Angenommen, das Team bemerkt, dass es jedem CO-STAR-Prompt von Hand dieselben Elemente hinzufügt: die Rollenstufe des Agenten, die geltende SLA-Richtlinie und einen bedingten Eskalationspfad für Fälle außerhalb des Tier-1-Rahmens. Weil diese Ergänzungen ständig wiederkehren, bieten sie sich als feste Framework-Komponenten an.',
+          'Die beispielhafte REPAIR-Vorlage:',
+        ],
+        items: [
+          'R (Role): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
+          'E (Escalation): "If the issue involves [condition], escalate to tier-2. Do not attempt resolution."',
+          'P (Policy anchor): "Apply policy [ID] for [issue type]. Quote the relevant clause in your response."',
+          'A (Action path): "Classify the issue, confirm understanding, propose resolution, request confirmation."',
+          'I (Intent confirmation): "End every response with: \'Does this address your issue, or would you like me to escalate?\'"',
+        ],
+      },
+      support_example_part2: {
+        content: [
+          'Da das Beispiel hypothetisch ist, gibt es keine Ergebnisse dazu. Ob Ihr eigenes Framework hilft, prüfen Sie so: Führen Sie dieselben Testprompts vor und nach der Einführung aus, bewerten Sie beide Durchläufe nach vorab festgelegten Kriterien und halten Sie fest, wie lange neue Teammitglieder brauchen, um brauchbare Prompts zu schreiben.',
+        ],
+        callouts: [
+          { type: 'tip', label: 'Wirkung messen', text: 'Erfassen Sie Einarbeitungszeit und Konsistenzbewertungen vor und nach der Einführung eines eigenen Frameworks. Verbessert sich nach einem vorab festgelegten Prüfzeitraum keines von beiden, überarbeiten Sie das Framework, bevor Sie mehr dokumentieren.' },
+        ],
+      },
       common_mistakes: {
         id: 'common_mistakes',
         title: 'Häufige Fehler beim Entwickeln eigener Frameworks',
         content: [
-          '**Der häufigste Fehler ist, ein Framework zu entwickeln, bevor 20+ reale Prompts manuell getestet wurden.** Frameworks, die aus der Theorie heraus entwickelt werden, enthalten Komponenten, die wichtig klingen, in der Praxis aber übersprungen werden.',
+          '**Ein häufiger Fehler ist, ein Framework zu entwickeln, bevor mindestens 10 reale Prompts getestet wurden.** Frameworks, die aus der Theorie statt aus beobachteten Mustern entstehen, können Komponenten enthalten, die wichtig klingen, in der Praxis aber übersprungen werden.',
         ],
         mistakes: [
           { mistake: 'Zu viele Komponenten (7+)', problem: 'Autoren überspringen Abschnitte unter Zeitdruck und brechen die Konsistenz.', fix: 'Begrenzen Sie auf 6 Komponenten. Verschieben Sie domänenspezifische Felder in Erweiterungen, nicht in das Kern-Framework.' },
@@ -428,7 +453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: 'Wann sollte ich ein eigenes Framework statt CO-STAR, CRAFT oder RISEN verwenden?', a: 'Erstellen Sie eines, wenn Sie wiederholt die gleichen 3+ Modifikationen an einem existierenden Framework für jeden Prompt in einem Workflow vornehmen. Wenn Sie immer eine Compliance-Einschränkung, Domain-Terminologie und Output-Schema zu CO-STAR hinzufügen, sollten diese Komponenten Ihres eigenen Frameworks werden.' },
           { q: 'Kann ein eigenes Framework über verschiedene KI-Modelle hinweg funktionieren?', a: 'Ja, wenn es richtig gestaltet ist. Vermeiden Sie modellspezifische Syntax und bauen Sie auf universelle Komponenten (Aufgabe, Einschränkungen, Output-Format). Testen Sie auf GPT-5.6 und Claude, bevor Sie finalisieren. Wenn das Framework pro Modell Umformulierungen benötigt, vereinfachen Sie es.' },
           { q: 'Wie viele Komponenten sollte mein eigenes Framework haben?', a: 'Verwenden Sie 3–6 Komponenten. Weniger als 3 ist eine Technik, kein Framework. Mehr als 6 erzeugt Reibung und Autoren überspringen Abschnitte. Wenn Sie mehr brauchen, teilen Sie in zwei spezialisierte Frameworks für verschiedene Aufgabentypen auf.' },
-          { q: 'Wie teste ich, ob mein eigenes Framework tatsächlich funktioniert?', a: 'Wenden Sie es auf 10 repräsentative Prompts aus Ihrem Workflow an. Bewerten Sie Ausgaben nach drei Kriterien: (1) Aufgabenerledigung, (2) Format-Einhaltung, (3) Qualitätskonsistenz. Ein funktionierendes Framework erzielte 8/10 oder besser bei allen drei. Testen Sie über mehrere Modelle mit PromptQuorum.' },
+          { q: 'Wie teste ich, ob mein eigenes Framework tatsächlich funktioniert?', a: 'Wenden Sie es auf 10 repräsentative Prompts aus Ihrem Workflow an. Bewerten Sie Ausgaben nach drei Kriterien: (1) Aufgabenerledigung, (2) Format-Einhaltung, (3) Qualitätskonsistenz. Ein funktionierendes Framework sollte bei allen drei mindestens 8/10 erreichen. Testen Sie über mehrere Modelle mit PromptQuorum.' },
           { q: 'Wie sollte ich mein eigenes Framework benennen?', a: 'Verwenden Sie ein Akronym, das Ihren Komponenten in Reihenfolge zugeordnet ist (wie REPAIR). Der Akronym-Test: Kann ein neues Teammitglied alle Komponenten allein aus dem Namen abrufen? Wenn nicht, vereinfachen Sie Ihre Komponentenliste.' },
           { q: 'Kann ich Komponenten von CO-STAR, CRAFT und RISEN kombinieren?', a: 'Ja, behandeln Sie es aber als neues Framework, nicht als Hybrid. Benennen Sie es, dokumentieren Sie es, testen Sie es und speichern Sie es in Versionskontrolle. Kombinieren ohne Formalisierung schafft nur ein undokumentiertes ad-hoc-Muster.' },
           { q: 'Wie versioniere ich ein eigenes Framework?', a: 'Speichern Sie jede Version in einer datierten Datei (z. B. repair-v1-2026-05.md) in Ihrer Prompt-Bibliothek. Markieren Sie Breaking Changes (Komponente hinzugefügt/entfernt) als Hauptversionen. Markieren Sie Verfeinerungen (Definitionen aktualisiert) als Nebenversionen. Dokumentieren Sie den Grund für jede Änderung.' },
@@ -458,9 +483,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'Construye un framework personalizado cuando añades las mismas 3+ modificaciones a cada prompt de un flujo de trabajo',
       '3-6 componentes: menos es una técnica, más genera fricción y se omite',
-      'Prueba en 10 prompts reales antes de documentar — los frameworks construidos desde la teoría fallan en la práctica',
-      'El framework REPAIR redujo el onboarding de 2 semanas a 3 días para un equipo de soporte',
-      'Las puntuaciones de consistencia mejoraron del 64% al 89% en el primer mes',
+      'Prueba en 10 prompts reales antes de documentar — los frameworks construidos desde la teoría suelen fallar en la práctica',
+      'Ejemplo ilustrativo: REPAIR, un framework de 5 componentes para un equipo de soporte hipotético',
+      'Para evaluarlo, puntúa los mismos prompts de prueba antes y después con criterios definidos de antemano',
       'Prueba entre modelos en GPT-5.6 y Claude Sonnet 5 antes de estandarizar',
     ],
     toc: [
@@ -481,7 +506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Construye tu propio framework de prompts: proceso de 5 pasos',
       description: 'Aprende cuándo y cómo construir un framework de prompts personalizado: proceso de 5 pasos desde el objetivo hasta la documentación. Con el ejemplo REPAIR para equipos de soporte.',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['framework de prompts personalizado', 'construir framework de prompts', 'framework de prompt engineering', 'diseño de prompts', 'prompts en equipo'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -500,7 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          'Construye un framework de prompts personalizado cuando añades repetidamente los mismos 3+ componentes a cada prompt de un flujo de trabajo. Usa 3-6 componentes, prueba en 10 prompts reales antes de documentar y verifica la fiabilidad entre modelos. El ejemplo REPAIR muestra cómo un equipo de soporte redujo el onboarding de 2 semanas a 3 días.',
+          'Construye un framework de prompts personalizado cuando añades repetidamente los mismos 3+ componentes a cada prompt de un flujo de trabajo. Usa 3-6 componentes, prueba en 10 prompts reales antes de documentar y verifica la fiabilidad entre modelos. El ejemplo REPAIR, una ilustración hipotética, muestra cómo las adiciones recurrentes de un equipo de soporte pueden convertirse en componentes de un framework.',
         ],
       },
       key_takeaways: {
@@ -577,9 +602,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'support_example',
         title: 'Ejemplo: Construir un framework para un equipo de soporte',
         content: [
-          '**El framework personalizado de un equipo de soporte — llamado REPAIR — consta de 5 componentes: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Los frameworks estándar como CO-STAR y CRAFT no incluyen lógica de escalación ni anclaje de políticas, que cada prompt de soporte requiere.',
-          'El equipo comenzó al notar que añadían manualmente los mismos elementos a cada prompt CO-STAR: el nivel de rol específico del agente, la política SLA aplicable y una ruta de escalación condicional si el problema superaba el alcance de nivel 1. Después de 3 semanas, esas adiciones se formalizaron como componentes del framework.',
-          'La plantilla REPAIR resultante:',
+          '**REPAIR es un framework ilustrativo para un equipo de soporte hipotético, con 5 componentes: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** CO-STAR y CRAFT no definen un componente específico para la lógica de escalación ni para el anclaje de políticas, que los prompts de soporte de este equipo necesitarían.',
+          'Supongamos que el equipo observa que añade a mano los mismos elementos a cada prompt CO-STAR: el nivel de rol del agente, la política SLA aplicable y una ruta de escalación condicional para los problemas que superan el nivel 1. Como estas adiciones se repiten, son candidatas a convertirse en componentes fijos del framework.',
+          'La plantilla REPAIR ilustrativa:',
         ],
         items: [
           'R (Role): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
@@ -591,18 +616,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       support_example_part2: {
         content: [
-          'El tiempo para incorporar a nuevos agentes bajó de 2 semanas a 3 días después de que el framework REPAIR fue documentado y añadido a la biblioteca de prompts del equipo. Las puntuaciones de consistencia de prompts (medidas via evaluación de Braintrust) mejoraron del 64% al 89% en el primer mes.',
+          'Como el ejemplo es hipotético, no hay resultados que mostrar. Para comprobar si tu propio framework ayuda, ejecuta los mismos prompts de prueba antes y después de introducirlo, puntúa ambas series con criterios definidos de antemano y anota cuánto tardan los nuevos miembros del equipo en escribir prompts aceptables.',
           'Usa un framework personalizado cuando puedas nombrar el patrón claramente y mostrar que aplica en tu flujo de trabajo. Evita nombrar un framework solo por tenerlo — una estructura consistente de 4 componentes sin nombre que usas diariamente es un framework incluso sin acrónimo.',
         ],
         callouts: [
-          { type: 'tip', label: 'Mide el impacto', text: 'Rastrea el tiempo de onboarding y las puntuaciones de consistencia antes y después de implementar un framework personalizado. Si ninguno mejora en 4 semanas, el framework necesita refinamiento — no más documentación.' },
+          { type: 'tip', label: 'Mide el impacto', text: 'Registra el tiempo de onboarding y las puntuaciones de consistencia antes y después de implementar un framework personalizado. Si ninguno mejora tras un periodo de revisión fijado de antemano, refina el framework antes de añadir más documentación.' },
         ],
       },
       common_mistakes: {
         id: 'common_mistakes',
         title: 'Errores comunes al construir frameworks personalizados',
         content: [
-          '**El error más común es construir un framework antes de probar manualmente 20+ prompts reales.** Los frameworks construidos desde la teoría en lugar de patrones observados incluyen componentes que suenan importantes pero se omiten en la práctica.',
+          '**Un error frecuente es construir un framework antes de probar al menos 10 prompts reales.** Los frameworks construidos desde la teoría en lugar de patrones observados pueden incluir componentes que suenan importantes pero se omiten en la práctica.',
         ],
         mistakes: [
           {
@@ -706,9 +731,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'Construa um framework personalizado quando adicionar as mesmas 3+ modificações a cada prompt de um fluxo de trabalho',
       '3-6 componentes: menos é uma técnica, mais gera atrito e é omitido',
-      'Teste em 10 prompts reais antes de documentar — frameworks construídos a partir da teoria falham na prática',
-      'O framework REPAIR reduziu o onboarding de 2 semanas para 3 dias para uma equipe de suporte',
-      'As pontuações de consistência melhoraram de 64% para 89% no primeiro mês',
+      'Teste em 10 prompts reais antes de documentar — frameworks construídos a partir da teoria costumam falhar na prática',
+      'Exemplo ilustrativo: REPAIR, um framework de 5 componentes para uma equipe de suporte hipotética',
+      'Para avaliar, pontue os mesmos prompts de teste antes e depois com critérios definidos com antecedência',
       'Teste entre modelos no GPT-5.6 e Claude Sonnet 5 antes de padronizar',
     ],
     toc: [
@@ -729,7 +754,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Construa seu próprio framework de prompts: processo de 5 etapas',
       description: 'Aprenda quando e como construir um framework de prompts personalizado: processo de 5 etapas desde o objetivo até a documentação. Com o exemplo REPAIR para equipes de suporte.',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['framework de prompts personalizado', 'construir framework de prompts', 'framework de prompt engineering', 'design de prompts', 'prompts em equipe'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -748,7 +773,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          'Construa um framework de prompts personalizado quando adicionar repetidamente os mesmos 3+ componentes a cada prompt de um fluxo de trabalho. Use 3-6 componentes, teste em 10 prompts reais antes de documentar e verifique a confiabilidade entre modelos. O exemplo REPAIR mostra como uma equipe de suporte reduziu o onboarding de 2 semanas para 3 dias.',
+          'Construa um framework de prompts personalizado quando adicionar repetidamente os mesmos 3+ componentes a cada prompt de um fluxo de trabalho. Use 3-6 componentes, teste em 10 prompts reais antes de documentar e verifique a confiabilidade entre modelos. O exemplo REPAIR, uma ilustração hipotética, mostra como acréscimos recorrentes de uma equipe de suporte podem virar componentes de um framework.',
         ],
       },
       key_takeaways: {
@@ -825,9 +850,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'support_example',
         title: 'Exemplo: Construir um framework para uma equipe de suporte',
         content: [
-          '**O framework personalizado de uma equipe de suporte — chamado REPAIR — consiste em 5 componentes: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Frameworks padrão como CO-STAR e CRAFT não incluem lógica de escalonamento nem ancoragem de políticas, que cada prompt de suporte exige.',
-          'A equipe começou ao notar que adicionava manualmente os mesmos elementos a cada prompt CO-STAR: o nível de função específico do agente, a política SLA aplicável e um caminho de escalonamento condicional se o problema ultrapassasse o escopo de nível 1. Após 3 semanas, essas adições foram formalizadas como componentes do framework.',
-          'O modelo REPAIR resultante:',
+          '**REPAIR é um framework ilustrativo para uma equipe de suporte hipotética, com 5 componentes: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** CO-STAR e CRAFT não definem um componente específico para lógica de escalonamento nem para ancoragem de políticas, de que os prompts de suporte dessa equipe precisariam.',
+          'Suponha que a equipe perceba que adiciona manualmente os mesmos elementos a cada prompt CO-STAR: o nível de função do agente, a política de SLA aplicável e um caminho de escalonamento condicional para problemas além do nível 1. Como esses acréscimos se repetem, são candidatos a componentes fixos do framework.',
+          'O modelo REPAIR ilustrativo:',
         ],
         items: [
           'R (Role): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
@@ -839,18 +864,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       support_example_part2: {
         content: [
-          'O tempo para integrar novos agentes caiu de 2 semanas para 3 dias após o framework REPAIR ser documentado e adicionado à biblioteca de prompts da equipe. As pontuações de consistência de prompts (medidas via avaliação do Braintrust) melhoraram de 64% para 89% no primeiro mês.',
+          'Como o exemplo é hipotético, não há resultados a apresentar. Para verificar se o seu próprio framework ajuda, execute os mesmos prompts de teste antes e depois de adotá-lo, pontue os dois conjuntos com critérios definidos com antecedência e anote quanto tempo novos membros da equipe levam para escrever prompts aceitáveis.',
           'Use um framework personalizado quando puder nomear o padrão claramente e mostrar que ele se aplica ao seu fluxo de trabalho. Evite nomear um framework apenas por tê-lo — uma estrutura consistente de 4 componentes sem nome que você usa diariamente é um framework mesmo sem acrônimo.',
         ],
         callouts: [
-          { type: 'tip', label: 'Meça o impacto', text: 'Rastreie o tempo de onboarding e as pontuações de consistência antes e depois de implementar um framework personalizado. Se nenhum melhorar em 4 semanas, o framework precisa de refinamento — não de mais documentação.' },
+          { type: 'tip', label: 'Meça o impacto', text: 'Acompanhe o tempo de onboarding e as pontuações de consistência antes e depois de implementar um framework personalizado. Se nenhum melhorar após um período de avaliação definido com antecedência, refine o framework antes de acrescentar documentação.' },
         ],
       },
       common_mistakes: {
         id: 'common_mistakes',
         title: 'Erros comuns ao construir frameworks personalizados',
         content: [
-          '**O erro mais comum é construir um framework antes de testar manualmente 20+ prompts reais.** Frameworks construídos a partir da teoria em vez de padrões observados incluem componentes que soam importantes mas são omitidos na prática.',
+          '**Um erro frequente é construir um framework antes de testar pelo menos 10 prompts reais.** Frameworks construídos a partir da teoria, e não de padrões observados, podem incluir componentes que soam importantes mas são omitidos na prática.',
         ],
         mistakes: [
           {
@@ -955,8 +980,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'Créez un framework personnalisé quand vous ajoutez les mêmes 3+ modifications à chaque prompt d\'un workflow',
       '3–6 composants : moins est une technique, plus crée de la friction',
       'Tester sur 10 prompts réels avant de documenter',
-      'Le framework REPAIR a réduit l\'onboarding de 2 semaines à 3 jours',
-      'Les scores de cohérence se sont améliorés de 64 % à 89 % en un mois',
+      'Exemple illustratif : REPAIR, un framework à 5 composants pour une équipe support fictive',
+      'Pour l’évaluer, notez les mêmes prompts de test avant et après selon des critères fixés à l’avance',
       'Tester sur GPT-5.6 et Claude Sonnet 5 avant de standardiser',
     ],
     toc: [
@@ -977,7 +1002,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Créer son propre framework de prompts : processus en 5 étapes',
       description: 'Créer un framework de prompts en 5 étapes : définir l\'objectif, identifier 3–6 composants, tester sur 10 prompts, affiner, documenter.',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['framework de prompts personnalisé', 'créer framework prompts', 'framework prompt engineering', 'conception prompts'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -996,7 +1021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          'Créez un framework de prompts personnalisé quand vous ajoutez les mêmes 3+ composants à chaque prompt d\'un workflow. Utilisez 3–6 composants, testez sur 10 prompts réels avant de documenter et vérifiez la fiabilité multi-modèles. L\'exemple REPAIR montre comment une équipe support a réduit l\'onboarding de 2 semaines à 3 jours.',
+          'Créez un framework de prompts personnalisé quand vous ajoutez les mêmes 3+ composants à chaque prompt d\'un workflow. Utilisez 3–6 composants, testez sur 10 prompts réels avant de documenter et vérifiez la fiabilité multi-modèles. L’exemple REPAIR, purement hypothétique, montre comment les ajouts récurrents d’une équipe support peuvent devenir des composants d’un framework.',
         ],
       },
       key_takeaways: {
@@ -1061,18 +1086,31 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'support_example',
         title: 'Exemple : créer un framework pour une équipe support',
         content: [
-          '**Le framework personnalisé d\'une équipe support — nommé REPAIR — comprend 5 composants : Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Les frameworks standard comme CO-STAR et CRAFT n\'incluent pas la logique d\'escalade ni l\'ancrage de politique, nécessaires pour chaque prompt support.',
-          'L\'équipe a constaté qu\'elle ajoutait manuellement les mêmes éléments à chaque prompt CO-STAR : le niveau de rôle spécifique de l\'agent, la politique SLA applicable et un chemin d\'escalade conditionnel. Après 3 semaines, ces ajouts ont été formalisés comme composants du framework.',
+          '**REPAIR est un framework illustratif pour une équipe support fictive, avec 5 composants : Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** CO-STAR et CRAFT ne prévoient pas de composant dédié à la logique d’escalade ni à l’ancrage de politique, dont les prompts support de cette équipe auraient besoin.',
+          'Supposons que l’équipe constate qu’elle ajoute à la main les mêmes éléments à chaque prompt CO-STAR : le niveau de rôle de l’agent, la politique SLA applicable et un chemin d’escalade conditionnel pour les cas qui dépassent le niveau 1. Comme ces ajouts reviennent sans cesse, ils peuvent devenir des composants fixes du framework.',
+          'Le modèle REPAIR donné en illustration :',
+        ],
+        items: [
+          'R (Role): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
+          'E (Escalation): "If the issue involves [condition], escalate to tier-2. Do not attempt resolution."',
+          'P (Policy anchor): "Apply policy [ID] for [issue type]. Quote the relevant clause in your response."',
+          'A (Action path): "Classify the issue, confirm understanding, propose resolution, request confirmation."',
+          'I (Intent confirmation): "End every response with: \'Does this address your issue, or would you like me to escalate?\'"',
+        ],
+      },
+      support_example_part2: {
+        content: [
+          'L’exemple étant hypothétique, il ne s’accompagne d’aucun résultat. Pour vérifier si votre propre framework est utile, exécutez les mêmes prompts de test avant et après son adoption, notez les deux séries selon des critères fixés à l’avance et relevez le temps nécessaire aux nouveaux membres pour rédiger des prompts acceptables.',
         ],
         callouts: [
-          { type: 'tip', label: 'Mesurez l\'impact', text: 'Suivez le temps d\'onboarding et les scores de cohérence avant et après le déploiement d\'un framework personnalisé. S\'il ne s\'améliore pas en 4 semaines, le framework nécessite un raffinement.' },
+          { type: 'tip', label: 'Mesurez l\'impact', text: 'Suivez le temps d’onboarding et les scores de cohérence avant et après le déploiement d’un framework personnalisé. Si aucun des deux ne progresse après une période d’évaluation fixée à l’avance, affinez le framework avant d’ajouter de la documentation.' },
         ],
       },
       common_mistakes: {
         id: 'common_mistakes',
         title: 'Erreurs courantes lors de la création de frameworks personnalisés',
         content: [
-          '**L\'erreur la plus courante est de créer un framework sans tester 20+ prompts réels manuellement.** Les frameworks construits à partir de la théorie incluent des composants qui semblent importants mais sont ignorés en pratique.',
+          '**Une erreur fréquente consiste à créer un framework avant d\'avoir testé au moins 10 prompts réels.** Les frameworks construits à partir de la théorie peuvent inclure des composants qui semblent importants mais sont ignorés en pratique.',
         ],
         mistakes: [
           { mistake: 'Trop de composants (7+)', problem: 'Les rédacteurs sautent des sections sous pression, brisant la cohérence.', fix: 'Limitez à 6 composants. Déplacez les champs spécifiques au domaine dans des extensions, pas dans le framework principal.' },
@@ -1139,7 +1177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/build-your-own-framework-overview-hero-ja.webp',
     title: '独自プロンプトフレームワークの構築：5ステップ設計プロセス',
     seoTitle: 'カスタムプロンプトフレームワーク構築：5ステップ手順',
-    intro: 'CO-STAR、CRAFT、RISENなどの既存フレームワークがワークフローに合わない場合、カスタムプロンプトフレームワークを構築することで、チームに再利用可能でテスト可能な構造を提供できます。このガイドでは、構築すべき状況、5ステップの設計プロセス、実践例を解説します。',
+    intro: 'CO-STAR、CRAFT、RISENなどの既存フレームワークがワークフローに合わない場合、カスタムプロンプトフレームワークを構築することで、チームに再利用可能でテスト可能な構造を提供できます。このガイドでは、構築すべき状況、5ステップの設計プロセス、説明用の具体例を解説します。',
     metaDescription: 'カスタムプロンプトフレームワークを5ステップで構築：目標定義、3〜6コンポーネント特定、10プロンプトでテスト、改良、文書化。支援チーム向けREPAIR例付き。',
     ogDescription: 'カスタムプロンプトフレームワークを5ステップで構築：目標定義、3〜6コンポーネント特定、10プロンプトでテスト、改良、文書化。PromptQuorumで複数モデルをテスト。',
     twitterDescription: '標準フレームワークが合わない？5ステップで独自フレームワークを構築。支援チーム向けREPAIR例。3〜6コンポーネント、10プロンプト検証。',
@@ -1152,8 +1190,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'ワークフローの各プロンプトに同じ3つ以上の変更を加えるときカスタムフレームワークを構築',
       '3〜6コンポーネント：少ないとテクニック、多いと摩擦が生じる',
       '文書化前に10の実際のプロンプトでテスト',
-      'REPAIRフレームワークで1つのサポートチームのオンボーディングが2週間から3日に短縮',
-      '整合性スコアが最初の月以内に64%から89%に向上',
+      '説明用の例：架空のサポートチーム向け5コンポーネントのフレームワーク「REPAIR」',
+      '効果の判断には、同じテスト用プロンプトを導入前後で事前に決めた基準により採点する',
       '標準化前にGPT-5.6とClaude Sonnet 5でモデル横断テスト',
     ],
     toc: [
@@ -1174,7 +1212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '独自プロンプトフレームワークの構築：5ステップ設計プロセス',
       description: 'カスタムプロンプトフレームワークを5ステップで構築：目標定義、3〜6コンポーネント特定、10プロンプトでテスト、改良、文書化。',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['カスタムプロンプトフレームワーク', 'プロンプトフレームワーク構築', 'プロンプトエンジニアリング', 'チームプロンプト'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -1193,7 +1231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          'ワークフローの各プロンプトに同じ3つ以上のコンポーネントを繰り返し追加するときにカスタムプロンプトフレームワークを構築します。3〜6コンポーネントを使用し、文書化前に10の実際のプロンプトでテストし、モデル横断的な信頼性を確認します。REPAIRの例は、サポートチームがオンボーディングを2週間から3日に短縮した方法を示しています。',
+          'ワークフローの各プロンプトに同じ3つ以上のコンポーネントを繰り返し追加するときにカスタムプロンプトフレームワークを構築します。3〜6コンポーネントを使用し、文書化前に10の実際のプロンプトでテストし、モデル横断的な信頼性を確認します。REPAIRは説明用の架空の例で、サポートチームが繰り返し追加する要素をフレームワークのコンポーネントにする方法を示しています。',
         ],
       },
       key_takeaways: {
@@ -1258,8 +1296,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'support_example',
         title: '例：サポートチーム向けフレームワーク構築',
         content: [
-          '**あるサポートチームのカスタムフレームワーク — REPAIRと命名 — は5つのコンポーネントで構成されます：Role、Escalation condition、Policy anchor、Action path、Intent confirmation。** CO-STARやCRAFTなどの標準フレームワークには、すべてのサポートプロンプトが必要とするエスカレーションロジックやポリシーアンカリングが含まれていません。',
-          'REPAIR template:',
+          '**REPAIRは架空のサポートチームを想定した説明用のフレームワークで、5つのコンポーネントで構成されます：Role、Escalation condition、Policy anchor、Action path、Intent confirmation。** CO-STARやCRAFTには、このチームのサポート用プロンプトに必要となるエスカレーションロジックやポリシー参照の専用コンポーネントがありません。',
+          'たとえば、このチームがすべてのCO-STARプロンプトに同じ要素を手作業で追加していると気づいたとします。担当者の役割レベル、適用されるSLAポリシー、一次対応の範囲を超える場合の条件付きエスカレーション手順です。繰り返し現れる要素は、固定コンポーネントの候補になります。',
+          '説明用のREPAIRテンプレート：',
         ],
         items: [
           'R (Role): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
@@ -1271,17 +1310,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       support_example_part2: {
         content: [
-          'REPAIRフレームワークをドキュメント化してチームのプロンプトライブラリに追加した後、新しいエージェントのオンボーディング時間は2週間から3日に短縮されました。プロンプト整合性スコア（Braintrust評価で測定）は最初の月以内に64%から89%に改善しました。',
+          'この例は架空のものなので、成果の数値はありません。自分のフレームワークが役立つかを確かめるには、導入の前後で同じテスト用プロンプトを実行し、事前に決めた基準で両方を採点したうえで、新しいメンバーが実用的なプロンプトを書けるようになるまでの時間を記録します。',
         ],
         callouts: [
-          { type: 'tip', label: '効果を測定する', text: 'カスタムフレームワークを導入する前後でオンボーディング時間と整合性スコアを追跡します。4週間以内に改善が見られない場合、フレームワークは文書化ではなく改良が必要です。' },
+          { type: 'tip', label: '効果を測定する', text: '独自フレームワークの導入前後で、オンボーディング時間と整合性スコアを記録します。事前に決めた評価期間を過ぎてもどちらも改善しない場合は、文書を増やす前にフレームワークを改良します。' },
         ],
       },
       common_mistakes: {
         id: 'common_mistakes',
         title: '独自フレームワーク構築時のよくある間違い',
         content: [
-          '**最も一般的な間違いは、20以上の実際のプロンプトを手動でテストする前にフレームワークを構築することです。** 理論から構築されたフレームワークには、重要そうに見えても実際にはスキップされるコンポーネントが含まれます。',
+          '**よくある間違いは、少なくとも10の実際のプロンプトをテストする前にフレームワークを構築することです。** 観察されたパターンではなく理論から構築されたフレームワークには、重要そうに見えても実際にはスキップされるコンポーネントが含まれる可能性があります。',
         ],
         mistakes: [
           { mistake: 'コンポーネントが多すぎる（7個以上）', problem: '時間のプレッシャーの下でライターがセクションをスキップし、一貫性が損なわれます。', fix: '6コンポーネントに制限します。ドメイン固有フィールドはコアフレームワークではなく拡張に移します。' },
@@ -1349,7 +1388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/build-your-own-framework-overview-hero-zh.webp',
     title: '构建自己的Prompt框架：5步设计流程',
     seoTitle: '构建自定义Prompt框架：5步设计流程指南',
-    intro: '当CO-STAR、CRAFT、RISEN等现有框架不适合您的工作流程时，构建自定义Prompt框架可以为团队提供可复用、可测试的结构。本指南说明何时应构建而非采用现有框架、5步设计流程，以及完整的实操案例。',
+    intro: '当CO-STAR、CRAFT、RISEN等现有框架不适合您的工作流程时，构建自定义Prompt框架可以为团队提供可复用、可测试的结构。本指南说明何时应构建而非采用现有框架、5步设计流程，以及一个示例说明。',
     metaDescription: '5步构建自定义Prompt框架：定义目标、识别3至6个组件、在10条Prompt上测试、改进、文档化。附支持团队REPAIR框架示例。',
     ogDescription: '5步构建自定义Prompt框架：定义目标、识别3至6个组件、在10条Prompt上测试、改进、文档化。使用PromptQuorum进行跨模型测试。',
     twitterDescription: '标准框架不适用？5步构建自定义框架。支持团队REPAIR示例。3至6个组件，10条Prompt验证。',
@@ -1362,8 +1401,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '当工作流中每条Prompt添加相同3项以上修改时构建自定义框架',
       '3至6个组件：更少是技术方法，更多会产生阻力',
       '文档化前在10条真实Prompt上测试',
-      'REPAIR框架将一个支持团队的入职时间从2周缩短至3天',
-      '一致性评分在第一个月内从64%提升至89%',
+      '示例说明：REPAIR，为一个虚构支持团队设计的5组件框架',
+      '评估框架时，按事先确定的标准，对引入前后的同一批测试Prompt评分',
       '标准化前在GPT-5.6和Claude Sonnet 5上进行跨模型测试',
     ],
     toc: [
@@ -1384,7 +1423,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '构建自己的Prompt框架：5步设计流程',
       description: '5步构建自定义Prompt框架：定义目标、识别3至6个组件、在10条Prompt上测试、改进、文档化。',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['自定义Prompt框架', '构建Prompt框架', 'Prompt工程框架', '团队提示词', 'Prompt设计'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -1403,7 +1442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          '当您反复在工作流中的每条Prompt中添加相同的3个以上组件时，构建自定义Prompt框架。使用3至6个组件，文档化前在10条真实Prompt上测试，并验证跨模型可靠性。REPAIR示例展示了支持团队如何将入职时间从2周缩短至3天。',
+          '当您反复在工作流中的每条Prompt中添加相同的3个以上组件时，构建自定义Prompt框架。使用3至6个组件，文档化前在10条真实Prompt上测试，并验证跨模型可靠性。REPAIR是一个假设性示例，用来说明支持团队反复添加的内容如何变成框架组件。',
         ],
       },
       key_takeaways: {
@@ -1468,8 +1507,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'support_example',
         title: '示例：为支持团队构建框架',
         content: [
-          '**一个支持团队的自定义框架——命名为REPAIR——包含5个组件：Role、Escalation condition、Policy anchor、Action path、Intent confirmation。** CO-STAR和CRAFT等标准框架不包含每条支持Prompt都需要的升级逻辑和策略锚定。',
-          'REPAIR模板：',
+          '**REPAIR是为一个虚构支持团队设计的示例框架，包含5个组件：Role、Escalation condition、Policy anchor、Action path、Intent confirmation。** CO-STAR和CRAFT没有专门用于升级逻辑或策略锚定的组件，而这个团队的支持Prompt需要它们。',
+          '假设该团队发现，自己总要在每条CO-STAR Prompt中手动添加相同的内容：客服的角色级别、适用的SLA政策，以及超出一线支持范围时的条件升级路径。这些内容反复出现，因此适合设为固定的框架组件。',
+          '示例REPAIR模板：',
         ],
         items: [
           'R (Role): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
@@ -1481,17 +1521,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       support_example_part2: {
         content: [
-          '将REPAIR框架文档化并添加到团队的Prompt库后，新代理的入职时间从2周缩短至3天。Prompt一致性评分（通过Braintrust评估测量）在第一个月内从64%提升至89%。',
+          '由于这是假设性示例，没有可报告的结果。要检验你自己的框架是否有用，请在引入前后运行同一批测试Prompt，按事先确定的标准对两组结果评分，并记录新成员需要多长时间才能写出合格的Prompt。',
         ],
         callouts: [
-          { type: 'tip', label: '衡量影响', text: '在部署自定义框架前后追踪入职时间和一致性评分。如果在4周内没有改善，框架需要改进，而不是更多文档。' },
+          { type: 'tip', label: '衡量影响', text: '在部署自定义框架前后记录入职时间和一致性评分。如果经过事先设定的评估期后两者都没有改善，应先改进框架，而不是增加文档。' },
         ],
       },
       common_mistakes: {
         id: 'common_mistakes',
         title: '构建自定义框架的常见错误',
         content: [
-          '**最常见的错误是在手动测试20条以上真实Prompt之前就构建框架。** 从理论而非观察到的模式构建的框架包含听起来重要但实际上被跳过的组件。',
+          '**一个常见错误是在测试至少10条真实Prompt之前就构建框架。** 基于理论而非实际观察到的模式构建的框架，可能包含听起来重要、实际却被跳过的组件。',
         ],
         mistakes: [
           { mistake: '组件过多（7个以上）', problem: '编写者在时间压力下跳过部分，破坏一致性。', fix: '限制在6个组件内。将领域特定字段移到扩展中，而不是核心框架中。' },
@@ -1571,9 +1611,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'ابنِ إطاراً مخصصاً عندما تضيف نفس 3 تعديلات أو أكثر إلى كل أمر في سير عمل معين',
       '3-6 مكونات: أقل من ذلك يُعدّ أسلوباً، وأكثر من ذلك يخلق احتكاكاً ويُهمَل',
-      'اختبر على 10 أوامر حقيقية قبل التوثيق — أطر العمل المبنية نظرياً تفشل في التطبيق',
-      'قلّص إطار REPAIR فترة الإعداد من أسبوعين إلى 3 أيام لفريق دعم',
-      'تحسّنت درجات الاتساق من 64% إلى 89% في الشهر الأول من استخدام إطار مخصص',
+      'اختبر على 10 أوامر حقيقية قبل التوثيق — أطر العمل المبنية نظرياً كثيراً ما تفشل في التطبيق',
+      'مثال توضيحي: REPAIR، إطار عمل من 5 مكونات لفريق دعم افتراضي',
+      'لتقييم الإطار، قيّم أوامر الاختبار نفسها قبل تطبيقه وبعده وفق معايير محددة مسبقاً',
       'اختبر على نموذجين على الأقل عبر PromptQuorum قبل التوحيد القياسي',
     ],
     toc: [
@@ -1594,7 +1634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'بناء إطار عمل خاص بك للأوامر: عملية من 5 خطوات',
       description: 'تعلّم متى وكيف تبني إطار عمل مخصصاً للأوامر: عملية من 5 خطوات من تحديد الهدف إلى التوثيق. مع مثال REPAIR العملي لفرق الدعم.',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['إطار عمل مخصص للأوامر', 'بناء إطار عمل أوامر', 'إطار عمل prompt engineering', 'تصميم الأوامر', 'أوامر الفريق'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -1613,7 +1653,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          'ابنِ إطار عمل مخصصاً للأوامر عندما تضيف بصورة متكررة نفس 3 مكونات أو أكثر إلى كل أمر في سير عمل معين. استخدم 3-6 مكونات، واختبر على 10 أوامر حقيقية قبل التوثيق، وتحقق من الموثوقية عبر النماذج. يوضح مثال REPAIR كيف قلّص فريق دعم فترة الإعداد من أسبوعين إلى 3 أيام.',
+          'ابنِ إطار عمل مخصصاً للأوامر عندما تضيف بصورة متكررة نفس 3 مكونات أو أكثر إلى كل أمر في سير عمل معين. استخدم 3-6 مكونات، واختبر على 10 أوامر حقيقية قبل التوثيق، وتحقق من الموثوقية عبر النماذج. مثال REPAIR حالة افتراضية للتوضيح، ويبيّن كيف يمكن أن تتحول الإضافات المتكررة لدى فريق دعم إلى مكونات في إطار العمل.',
         ],
       },
       key_takeaways: {
@@ -1690,9 +1730,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'support_example',
         title: 'مثال: بناء إطار عمل لفريق دعم',
         content: [
-          '**إطار العمل المخصص لفريق الدعم — المسمى REPAIR — يتألف من 5 مكونات: Role وEscalation condition وPolicy anchor وAction path وIntent confirmation.** لا تتضمن الأطر القياسية كـCO-STAR وCRAFT منطق التصعيد أو ارتكاز السياسة اللذين يحتاجهما كل أمر دعم.',
-          'لاحظ الفريق أنهم يضيفون يدوياً نفس العناصر إلى كل أمر CO-STAR: مستوى دور المندوب المحدد، والسياسة المعمول بها وفق اتفاقية مستوى الخدمة، ومسار تصعيد مشروط إذا تجاوزت المشكلة نطاق المستوى الأول. بعد 3 أسابيع، جرى تقنين هذه الإضافات كمكونات في الإطار.',
-          'قالب REPAIR الناتج:',
+          '**REPAIR إطار عمل توضيحي لفريق دعم افتراضي، ويتألف من 5 مكونات: Role وEscalation condition وPolicy anchor وAction path وIntent confirmation.** لا يخصّص CO-STAR وCRAFT مكوناً لمنطق التصعيد أو لارتكاز السياسة، وهما ما تحتاجه أوامر الدعم لدى هذا الفريق.',
+          'لنفترض أن الفريق لاحظ أنه يضيف يدوياً العناصر نفسها إلى كل أمر CO-STAR: مستوى دور المندوب، وسياسة اتفاقية مستوى الخدمة المعمول بها، ومسار تصعيد مشروط للمشكلات التي تتجاوز المستوى الأول. ولأن هذه الإضافات تتكرر، فهي مرشحة لأن تصبح مكونات ثابتة في الإطار.',
+          'قالب REPAIR التوضيحي:',
         ],
         items: [
           'R (دور): "أنت وكيل دعم من المستوى الأول لـ [Product]. صلاحياتك تشمل [scope]."',
@@ -1704,18 +1744,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       support_example_part2: {
         content: [
-          'انخفض وقت إعداد المندوبين الجدد من أسبوعين إلى 3 أيام بعد توثيق إطار REPAIR وإضافته إلى مكتبة أوامر الفريق. تحسّنت درجات اتساق الأوامر (المقاسة عبر تقييم Braintrust) من 64% إلى 89% في الشهر الأول.',
+          'بما أن المثال افتراضي، فلا توجد نتائج تخصّه. للتحقق من فائدة إطارك الخاص، شغّل أوامر الاختبار نفسها قبل اعتماده وبعده، وقيّم المجموعتين وفق معايير محددة مسبقاً، وسجّل الوقت الذي يحتاجه الأعضاء الجدد لكتابة أوامر مقبولة.',
           'استخدم إطار عمل مخصصاً عندما تستطيع تسمية النمط بوضوح وإثبات انطباقه على سير عملك. تجنّب تسمية إطار عمل لمجرد امتلاكه — فالبنية المتسقة المكونة من 4 مكونات بلا اسم التي تستخدمها يومياً هي إطار عمل حتى بدون اختصار.',
         ],
         callouts: [
-          { type: 'tip', label: 'قِس الأثر', text: 'تتبّع وقت الإعداد ودرجات الاتساق قبل تطبيق إطار عمل مخصص وبعده. إذا لم يتحسّن أيٌّ منهما في غضون 4 أسابيع، فالإطار يحتاج إلى تحسين — لا مزيداً من التوثيق.' },
+          { type: 'tip', label: 'قِس الأثر', text: 'تتبّع وقت الإعداد ودرجات الاتساق قبل تطبيق إطار عمل مخصص وبعده. إذا لم يتحسّن أيٌّ منهما بعد فترة مراجعة تحددها مسبقاً، فحسّن الإطار قبل إضافة مزيد من التوثيق.' },
         ],
       },
       common_mistakes: {
         id: 'common_mistakes',
         title: 'الأخطاء الشائعة عند بناء أطر عمل مخصصة',
         content: [
-          '**الخطأ الأكثر شيوعاً هو بناء إطار عمل قبل اختبار 20 أمراً حقيقياً أو أكثر يدوياً.** أطر العمل المبنية نظرياً بدلاً من الاستناد إلى أنماط مُلاحظة تتضمن مكونات تبدو مهمة لكن تُهمَل في التطبيق الفعلي.',
+          '**من الأخطاء المتكررة بناء إطار عمل قبل اختبار 10 أوامر حقيقية على الأقل.** قد تتضمن أطر العمل المبنية نظرياً، لا على أنماط مُلاحظة، مكونات تبدو مهمة لكن تُهمَل في التطبيق الفعلي.',
         ],
         mistakes: [
           {
@@ -1806,7 +1846,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/build-your-own-framework-overview-hero-ko.webp',
     title: '나만의 프롬프트 프레임워크 만들기: 5단계 프로세스',
     seoTitle: '커스텀 프롬프트 프레임워크 만들기: 5단계 가이드',
-    intro: 'CO-STAR, CRAFT, RISEN 같은 기존 프레임워크가 업무 흐름에 맞지 않을 때, 커스텀 프롬프트 프레임워크를 구축하면 팀에게 재사용 가능하고 검증된 구조를 제공합니다. 이 가이드는 구축 vs. 도입 판단 기준, 5단계 프로세스, 그리고 실제 예시를 다룹니다.',
+    intro: 'CO-STAR, CRAFT, RISEN 같은 기존 프레임워크가 업무 흐름에 맞지 않을 때, 커스텀 프롬프트 프레임워크를 구축하면 팀에게 재사용 가능하고 검증 가능한 구조를 제공합니다. 이 가이드는 구축 vs. 도입 판단 기준, 5단계 프로세스, 그리고 설명용 예시를 다룹니다.',
     metaDescription: '커스텀 프롬프트 프레임워크를 만드는 방법: 목표 설정부터 문서화까지 5단계 프로세스. 지원팀을 위한 REPAIR 예시 포함.',
     ogDescription: '커스텀 프롬프트 프레임워크를 5단계로 구축하세요: 목표 정의, 3-6개 구성 요소 식별, 10개 프롬프트 테스트, 개선, 문서화. PromptQuorum으로 모델 간 테스트 가능.',
     twitterDescription: '표준 프레임워크가 맞지 않나요? 5단계로 직접 만드세요. 지원팀을 위한 REPAIR 예시. 3-6개 구성 요소, 10개 프롬프트 검증.',
@@ -1818,9 +1858,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '업무 흐름의 모든 프롬프트에 동일한 3가지 이상의 수정을 추가할 때 커스텀 프레임워크를 구축하십시오',
       '3-6개 구성 요소: 그보다 적으면 기법이고, 많으면 마찰이 생기고 생략됩니다',
-      '문서화 전에 실제 프롬프트 10개로 테스트하십시오 — 이론으로 구축된 프레임워크는 실전에서 실패합니다',
-      'REPAIR 프레임워크는 지원팀의 온보딩을 2주에서 3일로 단축시켰습니다',
-      '일관성 점수가 첫 달에 64%에서 89%로 향상되었습니다',
+      '문서화 전에 실제 프롬프트 10개로 테스트하십시오 — 이론으로 구축한 프레임워크는 실전에서 실패하는 경우가 많습니다',
+      '설명용 예시: 가상의 지원팀을 위한 5개 구성 요소 프레임워크 REPAIR',
+      '효과를 판단하려면 도입 전후에 같은 테스트 프롬프트를 미리 정한 기준으로 채점합니다',
       '표준화 전에 GPT-5.6와 Claude Sonnet 5에서 모델 간 테스트를 수행하십시오',
     ],
     toc: [
@@ -1841,7 +1881,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '나만의 프롬프트 프레임워크 만들기: 5단계 프로세스',
       description: '커스텀 프롬프트 프레임워크를 만드는 방법: 목표 설정부터 문서화까지 5단계 프로세스. 지원팀을 위한 REPAIR 예시 포함.',
       datePublished: '2026-05-02',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-28',
       keywords: ['커스텀 프롬프트 프레임워크', '프롬프트 프레임워크 만들기', '프롬프트 엔지니어링 프레임워크', '프롬프트 설계', '팀 프롬프트'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -1860,7 +1900,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         content: [
-          '업무 흐름의 모든 프롬프트에 동일한 3가지 이상의 구성 요소를 반복적으로 추가할 때 커스텀 프롬프트 프레임워크를 구축하십시오. 3-6개의 구성 요소를 사용하고, 문서화 전에 실제 프롬프트 10개로 테스트하며, 모델 간 신뢰성을 확인하십시오. REPAIR 예시는 지원팀이 온보딩을 2주에서 3일로 단축한 방법을 보여줍니다.',
+          '업무 흐름의 모든 프롬프트에 동일한 3가지 이상의 구성 요소를 반복적으로 추가할 때 커스텀 프롬프트 프레임워크를 구축하십시오. 3-6개의 구성 요소를 사용하고, 문서화 전에 실제 프롬프트 10개로 테스트하며, 모델 간 신뢰성을 확인하십시오. REPAIR는 설명을 위한 가상의 예시로, 지원팀이 반복해서 추가하는 요소가 프레임워크 구성 요소가 되는 과정을 보여줍니다.',
         ],
       },
       key_takeaways: {
@@ -1937,9 +1977,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'support_example',
         title: '예시: 지원팀을 위한 프레임워크 구축',
         content: [
-          '**지원팀의 커스텀 프레임워크 — REPAIR라고 불리는 — 는 5개의 구성 요소로 구성됩니다: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** CO-STAR, CRAFT 같은 표준 프레임워크는 모든 지원 프롬프트에 필요한 에스컬레이션 로직과 정책 앵커링을 포함하지 않습니다.',
-          '팀은 각 CO-STAR 프롬프트에 수동으로 동일한 요소를 추가한다는 것을 알아챘을 때 시작했습니다: 에이전트의 특정 역할 수준, 적용 가능한 SLA 정책, 그리고 문제가 1단계 범위를 초과할 경우의 조건부 에스컬레이션 경로. 3주 후, 이러한 추가 사항이 프레임워크 구성 요소로 공식화되었습니다.',
-          '결과 REPAIR 템플릿:',
+          '**REPAIR는 가상의 지원팀을 가정한 설명용 프레임워크이며 5개의 구성 요소로 이루어집니다: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** CO-STAR와 CRAFT에는 이 팀의 지원 프롬프트에 필요한 에스컬레이션 로직이나 정책 앵커링 전용 구성 요소가 없습니다.',
+          '이 팀이 모든 CO-STAR 프롬프트에 같은 요소를 직접 추가하고 있다는 사실을 알아챘다고 가정해 보겠습니다. 담당자의 역할 등급, 적용되는 SLA 정책, 1단계 지원 범위를 넘는 문제에 대한 조건부 에스컬레이션 경로입니다. 이처럼 반복되는 요소는 고정된 구성 요소 후보가 됩니다.',
+          '설명용 REPAIR 템플릿:',
         ],
         items: [
           'R (역할): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
@@ -1951,18 +1991,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       support_example_part2: {
         content: [
-          'REPAIR 프레임워크가 문서화되어 팀의 프롬프트 라이브러리에 추가된 후 신규 에이전트 온보딩 시간이 2주에서 3일로 줄었습니다. 프롬프트 일관성 점수(Braintrust 평가를 통해 측정)는 첫 달에 64%에서 89%로 향상되었습니다.',
+          '이 예시는 가상이므로 보고할 결과가 없습니다. 직접 만든 프레임워크가 도움이 되는지 확인하려면 도입 전후에 같은 테스트 프롬프트를 실행하고, 두 결과를 미리 정한 기준으로 채점하며, 신규 팀원이 쓸 만한 프롬프트를 작성하기까지 걸리는 시간을 기록하십시오.',
           '패턴을 명확하게 이름 짓고 업무 흐름에 적용된다는 것을 보여줄 수 있을 때 커스텀 프레임워크를 사용하십시오. 단지 프레임워크를 위해 이름을 짓지 마십시오 — 약어 없이 매일 사용하는 일관된 4개 구성 요소 구조도 약어가 없어도 프레임워크입니다.',
         ],
         callouts: [
-          { type: 'tip', label: '영향을 측정하십시오', text: '커스텀 프레임워크를 구현하기 전후에 온보딩 시간과 일관성 점수를 추적하십시오. 4주 이내에 어느 것도 개선되지 않으면 프레임워크는 더 많은 문서화가 아닌 개선이 필요합니다.' },
+          { type: 'tip', label: '영향을 측정하십시오', text: '커스텀 프레임워크를 도입하기 전후의 온보딩 시간과 일관성 점수를 기록하십시오. 미리 정한 검토 기간이 지나도 둘 다 개선되지 않으면 문서를 늘리기 전에 프레임워크를 개선하십시오.' },
         ],
       },
       common_mistakes: {
         id: 'common_mistakes',
         title: '커스텀 프레임워크 구축 시 흔한 실수',
         content: [
-          '**가장 흔한 실수는 실제 프롬프트 20개 이상을 수동으로 테스트하기 전에 프레임워크를 구축하는 것입니다.** 관찰된 패턴이 아닌 이론에서 구축된 프레임워크는 실전에서 생략되는 중요하게 들리는 구성 요소를 포함합니다.',
+          '**흔히 하는 실수는 실제 프롬프트를 최소 10개 테스트하기 전에 프레임워크를 구축하는 것입니다.** 관찰된 패턴이 아니라 이론으로 구축한 프레임워크에는 중요해 보이지만 실전에서는 생략되는 구성 요소가 포함될 수 있습니다.',
         ],
         mistakes: [
           {
