@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -37812,6 +37812,1246 @@
       "ctr": 0.011148272017837236,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
+    "deployedAt": null
+  },
+  {
+    "id": "83a50aca-aea9-4cca-b20c-778f95203bb2",
+    "slug": "/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.096Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Small-model quality keeps improving in 2026. Smartphones run local LLMs at 15–30 tok/sec. Enterprise on-prem adoption is growing, led by regulated industries.",
+        "new": "5 local LLM trends for 2026–2027: stronger small models, AI on phones, reasoning models, no-code fine-tuning and on-prem use. Forecasts are labelled."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4308b0e6-2cbe-4f97-81e3-05dc330e21f9",
+    "slug": "/es/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.131Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "La calidad de los modelos pequeños por parámetro sigue mejorando en 2026 y los smartphones ejecutan LLMs a 15–30 tok/s.",
+        "new": "5 tendencias de LLM local 2026–2027: mejores modelos pequeños, IA en el móvil, razonamiento, fine-tuning sin código y uso en local. Son previsiones."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7875c9dc-7899-41eb-b8f8-b6c77d82fc57",
+    "slug": "/ar/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.165Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "جودة النماذج الصغيرة لكل معامل تستمر في التحسن في ⁨2026⁩؛ الهواتف تشغّل ⁨LLMs⁩ محلياً بسرعة ⁨15⁩–⁨30⁩ رمز/ثانية. تبني الاستدلال المحلي يتزايد.",
+        "new": "5 اتجاهات لنماذج LLM المحلية 2026–2027: نماذج صغيرة أقوى، وAI على الهاتف، والاستدلال، وfine-tuning دون برمجة، والتشغيل المحلي. التنبؤات موضّحة."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b3cfe927-6405-45ea-b1c9-0109ecc08670",
+    "slug": "/pt/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.199Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "A qualidade dos modelos pequenos por parâmetro continua melhorando em 2026 e smartphones executam LLMs a 15–30 tok/s.",
+        "new": "5 tendências de LLM local 2026–2027: modelos pequenos melhores, IA no celular, raciocínio, fine-tuning sem código e uso local. São previsões."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "98d8bb46-451c-4bea-ac9c-030b3b488d03",
+    "slug": "/de/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.233Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Die Zukunft lokaler LLMs: Modellqualität pro Parameter bei kleinen Modellen steigt weiter, Smartphones laufen mit 15–30 Token/Sek. Adoption wächst.",
+        "new": "5 Trends für lokale LLMs 2026–2027: stärkere kleine Modelle, KI am Smartphone, Reasoning, No-Code-Fine-Tuning, On-Premises. Prognosen gekennzeichnet."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1ebb0c6d-8843-4e33-ac17-62b02b90f200",
+    "slug": "/fr/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.267Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "La qualité par paramètre des petits modèles s'améliore en 2026. Les smartphones exécutent des LLM locaux à 15–30 tok/s. L'adoption sur site croît.",
+        "new": "5 tendances LLM local 2026–2027 : meilleurs petits modèles, IA sur mobile, raisonnement, fine-tuning sans code, usage sur site. Prévisions signalées."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "550d0a7c-2ad7-4de7-8085-cf0c7712ca0d",
+    "slug": "/ja/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.302Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "小型モデルのパラメータ当たり品質は2026年も向上を続けています。スマートフォンは15–30トークン/秒でローカルLLMを実行。企業のオンプレミス推論導入は規制業界を中心に拡大しています。",
+        "new": "ローカルLLMの2026〜2027年の5つの流れ：小型モデルの進化、スマホ上のAI、推論モデル、ノーコード学習、オンプレミス活用。予測は予測と明記しています。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fdefdc92-f5c8-437e-a058-66612202b969",
+    "slug": "/zh/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.336Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "小型模型的参数效率在2026年持续提升。智能手机以15–30令牌/秒运行本地LLM。企业本地推理的采用正在增长，由受监管行业带头。",
+        "new": "2026–2027 年本地 LLM 五大趋势：更强的小模型、手机端 AI、推理模型、无代码微调与本地部署。预测内容均已注明。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8e707a73-cd0c-498f-83a0-96c78cba9f58",
+    "slug": "/ko/local-llms/future-of-local-llms",
+    "date": "2026-11-28T15:47:45.371Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "소형 모델의 파라미터당 품질은 2026년에도 계속 향상되고 있습니다. 스마트폰이 15–30 tok/sec으로 로컬 LLM을 실행합니다. 기업의 온프레미스 추론 도입이 규제 산업을 중심으로 증가하고 있습니다.",
+        "new": "2026–2027년 로컬 LLM 5대 흐름: 더 나은 소형 모델, 스마트폰 AI, 추론 모델, 노코드 파인튜닝, 온프레미스 활용. 예측은 예측으로 표시했습니다."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d733e5ac-4ab2-4063-b0a3-f3e7367c2ab0",
+    "slug": "/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T15:47:45.446Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Unified memory is your Mac's VRAM, with a GPU limit. 16GB fits Phi, 36GB fits 8B, 64GB fits 32B, 128GB fits 70B. Full Q4/Q5/Q8 sizing chart.",
+        "new": "Unified memory is your Mac's VRAM, with a GPU limit. 16GB: 7B only, 36GB: 13B, 64GB: 32B, 128GB: 70B. Full Q4/Q5/Q8 sizing chart."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "503d31e1-2da2-442d-b86c-4633213d244f",
+    "slug": "/es/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T15:47:45.481Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "La memoria unificada es la VRAM del Mac, con límite de GPU. 16GB para Phi, 36GB para 8B, 64GB para 32B, 128GB para 70B. Tabla Q4/Q5/Q8 completa.",
+        "new": "La memoria unificada es la VRAM del Mac, con límite de GPU. 16GB: solo 7B, 36GB: 13B, 64GB: 32B, 128GB: 70B. Tabla Q4/Q5/Q8 completa."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e31cd875-a28d-4188-91e5-fbb1f66f61de",
+    "slug": "/ar/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T15:47:45.516Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "الذاكرة الموحدة هي VRAM جهاز Mac مع حد لوحدة الرسومات. ⁨16GB⁩ لـ ⁨Phi⁩، ⁨36GB⁩ لـ ⁨8B⁩، ⁨64GB⁩ لـ ⁨32B⁩، ⁨128GB⁩ لـ ⁨70B⁩. جدول ⁨Q4/Q5/Q8⁩.",
+        "new": "الذاكرة الموحدة هي VRAM جهاز Mac مع حد لوحدة الرسومات. ⁨16GB⁩ لـ ⁨7B⁩ فقط، ⁨36GB⁩ لـ ⁨13B⁩، ⁨64GB⁩ لـ ⁨32B⁩، ⁨128GB⁩ لـ ⁨70B⁩. جدول ⁨Q4/Q5/Q8⁩."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4cea6dce-2bf1-404b-b942-725b32343568",
+    "slug": "/de/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T15:47:45.550Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Unified Memory ist der VRAM Ihres Macs, mit GPU-Limit. 16GB für Phi, 36GB für 8B, 64GB für 32B, 128GB für 70B. Vollständige Q4/Q5/Q8-Tabelle.",
+        "new": "Unified Memory ist der VRAM Ihres Macs, mit GPU-Limit. 16GB: nur 7B, 36GB: 13B, 64GB: 32B, 128GB: 70B. Vollständige Q4/Q5/Q8-Tabelle."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6d0d2cb4-7ef1-4445-ade3-e44be627595d",
+    "slug": "/fr/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T15:47:45.585Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "La mémoire unifiée est la VRAM du Mac, avec limite GPU. 16Go pour Phi, 36Go pour 8B, 64Go pour 32B, 128Go pour 70B. Tableau Q4/Q5/Q8 complet.",
+        "new": "La mémoire unifiée est la VRAM du Mac, avec limite GPU. 16Go : 7B seulement, 36Go : 13B, 64Go : 32B, 128Go : 70B. Tableau Q4/Q5/Q8 complet."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "013f34df-bce3-4b59-b0a3-1b09479203cd",
+    "slug": "/ja/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T15:47:45.619Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ユニファイドメモリはMacのVRAM——CPUとGPUで共有（GPUには上限あり）。16GBでPhi、36GBで8B、64GBで32B、128GBで70Bが動作。Q4/Q5/Q8完全サイジング表。",
+        "new": "ユニファイドメモリはMacのVRAM——CPUとGPUで共有（GPUには上限あり）。目安は16GB＝7Bのみ、36GB＝13B、64GB＝32B、128GB＝70B。Q4/Q5/Q8完全サイジング表。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "71f4d27d-4dad-4c90-924d-1af49210e4a3",
+    "slug": "/zh/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T15:47:45.653Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "统一内存就是Mac的VRAM——CPU与GPU共享（GPU有上限）。16GB适配Phi，36GB适配8B，64GB适配32B，128GB适配70B。完整Q4/Q5/Q8选型表。",
+        "new": "统一内存就是Mac的VRAM——CPU与GPU共享（GPU有上限）。参考：16GB仅7B，36GB适配13B，64GB适配32B，128GB适配70B。完整Q4/Q5/Q8选型表。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "55467e03-6d33-4c66-b488-bc0a9963465b",
+    "slug": "/ko/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-11-28T15:47:45.688Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "통합 메모리는 Mac의 VRAM이며 GPU 한도가 있습니다. 16GB는 Phi, 36GB는 8B, 64GB는 32B, 128GB는 70B용. 완전한 Q4/Q5/Q8 크기 표.",
+        "new": "통합 메모리는 Mac의 VRAM이며 GPU 한도가 있습니다. 16GB는 7B만, 36GB는 13B, 64GB는 32B, 128GB는 70B용. 완전한 Q4/Q5/Q8 크기 표."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1de1d3d9-80a0-4064-a168-fcc927b6c500",
+    "slug": "/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:45.767Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "RTX 4090: 450W, ~$39/month. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (~10x more efficient per token). PSU sizing, cooling, and regional costs inside.",
+        "new": "RTX 4090: 450 W card, about $39/month at $0.12/kWh around the clock. RTX 5090: 575 W. M5 Max Mac Studio: 200 W max, whole system. PSU and cooling."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8fa042f2-ecc7-48ed-b01f-280f1ac312dd",
+    "slug": "/es/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:45.801Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Consumo energético LLM local 2026: RTX 4090 450W = $52/mes",
+        "new": "Consumo LLM local 2026: RTX 4090 450 W = ~$39/mes"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 4090: 450 W, ~$39/mes. RTX 5090: 575 W, 32 GB GDDR7. M5 Max: 30 W (10× más eficiente por token). Fuente 850 W. Refrigeración y costos regionales.",
+        "new": "RTX 4090: 450 W (tarjeta), unos $39/mes a $0.12/kWh en continuo. RTX 5090: 575 W. Mac Studio M5 Max: máx. 200 W en total. Fuente y refrigeración."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "60180711-6fc4-46b4-979a-3cfc218651d0",
+    "slug": "/ar/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:45.835Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "استهلاك طاقة ⁨LLM⁩ المحلي ⁨2026⁩: ⁨RTX 4090⁩ بـ ⁨52⁩$ شهريًا",
+        "new": "استهلاك طاقة LLM المحلي 2026: RTX 4090 بنحو 39$ شهريًا"
+      },
+      {
+        "field": "metaDescription",
+        "old": "⁨RTX 4090⁩: ⁨450W⁩ مع مزود ⁨850W⁩ بتكلفة ⁨39⁩$/شهر تقريباً. ⁨M5 Max⁩: ⁨30W⁩ — أكفأ ⁨10⁩ مرات لكل ⁨token. RTX 5090⁩: ⁨575W⁩ مع ⁨32 GB GDDR7⁩. تكاليف الكهرباء الإقليمية.",
+        "new": "RTX 4090: ‏450W للبطاقة، نحو 39$ شهريًا بسعر 0.12$/kWh دون توقف. RTX 5090: ‏575W. Mac Studio M5 Max: حتى 200W للنظام. الطاقة والتبريد."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3070a07b-dbee-455b-81cc-af60e55a5342",
+    "slug": "/pt/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:45.869Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Consumo de energia LLM local 2026: RTX 4090 450W = R$280/mês",
+        "new": "Consumo de LLM local 2026: RTX 4090 450 W = R$292/mês"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 4090: 450W, ~R$280/mês. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× mais econômico por token). Fonte de 1200W necessária. Custos por região incluídos.",
+        "new": "RTX 4090: placa de 450 W, cerca de R$292/mês a R$0,90/kWh sem parar. RTX 5090: 575 W. Mac Studio M5 Max: máx. 200 W no total. Fonte e refrigeração."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "cd6e5aeb-1386-4415-9e9f-e3cc47dc5639",
+    "slug": "/de/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:45.905Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLM Stromverbrauch 2026: RTX 4090 450W = €150/Monat",
+        "new": "LLM-Stromverbrauch 2026: RTX 4090 450 W = ca. €113/Monat"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 4090: 450W, ~€113/Monat. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× effizienter pro Token). 850W PSU notwendig. Kühlungs- und EU-Stromkosten drin.",
+        "new": "RTX 4090: 450 W Karte, ca. €113/Monat bei €0,35/kWh im Dauerbetrieb. RTX 5090: 575 W. Mac Studio M5 Max: max. 200 W gesamt. Netzteil und Kühlung."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a9318448-7d0e-4fe2-be4b-15ae04ea21ef",
+    "slug": "/fr/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:45.940Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLMs locaux électricité 2026 : RTX 4090 450W = 110 €/mois",
+        "new": "Consommation LLM local 2026 : RTX 4090 450 W = 97 €/mois"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 4090 : 450W, 110 €/mois. RTX 5090 : 575W, 32 Go GDDR7. M5 Max : 30W (10× plus efficace par token). Alimentation 1200W requise. Coûts régionaux inclus.",
+        "new": "RTX 4090 : 450 W (carte), environ 97 €/mois à 0,30 €/kWh en continu. RTX 5090 : 575 W. Mac Studio M5 Max : 200 W max au total. Alimentation, froid."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b3b75d05-95d3-4301-8a04-807c70bc0e05",
+    "slug": "/zh/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:45.974Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地LLM功耗2026：RTX 4090 450W = $52/月成本",
+        "new": "本地LLM功耗2026：RTX 4090 450W 全天约$39/月"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 4090：450W、约$39/月（$0.12/kWh）。RTX 5090：575W、32GB VRAM。M5 Max：30W（10倍效率）。需850W电源。功耗、冷却、电源、亚太合规。",
+        "new": "RTX 4090：显卡额定 450W，按 $0.12/kWh 全天运行约 $39/月。RTX 5090：575W。M5 Max Mac Studio：整机最大 200W。电源与散热要点。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "eef422cc-042d-441a-8c36-3fab1550a36e",
+    "slug": "/ja/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:46.008Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ローカルLLM電力消費2026: RTX 4090 450W = ¥5,200/月",
+        "new": "ローカルLLM消費電力2026：RTX 4090 450W＝約¥8,100/月"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 4090: 450W、¥5,200/月(@¥25/kWh)。RTX 5090: 575W、32GB VRAM。M5 Max: 30W(10倍効率)。1200W PSU必要。冷却、日本電力コスト含む。",
+        "new": "RTX 4090はカード定格450W、¥25/kWhで24時間なら月約¥8,100。RTX 5090は575W。M5 Max Mac Studioは本体全体で最大200W。電源と冷却を解説。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0239aa76-f052-440a-88eb-f1e6c90bbb39",
+    "slug": "/ko/local-llms/local-llm-power-consumption",
+    "date": "2026-11-28T15:47:46.042Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "로컬 LLM 전력 소비 2026: RTX 4090 450W = 월 $52",
+        "new": "로컬 LLM 전력 소비 2026: RTX 4090 450W = 월 약 $39"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 4090: 450W, 월 약 $39. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (토큰당 10배 효율). 850W PSU 필요. 냉각 및 지역별 비용 포함.",
+        "new": "RTX 4090: 카드 450W, $0.12/kWh로 상시 가동 시 월 약 $39. RTX 5090: 575W. M5 Max Mac Studio: 시스템 전체 최대 200W. 파워와 냉각."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c1d1f2b0-f81f-461c-bd06-b9bfc7da0887",
+    "slug": "/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.120Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
+        "new": "Mobile Local LLMs 2026: Offline AI on iPhone and Android"
+      },
+      {
+        "field": "seoTitle",
+        "old": "MLC LLM vs Ollama Android 2026: Best On-Device LLM Apps for iPhone & Smartphones",
+        "new": "Run a Local LLM on iPhone or Android (2026 Guide)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "MLC LLM vs Ollama for Android: MLC Chat runs on-device (Play Store), Ollama needs a desktop server. PocketPal AI (500K+ downloads), MLC Chat, Ollama iOS — 1–3B on iPhone, 7B on Snapdragon X. Performance benchmarks.",
+        "new": "Run a local LLM on iPhone or Android: PocketPal AI, MLC Chat and Private LLM, model download sizes, why Ollama needs a computer, and real limits (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a80efb7c-c7da-46a1-8af4-b07e2a97fe2c",
+    "slug": "/de/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.154Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Mobile lokale LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
+        "new": "Lokale LLMs auf dem Handy 2026: Offline-KI auf iPhone und Android"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Beste lokale LLM-Apps für Android & iOS 2026",
+        "new": "Lokales LLM auf iPhone oder Android nutzen (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Beste lokale LLM-Apps für Android und iOS 2026: MLC LLM, PocketPal AI und Ollama. Modelle auf dem Smartphone ausführen, Performance und Akku.",
+        "new": "Lokales LLM auf iPhone oder Android: PocketPal AI, MLC Chat und Private LLM, Modellgrößen, warum Ollama einen Computer braucht und echte Grenzen (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fb7e5c03-07e7-46f2-9430-2b899021950e",
+    "slug": "/fr/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.189Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "LLMs locaux mobiles 2026 : iPhone 16 Pro, iPad M4 & Snapdragon X",
+        "new": "LLM local sur mobile en 2026 : l’IA hors ligne sur iPhone et Android"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Meilleures apps LLM locales pour Android & iOS 2026 (MLC LLM, PocketPal AI, Ollama iOS)",
+        "new": "LLM local sur iPhone ou Android : guide 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Top apps LLM mobiles pour Android (MLC LLM, PocketPal AI 500K+ téléchargements) & iOS (Ollama iOS, Private LLM). 1–3B sur iPhone, 7B sur Snapdragon X. Guides de configuration & benchmarks.",
+        "new": "LLM local sur iPhone ou Android : PocketPal AI, MLC Chat et Private LLM, taille des modèles, pourquoi Ollama exige un ordinateur, et limites (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "041a525f-6800-4eae-ab9c-554d2ba604f0",
+    "slug": "/ja/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.223Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "モバイル向けローカルLLM 2026：iPhone 16 Pro・iPad M4・Snapdragon X",
+        "new": "スマホで動くローカルLLM 2026：iPhoneとAndroidのオフラインAI"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Android & iOS向けベストローカルLLMアプリ 2026（MLC LLM、PocketPal AI、Ollama iOS）",
+        "new": "iPhone・AndroidでローカルLLMを動かす（2026年版）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Android向けトップモバイルLLMアプリ（MLC LLM、PocketPal AI 50万ダウンロード以上）& iOS（Ollama iOS、Private LLM）。iPhone 1–3B、Snapdragon X 7B対応。設定ガイドとベンチマーク。",
+        "new": "iPhoneやAndroidでローカルLLMを使うには。PocketPal AI、MLC Chat、Private LLMの違い、モデルのダウンロードサイズ、Ollamaにパソコンが必要な理由、実際の制限を解説します（2026年版）。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0d1ea9d7-7e5a-4c40-918f-5b8c78ad63a5",
+    "slug": "/zh/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.258Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "移动本地LLM 2026：iPhone 16 Pro、iPad M4与Snapdragon X对比",
+        "new": "2026年手机本地大模型：在 iPhone 和安卓上离线使用 AI"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Android与iOS最佳本地LLM应用 2026（MLC LLM、PocketPal AI、Ollama iOS）",
+        "new": "在 iPhone 或安卓上运行本地大模型（2026指南）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Android顶级移动LLM应用（MLC LLM、PocketPal AI 50万+下载量）与iOS（Ollama iOS、Private LLM）。iPhone 1–3B，Snapdragon X 7B。设置指南和基准测试数据。",
+        "new": "在 iPhone 或安卓手机上运行本地大模型：介绍 PocketPal AI、MLC Chat、Private LLM 三款应用，模型下载体积，为什么使用 Ollama 需要一台电脑，以及发热、内存、续航和回答质量方面需要预期的限制（2026年版指南）。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7f540a21-e25e-4c56-9d77-05334efc7a48",
+    "slug": "/es/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.292Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "LLMs locales en móviles 2026: iPhone 16 Pro, iPad M4 y Snapdragon X",
+        "new": "LLM locales en el móvil 2026: IA sin conexión en iPhone y Android"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Mejores Apps LLM 2026: MLC LLM, PocketPal y Ollama iOS",
+        "new": "LLM local en iPhone o Android: guía 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "MLC LLM y PocketPal AI (500K+ descargas) en Android; Ollama iOS y Private LLM en iPhone. Ejecuta Llama 1–3B sin internet en cualquier móvil 2026.",
+        "new": "LLM local en iPhone o Android: PocketPal AI, MLC Chat y Private LLM, tamaño de los modelos, por qué Ollama necesita un PC y sus límites (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7635becf-890c-4509-868b-31e329c8aac0",
+    "slug": "/ar/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.329Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "نماذج ⁨LLM⁩ المحلية على الهواتف ⁨2026⁩: ⁨iPhone 16 Pro⁩ و⁨iPad M4⁩ و⁨Snapdragon X⁩",
+        "new": "النماذج اللغوية المحلية على الهاتف 2026: ذكاء اصطناعي دون اتصال على iPhone وAndroid"
+      },
+      {
+        "field": "seoTitle",
+        "old": "⁨MLC Chat⁩ و⁨PocketPal AI⁩: أفضل تطبيقات ⁨LLM⁩ للهواتف ⁨2026⁩",
+        "new": "تشغيل نموذج لغوي محلي على iPhone أو Android (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "تطبيقات ⁨LLM⁩ للهواتف: ⁨MLC LLM⁩ و⁨PocketPal AI⁩ (⁨500K⁩+ تنزيل) على ⁨Android⁩؛ ⁨Ollama iOS⁩ و⁨Private LLM⁩ على ⁨iOS⁩. شغّل ⁨1⁩–⁨3B⁩ على ⁨iPhone⁩ و⁨7B⁩ على ⁨Snapdragon X⁩.",
+        "new": "تشغيل نموذج لغوي محلي على iPhone أو Android: ‏PocketPal AI وMLC Chat وPrivate LLM، وأحجام النماذج، ولماذا يحتاج Ollama إلى حاسوب، وأبرز الحدود (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e832faa8-bd80-4544-a5c0-73fa44766fd1",
+    "slug": "/pt/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.364Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "LLMs Locais em Celulares 2026: iPhone 16 Pro, iPad M4 e Snapdragon X",
+        "new": "LLM local no celular em 2026: IA offline no iPhone e Android"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Melhores apps de LLM local para Android e iOS 2026",
+        "new": "LLM local no iPhone ou Android: guia 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Top apps de LLM móvel: MLC LLM e PocketPal AI (500K+ downloads) no Android; Ollama iOS e Private LLM no iOS. Execute 1–3B no iPhone e 7B no Snapdragon X.",
+        "new": "LLM local no iPhone ou Android: PocketPal AI, MLC Chat e Private LLM, tamanho dos modelos, por que o Ollama precisa de um computador e os limites (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "048589d5-12f3-4ff6-b511-e33c6c122c7f",
+    "slug": "/ko/local-llms/mobile-local-llms",
+    "date": "2026-11-28T15:47:46.399Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "모바일 로컬 LLM 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
+        "new": "2026년 모바일 로컬 LLM: iPhone과 Android의 오프라인 AI"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Android·iOS 최고의 로컬 LLM 앱 2026: MLC·PocketPal",
+        "new": "iPhone·Android에서 로컬 LLM 실행하기 (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Android(MLC LLM, PocketPal AI — 50만 다운로드 이상) & iOS(Ollama iOS, Private LLM)용 최고의 모바일 LLM 앱. iPhone에서 1–3B, Snapdragon X에서 7B 실행. 설치 가이드 및 성능 벤치마크.",
+        "new": "iPhone과 Android에서 로컬 LLM 실행하기: PocketPal AI, MLC Chat, Private LLM, 모델 다운로드 크기, Ollama에 컴퓨터가 필요한 이유와 현실적인 한계(2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "14378480-6497-4b2e-a422-894bd4333506",
+    "slug": "/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.467Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: Local LLM vs Cloud Comparison 2026",
+        "new": "Qwen 3.6 vs Claude Sonnet 5 vs DeepSeek API: Local or Cloud in 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 vs Claude 4.6 vs DeepSeek R2: 2026 Benchmark",
+        "new": "Qwen 3.6 vs Claude Sonnet 5 vs DeepSeek API (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare Qwen 3.6 27B (92.1% HumanEval, 16 GB VRAM), Claude Sonnet 5 (89.4%, $3/1M), and DeepSeek R2 ($0.14/1M). GDPR compliance, cost, and hardware analysis for 2026.",
+        "new": "Qwen 3.6 27B locally vs Claude Sonnet 5 and the DeepSeek API: vendor benchmarks, 17 GB model size, API prices and where your data is processed (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "77b5035e-a1e0-45d8-9ffe-73563f18bf1a",
+    "slug": "/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.501Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: LLM Local vs Cloud Comparación 2026",
+        "new": "Qwen 3.6 vs Claude Sonnet 5 vs API de DeepSeek: local o nube en 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 vs Claude 4.6 vs DeepSeek R2: Comparativa 2026",
+        "new": "Qwen 3.6, Claude Sonnet 5 y API DeepSeek: comparativa 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compara Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 5 (89,4%, $3/1M) y DeepSeek R2 ($0,14/1M). Cumplimiento GDPR, coste y hardware 2026.",
+        "new": "Qwen 3.6 27B en local frente a Claude Sonnet 5 y la API de DeepSeek: benchmarks del fabricante, modelo de 17 GB, precios y lugar de tratamiento (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "28d4b6be-ac85-4e73-bf17-75eab2340b84",
+    "slug": "/ar/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.536Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "⁨Qwen 3⁩ مقابل ⁨Claude Sonnet 5⁩ مقابل ⁨DeepSeek R2⁩: مقارنة ⁨LLM⁩ المحلي مقابل السحابي ⁨2026⁩",
+        "new": "Qwen 3.6 مقابل Claude Sonnet 5 مقابل واجهة DeepSeek: محلي أم سحابي في 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "⁨Qwen 3⁩ مقابل ⁨Claude 4.6⁩ مقابل ⁨DeepSeek R2⁩: ⁨2026⁩",
+        "new": "مقارنة Qwen 3.6 وClaude Sonnet 5 وDeepSeek لعام 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "قارن ⁨Qwen 3.6 27B⁩ (⁨92.1% HumanEval⁩، ⁨16 GB VRAM⁩) و⁨Claude Sonnet 5⁩ (⁨89.4%⁩، $⁨3/1M⁩) و⁨DeepSeek R2⁩ ($⁨0.14/1M⁩). امتثال ⁨GDPR⁩ والتكلفة والأجهزة ⁨2026⁩.",
+        "new": "مقارنة تشغيل Qwen 3.6 27B محلياً مع Claude Sonnet 5 وواجهة DeepSeek: اختبارات معلنة من المطوّر، حجم 17 جيجابايت، الأسعار ومكان معالجة البيانات في 2026."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e3e203a1-6152-49e6-b17d-aaaa5def4c98",
+    "slug": "/pt/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.570Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: LLM Local vs Nuvem 2026",
+        "new": "Qwen 3.6 vs Claude Sonnet 5 vs API DeepSeek: local ou nuvem em 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 vs Claude 4.6 vs DeepSeek R2: Comparação 2026",
+        "new": "Qwen 3.6, Claude Sonnet 5 e API DeepSeek: comparação 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 5 (89,4%, $3/1M) e DeepSeek R2 ($0,14/1M). LGPD, custo e hardware 2026.",
+        "new": "Qwen 3.6 27B local x Claude Sonnet 5 e API DeepSeek: benchmarks do fabricante, modelo de 17 GB, preços de API e local de tratamento dos dados (2026)."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "31646288-805c-461f-94c7-ddab275d93e3",
+    "slug": "/de/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.605Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Qwen 3 vs. Claude Sonnet 5 vs. DeepSeek R2: Lokale KI vs. Cloud-Vergleich 2026",
+        "new": "Qwen 3.6 vs. Claude Sonnet 5 vs. DeepSeek-API: lokal oder Cloud 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 vs. Claude Sonnet 5 vs. DeepSeek R2: Vergleich 2026",
+        "new": "Qwen 3.6, Claude Sonnet 5, DeepSeek-API im Vergleich 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen vs. Claude vs. DeepSeek lokal 2026: Benchmarks, Datenschutz und Kosten. Das beste lokale LLM für Entwickler und Unternehmen in Europa.",
+        "new": "Qwen 3.6 27B lokal vs. Claude Sonnet 5 und DeepSeek-API: Herstellerangaben zu Benchmarks, 17 GB Modellgröße, API-Preise und Verarbeitungsort, Stand 2026."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a182e800-7b58-475c-a789-ac22eb897b7f",
+    "slug": "/fr/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.640Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 : Comparatif Local vs Cloud 2026",
+        "new": "Qwen 3.6 vs Claude Sonnet 5 vs API DeepSeek : local ou cloud en 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 : Comparaison 2026",
+        "new": "Qwen 3.6, Claude Sonnet 5, API DeepSeek : comparatif 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Comparez Qwen 3.6 27B (92,1% HumanEval, 16 Go VRAM), Claude Sonnet 5 (89,4%, 3 $/1M), et DeepSeek R2 (0,14 $/1M). Conformité RGPD, coûts et matériel pour 2026.",
+        "new": "Qwen 3.6 27B en local face à Claude Sonnet 5 et l’API DeepSeek : benchmarks éditeur, modèle de 17 Go, tarifs API et lieu de traitement, état 2026."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "57007c1c-25db-4236-a82a-dad350bcc8cb",
+    "slug": "/zh/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.675Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：本地LLM vs 云端对比 2026",
+        "new": "Qwen 3.6、Claude Sonnet 5 与 DeepSeek API 对比：2026年本地还是云端"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 vs Claude vs DeepSeek：2026年完整对比",
+        "new": "Qwen 3.6、Claude Sonnet 5、DeepSeek API 对比 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "对比Qwen 3.6 27B（92.1% HumanEval、16GB显存）、Claude Sonnet 5（89.4%、$3/1M）、DeepSeek R2（$0.14/1M）。2026年GDPR合规、成本和硬件完整分析。",
+        "new": "Qwen 3.6 27B 本地运行与 Claude Sonnet 5、DeepSeek API 对比：厂商公布的基准成绩、17 GB 模型体积、API 价格以及数据处理地点，信息依据官方页面核对。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e930903b-cf8b-4997-bdd0-35939d022d00",
+    "slug": "/ja/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.709Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：ローカルLLM vs クラウド比較 2026",
+        "new": "Qwen 3.6・Claude Sonnet 5・DeepSeek API比較：ローカルかクラウドか（2026年）"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：2026年比較",
+        "new": "Qwen 3.6・Claude Sonnet 5・DeepSeek API比較 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen 3.6 27B（92.1% HumanEval、16 GB VRAM）とClaude Sonnet 5（89.4%、$3/1M）、DeepSeek R2（$0.14/1M）を徹底比較。GDPR対応、コスト、ハードウェア要件を2026年データで検証。",
+        "new": "Qwen 3.6 27Bのローカル実行とClaude Sonnet 5、DeepSeek APIを比較。メーカー公表ベンチマーク、17GBのモデルサイズ、API料金、データの処理場所を2026年版で確認。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a73fb56f-1b43-4c82-ae8d-6316899bf845",
+    "slug": "/ko/local-llms/qwen-vs-claude-vs-deepseek-local-2026",
+    "date": "2026-11-28T15:47:46.744Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: 로컬 LLM vs 클라우드 비교 2026",
+        "new": "Qwen 3.6, Claude Sonnet 5, DeepSeek API 비교: 2026년 로컬인가 클라우드인가"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Qwen 3 vs Claude 4.6 vs DeepSeek R2: 2026 벤치마크",
+        "new": "Qwen 3.6·Claude Sonnet 5·DeepSeek API 비교 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen 3.6 27B(HumanEval 92.1%, 16 GB VRAM), Claude Sonnet 5(89.4%, $3/1M), DeepSeek R2($0.14/1M) 비교. 2026년 GDPR 준수, 비용, 하드웨어 분석.",
+        "new": "로컬 Qwen 3.6 27B와 Claude Sonnet 5, DeepSeek API 비교: 개발사 공개 벤치마크, 17GB 모델 크기, API 가격과 데이터 처리 위치를 2026년 기준으로 확인했습니다."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c233e4a7-726a-4b80-96bc-a64e58aa8ed5",
+    "slug": "/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:46.818Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Running 70B+ Models on Apple Silicon 2026: M5 Max Complete Guide",
+        "new": "Running 70B Models on Apple Silicon 2026: M5 Max Guide"
+      },
+      {
+        "field": "seoTitle",
+        "old": "70B Models on M5 Max 128GB: 12–20 tok/s, Matches GPT-5.6 Quality",
+        "new": "70B on M5 Max: Memory, Speed Estimates and Setup 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "M5 Max 128GB runs 70B models at 12–20 tok/s. Q5 quality matches GPT-5.6 within 3%. Complete setup with Ollama/MLX, quantization guide, benchmarks.",
+        "new": "Run Llama 3.3 70B on an M5 Max Mac: 43–75 GB downloads, estimated 5–11 tok/s from memory bandwidth (not measured), Ollama setup and US prices."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e02c5d15-cb60-4620-b3f6-31386882546c",
+    "slug": "/es/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:46.853Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Ejecutar modelos 70B+ en Apple Silicon 2026: Guía completa M5 Max",
+        "new": "Modelos 70B en Apple Silicon 2026: guía para M5 Max"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Modelos 70B en M5 Max 128GB: 12–20 tok/s, calidad GPT-5.6",
+        "new": "70B en M5 Max: memoria, velocidad estimada y guía 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "M5 Max 128GB ejecuta modelos 70B a 12–20 tok/s. Calidad Q5 iguala a GPT-5.6 en un 3%. Configuración completa con Ollama/MLX, guía de cuantización y benchmarks.",
+        "new": "Llama 3.3 70B en un Mac M5 Max: descargas de 43–75 GB, 5–11 tok/s estimados por ancho de banda (no medidos), instalación y precios de EE. UU."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b68fa287-2734-46c0-a8e6-a139cd7884ba",
+    "slug": "/ar/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:46.887Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "تشغيل نماذج ⁨70B⁩+ على ⁨Apple Silicon 2026⁩: دليل ⁨M5 Max⁩ الكامل",
+        "new": "تشغيل نماذج 70B على Apple Silicon في 2026: دليل M5 Max"
+      },
+      {
+        "field": "seoTitle",
+        "old": "نماذج ⁨70B⁩ على ⁨M5 Max 128GB⁩: ⁨12⁩–⁨20 tok⁩/ث، جودة ⁨GPT⁩",
+        "new": "70B على M5 Max: الذاكرة وتقدير السرعة والإعداد 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "يشغّل ⁨M5 Max 128GB⁩ نماذج ⁨70B⁩ بـ ⁨12⁩–⁨20 token⁩/ث. جودة ⁨Q5⁩ تساوي ⁨GPT-5.6⁩ ضمن ⁨3%⁩. إعداد كامل مع ⁨Ollama/MLX⁩، ودليل تكميم، ومعايير.",
+        "new": "تشغيل Llama 3.3 70B على Mac بمعالج M5 Max: تنزيلات 43–75 GB، وتقدير 5–11 tok/s من عرض نطاق الذاكرة (دون قياس)، مع الإعداد والأسعار الأمريكية."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ccbb0bb4-861c-4d1e-a9cd-5b292e6a18bf",
+    "slug": "/pt/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:46.922Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Executar modelos 70B+ no Apple Silicon 2026: Guia completo M5 Max",
+        "new": "Modelos 70B no Apple Silicon 2026: guia para M5 Max"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Modelos 70B no M5 Max 128GB: 12–20 tok/s, qualidade GPT-5.6",
+        "new": "70B no M5 Max: memória, velocidade estimada, guia 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "M5 Max 128GB executa modelos 70B a 12–20 tok/s. Qualidade Q5 iguala o GPT-5.6 em 3%. Configuração completa com Ollama/MLX, guia de quantização e benchmarks.",
+        "new": "Llama 3.3 70B num Mac com M5 Max: downloads de 43–75 GB, 5–11 tok/s estimados pela largura de banda (não medidos), instalação e preços dos EUA."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e1fffe20-108e-4797-ab7e-f6b5d7bd1761",
+    "slug": "/de/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:46.956Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "70B+-Modelle auf Apple Silicon 2026: M5 Max Kompletleitfaden",
+        "new": "70B-Modelle auf Apple Silicon 2026: Leitfaden für M5 Max"
+      },
+      {
+        "field": "seoTitle",
+        "old": "70B-Modelle auf M5 Max 128GB: 12–20 tok/s, GPT-5.6-Qualität",
+        "new": "70B auf M5 Max: Speicher, Tempo-Schätzung, Setup 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "70B-Modelle auf Apple Silicon M5 Max ausführen 2026: Unified Memory, Tokens/Sek. und Quantisierung. Performance und Setup für große LLMs am Mac.",
+        "new": "Llama 3.3 70B auf einem M5-Max-Mac: Downloads von 43–75 GB, geschätzt 5–11 Tok/s aus der Speicherbandbreite (nicht gemessen), Setup und US-Preise."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "da1a8e4a-724b-4380-bf28-a7adc2fa24fc",
+    "slug": "/fr/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:46.990Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Exécuter des modèles 70B+ sur Apple Silicon M5 Max 128GB : Guide complet 2026",
+        "new": "Modèles 70B sur Apple Silicon 2026 : guide M5 Max"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Modèles 70B sur M5 Max 128GB : 12–20 tok/s, Qualité GPT-5.6",
+        "new": "70B sur M5 Max : mémoire, débit estimé, guide 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "M5 Max 128GB exécute modèles 70B à 12–20 tok/s. Qualité Q5 égale GPT-5.6 à 3% près. Configuration complète Ollama/MLX, guide quantification, benchmarks.",
+        "new": "Llama 3.3 70B sur un Mac M5 Max : 43–75 Go à télécharger, 5–11 tok/s estimés via la bande passante (non mesurés), installation et prix US."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2cc2e96c-bb94-40ae-bcab-9c916714bac0",
+    "slug": "/ja/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:47.033Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Apple Silicon 2026で70B以上のモデルを動かす：M5 Max完全ガイド",
+        "new": "Apple Siliconで70Bモデルを動かす2026：M5 Maxガイド"
+      },
+      {
+        "field": "seoTitle",
+        "old": "M5 Max 128GBで70Bモデル実行：12～20 tok/s、GPT-5.6品質",
+        "new": "M5 Maxで70B：メモリ・速度推定・導入ガイド2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "M5 Max 128GBで70Bモデルを12～20 tok/sで実行。Q5品質はGPT-5.6と3%以内。完全セットアップ、Ollama/MLX、量子化ガイド、ベンチマーク。",
+        "new": "M5 Max搭載MacでLlama 3.3 70Bを動かす：ダウンロードは43〜75 GB、帯域幅からの推定で5〜11 tok/s（実測ではありません）。導入手順と米国価格を解説。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b24e9a7d-50ae-47a0-b897-d323904db86b",
+    "slug": "/zh/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:47.067Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "在Apple Silicon上运行70B+模型2026：M5 Max完整指南",
+        "new": "在 Apple Silicon 上运行 70B 模型 2026：M5 Max 指南"
+      },
+      {
+        "field": "seoTitle",
+        "old": "M5 Max 128GB运行70B模型：12～20 tok/s，GPT-5.6级质量",
+        "new": "M5 Max 运行 70B：内存、速度估算与安装 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "M5 Max 128GB运行70B模型12～20 tok/s。Q5质量与GPT-5.6相当（3%误差内）。完整配置、Ollama/MLX、量化指南、性能基准。",
+        "new": "在 M5 Max Mac 上运行 Llama 3.3 70B：下载 43–75 GB，按内存带宽估算约 5–11 tok/s（非实测），附安装步骤与美国价格。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "36a4a7a2-22bb-4960-bb77-77d308263324",
+    "slug": "/ko/local-llms/running-70b-models-apple-silicon-m5-max",
+    "date": "2026-11-28T15:47:47.102Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Apple Silicon M5 Max에서 70B+ 모델 실행하기 2026: 완전 가이드",
+        "new": "Apple Silicon에서 70B 모델 실행 2026: M5 Max 가이드"
+      },
+      {
+        "field": "seoTitle",
+        "old": "M5 Max 128GB에서 70B 모델: 12–20 tok/s, GPT-5.6 수준의 품질",
+        "new": "M5 Max에서 70B: 메모리·속도 추정·설치 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "M5 Max 128GB는 70B 모델을 12–20 tok/s로 실행합니다. Q5 품질은 GPT-5.6와 3% 이내의 차이입니다. Ollama/MLX 완전 설정 가이드, 양자화 가이드, 벤치마크 포함.",
+        "new": "M5 Max Mac에서 Llama 3.3 70B 실행: 다운로드 43–75 GB, 메모리 대역폭 기준 추정 5–11 tok/s(실측 아님), 설치 방법과 미국 가격."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3b58a988-a826-45c9-a17c-63816f1a8cf3",
+    "slug": "/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.157Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mac Mini M4 hits ~18 tok/s on 7B Q4. Minisforum UM790 Pro scales to 64 GB DDR5. Beelink SER8: ~8 tok/s on a budget. Three mini PC picks for local LLM 2026.",
+        "new": "Mac mini M4, UM790 Pro and Beelink SER8 for local LLMs: memory bandwidth, estimated 7B Q4 speed, RAM limits and the newer M6 and M5 Pro Mac mini."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a904d75e-1d76-4b3d-9d43-d550b43665b0",
+    "slug": "/de/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.191Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mac Mini M4: ~18 tok/s bei 7B Q4. Minisforum UM790 Pro: bis 64 GB DDR5 skalierbar. Beelink SER8: ~8 tok/s günstig. Drei Mini-PC-Picks für lokale LLMs 2026.",
+        "new": "Mac Mini M4, UM790 Pro und Beelink SER8 für lokale LLMs: Speicherbandbreite, geschätztes 7B-Q4-Tempo, RAM-Grenzen und neuer Mac Mini M6/M5 Pro."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9cbe520b-22c1-443f-9dbe-5feb2a4d1077",
+    "slug": "/fr/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.225Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mac Mini M4 : ~18 tok/s, le plus rapide. UM790 Pro : 64 Go DDR5. Beelink SER8 : ~8 tok/s économique. Trois picks mini PC pour LLM local 2026.",
+        "new": "Mac mini M4, UM790 Pro et Beelink SER8 pour LLM local : bande passante, vitesse 7B Q4 estimée, limites de RAM et nouveau Mac mini M6/M5 Pro."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d02e58b0-5d71-4b8a-ae09-77a5199b45f5",
+    "slug": "/ja/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.259Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mac Mini M4：最速、~18 tok/s。Minisforum UM790 Pro：64 GB RAM スケーリング。Beelink SER8：予算オプション。ローカルLLM向け 3 選。PromptQuorum による簡潔な回答。",
+        "new": "ローカルLLM向けMac mini M4・UM790 Pro・Beelink SER8を比較。メモリ帯域、7B Q4の推定速度、RAMの上限、新型Mac mini M6／M5 Proも解説。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "36a97bb2-fc6c-4b7a-8541-712ad28580d5",
+    "slug": "/zh/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.293Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mac Mini M4：最快、约 18 tok/s。Minisforum UM790 Pro：64 GB 内存扩展。Beelink SER8：经济选择。本地 LLM 三大选择。PromptQuorum 快速解答。",
+        "new": "本地LLM迷你电脑对比：Mac mini M4、UM790 Pro、Beelink SER8的内存带宽、7B Q4估算速度、内存上限，以及新款Mac mini M6与M5 Pro。"
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b7a80e45-ef42-4e1c-92b1-cc29043f38af",
+    "slug": "/es/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.327Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mac Mini M4 alcanza ~18 tok/s en 7B Q4. Minisforum UM790 Pro escala a 64 GB DDR5. Beelink SER8: ~8 tok/s a buen precio. Tres mini PCs para LLM local en 2026.",
+        "new": "Mac mini M4, UM790 Pro y Beelink SER8 para LLM locales: ancho de banda, velocidad 7B Q4 estimada, límites de RAM y el nuevo Mac mini M6/M5 Pro."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9b8cdced-2dcf-4f79-b286-83a5188ac7d2",
+    "slug": "/pt/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.362Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mac Mini M4 alcança ~18 tok/s em 7B Q4. Minisforum UM790 Pro escala até 64 GB DDR5. Beelink SER8: ~8 tok/s com bom custo-benefício. Três mini PCs para LLM local em 2026.",
+        "new": "Mac mini M4, UM790 Pro e Beelink SER8 para LLM local: largura de banda, velocidade 7B Q4 estimada, limites de RAM e o novo Mac mini M6/M5 Pro."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f98f1f60-40b7-4e0b-8b1f-007d0bfc6d74",
+    "slug": "/ar/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.397Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "⁨Mac Mini M4⁩ يحقق ~⁨18⁩ رمز/ثانية في ⁨7B Q4. UM790 Pro⁩ يتوسع حتى ⁨64 GB DDR5. Beelink SER8⁩: ~⁨8⁩ رمز/ثانية بسعر معقول. ⁨3⁩ أجهزة مصغرة لنماذج ⁨LLM 2026⁩.",
+        "new": "أجهزة Mac mini M4 وUM790 Pro وBeelink SER8 لنماذج LLM المحلية: عرض النطاق، سرعة 7B Q4 التقديرية، حدود الذاكرة، وجديد Mac mini M6/M5 Pro."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0624a7f8-dde0-42bf-afaf-fdfe1793e40b",
+    "slug": "/ko/prompt-bites/best-mini-pc-for-local-llm",
+    "date": "2026-11-28T15:47:47.432Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mac Mini M4는 7B Q4에서 ~18 tok/s 달성. Minisforum UM790 Pro는 64 GB DDR5까지 확장 가능. Beelink SER8: ~8 tok/s의 가성비 선택. 2026년 로컬 LLM용 미니 PC 3종 비교.",
+        "new": "로컬 LLM용 Mac mini M4, UM790 Pro, Beelink SER8 비교: 메모리 대역폭, 7B Q4 추정 속도, RAM 한도, 신형 Mac mini M6·M5 Pro."
+      }
+    ],
+    "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
+    "baseline": null,
     "deployedAt": null
   }
 ]
