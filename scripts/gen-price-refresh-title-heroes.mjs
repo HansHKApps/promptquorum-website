@@ -18,6 +18,8 @@ const FILES = [
   'power-local-llm/articles/rtx-3090-local-llm-buy-or-rent',
   'prompt-bites/articles/best-gpu-under-600-local-llm',
   'prompt-bites/articles/best-gpu-under-1000-local-llm',
+  'prompt-bites/articles/cheapest-way-to-run-70b-model-locally',
+  'prompt-bites/articles/vram-for-70b-model',
 ]
 const FOOTER = {
   en: 'Local LLM Guide', de: 'Leitfaden Lokale LLMs', fr: 'Guide LLM locaux',

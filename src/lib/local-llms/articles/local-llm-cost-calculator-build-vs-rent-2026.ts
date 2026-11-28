@@ -18,11 +18,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**Local hardware or a rented cloud GPU: the cheaper option depends mainly on your hours per month. Enter your own numbers in the calculator below for the break-even.**',
     quickAnswerTop: {
       question: 'Is it cheaper to build a local LLM server or rent cloud GPU?',
-      answer: 'It depends on usage volume, not a fixed rule. Under 100 hours/month, cloud GPU rental (RunPod, Vast.ai) is almost always cheaper because there is no upfront cost. Above roughly 500 hours/month or for 24/7 workloads, owning hardware usually wins once electricity and eventual resale value are factored in. Use the calculator below with your own hours, hardware price, and electricity rate for an exact break-even.',
+      answer: 'It depends on usage volume, not a fixed rule. Under 100 hours/month, cloud GPU rental (RunPod, Vast.ai) is usually cheaper because there is no upfront cost. Above roughly 500 hours/month or for 24/7 workloads, owning hardware usually wins once electricity and eventual resale value are factored in. Use the calculator below with your own hours, hardware price, and electricity rate for an exact break-even.',
       bullets: [
         'Under 20 hr/month: rent — cloud almost always wins',
         '20–100 hr/month: usually rent — local rarely pays back in time',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ hr/month or 24/7: local usually wins on total cost of ownership',
         'Full TCO = hardware price + electricity − resale value, not just purchase price ÷ cloud rate',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: 'Path 2 — Medium Usage: A Mini PC May Beat a GPU Workstation',
-        content: 'For 7B–14B models used daily — chat, Home Assistant automations, Ollama running 24/7 — a Ryzen mini PC often beats a discrete GPU on cost per watt and total footprint. See the [Beelink SER8 review](/smart-home/beelink-ser8-local-ai-review) for a real 24/7 Ollama deployment, or the [best mini PCs for local LLMs guide](/local-llms/best-mini-pcs-local-llm) and [best AMD mini PC for local LLMs](/local-llms/best-amd-mini-pc-local-llm-2026) for the current lineup, including the [Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) and [GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review).',
+        content: 'For 7B–14B models used daily — chat, Home Assistant automations, Ollama running 24/7 — a Ryzen mini PC often beats a discrete GPU on cost per watt and total footprint. The [Beelink SER8 review](/smart-home/beelink-ser8-local-ai-review) looks at it as a 24/7 Ollama server (spec-based estimates, not a PromptQuorum benchmark); also see the [best mini PCs for local LLMs guide](/local-llms/best-mini-pcs-local-llm) and [best AMD mini PC for local LLMs](/local-llms/best-amd-mini-pc-local-llm-2026) for the current lineup, including the [Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) and [GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review).',
       },
       gpuPath: {
         title: 'Path 3 — Heavy Local AI: GPU Workstation',
@@ -274,11 +274,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**Lokale Hardware oder gemietete Cloud-GPU: Was günstiger ist, hängt vor allem von Ihren Stunden pro Monat ab. Geben Sie im Rechner unten Ihre eigenen Zahlen ein.**',
     quickAnswerTop: {
       question: 'Ist es günstiger, eine lokale LLM-Workstation zu bauen oder Cloud-GPUs zu mieten?',
-      answer: 'Das hängt vom Nutzungsvolumen ab, nicht von einer festen Regel. Unter 100 Std./Monat ist Cloud-GPU-Miete (RunPod, Vast.ai) fast immer günstiger, da keine Anfangsinvestition anfällt. Über etwa 500 Std./Monat oder bei Dauerbetrieb gewinnt meist eigene Hardware, sobald Strom und Wiederverkaufswert eingerechnet werden. Nutzen Sie den Rechner unten mit Ihren eigenen Stunden, Hardwarepreis und Strompreis für den genauen Break-even.',
+      answer: 'Das hängt vom Nutzungsvolumen ab, nicht von einer festen Regel. Unter 100 Std./Monat ist Cloud-GPU-Miete (RunPod, Vast.ai) meist günstiger, da keine Anfangsinvestition anfällt. Über etwa 500 Std./Monat oder bei Dauerbetrieb gewinnt meist eigene Hardware, sobald Strom und Wiederverkaufswert eingerechnet werden. Nutzen Sie den Rechner unten mit Ihren eigenen Stunden, Hardwarepreis und Strompreis für den genauen Break-even.',
       bullets: [
         'Unter 20 Std./Monat: Cloud mieten — lokal amortisiert sich fast nie',
         '20–100 Std./Monat: meist Cloud mieten',
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ Std./Monat oder Dauerbetrieb: lokal gewinnt meist bei Gesamtkosten',
         'Vollständige TCO = Hardwarepreis + Strom − Wiederverkaufswert, nicht nur Kaufpreis ÷ Cloud-Rate',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: 'Weg 2 — Mittlere Nutzung: Ein Mini-PC schlägt oft die GPU-Workstation',
-        content: 'Für täglich genutzte 7B–14B-Modelle — Chat, Home-Assistant-Automatisierungen, Ollama im Dauerbetrieb — schlägt ein Ryzen-Mini-PC eine diskrete GPU oft bei Kosten pro Watt und Platzbedarf. Siehe den [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review) für einen echten 24/7-Ollama-Einsatz, sowie den [Guide zu den besten Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm) und [besten AMD-Mini-PC für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026), einschließlich [Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) und [GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review).',
+        content: 'Für täglich genutzte 7B–14B-Modelle — Chat, Home-Assistant-Automatisierungen, Ollama im Dauerbetrieb — schlägt ein Ryzen-Mini-PC eine diskrete GPU oft bei Kosten pro Watt und Platzbedarf. Der [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review) betrachtet ihn als 24/7-Ollama-Server (Schätzungen auf Basis der Spezifikationen, kein PromptQuorum-Benchmark); siehe außerdem den [Guide zu den besten Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm) und [besten AMD-Mini-PC für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026), einschließlich [Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) und [GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review).',
       },
       gpuPath: {
         title: 'Weg 3 — Intensive lokale KI: GPU-Workstation',
@@ -518,11 +518,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**Matériel local ou GPU cloud loué : le moins cher dépend surtout de vos heures par mois. Saisissez vos propres chiffres dans le calculateur ci-dessous.**',
     quickAnswerTop: {
       question: 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?',
-      answer: 'Cela dépend du volume d\'utilisation, pas d\'une règle fixe. En dessous de 100 h/mois, la location cloud GPU (RunPod, Vast.ai) est presque toujours moins chère, car sans investissement initial. Au-delà d\'environ 500 h/mois ou en usage continu, posséder le matériel gagne généralement une fois l\'électricité et la valeur de revente prises en compte. Utilisez le calculateur ci-dessous avec vos propres chiffres pour un seuil de rentabilité exact.',
+      answer: 'Cela dépend du volume d\'utilisation, pas d\'une règle fixe. En dessous de 100 h/mois, la location cloud GPU (RunPod, Vast.ai) est généralement moins chère, car sans investissement initial. Au-delà d\'environ 500 h/mois ou en usage continu, posséder le matériel gagne généralement une fois l\'électricité et la valeur de revente prises en compte. Utilisez le calculateur ci-dessous avec vos propres chiffres pour un seuil de rentabilité exact.',
       bullets: [
         'Moins de 20 h/mois : louer — le local ne se rentabilise presque jamais',
         '20–100 h/mois : généralement louer',
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mois ou usage continu : le local gagne généralement en coût total',
         'TCO complet = prix du matériel + électricité − revente, pas seulement prix ÷ tarif cloud',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: 'Voie 2 — Usage moyen : un mini PC peut battre une workstation GPU',
-        content: 'Pour des modèles 7B–14B utilisés quotidiennement — chat, automatisations Home Assistant, Ollama en continu — un mini PC Ryzen bat souvent une GPU dédiée en coût par watt et encombrement. Voir le [test du Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) pour un vrai déploiement Ollama 24/7, ainsi que le [guide des meilleurs mini PC pour LLM local](/fr/local-llms/best-mini-pcs-local-llm) et le [meilleur mini PC AMD pour LLM local](/fr/local-llms/best-amd-mini-pc-local-llm-2026), incluant le [Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) et le [GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review).',
+        content: 'Pour des modèles 7B–14B utilisés quotidiennement — chat, automatisations Home Assistant, Ollama en continu — un mini PC Ryzen bat souvent une GPU dédiée en coût par watt et encombrement. Le [test du Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) l\'examine comme serveur Ollama 24/7 (estimations d\'après les spécifications, pas un benchmark PromptQuorum) ; voir aussi le [guide des meilleurs mini PC pour LLM local](/fr/local-llms/best-mini-pcs-local-llm) et le [meilleur mini PC AMD pour LLM local](/fr/local-llms/best-amd-mini-pc-local-llm-2026), incluant le [Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) et le [GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review).',
       },
       gpuPath: {
         title: 'Voie 3 — IA locale intensive : workstation GPU',
@@ -762,11 +762,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**ローカルGPUかクラウドGPUのどちらが安いかは、月間の利用時間で決まります。下の計算機に自分の数値を入れて損益分岐を確認してください。**',
     quickAnswerTop: {
       question: 'ローカルLLMサーバーを構築するのとクラウドGPUを借りるのはどちらが安いですか？',
-      answer: '固定ルールではなく使用量次第です。月100時間未満なら、初期費用のかからないクラウドGPUレンタル（RunPod、Vast.ai）がほぼ常に安くなります。月500時間程度を超える、または常時稼働の場合、電気代と将来の売却価値を考慮するとハードウェア購入が有利になることが多いです。正確な損益分岐点は、以下の計算機にご自身の使用時間・ハードウェア価格・電気料金を入力してください。',
+      answer: '固定ルールではなく使用量次第です。月100時間未満なら、初期費用のかからないクラウドGPUレンタル（RunPod、Vast.ai）が通常は安くなります。月500時間程度を超える、または常時稼働の場合、電気代と将来の売却価値を考慮するとハードウェア購入が有利になることが多いです。正確な損益分岐点は、以下の計算機にご自身の使用時間・ハードウェア価格・電気料金を入力してください。',
       bullets: [
         '月20時間未満：レンタル——ローカルはほぼ元が取れません',
         '月20〜100時間：通常はレンタルが有利',
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '月500時間以上または常時稼働：総所有コストではローカルが有利になることが多い',
         '完全なTCO＝ハードウェア価格＋電気代−売却価値。購入価格÷クラウド料金だけでは不十分',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: 'パス2 — 中程度の使用量：ミニPCがGPUワークステーションを上回る場合',
-        content: '毎日利用する7B〜14Bモデル——チャット、Home Assistant連携、常時稼働のOllama——では、Ryzenミニ PCがワット当たりコストと設置面積でディスクリートGPUを上回ることが多いです。実際の24/7 Ollama運用については[Beelink SER8レビュー](/ja/smart-home/beelink-ser8-local-ai-review)を、現行ラインナップは[ローカルLLM向けベストミニPCガイド](/ja/local-llms/best-mini-pcs-local-llm)と[ローカルLLM向けベストAMDミニPC](/ja/local-llms/best-amd-mini-pc-local-llm-2026)（[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review)、[GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review)を含む）をご覧ください。',
+        content: '毎日利用する7B〜14Bモデル——チャット、Home Assistant連携、常時稼働のOllama——では、Ryzenミニ PCがワット当たりコストと設置面積でディスクリートGPUを上回ることが多いです。24/7のOllamaサーバーとしての検討は[Beelink SER8レビュー](/ja/smart-home/beelink-ser8-local-ai-review)（仕様に基づく推定で、PromptQuorumのベンチマークではありません）を、現行ラインナップは[ローカルLLM向けベストミニPCガイド](/ja/local-llms/best-mini-pcs-local-llm)と[ローカルLLM向けベストAMDミニPC](/ja/local-llms/best-amd-mini-pc-local-llm-2026)（[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review)、[GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review)を含む）をご覧ください。',
       },
       gpuPath: {
         title: 'パス3 — 本格的なローカルAI：GPUワークステーション',
@@ -1006,11 +1006,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**Hardware local o GPU en la nube alquilada: lo más barato depende sobre todo de tus horas al mes. Introduce tus propios números en la calculadora de abajo.**',
     quickAnswerTop: {
       question: '¿Es más barato construir un servidor LLM local o alquilar GPU en el cloud?',
-      answer: 'Depende del volumen de uso, no es una regla fija. Por debajo de 100 horas/mes, el alquiler de GPU en la nube (RunPod, Vast.ai) es casi siempre más barato porque no hay costo inicial. Por encima de unas 500 horas/mes o en uso continuo, poseer hardware suele ganar una vez que se incluyen electricidad y valor de reventa. Usa la calculadora de abajo con tus propias horas, precio de hardware y tarifa eléctrica para un punto de equilibrio exacto.',
+      answer: 'Depende del volumen de uso, no es una regla fija. Por debajo de 100 horas/mes, el alquiler de GPU en la nube (RunPod, Vast.ai) normalmente es más barato porque no hay costo inicial. Por encima de unas 500 horas/mes o en uso continuo, poseer hardware suele ganar una vez que se incluyen electricidad y valor de reventa. Usa la calculadora de abajo con tus propias horas, precio de hardware y tarifa eléctrica para un punto de equilibrio exacto.',
       bullets: [
         'Menos de 20 hr/mes: alquilar — lo local casi nunca se amortiza',
         '20–100 hr/mes: normalmente alquilar',
@@ -1019,7 +1019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ hr/mes o continuo: lo local suele ganar en costo total',
         'TCO completo = precio del hardware + electricidad − reventa, no solo precio ÷ tarifa cloud',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: 'Camino 2 — Uso medio: un mini PC puede superar a una workstation GPU',
-        content: 'Para modelos 7B–14B de uso diario — chat, automatizaciones de Home Assistant, Ollama 24/7 — un mini PC Ryzen suele superar a una GPU discreta en costo por vatio y espacio. Ve la [reseña del Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) para un despliegue real de Ollama 24/7, o la [guía de los mejores mini PCs para LLM local](/es/local-llms/best-mini-pcs-local-llm) y el [mejor mini PC AMD para LLM local](/es/local-llms/best-amd-mini-pc-local-llm-2026), incluyendo el [Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) y el [GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review).',
+        content: 'Para modelos 7B–14B de uso diario — chat, automatizaciones de Home Assistant, Ollama 24/7 — un mini PC Ryzen suele superar a una GPU discreta en costo por vatio y espacio. La [reseña del Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) lo analiza como servidor Ollama 24/7 (estimaciones basadas en especificaciones, no un benchmark de PromptQuorum); consulta también la [guía de los mejores mini PCs para LLM local](/es/local-llms/best-mini-pcs-local-llm) y el [mejor mini PC AMD para LLM local](/es/local-llms/best-amd-mini-pc-local-llm-2026), incluyendo el [Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) y el [GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review).',
       },
       gpuPath: {
         title: 'Camino 3 — IA local intensiva: workstation GPU',
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**عتاد محلي أم وحدة GPU سحابية مستأجرة: الأرخص منهما يعتمد غالباً على عدد ساعات استخدامك شهرياً. أدخل أرقامك الخاصة في الحاسبة أدناه لمعرفة نقطة التعادل لديك.**',
     quickAnswerTop: {
       question: 'هل بناء خادم LLM محلي أرخص أم استئجار GPU في السحابة؟',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ ساعة/شهر أو تشغيل مستمر: يتفوق المحلي عادةً في التكلفة الإجمالية',
         'التكلفة الإجمالية الكاملة = سعر الأجهزة + الكهرباء − إعادة البيع، وليس فقط السعر ÷ تعرفة السحابة',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -1340,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: 'المسار 2 — استخدام متوسط: الميني PC قد يتفوق على محطة عمل GPU',
-        content: 'لنماذج 7B–14B المستخدمة يوميًا — محادثة، أتمتة Home Assistant، تشغيل Ollama على مدار الساعة — يتفوق الميني PC بمعالج Ryzen غالبًا على GPU منفصلة من حيث التكلفة لكل واط والمساحة. راجع [مراجعة Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) لتوزيع Ollama فعلي على مدار الساعة، ودليل [أفضل أجهزة ميني PC لـ LLM المحلي](/ar/local-llms/best-mini-pcs-local-llm) و[أفضل ميني PC بمعالج AMD لـ LLM المحلي](/ar/local-llms/best-amd-mini-pc-local-llm-2026)، بما في ذلك [Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) و[GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review).',
+        content: 'لنماذج 7B–14B المستخدمة يوميًا — محادثة، أتمتة Home Assistant، تشغيل Ollama على مدار الساعة — يتفوق الميني PC بمعالج Ryzen غالبًا على GPU منفصلة من حيث التكلفة لكل واط والمساحة. تتناول [مراجعة Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) الجهاز بوصفه خادم Ollama على مدار الساعة (تقديرات مبنية على المواصفات وليست اختبار أداء من PromptQuorum)؛ وراجع أيضاً دليل [أفضل أجهزة ميني PC لـ LLM المحلي](/ar/local-llms/best-mini-pcs-local-llm) و[أفضل ميني PC بمعالج AMD لـ LLM المحلي](/ar/local-llms/best-amd-mini-pc-local-llm-2026)، بما في ذلك [Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) و[GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review).',
       },
       gpuPath: {
         title: 'المسار 3 — ذكاء اصطناعي محلي مكثف: محطة عمل GPU',
@@ -1494,11 +1494,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**本地硬件还是租用云GPU更便宜，主要取决于你每月的使用小时数。请在下方计算器中输入自己的数据，查看盈亏平衡点。**',
     quickAnswerTop: {
       question: '自建本地LLM服务器和租用云GPU哪个更便宜？',
-      answer: '这取决于使用量而非固定规则。每月不足100小时，云GPU租用（RunPod、Vast.ai）几乎总是更便宜，因为没有前期成本。超过约500小时/月或全天候使用时，计入电费和最终转售价值后，自建硬件通常更划算。请在下方计算器中输入您的使用时长、硬件价格和电费，获得精确的损益平衡点。',
+      answer: '这取决于使用量而非固定规则。每月不足100小时，云GPU租用（RunPod、Vast.ai）通常更便宜，因为没有前期成本。超过约500小时/月或全天候使用时，计入电费和最终转售价值后，自建硬件通常更划算。请在下方计算器中输入您的使用时长、硬件价格和电费，获得精确的损益平衡点。',
       bullets: [
         '每月不足20小时：租用——本地几乎无法回本',
         '每月20–100小时：通常租用更划算',
@@ -1507,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '每月500小时以上或全天候：总成本上本地通常更划算',
         '完整TCO＝硬件价格＋电费−转售价值，而非仅用购买价格÷云端费率',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: '路径二 — 使用量中等：迷你主机可能优于GPU工作站',
-        content: '对于每天使用的7B–14B模型——聊天、Home Assistant自动化、全天候运行Ollama——Ryzen迷你主机在每瓦成本和占地面积上往往优于独立GPU。真实的24/7 Ollama部署案例见[Beelink SER8评测](/zh/smart-home/beelink-ser8-local-ai-review)，当前产品线见[本地LLM最佳迷你主机指南](/zh/local-llms/best-mini-pcs-local-llm)和[本地LLM最佳AMD迷你主机](/zh/local-llms/best-amd-mini-pc-local-llm-2026)，包括[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)和[GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review)。',
+        content: '对于每天使用的7B–14B模型——聊天、Home Assistant自动化、全天候运行Ollama——Ryzen迷你主机在每瓦成本和占地面积上往往优于独立GPU。将其用作24/7 Ollama服务器的分析见[Beelink SER8评测](/zh/smart-home/beelink-ser8-local-ai-review)（基于规格的估算，并非PromptQuorum基准测试），当前产品线见[本地LLM最佳迷你主机指南](/zh/local-llms/best-mini-pcs-local-llm)和[本地LLM最佳AMD迷你主机](/zh/local-llms/best-amd-mini-pc-local-llm-2026)，包括[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)和[GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review)。',
       },
       gpuPath: {
         title: '路径三 — 重度本地AI：GPU工作站',
@@ -1738,11 +1738,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**Hardware local ou GPU na nuvem alugada: o mais barato depende sobretudo das suas horas por mês. Informe os seus próprios números na calculadora abaixo.**',
     quickAnswerTop: {
       question: 'É mais barato montar um servidor de LLM local ou alugar GPU na nuvem?',
-      answer: 'Depende do volume de uso, não de uma regra fixa. Abaixo de 100 horas/mês, o aluguel de GPU na nuvem (RunPod, Vast.ai) é quase sempre mais barato, pois não há custo inicial. Acima de cerca de 500 horas/mês ou em uso contínuo, possuir o hardware costuma vencer depois de incluir eletricidade e valor de revenda. Use a calculadora abaixo com suas próprias horas, preço do hardware e tarifa de energia para um ponto de equilíbrio exato.',
+      answer: 'Depende do volume de uso, não de uma regra fixa. Abaixo de 100 horas/mês, o aluguel de GPU na nuvem (RunPod, Vast.ai) geralmente é mais barato, pois não há custo inicial. Acima de cerca de 500 horas/mês ou em uso contínuo, possuir o hardware costuma vencer depois de incluir eletricidade e valor de revenda. Use a calculadora abaixo com suas próprias horas, preço do hardware e tarifa de energia para um ponto de equilíbrio exato.',
       bullets: [
         'Menos de 20 h/mês: alugar — o local quase nunca se paga',
         '20–100 h/mês: geralmente alugar',
@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mês ou contínuo: o local costuma vencer no custo total',
         'TCO completo = preço do hardware + eletricidade − revenda, não apenas preço ÷ tarifa da nuvem',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -1828,7 +1828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: 'Caminho 2 — Uso médio: um mini PC pode superar uma workstation GPU',
-        content: 'Para modelos 7B–14B de uso diário — chat, automações do Home Assistant, Ollama 24/7 — um mini PC Ryzen costuma superar uma GPU dedicada em custo por watt e espaço ocupado. Veja a [análise do Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) para um uso real de Ollama 24/7, além do [guia dos melhores mini PCs para LLM local](/pt/local-llms/best-mini-pcs-local-llm) e [melhor mini PC AMD para LLM local](/pt/local-llms/best-amd-mini-pc-local-llm-2026), incluindo o [Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) e o [GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review).',
+        content: 'Para modelos 7B–14B de uso diário — chat, automações do Home Assistant, Ollama 24/7 — um mini PC Ryzen costuma superar uma GPU dedicada em custo por watt e espaço ocupado. A [análise do Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) o avalia como servidor Ollama 24/7 (estimativas com base nas especificações, não um benchmark da PromptQuorum); veja também o [guia dos melhores mini PCs para LLM local](/pt/local-llms/best-mini-pcs-local-llm) e [melhor mini PC AMD para LLM local](/pt/local-llms/best-amd-mini-pc-local-llm-2026), incluindo o [Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) e o [GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review).',
       },
       gpuPath: {
         title: 'Caminho 3 — IA local intensa: workstation GPU',
@@ -1982,11 +1982,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     leadAnswerBlock: '**로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지는 월 사용 시간이 좌우합니다. 아래 계산기에 직접 숫자를 넣어 손익분기를 확인하십시오.**',
     quickAnswerTop: {
       question: '로컬 LLM 서버를 직접 구축하는 것과 클라우드 GPU를 렌탈하는 것 중 어느 쪽이 더 저렴합니까?',
-      answer: '고정된 규칙이 아니라 사용량에 달려 있습니다. 월 100시간 미만이라면 클라우드 GPU 렌탈(RunPod, Vast.ai)이 초기 비용이 없어 거의 항상 더 저렴합니다. 월 약 500시간을 초과하거나 상시 가동하는 경우, 전기 요금과 향후 재판매 가치를 반영하면 하드웨어 구매가 보통 유리합니다. 정확한 손익분기점을 알려면 아래 계산기에 본인의 사용 시간, 하드웨어 가격, 전기 요금을 입력하세요.',
+      answer: '고정된 규칙이 아니라 사용량에 달려 있습니다. 월 100시간 미만이라면 클라우드 GPU 렌탈(RunPod, Vast.ai)이 초기 비용이 없어 대체로 더 저렴합니다. 월 약 500시간을 초과하거나 상시 가동하는 경우, 전기 요금과 향후 재판매 가치를 반영하면 하드웨어 구매가 보통 유리합니다. 정확한 손익분기점을 알려면 아래 계산기에 본인의 사용 시간, 하드웨어 가격, 전기 요금을 입력하세요.',
       bullets: [
         '월 20시간 미만: 렌탈 — 로컬은 거의 회수되지 않습니다',
         '월 20~100시간: 대체로 렌탈이 유리',
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '월 500시간 이상 또는 상시 가동: 총비용 기준으로 로컬이 보통 유리',
         '완전한 TCO = 하드웨어 가격 + 전기 요금 − 재판매 가치, 단순히 가격 ÷ 클라우드 요금이 아님',
       ],
-      updatedDate: '2026-11-27',
+      updatedDate: '2026-11-28',
     },
     snippetBlocks: [
       {
@@ -2072,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       miniPcPath: {
         title: '경로 2 — 중간 사용량: 미니 PC가 GPU 워크스테이션을 능가할 수 있음',
-        content: '매일 사용하는 7B~14B 모델 — 채팅, Home Assistant 자동화, 24/7 Ollama 운영 — 에는 Ryzen 미니 PC가 와트당 비용과 설치 공간에서 개별 GPU를 능가하는 경우가 많습니다. 실제 24/7 Ollama 운영 사례는 [Beelink SER8 리뷰](/ko/smart-home/beelink-ser8-local-ai-review)를, 현재 라인업은 [로컬 LLM 최고의 미니 PC 가이드](/ko/local-llms/best-mini-pcs-local-llm)와 [로컬 LLM 최고의 AMD 미니 PC](/ko/local-llms/best-amd-mini-pc-local-llm-2026)를 참고하세요. [Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review), [GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review)도 포함됩니다.',
+        content: '매일 사용하는 7B~14B 모델 — 채팅, Home Assistant 자동화, 24/7 Ollama 운영 — 에는 Ryzen 미니 PC가 와트당 비용과 설치 공간에서 개별 GPU를 능가하는 경우가 많습니다. 24/7 Ollama 서버로서의 검토는 [Beelink SER8 리뷰](/ko/smart-home/beelink-ser8-local-ai-review)(사양 기반 추정이며 PromptQuorum 벤치마크가 아닙니다)를, 현재 라인업은 [로컬 LLM 최고의 미니 PC 가이드](/ko/local-llms/best-mini-pcs-local-llm)와 [로컬 LLM 최고의 AMD 미니 PC](/ko/local-llms/best-amd-mini-pc-local-llm-2026)를 참고하세요. [Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review), [GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review)도 포함됩니다.',
       },
       gpuPath: {
         title: '경로 3 — 집중적인 로컬 AI: GPU 워크스테이션',
