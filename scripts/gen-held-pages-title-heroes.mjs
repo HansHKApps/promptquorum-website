@@ -15,6 +15,8 @@ const FILES = [
   'local-llms/articles/mobile-local-llms',
   'local-llms/articles/future-of-local-llms',
   'local-llms/articles/running-70b-models-apple-silicon-m5-max',
+  'local-llms/articles/local-llm-power-consumption',
+  'prompt-bites/articles/best-mini-pc-for-local-llm',
 ]
 const FOOTER = {
   en: 'Local LLM Guide', de: 'Leitfaden Lokale LLMs', fr: 'Guide LLM locaux',
@@ -41,7 +43,8 @@ const AR_OVERRIDE = { 'future-of-local-llms': 'اتجاهات النماذج ا�
 const only = process.argv.slice(2).filter((a) => LANGS.includes(a))
 
 let failed = 0
-for (const file of FILES) {
+const slugsOnly = (process.env.ONLY || '').split(',').filter(Boolean)
+for (const file of FILES.filter((f) => !slugsOnly.length || slugsOnly.includes(path.basename(f)))) {
   const article = load(file)
   const slug = path.basename(file)
   for (const lang of only.length ? only : LANGS) {
