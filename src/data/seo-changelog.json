@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -33977,5 +33977,727 @@
     "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "322fbfbc-c42a-497a-bc81-823198d5b72b",
+    "slug": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.293Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "M5 Ultra vs RTX 5090: M5 Ultra hits ~45 tok/s on Llama 3.3 70B (96GB, $5,499); RTX 5090's 32GB can't load 70B. M5 Max benchmarks, cost, power. 2026.",
+        "new": "M5 Ultra vs RTX 5090: 179 vs 290 tok/s in llama.cpp's 7B Q4_0 test (developer-reported). The 43GB Llama 3.3 70B fits a 96GB Mac, not a 32GB card. Cost, power."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "m5 ultra vs rtx 5090",
+      "m5 ultra vs 5090",
+      "mac studio m5 ultra vs rtx 5090"
+    ],
+    "baseline": {
+      "position": 6.17,
+      "impressions": 79038,
+      "clicks": 1210,
+      "ctr": 0.01530909182924669,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "dc17193f-645b-4dac-92c8-b34e4a05a5b4",
+    "slug": "/de/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.327Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "M5 Ultra vs RTX 5090: M5 Ultra erreicht ~45 Tok/s bei Llama 3.3 70B (96GB, 5.499 $); RTX 5090 (32GB) kann 70B nicht laden. Plus M5 Max, Kosten, Stromverbrauch 2026.",
+        "new": "M5 Ultra vs. RTX 5090: 179 vs. 290 Tok/s im 7B-Test von llama.cpp (Entwicklerangaben). Das 43-GB-Modell Llama 3.3 70B passt in 96 GB, nicht auf 32 GB."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "m5 ultra vs rtx 5090",
+      "m5 ultra vs 5090"
+    ],
+    "baseline": {
+      "position": 5.01,
+      "impressions": 2169,
+      "clicks": 62,
+      "ctr": 0.02858460119870908,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "5255c682-f119-4465-95b7-c76705953127",
+    "slug": "/fr/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.361Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "M5 Ultra vs RTX 5090 : le M5 Ultra atteint ~45 tok/s sur Llama 3.3 70B (96Go, 5 499 $) ; les 32Go du RTX 5090 ne peuvent pas charger 70B. Plus M5 Max, coût, conso 2026.",
+        "new": "M5 Ultra vs RTX 5090 : 179 contre 290 tok/s au test 7B de llama.cpp (chiffres de développeurs). Llama 3.3 70B (43 Go) tient en 96 Go, pas en 32 Go."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 6.02,
+      "impressions": 749,
+      "clicks": 18,
+      "ctr": 0.02403204272363151,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "8a725e5a-9589-48f1-beff-96abd0435d84",
+    "slug": "/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.395Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "M5 UltraとRTX 5090を比較：RTX 5090の32GB VRAMではLlama 3.3 70Bを読み込めませんが、M5 Ultra（96GB、米国価格5,499米ドル）なら収まります。M5 Max・消費電力・おすすめ構成も比較。",
+        "new": "M5 UltraとRTX 5090を比較：llama.cppの7Bテストは179対290 tok/s（開発者報告値）。43GBのLlama 3.3 70Bは96GBのMacに収まり、32GBには収まりません。"
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "mlx cuda",
+      "cuda mlx",
+      "m5 ultra vs rtx 5090"
+    ],
+    "baseline": {
+      "position": 6.83,
+      "impressions": 3184,
+      "clicks": 164,
+      "ctr": 0.05150753768844221,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "4cb712ac-fe8c-403e-8f35-d91037f67e0c",
+    "slug": "/zh/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.430Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "M5 Ultra vs RTX 5090：M5 Ultra在Llama 3.3 70B上约45 tok/s（96GB，5,499美元）；RTX 5090的32GB无法加载70B模型。另含M5 Max、成本与功耗对比2026。",
+        "new": "M5 Ultra对比RTX 5090：llama.cpp 7B测试为179对290 tok/s（开发者上报）。43GB的Llama 3.3 70B装得进96GB Mac，装不进32GB显卡。含成本与功耗对比。"
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 6.34,
+      "impressions": 662,
+      "clicks": 20,
+      "ctr": 0.030211480362537766,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "d6488d3c-6c71-4c75-b4aa-c42f333827e1",
+    "slug": "/es/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.464Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "M5 Ultra vs RTX 5090: el M5 Ultra alcanza ~45 tok/s en Llama 3.3 70B (96GB, $5,499); los 32GB del RTX 5090 no pueden cargar 70B. Además M5 Max, costo y consumo 2026.",
+        "new": "M5 Ultra vs RTX 5090: 179 vs 290 tok/s en la prueba 7B de llama.cpp (datos de desarrolladores). Llama 3.3 70B (43GB) cabe en 96GB, no en 32GB."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 5.83,
+      "impressions": 575,
+      "clicks": 4,
+      "ctr": 0.006956521739130435,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "c771ed54-98dc-4c22-aa32-98d77d1b9f3b",
+    "slug": "/pt/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.497Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "M5 Ultra vs RTX 5090: o M5 Ultra atinge ~45 tok/s no Llama 3.3 70B (96GB, US$ 5.499); os 32GB da RTX 5090 não carregam 70B. Mais M5 Max, custo e consumo 2026.",
+        "new": "M5 Ultra vs RTX 5090: 179 vs 290 tok/s no teste 7B do llama.cpp (dados de desenvolvedores). O Llama 3.3 70B (43GB) cabe em 96GB, não em 32GB."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 6.22,
+      "impressions": 139,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "ca2cb6b2-e0db-4c25-b8fd-f09237334ae9",
+    "slug": "/ar/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.532Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "⁨M5 Ultra⁩ مقابل ⁨RTX 5090⁩: يصل ⁨M5 Ultra⁩ إلى ⁨~45 tok/s⁩ على ⁨Llama 3.3 70B⁩ (⁨96GB⁩، ⁨5,499$⁩)؛ ذاكرة ⁨RTX 5090⁩ البالغة ⁨32GB⁩ لا تحمّل ⁨70B⁩. بالإضافة إلى ⁨M5 Max⁩ والتكلفة والطاقة ⁨2026⁩.",
+        "new": "M5 Ultra مقابل RTX 5090: ‏179 مقابل 290 رمز/ثانية في اختبار 7B في llama.cpp (أرقام المطورين). ملف Llama 3.3 70B (43GB) يتسع في 96GB لا في 32GB."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 5.11,
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "87cb1d02-1c9e-48a9-ae01-bdf6d070004a",
+    "slug": "/ko/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+    "date": "2026-11-28T09:43:35.566Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "M5 Ultra vs RTX 5090: RTX 5090의 32GB VRAM으로는 Llama 3.3 70B를 로드할 수 없지만 M5 Ultra(96GB, 미국 가격 5,499달러)는 메모리에 올릴 수 있습니다. M5 Max·전력·추천 구성 비교.",
+        "new": "M5 Ultra vs RTX 5090: llama.cpp 7B 테스트 179 대 290 tok/s(개발자 보고). 43GB Llama 3.3 70B는 96GB Mac에는 들어가지만 32GB에는 들어가지 않습니다."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 6.28,
+      "impressions": 1558,
+      "clicks": 72,
+      "ctr": 0.04621309370988447,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "de2ee392-4ba4-4597-b029-3789c624bac4",
+    "slug": "/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.599Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Three local AI workstation builds for 2026, priced this week: ~$2,700 budget, ~$5,300 recommended (RTX 4090), ~$8,800 professional (dual RTX 3090). Full parts lists, shop links, and why RAM/SSD prices jumped.",
+        "new": "Three local AI workstation builds for 2026: budget (used RTX 3090), recommended (RTX 4090) and professional (dual RTX 3090), with dated GPU prices and RAM."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "best ai workstation 2026",
+      "best ai workstations 2026",
+      "best local ai workstation"
+    ],
+    "baseline": {
+      "position": 6.01,
+      "impressions": 11081,
+      "clicks": 71,
+      "ctr": 0.006407363956321631,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "3ce1eea8-88f1-4d07-b7b0-45be8c4aaa9c",
+    "slug": "/de/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.634Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Drei lokale KI-Workstations 2026, Preise aktuell: ~2.500 € Budget, ~4.950 € Empfohlen (RTX 4090), ~8.200 € Profi (Dual RTX 3090). Komplette Teilelisten, Shop-Links, und warum RAM/SSD-Preise explodiert sind.",
+        "new": "Drei lokale KI-Workstations 2026: Budget (gebrauchte RTX 3090), Empfohlen (RTX 4090) und Profi (Dual RTX 3090), mit datierten GPU-Preisen und RAM."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "beste lokale ki",
+      "bester pc für lokale ki",
+      "was kostet eine workstation für ki-anwendungen?"
+    ],
+    "baseline": {
+      "position": 5.8,
+      "impressions": 3209,
+      "clicks": 76,
+      "ctr": 0.023683390464319103,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "6b0e1d96-db66-49f0-945a-89db0f695b38",
+    "slug": "/fr/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.668Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Trois configurations workstation IA locale 2026, prix vérifiés : ~2 500 € budget, ~4 950 € recommandé (RTX 4090), ~8 200 € professionnel (dual RTX 3090). Listes complètes, liens d'achat, et pourquoi les prix RAM/SSD ont explosé.",
+        "new": "Trois workstations IA locales 2026 : budget (RTX 3090 d'occasion), recommandé (RTX 4090) et pro (dual RTX 3090), avec prix GPU datés et notes sur la RAM."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 5.8,
+      "impressions": 189,
+      "clicks": 6,
+      "ctr": 0.031746031746031744,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "fc6d833d-9e40-4f75-839e-6aca27324ee0",
+    "slug": "/ja/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.702Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ローカルAIワークステーション3段階、今週確認した価格：約43万円バジェット、約84万円推奨（RTX 4090）、約139万円プロ（デュアルRTX 3090）。完全パーツリストと購入リンク、RAM/SSD高騰の理由を解説。",
+        "new": "ローカルAIワークステーション3構成：バジェット（中古RTX 3090）、推奨（RTX 4090）、プロ（デュアルRTX 3090）。日付付きのGPU価格とRAM高騰の理由を解説。"
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 8.22,
+      "impressions": 169,
+      "clicks": 2,
+      "ctr": 0.011834319526627219,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "857095af-1236-4644-adb8-fba2eea6a5c8",
+    "slug": "/zh/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.737Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年三档本地AI工作站，本周核实价格：入门档约19300元、推荐档约38000元（RTX 4090）、专业档约62600元（双RTX 3090）。完整配件清单、购买链接，以及RAM/SSD价格暴涨的原因。",
+        "new": "2026年三档本地AI工作站：入门（二手RTX 3090）、推荐（RTX 4090）、专业（双RTX 3090），附带注明日期的GPU价格及RAM涨价原因。"
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 5.33,
+      "impressions": 2457,
+      "clicks": 28,
+      "ctr": 0.011396011396011397,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "c7d3622e-7f5f-4a91-813b-d4d40ece4646",
+    "slug": "/es/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.770Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Tres workstations de IA local 2026, precios verificados esta semana: ~2.500 € económica, ~4.950 € recomendada (RTX 4090), ~8.200 € profesional (dual RTX 3090). Listas completas, enlaces de compra, y por qué subieron los precios de RAM/SSD.",
+        "new": "Tres workstations de IA local 2026: económica (RTX 3090 usada), recomendada (RTX 4090) y profesional (dual RTX 3090), con precios de GPU fechados y RAM."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 6.17,
+      "impressions": 546,
+      "clicks": 13,
+      "ctr": 0.023809523809523808,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "2f0b8e2d-7c8e-4cf2-a8e9-eb2d69b1c96c",
+    "slug": "/ko/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.804Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026년 로컬 AI 워크스테이션 3단계, 이번 주 확인한 가격: 경제형 약 419만원, 추천형 약 823만원(RTX 4090), 전문가형 약 1,559만원(듀얼 RTX 3090). 전체 부품 목록과 구매 링크, RAM/SSD 가격 폭등 이유까지.",
+        "new": "2026년 로컬 AI 워크스테이션 3종: 경제형(중고 RTX 3090), 추천형(RTX 4090), 전문가형(듀얼 RTX 3090). 날짜가 명시된 GPU 가격과 RAM 가격 상승 이유."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "ai 워크스테이션",
+      "ai workstation"
+    ],
+    "baseline": {
+      "position": 5.75,
+      "impressions": 1348,
+      "clicks": 50,
+      "ctr": 0.037091988130563795,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "05d75d49-931f-4409-9dc2-cf5abb8d681e",
+    "slug": "/pt/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.838Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Três workstations de IA local 2026, preços conferidos nesta semana: ~R$ 25.000 econômica, ~R$ 49.000 recomendada (RTX 4090), ~R$ 81.000 profissional (dual RTX 3090). Listas completas, links de compra e por que RAM/SSD subiram tanto.",
+        "new": "Três workstations de IA local 2026: econômica (RTX 3090 usada), recomendada (RTX 4090) e profissional (dual RTX 3090), com preços de GPU datados e RAM."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 6.66,
+      "impressions": 276,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "30942364-5fa2-4a4a-952f-2021843b005e",
+    "slug": "/ar/power-local-llm/best-workstation-build-local-ai-2026",
+    "date": "2026-11-28T09:43:35.872Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ثلاث محطات عمل للذكاء الاصطناعي المحلي ⁨2026⁩، أسعار مُحدَّثة هذا الأسبوع: نحو ⁨10,500⁩ درهم اقتصادي، و⁨20,600⁩ درهم موصى به (⁨RTX 4090⁩)، و⁨34,000⁩ درهم احترافي (⁨RTX 3090⁩ مزدوجة). قوائم مكونات كاملة وروابط شراء، وسبب ارتفاع أسعار RAM وSSD.",
+        "new": "ثلاث محطات عمل للذكاء الاصطناعي المحلي 2026: اقتصادية (RTX 3090 مستعملة)، وموصى بها (RTX 4090)، واحترافية (RTX 3090 مزدوجة)، مع أسعار GPU مؤرَّخة."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 4.08,
+      "impressions": 12,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "44a482e6-f90e-476c-bf8b-19d0c737d073",
+    "slug": "/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:35.907Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Three complete local-AI PC builds for 2026: budget 7B-13B, mid 14B-33B, and enthusiast 70B tiers. Exact parts lists, expected tokens/sec, and total costs repriced for the 2026 GPU, RAM, and SSD shortage.",
+        "new": "Three local-AI PC builds for 2026: budget 7B-13B, mid 14B-33B and enthusiast 70B tiers. Parts lists, a few dated US GPU prices and notes on DDR5 price rises."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "budget ai pc",
+      "budget local ai",
+      "local ai computer build"
+    ],
+    "baseline": {
+      "position": 5.74,
+      "impressions": 7484,
+      "clicks": 64,
+      "ctr": 0.0085515766969535,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "d096bd89-00f7-445a-a50c-c15850cab6c4",
+    "slug": "/de/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:35.940Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Lokale KI-Workstation bauen 2026: CPU, GPU, RAM und Speicher für LLM-Inferenz. Komplette Build-Anleitungen nach Budget, von Einsteiger bis RTX 5090 — Gesamtkosten neu berechnet für die GPU-, RAM- und SSD-Knappheit 2026.",
+        "new": "Lokale KI-Workstation bauen 2026: CPU, GPU, RAM und Speicher für LLM-Inferenz. Komplette Build-Anleitungen nach Budget, von Einsteiger bis RTX 5090 — einige datierte US-GPU-Preise und Hinweise zur DDR5-Knappheit 2026."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 6.42,
+      "impressions": 733,
+      "clicks": 15,
+      "ctr": 0.020463847203274217,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "9de20239-6cc1-4986-abaf-cc3289157c8c",
+    "slug": "/fr/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:35.975Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Trois configurations PC IA locale complètes pour 2026 : niveaux budget 7B-13B, intermédiaire 14B-33B et enthousiaste 70B. Listes de pièces exactes, tokens/s attendus et coûts totaux repensés pour la pénurie de GPU, de RAM et de SSD de 2026.",
+        "new": "Trois configurations PC IA locale complètes pour 2026 : niveaux budget 7B-13B, intermédiaire 14B-33B et enthousiaste 70B. Listes de pièces, quelques prix GPU datés (marché américain) et notes sur la pénurie de DDR5 de 2026."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 5.56,
+      "impressions": 791,
+      "clicks": 14,
+      "ctr": 0.017699115044247787,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "1490cb4f-ee71-4840-b5f3-f88acb3f48f8",
+    "slug": "/ja/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:36.009Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年のローカルAI PC構成3種：7B〜13B向けエントリー、14B〜33B向けミドル、70B向けハイエンド。正確なパーツリスト、想定tokens/sec、2026年のGPU・RAM・SSD不足を反映した合計コストを掲載。",
+        "new": "2026年のローカルAI PC構成3種：7B〜13B向けエントリー、14B〜33B向けミドル、70B向けハイエンド。パーツリスト、日付付きの米国GPU価格の一部と2026年のDDR5不足に関する注記を掲載。"
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "ローカルllm 自作pc",
+      "ローカルllm pc 自作",
+      "ローカルllm 作り方"
+    ],
+    "baseline": {
+      "position": 6.53,
+      "impressions": 1201,
+      "clicks": 41,
+      "ctr": 0.03413821815154038,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "3277ff4a-f0a9-4411-aa3c-52fa700106eb",
+    "slug": "/zh/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:36.043Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年本地AI工作站搭建：LLM推理所需的CPU、GPU、内存和存储。按预算的完整搭建指南，从入门级到搭载RTX 5090的高端配置，全面解析硬件选择。",
+        "new": "2026年本地AI工作站搭建：LLM推理所需的CPU、GPU、内存和存储。按预算的完整搭建指南，从入门级到搭载RTX 5090的高端配置，并附硬件选择说明。"
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 4.85,
+      "impressions": 720,
+      "clicks": 24,
+      "ctr": 0.03333333333333333,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "d2b3be26-a631-4313-9d3a-df910b950d39",
+    "slug": "/es/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:36.078Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Tres PCs para IA local en 2026: económica 7B–13B, media 14B–33B y entusiasta 70B. Listas de componentes exactas, tokens/s esperados y costos totales actualizados por la escasez de GPU, RAM y SSD de 2026.",
+        "new": "Tres PCs para IA local en 2026: económica 7B–13B, media 14B–33B y entusiasta 70B. Listas de componentes, algunos precios de GPU fechados (EE. UU.) y notas sobre la escasez de DDR5 de 2026."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "pc para ia local",
+      "pc ia local",
+      "mejor pc para ia local"
+    ],
+    "baseline": {
+      "position": 6.18,
+      "impressions": 3189,
+      "clicks": 53,
+      "ctr": 0.016619629978049544,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "2fdeb3b7-65de-4907-8958-a0f0c827db36",
+    "slug": "/pt/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:36.112Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Três PCs para IA local em 2026: econômica 7B–13B, intermediária 14B–33B e entusiasta 70B. Listas de componentes exatas, tokens/s esperados e custos totais reajustados para a escassez de GPU, RAM e SSD de 2026.",
+        "new": "Três PCs para IA local em 2026: econômica 7B–13B, intermediária 14B–33B e entusiasta 70B. Listas de componentes, alguns preços de GPU datados (EUA) e notas sobre a escassez de DDR5 de 2026."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 5.85,
+      "impressions": 414,
+      "clicks": 4,
+      "ctr": 0.00966183574879227,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "666ba4df-1b12-42e8-8e1d-997e91d8d543",
+    "slug": "/ar/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:36.147Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "3 قوائم مكوّنات كاملة لحاسوب LLM محلي 2026: مستوى اقتصادي لنماذج 7B–13B ومتوسط لـ 14B–33B ومتحمس لـ 70B. أداء توكن/ثانية وتكاليف معاد تسعيرها بعد شحّ GPU وRAM وSSD في 2026.",
+        "new": "3 قوائم مكوّنات كاملة لحاسوب LLM محلي 2026: مستوى اقتصادي لنماذج 7B–13B ومتوسط لـ 14B–33B ومتحمس لـ 70B. أسعار GPU مؤرَّخة وملاحظات عن شحّ DDR5 في 2026."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "baseline": {
+      "position": 6.11,
+      "impressions": 80,
+      "clicks": 2,
+      "ctr": 0.025,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
+  },
+  {
+    "id": "b9d3ed0f-bd74-46d5-a57e-f4b7ae314f00",
+    "slug": "/ko/power-local-llm/local-ai-workstation-build-guide",
+    "date": "2026-11-28T09:43:36.181Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026년 로컬 AI PC 3가지 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 2026년 GPU·RAM·SSD 공급 부족을 반영해 다시 산정한 총 비용을 확인하십시오.",
+        "new": "2026년 로컬 AI PC 3가지 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 부품 목록, 날짜가 명시된 일부 미국 GPU 가격과 2026년 DDR5 공급 부족 관련 안내를 확인하십시오."
+      }
+    ],
+    "reason": "Risk-gate fix of unsupported or stale claims (first GPU sweep).",
+    "queries": [
+      "로컬 ai pc",
+      "로컬 ai 컴퓨터 사양"
+    ],
+    "baseline": {
+      "position": 5.82,
+      "impressions": 1277,
+      "clicks": 28,
+      "ctr": 0.02192638997650744,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   }
 ]
