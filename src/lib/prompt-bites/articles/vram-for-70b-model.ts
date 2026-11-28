@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can I run a 70B model on a MacBook?',
-            a: 'Yes, if it has enough unified memory: plan 64 GB or more for Q4_K_M. A 32 GB MacBook cannot hold the model. If you do not need a laptop, the M5 Pro Mac mini can be configured with 64 GB, but the $1,699 base model has only 24 GB: Fstoppers listed an 18-core, 1 TB, 64 GB configuration at $3,199 on 21 September 2026. The Mac Studio M5 Max starts at $2,499 with 36 GB, so it needs a memory upgrade too. See <a href="/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">the RAM sizing guide</a> for smaller model alternatives.',
+            a: 'Yes, if it has enough unified memory: plan 64 GB or more for Q4_K_M. A 32 GB MacBook cannot hold the model. If you do not need a laptop, the M5 Pro Mac mini can be configured with 64 GB, but the $1,699 base model has only 24 GB. The cheapest 64 GB configuration (15-core CPU, 512 GB SSD) is $2,699, according to <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Daring Fireball\'s configuration table</a> of 25 August 2026. The Mac Studio M5 Max starts at $2,499 with 36 GB, so it needs a memory upgrade too. See <a href="/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">the RAM sizing guide</a> for smaller model alternatives.',
           },
           {
             q: 'Is there a cheaper way to run 70B models locally?',
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann ich ein 70B-Modell auf einem MacBook ausführen?',
-            a: 'Ja, wenn genug Unified Memory vorhanden ist: Planen Sie für Q4_K_M mindestens 64 GB ein. Ein MacBook mit 32 GB fasst das Modell nicht. Braucht es kein Notebook zu sein, lässt sich der Mac mini M5 Pro mit 64 GB konfigurieren, das Basismodell für 1.699 USD hat aber nur 24 GB: Fstoppers listete am 21. September 2026 eine Konfiguration mit 18 Kernen, 1 TB und 64 GB für 3.199 USD. Der Mac Studio M5 Max startet bei 2.499 USD mit 36 GB und braucht daher ebenfalls ein Speicher-Upgrade. Kleinere Modelle als Alternative zeigt <a href="/de/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">der RAM-Größenleitfaden</a>.',
+            a: 'Ja, wenn genug Unified Memory vorhanden ist: Planen Sie für Q4_K_M mindestens 64 GB ein. Ein MacBook mit 32 GB fasst das Modell nicht. Braucht es kein Notebook zu sein, lässt sich der Mac mini M5 Pro mit 64 GB konfigurieren, das Basismodell für 1.699 USD hat aber nur 24 GB. Die günstigste 64-GB-Konfiguration (15-Kern-CPU, 512-GB-SSD) kostet laut der <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Konfigurationstabelle von Daring Fireball</a> vom 25. August 2026 2.699 USD. Der Mac Studio M5 Max startet bei 2.499 USD mit 36 GB und braucht daher ebenfalls ein Speicher-Upgrade. Kleinere Modelle als Alternative zeigt <a href="/de/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">der RAM-Größenleitfaden</a>.',
           },
           {
             q: 'Gibt es einen günstigeren Weg, 70B-Modelle lokal zu betreiben?',
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Puis-je faire tourner un modèle 70B sur un MacBook ?',
-            a: 'Oui, s\'il a assez de mémoire unifiée : prévoyez au moins 64 Go en Q4_K_M. Un MacBook de 32 Go ne peut pas contenir le modèle. Si un portable n\'est pas nécessaire, le Mac mini M5 Pro peut être configuré avec 64 Go, mais le modèle de base à 1 699 $ n\'en a que 24 : le 21 septembre 2026, Fstoppers indiquait 3 199 $ pour une configuration 18 cœurs, 1 To et 64 Go. Le Mac Studio M5 Max démarre à 2 499 $ avec 36 Go et demande donc aussi une extension de mémoire. Pour des modèles plus petits, voir <a href="/fr/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">le guide de dimensionnement de la RAM</a>.',
+            a: 'Oui, s\'il a assez de mémoire unifiée : prévoyez au moins 64 Go en Q4_K_M. Un MacBook de 32 Go ne peut pas contenir le modèle. Si un portable n\'est pas nécessaire, le Mac mini M5 Pro peut être configuré avec 64 Go, mais le modèle de base à 1 699 $ n\'en a que 24. D\'après le <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">tableau des configurations de Daring Fireball</a> du 25 août 2026, la configuration 64 Go la moins chère (CPU 15 cœurs, SSD 512 Go) coûte 2 699 $. Le Mac Studio M5 Max démarre à 2 499 $ avec 36 Go et demande donc aussi une extension de mémoire. Pour des modèles plus petits, voir <a href="/fr/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">le guide de dimensionnement de la RAM</a>.',
           },
           {
             q: 'Existe-t-il un moyen moins cher d\'exécuter des modèles 70B localement ?',
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'MacBookで70Bモデルを動かせますか？',
-            a: 'ユニファイドメモリが十分なら可能です。Q4_K_Mには64GB以上を目安にしてください。32GBのMacBookには収まりません。ノート型でなくてよければ、M5 Pro Mac miniは64GBに構成できます。ただし$1,699の基本モデルは24GBです。Fstoppersは2026年9月21日、18コア・1TB・64GBの構成を$3,199と掲載しました。Mac Studio M5 Maxは36GBで$2,499からのため、こちらもメモリの増設構成が必要です。小さなモデルの選択肢は<a href="/ja/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM容量ガイド</a>をご覧ください。',
+            a: 'ユニファイドメモリが十分なら可能です。Q4_K_Mには64GB以上を目安にしてください。32GBのMacBookには収まりません。ノート型でなくてよければ、M5 Pro Mac miniは64GBに構成できます。ただし$1,699の基本モデルは24GBです。<a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Daring Fireballの構成価格表</a>（2026年8月25日）によると、最も安い64GB構成（15コアCPU、512GB SSD）は$2,699です。Mac Studio M5 Maxは36GBで$2,499からのため、こちらもメモリの増設構成が必要です。小さなモデルの選択肢は<a href="/ja/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM容量ガイド</a>をご覧ください。',
           },
           {
             q: '70Bモデルをローカルで動かす安価な方法はありますか？',
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '能在MacBook上运行70B模型吗？',
-            a: '可以，前提是统一内存足够：Q4_K_M建议64GB及以上。32GB的MacBook装不下该模型。如果不需要笔记本，M5 Pro版Mac mini可配置到64GB，但$1,699的基础款只有24GB：Fstoppers在2026年9月21日列出18核、1TB、64GB配置为$3,199。Mac Studio M5 Max起价$2,499、内存36GB，同样需要升级内存。较小模型的方案请参阅<a href="/zh/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM容量指南</a>。',
+            a: '可以，前提是统一内存足够：Q4_K_M建议64GB及以上。32GB的MacBook装不下该模型。如果不需要笔记本，M5 Pro版Mac mini可配置到64GB，但$1,699的基础款只有24GB。根据2026年8月25日的<a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Daring Fireball配置价格表</a>，最便宜的64GB配置（15核CPU、512GB固态硬盘）为$2,699。Mac Studio M5 Max起价$2,499、内存36GB，同样需要升级内存。较小模型的方案请参阅<a href="/zh/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM容量指南</a>。',
           },
           {
             q: '有没有更便宜的方式在本地运行70B模型？',
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Posso executar um modelo 70B em um MacBook?',
-            a: 'Sim, se tiver memória unificada suficiente: planeje 64 GB ou mais para Q4_K_M. Um MacBook de 32 GB não comporta o modelo. Se não precisar de um notebook, o Mac mini M5 Pro pode ser configurado com 64 GB, mas o modelo base de $1.699 tem só 24 GB: em 21 de setembro de 2026, o Fstoppers listou uma configuração de 18 núcleos, 1 TB e 64 GB por $3.199. O Mac Studio M5 Max parte de $2.499 com 36 GB, então também precisa de upgrade de memória. Para modelos menores, veja <a href="/pt/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">o guia de dimensionamento de RAM</a>.',
+            a: 'Sim, se tiver memória unificada suficiente: planeje 64 GB ou mais para Q4_K_M. Um MacBook de 32 GB não comporta o modelo. Se não precisar de um notebook, o Mac mini M5 Pro pode ser configurado com 64 GB, mas o modelo base de $1.699 tem só 24 GB. Segundo a <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">tabela de configurações do Daring Fireball</a> de 25 de agosto de 2026, a configuração de 64 GB mais barata (CPU de 15 núcleos, SSD de 512 GB) custa $2.699. O Mac Studio M5 Max parte de $2.499 com 36 GB, então também precisa de upgrade de memória. Para modelos menores, veja <a href="/pt/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">o guia de dimensionamento de RAM</a>.',
           },
           {
             q: 'Existe uma forma mais barata de executar modelos 70B localmente?',
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puedo ejecutar un modelo 70B en un MacBook?',
-            a: 'Sí, si tiene suficiente memoria unificada: cuenta con 64 GB o más para Q4_K_M. Un MacBook de 32 GB no puede contener el modelo. Si no necesitas un portátil, el Mac mini M5 Pro se puede configurar con 64 GB, pero el modelo base de $1.699 solo tiene 24 GB: Fstoppers listó el 21 de septiembre de 2026 una configuración de 18 núcleos, 1 TB y 64 GB por $3.199. El Mac Studio M5 Max parte de $2.499 con 36 GB, así que también necesita ampliar memoria. Para modelos más pequeños, consulta <a href="/es/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">la guía de dimensionamiento de RAM</a>.',
+            a: 'Sí, si tiene suficiente memoria unificada: cuenta con 64 GB o más para Q4_K_M. Un MacBook de 32 GB no puede contener el modelo. Si no necesitas un portátil, el Mac mini M5 Pro se puede configurar con 64 GB, pero el modelo base de $1.699 solo tiene 24 GB. Según la <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">tabla de configuraciones de Daring Fireball</a> del 25 de agosto de 2026, la configuración de 64 GB más barata (CPU de 15 núcleos, SSD de 512 GB) cuesta $2.699. El Mac Studio M5 Max parte de $2.499 con 36 GB, así que también necesita ampliar memoria. Para modelos más pequeños, consulta <a href="/es/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">la guía de dimensionamiento de RAM</a>.',
           },
           {
             q: '¿Hay alguna forma más barata de ejecutar modelos 70B localmente?',
@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل يمكنني تشغيل نموذج 70B على MacBook؟',
-            a: 'نعم، إذا كانت ذاكرته الموحدة كافية: خطّط لـ64 جيجابايت فأكثر لصيغة Q4_K_M. ولا يتسع MacBook بذاكرة 32 جيجابايت للنموذج. وإذا لم تكن بحاجة إلى حاسوب محمول، فيمكن تهيئة Mac mini M5 Pro بذاكرة 64 جيجابايت، لكن الطراز الأساسي بسعر $1,699 لا يحمل سوى 24: أدرج Fstoppers في 21 سبتمبر 2026 تهيئة بـ18 نواة و1 تيرابايت و64 جيجابايت بسعر $3,199. ويبدأ Mac Studio M5 Max من $2,499 بذاكرة 36 جيجابايت، فيحتاج هو أيضًا إلى ترقية الذاكرة. للنماذج الأصغر راجع <a href="/ar/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">دليل تحديد حجم RAM</a>.',
+            a: 'نعم، إذا كانت ذاكرته الموحدة كافية: خطّط لـ64 جيجابايت فأكثر لصيغة Q4_K_M. ولا يتسع MacBook بذاكرة 32 جيجابايت للنموذج. وإذا لم تكن بحاجة إلى حاسوب محمول، فيمكن تهيئة Mac mini M5 Pro بذاكرة 64 جيجابايت، لكن الطراز الأساسي بسعر $1,699 لا يحمل سوى 24. ووفق <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">جدول التهيئات لدى Daring Fireball</a> المؤرخ 25 أغسطس 2026، فإن أرخص تهيئة بذاكرة 64 جيجابايت (معالج 15 نواة وSSD بسعة 512 جيجابايت) سعرها $2,699. ويبدأ Mac Studio M5 Max من $2,499 بذاكرة 36 جيجابايت، فيحتاج هو أيضًا إلى ترقية الذاكرة. للنماذج الأصغر راجع <a href="/ar/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">دليل تحديد حجم RAM</a>.',
           },
           {
             q: 'هل توجد طريقة أرخص لتشغيل نماذج 70B محليًا؟',
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'MacBook에서 70B 모델을 실행할 수 있습니까?',
-            a: '통합 메모리가 충분하면 가능합니다. Q4_K_M에는 64GB 이상을 권장합니다. 32GB MacBook에는 담을 수 없습니다. 노트북이 꼭 필요하지 않다면 M5 Pro Mac mini를 64GB로 구성할 수 있습니다. 다만 $1,699 기본 모델은 24GB입니다. Fstoppers는 2026년 9월 21일 18코어·1TB·64GB 구성을 $3,199로 게재했습니다. Mac Studio M5 Max는 36GB 기준 $2,499부터이므로 역시 메모리 업그레이드가 필요합니다. 더 작은 모델은 <a href="/ko/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM 용량 가이드</a>를 참고하십시오.',
+            a: '통합 메모리가 충분하면 가능합니다. Q4_K_M에는 64GB 이상을 권장합니다. 32GB MacBook에는 담을 수 없습니다. 노트북이 꼭 필요하지 않다면 M5 Pro Mac mini를 64GB로 구성할 수 있습니다. 다만 $1,699 기본 모델은 24GB입니다. <a href="https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios" class="text-primary hover:underline">Daring Fireball 구성 가격표</a>(2026년 8월 25일)에 따르면 가장 저렴한 64GB 구성(15코어 CPU, 512GB SSD)은 $2,699입니다. Mac Studio M5 Max는 36GB 기준 $2,499부터이므로 역시 메모리 업그레이드가 필요합니다. 더 작은 모델은 <a href="/ko/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM 용량 가이드</a>를 참고하십시오.',
           },
           {
             q: '70B 모델을 로컬에서 더 저렴하게 실행하는 방법이 있습니까?',

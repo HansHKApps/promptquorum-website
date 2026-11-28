@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Best Mini PCs for Local LLM 2026 | PromptQuorum</title>
+    <title>Best Mini PCs for Local LLMs 2026 | PromptQuorum</title>
     <meta name="description" content="Interactive presentation on mini PC hardware for local LLM inference. Learn Mac mini M5 Pro, Framework Desktop, GPU compatibility, and cooling strategies." />
-    <meta property="og:title" content="Best Mini PCs for Local LLM 2026 — PromptQuorum" />
-    <meta property="og:description" content="Choose the right mini PC for Llama 3.3 70B: Mac mini M5 Pro vs Framework Desktop vs custom ITX builds." />
+    <meta property="og:title" content="Best Mini PCs for Local LLMs 2026 — PromptQuorum" />
+    <meta property="og:description" content="Memory first: Mac mini, Framework Desktop or a small desktop-GPU build for local LLMs." />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm" />
 
@@ -265,7 +265,7 @@
     <div class="header">
       <div class="header-left">
         <img src="/logo.svg" alt="PromptQuorum" />
-        <span id="header-title">Best Mini PCs for Local LLM 2026</span>
+        <span id="header-title">Best Mini PCs for Local LLMs 2026</span>
       </div>
       <div class="header-links">
         <a id="back-link" href="https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm" target="_blank" rel="noopener">← Back to Article</a>
@@ -287,785 +287,100 @@
   <script>
     const CONTENT = {
       en: {
-        title: 'Best Mini PCs for Local LLM 2026',
+        title: "Best Mini PCs for Local LLMs 2026",
         slides: [
-          {
-            type: 'title',
-            h1: 'Best Mini PCs for Local LLM 2026',
-            subtitle: 'Run Llama 3.3 70B on Mac mini M5 Pro, Framework Desktop, or Custom ITX builds',
-            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm'
-          },
-          {
-            type: 'list',
-            h2: 'Why Mini PCs for Local LLM?',
-            items: [
-              '<strong>Compact:</strong> 5–15L case, desk-friendly form factor',
-              '<strong>Silent operation:</strong> No data center noise or cooling complexity',
-              '<strong>Cost-effective:</strong> $900–2,300 runs 70B models at production speeds',
-              '<strong>Privacy:</strong> All inference local, no cloud dependencies'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Mac Mini M6 / M5 Pro Performance',
-            columns: ['Configuration', '7B Q4 tok/s', '70B Q4 tok/s', 'Price'],
-            rows: [
-              { 'Configuration': 'M6 (16-32 GB)', '7B Q4 tok/s': 'Not yet benchmarked', '70B Q4 tok/s': 'Cannot fit', 'Price': '$899' },
-              { 'Configuration': 'M5 Pro (24-64 GB)', '7B Q4 tok/s': 'Not yet benchmarked', '70B Q4 tok/s': 'Not yet benchmarked', 'Price': '$1,699' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Mac Mini M6 / M5 Pro: Pros & Cons',
-            items: [
-              '<strong>✓ Pros:</strong> Silent, low power, Metal GPU acceleration out-of-box',
-              '<strong>✓ Pros:</strong> Smallest 70B-capable option (M5 Pro, 64 GB config)',
-              '<strong>✗ Cons:</strong> RAM not upgradeable (choose 64 GB upfront for M5 Pro)',
-              '<strong>✗ Cons:</strong> No independent 70B tok/s benchmarks yet — shipped Sept 22, 2026'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop AMD Ryzen AI Max',
-            items: [
-              '<strong>CPU:</strong> Ryzen AI Max 395+ (16-core Zen 5)',
-              '<strong>GPU:</strong> Radeon 8060S (40 RDNA CUs)',
-              '<strong>Memory:</strong> 128 GB LPDDR5X unified (upgradeable)',
-              '<strong>Form:</strong> 4.5L mini-ITX, modular design',
-              '<strong>Power:</strong> 120W sustained, 200W peak'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Framework Desktop: Model Speeds',
-            columns: ['Model', 'tok/s'],
-            rows: [
-              { 'Model': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
-              { 'Model': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
-              { 'Model': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M5 Pro',
-            items: [
-              '<strong>Speed:</strong> Framework 20–25 tok/s on 70B; no independent M5 Pro benchmark yet',
-              '<strong>Memory:</strong> Framework 128 GB vs Mac mini M5 Pro 64 GB (2× capacity)',
-              '<strong>Upgradeable:</strong> Framework yes, Mac mini no',
-              '<strong>Price:</strong> Framework $1,999 vs Mac mini M5 Pro $1,699 (Mac mini cheaper)',
-              '<strong>Setup:</strong> Framework needs ROCm, Mac mini works out-of-box'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'GPU Compatibility for Mini-ITX',
-            columns: ['GPU', 'VRAM', 'Max Model', 'Fits Case?', 'Price (2026)'],
-            rows: [
-              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Max Model': '13B Q4', 'Fits Case?': 'Yes (217mm)', 'Price (2026)': '$450–500' },
-              { 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Max Model': '13B Q4', 'Fits Case?': 'Check (225mm)', 'Price (2026)': '$550–650' },
-              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 GB', 'Max Model': '7B Q4', 'Fits Case?': 'Yes (216mm)', 'Price (2026)': '$280–320' },
-              { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Max Model': '13B Q4', 'Fits Case?': 'Check variant', 'Price (2026)': '$250–350 used' }
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Platform Value Comparison',
-            columns: ['Platform', 'GPU Option', 'Total Cost', 'Best For'],
-            rows: [
-              { 'Platform': 'Intel NUC 13', 'GPU Option': 'RTX 5060 Ti (TB3)', 'Total Cost': '~$1,300', 'Best For': 'Build quality' },
-              { 'Platform': 'ASUS PN51/52', 'GPU Option': 'RTX 5060 Ti (PCIe)', 'Total Cost': '~$900', 'Best For': 'Best value' },
-              { 'Platform': 'Giada/Zotac', 'GPU Option': 'Integrated only', 'Total Cost': '~$400', 'Best For': '3B–7B models' },
-              { 'Platform': 'Custom ITX', 'GPU Option': 'Any GPU', 'Total Cost': '$1,000–1,400', 'Best For': 'Max flexibility' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Cooling: 4 Steps to Lower Temps',
-            items: [
-              '<strong>1. Monitor:</strong> GPU-Z or HWiNFO64 — watch temps at full load',
-              '<strong>2. Undervolt:</strong> MSI Afterburner (–50 mV) saves 5–10°C, zero speed loss',
-              '<strong>3. Replace fans:</strong> Noctua or BeQuiet! ($50–80) cuts noise 10–15 dB',
-              '<strong>4. Optimize airflow:</strong> Positive pressure case design = better cooling'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Limitations: What Won\'t Work',
-            items: [
-              '<strong>70B models require:</strong> Minimum 64 GB (Mac mini M5 Pro, 64 GB config) or 128 GB (Framework)',
-              '<strong>RTX 4090 maxes out:</strong> 70B Q4 at 60–80 tok/s (no further speedup)',
-              '<strong>Mac mini RAM not upgradeable:</strong> Choose 64 GB at purchase; no upgrade path',
-              '<strong>Custom ITX complexity:</strong> Requires case modding, cable management, thermal paste'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'FAQ: Common Questions',
-            items: [
-              '<strong>Q: Can I run 70B on RTX 4090?</strong> Yes, but 60–80 tok/s (slower than Framework Desktop)',
-              '<strong>Q: Mac mini M5 Pro vs Framework?</strong> Mac mini silent+compact, cheaper ($1,699 vs $1,999); Framework has more memory (128GB vs 64GB) and a published 70B benchmark (20–25 tok/s) — Mac mini M5 Pro has none yet',
-              '<strong>Q: Best mini PC 2026?</strong> ASUS PN51 + RTX 5060 Ti for value (~$900); Framework for speed',
-              '<strong>Q: What quantization to use?</strong> Q4_K_M: best balance of speed, quality, VRAM (13B on 16GB, 70B on 64GB)'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Common Mistakes to Avoid',
-            items: [
-              '<strong>1.</strong> Buying the base M6 Mac mini (32 GB max) expecting to run 70B (needs the M5 Pro, 64 GB)',
-              '<strong>2.</strong> Choosing RTX 4070 without measuring case depth (220mm limit)',
-              '<strong>3.</strong> Assuming offloading solves VRAM (slower than native GPU)',
-              '<strong>4.</strong> Not undervolting (free 5–10°C with no downside)',
-              '<strong>5.</strong> Buying pre-2025 GPU drivers (ROCm unstable on older Framework)'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'How PromptQuorum Helps',
-            items: [
-              '<strong>Multi-model dispatch:</strong> Send prompt to best model for lowest latency',
-              '<strong>Consensus generation:</strong> Run same prompt on 2–3 models, aggregate answers',
-              '<strong>Cost tracking:</strong> Monitor token spend across local models (no cloud bills)',
-              '<strong>Easy setup:</strong> One API, all local LLMs (Ollama, LM Studio, vLLM)'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Next Steps',
-            items: [
-              '<strong>✓ Step 1:</strong> Decide: Mac mini (silent), Framework (fast), or custom ITX (cheap)?',
-              '<strong>✓ Step 2:</strong> Order hardware, install Ollama or LM Studio',
-              '<strong>✓ Step 3:</strong> Download Llama 3.3 70B Q4 model (~40 GB)',
-              '<strong>✓ Step 4:</strong> Connect to PromptQuorum for multi-model dispatch',
-              '<strong>Try PromptQuorum Free:</strong> No credit card, start dispatching to local models today'
-            ]
-          }
+          {"type": "title", "h1": "Best Mini PCs for Local LLMs 2026", "subtitle": "Memory first: Mac mini, Framework Desktop or a small desktop-GPU build", "link": "https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm"},
+          {"type": "list", "h2": "Memory Decides the Model Size", "items": ["<strong>32 GB unified memory:</strong> too little for a 70B model at Q4", "<strong>64 GB:</strong> the amount to plan on for 70B Q4 (the download is about 43 GB)", "<strong>12–16 GB graphics card:</strong> about 13B at Q4 fully on the GPU", "<strong>Prices:</strong> US-dollar snapshots; check current local prices"]},
+          {"type": "table", "h2": "Mac mini: M6 and M5 Pro (August 2026)", "columns": ["Configuration", "Memory ceiling", "70B Q4 tok/s", "Price (US)"], "rows": [{"Configuration": "M6", "Memory ceiling": "32 GB", "70B Q4 tok/s": "Cannot fit", "Price (US)": "From $899 (16 GB)"}, {"Configuration": "M5 Pro", "Memory ceiling": "64 GB", "70B Q4 tok/s": "~4–5 (estimate)", "Price (US)": "From $1,699 (24 GB); 64 GB from $2,699"}]},
+          {"type": "list", "h2": "Mac mini: Pros and Cons", "items": ["<strong>Pro:</strong> compact; Ollama uses the Apple GPU through Metal", "<strong>Pro:</strong> M5 Pro with 64 GB can hold a 70B Q4 model", "<strong>Con:</strong> memory cannot be upgraded after purchase", "<strong>Con:</strong> 64 GB is tight for 70B; PromptQuorum has not tested these speeds"]},
+          {"type": "list", "h2": "Framework Desktop (128 GB)", "items": ["<strong>Chip:</strong> AMD Ryzen AI Max+ 395, Radeon 8060S (40 compute units)", "<strong>Memory:</strong> 128 GB LPDDR5X-8000, soldered and shared", "<strong>Size:</strong> 4.5 L; processor power 120 W, 140 W boost", "<strong>Price:</strong> $3,449 DIY listing without SSD or OS, out of stock on October 22, 2026 (ComputingForGeeks)"]},
+          {"type": "table", "h2": "Speeds on the Framework Chip Family", "columns": ["Model", "tok/s"], "rows": [{"Model": "Llama 3.1 8B Q4", "tok/s": "~30–40 (estimate)"}, {"Model": "Llama 3.3 70B Q4", "tok/s": "~4–6 (cited, third party)"}, {"Model": "DeepSeek-R1 70B Q4", "tok/s": "~4–6 (estimate)"}]},
+          {"type": "list", "h2": "Framework Desktop vs Mac mini M5 Pro", "items": ["<strong>Memory ceiling:</strong> 128 GB vs 64 GB", "<strong>Bandwidth:</strong> about 256 GB/s (calculated) vs 307 GB/s (Apple)", "<strong>70B Q4:</strong> ~4–6 tok/s cited vs ~4–5 tok/s estimate; not a head-to-head test", "<strong>Setup:</strong> the Mac is usually simpler with Ollama"]},
+          {"type": "table", "h2": "GPU Fit in Small Cases", "columns": ["GPU", "VRAM", "Max model (estimate)", "Check"], "rows": [{"GPU": "RTX 5060 Ti", "VRAM": "16 or 8 GB", "Max model (estimate)": "13B Q4 (16 GB)", "Check": "Length varies by maker"}, {"GPU": "RTX 5070", "VRAM": "12 GB", "Max model (estimate)": "13B Q4", "Check": "Card size"}, {"GPU": "RTX 4060 Ti", "VRAM": "8 or 16 GB", "Max model (estimate)": "7B Q4 (8 GB)", "Check": "Card size"}, {"GPU": "RTX 4070", "VRAM": "12 GB", "Max model (estimate)": "13B Q4", "Check": "Card size"}, {"GPU": "RTX A4000", "VRAM": "16 GB", "Max model (estimate)": "13B Q4", "Check": "Length and slots"}]},
+          {"type": "list", "h2": "Platform Options", "items": ["<strong>Shared memory:</strong> Mac mini or Strix Halo; memory fixed at purchase", "<strong>Custom mini-ITX or small build:</strong> replaceable desktop GPU; check case limits", "<strong>External GPU:</strong> needs Thunderbolt, USB4 or OCuLink; narrower link", "<strong>Ordinary integrated graphics:</strong> for trying small models; generally slower"]},
+          {"type": "list", "h2": "Cooling in Small Cases", "items": ["Check temperatures and noise during a long model run", "Noise depends on cooler, case, fan curve and load", "A lower power limit can reduce heat; test the effect on speed (at your own risk)", "Keep vents clear and clean dust filters"]},
+          {"type": "list", "h2": "Limitations", "items": ["One consumer graphics card limits you to its VRAM", "A 70B model on 12–16 GB needs offloading to system RAM: much slower", "A new GPU must fit the case and the power supply", "Standard mini-ITX boards have one PCIe x16 slot"]},
+          {"type": "list", "h2": "Common Questions", "items": ["<strong>RTX 4090 in a mini PC?</strong> Not in a palm-sized one: the Founders Edition is 304 mm long, three slots", "<strong>M6 or M5 Pro?</strong> For 70B: M5 Pro 64 GB. For about 7B–13B: M6 is enough", "<strong>Lowest entry here?</strong> M6 Mac mini from $899 for 7B; x86 builds were not priced"]},
+          {"type": "list", "h2": "Mistakes to Avoid", "items": ["Planning a GPU upgrade without a PCIe slot or external-GPU port", "Buying a card without checking length, thickness and power", "Assuming every case takes every power supply", "Forgetting system RAM when a model is offloaded"]},
+          {"type": "list", "h2": "Next Steps", "items": ["<strong>1.</strong> Pick the model size you need", "<strong>2.</strong> Check how much memory it takes", "<strong>3.</strong> Check slot, case and power before buying a graphics card", "<strong>4.</strong> Compare current local prices"]},
         ]
       },
       de: {
-        title: 'Beste Mini-PCs für lokale LLM 2026',
+        title: "Beste Mini-PCs für lokale LLMs 2026",
         slides: [
-          {
-            type: 'title',
-            h1: 'Beste Mini-PCs für lokale LLM 2026',
-            subtitle: 'Führen Sie Llama 3.3 70B auf Mac mini M5 Pro, Framework Desktop oder Custom ITX aus',
-            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=de'
-          },
-          {
-            type: 'list',
-            h2: 'Warum Mini-PCs für lokale LLM?',
-            items: [
-              '<strong>Kompakt:</strong> 5–15L Gehäuse, schreibtischfreundliche Form',
-              '<strong>Stille Funktion:</strong> Kein Rechenzentrumlärm, keine Kühlungskomplexität',
-              '<strong>Kosteneffektiv:</strong> 900–2.300 $ führen 70B-Modelle mit Produktionsgeschwindigkeiten aus',
-              '<strong>Datenschutz:</strong> Alle Inferenzen lokal, keine Cloud-Abhängigkeiten'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Mac Mini M6 / M5 Pro Leistung',
-            columns: ['Konfiguration', '7B Q4 tok/s', '70B Q4 tok/s', 'Preis'],
-            rows: [
-              { 'Konfiguration': 'M6 (16-32 GB)', '7B Q4 tok/s': 'Noch nicht getestet', '70B Q4 tok/s': 'Nicht möglich', 'Preis': '899 $' },
-              { 'Konfiguration': 'M5 Pro (24-64 GB)', '7B Q4 tok/s': 'Noch nicht getestet', '70B Q4 tok/s': 'Noch nicht getestet', 'Preis': '1.699 $' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Mac Mini M6 / M5 Pro: Vor- und Nachteile',
-            items: [
-              '<strong>✓ Vorteile:</strong> Leise, geringer Stromverbrauch, Metal GPU-Beschleunigung ab Werk',
-              '<strong>✓ Vorteile:</strong> Kompakteste 70B-fähige Option (M5 Pro, 64-GB-Konfiguration)',
-              '<strong>✗ Nachteile:</strong> RAM nicht aufrüstbar (wählen Sie beim Kauf 64 GB für M5 Pro)',
-              '<strong>✗ Nachteile:</strong> Noch keine unabhängigen 70B-tok/s-Benchmarks — Verkaufsstart 22. September 2026'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop AMD Ryzen AI Max',
-            items: [
-              '<strong>CPU:</strong> Ryzen AI Max 395+ (16-Core Zen 5)',
-              '<strong>GPU:</strong> Radeon 8060S (40 RDNA CUs)',
-              '<strong>Speicher:</strong> 128 GB LPDDR5X einheitlich (aufrüstbar)',
-              '<strong>Form:</strong> 4,5L Mini-ITX, modulares Design',
-              '<strong>Stromverbrauch:</strong> 120W dauerhaft, 200W Spitzenlast'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Framework Desktop: Modellgeschwindigkeiten',
-            columns: ['Modell', 'tok/s'],
-            rows: [
-              { 'Modell': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
-              { 'Modell': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
-              { 'Modell': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M5 Pro',
-            items: [
-              '<strong>Geschwindigkeit:</strong> Framework 20–25 tok/s bei 70B; für M5 Pro noch kein unabhängiger Benchmark',
-              '<strong>Speicher:</strong> Framework 128 GB vs Mac mini M5 Pro 64 GB (2× Kapazität)',
-              '<strong>Aufrüstbar:</strong> Framework ja, Mac mini nein',
-              '<strong>Preis:</strong> Framework 1.999 $ vs Mac mini M5 Pro 1.699 $ (Mac mini günstiger)',
-              '<strong>Setup:</strong> Framework braucht ROCm, Mac mini funktioniert sofort'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'GPU-Kompatibilität für Mini-ITX',
-            columns: ['GPU', 'VRAM', 'Max. Modell', 'Passt?', 'Preis (2026)'],
-            rows: [
-              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Max. Modell': '13B Q4', 'Passt?': 'Ja (217mm)', 'Preis (2026)': '450–500 $' },
-              { 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Max. Modell': '13B Q4', 'Passt?': 'Prüfen (225mm)', 'Preis (2026)': '550–650 $' },
-              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 GB', 'Max. Modell': '7B Q4', 'Passt?': 'Ja (216mm)', 'Preis (2026)': '280–320 $' },
-              { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Max. Modell': '13B Q4', 'Passt?': 'Variante prüfen', 'Preis (2026)': '250–350 $ gebraucht' }
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Plattform-Preisvergleich',
-            columns: ['Plattform', 'GPU-Option', 'Gesamtkosten', 'Am besten für'],
-            rows: [
-              { 'Plattform': 'Intel NUC 13', 'GPU-Option': 'RTX 5060 Ti (TB3)', 'Gesamtkosten': '~1.300 $', 'Am besten für': 'Verarbeitungsqualität' },
-              { 'Plattform': 'ASUS PN51/52', 'GPU-Option': 'RTX 5060 Ti (PCIe)', 'Gesamtkosten': '~900 $', 'Am besten für': 'Bestes Verhältnis' },
-              { 'Plattform': 'Giada/Zotac', 'GPU-Option': 'Nur integriert', 'Gesamtkosten': '~400 $', 'Am besten für': '3B–7B Modelle' },
-              { 'Plattform': 'Custom ITX', 'GPU-Option': 'Jede GPU', 'Gesamtkosten': '1.000–1.400 $', 'Am besten für': 'Max. Flexibilität' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Kühlung: 4 Schritte zur Temperaturreduktion',
-            items: [
-              '<strong>1. Überwachen:</strong> GPU-Z oder HWiNFO64 — Temps bei Vollast beobachten',
-              '<strong>2. Undervolten:</strong> MSI Afterburner (–50 mV) spart 5–10°C, null Geschwindigkeitsverlust',
-              '<strong>3. Lüfter ersetzen:</strong> Noctua oder BeQuiet! (50–80 €) reduziert Lärm 10–15 dB',
-              '<strong>4. Luftstrom optimieren:</strong> Positive-Druck-Gehäuse-Design = bessere Kühlung'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Einschränkungen: Was funktioniert nicht',
-            items: [
-              '<strong>70B-Modelle erfordern:</strong> Minimum 64 GB (Mac mini M5 Pro, 64-GB-Konfiguration) oder 128 GB (Framework)',
-              '<strong>RTX 4090 Obergrenze:</strong> 70B Q4 bei 60–80 tok/s (keine weitere Beschleunigung)',
-              '<strong>Mac mini RAM nicht aufrüstbar:</strong> Wählen Sie beim Kauf 64 GB; kein Upgrade möglich',
-              '<strong>Custom ITX Komplexität:</strong> Erfordert Gehäuseanpassung, Kabelmanagement, Wärmeleitpaste'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'FAQ: Häufig gestellte Fragen',
-            items: [
-              '<strong>F: Kann ich 70B auf RTX 4090 ausführen?</strong> Ja, aber 60–80 tok/s (langsamer als Framework)',
-              '<strong>F: Mac mini M5 Pro vs Framework?</strong> Mac mini leise, kompakt, günstiger (1.699 $ vs 1.999 $); Framework hat mehr Speicher (128 GB vs 64 GB) und einen veröffentlichten 70B-Benchmark (20–25 tok/s) — für den Mac mini M5 Pro gibt es noch keinen',
-              '<strong>F: Bester Mini-PC 2026?</strong> ASUS PN51 + RTX 5060 Ti für Preis (~900 $); Framework für Speed',
-              '<strong>F: Welche Quantisierung verwenden?</strong> Q4_K_M: beste Balance Geschwindigkeit, Qualität, VRAM'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Häufige Fehler vermeiden',
-            items: [
-              '<strong>1.</strong> Kauf des Basis-M6-Mac-mini (max. 32 GB) in der Erwartung, 70B ausführen zu können (dafür ist der M5 Pro mit 64 GB nötig)',
-              '<strong>2.</strong> Wahl RTX 4070 ohne Gehäusetiefe messen (220mm Limit)',
-              '<strong>3.</strong> Annahme Offloading löst VRAM (langsamer als nativ GPU)',
-              '<strong>4.</strong> Nicht undervolten (kostenlos 5–10°C ohne Nachteil)',
-              '<strong>5.</strong> Kauf vor-2025 GPU-Treiber (ROCm instabil auf älterem Framework)'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Wie PromptQuorum hilft',
-            items: [
-              '<strong>Multi-Modell-Versand:</strong> Senden Sie Prompt an bestes Modell für niedrigste Latenz',
-              '<strong>Konsens-Generierung:</strong> Führen Sie denselben Prompt auf 2–3 Modellen aus, aggregieren Sie Antworten',
-              '<strong>Kosten-Tracking:</strong> Überwachen Sie Token-Ausgaben über lokale Modelle (keine Cloud-Rechnungen)',
-              '<strong>Einfaches Setup:</strong> Eine API, alle lokalen LLMs (Ollama, LM Studio, vLLM)'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Nächste Schritte',
-            items: [
-              '<strong>✓ Schritt 1:</strong> Entscheiden: Mac mini (leise), Framework (schnell) oder Custom ITX (billig)?',
-              '<strong>✓ Schritt 2:</strong> Hardware bestellen, Ollama oder LM Studio installieren',
-              '<strong>✓ Schritt 3:</strong> Llama 3.3 70B Q4 Modell herunterladen (~40 GB)',
-              '<strong>✓ Schritt 4:</strong> Mit PromptQuorum verbinden für Multi-Modell-Versand',
-              '<strong>Probieren Sie PromptQuorum kostenlos:</strong> Keine Kreditkarte, starten Sie heute mit lokalen Modellen'
-            ]
-          }
+          {"type": "title", "h1": "Beste Mini-PCs für lokale LLMs 2026", "subtitle": "Zuerst der Speicher: Mac mini, Framework Desktop oder kleiner Eigenbau mit Desktop-GPU", "link": "https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=de"},
+          {"type": "list", "h2": "Der Speicher bestimmt die Modellgröße", "items": ["<strong>32 GB Unified Memory:</strong> zu wenig für ein 70B-Modell in Q4", "<strong>64 GB:</strong> so viel für 70B Q4 einplanen (Download etwa 43 GB)", "<strong>Grafikkarte mit 12–16 GB:</strong> etwa 13B in Q4 vollständig auf der GPU", "<strong>Preise:</strong> Momentaufnahmen; aktuelle Preise prüfen"]},
+          {"type": "table", "h2": "Mac mini: M6 und M5 Pro (August 2026)", "columns": ["Konfiguration", "Speichergrenze", "70B Q4 tok/s", "Preis"], "rows": [{"Konfiguration": "M6", "Speichergrenze": "32 GB", "70B Q4 tok/s": "Passt nicht", "Preis": "Ab 899 $ (16 GB, USA)"}, {"Konfiguration": "M5 Pro", "Speichergrenze": "64 GB", "70B Q4 tok/s": "~4–5 (Schätzung)", "Preis": "Ab 1.699 $ (24 GB); 64 GB ab 2.699 $ / 3.099 €"}]},
+          {"type": "list", "h2": "Mac mini: Vor- und Nachteile", "items": ["<strong>Plus:</strong> kompakt; Ollama nutzt die Apple-GPU über Metal", "<strong>Plus:</strong> M5 Pro mit 64 GB kann ein 70B-Q4-Modell aufnehmen", "<strong>Minus:</strong> Speicher nach dem Kauf nicht erweiterbar", "<strong>Minus:</strong> 64 GB sind für 70B knapp; PromptQuorum hat diese Werte nicht gemessen"]},
+          {"type": "list", "h2": "Framework Desktop (128 GB)", "items": ["<strong>Chip:</strong> AMD Ryzen AI Max+ 395, Radeon 8060S (40 Compute Units)", "<strong>Speicher:</strong> 128 GB LPDDR5X-8000, verlötet und gemeinsam", "<strong>Größe:</strong> 4,5 l; Prozessorleistung 120 W, 140 W Boost", "<strong>Preis:</strong> DIY-Listenpreis 3.449 $ ohne SSD und Betriebssystem, am 22.10.2026 nicht vorrätig (ComputingForGeeks)"]},
+          {"type": "table", "h2": "Werte für die Chipfamilie des Framework", "columns": ["Modell", "tok/s"], "rows": [{"Modell": "Llama 3.1 8B Q4", "tok/s": "~30–40 (Schätzung)"}, {"Modell": "Llama 3.3 70B Q4", "tok/s": "~4–6 (zitiert, Dritte)"}, {"Modell": "DeepSeek-R1 70B Q4", "tok/s": "~4–6 (Schätzung)"}]},
+          {"type": "list", "h2": "Framework Desktop vs. Mac mini M5 Pro", "items": ["<strong>Speichergrenze:</strong> 128 GB vs. 64 GB", "<strong>Bandbreite:</strong> rund 256 GB/s (berechnet) vs. 307 GB/s (Apple)", "<strong>70B Q4:</strong> ~4–6 tok/s zitiert vs. ~4–5 tok/s geschätzt; kein direkter Vergleichstest", "<strong>Einrichtung:</strong> mit Ollama ist der Mac meist einfacher"]},
+          {"type": "table", "h2": "GPU-Einbau in kleinen Gehäusen", "columns": ["GPU", "VRAM", "Max. Modell (Schätzung)", "Prüfen"], "rows": [{"GPU": "RTX 5060 Ti", "VRAM": "16 oder 8 GB", "Max. Modell (Schätzung)": "13B Q4 (16 GB)", "Prüfen": "Länge je nach Hersteller"}, {"GPU": "RTX 5070", "VRAM": "12 GB", "Max. Modell (Schätzung)": "13B Q4", "Prüfen": "Kartenmaße"}, {"GPU": "RTX 4060 Ti", "VRAM": "8 oder 16 GB", "Max. Modell (Schätzung)": "7B Q4 (8 GB)", "Prüfen": "Kartenmaße"}, {"GPU": "RTX 4070", "VRAM": "12 GB", "Max. Modell (Schätzung)": "13B Q4", "Prüfen": "Kartenmaße"}, {"GPU": "RTX A4000", "VRAM": "16 GB", "Max. Modell (Schätzung)": "13B Q4", "Prüfen": "Länge und Slots"}]},
+          {"type": "list", "h2": "Plattformoptionen", "items": ["<strong>Gemeinsamer Speicher:</strong> Mac mini oder Strix Halo; Größe beim Kauf fest", "<strong>Eigenbau (Mini-ITX/kompakt):</strong> austauschbare Desktop-GPU; Gehäusegrenzen prüfen", "<strong>Externe GPU:</strong> braucht Thunderbolt, USB4 oder OCuLink; schmalere Verbindung", "<strong>Gewöhnliche integrierte Grafik:</strong> zum Testen kleiner Modelle; meist langsamer"]},
+          {"type": "list", "h2": "Kühlung in kleinen Gehäusen", "items": ["Temperaturen und Lautstärke bei langem Modelllauf prüfen", "Lautstärke hängt von Kühler, Gehäuse, Lüfterkurve und Last ab", "Ein niedrigeres Power-Limit kann Wärme senken; Tempo testen (auf eigenes Risiko)", "Lüftungsöffnungen freihalten, Staubfilter reinigen"]},
+          {"type": "list", "h2": "Grenzen", "items": ["Eine Consumer-Grafikkarte begrenzt auf ihren VRAM", "70B mit 12–16 GB erfordert Auslagern in den Arbeitsspeicher: deutlich langsamer", "Eine neue GPU muss zu Gehäuse und Netzteil passen", "Übliche Mini-ITX-Boards haben einen PCIe-x16-Steckplatz"]},
+          {"type": "list", "h2": "Häufige Fragen", "items": ["<strong>RTX 4090 im Mini-PC?</strong> Nicht im handtellergroßen: Founders Edition 304 mm lang, drei Slots", "<strong>M6 oder M5 Pro?</strong> Für 70B: M5 Pro 64 GB. Für etwa 7B–13B reicht der M6", "<strong>Günstigster Einstieg hier?</strong> Mac mini M6 ab 899 $ (USA) für 7B; x86-Eigenbauten nicht bepreist"]},
+          {"type": "list", "h2": "Fehler vermeiden", "items": ["GPU-Upgrade ohne PCIe-Steckplatz oder Anschluss für externe GPU planen", "Karte kaufen, ohne Länge, Dicke und Strombedarf zu prüfen", "Annehmen, jedes Gehäuse nehme jedes Netzteil auf", "Arbeitsspeicher beim Auslagern vergessen"]},
+          {"type": "list", "h2": "Nächste Schritte", "items": ["<strong>1.</strong> Benötigte Modellgröße wählen", "<strong>2.</strong> Speicherbedarf prüfen", "<strong>3.</strong> Vor dem GPU-Kauf Steckplatz, Gehäuse und Netzteil prüfen", "<strong>4.</strong> Aktuelle lokale Preise vergleichen"]},
         ]
       },
       fr: {
-        title: 'Meilleurs mini PC pour LLM locaux 2026',
+        title: "Meilleurs mini PC pour LLM locaux 2026",
         slides: [
-          {
-            type: 'title',
-            h1: 'Meilleurs mini PC pour LLM locaux 2026',
-            subtitle: 'Exécutez Llama 3.3 70B sur Mac mini M5 Pro, Framework Desktop ou constructions ITX personnalisées',
-            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=fr'
-          },
-          {
-            type: 'list',
-            h2: 'Pourquoi mini PC pour LLM locaux?',
-            items: [
-              '<strong>Compact :</strong> Boîtier 5–15L, facteur de forme adapté au bureau',
-              '<strong>Fonctionnement silencieux :</strong> Pas de bruit de centre de données, pas de complexité de refroidissement',
-              '<strong>Rentable :</strong> 900–2 300 $ exécutent les modèles 70B aux vitesses de production',
-              '<strong>Confidentialité :</strong> Tous les appels locaux, pas de dépendances cloud'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Performance Mac Mini M6 / M5 Pro',
-            columns: ['Configuration', '7B Q4 tok/s', '70B Q4 tok/s', 'Prix'],
-            rows: [
-              { 'Configuration': 'M6 (16-32 Go)', '7B Q4 tok/s': 'Pas encore testé', '70B Q4 tok/s': 'Impossible', 'Prix': '899 $' },
-              { 'Configuration': 'M5 Pro (24-64 Go)', '7B Q4 tok/s': 'Pas encore testé', '70B Q4 tok/s': 'Pas encore testé', 'Prix': '1 699 $' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Mac Mini M6 / M5 Pro : Avantages et inconvénients',
-            items: [
-              '<strong>✓ Avantages :</strong> Silencieux, faible consommation, accélération GPU Metal out-of-box',
-              '<strong>✓ Avantages :</strong> Option 70B la plus compacte (M5 Pro, config 64 Go)',
-              '<strong>✗ Inconvénients :</strong> RAM non extensible (choisissez 64 Go à l\'achat pour le M5 Pro)',
-              '<strong>✗ Inconvénients :</strong> Pas encore de benchmark 70B indépendant — sorti le 22 septembre 2026'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop AMD Ryzen AI Max',
-            items: [
-              '<strong>CPU :</strong> Ryzen AI Max 395+ (16-cœur Zen 5)',
-              '<strong>GPU :</strong> Radeon 8060S (40 CU RDNA)',
-              '<strong>Mémoire :</strong> 128 Go LPDDR5X unifiée (extensible)',
-              '<strong>Format :</strong> 4,5L Mini-ITX, design modulaire',
-              '<strong>Puissance :</strong> 120W soutenu, 200W pic'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Framework Desktop : Vitesses des modèles',
-            columns: ['Modèle', 'tok/s'],
-            rows: [
-              { 'Modèle': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
-              { 'Modèle': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
-              { 'Modèle': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M5 Pro',
-            items: [
-              '<strong>Vitesse :</strong> Framework 20–25 tok/s sur 70B ; pas encore de benchmark indépendant pour le M5 Pro',
-              '<strong>Mémoire :</strong> Framework 128 Go vs Mac mini M5 Pro 64 Go (2× capacité)',
-              '<strong>Extensible :</strong> Framework oui, Mac mini non',
-              '<strong>Prix :</strong> Framework 1 999 $ vs Mac mini M5 Pro 1 699 $ (Mac mini moins cher)',
-              '<strong>Configuration :</strong> Framework nécessite ROCm, Mac mini fonctionne immédiatement'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Compatibilité GPU pour Mini-ITX',
-            columns: ['GPU', 'VRAM', 'Modèle max.', 'Compatible?', 'Prix (2026)'],
-            rows: [
-              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 Go', 'Modèle max.': '13B Q4', 'Compatible?': 'Oui (217mm)', 'Prix (2026)': '450–500 $' },
-              { 'GPU': 'RTX 5070', 'VRAM': '12 Go', 'Modèle max.': '13B Q4', 'Compatible?': 'Vérifier (225mm)', 'Prix (2026)': '550–650 $' },
-              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 Go', 'Modèle max.': '7B Q4', 'Compatible?': 'Oui (216mm)', 'Prix (2026)': '280–320 $' },
-              { 'GPU': 'RTX A4000', 'VRAM': '16 Go', 'Modèle max.': '13B Q4', 'Compatible?': 'Vérifier variante', 'Prix (2026)': '250–350 $ occasion' }
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Comparatif valeur plateforme',
-            columns: ['Plateforme', 'Option GPU', 'Coût total', 'Idéal pour'],
-            rows: [
-              { 'Plateforme': 'Intel NUC 13', 'Option GPU': 'RTX 5060 Ti (TB3)', 'Coût total': '~1 300 $', 'Idéal pour': 'Qualité de fabrication' },
-              { 'Plateforme': 'ASUS PN51/52', 'Option GPU': 'RTX 5060 Ti (PCIe)', 'Coût total': '~900 $', 'Idéal pour': 'Meilleur rapport' },
-              { 'Plateforme': 'Giada/Zotac', 'Option GPU': 'Intégré seul', 'Coût total': '~400 $', 'Idéal pour': 'Modèles 3B–7B' },
-              { 'Plateforme': 'Custom ITX', 'Option GPU': 'N\'importe quel GPU', 'Coût total': '1 000–1 400 $', 'Idéal pour': 'Flexibilité max' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Refroidissement : 4 étapes pour réduire les températures',
-            items: [
-              '<strong>1. Surveiller :</strong> GPU-Z ou HWiNFO64 — regarder les temps à charge complète',
-              '<strong>2. Sous-voltage :</strong> MSI Afterburner (–50 mV) économise 5–10°C, zéro perte de vitesse',
-              '<strong>3. Remplacer ventilateurs :</strong> Noctua ou BeQuiet! (50–80 €) réduit le bruit 10–15 dB',
-              '<strong>4. Optimiser flux d\'air :</strong> Design boîtier pression positive = meilleur refroidissement'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Limitations : Ce qui ne fonctionne pas',
-            items: [
-              '<strong>Les modèles 70B nécessitent :</strong> Minimum 64 Go (Mac mini M5 Pro, config 64 Go) ou 128 Go (Framework)',
-              '<strong>RTX 4090 plafond :</strong> 70B Q4 à 60–80 tok/s (pas d\'accélération supplémentaire)',
-              '<strong>RAM Mac mini non extensible :</strong> Choisissez 64 Go à l\'achat ; pas de chemin de mise à niveau',
-              '<strong>Complexité Custom ITX :</strong> Nécessite modification boîtier, gestion câbles, pâte thermique'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'FAQ : Questions fréquemment posées',
-            items: [
-              '<strong>Q: Puis-je exécuter 70B sur RTX 4090?</strong> Oui, mais 60–80 tok/s (plus lent que Framework)',
-              '<strong>Q: Mac mini M5 Pro vs Framework?</strong> Mac mini silencieux, compact, moins cher (1 699 $ vs 1 999 $) ; Framework a plus de mémoire (128 Go vs 64 Go) et un benchmark 70B publié (20–25 tok/s) — le Mac mini M5 Pro n\'en a pas encore',
-              '<strong>Q: Meilleur mini PC 2026?</strong> ASUS PN51 + RTX 5060 Ti pour rapport (~900 $); Framework pour vitesse',
-              '<strong>Q: Quel quantification utiliser?</strong> Q4_K_M: meilleur équilibre vitesse, qualité, VRAM'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Erreurs courantes à éviter',
-            items: [
-              '<strong>1.</strong> Acheter le Mac mini M6 de base (32 Go max) en pensant pouvoir exécuter 70B (il faut le M5 Pro, 64 Go)',
-              '<strong>2.</strong> Choisir RTX 4070 sans mesurer profondeur boîtier (limite 220mm)',
-              '<strong>3.</strong> Supposer déchargement résout VRAM (plus lent que GPU natif)',
-              '<strong>4.</strong> Ne pas faire de sous-voltage (5–10°C gratuit sans inconvénient)',
-              '<strong>5.</strong> Acheter pilotes GPU pré-2025 (ROCm instable sur Framework ancien)'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Comment PromptQuorum aide',
-            items: [
-              '<strong>Envoi multi-modèle :</strong> Envoyer invite au meilleur modèle pour latence la plus basse',
-              '<strong>Génération consensus :</strong> Exécuter même invite sur 2–3 modèles, agréger réponses',
-              '<strong>Suivi coûts :</strong> Surveiller dépense tokens sur modèles locaux (pas factures cloud)',
-              '<strong>Configuration facile :</strong> Une API, tous LLM locaux (Ollama, LM Studio, vLLM)'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Prochaines étapes',
-            items: [
-              '<strong>✓ Étape 1 :</strong> Décider : Mac mini (silencieux), Framework (rapide) ou Custom ITX (bon marché)?',
-              '<strong>✓ Étape 2 :</strong> Commander matériel, installer Ollama ou LM Studio',
-              '<strong>✓ Étape 3 :</strong> Télécharger modèle Llama 3.3 70B Q4 (~40 Go)',
-              '<strong>✓ Étape 4 :</strong> Connecter à PromptQuorum pour envoi multi-modèle',
-              '<strong>Essayez PromptQuorum gratuitement :</strong> Pas de carte bancaire, commencez avec modèles locaux aujourd\'hui'
-            ]
-          }
+          {"type": "title", "h1": "Meilleurs mini PC pour LLM locaux 2026", "subtitle": "La mémoire d’abord : Mac mini, Framework Desktop ou petit montage avec GPU de bureau", "link": "https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=fr"},
+          {"type": "list", "h2": "La mémoire fixe la taille du modèle", "items": ["<strong>32 Go de mémoire unifiée :</strong> trop peu pour un 70B en Q4", "<strong>64 Go :</strong> à prévoir pour un 70B Q4 (téléchargement d’environ 43 Go)", "<strong>Carte de 12 à 16 Go :</strong> environ 13B en Q4 entièrement sur le GPU", "<strong>Prix :</strong> relevés ponctuels ; vérifiez les prix actuels"]},
+          {"type": "table", "h2": "Mac mini : M6 et M5 Pro (août 2026)", "columns": ["Configuration", "Plafond mémoire", "70B Q4 tok/s", "Prix"], "rows": [{"Configuration": "M6", "Plafond mémoire": "32 Go", "70B Q4 tok/s": "Ne tient pas", "Prix": "Dès 899 $ (16 Go, É.-U.)"}, {"Configuration": "M5 Pro", "Plafond mémoire": "64 Go", "70B Q4 tok/s": "~4–5 (estimation)", "Prix": "Dès 1 699 $ (24 Go) ; 64 Go dès 2 699 $ / 3 099 €"}]},
+          {"type": "list", "h2": "Mac mini : avantages et limites", "items": ["<strong>Plus :</strong> compact ; Ollama exploite le GPU Apple via Metal", "<strong>Plus :</strong> le M5 Pro 64 Go peut contenir un 70B Q4", "<strong>Moins :</strong> mémoire non évolutive après l’achat", "<strong>Moins :</strong> 64 Go sont justes pour un 70B ; vitesses non testées par PromptQuorum"]},
+          {"type": "list", "h2": "Framework Desktop (128 Go)", "items": ["<strong>Puce :</strong> AMD Ryzen AI Max+ 395, Radeon 8060S (40 unités de calcul)", "<strong>Mémoire :</strong> 128 Go LPDDR5X-8000, soudée et partagée", "<strong>Format :</strong> 4,5 L ; processeur 120 W, 140 W en boost", "<strong>Prix :</strong> kit affiché à 3 449 $ sans SSD ni système, en rupture le 22/10/2026 (ComputingForGeeks)"]},
+          {"type": "table", "h2": "Vitesses pour la famille de puces du Framework", "columns": ["Modèle", "tok/s"], "rows": [{"Modèle": "Llama 3.1 8B Q4", "tok/s": "~30–40 (estimation)"}, {"Modèle": "Llama 3.3 70B Q4", "tok/s": "~4–6 (cité, tiers)"}, {"Modèle": "DeepSeek-R1 70B Q4", "tok/s": "~4–6 (estimation)"}]},
+          {"type": "list", "h2": "Framework Desktop et Mac mini M5 Pro", "items": ["<strong>Plafond mémoire :</strong> 128 Go contre 64 Go", "<strong>Bande passante :</strong> environ 256 Go/s (calculée) contre 307 Go/s (Apple)", "<strong>70B Q4 :</strong> ~4–6 tok/s cités contre ~4–5 tok/s estimés ; pas de test comparatif direct", "<strong>Installation :</strong> le Mac est généralement plus simple avec Ollama"]},
+          {"type": "table", "h2": "GPU dans un petit boîtier", "columns": ["GPU", "VRAM", "Modèle max. (estimation)", "À vérifier"], "rows": [{"GPU": "RTX 5060 Ti", "VRAM": "16 ou 8 Go", "Modèle max. (estimation)": "13B Q4 (16 Go)", "À vérifier": "Longueur selon la marque"}, {"GPU": "RTX 5070", "VRAM": "12 Go", "Modèle max. (estimation)": "13B Q4", "À vérifier": "Dimensions"}, {"GPU": "RTX 4060 Ti", "VRAM": "8 ou 16 Go", "Modèle max. (estimation)": "7B Q4 (8 Go)", "À vérifier": "Dimensions"}, {"GPU": "RTX 4070", "VRAM": "12 Go", "Modèle max. (estimation)": "13B Q4", "À vérifier": "Dimensions"}, {"GPU": "RTX A4000", "VRAM": "16 Go", "Modèle max. (estimation)": "13B Q4", "À vérifier": "Longueur et emplacements"}]},
+          {"type": "list", "h2": "Les plateformes possibles", "items": ["<strong>Mémoire partagée :</strong> Mac mini ou Strix Halo ; capacité fixée à l’achat", "<strong>Montage mini-ITX ou compact :</strong> GPU de bureau remplaçable ; vérifiez le boîtier", "<strong>GPU externe :</strong> Thunderbolt, USB4 ou OCuLink requis ; liaison plus étroite", "<strong>Graphique intégré ordinaire :</strong> pour essayer de petits modèles ; généralement plus lent"]},
+          {"type": "list", "h2": "Refroidissement en petit boîtier", "items": ["Contrôlez températures et bruit pendant une longue exécution", "Le bruit dépend du ventirad, du boîtier, de la ventilation et de la charge", "Une limite de puissance plus basse peut réduire la chaleur ; testez la vitesse (à vos risques)", "Aérations dégagées, filtres propres"]},
+          {"type": "list", "h2": "Limites", "items": ["Une carte grand public vous limite à sa VRAM", "Un 70B avec 12 à 16 Go exige un déport en RAM : bien plus lent", "Un nouveau GPU doit convenir au boîtier et à l’alimentation", "Une carte mini-ITX standard a un seul PCIe x16"]},
+          {"type": "list", "h2": "Questions fréquentes", "items": ["<strong>RTX 4090 dans un mini PC ?</strong> Pas dans un modèle de poche : 304 mm et trois emplacements (Founders Edition)", "<strong>M6 ou M5 Pro ?</strong> Pour un 70B : M5 Pro 64 Go. Pour environ 7B à 13B : le M6 suffit", "<strong>Entrée la moins chère ici ?</strong> Mac mini M6 dès 899 $ (É.-U.) pour du 7B ; montages x86 non chiffrés"]},
+          {"type": "list", "h2": "Erreurs à éviter", "items": ["Prévoir un ajout de GPU sans emplacement PCIe ni port externe adapté", "Acheter une carte sans vérifier longueur, épaisseur et consommation", "Croire que tout boîtier accepte toute alimentation", "Oublier la RAM système en cas de déport"]},
+          {"type": "list", "h2": "Étapes suivantes", "items": ["<strong>1.</strong> Choisissez la taille de modèle voulue", "<strong>2.</strong> Vérifiez la mémoire nécessaire", "<strong>3.</strong> Avant d’acheter un GPU : emplacement, boîtier, alimentation", "<strong>4.</strong> Comparez les prix locaux actuels"]},
         ]
       },
       ja: {
-        title: 'ローカルLLM向けミニPC 2026：最高ガイド',
+        title: "ローカルLLM向けミニPC 2026",
         slides: [
-          {
-            type: 'title',
-            h1: 'ローカルLLM向けミニPC 2026',
-            subtitle: 'Mac mini M5 Pro、Framework Desktop、またはカスタムITXビルドでLlama 3.3 70Bを実行',
-            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=ja'
-          },
-          {
-            type: 'list',
-            h2: 'ローカルLLM向けミニPCが必要な理由',
-            items: [
-              '<strong>コンパクト：</strong> 5–15L筐体、デスクトップに最適なフォームファクタ',
-              '<strong>静音：</strong> データセンターの騒音なし、冷却の複雑さなし',
-              '<strong>低コスト：</strong> 900–2,300ドルで70Bモデルを本番速度で実行',
-              '<strong>プライバシー：</strong> すべてローカル推論、クラウド依存なし'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Mac Mini M6 / M5 Pro性能',
-            columns: ['構成', '7B Q4 tok/s', '70B Q4 tok/s', '価格'],
-            rows: [
-              { '構成': 'M6（16-32 GB）', '7B Q4 tok/s': '未検証', '70B Q4 tok/s': '不可', '価格': '$899' },
-              { '構成': 'M5 Pro（24-64 GB）', '7B Q4 tok/s': '未検証', '70B Q4 tok/s': '未検証', '価格': '$1,699' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Mac Mini M6 / M5 Pro：長所と短所',
-            items: [
-              '<strong>✓ 長所：</strong> 静音、低消費電力、Metal GPU加速がすぐに使える',
-              '<strong>✓ 長所：</strong> 最もコンパクトな70B対応オプション（M5 Pro、64GB構成）',
-              '<strong>✗ 短所：</strong> RAM非アップグレード（M5 Proは購入時に64 GB選択）',
-              '<strong>✗ 短所：</strong> 独立した70B tok/sベンチマークはまだなし — 2026年9月22日発売'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop AMD Ryzen AI Max',
-            items: [
-              '<strong>CPU：</strong> Ryzen AI Max 395+（16コアZen 5）',
-              '<strong>GPU：</strong> Radeon 8060S（40 RDNA CU）',
-              '<strong>メモリ：</strong> 128 GB LPDDR5X統合（アップグレード可）',
-              '<strong>フォーム：</strong> 4.5Lミニ-ITX、モジュール設計',
-              '<strong>電力：</strong> 120W持続、200Wピーク'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Framework Desktopモデル速度',
-            columns: ['モデル', 'tok/s'],
-            rows: [
-              { 'モデル': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
-              { 'モデル': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
-              { 'モデル': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M5 Pro',
-            items: [
-              '<strong>速度：</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s（1.5–2倍高速）',
-              '<strong>メモリ：</strong> Framework 128 GB vs Mac mini 64 GB（2倍容量）',
-              '<strong>アップグレード可：</strong> Frameworkはい、Mac miniいいえ',
-              '<strong>価格：</strong> Framework $1,999 vs Mac mini $2,299（Frameworkが有利）',
-              '<strong>セットアップ：</strong> Framework ROCm必要、Mac miniはすぐに動く'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Mini-ITXGPU互換性',
-            columns: ['GPU', 'VRAM', '最大モデル', '対応？', '価格（2026）'],
-            rows: [
-              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最大モデル': '13B Q4', '対応？': '対応（217mm）', '価格（2026）': '$450–500' },
-              { 'GPU': 'RTX 5070', 'VRAM': '12 GB', '最大モデル': '13B Q4', '対応？': '確認（225mm）', '価格（2026）': '$550–650' },
-              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 GB', '最大モデル': '7B Q4', '対応？': '対応（216mm）', '価格（2026）': '$280–320' },
-              { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '最大モデル': '13B Q4', '対応？': '確認要', '価格（2026）': '$250–350 中古' }
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'プラットフォーム価値比較',
-            columns: ['プラットフォーム', 'GPU選択肢', '総コスト', '最適な用途'],
-            rows: [
-              { 'プラットフォーム': 'Intel NUC 13', 'GPU選択肢': 'RTX 5060 Ti (TB3)', '総コスト': '~$1,300', '最適な用途': '品質重視' },
-              { 'プラットフォーム': 'ASUS PN51/52', 'GPU選択肢': 'RTX 5060 Ti (PCIe)', '総コスト': '~$900', '最適な用途': '最高コスパ' },
-              { 'プラットフォーム': 'Giada/Zotac', 'GPU選択肢': '統合のみ', '総コスト': '~$400', '最適な用途': '3B–7B用' },
-              { 'プラットフォーム': 'Custom ITX', 'GPU選択肢': 'どのGPUでも', '総コスト': '$1,000–1,400', '最適な用途': '最大柔軟性' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: '冷却：温度低下の4ステップ',
-            items: [
-              '<strong>1. 監視：</strong> GPU-ZまたはHWiNFO64 — フル負荷時の温度監視',
-              '<strong>2. アンダーボルト：</strong> MSI Afterburner（–50 mV）で5–10°C低下、速度低下なし',
-              '<strong>3. ファン交換：</strong> NoctuaまたはBeQuiet!（$50–80）で騒音10–15 dB削減',
-              '<strong>4. 気流最適化：</strong> 正圧設定= より良い冷却'
-            ]
-          },
-          {
-            type: 'list',
-            h2: '制限事項：動作不可のこと',
-            items: [
-              '<strong>70Bモデル必須：</strong> 最小64 GB（Mac mini M5 Pro、64GB構成）またはFramework 128 GB',
-              '<strong>RTX 4090限界：</strong> 70B Q4で60–80 tok/s（これ以上加速不可）',
-              '<strong>Mac mini RAMアップグレード不可：</strong> 購入時に64 GB選択；後からアップグレード不可',
-              '<strong>Custom ITX複雑：</strong> ケース加工、ケーブル管理、グリス必要'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'FAQ：よくある質問',
-            items: [
-              '<strong>Q: RTX 4090で70B実行できる？</strong> はい、60–80 tok/s（Framework より遅い）',
-              '<strong>Q: Mac mini M5 Pro vs Framework？</strong> Mac miniは静音・コンパクトで安価（$1,699 vs $1,999）、Frameworkはメモリが多く（128GB vs 64GB）70Bベンチマークも公表済み（20–25 tok/s）— Mac mini M5 Proはまだ未検証',
-              '<strong>Q: 最高ミニPC 2026？</strong> ASUS PN51 + RTX 5060 Tiがコスパ最高（~$900）；Frameworkが速度最高',
-              '<strong>Q: どの量子化を使う？</strong> Q4_K_M：速度・品質・VRAMのベストバランス'
-            ]
-          },
-          {
-            type: 'list',
-            h2: '避けるべき一般的なミス',
-            items: [
-              '<strong>1.</strong> 64 GBの代わりに48 GB Mac mini購入（70Bが入らない）',
-              '<strong>2.</strong> ケース深さを測らずにRTX 4070選択（220mm制限）',
-              '<strong>3.</strong> オフロードがVRAM問題を解く（ネイティブGPUより遅い）',
-              '<strong>4.</strong> アンダーボルト未実施（無料で5–10°C低下）',
-              '<strong>5.</strong> 2025年前のGPUドライバ購入（古いFrameworkで不安定）'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'PromptQuorumがサポート',
-            items: [
-              '<strong>マルチモデルディスパッチ：</strong> プロンプトを最適モデルに送信、最低レイテンシ',
-              '<strong>コンセンサス生成：</strong> 同じプロンプトを2–3モデルで実行、回答を集約',
-              '<strong>コスト追跡：</strong> ローカルモデル全体のトークン支出監視（クラウド請求なし）',
-              '<strong>簡単セットアップ：</strong> 1つのAPI、すべてのローカルLLM（Ollama, LM Studio, vLLM）'
-            ]
-          },
-          {
-            type: 'list',
-            h2: '次のステップ',
-            items: [
-              '<strong>✓ ステップ1：</strong> 選択：Mac mini（静音）、Framework（高速）、Custom ITX（安価）？',
-              '<strong>✓ ステップ2：</strong> ハードウェア注文、OllamaまたはLM Studio インストール',
-              '<strong>✓ ステップ3：</strong> Llama 3.3 70B Q4モデル ダウンロード（~40 GB）',
-              '<strong>✓ ステップ4：</strong> PromptQuorumに接続、マルチモデルディスパッチ開始',
-              '<strong>PromptQuorum 無料体験：</strong> クレジットカード不要、今日からローカルモデルを開始'
-            ]
-          }
+          {"type": "title", "h1": "ローカルLLM向けミニPC 2026", "subtitle": "まずメモリ：Mac mini、Framework Desktop、デスクトップGPUの小型自作機", "link": "https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=ja"},
+          {"type": "list", "h2": "モデルの大きさはメモリで決まる", "items": ["<strong>統合メモリ32GB：</strong> 70BのQ4には不足", "<strong>64GB：</strong> 70B Q4で想定する容量（ダウンロードは約43GB）", "<strong>12〜16GBのGPU：</strong> GPUに全体が収まるのはQ4で13B程度", "<strong>価格：</strong> 時点情報。最新価格を確認"]},
+          {"type": "table", "h2": "Mac mini：M6とM5 Pro（2026年8月）", "columns": ["構成", "メモリ上限", "70B Q4 tok/s", "価格"], "rows": [{"構成": "M6", "メモリ上限": "32GB", "70B Q4 tok/s": "収まらない", "価格": "899ドル〜（16GB、米国）"}, {"構成": "M5 Pro", "メモリ上限": "64GB", "70B Q4 tok/s": "約4〜5（推定）", "価格": "1,699ドル〜（24GB）／64GBは2,699ドル〜、日本は¥479,800〜"}]},
+          {"type": "list", "h2": "Mac mini：長所と短所", "items": ["<strong>長所：</strong> 小型。OllamaはMetalでApple GPUを利用", "<strong>長所：</strong> 64GBのM5 Proなら70B Q4が収まる", "<strong>短所：</strong> 購入後にメモリは増設できない", "<strong>短所：</strong> 70Bには64GBでも余裕が少なめ。速度は当サイト未測定"]},
+          {"type": "list", "h2": "Framework Desktop（128GB）", "items": ["<strong>チップ：</strong> AMD Ryzen AI Max+ 395、Radeon 8060S（40CU）", "<strong>メモリ：</strong> 128GB LPDDR5X-8000（はんだ実装・共有）", "<strong>サイズ：</strong> 4.5L。プロセッサー120W、ブースト140W", "<strong>価格：</strong> DIY版（SSD・OSなし）3,449ドル、2026年10月22日時点で在庫切れ（ComputingForGeeks）"]},
+          {"type": "table", "h2": "Frameworkのチップ系列の速度", "columns": ["モデル", "tok/s"], "rows": [{"モデル": "Llama 3.1 8B Q4", "tok/s": "約30〜40（推定）"}, {"モデル": "Llama 3.3 70B Q4", "tok/s": "約4〜6（第三者の引用値）"}, {"モデル": "DeepSeek-R1 70B Q4", "tok/s": "約4〜6（推定）"}]},
+          {"type": "list", "h2": "Framework DesktopとMac mini M5 Pro", "items": ["<strong>メモリ上限：</strong> 128GB 対 64GB", "<strong>帯域：</strong> 約256GB/s（計算値）対 307GB/s（Apple公表）", "<strong>70B Q4：</strong> 引用値約4〜6 対 推定約4〜5 tok/s。同一条件の比較ではない", "<strong>設定：</strong> OllamaはMacのほうが簡単なのが一般的"]},
+          {"type": "table", "h2": "小型ケースのGPU装着", "columns": ["GPU", "VRAM", "最大モデル（推定）", "確認点"], "rows": [{"GPU": "RTX 5060 Ti", "VRAM": "16または8GB", "最大モデル（推定）": "13B Q4（16GB）", "確認点": "長さはメーカーにより異なる"}, {"GPU": "RTX 5070", "VRAM": "12GB", "最大モデル（推定）": "13B Q4", "確認点": "カード寸法"}, {"GPU": "RTX 4060 Ti", "VRAM": "8または16GB", "最大モデル（推定）": "7B Q4（8GB）", "確認点": "カード寸法"}, {"GPU": "RTX 4070", "VRAM": "12GB", "最大モデル（推定）": "13B Q4", "確認点": "カード寸法"}, {"GPU": "RTX A4000", "VRAM": "16GB", "最大モデル（推定）": "13B Q4", "確認点": "長さとスロット数"}]},
+          {"type": "list", "h2": "構成の選択肢", "items": ["<strong>共有メモリ機：</strong> Mac miniやStrix Halo。容量は購入時に固定", "<strong>Mini-ITX・小型自作：</strong> GPUを交換可能。ケースの制限を確認", "<strong>外付けGPU：</strong> Thunderbolt、USB4、OCuLinkが必要。帯域は狭い", "<strong>一般的な内蔵グラフィックス：</strong> 小型モデルのお試し向け。一般に低速"]},
+          {"type": "list", "h2": "小型ケースの冷却", "items": ["長時間実行時の温度と騒音を確認", "騒音はクーラー、ケース、ファンカーブ、負荷で変わる", "電力制限で発熱が減る場合あり。速度は要確認（自己責任）", "通気口をふさがず、防塵フィルターを掃除"]},
+          {"type": "list", "h2": "制限", "items": ["一般向けGPU1枚ではそのVRAMが上限", "12〜16GBで70Bを動かすにはRAMへの退避が必要で大幅に低速", "新しいGPUはケースと電源に適合が必要", "標準的なMini-ITX基板のPCIe x16は1本"]},
+          {"type": "list", "h2": "よくある質問", "items": ["<strong>RTX 4090をミニPCに？</strong> 手のひらサイズには不可。Founders Editionは長さ304mm、3スロット", "<strong>M6かM5 Proか？</strong> 70Bなら64GBのM5 Pro。約7B〜13BならM6で十分", "<strong>本資料内で手軽な入門は？</strong> 7Bなら899ドル〜（米国）のM6 Mac mini。x86構成は価格未調査"]},
+          {"type": "list", "h2": "避けたい失敗", "items": ["スロットや外付け用端子なしでGPU増設を計画する", "長さ・厚さ・消費電力を確認せずカードを買う", "どのケースにもどの電源も入ると考える", "退避時に必要なシステムRAMを忘れる"]},
+          {"type": "list", "h2": "次のステップ", "items": ["<strong>1.</strong> 必要なモデルの大きさを決める", "<strong>2.</strong> 必要メモリを確認する", "<strong>3.</strong> GPU購入前にスロット・ケース・電源を確認する", "<strong>4.</strong> 最新の現地価格を比較する"]},
         ]
       },
       zh: {
-        title: '2026年本地LLM迷你PC推荐',
+        title: "2026本地LLM迷你PC推荐",
         slides: [
-          {
-            type: 'title',
-            h1: '2026年本地LLM迷你PC推荐',
-            subtitle: '在Mac mini M5 Pro、Framework Desktop或自定义ITX上运行Llama 3.3 70B',
-            link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=zh'
-          },
-          {
-            type: 'list',
-            h2: '为什么选择迷你PC运行本地LLM?',
-            items: [
-              '<strong>紧凑：</strong> 5–15L机箱，桌面友好的外形',
-              '<strong>静音运行：</strong> 无数据中心噪音，无冷却复杂性',
-              '<strong>成本效益：</strong> $900–2,300可以以生产速度运行70B模型',
-              '<strong>隐私保护：</strong> 所有推理本地运行，无云依赖'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Mac Mini M6 / M5 Pro性能',
-            columns: ['配置', '7B Q4 tok/s', '70B Q4 tok/s', '价格'],
-            rows: [
-              { '配置': 'M6（16-32 GB）', '7B Q4 tok/s': '尚未测试', '70B Q4 tok/s': '无法装载', '价格': '$899' },
-              { '配置': 'M5 Pro（24-64 GB）', '7B Q4 tok/s': '尚未测试', '70B Q4 tok/s': '尚未测试', '价格': '$1,699' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Mac Mini M6 / M5 Pro：优缺点',
-            items: [
-              '<strong>✓ 优点：</strong> 静音、低功耗、开箱即用Metal GPU加速',
-              '<strong>✓ 优点：</strong> 最紧凑的70B可用选项（M5 Pro，64GB配置）',
-              '<strong>✗ 缺点：</strong> 内存不可升级（M5 Pro购买时需选择64 GB）',
-              '<strong>✗ 缺点：</strong> 尚无独立70B tok/s基准测试——2026年9月22日发售'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop AMD Ryzen AI Max',
-            items: [
-              '<strong>CPU：</strong> Ryzen AI Max 395+（16核Zen 5）',
-              '<strong>GPU：</strong> Radeon 8060S（40 RDNA CU）',
-              '<strong>内存：</strong> 128 GB LPDDR5X统一（可升级）',
-              '<strong>外形：</strong> 4.5L迷你-ITX，模块化设计',
-              '<strong>功率：</strong> 120W持续，200W峰值'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Framework Desktop模型速度',
-            columns: ['模型', 'tok/s'],
-            rows: [
-              { '模型': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
-              { '模型': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
-              { '模型': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M5 Pro',
-            items: [
-              '<strong>速度：</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s（快1.5–2倍）',
-              '<strong>内存：</strong> Framework 128 GB vs Mac mini 64 GB（容量2倍）',
-              '<strong>可升级：</strong> Framework可以，Mac mini不可以',
-              '<strong>价格：</strong> Framework $1,999 vs Mac mini $2,299（Framework更优）',
-              '<strong>设置：</strong> Framework需要ROCm，Mac mini开箱即用'
-            ]
-          },
-          {
-            type: 'table',
-            h2: 'Mini-ITX GPU兼容性',
-            columns: ['GPU', 'VRAM', '最大模型', '适配?', '价格（2026）'],
-            rows: [
-              { 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最大模型': '13B Q4', '适配?': '适配（217mm）', '价格（2026）': '$450–500' },
-              { 'GPU': 'RTX 5070', 'VRAM': '12 GB', '最大模型': '13B Q4', '适配?': '需确认（225mm）', '价格（2026）': '$550–650' },
-              { 'GPU': 'RTX 4060 Ti', 'VRAM': '8 GB', '最大模型': '7B Q4', '适配?': '适配（216mm）', '价格（2026）': '$280–320' },
-              { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '最大模型': '13B Q4', '适配?': '需确认', '价格（2026）': '$250–350 二手' }
-            ]
-          },
-          {
-            type: 'table',
-            h2: '平台性价比对比',
-            columns: ['平台', 'GPU选项', '总成本', '最适合'],
-            rows: [
-              { '平台': 'Intel NUC 13', 'GPU选项': 'RTX 5060 Ti (TB3)', '总成本': '~$1,300', '最适合': '做工优先' },
-              { '平台': 'ASUS PN51/52', 'GPU选项': 'RTX 5060 Ti (PCIe)', '总成本': '~$900', '最适合': '最佳性价比' },
-              { '平台': 'Giada/Zotac', 'GPU选项': '集成GPU仅', '总成本': '~$400', '最适合': '3B–7B模型' },
-              { '平台': 'Custom ITX', 'GPU选项': '任意GPU', '总成本': '$1,000–1,400', '最适合': '最大灵活性' }
-            ]
-          },
-          {
-            type: 'list',
-            h2: '散热：降温4步骤',
-            items: [
-              '<strong>1. 监控：</strong> GPU-Z或HWiNFO64 — 全负荷监控温度',
-              '<strong>2. 降压：</strong> MSI Afterburner（–50 mV）可降5–10°C，无速度损失',
-              '<strong>3. 换风扇：</strong> Noctua或BeQuiet!（$50–80）降噪10–15 dB',
-              '<strong>4. 优化气流：</strong> 正压设置 = 更好冷却'
-            ]
-          },
-          {
-            type: 'list',
-            h2: '限制：不支持的内容',
-            items: [
-              '<strong>70B模型需要：</strong> 最少64 GB（Mac mini M5 Pro，64GB配置）或128 GB（Framework）',
-              '<strong>RTX 4090上限：</strong> 70B Q4在60–80 tok/s（无法进一步加速）',
-              '<strong>Mac mini内存不可升级：</strong> 购买时选择64 GB；无升级路径',
-              '<strong>Custom ITX复杂性：</strong> 需要机箱改造、线材管理、导热膏'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'FAQ：常见问题',
-            items: [
-              '<strong>Q: 能在RTX 4090上运行70B吗?</strong> 可以，但60–80 tok/s（比Framework慢）',
-              '<strong>Q: Mac mini M5 Pro vs Framework?</strong> Mac mini静音、紧凑、更便宜（$1,699 vs $1,999）；Framework内存更大（128GB vs 64GB）且已公布70B基准测试（20–25 tok/s）——Mac mini M5 Pro尚无此数据',
-              '<strong>Q: 2026年最佳迷你PC?</strong> ASUS PN51 + RTX 5060 Ti性价比最高（~$900）；Framework速度最快',
-              '<strong>Q: 使用哪种量化?</strong> Q4_K_M：速度、质量、VRAM的最佳平衡'
-            ]
-          },
-          {
-            type: 'list',
-            h2: '避免的常见错误',
-            items: [
-              '<strong>1.</strong> 买48 GB Mac mini而非64 GB（70B装不下）',
-              '<strong>2.</strong> 不测量机箱深度就选RTX 4070（220mm限制）',
-              '<strong>3.</strong> 认为卸载能解决VRAM（比原生GPU更慢）',
-              '<strong>4.</strong> 不做降压（免费5–10°C无缺点）',
-              '<strong>5.</strong> 买2025年前GPU驱动（旧Framework上ROCm不稳定）'
-            ]
-          },
-          {
-            type: 'list',
-            h2: 'PromptQuorum如何帮助',
-            items: [
-              '<strong>多模型分发：</strong> 将提示发送到最佳模型以降低延迟',
-              '<strong>共识生成：</strong> 在2–3个模型上运行相同提示，聚合答案',
-              '<strong>成本跟踪：</strong> 监控本地模型的令牌支出（无云账单）',
-              '<strong>简单设置：</strong> 一个API，所有本地LLM（Ollama、LM Studio、vLLM）'
-            ]
-          },
-          {
-            type: 'list',
-            h2: '后续步骤',
-            items: [
-              '<strong>✓ 第1步：</strong> 决定：Mac mini（静音）、Framework（高速）还是Custom ITX（便宜）？',
-              '<strong>✓ 第2步：</strong> 订购硬件，安装Ollama或LM Studio',
-              '<strong>✓ 第3步：</strong> 下载Llama 3.3 70B Q4模型（~40 GB）',
-              '<strong>✓ 第4步：</strong> 连接到PromptQuorum进行多模型分发',
-              '<strong>免费试用PromptQuorum：</strong> 无需信用卡，立即开始使用本地模型'
-            ]
-          }
+          {"type": "title", "h1": "2026本地LLM迷你PC推荐", "subtitle": "先看内存：Mac mini、Framework Desktop或带桌面显卡的小型自组主机", "link": "https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=zh"},
+          {"type": "list", "h2": "内存决定模型大小", "items": ["<strong>32GB统一内存：</strong> 装不下Q4量化的70B", "<strong>64GB：</strong> 运行70B Q4应规划的容量（下载文件约43GB）", "<strong>12–16GB显卡：</strong> 约13B Q4可完全放入GPU", "<strong>价格：</strong> 为特定时点数据，请查看当前价格"]},
+          {"type": "table", "h2": "Mac mini：M6与M5 Pro（2026年8月）", "columns": ["配置", "内存上限", "70B Q4 tok/s", "价格（美国）"], "rows": [{"配置": "M6", "内存上限": "32GB", "70B Q4 tok/s": "装不下", "价格（美国）": "899美元起（16GB）"}, {"配置": "M5 Pro", "内存上限": "64GB", "70B Q4 tok/s": "约4–5（估算）", "价格（美国）": "1,699美元起（24GB）；64GB版2,699美元起"}]},
+          {"type": "list", "h2": "Mac mini：优缺点", "items": ["<strong>优点：</strong> 小巧；Ollama通过Metal使用苹果GPU", "<strong>优点：</strong> 64GB的M5 Pro可容纳70B Q4", "<strong>缺点：</strong> 购买后内存无法升级", "<strong>缺点：</strong> 64GB运行70B较紧张；速度未经PromptQuorum测试"]},
+          {"type": "list", "h2": "Framework Desktop（128GB）", "items": ["<strong>芯片：</strong> AMD Ryzen AI Max+ 395，Radeon 8060S（40个计算单元）", "<strong>内存：</strong> 128GB LPDDR5X-8000，焊接并共享", "<strong>尺寸：</strong> 4.5L；处理器120W，加速140W", "<strong>价格：</strong> DIY版（不含SSD和系统）标价3,449美元，2026年10月22日缺货（ComputingForGeeks）"]},
+          {"type": "table", "h2": "Framework所用芯片系列的速度", "columns": ["模型", "tok/s"], "rows": [{"模型": "Llama 3.1 8B Q4", "tok/s": "约30–40（估算）"}, {"模型": "Llama 3.3 70B Q4", "tok/s": "约4–6（第三方引用值）"}, {"模型": "DeepSeek-R1 70B Q4", "tok/s": "约4–6（估算）"}]},
+          {"type": "list", "h2": "Framework Desktop对比Mac mini M5 Pro", "items": ["<strong>内存上限：</strong> 128GB对64GB", "<strong>带宽：</strong> 约256GB/s（计算值）对307GB/s（苹果标称）", "<strong>70B Q4：</strong> 引用值约4–6对估算约4–5 tok/s；并非同场对比", "<strong>配置：</strong> 用Ollama时Mac通常更简单"]},
+          {"type": "table", "h2": "小机箱显卡装机检查", "columns": ["GPU", "VRAM", "最大模型（估算）", "检查项"], "rows": [{"GPU": "RTX 5060 Ti", "VRAM": "16GB或8GB", "最大模型（估算）": "13B Q4（16GB）", "检查项": "长度因厂商而异"}, {"GPU": "RTX 5070", "VRAM": "12GB", "最大模型（估算）": "13B Q4", "检查项": "显卡尺寸"}, {"GPU": "RTX 4060 Ti", "VRAM": "8GB或16GB", "最大模型（估算）": "7B Q4（8GB）", "检查项": "显卡尺寸"}, {"GPU": "RTX 4070", "VRAM": "12GB", "最大模型（估算）": "13B Q4", "检查项": "显卡尺寸"}, {"GPU": "RTX A4000", "VRAM": "16GB", "最大模型（估算）": "13B Q4", "检查项": "长度和槽位"}]},
+          {"type": "list", "h2": "平台方案", "items": ["<strong>共享内存：</strong> Mac mini或Strix Halo；容量购买时固定", "<strong>Mini-ITX或小型自组：</strong> 桌面显卡可更换；确认机箱限制", "<strong>外接GPU：</strong> 需要Thunderbolt、USB4或OCuLink；通道较窄", "<strong>普通集成显卡：</strong> 适合试用小模型；通常较慢"]},
+          {"type": "list", "h2": "小机箱散热", "items": ["长时间运行模型时检查温度和噪音", "噪音取决于散热器、机箱、风扇曲线和负载", "降低功耗限制可能减少发热；请测试速度（风险自负）", "保持通风口畅通，清洁防尘网"]},
+          {"type": "list", "h2": "局限性", "items": ["单张消费级显卡受其VRAM限制", "12–16GB运行70B需卸载到系统内存，速度慢很多", "新显卡必须适配机箱和电源", "标准Mini-ITX主板只有一条PCIe x16"]},
+          {"type": "list", "h2": "常见问题", "items": ["<strong>迷你PC装RTX 4090？</strong> 掌心大小的装不下：Founders Edition长304mm，占三槽", "<strong>M6还是M5 Pro？</strong> 70B选64GB的M5 Pro；约7B–13B用M6就够", "<strong>本页最简单的入门？</strong> 7B可选899美元起（美国）的M6 Mac mini；未给x86主机报价"]},
+          {"type": "list", "h2": "应避免的错误", "items": ["没有PCIe插槽或外接接口就计划升级GPU", "未核对长度、厚度和功耗就买显卡", "以为任何机箱都能装任何电源", "忽略卸载时所需的系统内存"]},
+          {"type": "list", "h2": "下一步", "items": ["<strong>1.</strong> 确定需要的模型大小", "<strong>2.</strong> 查清所需内存", "<strong>3.</strong> 买显卡前核对插槽、机箱和电源", "<strong>4.</strong> 比较当前当地价格"]},
         ]
-      }
+      },
     };
 
     function renderSlide(slide) {

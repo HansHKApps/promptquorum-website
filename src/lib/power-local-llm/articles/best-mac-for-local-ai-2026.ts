@@ -7,7 +7,7 @@
 // advertised "from" prices cover BASE memory only (M6 16GB $899, M5 Pro 24GB $1,699, M5 Max
 // 36GB $2,499, M5 Ultra 96GB $5,499); totals for 32/64/128/256GB use Daring Fireball's
 // configurator breakdown (32GB M6 ~$1,300, 64GB M5 Pro ~$2,700, 64GB/128GB M5 Max ~$3,500/
-// ~$5,100, 256GB M5 Ultra ~$9,500). M5 Ultra 512GB ships late October 2026, no price yet.
+// ~$5,100, 256GB M5 Ultra ~$9,500). M5 Ultra 512GB orderable since 2026-10-28 from $22,299 (MacRumors).
 // Only independent speed data: adamtalks.tech hands-on (Gemma 3 4B, LM Studio, M6 vs M5 Pro).
 // No independent 70B figures exist for M5 Max/M5 Ultra; MacBook Pro M5 Pro/M5 Max speeds
 // reuse the figures from the linked PromptQuorum M5 Pro vs M5 Max benchmarks page. MacBook Pro prices vary by source.
@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best Mac for Local AI 2026: Mac Mini vs Mac Studio vs MacBook Pro',
     seoTitle: 'Best Mac for Local AI 2026: Mac Mini vs Studio vs MBP',
     intro:
-      'Most Mac-for-AI advice fixates on the chip name when the number that actually binds the decision is unified memory. On Apple Silicon the model lives in the same memory pool as everything else, so a 64 GB Mac Mini runs a 34B model that a faster 32 GB Mac Mini cannot fit. Apple refreshed the Mac Mini and Mac Studio lineups on August 25, 2026 (shipping since September 22, 2026), and this guide compares four tiers for running local LLMs on the new hardware — the entry-level Mac Mini M6 as a budget always-on server, the Mac Mini M5 Pro as a more capable server, the MacBook Pro 16" as a portable workstation (M5 Pro or M5 Max), and the Mac Studio (M5 Max or M5 Ultra) as the desktop and extreme-memory options — on the figures that decide a purchase: unified memory, memory bandwidth, measured tokens per second, and price. Two caveats: Apple\'s advertised starting prices cover base memory, not the memory local LLMs need — the $899 Mac Mini M6 has 16 GB, the $1,699 Mac Mini M5 Pro has 24 GB, and the $2,499 Mac Studio M5 Max has 36 GB — so the configurations recommended here cost more (a 32 GB M6 is about $1,300, a 64 GB M5 Pro about $2,700, a 128 GB Mac Studio M5 Max about $5,100). And independent testing of the new chips is still thin: one hands-on test measured the M6 and M5 Pro Mac Mini on a small model, and we found no independent 70B measurements for the M5 Max or M5 Ultra, so performance claims for those chips are Apple\'s own figures, labeled as such. Prices are US list prices at the time of the last update; confirm current Apple Store pricing before buying.',
+      'Most Mac-for-AI advice fixates on the chip name when the number that actually binds the decision is unified memory. On Apple Silicon the model lives in the same memory pool as everything else, so a 64 GB Mac Mini runs a 34B model that a faster 32 GB Mac Mini cannot fit. Apple refreshed the Mac Mini and Mac Studio lineups on August 25, 2026 (shipping since September 22, 2026), and this guide compares four tiers for running local LLMs on the new hardware — the entry-level Mac Mini M6 as a budget always-on server, the Mac Mini M5 Pro as a more capable server, the MacBook Pro 16" as a portable workstation (M5 Pro or M5 Max), and the Mac Studio (M5 Max or M5 Ultra) as the desktop and extreme-memory options — on the figures that decide a purchase: unified memory, memory bandwidth, tokens-per-second figures where we have them (one small-model test; estimates are labelled), and price. Two caveats: Apple\'s advertised starting prices cover base memory, not the memory local LLMs need — the $899 Mac Mini M6 has 16 GB, the $1,699 Mac Mini M5 Pro has 24 GB, and the $2,499 Mac Studio M5 Max has 36 GB — so the configurations recommended here cost more (a 32 GB M6 is about $1,300, a 64 GB M5 Pro about $2,700, a 128 GB Mac Studio M5 Max about $5,100). And independent testing of the new chips is still thin: one hands-on test measured the M6 and M5 Pro Mac Mini on a small model, and we found no independent 70B measurements for the M5 Max or M5 Ultra, so this guide gives no measured 70B speed for those chips. MacStories and BGR have tested the M5 Ultra on other models. Prices are US list prices at the time of the last update; confirm current Apple Store pricing before buying.',
     metaDescription:
       'Mac Mini M6 32GB ~$1,300, M5 Pro 64GB ~$2,700. Mac Studio M5 Max 128GB ~$5,100, M5 Ultra from $5,499. Unified memory, bandwidth and real prices compared.',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-en.webp',
@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Which Mac should I buy for running local LLMs in 2026?',
         answer:
-          'Buy for unified memory, then bandwidth — and price the memory, not the chip: Apple\'s starting prices cover only base memory. A Mac Mini M6 32 GB (about $1,300; the $899 base has 16 GB) is the budget entry and covers 7B-14B models — it cannot fit 30B or 70B models. A Mac Mini M5 Pro 64 GB (about $2,700; the $1,699 base has 24 GB) is the value pick for serious use and runs 34B models silently as an always-on server. A MacBook Pro 16" M5 Pro 64 GB is the portable pick for 34B-70B Q4 work, and the M5 Max 128 GB runs 70B at Q5. A Mac Studio M5 Max (64 GB about $3,500, 128 GB about $5,100) is the desktop pick with twice the Mac Mini M5 Pro\'s bandwidth, and the Mac Studio M5 Ultra (from $5,499 with 96 GB, 256 GB about $9,500, up to 512 GB) is the extreme pick for the largest local models. All of these shipped September 22, 2026, except the M5 Ultra 512 GB configuration, which ships in late October 2026.',
+          'Buy for unified memory, then bandwidth — and price the memory, not the chip: Apple\'s starting prices cover only base memory. A Mac Mini M6 32 GB (about $1,300; the $899 base has 16 GB) is the budget entry and covers 7B-14B models — it cannot fit 30B or 70B models. A Mac Mini M5 Pro 64 GB (about $2,700; the $1,699 base has 24 GB) is the value pick for serious use and runs 34B models silently as an always-on server. A MacBook Pro 16" M5 Pro 64 GB is the portable pick for 34B-70B Q4 work, and the M5 Max 128 GB runs 70B at Q5. A Mac Studio M5 Max (64 GB about $3,500, 128 GB about $5,100) is the desktop pick with twice the Mac Mini M5 Pro\'s bandwidth, and the Mac Studio M5 Ultra (from $5,499 with 96 GB, 256 GB about $9,500, up to 512 GB) is the extreme pick for the largest local models. All of these have shipped since September 22, 2026; the M5 Ultra 512 GB configuration has been orderable since October 28, 2026 (from $22,299).',
         bullets: [
           'Budget: Mac Mini M6 32 GB, about $1,300, 7B-14B models only (32 GB memory ceiling)',
           'Value / always-on server: Mac Mini M5 Pro 64 GB, about $2,700, 34B models and tight 70B Q4',
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desktop: Mac Studio M5 Max 64 GB ~$3,500 or 128 GB ~$5,100; extreme: M5 Ultra from $5,499, up to 512 GB',
           'Apple Silicon memory cannot be upgraded after purchase — buy the size you need',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -118,8 +118,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Portable pick: MacBook Pro 16" M5 Pro 64 GB (about $3,000-3,400) or M5 Max 128 GB (about $5,000+)** — 307-614 GB/s bandwidth, runs 70B Q4 to Q5. Can throttle under sustained load (size varies by workload and chassis) — the trade-off for portability.',
           '**Desktop pick: Mac Studio M5 Max 64 GB (~$3,500) or 128 GB (~$5,100)** — 614 GB/s bandwidth runs 70B at Q5 on the 128 GB model. Shipping since September 22, 2026; we found no independent benchmarks yet.',
           '**Mac Mini M5 Pro vs Mac Studio M5 Max:** at the same 64 GB the Mac Studio costs about $800 more and has twice the bandwidth (614 vs 307 GB/s); only the Mac Studio reaches 128 GB.',
-          '**Extreme pick: Mac Studio M5 Ultra (from $5,499 with 96 GB; 256 GB about $9,500; up to 512 GB)** — 1.2 TB/s bandwidth; the 512 GB configuration ships in late October 2026 and has no announced price.',
-          '**Bandwidth, not chip name, sets speed.** In one independent test the M5 Pro Mac Mini generated about 92 tokens per second against the M6\'s 54 on a small model — a gap that tracks bandwidth (307 vs 153-170 GB/s). The M5 Max (460-614 GB/s) has up to twice the M5 Pro\'s bandwidth (Apple specifications; no independent M5 Max or M5 Ultra measurements found).',
+          '**Extreme pick: Mac Studio M5 Ultra (from $5,499 with 96 GB; 256 GB about $9,500; up to 512 GB)** — 1.2 TB/s bandwidth; the 512 GB configuration has been orderable since October 28, 2026, from $22,299.',
+          '**Bandwidth, not chip name, sets speed.** In one independent test the M5 Pro Mac Mini generated about 92 tokens per second against the M6\'s 54 on a small model — a gap that tracks bandwidth (307 vs 153-170 GB/s). The M5 Max (460-614 GB/s) has up to twice the M5 Pro\'s bandwidth (Apple specifications; we found no independent M5 Max measurements, and the independent M5 Ultra tests we know of use other models, not 70B).',
           '**Apple Silicon trades raw speed for capacity and quiet.** A desktop RTX GPU is faster on 7B-13B models, but its 24-32 GB VRAM cannot fit a 70B model that a 128 GB Mac runs comfortably, let alone the 512 GB the Mac Studio M5 Ultra can reach.',
           '**Power draw is low across the line.** A Mac Mini draws 25-55 W (estimate) under LLM load and an M5 Max 60-100 W (estimate) — versus 300-450 W for a desktop RTX card doing comparable work.',
         ],
@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Unified memory rule of thumb at Q4_K_M:** roughly 0.6 GB per billion parameters, plus 2-4 GB for context and tooling.',
           '**Memory bandwidth:** Mac Mini M6 170 GB/s, M5 Pro 307 GB/s, M5 Max 460-614 GB/s, M5 Ultra 1.2 TB/s.',
           '**Power draw range:** Mac Mini M5 Pro 25-55 W (estimate), MacBook Pro M5 Max 60-100 W (estimate) under LLM load.',
-          '**Availability:** the Aug 25, 2026 Mac Mini and Mac Studio refresh has shipped since September 22, 2026, except the M5 Ultra 512 GB configuration, which ships late October 2026 — confirm current Apple Store pricing before buying.',
+          '**Availability:** the Aug 25, 2026 Mac Mini and Mac Studio refresh has shipped since September 22, 2026, and the M5 Ultra 512 GB configuration has been orderable since October 28, 2026 (from $22,299) — confirm current Apple Store pricing before buying.',
         ],
       },
       editorsChoice: {
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Editor\'s Choice: Mac Mini M5 Pro 64 GB',
         highlight: true,
         content:
-          '**For most buyers choosing a Mac specifically for local AI, the Mac Mini M5 Pro with 64 GB of unified memory is the pick that balances capability, price, and running cost.** Its 64 GB clears every model up to 34B with context headroom and fits 70B Q4 tightly, it runs silently and draws only 25-55 W (estimate) under inference load, and at about $2,700 (the $1,699 base model has only 24 GB) it is the cheapest Mac that holds a 64 GB model. It also makes an ideal always-on home or office AI server. Step down to the Mac Mini M6 32 GB (about $1,300) only if 7B-14B models genuinely cover your use case — its 32 GB ceiling cannot fit 30B or 70B models. Step up to a Mac Studio M5 Max 64 GB (about $3,500) if you want twice the memory bandwidth at the same memory size, to the MacBook Pro 16" only if you need portability, to a Mac Studio M5 Max 128 GB (about $5,100) only if you need 70B at higher quality on the desktop, or to a Mac Studio M5 Ultra if you need the largest local models.',
+          '**For most buyers choosing a Mac specifically for local AI, the Mac Mini M5 Pro with 64 GB of unified memory is the pick that balances capability, price, and running cost.** Its 64 GB clears every model up to 34B with context headroom and fits 70B Q4 tightly, it runs silently and draws only 25-55 W (estimate) under inference load, and at about $2,700 (the $1,699 base model has only 24 GB) it is the lowest-priced Mac in this guide that holds a 64 GB model. It also makes an ideal always-on home or office AI server. Step down to the Mac Mini M6 32 GB (about $1,300) only if 7B-14B models genuinely cover your use case — its 32 GB ceiling cannot fit 30B or 70B models. Step up to a Mac Studio M5 Max 64 GB (about $3,500) if you want twice the memory bandwidth at the same memory size, to the MacBook Pro 16" only if you need portability, to a Mac Studio M5 Max 128 GB (about $5,100) only if you need 70B at higher quality on the desktop, or to a Mac Studio M5 Ultra if you need the largest local models.',
         callouts: [
           {
             type: 'note',
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Macs Compare for Local AI in 2026',
         content:
-          'Memory and bandwidth figures are Apple specifications. MacBook Pro speeds are indicative estimates; see the linked M5 Pro vs M5 Max benchmarks page for its ranges. They were not re-measured for this guide. The Mac Mini row speeds come from one independent hands-on test of a small 4B model (see Sources) on base-memory machines; we found no independent 70B measurements for the M6, M5 Pro Mac Mini, M5 Max Mac Studio, or M5 Ultra, so those cells are marked rather than estimated. Prices are US list prices for the configuration named in the row: Apple\'s advertised starting prices cover base memory only (M6 16 GB, M5 Pro 24 GB, M5 Max 36 GB, M5 Ultra 96 GB), so the memory upgrade is included here. Confirm current Apple Store pricing before buying.',
+          'Memory and bandwidth figures are Apple specifications. MacBook Pro speeds are estimates from memory bandwidth and model file size, not measurements; see the linked M5 Pro vs M5 Max speed estimates page for the method. The Mac Mini row speeds come from one independent hands-on test of a small 4B model (see Sources) on base-memory machines; we found no independent 70B measurements for the M6, M5 Pro Mac Mini, M5 Max Mac Studio, or M5 Ultra, so those cells are marked rather than estimated. Prices are US list prices for the configuration named in the row: Apple\'s advertised starting prices cover base memory only (M6 16 GB, M5 Pro 24 GB, M5 Max 36 GB, M5 Ultra 96 GB), so the memory upgrade is included here. Confirm current Apple Store pricing before buying.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -207,8 +207,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64 GB](https://www.apple.com/macbook-pro/)',
             'Unified memory': '64 GB',
             'Bandwidth': '307 GB/s',
-            'Speed (8B Q4)': '~50-60 tok/s',
-            'Speed (70B Q4)': '~8-12 tok/s',
+            'Speed (8B Q4)': '~38-50 tok/s',
+            'Speed (70B Q4)': '~4-5 tok/s',
             'Price (US)': '~$3,000-3,400',
             'Best for': 'Portable 34B-70B Q4 (tight)',
           },
@@ -216,8 +216,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128 GB',
             'Unified memory': '128 GB',
             'Bandwidth': '614 GB/s',
-            'Speed (8B Q4)': '~100-120 tok/s',
-            'Speed (70B Q4)': '16-22 tok/s',
+            'Speed (8B Q4)': '~75-100 tok/s',
+            'Speed (70B Q4)': '~9-11 tok/s',
             'Price (US)': '~$5,000+',
             'Best for': 'Portable 70B Q5, multi-model',
           },
@@ -246,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Speed (8B Q4)': 'not yet benchmarked',
             'Speed (70B Q4)': 'not yet benchmarked',
             'Price (US)': 'from $5,499; 256 GB ~$9,500',
-            'Best for': 'Extreme workstation, 512 GB not yet orderable',
+            'Best for': 'Extreme workstation; 512 GB from $22,299',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-en.webp',
@@ -320,8 +320,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The MacBook Pro 16" (M5 Pro or M5 Max, launched March 2026 and unaffected by Apple\'s August 25 Mac Mini/Mac Studio refresh) is the pick for buyers who need 70B-class models in a portable form factor — and the answer to "best MacBook for local AI".** The M5 Max is the only portable chip in this guide that comfortably clears 70B; the M5 Pro fits 70B at Q4 tightly. The trade-off versus a desktop with the same chip is that a laptop can throttle under sustained inference; the size varies by workload and chassis.',
         items: [
-          '**MacBook Pro 16" M5 Pro 64 GB (about $3,000-3,400; the 16" M5 Pro starts at $2,699):** up to 18-core CPU, 20-core GPU, 307 GB/s bandwidth — 64 GB is this chip\'s memory ceiling. Runs 8B models at roughly 50-60 tok/s and Llama 3.3 70B Q4 at roughly 8-12 tok/s (tight fit). The portable entry point to 70B local AI.',
-          '**MacBook Pro 16" M5 Max 128 GB (about $5,000 and up; the 16" M5 Max starts at $3,899):** up to 40-core GPU, 614 GB/s bandwidth. Runs 8B models at roughly 100-120 tok/s and 70B at Q5 (higher quality) at 12-18 tok/s, and supports running two models at once — for example a 70B model plus a 13B model.',
+          '**MacBook Pro 16" M5 Pro 64 GB (about $3,000-3,400; the 16" M5 Pro starts at $2,699):** up to 18-core CPU, 20-core GPU, 307 GB/s bandwidth — 64 GB is this chip\'s memory ceiling. Runs 8B models at roughly 38-50 tok/s and Llama 3.3 70B Q4 at roughly 4-5 tok/s (tight fit). The portable entry point to 70B local AI. These speeds are estimates from memory bandwidth and model file size, not measurements.',
+          '**MacBook Pro 16" M5 Max 128 GB (about $5,000 and up; the 16" M5 Max starts at $3,899):** up to 40-core GPU, 614 GB/s bandwidth. Runs 8B models at roughly 75-100 tok/s and 70B at Q5 (higher quality) at 7-10 tok/s, and supports running two models at once — for example a 70B model plus a 13B model. These speeds are estimates from memory bandwidth and model file size, not measurements.',
           '**Why buy this Mac:** you need 70B models and portability, you want a single machine for creative work and AI, or you present and travel and cannot leave a desktop behind.',
           '**Why skip this Mac:** if the machine never leaves a desk, a Mac Studio with the same chip runs cooler and sustains full speed, at a similar price at 128 GB; if 34B models are enough, the Mac Mini M5 Pro costs several hundred dollars less.',
         ],
@@ -356,17 +356,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max vs M5 Ultra: Desktop and Extreme',
         content:
-          '**Apple refreshed the Mac Studio on August 25, 2026 with the M5 Max (desktop 70B pick) and M5 Ultra (extreme, up to 512 GB); base configurations shipped September 22, 2026, and the M5 Ultra 512 GB configuration follows in late October 2026.** A 128 GB Mac Studio M5 Max runs 70B at Q5 quality and stays quieter under sustained load than a MacBook Pro, because the desktop chassis has no laptop thermal ceiling. The M5 Ultra exists for buyers who need models larger than 128 GB can hold. The advertised starting prices ($2,499 and $5,499) are for 36 GB and 96 GB; the 128 GB M5 Max costs about $5,100.',
+          '**Apple refreshed the Mac Studio on August 25, 2026 with the M5 Max (desktop 70B pick) and M5 Ultra (extreme, up to 512 GB); base configurations shipped September 22, 2026, and the M5 Ultra 512 GB configuration became orderable on October 28, 2026.** A 128 GB Mac Studio M5 Max runs 70B at Q5 quality and stays quieter under sustained load than a MacBook Pro, because the desktop chassis has no laptop thermal ceiling. The M5 Ultra exists for buyers who need models larger than 128 GB can hold. The advertised starting prices ($2,499 and $5,499) are for 36 GB and 96 GB; the 128 GB M5 Max costs about $5,100.',
         items: [
           '**Mac Studio M5 Max (from $2,499 with 36 GB; 64 GB about $3,500; 128 GB about $5,100):** the base 32-core GPU model has 460 GB/s and tops out at 36 GB; the 40-core GPU model (from about $3,100 with 48 GB) has 614 GB/s and is the only one offered with 64 GB or 128 GB. The desktop pick for 70B models. We found no independent 70B measurements for it.',
-          '**Mac Studio M5 Ultra (from $5,499 with 96 GB; 256 GB about $9,500, or about $10,800 with the 80-core GPU):** the 36-core CPU / 80-core GPU configuration supports up to 512 GB of unified memory at roughly 1.2 TB/s bandwidth. The 512 GB configuration ships late October 2026, is not yet orderable, and has no announced price. This is the tier for the largest local models — well beyond a single 70B model — not a mainstream buy.',
+          '**Mac Studio M5 Ultra (from $5,499 with 96 GB; 256 GB about $9,500, or about $10,800 with the 80-core GPU):** the 36-core CPU / 80-core GPU configuration supports up to 512 GB of unified memory at roughly 1.2 TB/s bandwidth. The 512 GB configuration has been orderable since October 28, 2026, from $22,299 ([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). This is the tier for the largest local models — well beyond a single 70B model — not a mainstream buy.',
           '**Why buy a Mac Studio:** you want a 70B desktop machine on the current lineup, you want quieter sustained operation than a MacBook Pro, you want twice the Mac Mini M5 Pro\'s bandwidth, or (M5 Ultra specifically) you need to run models larger than 128 GB can hold.',
           '**Why skip a Mac Studio:** if you need portability, buy a MacBook Pro; if 34B models are enough and speed is secondary, the Mac Mini M5 Pro is cheaper; if you want a 70B desktop for less, look at the previous-generation Mac Studio M4 Max, which is likely to be discounted now that the new lineup has shipped.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Prices and specs above are Apple\'s published figures plus configurator pricing reported by Daring Fireball; we found no independent benchmarks for the M5 Max or M5 Ultra Mac Studio. One source lists the 128 GB M5 Max configuration as discontinued while others still list it — confirm it is orderable on the Apple Store before planning a purchase around it.',
+            text: 'Prices and specs above are Apple\'s published figures plus configurator pricing reported by Daring Fireball; we found no independent 70B benchmarks for the M5 Max or M5 Ultra Mac Studio; independent M5 Ultra tests on other models are summarised in our [Apple Silicon M5 guide](/local-llms/apple-silicon-m5-local-llm). Confirm your exact configuration is orderable on the Apple Store before planning a purchase around it.',
           },
         ],
         affiliateLinks: [
@@ -429,9 +429,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**8B models — 8-9 GB:** fit any Mac with 16 GB or more, including the Mac Mini M6. A 32 GB Mac leaves comfortable headroom.',
           '**13-14B models — 11-13 GB:** need 32 GB once macOS and context overhead are counted. Mac Mini M6 (32 GB) and up.',
           '**34B models — 21-25 GB:** need 64 GB in practice. Mac Mini M5 Pro 64 GB is the value pick here — the M6\'s 32 GB ceiling cannot fit a 34B model.',
-          '**70B models at Q4 — 39-42 GB:** need 64 GB minimum, with 64 GB tight once context is added. Mac Mini M5 Pro 64 GB or MacBook Pro 16" M5 Pro 64 GB is the floor.',
+          '**70B models at Q4 — 43+ GB:** need 64 GB minimum, with 64 GB tight once context is added. Mac Mini M5 Pro 64 GB or MacBook Pro 16" M5 Pro 64 GB is the floor.',
           '**70B models at Q5 or concurrent models — 50-70 GB+:** need 128 GB. MacBook Pro 16" M5 Max 128 GB or a Mac Studio M5 Max 128 GB.',
-          '**Models larger than a single 70B, or very large MoE models — 100 GB+:** need the Mac Studio M5 Ultra, which reaches up to 512 GB unified memory (the 512 GB configuration ships late October 2026).',
+          '**Models larger than a single 70B, or very large MoE models — 100 GB+:** need the Mac Studio M5 Ultra, which reaches up to 512 GB unified memory (the 512 GB configuration has been orderable since October 28, 2026, from $22,299).',
         ],
         callouts: [
           {
@@ -439,8 +439,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple Silicon memory is soldered and cannot be upgraded. Buy one tier above your current need: if you run 34B models today, 64 GB is the floor, not the comfortable choice. For the full method, see the unified memory guide in Related Reading.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-en.webp',
-        imageCaption: 'Unified memory by model size at Q4_K_M: 8B needs 8-9 GB, 13-14B needs 11-13 GB, 34B needs 21-25 GB, 70B Q4 needs 39-42 GB, and 70B Q5 or concurrent models need 50-70+ GB.',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. What is the largest model you want to run?** 7-14B: Mac Mini M6 32 GB. 34B: Mac Mini M5 Pro 64 GB. 70B Q4: 64 GB Mac Mini M5 Pro or MacBook Pro M5 Pro. 70B Q5 or concurrent: 128 GB MacBook Pro M5 Max or Mac Studio M5 Max. 100B+ or huge MoE: Mac Studio M5 Ultra, up to 512 GB.',
           '**2. Does the machine need to move?** Yes: MacBook Pro 16" M5 Pro or M5 Max. No: Mac Mini (up to 34B/70B Q4) or Mac Studio (70B and up).',
           '**3. Is it an always-on server?** Yes: Mac Mini M5 Pro 64 GB — silent, 25-55 W (estimate), cheapest to run 24/7. No: pick by model size above.',
-          '**4. Do you need answers as fast as possible, or 512 GB?** Faster at the same memory: Mac Studio M5 Max (614 GB/s versus 307 GB/s). 512 GB: the Mac Studio M5 Ultra 512 GB configuration ships late October 2026 and is not orderable yet; the 256 GB configuration is available now.',
+          '**4. Do you need answers as fast as possible, or 512 GB?** Faster at the same memory: Mac Studio M5 Max (614 GB/s versus 307 GB/s). 512 GB: the Mac Studio M5 Ultra 512 GB configuration has been orderable since October 28, 2026, from $22,299.',
         ],
         snippetBlocks: [
           {
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'The new Mac Mini and Mac Studio models shipped on September 22, 2026; the Mac Studio M5 Ultra 512 GB configuration ships in late October 2026. Apple\'s advertised starting prices cover base memory only — open the current Apple Store configurator for the memory tier you need, because upgrade prices are the largest part of the total.',
+            text: 'The new Mac Mini and Mac Studio models shipped on September 22, 2026; the Mac Studio M5 Ultra 512 GB configuration has been orderable since October 28, 2026. Apple\'s advertised starting prices cover base memory only — open the current Apple Store configurator for the memory tier you need, because upgrade prices are the largest part of the total.',
           },
         ],
         affiliateLinks: [
@@ -506,8 +506,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Reading the advertised starting price as the price of the Mac you need.** $899 buys a Mac Mini M6 with 16 GB, $1,699 a Mac Mini M5 Pro with 24 GB, and $2,499 a Mac Studio M5 Max with 36 GB. The 32 GB M6 is about $1,300, the 64 GB M5 Pro about $2,700 and the 128 GB M5 Max about $5,100.',
           '**Assuming the Mac Mini M6\'s 32 GB ceiling covers 30B or 70B models.** It does not. 32 GB is a hard limit at roughly 14B models — the M5 Pro (64 GB) is the floor for 34B and up.',
           '**Forgetting that Apple Silicon memory cannot be upgraded.** The memory is soldered. Underbuy and the only fix is a new Mac — size one tier above today\'s need.',
-          '**Waiting for the 512 GB Mac Studio M5 Ultra without checking the price.** The 512 GB configuration ships late October 2026, has no announced price, and the 256 GB configuration already costs about $9,500.',
-          '**Buying a MacBook Pro for a desk-bound 24/7 server.** It throttles under sustained load. For an always-on server, the Mac Mini M5 Pro or a Mac Studio runs cooler and quieter.',
+          '**Planning around the 512 GB Mac Studio M5 Ultra without checking the price.** It starts at $22,299 (orderable since October 28, 2026), and the 256 GB configuration is about $9,500.',
+          '**Buying a MacBook Pro for a desk-bound 24/7 server.** It can throttle under sustained load. For an always-on server, the Mac Mini M5 Pro or a Mac Studio runs cooler and quieter.',
           '**Overbuying for 8B models.** If 8B models cover your use case, a 128 GB Mac is wasted money. Match the memory tier to the model, not to the budget you happen to have.',
           '**Treating Apple\'s "up to 4x AI performance" claim as a generation-speed benchmark.** It is Apple\'s own figure for the M6 versus the outgoing M4; the biggest gains are in prompt processing, while token generation is limited by memory bandwidth (the one independent test we found measured the M5 Pro about 70% faster than the M6 on a small model).',
         ],
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Configurations and pricing for the new Mac minis and Mac Studios (Daring Fireball)](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — Memory and storage upgrade prices used for the totals in this guide.',
           '[Apple rolling out the new Mac mini and Mac Studio in 30 countries (MacTech)](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — Shipping date and US starting prices.',
           '[M6 Mac mini vs M5 Pro Mac mini: Real-World Tests (Adam Talks Tech)](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — Independent hands-on test of both Mac Mini models with a 4B model in LM Studio (the author discloses affiliate links).',
-          '[M5 Pro vs M5 Max LLM Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens-per-second figures for 8B and 70B models on the M5 Pro and M5 Max MacBook Pro, as reported on that page (see its methodology note).',
+          '[M5 Pro vs M5 Max for Local LLMs: Specs and Speed Estimates](/local-llms/m5-pro-max-llm-benchmarks-2026) — estimated (not measured) tokens per second for 8B and 70B models, calculated from memory bandwidth and model file size.',
           '[Mac Mini M5 as Local AI Server](/local-llms/mac-mini-m5-local-ai-server) — estimates based on Apple\'s published specs (not measured by PromptQuorum): Mac Mini M5 Pro power draw, electricity cost, and always-on server performance.',
         ],
       },
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is the Mac Studio M5 available yet?',
-            a: 'Yes, with one exception. The Mac Studio M5 Max and M5 Ultra shipped on September 22, 2026. The M5 Ultra 512 GB configuration follows in late October 2026, is not yet orderable, and has no announced price. The M5 Ultra starts at $5,499 with 96 GB, and the 256 GB configuration is about $9,500. If you want a cheaper 70B desktop Mac, the previous-generation Mac Studio (M4 Max) may be discounted.',
+            a: 'Yes, with one exception. The Mac Studio M5 Max and M5 Ultra shipped on September 22, 2026. The M5 Ultra 512 GB configuration has been orderable since October 28, 2026, from $22,299. The M5 Ultra starts at $5,499 with 96 GB, and the 256 GB configuration is about $9,500. If you want a cheaper 70B desktop Mac, the previous-generation Mac Studio (M4 Max) may be discounted.',
           },
           {
             q: 'Mac Mini M5 Pro or Mac Studio M5 Max for AI?',
@@ -552,15 +552,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much unified memory do I need for local LLMs on a Mac?',
-            a: 'At Q4_K_M quantization, plan for roughly 0.6 GB per billion parameters plus 2-4 GB of overhead, and remember macOS shares the same pool. That means about 8-9 GB for 8B models, 21-25 GB for 34B, and 39-42 GB for 70B. A 64 GB Mac (Mac Mini M5 Pro or MacBook Pro M5 Pro) comfortably runs 34B and just fits 70B Q4; 128 GB (MacBook Pro M5 Max or Mac Studio M5 Max) is needed for 70B at Q5 or running multiple models; the Mac Studio M5 Ultra reaches up to 512 GB for models beyond a single 70B.',
+            a: 'At Q4_K_M quantization, plan for roughly 0.6 GB per billion parameters plus 2-4 GB of overhead, and remember macOS shares the same pool. That means about 8-9 GB for 8B models, 21-25 GB for 34B, and 43+ GB for 70B. A 64 GB Mac (Mac Mini M5 Pro or MacBook Pro M5 Pro) comfortably runs 34B and just fits 70B Q4; 128 GB (MacBook Pro M5 Max or Mac Studio M5 Max) is needed for 70B at Q5 or running multiple models; the Mac Studio M5 Ultra reaches up to 512 GB for models beyond a single 70B.',
           },
           {
             q: 'Mac Mini or MacBook Pro for local AI?',
-            a: 'Choose the Mac Mini M5 Pro if the machine stays on a desk and 34B models are your ceiling — it is cheaper, silent, and ideal as an always-on server. Choose a MacBook Pro 16" (M5 Pro or M5 Max) if you need to run 70B models or carry the machine. The MacBook Pro M5 Max is the most capable portable chip for 70B, but it throttles under sustained load, so a desk-bound server is still better served by a Mac Mini or Mac Studio.',
+            a: 'Choose the Mac Mini M5 Pro if the machine stays on a desk and 34B models are your ceiling — it is cheaper, silent, and ideal as an always-on server. Choose a MacBook Pro 16" (M5 Pro or M5 Max) if you need to run 70B models or carry the machine. The MacBook Pro M5 Max is the most capable portable chip for 70B, but it can throttle under sustained load, so a desk-bound server is still better served by a Mac Mini or Mac Studio.',
           },
           {
             q: 'Can a Mac run 70B models?',
-            a: 'Yes. A MacBook Pro 16" M5 Pro with 64 GB runs Llama 3.3 70B Q4 at roughly 8-12 tokens per second (a tight fit), and the M5 Max 128 GB version runs 70B at Q5 at 12-18 tokens per second. A Mac Studio M5 Max 128 GB should also run 70B comfortably, but we found no independent measurements yet. The Mac Mini M6 cannot — its 32 GB ceiling is too small; the Mac Mini M5 Pro at 64 GB fits 70B Q4 tightly.',
+            a: 'Yes. A MacBook Pro 16" M5 Pro with 64 GB runs Llama 3.3 70B Q4 at roughly 4-5 tokens per second (a tight fit), and the M5 Max 128 GB version runs 70B at Q5 at 7-10 tokens per second. A Mac Studio M5 Max 128 GB should also run 70B comfortably, but we found no independent measurements yet. The Mac Mini M6 cannot — its 32 GB ceiling is too small; the Mac Mini M5 Pro at 64 GB fits 70B Q4 tightly. These speeds are estimates from memory bandwidth and model file size, not measurements.',
           },
           {
             q: 'Is a Mac faster than an NVIDIA GPU for local LLMs?',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much does it cost to run a Mac as an AI server?',
-            a: 'Very little. A Mac Mini M5 Pro is estimated to draw roughly 25-55 W under LLM load and around 8 W at idle (estimates, not measured by PromptQuorum). Running it 24/7 for a full year would then cost roughly $26-39 in US electricity. That low running cost is a core reason the Mac Mini is the value pick for an always-on server.',
+            a: 'Very little. A Mac Mini M5 Pro is estimated to draw roughly 25-55 W under LLM load and around 8 W at idle (estimates, not measured by PromptQuorum). Running it 24/7 for a full year in mixed to light use would then cost roughly $26-39 at $0.15/kWh (estimate); heavier load or a higher tariff costs more. That low running cost is a core reason the Mac Mini is the value pick for an always-on server.',
           },
         ],
       },
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[See the full M5 Pro vs M5 Max benchmark set](/local-llms/m5-pro-max-llm-benchmarks-2026) — measured tokens-per-second, time-to-first-token, and power draw behind the figures in this guide.',
+          '[M5 Pro vs M5 Max for Local LLMs: Specs and Speed Estimates](/local-llms/m5-pro-max-llm-benchmarks-2026) — how the estimates behind this comparison are calculated, and how to measure speed on your own Mac.',
           '[Set up a Mac Mini M5 as an always-on AI server](/local-llms/mac-mini-m5-local-ai-server) — the full server build, with estimated power cost and always-on considerations (estimates, not measured).',
           '[Compare Apple Silicon across the whole M-series line](/local-llms/apple-silicon-local-llm-guide-2026) — how M1 through M5 Max compare on unified memory and bandwidth.',
           '[Work out how much unified memory each model size needs](/local-llms/how-much-unified-memory-for-local-llm) — the complete memory-by-model-size method behind the quick formula here.',
@@ -597,13 +597,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     theme: 'Overview & Reference',
     title: 'El mejor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro',
     seoTitle: 'El mejor Mac para IA local 2026: Mini vs Studio vs MBP',
     intro:
-      'La mayoría de los consejos sobre Mac para IA se centran en el nombre del chip, cuando el número que realmente define la decisión es la memoria unificada. En Apple Silicon el modelo vive en el mismo pool de memoria que todo lo demás, por lo que un Mac Mini de 64 GB puede ejecutar un modelo 34B que un Mac Mini de 32 GB más rápido no puede cargar. Apple renovó las líneas Mac Mini y Mac Studio el 25 de agosto de 2026 (con envíos desde el 22 de septiembre de 2026), y esta guía compara cuatro niveles para ejecutar LLMs locales en el nuevo hardware — el Mac Mini M6 de entrada como servidor económico siempre activo, el Mac Mini M5 Pro como servidor más capaz, el MacBook Pro 16" como estación de trabajo portátil (M5 Pro o M5 Max), y el Mac Studio (M5 Max o M5 Ultra) como opciones de escritorio y de memoria extrema — en las cifras que deciden una compra: memoria unificada, ancho de banda de memoria, tokens por segundo medidos y precio. Dos advertencias: los precios iniciales anunciados por Apple cubren solo la memoria base, no la memoria que necesitan los LLMs locales — el Mac Mini M6 de $899 tiene 16 GB, el Mac Mini M5 Pro de $1,699 tiene 24 GB y el Mac Studio M5 Max de $2,499 tiene 36 GB — por lo que las configuraciones recomendadas aquí cuestan más (un M6 de 32 GB cuesta unos $1,300, un M5 Pro de 64 GB unos $2,700 y un Mac Studio M5 Max de 128 GB unos $5,100). Y las pruebas independientes de los nuevos chips siguen siendo escasas: una prueba práctica midió el M6 y el M5 Pro del Mac Mini con un modelo pequeño, y no encontramos mediciones independientes de 70B para el M5 Max ni para el M5 Ultra, por lo que las cifras de rendimiento de esos chips son cifras propias de Apple, identificadas como tales. Los precios son precios de lista en EE. UU. en el momento de la última actualización; confirma el precio actual en la Apple Store antes de comprar.',
+      'La mayoría de los consejos sobre Mac para IA se centran en el nombre del chip, cuando el número que realmente define la decisión es la memoria unificada. En Apple Silicon el modelo vive en el mismo pool de memoria que todo lo demás, por lo que un Mac Mini de 64 GB puede ejecutar un modelo 34B que un Mac Mini de 32 GB más rápido no puede cargar. Apple renovó las líneas Mac Mini y Mac Studio el 25 de agosto de 2026 (con envíos desde el 22 de septiembre de 2026), y esta guía compara cuatro niveles para ejecutar LLMs locales en el nuevo hardware — el Mac Mini M6 de entrada como servidor económico siempre activo, el Mac Mini M5 Pro como servidor más capaz, el MacBook Pro 16" como estación de trabajo portátil (M5 Pro o M5 Max), y el Mac Studio (M5 Max o M5 Ultra) como opciones de escritorio y de memoria extrema — en las cifras que deciden una compra: memoria unificada, ancho de banda de memoria, cifras de tokens por segundo donde las tenemos (una prueba con un modelo pequeño; las estimaciones se indican) y precio. Dos advertencias: los precios iniciales anunciados por Apple cubren solo la memoria base, no la memoria que necesitan los LLMs locales — el Mac Mini M6 de $899 tiene 16 GB, el Mac Mini M5 Pro de $1,699 tiene 24 GB y el Mac Studio M5 Max de $2,499 tiene 36 GB — por lo que las configuraciones recomendadas aquí cuestan más (un M6 de 32 GB cuesta unos $1,300, un M5 Pro de 64 GB unos $2,700 y un Mac Studio M5 Max de 128 GB unos $5,100). Y las pruebas independientes de los nuevos chips siguen siendo escasas: una prueba práctica midió el M6 y el M5 Pro del Mac Mini con un modelo pequeño, y no encontramos mediciones independientes de 70B para el M5 Max ni para el M5 Ultra, por lo que esta guía no da ninguna velocidad 70B medida para esos chips. MacStories y BGR han probado el M5 Ultra con otros modelos. Los precios son precios de lista en EE. UU. en el momento de la última actualización; confirma el precio actual en la Apple Store antes de comprar.',
     metaDescription:
       'Mac Mini M6 32GB ~$1,300, M5 Pro 64GB ~$2,700. Mac Studio M5 Max 128GB ~$5,100, M5 Ultra desde $5,499. Memoria unificada, ancho de banda y precios reales comparados.',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-es.webp',
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Qué Mac debo comprar para ejecutar LLMs locales en 2026?',
         answer:
-          'Compra por memoria unificada, luego por ancho de banda — y fija el precio de la memoria, no del chip: los precios iniciales de Apple cubren solo la memoria base. Un Mac Mini M6 de 32 GB (unos $1,300; el modelo base de $899 tiene 16 GB) es la entrada económica y cubre modelos 7B-14B — no puede cargar modelos 30B ni 70B. Un Mac Mini M5 Pro de 64 GB (unos $2,700; el modelo base de $1,699 tiene 24 GB) es la opción con mejor relación precio-prestaciones para uso serio y ejecuta modelos 34B silenciosamente como servidor siempre activo. Un MacBook Pro 16" M5 Pro de 64 GB es la opción portátil para 34B-70B Q4, y el M5 Max de 128 GB ejecuta 70B en Q5. Un Mac Studio M5 Max (64 GB unos $3,500, 128 GB unos $5,100) es la opción de escritorio con el doble de ancho de banda que el Mac Mini M5 Pro, y el Mac Studio M5 Ultra (desde $5,499 con 96 GB, 256 GB unos $9,500, hasta 512 GB) es la opción extrema para los modelos locales más grandes. Todos se enviaron el 22 de septiembre de 2026, excepto la configuración M5 Ultra de 512 GB, que se envía a finales de octubre de 2026.',
+          'Compra por memoria unificada, luego por ancho de banda — y fija el precio de la memoria, no del chip: los precios iniciales de Apple cubren solo la memoria base. Un Mac Mini M6 de 32 GB (unos $1,300; el modelo base de $899 tiene 16 GB) es la entrada económica y cubre modelos 7B-14B — no puede cargar modelos 30B ni 70B. Un Mac Mini M5 Pro de 64 GB (unos $2,700; el modelo base de $1,699 tiene 24 GB) es la opción con mejor relación precio-prestaciones para uso serio y ejecuta modelos 34B silenciosamente como servidor siempre activo. Un MacBook Pro 16" M5 Pro de 64 GB es la opción portátil para 34B-70B Q4, y el M5 Max de 128 GB ejecuta 70B en Q5. Un Mac Studio M5 Max (64 GB unos $3,500, 128 GB unos $5,100) es la opción de escritorio con el doble de ancho de banda que el Mac Mini M5 Pro, y el Mac Studio M5 Ultra (desde $5,499 con 96 GB, 256 GB unos $9,500, hasta 512 GB) es la opción extrema para los modelos locales más grandes. Todos se envían desde el 22 de septiembre de 2026; la configuración M5 Ultra de 512 GB se puede pedir desde el 28 de octubre de 2026 (desde $22,299).',
         bullets: [
           'Económico: Mac Mini M6 32 GB, unos $1,300, solo modelos 7B-14B (techo de 32 GB de memoria)',
           'Valor / servidor siempre activo: Mac Mini M5 Pro 64 GB, unos $2,700, modelos 34B y 70B Q4 ajustado',
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Escritorio: Mac Studio M5 Max 64 GB ~$3,500 o 128 GB ~$5,100; extremo: M5 Ultra desde $5,499, hasta 512 GB',
           'La memoria de Apple Silicon no se puede actualizar después de la compra — compra el tamaño que necesitas desde el principio',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -692,8 +692,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Opción portátil: MacBook Pro 16" M5 Pro 64 GB (unos $3,000-3,400) o M5 Max 128 GB (unos $5,000+)** — 307-614 GB/s de ancho de banda, ejecuta 70B de Q4 a Q5. Puede reducir su rendimiento bajo carga sostenida (el alcance varía según la carga y el chasis) a cambio de portabilidad.',
           '**Opción de escritorio: Mac Studio M5 Max 64 GB (~$3,500) o 128 GB (~$5,100)** — 614 GB/s de ancho de banda ejecuta 70B en Q5 con el modelo de 128 GB. Se envía desde el 22 de septiembre de 2026; aún no encontramos benchmarks independientes.',
           '**Mac Mini M5 Pro vs Mac Studio M5 Max:** con los mismos 64 GB, el Mac Studio cuesta unos $800 más y tiene el doble de ancho de banda (614 vs 307 GB/s); solo el Mac Studio llega a 128 GB.',
-          '**Opción extrema: Mac Studio M5 Ultra (desde $5,499 con 96 GB; 256 GB unos $9,500; hasta 512 GB)** — 1.2 TB/s de ancho de banda; la configuración de 512 GB se envía a finales de octubre de 2026 y no tiene precio anunciado.',
-          '**El ancho de banda, no el nombre del chip, determina la velocidad.** En una prueba independiente, el Mac Mini M5 Pro generó unos 92 tokens por segundo frente a 54 del M6 con un modelo pequeño — una diferencia que sigue al ancho de banda (307 vs 153-170 GB/s). El M5 Max (460-614 GB/s) tiene hasta el doble de ancho de banda que el M5 Pro (especificaciones de Apple; no encontramos mediciones independientes del M5 Max ni del M5 Ultra).',
+          '**Opción extrema: Mac Studio M5 Ultra (desde $5,499 con 96 GB; 256 GB unos $9,500; hasta 512 GB)** — 1.2 TB/s de ancho de banda; la configuración de 512 GB se puede pedir desde el 28 de octubre de 2026, desde $22,299.',
+          '**El ancho de banda, no el nombre del chip, determina la velocidad.** En una prueba independiente, el Mac Mini M5 Pro generó unos 92 tokens por segundo frente a 54 del M6 con un modelo pequeño — una diferencia que sigue al ancho de banda (307 vs 153-170 GB/s). El M5 Max (460-614 GB/s) tiene hasta el doble de ancho de banda que el M5 Pro (especificaciones de Apple; no encontramos mediciones independientes del M5 Max, y las pruebas independientes del M5 Ultra que conocemos usan otros modelos, no 70B).',
           '**Apple Silicon cambia velocidad bruta por capacidad y silencio.** Una GPU RTX de escritorio es más rápida en modelos 7B-13B, pero sus 24-32 GB de VRAM no pueden cargar un modelo 70B que un Mac de 128 GB ejecuta sin problemas, y mucho menos los 512 GB que puede alcanzar el Mac Studio M5 Ultra.',
           '**El consumo energético es bajo en toda la gama.** Un Mac Mini consume 25-55 W (estimación) bajo carga LLM y un M5 Max 60-100 W (estimación) — frente a 300-450 W de una tarjeta RTX de escritorio realizando trabajo comparable.',
         ],
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Regla general de memoria unificada en Q4_K_M:** aproximadamente 0.6 GB por cada mil millones de parámetros, más 2-4 GB para contexto y herramientas.',
           '**Ancho de banda de memoria:** Mac Mini M6 170 GB/s, M5 Pro 307 GB/s, M5 Max 460-614 GB/s, M5 Ultra 1.2 TB/s.',
           '**Rango de consumo:** Mac Mini M5 Pro 25-55 W (estimación), MacBook Pro M5 Max 60-100 W (estimación) bajo carga LLM.',
-          '**Disponibilidad:** la renovación de Mac Mini y Mac Studio del 25 de agosto de 2026 se envía desde el 22 de septiembre de 2026, salvo la configuración M5 Ultra de 512 GB, que se envía a finales de octubre de 2026 — confirma el precio actual en la Apple Store antes de comprar.',
+          '**Disponibilidad:** la renovación de Mac Mini y Mac Studio del 25 de agosto de 2026 se envía desde el 22 de septiembre de 2026, y la configuración M5 Ultra de 512 GB se puede pedir desde el 28 de octubre de 2026 (desde $22,299) — confirma el precio actual en la Apple Store antes de comprar.',
         ],
       },
       editorsChoice: {
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Elección del editor: Mac Mini M5 Pro 64 GB',
         highlight: true,
         content:
-          '**Para la mayoría de los compradores que eligen un Mac específicamente para IA local, el Mac Mini M5 Pro con 64 GB de memoria unificada es la opción que equilibra capacidad, precio y costo operativo.** Sus 64 GB acomodan todos los modelos hasta 34B con margen de contexto y ajustan 70B Q4, funciona en silencio y consume solo 25-55 W (estimación) bajo carga de inferencia, y a unos $2,700 (el modelo base de $1,699 tiene solo 24 GB) es el Mac más económico que alberga un modelo de 64 GB. También es un servidor de IA siempre activo ideal para el hogar o la oficina. Baja al Mac Mini M6 de 32 GB (unos $1,300) solo si los modelos 7B-14B cubren de verdad tu caso de uso — su techo de 32 GB no admite modelos 30B ni 70B. Sube a un Mac Studio M5 Max de 64 GB (unos $3,500) si quieres el doble de ancho de banda con la misma memoria, al MacBook Pro 16" solo si necesitas portabilidad, a un Mac Studio M5 Max de 128 GB (unos $5,100) solo si necesitas 70B con mayor calidad en el escritorio, o a un Mac Studio M5 Ultra si necesitas los modelos locales más grandes.',
+          '**Para la mayoría de los compradores que eligen un Mac específicamente para IA local, el Mac Mini M5 Pro con 64 GB de memoria unificada es la opción que equilibra capacidad, precio y costo operativo.** Sus 64 GB acomodan todos los modelos hasta 34B con margen de contexto y ajustan 70B Q4, funciona en silencio y consume solo 25-55 W (estimación) bajo carga de inferencia, y a unos $2,700 (el modelo base de $1,699 tiene solo 24 GB) es el Mac de menor precio de esta guía que alberga un modelo de 64 GB. También es un servidor de IA siempre activo ideal para el hogar o la oficina. Baja al Mac Mini M6 de 32 GB (unos $1,300) solo si los modelos 7B-14B cubren de verdad tu caso de uso — su techo de 32 GB no admite modelos 30B ni 70B. Sube a un Mac Studio M5 Max de 64 GB (unos $3,500) si quieres el doble de ancho de banda con la misma memoria, al MacBook Pro 16" solo si necesitas portabilidad, a un Mac Studio M5 Max de 128 GB (unos $5,100) solo si necesitas 70B con mayor calidad en el escritorio, o a un Mac Studio M5 Ultra si necesitas los modelos locales más grandes.',
         callouts: [
           {
             type: 'note',
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan los Mac para IA local en 2026',
         content:
-          'Las cifras de memoria y ancho de banda son especificaciones de Apple. Las velocidades del MacBook Pro son estimaciones orientativas; consulta la página enlazada de benchmarks M5 Pro vs M5 Max para ver sus rangos. No se volvieron a medir para esta guía. Las velocidades de la fila del Mac Mini provienen de una prueba práctica independiente con un modelo pequeño de 4B (ver Fuentes) en equipos con memoria base; no encontramos mediciones independientes de 70B para el M6, el M5 Pro del Mac Mini, el M5 Max del Mac Studio ni el M5 Ultra, por lo que esas celdas están marcadas en lugar de estimadas. Los precios son precios de lista en EE. UU. para la configuración indicada en cada fila: los precios iniciales anunciados por Apple cubren solo la memoria base (M6 16 GB, M5 Pro 24 GB, M5 Max 36 GB, M5 Ultra 96 GB), por lo que aquí se incluye la ampliación de memoria. Confirma el precio actual en la Apple Store antes de comprar.',
+          'Las cifras de memoria y ancho de banda son especificaciones de Apple. Las velocidades del MacBook Pro son estimaciones a partir del ancho de banda y el tamaño del archivo del modelo, no mediciones; consulta el método en la página enlazada de velocidades estimadas de M5 Pro vs M5 Max. Las velocidades de la fila del Mac Mini provienen de una prueba práctica independiente con un modelo pequeño de 4B (ver Fuentes) en equipos con memoria base; no encontramos mediciones independientes de 70B para el M6, el M5 Pro del Mac Mini, el M5 Max del Mac Studio ni el M5 Ultra, por lo que esas celdas están marcadas en lugar de estimadas. Los precios son precios de lista en EE. UU. para la configuración indicada en cada fila: los precios iniciales anunciados por Apple cubren solo la memoria base (M6 16 GB, M5 Pro 24 GB, M5 Max 36 GB, M5 Ultra 96 GB), por lo que aquí se incluye la ampliación de memoria. Confirma el precio actual en la Apple Store antes de comprar.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -781,8 +781,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64 GB](https://www.apple.com/macbook-pro/)',
             'Memoria unificada': '64 GB',
             'Ancho de banda': '307 GB/s',
-            'Velocidad (8B Q4)': '~50-60 tok/s',
-            'Velocidad (70B Q4)': '~8-12 tok/s',
+            'Velocidad (8B Q4)': '~38-50 tok/s',
+            'Velocidad (70B Q4)': '~4-5 tok/s',
             'Precio (EE. UU.)': '~$3,000-3,400',
             'Ideal para': 'Portátil 34B-70B Q4 (ajustado)',
           },
@@ -790,8 +790,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128 GB',
             'Memoria unificada': '128 GB',
             'Ancho de banda': '614 GB/s',
-            'Velocidad (8B Q4)': '~100-120 tok/s',
-            'Velocidad (70B Q4)': '16-22 tok/s',
+            'Velocidad (8B Q4)': '~75-100 tok/s',
+            'Velocidad (70B Q4)': '~9-11 tok/s',
             'Precio (EE. UU.)': '~$5,000+',
             'Ideal para': '70B Q5 portátil, multi-modelo',
           },
@@ -820,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Velocidad (8B Q4)': 'aún no evaluado',
             'Velocidad (70B Q4)': 'aún no evaluado',
             'Precio (EE. UU.)': 'desde $5,499; 256 GB ~$9,500',
-            'Ideal para': 'Estación extrema, 512 GB aún no disponible',
+            'Ideal para': 'Estación extrema; 512 GB desde $22,299',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-es.webp',
@@ -894,8 +894,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**El MacBook Pro 16" (M5 Pro o M5 Max, lanzado en marzo de 2026 y sin relación con la renovación del Mac Mini/Mac Studio del 25 de agosto de Apple) es la opción para compradores que necesitan modelos de clase 70B en un factor de forma portátil — y la respuesta a "el mejor MacBook para IA local".** El M5 Max es el único chip portátil de esta guía que supera 70B con comodidad; el M5 Pro ajusta 70B en Q4. El compromiso frente a un equipo de escritorio con el mismo chip es que un portátil puede reducir su rendimiento bajo inferencia sostenida; el alcance varía según la carga y el chasis.',
         items: [
-          '**MacBook Pro 16" M5 Pro 64 GB (unos $3,000-3,400; el 16" M5 Pro parte de $2,699):** CPU de hasta 18 núcleos, GPU de 20 núcleos, 307 GB/s de ancho de banda — 64 GB es el techo de memoria de este chip. Ejecuta modelos 8B a aproximadamente 50-60 tok/s y Llama 3.3 70B Q4 a aproximadamente 8-12 tok/s (ajustado). El punto de entrada portátil a la IA local 70B.',
-          '**MacBook Pro 16" M5 Max 128 GB (unos $5,000 en adelante; el 16" M5 Max parte de $3,899):** GPU de hasta 40 núcleos, 614 GB/s de ancho de banda. Ejecuta modelos 8B a aproximadamente 100-120 tok/s y 70B en Q5 (mayor calidad) a 12-18 tok/s, y permite ejecutar dos modelos a la vez — por ejemplo un modelo 70B más un modelo 13B.',
+          '**MacBook Pro 16" M5 Pro 64 GB (unos $3,000-3,400; el 16" M5 Pro parte de $2,699):** CPU de hasta 18 núcleos, GPU de 20 núcleos, 307 GB/s de ancho de banda — 64 GB es el techo de memoria de este chip. Ejecuta modelos 8B a aproximadamente 38-50 tok/s y Llama 3.3 70B Q4 a aproximadamente 4-5 tok/s (ajustado). El punto de entrada portátil a la IA local 70B. Estas velocidades son estimaciones a partir del ancho de banda y el tamaño del archivo del modelo, no mediciones.',
+          '**MacBook Pro 16" M5 Max 128 GB (unos $5,000 en adelante; el 16" M5 Max parte de $3,899):** GPU de hasta 40 núcleos, 614 GB/s de ancho de banda. Ejecuta modelos 8B a aproximadamente 75-100 tok/s y 70B en Q5 (mayor calidad) a 7-10 tok/s, y permite ejecutar dos modelos a la vez — por ejemplo un modelo 70B más un modelo 13B. Estas velocidades son estimaciones a partir del ancho de banda y el tamaño del archivo del modelo, no mediciones.',
           '**Por qué comprar este Mac:** necesitas modelos 70B y portabilidad, quieres un único equipo para trabajo creativo e IA, o viajas y presentas y no puedes dejar un equipo de escritorio.',
           '**Por qué descartarlo:** si el equipo nunca abandona el escritorio, un Mac Studio con el mismo chip funciona más frío y mantiene la velocidad completa, a un precio similar con 128 GB; si los modelos 34B son suficientes, el Mac Mini M5 Pro cuesta varios cientos de dólares menos.',
         ],
@@ -930,17 +930,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max vs M5 Ultra: Escritorio y extremo',
         content:
-          '**Apple renovó el Mac Studio el 25 de agosto de 2026 con el M5 Max (opción de escritorio para 70B) y el M5 Ultra (extremo, hasta 512 GB); las configuraciones base se enviaron el 22 de septiembre de 2026, y la configuración M5 Ultra de 512 GB llega a finales de octubre de 2026.** Un Mac Studio M5 Max de 128 GB ejecuta 70B en calidad Q5 y permanece más silencioso bajo carga sostenida que un MacBook Pro, porque la carcasa de escritorio no tiene el límite térmico de un portátil. El M5 Ultra existe para quienes necesitan modelos más grandes de lo que 128 GB puede contener. Los precios iniciales anunciados ($2,499 y $5,499) corresponden a 36 GB y 96 GB; el M5 Max de 128 GB cuesta unos $5,100.',
+          '**Apple renovó el Mac Studio el 25 de agosto de 2026 con el M5 Max (opción de escritorio para 70B) y el M5 Ultra (extremo, hasta 512 GB); las configuraciones base se enviaron el 22 de septiembre de 2026, y la configuración M5 Ultra de 512 GB se puede pedir desde el 28 de octubre de 2026.** Un Mac Studio M5 Max de 128 GB ejecuta 70B en calidad Q5 y permanece más silencioso bajo carga sostenida que un MacBook Pro, porque la carcasa de escritorio no tiene el límite térmico de un portátil. El M5 Ultra existe para quienes necesitan modelos más grandes de lo que 128 GB puede contener. Los precios iniciales anunciados ($2,499 y $5,499) corresponden a 36 GB y 96 GB; el M5 Max de 128 GB cuesta unos $5,100.',
         items: [
           '**Mac Studio M5 Max (desde $2,499 con 36 GB; 64 GB unos $3,500; 128 GB unos $5,100):** el modelo base con GPU de 32 núcleos tiene 460 GB/s y llega como máximo a 36 GB; el modelo con GPU de 40 núcleos (desde unos $3,100 con 48 GB) tiene 614 GB/s y es el único que se ofrece con 64 GB o 128 GB. La opción de escritorio para modelos 70B. No encontramos mediciones independientes de 70B para él.',
-          '**Mac Studio M5 Ultra (desde $5,499 con 96 GB; 256 GB unos $9,500, o unos $10,800 con la GPU de 80 núcleos):** la configuración de CPU de 36 núcleos / GPU de 80 núcleos admite hasta 512 GB de memoria unificada a aproximadamente 1.2 TB/s de ancho de banda. La configuración de 512 GB se envía a finales de octubre de 2026, aún no se puede pedir y no tiene precio anunciado. Este nivel es para los modelos locales más grandes — muy por encima de un solo modelo 70B — no es una compra habitual.',
+          '**Mac Studio M5 Ultra (desde $5,499 con 96 GB; 256 GB unos $9,500, o unos $10,800 con la GPU de 80 núcleos):** la configuración de CPU de 36 núcleos / GPU de 80 núcleos admite hasta 512 GB de memoria unificada a aproximadamente 1.2 TB/s de ancho de banda. La configuración de 512 GB se puede pedir desde el 28 de octubre de 2026, desde $22,299 ([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). Este nivel es para los modelos locales más grandes — muy por encima de un solo modelo 70B — no es una compra habitual.',
           '**Por qué comprar un Mac Studio:** quieres un equipo de escritorio 70B en la línea actual, quieres una operación sostenida más silenciosa que un MacBook Pro, quieres el doble de ancho de banda que el Mac Mini M5 Pro, o (M5 Ultra en concreto) necesitas ejecutar modelos más grandes de lo que caben en 128 GB.',
           '**Por qué descartarlo:** si necesitas portabilidad, compra un MacBook Pro; si los modelos 34B son suficientes y la velocidad es secundaria, el Mac Mini M5 Pro es más económico; si quieres un escritorio 70B por menos, mira el Mac Studio M4 Max de generación anterior, que probablemente se rebaje ahora que la nueva línea ya se ha enviado.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Los precios y especificaciones de arriba son cifras publicadas por Apple más los precios del configurador reportados por Daring Fireball; no encontramos benchmarks independientes del Mac Studio M5 Max ni M5 Ultra. Una fuente indica que la configuración M5 Max de 128 GB está descontinuada mientras que otras aún la listan — confirma que se puede pedir en la Apple Store antes de planificar una compra en torno a ella.',
+            text: 'Los precios y especificaciones de arriba son cifras publicadas por Apple más los precios del configurador reportados por Daring Fireball; no encontramos benchmarks independientes de 70B del Mac Studio M5 Max ni M5 Ultra; las pruebas independientes del M5 Ultra con otros modelos se resumen en nuestra [guía de Apple Silicon M5](/es/local-llms/apple-silicon-m5-local-llm). Confirma que tu configuración exacta se puede pedir en la Apple Store antes de planificar una compra en torno a ella.',
           },
         ],
         affiliateLinks: [
@@ -1003,9 +1003,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modelos 8B — 8-9 GB:** caben en cualquier Mac con 16 GB o más, incluido el Mac Mini M6. Un Mac de 32 GB deja un margen cómodo.',
           '**Modelos 13-14B — 11-13 GB:** necesitan 32 GB una vez contados macOS y el overhead de contexto. Mac Mini M6 (32 GB) en adelante.',
           '**Modelos 34B — 21-25 GB:** necesitan 64 GB en la práctica. El Mac Mini M5 Pro de 64 GB es la opción con mejor relación precio-prestaciones aquí — el techo de 32 GB del M6 no admite un modelo 34B.',
-          '**Modelos 70B en Q4 — 39-42 GB:** necesitan 64 GB como mínimo, y con el contexto añadido los 64 GB quedan ajustados. El Mac Mini M5 Pro de 64 GB o el MacBook Pro 16" M5 Pro de 64 GB son el piso.',
+          '**Modelos 70B en Q4 — 43+ GB:** necesitan 64 GB como mínimo, y con el contexto añadido los 64 GB quedan ajustados. El Mac Mini M5 Pro de 64 GB o el MacBook Pro 16" M5 Pro de 64 GB son el piso.',
           '**Modelos 70B en Q5 o modelos concurrentes — 50-70 GB+:** necesitan 128 GB. MacBook Pro 16" M5 Max de 128 GB o un Mac Studio M5 Max de 128 GB.',
-          '**Modelos más grandes que un solo 70B, o modelos MoE muy grandes — 100 GB+:** necesitan el Mac Studio M5 Ultra, que alcanza hasta 512 GB de memoria unificada (la configuración de 512 GB se envía a finales de octubre de 2026).',
+          '**Modelos más grandes que un solo 70B, o modelos MoE muy grandes — 100 GB+:** necesitan el Mac Studio M5 Ultra, que alcanza hasta 512 GB de memoria unificada (la configuración de 512 GB se puede pedir desde el 28 de octubre de 2026, desde $22,299).',
         ],
         callouts: [
           {
@@ -1013,8 +1013,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La memoria de Apple Silicon está soldada y no se puede actualizar. Compra un nivel por encima de tu necesidad actual: si ejecutas modelos 34B hoy, 64 GB es el piso, no la opción cómoda. Para el método completo, consulta la guía de memoria unificada en la sección de Lectura relacionada.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-es.webp',
-        imageCaption: 'Memoria unificada por tamaño de modelo en Q4_K_M: 8B necesita 8-9 GB, 13-14B necesita 11-13 GB, 34B necesita 21-25 GB, 70B Q4 necesita 39-42 GB, y 70B Q5 o modelos concurrentes necesitan 50-70+ GB.',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. ¿Cuál es el modelo más grande que quieres ejecutar?** 7-14B: Mac Mini M6 32 GB. 34B: Mac Mini M5 Pro 64 GB. 70B Q4: Mac Mini M5 Pro de 64 GB o MacBook Pro M5 Pro. 70B Q5 o concurrente: MacBook Pro M5 Max de 128 GB o Mac Studio M5 Max. 100B+ o MoE enorme: Mac Studio M5 Ultra, hasta 512 GB.',
           '**2. ¿El equipo necesita moverse?** Sí: MacBook Pro 16" M5 Pro o M5 Max. No: Mac Mini (hasta 34B/70B Q4) o Mac Studio (70B en adelante).',
           '**3. ¿Es un servidor siempre activo?** Sí: Mac Mini M5 Pro 64 GB — silencioso, 25-55 W (estimación), el más económico para operar 24/7. No: elige por tamaño de modelo según lo anterior.',
-          '**4. ¿Necesitas las respuestas lo más rápido posible, o 512 GB?** Más rápido con la misma memoria: Mac Studio M5 Max (614 GB/s frente a 307 GB/s). 512 GB: la configuración Mac Studio M5 Ultra de 512 GB se envía a finales de octubre de 2026 y aún no se puede pedir; la configuración de 256 GB está disponible ahora.',
+          '**4. ¿Necesitas las respuestas lo más rápido posible, o 512 GB?** Más rápido con la misma memoria: Mac Studio M5 Max (614 GB/s frente a 307 GB/s). 512 GB: la configuración Mac Studio M5 Ultra de 512 GB se puede pedir desde el 28 de octubre de 2026, desde $22,299.',
         ],
         snippetBlocks: [
           {
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Los nuevos Mac Mini y Mac Studio se enviaron el 22 de septiembre de 2026; la configuración Mac Studio M5 Ultra de 512 GB se envía a finales de octubre de 2026. Los precios iniciales anunciados por Apple cubren solo la memoria base — abre el configurador actual de la Apple Store para el nivel de memoria que necesitas, porque las ampliaciones son la mayor parte del total.',
+            text: 'Los nuevos Mac Mini y Mac Studio se enviaron el 22 de septiembre de 2026; la configuración Mac Studio M5 Ultra de 512 GB se puede pedir desde el 28 de octubre de 2026. Los precios iniciales anunciados por Apple cubren solo la memoria base — abre el configurador actual de la Apple Store para el nivel de memoria que necesitas, porque las ampliaciones son la mayor parte del total.',
           },
         ],
         affiliateLinks: [
@@ -1080,8 +1080,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Leer el precio inicial anunciado como el precio del Mac que necesitas.** $899 compra un Mac Mini M6 con 16 GB, $1,699 un Mac Mini M5 Pro con 24 GB y $2,499 un Mac Studio M5 Max con 36 GB. El M6 de 32 GB cuesta unos $1,300, el M5 Pro de 64 GB unos $2,700 y el M5 Max de 128 GB unos $5,100.',
           '**Asumir que el techo de 32 GB del Mac Mini M6 cubre modelos 30B o 70B.** No es así. 32 GB es un límite estricto en torno a los modelos 14B — el M5 Pro (64 GB) es el piso para 34B en adelante.',
           '**Olvidar que la memoria de Apple Silicon no se puede actualizar.** La memoria está soldada. Comprar con poca memoria y la única solución es un Mac nuevo — dimensiona un nivel por encima de tu necesidad actual.',
-          '**Esperar al Mac Studio M5 Ultra de 512 GB sin comprobar el precio.** La configuración de 512 GB se envía a finales de octubre de 2026, no tiene precio anunciado, y la configuración de 256 GB ya cuesta unos $9,500.',
-          '**Comprar un MacBook Pro para un servidor fijo en escritorio 24/7.** Se reduce bajo carga sostenida. Para un servidor siempre activo, el Mac Mini M5 Pro o un Mac Studio funciona más frío y silencioso.',
+          '**Planificar en torno al Mac Studio M5 Ultra de 512 GB sin comprobar el precio.** Parte de $22,299 (se puede pedir desde el 28 de octubre de 2026), y la configuración de 256 GB cuesta unos $9,500.',
+          '**Comprar un MacBook Pro para un servidor fijo en escritorio 24/7.** Puede reducir su rendimiento bajo carga sostenida. Para un servidor siempre activo, el Mac Mini M5 Pro o un Mac Studio funciona más frío y silencioso.',
           '**Sobredimensionar para modelos 8B.** Si los modelos 8B cubren tu caso de uso, un Mac de 128 GB es dinero malgastado. Ajusta el nivel de memoria al modelo, no al presupuesto que tengas.',
           '**Tratar la afirmación de Apple de "hasta 4 veces más rendimiento de IA" como un benchmark de velocidad de generación.** Es una cifra propia de Apple para el M6 frente al M4 saliente; las mayores mejoras están en el procesamiento del prompt, mientras que la generación de tokens está limitada por el ancho de banda de memoria (la única prueba independiente que encontramos midió el M5 Pro un 70% más rápido que el M6 con un modelo pequeño).',
         ],
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Configuraciones y precios de los nuevos Mac mini y Mac Studio (Daring Fireball)](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — Precios de ampliación de memoria y almacenamiento usados para los totales de esta guía.',
           '[Apple lanza los nuevos Mac mini y Mac Studio en 30 países (MacTech)](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — Fecha de envío y precios iniciales en EE. UU.',
           '[M6 Mac mini vs M5 Pro Mac mini: pruebas en condiciones reales (Adam Talks Tech)](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — Prueba práctica independiente de ambos Mac Mini con un modelo de 4B en LM Studio (el autor declara enlaces de afiliado).',
-          '[Benchmarks LLM M5 Pro vs M5 Max 2026](/es/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens por segundo para modelos 8B y 70B en el M5 Pro y el M5 Max, según se indica en esa página (consulta su nota metodológica).',
+          '[M5 Pro vs M5 Max para LLM locales: especificaciones y velocidades estimadas](/es/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens por segundo estimados (no medidos) para modelos 8B y 70B, calculados a partir del ancho de banda y el tamaño del archivo del modelo.',
           '[Mac Mini M5 como servidor de IA local](/es/local-llms/mac-mini-m5-local-ai-server) — estimaciones basadas en las especificaciones publicadas por Apple (no medidas por PromptQuorum): consumo de energía del Mac Mini M5 Pro, costo de electricidad y rendimiento como servidor siempre activo.',
         ],
       },
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Ya está disponible el Mac Studio M5?',
-            a: 'Sí, con una excepción. El Mac Studio M5 Max y M5 Ultra se enviaron el 22 de septiembre de 2026. La configuración M5 Ultra de 512 GB llega a finales de octubre de 2026, aún no se puede pedir y no tiene precio anunciado. El M5 Ultra parte de $5,499 con 96 GB, y la configuración de 256 GB cuesta unos $9,500. Si quieres un Mac de escritorio 70B más económico, el Mac Studio de generación anterior (M4 Max) puede estar rebajado.',
+            a: 'Sí, con una excepción. El Mac Studio M5 Max y M5 Ultra se enviaron el 22 de septiembre de 2026. La configuración M5 Ultra de 512 GB se puede pedir desde el 28 de octubre de 2026, desde $22,299. El M5 Ultra parte de $5,499 con 96 GB, y la configuración de 256 GB cuesta unos $9,500. Si quieres un Mac de escritorio 70B más económico, el Mac Studio de generación anterior (M4 Max) puede estar rebajado.',
           },
           {
             q: '¿Mac Mini M5 Pro o Mac Studio M5 Max para IA?',
@@ -1126,15 +1126,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánta memoria unificada necesito para LLMs locales en un Mac?',
-            a: 'Con cuantización Q4_K_M, planifica aproximadamente 0.6 GB por cada mil millones de parámetros más 2-4 GB de overhead, y recuerda que macOS comparte el mismo pool. Eso significa aproximadamente 8-9 GB para modelos 8B, 21-25 GB para 34B y 39-42 GB para 70B. Un Mac de 64 GB (Mac Mini M5 Pro o MacBook Pro M5 Pro) ejecuta cómodamente 34B y apenas cabe el 70B Q4; 128 GB (MacBook Pro M5 Max o Mac Studio M5 Max) se necesita para 70B en Q5 o para ejecutar varios modelos; el Mac Studio M5 Ultra alcanza hasta 512 GB para modelos más grandes que un solo 70B.',
+            a: 'Con cuantización Q4_K_M, planifica aproximadamente 0.6 GB por cada mil millones de parámetros más 2-4 GB de overhead, y recuerda que macOS comparte el mismo pool. Eso significa aproximadamente 8-9 GB para modelos 8B, 21-25 GB para 34B y 43+ GB para 70B. Un Mac de 64 GB (Mac Mini M5 Pro o MacBook Pro M5 Pro) ejecuta cómodamente 34B y apenas cabe el 70B Q4; 128 GB (MacBook Pro M5 Max o Mac Studio M5 Max) se necesita para 70B en Q5 o para ejecutar varios modelos; el Mac Studio M5 Ultra alcanza hasta 512 GB para modelos más grandes que un solo 70B.',
           },
           {
             q: '¿Mac Mini o MacBook Pro para IA local?',
-            a: 'Elige el Mac Mini M5 Pro si el equipo permanece en un escritorio y los modelos 34B son tu techo — es más económico, silencioso e ideal como servidor siempre activo. Elige un MacBook Pro 16" (M5 Pro o M5 Max) si necesitas ejecutar modelos 70B o llevar el equipo contigo. El MacBook Pro M5 Max es el chip portátil más capaz para 70B, pero se reduce bajo carga sostenida, así que un servidor fijo sigue mejor atendido por un Mac Mini o Mac Studio.',
+            a: 'Elige el Mac Mini M5 Pro si el equipo permanece en un escritorio y los modelos 34B son tu techo — es más económico, silencioso e ideal como servidor siempre activo. Elige un MacBook Pro 16" (M5 Pro o M5 Max) si necesitas ejecutar modelos 70B o llevar el equipo contigo. El MacBook Pro M5 Max es el chip portátil más capaz para 70B, pero puede reducir su rendimiento bajo carga sostenida, así que un servidor fijo sigue mejor atendido por un Mac Mini o Mac Studio.',
           },
           {
             q: '¿Puede un Mac ejecutar modelos 70B?',
-            a: 'Sí. Un MacBook Pro 16" M5 Pro de 64 GB ejecuta Llama 3.3 70B Q4 a aproximadamente 8-12 tokens por segundo (con margen ajustado), y la versión M5 Max de 128 GB ejecuta 70B en Q5 a 12-18 tokens por segundo. Un Mac Studio M5 Max de 128 GB también debería ejecutar 70B cómodamente, pero aún no encontramos mediciones independientes. El Mac Mini M6 no puede — su techo de 32 GB es demasiado pequeño; el Mac Mini M5 Pro con 64 GB ajusta 70B Q4.',
+            a: 'Sí. Un MacBook Pro 16" M5 Pro de 64 GB ejecuta Llama 3.3 70B Q4 a aproximadamente 4-5 tokens por segundo (con margen ajustado), y la versión M5 Max de 128 GB ejecuta 70B en Q5 a 7-10 tokens por segundo. Un Mac Studio M5 Max de 128 GB también debería ejecutar 70B cómodamente, pero aún no encontramos mediciones independientes. El Mac Mini M6 no puede — su techo de 32 GB es demasiado pequeño; el Mac Mini M5 Pro con 64 GB ajusta 70B Q4. Estas velocidades son estimaciones a partir del ancho de banda y el tamaño del archivo del modelo, no mediciones.',
           },
           {
             q: '¿Es un Mac más rápido que una GPU NVIDIA para LLMs locales?',
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto cuesta operar un Mac como servidor de IA?',
-            a: 'Muy poco. Se estima que un Mac Mini M5 Pro consume aproximadamente 25-55 W bajo carga LLM y alrededor de 8 W en reposo (estimaciones, no medidas por PromptQuorum). Operarlo 24/7 durante un año completo cuesta aproximadamente $26-39 en electricidad en EE. UU.. Ese bajo costo operativo es una razón central por la que el Mac Mini es la opción con mejor relación precio-prestaciones para un servidor siempre activo.',
+            a: 'Muy poco. Se estima que un Mac Mini M5 Pro consume aproximadamente 25-55 W bajo carga LLM y alrededor de 8 W en reposo (estimaciones, no medidas por PromptQuorum). Operarlo 24/7 durante un año completo con uso ligero a mixto costaría unos $26-39 a $0.15/kWh (estimación); con más carga o una tarifa más alta cuesta más. Ese bajo costo operativo es una razón central por la que el Mac Mini es la opción con mejor relación precio-prestaciones para un servidor siempre activo.',
           },
         ],
       },
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Ver el conjunto completo de benchmarks M5 Pro vs M5 Max](/es/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens por segundo medidos, tiempo hasta el primer token y consumo de energía detrás de las cifras de esta guía.',
+          '[M5 Pro vs M5 Max para LLM locales: especificaciones y velocidades estimadas](/es/local-llms/m5-pro-max-llm-benchmarks-2026) — cómo se calculan las estimaciones de esta comparación y cómo medir la velocidad en tu propio Mac.',
           '[Configurar un Mac Mini M5 como servidor de IA siempre activo](/es/local-llms/mac-mini-m5-local-ai-server) — la construcción completa del servidor, con costo de electricidad estimado y consideraciones para uso siempre activo (estimaciones, no medidas).',
           '[Comparar Apple Silicon en toda la línea de la serie M](/es/local-llms/apple-silicon-local-llm-guide-2026) — cómo se comparan M1 hasta M5 Max en memoria unificada y ancho de banda.',
           '[Calcular cuánta memoria unificada necesita cada tamaño de modelo](/es/local-llms/how-much-unified-memory-for-local-llm) — el método completo por tamaño de modelo detrás de la fórmula rápida aquí.',
@@ -1169,11 +1169,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'El mejor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro',
-      description: 'Tres Mac comparados para LLMs locales: Mac Mini M5 Pro, MacBook Pro 16',
+      description: 'Mac Mini, MacBook Pro y Mac Studio comparados para LLMs locales: memoria unificada, ancho de banda y precios.',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Bester Mac für lokale KI 2026: Mac Mini vs. Mac Studio vs. MacBook Pro',
     seoTitle: 'Bester Mac für lokale KI 2026: Mini vs. Studio vs. MBP',
     intro:
-      'Die meisten Mac-für-KI-Empfehlungen fixieren sich auf den Chipnamen, dabei ist die Zahl, die die Entscheidung tatsächlich bindet, der Unified Memory. Auf Apple Silicon liegt das Modell im selben Speicherpool wie alles andere — ein Mac Mini mit 64 GB führt daher ein 34B-Modell aus, das in einen Mac Mini mit 32 GB schlicht nicht passt. Apple hat die Mac-Mini- und Mac-Studio-Reihe am 25. August 2026 aufgefrischt (Auslieferung seit dem 22. September 2026), und dieser Leitfaden vergleicht vier Klassen für den Betrieb lokaler LLMs auf der neuen Hardware — den Einstiegs-Mac-Mini-M6 als günstigen Server, den Mac Mini M5 Pro als leistungsfähigeren Server, das MacBook Pro 16" als portable Workstation (M5 Pro oder M5 Max) und den Mac Studio (M5 Max oder M5 Ultra) als Desktop- und Extrem-Speicher-Option — anhand der Kennzahlen, die einen Kauf entscheiden: Unified Memory, Speicherbandbreite, gemessene Tokens pro Sekunde und Preis. Zwei Hinweise: Apples beworbene Einstiegspreise gelten nur für den Basisspeicher, nicht für den Speicher, den lokale LLMs brauchen — der Mac Mini M6 für 899 $ hat 16 GB, der Mac Mini M5 Pro für 1.699 $ hat 24 GB, und der Mac Studio M5 Max für 2.499 $ hat 36 GB —, daher kosten die hier empfohlenen Konfigurationen mehr (ein M6 mit 32 GB etwa 1.300 $, ein M5 Pro mit 64 GB etwa 2.700 $, ein Mac Studio M5 Max mit 128 GB etwa 5.100 $). Und unabhängige Tests der neuen Chips sind weiterhin dünn gesät: Ein Hands-on-Test hat den M6 und den M5 Pro im Mac Mini mit einem kleinen Modell gemessen, und für den M5 Max und den M5 Ultra haben wir keine unabhängigen 70B-Messungen gefunden, weshalb die Leistungsangaben zu diesen Chips Apples eigene Zahlen sind, als solche gekennzeichnet. Die Preise sind US-Listenpreise zum Zeitpunkt der letzten Aktualisierung; prüfen Sie vor dem Kauf den aktuellen Apple-Store-Preis.',
+      'Die meisten Mac-für-KI-Empfehlungen fixieren sich auf den Chipnamen, dabei ist die Zahl, die die Entscheidung tatsächlich bindet, der Unified Memory. Auf Apple Silicon liegt das Modell im selben Speicherpool wie alles andere — ein Mac Mini mit 64 GB führt daher ein 34B-Modell aus, das in einen Mac Mini mit 32 GB schlicht nicht passt. Apple hat die Mac-Mini- und Mac-Studio-Reihe am 25. August 2026 aufgefrischt (Auslieferung seit dem 22. September 2026), und dieser Leitfaden vergleicht vier Klassen für den Betrieb lokaler LLMs auf der neuen Hardware — den Einstiegs-Mac-Mini-M6 als günstigen Server, den Mac Mini M5 Pro als leistungsfähigeren Server, das MacBook Pro 16" als portable Workstation (M5 Pro oder M5 Max) und den Mac Studio (M5 Max oder M5 Ultra) als Desktop- und Extrem-Speicher-Option — anhand der Kennzahlen, die einen Kauf entscheiden: Unified Memory, Speicherbandbreite, Token-pro-Sekunde-Werte, soweit vorhanden (ein Test mit kleinem Modell; Schätzwerte sind gekennzeichnet), und Preis. Zwei Hinweise: Apples beworbene Einstiegspreise gelten nur für den Basisspeicher, nicht für den Speicher, den lokale LLMs brauchen — der Mac Mini M6 für 899 $ hat 16 GB, der Mac Mini M5 Pro für 1.699 $ hat 24 GB, und der Mac Studio M5 Max für 2.499 $ hat 36 GB —, daher kosten die hier empfohlenen Konfigurationen mehr (ein M6 mit 32 GB etwa 1.300 $, ein M5 Pro mit 64 GB etwa 2.700 $, ein Mac Studio M5 Max mit 128 GB etwa 5.100 $). Und unabhängige Tests der neuen Chips sind weiterhin dünn gesät: Ein Hands-on-Test hat den M6 und den M5 Pro im Mac Mini mit einem kleinen Modell gemessen, und für den M5 Max und den M5 Ultra haben wir keine unabhängigen 70B-Messungen gefunden; dieser Leitfaden nennt daher keine gemessene 70B-Geschwindigkeit für diese Chips. MacStories und BGR haben den M5 Ultra mit anderen Modellen getestet. Die Preise sind US-Listenpreise zum Zeitpunkt der letzten Aktualisierung; prüfen Sie vor dem Kauf den aktuellen Apple-Store-Preis.',
     metaDescription:
       'Mac Mini M6 32GB ca. 1.300 $, M5 Pro 64GB ca. 2.700 $. Mac Studio M5 Max 128GB ca. 5.100 $, M5 Ultra ab 5.499 $. Speicher, Bandbreite, echte Preise.',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-de.webp',
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Welchen Mac sollte ich 2026 für den Betrieb lokaler LLMs kaufen?',
         answer:
-          'Kaufen Sie nach Unified Memory, dann nach Bandbreite — und bewerten Sie den Preis des Speichers, nicht des Chips: Apples Einstiegspreise gelten nur für den Basisspeicher. Ein Mac Mini M6 mit 32 GB (ca. 1.300 $; das Basismodell für 899 $ hat 16 GB) ist der günstige Einstieg und deckt 7B-14B-Modelle ab — 30B- oder 70B-Modelle passen nicht hinein. Ein Mac Mini M5 Pro mit 64 GB (ca. 2.700 $; das Basismodell für 1.699 $ hat 24 GB) ist die Preis-Leistungs-Empfehlung für ernsthaften Einsatz und führt 34B-Modelle lautlos als Always-on-Server aus. Ein MacBook Pro 16" M5 Pro mit 64 GB ist die portable Wahl für 34B-70B Q4, und der M5 Max mit 128 GB führt 70B bei Q5 aus. Ein Mac Studio M5 Max (64 GB ca. 3.500 $, 128 GB ca. 5.100 $) ist die Desktop-Wahl mit der doppelten Bandbreite des Mac Mini M5 Pro, und der Mac Studio M5 Ultra (ab 5.499 $ mit 96 GB, 256 GB ca. 9.500 $, bis 512 GB) ist die Extrem-Wahl für die größten lokalen Modelle. Alle diese Modelle werden seit dem 22. September 2026 ausgeliefert, mit Ausnahme der M5-Ultra-Konfiguration mit 512 GB, die Ende Oktober 2026 folgt.',
+          'Kaufen Sie nach Unified Memory, dann nach Bandbreite — und bewerten Sie den Preis des Speichers, nicht des Chips: Apples Einstiegspreise gelten nur für den Basisspeicher. Ein Mac Mini M6 mit 32 GB (ca. 1.300 $; das Basismodell für 899 $ hat 16 GB) ist der günstige Einstieg und deckt 7B-14B-Modelle ab — 30B- oder 70B-Modelle passen nicht hinein. Ein Mac Mini M5 Pro mit 64 GB (ca. 2.700 $; das Basismodell für 1.699 $ hat 24 GB) ist die Preis-Leistungs-Empfehlung für ernsthaften Einsatz und führt 34B-Modelle lautlos als Always-on-Server aus. Ein MacBook Pro 16" M5 Pro mit 64 GB ist die portable Wahl für 34B-70B Q4, und der M5 Max mit 128 GB führt 70B bei Q5 aus. Ein Mac Studio M5 Max (64 GB ca. 3.500 $, 128 GB ca. 5.100 $) ist die Desktop-Wahl mit der doppelten Bandbreite des Mac Mini M5 Pro, und der Mac Studio M5 Ultra (ab 5.499 $ mit 96 GB, 256 GB ca. 9.500 $, bis 512 GB) ist die Extrem-Wahl für die größten lokalen Modelle. Alle diese Modelle werden seit dem 22. September 2026 ausgeliefert; die M5-Ultra-Konfiguration mit 512 GB ist seit dem 28. Oktober 2026 bestellbar (ab 22.299 $).',
         bullets: [
           'Günstig: Mac Mini M6 32 GB, ca. 1.300 $, nur 7B-14B-Modelle (32-GB-Speichergrenze)',
           'Preis-Leistung / Always-on-Server: Mac Mini M5 Pro 64 GB, ca. 2.700 $, 34B-Modelle und knappes 70B Q4',
@@ -1247,7 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desktop: Mac Studio M5 Max 64 GB ca. 3.500 $ oder 128 GB ca. 5.100 $; extrem: M5 Ultra ab 5.499 $, bis 512 GB',
           'Der Speicher von Apple Silicon lässt sich nach dem Kauf nicht aufrüsten — kaufen Sie die Größe, die Sie brauchen',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1277,12 +1277,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Unified Memory ist die bindende Beschränkung.** Auf Apple Silicon teilt sich das Modell einen einzigen Speicherpool mit dem System — ein Modell, das nicht in den Unified Memory passt, lässt sich nicht ausführen. Wählen Sie den Mac, dessen Speicher zu Ihrem Zielmodell passt, und optimieren Sie erst danach auf Bandbreite und Bauform.',
           '**Der Speicher lässt sich nach dem Kauf nicht aufrüsten.** Der Unified Memory von Apple Silicon ist verlötet. Was Sie kaufen, ist endgültig — dimensionieren Sie für das Modell, das Sie in zwei Jahren ausführen wollen, nicht nur für heute.',
           '**Günstige Empfehlung: Mac Mini M6 32 GB (ca. 1.300 $)** — Einstiegschip der Apple-Auffrischung vom 25. August 2026, 170 GB/s Bandbreite, 32-GB-Speichergrenze deckt nur 7B-14B-Modelle ab; nicht ausreichend für 30B oder 70B. Die beworbenen 899 $ gelten für das Modell mit 16 GB.',
-          '**Preis-Leistungs- / Server-Empfehlung: Mac Mini M5 Pro 64 GB (ca. 2.700 $)** — lautlos, 25-55 W (Schätzung) unter Last, rund 26-39 € Strom pro Jahr, und 64 GB führen 34B-Modelle aus und fassen 70B Q4 knapp. Die beworbenen 1.699 $ gelten für das Modell mit 24 GB.',
+          '**Preis-Leistungs- / Server-Empfehlung: Mac Mini M5 Pro 64 GB (ca. 2.700 $)** — lautlos, 25-55 W (Schätzung) unter Last, rund 26-39 $ Strom pro Jahr (Schätzung zu 0,15 $/kWh bei leichter bis gemischter Nutzung; Ihr Tarif kann abweichen), und 64 GB führen 34B-Modelle aus und fassen 70B Q4 knapp. Die beworbenen 1.699 $ gelten für das Modell mit 24 GB.',
           '**Portable Empfehlung: MacBook Pro 16" M5 Pro 64 GB (ca. 3.000-3.400 $) oder M5 Max 128 GB (ca. 5.000 $ und mehr)** — 307-614 GB/s Bandbreite, führt 70B von Q4 bis Q5 aus. Kann unter Dauerlast drosseln (das Ausmaß hängt von Workload und Gehäuse ab) — der Preis für die Portabilität.',
           '**Desktop-Empfehlung: Mac Studio M5 Max 64 GB (ca. 3.500 $) oder 128 GB (ca. 5.100 $)** — 614 GB/s Bandbreite führen 70B bei Q5 auf dem Modell mit 128 GB aus. Wird seit dem 22. September 2026 ausgeliefert; wir haben noch keine unabhängigen Benchmarks gefunden.',
           '**Mac Mini M5 Pro vs. Mac Studio M5 Max:** Bei gleichen 64 GB kostet der Mac Studio rund 800 $ mehr und hat die doppelte Bandbreite (614 vs. 307 GB/s); nur der Mac Studio erreicht 128 GB.',
-          '**Extrem-Empfehlung: Mac Studio M5 Ultra (ab 5.499 $ mit 96 GB; 256 GB ca. 9.500 $; bis 512 GB)** — 1,2 TB/s Bandbreite; die 512-GB-Konfiguration wird Ende Oktober 2026 ausgeliefert und hat keinen angekündigten Preis.',
-          '**Die Bandbreite, nicht der Chipname, bestimmt das Tempo.** In einem unabhängigen Test erzeugte der Mac Mini M5 Pro mit einem kleinen Modell rund 92 Tokens pro Sekunde gegenüber 54 beim M6 — ein Abstand, der der Bandbreite folgt (307 vs. 153-170 GB/s). Der M5 Max (460-614 GB/s) hat bis zu die doppelte Bandbreite des M5 Pro (Apple-Spezifikationen; keine unabhängigen Messungen zu M5 Max oder M5 Ultra gefunden).',
+          '**Extrem-Empfehlung: Mac Studio M5 Ultra (ab 5.499 $ mit 96 GB; 256 GB ca. 9.500 $; bis 512 GB)** — 1,2 TB/s Bandbreite; die 512-GB-Konfiguration ist seit dem 28. Oktober 2026 bestellbar, ab 22.299 $.',
+          '**Die Bandbreite, nicht der Chipname, bestimmt das Tempo.** In einem unabhängigen Test erzeugte der Mac Mini M5 Pro mit einem kleinen Modell rund 92 Tokens pro Sekunde gegenüber 54 beim M6 — ein Abstand, der der Bandbreite folgt (307 vs. 153-170 GB/s). Der M5 Max (460-614 GB/s) hat bis zu die doppelte Bandbreite des M5 Pro (Apple-Spezifikationen; zum M5 Max haben wir keine unabhängigen Messungen gefunden, und die uns bekannten unabhängigen M5-Ultra-Tests verwenden andere Modelle, keine 70B-Modelle).',
           '**Apple Silicon tauscht reine Geschwindigkeit gegen Kapazität und Ruhe.** Eine Desktop-RTX-GPU ist bei 7B-13B-Modellen schneller, aber ihre 24-32 GB VRAM fassen kein 70B-Modell, das ein Mac mit 128 GB problemlos ausführt — geschweige denn die 512 GB, die der Mac Studio M5 Ultra erreichen kann.',
           '**Der Stromverbrauch ist über die ganze Reihe niedrig.** Ein Mac Mini zieht unter LLM-Last 25-55 W (Schätzung) und ein M5 Max 60-100 W (Schätzung) — gegenüber 300-450 W für eine Desktop-RTX-Karte bei vergleichbarer Arbeit.',
         ],
@@ -1299,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Faustregel für Unified Memory bei Q4_K_M:** rund 0,6 GB pro Milliarde Parameter, plus 2-4 GB für Kontext und Tooling.',
           '**Speicherbandbreite:** Mac Mini M6 170 GB/s, M5 Pro 307 GB/s, M5 Max 460-614 GB/s, M5 Ultra 1,2 TB/s.',
           '**Spanne des Stromverbrauchs:** Mac Mini M5 Pro 25-55 W (Schätzung), MacBook Pro M5 Max 60-100 W (Schätzung) unter LLM-Last.',
-          '**Verfügbarkeit:** Die Mac-Mini- und Mac-Studio-Auffrischung vom 25. August 2026 wird seit dem 22. September 2026 ausgeliefert, außer der M5-Ultra-Konfiguration mit 512 GB, die Ende Oktober 2026 folgt — prüfen Sie vor dem Kauf den aktuellen Apple-Store-Preis.',
+          '**Verfügbarkeit:** Die Mac-Mini- und Mac-Studio-Auffrischung vom 25. August 2026 wird seit dem 22. September 2026 ausgeliefert, und die M5-Ultra-Konfiguration mit 512 GB ist seit dem 28. Oktober 2026 bestellbar (ab 22.299 $) — prüfen Sie vor dem Kauf den aktuellen Apple-Store-Preis.',
         ],
       },
       editorsChoice: {
@@ -1307,7 +1307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Empfehlung der Redaktion: Mac Mini M5 Pro 64 GB',
         highlight: true,
         content:
-          '**Für die meisten Käuferinnen und Käufer, die gezielt einen Mac für lokale KI wählen, ist der Mac Mini M5 Pro mit 64 GB Unified Memory die Wahl, die Leistungsfähigkeit, Preis und Betriebskosten ausbalanciert.** Seine 64 GB fassen jedes Modell bis 34B mit Kontext-Reserve und fassen 70B Q4 knapp, er arbeitet lautlos und zieht unter Inferenzlast nur 25-55 W (Schätzung), und bei etwa 2.700 $ (das Basismodell für 1.699 $ hat nur 24 GB) ist er der günstigste Mac, der ein Modell mit 64 GB fasst. Er gibt zudem einen idealen Always-on-KI-Server für Zuhause oder das Büro ab. Steigen Sie nur dann auf den Mac Mini M6 32 GB (ca. 1.300 $) herunter, wenn 7B-14B-Modelle Ihren Anwendungsfall wirklich abdecken — seine 32-GB-Grenze reicht nicht für 30B- oder 70B-Modelle. Wechseln Sie zu einem Mac Studio M5 Max mit 64 GB (ca. 3.500 $), wenn Sie bei gleicher Speichergröße die doppelte Speicherbandbreite wollen, zum MacBook Pro 16" nur, wenn Sie Portabilität brauchen, zu einem Mac Studio M5 Max mit 128 GB (ca. 5.100 $) nur, wenn Sie 70B in höherer Qualität auf dem Desktop brauchen, oder zu einem Mac Studio M5 Ultra, wenn Sie die größten lokalen Modelle brauchen.',
+          '**Für die meisten Käuferinnen und Käufer, die gezielt einen Mac für lokale KI wählen, ist der Mac Mini M5 Pro mit 64 GB Unified Memory die Wahl, die Leistungsfähigkeit, Preis und Betriebskosten ausbalanciert.** Seine 64 GB fassen jedes Modell bis 34B mit Kontext-Reserve und fassen 70B Q4 knapp, er arbeitet lautlos und zieht unter Inferenzlast nur 25-55 W (Schätzung), und bei etwa 2.700 $ (das Basismodell für 1.699 $ hat nur 24 GB) ist er der preisgünstigste Mac in diesem Ratgeber, der ein Modell mit 64 GB fasst. Er gibt zudem einen idealen Always-on-KI-Server für Zuhause oder das Büro ab. Steigen Sie nur dann auf den Mac Mini M6 32 GB (ca. 1.300 $) herunter, wenn 7B-14B-Modelle Ihren Anwendungsfall wirklich abdecken — seine 32-GB-Grenze reicht nicht für 30B- oder 70B-Modelle. Wechseln Sie zu einem Mac Studio M5 Max mit 64 GB (ca. 3.500 $), wenn Sie bei gleicher Speichergröße die doppelte Speicherbandbreite wollen, zum MacBook Pro 16" nur, wenn Sie Portabilität brauchen, zu einem Mac Studio M5 Max mit 128 GB (ca. 5.100 $) nur, wenn Sie 70B in höherer Qualität auf dem Desktop brauchen, oder zu einem Mac Studio M5 Ultra, wenn Sie die größten lokalen Modelle brauchen.',
         callouts: [
           {
             type: 'note',
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie die Macs für lokale KI 2026 abschneiden',
         content:
-          'Die Angaben zu Speicher und Bandbreite sind Apple-Spezifikationen. Die Geschwindigkeiten des MacBook Pro sind Richtwerte; die Bereiche finden Sie auf der verlinkten Benchmark-Seite M5 Pro vs. M5 Max. Für diesen Ratgeber wurden sie nicht erneut gemessen. Die Tempo-Werte der Mac-Mini-Zeilen stammen aus einem unabhängigen Hands-on-Test mit einem kleinen 4B-Modell (siehe Quellen) auf Maschinen mit Basisspeicher; unabhängige 70B-Messungen für den M6, den M5 Pro im Mac Mini, den M5 Max im Mac Studio und den M5 Ultra haben wir nicht gefunden, diese Zellen sind daher gekennzeichnet statt geschätzt. Die Preise sind US-Listenpreise für die in der Zeile genannte Konfiguration: Apples beworbene Einstiegspreise gelten nur für den Basisspeicher (M6 16 GB, M5 Pro 24 GB, M5 Max 36 GB, M5 Ultra 96 GB), das Speicher-Upgrade ist hier also eingerechnet. Prüfen Sie vor dem Kauf den aktuellen Apple-Store-Preis.',
+          'Die Angaben zu Speicher und Bandbreite sind Apple-Spezifikationen. Die Geschwindigkeiten des MacBook Pro sind Schätzwerte aus Speicherbandbreite und Modelldateigröße, keine Messungen; die Methode steht auf der verlinkten Seite mit Geschwindigkeitsschätzungen für M5 Pro vs. M5 Max. Die Tempo-Werte der Mac-Mini-Zeilen stammen aus einem unabhängigen Hands-on-Test mit einem kleinen 4B-Modell (siehe Quellen) auf Maschinen mit Basisspeicher; unabhängige 70B-Messungen für den M6, den M5 Pro im Mac Mini, den M5 Max im Mac Studio und den M5 Ultra haben wir nicht gefunden, diese Zellen sind daher gekennzeichnet statt geschätzt. Die Preise sind US-Listenpreise für die in der Zeile genannte Konfiguration: Apples beworbene Einstiegspreise gelten nur für den Basisspeicher (M6 16 GB, M5 Pro 24 GB, M5 Max 36 GB, M5 Ultra 96 GB), das Speicher-Upgrade ist hier also eingerechnet. Prüfen Sie vor dem Kauf den aktuellen Apple-Store-Preis.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1370,8 +1370,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64 GB](https://www.apple.com/macbook-pro/)',
             'Unified Memory': '64 GB',
             'Bandbreite': '307 GB/s',
-            'Tempo (8B Q4)': 'ca. 50-60 Tok/s',
-            'Tempo (70B Q4)': 'ca. 8-12 Tok/s',
+            'Tempo (8B Q4)': 'ca. 38-50 Tok/s',
+            'Tempo (70B Q4)': 'ca. 4-5 Tok/s',
             'Preis (US)': 'ca. 3.000-3.400 $',
             'Am besten für': 'Portabel 34B-70B Q4 (knapp)',
           },
@@ -1379,8 +1379,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128 GB',
             'Unified Memory': '128 GB',
             'Bandbreite': '614 GB/s',
-            'Tempo (8B Q4)': 'ca. 100-120 Tok/s',
-            'Tempo (70B Q4)': '16-22 Tok/s',
+            'Tempo (8B Q4)': 'ca. 75-100 Tok/s',
+            'Tempo (70B Q4)': '~9-11 Tok/s',
             'Preis (US)': 'ca. 5.000 $ und mehr',
             'Am besten für': 'Portable 70B Q5, mehrere Modelle',
           },
@@ -1409,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Tempo (8B Q4)': 'noch nicht getestet',
             'Tempo (70B Q4)': 'noch nicht getestet',
             'Preis (US)': 'ab 5.499 $; 256 GB ca. 9.500 $',
-            'Am besten für': 'Extrem-Workstation, 512 GB noch nicht bestellbar',
+            'Am besten für': 'Extrem-Workstation; 512 GB ab 22.299 $',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-de.webp',
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mac Mini M6 (ab 899 $ mit 16 GB; etwa 1.300 $ mit 32 GB, dem Maximum):** 12-Core-CPU, 12-Core-GPU, doppelte 16-Core Neural Engine, 170 GB/s Bandbreite bei 24 GB und 32 GB (153 GB/s bei 16 GB). Apple gibt rund 40 % mehr CPU-Leistung und bis zu 4-fache KI-Leistung gegenüber dem auslaufenden M4 an (Apples eigene Angabe; die größeren Zugewinne liegen in der Prompt-Verarbeitung, während die Token-Erzeugung von der Bandbreite begrenzt wird). Bewältigt 7B-14B-Modelle komfortabel; 32 GB sind eine feste Grenze, die 30B- und 70B-Modelle ausschließt.',
           '**Mac Mini M5 Pro (ab 1.699 $ mit 24 GB; etwa 2.700 $ mit 64 GB):** die empfohlene Wahl. Bis zu 18-Core-CPU, 20-Core-GPU (das Modell mit 18/20 Kernen und 64 GB kostet etwa 2.900 $), 307 GB/s Bandbreite, Thunderbolt 5. Fasst 34B-Modelle mit Reserve und 70B bei Q4 knapp. Genug Speicher, um ein LLM, Whisper-Spracherkennung und eine RAG-Pipeline gleichzeitig zu betreiben.',
           '**Gemessenes Tempo:** In einem unabhängigen Hands-on-Test (Gemma 3 4B in LM Studio, Maschinen mit Basisspeicher) erzeugte der M6 rund 53-54 Tokens pro Sekunde und der M5 Pro rund 92-93, bei einer Zeit bis zum ersten Token unter einer halben Sekunde auf beiden. Der Abstand von etwa 70 % folgt dem Bandbreitenvorteil des M5 Pro. Es ist ein einzelner Test mit einem kleinen Modell, kein 70B-Ergebnis.',
-          '**Warum diesen Mac kaufen:** Der M5 Pro ist der günstigste Einstieg in ernsthafte Apple-Silicon-KI, lautloser Betrieb, 25-55 W (Schätzung) Stromverbrauch (ca. 26-39 € Strom pro Jahr) und eine kompakte Bauform, die als Server in einen Schrank passt. Der M6 unterbietet ihn im Preis, wenn 7B-14B Ihren Anwendungsfall wirklich abdeckt.',
+          '**Warum diesen Mac kaufen:** Der M5 Pro ist der günstigste Einstieg in ernsthafte Apple-Silicon-KI, lautloser Betrieb, 25-55 W (Schätzung) Stromverbrauch (ca. 26-39 $ Strom pro Jahr bei 0,15 $/kWh, Schätzung) und eine kompakte Bauform, die als Server in einen Schrank passt. Der M6 unterbietet ihn im Preis, wenn 7B-14B Ihren Anwendungsfall wirklich abdeckt.',
           '**Warum diesen Mac überspringen:** Die 32-GB-Grenze des M6 fasst kein 30B- oder 70B-Modell, und kein Mac Mini ist portabel. Wenn 70B mit echter Reserve Ihr Ziel ist, wählen Sie stattdessen ein MacBook Pro oder einen Mac Studio M5 Max.',
         ],
         callouts: [
@@ -1453,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'Der Mac Mini M5 Pro gibt einen ausgezeichneten Headless-KI-Server ab: Ollama installieren, die API im LAN bereitstellen, und jedes Gerät im Haus kann ihn nutzen. Der geschätzte Strombedarf im 24/7-Betrieb kostet etwa 26-39 € pro Jahr (Schätzung, nicht gemessen).',
+            text: 'Der Mac Mini M5 Pro gibt einen ausgezeichneten Headless-KI-Server ab: Ollama installieren, die API im LAN bereitstellen, und jedes Gerät im Haus kann ihn nutzen. Der geschätzte Strombedarf im 24/7-Betrieb kostet bei leichter bis gemischter Nutzung und 0,15 $/kWh etwa 26-39 $ pro Jahr (Schätzung, nicht gemessen); Ihr Tarif kann abweichen.',
           },
           {
             type: 'warning',
@@ -1483,8 +1483,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Das MacBook Pro 16" (M5 Pro oder M5 Max, im März 2026 vorgestellt und von Apples Mac-Mini/Mac-Studio-Auffrischung am 25. August unberührt) ist die Wahl für Käuferinnen und Käufer, die Modelle der 70B-Klasse in portabler Bauform brauchen — und die Antwort auf die Frage nach dem „besten MacBook für lokale KI“.** Der M5 Max ist der einzige portable Chip in diesem Ratgeber, der 70B komfortabel bewältigt; der M5 Pro fasst 70B bei Q4 knapp. Der Kompromiss gegenüber einem Desktop mit demselben Chip ist, dass ein Laptop unter Dauerinferenz drosseln kann; das Ausmaß hängt von Workload und Gehäuse ab.',
         items: [
-          '**MacBook Pro 16" M5 Pro 64 GB (etwa 3.000-3.400 $; das 16" M5 Pro startet bei 2.699 $):** bis zu 18-Core-CPU, 20-Core-GPU, 307 GB/s Bandbreite — 64 GB sind die Speichergrenze dieses Chips. Führt 8B-Modelle mit rund 50-60 Tok/s und Llama 3.3 70B Q4 mit rund 8-12 Tok/s (knapp) aus. Der portable Einstieg in lokale 70B-KI.',
-          '**MacBook Pro 16" M5 Max 128 GB (etwa 5.000 $ und mehr; das 16" M5 Max startet bei 3.899 $):** bis zu 40-Core-GPU, 614 GB/s Bandbreite. Führt 8B-Modelle mit rund 100-120 Tok/s und 70B bei Q5 (höhere Qualität) mit 12-18 Tok/s aus und unterstützt den Betrieb von zwei Modellen gleichzeitig — etwa ein 70B-Modell plus ein 13B-Modell.',
+          '**MacBook Pro 16" M5 Pro 64 GB (etwa 3.000-3.400 $; das 16" M5 Pro startet bei 2.699 $):** bis zu 18-Core-CPU, 20-Core-GPU, 307 GB/s Bandbreite — 64 GB sind die Speichergrenze dieses Chips. Führt 8B-Modelle mit rund 38-50 Tok/s und Llama 3.3 70B Q4 mit rund 4-5 Tok/s (knapp) aus. Der portable Einstieg in lokale 70B-KI. Diese Geschwindigkeiten sind Schätzwerte aus Speicherbandbreite und Modelldateigröße, keine Messungen.',
+          '**MacBook Pro 16" M5 Max 128 GB (etwa 5.000 $ und mehr; das 16" M5 Max startet bei 3.899 $):** bis zu 40-Core-GPU, 614 GB/s Bandbreite. Führt 8B-Modelle mit rund 75-100 Tok/s und 70B bei Q5 (höhere Qualität) mit 7-10 Tok/s aus und unterstützt den Betrieb von zwei Modellen gleichzeitig — etwa ein 70B-Modell plus ein 13B-Modell. Diese Geschwindigkeiten sind Schätzwerte aus Speicherbandbreite und Modelldateigröße, keine Messungen.',
           '**Warum diesen Mac kaufen:** Sie brauchen 70B-Modelle und Portabilität, Sie möchten eine einzige Maschine für Kreativarbeit und KI, oder Sie präsentieren und reisen und können keinen Desktop zurücklassen.',
           '**Warum diesen Mac überspringen:** Wenn die Maschine den Schreibtisch nie verlässt, läuft ein Mac Studio mit demselben Chip kühler und hält die volle Geschwindigkeit dauerhaft, bei 128 GB zu einem ähnlichen Preis; wenn 34B-Modelle genügen, kostet der Mac Mini M5 Pro mehrere hundert Dollar weniger.',
         ],
@@ -1519,17 +1519,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max vs. M5 Ultra: Desktop und Extrem',
         content:
-          '**Apple hat den Mac Studio am 25. August 2026 mit dem M5 Max (Desktop-Empfehlung für 70B) und dem M5 Ultra (extrem, bis 512 GB) aufgefrischt; die Basiskonfigurationen wurden am 22. September 2026 ausgeliefert, die M5-Ultra-Konfiguration mit 512 GB folgt Ende Oktober 2026.** Ein Mac Studio M5 Max mit 128 GB führt 70B in Q5-Qualität aus und bleibt unter Dauerlast leiser als ein MacBook Pro, weil das Desktop-Gehäuse keine Laptop-Wärmegrenze hat. Der M5 Ultra existiert für alle, die Modelle brauchen, die größer sind als 128 GB fassen können. Die beworbenen Einstiegspreise (2.499 $ und 5.499 $) gelten für 36 GB und 96 GB; der M5 Max mit 128 GB kostet etwa 5.100 $.',
+          '**Apple hat den Mac Studio am 25. August 2026 mit dem M5 Max (Desktop-Empfehlung für 70B) und dem M5 Ultra (extrem, bis 512 GB) aufgefrischt; die Basiskonfigurationen wurden am 22. September 2026 ausgeliefert, die M5-Ultra-Konfiguration mit 512 GB ist seit dem 28. Oktober 2026 bestellbar.** Ein Mac Studio M5 Max mit 128 GB führt 70B in Q5-Qualität aus und bleibt unter Dauerlast leiser als ein MacBook Pro, weil das Desktop-Gehäuse keine Laptop-Wärmegrenze hat. Der M5 Ultra existiert für alle, die Modelle brauchen, die größer sind als 128 GB fassen können. Die beworbenen Einstiegspreise (2.499 $ und 5.499 $) gelten für 36 GB und 96 GB; der M5 Max mit 128 GB kostet etwa 5.100 $.',
         items: [
           '**Mac Studio M5 Max (ab 2.499 $ mit 36 GB; 64 GB etwa 3.500 $; 128 GB etwa 5.100 $):** das Basismodell mit 32-Core-GPU hat 460 GB/s und endet bei 36 GB; das Modell mit 40-Core-GPU (ab etwa 3.100 $ mit 48 GB) hat 614 GB/s und ist das einzige, das mit 64 GB oder 128 GB angeboten wird. Die Desktop-Empfehlung für 70B-Modelle. Unabhängige 70B-Messungen dazu haben wir nicht gefunden.',
-          '**Mac Studio M5 Ultra (ab 5.499 $ mit 96 GB; 256 GB etwa 9.500 $, oder etwa 10.800 $ mit der 80-Core-GPU):** die Konfiguration mit 36-Core-CPU / 80-Core-GPU unterstützt bis zu 512 GB Unified Memory bei rund 1,2 TB/s Bandbreite. Die 512-GB-Konfiguration wird Ende Oktober 2026 ausgeliefert, ist noch nicht bestellbar und hat keinen angekündigten Preis. Diese Klasse ist für die größten lokalen Modelle gedacht — weit über einem einzelnen 70B-Modell — kein Kauf für den Durchschnittsanwender.',
+          '**Mac Studio M5 Ultra (ab 5.499 $ mit 96 GB; 256 GB etwa 9.500 $, oder etwa 10.800 $ mit der 80-Core-GPU):** die Konfiguration mit 36-Core-CPU / 80-Core-GPU unterstützt bis zu 512 GB Unified Memory bei rund 1,2 TB/s Bandbreite. Die 512-GB-Konfiguration ist seit dem 28. Oktober 2026 bestellbar, ab 22.299 $ ([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). Diese Klasse ist für die größten lokalen Modelle gedacht — weit über einem einzelnen 70B-Modell — kein Kauf für den Durchschnittsanwender.',
           '**Warum einen Mac Studio kaufen:** Sie möchten einen 70B-Desktop-Rechner in der aktuellen Reihe, Sie möchten einen leiseren Dauerbetrieb als bei einem MacBook Pro, Sie möchten die doppelte Bandbreite des Mac Mini M5 Pro, oder (speziell der M5 Ultra) Sie müssen Modelle ausführen, die größer sind als 128 GB fassen können.',
           '**Warum einen Mac Studio überspringen:** Wenn Sie Portabilität brauchen, kaufen Sie ein MacBook Pro; wenn 34B-Modelle genügen und Tempo zweitrangig ist, ist der Mac Mini M5 Pro günstiger; wenn Sie einen günstigeren 70B-Desktop wollen, schauen Sie sich den Mac Studio M4 Max der Vorgeneration an, der nach dem Verkaufsstart der neuen Reihe wahrscheinlich reduziert wird.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Preise und Spezifikationen oben sind Apples veröffentlichte Angaben plus Konfigurator-Preise, über die Daring Fireball berichtet hat; unabhängige Benchmarks zum Mac Studio mit M5 Max oder M5 Ultra haben wir nicht gefunden. Eine Quelle führt die Konfiguration M5 Max mit 128 GB als eingestellt, andere führen sie weiterhin — prüfen Sie im Apple Store, ob sie bestellbar ist, bevor Sie einen Kauf darauf aufbauen.',
+            text: 'Preise und Spezifikationen oben sind Apples veröffentlichte Angaben plus Konfigurator-Preise, über die Daring Fireball berichtet hat; unabhängige 70B-Benchmarks zum Mac Studio mit M5 Max oder M5 Ultra haben wir nicht gefunden; unabhängige M5-Ultra-Tests mit anderen Modellen fasst unser [Ratgeber zu Apple Silicon M5](/de/local-llms/apple-silicon-m5-local-llm) zusammen. Prüfen Sie im Apple Store, ob Ihre genaue Konfiguration bestellbar ist, bevor Sie einen Kauf darauf aufbauen.',
           },
         ],
         affiliateLinks: [
@@ -1592,9 +1592,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**8B-Modelle — 8-9 GB:** passen in jeden Mac mit 16 GB oder mehr, einschließlich dem Mac Mini M6. Ein Mac mit 32 GB lässt komfortable Reserve.',
           '**13-14B-Modelle — 11-13 GB:** brauchen 32 GB, sobald macOS und der Kontext-Overhead mitgezählt werden. Mac Mini M6 (32 GB) und mehr.',
           '**34B-Modelle — 21-25 GB:** brauchen in der Praxis 64 GB. Der Mac Mini M5 Pro 64 GB ist hier die Preis-Leistungs-Empfehlung — die 32-GB-Grenze des M6 reicht für ein 34B-Modell nicht aus.',
-          '**70B-Modelle bei Q4 — 39-42 GB:** brauchen mindestens 64 GB, wobei 64 GB knapp werden, sobald Kontext hinzukommt. Der Mac Mini M5 Pro mit 64 GB oder das MacBook Pro 16" M5 Pro mit 64 GB sind die Untergrenze.',
+          '**70B-Modelle bei Q4 — 43+ GB:** brauchen mindestens 64 GB, wobei 64 GB knapp werden, sobald Kontext hinzukommt. Der Mac Mini M5 Pro mit 64 GB oder das MacBook Pro 16" M5 Pro mit 64 GB sind die Untergrenze.',
           '**70B-Modelle bei Q5 oder parallele Modelle — 50-70 GB+:** brauchen 128 GB. MacBook Pro 16" M5 Max 128 GB oder ein Mac Studio M5 Max mit 128 GB.',
-          '**Modelle größer als ein einzelnes 70B, oder sehr große MoE-Modelle — 100 GB+:** brauchen den Mac Studio M5 Ultra, der bis zu 512 GB Unified Memory erreicht (die 512-GB-Konfiguration wird Ende Oktober 2026 ausgeliefert).',
+          '**Modelle größer als ein einzelnes 70B, oder sehr große MoE-Modelle — 100 GB+:** brauchen den Mac Studio M5 Ultra, der bis zu 512 GB Unified Memory erreicht (die 512-GB-Konfiguration ist seit dem 28. Oktober 2026 bestellbar, ab 22.299 $).',
         ],
         callouts: [
           {
@@ -1602,8 +1602,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Der Speicher von Apple Silicon ist verlötet und lässt sich nicht aufrüsten. Kaufen Sie eine Klasse über Ihrem aktuellen Bedarf: Wenn Sie heute 34B-Modelle ausführen, sind 64 GB die Untergrenze, nicht die komfortable Wahl. Die vollständige Methode finden Sie im Unified-Memory-Leitfaden unter Weiterführende Artikel.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-de.webp',
-        imageCaption: 'Unified Memory nach Modellgröße bei Q4_K_M: 8B braucht 8-9 GB, 13-14B braucht 11-13 GB, 34B braucht 21-25 GB, 70B Q4 braucht 39-42 GB, und 70B Q5 oder parallele Modelle brauchen 50-70+ GB.',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. Was ist das größte Modell, das Sie ausführen möchten?** 7-14B: Mac Mini M6 32 GB. 34B: Mac Mini M5 Pro 64 GB. 70B Q4: Mac Mini M5 Pro 64 GB oder MacBook Pro M5 Pro. 70B Q5 oder parallel: MacBook Pro M5 Max 128 GB oder Mac Studio M5 Max. 100B+ oder riesige MoE: Mac Studio M5 Ultra, bis 512 GB.',
           '**2. Muss die Maschine sich bewegen?** Ja: MacBook Pro 16" M5 Pro oder M5 Max. Nein: Mac Mini (bis 34B/70B Q4) oder Mac Studio (70B und mehr).',
           '**3. Ist es ein Always-on-Server?** Ja: Mac Mini M5 Pro 64 GB — lautlos, 25-55 W (Schätzung), am günstigsten im 24/7-Betrieb. Nein: nach Modellgröße oben wählen.',
-          '**4. Brauchen Sie möglichst schnelle Antworten oder 512 GB?** Schneller bei gleichem Speicher: Mac Studio M5 Max (614 GB/s gegenüber 307 GB/s). 512 GB: Die Mac-Studio-M5-Ultra-Konfiguration mit 512 GB wird Ende Oktober 2026 ausgeliefert und ist noch nicht bestellbar; die Konfiguration mit 256 GB ist jetzt verfügbar.',
+          '**4. Brauchen Sie möglichst schnelle Antworten oder 512 GB?** Schneller bei gleichem Speicher: Mac Studio M5 Max (614 GB/s gegenüber 307 GB/s). 512 GB: Die Mac-Studio-M5-Ultra-Konfiguration mit 512 GB ist seit dem 28. Oktober 2026 bestellbar, ab 22.299 $.',
         ],
         snippetBlocks: [
           {
@@ -1641,7 +1641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Die neuen Mac-Mini- und Mac-Studio-Modelle werden seit dem 22. September 2026 ausgeliefert; die Mac-Studio-M5-Ultra-Konfiguration mit 512 GB folgt Ende Oktober 2026. Apples beworbene Einstiegspreise gelten nur für den Basisspeicher — öffnen Sie vor dem Kauf den aktuellen Apple-Store-Konfigurator für die benötigte Speicherstufe, denn die Upgrade-Preise machen den größten Teil der Gesamtsumme aus.',
+            text: 'Die neuen Mac-Mini- und Mac-Studio-Modelle werden seit dem 22. September 2026 ausgeliefert; die Mac-Studio-M5-Ultra-Konfiguration mit 512 GB ist seit dem 28. Oktober 2026 bestellbar. Apples beworbene Einstiegspreise gelten nur für den Basisspeicher — öffnen Sie vor dem Kauf den aktuellen Apple-Store-Konfigurator für die benötigte Speicherstufe, denn die Upgrade-Preise machen den größten Teil der Gesamtsumme aus.',
           },
         ],
         affiliateLinks: [
@@ -1669,8 +1669,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Den beworbenen Einstiegspreis für den Preis des Macs halten, den Sie brauchen.** 899 $ kaufen einen Mac Mini M6 mit 16 GB, 1.699 $ einen Mac Mini M5 Pro mit 24 GB und 2.499 $ einen Mac Studio M5 Max mit 36 GB. Der M6 mit 32 GB kostet etwa 1.300 $, der M5 Pro mit 64 GB etwa 2.700 $ und der M5 Max mit 128 GB etwa 5.100 $.',
           '**Annehmen, die 32-GB-Grenze des Mac Mini M6 decke 30B- oder 70B-Modelle ab.** Das ist nicht der Fall. 32 GB sind eine feste Grenze bei rund 14B-Modellen — der M5 Pro (64 GB) ist die Untergrenze für 34B aufwärts.',
           '**Vergessen, dass sich der Speicher von Apple Silicon nicht aufrüsten lässt.** Der Speicher ist verlötet. Wer zu klein kauft, dem bleibt als einzige Lösung ein neuer Mac — dimensionieren Sie eine Klasse über dem heutigen Bedarf.',
-          '**Auf den Mac Studio M5 Ultra mit 512 GB warten, ohne den Preis zu prüfen.** Die Konfiguration mit 512 GB wird Ende Oktober 2026 ausgeliefert, hat keinen angekündigten Preis, und die Konfiguration mit 256 GB kostet bereits etwa 9.500 $.',
-          '**Ein MacBook Pro für einen schreibtischgebundenen 24/7-Server kaufen.** Es drosselt unter Dauerlast. Für einen Always-on-Server laufen der Mac Mini M5 Pro oder ein Mac Studio kühler und leiser.',
+          '**Mit dem Mac Studio M5 Ultra mit 512 GB planen, ohne den Preis zu prüfen.** Er beginnt bei 22.299 $ (seit dem 28. Oktober 2026 bestellbar), und die Konfiguration mit 256 GB kostet etwa 9.500 $.',
+          '**Ein MacBook Pro für einen schreibtischgebundenen 24/7-Server kaufen.** Es kann unter Dauerlast drosseln. Für einen Always-on-Server laufen der Mac Mini M5 Pro oder ein Mac Studio kühler und leiser.',
           '**Für 8B-Modelle überdimensionieren.** Wenn 8B-Modelle Ihren Anwendungsfall abdecken, ist ein Mac mit 128 GB verschwendetes Geld. Passen Sie die Speicherklasse an das Modell an, nicht an das gerade verfügbare Budget.',
           '**Apples Angabe „bis zu 4-fache KI-Leistung“ als Benchmark für die Erzeugungsgeschwindigkeit behandeln.** Das ist Apples eigene Zahl für den M6 gegenüber dem auslaufenden M4; die größten Zugewinne liegen in der Prompt-Verarbeitung, während die Token-Erzeugung von der Speicherbandbreite begrenzt wird (der eine unabhängige Test, den wir gefunden haben, maß den M5 Pro bei einem kleinen Modell rund 70 % schneller als den M6).',
         ],
@@ -1685,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Konfigurationen und Preise der neuen Mac minis und Mac Studios (Daring Fireball)](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — Preise für Speicher- und Festplatten-Upgrades, aus denen die Gesamtsummen in diesem Leitfaden berechnet sind.',
           '[Apple liefert den neuen Mac mini und Mac Studio in 30 Ländern aus (MacTech)](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — Auslieferungsdatum und US-Einstiegspreise.',
           '[M6 Mac mini vs. M5 Pro Mac mini: Real-World Tests (Adam Talks Tech)](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — Unabhängiger Hands-on-Test beider Mac-Mini-Modelle mit einem 4B-Modell in LM Studio (der Autor weist auf Affiliate-Links hin).',
-          '[M5 Pro vs. M5 Max LLM-Benchmarks 2026](/de/local-llms/m5-pro-max-llm-benchmarks-2026) — Tokens pro Sekunde für 8B- und 70B-Modelle auf dem M5 Pro und dem M5 Max, wie auf dieser Seite angegeben (siehe deren Methodikhinweis).',
+          '[M5 Pro vs. M5 Max für lokale LLMs: Spezifikationen und Geschwindigkeitsschätzungen](/de/local-llms/m5-pro-max-llm-benchmarks-2026) — geschätzte (nicht gemessene) Tokens pro Sekunde für 8B- und 70B-Modelle, berechnet aus Speicherbandbreite und Modelldateigröße.',
           '[Mac Mini M5 als Server für lokale KI](/de/local-llms/mac-mini-m5-local-ai-server) — Schätzungen auf Basis der von Apple veröffentlichten Spezifikationen (nicht von PromptQuorum gemessen): Stromverbrauch, Stromkosten und Always-on-Server-Leistung des Mac Mini M5 Pro.',
         ],
       },
@@ -1699,7 +1699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist der Mac Studio M5 schon verfügbar?',
-            a: 'Ja, mit einer Ausnahme. Der Mac Studio M5 Max und M5 Ultra werden seit dem 22. September 2026 ausgeliefert. Die M5-Ultra-Konfiguration mit 512 GB folgt Ende Oktober 2026, ist noch nicht bestellbar und hat keinen angekündigten Preis. Der M5 Ultra startet bei 5.499 $ mit 96 GB, und die Konfiguration mit 256 GB kostet etwa 9.500 $. Wenn Sie einen günstigeren 70B-Desktop-Mac wollen, ist der Mac Studio der Vorgeneration (M4 Max) möglicherweise reduziert.',
+            a: 'Ja, mit einer Ausnahme. Der Mac Studio M5 Max und M5 Ultra werden seit dem 22. September 2026 ausgeliefert. Die M5-Ultra-Konfiguration mit 512 GB ist seit dem 28. Oktober 2026 bestellbar, ab 22.299 $. Der M5 Ultra startet bei 5.499 $ mit 96 GB, und die Konfiguration mit 256 GB kostet etwa 9.500 $. Wenn Sie einen günstigeren 70B-Desktop-Mac wollen, ist der Mac Studio der Vorgeneration (M4 Max) möglicherweise reduziert.',
           },
           {
             q: 'Mac Mini M5 Pro oder Mac Studio M5 Max für KI?',
@@ -1715,15 +1715,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie viel Unified Memory brauche ich für lokale LLMs auf einem Mac?',
-            a: 'Bei Q4_K_M-Quantisierung planen Sie rund 0,6 GB pro Milliarde Parameter plus 2-4 GB Overhead ein und bedenken, dass macOS denselben Pool teilt. Das bedeutet etwa 8-9 GB für 8B-Modelle, 21-25 GB für 34B und 39-42 GB für 70B. Ein Mac mit 64 GB (Mac Mini M5 Pro oder MacBook Pro M5 Pro) führt 34B komfortabel aus und fasst 70B Q4 gerade so; 128 GB (MacBook Pro M5 Max oder Mac Studio M5 Max) sind für 70B bei Q5 oder den Betrieb mehrerer Modelle nötig; der Mac Studio M5 Ultra erreicht bis zu 512 GB für Modelle größer als ein einzelnes 70B.',
+            a: 'Bei Q4_K_M-Quantisierung planen Sie rund 0,6 GB pro Milliarde Parameter plus 2-4 GB Overhead ein und bedenken, dass macOS denselben Pool teilt. Das bedeutet etwa 8-9 GB für 8B-Modelle, 21-25 GB für 34B und 43+ GB für 70B. Ein Mac mit 64 GB (Mac Mini M5 Pro oder MacBook Pro M5 Pro) führt 34B komfortabel aus und fasst 70B Q4 gerade so; 128 GB (MacBook Pro M5 Max oder Mac Studio M5 Max) sind für 70B bei Q5 oder den Betrieb mehrerer Modelle nötig; der Mac Studio M5 Ultra erreicht bis zu 512 GB für Modelle größer als ein einzelnes 70B.',
           },
           {
             q: 'Mac Mini oder MacBook Pro für lokale KI?',
-            a: 'Wählen Sie den Mac Mini M5 Pro, wenn die Maschine am Schreibtisch bleibt und 34B-Modelle Ihre Obergrenze sind — er ist günstiger, lautlos und ideal als Always-on-Server. Wählen Sie ein MacBook Pro 16" (M5 Pro oder M5 Max), wenn Sie 70B-Modelle ausführen oder das Gerät tragen müssen. Der MacBook Pro M5 Max ist der leistungsfähigste portable Chip für 70B, drosselt aber unter Dauerlast — ein schreibtischgebundener Server ist daher weiterhin mit einem Mac Mini oder Mac Studio besser bedient.',
+            a: 'Wählen Sie den Mac Mini M5 Pro, wenn die Maschine am Schreibtisch bleibt und 34B-Modelle Ihre Obergrenze sind — er ist günstiger, lautlos und ideal als Always-on-Server. Wählen Sie ein MacBook Pro 16" (M5 Pro oder M5 Max), wenn Sie 70B-Modelle ausführen oder das Gerät tragen müssen. Der MacBook Pro M5 Max ist der leistungsfähigste portable Chip für 70B, kann aber unter Dauerlast drosseln — ein schreibtischgebundener Server ist daher weiterhin mit einem Mac Mini oder Mac Studio besser bedient.',
           },
           {
             q: 'Kann ein Mac 70B-Modelle ausführen?',
-            a: 'Ja. Ein MacBook Pro 16" M5 Pro mit 64 GB führt Llama 3.3 70B Q4 mit rund 8-12 Tokens pro Sekunde aus (knapp), und die M5-Max-Version mit 128 GB führt 70B bei Q5 mit 12-18 Tokens pro Sekunde aus. Ein Mac Studio M5 Max mit 128 GB dürfte 70B ebenfalls komfortabel ausführen, doch unabhängige Messungen dazu haben wir noch nicht gefunden. Der Mac Mini M6 kann das nicht — seine 32-GB-Grenze ist zu klein; der Mac Mini M5 Pro mit 64 GB fasst 70B Q4 knapp.',
+            a: 'Ja. Ein MacBook Pro 16" M5 Pro mit 64 GB führt Llama 3.3 70B Q4 mit rund 4-5 Tokens pro Sekunde aus (knapp), und die M5-Max-Version mit 128 GB führt 70B bei Q5 mit 7-10 Tokens pro Sekunde aus. Ein Mac Studio M5 Max mit 128 GB dürfte 70B ebenfalls komfortabel ausführen, doch unabhängige Messungen dazu haben wir noch nicht gefunden. Der Mac Mini M6 kann das nicht — seine 32-GB-Grenze ist zu klein; der Mac Mini M5 Pro mit 64 GB fasst 70B Q4 knapp. Diese Geschwindigkeiten sind Schätzwerte aus Speicherbandbreite und Modelldateigröße, keine Messungen.',
           },
           {
             q: 'Ist ein Mac schneller als eine NVIDIA-GPU für lokale LLMs?',
@@ -1735,15 +1735,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie viel kostet der Betrieb eines Macs als KI-Server?',
-            a: 'Sehr wenig. Ein Mac Mini M5 Pro zieht schätzungsweise 25-55 W unter LLM-Last und rund 8 W im Leerlauf (Schätzwerte, nicht von PromptQuorum gemessen). Ihn ein volles Jahr im 24/7-Betrieb laufen zu lassen kostet bei deutschen Strompreisen rund 26-39 €. Diese niedrigen Betriebskosten sind ein Kerngrund, warum der Mac Mini die Preis-Leistungs-Empfehlung für einen Always-on-Server ist.',
+            a: 'Sehr wenig. Ein Mac Mini M5 Pro zieht schätzungsweise 25-55 W unter LLM-Last und rund 8 W im Leerlauf (Schätzwerte, nicht von PromptQuorum gemessen). Ihn ein volles Jahr im 24/7-Betrieb laufen zu lassen kostet bei leichter bis gemischter Nutzung und 0,15 $/kWh rund 26-39 $ (Schätzung); bei höherer Last oder höherem Stromtarif, etwa in Deutschland, kann es deutlich mehr sein. Diese niedrigen Betriebskosten sind ein Kerngrund, warum der Mac Mini die Preis-Leistungs-Empfehlung für einen Always-on-Server ist.',
           },
           {
             q: 'Erfüllt lokale KI auf einem Mac die Anforderungen der DSGVO an den Datenstandort?',
-            a: 'Ja, in einer entscheidenden Hinsicht. Wenn ein LLM lokal auf einem Mac läuft, verlassen Prompts, Dokumente und Ausgaben das Gerät nicht — es findet keine Übermittlung an einen Cloud-Anbieter und keine Drittlandübermittlung statt. Damit entfällt die rechtliche Komplexität rund um Art. 44 ff. DSGVO und Standardvertragsklauseln, und personenbezogene Daten bleiben physisch im eigenen Verantwortungsbereich. Ein Mac Mini M5 Pro als Headless-Server hält die Verarbeitung vollständig im eigenen Netz, was die Erfüllung von Pflichten zur Datenresidenz und die Auftragsverarbeitungs-Dokumentation deutlich vereinfacht. Die übrigen DSGVO-Pflichten — Rechtsgrundlage, Löschkonzept, Betroffenenrechte — bleiben davon unberührt; lokale Inferenz löst den Aspekt der Datenübermittlung, nicht den gesamten Datenschutz.',
+            a: 'Lokale Inferenz kann helfen, ersetzt aber keine DSGVO-Prüfung. Läuft das Modell vollständig auf dem Mac, müssen Prompts, Dokumente und Ausgaben für die Inferenz nicht an einen Cloud-KI-Anbieter übertragen werden; für diesen Schritt entsteht dann keine Übermittlung an diesen Anbieter. Das gilt nur, wenn weder die verwendete Software noch aktivierte Funktionen (zum Beispiel Cloud-Modelle, Telemetrie, Synchronisierung oder Backups) Daten nach außen senden — prüfen Sie das in Ihrer Konfiguration. Die übrigen DSGVO-Pflichten, etwa Rechtsgrundlage, Löschkonzept, Betroffenenrechte, technische und organisatorische Maßnahmen und gegebenenfalls Auftragsverarbeitungsverträge, bleiben bestehen. Dies ist keine Rechtsberatung; klären Sie den Einzelfall mit Ihrer Datenschutzbeauftragten oder Ihrem Datenschutzbeauftragten.',
           },
           {
             q: 'Ist ein Mac eine sinnvolle Lokale-KI-Maschine für den deutschen Mittelstand?',
-            a: 'Für viele mittelständische Unternehmen ja. Ein Mac Mini M5 Pro 64 GB für etwa 2.700 $ (US-Listenpreis) ist eine einmalige Investition, die einen Always-on-KI-Server für ein ganzes Team bereitstellt — installiert man Ollama und stellt die API im Firmennetz bereit, nutzen alle Arbeitsplätze 34B-Modelle ohne laufende Pro-Nutzer-Lizenzkosten. Bei rund 26-39 € Strom pro Jahr und lautlosem Betrieb passt das Gerät in jedes Büro und benötigt kein Rechenzentrum. Für den Mittelstand sind die ausschlaggebenden Vorteile die kalkulierbaren Gesamtkosten und die Tatsache, dass sensible Geschäfts- und Kundendaten das Haus nicht verlassen. Erst wenn 70B-Modelle oder hohe Parallellast gefragt sind, lohnt der Schritt zu einem Mac Studio M5 Max mit 128 GB.',
+            a: 'Das kann er sein, je nach Anwendungsfall. Ein Mac Mini M5 Pro 64 GB für etwa 2.700 $ (US-Listenpreis) lässt sich als Always-on-KI-Server für ein kleines Team einrichten: Mit Ollama und einer im Firmennetz abgesicherten API können mehrere Arbeitsplätze Modelle bis in die 34B-Klasse nutzen. Wie viele Personen gleichzeitig sinnvoll arbeiten können, hängt von Modell und Last ab; das haben wir nicht getestet. Für die Inferenz mit Ollama auf eigener Hardware fallen keine Pro-Nutzer-Gebühren eines Cloud-KI-Dienstes an; Modell- und Softwarelizenzen sollten Sie dennoch prüfen. Der Strombedarf wird bei leichter bis gemischter Nutzung auf rund 26-39 $ pro Jahr geschätzt (bei 0,15 $/kWh; deutsche Tarife liegen oft höher). Bei rein lokaler Konfiguration müssen Prompts für die Inferenz das eigene Netz nicht verlassen. Für 70B-Modelle oder hohe Parallellast kommt eher ein Mac Studio M5 Max mit 128 GB infrage.',
           },
         ],
       },
@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Den vollständigen M5 Pro vs. M5 Max Benchmark-Satz ansehen](/de/local-llms/m5-pro-max-llm-benchmarks-2026) — gemessene Tokens pro Sekunde, Zeit bis zum ersten Token und Stromverbrauch hinter den Zahlen in diesem Leitfaden.',
+          '[M5 Pro vs. M5 Max für lokale LLMs: Spezifikationen und Geschwindigkeitsschätzungen](/de/local-llms/m5-pro-max-llm-benchmarks-2026) — wie die Schätzwerte dieses Vergleichs berechnet werden und wie Sie die Geschwindigkeit auf Ihrem eigenen Mac messen.',
           '[Einen Mac Mini M5 als Always-on-KI-Server einrichten](/de/local-llms/mac-mini-m5-local-ai-server) — der vollständige Server-Aufbau, mit geschätzten Stromkosten und Hinweisen zum Dauerbetrieb (Schätzungen, nicht gemessen).',
           '[Apple Silicon über die gesamte M-Serie vergleichen](/de/local-llms/apple-silicon-local-llm-guide-2026) — wie M1 bis M5 Max bei Unified Memory und Bandbreite abschneiden.',
           '[Ausrechnen, wie viel Unified Memory jede Modellgröße braucht](/de/local-llms/how-much-unified-memory-for-local-llm) — die vollständige Methode pro Modellgröße hinter der schnellen Formel hier.',
@@ -1767,7 +1767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Meilleur Mac pour l\'IA locale 2026 : Mac mini vs Mac Studio vs MacBook Pro',
     seoTitle: 'Meilleur Mac pour l\'IA locale 2026 : mini vs Studio vs MBP',
     intro:
-      'La plupart des conseils sur les Mac pour l\'IA se fixent sur le nom de la puce, alors que le chiffre qui détermine réellement le choix est la mémoire unifiée. Sur Apple Silicon, le modèle réside dans le même pool mémoire que tout le reste : un Mac mini de 64 Go fait donc tourner un modèle 34B qu\'un Mac mini de 32 Go ne peut pas charger. Apple a rafraîchi les gammes Mac mini et Mac Studio le 25 août 2026 (livrées depuis le 22 septembre 2026), et ce guide compare quatre catégories pour exécuter des LLM en local sur le nouveau matériel — le Mac mini M6 d\'entrée comme serveur économique, le Mac mini M5 Pro comme serveur plus capable, le MacBook Pro 16" comme station de travail portable (M5 Pro ou M5 Max), et le Mac Studio (M5 Max ou M5 Ultra) comme options de bureau et de mémoire extrême — sur les chiffres qui décident d\'un achat : mémoire unifiée, bande passante mémoire, tokens par seconde mesurés et prix. Deux réserves : les prix de départ annoncés par Apple ne couvrent que la mémoire de base, pas celle dont les LLM locaux ont besoin — le Mac mini M6 à 899 $ a 16 Go, le Mac mini M5 Pro à 1 699 $ a 24 Go et le Mac Studio M5 Max à 2 499 $ a 36 Go — si bien que les configurations recommandées ici coûtent plus cher (un M6 de 32 Go revient à environ 1 300 $, un M5 Pro de 64 Go à environ 2 700 $, un Mac Studio M5 Max de 128 Go à environ 5 100 $). Et les tests indépendants des nouvelles puces restent rares : un test pratique a mesuré le Mac mini M6 et le Mac mini M5 Pro sur un petit modèle, et nous n\'avons trouvé aucune mesure indépendante en 70B pour le M5 Max ni le M5 Ultra ; les performances annoncées pour ces puces sont donc les chiffres d\'Apple elle-même, identifiés comme tels. Les prix sont les prix catalogue américains à la date de la dernière mise à jour ; vérifiez le tarif actuel de l\'Apple Store avant d\'acheter.',
+      'La plupart des conseils sur les Mac pour l\'IA se fixent sur le nom de la puce, alors que le chiffre qui détermine réellement le choix est la mémoire unifiée. Sur Apple Silicon, le modèle réside dans le même pool mémoire que tout le reste : un Mac mini de 64 Go fait donc tourner un modèle 34B qu\'un Mac mini de 32 Go ne peut pas charger. Apple a rafraîchi les gammes Mac mini et Mac Studio le 25 août 2026 (livrées depuis le 22 septembre 2026), et ce guide compare quatre catégories pour exécuter des LLM en local sur le nouveau matériel — le Mac mini M6 d\'entrée comme serveur économique, le Mac mini M5 Pro comme serveur plus capable, le MacBook Pro 16" comme station de travail portable (M5 Pro ou M5 Max), et le Mac Studio (M5 Max ou M5 Ultra) comme options de bureau et de mémoire extrême — sur les chiffres qui décident d\'un achat : mémoire unifiée, bande passante mémoire, chiffres en tokens par seconde quand nous en avons (un test sur petit modèle ; les estimations sont signalées) et prix. Deux réserves : les prix de départ annoncés par Apple ne couvrent que la mémoire de base, pas celle dont les LLM locaux ont besoin — le Mac mini M6 à 899 $ a 16 Go, le Mac mini M5 Pro à 1 699 $ a 24 Go et le Mac Studio M5 Max à 2 499 $ a 36 Go — si bien que les configurations recommandées ici coûtent plus cher (un M6 de 32 Go revient à environ 1 300 $, un M5 Pro de 64 Go à environ 2 700 $, un Mac Studio M5 Max de 128 Go à environ 5 100 $). Et les tests indépendants des nouvelles puces restent rares : un test pratique a mesuré le Mac mini M6 et le Mac mini M5 Pro sur un petit modèle, et nous n\'avons trouvé aucune mesure indépendante en 70B pour le M5 Max ni le M5 Ultra ; ce guide ne donne donc aucune vitesse 70B mesurée pour ces puces. MacStories et BGR ont testé le M5 Ultra sur d\'autres modèles. Les prix sont les prix catalogue américains à la date de la dernière mise à jour ; vérifiez le tarif actuel de l\'Apple Store avant d\'acheter.',
     metaDescription:
       'Mac mini M6 32 Go ~1 300 $, M5 Pro 64 Go ~2 700 $. Mac Studio M5 Max 128 Go ~5 100 $, M5 Ultra dès 5 499 $. Mémoire unifiée, bande passante et prix réels comparés.',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-fr.webp',
@@ -1823,7 +1823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Quel Mac acheter pour exécuter des LLM en local en 2026 ?',
         answer:
-          'Achetez selon la mémoire unifiée, puis la bande passante — et comptez le prix de la mémoire, pas celui de la puce : les prix de départ d\'Apple ne couvrent que la mémoire de base. Un Mac mini M6 32 Go (environ 1 300 $ ; le modèle de base à 899 $ a 16 Go) est l\'entrée économique et couvre les modèles 7B-14B — les modèles 30B ou 70B n\'y tiennent pas. Un Mac mini M5 Pro 64 Go (environ 2 700 $ ; le modèle de base à 1 699 $ a 24 Go) est le choix rapport qualité-prix pour un usage sérieux et fait tourner les modèles 34B en silence comme serveur toujours actif. Un MacBook Pro 16" M5 Pro 64 Go est le choix portable pour le 34B-70B Q4, et le M5 Max 128 Go exécute le 70B en Q5. Un Mac Studio M5 Max (64 Go environ 3 500 $, 128 Go environ 5 100 $) est le choix de bureau, avec le double de la bande passante du Mac mini M5 Pro, et le Mac Studio M5 Ultra (dès 5 499 $ avec 96 Go, 256 Go environ 9 500 $, jusqu\'à 512 Go) est le choix extrême pour les plus gros modèles locaux. Toutes ces configurations sont livrées depuis le 22 septembre 2026, sauf la configuration M5 Ultra de 512 Go, livrée fin octobre 2026.',
+          'Achetez selon la mémoire unifiée, puis la bande passante — et comptez le prix de la mémoire, pas celui de la puce : les prix de départ d\'Apple ne couvrent que la mémoire de base. Un Mac mini M6 32 Go (environ 1 300 $ ; le modèle de base à 899 $ a 16 Go) est l\'entrée économique et couvre les modèles 7B-14B — les modèles 30B ou 70B n\'y tiennent pas. Un Mac mini M5 Pro 64 Go (environ 2 700 $ ; le modèle de base à 1 699 $ a 24 Go) est le choix rapport qualité-prix pour un usage sérieux et fait tourner les modèles 34B en silence comme serveur toujours actif. Un MacBook Pro 16" M5 Pro 64 Go est le choix portable pour le 34B-70B Q4, et le M5 Max 128 Go exécute le 70B en Q5. Un Mac Studio M5 Max (64 Go environ 3 500 $, 128 Go environ 5 100 $) est le choix de bureau, avec le double de la bande passante du Mac mini M5 Pro, et le Mac Studio M5 Ultra (dès 5 499 $ avec 96 Go, 256 Go environ 9 500 $, jusqu\'à 512 Go) est le choix extrême pour les plus gros modèles locaux. Toutes ces configurations sont livrées depuis le 22 septembre 2026 ; la configuration M5 Ultra de 512 Go est commandable depuis le 28 octobre 2026 (à partir de 22 299 $).',
         bullets: [
           'Économique : Mac mini M6 32 Go, environ 1 300 $, uniquement 7B-14B (plafond mémoire 32 Go)',
           'Rapport qualité-prix / serveur toujours actif : Mac mini M5 Pro 64 Go, environ 2 700 $, modèles 34B et 70B Q4 serré',
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bureau : Mac Studio M5 Max 64 Go ~3 500 $ ou 128 Go ~5 100 $ ; extrême : M5 Ultra dès 5 499 $, jusqu\'à 512 Go',
           'La mémoire d\'Apple Silicon n\'est pas évolutive après l\'achat — choisissez d\'emblée la taille nécessaire',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1861,12 +1861,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La mémoire unifiée est la contrainte déterminante.** Sur Apple Silicon, le modèle partage un seul pool mémoire avec le système — un modèle qui n\'y tient pas ne peut pas s\'exécuter. Choisissez le Mac dont la mémoire correspond à votre modèle cible, puis optimisez la bande passante et le format.',
           '**La mémoire n\'est pas évolutive après l\'achat.** La mémoire unifiée d\'Apple Silicon est soudée. Ce que vous achetez est définitif — dimensionnez pour le modèle que vous voudrez dans deux ans, pas seulement aujourd\'hui.',
           '**Choix économique : Mac mini M6 32 Go (environ 1 300 $)** — puce d\'entrée du rafraîchissement Apple du 25 août 2026, 170 Go/s de bande passante, plafond mémoire de 32 Go qui couvre seulement les modèles 7B-14B ; insuffisant pour 30B ou 70B. Les 899 $ annoncés correspondent au modèle de 16 Go.',
-          '**Choix rapport qualité-prix / serveur : Mac mini M5 Pro 64 Go (environ 2 700 $)** — silencieux, 25-55 W (estimation) en charge, environ 26-39 € d\'électricité par an, et 64 Go font tourner les modèles 34B et font tenir le 70B Q4 de justesse. Les 1 699 $ annoncés correspondent au modèle de 24 Go.',
+          '**Choix rapport qualité-prix / serveur : Mac mini M5 Pro 64 Go (environ 2 700 $)** — silencieux, 25-55 W (estimation) en charge, environ 26-39 $ d\'électricité par an (estimation à 0,15 $/kWh en usage léger à mixte ; votre tarif peut différer), et 64 Go font tourner les modèles 34B et font tenir le 70B Q4 de justesse. Les 1 699 $ annoncés correspondent au modèle de 24 Go.',
           '**Choix portable : MacBook Pro 16" M5 Pro 64 Go (environ 3 000-3 400 $) ou M5 Max 128 Go (environ 5 000 $ et plus)** — 307-614 Go/s de bande passante, exécute le 70B de Q4 à Q5. Peut subir un throttling en charge soutenue (l\'ampleur varie selon la charge et le châssis) en échange de la portabilité.',
           '**Choix de bureau : Mac Studio M5 Max 64 Go (~3 500 $) ou 128 Go (~5 100 $)** — 614 Go/s de bande passante font tourner le 70B en Q5 sur le modèle de 128 Go. Livré depuis le 22 septembre 2026 ; nous n\'avons pas encore trouvé de benchmarks indépendants.',
           '**Mac mini M5 Pro vs Mac Studio M5 Max :** à 64 Go identiques, le Mac Studio coûte environ 800 $ de plus et offre le double de bande passante (614 contre 307 Go/s) ; seul le Mac Studio atteint 128 Go.',
-          '**Choix extrême : Mac Studio M5 Ultra (dès 5 499 $ avec 96 Go ; 256 Go environ 9 500 $ ; jusqu\'à 512 Go)** — 1,2 To/s de bande passante ; la configuration de 512 Go est livrée fin octobre 2026 et n\'a pas de prix annoncé.',
-          '**C\'est la bande passante, pas le nom de la puce, qui fixe la vitesse.** Lors d\'un test indépendant, le Mac mini M5 Pro a généré environ 92 tokens par seconde contre 54 pour le M6 sur un petit modèle — un écart qui suit la bande passante (307 contre 153-170 Go/s). Le M5 Max (460-614 Go/s) offre jusqu\'au double de la bande passante du M5 Pro (spécifications Apple ; aucune mesure indépendante du M5 Max ni du M5 Ultra trouvée).',
+          '**Choix extrême : Mac Studio M5 Ultra (dès 5 499 $ avec 96 Go ; 256 Go environ 9 500 $ ; jusqu\'à 512 Go)** — 1,2 To/s de bande passante ; la configuration de 512 Go est commandable depuis le 28 octobre 2026, à partir de 22 299 $.',
+          '**C\'est la bande passante, pas le nom de la puce, qui fixe la vitesse.** Lors d\'un test indépendant, le Mac mini M5 Pro a généré environ 92 tokens par seconde contre 54 pour le M6 sur un petit modèle — un écart qui suit la bande passante (307 contre 153-170 Go/s). Le M5 Max (460-614 Go/s) offre jusqu\'au double de la bande passante du M5 Pro (spécifications Apple ; aucune mesure indépendante du M5 Max trouvée, et les tests indépendants du M5 Ultra que nous connaissons portent sur d\'autres modèles, pas sur du 70B).',
           '**Apple Silicon échange la vitesse brute contre la capacité et le silence.** Un GPU RTX de bureau est plus rapide sur les modèles 7B-13B, mais ses 24-32 Go de VRAM ne peuvent pas charger un modèle 70B qu\'un Mac de 128 Go exécute sans peine, et encore moins les 512 Go que peut atteindre le Mac Studio M5 Ultra.',
           '**La consommation est faible sur toute la gamme.** Un Mac mini consomme 25-55 W (estimation) sous charge LLM et un M5 Max 60-100 W (estimation) — contre 300-450 W pour une carte RTX de bureau effectuant un travail comparable.',
         ],
@@ -1883,7 +1883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Règle empirique de mémoire unifiée en Q4_K_M :** environ 0,6 Go par milliard de paramètres, plus 2-4 Go pour le contexte et l\'outillage.',
           '**Bande passante mémoire :** Mac mini M6 170 Go/s, M5 Pro 307 Go/s, M5 Max 460-614 Go/s, M5 Ultra 1,2 To/s.',
           '**Plage de consommation :** Mac mini M5 Pro 25-55 W (estimation), MacBook Pro M5 Max 60-100 W (estimation) sous charge LLM.',
-          '**Disponibilité :** le rafraîchissement Mac mini et Mac Studio du 25 août 2026 est livré depuis le 22 septembre 2026, sauf la configuration M5 Ultra de 512 Go, livrée fin octobre 2026 — vérifiez le tarif actuel de l\'Apple Store avant d\'acheter.',
+          '**Disponibilité :** le rafraîchissement Mac mini et Mac Studio du 25 août 2026 est livré depuis le 22 septembre 2026, et la configuration M5 Ultra de 512 Go est commandable depuis le 28 octobre 2026 (à partir de 22 299 $) — vérifiez le tarif actuel de l\'Apple Store avant d\'acheter.',
         ],
       },
       editorsChoice: {
@@ -1891,7 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Choix de la rédaction : Mac mini M5 Pro 64 Go',
         highlight: true,
         content:
-          '**Pour la plupart des acheteurs qui choisissent un Mac spécifiquement pour l\'IA locale, le Mac mini M5 Pro doté de 64 Go de mémoire unifiée est le choix qui équilibre capacité, prix et coût d\'exploitation.** Ses 64 Go absorbent tous les modèles jusqu\'à 34B avec de la marge de contexte et font tenir le 70B Q4 de justesse, il fonctionne en silence et ne consomme que 25-55 W (estimation) sous charge d\'inférence, et à environ 2 700 $ (le modèle de base à 1 699 $ n\'a que 24 Go) c\'est le Mac le moins cher qui contienne un modèle de 64 Go. Il fait aussi un serveur d\'IA toujours actif idéal pour la maison ou le bureau. Descendez au Mac mini M6 32 Go (environ 1 300 $) seulement si les modèles 7B-14B couvrent réellement votre usage — son plafond de 32 Go ne supporte pas les modèles 30B ou 70B. Passez à un Mac Studio M5 Max 64 Go (environ 3 500 $) si vous voulez le double de bande passante à mémoire égale, au MacBook Pro 16" uniquement si vous avez besoin de portabilité, à un Mac Studio M5 Max 128 Go (environ 5 100 $) uniquement si vous avez besoin du 70B en meilleure qualité sur le bureau, ou à un Mac Studio M5 Ultra si vous avez besoin des plus gros modèles locaux.',
+          '**Pour la plupart des acheteurs qui choisissent un Mac spécifiquement pour l\'IA locale, le Mac mini M5 Pro doté de 64 Go de mémoire unifiée est le choix qui équilibre capacité, prix et coût d\'exploitation.** Ses 64 Go absorbent tous les modèles jusqu\'à 34B avec de la marge de contexte et font tenir le 70B Q4 de justesse, il fonctionne en silence et ne consomme que 25-55 W (estimation) sous charge d\'inférence, et à environ 2 700 $ (le modèle de base à 1 699 $ n\'a que 24 Go) c\'est le Mac le moins cher de ce guide qui contienne un modèle de 64 Go. Il fait aussi un serveur d\'IA toujours actif idéal pour la maison ou le bureau. Descendez au Mac mini M6 32 Go (environ 1 300 $) seulement si les modèles 7B-14B couvrent réellement votre usage — son plafond de 32 Go ne supporte pas les modèles 30B ou 70B. Passez à un Mac Studio M5 Max 64 Go (environ 3 500 $) si vous voulez le double de bande passante à mémoire égale, au MacBook Pro 16" uniquement si vous avez besoin de portabilité, à un Mac Studio M5 Max 128 Go (environ 5 100 $) uniquement si vous avez besoin du 70B en meilleure qualité sur le bureau, ou à un Mac Studio M5 Ultra si vous avez besoin des plus gros modèles locaux.',
         callouts: [
           {
             type: 'note',
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparaison des Mac pour l\'IA locale en 2026',
         content:
-          'Les chiffres de mémoire et de bande passante sont les spécifications Apple. Les vitesses du MacBook Pro sont des estimations indicatives ; consultez la page de benchmarks M5 Pro vs M5 Max liée pour ses plages. Elles n\'ont pas été re-mesurées pour ce guide. Les vitesses de la ligne Mac mini proviennent d\'un seul test pratique indépendant sur un petit modèle 4B (voir Sources), réalisé sur des machines à mémoire de base ; nous n\'avons trouvé aucune mesure indépendante en 70B pour le M6, le M5 Pro du Mac mini, le M5 Max du Mac Studio ni le M5 Ultra ; ces cellules sont donc annotées plutôt qu\'estimées. Les prix sont les prix catalogue américains de la configuration indiquée dans chaque ligne : les prix de départ annoncés par Apple ne couvrent que la mémoire de base (M6 16 Go, M5 Pro 24 Go, M5 Max 36 Go, M5 Ultra 96 Go), le supplément de mémoire est donc inclus ici. Vérifiez le tarif actuel de l\'Apple Store avant d\'acheter.',
+          'Les chiffres de mémoire et de bande passante sont les spécifications Apple. Les vitesses du MacBook Pro sont des estimations tirées de la bande passante mémoire et de la taille du fichier du modèle, pas des mesures ; la méthode figure sur la page liée des vitesses estimées M5 Pro vs M5 Max. Les vitesses de la ligne Mac mini proviennent d\'un seul test pratique indépendant sur un petit modèle 4B (voir Sources), réalisé sur des machines à mémoire de base ; nous n\'avons trouvé aucune mesure indépendante en 70B pour le M6, le M5 Pro du Mac mini, le M5 Max du Mac Studio ni le M5 Ultra ; ces cellules sont donc annotées plutôt qu\'estimées. Les prix sont les prix catalogue américains de la configuration indiquée dans chaque ligne : les prix de départ annoncés par Apple ne couvrent que la mémoire de base (M6 16 Go, M5 Pro 24 Go, M5 Max 36 Go, M5 Ultra 96 Go), le supplément de mémoire est donc inclus ici. Vérifiez le tarif actuel de l\'Apple Store avant d\'acheter.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1954,8 +1954,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64 Go](https://www.apple.com/macbook-pro/)',
             'Mémoire unifiée': '64 Go',
             'Bande passante': '307 Go/s',
-            'Vitesse (8B Q4)': 'env. 50-60 tok/s',
-            'Vitesse (70B Q4)': 'env. 8-12 tok/s',
+            'Vitesse (8B Q4)': 'env. 38-50 tok/s',
+            'Vitesse (70B Q4)': 'env. 4-5 tok/s',
             'Prix (US)': '~3 000-3 400 $',
             'Idéal pour': 'Portable 34B-70B Q4 (serré)',
           },
@@ -1963,8 +1963,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128 Go',
             'Mémoire unifiée': '128 Go',
             'Bande passante': '614 Go/s',
-            'Vitesse (8B Q4)': 'env. 100-120 tok/s',
-            'Vitesse (70B Q4)': '16-22 tok/s',
+            'Vitesse (8B Q4)': 'env. 75-100 tok/s',
+            'Vitesse (70B Q4)': '~9-11 tok/s',
             'Prix (US)': '~5 000 $ et plus',
             'Idéal pour': '70B Q5 portable, multi-modèle',
           },
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Vitesse (8B Q4)': 'pas encore testé',
             'Vitesse (70B Q4)': 'pas encore testé',
             'Prix (US)': 'dès 5 499 $ ; 256 Go ~9 500 $',
-            'Idéal pour': 'Extrême, 512 Go pas encore commandable',
+            'Idéal pour': 'Extrême ; 512 Go dès 22 299 $',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-fr.webp',
@@ -2027,7 +2027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mac mini M6 (dès 899 $ avec 16 Go ; environ 1 300 $ avec 32 Go, le maximum) :** CPU 12 cœurs, GPU 12 cœurs, moteur neuronal double 16 cœurs, 170 Go/s de bande passante à 24 Go et 32 Go (153 Go/s à 16 Go). Apple annonce environ 40 % de performance CPU en plus et jusqu\'à 4 fois la performance IA par rapport au M4 sortant (chiffre propre à Apple ; les gains les plus importants concernent le traitement du prompt, tandis que la génération de tokens est limitée par la bande passante). Gère confortablement les modèles 7B-14B ; 32 Go est un plafond strict qui exclut les modèles 30B et 70B.',
           '**Mac mini M5 Pro (dès 1 699 $ avec 24 Go ; environ 2 700 $ avec 64 Go) :** le choix recommandé. CPU jusqu\'à 18 cœurs, GPU 20 cœurs (le modèle 18/20 cœurs avec 64 Go coûte environ 2 900 $), 307 Go/s de bande passante, Thunderbolt 5. Fait tenir les modèles 34B avec marge et le 70B en Q4 de justesse. Assez de mémoire pour exécuter en même temps un LLM, la reconnaissance vocale Whisper et un pipeline RAG.',
           '**Vitesse mesurée :** lors d\'un test pratique indépendant (Gemma 3 4B dans LM Studio, machines à mémoire de base), le M6 a généré environ 53-54 tokens par seconde et le M5 Pro environ 92-93, avec un temps jusqu\'au premier token inférieur à une demi-seconde sur les deux. L\'écart d\'environ 70 % suit l\'avantage de bande passante du M5 Pro. Il s\'agit d\'un seul test sur un petit modèle, pas d\'un résultat en 70B.',
-          '**Pourquoi acheter ce Mac :** le M5 Pro est l\'entrée la moins chère dans l\'IA Apple Silicon sérieuse, fonctionnement silencieux, consommation de 25-55 W (estimation) (env. 26-39 € d\'électricité par an) et un format compact qui se loge dans un placard comme serveur. Le M6 le bat sur le prix si le 7B-14B couvre réellement votre usage.',
+          '**Pourquoi acheter ce Mac :** le M5 Pro est l\'entrée la moins chère dans l\'IA Apple Silicon sérieuse, fonctionnement silencieux, consommation de 25-55 W (estimation) (env. 26-39 $ d\'électricité par an à 0,15 $/kWh, estimation) et un format compact qui se loge dans un placard comme serveur. Le M6 le bat sur le prix si le 7B-14B couvre réellement votre usage.',
           '**Pourquoi écarter ce Mac :** le plafond de 32 Go du M6 ne supporte pas un modèle 30B ni 70B, et aucun Mac mini n\'est portable. Si le 70B avec une vraie marge est votre objectif, choisissez plutôt un MacBook Pro ou un Mac Studio M5 Max.',
         ],
         callouts: [
@@ -2037,7 +2037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'Le Mac mini M5 Pro fait un excellent serveur d\'IA headless : installez Ollama, exposez l\'API sur le réseau local, et chaque appareil de la maison peut l\'utiliser. L\'électricité estimée pour un usage 24/7 est d\'environ 26-39 € par an (estimation, non mesurée).',
+            text: 'Le Mac mini M5 Pro fait un excellent serveur d\'IA headless : installez Ollama, exposez l\'API sur le réseau local, et chaque appareil de la maison peut l\'utiliser. L\'électricité estimée pour un usage 24/7 est d\'environ 26-39 $ par an à 0,15 $/kWh en usage léger à mixte (estimation, non mesurée) ; votre tarif peut différer.',
           },
           {
             type: 'warning',
@@ -2067,8 +2067,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Le MacBook Pro 16" (M5 Pro ou M5 Max, lancé en mars 2026 et non concerné par le rafraîchissement Mac mini/Mac Studio d\'Apple du 25 août) est le choix des acheteurs qui ont besoin de modèles de classe 70B dans un format portable — et la réponse à la question « quel est le meilleur MacBook pour l\'IA locale ».** Le M5 Max est la seule puce portable de ce guide qui dépasse confortablement le 70B ; le M5 Pro fait tenir le 70B en Q4 de justesse. Le compromis face à un bureau doté de la même puce : un portable peut subir un throttling en inférence soutenue ; l\'ampleur varie selon la charge et le châssis.',
         items: [
-          '**MacBook Pro 16" M5 Pro 64 Go (environ 3 000-3 400 $ ; le 16" M5 Pro démarre à 2 699 $) :** CPU jusqu\'à 18 cœurs, GPU 20 cœurs, 307 Go/s de bande passante — 64 Go est le plafond mémoire de cette puce. Exécute les modèles 8B à environ 50-60 tok/s et Llama 3.3 70B Q4 à environ 8-12 tok/s (de justesse). Le point d\'entrée portable dans l\'IA locale 70B.',
-          '**MacBook Pro 16" M5 Max 128 Go (environ 5 000 $ et plus ; le 16" M5 Max démarre à 3 899 $) :** GPU jusqu\'à 40 cœurs, 614 Go/s de bande passante. Exécute les modèles 8B à environ 100-120 tok/s et le 70B en Q5 (meilleure qualité) à 12-18 tok/s, et permet d\'exécuter deux modèles à la fois — par exemple un modèle 70B et un modèle 13B.',
+          '**MacBook Pro 16" M5 Pro 64 Go (environ 3 000-3 400 $ ; le 16" M5 Pro démarre à 2 699 $) :** CPU jusqu\'à 18 cœurs, GPU 20 cœurs, 307 Go/s de bande passante — 64 Go est le plafond mémoire de cette puce. Exécute les modèles 8B à environ 38-50 tok/s et Llama 3.3 70B Q4 à environ 4-5 tok/s (de justesse). Le point d\'entrée portable dans l\'IA locale 70B. Ces vitesses sont des estimations tirées de la bande passante mémoire et de la taille du fichier du modèle, pas des mesures.',
+          '**MacBook Pro 16" M5 Max 128 Go (environ 5 000 $ et plus ; le 16" M5 Max démarre à 3 899 $) :** GPU jusqu\'à 40 cœurs, 614 Go/s de bande passante. Exécute les modèles 8B à environ 75-100 tok/s et le 70B en Q5 (meilleure qualité) à 7-10 tok/s, et permet d\'exécuter deux modèles à la fois — par exemple un modèle 70B et un modèle 13B. Ces vitesses sont des estimations tirées de la bande passante mémoire et de la taille du fichier du modèle, pas des mesures.',
           '**Pourquoi acheter ce Mac :** vous avez besoin de modèles 70B et de portabilité, vous voulez une seule machine pour le travail créatif et l\'IA, ou vous présentez et voyagez et ne pouvez pas laisser un bureau derrière vous.',
           '**Pourquoi écarter ce Mac :** si la machine ne quitte jamais un bureau, un Mac Studio doté de la même puce chauffe moins et maintient sa pleine vitesse, pour un prix similaire à 128 Go ; si les modèles 34B suffisent, le Mac mini M5 Pro coûte plusieurs centaines de dollars de moins.',
         ],
@@ -2103,17 +2103,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max vs M5 Ultra : bureau et extrême',
         content:
-          '**Apple a rafraîchi le Mac Studio le 25 août 2026 avec le M5 Max (choix de bureau pour le 70B) et le M5 Ultra (extrême, jusqu\'à 512 Go) ; les configurations de base sont livrées depuis le 22 septembre 2026, et la configuration M5 Ultra de 512 Go suit fin octobre 2026.** Un Mac Studio M5 Max de 128 Go exécute le 70B en qualité Q5 et reste plus silencieux qu\'un MacBook Pro en charge soutenue, car le châssis de bureau n\'a pas le plafond thermique d\'un portable. Le M5 Ultra existe pour ceux qui ont besoin de modèles plus gros que ce que 128 Go peut contenir. Les prix de départ annoncés (2 499 $ et 5 499 $) correspondent à 36 Go et 96 Go ; le M5 Max de 128 Go coûte environ 5 100 $.',
+          '**Apple a rafraîchi le Mac Studio le 25 août 2026 avec le M5 Max (choix de bureau pour le 70B) et le M5 Ultra (extrême, jusqu\'à 512 Go) ; les configurations de base sont livrées depuis le 22 septembre 2026, et la configuration M5 Ultra de 512 Go est commandable depuis le 28 octobre 2026.** Un Mac Studio M5 Max de 128 Go exécute le 70B en qualité Q5 et reste plus silencieux qu\'un MacBook Pro en charge soutenue, car le châssis de bureau n\'a pas le plafond thermique d\'un portable. Le M5 Ultra existe pour ceux qui ont besoin de modèles plus gros que ce que 128 Go peut contenir. Les prix de départ annoncés (2 499 $ et 5 499 $) correspondent à 36 Go et 96 Go ; le M5 Max de 128 Go coûte environ 5 100 $.',
         items: [
           '**Mac Studio M5 Max (dès 2 499 $ avec 36 Go ; 64 Go environ 3 500 $ ; 128 Go environ 5 100 $) :** le modèle de base à GPU 32 cœurs offre 460 Go/s et plafonne à 36 Go ; le modèle à GPU 40 cœurs (dès environ 3 100 $ avec 48 Go) offre 614 Go/s et est le seul proposé en 64 Go ou 128 Go. Le choix de bureau pour les modèles 70B. Nous n\'avons trouvé aucune mesure indépendante en 70B pour cette machine.',
-          '**Mac Studio M5 Ultra (dès 5 499 $ avec 96 Go ; 256 Go environ 9 500 $, ou environ 10 800 $ avec le GPU 80 cœurs) :** la configuration CPU 36 cœurs / GPU 80 cœurs supporte jusqu\'à 512 Go de mémoire unifiée à environ 1,2 To/s de bande passante. La configuration de 512 Go est livrée fin octobre 2026, n\'est pas encore commandable et n\'a pas de prix annoncé. Cette catégorie vise les plus gros modèles locaux — bien au-delà d\'un seul modèle 70B — ce n\'est pas un achat courant.',
+          '**Mac Studio M5 Ultra (dès 5 499 $ avec 96 Go ; 256 Go environ 9 500 $, ou environ 10 800 $ avec le GPU 80 cœurs) :** la configuration CPU 36 cœurs / GPU 80 cœurs supporte jusqu\'à 512 Go de mémoire unifiée à environ 1,2 To/s de bande passante. La configuration de 512 Go est commandable depuis le 28 octobre 2026, à partir de 22 299 $ ([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). Cette catégorie vise les plus gros modèles locaux — bien au-delà d\'un seul modèle 70B — ce n\'est pas un achat courant.',
           '**Pourquoi acheter un Mac Studio :** vous voulez une machine de bureau 70B sur la gamme actuelle, vous voulez un fonctionnement soutenu plus silencieux qu\'un MacBook Pro, vous voulez le double de la bande passante du Mac mini M5 Pro, ou (spécifiquement le M5 Ultra) vous devez exécuter des modèles plus gros que ce que 128 Go peut contenir.',
           '**Pourquoi écarter un Mac Studio :** si vous avez besoin de portabilité, achetez un MacBook Pro ; si les modèles 34B suffisent et que la vitesse est secondaire, le Mac mini M5 Pro est moins cher ; si vous voulez un bureau 70B pour moins cher, regardez le Mac Studio M4 Max de génération précédente, probablement remisé maintenant que la nouvelle gamme est livrée.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Les prix et spécifications ci-dessus sont les chiffres publiés par Apple, complétés par les tarifs du configurateur rapportés par Daring Fireball ; nous n\'avons trouvé aucun benchmark indépendant du Mac Studio M5 Max ni M5 Ultra. Une source indique la configuration M5 Max de 128 Go comme abandonnée alors que d\'autres la listent encore — vérifiez qu\'elle est commandable sur l\'Apple Store avant de planifier un achat autour d\'elle.',
+            text: 'Les prix et spécifications ci-dessus sont les chiffres publiés par Apple, complétés par les tarifs du configurateur rapportés par Daring Fireball ; nous n\'avons trouvé aucun benchmark 70B indépendant du Mac Studio M5 Max ni M5 Ultra ; les tests indépendants du M5 Ultra sur d\'autres modèles sont résumés dans notre [guide Apple Silicon M5](/fr/local-llms/apple-silicon-m5-local-llm). Vérifiez que votre configuration exacte est commandable sur l\'Apple Store avant de planifier un achat.',
           },
         ],
         affiliateLinks: [
@@ -2176,9 +2176,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modèles 8B — 8-9 Go :** tiennent sur tout Mac doté de 16 Go ou plus, y compris le Mac mini M6. Un Mac de 32 Go laisse une marge confortable.',
           '**Modèles 13-14B — 11-13 Go :** nécessitent 32 Go une fois macOS et la surcharge de contexte comptés. Mac mini M6 (32 Go) et au-delà.',
           '**Modèles 34B — 21-25 Go :** nécessitent 64 Go en pratique. Le Mac mini M5 Pro 64 Go est le choix rapport qualité-prix ici — le plafond de 32 Go du M6 ne suffit pas pour un modèle 34B.',
-          '**Modèles 70B en Q4 — 39-42 Go :** nécessitent 64 Go au minimum, 64 Go devenant juste une fois le contexte ajouté. Le Mac mini M5 Pro 64 Go ou le MacBook Pro 16" M5 Pro 64 Go est le plancher.',
+          '**Modèles 70B en Q4 — 43+ Go :** nécessitent 64 Go au minimum, 64 Go devenant juste une fois le contexte ajouté. Le Mac mini M5 Pro 64 Go ou le MacBook Pro 16" M5 Pro 64 Go est le plancher.',
           '**Modèles 70B en Q5 ou modèles simultanés — 50-70 Go+ :** nécessitent 128 Go. MacBook Pro 16" M5 Max 128 Go ou un Mac Studio M5 Max de 128 Go.',
-          '**Modèles plus gros qu\'un seul 70B, ou modèles MoE très volumineux — 100 Go+ :** nécessitent le Mac Studio M5 Ultra, qui atteint jusqu\'à 512 Go de mémoire unifiée (la configuration de 512 Go est livrée fin octobre 2026).',
+          '**Modèles plus gros qu\'un seul 70B, ou modèles MoE très volumineux — 100 Go+ :** nécessitent le Mac Studio M5 Ultra, qui atteint jusqu\'à 512 Go de mémoire unifiée (la configuration de 512 Go est commandable depuis le 28 octobre 2026, à partir de 22 299 $).',
         ],
         callouts: [
           {
@@ -2186,8 +2186,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La mémoire d\'Apple Silicon est soudée et ne peut pas être mise à niveau. Achetez une catégorie au-dessus de votre besoin actuel : si vous exécutez des modèles 34B aujourd\'hui, 64 Go sont le plancher, pas le choix confortable. Pour la méthode complète, voir le guide de la mémoire unifiée dans À lire également.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-fr.webp',
-        imageCaption: 'Mémoire unifiée par taille de modèle en Q4_K_M : 8B nécessite 8-9 Go, 13-14B nécessite 11-13 Go, 34B nécessite 21-25 Go, 70B Q4 nécessite 39-42 Go, et 70B Q5 ou plusieurs modèles nécessitent 50-70+ Go.',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -2198,7 +2198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. Quel est le plus gros modèle que vous voulez exécuter ?** 7-14B : Mac mini M6 32 Go. 34B : Mac mini M5 Pro 64 Go. 70B Q4 : Mac mini M5 Pro 64 Go ou MacBook Pro M5 Pro. 70B Q5 ou simultané : MacBook Pro M5 Max 128 Go ou Mac Studio M5 Max. 100B+ ou MoE géant : Mac Studio M5 Ultra, jusqu\'à 512 Go.',
           '**2. La machine doit-elle se déplacer ?** Oui : MacBook Pro 16" M5 Pro ou M5 Max. Non : Mac mini (jusqu\'à 34B/70B Q4) ou Mac Studio (70B et plus).',
           '**3. Est-ce un serveur toujours actif ?** Oui : Mac mini M5 Pro 64 Go — silencieux, 25-55 W (estimation), le moins cher à faire tourner 24/7. Non : choisissez selon la taille du modèle ci-dessus.',
-          '**4. Vous faut-il des réponses aussi rapides que possible, ou 512 Go ?** Plus rapide à mémoire égale : Mac Studio M5 Max (614 Go/s contre 307 Go/s). 512 Go : la configuration Mac Studio M5 Ultra de 512 Go est livrée fin octobre 2026 et n\'est pas encore commandable ; la configuration de 256 Go est disponible dès maintenant.',
+          '**4. Vous faut-il des réponses aussi rapides que possible, ou 512 Go ?** Plus rapide à mémoire égale : Mac Studio M5 Max (614 Go/s contre 307 Go/s). 512 Go : la configuration Mac Studio M5 Ultra de 512 Go est commandable depuis le 28 octobre 2026, à partir de 22 299 $.',
         ],
         snippetBlocks: [
           {
@@ -2225,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Les nouveaux Mac mini et Mac Studio sont livrés depuis le 22 septembre 2026 ; la configuration Mac Studio M5 Ultra de 512 Go est livrée fin octobre 2026. Les prix de départ annoncés par Apple ne couvrent que la mémoire de base — ouvrez le configurateur actuel de l\'Apple Store pour le palier de mémoire qu\'il vous faut, car les suppléments de mémoire représentent la plus grande part du total.',
+            text: 'Les nouveaux Mac mini et Mac Studio sont livrés depuis le 22 septembre 2026 ; la configuration Mac Studio M5 Ultra de 512 Go est commandable depuis le 28 octobre 2026. Les prix de départ annoncés par Apple ne couvrent que la mémoire de base — ouvrez le configurateur actuel de l\'Apple Store pour le palier de mémoire qu\'il vous faut, car les suppléments de mémoire représentent la plus grande part du total.',
           },
         ],
         affiliateLinks: [
@@ -2253,8 +2253,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Prendre le prix de départ annoncé pour le prix du Mac dont vous avez besoin.** 899 $ achètent un Mac mini M6 avec 16 Go, 1 699 $ un Mac mini M5 Pro avec 24 Go et 2 499 $ un Mac Studio M5 Max avec 36 Go. Le M6 de 32 Go coûte environ 1 300 $, le M5 Pro de 64 Go environ 2 700 $ et le M5 Max de 128 Go environ 5 100 $.',
           '**Supposer que le plafond de 32 Go du Mac mini M6 couvre les modèles 30B ou 70B.** Ce n\'est pas le cas. 32 Go est une limite stricte autour des modèles 14B — le M5 Pro (64 Go) est le plancher pour le 34B et au-delà.',
           '**Oublier que la mémoire d\'Apple Silicon n\'est pas évolutive.** La mémoire est soudée. Sous-dimensionnez et la seule solution est un nouveau Mac — dimensionnez une catégorie au-dessus du besoin actuel.',
-          '**Attendre le Mac Studio M5 Ultra de 512 Go sans vérifier le prix.** La configuration de 512 Go est livrée fin octobre 2026, n\'a pas de prix annoncé, et la configuration de 256 Go coûte déjà environ 9 500 $.',
-          '**Acheter un MacBook Pro pour un serveur 24/7 fixe.** Il subit un throttling en charge soutenue. Pour un serveur toujours actif, le Mac mini M5 Pro ou un Mac Studio chauffe moins et reste plus silencieux.',
+          '**Prévoir le Mac Studio M5 Ultra de 512 Go sans vérifier le prix.** Il démarre à 22 299 $ (commandable depuis le 28 octobre 2026), et la configuration de 256 Go coûte environ 9 500 $.',
+          '**Acheter un MacBook Pro pour un serveur 24/7 fixe.** Il peut subir un throttling en charge soutenue. Pour un serveur toujours actif, le Mac mini M5 Pro ou un Mac Studio chauffe moins et reste plus silencieux.',
           '**Surdimensionner pour des modèles 8B.** Si les modèles 8B couvrent votre cas d\'usage, un Mac de 128 Go est de l\'argent gaspillé. Adaptez la catégorie de mémoire au modèle, pas au budget dont vous disposez.',
           '**Traiter l\'affirmation d\'Apple « jusqu\'à 4 fois la performance IA » comme un benchmark de vitesse de génération.** C\'est un chiffre propre à Apple pour le M6 face au M4 sortant ; les gains les plus importants concernent le traitement du prompt, tandis que la génération de tokens est limitée par la bande passante mémoire (le seul test indépendant que nous ayons trouvé a mesuré le M5 Pro environ 70 % plus rapide que le M6 sur un petit modèle).',
         ],
@@ -2269,7 +2269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Configurations et tarifs des nouveaux Mac mini et Mac Studio (Daring Fireball)](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — Tarifs des suppléments de mémoire et de stockage utilisés pour les totaux de ce guide.',
           '[Apple déploie les nouveaux Mac mini et Mac Studio dans 30 pays (MacTech)](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — Date de livraison et prix de départ américains.',
           '[Mac mini M6 vs Mac mini M5 Pro : tests en conditions réelles (Adam Talks Tech)](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — Test pratique indépendant des deux Mac mini avec un modèle 4B dans LM Studio (l\'auteur déclare des liens d\'affiliation).',
-          '[Benchmarks LLM M5 Pro vs M5 Max 2026](/fr/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens par seconde pour les modèles 8B et 70B sur le M5 Pro et le M5 Max, tels qu\'indiqués sur cette page (voir sa note méthodologique).',
+          '[M5 Pro vs M5 Max pour les LLM locaux : caractéristiques et vitesses estimées](/fr/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens par seconde estimés (non mesurés) pour les modèles 8B et 70B, calculés à partir de la bande passante mémoire et de la taille du fichier du modèle.',
           '[Le Mac mini M5 comme serveur d\'IA locale](/fr/local-llms/mac-mini-m5-local-ai-server) — estimations fondées sur les spécifications publiées par Apple (non mesurées par PromptQuorum) : consommation, coût d\'électricité et performance en serveur toujours actif du Mac mini M5 Pro.',
         ],
       },
@@ -2283,7 +2283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Le Mac Studio M5 est-il déjà disponible ?',
-            a: 'Oui, à une exception près. Les Mac Studio M5 Max et M5 Ultra sont livrés depuis le 22 septembre 2026. La configuration M5 Ultra de 512 Go suit fin octobre 2026, n\'est pas encore commandable et n\'a pas de prix annoncé. Le M5 Ultra démarre à 5 499 $ avec 96 Go, et la configuration de 256 Go coûte environ 9 500 $. Si vous voulez un Mac de bureau 70B moins cher, le Mac Studio de génération précédente (M4 Max) peut être remisé.',
+            a: 'Oui, à une exception près. Les Mac Studio M5 Max et M5 Ultra sont livrés depuis le 22 septembre 2026. La configuration M5 Ultra de 512 Go est commandable depuis le 28 octobre 2026, à partir de 22 299 $. Le M5 Ultra démarre à 5 499 $ avec 96 Go, et la configuration de 256 Go coûte environ 9 500 $. Si vous voulez un Mac de bureau 70B moins cher, le Mac Studio de génération précédente (M4 Max) peut être remisé.',
           },
           {
             q: 'Mac mini M5 Pro ou Mac Studio M5 Max pour l\'IA ?',
@@ -2299,15 +2299,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien de mémoire unifiée faut-il pour des LLM locaux sur un Mac ?',
-            a: 'En quantification Q4_K_M, prévoyez environ 0,6 Go par milliard de paramètres plus 2-4 Go de surcharge, et rappelez-vous que macOS partage le même pool. Cela représente environ 8-9 Go pour les modèles 8B, 21-25 Go pour le 34B et 39-42 Go pour le 70B. Un Mac de 64 Go (Mac mini M5 Pro ou MacBook Pro M5 Pro) exécute le 34B sans peine et fait tout juste tenir le 70B Q4 ; 128 Go (MacBook Pro M5 Max ou Mac Studio M5 Max) sont nécessaires pour le 70B en Q5 ou pour exécuter plusieurs modèles ; le Mac Studio M5 Ultra atteint jusqu\'à 512 Go pour des modèles plus gros qu\'un seul 70B.',
+            a: 'En quantification Q4_K_M, prévoyez environ 0,6 Go par milliard de paramètres plus 2-4 Go de surcharge, et rappelez-vous que macOS partage le même pool. Cela représente environ 8-9 Go pour les modèles 8B, 21-25 Go pour le 34B et 43+ Go pour le 70B. Un Mac de 64 Go (Mac mini M5 Pro ou MacBook Pro M5 Pro) exécute le 34B sans peine et fait tout juste tenir le 70B Q4 ; 128 Go (MacBook Pro M5 Max ou Mac Studio M5 Max) sont nécessaires pour le 70B en Q5 ou pour exécuter plusieurs modèles ; le Mac Studio M5 Ultra atteint jusqu\'à 512 Go pour des modèles plus gros qu\'un seul 70B.',
           },
           {
             q: 'Mac mini ou MacBook Pro pour l\'IA locale ?',
-            a: 'Choisissez le Mac mini M5 Pro si la machine reste sur un bureau et que les modèles 34B sont votre plafond — il est moins cher, silencieux et idéal comme serveur toujours actif. Choisissez un MacBook Pro 16" (M5 Pro ou M5 Max) si vous devez exécuter des modèles 70B ou emporter la machine. Le MacBook Pro M5 Max est la puce portable la plus capable pour le 70B, mais il subit un throttling en charge soutenue — un serveur fixe reste donc mieux servi par un Mac mini ou un Mac Studio.',
+            a: 'Choisissez le Mac mini M5 Pro si la machine reste sur un bureau et que les modèles 34B sont votre plafond — il est moins cher, silencieux et idéal comme serveur toujours actif. Choisissez un MacBook Pro 16" (M5 Pro ou M5 Max) si vous devez exécuter des modèles 70B ou emporter la machine. Le MacBook Pro M5 Max est la puce portable la plus capable pour le 70B, mais il peut subir un throttling en charge soutenue — un serveur fixe reste donc mieux servi par un Mac mini ou un Mac Studio.',
           },
           {
             q: 'Un Mac peut-il exécuter des modèles 70B ?',
-            a: 'Oui. Un MacBook Pro 16" M5 Pro de 64 Go exécute Llama 3.3 70B Q4 à environ 8-12 tokens par seconde (de justesse), et la version M5 Max de 128 Go exécute le 70B en Q5 à 12-18 tokens par seconde. Un Mac Studio M5 Max de 128 Go devrait aussi exécuter le 70B sans peine, mais nous n\'avons pas encore trouvé de mesures indépendantes. Le Mac mini M6 ne le peut pas — son plafond de 32 Go est trop petit ; le Mac mini M5 Pro à 64 Go fait tenir le 70B Q4 de justesse.',
+            a: 'Oui. Un MacBook Pro 16" M5 Pro de 64 Go exécute Llama 3.3 70B Q4 à environ 4-5 tokens par seconde (de justesse), et la version M5 Max de 128 Go exécute le 70B en Q5 à 7-10 tokens par seconde. Un Mac Studio M5 Max de 128 Go devrait aussi exécuter le 70B sans peine, mais nous n\'avons pas encore trouvé de mesures indépendantes. Le Mac mini M6 ne le peut pas — son plafond de 32 Go est trop petit ; le Mac mini M5 Pro à 64 Go fait tenir le 70B Q4 de justesse. Ces vitesses sont des estimations tirées de la bande passante mémoire et de la taille du fichier du modèle, pas des mesures.',
           },
           {
             q: 'Un Mac est-il plus rapide qu\'un GPU NVIDIA pour les LLM locaux ?',
@@ -2319,7 +2319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien coûte l\'exploitation d\'un Mac comme serveur d\'IA ?',
-            a: 'Très peu. On estime qu\'un Mac mini M5 Pro consomme environ 25-55 W sous charge LLM et environ 8 W au repos (estimations, non mesurées par PromptQuorum). Le faire tourner 24/7 pendant une année entière coûte environ 26-39 € d\'électricité. Ce faible coût d\'exploitation est une raison centrale qui fait du Mac mini le choix rapport qualité-prix pour un serveur toujours actif.',
+            a: 'Très peu. On estime qu\'un Mac mini M5 Pro consomme environ 25-55 W sous charge LLM et environ 8 W au repos (estimations, non mesurées par PromptQuorum). Le faire tourner 24/7 pendant une année entière en usage léger à mixte coûterait environ 26-39 $ à 0,15 $/kWh (estimation) ; une charge plus lourde ou un tarif plus élevé coûte davantage. Ce faible coût d\'exploitation est une raison centrale qui fait du Mac mini le choix rapport qualité-prix pour un serveur toujours actif.',
           },
         ],
       },
@@ -2327,7 +2327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire également',
         items: [
-          '[Voir l\'ensemble complet des benchmarks M5 Pro vs M5 Max](/fr/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens par seconde mesurés, temps jusqu\'au premier token et consommation derrière les chiffres de ce guide.',
+          '[M5 Pro vs M5 Max pour les LLM locaux : caractéristiques et vitesses estimées](/fr/local-llms/m5-pro-max-llm-benchmarks-2026) — comment les estimations de ce comparatif sont calculées et comment mesurer la vitesse sur votre propre Mac.',
           '[Configurer un Mac mini M5 comme serveur d\'IA toujours actif](/fr/local-llms/mac-mini-m5-local-ai-server) — la construction complète du serveur, avec coût d\'électricité estimé et points d\'attention pour un usage permanent (estimations, non mesurées).',
           '[Comparer Apple Silicon sur toute la gamme M](/fr/local-llms/apple-silicon-local-llm-guide-2026) — comment M1 à M5 Max se comparent en mémoire unifiée et bande passante.',
           '[Calculer la mémoire unifiée nécessaire à chaque taille de modèle](/fr/local-llms/how-much-unified-memory-for-local-llm) — la méthode complète par taille de modèle derrière la formule rapide donnée ici.',
@@ -2343,7 +2343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -2352,7 +2352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカルAIおすすめMac 2026：Mac mini vs Mac Studio vs MacBook Pro',
     seoTitle: 'ローカルAI用おすすめMac 2026：Mini vs Studio vs MBP',
     intro:
-      'Mac選びの多くのアドバイスはチップ名にとらわれがちですが、購入判断を実際に左右する数値はunified memoryです。Apple Siliconではモデルが他のすべてと同じメモリプールに置かれるため、64GBのMac miniは34Bモデルを動かせますが、32GBのMac miniには収まりません。Appleは2026年8月25日にMac miniとMac Studioのラインアップを刷新しました（2026年9月22日から出荷中）。本ガイドでは、新しいハードウェアでローカルLLMを動かすための4つの階層——エントリーの常時稼働サーバーとしてのMac mini M6、より高性能なサーバーとしてのMac mini M5 Pro、ポータブルワークステーションとしてのMacBook Pro 16"（M5 ProまたはM5 Max）、デスクトップおよび超大容量メモリの選択肢としてのMac Studio（M5 MaxまたはM5 Ultra）——を、購入を決める数値、すなわちunified memory、メモリ帯域幅、実測のtokens per second、価格で比較します。2点の注意があります。第一に、Appleが示す開始価格は基本メモリ構成のものであり、ローカルLLMに必要なメモリ量のものではありません——$899のMac mini M6は16GB、$1,699のMac mini M5 Proは24GB、$2,499のMac Studio M5 Maxは36GBです——そのため、本ガイドで推奨する構成はより高価になります（32GBのM6は約$1,300、64GBのM5 Proは約$2,700、128GBのMac Studio M5 Maxは約$5,100）。第二に、新チップの独立したテストはまだ乏しい状況です。あるハンズオンテストが小さなモデルでM6とM5 ProのMac miniを測定したにとどまり、M5 MaxとM5 Ultraについては独立した70B測定を見つけられませんでした。そのため、これらのチップの性能値はApple自身の数値であり、その旨を明示しています。本ページの$表記は米ドルの米国価格で、日本での販売価格は税・輸入コスト・為替・販売店により異なります。購入前にApple Store（apple.com/jp）の税込価格を確認し、価格.comで比較してください。',
+      'Mac選びの多くのアドバイスはチップ名にとらわれがちですが、購入判断を実際に左右する数値はunified memoryです。Apple Siliconではモデルが他のすべてと同じメモリプールに置かれるため、64GBのMac miniは34Bモデルを動かせますが、32GBのMac miniには収まりません。Appleは2026年8月25日にMac miniとMac Studioのラインアップを刷新しました（2026年9月22日から出荷中）。本ガイドでは、新しいハードウェアでローカルLLMを動かすための4つの階層——エントリーの常時稼働サーバーとしてのMac mini M6、より高性能なサーバーとしてのMac mini M5 Pro、ポータブルワークステーションとしてのMacBook Pro 16"（M5 ProまたはM5 Max）、デスクトップおよび超大容量メモリの選択肢としてのMac Studio（M5 MaxまたはM5 Ultra）——を、購入を決める数値、すなわちunified memory、メモリ帯域幅、tokens per secondの数値（小型モデルのテスト1件のみ。推定値はその旨を明記）、価格で比較します。2点の注意があります。第一に、Appleが示す開始価格は基本メモリ構成のものであり、ローカルLLMに必要なメモリ量のものではありません——$899のMac mini M6は16GB、$1,699のMac mini M5 Proは24GB、$2,499のMac Studio M5 Maxは36GBです——そのため、本ガイドで推奨する構成はより高価になります（32GBのM6は約$1,300、64GBのM5 Proは約$2,700、128GBのMac Studio M5 Maxは約$5,100）。第二に、新チップの独立したテストはまだ乏しい状況です。あるハンズオンテストが小さなモデルでM6とM5 ProのMac miniを測定したにとどまり、M5 MaxとM5 Ultraについては独立した70B測定を見つけられませんでした。そのため、本ガイドではこれらのチップの70B実測速度を示していません。MacStoriesとBGRは別のモデルでM5 Ultraをテストしています。本ページの$表記は米ドルの米国価格で、日本での販売価格は税・輸入コスト・為替・販売店により異なります。購入前にApple Store（apple.com/jp）の税込価格を確認し、価格.comで比較してください。',
     metaDescription:
       'おすすめMac比較：Mac mini M6 32GBは米国価格で約$1,300、M5 Pro 64GBは約$2,700、Mac Studio M5 Max 128GBは約$5,100。日本の価格は価格.comで確認。',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ja.webp',
@@ -2399,7 +2399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: '2026年にローカルLLMを動かすにはどのMacを買うべきですか？',
         answer:
-          'まずunified memoryで、次に帯域幅で選びます——そしてチップではなくメモリに値段をつけて考えてください。Appleの開始価格は基本メモリ構成のみのものです。Mac mini M6 32GB（約$1,300；$899のベースモデルは16GB）はエントリーの選択肢で7B-14Bモデルをカバーします——30Bや70Bモデルは収まりません。Mac mini M5 Pro 64GB（約$2,700；$1,699のベースモデルは24GB）は本格的な用途向けのコストパフォーマンスの選択肢で、常時稼働サーバーとして34Bモデルを静かに動かします。MacBook Pro 16" M5 Pro 64GBは34B-70B Q4向けのポータブルの選択肢で、M5 Max 128GBはQ5で70Bを動かします。Mac Studio M5 Max（64GBで約$3,500、128GBで約$5,100）はMac mini M5 Proの2倍の帯域幅を持つデスクトップの選択肢で、Mac Studio M5 Ultra（96GBで$5,499から、256GBで約$9,500、最大512GB）は最大のローカルモデル向けの極端な選択肢です。これらはすべて2026年9月22日に出荷されましたが、M5 Ultraの512GB構成のみ2026年10月下旬の出荷です。ここで示した$は米国価格です。日本での価格は税・為替・販売店で異なるため、Apple Store（apple.com/jp）と価格.comで確認してください。',
+          'まずunified memoryで、次に帯域幅で選びます——そしてチップではなくメモリに値段をつけて考えてください。Appleの開始価格は基本メモリ構成のみのものです。Mac mini M6 32GB（約$1,300；$899のベースモデルは16GB）はエントリーの選択肢で7B-14Bモデルをカバーします——30Bや70Bモデルは収まりません。Mac mini M5 Pro 64GB（約$2,700；$1,699のベースモデルは24GB）は本格的な用途向けのコストパフォーマンスの選択肢で、常時稼働サーバーとして34Bモデルを静かに動かします。MacBook Pro 16" M5 Pro 64GBは34B-70B Q4向けのポータブルの選択肢で、M5 Max 128GBはQ5で70Bを動かします。Mac Studio M5 Max（64GBで約$3,500、128GBで約$5,100）はMac mini M5 Proの2倍の帯域幅を持つデスクトップの選択肢で、Mac Studio M5 Ultra（96GBで$5,499から、256GBで約$9,500、最大512GB）は最大のローカルモデル向けの極端な選択肢です。これらはすべて2026年9月22日から出荷されており、M5 Ultraの512GB構成も2026年10月28日から注文できます（$22,299から）。ここで示した$は米国価格です。日本での価格は税・為替・販売店で異なるため、Apple Store（apple.com/jp）と価格.comで確認してください。',
         bullets: [
           'エントリー：Mac mini M6 32GB、約$1,300、7B-14Bモデルのみ（32GBのメモリ上限）',
           'コスパ／常時稼働サーバー：Mac mini M5 Pro 64GB、約$2,700、34Bモデルと余裕の少ない70B Q4',
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'デスクトップ：Mac Studio M5 Max 64GB 約$3,500または128GB 約$5,100；極端：M5 Ultra $5,499から、最大512GB',
           'Apple Siliconのメモリは購入後にアップグレードできません——必要な容量を最初から選んでください',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2437,12 +2437,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**unified memoryが拘束的な制約です。** Apple Siliconではモデルがシステムと一つのメモリプールを共有します——unified memoryに収まらないモデルは動きません。ターゲットモデルにメモリが合うMacを選び、その後で帯域幅とフォームファクターを最適化してください。',
           '**メモリは購入後にアップグレードできません。** Apple Siliconのunified memoryは基板に直付けされています。買ったものが恒久的な構成です——今だけでなく2年後に動かしたいモデルに合わせて容量を決めてください。',
           '**エントリーの選択：Mac mini M6 32GB（米国価格で約$1,300）** ——Appleの2026年8月25日刷新のエントリーチップ、170GB/sの帯域幅、32GBのメモリ上限は7B-14Bモデルのみをカバー；30Bや70Bには不十分です。広告されている$899は16GBモデルの価格です。',
-          '**コスパ／サーバーの選択：Mac mini M5 Pro 64GB（約$2,700）** ——静音、負荷時25-55W（推定）、電気代は年間約¥4,000-6,000、64GBで34Bモデルを動かし、70B Q4を余裕の少ない状態で収めます。広告されている$1,699は24GBモデルの価格です。',
+          '**コスパ／サーバーの選択：Mac mini M5 Pro 64GB（約$2,700）** ——静音、負荷時25-55W（推定）、電気代は年間約$26-39（$0.15/kWh、軽め〜混在利用の推定。日本の料金では異なります）、64GBで34Bモデルを動かし、70B Q4を余裕の少ない状態で収めます。広告されている$1,699は24GBモデルの価格です。',
           '**ポータブルの選択：MacBook Pro 16" M5 Pro 64GB（約$3,000-3,400）またはM5 Max 128GB（約$5,000以上）** ——307-614GB/sの帯域幅、70BをQ4からQ5まで実行。ポータビリティと引き換えに、持続負荷時にスロットリングが発生することがあります（程度は負荷や筐体により異なります）。',
           '**デスクトップの選択：Mac Studio M5 Max 64GB（約$3,500）または128GB（約$5,100）** ——614GB/sの帯域幅で、128GBモデルならQ5の70Bを動かします。2026年9月22日から出荷中；独立したベンチマークはまだ見つかっていません。',
           '**Mac mini M5 Pro 対 Mac Studio M5 Max：** 同じ64GBならMac Studioは約$800高く、帯域幅は2倍（614対307GB/s）です；128GBに到達できるのはMac Studioだけです。',
-          '**極端な選択：Mac Studio M5 Ultra（96GBで$5,499から；256GBは約$9,500；最大512GB）** ——1.2TB/sの帯域幅；512GB構成は2026年10月下旬に出荷され、価格は未発表です。',
-          '**速度を決めるのはチップ名ではなく帯域幅です。** 独立したテストの一つでは、小さなモデルでMac mini M5 Proは毎秒約92トークン、M6は54トークンを生成しました——帯域幅（307対153-170GB/s）に沿った差です。M5 Max（460-614GB/s）の帯域幅はM5 Proの最大2倍です（Apple仕様；M5 MaxとM5 Ultraの独立した測定は見つかっていません）。',
+          '**極端な選択：Mac Studio M5 Ultra（96GBで$5,499から；256GBは約$9,500；最大512GB）** ——1.2TB/sの帯域幅；512GB構成は2026年10月28日から注文可能で、$22,299からです。',
+          '**速度を決めるのはチップ名ではなく帯域幅です。** 独立したテストの一つでは、小さなモデルでMac mini M5 Proは毎秒約92トークン、M6は54トークンを生成しました——帯域幅（307対153-170GB/s）に沿った差です。M5 Max（460-614GB/s）の帯域幅はM5 Proの最大2倍です（Apple仕様；M5 Maxの独立した測定は見つかっておらず、把握しているM5 Ultraの独立テストは70B以外のモデルを使っています）。',
           '**Apple Siliconは生の速度を容量と静音性と引き換えにしています。** デスクトップのRTX GPUは7B-13Bモデルでは高速ですが、その24-32GBのVRAMには、128GBのMacが余裕で動かす70Bモデルはおろか、Mac Studio M5 Ultraが到達できる512GBはなおさら収まりません。',
           '**消費電力はラインアップ全体で低く抑えられています。** Mac miniはLLM負荷時25-55W（推定）、M5 Maxは60-100W（推定）を消費します——同等の作業をするデスクトップRTXカードの300-450Wに対してです。',
         ],
@@ -2459,7 +2459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Q4_K_Mでのunified memoryの目安：** パラメータ10億あたり約0.6GB、加えてコンテキストとツール用に2-4GB。',
           '**メモリ帯域幅：** Mac mini M6 170GB/s、M5 Pro 307GB/s、M5 Max 460-614GB/s、M5 Ultra 1.2TB/s。',
           '**消費電力の範囲：** Mac mini M5 Pro 25-55W（推定）、MacBook Pro M5 Max 60-100W（推定）（LLM負荷時）。',
-          '**入手性：** 2026年8月25日のMac miniとMac Studioの刷新は2026年9月22日から出荷されています（M5 Ultraの512GB構成のみ2026年10月下旬）——本ページの$は米国価格です。日本の価格はApple Store（apple.com/jp）と価格.comで確認してください。',
+          '**入手性：** 2026年8月25日のMac miniとMac Studioの刷新は2026年9月22日から出荷されています（M5 Ultraの512GB構成は2026年10月28日から注文可能、$22,299から）——本ページの$は米国価格です。日本の価格はApple Store（apple.com/jp）と価格.comで確認してください。',
         ],
       },
       editorsChoice: {
@@ -2467,7 +2467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '編集部の選択：Mac mini M5 Pro 64GB',
         highlight: true,
         content:
-          '**ローカルAI専用にMacを選ぶ大半の購入者にとって、64GBのunified memoryを備えたMac mini M5 Proが、能力・価格・運用コストのバランスが取れた選択肢です。** 64GBは34Bまでのあらゆるモデルをコンテキストの余裕とともに収め、70B Q4も余裕の少ない状態で収め、静音で動作し、推論負荷時の消費電力はわずか25-55W（推定）です。約$2,700（$1,699のベースモデルは24GBのみ）で、64GBモデルを載せられる最も安いMacです。家庭やオフィスの常時稼働AIサーバーとしても理想的です。7B-14Bモデルで用途が本当に足りる場合のみMac mini M6 32GB（約$1,300）にダウングレードしてください——その32GBの上限は30Bや70Bモデルには対応できません。同じメモリ容量で2倍の帯域幅が欲しいならMac Studio M5 Max 64GB（約$3,500）へ、ポータビリティが必要な場合のみMacBook Pro 16"へ、デスクトップでより高品質な70Bが必要な場合のみMac Studio M5 Max 128GB（約$5,100）へ、最大のローカルモデルが必要な場合はMac Studio M5 Ultraへステップアップしてください。',
+          '**ローカルAI専用にMacを選ぶ大半の購入者にとって、64GBのunified memoryを備えたMac mini M5 Proが、能力・価格・運用コストのバランスが取れた選択肢です。** 64GBは34Bまでのあらゆるモデルをコンテキストの余裕とともに収め、70B Q4も余裕の少ない状態で収め、静音で動作し、推論負荷時の消費電力はわずか25-55W（推定）です。約$2,700（$1,699のベースモデルは24GBのみ）で、本ガイドで64GBモデルを載せられるMacの中で最も安価です。家庭やオフィスの常時稼働AIサーバーとしても理想的です。7B-14Bモデルで用途が本当に足りる場合のみMac mini M6 32GB（約$1,300）にダウングレードしてください——その32GBの上限は30Bや70Bモデルには対応できません。同じメモリ容量で2倍の帯域幅が欲しいならMac Studio M5 Max 64GB（約$3,500）へ、ポータビリティが必要な場合のみMacBook Pro 16"へ、デスクトップでより高品質な70Bが必要な場合のみMac Studio M5 Max 128GB（約$5,100）へ、最大のローカルモデルが必要な場合はMac Studio M5 Ultraへステップアップしてください。',
         callouts: [
           {
             type: 'note',
@@ -2495,7 +2495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年のローカルAIでMacはどう比較されるか',
         content:
-          'メモリと帯域幅の数値はApple仕様です。MacBook Proの速度は目安となる推定値です。範囲はリンク先のM5 Pro vs M5 Maxベンチマークページを参照してください。本ガイドのために再測定したものではありません。Mac miniの行の速度は、基本メモリ構成のマシンで小さな4Bモデルを対象にした独立ハンズオンテスト1件（出典参照）によるものです。M6、Mac miniのM5 Pro、Mac StudioのM5 Max、M5 Ultraについては独立した70B測定を見つけられなかったため、これらのセルは推定ではなくその旨を明示しています。価格は行に記載した構成の米国定価です。Appleが示す開始価格は基本メモリ構成のみのもの（M6は16GB、M5 Proは24GB、M5 Maxは36GB、M5 Ultraは96GB）なので、ここではメモリ増設分を含めています。本ページの$は米国価格です。日本での販売価格は税・為替・販売店により異なるため、購入前にApple Store（apple.com/jp）の税込価格を確認し、価格.comで比較してください。',
+          'メモリと帯域幅の数値はApple仕様です。MacBook Proの速度はメモリ帯域幅とモデルのファイルサイズに基づく推定値で、実測ではありません。算出方法はリンク先のM5 Pro対M5 Max推定速度ページを参照してください。Mac miniの行の速度は、基本メモリ構成のマシンで小さな4Bモデルを対象にした独立ハンズオンテスト1件（出典参照）によるものです。M6、Mac miniのM5 Pro、Mac StudioのM5 Max、M5 Ultraについては独立した70B測定を見つけられなかったため、これらのセルは推定ではなくその旨を明示しています。価格は行に記載した構成の米国定価です。Appleが示す開始価格は基本メモリ構成のみのもの（M6は16GB、M5 Proは24GB、M5 Maxは36GB、M5 Ultraは96GB）なので、ここではメモリ増設分を含めています。本ページの$は米国価格です。日本での販売価格は税・為替・販売店により異なるため、購入前にApple Store（apple.com/jp）の税込価格を確認し、価格.comで比較してください。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2530,8 +2530,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64GB](https://www.apple.com/macbook-pro/)',
             'unified memory': '64GB',
             '帯域幅': '307GB/s',
-            '速度（8B Q4）': '約50-60 tok/s',
-            '速度（70B Q4）': '約8-12 tok/s',
+            '速度（8B Q4）': '約38-50 tok/s',
+            '速度（70B Q4）': '約4-5 tok/s',
             '価格（米国）': '約$3,000-3,400',
             '最適な用途': 'ポータブル34B-70B Q4（余裕少なめ）',
           },
@@ -2539,8 +2539,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128GB',
             'unified memory': '128GB',
             '帯域幅': '614GB/s',
-            '速度（8B Q4）': '約100-120 tok/s',
-            '速度（70B Q4）': '12-18 tok/s',
+            '速度（8B Q4）': '約75-100 tok/s',
+            '速度（70B Q4）': '~9-11 tok/s',
             '価格（米国）': '約$5,000以上',
             '最適な用途': 'ポータブル70B Q5、マルチモデル',
           },
@@ -2569,7 +2569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '速度（8B Q4）': 'まだ未検証',
             '速度（70B Q4）': 'まだ未検証',
             '価格（米国）': '$5,499から；256GBは約$9,500',
-            '最適な用途': '極端、512GBはまだ注文不可',
+            '最適な用途': '極端；512GBは$22,299から',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ja.webp',
@@ -2603,7 +2603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mac mini M6（16GBで$899から；最大の32GBで約$1,300）：** 12コアCPU、12コアGPU、デュアル16コアNeural Engine、24GBと32GBで170GB/sの帯域幅（16GBでは153GB/s）。Appleは出荷終了のM4と比べてCPU性能が約40%向上、AI性能は最大4倍と述べています（Apple自身の主張です。大きな向上はプロンプト処理にあり、トークン生成は帯域幅に律速されます）。7B-14Bモデルを快適に処理します；32GBは厳格な上限で、30Bと70Bモデルを除外します。',
           '**Mac mini M5 Pro（24GBで$1,699から；64GBで約$2,700）：** 推奨の選択肢。最大18コアCPU、20コアGPU（18/20コアで64GBのモデルは約$2,900）、307GB/sの帯域幅、Thunderbolt 5。34Bモデルを余裕を持って収め、70BもQ4で余裕の少ない状態で収めます。LLM、Whisperの音声認識、RAGパイプラインを同時に動かすのに十分なメモリです。',
           '**実測速度：** 独立したハンズオンテスト1件（LM StudioでのGemma 3 4B、基本メモリ構成のマシン）では、M6は毎秒約53-54トークン、M5 Proは約92-93トークンを生成し、どちらも最初のトークンまでの時間は0.5秒未満でした。約70%の差はM5 Proの帯域幅の優位に沿ったものです。これは小さなモデルでの単一テストであり、70Bの結果ではありません。',
-          '**このMacを買う理由：** M5 ProはApple Silicon本格AIへの最も安い参入コストであり、静音動作、25-55W（推定）の消費電力（年間約¥4,000-6,000の電気代）、そしてサーバーとしてクローゼットに収まるコンパクトな筐体です。7B-14Bで用途が本当に足りるならM6のほうが価格で上回ります。',
+          '**このMacを買う理由：** M5 ProはApple Silicon本格AIへの最も安い参入コストであり、静音動作、25-55W（推定）の消費電力（年間約$26-39の電気代。$0.15/kWhでの推定で、日本の料金では異なります）、そしてサーバーとしてクローゼットに収まるコンパクトな筐体です。7B-14Bで用途が本当に足りるならM6のほうが価格で上回ります。',
           '**このMacを見送る理由：** M6の32GBの上限は30Bや70Bモデルを収められず、どちらのMac miniもポータブルではありません。本当の余裕を持った70Bが目標なら、代わりにMacBook ProかMac Studio M5 Maxを選んでください。',
         ],
         callouts: [
@@ -2613,7 +2613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'Mac mini M5 Proは優れたヘッドレスAIサーバーになります：Ollamaをインストールし、APIをLANに公開すれば、家中のすべてのデバイスが利用できます。24時間365日稼働時の推定電気代は年間約¥4,000-6,000です（推定値であり、実測ではありません）。',
+            text: 'Mac mini M5 Proは優れたヘッドレスAIサーバーになります：Ollamaをインストールし、APIをLANに公開すれば、家中のすべてのデバイスが利用できます。24時間365日稼働時の推定電気代は、軽め〜混在利用で$0.15/kWhの場合、年間約$26-39です（推定値であり、実測ではありません。日本の料金では異なります）。',
           },
           {
             type: 'warning',
@@ -2643,8 +2643,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**MacBook Pro 16"（M5 ProまたはM5 Max、2026年3月発売でAppleの8月25日のMac mini/Mac Studio刷新の対象外）は、70Bクラスのモデルが必要でポータブルなフォームファクターを求める購入者向けの選択肢であり、「ローカルAIに最適なMacBook」への答えです。** M5 Maxはこのガイドの中で70Bを余裕で処理できる唯一のポータブルチップです；M5 Proは70BをQ4で余裕の少ない状態で収めます。同じチップを積むデスクトップに対するトレードオフは、ノートでは持続的な推論でスロットリングが発生することがある点です（程度は負荷や筐体により異なります）。',
         items: [
-          '**MacBook Pro 16" M5 Pro 64GB（約$3,000-3,400；16" M5 Proは$2,699から）：** 最大18コアCPU、20コアGPU、307GB/sの帯域幅——64GBがこのチップのメモリ上限です。8Bモデルをおよそ50-60 tok/s、Llama 3.3 70B Q4を約8-12 tok/s（余裕少なめ）で動かします。ローカル70B AIへのポータブルな入口です。',
-          '**MacBook Pro 16" M5 Max 128GB（約$5,000以上；16" M5 Maxは$3,899から）：** 最大40コアGPU、614GB/sの帯域幅。8Bモデルをおよそ100-120 tok/s、Q5（より高品質）で70Bを12-18 tok/sで動かし、2つのモデルを同時に動かすこと——たとえば70Bモデルと13Bモデル——をサポートします。',
+          '**MacBook Pro 16" M5 Pro 64GB（約$3,000-3,400；16" M5 Proは$2,699から）：** 最大18コアCPU、20コアGPU、307GB/sの帯域幅——64GBがこのチップのメモリ上限です。8Bモデルをおよそ38-50 tok/s、Llama 3.3 70B Q4を約4-5 tok/s（余裕少なめ）で動かします。ローカル70B AIへのポータブルな入口です。これらの速度はメモリ帯域幅とモデルのファイルサイズに基づく推定値で、実測ではありません。',
+          '**MacBook Pro 16" M5 Max 128GB（約$5,000以上；16" M5 Maxは$3,899から）：** 最大40コアGPU、614GB/sの帯域幅。8Bモデルをおよそ75-100 tok/s、Q5（より高品質）で70Bを7-10 tok/sで動かし、2つのモデルを同時に動かすこと——たとえば70Bモデルと13Bモデル——をサポートします。これらの速度はメモリ帯域幅とモデルのファイルサイズに基づく推定値で、実測ではありません。',
           '**このMacを買う理由：** 70Bモデルとポータビリティが必要、クリエイティブ作業とAIに1台のマシンが欲しい、あるいはプレゼンや出張でデスクトップを置いていけない。',
           '**このMacを見送る理由：** マシンがデスクを離れないなら、同じチップのMac Studioのほうが冷えて動き、持続的にフルスピードを保てます。128GBでは価格も同程度です；34Bモデルで十分なら、Mac mini M5 Proは数百ドル安くなります。',
         ],
@@ -2679,17 +2679,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max 対 M5 Ultra：デスクトップと極端な選択肢',
         content:
-          '**Appleは2026年8月25日、Mac StudioをM5 Max（70B向けデスクトップの選択肢）とM5 Ultra（極端、最大512GB）で刷新しました；ベース構成は2026年9月22日に出荷され、512GBのM5 Ultra構成は2026年10月下旬に続きます。** 128GBのMac Studio M5 MaxはQ5品質で70Bを動かし、デスクトップ筐体にラップトップの熱的上限がないため、MacBook Proより持続負荷時に静かさを保ちます。M5 Ultraは、128GBに収まらない大きさのモデルが必要な人向けに存在します。広告されている開始価格（$2,499と$5,499）は36GBと96GBのものです。128GBのM5 Maxは約$5,100です。',
+          '**Appleは2026年8月25日、Mac StudioをM5 Max（70B向けデスクトップの選択肢）とM5 Ultra（極端、最大512GB）で刷新しました；ベース構成は2026年9月22日に出荷され、512GBのM5 Ultra構成は2026年10月28日から注文可能になりました。** 128GBのMac Studio M5 MaxはQ5品質で70Bを動かし、デスクトップ筐体にラップトップの熱的上限がないため、MacBook Proより持続負荷時に静かさを保ちます。M5 Ultraは、128GBに収まらない大きさのモデルが必要な人向けに存在します。広告されている開始価格（$2,499と$5,499）は36GBと96GBのものです。128GBのM5 Maxは約$5,100です。',
         items: [
           '**Mac Studio M5 Max（36GBで$2,499から；64GBは約$3,500；128GBは約$5,100）：** ベースの32コアGPUモデルは460GB/sで、36GBが上限です。40コアGPUモデル（48GBで約$3,100から）は614GB/sで、64GBまたは128GBが選べる唯一のモデルです。70Bモデル向けのデスクトップの選択肢。独立した70B測定は見つかっていません。',
-          '**Mac Studio M5 Ultra（96GBで$5,499から；256GBは約$9,500、80コアGPUでは約$10,800）：** 36コアCPU／80コアGPU構成は最大512GBのunified memoryを約1.2TB/sの帯域幅でサポートします。512GB構成は2026年10月下旬に出荷され、まだ注文できず、価格も未発表です。この階層は最大のローカルモデル——単一の70Bモデルをはるかに超える——向けであり、一般的な購入対象ではありません。',
+          '**Mac Studio M5 Ultra（96GBで$5,499から；256GBは約$9,500、80コアGPUでは約$10,800）：** 36コアCPU／80コアGPU構成は最大512GBのunified memoryを約1.2TB/sの帯域幅でサポートします。512GB構成は2026年10月28日から注文可能で、$22,299からです([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/))。この階層は最大のローカルモデル——単一の70Bモデルをはるかに超える——向けであり、一般的な購入対象ではありません。',
           '**Mac Studioを買う理由：** 現行ラインアップの70Bデスクトップマシンが欲しい、MacBook Proより静かな持続動作が欲しい、Mac mini M5 Proの2倍の帯域幅が欲しい、あるいは（特にM5 Ultra）128GBに収まらないモデルを動かす必要がある。',
           '**Mac Studioを見送る理由：** ポータビリティが必要ならMacBook Proを買ってください；34Bモデルで十分で速度が二の次なら、Mac mini M5 Proのほうが安いです；より安い70Bデスクトップが欲しいなら、新ラインアップが出荷された今、値引きされる可能性が高い前世代のMac Studio M4 Maxを検討してください。',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '上記の価格と仕様はAppleが公開している数値に、Daring Fireballが報じたコンフィギュレーターの価格を加えたものです；M5 MaxまたはM5 Ultra搭載Mac Studioの独立したベンチマークは見つかっていません。ある情報源は128GBのM5 Max構成を販売終了としていますが、他の情報源は引き続き掲載しています——この構成を前提に購入を計画する前に、Apple Storeで注文可能かどうか確認してください。',
+            text: '上記の価格と仕様はAppleが公開している数値に、Daring Fireballが報じたコンフィギュレーターの価格を加えたものです；M5 MaxまたはM5 Ultra搭載Mac Studioの独立した70Bベンチマークは見つかっていません。別のモデルを使ったM5 Ultraの独立テストは当サイトの[Apple Silicon M5ガイド](/ja/local-llms/apple-silicon-m5-local-llm)にまとめています。購入を計画する前に、希望する構成がApple Storeで注文可能かどうか確認してください。',
           },
         ],
         affiliateLinks: [
@@ -2752,9 +2752,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**8Bモデル——8-9GB：** 16GB以上のあらゆるMacに収まります（Mac mini M6を含む）。32GBのMacなら快適な余裕が残ります。',
           '**13-14Bモデル——11-13GB：** macOSとコンテキストのオーバーヘッドを数えると32GBが必要です。Mac mini M6（32GB）以上。',
           '**34Bモデル——21-25GB：** 実際には64GBが必要です。ここではMac mini M5 Pro 64GBがコスパの選択肢です——M6の32GBの上限では34Bモデルは収まりません。',
-          '**Q4の70Bモデル——39-42GB：** 最低64GBが必要で、コンテキストを加えると64GBは厳しくなります。Mac mini M5 Pro 64GBまたはMacBook Pro 16" M5 Pro 64GBが下限です。',
+          '**Q4の70Bモデル——43+GB：** 最低64GBが必要で、コンテキストを加えると64GBは厳しくなります。Mac mini M5 Pro 64GBまたはMacBook Pro 16" M5 Pro 64GBが下限です。',
           '**Q5の70Bモデルまたは同時実行モデル——50-70GB以上：** 128GBが必要です。MacBook Pro 16" M5 Max 128GBまたはMac Studio M5 Max 128GB。',
-          '**単一の70Bを超えるモデル、または非常に大きなMoEモデル——100GB以上：** 最大512GBのunified memoryに到達できるMac Studio M5 Ultraが必要です（512GB構成は2026年10月下旬出荷）。',
+          '**単一の70Bを超えるモデル、または非常に大きなMoEモデル——100GB以上：** 最大512GBのunified memoryに到達できるMac Studio M5 Ultraが必要です（512GB構成は2026年10月28日から注文可能、$22,299から）。',
         ],
         callouts: [
           {
@@ -2762,8 +2762,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple Siliconのメモリは直付けされており、アップグレードできません。現在の必要量より1段階上を買ってください：今日34Bモデルを動かすなら、64GBは下限であって快適な選択ではありません。完全な方法は、関連記事のunified memoryガイドを参照してください。',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-ja.webp',
-        imageCaption: 'Q4_K_Mでのモデルサイズ別unified memory：8Bは8-9GB、13-14Bは11-13GB、34Bは21-25GB、Q4の70Bは39-42GB、Q5の70Bまたは同時実行モデルは50-70GB以上が必要。',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -2774,7 +2774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. 動かしたい最大のモデルは何ですか？** 7-14B：Mac mini M6 32GB。34B：Mac mini M5 Pro 64GB。70B Q4：Mac mini M5 Pro 64GBまたはMacBook Pro M5 Pro。70B Q5または同時実行：MacBook Pro M5 Max 128GBまたはMac Studio M5 Max。100B超や巨大なMoE：Mac Studio M5 Ultra、最大512GB。',
           '**2. マシンは動く必要がありますか？** はい：MacBook Pro 16" M5 ProまたはM5 Max。いいえ：Mac mini（34B／70B Q4まで）またはMac Studio（70B以上）。',
           '**3. 常時稼働サーバーですか？** はい：Mac mini M5 Pro 64GB——静音、25-55W（推定）、24時間365日稼働で最も安価。いいえ：上記のモデルサイズで選んでください。',
-          '**4. 回答をできるだけ速くしたいですか、それとも512GBが必要ですか？** 同じメモリ容量でより速く：Mac Studio M5 Max（614GB/s対307GB/s）。512GB：Mac Studio M5 Ultraの512GB構成は2026年10月下旬に出荷予定でまだ注文できません；256GB構成は現在入手可能です。',
+          '**4. 回答をできるだけ速くしたいですか、それとも512GBが必要ですか？** 同じメモリ容量でより速く：Mac Studio M5 Max（614GB/s対307GB/s）。512GB：Mac Studio M5 Ultraの512GB構成は2026年10月28日から注文可能で、$22,299からです。',
         ],
         snippetBlocks: [
           {
@@ -2801,7 +2801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '新しいMac miniとMac Studioは2026年9月22日に出荷されました；Mac Studio M5 Ultraの512GB構成は2026年10月下旬に出荷されます。Appleの広告されている開始価格は基本メモリ構成のみのものです——必要なメモリ階層について、現在のApple Storeのコンフィギュレーターを開いてください。合計金額の大部分はアップグレード価格だからです。',
+            text: '新しいMac miniとMac Studioは2026年9月22日に出荷されました；Mac Studio M5 Ultraの512GB構成は2026年10月28日から注文できます。Appleの広告されている開始価格は基本メモリ構成のみのものです——必要なメモリ階層について、現在のApple Storeのコンフィギュレーターを開いてください。合計金額の大部分はアップグレード価格だからです。',
           },
         ],
         affiliateLinks: [
@@ -2865,8 +2865,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**広告されている開始価格を、必要なMacの価格と読んでしまう。** $899で買えるのは16GBのMac mini M6、$1,699で24GBのMac mini M5 Pro、$2,499で36GBのMac Studio M5 Maxです。32GBのM6は約$1,300、64GBのM5 Proは約$2,700、128GBのM5 Maxは約$5,100です。',
           '**Mac mini M6の32GBの上限が30Bや70Bモデルをカバーすると思い込む。** そうではありません。32GBはおよそ14Bモデルで厳格な上限です——M5 Pro（64GB）が34B以上の下限です。',
           '**Apple Siliconのメモリがアップグレードできないことを忘れる。** メモリは直付けされています。少なく買ってしまうと唯一の解決策は新しいMacです——今日の必要より1段階上の容量にしてください。',
-          '**価格を確認せずに512GBのMac Studio M5 Ultraを待つ。** 512GB構成は2026年10月下旬に出荷され、価格は未発表で、256GB構成はすでに約$9,500です。',
-          '**デスクに固定の24時間365日サーバーにMacBook Proを買う。** 持続負荷でスロットリングします。常時稼働サーバーには、Mac mini M5 ProかMac Studioのほうが冷えて静かに動きます。',
+          '**価格を確認せずに512GBのMac Studio M5 Ultraを前提にする。** 価格は$22,299から（2026年10月28日から注文可能）で、256GB構成は約$9,500です。',
+          '**デスクに固定の24時間365日サーバーにMacBook Proを買う。** 持続負荷でスロットリングすることがあります。常時稼働サーバーには、Mac mini M5 ProかMac Studioのほうが冷えて静かに動きます。',
           '**8Bモデルのためにオーバースペックを買う。** 8Bモデルでユースケースが足りるなら、128GBのMacは無駄な出費です。たまたまある予算ではなく、モデルにメモリ帯を合わせてください。',
           '**Appleの「AI性能最大4倍」という主張を生成速度のベンチマークとして扱う。** これは出荷終了のM4に対するM6についてのApple自身の数値です。最大の向上はプロンプト処理にあり、トークン生成はメモリ帯域幅に律速されます（私たちが見つけた唯一の独立テストでは、小さなモデルでM5 ProがM6より約70%高速でした）。',
         ],
@@ -2881,7 +2881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[新しいMac miniとMac Studioの構成と価格（Daring Fireball）](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — 本ガイドの合計金額に使用したメモリとストレージのアップグレード価格。',
           '[新しいMac miniとMac Studioが30の国と地域で展開開始（MacTech）](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — 出荷日と米国の開始価格。',
           '[M6 Mac mini 対 M5 Pro Mac mini：実環境テスト（Adam Talks Tech）](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — LM Studioで4Bモデルを使った両Mac miniの独立したハンズオンテスト（著者はアフィリエイトリンクを開示しています）。',
-          '[M5 Pro vs M5 Max LLMベンチマーク 2026](/ja/local-llms/m5-pro-max-llm-benchmarks-2026) — M5 ProとM5 Maxでの8Bおよび70Bモデルのtokens per second（当該ページの記載に基づく。方法論の注記を参照）。',
+          '[ローカルLLM向けM5 Pro対M5 Max：仕様と推定速度](/ja/local-llms/m5-pro-max-llm-benchmarks-2026) — 8Bと70Bモデルの毎秒トークン数の推定値（実測ではありません）。メモリ帯域幅とモデルのファイルサイズから算出しています。',
           '[ローカルAIサーバーとしてのMac mini M5](/ja/local-llms/mac-mini-m5-local-ai-server) — Appleが公開している仕様に基づく推定（PromptQuorumによる実測ではありません）：Mac mini M5 Proの消費電力、電気代、常時稼働サーバー性能。',
         ],
       },
@@ -2895,7 +2895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac Studio M5はもう入手できますか？',
-            a: 'はい、ただし1つ例外があります。Mac Studio M5 MaxとM5 Ultraは2026年9月22日に出荷されました。M5 Ultraの512GB構成は2026年10月下旬に続きますが、まだ注文できず、価格も未発表です。M5 Ultraは96GBで$5,499からで、256GB構成は約$9,500です。より安い70BのデスクトップMacが欲しい場合は、前世代のMac Studio（M4 Max）が値引きされている可能性があります。',
+            a: 'はい、ただし1つ例外があります。Mac Studio M5 MaxとM5 Ultraは2026年9月22日に出荷されました。M5 Ultraの512GB構成は2026年10月28日から注文可能で、$22,299からです。M5 Ultraは96GBで$5,499からで、256GB構成は約$9,500です。より安い70BのデスクトップMacが欲しい場合は、前世代のMac Studio（M4 Max）が値引きされている可能性があります。',
           },
           {
             q: 'AI用途ではMac mini M5 ProとMac Studio M5 Maxのどちらがよいですか？',
@@ -2911,15 +2911,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MacでローカルLLMを動かすにはunified memoryがどれくらい必要ですか？',
-            a: 'Q4_K_M量子化では、パラメータ10億あたり約0.6GBに加えて2-4GBのオーバーヘッドを見込み、macOSが同じプールを共有することを忘れないでください。これは8Bモデルで約8-9GB、34Bで21-25GB、70Bで39-42GBを意味します。64GBのMac（Mac mini M5 ProまたはMacBook Pro M5 Pro）は34Bを余裕で動かし、70B Q4はぎりぎり収まります；128GB（MacBook Pro M5 MaxまたはMac Studio M5 Max）は70B Q5や複数モデルの実行に必要です；Mac Studio M5 Ultraは単一の70Bを超えるモデル向けに最大512GBに到達します。',
+            a: 'Q4_K_M量子化では、パラメータ10億あたり約0.6GBに加えて2-4GBのオーバーヘッドを見込み、macOSが同じプールを共有することを忘れないでください。これは8Bモデルで約8-9GB、34Bで21-25GB、70Bで43+GBを意味します。64GBのMac（Mac mini M5 ProまたはMacBook Pro M5 Pro）は34Bを余裕で動かし、70B Q4はぎりぎり収まります；128GB（MacBook Pro M5 MaxまたはMac Studio M5 Max）は70B Q5や複数モデルの実行に必要です；Mac Studio M5 Ultraは単一の70Bを超えるモデル向けに最大512GBに到達します。',
           },
           {
             q: 'ローカルAIにはMac miniとMacBook Proのどちらですか？',
-            a: 'マシンがデスクに留まり34Bモデルが上限なら、Mac mini M5 Proを選んでください——安く、静音で、常時稼働サーバーとして理想的です。70Bモデルを動かす必要があるか、マシンを持ち運ぶ必要があるなら、MacBook Pro 16"（M5 ProまたはM5 Max）を選んでください。MacBook Pro M5 Maxは70Bに最も対応できるポータブルチップですが、持続負荷でスロットリングするため、デスク固定のサーバーは引き続きMac miniかMac Studioのほうが適しています。',
+            a: 'マシンがデスクに留まり34Bモデルが上限なら、Mac mini M5 Proを選んでください——安く、静音で、常時稼働サーバーとして理想的です。70Bモデルを動かす必要があるか、マシンを持ち運ぶ必要があるなら、MacBook Pro 16"（M5 ProまたはM5 Max）を選んでください。MacBook Pro M5 Maxは70Bに最も対応できるポータブルチップですが、持続負荷でスロットリングすることがあるため、デスク固定のサーバーは引き続きMac miniかMac Studioのほうが適しています。',
           },
           {
             q: 'Macは70Bモデルを動かせますか？',
-            a: 'はい。64GBのMacBook Pro 16" M5 ProはLlama 3.3 70B Q4を毎秒約8-12トークンで動かします（余裕は少なめ）、128GBのM5 Max版は70B Q5を毎秒12-18トークンで動かします。128GBのMac Studio M5 Maxも70Bを余裕で動かすはずですが、独立した測定はまだ見つかっていません。Mac mini M6はできません——32GBの上限が小さすぎます；64GBのMac mini M5 Proは70B Q4を余裕の少ない状態で収めます。',
+            a: 'はい。64GBのMacBook Pro 16" M5 ProはLlama 3.3 70B Q4を毎秒約4-5トークンで動かします（余裕は少なめ）、128GBのM5 Max版は70B Q5を毎秒7-10トークンで動かします。128GBのMac Studio M5 Maxも70Bを余裕で動かすはずですが、独立した測定はまだ見つかっていません。Mac mini M6はできません——32GBの上限が小さすぎます；64GBのMac mini M5 Proは70B Q4を余裕の少ない状態で収めます。これらの速度はメモリ帯域幅とモデルのファイルサイズに基づく推定値で、実測ではありません。',
           },
           {
             q: 'ローカルLLMではMacはNVIDIA GPUより速いですか？',
@@ -2931,7 +2931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MacをAIサーバーとして運用するのにいくらかかりますか？',
-            a: 'ごくわずかです。Mac mini M5 ProはLLM負荷時に約25-55W、アイドル時に約8Wを消費すると推定されます（推定値であり、PromptQuorumによる実測ではありません）。1年間まるごと24時間365日稼働させても電気代は約¥4,000-6,000。この低い運用コストが、Mac miniが常時稼働サーバーのコスパの選択肢である中心的な理由です。',
+            a: 'ごくわずかです。Mac mini M5 ProはLLM負荷時に約25-55W、アイドル時に約8Wを消費すると推定されます（推定値であり、PromptQuorumによる実測ではありません）。軽め〜混在利用で1年間24時間365日稼働させた場合の電気代は、$0.15/kWhで約$26-39と推定されます。負荷が重い場合や、日本のように料金単価が異なる場合は金額が変わります。この低い運用コストが、Mac miniが常時稼働サーバーのコスパの選択肢である中心的な理由です。',
           },
           {
             q: 'Macは日本でどこで買うのがよいですか？保証はどうなりますか？',
@@ -2951,7 +2951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[M5 Pro vs M5 Maxのベンチマーク一式を見る](/ja/local-llms/m5-pro-max-llm-benchmarks-2026) — 本ガイドの数値の裏にある、実測のtokens per second、最初のトークンまでの時間、消費電力。',
+          '[ローカルLLM向けM5 Pro対M5 Max：仕様と推定速度](/ja/local-llms/m5-pro-max-llm-benchmarks-2026) — この比較の推定値の算出方法と、ご自身のMacで速度を測定する方法。',
           '[Mac mini M5を常時稼働AIサーバーとしてセットアップする](/ja/local-llms/mac-mini-m5-local-ai-server) — サーバー構築の全工程、推定電気代と常時稼働時の留意点（推定値であり実測ではありません）。',
           '[Apple SiliconをMシリーズ全体で比較する](/ja/local-llms/apple-silicon-local-llm-guide-2026) — M1からM5 Maxまでがunified memoryと帯域幅でどう比較されるか。',
           '[各モデルサイズに必要なunified memoryを計算する](/ja/local-llms/how-much-unified-memory-for-local-llm) — ここでの簡易式の裏にある、モデルサイズ別の完全な方法。',
@@ -2967,7 +2967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -2976,7 +2976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026 年最适合本地 AI 的 Mac：Mac mini vs Mac Studio vs MacBook Pro',
     seoTitle: '2026本地AI最佳Mac：Mini vs Studio vs MBP',
     intro:
-      '大多数关于「Mac 跑 AI」的建议都盯着芯片型号，但真正决定选择的数字是统一内存。在 Apple Silicon 上，模型与其他一切共用同一个内存池，因此一台 64 GB 的 Mac mini 能跑 34B 模型，而一台 32 GB 的 Mac mini 却装不下。Apple 在 2026 年 8 月 25 日更新了 Mac mini 和 Mac Studio 产品线（自 2026 年 9 月 22 日起发货），本指南在新硬件上比较四个档位来运行本地 LLM——作为经济型常开服务器的入门款 Mac mini M6、更强的服务器 Mac mini M5 Pro、作为便携工作站的 MacBook Pro 16"（M5 Pro 或 M5 Max），以及作为桌面和超大内存选择的 Mac Studio（M5 Max 或 M5 Ultra）——从决定购买的几个数字：统一内存、内存带宽、实测的每秒 token 数和价格。有两点提醒：Apple 宣传的起售价只包含基础内存，而不是本地 LLM 所需的内存——$899 的 Mac mini M6 只有 16 GB，$1,699 的 Mac mini M5 Pro 只有 24 GB，$2,499 的 Mac Studio M5 Max 只有 36 GB——因此本文推荐的配置要贵得多（32 GB 的 M6 约 $1,300，64 GB 的 M5 Pro 约 $2,700，128 GB 的 Mac Studio M5 Max 约 $5,100）。另外，对新芯片的独立测试仍然很少：一项实测在小模型上测试了 M6 和 M5 Pro 版 Mac mini，而我们没有找到针对 M5 Max 或 M5 Ultra 的独立 70B 实测，因此下文这些芯片的性能数字来自 Apple 自己的宣称，已明确标注。价格为最近一次更新时的美国官方标价；购买前请确认当前 Apple Store 价格。',
+      '大多数关于「Mac 跑 AI」的建议都盯着芯片型号，但真正决定选择的数字是统一内存。在 Apple Silicon 上，模型与其他一切共用同一个内存池，因此一台 64 GB 的 Mac mini 能跑 34B 模型，而一台 32 GB 的 Mac mini 却装不下。Apple 在 2026 年 8 月 25 日更新了 Mac mini 和 Mac Studio 产品线（自 2026 年 9 月 22 日起发货），本指南在新硬件上比较四个档位来运行本地 LLM——作为经济型常开服务器的入门款 Mac mini M6、更强的服务器 Mac mini M5 Pro、作为便携工作站的 MacBook Pro 16"（M5 Pro 或 M5 Max），以及作为桌面和超大内存选择的 Mac Studio（M5 Max 或 M5 Ultra）——从决定购买的几个数字：统一内存、内存带宽、现有的每秒 token 数（仅一项小模型实测，估算值另行标注）和价格。有两点提醒：Apple 宣传的起售价只包含基础内存，而不是本地 LLM 所需的内存——$899 的 Mac mini M6 只有 16 GB，$1,699 的 Mac mini M5 Pro 只有 24 GB，$2,499 的 Mac Studio M5 Max 只有 36 GB——因此本文推荐的配置要贵得多（32 GB 的 M6 约 $1,300，64 GB 的 M5 Pro 约 $2,700，128 GB 的 Mac Studio M5 Max 约 $5,100）。另外，对新芯片的独立测试仍然很少：一项实测在小模型上测试了 M6 和 M5 Pro 版 Mac mini，而我们没有找到针对 M5 Max 或 M5 Ultra 的独立 70B 实测，因此本指南不给出这些芯片的 70B 实测速度。MacStories 和 BGR 已用其他模型测试过 M5 Ultra。价格为最近一次更新时的美国官方标价；购买前请确认当前 Apple Store 价格。',
     metaDescription:
       'Mac mini M6 32GB约$1,300，M5 Pro 64GB约$2,700。Mac Studio M5 Max 128GB约$5,100，M5 Ultra起$5,499。统一内存、带宽与真实价格对比。',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-zh.webp',
@@ -3023,7 +3023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '2026 年运行本地 LLM 应该买哪台 Mac？',
         answer:
-          '先按统一内存买，再看带宽——而且要为内存定价，而不是为芯片定价：Apple 的起售价只包含基础内存。Mac mini M6 32 GB（约 $1,300；$899 的基础款只有 16 GB）是经济入门款，覆盖 7B-14B 模型——装不下 30B 或 70B 模型。Mac mini M5 Pro 64 GB（约 $2,700；$1,699 的基础款只有 24 GB）是认真使用的性价比之选，作为常开服务器静音运行 34B 模型。MacBook Pro 16" M5 Pro 64 GB 是 34B-70B Q4 的便携之选，128 GB 的 M5 Max 以 Q5 运行 70B。Mac Studio M5 Max（64 GB 约 $3,500，128 GB 约 $5,100）是带宽达到 Mac mini M5 Pro 两倍的桌面之选，Mac Studio M5 Ultra（96 GB 起售价 $5,499，256 GB 约 $9,500，最高 512 GB）是运行最大本地模型的极限之选。以上均已于 2026 年 9 月 22 日发货，唯独 M5 Ultra 512 GB 配置将于 2026 年 10 月下旬发货。',
+          '先按统一内存买，再看带宽——而且要为内存定价，而不是为芯片定价：Apple 的起售价只包含基础内存。Mac mini M6 32 GB（约 $1,300；$899 的基础款只有 16 GB）是经济入门款，覆盖 7B-14B 模型——装不下 30B 或 70B 模型。Mac mini M5 Pro 64 GB（约 $2,700；$1,699 的基础款只有 24 GB）是认真使用的性价比之选，作为常开服务器静音运行 34B 模型。MacBook Pro 16" M5 Pro 64 GB 是 34B-70B Q4 的便携之选，128 GB 的 M5 Max 以 Q5 运行 70B。Mac Studio M5 Max（64 GB 约 $3,500，128 GB 约 $5,100）是带宽达到 Mac mini M5 Pro 两倍的桌面之选，Mac Studio M5 Ultra（96 GB 起售价 $5,499，256 GB 约 $9,500，最高 512 GB）是运行最大本地模型的极限之选。以上机型自 2026 年 9 月 22 日起发货；M5 Ultra 512 GB 配置自 2026 年 10 月 28 日起可订购（$22,299 起）。',
         bullets: [
           '经济款：Mac mini M6 32 GB，约 $1,300，仅限 7B-14B 模型（32 GB 内存上限）',
           '性价比 / 常开服务器：Mac mini M5 Pro 64 GB，约 $2,700，34B 模型及较紧张的 70B Q4',
@@ -3031,7 +3031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '桌面：Mac Studio M5 Max 64 GB 约 $3,500 或 128 GB 约 $5,100；极限：M5 Ultra 起售价 $5,499，最高 512 GB',
           'Apple Silicon 的内存购买后无法升级——一开始就买够你需要的容量',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -3065,8 +3065,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**便携之选：MacBook Pro 16" M5 Pro 64 GB（约 $3,000-3,400）或 M5 Max 128 GB（约 $5,000 以上）** ——307-614 GB/s 带宽，运行 70B 从 Q4 到 Q5。为了便携，持续负载下可能出现降频（幅度因负载和机身而异）。',
           '**桌面之选：Mac Studio M5 Max 64 GB（约 $3,500）或 128 GB（约 $5,100）** ——614 GB/s 带宽，128 GB 版本可以 Q5 运行 70B。自 2026 年 9 月 22 日起发货；我们尚未找到独立基准测试。',
           '**Mac mini M5 Pro 对比 Mac Studio M5 Max：** 在同为 64 GB 时，Mac Studio 贵约 $800，带宽是前者的两倍（614 对 307 GB/s）；只有 Mac Studio 能达到 128 GB。',
-          '**极限之选：Mac Studio M5 Ultra（96 GB 起售价 $5,499；256 GB 约 $9,500；最高 512 GB）** ——1.2 TB/s 带宽；512 GB 配置将于 2026 年 10 月下旬发货，尚未公布价格。',
-          '**决定速度的是带宽，不是芯片名称。** 在一项独立测试中，Mac mini M5 Pro 在小模型上每秒生成约 92 个 token，而 M6 约为 54 个——这一差距与带宽（307 对 153-170 GB/s）相符。M5 Max（460-614 GB/s）的带宽最高可达 M5 Pro 的两倍（Apple 规格；未找到针对 M5 Max 或 M5 Ultra 的独立实测）。',
+          '**极限之选：Mac Studio M5 Ultra（96 GB 起售价 $5,499；256 GB 约 $9,500；最高 512 GB）** ——1.2 TB/s 带宽；512 GB 配置自 2026 年 10 月 28 日起可订购，$22,299 起。',
+          '**决定速度的是带宽，不是芯片名称。** 在一项独立测试中，Mac mini M5 Pro 在小模型上每秒生成约 92 个 token，而 M6 约为 54 个——这一差距与带宽（307 对 153-170 GB/s）相符。M5 Max（460-614 GB/s）的带宽最高可达 M5 Pro 的两倍（Apple 规格；未找到针对 M5 Max 的独立实测，已知的 M5 Ultra 独立测试使用的是其他模型，而非 70B）。',
           '**Apple Silicon 用原始速度换取容量与安静。** 桌面 RTX GPU 在 7B-13B 模型上更快，但其 24-32 GB 显存装不下 128 GB Mac 能从容运行的 70B 模型，更不用说 Mac Studio M5 Ultra 能达到的 512 GB。',
           '**整条产品线的功耗都很低。** Mac mini 在 LLM 负载下功耗 25-55 W（估算），M5 Max 为 60-100 W（估算）——而做同等工作的桌面 RTX 显卡需要 300-450 W。',
         ],
@@ -3083,7 +3083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Q4_K_M 下的统一内存经验法则：** 每十亿参数约 0.6 GB，再加上 2-4 GB 用于上下文和工具链。',
           '**内存带宽：** Mac mini M6 170 GB/s，M5 Pro 307 GB/s，M5 Max 460-614 GB/s，M5 Ultra 1.2 TB/s。',
           '**功耗范围：** Mac mini M5 Pro 25-55 W（估算），MacBook Pro M5 Max 60-100 W（估算）（LLM 负载下）。',
-          '**供货情况：** 2026 年 8 月 25 日的 Mac mini 和 Mac Studio 更新已自 2026 年 9 月 22 日起发货，M5 Ultra 512 GB 配置除外，其于 2026 年 10 月下旬发货——购买前请确认当前 Apple Store 的价格。',
+          '**供货情况：** 2026 年 8 月 25 日的 Mac mini 和 Mac Studio 更新已自 2026 年 9 月 22 日起发货，M5 Ultra 512 GB 配置自 2026 年 10 月 28 日起可订购（$22,299 起）——购买前请确认当前 Apple Store 的价格。',
         ],
       },
       editorsChoice: {
@@ -3091,7 +3091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '编辑推荐：Mac mini M5 Pro 64 GB',
         highlight: true,
         content:
-          '**对于大多数专门为本地 AI 挑选 Mac 的购买者来说，配备 64 GB 统一内存的 Mac mini M5 Pro 是在能力、价格和运行成本之间取得平衡的选择。** 它的 64 GB 能装下最高 34B 的所有模型并留有上下文余量，也能较紧张地装下 70B Q4，运行静音，推理负载下功耗仅 25-55 W（估算），约 $2,700 的价格（$1,699 的基础款只有 24 GB）使它成为能容纳 64 GB 模型的最便宜的 Mac。它也是理想的家用或办公常开 AI 服务器。只有当 7B-14B 模型确实能满足你的使用场景时，才降级选择 Mac mini M6 32 GB（约 $1,300）——它的 32 GB 上限无法支持 30B 或 70B 模型。如果你想在相同内存下获得两倍的内存带宽，就升级到 Mac Studio M5 Max 64 GB（约 $3,500）；只有当你需要便携性时，才升级到 MacBook Pro 16"；只有当你需要在桌面以更高质量跑 70B 时，才升级到 Mac Studio M5 Max 128 GB（约 $5,100）；如果你需要运行最大的本地模型，则升级到 Mac Studio M5 Ultra。',
+          '**对于大多数专门为本地 AI 挑选 Mac 的购买者来说，配备 64 GB 统一内存的 Mac mini M5 Pro 是在能力、价格和运行成本之间取得平衡的选择。** 它的 64 GB 能装下最高 34B 的所有模型并留有上下文余量，也能较紧张地装下 70B Q4，运行静音，推理负载下功耗仅 25-55 W（估算），约 $2,700 的价格（$1,699 的基础款只有 24 GB）使它成为本指南中能容纳 64 GB 模型的价格最低的 Mac。它也是理想的家用或办公常开 AI 服务器。只有当 7B-14B 模型确实能满足你的使用场景时，才降级选择 Mac mini M6 32 GB（约 $1,300）——它的 32 GB 上限无法支持 30B 或 70B 模型。如果你想在相同内存下获得两倍的内存带宽，就升级到 Mac Studio M5 Max 64 GB（约 $3,500）；只有当你需要便携性时，才升级到 MacBook Pro 16"；只有当你需要在桌面以更高质量跑 70B 时，才升级到 Mac Studio M5 Max 128 GB（约 $5,100）；如果你需要运行最大的本地模型，则升级到 Mac Studio M5 Ultra。',
         callouts: [
           {
             type: 'note',
@@ -3119,7 +3119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026 年多款 Mac 在本地 AI 上的对比',
         content:
-          '内存和带宽数字为 Apple 官方规格。MacBook Pro 的速度为参考估算值，具体范围请参阅所链接的 M5 Pro 与 M5 Max 基准测试页面；并未为本指南重新测量。Mac mini 各行的速度来自一项针对小型 4B 模型的独立实测（见来源），测试机器为基础内存配置；我们没有找到针对 M6、Mac mini 上的 M5 Pro、Mac Studio 上的 M5 Max 和 M5 Ultra 的独立 70B 实测，因此这些单元格按此标注，而非估算。价格为所列配置的美国官方标价：Apple 宣传的起售价只包含基础内存（M6 16 GB、M5 Pro 24 GB、M5 Max 36 GB、M5 Ultra 96 GB），因此这里已计入内存升级费用。购买前请确认当前 Apple Store 的价格。',
+          '内存和带宽数字为 Apple 官方规格。MacBook Pro 的速度是根据内存带宽和模型文件大小得出的估算值，并非实测；计算方法请参阅所链接的 M5 Pro 与 M5 Max 速度估算页面。Mac mini 各行的速度来自一项针对小型 4B 模型的独立实测（见来源），测试机器为基础内存配置；我们没有找到针对 M6、Mac mini 上的 M5 Pro、Mac Studio 上的 M5 Max 和 M5 Ultra 的独立 70B 实测，因此这些单元格按此标注，而非估算。价格为所列配置的美国官方标价：Apple 宣传的起售价只包含基础内存（M6 16 GB、M5 Pro 24 GB、M5 Max 36 GB、M5 Ultra 96 GB），因此这里已计入内存升级费用。购买前请确认当前 Apple Store 的价格。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3154,8 +3154,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64 GB](https://www.apple.com/macbook-pro/)',
             '统一内存': '64 GB',
             '带宽': '307 GB/s',
-            '速度（8B Q4）': '约 50-60 tok/s',
-            '速度（70B Q4）': '约 8-12 tok/s',
+            '速度（8B Q4）': '约 38-50 tok/s',
+            '速度（70B Q4）': '约 4-5 tok/s',
             '价格（美国）': '约 $3,000-3,400',
             '最适合': '便携 34B-70B Q4（较紧张）',
           },
@@ -3163,8 +3163,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128 GB',
             '统一内存': '128 GB',
             '带宽': '614 GB/s',
-            '速度（8B Q4）': '约 100-120 tok/s',
-            '速度（70B Q4）': '12-18 tok/s',
+            '速度（8B Q4）': '约 75-100 tok/s',
+            '速度（70B Q4）': '~9-11 tok/s',
             '价格（美国）': '约 $5,000 以上',
             '最适合': '便携 70B Q5，多模型',
           },
@@ -3193,7 +3193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '速度（8B Q4）': '尚未测试',
             '速度（70B Q4）': '尚未测试',
             '价格（美国）': '起售价 $5,499；256 GB 约 $9,500',
-            '最适合': '极限工作站，512 GB 暂不可订购',
+            '最适合': '极限工作站；512 GB $22,299 起',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-zh.webp',
@@ -3267,8 +3267,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**MacBook Pro 16"（M5 Pro 或 M5 Max，2026 年 3 月发布，不受 Apple 8 月 25 日 Mac mini/Mac Studio 更新影响）适合需要 70B 级模型、以便携外形使用的购买者——也是「最适合本地 AI 的 MacBook」这个问题的答案。** M5 Max 是本指南中唯一能从容超越 70B 的便携芯片；M5 Pro 能较紧张地以 Q4 装下 70B。相比同芯片桌面机的代价是笔记本在持续推理下可能降频，幅度因负载和机身而异。',
         items: [
-          '**MacBook Pro 16" M5 Pro 64 GB（约 $3,000-3,400；16" M5 Pro 起售价 $2,699）：** 最高 18 核 CPU、20 核 GPU，307 GB/s 带宽——64 GB 是这颗芯片的内存上限。以约 50-60 tok/s 跑 8B 模型，以约 8-12 tok/s（较紧张）跑 Llama 3.3 70B Q4。这是进入本地 70B AI 的便携入口。',
-          '**MacBook Pro 16" M5 Max 128 GB（约 $5,000 以上；16" M5 Max 起售价 $3,899）：** 最高 40 核 GPU，614 GB/s 带宽。以约 100-120 tok/s 跑 8B 模型，以 Q5（更高质量）12-18 tok/s 跑 70B，并支持同时运行两个模型——例如一个 70B 模型加一个 13B 模型。',
+          '**MacBook Pro 16" M5 Pro 64 GB（约 $3,000-3,400；16" M5 Pro 起售价 $2,699）：** 最高 18 核 CPU、20 核 GPU，307 GB/s 带宽——64 GB 是这颗芯片的内存上限。以约 38-50 tok/s 跑 8B 模型，以约 4-5 tok/s（较紧张）跑 Llama 3.3 70B Q4。这是进入本地 70B AI 的便携入口。这些速度是根据内存带宽和模型文件大小得出的估算值，并非实测。',
+          '**MacBook Pro 16" M5 Max 128 GB（约 $5,000 以上；16" M5 Max 起售价 $3,899）：** 最高 40 核 GPU，614 GB/s 带宽。以约 75-100 tok/s 跑 8B 模型，以 Q5（更高质量）7-10 tok/s 跑 70B，并支持同时运行两个模型——例如一个 70B 模型加一个 13B 模型。这些速度是根据内存带宽和模型文件大小得出的估算值，并非实测。',
           '**为什么买这台 Mac：** 你需要 70B 模型且要便携，你想要一台机器同时用于创意工作和 AI，或者你经常演示和出差，无法把桌面机留在原地。',
           '**为什么跳过这台 Mac：** 如果机器从不离开桌面，同芯片的 Mac Studio 更凉快，也能持续保持全速，在 128 GB 时价格相近；如果 34B 模型就够用，Mac mini M5 Pro 要便宜几百美元。',
         ],
@@ -3303,17 +3303,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max 对比 M5 Ultra：桌面与极限选择',
         content:
-          '**Apple 在 2026 年 8 月 25 日用 M5 Max（70B 桌面之选）和 M5 Ultra（极限之选，最高 512 GB）更新了 Mac Studio；基础配置已于 2026 年 9 月 22 日发货，M5 Ultra 512 GB 配置将于 2026 年 10 月下旬跟进。** 128 GB 的 Mac Studio M5 Max 能以 Q5 质量跑 70B，并在持续负载下比 MacBook Pro 更安静，因为桌面机身没有笔记本的散热上限。M5 Ultra 是为那些需要超过 128 GB 容量的模型的用户而存在的。宣传的起售价（$2,499 和 $5,499）对应的是 36 GB 和 96 GB；128 GB 的 M5 Max 约 $5,100。',
+          '**Apple 在 2026 年 8 月 25 日用 M5 Max（70B 桌面之选）和 M5 Ultra（极限之选，最高 512 GB）更新了 Mac Studio；基础配置已于 2026 年 9 月 22 日发货，M5 Ultra 512 GB 配置自 2026 年 10 月 28 日起可订购。** 128 GB 的 Mac Studio M5 Max 能以 Q5 质量跑 70B，并在持续负载下比 MacBook Pro 更安静，因为桌面机身没有笔记本的散热上限。M5 Ultra 是为那些需要超过 128 GB 容量的模型的用户而存在的。宣传的起售价（$2,499 和 $5,499）对应的是 36 GB 和 96 GB；128 GB 的 M5 Max 约 $5,100。',
         items: [
           '**Mac Studio M5 Max（36 GB 起售价 $2,499；64 GB 约 $3,500；128 GB 约 $5,100）：** 基础的 32 核 GPU 型号带宽为 460 GB/s，内存最高 36 GB；40 核 GPU 型号（48 GB 起售价约 $3,100）带宽为 614 GB/s，且是唯一提供 64 GB 或 128 GB 的型号。70B 模型的桌面之选。我们没有找到针对它的独立 70B 实测。',
-          '**Mac Studio M5 Ultra（96 GB 起售价 $5,499；256 GB 约 $9,500，配 80 核 GPU 约 $10,800）：** 36 核 CPU / 80 核 GPU 配置支持最高 512 GB 统一内存，带宽约 1.2 TB/s。512 GB 配置于 2026 年 10 月下旬发货，目前尚不可订购，也未公布价格。这一档位是为运行最大的本地模型——远超单个 70B 模型——而设，不是主流购买选项。',
+          '**Mac Studio M5 Ultra（96 GB 起售价 $5,499；256 GB 约 $9,500，配 80 核 GPU 约 $10,800）：** 36 核 CPU / 80 核 GPU 配置支持最高 512 GB 统一内存，带宽约 1.2 TB/s。512 GB 配置自 2026 年 10 月 28 日起可订购，$22,299 起([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/))。这一档位是为运行最大的本地模型——远超单个 70B 模型——而设，不是主流购买选项。',
           '**为什么买 Mac Studio：** 你想要现行产品线中的 70B 桌面机，你想要比 MacBook Pro 更安静的持续运行，你想要两倍于 Mac mini M5 Pro 的带宽，或者（特别是 M5 Ultra）你需要运行超过 128 GB 容量的模型。',
           '**为什么跳过 Mac Studio：** 如果你需要便携性，请买 MacBook Pro；如果 34B 模型就够用而速度是次要的，Mac mini M5 Pro 更便宜；如果你想以更低价格买到 70B 桌面机，请考虑上一代 Mac Studio M4 Max，既然新产品线已经发货，它很可能会有折扣。',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '以上价格和规格来自 Apple 公布的数字，以及 Daring Fireball 报道的配置器定价；我们没有找到针对 M5 Max 或 M5 Ultra Mac Studio 的独立基准测试。有一个来源称 128 GB 的 M5 Max 配置已停售，而其他来源仍在列出——在围绕它制定购买计划之前，请先在 Apple Store 确认它是否可订购。',
+            text: '以上价格和规格来自 Apple 公布的数字，以及 Daring Fireball 报道的配置器定价；我们没有找到针对 M5 Max 或 M5 Ultra Mac Studio 的独立 70B 基准测试；使用其他模型的 M5 Ultra 独立测试汇总在我们的 [Apple Silicon M5 指南](/zh/local-llms/apple-silicon-m5-local-llm)中。制定购买计划前，请先在 Apple Store 确认你需要的具体配置是否可订购。',
           },
         ],
         affiliateLinks: [
@@ -3376,9 +3376,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**8B 模型——8-9 GB：** 适用于任何 16 GB 或以上的 Mac，包括 Mac mini M6。32 GB 的 Mac 留有宽裕余量。',
           '**13-14B 模型——11-13 GB：** 计入 macOS 和上下文开销后需要 32 GB。Mac mini M6（32 GB）及以上。',
           '**34B 模型——21-25 GB：** 实际需要 64 GB。Mac mini M5 Pro 64 GB 在这一档是性价比之选——M6 的 32 GB 上限装不下 34B 模型。',
-          '**Q4 的 70B 模型——39-42 GB：** 至少需要 64 GB，而加上上下文后 64 GB 会很紧。Mac mini M5 Pro 64 GB 或 MacBook Pro 16" M5 Pro 64 GB 是底线。',
+          '**Q4 的 70B 模型——43+ GB：** 至少需要 64 GB，而加上上下文后 64 GB 会很紧。Mac mini M5 Pro 64 GB 或 MacBook Pro 16" M5 Pro 64 GB 是底线。',
           '**Q5 的 70B 模型或并行模型——50-70 GB+：** 需要 128 GB。MacBook Pro 16" M5 Max 128 GB 或一台 Mac Studio M5 Max 128 GB。',
-          '**超过单个 70B 的模型，或非常大的 MoE 模型——100 GB+：** 需要 Mac Studio M5 Ultra，最高可达 512 GB 统一内存（512 GB 配置于 2026 年 10 月下旬发货）。',
+          '**超过单个 70B 的模型，或非常大的 MoE 模型——100 GB+：** 需要 Mac Studio M5 Ultra，最高可达 512 GB 统一内存（512 GB 配置自 2026 年 10 月 28 日起可订购，$22,299 起）。',
         ],
         callouts: [
           {
@@ -3386,8 +3386,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple Silicon 的内存是焊死的，无法升级。买比当前需求高一档：如果你今天跑 34B 模型，64 GB 是底线，而不是从容的选择。完整方法请参见延伸阅读中的统一内存指南。',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-zh.webp',
-        imageCaption: 'Q4_K_M 下按模型大小所需的统一内存：8B 需要 8-9 GB，13-14B 需要 11-13 GB，34B 需要 21-25 GB，70B Q4 需要 39-42 GB，70B Q5 或并行模型需要 50-70+ GB。',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -3398,7 +3398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. 你想运行的最大模型是什么？** 7-14B：Mac mini M6 32 GB。34B：Mac mini M5 Pro 64 GB。70B Q4：Mac mini M5 Pro 64 GB 或 MacBook Pro M5 Pro。70B Q5 或并行：MacBook Pro M5 Max 128 GB 或 Mac Studio M5 Max。100B+ 或超大 MoE：Mac Studio M5 Ultra，最高 512 GB。',
           '**2. 机器需要移动吗？** 需要：MacBook Pro 16" M5 Pro 或 M5 Max。不需要：Mac mini（最高 34B/70B Q4）或 Mac Studio（70B 及以上）。',
           '**3. 它是常开服务器吗？** 是：Mac mini M5 Pro 64 GB——静音、25-55 W（估算）、7×24 小时运行最便宜。否：按上面的模型规模选择。',
-          '**4. 你需要尽可能快的回答，还是 512 GB？** 同样内存下更快：Mac Studio M5 Max（614 GB/s 对 307 GB/s）。512 GB：Mac Studio M5 Ultra 512 GB 配置将于 2026 年 10 月下旬发货，目前尚不可订购；256 GB 配置现已可买。',
+          '**4. 你需要尽可能快的回答，还是 512 GB？** 同样内存下更快：Mac Studio M5 Max（614 GB/s 对 307 GB/s）。512 GB：Mac Studio M5 Ultra 512 GB 配置自 2026 年 10 月 28 日起可订购，$22,299 起。',
         ],
         snippetBlocks: [
           {
@@ -3425,7 +3425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '新的 Mac mini 和 Mac Studio 机型已于 2026 年 9 月 22 日发货；Mac Studio M5 Ultra 512 GB 配置将于 2026 年 10 月下旬发货。Apple 宣传的起售价只包含基础内存——请打开当前的 Apple Store 配置器查看你需要的内存档位，因为升级费用是总价中最大的部分。',
+            text: '新的 Mac mini 和 Mac Studio 机型已于 2026 年 9 月 22 日发货；Mac Studio M5 Ultra 512 GB 配置自 2026 年 10 月 28 日起可订购。Apple 宣传的起售价只包含基础内存——请打开当前的 Apple Store 配置器查看你需要的内存档位，因为升级费用是总价中最大的部分。',
           },
         ],
         affiliateLinks: [
@@ -3453,8 +3453,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**把宣传的起售价当成你需要的那台 Mac 的价格。** $899 买到的是 16 GB 的 Mac mini M6，$1,699 是 24 GB 的 Mac mini M5 Pro，$2,499 是 36 GB 的 Mac Studio M5 Max。32 GB 的 M6 约 $1,300，64 GB 的 M5 Pro 约 $2,700，128 GB 的 M5 Max 约 $5,100。',
           '**以为 Mac mini M6 的 32 GB 上限能覆盖 30B 或 70B 模型。** 并非如此。32 GB 在约 14B 模型处是硬性上限——M5 Pro（64 GB）才是 34B 及以上的底线。',
           '**忘记 Apple Silicon 的内存无法升级。** 内存是焊死的。买少了，唯一的补救就是换一台新 Mac——按比今天需求高一档来配置。',
-          '**没确认价格就等待 512 GB 的 Mac Studio M5 Ultra。** 512 GB 配置将于 2026 年 10 月下旬发货，尚未公布价格，而 256 GB 配置就已经约 $9,500。',
-          '**为固定在桌面的 7×24 小时服务器买 MacBook Pro。** 它在持续负载下会降频。对于常开服务器，Mac mini M5 Pro 或 Mac Studio 更凉快也更安静。',
+          '**没确认价格就把 512 GB 的 Mac Studio M5 Ultra 纳入计划。** 它 $22,299 起（自 2026 年 10 月 28 日起可订购），256 GB 配置约 $9,500。',
+          '**为固定在桌面的 7×24 小时服务器买 MacBook Pro。** 它在持续负载下可能降频。对于常开服务器，Mac mini M5 Pro 或 Mac Studio 更凉快也更安静。',
           '**为 8B 模型买过头。** 如果 8B 模型覆盖你的使用场景，128 GB 的 Mac 是浪费钱。把内存档位匹配模型，而不是匹配你恰好有的预算。',
           '**把 Apple 「AI 性能最高提升 4 倍」的宣称当作生成速度基准。** 这是 Apple 自己针对停产 M4 与 M6 的对比数字；最大的提升体现在提示词处理上，而 token 生成受限于内存带宽（我们找到的那项独立测试显示，M5 Pro 在小模型上比 M6 快约 70%）。',
         ],
@@ -3469,7 +3469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[新款 Mac mini 与 Mac Studio 的配置与定价（Daring Fireball）](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — 本指南总价所用的内存和存储升级价格。',
           '[Apple 在 30 个国家和地区推出新款 Mac mini 和 Mac Studio（MacTech）](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — 发货日期和美国起售价。',
           '[M6 Mac mini 对比 M5 Pro Mac mini：真实测试（Adam Talks Tech）](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — 在 LM Studio 中用 4B 模型对两款 Mac mini 做的独立实测（作者披露含联盟链接）。',
-          '[M5 Pro vs M5 Max LLM 基准测试 2026](/zh/local-llms/m5-pro-max-llm-benchmarks-2026) — M5 Pro 和 M5 Max 上 8B 与 70B 模型的每秒 token 数（以该页面所载为准，请参阅其方法说明）。',
+          '[本地 LLM：M5 Pro 与 M5 Max 规格和速度估算](/zh/local-llms/m5-pro-max-llm-benchmarks-2026) — 8B 与 70B 模型每秒 token 数的估算值（非实测），根据内存带宽和模型文件大小计算。',
           '[作为本地 AI 服务器的 Mac mini M5](/zh/local-llms/mac-mini-m5-local-ai-server) — 基于 Apple 公开规格的估算（非 PromptQuorum 实测）：Mac mini M5 Pro 的功耗、电费和常开服务器性能。',
         ],
       },
@@ -3483,7 +3483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac Studio M5 已经上市了吗？',
-            a: '已经上市，只有一个例外。Mac Studio M5 Max 和 M5 Ultra 已于 2026 年 9 月 22 日发货。M5 Ultra 512 GB 配置将于 2026 年 10 月下旬跟进，目前尚不可订购，也未公布价格。M5 Ultra 的 96 GB 起售价为 $5,499，256 GB 配置约 $9,500。如果你想要更便宜的 70B 桌面 Mac，上一代 Mac Studio（M4 Max）可能会有折扣。',
+            a: '已经上市，只有一个例外。Mac Studio M5 Max 和 M5 Ultra 已于 2026 年 9 月 22 日发货。M5 Ultra 512 GB 配置自 2026 年 10 月 28 日起可订购，$22,299 起。M5 Ultra 的 96 GB 起售价为 $5,499，256 GB 配置约 $9,500。如果你想要更便宜的 70B 桌面 Mac，上一代 Mac Studio（M4 Max）可能会有折扣。',
           },
           {
             q: '做 AI 选 Mac mini M5 Pro 还是 Mac Studio M5 Max？',
@@ -3499,15 +3499,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '在 Mac 上跑本地 LLM 需要多少统一内存？',
-            a: '在 Q4_K_M 量化下，按每十亿参数约 0.6 GB 加上 2-4 GB 开销来规划，并记住 macOS 共用同一个内存池。这意味着 8B 模型约需 8-9 GB，34B 需 21-25 GB，70B 需 39-42 GB。一台 64 GB 的 Mac（Mac mini M5 Pro 或 MacBook Pro M5 Pro）能从容运行 34B 并勉强装下 70B Q4；128 GB（MacBook Pro M5 Max 或 Mac Studio M5 Max）用于以 Q5 跑 70B 或同时跑多个模型；Mac Studio M5 Ultra 最高可达 512 GB，用于超过单个 70B 的模型。',
+            a: '在 Q4_K_M 量化下，按每十亿参数约 0.6 GB 加上 2-4 GB 开销来规划，并记住 macOS 共用同一个内存池。这意味着 8B 模型约需 8-9 GB，34B 需 21-25 GB，70B 需 43+ GB。一台 64 GB 的 Mac（Mac mini M5 Pro 或 MacBook Pro M5 Pro）能从容运行 34B 并勉强装下 70B Q4；128 GB（MacBook Pro M5 Max 或 Mac Studio M5 Max）用于以 Q5 跑 70B 或同时跑多个模型；Mac Studio M5 Ultra 最高可达 512 GB，用于超过单个 70B 的模型。',
           },
           {
             q: '本地 AI 选 Mac mini 还是 MacBook Pro？',
-            a: '如果机器固定在桌面上、34B 模型是你的上限，就选 Mac mini M5 Pro——它更便宜、静音，作为常开服务器很理想。如果你需要运行 70B 模型或随身携带机器，就选 MacBook Pro 16"（M5 Pro 或 M5 Max）。MacBook Pro M5 Max 是运行 70B 能力最强的便携芯片，但它在持续负载下会降频——因此固定不动的服务器仍然更适合用 Mac mini 或 Mac Studio。',
+            a: '如果机器固定在桌面上、34B 模型是你的上限，就选 Mac mini M5 Pro——它更便宜、静音，作为常开服务器很理想。如果你需要运行 70B 模型或随身携带机器，就选 MacBook Pro 16"（M5 Pro 或 M5 Max）。MacBook Pro M5 Max 是运行 70B 能力最强的便携芯片，但它在持续负载下可能降频——因此固定不动的服务器仍然更适合用 Mac mini 或 Mac Studio。',
           },
           {
             q: 'Mac 能跑 70B 模型吗？',
-            a: '能。64 GB 的 MacBook Pro 16" M5 Pro 以每秒约 8-12 token 跑 Llama 3.3 70B Q4（余量较紧张），128 GB 的 M5 Max 版本以每秒 12-18 token 跑 70B Q5。128 GB 的 Mac Studio M5 Max 应该也能从容跑 70B，但我们目前还没有找到独立实测。Mac mini M6 不行——它的 32 GB 上限太小；64 GB 的 Mac mini M5 Pro 能较紧张地装下 70B Q4。',
+            a: '能。64 GB 的 MacBook Pro 16" M5 Pro 以每秒约 4-5 token 跑 Llama 3.3 70B Q4（余量较紧张），128 GB 的 M5 Max 版本以每秒 7-10 token 跑 70B Q5。128 GB 的 Mac Studio M5 Max 应该也能从容跑 70B，但我们目前还没有找到独立实测。Mac mini M6 不行——它的 32 GB 上限太小；64 GB 的 Mac mini M5 Pro 能较紧张地装下 70B Q4。这些速度是根据内存带宽和模型文件大小得出的估算值，并非实测。',
           },
           {
             q: '本地 LLM 上 Mac 比 NVIDIA GPU 快吗？',
@@ -3519,7 +3519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '把 Mac 当 AI 服务器运行要花多少钱？',
-            a: '很少。据估算，Mac mini M5 Pro 在 LLM 负载下功耗约 25-55 W，空闲时约 8 W（为估算值，非 PromptQuorum 实测）。让它 7×24 小时运行整整一年，按美国电价约花 $26-39。这种低运行成本正是 Mac mini 成为常开服务器性价比之选的核心原因。',
+            a: '很少。据估算，Mac mini M5 Pro 在 LLM 负载下功耗约 25-55 W，空闲时约 8 W（为估算值，非 PromptQuorum 实测）。在轻度到混合使用下让它 7×24 小时运行整整一年，按 $0.15/kWh 估算约花 $26-39；负载更高或电价更高则花费更多。这种低运行成本正是 Mac mini 成为常开服务器性价比之选的核心原因。',
           },
         ],
       },
@@ -3527,7 +3527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[查看完整的 M5 Pro vs M5 Max 基准测试集](/zh/local-llms/m5-pro-max-llm-benchmarks-2026) — 本指南数字背后的实测每秒 token 数、首 token 时间和功耗。',
+          '[本地 LLM：M5 Pro 与 M5 Max 规格和速度估算](/zh/local-llms/m5-pro-max-llm-benchmarks-2026) — 本对比中的估算值如何计算，以及如何在你自己的 Mac 上测速。',
           '[把 Mac mini M5 配置为常开 AI 服务器](/zh/local-llms/mac-mini-m5-local-ai-server) — 完整的服务器搭建，以及估算的电费和常开运行的注意事项（为估算值，非实测）。',
           '[在整条 M 系列产品线上对比 Apple Silicon](/zh/local-llms/apple-silicon-local-llm-guide-2026) — M1 到 M5 Max 在统一内存和带宽上的对比。',
           '[算出每种模型规模需要多少统一内存](/zh/local-llms/how-much-unified-memory-for-local-llm) — 本文快速公式背后按模型规模划分的完整方法。',
@@ -3543,7 +3543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -3552,7 +3552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'O melhor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro',
     seoTitle: 'O melhor Mac para IA local 2026: Mini vs Studio vs MBP',
     intro:
-      'A maioria dos conselhos sobre Mac para IA foca no nome do chip, quando o número que realmente define a decisão é a memória unificada. No Apple Silicon o modelo vive no mesmo pool de memória que todo o resto, então um Mac Mini de 64 GB consegue executar um modelo 34B que um Mac Mini de 32 GB, mesmo mais rápido, não consegue carregar. A Apple renovou as linhas Mac Mini e Mac Studio em 25 de agosto de 2026 (entregues desde 22 de setembro de 2026), e este guia compara quatro níveis para executar LLMs locais no novo hardware — o Mac Mini M6 de entrada como servidor econômico sempre ativo, o Mac Mini M5 Pro como servidor mais capaz, o MacBook Pro 16" como estação de trabalho portátil (M5 Pro ou M5 Max), e o Mac Studio (M5 Max ou M5 Ultra) como opções de desktop e memória extrema — nos números que decidem uma compra: memória unificada, largura de banda de memória, tokens por segundo medidos e preço. Duas ressalvas: os preços iniciais anunciados pela Apple cobrem apenas a memória base, não a memória de que os LLMs locais precisam — o Mac Mini M6 de US$ 899 tem 16 GB, o Mac Mini M5 Pro de US$ 1.699 tem 24 GB e o Mac Studio M5 Max de US$ 2.499 tem 36 GB — então as configurações recomendadas aqui custam mais (um M6 de 32 GB custa cerca de US$ 1.300, um M5 Pro de 64 GB cerca de US$ 2.700, um Mac Studio M5 Max de 128 GB cerca de US$ 5.100). E os testes independentes dos novos chips ainda são escassos: um teste prático mediu o Mac Mini M6 e o M5 Pro em um modelo pequeno, e não encontramos medições independentes de 70B para o M5 Max nem para o M5 Ultra, então os números de desempenho desses chips são as próprias afirmações da Apple, identificadas como tais. Os preços são preços de tabela nos EUA na data da última atualização; confirme o preço atual na Apple Store antes de comprar.',
+      'A maioria dos conselhos sobre Mac para IA foca no nome do chip, quando o número que realmente define a decisão é a memória unificada. No Apple Silicon o modelo vive no mesmo pool de memória que todo o resto, então um Mac Mini de 64 GB consegue executar um modelo 34B que um Mac Mini de 32 GB, mesmo mais rápido, não consegue carregar. A Apple renovou as linhas Mac Mini e Mac Studio em 25 de agosto de 2026 (entregues desde 22 de setembro de 2026), e este guia compara quatro níveis para executar LLMs locais no novo hardware — o Mac Mini M6 de entrada como servidor econômico sempre ativo, o Mac Mini M5 Pro como servidor mais capaz, o MacBook Pro 16" como estação de trabalho portátil (M5 Pro ou M5 Max), e o Mac Studio (M5 Max ou M5 Ultra) como opções de desktop e memória extrema — nos números que decidem uma compra: memória unificada, largura de banda de memória, números de tokens por segundo quando existem (um teste com modelo pequeno; as estimativas são identificadas) e preço. Duas ressalvas: os preços iniciais anunciados pela Apple cobrem apenas a memória base, não a memória de que os LLMs locais precisam — o Mac Mini M6 de US$ 899 tem 16 GB, o Mac Mini M5 Pro de US$ 1.699 tem 24 GB e o Mac Studio M5 Max de US$ 2.499 tem 36 GB — então as configurações recomendadas aqui custam mais (um M6 de 32 GB custa cerca de US$ 1.300, um M5 Pro de 64 GB cerca de US$ 2.700, um Mac Studio M5 Max de 128 GB cerca de US$ 5.100). E os testes independentes dos novos chips ainda são escassos: um teste prático mediu o Mac Mini M6 e o M5 Pro em um modelo pequeno, e não encontramos medições independentes de 70B para o M5 Max nem para o M5 Ultra, então este guia não informa nenhuma velocidade 70B medida para esses chips. A MacStories e a BGR testaram o M5 Ultra com outros modelos. Os preços são preços de tabela nos EUA na data da última atualização; confirme o preço atual na Apple Store antes de comprar.',
     metaDescription:
       'Mac Mini M6 32GB ~US$ 1.300, M5 Pro 64GB ~US$ 2.700. Mac Studio M5 Max 128GB ~US$ 5.100, M5 Ultra a partir de US$ 5.499. Memória, largura de banda e preços reais.',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-pt.webp',
@@ -3599,7 +3599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'Qual Mac devo comprar para executar LLMs locais em 2026?',
         answer:
-          'Compre pela memória unificada, depois pela largura de banda — e some o preço da memória, não do chip: os preços iniciais da Apple cobrem apenas a memória base. Um Mac Mini M6 de 32 GB (cerca de US$ 1.300; o modelo base de US$ 899 tem 16 GB) é a entrada econômica e cobre modelos 7B-14B — modelos 30B ou 70B não cabem. Um Mac Mini M5 Pro de 64 GB (cerca de US$ 2.700; o modelo base de US$ 1.699 tem 24 GB) é a opção com melhor custo-benefício para uso sério e executa modelos 34B silenciosamente como servidor sempre ativo. Um MacBook Pro 16" M5 Pro de 64 GB é a opção portátil para 34B-70B Q4, e o M5 Max de 128 GB executa 70B em Q5. Um Mac Studio M5 Max (64 GB cerca de US$ 3.500, 128 GB cerca de US$ 5.100) é a opção de desktop com o dobro da largura de banda do Mac Mini M5 Pro, e o Mac Studio M5 Ultra (a partir de US$ 5.499 com 96 GB, 256 GB cerca de US$ 9.500, até 512 GB) é a opção extrema para os maiores modelos locais. Todos foram entregues em 22 de setembro de 2026, exceto a configuração M5 Ultra de 512 GB, que é entregue no final de outubro de 2026.',
+          'Compre pela memória unificada, depois pela largura de banda — e some o preço da memória, não do chip: os preços iniciais da Apple cobrem apenas a memória base. Um Mac Mini M6 de 32 GB (cerca de US$ 1.300; o modelo base de US$ 899 tem 16 GB) é a entrada econômica e cobre modelos 7B-14B — modelos 30B ou 70B não cabem. Um Mac Mini M5 Pro de 64 GB (cerca de US$ 2.700; o modelo base de US$ 1.699 tem 24 GB) é a opção com melhor custo-benefício para uso sério e executa modelos 34B silenciosamente como servidor sempre ativo. Um MacBook Pro 16" M5 Pro de 64 GB é a opção portátil para 34B-70B Q4, e o M5 Max de 128 GB executa 70B em Q5. Um Mac Studio M5 Max (64 GB cerca de US$ 3.500, 128 GB cerca de US$ 5.100) é a opção de desktop com o dobro da largura de banda do Mac Mini M5 Pro, e o Mac Studio M5 Ultra (a partir de US$ 5.499 com 96 GB, 256 GB cerca de US$ 9.500, até 512 GB) é a opção extrema para os maiores modelos locais. Todos são entregues desde 22 de setembro de 2026; a configuração M5 Ultra de 512 GB pode ser encomendada desde 28 de outubro de 2026 (a partir de US$ 22.299).',
         bullets: [
           'Econômico: Mac Mini M6 32 GB, cerca de US$ 1.300, apenas modelos 7B-14B (teto de memória de 32 GB)',
           'Custo-benefício / servidor sempre ativo: Mac Mini M5 Pro 64 GB, cerca de US$ 2.700, modelos 34B e 70B Q4 apertado',
@@ -3607,7 +3607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desktop: Mac Studio M5 Max 64 GB ~US$ 3.500 ou 128 GB ~US$ 5.100; extremo: M5 Ultra a partir de US$ 5.499, até 512 GB',
           'A memória do Apple Silicon não pode ser atualizada após a compra — compre o tamanho de que precisa desde o início',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -3641,8 +3641,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Opção portátil: MacBook Pro 16" M5 Pro 64 GB (cerca de US$ 3.000-3.400) ou M5 Max 128 GB (cerca de US$ 5.000+)** — 307-614 GB/s de largura de banda, executa 70B de Q4 a Q5. Pode reduzir o desempenho sob carga sustentada (a intensidade varia conforme a carga e o chassi) em troca de portabilidade.',
           '**Opção de desktop: Mac Studio M5 Max 64 GB (~US$ 3.500) ou 128 GB (~US$ 5.100)** — 614 GB/s de largura de banda executa 70B em Q5 no modelo de 128 GB. Entregue desde 22 de setembro de 2026; ainda não encontramos benchmarks independentes.',
           '**Mac Mini M5 Pro vs Mac Studio M5 Max:** com os mesmos 64 GB, o Mac Studio custa cerca de US$ 800 a mais e tem o dobro da largura de banda (614 vs 307 GB/s); só o Mac Studio chega a 128 GB.',
-          '**Opção extrema: Mac Studio M5 Ultra (a partir de US$ 5.499 com 96 GB; 256 GB cerca de US$ 9.500; até 512 GB)** — 1,2 TB/s de largura de banda; a configuração de 512 GB é entregue no final de outubro de 2026 e não tem preço anunciado.',
-          '**A largura de banda, não o nome do chip, determina a velocidade.** Em um teste independente, o Mac Mini M5 Pro gerou cerca de 92 tokens por segundo contra 54 do M6 em um modelo pequeno — uma diferença que acompanha a largura de banda (307 vs 153-170 GB/s). O M5 Max (460-614 GB/s) tem até o dobro da largura de banda do M5 Pro (especificações da Apple; não encontramos medições independentes do M5 Max nem do M5 Ultra).',
+          '**Opção extrema: Mac Studio M5 Ultra (a partir de US$ 5.499 com 96 GB; 256 GB cerca de US$ 9.500; até 512 GB)** — 1,2 TB/s de largura de banda; a configuração de 512 GB pode ser encomendada desde 28 de outubro de 2026, a partir de US$ 22.299.',
+          '**A largura de banda, não o nome do chip, determina a velocidade.** Em um teste independente, o Mac Mini M5 Pro gerou cerca de 92 tokens por segundo contra 54 do M6 em um modelo pequeno — uma diferença que acompanha a largura de banda (307 vs 153-170 GB/s). O M5 Max (460-614 GB/s) tem até o dobro da largura de banda do M5 Pro (especificações da Apple; não encontramos medições independentes do M5 Max, e os testes independentes do M5 Ultra que conhecemos usam outros modelos, não 70B).',
           '**O Apple Silicon troca velocidade bruta por capacidade e silêncio.** Uma GPU RTX de desktop é mais rápida em modelos 7B-13B, mas seus 24-32 GB de VRAM não conseguem carregar um modelo 70B que um Mac de 128 GB executa sem problemas, muito menos os 512 GB que o Mac Studio M5 Ultra pode alcançar.',
           '**O consumo de energia é baixo em toda a linha.** Um Mac Mini consome 25-55 W (estimativa) sob carga de LLM e um M5 Max 60-100 W (estimativa) — contra 300-450 W de uma placa RTX de desktop fazendo trabalho comparável.',
         ],
@@ -3659,7 +3659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Regra geral de memória unificada em Q4_K_M:** aproximadamente 0.6 GB por bilhão de parâmetros, mais 2-4 GB para contexto e ferramentas.',
           '**Largura de banda de memória:** Mac Mini M6 170 GB/s, M5 Pro 307 GB/s, M5 Max 460-614 GB/s, M5 Ultra 1,2 TB/s.',
           '**Faixa de consumo:** Mac Mini M5 Pro 25-55 W (estimativa), MacBook Pro M5 Max 60-100 W (estimativa) sob carga de LLM.',
-          '**Disponibilidade:** a atualização de Mac Mini e Mac Studio de 25 de agosto de 2026 é entregue desde 22 de setembro de 2026, exceto a configuração M5 Ultra de 512 GB, entregue no final de outubro de 2026 — confirme o preço atual na Apple Store antes de comprar.',
+          '**Disponibilidade:** a atualização de Mac Mini e Mac Studio de 25 de agosto de 2026 é entregue desde 22 de setembro de 2026, e a configuração M5 Ultra de 512 GB pode ser encomendada desde 28 de outubro de 2026 (a partir de US$ 22.299) — confirme o preço atual na Apple Store antes de comprar.',
         ],
       },
       editorsChoice: {
@@ -3667,7 +3667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Escolha do editor: Mac Mini M5 Pro 64 GB',
         highlight: true,
         content:
-          '**Para a maioria dos compradores que escolhem um Mac especificamente para IA local, o Mac Mini M5 Pro com 64 GB de memória unificada é a opção que equilibra capacidade, preço e custo operacional.** Seus 64 GB acomodam todos os modelos até 34B com margem de contexto e cabem 70B Q4 com margem apertada, ele funciona em silêncio e consome apenas 25-55 W (estimativa) sob carga de inferência, e por cerca de US$ 2.700 (o modelo base de US$ 1.699 tem apenas 24 GB) é o Mac mais barato que comporta um modelo de 64 GB. Ele também é um servidor de IA sempre ativo ideal para casa ou escritório. Desça para o Mac Mini M6 32 GB (cerca de US$ 1.300) apenas se modelos 7B-14B realmente cobrirem o seu caso de uso — seu teto de 32 GB não suporta modelos 30B ou 70B. Suba para um Mac Studio M5 Max de 64 GB (cerca de US$ 3.500) se quiser o dobro da largura de banda de memória com o mesmo tamanho de memória, para o MacBook Pro 16" apenas se precisar de portabilidade, para um Mac Studio M5 Max de 128 GB (cerca de US$ 5.100) apenas se precisar de 70B com maior qualidade no desktop, ou para um Mac Studio M5 Ultra se precisar dos maiores modelos locais.',
+          '**Para a maioria dos compradores que escolhem um Mac especificamente para IA local, o Mac Mini M5 Pro com 64 GB de memória unificada é a opção que equilibra capacidade, preço e custo operacional.** Seus 64 GB acomodam todos os modelos até 34B com margem de contexto e cabem 70B Q4 com margem apertada, ele funciona em silêncio e consome apenas 25-55 W (estimativa) sob carga de inferência, e por cerca de US$ 2.700 (o modelo base de US$ 1.699 tem apenas 24 GB) é o Mac de menor preço deste guia que comporta um modelo de 64 GB. Ele também é um servidor de IA sempre ativo ideal para casa ou escritório. Desça para o Mac Mini M6 32 GB (cerca de US$ 1.300) apenas se modelos 7B-14B realmente cobrirem o seu caso de uso — seu teto de 32 GB não suporta modelos 30B ou 70B. Suba para um Mac Studio M5 Max de 64 GB (cerca de US$ 3.500) se quiser o dobro da largura de banda de memória com o mesmo tamanho de memória, para o MacBook Pro 16" apenas se precisar de portabilidade, para um Mac Studio M5 Max de 128 GB (cerca de US$ 5.100) apenas se precisar de 70B com maior qualidade no desktop, ou para um Mac Studio M5 Ultra se precisar dos maiores modelos locais.',
         callouts: [
           {
             type: 'note',
@@ -3695,7 +3695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como os Macs se comparam para IA local em 2026',
         content:
-          'Os números de memória e largura de banda são especificações da Apple. As velocidades do MacBook Pro são estimativas indicativas; veja a página de benchmarks M5 Pro vs M5 Max vinculada para os intervalos. Não foram medidas novamente para este guia. As velocidades da linha do Mac Mini vêm de um teste prático independente com um modelo pequeno de 4B (veja Fontes) em máquinas com memória base; não encontramos medições independentes de 70B para o M6, o M5 Pro do Mac Mini, o M5 Max do Mac Studio nem o M5 Ultra, então essas células estão marcadas dessa forma em vez de estimadas. Os preços são preços de tabela nos EUA para a configuração indicada em cada linha: os preços iniciais anunciados pela Apple cobrem apenas a memória base (M6 16 GB, M5 Pro 24 GB, M5 Max 36 GB, M5 Ultra 96 GB), então o upgrade de memória está incluído aqui. Confirme o preço atual na Apple Store antes de comprar.',
+          'Os números de memória e largura de banda são especificações da Apple. As velocidades do MacBook Pro são estimativas a partir da largura de banda de memória e do tamanho do arquivo do modelo, não medições; veja o método na página vinculada de velocidades estimadas M5 Pro vs M5 Max. As velocidades da linha do Mac Mini vêm de um teste prático independente com um modelo pequeno de 4B (veja Fontes) em máquinas com memória base; não encontramos medições independentes de 70B para o M6, o M5 Pro do Mac Mini, o M5 Max do Mac Studio nem o M5 Ultra, então essas células estão marcadas dessa forma em vez de estimadas. Os preços são preços de tabela nos EUA para a configuração indicada em cada linha: os preços iniciais anunciados pela Apple cobrem apenas a memória base (M6 16 GB, M5 Pro 24 GB, M5 Max 36 GB, M5 Ultra 96 GB), então o upgrade de memória está incluído aqui. Confirme o preço atual na Apple Store antes de comprar.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3730,8 +3730,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64 GB](https://www.apple.com/macbook-pro/)',
             'Memória unificada': '64 GB',
             'Largura de banda': '307 GB/s',
-            'Velocidade (8B Q4)': '~50-60 tok/s',
-            'Velocidade (70B Q4)': '~8-12 tok/s',
+            'Velocidade (8B Q4)': '~38-50 tok/s',
+            'Velocidade (70B Q4)': '~4-5 tok/s',
             'Preço (EUA)': '~US$ 3.000-3.400',
             'Ideal para': 'Portátil 34B-70B Q4 (apertado)',
           },
@@ -3739,8 +3739,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128 GB',
             'Memória unificada': '128 GB',
             'Largura de banda': '614 GB/s',
-            'Velocidade (8B Q4)': '~100-120 tok/s',
-            'Velocidade (70B Q4)': '16-22 tok/s',
+            'Velocidade (8B Q4)': '~75-100 tok/s',
+            'Velocidade (70B Q4)': '~9-11 tok/s',
             'Preço (EUA)': '~US$ 5.000+',
             'Ideal para': '70B Q5 portátil, multimodelo',
           },
@@ -3769,7 +3769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Velocidade (8B Q4)': 'ainda não testado',
             'Velocidade (70B Q4)': 'ainda não testado',
             'Preço (EUA)': 'de US$ 5.499; 256 GB ~US$ 9.500',
-            'Ideal para': 'Estação extrema, 512 GB ainda sem pedido',
+            'Ideal para': 'Estação extrema; 512 GB de US$ 22.299',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-pt.webp',
@@ -3843,8 +3843,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O MacBook Pro 16" (M5 Pro ou M5 Max, lançado em março de 2026 e não afetado pela atualização de Mac Mini/Mac Studio da Apple em 25 de agosto) é a opção para compradores que precisam de modelos da classe 70B em um fator de forma portátil — e a resposta para "o melhor MacBook para IA local".** O M5 Max é o único chip portátil deste guia que supera 70B com folga; o M5 Pro cabe 70B em Q4 com margem apertada. O trade-off em relação a um desktop com o mesmo chip é que um notebook pode reduzir o desempenho sob inferência sustentada; a intensidade varia conforme a carga e o chassi.',
         items: [
-          '**MacBook Pro 16" M5 Pro 64 GB (cerca de US$ 3.000-3.400; o 16" M5 Pro começa em US$ 2.699):** CPU de até 18 núcleos, GPU de 20 núcleos, 307 GB/s de largura de banda — 64 GB é o teto de memória desse chip. Executa modelos 8B a aproximadamente 50-60 tok/s e Llama 3.3 70B Q4 a aproximadamente 8-12 tok/s (margem apertada). O ponto de entrada portátil à IA local 70B.',
-          '**MacBook Pro 16" M5 Max 128 GB (cerca de US$ 5.000 ou mais; o 16" M5 Max começa em US$ 3.899):** GPU de até 40 núcleos, 614 GB/s de largura de banda. Executa modelos 8B a aproximadamente 100-120 tok/s e 70B em Q5 (maior qualidade) a 12-18 tok/s, e permite executar dois modelos ao mesmo tempo — por exemplo um modelo 70B mais um modelo 13B.',
+          '**MacBook Pro 16" M5 Pro 64 GB (cerca de US$ 3.000-3.400; o 16" M5 Pro começa em US$ 2.699):** CPU de até 18 núcleos, GPU de 20 núcleos, 307 GB/s de largura de banda — 64 GB é o teto de memória desse chip. Executa modelos 8B a aproximadamente 38-50 tok/s e Llama 3.3 70B Q4 a aproximadamente 4-5 tok/s (margem apertada). O ponto de entrada portátil à IA local 70B. Essas velocidades são estimativas a partir da largura de banda de memória e do tamanho do arquivo do modelo, não medições.',
+          '**MacBook Pro 16" M5 Max 128 GB (cerca de US$ 5.000 ou mais; o 16" M5 Max começa em US$ 3.899):** GPU de até 40 núcleos, 614 GB/s de largura de banda. Executa modelos 8B a aproximadamente 75-100 tok/s e 70B em Q5 (maior qualidade) a 7-10 tok/s, e permite executar dois modelos ao mesmo tempo — por exemplo um modelo 70B mais um modelo 13B. Essas velocidades são estimativas a partir da largura de banda de memória e do tamanho do arquivo do modelo, não medições.',
           '**Por que comprar este Mac:** você precisa de modelos 70B e portabilidade, quer uma única máquina para trabalho criativo e IA, ou viaja e apresenta e não pode deixar uma máquina de desktop para trás.',
           '**Por que descartá-lo:** se a máquina nunca sai da mesa, um Mac Studio com o mesmo chip funciona mais frio e sustenta a velocidade máxima, por um preço parecido com 128 GB; se os modelos 34B são suficientes, o Mac Mini M5 Pro custa várias centenas de dólares a menos.',
         ],
@@ -3879,17 +3879,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max vs M5 Ultra: Desktop e extremo',
         content:
-          '**A Apple renovou o Mac Studio em 25 de agosto de 2026 com o M5 Max (opção de desktop para 70B) e o M5 Ultra (extremo, até 512 GB); as configurações base foram entregues em 22 de setembro de 2026, e a configuração M5 Ultra de 512 GB segue no final de outubro de 2026.** Um Mac Studio M5 Max de 128 GB executa 70B em qualidade Q5 e permanece mais silencioso sob carga sustentada do que um MacBook Pro, porque a carcaça de desktop não tem o teto térmico de um notebook. O M5 Ultra existe para quem precisa de modelos maiores do que 128 GB conseguem conter. Os preços iniciais anunciados (US$ 2.499 e US$ 5.499) são de 36 GB e 96 GB; o M5 Max de 128 GB custa cerca de US$ 5.100.',
+          '**A Apple renovou o Mac Studio em 25 de agosto de 2026 com o M5 Max (opção de desktop para 70B) e o M5 Ultra (extremo, até 512 GB); as configurações base foram entregues em 22 de setembro de 2026, e a configuração M5 Ultra de 512 GB pode ser encomendada desde 28 de outubro de 2026.** Um Mac Studio M5 Max de 128 GB executa 70B em qualidade Q5 e permanece mais silencioso sob carga sustentada do que um MacBook Pro, porque a carcaça de desktop não tem o teto térmico de um notebook. O M5 Ultra existe para quem precisa de modelos maiores do que 128 GB conseguem conter. Os preços iniciais anunciados (US$ 2.499 e US$ 5.499) são de 36 GB e 96 GB; o M5 Max de 128 GB custa cerca de US$ 5.100.',
         items: [
           '**Mac Studio M5 Max (a partir de US$ 2.499 com 36 GB; 64 GB cerca de US$ 3.500; 128 GB cerca de US$ 5.100):** o modelo base com GPU de 32 núcleos tem 460 GB/s e chega a no máximo 36 GB; o modelo com GPU de 40 núcleos (a partir de cerca de US$ 3.100 com 48 GB) tem 614 GB/s e é o único oferecido com 64 GB ou 128 GB. A opção de desktop para modelos 70B. Não encontramos medições independentes de 70B para ele.',
-          '**Mac Studio M5 Ultra (a partir de US$ 5.499 com 96 GB; 256 GB cerca de US$ 9.500, ou cerca de US$ 10.800 com a GPU de 80 núcleos):** a configuração de CPU de 36 núcleos / GPU de 80 núcleos suporta até 512 GB de memória unificada a aproximadamente 1,2 TB/s de largura de banda. A configuração de 512 GB é entregue no final de outubro de 2026, ainda não pode ser encomendada e não tem preço anunciado. Este nível é para os maiores modelos locais — muito além de um único modelo 70B — não é uma compra comum.',
+          '**Mac Studio M5 Ultra (a partir de US$ 5.499 com 96 GB; 256 GB cerca de US$ 9.500, ou cerca de US$ 10.800 com a GPU de 80 núcleos):** a configuração de CPU de 36 núcleos / GPU de 80 núcleos suporta até 512 GB de memória unificada a aproximadamente 1,2 TB/s de largura de banda. A configuração de 512 GB pode ser encomendada desde 28 de outubro de 2026, a partir de US$ 22.299 ([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). Este nível é para os maiores modelos locais — muito além de um único modelo 70B — não é uma compra comum.',
           '**Por que comprar um Mac Studio:** você quer uma máquina de desktop 70B na linha atual, quer uma operação sustentada mais silenciosa do que um MacBook Pro, quer o dobro da largura de banda do Mac Mini M5 Pro, ou (especificamente o M5 Ultra) precisa executar modelos maiores do que 128 GB conseguem conter.',
           '**Por que descartá-lo:** se você precisa de portabilidade, compre um MacBook Pro; se os modelos 34B são suficientes e a velocidade é secundária, o Mac Mini M5 Pro é mais barato; se quer um desktop 70B por menos, considere o Mac Studio M4 Max da geração anterior, provavelmente com desconto agora que a nova linha foi entregue.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Os preços e especificações acima são números publicados pela Apple mais preços do configurador relatados pelo Daring Fireball; não encontramos benchmarks independentes do Mac Studio M5 Max nem do M5 Ultra. Uma fonte lista a configuração M5 Max de 128 GB como descontinuada enquanto outras ainda a listam — confirme que ela pode ser encomendada na Apple Store antes de planejar uma compra em torno dela.',
+            text: 'Os preços e especificações acima são números publicados pela Apple mais preços do configurador relatados pelo Daring Fireball; não encontramos benchmarks independentes de 70B do Mac Studio M5 Max nem do M5 Ultra; os testes independentes do M5 Ultra com outros modelos estão resumidos no nosso [guia do Apple Silicon M5](/pt/local-llms/apple-silicon-m5-local-llm). Confirme que a sua configuração exata pode ser encomendada na Apple Store antes de planejar uma compra em torno dela.',
           },
         ],
         affiliateLinks: [
@@ -3952,9 +3952,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modelos 8B — 8-9 GB:** cabem em qualquer Mac com 16 GB ou mais, incluindo o Mac Mini M6. Um Mac de 32 GB deixa uma margem confortável.',
           '**Modelos 13-14B — 11-13 GB:** precisam de 32 GB depois de contados o macOS e o overhead de contexto. Mac Mini M6 (32 GB) em diante.',
           '**Modelos 34B — 21-25 GB:** precisam de 64 GB na prática. O Mac Mini M5 Pro de 64 GB é a opção com melhor custo-benefício aqui — o teto de 32 GB do M6 não cabe um modelo 34B.',
-          '**Modelos 70B em Q4 — 39-42 GB:** precisam de 64 GB no mínimo, e com o contexto adicionado os 64 GB ficam apertados. O Mac Mini M5 Pro de 64 GB ou o MacBook Pro 16" M5 Pro de 64 GB são o piso.',
+          '**Modelos 70B em Q4 — 43+ GB:** precisam de 64 GB no mínimo, e com o contexto adicionado os 64 GB ficam apertados. O Mac Mini M5 Pro de 64 GB ou o MacBook Pro 16" M5 Pro de 64 GB são o piso.',
           '**Modelos 70B em Q5 ou modelos concorrentes — 50-70 GB+:** precisam de 128 GB. MacBook Pro 16" M5 Max de 128 GB ou um Mac Studio M5 Max de 128 GB.',
-          '**Modelos maiores do que um único 70B, ou modelos MoE muito grandes — 100 GB+:** precisam do Mac Studio M5 Ultra, que chega a até 512 GB de memória unificada (a configuração de 512 GB é entregue no final de outubro de 2026).',
+          '**Modelos maiores do que um único 70B, ou modelos MoE muito grandes — 100 GB+:** precisam do Mac Studio M5 Ultra, que chega a até 512 GB de memória unificada (a configuração de 512 GB pode ser encomendada desde 28 de outubro de 2026, a partir de US$ 22.299).',
         ],
         callouts: [
           {
@@ -3962,8 +3962,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'A memória do Apple Silicon é soldada e não pode ser atualizada. Compre um nível acima da sua necessidade atual: se você executa modelos 34B hoje, 64 GB é o piso, não a opção confortável. Para o método completo, consulte o guia de memória unificada na seção de Leituras relacionadas.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-pt.webp',
-        imageCaption: 'Memória unificada por tamanho de modelo em Q4_K_M: 8B precisa de 8-9 GB, 13-14B precisa de 11-13 GB, 34B precisa de 21-25 GB, 70B Q4 precisa de 39-42 GB, e 70B Q5 ou modelos concorrentes precisam de 50-70+ GB.',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -3974,7 +3974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. Qual é o maior modelo que você quer executar?** 7-14B: Mac Mini M6 32 GB. 34B: Mac Mini M5 Pro 64 GB. 70B Q4: Mac Mini M5 Pro 64 GB ou MacBook Pro M5 Pro. 70B Q5 ou concorrente: MacBook Pro M5 Max 128 GB ou Mac Studio M5 Max. 100B+ ou MoE gigante: Mac Studio M5 Ultra, até 512 GB.',
           '**2. A máquina precisa se mover?** Sim: MacBook Pro 16" M5 Pro ou M5 Max. Não: Mac Mini (até 34B/70B Q4) ou Mac Studio (70B ou mais).',
           '**3. É um servidor sempre ativo?** Sim: Mac Mini M5 Pro 64 GB — silencioso, 25-55 W (estimativa), o mais econômico para operar 24/7. Não: escolha pelo tamanho do modelo conforme acima.',
-          '**4. Você precisa das respostas o mais rápido possível, ou de 512 GB?** Mais rápido com a mesma memória: Mac Studio M5 Max (614 GB/s contra 307 GB/s). 512 GB: a configuração Mac Studio M5 Ultra de 512 GB é entregue no final de outubro de 2026 e ainda não pode ser encomendada; a configuração de 256 GB está disponível agora.',
+          '**4. Você precisa das respostas o mais rápido possível, ou de 512 GB?** Mais rápido com a mesma memória: Mac Studio M5 Max (614 GB/s contra 307 GB/s). 512 GB: a configuração Mac Studio M5 Ultra de 512 GB pode ser encomendada desde 28 de outubro de 2026, a partir de US$ 22.299.',
         ],
         snippetBlocks: [
           {
@@ -4001,7 +4001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Os novos modelos de Mac Mini e Mac Studio foram entregues em 22 de setembro de 2026; a configuração Mac Studio M5 Ultra de 512 GB é entregue no final de outubro de 2026. Os preços iniciais anunciados pela Apple cobrem apenas a memória base — abra o configurador atual da Apple Store para o nível de memória de que você precisa, porque os preços dos upgrades são a maior parte do total.',
+            text: 'Os novos modelos de Mac Mini e Mac Studio foram entregues em 22 de setembro de 2026; a configuração Mac Studio M5 Ultra de 512 GB pode ser encomendada desde 28 de outubro de 2026. Os preços iniciais anunciados pela Apple cobrem apenas a memória base — abra o configurador atual da Apple Store para o nível de memória de que você precisa, porque os preços dos upgrades são a maior parte do total.',
           },
         ],
         affiliateLinks: [
@@ -4029,8 +4029,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ler o preço inicial anunciado como o preço do Mac de que você precisa.** US$ 899 compram um Mac Mini M6 com 16 GB, US$ 1.699 um Mac Mini M5 Pro com 24 GB e US$ 2.499 um Mac Studio M5 Max com 36 GB. O M6 de 32 GB custa cerca de US$ 1.300, o M5 Pro de 64 GB cerca de US$ 2.700 e o M5 Max de 128 GB cerca de US$ 5.100.',
           '**Presumir que o teto de 32 GB do Mac Mini M6 cobre modelos 30B ou 70B.** Não cobre. 32 GB é um limite rígido perto de modelos 14B — o M5 Pro (64 GB) é o piso para 34B em diante.',
           '**Esquecer que a memória do Apple Silicon não pode ser atualizada.** A memória é soldada. Comprar com pouca memória e a única solução é um Mac novo — dimensione um nível acima da sua necessidade atual.',
-          '**Esperar pelo Mac Studio M5 Ultra de 512 GB sem verificar o preço.** A configuração de 512 GB é entregue no final de outubro de 2026, não tem preço anunciado, e a configuração de 256 GB já custa cerca de US$ 9.500.',
-          '**Comprar um MacBook Pro para um servidor fixo na mesa 24/7.** Ele reduz o desempenho sob carga sustentada. Para um servidor sempre ativo, o Mac Mini M5 Pro ou um Mac Studio funciona mais frio e silencioso.',
+          '**Planejar em torno do Mac Studio M5 Ultra de 512 GB sem verificar o preço.** Ele começa em US$ 22.299 (pode ser encomendado desde 28 de outubro de 2026), e a configuração de 256 GB custa cerca de US$ 9.500.',
+          '**Comprar um MacBook Pro para um servidor fixo na mesa 24/7.** Ele pode reduzir o desempenho sob carga sustentada. Para um servidor sempre ativo, o Mac Mini M5 Pro ou um Mac Studio funciona mais frio e silencioso.',
           '**Superdimensionar para modelos 8B.** Se os modelos 8B cobrem o seu caso de uso, um Mac de 128 GB é dinheiro desperdiçado. Ajuste o nível de memória ao modelo, não ao orçamento que você por acaso tem.',
           '**Tratar a afirmação da Apple de "até 4x mais desempenho de IA" como um benchmark de velocidade de geração.** É um número da própria Apple para o M6 em relação ao M4 anterior; os maiores ganhos estão no processamento do prompt, enquanto a geração de tokens é limitada pela largura de banda de memória (o único teste independente que encontramos mediu o M5 Pro cerca de 70% mais rápido que o M6 em um modelo pequeno).',
         ],
@@ -4045,7 +4045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Configurations and pricing for the new Mac minis and Mac Studios (Daring Fireball)](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — Preços dos upgrades de memória e armazenamento usados nos totais deste guia.',
           '[Apple rolling out the new Mac mini and Mac Studio in 30 countries (MacTech)](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — Data de entrega e preços iniciais nos EUA.',
           '[M6 Mac mini vs M5 Pro Mac mini: Real-World Tests (Adam Talks Tech)](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — Teste prático independente dos dois Mac Mini com um modelo de 4B no LM Studio (o autor declara usar links de afiliado).',
-          '[Benchmarks LLM M5 Pro vs M5 Max 2026](/pt/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens por segundo para modelos 8B e 70B no M5 Pro e no M5 Max, conforme indicado nessa página (veja a nota de metodologia).',
+          '[M5 Pro vs M5 Max para LLMs locais: especificações e velocidades estimadas](/pt/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens por segundo estimados (não medidos) para modelos 8B e 70B, calculados a partir da largura de banda de memória e do tamanho do arquivo do modelo.',
           '[Mac Mini M5 como servidor de IA local](/pt/local-llms/mac-mini-m5-local-ai-server) — estimativas com base nas especificações publicadas pela Apple (não medidas pela PromptQuorum): consumo de energia do Mac Mini M5 Pro, custo de eletricidade e desempenho como servidor sempre ativo.',
         ],
       },
@@ -4059,7 +4059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Mac Studio M5 já está disponível?',
-            a: 'Sim, com uma exceção. O Mac Studio M5 Max e o M5 Ultra foram entregues em 22 de setembro de 2026. A configuração M5 Ultra de 512 GB segue no final de outubro de 2026, ainda não pode ser encomendada e não tem preço anunciado. O M5 Ultra começa em US$ 5.499 com 96 GB, e a configuração de 256 GB custa cerca de US$ 9.500. Se você quer um Mac de desktop 70B mais barato, o Mac Studio da geração anterior (M4 Max) pode estar com desconto.',
+            a: 'Sim, com uma exceção. O Mac Studio M5 Max e o M5 Ultra foram entregues em 22 de setembro de 2026. A configuração M5 Ultra de 512 GB pode ser encomendada desde 28 de outubro de 2026, a partir de US$ 22.299. O M5 Ultra começa em US$ 5.499 com 96 GB, e a configuração de 256 GB custa cerca de US$ 9.500. Se você quer um Mac de desktop 70B mais barato, o Mac Studio da geração anterior (M4 Max) pode estar com desconto.',
           },
           {
             q: 'Mac Mini M5 Pro ou Mac Studio M5 Max para IA?',
@@ -4075,15 +4075,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanta memória unificada eu preciso para LLMs locais em um Mac?',
-            a: 'Com quantização Q4_K_M, planeje aproximadamente 0.6 GB por bilhão de parâmetros mais 2-4 GB de overhead, e lembre-se de que o macOS compartilha o mesmo pool. Isso significa aproximadamente 8-9 GB para modelos 8B, 21-25 GB para 34B e 39-42 GB para 70B. Um Mac de 64 GB (Mac Mini M5 Pro ou MacBook Pro M5 Pro) executa confortavelmente 34B e mal cabe o 70B Q4; 128 GB (MacBook Pro M5 Max ou Mac Studio M5 Max) são necessários para 70B em Q5 ou para executar vários modelos; o Mac Studio M5 Ultra chega a até 512 GB para modelos maiores do que um único 70B.',
+            a: 'Com quantização Q4_K_M, planeje aproximadamente 0.6 GB por bilhão de parâmetros mais 2-4 GB de overhead, e lembre-se de que o macOS compartilha o mesmo pool. Isso significa aproximadamente 8-9 GB para modelos 8B, 21-25 GB para 34B e 43+ GB para 70B. Um Mac de 64 GB (Mac Mini M5 Pro ou MacBook Pro M5 Pro) executa confortavelmente 34B e mal cabe o 70B Q4; 128 GB (MacBook Pro M5 Max ou Mac Studio M5 Max) são necessários para 70B em Q5 ou para executar vários modelos; o Mac Studio M5 Ultra chega a até 512 GB para modelos maiores do que um único 70B.',
           },
           {
             q: 'Mac Mini ou MacBook Pro para IA local?',
-            a: 'Escolha o Mac Mini M5 Pro se a máquina permanece em uma mesa e os modelos 34B são o seu teto — ele é mais barato, silencioso e ideal como servidor sempre ativo. Escolha um MacBook Pro 16" (M5 Pro ou M5 Max) se você precisa executar modelos 70B ou levar a máquina consigo. O MacBook Pro M5 Max é o chip portátil mais capaz para 70B, mas reduz o desempenho sob carga sustentada, então um servidor fixo continua sendo melhor atendido por um Mac Mini ou Mac Studio.',
+            a: 'Escolha o Mac Mini M5 Pro se a máquina permanece em uma mesa e os modelos 34B são o seu teto — ele é mais barato, silencioso e ideal como servidor sempre ativo. Escolha um MacBook Pro 16" (M5 Pro ou M5 Max) se você precisa executar modelos 70B ou levar a máquina consigo. O MacBook Pro M5 Max é o chip portátil mais capaz para 70B, mas pode reduzir o desempenho sob carga sustentada, então um servidor fixo continua sendo melhor atendido por um Mac Mini ou Mac Studio.',
           },
           {
             q: 'Um Mac consegue executar modelos 70B?',
-            a: 'Sim. Um MacBook Pro 16" M5 Pro de 64 GB executa Llama 3.3 70B Q4 a aproximadamente 8-12 tokens por segundo (margem apertada), e a versão M5 Max de 128 GB executa 70B em Q5 a 12-18 tokens por segundo. Um Mac Studio M5 Max de 128 GB também deve executar 70B confortavelmente, mas ainda não encontramos medições independentes. O Mac Mini M6 não consegue — seu teto de 32 GB é pequeno demais; o Mac Mini M5 Pro com 64 GB cabe 70B Q4 com margem apertada.',
+            a: 'Sim. Um MacBook Pro 16" M5 Pro de 64 GB executa Llama 3.3 70B Q4 a aproximadamente 4-5 tokens por segundo (margem apertada), e a versão M5 Max de 128 GB executa 70B em Q5 a 7-10 tokens por segundo. Um Mac Studio M5 Max de 128 GB também deve executar 70B confortavelmente, mas ainda não encontramos medições independentes. O Mac Mini M6 não consegue — seu teto de 32 GB é pequeno demais; o Mac Mini M5 Pro com 64 GB cabe 70B Q4 com margem apertada. Essas velocidades são estimativas a partir da largura de banda de memória e do tamanho do arquivo do modelo, não medições.',
           },
           {
             q: 'Um Mac é mais rápido do que uma GPU NVIDIA para LLMs locais?',
@@ -4095,7 +4095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanto custa operar um Mac como servidor de IA?',
-            a: 'Muito pouco. Estima-se que um Mac Mini M5 Pro consuma cerca de 25-55 W sob carga de LLM e cerca de 8 W em repouso (estimativas, não medidas pela PromptQuorum). Operá-lo 24/7 durante um ano completo custa aproximadamente US$ 26-39 em eletricidade nos EUA. Esse baixo custo operacional é um motivo central pelo qual o Mac Mini é a opção com melhor custo-benefício para um servidor sempre ativo.',
+            a: 'Muito pouco. Estima-se que um Mac Mini M5 Pro consuma cerca de 25-55 W sob carga de LLM e cerca de 8 W em repouso (estimativas, não medidas pela PromptQuorum). Operá-lo 24/7 durante um ano completo em uso leve a misto custaria cerca de US$ 26-39 a US$ 0,15/kWh (estimativa); com mais carga ou tarifa mais alta, custa mais. Esse baixo custo operacional é um motivo central pelo qual o Mac Mini é a opção com melhor custo-benefício para um servidor sempre ativo.',
           },
         ],
       },
@@ -4103,7 +4103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Ver o conjunto completo de benchmarks M5 Pro vs M5 Max](/pt/local-llms/m5-pro-max-llm-benchmarks-2026) — tokens por segundo medidos, tempo até o primeiro token e consumo de energia por trás dos números deste guia.',
+          '[M5 Pro vs M5 Max para LLMs locais: especificações e velocidades estimadas](/pt/local-llms/m5-pro-max-llm-benchmarks-2026) — como as estimativas desta comparação são calculadas e como medir a velocidade no seu próprio Mac.',
           '[Configurar um Mac Mini M5 como servidor de IA sempre ativo](/pt/local-llms/mac-mini-m5-local-ai-server) — a construção completa do servidor, com custo de eletricidade estimado e considerações para uso sempre ligado (estimativas, não medidas).',
           '[Comparar Apple Silicon em toda a linha da série M](/pt/local-llms/apple-silicon-local-llm-guide-2026) — como M1 até M5 Max se comparam em memória unificada e largura de banda.',
           '[Calcular quanta memória unificada cada tamanho de modelo precisa](/pt/local-llms/how-much-unified-memory-for-local-llm) — o método completo por tamanho de modelo por trás da fórmula rápida aqui.',
@@ -4118,11 +4118,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'O melhor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro',
-      description: 'Três Macs comparados para LLMs locais: Mac Mini M5 Pro, MacBook Pro 16',
+      description: 'Mac Mini, MacBook Pro e Mac Studio comparados para LLMs locais: memória unificada, largura de banda e preços.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4133,7 +4133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -4142,7 +4142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل ⁨Mac⁩ للذكاء الاصطناعي المحلي ⁨2026⁩: ⁨Mac Mini⁩ مقابل ⁨Mac Studio⁩ مقابل ⁨MacBook Pro⁩',
     seoTitle: '⁨Mac⁩ للذكاء الاصطناعي المحلي ⁨2026⁩: ⁨Mini⁩ أم ⁨Studio⁩',
     intro:
-      'تركّز معظم نصائح Mac للذكاء الاصطناعي على اسم الشريحة، بينما الرقم الذي يحدد القرار فعلاً هو الذاكرة الموحّدة. في Apple Silicon يعيش النموذج في نفس تجمّع الذاكرة مع كل شيء آخر، لذا يمكن لجهاز Mac Mini بذاكرة 64 GB تشغيل نموذج 34B لا يستطيع جهاز Mac Mini بذاكرة 32 GB تحميله. جدّدت Apple خطي Mac Mini وMac Studio في 25 أغسطس 2026 (ويُشحنان منذ 22 سبتمبر 2026)، ويقارن هذا الدليل أربع فئات لتشغيل نماذج LLM محلياً على الأجهزة الجديدة — Mac Mini M6 الأساسي كخادم اقتصادي، وMac Mini M5 Pro كخادم أقدر، وMacBook Pro 16" كمحطة عمل محمولة (M5 Pro أو M5 Max)، وMac Studio (M5 Max أو M5 Ultra) كخيار لسطح المكتب والذاكرة الضخمة — في الأرقام التي تحدد عملية الشراء: الذاكرة الموحّدة، وعرض نطاق الذاكرة، والرموز المقاسة في الثانية، والسعر. تحذيران: أسعار Apple المعلنة للبدء تشمل الذاكرة الأساسية فقط، لا الذاكرة التي تحتاجها نماذج LLM المحلية — فجهاز Mac Mini M6 بسعر 899 دولاراً بذاكرة 16 GB، وMac Mini M5 Pro بسعر 1,699 دولار بذاكرة 24 GB، وMac Studio M5 Max بسعر 2,499 دولار بذاكرة 36 GB — لذا تكلّف التهيئات الموصى بها هنا أكثر (حوالي 1,300 دولار لـM6 بذاكرة 32 GB، وحوالي 2,700 دولار لـM5 Pro بذاكرة 64 GB، وحوالي 5,100 دولار لـMac Studio M5 Max بذاكرة 128 GB). والاختبار المستقل للشرائح الجديدة لا يزال محدوداً: قاس اختبار عملي واحد جهازي M6 وM5 Pro في Mac Mini على نموذج صغير، ولم نعثر على أي قياسات مستقلة لنماذج 70B على M5 Max أو M5 Ultra، لذا فأرقام الأداء لهاتين الشريحتين هي أرقام Apple نفسها، موضَّحة بصفتها كذلك. الأسعار هي أسعار القائمة في الولايات المتحدة وقت آخر تحديث؛ تحقق من السعر الحالي في Apple Store قبل الشراء.',
+      'تركّز معظم نصائح Mac للذكاء الاصطناعي على اسم الشريحة، بينما الرقم الذي يحدد القرار فعلاً هو الذاكرة الموحّدة. في Apple Silicon يعيش النموذج في نفس تجمّع الذاكرة مع كل شيء آخر، لذا يمكن لجهاز Mac Mini بذاكرة 64 GB تشغيل نموذج 34B لا يستطيع جهاز Mac Mini بذاكرة 32 GB تحميله. جدّدت Apple خطي Mac Mini وMac Studio في 25 أغسطس 2026 (ويُشحنان منذ 22 سبتمبر 2026)، ويقارن هذا الدليل أربع فئات لتشغيل نماذج LLM محلياً على الأجهزة الجديدة — Mac Mini M6 الأساسي كخادم اقتصادي، وMac Mini M5 Pro كخادم أقدر، وMacBook Pro 16" كمحطة عمل محمولة (M5 Pro أو M5 Max)، وMac Studio (M5 Max أو M5 Ultra) كخيار لسطح المكتب والذاكرة الضخمة — في الأرقام التي تحدد عملية الشراء: الذاكرة الموحّدة، وعرض نطاق الذاكرة، وأرقام الرموز في الثانية حيثما توفرت (اختبار واحد لنموذج صغير، والتقديرات موضحة)، والسعر. تحذيران: أسعار Apple المعلنة للبدء تشمل الذاكرة الأساسية فقط، لا الذاكرة التي تحتاجها نماذج LLM المحلية — فجهاز Mac Mini M6 بسعر 899 دولاراً بذاكرة 16 GB، وMac Mini M5 Pro بسعر 1,699 دولار بذاكرة 24 GB، وMac Studio M5 Max بسعر 2,499 دولار بذاكرة 36 GB — لذا تكلّف التهيئات الموصى بها هنا أكثر (حوالي 1,300 دولار لـM6 بذاكرة 32 GB، وحوالي 2,700 دولار لـM5 Pro بذاكرة 64 GB، وحوالي 5,100 دولار لـMac Studio M5 Max بذاكرة 128 GB). والاختبار المستقل للشرائح الجديدة لا يزال محدوداً: قاس اختبار عملي واحد جهازي M6 وM5 Pro في Mac Mini على نموذج صغير، ولم نعثر على أي قياسات مستقلة لنماذج 70B على M5 Max أو M5 Ultra، لذا لا يقدّم هذا الدليل أي سرعة 70B مقاسة لهاتين الشريحتين. وقد اختبرت MacStories وBGR شريحة M5 Ultra بنماذج أخرى. الأسعار هي أسعار القائمة في الولايات المتحدة وقت آخر تحديث؛ تحقق من السعر الحالي في Apple Store قبل الشراء.',
     metaDescription:
       'Mac Mini M6 بذاكرة 32GB بحوالي 1,300 دولار، وM5 Pro بذاكرة 64GB بحوالي 2,700 دولار. Mac Studio M5 Max بذاكرة 128GB بحوالي 5,100 دولار، وM5 Ultra من 5,499 دولاراً. مقارنة الذاكرة الموحّدة وعرض النطاق والأسعار الفعلية.',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ar.webp',
@@ -4189,7 +4189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'أي Mac يجب أن أشتري لتشغيل نماذج LLM المحلية في 2026؟',
         answer:
-          'اشترِ بالذاكرة الموحّدة أولاً، ثم بعرض النطاق — وسعّر الذاكرة لا الشريحة: أسعار Apple للبدء تشمل الذاكرة الأساسية فقط. جهاز Mac Mini M6 بذاكرة 32 GB (حوالي 1,300 دولار؛ الطراز الأساسي بسعر 899 دولاراً بذاكرة 16 GB) هو المدخل الاقتصادي ويغطي نماذج 7B-14B — لا تتسع نماذج 30B أو 70B فيه. Mac Mini M5 Pro بذاكرة 64 GB (حوالي 2,700 دولار؛ الطراز الأساسي بسعر 1,699 دولار بذاكرة 24 GB) هو الخيار الأفضل من حيث القيمة للاستخدام الجاد ويُشغّل نماذج 34B بصمت كخادم دائم التشغيل. MacBook Pro 16" M5 Pro بذاكرة 64 GB هو الخيار المحمول لنماذج 34B-70B Q4، وM5 Max بذاكرة 128 GB يُشغّل 70B بتكميم Q5. Mac Studio M5 Max (حوالي 3,500 دولار بذاكرة 64 GB، وحوالي 5,100 دولار بذاكرة 128 GB) هو خيار سطح المكتب بضعف عرض نطاق Mac Mini M5 Pro، وMac Studio M5 Ultra (من 5,499 دولاراً بذاكرة 96 GB، وحوالي 9,500 دولار بذاكرة 256 GB، حتى 512 GB) هو الخيار الأقصى لأكبر النماذج المحلية. شُحنت كلها في 22 سبتمبر 2026، باستثناء تهيئة M5 Ultra بذاكرة 512 GB التي تُشحن في أواخر أكتوبر 2026.',
+          'اشترِ بالذاكرة الموحّدة أولاً، ثم بعرض النطاق — وسعّر الذاكرة لا الشريحة: أسعار Apple للبدء تشمل الذاكرة الأساسية فقط. جهاز Mac Mini M6 بذاكرة 32 GB (حوالي 1,300 دولار؛ الطراز الأساسي بسعر 899 دولاراً بذاكرة 16 GB) هو المدخل الاقتصادي ويغطي نماذج 7B-14B — لا تتسع نماذج 30B أو 70B فيه. Mac Mini M5 Pro بذاكرة 64 GB (حوالي 2,700 دولار؛ الطراز الأساسي بسعر 1,699 دولار بذاكرة 24 GB) هو الخيار الأفضل من حيث القيمة للاستخدام الجاد ويُشغّل نماذج 34B بصمت كخادم دائم التشغيل. MacBook Pro 16" M5 Pro بذاكرة 64 GB هو الخيار المحمول لنماذج 34B-70B Q4، وM5 Max بذاكرة 128 GB يُشغّل 70B بتكميم Q5. Mac Studio M5 Max (حوالي 3,500 دولار بذاكرة 64 GB، وحوالي 5,100 دولار بذاكرة 128 GB) هو خيار سطح المكتب بضعف عرض نطاق Mac Mini M5 Pro، وMac Studio M5 Ultra (من 5,499 دولاراً بذاكرة 96 GB، وحوالي 9,500 دولار بذاكرة 256 GB، حتى 512 GB) هو الخيار الأقصى لأكبر النماذج المحلية. تُشحن كلها منذ 22 سبتمبر 2026، وتهيئة M5 Ultra بذاكرة 512 GB متاحة للطلب منذ 28 أكتوبر 2026 (من 22,299 دولار).',
         bullets: [
           'اقتصادي: Mac Mini M6 بذاكرة 32 GB، حوالي 1,300 دولار، نماذج 7B-14B فقط (سقف ذاكرة 32 GB)',
           'قيمة / خادم دائم التشغيل: Mac Mini M5 Pro 64 GB، حوالي 2,700 دولار، نماذج 34B و70B Q4 بهامش ضيق',
@@ -4197,7 +4197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'سطح المكتب: Mac Studio M5 Max 64 GB حوالي 3,500 دولار أو 128 GB حوالي 5,100 دولار؛ الأقصى: M5 Ultra من 5,499 دولاراً، حتى 512 GB',
           'ذاكرة Apple Silicon لا يمكن ترقيتها بعد الشراء — اشترِ الحجم الذي تحتاجه من البداية',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -4231,8 +4231,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الخيار المحمول: MacBook Pro 16" M5 Pro 64 GB (حوالي 3,000-3,400 دولار) أو M5 Max 128 GB (حوالي 5,000 دولار فأكثر)** — عرض نطاق 307-614 GB/ثانية، يُشغّل 70B من Q4 إلى Q5. قد يخفض أداءه تحت الحمل المستمر (يختلف المقدار حسب الحمل والهيكل) مقابل قابلية التنقل.',
           '**خيار سطح المكتب: Mac Studio M5 Max 64 GB (~3,500 دولار) أو 128 GB (~5,100 دولار)** — عرض نطاق 614 GB/ثانية يُشغّل 70B بتكميم Q5 في طراز 128 GB. يُشحن منذ 22 سبتمبر 2026؛ لم نعثر بعد على معايير مستقلة.',
           '**Mac Mini M5 Pro مقابل Mac Studio M5 Max:** عند نفس الذاكرة 64 GB يكلّف Mac Studio أكثر بنحو 800 دولار ولديه ضعف عرض النطاق (614 مقابل 307 GB/ثانية)؛ وحده Mac Studio يصل إلى 128 GB.',
-          '**الخيار الأقصى: Mac Studio M5 Ultra (من 5,499 دولاراً بذاكرة 96 GB؛ حوالي 9,500 دولار بذاكرة 256 GB؛ حتى 512 GB)** — عرض نطاق 1.2 تيرابايت/ثانية؛ تُشحن تهيئة 512 GB في أواخر أكتوبر 2026 وليس لها سعر معلن.',
-          '**عرض النطاق، لا اسم الشريحة، يحدد السرعة.** في اختبار مستقل واحد ولّد Mac Mini M5 Pro حوالي 92 رمزاً في الثانية مقابل 54 لـM6 على نموذج صغير — فجوة تتبع عرض النطاق (307 مقابل 153-170 GB/ثانية). وM5 Max (460-614 GB/ثانية) لديه حتى ضعف عرض نطاق M5 Pro (مواصفات Apple؛ لم نجد قياسات مستقلة لـM5 Max أو M5 Ultra).',
+          '**الخيار الأقصى: Mac Studio M5 Ultra (من 5,499 دولاراً بذاكرة 96 GB؛ حوالي 9,500 دولار بذاكرة 256 GB؛ حتى 512 GB)** — عرض نطاق 1.2 تيرابايت/ثانية؛ تهيئة 512 GB متاحة للطلب منذ 28 أكتوبر 2026 بسعر يبدأ من 22,299 دولار.',
+          '**عرض النطاق، لا اسم الشريحة، يحدد السرعة.** في اختبار مستقل واحد ولّد Mac Mini M5 Pro حوالي 92 رمزاً في الثانية مقابل 54 لـM6 على نموذج صغير — فجوة تتبع عرض النطاق (307 مقابل 153-170 GB/ثانية). وM5 Max (460-614 GB/ثانية) لديه حتى ضعف عرض نطاق M5 Pro (مواصفات Apple؛ لم نجد قياسات مستقلة لـM5 Max، والاختبارات المستقلة التي نعرفها لـM5 Ultra تستخدم نماذج أخرى غير 70B).',
           '**Apple Silicon يقايض السرعة الخام بالسعة والصمت.** بطاقة RTX لسطح المكتب أسرع في نماذج 7B-13B، لكن ذاكرة VRAM البالغة 24-32 GB لا تتسع لنموذج 70B يُشغّله Mac بذاكرة 128 GB بسهولة، ناهيك عن 512 GB التي يمكن أن يصل إليها Mac Studio M5 Ultra.',
           '**استهلاك الطاقة منخفض في كل الخط. ** Mac Mini يستهلك 25-55 واط (تقدير) تحت حمل LLM وM5 Max يستهلك 60-100 واط (تقدير) — مقابل 300-450 واط لبطاقة RTX لسطح المكتب في عمل مماثل.',
         ],
@@ -4249,7 +4249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**قاعدة عامة للذاكرة الموحّدة في Q4_K_M:** حوالي 0.6 GB لكل مليار معامل، بالإضافة إلى 2-4 GB للسياق والأدوات.',
           '**عرض نطاق الذاكرة:** Mac Mini M6 بـ170 GB/ثانية، M5 Pro بـ307 GB/ثانية، M5 Max بـ460-614 GB/ثانية، M5 Ultra بـ1.2 تيرابايت/ثانية.',
           '**نطاق الاستهلاك:** Mac Mini M5 Pro 25-55 واط (تقدير)، MacBook Pro M5 Max 60-100 واط (تقدير) تحت حمل LLM.',
-          '**التوفر:** تحديث Mac Mini وMac Studio بتاريخ 25 أغسطس 2026 يُشحن منذ 22 سبتمبر 2026، باستثناء تهيئة M5 Ultra بذاكرة 512 GB التي تُشحن في أواخر أكتوبر 2026 — تحقق من السعر الحالي في Apple Store قبل الشراء.',
+          '**التوفر:** تحديث Mac Mini وMac Studio بتاريخ 25 أغسطس 2026 يُشحن منذ 22 سبتمبر 2026، وتهيئة M5 Ultra بذاكرة 512 GB متاحة للطلب منذ 28 أكتوبر 2026 (من 22,299 دولار) — تحقق من السعر الحالي في Apple Store قبل الشراء.',
         ],
       },
       editorsChoice: {
@@ -4257,7 +4257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'اختيار المحرر: Mac Mini M5 Pro 64 GB',
         highlight: true,
         content:
-          '**لمعظم المشترين الذين يختارون Mac تحديداً للذكاء الاصطناعي المحلي، Mac Mini M5 Pro بذاكرة موحّدة 64 GB هو الخيار الذي يوازن بين السعة والسعر والتكلفة التشغيلية.** ذاكرته البالغة 64 GB تستوعب جميع النماذج حتى 34B مع هامش للسياق وتتسع لـ70B Q4 بهامش ضيق، ويعمل بصمت ولا يستهلك سوى 25-55 واط (تقدير) تحت حمل الاستدلال، وبحوالي 2,700 دولار (الطراز الأساسي بسعر 1,699 دولار لا يملك سوى 24 GB) هو أرخص Mac يستوعب نموذجاً بحجم 64 GB. كما يُعدّ خادم ذكاء اصطناعي دائم التشغيل مثالياً للمنزل أو المكتب. انتقل إلى Mac Mini M6 بذاكرة 32 GB (حوالي 1,300 دولار) فقط إذا كانت نماذج 7B-14B تغطي فعلاً حالة استخدامك — سقفه 32 GB لا يدعم نماذج 30B أو 70B. ارتقِ إلى Mac Studio M5 Max بذاكرة 64 GB (حوالي 3,500 دولار) إذا أردت ضعف عرض النطاق بنفس حجم الذاكرة، وإلى MacBook Pro 16" فقط إذا احتجت قابلية التنقل، وإلى Mac Studio M5 Max بذاكرة 128 GB (حوالي 5,100 دولار) فقط إذا احتجت نماذج 70B بجودة أعلى على سطح المكتب، أو إلى Mac Studio M5 Ultra إذا احتجت أكبر النماذج المحلية.',
+          '**لمعظم المشترين الذين يختارون Mac تحديداً للذكاء الاصطناعي المحلي، Mac Mini M5 Pro بذاكرة موحّدة 64 GB هو الخيار الذي يوازن بين السعة والسعر والتكلفة التشغيلية.** ذاكرته البالغة 64 GB تستوعب جميع النماذج حتى 34B مع هامش للسياق وتتسع لـ70B Q4 بهامش ضيق، ويعمل بصمت ولا يستهلك سوى 25-55 واط (تقدير) تحت حمل الاستدلال، وبحوالي 2,700 دولار (الطراز الأساسي بسعر 1,699 دولار لا يملك سوى 24 GB) هو أرخص Mac في هذا الدليل يستوعب نموذجاً بحجم 64 GB. كما يُعدّ خادم ذكاء اصطناعي دائم التشغيل مثالياً للمنزل أو المكتب. انتقل إلى Mac Mini M6 بذاكرة 32 GB (حوالي 1,300 دولار) فقط إذا كانت نماذج 7B-14B تغطي فعلاً حالة استخدامك — سقفه 32 GB لا يدعم نماذج 30B أو 70B. ارتقِ إلى Mac Studio M5 Max بذاكرة 64 GB (حوالي 3,500 دولار) إذا أردت ضعف عرض النطاق بنفس حجم الذاكرة، وإلى MacBook Pro 16" فقط إذا احتجت قابلية التنقل، وإلى Mac Studio M5 Max بذاكرة 128 GB (حوالي 5,100 دولار) فقط إذا احتجت نماذج 70B بجودة أعلى على سطح المكتب، أو إلى Mac Studio M5 Ultra إذا احتجت أكبر النماذج المحلية.',
         callouts: [
           {
             type: 'note',
@@ -4285,7 +4285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'مقارنة أجهزة Mac للذكاء الاصطناعي المحلي في 2026',
         content:
-          'أرقام الذاكرة وعرض النطاق مواصفات Apple الرسمية. سرعات MacBook Pro تقديرات إرشادية؛ راجع صفحة المعايير المرتبطة M5 Pro مقابل M5 Max لمعرفة نطاقاتها. ولم تُقَس من جديد لهذا الدليل. سرعات صفّي Mac Mini مأخوذة من اختبار عملي مستقل واحد لنموذج صغير بحجم 4B (انظر المصادر) على أجهزة بذاكرة أساسية؛ ولم نعثر على قياسات مستقلة لنماذج 70B لـM6 وM5 Pro في Mac Mini وM5 Max في Mac Studio وM5 Ultra، لذا وُسمت تلك الخلايا بدلاً من تقديرها. الأسعار هي أسعار القائمة في الولايات المتحدة للتهيئة المذكورة في كل صف: أسعار Apple المعلنة للبدء تشمل الذاكرة الأساسية فقط (M6 بذاكرة 16 GB، وM5 Pro بذاكرة 24 GB، وM5 Max بذاكرة 36 GB، وM5 Ultra بذاكرة 96 GB)، لذا فترقية الذاكرة محتسبة هنا. تحقق من السعر الحالي في Apple Store قبل الشراء.',
+          'أرقام الذاكرة وعرض النطاق مواصفات Apple الرسمية. سرعات MacBook Pro تقديرات محسوبة من عرض نطاق الذاكرة وحجم ملف النموذج وليست قياسات؛ راجع طريقة الحساب في صفحة السرعات التقديرية المرتبطة M5 Pro مقابل M5 Max. سرعات صفّي Mac Mini مأخوذة من اختبار عملي مستقل واحد لنموذج صغير بحجم 4B (انظر المصادر) على أجهزة بذاكرة أساسية؛ ولم نعثر على قياسات مستقلة لنماذج 70B لـM6 وM5 Pro في Mac Mini وM5 Max في Mac Studio وM5 Ultra، لذا وُسمت تلك الخلايا بدلاً من تقديرها. الأسعار هي أسعار القائمة في الولايات المتحدة للتهيئة المذكورة في كل صف: أسعار Apple المعلنة للبدء تشمل الذاكرة الأساسية فقط (M6 بذاكرة 16 GB، وM5 Pro بذاكرة 24 GB، وM5 Max بذاكرة 36 GB، وM5 Ultra بذاكرة 96 GB)، لذا فترقية الذاكرة محتسبة هنا. تحقق من السعر الحالي في Apple Store قبل الشراء.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4320,8 +4320,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64 GB](https://www.apple.com/macbook-pro/)',
             'الذاكرة الموحّدة': '64 GB',
             'عرض النطاق': '307 GB/ثانية',
-            'السرعة (8B Q4)': '~50-60 رمز/ثانية',
-            'السرعة (70B Q4)': '~8-12 رمز/ثانية',
+            'السرعة (8B Q4)': '~38-50 رمز/ثانية',
+            'السرعة (70B Q4)': '~4-5 رمز/ثانية',
             'السعر (الولايات المتحدة)': '~3,000-3,400 دولار',
             'الأنسب لـ': 'محمول 34B-70B Q4 (هامش ضيق)',
           },
@@ -4329,8 +4329,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128 GB',
             'الذاكرة الموحّدة': '128 GB',
             'عرض النطاق': '614 GB/ثانية',
-            'السرعة (8B Q4)': '~100-120 رمز/ثانية',
-            'السرعة (70B Q4)': '16-22 رمز/ثانية',
+            'السرعة (8B Q4)': '~75-100 رمز/ثانية',
+            'السرعة (70B Q4)': '~9-11 رمز/ثانية',
             'السعر (الولايات المتحدة)': '~5,000 دولار فأكثر',
             'الأنسب لـ': '70B Q5 محمول، متعدد النماذج',
           },
@@ -4359,7 +4359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'السرعة (8B Q4)': 'لم يُختبر بعد',
             'السرعة (70B Q4)': 'لم يُختبر بعد',
             'السعر (الولايات المتحدة)': 'من 5,499 دولاراً؛ 256 GB ~9,500 دولار',
-            'الأنسب لـ': 'أقصى، 512 GB غير متاح للطلب بعد',
+            'الأنسب لـ': 'أقصى؛ 512 GB من 22,299 دولار',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ar.webp',
@@ -4433,8 +4433,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**MacBook Pro 16" (بشريحة M5 Pro أو M5 Max، أُطلق في مارس 2026 ولم يتأثر بتحديث Mac Mini/Mac Studio من Apple في 25 أغسطس) هو الخيار للمشترين الذين يحتاجون نماذج من فئة 70B بعامل شكل محمول — وهو الجواب عن سؤال «أفضل MacBook للذكاء الاصطناعي المحلي».** M5 Max هو الشريحة المحمولة الوحيدة في هذا الدليل التي تتجاوز 70B بارتياح؛ أما M5 Pro فيتسع لـ70B بتكميم Q4 بهامش ضيق. المساومة مقارنةً بجهاز سطح مكتب بنفس الشريحة هي أن الحاسوب المحمول قد يخفض أداءه تحت الاستدلال المستمر؛ ويختلف المقدار حسب الحمل والهيكل.',
         items: [
-          '**MacBook Pro 16" M5 Pro 64 GB (حوالي 3,000-3,400 دولار؛ يبدأ M5 Pro مقاس 16" من 2,699 دولاراً):** معالج مركزي حتى 18 نواة، ووحدة معالجة رسومية بـ20 نواة، وعرض نطاق 307 GB/ثانية — 64 GB هو سقف ذاكرة هذه الشريحة. يُشغّل نماذج 8B بحوالي 50-60 رمز/ثانية وLlama 3.3 70B Q4 بحوالي 8-12 رمز/ثانية (هامش ضيق). نقطة الدخول المحمولة إلى الذكاء الاصطناعي المحلي 70B.',
-          '**MacBook Pro 16" M5 Max 128 GB (حوالي 5,000 دولار فأكثر؛ يبدأ M5 Max مقاس 16" من 3,899 دولار):** وحدة معالجة رسومية حتى 40 نواة، وعرض نطاق 614 GB/ثانية. يُشغّل نماذج 8B بحوالي 100-120 رمز/ثانية و70B بتكميم Q5 (جودة أعلى) بسرعة 12-18 رمز/ثانية، ويسمح بتشغيل نموذجين في وقت واحد — على سبيل المثال نموذج 70B بالإضافة إلى نموذج 13B.',
+          '**MacBook Pro 16" M5 Pro 64 GB (حوالي 3,000-3,400 دولار؛ يبدأ M5 Pro مقاس 16" من 2,699 دولاراً):** معالج مركزي حتى 18 نواة، ووحدة معالجة رسومية بـ20 نواة، وعرض نطاق 307 GB/ثانية — 64 GB هو سقف ذاكرة هذه الشريحة. يُشغّل نماذج 8B بحوالي 38-50 رمز/ثانية وLlama 3.3 70B Q4 بحوالي 4-5 رمز/ثانية (هامش ضيق). نقطة الدخول المحمولة إلى الذكاء الاصطناعي المحلي 70B. هذه السرعات تقديرات محسوبة من عرض نطاق الذاكرة وحجم ملف النموذج، وليست قياسات.',
+          '**MacBook Pro 16" M5 Max 128 GB (حوالي 5,000 دولار فأكثر؛ يبدأ M5 Max مقاس 16" من 3,899 دولار):** وحدة معالجة رسومية حتى 40 نواة، وعرض نطاق 614 GB/ثانية. يُشغّل نماذج 8B بحوالي 75-100 رمز/ثانية و70B بتكميم Q5 (جودة أعلى) بسرعة 7-10 رمز/ثانية، ويسمح بتشغيل نموذجين في وقت واحد — على سبيل المثال نموذج 70B بالإضافة إلى نموذج 13B. هذه السرعات تقديرات محسوبة من عرض نطاق الذاكرة وحجم ملف النموذج، وليست قياسات.',
           '**لماذا تشتري هذا الجهاز:** تحتاج نماذج 70B وقابلية التنقل، تريد جهازاً واحداً للعمل الإبداعي والذكاء الاصطناعي، أو تسافر وتقدّم ولا يمكنك ترك جهاز سطح مكتب.',
           '**لماذا تتجاهله:** إذا كان الجهاز لا يغادر المكتب أبداً، فإن Mac Studio بنفس الشريحة يعمل بحرارة أقل ويحافظ على السرعة الكاملة، بسعر مماثل عند 128 GB؛ وإذا كانت نماذج 34B كافية، فإن Mac Mini M5 Pro أرخص بعدة مئات من الدولارات.',
         ],
@@ -4469,17 +4469,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max مقابل M5 Ultra: سطح المكتب والأقصى',
         content:
-          '**جدّدت Apple Mac Studio في 25 أغسطس 2026 بشريحتي M5 Max (خيار سطح المكتب لنماذج 70B) وM5 Ultra (الأقصى، حتى 512 GB)؛ شُحنت التهيئات الأساسية في 22 سبتمبر 2026، وتلحق تهيئة M5 Ultra بذاكرة 512 GB في أواخر أكتوبر 2026.** Mac Studio M5 Max بذاكرة 128 GB يُشغّل 70B بجودة Q5 ويبقى أكثر هدوءاً تحت الحمل المستمر مقارنةً بـMacBook Pro، لأن هيكل سطح المكتب لا يخضع للحد الحراري للحاسوب المحمول. أما M5 Ultra فهو موجود لمن يحتاج نماذج أكبر مما تتسع له 128 GB. الأسعار المعلنة للبدء (2,499 و5,499 دولار) هي لذاكرة 36 GB و96 GB؛ أما M5 Max بذاكرة 128 GB فيكلّف حوالي 5,100 دولار.',
+          '**جدّدت Apple Mac Studio في 25 أغسطس 2026 بشريحتي M5 Max (خيار سطح المكتب لنماذج 70B) وM5 Ultra (الأقصى، حتى 512 GB)؛ شُحنت التهيئات الأساسية في 22 سبتمبر 2026، وأصبحت تهيئة M5 Ultra بذاكرة 512 GB متاحة للطلب منذ 28 أكتوبر 2026.** Mac Studio M5 Max بذاكرة 128 GB يُشغّل 70B بجودة Q5 ويبقى أكثر هدوءاً تحت الحمل المستمر مقارنةً بـMacBook Pro، لأن هيكل سطح المكتب لا يخضع للحد الحراري للحاسوب المحمول. أما M5 Ultra فهو موجود لمن يحتاج نماذج أكبر مما تتسع له 128 GB. الأسعار المعلنة للبدء (2,499 و5,499 دولار) هي لذاكرة 36 GB و96 GB؛ أما M5 Max بذاكرة 128 GB فيكلّف حوالي 5,100 دولار.',
         items: [
           '**Mac Studio M5 Max (من 2,499 دولار بذاكرة 36 GB؛ حوالي 3,500 دولار بذاكرة 64 GB؛ حوالي 5,100 دولار بذاكرة 128 GB):** الطراز الأساسي بـ32 نواة GPU لديه 460 GB/ثانية ويتوقف عند 36 GB؛ أما طراز 40 نواة GPU (من حوالي 3,100 دولار بذاكرة 48 GB) فلديه 614 GB/ثانية وهو الوحيد المتاح بذاكرة 64 GB أو 128 GB. خيار سطح المكتب لنماذج 70B. لم نعثر على قياسات مستقلة لنماذج 70B عليه.',
-          '**Mac Studio M5 Ultra (من 5,499 دولاراً بذاكرة 96 GB؛ 256 GB بحوالي 9,500 دولار، أو حوالي 10,800 دولار مع GPU بـ80 نواة):** تهيئة معالج 36 نواة / وحدة معالجة رسومية 80 نواة تدعم حتى 512 GB ذاكرة موحّدة بعرض نطاق حوالي 1.2 تيرابايت/ثانية. تُشحن تهيئة 512 GB في أواخر أكتوبر 2026، وهي غير متاحة للطلب بعد، وليس لها سعر معلن. هذه الفئة لأكبر النماذج المحلية — أبعد بكثير من نموذج 70B واحد — وليست شراءً شائعاً.',
+          '**Mac Studio M5 Ultra (من 5,499 دولاراً بذاكرة 96 GB؛ 256 GB بحوالي 9,500 دولار، أو حوالي 10,800 دولار مع GPU بـ80 نواة):** تهيئة معالج 36 نواة / وحدة معالجة رسومية 80 نواة تدعم حتى 512 GB ذاكرة موحّدة بعرض نطاق حوالي 1.2 تيرابايت/ثانية. تهيئة 512 GB متاحة للطلب منذ 28 أكتوبر 2026 بسعر يبدأ من 22,299 دولار ([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). هذه الفئة لأكبر النماذج المحلية — أبعد بكثير من نموذج 70B واحد — وليست شراءً شائعاً.',
           '**لماذا تشتري Mac Studio:** تريد جهاز سطح مكتب 70B من الخط الحالي، تريد تشغيلاً مستمراً أكثر هدوءاً من MacBook Pro، تريد ضعف عرض نطاق Mac Mini M5 Pro، أو (تحديداً M5 Ultra) تحتاج تشغيل نماذج أكبر مما تتسع له 128 GB.',
           '**لماذا تتجاهله:** إذا كنت تحتاج قابلية التنقل، اشترِ MacBook Pro؛ إذا كانت نماذج 34B كافية والسرعة ثانوية، فإن Mac Mini M5 Pro أرخص؛ وإذا أردت سطح مكتب 70B بسعر أقل، فانظر إلى Mac Studio M4 Max من الجيل السابق، الذي من المرجح أن يُخفَّض سعره بعد أن وصل الخط الجديد إلى الأسواق.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'الأسعار والمواصفات أعلاه هي أرقام Apple المنشورة مضافاً إليها أسعار أداة التهيئة التي أوردها Daring Fireball؛ ولم نعثر على معايير مستقلة لـMac Studio M5 Max أو M5 Ultra. يذكر مصدر واحد أن تهيئة M5 Max بذاكرة 128 GB متوقفة، بينما لا تزال مصادر أخرى تدرجها — تأكد من أنها متاحة للطلب في Apple Store قبل بناء قرار الشراء عليها.',
+            text: 'الأسعار والمواصفات أعلاه هي أرقام Apple المنشورة مضافاً إليها أسعار أداة التهيئة التي أوردها Daring Fireball؛ ولم نعثر على معايير مستقلة لنماذج 70B على Mac Studio M5 Max أو M5 Ultra؛ ونلخّص الاختبارات المستقلة لـM5 Ultra بنماذج أخرى في [دليل Apple Silicon M5](/ar/local-llms/apple-silicon-m5-local-llm). تأكد من أن تهيئتك المحددة متاحة للطلب في Apple Store قبل بناء قرار الشراء عليها.',
           },
         ],
         affiliateLinks: [
@@ -4542,9 +4542,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**نماذج 8B — 8-9 GB:** تتسع في أي Mac بذاكرة 16 GB أو أكثر، بما في ذلك Mac Mini M6. Mac بذاكرة 32 GB يترك هامشاً مريحاً.',
           '**نماذج 13-14B — 11-13 GB:** تحتاج 32 GB بعد احتساب macOS وعبء السياق. Mac Mini M6 (بذاكرة 32 GB) فما فوق.',
           '**نماذج 34B — 21-25 GB:** تحتاج 64 GB عملياً. Mac Mini M5 Pro بذاكرة 64 GB هو الخيار الأفضل من حيث القيمة هنا — سقف M6 البالغ 32 GB لا يتسع لنموذج 34B.',
-          '**نماذج 70B بتكميم Q4 — 39-42 GB:** تحتاج 64 GB كحد أدنى، ومع السياق المضاف تضيق 64 GB. Mac Mini M5 Pro بذاكرة 64 GB أو MacBook Pro 16" M5 Pro بذاكرة 64 GB هو الحد الأدنى.',
+          '**نماذج 70B بتكميم Q4 — 43+ GB:** تحتاج 64 GB كحد أدنى، ومع السياق المضاف تضيق 64 GB. Mac Mini M5 Pro بذاكرة 64 GB أو MacBook Pro 16" M5 Pro بذاكرة 64 GB هو الحد الأدنى.',
           '**نماذج 70B بتكميم Q5 أو النماذج المتزامنة — 50-70 GB+:** تحتاج 128 GB. MacBook Pro 16" M5 Max بذاكرة 128 GB أو Mac Studio M5 Max بذاكرة 128 GB.',
-          '**نماذج أكبر من 70B واحد، أو نماذج MoE ضخمة — +100 GB:** تحتاج Mac Studio M5 Ultra، الذي يصل حتى 512 GB ذاكرة موحّدة (تُشحن تهيئة 512 GB في أواخر أكتوبر 2026).',
+          '**نماذج أكبر من 70B واحد، أو نماذج MoE ضخمة — +100 GB:** تحتاج Mac Studio M5 Ultra، الذي يصل حتى 512 GB ذاكرة موحّدة (تهيئة 512 GB متاحة للطلب منذ 28 أكتوبر 2026 من 22,299 دولار).',
         ],
         callouts: [
           {
@@ -4552,8 +4552,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ذاكرة Apple Silicon ملحومة ولا يمكن ترقيتها. اشترِ مستوى واحداً فوق حاجتك الحالية: إذا كنت تُشغّل نماذج 34B اليوم، 64 GB هو الحد الأدنى لا الخيار المريح. للطريقة الكاملة، راجع دليل الذاكرة الموحّدة في قسم القراءة ذات الصلة.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-ar.webp',
-        imageCaption: 'الذاكرة الموحّدة حسب حجم النموذج بتكميم Q4_K_M: يحتاج 8B إلى 8-9 GB، و13-14B إلى 11-13 GB، و34B إلى 21-25 GB، و70B Q4 إلى 39-42 GB، ويحتاج 70B Q5 أو النماذج المتزامنة إلى 50-70+ GB.',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -4564,7 +4564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. ما أكبر نموذج تريد تشغيله؟** 7-14B: Mac Mini M6 بذاكرة 32 GB. 34B: Mac Mini M5 Pro 64 GB. 70B Q4: Mac Mini M5 Pro 64 GB أو MacBook Pro M5 Pro. 70B Q5 أو متزامن: MacBook Pro M5 Max 128 GB أو Mac Studio M5 Max. +100B أو MoE ضخم: Mac Studio M5 Ultra، حتى 512 GB.',
           '**2. هل يحتاج الجهاز إلى التنقل؟** نعم: MacBook Pro 16" M5 Pro أو M5 Max. لا: Mac Mini (حتى 34B/70B Q4) أو Mac Studio (70B فأكثر).',
           '**3. هل هو خادم دائم التشغيل؟** نعم: Mac Mini M5 Pro 64 GB — صامت، 25-55 واط (تقدير)، الأرخص في التشغيل 24/7. لا: اختر حسب حجم النموذج كما سبق.',
-          '**4. هل تحتاج إجابات بأسرع ما يمكن، أم 512 GB؟** الأسرع بنفس الذاكرة: Mac Studio M5 Max (614 GB/ثانية مقابل 307 GB/ثانية). أما 512 GB: فتهيئة Mac Studio M5 Ultra بذاكرة 512 GB تُشحن في أواخر أكتوبر 2026 وغير متاحة للطلب بعد؛ أما تهيئة 256 GB فمتاحة الآن.',
+          '**4. هل تحتاج إجابات بأسرع ما يمكن، أم 512 GB؟** الأسرع بنفس الذاكرة: Mac Studio M5 Max (614 GB/ثانية مقابل 307 GB/ثانية). أما 512 GB: فتهيئة Mac Studio M5 Ultra بذاكرة 512 GB متاحة للطلب منذ 28 أكتوبر 2026 بسعر يبدأ من 22,299 دولار.',
         ],
         snippetBlocks: [
           {
@@ -4591,7 +4591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'شُحنت طرازات Mac Mini وMac Studio الجديدة في 22 سبتمبر 2026؛ وتُشحن تهيئة Mac Studio M5 Ultra بذاكرة 512 GB في أواخر أكتوبر 2026. أسعار Apple المعلنة للبدء تشمل الذاكرة الأساسية فقط — افتح أداة التهيئة الحالية في Apple Store لفئة الذاكرة التي تحتاجها، فأسعار الترقيات هي الجزء الأكبر من الإجمالي.',
+            text: 'شُحنت طرازات Mac Mini وMac Studio الجديدة في 22 سبتمبر 2026؛ وتهيئة Mac Studio M5 Ultra بذاكرة 512 GB متاحة للطلب منذ 28 أكتوبر 2026. أسعار Apple المعلنة للبدء تشمل الذاكرة الأساسية فقط — افتح أداة التهيئة الحالية في Apple Store لفئة الذاكرة التي تحتاجها، فأسعار الترقيات هي الجزء الأكبر من الإجمالي.',
           },
         ],
         affiliateLinks: [
@@ -4619,8 +4619,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**قراءة السعر المعلن للبدء على أنه سعر الـMac الذي تحتاجه.** 899 دولاراً تشتري Mac Mini M6 بذاكرة 16 GB، و1,699 دولار تشتري Mac Mini M5 Pro بذاكرة 24 GB، و2,499 دولار تشتري Mac Studio M5 Max بذاكرة 36 GB. أما M6 بذاكرة 32 GB فحوالي 1,300 دولار، وM5 Pro بذاكرة 64 GB حوالي 2,700 دولار، وM5 Max بذاكرة 128 GB حوالي 5,100 دولار.',
           '**افتراض أن سقف Mac Mini M6 البالغ 32 GB يغطي نماذج 30B أو 70B.** غير صحيح. 32 GB هو حد صارم قرب نماذج 14B — M5 Pro (بذاكرة 64 GB) هو الحد الأدنى لـ34B فما فوق.',
           '**نسيان أن ذاكرة Apple Silicon لا يمكن ترقيتها.** الذاكرة ملحومة. شراء بذاكرة أقل والحل الوحيد هو جهاز Mac جديد — قِس مستوى واحداً فوق حاجتك الحالية.',
-          '**انتظار Mac Studio M5 Ultra بذاكرة 512 GB دون التحقق من السعر.** تهيئة 512 GB تُشحن في أواخر أكتوبر 2026، وليس لها سعر معلن، بينما تكلّف تهيئة 256 GB حالياً حوالي 9,500 دولار.',
-          '**شراء MacBook Pro لخادم ثابت على مكتب 24/7.** يُخفَّض تحت الحمل المستمر. لخادم دائم التشغيل، Mac Mini M5 Pro أو Mac Studio يعمل بحرارة وصمت أقل.',
+          '**التخطيط على Mac Studio M5 Ultra بذاكرة 512 GB دون التحقق من السعر.** يبدأ من 22,299 دولار (متاح للطلب منذ 28 أكتوبر 2026)، بينما تكلّف تهيئة 256 GB حوالي 9,500 دولار.',
+          '**شراء MacBook Pro لخادم ثابت على مكتب 24/7.** قد يخفض أداءه تحت الحمل المستمر. لخادم دائم التشغيل، Mac Mini M5 Pro أو Mac Studio يعمل بحرارة وصمت أقل.',
           '**المبالغة في التحجيم لنماذج 8B.** إذا كانت نماذج 8B تغطي حالة استخدامك، فإن Mac بذاكرة 128 GB أموال مهدرة. اضبط مستوى الذاكرة على النموذج، لا على الميزانية المتاحة.',
           '**معاملة ادعاء Apple بـ«أداء ذكاء اصطناعي يصل إلى 4 أضعاف» كمعيار لسرعة التوليد.** هو رقم من Apple نفسها لمقارنة M6 بـM4 السابق؛ أكبر المكاسب في معالجة الموجّه، بينما توليد الرموز محكوم بعرض نطاق الذاكرة (الاختبار المستقل الوحيد الذي وجدناه قاس M5 Pro أسرع من M6 بنحو 70% على نموذج صغير).',
         ],
@@ -4635,7 +4635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[التهيئات والأسعار لأجهزة Mac mini وMac Studio الجديدة (Daring Fireball)](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — أسعار ترقيات الذاكرة والتخزين المستخدمة في الإجماليات الواردة في هذا الدليل.',
           '[إطلاق Apple لأجهزة Mac mini وMac Studio الجديدة في 30 دولة (MacTech)](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — موعد الشحن وأسعار البدء في الولايات المتحدة.',
           '[M6 Mac mini مقابل M5 Pro Mac mini: اختبارات واقعية (Adam Talks Tech)](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — اختبار عملي مستقل لجهازي Mac Mini بنموذج 4B في LM Studio (يفصح المؤلف عن وجود روابط شراكة).',
-          '[معايير LLM M5 Pro مقابل M5 Max 2026](/ar/local-llms/m5-pro-max-llm-benchmarks-2026) — عدد الرموز في الثانية لنماذج 8B و70B على M5 Pro وM5 Max كما ورد في تلك الصفحة (راجع ملاحظة المنهجية فيها).',
+          '[M5 Pro مقابل M5 Max لنماذج LLM المحلية: المواصفات والسرعات التقديرية](/ar/local-llms/m5-pro-max-llm-benchmarks-2026) — عدد تقديري (غير مقاس) للرموز في الثانية لنماذج 8B و70B، محسوب من عرض نطاق الذاكرة وحجم ملف النموذج.',
           '[Mac Mini M5 كخادم ذكاء اصطناعي محلي](/ar/local-llms/mac-mini-m5-local-ai-server) — تقديرات مبنية على مواصفات Apple المنشورة (لم تقسها PromptQuorum): استهلاك طاقة Mac Mini M5 Pro وتكلفة الكهرباء والأداء كخادم دائم التشغيل.',
         ],
       },
@@ -4649,7 +4649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل Mac Studio M5 متاح بعد؟',
-            a: 'نعم، مع استثناء واحد. شُحن Mac Studio M5 Max وM5 Ultra في 22 سبتمبر 2026. أما تهيئة M5 Ultra بذاكرة 512 GB فتلحق في أواخر أكتوبر 2026، وهي غير متاحة للطلب بعد، وليس لها سعر معلن. يبدأ M5 Ultra من 5,499 دولاراً بذاكرة 96 GB، وتهيئة 256 GB بحوالي 9,500 دولار. وإذا أردت Mac لسطح المكتب 70B بسعر أقل، فقد يكون Mac Studio من الجيل السابق (M4 Max) بخصم.',
+            a: 'نعم، مع استثناء واحد. شُحن Mac Studio M5 Max وM5 Ultra في 22 سبتمبر 2026. أما تهيئة M5 Ultra بذاكرة 512 GB فمتاحة للطلب منذ 28 أكتوبر 2026 بسعر يبدأ من 22,299 دولار. يبدأ M5 Ultra من 5,499 دولاراً بذاكرة 96 GB، وتهيئة 256 GB بحوالي 9,500 دولار. وإذا أردت Mac لسطح المكتب 70B بسعر أقل، فقد يكون Mac Studio من الجيل السابق (M4 Max) بخصم.',
           },
           {
             q: 'Mac Mini M5 Pro أم Mac Studio M5 Max للذكاء الاصطناعي؟',
@@ -4665,15 +4665,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم ذاكرة موحّدة أحتاج لنماذج LLM المحلية على Mac؟',
-            a: 'مع تكميم Q4_K_M، خطّط لحوالي 0.6 GB لكل مليار معامل بالإضافة إلى 2-4 GB عبء، وتذكر أن macOS يشترك في نفس التجمّع. هذا يعني حوالي 8-9 GB لنماذج 8B، و21-25 GB لـ34B، و39-42 GB لـ70B. Mac بذاكرة 64 GB (Mac Mini M5 Pro أو MacBook Pro M5 Pro) يُشغّل 34B بارتياح ويتسع بصعوبة لـ70B Q4؛ 128 GB (MacBook Pro M5 Max أو Mac Studio M5 Max) يلزم لـ70B بتكميم Q5 أو لتشغيل عدة نماذج؛ Mac Studio M5 Ultra يصل حتى 512 GB لنماذج أكبر من 70B واحد.',
+            a: 'مع تكميم Q4_K_M، خطّط لحوالي 0.6 GB لكل مليار معامل بالإضافة إلى 2-4 GB عبء، وتذكر أن macOS يشترك في نفس التجمّع. هذا يعني حوالي 8-9 GB لنماذج 8B، و21-25 GB لـ34B، و43+ GB لـ70B. Mac بذاكرة 64 GB (Mac Mini M5 Pro أو MacBook Pro M5 Pro) يُشغّل 34B بارتياح ويتسع بصعوبة لـ70B Q4؛ 128 GB (MacBook Pro M5 Max أو Mac Studio M5 Max) يلزم لـ70B بتكميم Q5 أو لتشغيل عدة نماذج؛ Mac Studio M5 Ultra يصل حتى 512 GB لنماذج أكبر من 70B واحد.',
           },
           {
             q: 'Mac Mini أم MacBook Pro للذكاء الاصطناعي المحلي؟',
-            a: 'اختر Mac Mini M5 Pro إذا ظل الجهاز على مكتب ونماذج 34B هي سقفك — فهو أرخص وصامت ومثالي كخادم دائم التشغيل. اختر MacBook Pro 16" (بشريحة M5 Pro أو M5 Max) إذا كنت تحتاج تشغيل نماذج 70B أو اصطحاب الجهاز معك. MacBook Pro M5 Max هو الشريحة المحمولة الأقدر على 70B، لكنه يُخفَّض تحت الحمل المستمر، لذا يظل الخادم الثابت أفضل خدمة بواسطة Mac Mini أو Mac Studio.',
+            a: 'اختر Mac Mini M5 Pro إذا ظل الجهاز على مكتب ونماذج 34B هي سقفك — فهو أرخص وصامت ومثالي كخادم دائم التشغيل. اختر MacBook Pro 16" (بشريحة M5 Pro أو M5 Max) إذا كنت تحتاج تشغيل نماذج 70B أو اصطحاب الجهاز معك. MacBook Pro M5 Max هو الشريحة المحمولة الأقدر على 70B، لكنه قد يخفض أداءه تحت الحمل المستمر، لذا يظل الخادم الثابت أفضل خدمة بواسطة Mac Mini أو Mac Studio.',
           },
           {
             q: 'هل يستطيع Mac تشغيل نماذج 70B؟',
-            a: 'نعم. MacBook Pro 16" M5 Pro بذاكرة 64 GB يُشغّل Llama 3.3 70B Q4 بسرعة حوالي 8-12 رمز/ثانية (هامش ضيق)، وإصدار M5 Max بذاكرة 128 GB يُشغّل 70B بتكميم Q5 بسرعة 12-18 رمز/ثانية. Mac Studio M5 Max بذاكرة 128 GB يُفترض أن يُشغّل 70B بارتياح أيضاً، لكننا لم نعثر بعد على قياسات مستقلة. Mac Mini M6 لا يستطيع — سقفه 32 GB صغير جداً؛ Mac Mini M5 Pro بذاكرة 64 GB يتسع لـ70B Q4 بهامش ضيق.',
+            a: 'نعم. MacBook Pro 16" M5 Pro بذاكرة 64 GB يُشغّل Llama 3.3 70B Q4 بسرعة حوالي 4-5 رمز/ثانية (هامش ضيق)، وإصدار M5 Max بذاكرة 128 GB يُشغّل 70B بتكميم Q5 بسرعة 7-10 رمز/ثانية. Mac Studio M5 Max بذاكرة 128 GB يُفترض أن يُشغّل 70B بارتياح أيضاً، لكننا لم نعثر بعد على قياسات مستقلة. Mac Mini M6 لا يستطيع — سقفه 32 GB صغير جداً؛ Mac Mini M5 Pro بذاكرة 64 GB يتسع لـ70B Q4 بهامش ضيق. هذه السرعات تقديرات محسوبة من عرض نطاق الذاكرة وحجم ملف النموذج، وليست قياسات.',
           },
           {
             q: 'هل Mac أسرع من GPU NVIDIA لنماذج LLM المحلية؟',
@@ -4685,7 +4685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم يكلّف تشغيل Mac كخادم ذكاء اصطناعي؟',
-            a: 'بشكل ضئيل جداً. يُقدَّر أن يستهلك Mac Mini M5 Pro حوالي 25-55 واط تحت حمل LLM وحوالي 8 واط في وضع الخمول (تقديرات لم تقسها PromptQuorum). تشغيله 24/7 لمدة سنة كاملة يكلّف حوالي 26-39 دولار في الكهرباء في الولايات المتحدة. هذه التكلفة التشغيلية المنخفضة هي سبب رئيسي لكون Mac Mini هو الخيار الأفضل من حيث القيمة لخادم دائم التشغيل.',
+            a: 'بشكل ضئيل جداً. يُقدَّر أن يستهلك Mac Mini M5 Pro حوالي 25-55 واط تحت حمل LLM وحوالي 8 واط في وضع الخمول (تقديرات لم تقسها PromptQuorum). وتشغيله 24/7 لمدة سنة كاملة باستخدام خفيف إلى مختلط يكلّف تقديرياً حوالي 26-39 دولاراً بسعر 0.15 دولار لكل كيلوواط ساعة؛ ويزيد المبلغ مع حمل أثقل أو تعرفة أعلى. هذه التكلفة التشغيلية المنخفضة هي سبب رئيسي لكون Mac Mini هو الخيار الأفضل من حيث القيمة لخادم دائم التشغيل.',
           },
         ],
       },
@@ -4693,7 +4693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
-          '[عرض مجموعة المعايير الكاملة لـM5 Pro مقابل M5 Max](/ar/local-llms/m5-pro-max-llm-benchmarks-2026) — الرموز المقاسة في الثانية والوقت حتى الرمز الأول واستهلاك الطاقة وراء أرقام هذا الدليل.',
+          '[M5 Pro مقابل M5 Max لنماذج LLM المحلية: المواصفات والسرعات التقديرية](/ar/local-llms/m5-pro-max-llm-benchmarks-2026) — كيف تُحسب التقديرات في هذه المقارنة، وكيف تقيس السرعة على جهاز Mac الخاص بك.',
           '[إعداد Mac Mini M5 كخادم ذكاء اصطناعي دائم التشغيل](/ar/local-llms/mac-mini-m5-local-ai-server) — البناء الكامل للخادم مع تكلفة كهرباء تقديرية واعتبارات التشغيل الدائم (تقديرات وليست قياسات).',
           '[مقارنة Apple Silicon عبر خط سلسلة M](/ar/local-llms/apple-silicon-local-llm-guide-2026) — كيف تتقابل M1 حتى M5 Max في الذاكرة الموحّدة وعرض النطاق.',
           '[حساب مقدار الذاكرة الموحّدة التي يحتاجها كل حجم نموذج](/ar/local-llms/how-much-unified-memory-for-local-llm) — الطريقة الكاملة حسب حجم النموذج وراء الصيغة السريعة هنا.',
@@ -4712,7 +4712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4722,7 +4722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-22',
+    dateModified: '2026-11-28',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -4731,7 +4731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 AI용 Mac 추천 2026: 맥미니 vs Mac Studio vs MacBook Pro',
     seoTitle: '로컬 AI Mac 추천 2026: 맥미니 vs Studio vs MBP',
     intro:
-      'Mac을 AI용으로 추천하는 대부분의 글은 칩 이름에만 집중하지만, 실제로 구매 결정을 좌우하는 수치는 통합 메모리(Unified Memory)입니다. Apple Silicon에서는 모델이 시스템의 모든 것과 동일한 메모리 풀을 공유합니다. 따라서 64GB Mac Mini는 더 빠른 32GB Mac Mini가 담을 수 없는 34B 모델을 실행할 수 있습니다. Apple은 2026년 8월 25일에 Mac Mini와 Mac Studio 라인업을 새롭게 했으며(2026년 9월 22일부터 출하 중), 이 가이드는 새 하드웨어에서 로컬 LLM을 실행하기 위한 네 가지 등급을 비교합니다. 저렴한 상시 가동 서버인 보급형 Mac Mini M6, 더 강력한 서버인 Mac Mini M5 Pro, 휴대용 워크스테이션인 MacBook Pro 16"(M5 Pro 또는 M5 Max), 그리고 데스크톱 및 초대용량 메모리 옵션인 Mac Studio(M5 Max 또는 M5 Ultra)를 구매 결정에 중요한 수치인 통합 메모리, 메모리 대역폭, 측정된 초당 토큰 수, 가격으로 비교합니다. 두 가지 주의 사항이 있습니다. 첫째, Apple이 내세우는 시작 가격은 기본 메모리 구성 기준이며 로컬 LLM에 필요한 메모리 구성이 아닙니다. $899의 Mac Mini M6는 16GB, $1,699의 Mac Mini M5 Pro는 24GB, $2,499의 Mac Studio M5 Max는 36GB이므로, 여기서 권장하는 구성은 더 비쌉니다(32GB M6는 약 $1,300, 64GB M5 Pro는 약 $2,700, 128GB Mac Studio M5 Max는 약 $5,100). 둘째, 새 칩에 대한 독립적인 테스트는 아직 부족합니다. 한 건의 실제 사용 테스트가 소형 모델에서 M6와 M5 Pro Mac Mini를 측정했을 뿐이며, M5 Max나 M5 Ultra의 70B 독립 측정치는 찾지 못했습니다. 따라서 해당 칩의 성능 수치는 Apple 자체 수치이며 그렇게 표시되어 있습니다. 이 페이지의 $ 표기는 달러 기준 미국 가격이며, 국내 판매 가격은 세금·수입 비용·환율·판매처에 따라 다릅니다. 구매 전 Apple Store 한국(apple.com/kr)의 세금 포함 가격을 확인하고 다나와에서 비교하십시오.',
+      'Mac을 AI용으로 추천하는 대부분의 글은 칩 이름에만 집중하지만, 실제로 구매 결정을 좌우하는 수치는 통합 메모리(Unified Memory)입니다. Apple Silicon에서는 모델이 시스템의 모든 것과 동일한 메모리 풀을 공유합니다. 따라서 64GB Mac Mini는 더 빠른 32GB Mac Mini가 담을 수 없는 34B 모델을 실행할 수 있습니다. Apple은 2026년 8월 25일에 Mac Mini와 Mac Studio 라인업을 새롭게 했으며(2026년 9월 22일부터 출하 중), 이 가이드는 새 하드웨어에서 로컬 LLM을 실행하기 위한 네 가지 등급을 비교합니다. 저렴한 상시 가동 서버인 보급형 Mac Mini M6, 더 강력한 서버인 Mac Mini M5 Pro, 휴대용 워크스테이션인 MacBook Pro 16"(M5 Pro 또는 M5 Max), 그리고 데스크톱 및 초대용량 메모리 옵션인 Mac Studio(M5 Max 또는 M5 Ultra)를 구매 결정에 중요한 수치인 통합 메모리, 메모리 대역폭, 초당 토큰 수치(소형 모델 테스트 1건. 추정치는 표시), 가격으로 비교합니다. 두 가지 주의 사항이 있습니다. 첫째, Apple이 내세우는 시작 가격은 기본 메모리 구성 기준이며 로컬 LLM에 필요한 메모리 구성이 아닙니다. $899의 Mac Mini M6는 16GB, $1,699의 Mac Mini M5 Pro는 24GB, $2,499의 Mac Studio M5 Max는 36GB이므로, 여기서 권장하는 구성은 더 비쌉니다(32GB M6는 약 $1,300, 64GB M5 Pro는 약 $2,700, 128GB Mac Studio M5 Max는 약 $5,100). 둘째, 새 칩에 대한 독립적인 테스트는 아직 부족합니다. 한 건의 실제 사용 테스트가 소형 모델에서 M6와 M5 Pro Mac Mini를 측정했을 뿐이며, M5 Max나 M5 Ultra의 70B 독립 측정치는 찾지 못했습니다. 따라서 이 가이드는 해당 칩의 70B 실측 속도를 제시하지 않습니다. MacStories와 BGR은 다른 모델로 M5 Ultra를 테스트했습니다. 이 페이지의 $ 표기는 달러 기준 미국 가격이며, 국내 판매 가격은 세금·수입 비용·환율·판매처에 따라 다릅니다. 구매 전 Apple Store 한국(apple.com/kr)의 세금 포함 가격을 확인하고 다나와에서 비교하십시오.',
     metaDescription:
       '로컬 AI Mac 추천: Mac Mini M6 32GB 미국 가격 약 $1,300, M5 Pro 64GB 약 $2,700, M5 Max 128GB 약 $5,100. 국내 가격은 다나와에서 확인.',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ko.webp',
@@ -4779,7 +4779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: '2026년에 로컬 LLM 실행을 위해 어떤 Mac을 구매해야 합니까?',
         answer:
-          '통합 메모리를 먼저 보고, 그다음 대역폭을 고려하십시오. 그리고 칩이 아니라 메모리의 가격을 따져야 합니다. Apple의 시작 가격은 기본 메모리만 포함하기 때문입니다. Mac Mini M6 32GB(약 $1,300, $899 기본 모델은 16GB)는 보급형 진입점으로 7B-14B 모델을 커버하며, 30B나 70B 모델은 담을 수 없습니다. Mac Mini M5 Pro 64GB(약 $2,700, $1,699 기본 모델은 24GB)는 진지한 사용을 위한 가성비 선택으로, 34B 모델을 조용하게 상시 가동 서버로 실행합니다. MacBook Pro 16" M5 Pro 64GB는 34B-70B Q4 작업을 위한 휴대용 선택이고, M5 Max 128GB는 70B를 Q5로 실행합니다. Mac Studio M5 Max(64GB 약 $3,500, 128GB 약 $5,100)는 Mac Mini M5 Pro의 두 배 대역폭을 가진 데스크톱 선택이고, Mac Studio M5 Ultra(96GB $5,499부터, 256GB 약 $9,500, 최대 512GB)는 가장 큰 로컬 모델을 위한 극단적 선택입니다. 이 모두는 2026년 9월 22일에 출하되었으며, 2026년 10월 하순에 출하되는 M5 Ultra 512GB 구성만 예외입니다. 여기의 $는 미국 가격입니다. 국내 가격은 세금·환율·판매처에 따라 다르므로 Apple Store 한국(apple.com/kr)과 다나와에서 확인하십시오.',
+          '통합 메모리를 먼저 보고, 그다음 대역폭을 고려하십시오. 그리고 칩이 아니라 메모리의 가격을 따져야 합니다. Apple의 시작 가격은 기본 메모리만 포함하기 때문입니다. Mac Mini M6 32GB(약 $1,300, $899 기본 모델은 16GB)는 보급형 진입점으로 7B-14B 모델을 커버하며, 30B나 70B 모델은 담을 수 없습니다. Mac Mini M5 Pro 64GB(약 $2,700, $1,699 기본 모델은 24GB)는 진지한 사용을 위한 가성비 선택으로, 34B 모델을 조용하게 상시 가동 서버로 실행합니다. MacBook Pro 16" M5 Pro 64GB는 34B-70B Q4 작업을 위한 휴대용 선택이고, M5 Max 128GB는 70B를 Q5로 실행합니다. Mac Studio M5 Max(64GB 약 $3,500, 128GB 약 $5,100)는 Mac Mini M5 Pro의 두 배 대역폭을 가진 데스크톱 선택이고, Mac Studio M5 Ultra(96GB $5,499부터, 256GB 약 $9,500, 최대 512GB)는 가장 큰 로컬 모델을 위한 극단적 선택입니다. 이 모두는 2026년 9월 22일부터 출하되고 있으며, M5 Ultra 512GB 구성은 2026년 10월 28일부터 주문할 수 있습니다($22,299부터). 여기의 $는 미국 가격입니다. 국내 가격은 세금·환율·판매처에 따라 다르므로 Apple Store 한국(apple.com/kr)과 다나와에서 확인하십시오.',
         bullets: [
           '보급형: Mac Mini M6 32GB, 약 $1,300, 7B-14B 모델만(32GB 메모리 한계)',
           '가성비 / 상시 가동 서버: Mac Mini M5 Pro 64GB, 약 $2,700, 34B 모델과 여유가 빠듯한 70B Q4',
@@ -4787,7 +4787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '데스크톱: Mac Studio M5 Max 64GB 약 $3,500 또는 128GB 약 $5,100; 극단: M5 Ultra $5,499부터, 최대 512GB',
           'Apple Silicon 메모리는 구매 후 업그레이드 불가 — 처음부터 필요한 용량을 구매하십시오',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -4821,8 +4821,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**휴대용 추천: MacBook Pro 16" M5 Pro 64GB(약 $3,000-3,400) 또는 M5 Max 128GB(약 $5,000 이상)** — 307-614GB/s 대역폭, 70B를 Q4부터 Q5까지 실행. 지속적인 부하 시 성능이 제한될 수 있으며(정도는 작업 부하와 본체에 따라 다름), 그 대신 휴대성을 얻습니다.',
           '**데스크톱 추천: Mac Studio M5 Max 64GB(약 $3,500) 또는 128GB(약 $5,100)** — 614GB/s 대역폭으로 128GB 모델은 70B를 Q5 품질로 실행. 2026년 9월 22일부터 출하 중이며, 아직 독립적인 벤치마크는 찾지 못했습니다.',
           '**Mac Mini M5 Pro vs Mac Studio M5 Max:** 같은 64GB에서 Mac Studio는 약 $800 더 비싸고 대역폭이 두 배(614 vs 307GB/s)이며, 128GB에 도달하는 것은 Mac Studio뿐입니다.',
-          '**극단 추천: Mac Studio M5 Ultra(96GB $5,499부터; 256GB 약 $9,500; 최대 512GB)** — 1.2TB/s 대역폭; 512GB 구성은 2026년 10월 하순에 출하되며 발표된 가격은 없습니다.',
-          '**속도를 결정하는 것은 칩 이름이 아니라 대역폭입니다.** 한 건의 독립 테스트에서 M5 Pro Mac Mini는 소형 모델에서 초당 약 92 토큰을 생성했고 M6는 54 토큰이었습니다. 이 차이는 대역폭(307 vs 153-170GB/s)과 일치합니다. M5 Max(460-614GB/s)는 M5 Pro의 최대 두 배 대역폭을 가집니다(Apple 사양이며, M5 Max나 M5 Ultra의 독립 측정치는 찾지 못했습니다).',
+          '**극단 추천: Mac Studio M5 Ultra(96GB $5,499부터; 256GB 약 $9,500; 최대 512GB)** — 1.2TB/s 대역폭; 512GB 구성은 2026년 10월 28일부터 주문할 수 있으며 $22,299부터입니다.',
+          '**속도를 결정하는 것은 칩 이름이 아니라 대역폭입니다.** 한 건의 독립 테스트에서 M5 Pro Mac Mini는 소형 모델에서 초당 약 92 토큰을 생성했고 M6는 54 토큰이었습니다. 이 차이는 대역폭(307 vs 153-170GB/s)과 일치합니다. M5 Max(460-614GB/s)는 M5 Pro의 최대 두 배 대역폭을 가집니다(Apple 사양이며, M5 Max의 독립 측정치는 찾지 못했고, 알려진 M5 Ultra 독립 테스트는 70B가 아닌 다른 모델을 사용합니다).',
           '**Apple Silicon은 순수 속도를 용량과 정숙성으로 맞바꿉니다.** 데스크톱 RTX GPU는 7B-13B 모델에서 더 빠르지만, 24-32GB VRAM으로는 128GB Mac이 무리 없이 실행하는 70B 모델을 로드할 수 없으며, Mac Studio M5 Ultra가 도달할 수 있는 512GB는 더더욱 불가능합니다.',
           '**전력 소비는 전 제품군에서 낮습니다.** Mac Mini는 LLM 부하 시 25-55W(추정), M5 Max는 60-100W(추정)를 소비합니다. 이에 비해 데스크톱 RTX 카드는 비슷한 작업에서 300-450W를 소비합니다.',
         ],
@@ -4839,7 +4839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Q4_K_M에서의 통합 메모리 규칙:** 10억 파라미터당 약 0.6GB, 컨텍스트 및 도구용으로 2-4GB 추가.',
           '**메모리 대역폭:** Mac Mini M6 170GB/s, M5 Pro 307GB/s, M5 Max 460-614GB/s, M5 Ultra 1.2TB/s.',
           '**전력 소비 범위:** Mac Mini M5 Pro 25-55W(추정), MacBook Pro M5 Max LLM 부하 시 60-100W(추정).',
-          '**가용성:** 2026년 8월 25일의 Mac Mini 및 Mac Studio 업데이트는 2026년 9월 22일부터 출하 중이며, M5 Ultra 512GB 구성만 2026년 10월 하순에 출하됩니다 — 이 페이지의 $는 미국 가격입니다. 국내 가격은 Apple Store 한국(apple.com/kr)과 다나와에서 확인하십시오.',
+          '**가용성:** 2026년 8월 25일의 Mac Mini 및 Mac Studio 업데이트는 2026년 9월 22일부터 출하 중이며, M5 Ultra 512GB 구성은 2026년 10월 28일부터 주문할 수 있습니다($22,299부터) — 이 페이지의 $는 미국 가격입니다. 국내 가격은 Apple Store 한국(apple.com/kr)과 다나와에서 확인하십시오.',
         ],
       },
       editorsChoice: {
@@ -4847,7 +4847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '편집자 추천: Mac Mini M5 Pro 64GB',
         highlight: true,
         content:
-          '**로컬 AI를 위해 특별히 Mac을 선택하는 대부분의 구매자에게 통합 메모리 64GB의 Mac Mini M5 Pro는 성능, 가격, 운영 비용의 균형을 맞춘 선택입니다.** 64GB는 컨텍스트 여유를 두고 최대 34B 모델을 수용하며 70B Q4도 여유가 빠듯하게 수용합니다. 조용하게 작동하고 추론 부하 시 25-55W(추정)만 소비하며, 약 $2,700로(기본 $1,699 모델은 24GB뿐입니다) 64GB 모델을 담을 수 있는 가장 저렴한 Mac입니다. 또한 가정이나 사무실을 위한 이상적인 상시 가동 AI 서버이기도 합니다. 7B-14B 모델이 실제로 사용 사례를 충족하는 경우에만 Mac Mini M6 32GB(약 $1,300)로 내려가십시오. 32GB 한계로는 30B나 70B 모델을 담을 수 없습니다. 같은 메모리 크기에서 두 배의 메모리 대역폭을 원한다면 Mac Studio M5 Max 64GB(약 $3,500)로, 휴대성이 필요한 경우에만 MacBook Pro 16"로, 데스크톱에서 더 높은 품질의 70B가 필요한 경우에만 Mac Studio M5 Max 128GB(약 $5,100)로, 가장 큰 로컬 모델이 필요한 경우에는 Mac Studio M5 Ultra로 올라가십시오.',
+          '**로컬 AI를 위해 특별히 Mac을 선택하는 대부분의 구매자에게 통합 메모리 64GB의 Mac Mini M5 Pro는 성능, 가격, 운영 비용의 균형을 맞춘 선택입니다.** 64GB는 컨텍스트 여유를 두고 최대 34B 모델을 수용하며 70B Q4도 여유가 빠듯하게 수용합니다. 조용하게 작동하고 추론 부하 시 25-55W(추정)만 소비하며, 약 $2,700로(기본 $1,699 모델은 24GB뿐입니다) 이 가이드에서 64GB 모델을 담을 수 있는 Mac 중 가장 저렴합니다. 또한 가정이나 사무실을 위한 이상적인 상시 가동 AI 서버이기도 합니다. 7B-14B 모델이 실제로 사용 사례를 충족하는 경우에만 Mac Mini M6 32GB(약 $1,300)로 내려가십시오. 32GB 한계로는 30B나 70B 모델을 담을 수 없습니다. 같은 메모리 크기에서 두 배의 메모리 대역폭을 원한다면 Mac Studio M5 Max 64GB(약 $3,500)로, 휴대성이 필요한 경우에만 MacBook Pro 16"로, 데스크톱에서 더 높은 품질의 70B가 필요한 경우에만 Mac Studio M5 Max 128GB(약 $5,100)로, 가장 큰 로컬 모델이 필요한 경우에는 Mac Studio M5 Ultra로 올라가십시오.',
         callouts: [
           {
             type: 'note',
@@ -4875,7 +4875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 로컬 AI를 위한 Mac 비교',
         content:
-          '메모리 및 대역폭 수치는 Apple의 공식 사양입니다. MacBook Pro 속도는 참고용 추정치이며, 범위는 링크된 M5 Pro vs M5 Max 벤치마크 페이지를 참조하십시오. 이 가이드를 위해 다시 측정한 것은 아닙니다. Mac Mini 행의 속도는 기본 메모리 기기에서 소형 4B 모델로 진행된 한 건의 독립적인 실제 사용 테스트(출처 참조)에서 가져왔습니다. M6, Mac Mini M5 Pro, Mac Studio M5 Max, M5 Ultra의 70B 독립 측정치는 찾지 못했으므로, 해당 칸은 추정치가 아니라 이렇게 표시되어 있습니다. 가격은 해당 행에 명시된 구성의 미국 정가입니다. Apple이 내세우는 시작 가격은 기본 메모리만 포함하므로(M6 16GB, M5 Pro 24GB, M5 Max 36GB, M5 Ultra 96GB) 여기에는 메모리 업그레이드 비용이 포함되어 있습니다. 이 페이지의 $는 미국 가격입니다. 국내 판매 가격은 세금·환율·판매처에 따라 다르므로 구매 전 Apple Store 한국(apple.com/kr)의 세금 포함 가격을 확인하고 다나와에서 비교하십시오.',
+          '메모리 및 대역폭 수치는 Apple의 공식 사양입니다. MacBook Pro 속도는 메모리 대역폭과 모델 파일 크기로 계산한 추정치이며 실측값이 아닙니다. 계산 방법은 링크된 M5 Pro vs M5 Max 속도 추정 페이지를 참조하십시오. Mac Mini 행의 속도는 기본 메모리 기기에서 소형 4B 모델로 진행된 한 건의 독립적인 실제 사용 테스트(출처 참조)에서 가져왔습니다. M6, Mac Mini M5 Pro, Mac Studio M5 Max, M5 Ultra의 70B 독립 측정치는 찾지 못했으므로, 해당 칸은 추정치가 아니라 이렇게 표시되어 있습니다. 가격은 해당 행에 명시된 구성의 미국 정가입니다. Apple이 내세우는 시작 가격은 기본 메모리만 포함하므로(M6 16GB, M5 Pro 24GB, M5 Max 36GB, M5 Ultra 96GB) 여기에는 메모리 업그레이드 비용이 포함되어 있습니다. 이 페이지의 $는 미국 가격입니다. 국내 판매 가격은 세금·환율·판매처에 따라 다르므로 구매 전 Apple Store 한국(apple.com/kr)의 세금 포함 가격을 확인하고 다나와에서 비교하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4910,8 +4910,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': '[MacBook Pro 16" M5 Pro 64GB](https://www.apple.com/macbook-pro/)',
             '통합 메모리': '64GB',
             '대역폭': '307GB/s',
-            '속도 (8B Q4)': '약 50-60 tok/s',
-            '속도 (70B Q4)': '약 8-12 tok/s',
+            '속도 (8B Q4)': '약 38-50 tok/s',
+            '속도 (70B Q4)': '약 4-5 tok/s',
             '가격 (미국)': '약 $3,000-3,400',
             '최적 용도': '휴대용 34B-70B Q4(빠듯함)',
           },
@@ -4919,8 +4919,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mac': 'MacBook Pro 16" M5 Max 128GB',
             '통합 메모리': '128GB',
             '대역폭': '614GB/s',
-            '속도 (8B Q4)': '약 100-120 tok/s',
-            '속도 (70B Q4)': '16-22 tok/s',
+            '속도 (8B Q4)': '약 75-100 tok/s',
+            '속도 (70B Q4)': '~9-11 tok/s',
             '가격 (미국)': '약 $5,000 이상',
             '최적 용도': '휴대용 70B Q5, 멀티 모델',
           },
@@ -4949,7 +4949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '속도 (8B Q4)': '아직 테스트되지 않음',
             '속도 (70B Q4)': '아직 테스트되지 않음',
             '가격 (미국)': '$5,499부터; 256GB 약 $9,500',
-            '최적 용도': '극단 워크스테이션, 512GB는 아직 주문 불가',
+            '최적 용도': '극단 워크스테이션; 512GB $22,299부터',
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ko.webp',
@@ -5023,8 +5023,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**MacBook Pro 16"(M5 Pro 또는 M5 Max, 2026년 3월 출시되었으며 Apple의 8월 25일 Mac Mini/Mac Studio 업데이트의 영향을 받지 않음)는 70B급 모델이 필요하고 휴대용 폼 팩터를 원하는 구매자를 위한 선택이며, "로컬 AI용 최고의 MacBook"에 대한 답입니다.** M5 Max는 이 가이드에서 70B를 여유 있게 넘어설 수 있는 유일한 휴대용 칩입니다. M5 Pro는 70B를 Q4로 여유가 빠듯하게 수용합니다. 동일한 칩의 데스크톱 장비 대비 절충점은 노트북은 지속적인 추론 시 성능이 제한될 수 있다는 점입니다(정도는 작업 부하와 본체에 따라 다름).',
         items: [
-          '**MacBook Pro 16" M5 Pro 64GB(약 $3,000-3,400; 16" M5 Pro는 $2,699부터):** 최대 18코어 CPU, 20코어 GPU, 307GB/s 대역폭 — 64GB가 이 칩의 메모리 한계입니다. 8B 모델을 약 50-60 tok/s, Llama 3.3 70B Q4를 약 8-12 tok/s(빠듯함)로 실행합니다. 휴대용 로컬 AI 70B로의 진입점입니다.',
-          '**MacBook Pro 16" M5 Max 128GB(약 $5,000 이상; 16" M5 Max는 $3,899부터):** 최대 40코어 GPU, 614GB/s 대역폭. 8B 모델을 약 100-120 tok/s, 70B를 Q5(더 높은 품질)로 12-18 tok/s로 실행하며 두 모델을 동시에 실행할 수 있습니다. 예를 들어 70B 모델과 13B 모델을 함께 사용할 수 있습니다.',
+          '**MacBook Pro 16" M5 Pro 64GB(약 $3,000-3,400; 16" M5 Pro는 $2,699부터):** 최대 18코어 CPU, 20코어 GPU, 307GB/s 대역폭 — 64GB가 이 칩의 메모리 한계입니다. 8B 모델을 약 38-50 tok/s, Llama 3.3 70B Q4를 약 4-5 tok/s(빠듯함)로 실행합니다. 휴대용 로컬 AI 70B로의 진입점입니다. 이 속도는 메모리 대역폭과 모델 파일 크기로 계산한 추정치이며 실측값이 아닙니다.',
+          '**MacBook Pro 16" M5 Max 128GB(약 $5,000 이상; 16" M5 Max는 $3,899부터):** 최대 40코어 GPU, 614GB/s 대역폭. 8B 모델을 약 75-100 tok/s, 70B를 Q5(더 높은 품질)로 7-10 tok/s로 실행하며 두 모델을 동시에 실행할 수 있습니다. 예를 들어 70B 모델과 13B 모델을 함께 사용할 수 있습니다. 이 속도는 메모리 대역폭과 모델 파일 크기로 계산한 추정치이며 실측값이 아닙니다.',
           '**이 Mac을 구매하는 이유:** 70B 모델과 휴대성이 모두 필요하거나, 크리에이티브 작업과 AI를 위한 단일 장비를 원하거나, 발표나 출장 때문에 데스크톱을 두고 떠날 수 없는 경우.',
           '**이 Mac을 제외하는 이유:** 장비가 항상 책상 위에 있다면 같은 칩의 Mac Studio가 더 시원하게 작동하고 전체 속도를 유지하며, 128GB에서는 가격도 비슷합니다. 34B 모델로 충분하다면 Mac Mini M5 Pro가 수백 달러 더 저렴합니다.',
         ],
@@ -5059,17 +5059,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mac-studio',
         title: 'Mac Studio M5 Max vs M5 Ultra: 데스크톱과 극단',
         content:
-          '**Apple은 2026년 8월 25일에 Mac Studio를 M5 Max(70B를 위한 데스크톱 옵션)와 M5 Ultra(극단, 최대 512GB)로 새롭게 했습니다. 기본 구성은 2026년 9월 22일에 출하되었으며, M5 Ultra 512GB 구성은 2026년 10월 하순에 이어집니다.** Mac Studio M5 Max 128GB는 Q5 품질로 70B를 실행하며, 데스크톱 케이스에는 노트북의 열 제한이 없으므로 지속적인 부하에서 MacBook Pro보다 더 조용하게 작동합니다. M5 Ultra는 128GB로 담을 수 없는 더 큰 모델이 필요한 사용자를 위해 존재합니다. 광고된 시작 가격($2,499와 $5,499)은 36GB와 96GB 모델의 가격이며, 128GB M5 Max는 약 $5,100입니다.',
+          '**Apple은 2026년 8월 25일에 Mac Studio를 M5 Max(70B를 위한 데스크톱 옵션)와 M5 Ultra(극단, 최대 512GB)로 새롭게 했습니다. 기본 구성은 2026년 9월 22일에 출하되었으며, M5 Ultra 512GB 구성은 2026년 10월 28일부터 주문할 수 있습니다.** Mac Studio M5 Max 128GB는 Q5 품질로 70B를 실행하며, 데스크톱 케이스에는 노트북의 열 제한이 없으므로 지속적인 부하에서 MacBook Pro보다 더 조용하게 작동합니다. M5 Ultra는 128GB로 담을 수 없는 더 큰 모델이 필요한 사용자를 위해 존재합니다. 광고된 시작 가격($2,499와 $5,499)은 36GB와 96GB 모델의 가격이며, 128GB M5 Max는 약 $5,100입니다.',
         items: [
           '**Mac Studio M5 Max(36GB는 $2,499부터; 64GB는 약 $3,500; 128GB는 약 $5,100):** 기본 32코어 GPU 모델은 460GB/s이며 36GB가 최대입니다. 40코어 GPU 모델(48GB는 약 $3,100부터)은 614GB/s이며 64GB 또는 128GB가 제공되는 유일한 모델입니다. 70B 모델을 위한 데스크톱 선택입니다. 이 모델의 70B 독립 측정치는 찾지 못했습니다.',
-          '**Mac Studio M5 Ultra(96GB는 $5,499부터; 256GB는 약 $9,500, 80코어 GPU는 약 $10,800):** 36코어 CPU / 80코어 GPU 구성은 최대 512GB 통합 메모리를 약 1.2TB/s 대역폭으로 지원합니다. 512GB 구성은 2026년 10월 하순에 출하되며, 아직 주문할 수 없고 발표된 가격도 없습니다. 이 등급은 단일 70B 모델을 훨씬 뛰어넘는 가장 큰 로컬 모델을 위한 것으로, 일반적인 구매 대상이 아닙니다.',
+          '**Mac Studio M5 Ultra(96GB는 $5,499부터; 256GB는 약 $9,500, 80코어 GPU는 약 $10,800):** 36코어 CPU / 80코어 GPU 구성은 최대 512GB 통합 메모리를 약 1.2TB/s 대역폭으로 지원합니다. 512GB 구성은 2026년 10월 28일부터 주문할 수 있으며 $22,299부터입니다([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). 이 등급은 단일 70B 모델을 훨씬 뛰어넘는 가장 큰 로컬 모델을 위한 것으로, 일반적인 구매 대상이 아닙니다.',
           '**Mac Studio를 구매하는 이유:** 현재 라인업의 데스크톱 70B 장비를 원하거나, MacBook Pro보다 더 조용한 지속적인 작동을 원하거나, Mac Mini M5 Pro의 두 배 대역폭을 원하거나, (특히 M5 Ultra의 경우) 128GB로 담을 수 없는 모델을 실행해야 하는 경우.',
           '**Mac Studio를 제외하는 이유:** 휴대성이 필요하면 MacBook Pro를 구매하십시오. 34B 모델로 충분하고 속도가 부차적이라면 Mac Mini M5 Pro가 더 저렴합니다. 더 저렴한 70B 데스크톱을 원한다면, 새 라인업이 출하된 지금 할인될 가능성이 높은 이전 세대 Mac Studio M4 Max를 살펴보십시오.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '위 가격과 사양은 Apple이 공개한 수치와 Daring Fireball이 보도한 구성 도구 가격입니다. M5 Max나 M5 Ultra Mac Studio의 독립적인 벤치마크는 찾지 못했습니다. 한 출처는 128GB M5 Max 구성을 단종된 것으로 표기하지만 다른 출처들은 여전히 판매 중으로 표기합니다. 구매 계획을 세우기 전에 Apple Store에서 주문 가능한지 확인하십시오.',
+            text: '위 가격과 사양은 Apple이 공개한 수치와 Daring Fireball이 보도한 구성 도구 가격입니다. M5 Max나 M5 Ultra Mac Studio의 70B 독립 벤치마크는 찾지 못했습니다. 다른 모델을 사용한 M5 Ultra 독립 테스트는 [Apple Silicon M5 가이드](/ko/local-llms/apple-silicon-m5-local-llm)에 정리했습니다. 구매 계획을 세우기 전에 원하는 구성을 Apple Store에서 주문할 수 있는지 확인하십시오.',
           },
         ],
         affiliateLinks: [
@@ -5132,9 +5132,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**8B 모델 — 8-9GB:** Mac Mini M6를 포함해 16GB 이상의 모든 Mac에서 실행 가능합니다. 32GB Mac은 충분한 여유를 제공합니다.',
           '**13-14B 모델 — 11-13GB:** macOS 및 컨텍스트 오버헤드를 포함하면 32GB가 필요합니다. Mac Mini M6(32GB)부터.',
           '**34B 모델 — 21-25GB:** 실제로는 64GB가 필요합니다. Mac Mini M5 Pro 64GB가 여기서 가장 좋은 가성비 옵션입니다. M6의 32GB 한계로는 34B 모델을 수용할 수 없습니다.',
-          '**70B 모델 Q4 — 39-42GB:** 최소 64GB가 필요하며, 컨텍스트를 추가하면 64GB가 빠듯합니다. Mac Mini M5 Pro 64GB 또는 MacBook Pro 16" M5 Pro 64GB가 최소 기준입니다.',
+          '**70B 모델 Q4 — 43+GB:** 최소 64GB가 필요하며, 컨텍스트를 추가하면 64GB가 빠듯합니다. Mac Mini M5 Pro 64GB 또는 MacBook Pro 16" M5 Pro 64GB가 최소 기준입니다.',
           '**70B 모델 Q5 또는 동시 모델 — 50-70GB+:** 128GB가 필요합니다. MacBook Pro 16" M5 Max 128GB 또는 Mac Studio M5 Max 128GB.',
-          '**단일 70B보다 큰 모델, 또는 매우 큰 MoE 모델 — 100GB+:** 최대 512GB 통합 메모리에 도달하는 Mac Studio M5 Ultra가 필요합니다(512GB 구성은 2026년 10월 하순에 출하).',
+          '**단일 70B보다 큰 모델, 또는 매우 큰 MoE 모델 — 100GB+:** 최대 512GB 통합 메모리에 도달하는 Mac Studio M5 Ultra가 필요합니다(512GB 구성은 2026년 10월 28일부터 주문 가능, $22,299부터).',
         ],
         callouts: [
           {
@@ -5142,8 +5142,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple Silicon 메모리는 납땜되어 있어 업그레이드가 불가능합니다. 현재 필요보다 한 단계 위로 구매하십시오. 오늘 34B 모델을 실행한다면 64GB는 편안한 옵션이 아니라 최소 기준입니다. 전체 방법론은 관련 읽을거리 섹션의 통합 메모리 가이드를 참조하십시오.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-ko.webp',
-        imageCaption: 'Q4_K_M 기준 모델 크기별 통합 메모리: 8B는 8-9GB, 13-14B는 11-13GB, 34B는 21-25GB, 70B Q4는 39-42GB, 70B Q5 또는 동시 모델은 50-70GB 이상이 필요합니다.',
+        image: '',
+        imageCaption: '',
       },
       decisionFlowchart: {
         id: 'decision-flowchart',
@@ -5154,7 +5154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. 실행하고 싶은 가장 큰 모델은 무엇입니까?** 7-14B: Mac Mini M6 32GB. 34B: Mac Mini M5 Pro 64GB. 70B Q4: 64GB Mac Mini M5 Pro 또는 MacBook Pro M5 Pro. 70B Q5 또는 동시 실행: 128GB MacBook Pro M5 Max 또는 Mac Studio M5 Max. 100B+ 또는 초대형 MoE: Mac Studio M5 Ultra, 최대 512GB.',
           '**2. 장비를 이동시켜야 합니까?** 예: MacBook Pro 16" M5 Pro 또는 M5 Max. 아니오: Mac Mini(34B/70B Q4까지) 또는 Mac Studio(70B 이상).',
           '**3. 상시 가동 서버입니까?** 예: Mac Mini M5 Pro 64GB — 조용하고, 25-55W(추정), 24/7 운영에 가장 저렴. 아니오: 위의 모델 크기에 따라 선택하십시오.',
-          '**4. 가능한 한 빠른 응답이 필요합니까, 아니면 512GB가 필요합니까?** 같은 메모리에서 더 빠른 응답: Mac Studio M5 Max(614GB/s 대 307GB/s). 512GB: Mac Studio M5 Ultra 512GB 구성은 2026년 10월 하순에 출하되며 아직 주문할 수 없습니다. 256GB 구성은 지금 구매할 수 있습니다.',
+          '**4. 가능한 한 빠른 응답이 필요합니까, 아니면 512GB가 필요합니까?** 같은 메모리에서 더 빠른 응답: Mac Studio M5 Max(614GB/s 대 307GB/s). 512GB: Mac Studio M5 Ultra 512GB 구성은 2026년 10월 28일부터 주문할 수 있으며 $22,299부터입니다.',
         ],
         snippetBlocks: [
           {
@@ -5181,7 +5181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '새로운 Mac Mini 및 Mac Studio 모델은 2026년 9월 22일에 출하되었으며, Mac Studio M5 Ultra 512GB 구성은 2026년 10월 하순에 출하됩니다. Apple의 시작 가격은 기본 메모리만 포함합니다. 필요한 메모리 등급에 대해 현재 Apple Store 구성 도구를 열어 확인하십시오. 업그레이드 비용이 총액의 가장 큰 부분이기 때문입니다.',
+            text: '새로운 Mac Mini 및 Mac Studio 모델은 2026년 9월 22일에 출하되었으며, Mac Studio M5 Ultra 512GB 구성은 2026년 10월 28일부터 주문할 수 있습니다. Apple의 시작 가격은 기본 메모리만 포함합니다. 필요한 메모리 등급에 대해 현재 Apple Store 구성 도구를 열어 확인하십시오. 업그레이드 비용이 총액의 가장 큰 부분이기 때문입니다.',
           },
         ],
         affiliateLinks: [
@@ -5245,8 +5245,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**광고된 시작 가격을 필요한 Mac의 가격으로 읽습니다.** $899는 16GB의 Mac Mini M6, $1,699는 24GB의 Mac Mini M5 Pro, $2,499는 36GB의 Mac Studio M5 Max를 살 수 있는 가격입니다. 32GB M6는 약 $1,300, 64GB M5 Pro는 약 $2,700, 128GB M5 Max는 약 $5,100입니다.',
           '**Mac Mini M6의 32GB 한계가 30B나 70B 모델을 커버한다고 가정합니다.** 그렇지 않습니다. 32GB는 약 14B 모델 근처에서 엄격한 한계입니다. M5 Pro(64GB)가 34B 이상을 위한 최소 기준입니다.',
           '**Apple Silicon 메모리가 업그레이드 불가능하다는 것을 잊습니다.** 메모리는 납땜되어 있습니다. 적은 메모리로 구매하면 유일한 해결책은 새 Mac입니다. 현재 필요보다 한 단계 위로 크기를 결정하십시오.',
-          '**가격을 확인하지 않고 512GB Mac Studio M5 Ultra를 기다립니다.** 512GB 구성은 2026년 10월 하순에 출하되며 발표된 가격이 없고, 256GB 구성만 해도 이미 약 $9,500입니다.',
-          '**24/7 데스크톱 서버로 MacBook Pro를 구매합니다.** 지속적인 부하 시 성능이 제한됩니다. 상시 가동 서버로는 Mac Mini M5 Pro 또는 Mac Studio가 더 시원하고 조용하게 작동합니다.',
+          '**가격을 확인하지 않고 512GB Mac Studio M5 Ultra를 계획에 넣습니다.** 가격은 $22,299부터이며(2026년 10월 28일부터 주문 가능), 256GB 구성은 약 $9,500입니다.',
+          '**24/7 데스크톱 서버로 MacBook Pro를 구매합니다.** 지속적인 부하 시 성능이 제한될 수 있습니다. 상시 가동 서버로는 Mac Mini M5 Pro 또는 Mac Studio가 더 시원하고 조용하게 작동합니다.',
           '**8B 모델을 위해 과도하게 구매합니다.** 8B 모델이 사용 사례를 충족한다면 128GB Mac은 낭비입니다. 우연히 가진 예산이 아니라 모델에 맞게 메모리 등급을 조정하십시오.',
           '**Apple의 "AI 성능 최대 4배" 주장을 토큰 생성 속도 벤치마크로 취급합니다.** 이는 이전 세대 M4 대비 M6에 대한 Apple 자체 수치이며, 가장 큰 향상은 프롬프트 처리에 있고 토큰 생성은 메모리 대역폭에 의해 제한됩니다(우리가 찾은 유일한 독립 테스트에서는 소형 모델에서 M5 Pro가 M6보다 약 70% 빨랐습니다).',
         ],
@@ -5261,7 +5261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[새로운 Mac mini와 Mac Studio의 구성 및 가격(Daring Fireball)](https://daringfireball.net/2026/08/configurations_and_pricing_for_new_mac_minis_and_mac_studios) — 이 가이드의 총액에 사용된 메모리 및 저장 공간 업그레이드 가격.',
           '[Apple, 새로운 Mac mini와 Mac Studio를 30개 국가에 출시(MacTech)](https://www.mactech.com/2026/09/22/apple-is-rolling-out-the-new-mac-mini-and-mac-studio-models-in-30-countries-and-regions/) — 출하일과 미국 시작 가격.',
           '[M6 Mac mini vs M5 Pro Mac mini: 실제 테스트(Adam Talks Tech)](https://adamtalks.tech/reviews/m6-mac-mini-vs-m5-pro-mac-mini-tested/) — LM Studio에서 4B 모델로 두 Mac Mini를 비교한 독립적인 실제 사용 테스트(저자가 제휴 링크를 사용한다고 밝힘).',
-          '[LLM M5 Pro vs M5 Max 벤치마크 2026](/ko/local-llms/m5-pro-max-llm-benchmarks-2026) — 해당 페이지에 보고된 M5 Pro 및 M5 Max MacBook Pro의 8B 및 70B 모델 초당 토큰 수(방법론 주석 참조).',
+          '[로컬 LLM용 M5 Pro vs M5 Max: 사양과 속도 추정치](/ko/local-llms/m5-pro-max-llm-benchmarks-2026) — 8B 및 70B 모델의 초당 토큰 추정치(실측 아님). 메모리 대역폭과 모델 파일 크기로 계산했습니다.',
           '[Mac Mini M5를 로컬 AI 서버로 사용](/ko/local-llms/mac-mini-m5-local-ai-server) — Apple이 공개한 사양에 기반한 추정치(PromptQuorum이 측정한 것이 아님): Mac Mini M5 Pro 전력 소비, 전기 비용 및 상시 가동 서버로서의 성능.',
         ],
       },
@@ -5275,7 +5275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac Studio M5가 이미 출시되었습니까?',
-            a: '예, 한 가지 예외가 있습니다. Mac Studio M5 Max와 M5 Ultra는 2026년 9월 22일에 출하되었습니다. M5 Ultra 512GB 구성은 2026년 10월 하순에 이어지며, 아직 주문할 수 없고 발표된 가격도 없습니다. M5 Ultra는 96GB에 $5,499부터 시작하며, 256GB 구성은 약 $9,500입니다. 더 저렴한 70B 데스크톱 Mac을 원한다면 이전 세대 Mac Studio(M4 Max)가 할인될 수 있습니다.',
+            a: '예, 한 가지 예외가 있습니다. Mac Studio M5 Max와 M5 Ultra는 2026년 9월 22일에 출하되었습니다. M5 Ultra 512GB 구성은 2026년 10월 28일부터 주문할 수 있으며 $22,299부터입니다. M5 Ultra는 96GB에 $5,499부터 시작하며, 256GB 구성은 약 $9,500입니다. 더 저렴한 70B 데스크톱 Mac을 원한다면 이전 세대 Mac Studio(M4 Max)가 할인될 수 있습니다.',
           },
           {
             q: 'AI용으로 Mac Mini M5 Pro와 Mac Studio M5 Max 중 어느 것이 좋습니까?',
@@ -5291,15 +5291,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac에서 로컬 LLM을 위해 얼마나 많은 통합 메모리가 필요합니까?',
-            a: 'Q4_K_M 양자화로 10억 파라미터당 약 0.6GB를 계획하고 2-4GB 오버헤드를 추가하며, macOS가 동일한 풀을 공유한다는 것을 기억하십시오. 이는 8B 모델에 약 8-9GB, 34B에 21-25GB, 70B에 39-42GB를 의미합니다. 64GB Mac(Mac Mini M5 Pro 또는 MacBook Pro M5 Pro)은 34B를 편안하게 실행하고 70B Q4도 겨우 맞습니다. 128GB(MacBook Pro M5 Max 또는 Mac Studio M5 Max)는 Q5 품질의 70B나 여러 모델을 동시에 실행하는 데 필요합니다. Mac Studio M5 Ultra는 단일 70B보다 큰 모델을 위해 최대 512GB에 도달합니다.',
+            a: 'Q4_K_M 양자화로 10억 파라미터당 약 0.6GB를 계획하고 2-4GB 오버헤드를 추가하며, macOS가 동일한 풀을 공유한다는 것을 기억하십시오. 이는 8B 모델에 약 8-9GB, 34B에 21-25GB, 70B에 43+GB를 의미합니다. 64GB Mac(Mac Mini M5 Pro 또는 MacBook Pro M5 Pro)은 34B를 편안하게 실행하고 70B Q4도 겨우 맞습니다. 128GB(MacBook Pro M5 Max 또는 Mac Studio M5 Max)는 Q5 품질의 70B나 여러 모델을 동시에 실행하는 데 필요합니다. Mac Studio M5 Ultra는 단일 70B보다 큰 모델을 위해 최대 512GB에 도달합니다.',
           },
           {
             q: 'Mac Mini vs MacBook Pro, 로컬 AI에 어느 것이 좋습니까?',
-            a: '장비가 항상 책상 위에 있고 34B 모델이 상한선이라면 Mac Mini M5 Pro를 선택하십시오. 더 저렴하고 조용하며 상시 가동 서버에 이상적입니다. 70B 모델을 실행하거나 장비를 가지고 다닐 필요가 있다면 MacBook Pro 16"(M5 Pro 또는 M5 Max)를 선택하십시오. MacBook Pro M5 Max는 70B에 가장 적합한 휴대용 칩이지만 지속적인 부하 시 성능이 제한되므로, 고정된 서버는 여전히 Mac Mini나 Mac Studio가 더 나은 선택입니다.',
+            a: '장비가 항상 책상 위에 있고 34B 모델이 상한선이라면 Mac Mini M5 Pro를 선택하십시오. 더 저렴하고 조용하며 상시 가동 서버에 이상적입니다. 70B 모델을 실행하거나 장비를 가지고 다닐 필요가 있다면 MacBook Pro 16"(M5 Pro 또는 M5 Max)를 선택하십시오. MacBook Pro M5 Max는 70B에 가장 적합한 휴대용 칩이지만 지속적인 부하 시 성능이 제한될 수 있으므로, 고정된 서버는 여전히 Mac Mini나 Mac Studio가 더 나은 선택입니다.',
           },
           {
             q: 'Mac이 70B 모델을 실행할 수 있습니까?',
-            a: '예. MacBook Pro 16" M5 Pro 64GB는 Llama 3.3 70B Q4를 초당 약 8-12 토큰으로 실행하며(여유가 빠듯함), M5 Max 128GB 버전은 70B Q5를 초당 12-18 토큰으로 실행합니다. Mac Studio M5 Max 128GB도 70B를 편안하게 실행할 것으로 예상되지만, 아직 독립적인 측정치는 찾지 못했습니다. Mac Mini M6는 불가능합니다. 32GB 한계가 너무 작습니다. 64GB의 Mac Mini M5 Pro는 70B Q4를 여유가 빠듯하게 수용합니다.',
+            a: '예. MacBook Pro 16" M5 Pro 64GB는 Llama 3.3 70B Q4를 초당 약 4-5 토큰으로 실행하며(여유가 빠듯함), M5 Max 128GB 버전은 70B Q5를 초당 7-10 토큰으로 실행합니다. Mac Studio M5 Max 128GB도 70B를 편안하게 실행할 것으로 예상되지만, 아직 독립적인 측정치는 찾지 못했습니다. Mac Mini M6는 불가능합니다. 32GB 한계가 너무 작습니다. 64GB의 Mac Mini M5 Pro는 70B Q4를 여유가 빠듯하게 수용합니다. 이 속도는 메모리 대역폭과 모델 파일 크기로 계산한 추정치이며 실측값이 아닙니다.',
           },
           {
             q: 'Mac이 로컬 LLM에서 NVIDIA GPU보다 빠릅니까?',
@@ -5311,7 +5311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac을 AI 서버로 운영하는 비용은 얼마입니까?',
-            a: '매우 저렴합니다. Mac Mini M5 Pro는 LLM 부하 시 약 25-55W, 유휴 시 약 8W를 소비하는 것으로 추정됩니다(추정치이며 PromptQuorum이 측정한 값이 아닙니다). 1년 동안 24/7 운영하는 비용은 미국 기준 전기료로 약 $26-39입니다. 이 낮은 운영 비용이 Mac Mini가 상시 가동 서버로서 최고의 가성비를 제공하는 핵심 이유입니다.',
+            a: '매우 저렴합니다. Mac Mini M5 Pro는 LLM 부하 시 약 25-55W, 유휴 시 약 8W를 소비하는 것으로 추정됩니다(추정치이며 PromptQuorum이 측정한 값이 아닙니다). 가벼운~혼합 사용으로 1년 동안 24/7 운영하는 비용은 $0.15/kWh 기준 약 $26-39로 추정됩니다. 부하가 크거나 전기 요금이 더 높으면 비용이 늘어납니다. 이 낮은 운영 비용이 Mac Mini가 상시 가동 서버로서 최고의 가성비를 제공하는 핵심 이유입니다.',
           },
           {
             q: 'Mac은 국내에서 어디서 구매하는 것이 좋고 AS는 어떻게 됩니까?',
@@ -5331,7 +5331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[M5 Pro vs M5 Max 전체 벤치마크 확인](/ko/local-llms/m5-pro-max-llm-benchmarks-2026) — 이 가이드의 수치 뒤에 있는 측정된 초당 토큰, 첫 토큰까지 시간 및 전력 소비.',
+          '[로컬 LLM용 M5 Pro vs M5 Max: 사양과 속도 추정치](/ko/local-llms/m5-pro-max-llm-benchmarks-2026) — 이 비교의 추정치를 계산하는 방법과 본인의 Mac에서 속도를 측정하는 방법.',
           '[Mac Mini M5를 상시 가동 AI 서버로 설정](/ko/local-llms/mac-mini-m5-local-ai-server) — 완전한 서버 구축, 추정 전기 비용 및 상시 가동 시 고려 사항(추정치이며 실측이 아닙니다).',
           '[전체 M 시리즈 라인업에서 Apple Silicon 비교](/ko/local-llms/apple-silicon-local-llm-guide-2026) — 통합 메모리 및 대역폭에서 M1부터 M5 Max까지 비교.',
           '[각 모델 크기에 필요한 통합 메모리 계산](/ko/local-llms/how-much-unified-memory-for-local-llm) — 여기의 빠른 공식 뒤에 있는 모델 크기별 전체 방법론.',
@@ -5350,7 +5350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
