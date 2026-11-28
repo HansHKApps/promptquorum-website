@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "Choose a GPU for local LLMs by VRAM first, then by memory speed and current price. In developer-reported llama.cpp results, a 7B Q4_0 model generates 176.9 tokens/s on a 16 GB RTX 5070 Ti and 186.2 tokens/s on a 24 GB RTX 4090, so the VRAM tier matters more than the flagship label. Tracked GPU prices are far above launch MSRP, so each card below is paired with its benchmark source and observed price range.",
     metaDescription: "In community llama.cpp tests a 7B model runs at 177 tok/s on an RTX 5070 Ti and 186 on an RTX 4090. Compare GPUs by VRAM, speed and observed prices.",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     next_refresh_due: "2027-05-15",
     last_full_refresh: "2026-11-15",
     current_hardware_mentioned: [
@@ -90,8 +90,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**Choose VRAM first:** 12 GB suits models up to about 14B, 16 GB suits mid-size models such as gpt-oss-20b, 24 GB suits dense ~32B models, and 48 GB (two 24 GB cards) suits 70B-class models (estimates, Q4-class quantization).",
           "**The speed gap is small for 7B models:** developer-reported llama.cpp results give 176.9 tok/s (RTX 5070 Ti, 16 GB) versus 186.2 tok/s (RTX 4090, 24 GB); prompt processing differs more (6,952 versus 11,993 tok/s).",
-          "**Prices are volatile:** per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15), the RTX 5090 retails around $4,500–4,700 versus a $1,999 MSRP, the RTX 5080 $1,200–1,600 versus $999, and new RTX 4090 listings $2,000–3,000.",
-          "**Lowest-priced 24 GB route in the tracked data:** a used RTX 3090 at about $1,500–1,725 (eBay sold listings, same tracker, figure dated 2026-11-23) reaches 158.2 tok/s, about 85% of an RTX 4090 on the 7B test.",
+          "**US prices are volatile:** per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-11-27), the RTX 5090 retails around $4,500–4,700 versus a $1,999 MSRP, the RTX 5080 $1,200–1,600 versus $999, and new RTX 4090 listings $2,000–3,000.",
+          "**Lowest-priced 24 GB NVIDIA route in the tracked data:** a used RTX 3090 at about $1,500–1,725 (median $1,650; 225 US eBay sold listings, 13–23 November 2026, same tracker) reaches 158.2 tok/s, about 85% of an RTX 4090 on the 7B test. The same tracker lists a new AMD RX 7900 XTX (24 GB) lower, at $900–1,000 (undated).",
           "**NVIDIA with CUDA is the default path.** An AMD RX 7900 XTX matches RTX 4090 generation speed on the Vulkan 7B test (182.6 versus 188.0 tok/s, same scoreboard) but processes prompts about 2.5 times slower.",
         ],
       },
@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "GPU Tiers by VRAM, Speed and Observed Price",
         content: [
           "The table lists each GPU with its VRAM, its developer-reported llama.cpp generation speed on a 7B Q4_0 model, and the US price range seen in the sources named below. Speeds are not PromptQuorum measurements, and larger models or longer context run slower.",
-          "Speed is token generation (tg128) for Llama 2 7B Q4_0 with `llama-bench -ngl 99` and no flash attention, taken from the user-submitted [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013); the RX 7900 XTX figure comes from the [llama.cpp Vulkan scoreboard](https://github.com/ggml-org/llama.cpp/discussions/10879). Prices are listed or observed US prices from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15; the used RTX 3090 figure is dated 2026-11-23) and [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). They are not offers or guarantees; check live listings.",
+          "Speed is token generation (tg128) for Llama 2 7B Q4_0 with `llama-bench -ngl 99` and no flash attention, taken from the user-submitted [llama.cpp CUDA scoreboard](https://github.com/ggml-org/llama.cpp/discussions/15013); the RX 7900 XTX figure comes from the [llama.cpp Vulkan scoreboard](https://github.com/ggml-org/llama.cpp/discussions/10879). Prices are listed or observed US prices from the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-11-27; the used RTX 3090 figure covers 13–23 November 2026) and [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). They are not offers or guarantees; check live listings.",
         ],
         rows: [
           {
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             GPU: "RTX 5070 Ti",
             VRAM: "16 GB",
-            "Speed (7B Q4_0)": "176.8 tok/s",
+            "Speed (7B Q4_0)": "176.9 tok/s",
             "Observed US price": "~$750–900, sporadic stock",
           },
           {
@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Speed (7B Q4_0)": "186.2 tok/s",
             "Observed US price": "New $2,000–3,000 / used ~$2,575–3,010",
           },
-          { GPU: "RX 7900 XTX", VRAM: "24 GB", "Speed (7B Q4_0)": "182.6 tok/s", "Observed US price": "Not tracked here" },
+          { GPU: "RX 7900 XTX", VRAM: "24 GB", "Speed (7B Q4_0)": "182.6 tok/s", "Observed US price": "New $900–1,000 (undated)" },
           {
             GPU: "RTX 5090",
             VRAM: "32 GB",
@@ -173,9 +173,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 GB and Larger: 30B-Class and 70B-Class Models",
         content: [
-          "**RTX 4090 (24 GB):** 186.2 tok/s and 11,993 tok/s prompt processing, the fastest 24 GB card in these results. New listings were $2,000–3,000 against a $1,599 MSRP, and used sold listings $2,575–3,010 (median $2,860), per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
-          "**RTX 3090 (24 GB), used:** 158.2 tok/s, about 85% of the RTX 4090, but prompt processing is less than half (5,175 versus 11,993 tok/s). Used sold listings were about $1,500–1,725 per the same tracker (figure dated 2026-11-23).",
-          "**RTX 5090 (32 GB):** 290.0 tok/s, the fastest card in the table. Retail was around $4,500–4,700 versus a $1,999 MSRP, and used sold listings $5,900–6,350. NVIDIA lists a [575 W total graphics power and 1,000 W required system power](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) for the reference configuration.",
+          "**RTX 4090 (24 GB):** 186.2 tok/s and 11,993 tok/s prompt processing, the fastest 24 GB card in these results. New listings were $2,000–3,000 against a $1,599 MSRP, and used sold listings $2,575–3,010 (median $2,860; 216 sold listings, October 2026), per the [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
+          "**RTX 3090 (24 GB), used:** 158.2 tok/s, about 85% of the RTX 4090, but prompt processing is less than half (5,175 versus 11,993 tok/s). Used sold listings were $1,500–1,725 (median $1,650; 225 US eBay sales, 13–23 November 2026) per the same tracker.",
+          "**RTX 5090 (32 GB):** 290.0 tok/s, the fastest card in the table. Retail was around $4,500–4,700 versus a $1,999 MSRP, and used sold listings $5,660–6,200 (median $6,000; 111 US eBay sales, 6–25 November 2026). NVIDIA lists a [575 W total graphics power and 1,000 W required system power](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) for the reference configuration.",
           "**48 GB and above:** 70B-class models at Q4 need about 43 GB for weights ([Ollama](https://ollama.com/library/llama3.3) lists the llama3.3:70b download at 43 GB), so they need two 24 GB cards or one workstation card with 48 GB or more. See [Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms).",
           "**Power safety:** high-wattage GPUs draw large, sustained current. Follow the card maker's power-supply and cable instructions, seat power connectors fully, and ask a qualified electrician about circuit capacity. This guide is not electrical-safety advice.",
         ],
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", VRAM: "32 GB", "Generation (tok/s)": "290.0", "Prompt (tok/s)": "14,073" },
           { GPU: "RTX 4090", VRAM: "24 GB", "Generation (tok/s)": "186.2", "Prompt (tok/s)": "11,993" },
           { GPU: "RTX 5080", VRAM: "16 GB", "Generation (tok/s)": "182.0", "Prompt (tok/s)": "8,297" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "Generation (tok/s)": "176.8", "Prompt (tok/s)": "6,952" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "Generation (tok/s)": "176.9", "Prompt (tok/s)": "6,952" },
           { GPU: "RTX 3090", VRAM: "24 GB", "Generation (tok/s)": "158.2", "Prompt (tok/s)": "5,175" },
           { GPU: "RTX 4080", VRAM: "16 GB", "Generation (tok/s)": "142.5", "Prompt (tok/s)": "8,032" },
           { GPU: "RTX 4070 Ti SUPER", VRAM: "16 GB", "Generation (tok/s)": "132.3", "Prompt (tok/s)": "6,925" },
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: "Is a used RTX 3090 still a good choice for local LLMs?",
-            a: "It is the lowest-priced 24 GB NVIDIA option in the tracked data (about $1,500–1,725 in sold listings, figure dated 2026-11-23) and reaches 158.2 tok/s on the 7B test, about 85% of an RTX 4090. Its prompt processing is less than half (5,175 versus 11,993 tok/s), and used cards may have no warranty and carry wear risk; read [Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms) first.",
+            a: "It is the lowest-priced 24 GB NVIDIA option in the tracked data (about $1,500–1,725 in sold listings, US eBay sales, 13–23 November 2026) and reaches 158.2 tok/s on the 7B test, about 85% of an RTX 4090. Its prompt processing is less than half (5,175 versus 11,993 tok/s), and used cards may have no warranty and carry wear risk; read [Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms) first.",
           },
           {
             q: "Should I buy an AMD GPU for local LLMs?",
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- user-submitted Llama 2 7B Q4_0 results.",
           "[llama.cpp discussion #10879: Performance on Vulkan](https://github.com/ggml-org/llama.cpp/discussions/10879) -- user-submitted results for AMD, Intel and NVIDIA.",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- MSRP, retail and eBay sold-listing prices (updated 2026-10-15; used RTX 3090 figure dated 2026-11-23).",
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- MSRP, retail and eBay sold-listing prices (updated 2026-11-27; used RTX 3090: 13–23 November 2026; used RTX 5090: 6–25 November 2026).",
           "[heise: Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- availability report (2026-01-15).",
           "[Wccftech: RTX 5060 Ti 16 GB retail prices](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- retail listing check (2026-01-27).",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) and [RTX 5070 family](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- memory, power and system requirements.",
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/local-llms/best-gpus-for-local-llms",
       inLanguage: "en",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [
@@ -401,7 +401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: "Is a used RTX 3090 still a good choice for local LLMs?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "It is the lowest-priced 24 GB NVIDIA option in the tracked data (about $1,500–1,725 in sold listings, figure dated 2026-11-23) and reaches 158.2 tok/s on the 7B test, about 85% of an RTX 4090. Its prompt processing is less than half (5,175 versus 11,993 tok/s), and used cards may have no warranty and carry wear risk; read [Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms) first.",
+            text: "It is the lowest-priced 24 GB NVIDIA option in the tracked data (about $1,500–1,725 in sold listings, US eBay sales, 13–23 November 2026) and reaches 158.2 tok/s on the 7B test, about 85% of an RTX 4090. Its prompt processing is less than half (5,175 versus 11,993 tok/s), and used cards may have no warranty and carry wear risk; read [Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms) first.",
           },
         },
         {
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "Elige la GPU para LLMs locales primero por VRAM y después por velocidad de memoria y precio actual. En resultados de llama.cpp reportados por desarrolladores, un modelo 7B Q4_0 genera 176.9 tokens/s en una RTX 5070 Ti de 16 GB y 186.2 tokens/s en una RTX 4090 de 24 GB, así que el nivel de VRAM pesa más que la etiqueta de gama alta. Los precios de las GPUs registrados están muy por encima del MSRP de lanzamiento, por lo que cada tarjeta se acompaña de su fuente de benchmark y su rango de precio observado.",
     metaDescription: "En pruebas comunitarias de llama.cpp, un modelo 7B corre a 177 tok/s en una RTX 5070 Ti y a 186 en una RTX 4090. Compara GPUs por VRAM, velocidad y precio.",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     leadAnswerBlock: "**Elige la GPU primero por nivel de VRAM: 12 GB para modelos pequeños, 16 GB para modelos medianos y 24 GB o más para modelos de clase 30B. En resultados de llama.cpp reportados por desarrolladores, un modelo 7B Q4_0 genera 176.9 tok/s en una RTX 5070 Ti y 186.2 tok/s en una RTX 4090, así que el nivel y el precio importan más que el estatus de gama alta.**",
     audience: "Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLMs locales",
     readTime: "12 min de lectura",
@@ -546,8 +546,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**Elige primero la VRAM:** 12 GB sirven para modelos de hasta unos 14B, 16 GB para modelos medianos como gpt-oss-20b, 24 GB para modelos densos de ~32B y 48 GB (dos tarjetas de 24 GB) para modelos de clase 70B (estimaciones, cuantización de clase Q4).",
           "**La diferencia de velocidad es pequeña con modelos 7B:** los resultados de llama.cpp reportados por desarrolladores dan 176.9 tok/s (RTX 5070 Ti, 16 GB) frente a 186.2 tok/s (RTX 4090, 24 GB); el procesamiento del prompt difiere más (6,952 frente a 11,993 tok/s).",
-          "**Los precios son volátiles:** según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15), la RTX 5090 se vende alrededor de $4,500–4,700 frente a un MSRP de $1,999, la RTX 5080 a $1,200–1,600 frente a $999 y las RTX 4090 nuevas a $2,000–3,000. Los precios en tu país pueden variar según impuestos locales.",
-          "**La vía de 24 GB más barata en los datos rastreados:** una RTX 3090 usada a unos $1,500–1,725 (ventas completadas en eBay, mismo rastreador, cifra con fecha 2026-11-23) alcanza 158.2 tok/s, cerca del 85% de una RTX 4090 en la prueba 7B.",
+          "**Los precios son volátiles:** según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-11-27), la RTX 5090 se vende alrededor de $4,500–4,700 frente a un MSRP de $1,999, la RTX 5080 a $1,200–1,600 frente a $999 y las RTX 4090 nuevas a $2,000–3,000. Los precios en tu país pueden variar según impuestos locales.",
+          "**La vía NVIDIA de 24 GB más barata en los datos rastreados:** una RTX 3090 usada a $1,500–1,725 (mediana $1,650; 225 ventas completadas en eBay EE. UU., 13–23 de noviembre de 2026, mismo rastreador) alcanza 158.2 tok/s, cerca del 85% de una RTX 4090 en la prueba 7B. El mismo rastreador muestra una AMD RX 7900 XTX nueva (24 GB) más barata, a $900–1,000 (sin fecha).",
           "**NVIDIA con CUDA es el camino por defecto.** Una AMD RX 7900 XTX iguala la velocidad de generación de la RTX 4090 en la prueba 7B con Vulkan (182.6 frente a 188.0 tok/s, mismo marcador), pero procesa prompts unas 2.5 veces más lento.",
         ],
       },
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Niveles de GPU por VRAM, velocidad y precio observado",
         content: [
           "La tabla muestra cada GPU con su VRAM, su velocidad de generación de llama.cpp reportada por desarrolladores con un modelo 7B Q4_0 y el rango de precios en EE. UU. de las fuentes indicadas abajo. Las velocidades no son mediciones de PromptQuorum, y los modelos más grandes o el contexto más largo van más lento.",
-          "La velocidad es la generación de tokens (tg128) de Llama 2 7B Q4_0 con `llama-bench -ngl 99` y sin flash attention, tomada del [marcador CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) enviado por usuarios; la cifra de la RX 7900 XTX proviene del [marcador Vulkan de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/10879). Los precios son precios listados u observados en EE. UU. del [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15; la cifra de la RTX 3090 usada tiene fecha 2026-11-23) y de [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). No son ofertas ni garantías; consulta los listados actuales.",
+          "La velocidad es la generación de tokens (tg128) de Llama 2 7B Q4_0 con `llama-bench -ngl 99` y sin flash attention, tomada del [marcador CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) enviado por usuarios; la cifra de la RX 7900 XTX proviene del [marcador Vulkan de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/10879). Los precios son precios listados u observados en EE. UU. del [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-11-27; la cifra de la RTX 3090 usada tiene fecha 2026-11-23) y de [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). No son ofertas ni garantías; consulta los listados actuales.",
         ],
         rows: [
           {
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             GPU: "RTX 5070 Ti",
             VRAM: "16 GB",
-            "Velocidad (7B Q4_0)": "176.8 tok/s",
+            "Velocidad (7B Q4_0)": "176.9 tok/s",
             "Precio observado (EE. UU.)": "~$750–900, stock esporádico",
           },
           {
@@ -605,7 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             GPU: "RX 7900 XTX",
             VRAM: "24 GB",
             "Velocidad (7B Q4_0)": "182.6 tok/s",
-            "Precio observado (EE. UU.)": "No rastreado aquí",
+            "Precio observado (EE. UU.)": "Nueva $900–1,000 (sin fecha)",
           },
           {
             GPU: "RTX 5090",
@@ -639,9 +639,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 GB o más: modelos de clase 30B y 70B",
         content: [
-          "**RTX 4090 (24 GB):** 186.2 tok/s y 11,993 tok/s de procesamiento del prompt, la tarjeta de 24 GB más rápida en estos resultados. Los listados nuevos estaban a $2,000–3,000 frente a un MSRP de $1,599, y las ventas usadas completadas a $2,575–3,010 (mediana $2,860), según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
-          "**RTX 3090 (24 GB), usada:** 158.2 tok/s, cerca del 85% de la RTX 4090, pero el procesamiento del prompt es menos de la mitad (5,175 frente a 11,993 tok/s). Las ventas usadas completadas rondaban los $1,500–1,725 según el mismo rastreador (cifra con fecha 2026-11-23).",
-          "**RTX 5090 (32 GB):** 290.0 tok/s, la tarjeta más rápida de la tabla. En retail estaba alrededor de $4,500–4,700 frente a un MSRP de $1,999, y las ventas usadas completadas a $5,900–6,350. NVIDIA indica [575 W de potencia gráfica total y 1,000 W de potencia de sistema requerida](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) para la configuración de referencia.",
+          "**RTX 4090 (24 GB):** 186.2 tok/s y 11,993 tok/s de procesamiento del prompt, la tarjeta de 24 GB más rápida en estos resultados. Los listados nuevos estaban a $2,000–3,000 frente a un MSRP de $1,599, y las ventas usadas completadas a $2,575–3,010 (mediana $2,860; 216 ventas, octubre de 2026), según el [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
+          "**RTX 3090 (24 GB), usada:** 158.2 tok/s, cerca del 85% de la RTX 4090, pero el procesamiento del prompt es menos de la mitad (5,175 frente a 11,993 tok/s). Las ventas usadas completadas estaban en $1,500–1,725 (mediana $1,650; 225 ventas en eBay EE. UU., 13–23 de noviembre de 2026) según el mismo rastreador.",
+          "**RTX 5090 (32 GB):** 290.0 tok/s, la tarjeta más rápida de la tabla. En retail estaba alrededor de $4,500–4,700 frente a un MSRP de $1,999, y las ventas usadas completadas a $5,660–6,200 (mediana $6,000; 111 ventas en eBay EE. UU., 6–25 de noviembre de 2026). NVIDIA indica [575 W de potencia gráfica total y 1,000 W de potencia de sistema requerida](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) para la configuración de referencia.",
           "**48 GB o más:** los modelos de clase 70B en Q4 necesitan unos 43 GB solo para los pesos ([Ollama](https://ollama.com/library/llama3.3) indica una descarga de 43 GB para llama3.3:70b), por lo que requieren dos tarjetas de 24 GB o una tarjeta profesional de 48 GB o más. Consulta [LLMs locales con varias GPUs](/es/local-llms/multi-gpu-local-llms).",
           "**Seguridad eléctrica:** las GPUs de alto consumo demandan mucha corriente de forma sostenida. Sigue las instrucciones de fuente de alimentación y cables del fabricante, conecta bien los conectores de alimentación y consulta a un electricista cualificado sobre la capacidad del circuito. Esta guía no es asesoramiento de seguridad eléctrica.",
         ],
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", VRAM: "32 GB", "Generación (tok/s)": "290.0", "Prompt (tok/s)": "14,073" },
           { GPU: "RTX 4090", VRAM: "24 GB", "Generación (tok/s)": "186.2", "Prompt (tok/s)": "11,993" },
           { GPU: "RTX 5080", VRAM: "16 GB", "Generación (tok/s)": "182.0", "Prompt (tok/s)": "8,297" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "Generación (tok/s)": "176.8", "Prompt (tok/s)": "6,952" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "Generación (tok/s)": "176.9", "Prompt (tok/s)": "6,952" },
           { GPU: "RTX 3090", VRAM: "24 GB", "Generación (tok/s)": "158.2", "Prompt (tok/s)": "5,175" },
           { GPU: "RTX 4080", VRAM: "16 GB", "Generación (tok/s)": "142.5", "Prompt (tok/s)": "8,032" },
           { GPU: "RTX 4070 Ti SUPER", VRAM: "16 GB", "Generación (tok/s)": "132.3", "Prompt (tok/s)": "6,925" },
@@ -797,7 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp discussion #15013: rendimiento con NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- resultados de Llama 2 7B Q4_0 enviados por usuarios.",
           "[llama.cpp discussion #10879: rendimiento con Vulkan](https://github.com/ggml-org/llama.cpp/discussions/10879) -- resultados enviados por usuarios para AMD, Intel y NVIDIA.",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- precios MSRP, retail y de ventas completadas en eBay (actualizado el 2026-10-15; cifra de la RTX 3090 usada con fecha 2026-11-23).",
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- precios MSRP, retail y de ventas completadas en eBay (actualizado el 2026-11-27; cifra de la RTX 3090 usada con fecha 2026-11-23).",
           "[heise: Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- informe de disponibilidad (2026-01-15).",
           "[Wccftech: precios retail de la RTX 5060 Ti 16 GB](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- revisión de listados retail (2026-01-27).",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) y [familia RTX 5070](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- memoria, potencia y requisitos del sistema.",
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/es/local-llms/best-gpus-for-local-llms",
       inLanguage: "es",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [
@@ -969,7 +969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "اختر GPU لنماذج LLM المحلية أولًا بحسب VRAM، ثم بحسب سرعة الذاكرة والسعر الحالي. في نتائج llama.cpp التي أبلغ عنها مطورون، يولّد نموذج 7B بصيغة Q4_0 ما مقداره 176.9 tok/s على RTX 5070 Ti بسعة 16 GB و186.2 tok/s على RTX 4090 بسعة 24 GB، لذا فإن فئة VRAM أهم من وصف البطاقة بأنها رائدة. أسعار GPU المرصودة أعلى كثيرًا من سعر الإطلاق الموصى به، ولذلك نقرن كل بطاقة بمصدر القياس ونطاق السعر المرصود.",
     metaDescription: "في اختبارات llama.cpp المجتمعية يعمل نموذج 7B بسرعة 177 tok/s على RTX 5070 Ti و186 على RTX 4090. قارن بطاقات GPU بحسب VRAM والسرعة والسعر المرصود.",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     leadAnswerBlock: "**اختر GPU أولًا بحسب فئة VRAM: 12 GB للنماذج الصغيرة، و16 GB للنماذج المتوسطة، و24 GB أو أكثر لنماذج فئة 30B. في نتائج llama.cpp التي أبلغ عنها مطورون، يولّد نموذج 7B بصيغة Q4_0 ما مقداره 176.9 tok/s على RTX 5070 Ti و186.2 tok/s على RTX 4090، لذا فإن الفئة والسعر أهم من مكانة البطاقة الرائدة.**",
     audience: "المطورون الذين يعرفون Ollama أو LM Studio ويريدون تحسين سير عمل نماذج LLM المحلية",
     readTime: "12 دقائق للقراءة",
@@ -1012,8 +1012,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**اختر VRAM أولًا:** تناسب 12 GB نماذج حتى نحو 14B، وتناسب 16 GB نماذج متوسطة مثل gpt-oss-20b، وتناسب 24 GB نماذج كثيفة بحجم نحو 32B، وتناسب 48 GB (بطاقتان بسعة 24 GB) نماذج فئة 70B (تقديرات، تكميم من فئة Q4).",
           "**فرق السرعة صغير مع نماذج 7B:** تعطي نتائج llama.cpp التي أبلغ عنها مطورون 176.9 tok/s (RTX 5070 Ti، 16 GB) مقابل 186.2 tok/s (RTX 4090، 24 GB)؛ أما معالجة الـ prompt فالفرق فيها أكبر (6,952 مقابل 11,993 tok/s).",
-          "**الأسعار متقلبة:** بحسب [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (تحديث المصدر في 2026-10-15)، تُباع RTX 5090 بالتجزئة بنحو $4,500–4,700 مقابل سعر موصى به $1,999، وRTX 5080 بين $1,200–1,600 مقابل $999، وبطاقات RTX 4090 الجديدة بين $2,000–3,000. الأسعار للسوق الأمريكية وتختلف من بلد إلى آخر بحسب الرسوم والضرائب.",
-          "**أرخص مسار بسعة 24 GB في البيانات المرصودة:** بطاقة RTX 3090 مستعملة بنحو $1,500–1,725 (مبيعات مكتملة على eBay، المتتبع نفسه، رقم مؤرخ في 2026-11-23) تصل إلى 158.2 tok/s، أي نحو 85% من RTX 4090 في اختبار 7B.",
+          "**الأسعار متقلبة:** بحسب [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (تحديث المصدر في 2026-11-27)، تُباع RTX 5090 بالتجزئة بنحو $4,500–4,700 مقابل سعر موصى به $1,999، وRTX 5080 بين $1,200–1,600 مقابل $999، وبطاقات RTX 4090 الجديدة بين $2,000–3,000. الأسعار للسوق الأمريكية وتختلف من بلد إلى آخر بحسب الرسوم والضرائب.",
+          "**أرخص مسار من NVIDIA بسعة 24 GB في البيانات المرصودة:** بطاقة RTX 3090 مستعملة بسعر $1,500–1,725 (الوسيط $1,650؛ 225 عملية بيع مكتملة على eBay الأمريكي، 13–23 نوفمبر 2026، المتتبع نفسه) تصل إلى 158.2 tok/s، أي نحو 85% من RTX 4090 في اختبار 7B. ويعرض المتتبع نفسه بطاقة AMD RX 7900 XTX جديدة (24 GB) بسعر أقل، $900–1,000 (بلا تاريخ).",
           "**NVIDIA مع CUDA هو المسار الافتراضي.** تقارب AMD RX 7900 XTX سرعة توليد RTX 4090 في اختبار 7B على Vulkan (182.6 مقابل 188.0 tok/s، في الجدول نفسه)، لكنها تعالج الـ prompt أبطأ بنحو 2.5 مرة.",
         ],
       },
@@ -1022,7 +1022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "فئات GPU بحسب VRAM والسرعة والسعر المرصود",
         content: [
           "يعرض الجدول كل GPU مع VRAM وسرعة التوليد في llama.cpp التي أبلغ عنها مطورون لنموذج 7B بصيغة Q4_0، ونطاق السعر في الولايات المتحدة من المصادر المذكورة أدناه. السرعات ليست قياسات من PromptQuorum، وتتباطأ النماذج الأكبر أو السياق الأطول.",
-          "السرعة هي توليد الرموز (tg128) لنموذج Llama 2 7B Q4_0 باستخدام `llama-bench -ngl 99` ودون flash attention، مأخوذة من [لوحة نتائج CUDA في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) التي يرسلها المستخدمون؛ وقيمة RX 7900 XTX مأخوذة من [لوحة نتائج Vulkan في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/10879). الأسعار هي أسعار معروضة أو مرصودة في الولايات المتحدة من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (تحديث المصدر في 2026-10-15؛ ورقم RTX 3090 المستعملة مؤرخ في 2026-11-23) ومن [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). وهي ليست عروضًا ولا ضمانات؛ تحقق من الإعلانات الحالية.",
+          "السرعة هي توليد الرموز (tg128) لنموذج Llama 2 7B Q4_0 باستخدام `llama-bench -ngl 99` ودون flash attention، مأخوذة من [لوحة نتائج CUDA في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) التي يرسلها المستخدمون؛ وقيمة RX 7900 XTX مأخوذة من [لوحة نتائج Vulkan في llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/10879). الأسعار هي أسعار معروضة أو مرصودة في الولايات المتحدة من [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (تحديث المصدر في 2026-11-27؛ ورقم RTX 3090 المستعملة مؤرخ في 2026-11-23) ومن [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). وهي ليست عروضًا ولا ضمانات؛ تحقق من الإعلانات الحالية.",
         ],
         rows: [
           {
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             GPU: "RTX 5070 Ti",
             VRAM: "16 GB",
-            "السرعة (7B Q4_0)": "176.8 tok/s",
+            "السرعة (7B Q4_0)": "176.9 tok/s",
             "السعر المرصود (أمريكا)": "نحو $750–900، توفر متقطع",
           },
           {
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             GPU: "RX 7900 XTX",
             VRAM: "24 GB",
             "السرعة (7B Q4_0)": "182.6 tok/s",
-            "السعر المرصود (أمريكا)": "غير مرصودة هنا",
+            "السعر المرصود (أمريكا)": "جديدة $900–1,000 (بلا تاريخ)",
           },
           {
             GPU: "RTX 5090",
@@ -1100,9 +1100,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 GB فأكثر: نماذج فئة 30B و70B",
         content: [
-          "**RTX 4090 (24 GB):** 186.2 tok/s و11,993 tok/s في معالجة الـ prompt، وهي أسرع بطاقة بسعة 24 GB في هذه النتائج. بحسب [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) كانت الإعلانات الجديدة بين $2,000–3,000 مقابل سعر موصى به $1,599، والمبيعات المستعملة المكتملة بين $2,575–3,010 (الوسيط $2,860).",
-          "**RTX 3090 (24 GB)، مستعملة:** 158.2 tok/s، أي نحو 85% من RTX 4090، لكن معالجة الـ prompt أقل من النصف (5,175 مقابل 11,993 tok/s). وكانت المبيعات المستعملة المكتملة بنحو $1,500–1,725 بحسب المتتبع نفسه (رقم مؤرخ في 2026-11-23).",
-          "**RTX 5090 (32 GB):** 290.0 tok/s، وهي الأسرع في الجدول. بلغ سعر التجزئة نحو $4,500–4,700 مقابل سعر موصى به $1,999، وكانت المبيعات المستعملة المكتملة بين $5,900–6,350. تذكر NVIDIA للتهيئة المرجعية [إجمالي قدرة رسوميات 575 W وقدرة نظام مطلوبة 1,000 W](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/).",
+          "**RTX 4090 (24 GB):** 186.2 tok/s و11,993 tok/s في معالجة الـ prompt، وهي أسرع بطاقة بسعة 24 GB في هذه النتائج. بحسب [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) كانت الإعلانات الجديدة بين $2,000–3,000 مقابل سعر موصى به $1,599، والمبيعات المستعملة المكتملة بين $2,575–3,010 (الوسيط $2,860؛ 216 عملية بيع، أكتوبر 2026).",
+          "**RTX 3090 (24 GB)، مستعملة:** 158.2 tok/s، أي نحو 85% من RTX 4090، لكن معالجة الـ prompt أقل من النصف (5,175 مقابل 11,993 tok/s). وكانت المبيعات المستعملة المكتملة بين $1,500–1,725 (الوسيط $1,650؛ 225 عملية بيع على eBay الأمريكي، 13–23 نوفمبر 2026) بحسب المتتبع نفسه.",
+          "**RTX 5090 (32 GB):** 290.0 tok/s، وهي الأسرع في الجدول. بلغ سعر التجزئة نحو $4,500–4,700 مقابل سعر موصى به $1,999، وكانت المبيعات المستعملة المكتملة بين $5,660–6,200 (الوسيط $6,000؛ 111 عملية بيع على eBay الأمريكي، 6–25 نوفمبر 2026). تذكر NVIDIA للتهيئة المرجعية [إجمالي قدرة رسوميات 575 W وقدرة نظام مطلوبة 1,000 W](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/).",
           "**48 GB فأكثر:** تحتاج نماذج فئة 70B بصيغة Q4 إلى نحو 43 GB للأوزان وحدها (تذكر [Ollama](https://ollama.com/library/llama3.3) أن تنزيل llama3.3:70b يبلغ 43 GB)، لذا تتطلب بطاقتين بسعة 24 GB أو بطاقة محطات عمل واحدة بسعة 48 GB أو أكثر. راجع [نماذج LLM المحلية على عدة GPU](/ar/local-llms/multi-gpu-local-llms).",
           "**السلامة الكهربائية:** تسحب بطاقات GPU عالية القدرة تيارًا كبيرًا ومستمرًا. اتبع تعليمات مصنّع البطاقة بشأن مزود الطاقة والكابلات، وأحكم تثبيت موصلات الطاقة، واسأل كهربائيًا مؤهلًا عن سعة الدائرة الكهربائية. هذا الدليل ليس نصيحة في السلامة الكهربائية.",
         ],
@@ -1169,7 +1169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", VRAM: "32 GB", "التوليد (tok/s)": "290.0", "الـ prompt (tok/s)": "14,073" },
           { GPU: "RTX 4090", VRAM: "24 GB", "التوليد (tok/s)": "186.2", "الـ prompt (tok/s)": "11,993" },
           { GPU: "RTX 5080", VRAM: "16 GB", "التوليد (tok/s)": "182.0", "الـ prompt (tok/s)": "8,297" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "التوليد (tok/s)": "176.8", "الـ prompt (tok/s)": "6,952" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "التوليد (tok/s)": "176.9", "الـ prompt (tok/s)": "6,952" },
           { GPU: "RTX 3090", VRAM: "24 GB", "التوليد (tok/s)": "158.2", "الـ prompt (tok/s)": "5,175" },
           { GPU: "RTX 4080", VRAM: "16 GB", "التوليد (tok/s)": "142.5", "الـ prompt (tok/s)": "8,032" },
           { GPU: "RTX 4070 Ti SUPER", VRAM: "16 GB", "التوليد (tok/s)": "132.3", "الـ prompt (tok/s)": "6,925" },
@@ -1258,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp discussion #15013: الأداء على NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- نتائج Llama 2 7B Q4_0 التي أرسلها المستخدمون.",
           "[llama.cpp discussion #10879: الأداء على Vulkan](https://github.com/ggml-org/llama.cpp/discussions/10879) -- نتائج أرسلها المستخدمون لبطاقات AMD وIntel وNVIDIA.",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- الأسعار الموصى بها وأسعار التجزئة وأسعار المبيعات المكتملة على eBay (تحديث 2026-10-15؛ رقم RTX 3090 المستعملة مؤرخ في 2026-11-23).",
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- الأسعار الموصى بها وأسعار التجزئة وأسعار المبيعات المكتملة على eBay (تحديث 2026-11-27؛ رقم RTX 3090 المستعملة مؤرخ في 2026-11-23).",
           "[heise: Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- تقرير عن التوفر (2026-01-15).",
           "[Wccftech: أسعار تجزئة RTX 5060 Ti 16 GB](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- فحص إعلانات التجزئة (2026-01-27).",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) و[عائلة RTX 5070](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- الذاكرة والطاقة ومتطلبات النظام.",
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/ar/local-llms/best-gpus-for-local-llms",
       inLanguage: "ar",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [
@@ -1430,7 +1430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "Escolha a GPU para LLMs locais primeiro pela VRAM e depois pela velocidade da memória e pelo preço atual. Em resultados do llama.cpp reportados por desenvolvedores, um modelo 7B Q4_0 gera 176.9 tokens/s em uma RTX 5070 Ti de 16 GB e 186.2 tokens/s em uma RTX 4090 de 24 GB, então a faixa de VRAM pesa mais do que o rótulo de topo de linha. Os preços de GPUs acompanhados estão muito acima do MSRP de lançamento, por isso cada placa vem com a fonte do benchmark e a faixa de preço observada.",
     metaDescription: "Em testes da comunidade com llama.cpp, um modelo 7B roda a 177 tok/s em uma RTX 5070 Ti e a 186 em uma RTX 4090. Compare GPUs por VRAM, velocidade e preço.",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     leadAnswerBlock: "**Escolha a GPU primeiro pela faixa de VRAM: 12 GB para modelos pequenos, 16 GB para modelos médios e 24 GB ou mais para modelos da classe 30B. Em resultados do llama.cpp reportados por desenvolvedores, um modelo 7B Q4_0 gera 176.9 tok/s em uma RTX 5070 Ti e 186.2 tok/s em uma RTX 4090, então faixa e preço importam mais do que o status de topo de linha.**",
     audience: "Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais",
     readTime: "12 min de leitura",
@@ -1473,8 +1473,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**Escolha a VRAM primeiro:** 12 GB servem para modelos de até cerca de 14B, 16 GB para modelos médios como o gpt-oss-20b, 24 GB para modelos densos de ~32B e 48 GB (duas placas de 24 GB) para modelos da classe 70B (estimativas, quantização da classe Q4).",
           "**A diferença de velocidade é pequena com modelos 7B:** os resultados do llama.cpp reportados por desenvolvedores dão 176.9 tok/s (RTX 5070 Ti, 16 GB) contra 186.2 tok/s (RTX 4090, 24 GB); o processamento do prompt difere mais (6,952 contra 11,993 tok/s).",
-          "**Os preços são voláteis:** segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15), a RTX 5090 é vendida por cerca de $4,500–4,700 contra um MSRP de $1,999, a RTX 5080 por $1,200–1,600 contra $999 e as RTX 4090 novas por $2,000–3,000. Os preços no Brasil podem variar bastante devido a impostos de importação.",
-          "**O caminho mais barato de 24 GB nos dados acompanhados:** uma RTX 3090 usada por cerca de $1,500–1,725 (vendas concluídas no eBay, mesmo rastreador, valor datado de 2026-11-23) alcança 158.2 tok/s, cerca de 85% de uma RTX 4090 no teste 7B.",
+          "**Os preços são voláteis:** segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-11-27), a RTX 5090 é vendida por cerca de $4,500–4,700 contra um MSRP de $1,999, a RTX 5080 por $1,200–1,600 contra $999 e as RTX 4090 novas por $2,000–3,000. Os preços no Brasil podem variar bastante devido a impostos de importação.",
+          "**O caminho NVIDIA mais barato de 24 GB nos dados acompanhados:** uma RTX 3090 usada por $1,500–1,725 (mediana $1,650; 225 vendas concluídas no eBay EUA, 13 a 23 de novembro de 2026, mesmo rastreador) alcança 158.2 tok/s, cerca de 85% de uma RTX 4090 no teste 7B. O mesmo rastreador mostra uma AMD RX 7900 XTX nova (24 GB) mais barata, por $900–1,000 (sem data).",
           "**NVIDIA com CUDA é o caminho padrão.** Uma AMD RX 7900 XTX iguala a velocidade de geração da RTX 4090 no teste 7B com Vulkan (182.6 contra 188.0 tok/s, mesmo placar), mas processa prompts cerca de 2.5 vezes mais devagar.",
         ],
       },
@@ -1483,7 +1483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Faixas de GPU por VRAM, velocidade e preço observado",
         content: [
           "A tabela lista cada GPU com sua VRAM, sua velocidade de geração do llama.cpp reportada por desenvolvedores em um modelo 7B Q4_0 e a faixa de preço nos EUA vista nas fontes indicadas abaixo. As velocidades não são medições da PromptQuorum, e modelos maiores ou contexto mais longo rodam mais devagar.",
-          "A velocidade é a geração de tokens (tg128) do Llama 2 7B Q4_0 com `llama-bench -ngl 99` e sem flash attention, retirada do [placar CUDA do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) enviado por usuários; o valor da RX 7900 XTX vem do [placar Vulkan do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/10879). Os preços são preços listados ou observados nos EUA do [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15; o valor da RTX 3090 usada é datado de 2026-11-23) e da [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). Não são ofertas nem garantias; confira os anúncios atuais.",
+          "A velocidade é a geração de tokens (tg128) do Llama 2 7B Q4_0 com `llama-bench -ngl 99` e sem flash attention, retirada do [placar CUDA do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) enviado por usuários; o valor da RX 7900 XTX vem do [placar Vulkan do llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/10879). Os preços são preços listados ou observados nos EUA do [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-11-27; o valor da RTX 3090 usada é datado de 2026-11-23) e da [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). Não são ofertas nem garantias; confira os anúncios atuais.",
         ],
         rows: [
           {
@@ -1507,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             GPU: "RTX 5070 Ti",
             VRAM: "16 GB",
-            "Velocidade (7B Q4_0)": "176.8 tok/s",
+            "Velocidade (7B Q4_0)": "176.9 tok/s",
             "Preço observado (EUA)": "~$750–900, estoque esporádico",
           },
           {
@@ -1532,7 +1532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             GPU: "RX 7900 XTX",
             VRAM: "24 GB",
             "Velocidade (7B Q4_0)": "182.6 tok/s",
-            "Preço observado (EUA)": "Não rastreado aqui",
+            "Preço observado (EUA)": "Nova $900–1,000 (sem data)",
           },
           {
             GPU: "RTX 5090",
@@ -1566,9 +1566,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 GB ou mais: modelos da classe 30B e 70B",
         content: [
-          "**RTX 4090 (24 GB):** 186.2 tok/s e 11,993 tok/s de processamento do prompt, a placa de 24 GB mais rápida nesses resultados. Os anúncios novos estavam a $2,000–3,000 contra um MSRP de $1,599, e as vendas usadas concluídas a $2,575–3,010 (mediana $2,860), segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
-          "**RTX 3090 (24 GB), usada:** 158.2 tok/s, cerca de 85% da RTX 4090, mas o processamento do prompt é menos da metade (5,175 contra 11,993 tok/s). As vendas usadas concluídas ficaram em cerca de $1,500–1,725 segundo o mesmo rastreador (valor datado de 2026-11-23).",
-          "**RTX 5090 (32 GB):** 290.0 tok/s, a placa mais rápida da tabela. No varejo ficou em torno de $4,500–4,700 contra um MSRP de $1,999, e as vendas usadas concluídas a $5,900–6,350. A NVIDIA indica [575 W de potência gráfica total e 1,000 W de potência de sistema necessária](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) para a configuração de referência.",
+          "**RTX 4090 (24 GB):** 186.2 tok/s e 11,993 tok/s de processamento do prompt, a placa de 24 GB mais rápida nesses resultados. Os anúncios novos estavam a $2,000–3,000 contra um MSRP de $1,599, e as vendas usadas concluídas a $2,575–3,010 (mediana $2,860; 216 vendas, outubro de 2026), segundo o [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
+          "**RTX 3090 (24 GB), usada:** 158.2 tok/s, cerca de 85% da RTX 4090, mas o processamento do prompt é menos da metade (5,175 contra 11,993 tok/s). As vendas usadas concluídas ficaram em $1,500–1,725 (mediana $1,650; 225 vendas no eBay EUA, 13 a 23 de novembro de 2026) segundo o mesmo rastreador.",
+          "**RTX 5090 (32 GB):** 290.0 tok/s, a placa mais rápida da tabela. No varejo ficou em torno de $4,500–4,700 contra um MSRP de $1,999, e as vendas usadas concluídas a $5,660–6,200 (mediana $6,000; 111 vendas no eBay EUA, 6 a 25 de novembro de 2026). A NVIDIA indica [575 W de potência gráfica total e 1,000 W de potência de sistema necessária](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) para a configuração de referência.",
           "**48 GB ou mais:** modelos da classe 70B em Q4 precisam de cerca de 43 GB só para os pesos ([Ollama](https://ollama.com/library/llama3.3) informa um download de 43 GB para llama3.3:70b), então exigem duas placas de 24 GB ou uma placa profissional de 48 GB ou mais. Veja [LLMs locais com várias GPUs](/pt/local-llms/multi-gpu-local-llms).",
           "**Segurança elétrica:** GPUs de alta potência consomem muita corrente de forma contínua. Siga as instruções do fabricante da placa sobre fonte e cabos, encaixe totalmente os conectores de energia e consulte um eletricista qualificado sobre a capacidade do circuito. Este guia não é orientação de segurança elétrica.",
         ],
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", VRAM: "32 GB", "Geração (tok/s)": "290.0", "Prompt (tok/s)": "14,073" },
           { GPU: "RTX 4090", VRAM: "24 GB", "Geração (tok/s)": "186.2", "Prompt (tok/s)": "11,993" },
           { GPU: "RTX 5080", VRAM: "16 GB", "Geração (tok/s)": "182.0", "Prompt (tok/s)": "8,297" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "Geração (tok/s)": "176.8", "Prompt (tok/s)": "6,952" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "Geração (tok/s)": "176.9", "Prompt (tok/s)": "6,952" },
           { GPU: "RTX 3090", VRAM: "24 GB", "Geração (tok/s)": "158.2", "Prompt (tok/s)": "5,175" },
           { GPU: "RTX 4080", VRAM: "16 GB", "Geração (tok/s)": "142.5", "Prompt (tok/s)": "8,032" },
           { GPU: "RTX 4070 Ti SUPER", VRAM: "16 GB", "Geração (tok/s)": "132.3", "Prompt (tok/s)": "6,925" },
@@ -1724,7 +1724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp discussion #15013: desempenho com NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- resultados de Llama 2 7B Q4_0 enviados por usuários.",
           "[llama.cpp discussion #10879: desempenho com Vulkan](https://github.com/ggml-org/llama.cpp/discussions/10879) -- resultados enviados por usuários para AMD, Intel e NVIDIA.",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- preços MSRP, de varejo e de vendas concluídas no eBay (atualizado em 2026-10-15; valor da RTX 3090 usada datado de 2026-11-23).",
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- preços MSRP, de varejo e de vendas concluídas no eBay (atualizado em 2026-11-27; valor da RTX 3090 usada datado de 2026-11-23).",
           "[heise: Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- relato de disponibilidade (2026-01-15).",
           "[Wccftech: preços de varejo da RTX 5060 Ti 16 GB](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- verificação de anúncios de varejo (2026-01-27).",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) e [família RTX 5070](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- memória, potência e requisitos do sistema.",
@@ -1741,7 +1741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/pt/local-llms/best-gpus-for-local-llms",
       inLanguage: "pt-BR",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "Wählen Sie die GPU für lokale LLMs zuerst nach VRAM aus, danach nach Speichergeschwindigkeit und aktuellem Preis. In von Entwicklern gemeldeten llama.cpp-Ergebnissen erzeugt ein 7B-Modell mit Q4_0 auf einer RTX 5070 Ti mit 16 GB 176,9 Token/s und auf einer RTX 4090 mit 24 GB 186,2 Token/s – die VRAM-Stufe zählt also mehr als das Flaggschiff-Etikett. Die erfassten GPU-Preise liegen weit über der Marktstart-UVP; daher steht bei jeder Karte die Benchmark-Quelle und die beobachtete Preisspanne.",
     metaDescription: "In Community-Tests mit llama.cpp läuft ein 7B-Modell mit 177 Token/s auf einer RTX 5070 Ti und 186 auf einer RTX 4090. GPUs nach VRAM, Tempo und Preis.",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     leadAnswerBlock: "**Wählen Sie die GPU zuerst nach VRAM-Stufe: 12 GB für kleine Modelle, 16 GB für mittelgroße Modelle, 24 GB oder mehr für Modelle der 30B-Klasse. In von Entwicklern gemeldeten llama.cpp-Ergebnissen erzeugt ein 7B-Modell mit Q4_0 auf einer RTX 5070 Ti 176,9 Token/s und auf einer RTX 4090 186,2 Token/s – Stufe und Preis zählen mehr als der Flaggschiff-Status.**",
     audience: "Entwickler, die mit Ollama oder LM Studio vertraut sind und lokale LLM-Workflows optimieren",
     readTime: "12 Min. Lesezeit",
@@ -1939,8 +1939,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**VRAM zuerst wählen:** 12 GB genügen für Modelle bis etwa 14B, 16 GB für mittelgroße Modelle wie gpt-oss-20b, 24 GB für dichte Modelle um 32B und 48 GB (zwei 24-GB-Karten) für Modelle der 70B-Klasse (Schätzungen, Quantisierung der Q4-Klasse).",
           "**Der Geschwindigkeitsunterschied ist bei 7B-Modellen klein:** Die gemeldeten llama.cpp-Ergebnisse liefern 176,9 Token/s (RTX 5070 Ti, 16 GB) gegenüber 186,2 Token/s (RTX 4090, 24 GB); bei der Prompt-Verarbeitung ist der Abstand größer (6.952 gegenüber 11.993 Token/s).",
-          "**Die Preise schwanken stark:** Laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15) kostet die RTX 5090 im Handel rund 4.500–4.700 US-$ bei einer UVP von 1.999 US-$, die RTX 5080 1.200–1.600 US-$ bei 999 US-$ und neue RTX 4090 2.000–3.000 US-$. Die Preise gelten für den US-Handel; in Deutschland weichen sie ab.",
-          "**Günstigster 24-GB-Weg in den erfassten Daten:** Eine gebrauchte RTX 3090 für etwa 1.500–1.725 US-$ (abgeschlossene eBay-Verkäufe, gleicher Tracker, Stand 2026-11-23) erreicht 158,2 Token/s, rund 85 % einer RTX 4090 im 7B-Test.",
+          "**Die Preise schwanken stark:** Laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-11-27) kostet die RTX 5090 im Handel rund 4.500–4.700 US-$ bei einer UVP von 1.999 US-$, die RTX 5080 1.200–1.600 US-$ bei 999 US-$ und neue RTX 4090 2.000–3.000 US-$. Die Preise gelten für den US-Handel; in Deutschland weichen sie ab.",
+          "**Günstigster 24-GB-NVIDIA-Weg in den erfassten Daten:** Eine gebrauchte RTX 3090 für 1.500–1.725 US-$ (Median 1.650 US-$; 225 abgeschlossene US-eBay-Verkäufe, 13.–23. November 2026, gleicher Tracker) erreicht 158,2 Token/s, rund 85 % einer RTX 4090 im 7B-Test. Derselbe Tracker führt eine neue AMD RX 7900 XTX (24 GB) günstiger, mit 900–1.000 US-$ (ohne Datum).",
           "**NVIDIA mit CUDA ist der Standardweg.** Eine AMD RX 7900 XTX erreicht im Vulkan-7B-Test die Generierungsgeschwindigkeit der RTX 4090 (182,6 gegenüber 188,0 Token/s, gleiche Tabelle), verarbeitet Prompts aber etwa 2,5-mal langsamer.",
         ],
       },
@@ -1949,7 +1949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "GPU-Stufen nach VRAM, Geschwindigkeit und beobachtetem Preis",
         content: [
           "Die Tabelle zeigt jede GPU mit VRAM, der von Entwicklern gemeldeten llama.cpp-Generierungsgeschwindigkeit bei einem 7B-Modell mit Q4_0 und der US-Preisspanne aus den unten genannten Quellen. Die Geschwindigkeiten sind keine Messungen von PromptQuorum; größere Modelle oder längerer Kontext laufen langsamer.",
-          "Die Geschwindigkeit ist die Token-Generierung (tg128) für Llama 2 7B Q4_0 mit `llama-bench -ngl 99` und ohne Flash Attention, entnommen der von Nutzern eingereichten [llama.cpp-CUDA-Tabelle](https://github.com/ggml-org/llama.cpp/discussions/15013); der Wert der RX 7900 XTX stammt aus der [llama.cpp-Vulkan-Tabelle](https://github.com/ggml-org/llama.cpp/discussions/10879). Die Preise sind gelistete oder beobachtete US-Preise aus dem [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15; der Wert für die gebrauchte RTX 3090 hat den Stand 2026-11-23) und von [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). Sie sind keine Angebote oder Zusagen; prüfen Sie die aktuellen Listings.",
+          "Die Geschwindigkeit ist die Token-Generierung (tg128) für Llama 2 7B Q4_0 mit `llama-bench -ngl 99` und ohne Flash Attention, entnommen der von Nutzern eingereichten [llama.cpp-CUDA-Tabelle](https://github.com/ggml-org/llama.cpp/discussions/15013); der Wert der RX 7900 XTX stammt aus der [llama.cpp-Vulkan-Tabelle](https://github.com/ggml-org/llama.cpp/discussions/10879). Die Preise sind gelistete oder beobachtete US-Preise aus dem [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-11-27; der Wert für die gebrauchte RTX 3090 hat den Stand 2026-11-23) und von [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). Sie sind keine Angebote oder Zusagen; prüfen Sie die aktuellen Listings.",
         ],
         rows: [
           {
@@ -1973,7 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             GPU: "RTX 5070 Ti",
             VRAM: "16 GB",
-            "Tempo (7B Q4_0)": "176,8 Token/s",
+            "Tempo (7B Q4_0)": "176,9 Token/s",
             "Beobachteter US-Preis": "~750–900 US-$, sporadisch lieferbar",
           },
           {
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             GPU: "RX 7900 XTX",
             VRAM: "24 GB",
             "Tempo (7B Q4_0)": "182,6 Token/s",
-            "Beobachteter US-Preis": "Hier nicht erfasst",
+            "Beobachteter US-Preis": "Neu 900–1.000 US-$ (ohne Datum)",
           },
           {
             GPU: "RTX 5090",
@@ -2032,9 +2032,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 GB und mehr: Modelle der 30B- und 70B-Klasse",
         content: [
-          "**RTX 4090 (24 GB):** 186,2 Token/s und 11.993 Token/s bei der Prompt-Verarbeitung, die schnellste 24-GB-Karte in diesen Ergebnissen. Neue Angebote lagen bei 2.000–3.000 US-$ gegenüber einer UVP von 1.599 US-$, abgeschlossene Gebrauchtverkäufe bei 2.575–3.010 US-$ (Median 2.860 US-$), laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
-          "**RTX 3090 (24 GB), gebraucht:** 158,2 Token/s, rund 85 % der RTX 4090, aber die Prompt-Verarbeitung liegt bei weniger als der Hälfte (5.175 gegenüber 11.993 Token/s). Abgeschlossene Gebrauchtverkäufe lagen laut demselben Tracker bei etwa 1.500–1.725 US-$ (Stand 2026-11-23).",
-          "**RTX 5090 (32 GB):** 290,0 Token/s, die schnellste Karte der Tabelle. Im Handel lag sie bei rund 4.500–4.700 US-$ gegenüber einer UVP von 1.999 US-$, abgeschlossene Gebrauchtverkäufe bei 5.900–6.350 US-$. NVIDIA nennt für die Referenzkonfiguration [575 W Total Graphics Power und 1.000 W erforderliche Systemleistung](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/).",
+          "**RTX 4090 (24 GB):** 186,2 Token/s und 11.993 Token/s bei der Prompt-Verarbeitung, die schnellste 24-GB-Karte in diesen Ergebnissen. Neue Angebote lagen bei 2.000–3.000 US-$ gegenüber einer UVP von 1.599 US-$, abgeschlossene Gebrauchtverkäufe bei 2.575–3.010 US-$ (Median 2.860 US-$; 216 Verkäufe, Oktober 2026), laut [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
+          "**RTX 3090 (24 GB), gebraucht:** 158,2 Token/s, rund 85 % der RTX 4090, aber die Prompt-Verarbeitung liegt bei weniger als der Hälfte (5.175 gegenüber 11.993 Token/s). Abgeschlossene Gebrauchtverkäufe lagen laut demselben Tracker bei 1.500–1.725 US-$ (Median 1.650 US-$; 225 US-eBay-Verkäufe, 13.–23. November 2026).",
+          "**RTX 5090 (32 GB):** 290,0 Token/s, die schnellste Karte der Tabelle. Im Handel lag sie bei rund 4.500–4.700 US-$ gegenüber einer UVP von 1.999 US-$, abgeschlossene Gebrauchtverkäufe bei 5.660–6.200 US-$ (Median 6.000 US-$; 111 US-eBay-Verkäufe, 6.–25. November 2026). NVIDIA nennt für die Referenzkonfiguration [575 W Total Graphics Power und 1.000 W erforderliche Systemleistung](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/).",
           "**48 GB und mehr:** Modelle der 70B-Klasse benötigen bei Q4 allein für die Gewichte etwa 43 GB ([Ollama](https://ollama.com/library/llama3.3) nennt für llama3.3:70b einen Download von 43 GB), also zwei 24-GB-Karten oder eine Workstation-Karte mit 48 GB oder mehr. Siehe [Multi-GPU für lokale LLMs](/de/local-llms/multi-gpu-local-llms).",
           "**Elektrische Sicherheit:** Leistungsstarke GPUs ziehen dauerhaft hohe Ströme. Befolgen Sie die Netzteil- und Kabelhinweise des Kartenherstellers, stecken Sie Stromstecker vollständig ein und fragen Sie bei der Kapazität des Stromkreises eine Elektrofachkraft. Dieser Leitfaden ist keine Beratung zur elektrischen Sicherheit.",
         ],
@@ -2101,7 +2101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", VRAM: "32 GB", "Generierung (Token/s)": "290,0", "Prompt (Token/s)": "14.073" },
           { GPU: "RTX 4090", VRAM: "24 GB", "Generierung (Token/s)": "186,2", "Prompt (Token/s)": "11.993" },
           { GPU: "RTX 5080", VRAM: "16 GB", "Generierung (Token/s)": "182,0", "Prompt (Token/s)": "8.297" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "Generierung (Token/s)": "176,8", "Prompt (Token/s)": "6.952" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "Generierung (Token/s)": "176,9", "Prompt (Token/s)": "6.952" },
           { GPU: "RTX 3090", VRAM: "24 GB", "Generierung (Token/s)": "158,2", "Prompt (Token/s)": "5.175" },
           { GPU: "RTX 4080", VRAM: "16 GB", "Generierung (Token/s)": "142,5", "Prompt (Token/s)": "8.032" },
           { GPU: "RTX 4070 Ti SUPER", VRAM: "16 GB", "Generierung (Token/s)": "132,3", "Prompt (Token/s)": "6.925" },
@@ -2190,7 +2190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp-Diskussion #15013: Leistung mit NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- von Nutzern eingereichte Ergebnisse für Llama 2 7B Q4_0.",
           "[llama.cpp-Diskussion #10879: Leistung mit Vulkan](https://github.com/ggml-org/llama.cpp/discussions/10879) -- von Nutzern eingereichte Ergebnisse für AMD, Intel und NVIDIA.",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- UVP-, Handels- und eBay-Verkaufspreise (aktualisiert am 2026-10-15; Wert für die gebrauchte RTX 3090 mit Stand 2026-11-23).",
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- UVP-, Handels- und eBay-Verkaufspreise (aktualisiert am 2026-11-27; Wert für die gebrauchte RTX 3090 mit Stand 2026-11-23).",
           "[heise: Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- Bericht zur Verfügbarkeit (2026-01-15).",
           "[Wccftech: Handelspreise der RTX 5060 Ti 16 GB](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- Prüfung von Handelsangeboten (2026-01-27).",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) und [RTX-5070-Familie](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- Speicher, Leistungsaufnahme und Systemanforderungen.",
@@ -2207,7 +2207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/de/local-llms/best-gpus-for-local-llms",
       inLanguage: "de",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [
@@ -2362,7 +2362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "Choisissez le GPU pour vos LLM locaux d’abord selon la VRAM, puis selon la vitesse mémoire et le prix actuel. Dans les résultats llama.cpp rapportés par des développeurs, un modèle 7B en Q4_0 génère 176.9 tokens/s sur une RTX 5070 Ti de 16 Go et 186.2 tokens/s sur une RTX 4090 de 24 Go : le palier de VRAM compte plus que l’étiquette haut de gamme. Les prix de GPU relevés sont très supérieurs au prix de lancement conseillé ; chaque carte est donc associée à sa source de benchmark et à sa fourchette de prix observée.",
     metaDescription: "Dans les tests communautaires llama.cpp, un modèle 7B tourne à 177 tok/s sur une RTX 5070 Ti et 186 sur une RTX 4090. GPU comparés : VRAM, vitesse, prix.",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     leadAnswerBlock: "**Choisissez le GPU d’abord selon le palier de VRAM : 12 Go pour les petits modèles, 16 Go pour les modèles moyens, 24 Go ou plus pour la classe 30B. Dans les résultats llama.cpp rapportés par des développeurs, un modèle 7B en Q4_0 génère 176.9 tok/s sur une RTX 5070 Ti et 186.2 tok/s sur une RTX 4090 : palier et prix comptent plus que le statut haut de gamme.**",
     audience: "Développeurs familiers d’Ollama ou de LM Studio qui optimisent leurs flux de travail avec des LLM locaux",
     readTime: "12 min de lecture",
@@ -2405,8 +2405,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**Choisissez d’abord la VRAM :** 12 Go conviennent aux modèles jusqu’à environ 14B, 16 Go aux modèles moyens comme gpt-oss-20b, 24 Go aux modèles denses d’environ 32B et 48 Go (deux cartes de 24 Go) aux modèles de classe 70B (estimations, quantification de classe Q4).",
           "**L’écart de vitesse est faible sur les modèles 7B :** les résultats llama.cpp rapportés par des développeurs donnent 176.9 tok/s (RTX 5070 Ti, 16 Go) contre 186.2 tok/s (RTX 4090, 24 Go) ; le traitement du prompt diffère davantage (6 952 contre 11 993 tok/s).",
-          "**Les prix sont volatils :** selon le [suivi d’InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15), la RTX 5090 se vend autour de 4 500–4 700 $ US pour un prix conseillé de 1 999 $ US, la RTX 5080 1 200–1 600 $ US contre 999 $ US, et les RTX 4090 neuves 2 000–3 000 $ US. Ces prix sont ceux du marché américain ; ils diffèrent en France.",
-          "**La voie la moins chère en 24 Go dans les données relevées :** une RTX 3090 d’occasion à environ 1 500–1 725 $ US (ventes conclues sur eBay, même suivi, chiffre daté du 2026-11-23) atteint 158.2 tok/s, soit environ 85 % d’une RTX 4090 sur le test 7B.",
+          "**Les prix sont volatils :** selon le [suivi d’InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-11-27), la RTX 5090 se vend autour de 4 500–4 700 $ US pour un prix conseillé de 1 999 $ US, la RTX 5080 1 200–1 600 $ US contre 999 $ US, et les RTX 4090 neuves 2 000–3 000 $ US. Ces prix sont ceux du marché américain ; ils diffèrent en France.",
+          "**La voie NVIDIA la moins chère en 24 Go dans les données relevées :** une RTX 3090 d’occasion à 1 500–1 725 $ US (médiane 1 650 $ US ; 225 ventes conclues sur eBay États-Unis, 13-23 novembre 2026, même suivi) atteint 158.2 tok/s, soit environ 85 % d’une RTX 4090 sur le test 7B. Le même suivi affiche une AMD RX 7900 XTX neuve (24 Go) moins chère, à 900–1 000 $ US (non daté).",
           "**NVIDIA avec CUDA est la voie par défaut.** Une AMD RX 7900 XTX égale la vitesse de génération de la RTX 4090 sur le test 7B Vulkan (182.6 contre 188.0 tok/s, même tableau), mais traite les prompts environ 2.5 fois plus lentement.",
         ],
       },
@@ -2415,7 +2415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Paliers de GPU selon la VRAM, la vitesse et le prix observé",
         content: [
           "Le tableau liste chaque GPU avec sa VRAM, sa vitesse de génération llama.cpp rapportée par des développeurs sur un modèle 7B Q4_0 et la fourchette de prix américaine relevée dans les sources ci-dessous. Les vitesses ne sont pas des mesures de PromptQuorum ; les modèles plus grands ou un contexte plus long vont plus lentement.",
-          "La vitesse correspond à la génération de tokens (tg128) de Llama 2 7B Q4_0 avec `llama-bench -ngl 99` et sans flash attention, tirée du [tableau CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) alimenté par les utilisateurs ; la valeur de la RX 7900 XTX provient du [tableau Vulkan de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/10879). Les prix sont des prix affichés ou observés aux États-Unis, issus du [suivi d’InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15 ; le chiffre de la RTX 3090 d’occasion est daté du 2026-11-23) et de [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). Ce ne sont ni des offres ni des garanties ; vérifiez les annonces actuelles.",
+          "La vitesse correspond à la génération de tokens (tg128) de Llama 2 7B Q4_0 avec `llama-bench -ngl 99` et sans flash attention, tirée du [tableau CUDA de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/15013) alimenté par les utilisateurs ; la valeur de la RX 7900 XTX provient du [tableau Vulkan de llama.cpp](https://github.com/ggml-org/llama.cpp/discussions/10879). Les prix sont des prix affichés ou observés aux États-Unis, issus du [suivi d’InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-11-27 ; le chiffre de la RTX 3090 d’occasion est daté du 2026-11-23) et de [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) (2026-01-27). Ce ne sont ni des offres ni des garanties ; vérifiez les annonces actuelles.",
         ],
         rows: [
           {
@@ -2434,7 +2434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             GPU: "RTX 5070 Ti",
             VRAM: "16 Go",
-            "Vitesse (7B Q4_0)": "176.8 tok/s",
+            "Vitesse (7B Q4_0)": "176.9 tok/s",
             "Prix observé (É.-U.)": "~750–900 $ US, stock sporadique",
           },
           {
@@ -2455,7 +2455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Vitesse (7B Q4_0)": "186.2 tok/s",
             "Prix observé (É.-U.)": "Neuve 2 000–3 000 $ US / occasion ~2 575–3 010 $ US",
           },
-          { GPU: "RX 7900 XTX", VRAM: "24 Go", "Vitesse (7B Q4_0)": "182.6 tok/s", "Prix observé (É.-U.)": "Non suivi ici" },
+          { GPU: "RX 7900 XTX", VRAM: "24 Go", "Vitesse (7B Q4_0)": "182.6 tok/s", "Prix observé (É.-U.)": "Neuve 900–1 000 $ US (non daté)" },
           {
             GPU: "RTX 5090",
             VRAM: "32 Go",
@@ -2488,9 +2488,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 Go et plus : modèles de classe 30B et 70B",
         content: [
-          "**RTX 4090 (24 Go) :** 186.2 tok/s et 11 993 tok/s de traitement du prompt, la carte de 24 Go la plus rapide de ces résultats. Les annonces neuves étaient à 2 000–3 000 $ US pour un prix conseillé de 1 599 $ US, et les ventes d’occasion conclues à 2 575–3 010 $ US (médiane 2 860 $ US), selon le [suivi d’InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
-          "**RTX 3090 (24 Go), d’occasion :** 158.2 tok/s, environ 85 % de la RTX 4090, mais le traitement du prompt est inférieur de plus de moitié (5 175 contre 11 993 tok/s). Les ventes d’occasion conclues étaient d’environ 1 500–1 725 $ US selon le même suivi (chiffre daté du 2026-11-23).",
-          "**RTX 5090 (32 Go) :** 290.0 tok/s, la carte la plus rapide du tableau. En boutique, elle se situait autour de 4 500–4 700 $ US pour un prix conseillé de 1 999 $ US, et les ventes d’occasion conclues à 5 900–6 350 $ US. NVIDIA indique [575 W de puissance graphique totale et 1 000 W de puissance système requise](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) pour la configuration de référence.",
+          "**RTX 4090 (24 Go) :** 186.2 tok/s et 11 993 tok/s de traitement du prompt, la carte de 24 Go la plus rapide de ces résultats. Les annonces neuves étaient à 2 000–3 000 $ US pour un prix conseillé de 1 599 $ US, et les ventes d’occasion conclues à 2 575–3 010 $ US (médiane 2 860 $ US ; 216 ventes, octobre 2026), selon le [suivi d’InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/).",
+          "**RTX 3090 (24 Go), d’occasion :** 158.2 tok/s, environ 85 % de la RTX 4090, mais le traitement du prompt est inférieur de plus de moitié (5 175 contre 11 993 tok/s). Les ventes d’occasion conclues se situaient à 1 500–1 725 $ US (médiane 1 650 $ US ; 225 ventes sur eBay États-Unis, 13-23 novembre 2026) selon le même suivi.",
+          "**RTX 5090 (32 Go) :** 290.0 tok/s, la carte la plus rapide du tableau. En boutique, elle se situait autour de 4 500–4 700 $ US pour un prix conseillé de 1 999 $ US, et les ventes d’occasion conclues à 5 660–6 200 $ US (médiane 6 000 $ US ; 111 ventes sur eBay États-Unis, 6-25 novembre 2026). NVIDIA indique [575 W de puissance graphique totale et 1 000 W de puissance système requise](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) pour la configuration de référence.",
           "**48 Go et plus :** les modèles de classe 70B en Q4 exigent environ 43 Go rien que pour les poids ([Ollama](https://ollama.com/library/llama3.3) indique 43 Go de téléchargement pour llama3.3:70b) ; il faut donc deux cartes de 24 Go ou une carte professionnelle de 48 Go ou plus. Voir [LLM locaux multi-GPU](/fr/local-llms/multi-gpu-local-llms).",
           "**Sécurité électrique :** les GPU de forte puissance appellent un courant élevé et soutenu. Suivez les consignes d’alimentation et de câblage du fabricant de la carte, enfoncez complètement les connecteurs d’alimentation et demandez à un électricien qualifié ce que supporte votre circuit. Ce guide ne constitue pas un conseil de sécurité électrique.",
         ],
@@ -2557,7 +2557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", VRAM: "32 Go", "Génération (tok/s)": "290.0", "Prompt (tok/s)": "14 073" },
           { GPU: "RTX 4090", VRAM: "24 Go", "Génération (tok/s)": "186.2", "Prompt (tok/s)": "11 993" },
           { GPU: "RTX 5080", VRAM: "16 Go", "Génération (tok/s)": "182.0", "Prompt (tok/s)": "8 297" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 Go", "Génération (tok/s)": "176.8", "Prompt (tok/s)": "6 952" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 Go", "Génération (tok/s)": "176.9", "Prompt (tok/s)": "6 952" },
           { GPU: "RTX 3090", VRAM: "24 Go", "Génération (tok/s)": "158.2", "Prompt (tok/s)": "5 175" },
           { GPU: "RTX 4080", VRAM: "16 Go", "Génération (tok/s)": "142.5", "Prompt (tok/s)": "8 032" },
           { GPU: "RTX 4070 Ti SUPER", VRAM: "16 Go", "Génération (tok/s)": "132.3", "Prompt (tok/s)": "6 925" },
@@ -2646,7 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp discussion #15013 : performances avec NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- résultats Llama 2 7B Q4_0 soumis par les utilisateurs.",
           "[llama.cpp discussion #10879 : performances avec Vulkan](https://github.com/ggml-org/llama.cpp/discussions/10879) -- résultats soumis par les utilisateurs pour AMD, Intel et NVIDIA.",
-          "[InsiderLLM : NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- prix conseillés, prix en boutique et ventes conclues sur eBay (mis à jour le 2026-10-15 ; chiffre de la RTX 3090 d’occasion daté du 2026-11-23).",
+          "[InsiderLLM : NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- prix conseillés, prix en boutique et ventes conclues sur eBay (mis à jour le 2026-11-27 ; chiffre de la RTX 3090 d’occasion daté du 2026-11-23).",
           "[heise : Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- rapport sur la disponibilité (2026-01-15).",
           "[Wccftech : prix en boutique de la RTX 5060 Ti 16 Go](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- relevé d’annonces (2026-01-27).",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) et [famille RTX 5070](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- mémoire, puissance et exigences système.",
@@ -2663,7 +2663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/fr/local-llms/best-gpus-for-local-llms",
       inLanguage: "fr",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [
@@ -2818,7 +2818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "ローカルLLM用のGPUは、まずVRAM容量、次にメモリ速度と現在の価格で選びます。開発者が報告したllama.cppの結果では、7B Q4_0モデルの生成速度はVRAM 16 GBのRTX 5070 Tiで176.9 tok/s、VRAM 24 GBのRTX 4090で186.2 tok/sです。上位モデルかどうかより、VRAMの区分が重要です。追跡したGPU価格は発売時の希望小売価格を大きく上回っているため、各カードにベンチマークの出典と観測価格帯を併記しています。",
     metaDescription: "llama.cppのコミュニティ計測では7BモデルがRTX 5070 Tiで177 tok/s、RTX 4090で186 tok/s。VRAM別にGPUの速度と観測価格を比較します。",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     leadAnswerBlock: "**GPUはまずVRAMの区分で選びます。小型モデルは12 GB、中型モデルは16 GB、30B級は24 GB以上が目安です。開発者が報告したllama.cppの結果では、7B Q4_0モデルの生成速度はRTX 5070 Tiで176.9 tok/s、RTX 4090で186.2 tok/sです。上位モデルかどうかより、VRAM区分と価格が重要です。**",
     audience: "OllamaやLM Studioに慣れ、ローカルLLMのワークフローを最適化したい開発者",
     readTime: "12分で読める",
@@ -2855,8 +2855,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**まずVRAMで選ぶ：** 12 GBは約14Bまで、16 GBはgpt-oss-20bなどの中型、24 GBは約32Bの密モデル、48 GB（24 GBカード2枚）は70B級が目安です（推定、Q4級の量子化）。",
           "**7Bモデルでは速度差が小さい：** 開発者報告のllama.cpp結果は、RTX 5070 Ti（16 GB）が176.9 tok/s、RTX 4090（24 GB）が186.2 tok/sです。プロンプト処理の差は大きく、6,952 tok/sと11,993 tok/sです。",
-          "**価格は変動が大きい：** [InsiderLLMのトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（出典の更新日2026-10-15）では、RTX 5090は小売で約$4,500–4,700（希望小売価格$1,999）、RTX 5080は$1,200–1,600（$999）、新品のRTX 4090は$2,000–3,000です。価格は米国市場のもので、日本では異なります。",
-          "**追跡データで最も安い24 GBの選択肢：** 中古のRTX 3090は約$1,500–1,725（eBayの成約、同じトラッカー、2026-11-23付の数値）で、7Bテストは158.2 tok/s、RTX 4090の約85%です。",
+          "**価格は変動が大きい：** [InsiderLLMのトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（出典の更新日2026-11-27）では、RTX 5090は小売で約$4,500–4,700（希望小売価格$1,999）、RTX 5080は$1,200–1,600（$999）、新品のRTX 4090は$2,000–3,000です。価格は米国市場のもので、日本では異なります。",
+          "**追跡データで最も安い24 GBのNVIDIAの選択肢：** 中古のRTX 3090は$1,500–1,725（中央値$1,650、eBay米国の成約225件、2026年11月13～23日、同じトラッカー）で、7Bテストは158.2 tok/s、RTX 4090の約85%です。同じトラッカーには、より安い新品のAMD RX 7900 XTX（24 GB）が$900–1,000（日付なし）で掲載されています。",
           "**NVIDIAとCUDAが標準的な選択です。** AMD RX 7900 XTXはVulkanの7Bテストで生成速度がRTX 4090並み（182.6対188.0 tok/s、同じ表）ですが、プロンプト処理は約2.5倍遅くなります。",
         ],
       },
@@ -2865,17 +2865,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "VRAM・速度・観測価格によるGPU区分",
         content: [
           "表は各GPUについて、VRAM、開発者が報告した7B Q4_0モデルでのllama.cpp生成速度、下記の出典で確認した米国の価格帯を示します。速度はPromptQuorumの計測値ではありません。大きなモデルや長いコンテキストでは遅くなります。",
-          "速度は、Llama 2 7B Q4_0の生成（tg128）で、`llama-bench -ngl 99`・Flash Attentionなしの結果です。ユーザー投稿の[llama.cpp CUDAスコアボード](https://github.com/ggml-org/llama.cpp/discussions/15013)から取得しました。RX 7900 XTXの値は[llama.cpp Vulkanスコアボード](https://github.com/ggml-org/llama.cpp/discussions/10879)によります。価格は[InsiderLLMのトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（出典の更新日2026-10-15。中古RTX 3090の数値は2026-11-23付）と[Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)（2026-01-27）にある米国の掲載・観測価格で、販売の申し出や保証ではありません。最新の掲載を確認してください。",
+          "速度は、Llama 2 7B Q4_0の生成（tg128）で、`llama-bench -ngl 99`・Flash Attentionなしの結果です。ユーザー投稿の[llama.cpp CUDAスコアボード](https://github.com/ggml-org/llama.cpp/discussions/15013)から取得しました。RX 7900 XTXの値は[llama.cpp Vulkanスコアボード](https://github.com/ggml-org/llama.cpp/discussions/10879)によります。価格は[InsiderLLMのトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（出典の更新日2026-11-27。中古RTX 3090の数値は2026-11-23付）と[Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)（2026-01-27）にある米国の掲載・観測価格で、販売の申し出や保証ではありません。最新の掲載を確認してください。",
         ],
         rows: [
           { GPU: "RTX 3060", VRAM: "12 GB", "速度（7B Q4_0）": "75.6 tok/s", "観測価格（米国）": "中古のみ・ここでは未追跡" },
           { GPU: "RTX 5070", VRAM: "12 GB", "速度（7B Q4_0）": "127.5 tok/s", "観測価格（米国）": "ここでは未追跡" },
           { GPU: "RTX 5060 Ti", VRAM: "16 GB", "速度（7B Q4_0）": "90.9 tok/s", "観測価格（米国）": "$679から（掲載、2026-01-27）" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "速度（7B Q4_0）": "176.8 tok/s", "観測価格（米国）": "約$750–900、在庫は断続的" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "速度（7B Q4_0）": "176.9 tok/s", "観測価格（米国）": "約$750–900、在庫は断続的" },
           { GPU: "RTX 5080", VRAM: "16 GB", "速度（7B Q4_0）": "182.0 tok/s", "観測価格（米国）": "$1,200–1,600（希望小売価格$999）" },
           { GPU: "RTX 3090（中古）", VRAM: "24 GB", "速度（7B Q4_0）": "158.2 tok/s", "観測価格（米国）": "中古 約$1,500–1,725" },
           { GPU: "RTX 4090", VRAM: "24 GB", "速度（7B Q4_0）": "186.2 tok/s", "観測価格（米国）": "新品$2,000–3,000／中古 約$2,575–3,010" },
-          { GPU: "RX 7900 XTX", VRAM: "24 GB", "速度（7B Q4_0）": "182.6 tok/s", "観測価格（米国）": "ここでは未追跡" },
+          { GPU: "RX 7900 XTX", VRAM: "24 GB", "速度（7B Q4_0）": "182.6 tok/s", "観測価格（米国）": "新品$900–1,000（日付なし）" },
           { GPU: "RTX 5090", VRAM: "32 GB", "速度（7B Q4_0）": "290.0 tok/s", "観測価格（米国）": "約$4,500–4,700（希望小売価格$1,999）" },
         ],
         columns: ["GPU","VRAM","速度（7B Q4_0）","観測価格（米国）"],
@@ -2903,9 +2903,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 GB以上：30B級・70B級モデル",
         content: [
-          "**RTX 4090（24 GB）：** 186.2 tok/s、プロンプト処理11,993 tok/s。この結果では最速の24 GBカードです。[InsiderLLMのトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)によると、新品は$2,000–3,000（希望小売価格$1,599）、中古の成約は$2,575–3,010（中央値$2,860）でした。",
-          "**RTX 3090（24 GB）、中古：** 158.2 tok/sで、RTX 4090の約85%です。ただしプロンプト処理は半分未満です（5,175対11,993 tok/s）。同じトラッカーでは、中古の成約は約$1,500–1,725でした（2026-11-23付の数値）。",
-          "**RTX 5090（32 GB）：** 290.0 tok/sで、表の中で最速です。小売は約$4,500–4,700（希望小売価格$1,999）、中古の成約は$5,900–6,350でした。NVIDIAは基準構成について[総グラフィックス電力575 W、必要システム電力1,000 W](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)としています。",
+          "**RTX 4090（24 GB）：** 186.2 tok/s、プロンプト処理11,993 tok/s。この結果では最速の24 GBカードです。[InsiderLLMのトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)によると、新品は$2,000–3,000（希望小売価格$1,599）、中古の成約は$2,575–3,010（中央値$2,860、216件、2026年10月）でした。",
+          "**RTX 3090（24 GB）、中古：** 158.2 tok/sで、RTX 4090の約85%です。ただしプロンプト処理は半分未満です（5,175対11,993 tok/s）。同じトラッカーでは、中古の成約は$1,500–1,725でした（中央値$1,650、eBay米国225件、2026年11月13～23日）。",
+          "**RTX 5090（32 GB）：** 290.0 tok/sで、表の中で最速です。小売は約$4,500–4,700（希望小売価格$1,999）、中古の成約は$5,660–6,200でした（中央値$6,000、eBay米国111件、2026年11月6～25日）。NVIDIAは基準構成について[総グラフィックス電力575 W、必要システム電力1,000 W](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)としています。",
           "**48 GB以上：** Q4の70B級モデルは重みだけで約43 GB必要です（[Ollama](https://ollama.com/library/llama3.3)はllama3.3:70bのダウンロードを43 GBとしています）。24 GBカード2枚、または48 GB以上のワークステーション用カード1枚が必要です。[ローカルLLMのマルチGPU](/ja/local-llms/multi-gpu-local-llms)も参照してください。",
           "**電気的な安全：** 高出力GPUは大きな電流を長時間流します。カードメーカーの電源・ケーブルの指示に従い、電源コネクタを奥まで差し込み、回路の容量は有資格の電気技術者に相談してください。本ガイドは電気安全に関する助言ではありません。",
         ],
@@ -2972,7 +2972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", VRAM: "32 GB", "生成（tok/s）": "290.0", "プロンプト（tok/s）": "14,073" },
           { GPU: "RTX 4090", VRAM: "24 GB", "生成（tok/s）": "186.2", "プロンプト（tok/s）": "11,993" },
           { GPU: "RTX 5080", VRAM: "16 GB", "生成（tok/s）": "182.0", "プロンプト（tok/s）": "8,297" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "生成（tok/s）": "176.8", "プロンプト（tok/s）": "6,952" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "生成（tok/s）": "176.9", "プロンプト（tok/s）": "6,952" },
           { GPU: "RTX 3090", VRAM: "24 GB", "生成（tok/s）": "158.2", "プロンプト（tok/s）": "5,175" },
           { GPU: "RTX 4080", VRAM: "16 GB", "生成（tok/s）": "142.5", "プロンプト（tok/s）": "8,032" },
           { GPU: "RTX 4070 Ti SUPER", VRAM: "16 GB", "生成（tok/s）": "132.3", "プロンプト（tok/s）": "6,925" },
@@ -3061,7 +3061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp discussion #15013：NVIDIA CUDAでの性能](https://github.com/ggml-org/llama.cpp/discussions/15013) -- ユーザー投稿のLlama 2 7B Q4_0結果。",
           "[llama.cpp discussion #10879：Vulkanでの性能](https://github.com/ggml-org/llama.cpp/discussions/10879) -- AMD、Intel、NVIDIAのユーザー投稿結果。",
-          "[InsiderLLM：NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- 希望小売価格、小売価格、eBay成約価格（更新日2026-10-15。中古RTX 3090の数値は2026-11-23付）。",
+          "[InsiderLLM：NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- 希望小売価格、小売価格、eBay成約価格（更新日2026-11-27。中古RTX 3090の数値は2026-11-23付）。",
           "[heise：Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- 入手性に関する報道（2026-01-15）。",
           "[Wccftech：RTX 5060 Ti 16 GBの小売価格](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- 小売掲載の確認（2026-01-27）。",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)と[RTX 5070ファミリー](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- メモリ、電力、システム要件。",
@@ -3078,7 +3078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/ja/local-llms/best-gpus-for-local-llms",
       inLanguage: "ja",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [
@@ -3233,7 +3233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "为本地LLM选显卡，先看显存，再看显存速度和当前价格。开发者报告的llama.cpp结果显示，7B Q4_0模型在16 GB的RTX 5070 Ti上生成176.9 tok/s，在24 GB的RTX 4090上为186.2 tok/s，因此显存档位比旗舰型号更重要。已追踪的显卡价格远高于发布时的建议零售价，所以下文为每张显卡标明基准测试来源和观测到的价格区间。",
     metaDescription: "llama.cpp社区测试中，7B模型在RTX 5070 Ti上达177 tok/s，在RTX 4090上为186 tok/s。按显存、速度和观测价格对比各档显卡。",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     leadAnswerBlock: "**选显卡先看显存档位：小模型用12 GB，中型模型用16 GB，30B级模型用24 GB或以上。开发者报告的llama.cpp结果显示，7B Q4_0模型在RTX 5070 Ti上生成176.9 tok/s，在RTX 4090上为186.2 tok/s，因此档位和价格比旗舰地位更重要。**",
     audience: "熟悉Ollama或LM Studio、希望优化本地LLM工作流的开发者",
     readTime: "阅读约12分钟",
@@ -3270,8 +3270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**先选显存：** 12 GB适合约14B以内的模型，16 GB适合gpt-oss-20b这类中型模型，24 GB适合约32B的稠密模型，48 GB（两张24 GB显卡）适合70B级模型（估算，Q4级量化）。",
           "**7B模型上速度差距很小：** 开发者报告的llama.cpp结果为176.9 tok/s（RTX 5070 Ti，16 GB）对186.2 tok/s（RTX 4090，24 GB）；提示词处理的差距更大（6,952对11,993 tok/s）。",
-          "**价格波动大：** 据[InsiderLLM价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于2026-10-15），RTX 5090零售约$4,500–4,700（建议零售价$1,999），RTX 5080为$1,200–1,600（$999），全新RTX 4090为$2,000–3,000。",
-          "**追踪数据中最便宜的24 GB方案：** 二手RTX 3090约$1,500–1,725（eBay成交，同一追踪，数据日期2026-11-23），7B测试为158.2 tok/s，约为RTX 4090的85%。",
+          "**价格波动大：** 据[InsiderLLM价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于2026-11-27），RTX 5090零售约$4,500–4,700（建议零售价$1,999），RTX 5080为$1,200–1,600（$999），全新RTX 4090为$2,000–3,000。",
+          "**追踪数据中最便宜的24 GB NVIDIA方案：** 二手RTX 3090为$1,500–1,725（中位数$1,650；225笔eBay美国成交，2026年11月13日至23日，同一追踪），7B测试为158.2 tok/s，约为RTX 4090的85%。同一追踪页列出的全新AMD RX 7900 XTX（24 GB）更便宜，为$900–1,000（未注明日期）。",
           "**NVIDIA加CUDA是默认路径。** AMD RX 7900 XTX在Vulkan的7B测试中生成速度与RTX 4090接近（182.6对188.0 tok/s，同一榜单），但提示词处理慢约2.5倍。",
         ],
       },
@@ -3280,17 +3280,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "按显存、速度和观测价格划分的显卡档位",
         content: [
           "表中列出每张显卡的显存、开发者报告的7B Q4_0模型llama.cpp生成速度，以及下列来源中的美国价格区间。速度并非PromptQuorum的实测值；更大的模型或更长的上下文会更慢。",
-          "速度为Llama 2 7B Q4_0的令牌生成（tg128），使用`llama-bench -ngl 99`且不启用flash attention，取自用户提交的[llama.cpp CUDA榜单](https://github.com/ggml-org/llama.cpp/discussions/15013)；RX 7900 XTX的数值取自[llama.cpp Vulkan榜单](https://github.com/ggml-org/llama.cpp/discussions/10879)。价格为[InsiderLLM价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于2026-10-15；二手RTX 3090数据日期为2026-11-23）和[Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)（2026-01-27）中的美国挂牌或观测价格，不是报价或保证，请查看实时挂牌。",
+          "速度为Llama 2 7B Q4_0的令牌生成（tg128），使用`llama-bench -ngl 99`且不启用flash attention，取自用户提交的[llama.cpp CUDA榜单](https://github.com/ggml-org/llama.cpp/discussions/15013)；RX 7900 XTX的数值取自[llama.cpp Vulkan榜单](https://github.com/ggml-org/llama.cpp/discussions/10879)。价格为[InsiderLLM价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于2026-11-27；二手RTX 3090数据日期为2026-11-23）和[Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)（2026-01-27）中的美国挂牌或观测价格，不是报价或保证，请查看实时挂牌。",
         ],
         rows: [
           { GPU: "RTX 3060", "显存": "12 GB", "速度（7B Q4_0）": "75.6 tok/s", "观测美国价格": "仅二手；此处未追踪" },
           { GPU: "RTX 5070", "显存": "12 GB", "速度（7B Q4_0）": "127.5 tok/s", "观测美国价格": "此处未追踪" },
           { GPU: "RTX 5060 Ti", "显存": "16 GB", "速度（7B Q4_0）": "90.9 tok/s", "观测美国价格": "$679起（挂牌，2026-01-27）" },
-          { GPU: "RTX 5070 Ti", "显存": "16 GB", "速度（7B Q4_0）": "176.8 tok/s", "观测美国价格": "约$750–900，库存时有时无" },
+          { GPU: "RTX 5070 Ti", "显存": "16 GB", "速度（7B Q4_0）": "176.9 tok/s", "观测美国价格": "约$750–900，库存时有时无" },
           { GPU: "RTX 5080", "显存": "16 GB", "速度（7B Q4_0）": "182.0 tok/s", "观测美国价格": "$1,200–1,600（建议零售价$999）" },
           { GPU: "RTX 3090（二手）", "显存": "24 GB", "速度（7B Q4_0）": "158.2 tok/s", "观测美国价格": "二手约$1,500–1,725" },
           { GPU: "RTX 4090", "显存": "24 GB", "速度（7B Q4_0）": "186.2 tok/s", "观测美国价格": "全新$2,000–3,000／二手约$2,575–3,010" },
-          { GPU: "RX 7900 XTX", "显存": "24 GB", "速度（7B Q4_0）": "182.6 tok/s", "观测美国价格": "此处未追踪" },
+          { GPU: "RX 7900 XTX", "显存": "24 GB", "速度（7B Q4_0）": "182.6 tok/s", "观测美国价格": "全新$900–1,000（未注明日期）" },
           { GPU: "RTX 5090", "显存": "32 GB", "速度（7B Q4_0）": "290.0 tok/s", "观测美国价格": "约$4,500–4,700（建议零售价$1,999）" },
         ],
         columns: ["GPU","显存","速度（7B Q4_0）","观测美国价格"],
@@ -3318,9 +3318,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 GB及以上：30B级与70B级模型",
         content: [
-          "**RTX 4090（24 GB）：** 186.2 tok/s，提示词处理11,993 tok/s，是这些结果中最快的24 GB显卡。据[InsiderLLM价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，全新挂牌为$2,000–3,000（建议零售价$1,599），二手成交为$2,575–3,010（中位数$2,860）。",
-          "**RTX 3090（24 GB），二手：** 158.2 tok/s，约为RTX 4090的85%，但提示词处理不到一半（5,175对11,993 tok/s）。同一追踪显示二手成交约$1,500–1,725（数据日期2026-11-23）。",
-          "**RTX 5090（32 GB）：** 290.0 tok/s，表中最快。零售约$4,500–4,700（建议零售价$1,999），二手成交$5,900–6,350。NVIDIA对参考配置给出[575 W总显卡功耗和1,000 W所需系统功率](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)。",
+          "**RTX 4090（24 GB）：** 186.2 tok/s，提示词处理11,993 tok/s，是这些结果中最快的24 GB显卡。据[InsiderLLM价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，全新挂牌为$2,000–3,000（建议零售价$1,599），二手成交为$2,575–3,010（中位数$2,860；216笔，2026年10月）。",
+          "**RTX 3090（24 GB），二手：** 158.2 tok/s，约为RTX 4090的85%，但提示词处理不到一半（5,175对11,993 tok/s）。同一追踪显示二手成交为$1,500–1,725（中位数$1,650；225笔eBay美国成交，2026年11月13日至23日）。",
+          "**RTX 5090（32 GB）：** 290.0 tok/s，表中最快。零售约$4,500–4,700（建议零售价$1,999），二手成交$5,660–6,200（中位数$6,000；111笔eBay美国成交，2026年11月6日至25日）。NVIDIA对参考配置给出[575 W总显卡功耗和1,000 W所需系统功率](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)。",
           "**48 GB及以上：** Q4下70B级模型仅权重就需约43 GB（[Ollama](https://ollama.com/library/llama3.3)列出llama3.3:70b下载为43 GB），因此需要两张24 GB显卡或一张48 GB以上的工作站显卡。参见[本地LLM多显卡方案](/zh/local-llms/multi-gpu-local-llms)。",
           "**用电安全：** 高功耗显卡会持续吸取较大电流。请遵循显卡厂商的电源和线缆说明，插紧供电接口，并就线路容量咨询有资质的电工。本指南不构成用电安全建议。",
         ],
@@ -3382,7 +3382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", "显存": "32 GB", "生成（tok/s）": "290.0", "提示词（tok/s）": "14,073" },
           { GPU: "RTX 4090", "显存": "24 GB", "生成（tok/s）": "186.2", "提示词（tok/s）": "11,993" },
           { GPU: "RTX 5080", "显存": "16 GB", "生成（tok/s）": "182.0", "提示词（tok/s）": "8,297" },
-          { GPU: "RTX 5070 Ti", "显存": "16 GB", "生成（tok/s）": "176.8", "提示词（tok/s）": "6,952" },
+          { GPU: "RTX 5070 Ti", "显存": "16 GB", "生成（tok/s）": "176.9", "提示词（tok/s）": "6,952" },
           { GPU: "RTX 3090", "显存": "24 GB", "生成（tok/s）": "158.2", "提示词（tok/s）": "5,175" },
           { GPU: "RTX 4080", "显存": "16 GB", "生成（tok/s）": "142.5", "提示词（tok/s）": "8,032" },
           { GPU: "RTX 4070 Ti SUPER", "显存": "16 GB", "生成（tok/s）": "132.3", "提示词（tok/s）": "6,925" },
@@ -3471,7 +3471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp discussion #15013：NVIDIA CUDA性能](https://github.com/ggml-org/llama.cpp/discussions/15013) -- 用户提交的Llama 2 7B Q4_0结果。",
           "[llama.cpp discussion #10879：Vulkan性能](https://github.com/ggml-org/llama.cpp/discussions/10879) -- 用户提交的AMD、Intel和NVIDIA结果。",
-          "[InsiderLLM：NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- 建议零售价、零售价和eBay成交价（更新于2026-10-15；二手RTX 3090数据日期为2026-11-23）。",
+          "[InsiderLLM：NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- 建议零售价、零售价和eBay成交价（更新于2026-11-27；二手RTX 3090数据日期为2026-11-23）。",
           "[heise：Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- 供货报道（2026-01-15）。",
           "[Wccftech：RTX 5060 Ti 16 GB零售价格](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- 零售挂牌核查（2026-01-27）。",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)与[RTX 5070系列](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- 显存、功耗和系统要求。",
@@ -3488,7 +3488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/zh/local-llms/best-gpus-for-local-llms",
       inLanguage: "zh",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [
@@ -3643,7 +3643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "로컬 LLM용 GPU는 먼저 VRAM 용량, 그다음 메모리 속도와 현재 가격으로 고릅니다. 개발자가 보고한 llama.cpp 결과에서 7B Q4_0 모델의 생성 속도는 16 GB RTX 5070 Ti에서 176.9 tok/s, 24 GB RTX 4090에서 186.2 tok/s였으므로, 플래그십 여부보다 VRAM 구간이 더 중요합니다. 추적한 GPU 가격은 출시 권장가보다 훨씬 높아서, 각 카드마다 벤치마크 출처와 관측된 가격대를 함께 제시합니다.",
     metaDescription: "llama.cpp 커뮤니티 테스트에서 7B 모델은 RTX 5070 Ti에서 177 tok/s, RTX 4090에서 186 tok/s였습니다. VRAM별 GPU 속도와 관측 가격을 비교합니다.",
     publishDate: "2026-04-04",
-    dateModified: "2026-11-27",
+    dateModified: "2026-11-28",
     leadAnswerBlock: "**GPU는 먼저 VRAM 구간으로 고릅니다. 소형 모델은 12 GB, 중형 모델은 16 GB, 30B급 모델은 24 GB 이상이 기준입니다. 개발자가 보고한 llama.cpp 결과에서 7B Q4_0 모델의 생성 속도는 RTX 5070 Ti에서 176.9 tok/s, RTX 4090에서 186.2 tok/s였으므로, 구간과 가격이 플래그십 여부보다 중요합니다.**",
     audience: "Ollama 또는 LM Studio에 익숙하고 로컬 LLM 워크플로를 최적화하려는 개발자",
     readTime: "12분 읽기",
@@ -3680,8 +3680,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**VRAM을 먼저 고르십시오.** 12 GB는 약 14B까지, 16 GB는 gpt-oss-20b 같은 중형 모델, 24 GB는 약 32B 밀집 모델, 48 GB(24 GB 카드 2장)는 70B급 모델에 적합합니다(추정, Q4급 양자화).",
           "**7B 모델에서는 속도 차이가 작습니다.** 개발자가 보고한 llama.cpp 결과는 176.9 tok/s(RTX 5070 Ti, 16 GB) 대 186.2 tok/s(RTX 4090, 24 GB)입니다. 프롬프트 처리 차이는 더 큽니다(6,952 대 11,993 tok/s).",
-          "**가격 변동이 큽니다.** [InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)에 따르면 RTX 5090은 소매 약 $4,500–4,700(권장가 $1,999), RTX 5080은 $1,200–1,600($999), 신품 RTX 4090은 $2,000–3,000입니다. 가격은 미국 시장 기준이며 국내 가격은 다릅니다.",
-          "**추적 데이터에서 가장 저렴한 24 GB 선택지:** 중고 RTX 3090은 약 $1,500–1,725(eBay 낙찰, 같은 추적, 2026-11-23 기준 수치)이고 7B 테스트에서 158.2 tok/s로 RTX 4090의 약 85%입니다.",
+          "**가격 변동이 큽니다.** [InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-11-27)에 따르면 RTX 5090은 소매 약 $4,500–4,700(권장가 $1,999), RTX 5080은 $1,200–1,600($999), 신품 RTX 4090은 $2,000–3,000입니다. 가격은 미국 시장 기준이며 국내 가격은 다릅니다.",
+          "**추적 데이터에서 가장 저렴한 24 GB NVIDIA 선택지:** 중고 RTX 3090은 $1,500–1,725(중앙값 $1,650, eBay 미국 낙찰 225건, 2026년 11월 13~23일, 같은 추적)이고 7B 테스트에서 158.2 tok/s로 RTX 4090의 약 85%입니다. 같은 추적에는 더 저렴한 신품 AMD RX 7900 XTX(24 GB)가 $900–1,000(날짜 미표기)로 올라 있습니다.",
           "**NVIDIA와 CUDA가 기본 선택입니다.** AMD RX 7900 XTX는 Vulkan 7B 테스트에서 생성 속도가 RTX 4090과 비슷하지만(182.6 대 188.0 tok/s, 같은 표) 프롬프트 처리는 약 2.5배 느립니다.",
         ],
       },
@@ -3690,13 +3690,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "VRAM, 속도, 관측 가격별 GPU 구간",
         content: [
           "표는 각 GPU의 VRAM, 개발자가 보고한 7B Q4_0 모델의 llama.cpp 생성 속도, 아래 출처에서 확인한 미국 가격대를 보여 줍니다. 속도는 PromptQuorum이 측정한 값이 아니며, 더 큰 모델이나 더 긴 컨텍스트에서는 느려집니다.",
-          "속도는 Llama 2 7B Q4_0의 토큰 생성(tg128)이며 `llama-bench -ngl 99`, Flash Attention 미사용 조건입니다. 사용자가 제출한 [llama.cpp CUDA 점수표](https://github.com/ggml-org/llama.cpp/discussions/15013)에서 가져왔고, RX 7900 XTX 수치는 [llama.cpp Vulkan 점수표](https://github.com/ggml-org/llama.cpp/discussions/10879)에서 가져왔습니다. 가격은 [InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15, 중고 RTX 3090 수치는 2026-11-23 기준)과 [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)(2026-01-27)에 나온 미국 등록 또는 관측 가격이며, 판매 제안이나 보증이 아닙니다. 실시간 등록 가격을 확인하십시오.",
+          "속도는 Llama 2 7B Q4_0의 토큰 생성(tg128)이며 `llama-bench -ngl 99`, Flash Attention 미사용 조건입니다. 사용자가 제출한 [llama.cpp CUDA 점수표](https://github.com/ggml-org/llama.cpp/discussions/15013)에서 가져왔고, RX 7900 XTX 수치는 [llama.cpp Vulkan 점수표](https://github.com/ggml-org/llama.cpp/discussions/10879)에서 가져왔습니다. 가격은 [InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-11-27, 중고 RTX 3090 수치는 2026-11-23 기준)과 [Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)(2026-01-27)에 나온 미국 등록 또는 관측 가격이며, 판매 제안이나 보증이 아닙니다. 실시간 등록 가격을 확인하십시오.",
         ],
         rows: [
           { GPU: "RTX 3060", VRAM: "12 GB", "속도(7B Q4_0)": "75.6 tok/s", "관측 가격(미국)": "중고만 해당, 여기서는 미추적" },
           { GPU: "RTX 5070", VRAM: "12 GB", "속도(7B Q4_0)": "127.5 tok/s", "관측 가격(미국)": "여기서는 미추적" },
           { GPU: "RTX 5060 Ti", VRAM: "16 GB", "속도(7B Q4_0)": "90.9 tok/s", "관측 가격(미국)": "$679부터(등록, 2026-01-27)" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "속도(7B Q4_0)": "176.8 tok/s", "관측 가격(미국)": "약 $750–900, 재고 불규칙" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "속도(7B Q4_0)": "176.9 tok/s", "관측 가격(미국)": "약 $750–900, 재고 불규칙" },
           { GPU: "RTX 5080", VRAM: "16 GB", "속도(7B Q4_0)": "182.0 tok/s", "관측 가격(미국)": "$1,200–1,600(권장가 $999)" },
           { GPU: "RTX 3090(중고)", VRAM: "24 GB", "속도(7B Q4_0)": "158.2 tok/s", "관측 가격(미국)": "중고 약 $1,500–1,725" },
           {
@@ -3705,7 +3705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "속도(7B Q4_0)": "186.2 tok/s",
             "관측 가격(미국)": "신품 $2,000–3,000 / 중고 약 $2,575–3,010",
           },
-          { GPU: "RX 7900 XTX", VRAM: "24 GB", "속도(7B Q4_0)": "182.6 tok/s", "관측 가격(미국)": "여기서는 미추적" },
+          { GPU: "RX 7900 XTX", VRAM: "24 GB", "속도(7B Q4_0)": "182.6 tok/s", "관측 가격(미국)": "신품 $900–1,000(날짜 미표기)" },
           { GPU: "RTX 5090", VRAM: "32 GB", "속도(7B Q4_0)": "290.0 tok/s", "관측 가격(미국)": "약 $4,500–4,700(권장가 $1,999)" },
         ],
         columns: ["GPU","VRAM","속도(7B Q4_0)","관측 가격(미국)"],
@@ -3733,9 +3733,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: "high",
         title: "24 GB 이상: 30B급과 70B급 모델",
         content: [
-          "**RTX 4090(24 GB):** 186.2 tok/s, 프롬프트 처리 11,993 tok/s로 이 결과에서 가장 빠른 24 GB 카드입니다. [InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에 따르면 신품 등록은 $2,000–3,000(권장가 $1,599), 중고 낙찰은 $2,575–3,010(중앙값 $2,860)이었습니다.",
-          "**RTX 3090(24 GB), 중고:** 158.2 tok/s로 RTX 4090의 약 85%이지만, 프롬프트 처리는 절반에 못 미칩니다(5,175 대 11,993 tok/s). 같은 추적에서 중고 낙찰은 약 $1,500–1,725이었습니다(2026-11-23 기준 수치).",
-          "**RTX 5090(32 GB):** 290.0 tok/s로 표에서 가장 빠릅니다. 소매는 약 $4,500–4,700(권장가 $1,999), 중고 낙찰은 $5,900–6,350이었습니다. NVIDIA는 기준 구성에 [총 그래픽 전력 575 W, 필요 시스템 전력 1,000 W](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)를 표기합니다.",
+          "**RTX 4090(24 GB):** 186.2 tok/s, 프롬프트 처리 11,993 tok/s로 이 결과에서 가장 빠른 24 GB 카드입니다. [InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에 따르면 신품 등록은 $2,000–3,000(권장가 $1,599), 중고 낙찰은 $2,575–3,010(중앙값 $2,860, 216건, 2026년 10월)이었습니다.",
+          "**RTX 3090(24 GB), 중고:** 158.2 tok/s로 RTX 4090의 약 85%이지만, 프롬프트 처리는 절반에 못 미칩니다(5,175 대 11,993 tok/s). 같은 추적에서 중고 낙찰은 $1,500–1,725였습니다(중앙값 $1,650, eBay 미국 225건, 2026년 11월 13~23일).",
+          "**RTX 5090(32 GB):** 290.0 tok/s로 표에서 가장 빠릅니다. 소매는 약 $4,500–4,700(권장가 $1,999), 중고 낙찰은 $5,660–6,200이었습니다(중앙값 $6,000, eBay 미국 111건, 2026년 11월 6~25일). NVIDIA는 기준 구성에 [총 그래픽 전력 575 W, 필요 시스템 전력 1,000 W](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)를 표기합니다.",
           "**48 GB 이상:** Q4의 70B급 모델은 가중치만 약 43 GB가 필요합니다([Ollama](https://ollama.com/library/llama3.3)는 llama3.3:70b 다운로드를 43 GB로 표기). 따라서 24 GB 카드 2장 또는 48 GB 이상의 워크스테이션 카드 1장이 필요합니다. [로컬 LLM 멀티 GPU](/ko/local-llms/multi-gpu-local-llms)를 참고하십시오.",
           "**전기 안전:** 고전력 GPU는 큰 전류를 지속적으로 사용합니다. 카드 제조사의 전원 장치와 케이블 지침을 따르고, 전원 커넥터를 끝까지 꽂으며, 회로 용량은 자격을 갖춘 전기 기술자에게 문의하십시오. 이 가이드는 전기 안전에 대한 조언이 아닙니다.",
         ],
@@ -3802,7 +3802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: "RTX 5090", VRAM: "32 GB", "생성(tok/s)": "290.0", "프롬프트(tok/s)": "14,073" },
           { GPU: "RTX 4090", VRAM: "24 GB", "생성(tok/s)": "186.2", "프롬프트(tok/s)": "11,993" },
           { GPU: "RTX 5080", VRAM: "16 GB", "생성(tok/s)": "182.0", "프롬프트(tok/s)": "8,297" },
-          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "생성(tok/s)": "176.8", "프롬프트(tok/s)": "6,952" },
+          { GPU: "RTX 5070 Ti", VRAM: "16 GB", "생성(tok/s)": "176.9", "프롬프트(tok/s)": "6,952" },
           { GPU: "RTX 3090", VRAM: "24 GB", "생성(tok/s)": "158.2", "프롬프트(tok/s)": "5,175" },
           { GPU: "RTX 4080", VRAM: "16 GB", "생성(tok/s)": "142.5", "프롬프트(tok/s)": "8,032" },
           { GPU: "RTX 4070 Ti SUPER", VRAM: "16 GB", "생성(tok/s)": "132.3", "프롬프트(tok/s)": "6,925" },
@@ -3891,7 +3891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[llama.cpp discussion #15013: NVIDIA CUDA 성능](https://github.com/ggml-org/llama.cpp/discussions/15013) -- 사용자가 제출한 Llama 2 7B Q4_0 결과.",
           "[llama.cpp discussion #10879: Vulkan 성능](https://github.com/ggml-org/llama.cpp/discussions/10879) -- AMD, Intel, NVIDIA의 사용자 제출 결과.",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- 권장가, 소매가, eBay 낙찰가(갱신일 2026-10-15, 중고 RTX 3090 수치는 2026-11-23 기준).",
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- 권장가, 소매가, eBay 낙찰가(갱신일 2026-11-27, 중고 RTX 3090 수치는 2026-11-23 기준).",
           "[heise: Graphics card prices skyrocket, GeForce RTX 5070 Ti disappears](https://heise.de/-11142989) -- 입고 관련 보도(2026-01-15).",
           "[Wccftech: RTX 5060 Ti 16 GB 소매 가격](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/) -- 소매 등록 확인(2026-01-27).",
           "[NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) 및 [RTX 5070 제품군](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/) -- 메모리, 전력, 시스템 요구 사항.",
@@ -3908,7 +3908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: "https://www.promptquorum.com/ko/local-llms/best-gpus-for-local-llms",
       inLanguage: "ko",
       datePublished: "2026-04-04",
-      dateModified: "2026-11-27",
+      dateModified: "2026-11-28",
       publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com" },
       proficiencyLevel: "Intermediate",
       about: [

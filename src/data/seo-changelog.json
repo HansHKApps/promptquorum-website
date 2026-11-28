@@ -33752,5 +33752,230 @@
       "t14": "2026-12-12",
       "t28": "2026-12-26"
     }
+  },
+  {
+    "id": "9d5e8fbe-2fca-4fa7-98fd-1c3bf367bd42",
+    "slug": "/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:38.130Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Our pick for local LLMs under $1,000: RTX 5070 Ti 16 GB (~$750-900). A used RTX 4090 is listed at ~$2,575-3,010 per the InsiderLLM tracker (2026-10-15); the used 24 GB RTX 4090 and 3090 no longer fit the budget.",
+        "new": "Our pick for local LLMs under $1,000: RTX 5070 Ti 16 GB (~$750-900). Used 24 GB RTX 3090 and 4090 cards sit far above that budget in US sold prices."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "96f0fb50-2054-47f4-a8b4-5306b51b8ad3",
+    "slug": "/ar/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:38.242Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "اختيارنا لـ LLM محلي بأقل من 1,000 دولار: RTX 5070 Ti 16 GB (~750-900 دولار). RTX 4090 المستعملة مدرجة بنحو 2,575-3,010 دولار وفق متتبع InsiderLLM (2026-10-15)؛ وRTX 4090 وRTX 3090 المستعملتان بسعة 24 GB خارج الميزانية.",
+        "new": "اختيارنا لـ LLM محلي بأقل من 1,000 دولار: RTX 5070 Ti 16 GB (~750-900 دولار). وتتجاوز RTX 3090 وRTX 4090 المستعملتان (24 GB) هذه الميزانية بكثير وفق أسعار البيع في أمريكا."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "05f8b431-ba61-46a7-8932-a97c9064777a",
+    "slug": "/de/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:38.358Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Unsere Wahl für lokale LLMs unter 1.000 $: RTX 5070 Ti 16 GB (~750-900 $). Gebrauchte RTX 4090 laut InsiderLLM-Tracker ~2.575-3.010 $ (2026-10-15); gebrauchte 24-GB-RTX-4090/3090 sprengen das Budget.",
+        "new": "Unsere Wahl für lokale LLMs unter 1.000 $: RTX 5070 Ti 16 GB (~750-900 $). Gebrauchte RTX 3090 und 4090 mit 24 GB liegen bei US-Verkaufspreisen weit darüber."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "75874760-1caa-4cf7-b7d6-b97acb1ce388",
+    "slug": "/es/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:38.469Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Nuestra elección para LLMs locales por menos de $1,000: RTX 5070 Ti 16 GB (~$750-900). Una RTX 4090 usada figura en ~$2,575-3,010 según InsiderLLM (2026-10-15); las 4090 y 3090 usadas de 24 GB ya no caben.",
+        "new": "Nuestra elección para LLMs locales por menos de $1,000: RTX 5070 Ti 16 GB (~$750-900). Las 3090 y 4090 usadas de 24 GB quedan muy por encima según precios de venta en EE. UU."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "678d28cd-63a2-441c-9735-b3ef0c157e18",
+    "slug": "/fr/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:38.581Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Notre choix de GPU pour LLM locaux à moins de 1 000 $ : RTX 5070 Ti 16 Go (~750-900 $). Une RTX 4090 d'occasion est listée à ~2 575-3 010 $ (suivi InsiderLLM, 2026-10-15) ; les 4090 et 3090 de 24 Go d'occasion sortent du budget.",
+        "new": "Notre choix de GPU pour LLM locaux à moins de 1 000 $ : RTX 5070 Ti 16 Go (~750-900 $). Les 3090 et 4090 de 24 Go d'occasion se vendent bien au-dessus aux États-Unis."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "533336ad-0b79-4180-891d-4b09cccc9e19",
+    "slug": "/ja/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:38.693Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ローカルLLM向け1,000ドル以下の推奨GPUはRTX 5070 Ti 16GB(約750-900ドル)。中古RTX 4090はInsiderLLMトラッカーで約2,575-3,010ドル(2026-10-15)、中古の24GB RTX 4090と3090は予算外です。",
+        "new": "ローカルLLM向け1,000ドル以下の推奨GPUはRTX 5070 Ti 16GB(約750-900ドル)。中古の24GB RTX 3090と4090は、米国の落札価格では予算を大きく超えます。"
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7940cc3a-5e7f-4e6b-843c-bbe2d500f2a7",
+    "slug": "/ko/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:38.803Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "로컬 LLM용 1,000달러 이하 추천 GPU: RTX 5070 Ti 16GB(약 750-900달러). 중고 RTX 4090은 InsiderLLM 트래커에 약 2,575-3,010달러로 실려 있으며(2026-10-15), 중고 24GB RTX 4090과 3090은 예산 밖입니다.",
+        "new": "로컬 LLM용 1,000달러 이하 추천 GPU: RTX 5070 Ti 16GB(약 750-900달러). 미국 판매가 기준으로 중고 24GB RTX 3090과 4090은 예산을 크게 넘습니다."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8cec7de6-1288-4319-8803-85d08e83205c",
+    "slug": "/pt/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:38.916Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Nossa escolha para LLMs locais abaixo de US$ 1.000: RTX 5070 Ti 16 GB (~US$ 750-900). Uma RTX 4090 usada aparece a ~US$ 2.575-3.010 no rastreador do InsiderLLM (2026-10-15); as 4090 e 3090 usadas de 24 GB saem do orçamento.",
+        "new": "Nossa escolha para LLMs locais abaixo de US$ 1.000: RTX 5070 Ti 16 GB (~US$ 750-900). As 3090 e 4090 usadas de 24 GB ficam muito acima nos preços de venda dos EUA."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2fd7fa42-7578-4e91-898e-0bb152743ab4",
+    "slug": "/zh/prompt-bites/best-gpu-under-1000-local-llm",
+    "date": "2026-11-28T10:55:39.027Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "1000 美元以下本地 LLM 推荐 GPU：RTX 5070 Ti 16 GB（约 750-900 美元）。二手 RTX 4090 在 InsiderLLM 追踪中约 2575-3010 美元（2026-10-15），二手 24 GB RTX 4090 和 3090 已超出预算。",
+        "new": "1000 美元以下本地 LLM 推荐 GPU：RTX 5070 Ti 16 GB（约 750-900 美元）。按美国成交价，二手 24 GB RTX 3090 和 4090 远超这一预算。"
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2e977dbf-f33c-4d4e-9941-4f49279a409f",
+    "slug": "/local-llms/qwen-local-deployment-guide-2026",
+    "date": "2026-11-28T10:55:39.157Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Run Qwen 3.6 27B, Qwen3, Qwen2.5, Coder and VL locally. VRAM needs, Ollama and LM Studio setup, Q4_K_M speeds and hardware tiers for every budget.",
+        "new": "Run Qwen 3.6 27B, Qwen3, Qwen2.5, Coder and VL locally. VRAM needs, Ollama and LM Studio setup, Q4_K_M quantization and hardware tiers for every budget."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1799b114-3e33-48c8-9759-eef306f2283f",
+    "slug": "/ar/local-llms/qwen-local-deployment-guide-2026",
+    "date": "2026-11-28T10:55:39.267Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
+        "new": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وتكميم Q4_K_M ودليل مستويات الأجهزة."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3b3b3bb6-58e5-4ae2-b4ff-fb77f3226a0d",
+    "slug": "/fr/local-llms/qwen-local-deployment-guide-2026",
+    "date": "2026-11-28T10:55:39.377Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
+        "new": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, quantification Q4_K_M et guide par niveau matériel."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ca1e7c06-82c6-4497-b59a-87a2d0eba766",
+    "slug": "/ja/local-llms/qwen-local-deployment-guide-2026",
+    "date": "2026-11-28T10:55:39.487Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
+        "new": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM Studioのセットアップ、Q4_K_M量子化、ハードウェア階層別の選び方を解説します。"
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "79ba70f0-86a9-4936-bd01-565cfca05e0f",
+    "slug": "/zh/local-llms/qwen-local-deployment-guide-2026",
+    "date": "2026-11-28T10:55:39.599Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
+        "new": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化说明，以及各硬件预算档位的配置建议。"
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a4ccd55c-bc3c-4ab8-b3d4-182bc96bf342",
+    "slug": "/ko/local-llms/qwen-local-deployment-guide-2026",
+    "date": "2026-11-28T10:55:39.708Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
+        "new": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 양자화, 하드웨어 티어 가이드를 제공합니다."
+      }
+    ],
+    "reason": "Price and claim correction: meta description (2026-11-28 reconciliation)",
+    "baseline": null,
+    "deployedAt": null
   }
 ]
