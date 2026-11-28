@@ -51,6 +51,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "future-of-local-llms",
+        "title": "Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI",
+        "url": "/local-llms/future-of-local-llms",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "local-llm-cost-calculator-build-vs-rent-2026",
         "title": "Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026",
         "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -70,14 +78,6 @@
         "slug": "local-llm-pc-build-2000",
         "title": "Dual-GPU Local LLM PC Build (2026): 2x RTX 5060 Ti 16GB, About $2,700",
         "url": "/local-llms/local-llm-pc-build-2000",
-        "dateModified": "2026-11-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-workstation-build",
-        "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
-        "url": "/local-llms/local-llm-workstation-build",
         "dateModified": "2026-11-28",
         "tier": "about"
       }
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 203,
+    "totalCount": 205,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 116,
+    "totalCount": 115,
     "capped": true
   },
   "LocalAI": {
@@ -440,6 +440,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mobile-local-llms",
+        "title": "Mobile Local LLMs 2026: Offline AI on iPhone and Android",
+        "url": "/local-llms/mobile-local-llms",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
@@ -481,11 +489,11 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "mobile-local-llms",
-        "title": "Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
-        "url": "/local-llms/mobile-local-llms",
-        "dateModified": "2026-08-28",
-        "tier": "about"
+        "slug": "future-of-local-llms",
+        "title": "Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI",
+        "url": "/local-llms/future-of-local-llms",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -504,7 +512,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "SGLang": {
@@ -846,23 +854,23 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "local-llms",
+        "slug": "running-70b-models-apple-silicon-m5-max",
+        "title": "Running 70B Models on Apple Silicon 2026: M5 Max Guide",
+        "url": "/local-llms/running-70b-models-apple-silicon-m5-max",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
         "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "dateModified": "2026-11-27",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "LM Studio": {
@@ -948,7 +956,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 195,
+    "totalCount": 194,
     "capped": true
   },
   "Atomic Chat": {
@@ -1580,7 +1588,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 18,
     "capped": true
   },
   "h2oGPT": {
@@ -6090,10 +6098,10 @@
       {
         "cluster": "local-llms",
         "slug": "mobile-local-llms",
-        "title": "Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
+        "title": "Mobile Local LLMs 2026: Offline AI on iPhone and Android",
         "url": "/local-llms/mobile-local-llms",
-        "dateModified": "2026-08-28",
-        "tier": "about"
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
@@ -6123,6 +6131,14 @@
         "title": "PocketPal AI Review: Free, Open-Source On-Device Chat",
         "url": "/power-local-llm/pocketpal-ai-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mobile-local-llms",
+        "title": "Mobile Local LLMs 2026: Offline AI on iPhone and Android",
+        "url": "/local-llms/mobile-local-llms",
+        "dateModified": "2026-11-28",
         "tier": "about"
       },
       {
@@ -6187,14 +6203,6 @@
         "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
         "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
         "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "layla-review",
-        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
-        "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],
@@ -9862,6 +9870,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "future-of-local-llms",
+        "title": "Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI",
+        "url": "/local-llms/future-of-local-llms",
+        "dateModified": "2026-11-28",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-train-operate-compared",
         "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
@@ -9875,14 +9891,6 @@
         "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
         "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "future-of-local-llms",
-        "title": "Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI",
-        "url": "/local-llms/future-of-local-llms",
-        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -10648,6 +10656,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mobile-local-llms",
+        "title": "Mobile Local LLMs 2026: Offline AI on iPhone and Android",
+        "url": "/local-llms/mobile-local-llms",
+        "dateModified": "2026-11-28",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "weesper-neon-flow-review",
         "title": "Weesper Neon Flow Review: Offline Dictation for Mac and Windows",
@@ -10701,14 +10717,6 @@
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "argos-translate-review",
-        "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
-        "url": "/power-local-llm/argos-translate-review",
-        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],
@@ -12160,7 +12168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 114,
+    "totalCount": 113,
     "capped": true
   },
   "Sokuji": {
@@ -14702,7 +14710,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 298,
+    "totalCount": 297,
     "capped": true
   },
   "Qdrant": {
