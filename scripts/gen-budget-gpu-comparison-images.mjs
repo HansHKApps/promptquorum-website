@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+// STALE since 2026-11-28 (session/gpu-finish): do NOT run. The article was re-ranked on sourced
+// prices and its speed estimates were removed; this script still renders the old speed table and old
+// price rows and would overwrite the current hero images. Update ROWS/labels to the article first.
+if (!process.argv.includes('--force-stale')) throw new Error('gen-budget-gpu-comparison-images: stale, see header')
 // Regenerates both table images of best-budget-gpus-local-llm (9 locales, SVG + WebP):
 // the GPU price comparison and the RTX 3060 model speeds (also the article hero).
 // Prices and dates must match the article's which-budget-gpus table and note. Speed rows are read

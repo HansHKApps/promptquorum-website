@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Under 12 GB VRAM → invideo is the practical choice; below this tier, local options are limited to quantized, entry-quality output.',
           '12 GB VRAM → LTX-Video 0.9.5, a practical local option at this tier.',
-          '16–24 GB+ VRAM → Wan 2.2 (top quality, Apache 2.0 — permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card)) or LTX-2 (speed + synchronized audio).',
+          '16–24 GB+ VRAM → Wan 2.2 (strong quality, Apache 2.0 — permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card)) or LTX-2 (speed + synchronized audio).',
           'In the EU, UK, or South Korea → HunyuanVideo 1.5\'s license excludes you; use Wan 2.2 or LTX-2 instead.',
           'Need a finished narrated video, not a raw clip → local models only generate silent (LTX excepted) 5–20 second clips; invideo offers a hosted workflow around the clip; check its pricing page for what each plan includes.',
         ],
@@ -91,12 +91,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 is a top-tier local video model under the permissive Apache 2.0 license.** Permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card).',
+          '**Wan 2.2 is a strong local video model under the permissive Apache 2.0 license.** Permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card).',
           '**Invideo is a hosted alternative** with a free plan and paid Starter, Plus, and Max plans; its pricing page lists access to all models, including all Seedance models, for Plus and Max. Prices vary — check the live page.',
           '**HunyuanVideo 1.5\'s license explicitly excludes the EU, UK, and South Korea** — for both the model and its outputs. Readers in those regions should use Wan 2.2 or LTX-2 instead.',
           '**LTX-2 is positioned as a speed-focused model and is the only one of this local trio with built-in synchronized audio**, free commercially for companies under $10M annual revenue.',
           '**12GB VRAM is the realistic floor for serious local video generation.** Below that, invideo becomes the more practical option.',
-          '**Local models generate raw silent clips of 5–20 seconds, not finished videos.** Script, voiceover, music, subtitles, and editing are separate tools you assemble yourself — invideo aims to bring these steps into one hosted workflow.',
+          '**Local models generate raw clips of 5–20 seconds (silent except for LTX-2), not finished videos.** Script, voiceover, music, subtitles, and editing are separate tools you assemble yourself — invideo aims to bring these steps into one hosted workflow.',
           '**No open-weights "Wan 2.7" repository appeared on the official Wan GitHub page when checked on 27 November 2026.** Alibaba announced [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) in April 2026 as a model available on Alibaba Cloud. Be cautious with third-party pages offering "Wan 2.7 weights".',
         ],
       },
@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2 (Alibaba) — strong quality, Apache 2.0',
         content:
-          'Wan 2.2 is widely used among open video models, with many community derivatives built on top (see its Hugging Face model page for current download counts). It ships in three variants — T2V-A14B and I2V-A14B (mixture-of-experts, 27B total / 14B active parameters), plus a compact TI2V-5B that handles both text- and image-to-video on as little as 6–8GB VRAM. The 14B tier needs 15GB (GGUF Q3) to 25GB (FP8); the official unquantized command asks for 80GB. Its license is Apache 2.0 — genuinely free, permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card).\n\n**Speed, concretely:** the [official Wan 2.2 repository](https://github.com/Wan-Video/Wan2.2) says that, without specific optimization, the compact TI2V-5B model can generate a 5-second 720p clip in under 9 minutes on a single consumer-grade GPU. That is the developer\'s figure, which PromptQuorum has not verified, and it does not describe the 14B variants. A 20-second sequence means generating 4 separate 5-second clips, which is under 36 minutes of raw generation if each takes the stated time, plus manual editing to join them. This is arithmetic on the per-clip figure, not a measured 20-second benchmark.',
+          'Wan 2.2 is widely used among open video models, with many community derivatives built on top (see its Hugging Face model page for current download counts). It ships in three variants — T2V-A14B and I2V-A14B (mixture-of-experts, 27B total / 14B active parameters), plus a compact TI2V-5B that handles both text- and image-to-video on as little as 6–8GB VRAM. The 14B tier needs 15GB (GGUF Q3) to 25GB (FP8); the official unquantized command asks for 80GB. Its license is Apache 2.0 — genuinely free, permissive commercial use with no revenue threshold or territory exclusion (standard Apache terms such as attribution notices apply; check the model card).\n\n**Speed, concretely:** the [official Wan 2.2 repository](https://github.com/Wan-Video/Wan2.2) says that, without specific optimization, the compact TI2V-5B model can generate a 5-second 720p clip in under 9 minutes on a single consumer-grade GPU. That is the developer\'s figure, which PromptQuorum has not verified, and it does not describe the 14B variants. The repository says its TI2V-5B example command runs on a GPU with at least 24GB VRAM (for example an RTX 4090), so do not expect that time on a 6–8GB card. A 20-second sequence means generating 4 separate 5-second clips, which is under 36 minutes of raw generation if each takes the stated time, plus manual editing to join them. This is arithmetic on the per-clip figure, not a measured 20-second benchmark.',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 on GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 on Hugging Face' },
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: 'The Hardware Gate',
         content: [
-          'Local video generation is free the way a puppy is free: the model weights cost nothing, but the GPU is the real price of entry. Skip local generation entirely if your GPU has under 12GB VRAM and you\'re not planning to upgrade — below that tier only the quantized 5B variant of Wan 2.2 is usable, at entry quality, and a cloud platform will get you better output faster.',
+          'Local video generation is free the way a puppy is free: the model weights cost nothing, but the GPU is the real price of entry. Skip local generation entirely if your GPU has under 12GB VRAM and you\'re not planning to upgrade — below that tier only the quantized 5B variant of Wan 2.2 is usable, at entry quality, and a cloud platform is likely the easier route.',
           'Not sure what any of this means for your machine? These guides break it down: [VRAM Calculator](/local-llms/vram-calculator-local-llm) for exact requirements per model, [How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm) for charts across model sizes, [Best GPUs for Local AI](/local-llms/best-gpus-for-local-llms) and [Best Budget GPUs](/local-llms/best-budget-gpus-local-llm) for hardware picks, and [GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) for platform comparisons. One honest caveat: those guides use the LLM VRAM formula (parameters × bits ÷ 8). Video diffusion models also scale VRAM with resolution and clip length, so treat their numbers as a floor, not a ceiling, for video workloads.',
         ],
         columns: ['Your GPU', 'What you can run'],
@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your GPU': '6–8GB VRAM', 'What you can run': 'Wan 2.2 TI2V-5B (quantized) — usable, entry quality' },
           { 'Your GPU': '12GB VRAM', 'What you can run': 'LTX-Video 0.9.5 — a practical option at this tier' },
           { 'Your GPU': '16GB VRAM', 'What you can run': 'HunyuanVideo 1.5 (license permitting), Wan 2.2 14B at GGUF Q3' },
-          { 'Your GPU': '24GB+ VRAM', 'What you can run': 'Everything: Wan 2.2 14B at high quality, LTX-2 quantized' },
+          { 'Your GPU': '24GB+ VRAM', 'What you can run': 'All three: Wan 2.2 14B (quantized), LTX-2 quantized, HunyuanVideo 1.5 (license permitting)' },
         ],
         note:
           'Rough GPU cost, from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (US eBay listing data, not a quote or offer): used RTX 3090 sold listings are about $1,500–1,725 (median $1,650; 225 sold listings, 13–23 November 2026; dated 2026-11-23). Used RTX 4090 sold listings were $2,575–3,010 (median $2,860) in the figure dated 2026-10-15. GPU prices move — verify current pricing before buying rather than trusting these figures past a few months.',
@@ -191,7 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: 'What Running Local Video Generation Actually Involves',
         content:
-          'With local models, you are not installing a video tool — you are assembling a pipeline.\n\n**The generation setup.** ComfyUI is node-based: you build, or import and debug, a workflow graph of loaders, samplers, and decoders. Expect CUDA version mismatches, PyTorch pins, and the occasional `flash_attn` install error before your first frame renders.\n\n**The prompting.** Video models need structured prompts — shot type, camera movement, lighting, subject action — not one-liners. There is no built-in prompt helper and no system-prompt layer; you write the full structure yourself. Our guides on [system prompts vs. user prompts](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) and [prompt engineering for local models](/local-llms/prompt-engineering-for-local-models) cover fundamentals that transfer directly to video prompting.\n\n**Everything around the clip.** Local models output raw, silent (LTX excepted) clips of 5–20 seconds. Script, voiceover, music, stock footage, subtitles, and editing are each separate tools you choose, install, and wire together yourself.\n\nIf your goal is a short, style-matched motion loop from an SD1.5/SDXL checkpoint you already use — rather than a native video model — [AnimateDiff](/power-local-llm/animatediff-video-generation-guide) is a lighter-weight, checkpoint-based alternative worth comparing before assembling a full native-video pipeline.',
+          'With local models, you are not installing a video tool — you are assembling a pipeline.\n\n**The generation setup.** ComfyUI is node-based: you build, or import and debug, a workflow graph of loaders, samplers, and decoders. Expect CUDA version mismatches, PyTorch pins, and the occasional `flash_attn` install error before your first frame renders.\n\n**The prompting.** Video models need structured prompts — shot type, camera movement, lighting, subject action — not one-liners. A typical ComfyUI workflow gives you no system-prompt layer. The [Wan 2.2](https://github.com/Wan-Video/Wan2.2) and [HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) repositories offer prompt extension or rewriting, but it relies on a separate language model or API that you set up yourself. Our guides on [system prompts vs. user prompts](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) and [prompt engineering for local models](/local-llms/prompt-engineering-for-local-models) cover fundamentals that transfer directly to video prompting.\n\n**Everything around the clip.** Local models output raw, silent (LTX excepted) clips of 5–20 seconds. Script, voiceover, music, stock footage, subtitles, and editing are each separate tools you choose, install, and wire together yourself.\n\nIf your goal is a short, style-matched motion loop from an SD1.5/SDXL checkpoint you already use — rather than a native video model — [AnimateDiff](/power-local-llm/animatediff-video-generation-guide) is a lighter-weight, checkpoint-based alternative worth comparing before assembling a full native-video pipeline.',
         promptExamples: [
           { label: 'Weak (one-liner)', text: 'A dog on a beach' },
           { label: 'Structured (what video models need)', text: 'Golden retriever sprinting along a wet shoreline at golden hour, low tracking shot following from the side, shallow depth of field, warm backlight, gentle slow motion, cinematic 24fps' },
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'No GPU, or under 12GB VRAM', 'Recommendation': 'Invideo (cloud) — local options are entry-level below this tier' },
           { 'Your situation': 'Want a finished video with voiceover, not raw clips', 'Recommendation': 'Invideo (cloud) — local models don\'t assemble a full production' },
           { 'Your situation': 'Deadline-driven, zero setup tolerance', 'Recommendation': 'Invideo (cloud)' },
-          { 'Your situation': '12GB+ GPU, comfortable with setup, want privacy and $0 marginal cost', 'Recommendation': 'Local: LTX-Video (12GB) or Wan 2.2 (24GB for full quality)' },
+          { 'Your situation': '12GB+ GPU, comfortable with setup, want privacy and $0 marginal cost', 'Recommendation': 'Local: LTX-Video (12GB) or Wan 2.2 (24GB for the 14B models, quantized)' },
           { 'Your situation': 'In the EU, UK, or South Korea', 'Recommendation': 'Local = Wan 2.2 or LTX-2 only (HunyuanVideo\'s license excludes you)' },
           { 'Your situation': 'Need automation/API at scale without building it', 'Recommendation': 'Invideo (cloud, MCP server)' },
         ],
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'أقل من 12 جيجابايت VRAM ← يُعد invideo الخيار العملي؛ دون هذا المستوى تقتصر الخيارات المحلية على مخرجات مكمَّمة بجودة مبتدئة.',
           '12 جيجابايت VRAM ← LTX-Video 0.9.5، خيار محلي عملي في هذا المستوى.',
-          '16 إلى 24+ جيجابايت VRAM ← Wan 2.2 (أعلى جودة، Apache 2.0 — استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي؛ تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد، راجع بطاقة النموذج) أو LTX-2 (سرعة + صوت متزامن).',
+          '16 إلى 24+ جيجابايت VRAM ← Wan 2.2 (جودة قوية، Apache 2.0 — استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي؛ تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد، راجع بطاقة النموذج) أو LTX-2 (سرعة + صوت متزامن).',
           'إذا كنت في الاتحاد الأوروبي أو المملكة المتحدة أو كوريا الجنوبية ← ترخيص HunyuanVideo 1.5 يستبعدك؛ استخدم Wan 2.2 أو LTX-2 بدلًا منه.',
           'تحتاج فيديو سرديًا جاهزًا، لا مقطعًا خامًا ← النماذج المحلية تولّد فقط مقاطع صامتة (باستثناء LTX) مدتها 5 إلى 20 ثانية؛ يقدّم invideo سير عمل مستضافًا حول المقطع؛ راجع صفحة الأسعار لمعرفة ما تتضمنه كل خطة.',
         ],
@@ -443,12 +443,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**يُعد Wan 2.2 نموذج فيديو محلياً من الفئة الأولى برخصة Apache 2.0 المتساهلة.** استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي (تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد؛ راجع بطاقة النموذج).',
+          '**يُعد Wan 2.2 نموذج فيديو محلياً قوياً برخصة Apache 2.0 المتساهلة.** استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي (تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد؛ راجع بطاقة النموذج).',
           '**invideo بديل مستضاف** لديه خطة مجانية وخطط مدفوعة هي Starter وPlus وMax؛ وتذكر صفحة أسعاره أن Plus وMax تتيحان الوصول إلى جميع النماذج، بما فيها جميع نماذج Seedance. الأسعار متفاوتة — راجع الصفحة الحالية.',
           '**يستبعد ترخيص HunyuanVideo 1.5 صراحةً الاتحاد الأوروبي والمملكة المتحدة وكوريا الجنوبية** — يشمل ذلك النموذج نفسه ومخرجاته. يجب على القراء في هذه المناطق استخدام Wan 2.2 أو LTX-2 بدلًا منه.',
           '**يُقدَّم LTX-2 بوصفه نموذجًا يركّز على السرعة، وهو الوحيد بين هذا الثلاثي المحلي الذي يتضمن صوتًا متزامنًا مدمجًا**، وهو مجاني تجاريًا للشركات التي تقل إيراداتها السنوية عن 10 ملايين دولار.',
           '**12 جيجابايت VRAM هو الحد الأدنى الواقعي لتوليد الفيديو المحلي الجاد.** دون ذلك، يصبح invideo الخيار الأكثر عملية.',
-          '**تولّد النماذج المحلية مقاطع خامًا صامتة مدتها 5 إلى 20 ثانية، لا فيديوهات جاهزة.** النص، والتعليق الصوتي، والموسيقى، والترجمة النصية، والمونتاج أدوات منفصلة تجمّعها بنفسك — بينما تسعى invideo إلى جمع هذه الخطوات في سير عمل مستضاف واحد.',
+          '**تولّد النماذج المحلية مقاطع خامًا مدتها 5 إلى 20 ثانية (صامتة باستثناء LTX-2)، لا فيديوهات جاهزة.** النص، والتعليق الصوتي، والموسيقى، والترجمة النصية، والمونتاج أدوات منفصلة تجمّعها بنفسك — بينما تسعى invideo إلى جمع هذه الخطوات في سير عمل مستضاف واحد.',
           '**عند التحقق في 27 نوفمبر 2026، لم تعرض صفحة Wan الرسمية على GitHub أي مستودع بأوزان مفتوحة باسم "Wan 2.7".** وقد أعلنت Alibaba في أبريل 2026 عن [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) بوصفه نموذجًا متاحًا على Alibaba Cloud. توخَّ الحذر من صفحات الجهات الخارجية التي تعرض "أوزان Wan 2.7".',
         ],
       },
@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2 (Alibaba) — جودة قوية، برخصة Apache 2.0',
         content:
-          'يُستخدم Wan 2.2 على نطاق واسع بين نماذج الفيديو المفتوحة، مع مشتقات مجتمعية كثيرة مبنية عليه (راجع صفحة النموذج على Hugging Face لمعرفة أعداد التنزيل الحالية). يأتي في ثلاثة إصدارات — T2V-A14B وI2V-A14B (خليط خبراء، 27B إجمالي / 14B نشط)، إضافة إلى TI2V-5B المدمج الذي يعالج التحويل من نص وصورة إلى فيديو بذاكرة تصل إلى 6–8 جيجابايت فقط. يحتاج مستوى 14B ما بين 15 جيجابايت (GGUF Q3) إلى 25 جيجابايت (FP8)؛ بينما يطلب الأمر الرسمي غير المُكمَّم 80 جيجابايت. ترخيصه هو Apache 2.0 — مجاني فعليًا، استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي (تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد؛ راجع بطاقة النموذج).\n\n**السرعة، بالأرقام:** يذكر [مستودع Wan 2.2 الرسمي](https://github.com/Wan-Video/Wan2.2) أن النموذج المدمج TI2V-5B يستطيع، دون تحسينات خاصة، توليد مقطع 720p مدته 5 ثوانٍ في أقل من 9 دقائق على معالج رسومات استهلاكي واحد. هذا رقم المطوّر ولم تتحقق منه PromptQuorum، وهو لا يصف نسخ 14B. وتسلسل مدته 20 ثانية يعني توليد 4 مقاطع منفصلة مدة كل منها 5 ثوانٍ، أي أقل من 36 دقيقة من التوليد الخام إذا استغرق كل مقطع الزمن المذكور، يضاف إليها المونتاج اليدوي لوصلها. وهذا حساب مبني على رقم المقطع الواحد، لا قياس فعلي لـ 20 ثانية.',
+          'يُستخدم Wan 2.2 على نطاق واسع بين نماذج الفيديو المفتوحة، مع مشتقات مجتمعية كثيرة مبنية عليه (راجع صفحة النموذج على Hugging Face لمعرفة أعداد التنزيل الحالية). يأتي في ثلاثة إصدارات — T2V-A14B وI2V-A14B (خليط خبراء، 27B إجمالي / 14B نشط)، إضافة إلى TI2V-5B المدمج الذي يعالج التحويل من نص وصورة إلى فيديو بذاكرة تصل إلى 6–8 جيجابايت فقط. يحتاج مستوى 14B ما بين 15 جيجابايت (GGUF Q3) إلى 25 جيجابايت (FP8)؛ بينما يطلب الأمر الرسمي غير المُكمَّم 80 جيجابايت. ترخيصه هو Apache 2.0 — مجاني فعليًا، استخدام تجاري متساهل بلا حد أدنى للإيرادات ولا استبعاد جغرافي (تسري الشروط القياسية لـ Apache مثل إشعارات الإسناد؛ راجع بطاقة النموذج).\n\n**السرعة، بالأرقام:** يذكر [مستودع Wan 2.2 الرسمي](https://github.com/Wan-Video/Wan2.2) أن النموذج المدمج TI2V-5B يستطيع، دون تحسينات خاصة، توليد مقطع 720p مدته 5 ثوانٍ في أقل من 9 دقائق على معالج رسومات استهلاكي واحد. هذا رقم المطوّر ولم تتحقق منه PromptQuorum، وهو لا يصف نسخ 14B. ويذكر المستودع أن أمر المثال الخاص بـ TI2V-5B يعمل على معالج رسومات بذاكرة 24GB على الأقل (مثل RTX 4090)، فلا تتوقع هذا الزمن على بطاقة بذاكرة 6–8GB. وتسلسل مدته 20 ثانية يعني توليد 4 مقاطع منفصلة مدة كل منها 5 ثوانٍ، أي أقل من 36 دقيقة من التوليد الخام إذا استغرق كل مقطع الزمن المذكور، يضاف إليها المونتاج اليدوي لوصلها. وهذا حساب مبني على رقم المقطع الواحد، لا قياس فعلي لـ 20 ثانية.',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 on GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 on Hugging Face' },
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: 'حاجز العتاد',
         content: [
-          'توليد الفيديو المحلي "مجاني" بالطريقة نفسها التي يكون بها الجرو مجانيًا: أوزان النموذج لا تكلّف شيئًا، لكن معالج الرسومات هو الثمن الحقيقي للدخول. تجنّب التوليد المحلي كليًا إذا كان معالج الرسومات لديك أقل من 12 جيجابايت VRAM ولا تنوي الترقية — فدون هذا المستوى لا يصلح للاستخدام سوى إصدار Wan 2.2 TI2V-5B المُكمَّم، وبجودة مبتدئة فقط، وستحصل من منصة سحابية على مخرجات أفضل وأسرع.',
+          'توليد الفيديو المحلي "مجاني" بالطريقة نفسها التي يكون بها الجرو مجانيًا: أوزان النموذج لا تكلّف شيئًا، لكن معالج الرسومات هو الثمن الحقيقي للدخول. تجنّب التوليد المحلي كليًا إذا كان معالج الرسومات لديك أقل من 12 جيجابايت VRAM ولا تنوي الترقية — فدون هذا المستوى لا يصلح للاستخدام سوى إصدار Wan 2.2 TI2V-5B المُكمَّم، وبجودة مبتدئة فقط، والمنصة السحابية هي على الأرجح الطريق الأسهل.',
           'لست متأكدًا مما يعنيه كل هذا لجهازك؟ توضح هذه الأدلة التفاصيل: [حاسبة VRAM](/ar/local-llms/vram-calculator-local-llm) لمعرفة المتطلبات الدقيقة لكل نموذج، [كم تحتاج من VRAM؟](/ar/local-llms/how-much-vram-local-llm) لجداول عبر أحجام النماذج، [أفضل معالجات الرسومات للذكاء الاصطناعي المحلي](/ar/local-llms/best-gpus-for-local-llms) و[أفضل معالجات الرسومات الاقتصادية](/ar/local-llms/best-budget-gpus-local-llm) لاختيارات العتاد، و[معالج الرسومات مقابل المعالج المركزي مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) لمقارنات المنصات. تنبيه صادق واحد: تستخدم هذه الأدلة معادلة VRAM الخاصة بالنماذج اللغوية الكبيرة (المعاملات × البتات ÷ 8). أما نماذج انتشار الفيديو فتتغير احتياجاتها من VRAM أيضًا حسب الدقة وطول المقطع، فاعتبر أرقامها حدًا أدنى لا حدًا أقصى لأعباء عمل الفيديو.',
         ],
         columns: ['معالج الرسومات لديك', 'ما يمكنك تشغيله'],
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'معالج الرسومات لديك': '6–8GB VRAM', 'ما يمكنك تشغيله': 'Wan 2.2 TI2V-5B (مُكمَّم) — قابل للاستخدام، جودة أساسية' },
           { 'معالج الرسومات لديك': '12GB VRAM', 'ما يمكنك تشغيله': 'LTX-Video 0.9.5 — خيار عملي في هذا المستوى' },
           { 'معالج الرسومات لديك': '16GB VRAM', 'ما يمكنك تشغيله': 'HunyuanVideo 1.5 (إن سمح الترخيص)، Wan 2.2 14B بصيغة GGUF Q3' },
-          { 'معالج الرسومات لديك': '24GB+ VRAM', 'ما يمكنك تشغيله': 'كل شيء: Wan 2.2 14B بجودة عالية، LTX-2 مُكمَّم' },
+          { 'معالج الرسومات لديك': '24GB+ VRAM', 'ما يمكنك تشغيله': 'الثلاثة جميعًا: Wan 2.2 14B (مُكمَّم)، وLTX-2 مُكمَّم، وHunyuanVideo 1.5 (إن سمح الترخيص)' },
         ],
         note:
           'تكلفة تقريبية لبطاقات الرسومات، من [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (بيانات قوائم eBay الأمريكية، وليست عرض سعر): قوائم بيع RTX 3090 المستعملة نحو 1,500–1,725$ (الوسيط 1,650$؛ 225 عملية بيع، 13–23 نوفمبر 2026؛ بتاريخ 2026-11-23). أما قوائم بيع RTX 4090 المستعملة فكانت 2,575–3,010$ (الوسيط 2,860$) في الرقم المؤرَّخ في 2026-10-15. أسعار بلدك قد تختلف حسب الضرائب والرسوم الجمركية. أسعار معالجات الرسومات متغيرة — تحقق من الأسعار الحالية قبل الشراء بدلًا من الاعتماد على هذه الأرقام بعد مرور أشهر قليلة.',
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: 'ما الذي يتطلبه فعليًا تشغيل توليد الفيديو المحلي',
         content:
-          'مع النماذج المحلية، أنت لا تُثبّت أداة فيديو — بل تجمّع خط إنتاج كامل.\n\n**إعداد التوليد.** ComfyUI قائم على العُقد: تبني، أو تستورد وتُصلح، مخطط سير عمل من المُحمِّلات وأدوات أخذ العينات وفكّاكات التشفير. توقّع تعارضات في إصدارات CUDA، وتثبيتات مضبوطة لـ PyTorch، وأخطاء تثبيت عرضية لـ `flash_attn` قبل أن يظهر أول إطار.\n\n**كتابة الأوامر النصية.** تحتاج نماذج الفيديو أوامر نصية مُهيكلة — نوع اللقطة، حركة الكاميرا، الإضاءة، حركة الموضوع — لا جملة واحدة مختصرة. لا يوجد مساعد أوامر مدمج ولا طبقة أوامر نظام؛ تكتب الهيكل الكامل بنفسك. تغطي أدلتنا حول [أوامر النظام مقابل أوامر المستخدم](/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) و[هندسة الأوامر للنماذج المحلية](/ar/local-llms/prompt-engineering-for-local-models) أساسيات تنتقل مباشرة إلى كتابة أوامر الفيديو.\n\n**كل ما يحيط بالمقطع.** تُخرج النماذج المحلية مقاطع خامًا صامتة (باستثناء LTX) مدتها 5 إلى 20 ثانية. النص، والتعليق الصوتي، والموسيقى، واللقطات الأرشيفية، والترجمة النصية، والمونتاج — كل منها أداة منفصلة تختارها وتثبّتها وتربطها بنفسك.',
+          'مع النماذج المحلية، أنت لا تُثبّت أداة فيديو — بل تجمّع خط إنتاج كامل.\n\n**إعداد التوليد.** ComfyUI قائم على العُقد: تبني، أو تستورد وتُصلح، مخطط سير عمل من المُحمِّلات وأدوات أخذ العينات وفكّاكات التشفير. توقّع تعارضات في إصدارات CUDA، وتثبيتات مضبوطة لـ PyTorch، وأخطاء تثبيت عرضية لـ `flash_attn` قبل أن يظهر أول إطار.\n\n**كتابة الأوامر النصية.** تحتاج نماذج الفيديو أوامر نصية مُهيكلة — نوع اللقطة، حركة الكاميرا، الإضاءة، حركة الموضوع — لا جملة واحدة مختصرة. لا يوفّر سير عمل ComfyUI المعتاد طبقة أوامر نظام. ويقدّم مستودعا [Wan 2.2](https://github.com/Wan-Video/Wan2.2) و[HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) توسيع الأوامر النصية أو إعادة صياغتها، لكن ذلك يعتمد على نموذج لغوي منفصل أو واجهة برمجية تُعدّها بنفسك. تغطي أدلتنا حول [أوامر النظام مقابل أوامر المستخدم](/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) و[هندسة الأوامر للنماذج المحلية](/ar/local-llms/prompt-engineering-for-local-models) أساسيات تنتقل مباشرة إلى كتابة أوامر الفيديو.\n\n**كل ما يحيط بالمقطع.** تُخرج النماذج المحلية مقاطع خامًا صامتة (باستثناء LTX) مدتها 5 إلى 20 ثانية. النص، والتعليق الصوتي، والموسيقى، واللقطات الأرشيفية، والترجمة النصية، والمونتاج — كل منها أداة منفصلة تختارها وتثبّتها وتربطها بنفسك.',
         promptExamples: [
           { label: 'ضعيف (جملة واحدة)', text: 'A dog on a beach' },
           { label: 'مُهيكل (ما تحتاجه نماذج الفيديو)', text: 'Golden retriever sprinting along a wet shoreline at golden hour, low tracking shot following from the side, shallow depth of field, warm backlight, gentle slow motion, cinematic 24fps' },
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'وضعك': 'بلا معالج رسومات، أو أقل من 12GB VRAM', 'التوصية': 'Invideo (سحابي) — الخيارات المحلية دون هذا المستوى بمستوى مبتدئ' },
           { 'وضعك': 'تريد فيديو جاهزًا بتعليق صوتي، لا مقاطع خامًا', 'التوصية': 'Invideo (سحابي) — لا تُجمّع النماذج المحلية إنتاجًا كاملًا' },
           { 'وضعك': 'محكوم بموعد نهائي، لا تحمّل صفر للإعداد', 'التوصية': 'Invideo (سحابي)' },
-          { 'وضعك': 'معالج رسومات 12GB+، مرتاح للإعداد، تريد الخصوصية وتكلفة هامشية صفرية', 'التوصية': 'محليًا: LTX-Video (12GB) أو Wan 2.2 (24GB للجودة الكاملة)' },
+          { 'وضعك': 'معالج رسومات 12GB+، مرتاح للإعداد، تريد الخصوصية وتكلفة هامشية صفرية', 'التوصية': 'محليًا: LTX-Video (12GB) أو Wan 2.2 (24GB لنماذج 14B المُكمَّمة)' },
           { 'وضعك': 'في الاتحاد الأوروبي أو المملكة المتحدة أو كوريا الجنوبية', 'التوصية': 'محليًا فقط Wan 2.2 أو LTX-2 (ترخيص HunyuanVideo يستبعدك)' },
           { 'وضعك': 'تحتاج أتمتة/واجهة برمجية على نطاق واسع دون بنائها بنفسك', 'التوصية': 'Invideo (سحابي، خادم MCP)' },
         ],
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Unter 12 GB VRAM → invideo ist die praktische Wahl; unterhalb dieser Stufe bleiben lokal nur quantisierte Ergebnisse auf Einstiegsniveau.',
           '12 GB VRAM → LTX-Video 0.9.5, eine praktikable lokale Option auf dieser Stufe.',
-          '16–24 GB+ VRAM → Wan 2.2 (Top-Qualität, Apache 2.0 – freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss; übliche Apache-Bedingungen wie Namensnennungshinweise gelten, prüfen Sie die Modellkarte) oder LTX-2 (Geschwindigkeit + synchronisierter Ton).',
+          '16–24 GB+ VRAM → Wan 2.2 (starke Qualität, Apache 2.0 – freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss; übliche Apache-Bedingungen wie Namensnennungshinweise gelten, prüfen Sie die Modellkarte) oder LTX-2 (Geschwindigkeit + synchronisierter Ton).',
           'In der EU, im Vereinigten Königreich oder in Südkorea → HunyuanVideo 1.5s Lizenz schließt Sie aus; nutzen Sie stattdessen Wan 2.2 oder LTX-2.',
           'Brauchen Sie ein fertiges, erzähltes Video statt eines rohen Clips → lokale Modelle generieren nur stumme (Ausnahme: LTX) Clips von 5–20 Sekunden; invideo bietet einen gehosteten Workflow rund um den Clip; was die Pläne enthalten, steht auf der Preisseite.',
         ],
@@ -795,12 +795,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 ist ein lokales Top-Videomodell unter der freizügigen Apache-2.0-Lizenz.** Freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss (übliche Apache-Bedingungen wie Namensnennungshinweise gelten; prüfen Sie die Modellkarte).',
+          '**Wan 2.2 ist ein starkes lokales Videomodell unter der freizügigen Apache-2.0-Lizenz.** Freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss (übliche Apache-Bedingungen wie Namensnennungshinweise gelten; prüfen Sie die Modellkarte).',
           '**Invideo ist eine gehostete Alternative** mit einem kostenlosen Plan sowie den kostenpflichtigen Plänen Starter, Plus und Max; laut Preisseite haben Plus und Max Zugang zu allen Modellen, einschließlich aller Seedance-Modelle. Die Preise variieren – prüfen Sie die aktuelle Seite.',
           '**HunyuanVideo 1.5s Lizenz schließt die EU, das Vereinigte Königreich und Südkorea ausdrücklich aus** – das betrifft sowohl das Modell als auch seine Ausgaben. Leser in diesen Regionen sollten stattdessen Wan 2.2 oder LTX-2 nutzen.',
           '**LTX-2 ist als auf Geschwindigkeit ausgelegtes Modell positioniert und als einziges dieser drei lokalen Modelle mit eingebautem synchronisiertem Ton ausgestattet**, kommerziell kostenlos für Unternehmen mit weniger als 10 Mio. $ Jahresumsatz.',
           '**12 GB VRAM sind die realistische Untergrenze für ernsthafte lokale Videogenerierung.** Darunter wird invideo zur praktischeren Option.',
-          '**Lokale Modelle erzeugen rohe, stumme Clips von 5–20 Sekunden, keine fertigen Videos.** Skript, Voiceover, Musik, Untertitel und Schnitt sind separate Werkzeuge, die Sie selbst zusammenstellen – invideo will diese Schritte in einem gehosteten Workflow bündeln.',
+          '**Lokale Modelle erzeugen rohe Clips von 5–20 Sekunden (stumm, außer bei LTX-2), keine fertigen Videos.** Skript, Voiceover, Musik, Untertitel und Schnitt sind separate Werkzeuge, die Sie selbst zusammenstellen – invideo will diese Schritte in einem gehosteten Workflow bündeln.',
           '**Bei der Prüfung am 27. November 2026 fand sich auf der offiziellen Wan-Seite bei GitHub kein Repository mit offenen Gewichten für "Wan 2.7".** Alibaba hat [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) im April 2026 als in der Alibaba Cloud verfügbares Modell angekündigt. Seien Sie vorsichtig bei Drittseiten, die "Wan-2.7-Gewichte" anbieten.',
         ],
       },
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2 (Alibaba) – starke Qualität, Apache 2.0',
         content:
-          'Wan 2.2 wird unter den offenen Videomodellen breit genutzt, mit vielen darauf aufbauenden Community-Derivaten (aktuelle Download-Zahlen finden Sie auf der Hugging-Face-Modellseite). Es erscheint in drei Varianten – T2V-A14B und I2V-A14B (Mixture-of-Experts, 27B gesamt / 14B aktive Parameter) sowie ein kompaktes TI2V-5B, das sowohl Text- als auch Bild-zu-Video mit nur 6–8 GB VRAM verarbeitet. Die 14B-Stufe benötigt 15 GB (GGUF Q3) bis 25 GB (FP8); der offizielle unquantisierte Befehl verlangt 80 GB. Die Lizenz ist Apache 2.0 – wirklich kostenlos, freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss (übliche Apache-Bedingungen wie Namensnennungshinweise gelten; prüfen Sie die Modellkarte).\n\n**Geschwindigkeit, konkret:** Laut [offiziellem Wan-2.2-Repository](https://github.com/Wan-Video/Wan2.2) kann das kompakte Modell TI2V-5B ohne spezielle Optimierung einen 5-sekündigen 720p-Clip in weniger als 9 Minuten auf einer einzelnen Consumer-GPU erzeugen. Das ist die Angabe des Entwicklers, die PromptQuorum nicht überprüft hat, und sie beschreibt nicht die 14B-Varianten. Für eine 20-Sekunden-Sequenz müssen 4 separate 5-Sekunden-Clips erzeugt werden, also weniger als 36 Minuten reine Generierungszeit, wenn jeder die genannte Zeit braucht, plus manueller Schnitt zum Zusammenfügen. Das ist eine Rechnung mit dem Pro-Clip-Wert, kein gemessener 20-Sekunden-Benchmark.',
+          'Wan 2.2 wird unter den offenen Videomodellen breit genutzt, mit vielen darauf aufbauenden Community-Derivaten (aktuelle Download-Zahlen finden Sie auf der Hugging-Face-Modellseite). Es erscheint in drei Varianten – T2V-A14B und I2V-A14B (Mixture-of-Experts, 27B gesamt / 14B aktive Parameter) sowie ein kompaktes TI2V-5B, das sowohl Text- als auch Bild-zu-Video mit nur 6–8 GB VRAM verarbeitet. Die 14B-Stufe benötigt 15 GB (GGUF Q3) bis 25 GB (FP8); der offizielle unquantisierte Befehl verlangt 80 GB. Die Lizenz ist Apache 2.0 – wirklich kostenlos, freizügige kommerzielle Nutzung ohne Umsatzschwelle und ohne Gebietsausschluss (übliche Apache-Bedingungen wie Namensnennungshinweise gelten; prüfen Sie die Modellkarte).\n\n**Geschwindigkeit, konkret:** Laut [offiziellem Wan-2.2-Repository](https://github.com/Wan-Video/Wan2.2) kann das kompakte Modell TI2V-5B ohne spezielle Optimierung einen 5-sekündigen 720p-Clip in weniger als 9 Minuten auf einer einzelnen Consumer-GPU erzeugen. Das ist die Angabe des Entwicklers, die PromptQuorum nicht überprüft hat, und sie beschreibt nicht die 14B-Varianten. Laut Repository läuft der Beispielbefehl für TI2V-5B auf einer GPU mit mindestens 24 GB VRAM (etwa einer RTX 4090); erwarten Sie diese Zeit also nicht auf einer 6–8-GB-Karte. Für eine 20-Sekunden-Sequenz müssen 4 separate 5-Sekunden-Clips erzeugt werden, also weniger als 36 Minuten reine Generierungszeit, wenn jeder die genannte Zeit braucht, plus manueller Schnitt zum Zusammenfügen. Das ist eine Rechnung mit dem Pro-Clip-Wert, kein gemessener 20-Sekunden-Benchmark.',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 on GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 on Hugging Face' },
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: 'Die Hardware-Hürde',
         content: [
-          'Lokale Videogenerierung ist so kostenlos wie ein Welpe kostenlos ist: Die Modellgewichte kosten nichts, aber die GPU ist der eigentliche Preis des Einstiegs. Verzichten Sie ganz auf lokale Generierung, wenn Ihre GPU unter 12 GB VRAM hat und Sie kein Upgrade planen – unterhalb dieser Stufe ist nur die quantisierte 5B-Variante von Wan 2.2 nutzbar, und zwar in Einsteigerqualität, und eine Cloud-Plattform liefert Ihnen schneller bessere Ergebnisse.',
+          'Lokale Videogenerierung ist so kostenlos wie ein Welpe kostenlos ist: Die Modellgewichte kosten nichts, aber die GPU ist der eigentliche Preis des Einstiegs. Verzichten Sie ganz auf lokale Generierung, wenn Ihre GPU unter 12 GB VRAM hat und Sie kein Upgrade planen – unterhalb dieser Stufe ist nur die quantisierte 5B-Variante von Wan 2.2 nutzbar, und zwar in Einsteigerqualität, und eine Cloud-Plattform ist dann wahrscheinlich der einfachere Weg.',
           'Nicht sicher, was das für Ihre Maschine bedeutet? Diese Leitfäden schlüsseln es auf: [VRAM-Rechner](/de/local-llms/vram-calculator-local-llm) für exakte Anforderungen pro Modell, [Wie viel VRAM brauchen Sie?](/de/local-llms/how-much-vram-local-llm) für Übersichten über Modellgrößen hinweg, [Beste GPUs für lokale KI](/de/local-llms/best-gpus-for-local-llms) und [Beste Budget-GPUs](/de/local-llms/best-budget-gpus-local-llm) für Hardware-Empfehlungen sowie [GPU vs. CPU vs. Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon) für Plattformvergleiche. Ein ehrlicher Vorbehalt: Diese Leitfäden nutzen die LLM-VRAM-Formel (Parameter × Bits ÷ 8). Video-Diffusionsmodelle skalieren den VRAM-Bedarf zusätzlich mit Auflösung und Cliplänge – behandeln Sie deren Zahlen für Video-Workloads also als Untergrenze, nicht als Obergrenze.',
         ],
         columns: ['Ihre GPU', 'Was Sie ausführen können'],
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre GPU': '6–8 GB VRAM', 'Was Sie ausführen können': 'Wan 2.2 TI2V-5B (quantisiert) – brauchbar, Einstiegsqualität' },
           { 'Ihre GPU': '12 GB VRAM', 'Was Sie ausführen können': 'LTX-Video 0.9.5 – eine praktikable Option auf dieser Stufe' },
           { 'Ihre GPU': '16 GB VRAM', 'Was Sie ausführen können': 'HunyuanVideo 1.5 (falls Lizenz erlaubt), Wan 2.2 14B bei GGUF Q3' },
-          { 'Ihre GPU': '24 GB+ VRAM', 'Was Sie ausführen können': 'Alles: Wan 2.2 14B in hoher Qualität, LTX-2 quantisiert' },
+          { 'Ihre GPU': '24 GB+ VRAM', 'Was Sie ausführen können': 'Alle drei: Wan 2.2 14B (quantisiert), LTX-2 quantisiert, HunyuanVideo 1.5 (falls die Lizenz es erlaubt)' },
         ],
         note:
           'Grobe GPU-Kosten laut [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (US-eBay-Angebotsdaten, kein Preisangebot): Gebrauchte RTX 3090 wurden für etwa 1.500–1.725 $ verkauft (Median 1.650 $; 225 Verkäufe, 13.–23. November 2026; Stand 2026-11-23). Für gebrauchte RTX 4090 nannte der Wert mit Stand 2026-10-15 Verkäufe für 2.575–3.010 $ (Median 2.860 $). Preise in Deutschland weichen wegen Steuern und Importkosten ab. GPU-Preise bewegen sich – prüfen Sie die aktuelle Preislage, statt sich über mehr als ein paar Monate hinweg auf diese Zahlen zu verlassen.',
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: 'Was der Betrieb lokaler Videogenerierung tatsächlich bedeutet',
         content:
-          'Mit lokalen Modellen installieren Sie kein Videotool – Sie bauen eine Pipeline zusammen.\n\n**Das Generierungs-Setup.** ComfyUI ist knotenbasiert: Sie bauen einen Workflow-Graphen aus Loadern, Samplern und Decodern selbst auf – oder importieren und debuggen einen bestehenden. Rechnen Sie mit CUDA-Versionskonflikten, PyTorch-Pins und dem gelegentlichen `flash_attn`-Installationsfehler, bevor Ihr erstes Bild gerendert wird.\n\n**Das Prompten.** Videomodelle brauchen strukturierte Prompts – Einstellungsgröße, Kamerabewegung, Beleuchtung, Handlung des Subjekts – keine Einzeiler. Es gibt keinen eingebauten Prompt-Helfer und keine System-Prompt-Ebene; Sie schreiben die vollständige Struktur selbst. Unsere Leitfäden zu [System-Prompts vs. User-Prompts](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) und [Prompt Engineering für lokale Modelle](/de/local-llms/prompt-engineering-for-local-models) behandeln Grundlagen, die sich direkt auf Video-Prompting übertragen lassen.\n\n**Alles rund um den Clip.** Lokale Modelle geben rohe, stumme (Ausnahme: LTX) Clips von 5–20 Sekunden aus. Skript, Voiceover, Musik, Stock-Footage, Untertitel und Schnitt sind jeweils separate Werkzeuge, die Sie selbst auswählen, installieren und miteinander verbinden.',
+          'Mit lokalen Modellen installieren Sie kein Videotool – Sie bauen eine Pipeline zusammen.\n\n**Das Generierungs-Setup.** ComfyUI ist knotenbasiert: Sie bauen einen Workflow-Graphen aus Loadern, Samplern und Decodern selbst auf – oder importieren und debuggen einen bestehenden. Rechnen Sie mit CUDA-Versionskonflikten, PyTorch-Pins und dem gelegentlichen `flash_attn`-Installationsfehler, bevor Ihr erstes Bild gerendert wird.\n\n**Das Prompten.** Videomodelle brauchen strukturierte Prompts – Einstellungsgröße, Kamerabewegung, Beleuchtung, Handlung des Subjekts – keine Einzeiler. Ein typischer ComfyUI-Workflow hat keine System-Prompt-Ebene. Die Repositories von [Wan 2.2](https://github.com/Wan-Video/Wan2.2) und [HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) bieten zwar eine Prompt-Erweiterung bzw. -Umformulierung, sie setzt aber ein separates Sprachmodell oder eine API voraus, die Sie selbst einrichten. Unsere Leitfäden zu [System-Prompts vs. User-Prompts](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) und [Prompt Engineering für lokale Modelle](/de/local-llms/prompt-engineering-for-local-models) behandeln Grundlagen, die sich direkt auf Video-Prompting übertragen lassen.\n\n**Alles rund um den Clip.** Lokale Modelle geben rohe, stumme (Ausnahme: LTX) Clips von 5–20 Sekunden aus. Skript, Voiceover, Musik, Stock-Footage, Untertitel und Schnitt sind jeweils separate Werkzeuge, die Sie selbst auswählen, installieren und miteinander verbinden.',
         promptExamples: [
           { label: 'Schwach (Einzeiler)', text: 'Ein Hund am Strand' },
           { label: 'Strukturiert (was Videomodelle brauchen)', text: 'Golden Retriever sprintet bei goldenem Licht an einer nassen Küstenlinie entlang, niedriger seitlicher Tracking-Shot, geringe Schärfentiefe, warmes Gegenlicht, sanfte Zeitlupe, filmisches 24-fps-Bild' },
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre Situation': 'Keine GPU, oder unter 12 GB VRAM', 'Empfehlung': 'Invideo (Cloud) – lokale Optionen sind darunter nur Einstiegsniveau' },
           { 'Ihre Situation': 'Wollen ein fertiges Video mit Voiceover, keine rohen Clips', 'Empfehlung': 'Invideo (Cloud) – lokale Modelle stellen keine vollständige Produktion zusammen' },
           { 'Ihre Situation': 'Termindruck, keine Toleranz für Setup', 'Empfehlung': 'Invideo (Cloud)' },
-          { 'Ihre Situation': 'GPU ab 12 GB, Setup ist kein Problem, wollen Privatsphäre und 0 $ Grenzkosten', 'Empfehlung': 'Lokal: LTX-Video (12 GB) oder Wan 2.2 (24 GB für volle Qualität)' },
+          { 'Ihre Situation': 'GPU ab 12 GB, Setup ist kein Problem, wollen Privatsphäre und 0 $ Grenzkosten', 'Empfehlung': 'Lokal: LTX-Video (12 GB) oder Wan 2.2 (24 GB für die quantisierten 14B-Modelle)' },
           { 'Ihre Situation': 'In der EU, im Vereinigten Königreich oder in Südkorea', 'Empfehlung': 'Lokal = nur Wan 2.2 oder LTX-2 (HunyuanVideos Lizenz schließt Sie aus)' },
           { 'Ihre Situation': 'Brauchen Automatisierung/API im großen Maßstab, ohne sie selbst zu bauen', 'Empfehlung': 'Invideo (Cloud, MCP-Server)' },
         ],
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Menos de 12 GB de VRAM → invideo es la opción práctica; por debajo de este nivel, las opciones locales se limitan a resultados cuantizados de nivel básico.',
           '12 GB de VRAM → LTX-Video 0.9.5, una opción local práctica en este nivel.',
-          '16–24 GB+ de VRAM → Wan 2.2 (máxima calidad, Apache 2.0 — uso comercial permisivo sin umbral de ingresos ni exclusión territorial; se aplican los términos estándar de Apache, como los avisos de atribución, revisa la ficha del modelo) o LTX-2 (velocidad + audio sincronizado).',
+          '16–24 GB+ de VRAM → Wan 2.2 (buena calidad, Apache 2.0 — uso comercial permisivo sin umbral de ingresos ni exclusión territorial; se aplican los términos estándar de Apache, como los avisos de atribución, revisa la ficha del modelo) o LTX-2 (velocidad + audio sincronizado).',
           'En la UE, el Reino Unido o Corea del Sur → la licencia de HunyuanVideo 1.5 te excluye; usa Wan 2.2 o LTX-2 en su lugar.',
           'Necesitas un video narrado terminado, no un clip en bruto → los modelos locales solo generan clips silenciosos (excepto LTX) de 5 a 20 segundos; invideo ofrece un flujo de trabajo alojado alrededor del clip; consulta en su página de precios qué incluye cada plan.',
         ],
@@ -1155,12 +1155,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 es un modelo de video local de primer nivel bajo la licencia permisiva Apache 2.0.** Uso comercial permisivo sin umbral de ingresos ni exclusión territorial (se aplican los términos estándar de Apache, como los avisos de atribución; revisa la ficha del modelo).',
+          '**Wan 2.2 es un modelo de video local sólido bajo la licencia permisiva Apache 2.0.** Uso comercial permisivo sin umbral de ingresos ni exclusión territorial (se aplican los términos estándar de Apache, como los avisos de atribución; revisa la ficha del modelo).',
           '**Invideo es una alternativa alojada** con un plan gratuito y los planes de pago Starter, Plus y Max; su página de precios indica que Plus y Max tienen acceso a todos los modelos, incluidos todos los Seedance. Los precios varían: consulta la página actual.',
           '**La licencia de HunyuanVideo 1.5 excluye explícitamente a la UE, el Reino Unido y Corea del Sur** — tanto para el modelo como para sus resultados. Los lectores en esas regiones deben usar Wan 2.2 o LTX-2 en su lugar.',
           '**LTX-2 se presenta como un modelo orientado a la velocidad y es el único de este trío local con audio sincronizado integrado**, gratuito para uso comercial en empresas con ingresos anuales inferiores a $10M.',
           '**12 GB de VRAM es el piso realista para generación de video local en serio.** Por debajo de eso, invideo se vuelve la opción más práctica.',
-          '**Los modelos locales generan clips silenciosos en bruto de 5 a 20 segundos, no videos terminados.** Guion, locución, música, subtítulos y edición son herramientas separadas que tú mismo ensamblas — invideo busca reunir estos pasos en un solo flujo de trabajo alojado.',
+          '**Los modelos locales generan clips en bruto de 5 a 20 segundos (silenciosos, salvo con LTX-2), no videos terminados.** Guion, locución, música, subtítulos y edición son herramientas separadas que tú mismo ensamblas — invideo busca reunir estos pasos en un solo flujo de trabajo alojado.',
           '**Al comprobarlo el 27 de noviembre de 2026, la página oficial de Wan en GitHub no mostraba ningún repositorio con pesos abiertos de "Wan 2.7".** Alibaba anunció [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) en abril de 2026 como modelo disponible en Alibaba Cloud. Ten cuidado con las páginas de terceros que ofrecen "pesos de Wan 2.7".',
         ],
       },
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2 (Alibaba) — calidad sólida, Apache 2.0',
         content:
-          'Wan 2.2 es ampliamente utilizado entre los modelos de video abiertos, con muchos derivados de la comunidad construidos sobre él (consulta su página de modelo en Hugging Face para ver las descargas actuales). Se distribuye en tres variantes — T2V-A14B e I2V-A14B (mezcla de expertos, 27B parámetros totales / 14B activos), más una TI2V-5B compacta que gestiona tanto texto-a-video como imagen-a-video con apenas 6–8GB de VRAM. El nivel 14B necesita entre 15GB (GGUF Q3) y 25GB (FP8); el comando oficial sin cuantizar pide 80GB. Su licencia es Apache 2.0 — verdaderamente gratuita, uso comercial permisivo sin umbral de ingresos ni exclusión territorial (se aplican los términos estándar de Apache, como los avisos de atribución; revisa la ficha del modelo).\n\n**Velocidad, en concreto:** el [repositorio oficial de Wan 2.2](https://github.com/Wan-Video/Wan2.2) indica que, sin optimizaciones específicas, el modelo compacto TI2V-5B puede generar un clip de 5 segundos a 720p en menos de 9 minutos con una sola GPU de consumo. Es la cifra del desarrollador, que PromptQuorum no ha verificado, y no describe las variantes 14B. Una secuencia de 20 segundos implica generar 4 clips separados de 5 segundos, es decir, menos de 36 minutos de generación en bruto si cada uno tarda lo indicado, más la edición manual para unirlos. Es un cálculo a partir de la cifra por clip, no un benchmark medido de 20 segundos.',
+          'Wan 2.2 es ampliamente utilizado entre los modelos de video abiertos, con muchos derivados de la comunidad construidos sobre él (consulta su página de modelo en Hugging Face para ver las descargas actuales). Se distribuye en tres variantes — T2V-A14B e I2V-A14B (mezcla de expertos, 27B parámetros totales / 14B activos), más una TI2V-5B compacta que gestiona tanto texto-a-video como imagen-a-video con apenas 6–8GB de VRAM. El nivel 14B necesita entre 15GB (GGUF Q3) y 25GB (FP8); el comando oficial sin cuantizar pide 80GB. Su licencia es Apache 2.0 — verdaderamente gratuita, uso comercial permisivo sin umbral de ingresos ni exclusión territorial (se aplican los términos estándar de Apache, como los avisos de atribución; revisa la ficha del modelo).\n\n**Velocidad, en concreto:** el [repositorio oficial de Wan 2.2](https://github.com/Wan-Video/Wan2.2) indica que, sin optimizaciones específicas, el modelo compacto TI2V-5B puede generar un clip de 5 segundos a 720p en menos de 9 minutos con una sola GPU de consumo. Es la cifra del desarrollador, que PromptQuorum no ha verificado, y no describe las variantes 14B. Según el repositorio, su comando de ejemplo para TI2V-5B funciona en una GPU con al menos 24 GB de VRAM (por ejemplo, una RTX 4090), así que no esperes ese tiempo en una tarjeta de 6–8 GB. Una secuencia de 20 segundos implica generar 4 clips separados de 5 segundos, es decir, menos de 36 minutos de generación en bruto si cada uno tarda lo indicado, más la edición manual para unirlos. Es un cálculo a partir de la cifra por clip, no un benchmark medido de 20 segundos.',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 on GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 on Hugging Face' },
@@ -1238,7 +1238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: 'El filtro del hardware',
         content: [
-          'La generación de video local es gratis de la misma manera en que un cachorro es gratis: los pesos del modelo no cuestan nada, pero la GPU es el verdadero precio de entrada. Sáltate por completo la generación local si tu GPU tiene menos de 12 GB de VRAM y no planeas actualizarla — por debajo de ese nivel solo la variante cuantizada de 5B de Wan 2.2 es utilizable, con calidad de entrada, y una plataforma en la nube te dará mejores resultados más rápido.',
+          'La generación de video local es gratis de la misma manera en que un cachorro es gratis: los pesos del modelo no cuestan nada, pero la GPU es el verdadero precio de entrada. Sáltate por completo la generación local si tu GPU tiene menos de 12 GB de VRAM y no planeas actualizarla — por debajo de ese nivel solo la variante cuantizada de 5B de Wan 2.2 es utilizable, con calidad de entrada, y una plataforma en la nube probablemente sea el camino más sencillo.',
           '¿No estás seguro de qué significa todo esto para tu equipo? Estas guías lo explican: [Calculadora de VRAM](/es/local-llms/vram-calculator-local-llm) para requisitos exactos por modelo, [¿Cuánta VRAM necesitas?](/es/local-llms/how-much-vram-local-llm) para tablas comparativas entre tamaños de modelo, [Mejores GPU para IA local](/es/local-llms/best-gpus-for-local-llms) y [Mejores GPU económicas](/es/local-llms/best-budget-gpus-local-llm) para recomendaciones de hardware, y [GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) para comparaciones de plataformas. Una advertencia honesta: esas guías usan la fórmula de VRAM para LLMs (parámetros × bits ÷ 8). Los modelos de difusión de video también escalan la VRAM con la resolución y la duración del clip, así que trata esas cifras como un piso, no un techo, para cargas de trabajo de video.',
         ],
         columns: ['Tu GPU', 'Qué puedes correr'],
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu GPU': '6–8GB VRAM', 'Qué puedes correr': 'Wan 2.2 TI2V-5B (cuantizado) — utilizable, calidad de entrada' },
           { 'Tu GPU': '12GB VRAM', 'Qué puedes correr': 'LTX-Video 0.9.5 — una opción práctica en este nivel' },
           { 'Tu GPU': '16GB VRAM', 'Qué puedes correr': 'HunyuanVideo 1.5 (si la licencia lo permite), Wan 2.2 14B en GGUF Q3' },
-          { 'Tu GPU': '24GB+ VRAM', 'Qué puedes correr': 'Todo: Wan 2.2 14B en alta calidad, LTX-2 cuantizado' },
+          { 'Tu GPU': '24GB+ VRAM', 'Qué puedes correr': 'Los tres: Wan 2.2 14B (cuantizado), LTX-2 cuantizado, HunyuanVideo 1.5 (si la licencia lo permite)' },
         ],
         note:
           'Costo aproximado de GPU, según el [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (datos de listados de eBay EE. UU., no una cotización ni una oferta): los listados vendidos de RTX 3090 usadas rondan los $1,500–1,725 (mediana $1,650; 225 ventas, 13–23 de noviembre de 2026; con fecha 2026-11-23). En la cifra con fecha 2026-10-15, los de RTX 4090 usadas estaban en $2,575–3,010 (mediana $2,860). Los precios de GPU varían — verifica el precio actual antes de comprar en lugar de confiar en estas cifras pasados unos meses. Los precios en tu país pueden variar según impuestos locales.',
@@ -1255,7 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: 'Lo que realmente implica correr generación de video local',
         content:
-          'Con modelos locales, no estás instalando una herramienta de video — estás ensamblando un pipeline.\n\n**La configuración de generación.** ComfyUI está basado en nodos: construyes, o importas y depuras, un grafo de flujo de trabajo con loaders, samplers y decoders. Espera desajustes de versión de CUDA, versiones fijadas de PyTorch y algún que otro error de instalación de `flash_attn` antes de que se renderice tu primer frame.\n\n**El prompting.** Los modelos de video necesitan prompts estructurados — tipo de plano, movimiento de cámara, iluminación, acción del sujeto — no frases de una línea. No hay un asistente de prompts integrado ni una capa de system prompt; tú escribes toda la estructura. Nuestras guías sobre [system prompts vs. user prompts](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) y [prompt engineering para modelos locales](/es/local-llms/prompt-engineering-for-local-models) cubren fundamentos que se transfieren directamente al prompting de video.\n\n**Todo lo que rodea al clip.** Los modelos locales generan clips en bruto y silenciosos (excepto LTX) de 5 a 20 segundos. Guion, locución, música, imágenes de stock, subtítulos y edición son herramientas separadas que tú eliges, instalas y conectas entre sí.',
+          'Con modelos locales, no estás instalando una herramienta de video — estás ensamblando un pipeline.\n\n**La configuración de generación.** ComfyUI está basado en nodos: construyes, o importas y depuras, un grafo de flujo de trabajo con loaders, samplers y decoders. Espera desajustes de versión de CUDA, versiones fijadas de PyTorch y algún que otro error de instalación de `flash_attn` antes de que se renderice tu primer frame.\n\n**El prompting.** Los modelos de video necesitan prompts estructurados — tipo de plano, movimiento de cámara, iluminación, acción del sujeto — no frases de una línea. Un flujo de trabajo típico de ComfyUI no tiene capa de system prompt. Los repositorios de [Wan 2.2](https://github.com/Wan-Video/Wan2.2) y [HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) ofrecen ampliación o reescritura de prompts, pero requiere un modelo de lenguaje aparte o una API que configuras tú. Nuestras guías sobre [system prompts vs. user prompts](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) y [prompt engineering para modelos locales](/es/local-llms/prompt-engineering-for-local-models) cubren fundamentos que se transfieren directamente al prompting de video.\n\n**Todo lo que rodea al clip.** Los modelos locales generan clips en bruto y silenciosos (excepto LTX) de 5 a 20 segundos. Guion, locución, música, imágenes de stock, subtítulos y edición son herramientas separadas que tú eliges, instalas y conectas entre sí.',
         promptExamples: [
           { label: 'Débil (una línea)', text: 'Un perro en una playa' },
           { label: 'Estructurado (lo que necesitan los modelos de video)', text: 'Golden retriever corriendo por una orilla mojada durante la hora dorada, plano de seguimiento bajo desde el lateral, poca profundidad de campo, contraluz cálido, cámara lenta suave, 24fps cinematográfico' },
@@ -1294,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Sin GPU, o menos de 12GB de VRAM', 'Recomendación': 'Invideo (nube) — las opciones locales son básicas por debajo de este nivel' },
           { 'Tu situación': 'Quieres un video terminado con locución, no clips en bruto', 'Recomendación': 'Invideo (nube) — los modelos locales no ensamblan una producción completa' },
           { 'Tu situación': 'Con plazo urgente, cero tolerancia a la configuración', 'Recomendación': 'Invideo (nube)' },
-          { 'Tu situación': 'GPU de 12GB+, cómodo con la configuración, quieres privacidad y $0 de costo marginal', 'Recomendación': 'Local: LTX-Video (12GB) o Wan 2.2 (24GB para máxima calidad)' },
+          { 'Tu situación': 'GPU de 12GB+, cómodo con la configuración, quieres privacidad y $0 de costo marginal', 'Recomendación': 'Local: LTX-Video (12GB) o Wan 2.2 (24GB para los modelos 14B cuantizados)' },
           { 'Tu situación': 'En la UE, el Reino Unido o Corea del Sur', 'Recomendación': 'Local = solo Wan 2.2 o LTX-2 (la licencia de HunyuanVideo te excluye)' },
           { 'Tu situación': 'Necesitas automatización/API a escala sin construirla', 'Recomendación': 'Invideo (nube, servidor MCP)' },
         ],
@@ -1475,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Moins de 12 Go de VRAM → invideo est le choix pratique ; en dessous de ce seuil, les options locales se limitent à un rendu quantifié d\'entrée de gamme.',
           '12 Go de VRAM → LTX-Video 0.9.5, une option locale pratique à ce niveau.',
-          '16–24 Go+ de VRAM → Wan 2.2 (meilleure qualité, Apache 2.0 — usage commercial permissif sans seuil de revenus ni exclusion territoriale ; les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent, consultez la fiche du modèle) ou LTX-2 (vitesse + audio synchronisé).',
+          '16–24 Go+ de VRAM → Wan 2.2 (qualité solide, Apache 2.0 — usage commercial permissif sans seuil de revenus ni exclusion territoriale ; les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent, consultez la fiche du modèle) ou LTX-2 (vitesse + audio synchronisé).',
           'Dans l\'UE, au Royaume-Uni ou en Corée du Sud → la licence de HunyuanVideo 1.5 vous exclut ; utilisez plutôt Wan 2.2 ou LTX-2.',
           'Besoin d\'une vidéo narrée finie, pas d\'un clip brut → les modèles locaux ne génèrent que des clips silencieux (LTX excepté) de 5 à 20 secondes ; invideo propose un workflow hébergé autour du clip ; le contenu de chaque offre figure sur sa page tarifs.',
         ],
@@ -1507,12 +1507,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 est un modèle vidéo local haut de gamme sous licence permissive Apache 2.0.** Usage commercial permissif sans seuil de revenus ni exclusion territoriale (les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent ; consultez la fiche du modèle).',
+          '**Wan 2.2 est un modèle vidéo local solide sous licence permissive Apache 2.0.** Usage commercial permissif sans seuil de revenus ni exclusion territoriale (les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent ; consultez la fiche du modèle).',
           '**Invideo est une alternative hébergée** avec une offre gratuite et les offres payantes Starter, Plus et Max ; sa page tarifs indique que Plus et Max donnent accès à tous les modèles, dont tous les modèles Seedance. Les prix varient : consultez la page actuelle.',
           '**La licence de HunyuanVideo 1.5 exclut explicitement l\'UE, le Royaume-Uni et la Corée du Sud** — pour le modèle comme pour ses sorties. Les lecteurs de ces régions doivent utiliser Wan 2.2 ou LTX-2.',
           '**LTX-2 est présenté comme un modèle axé sur la vitesse et c\'est le seul de ce trio local avec audio synchronisé intégré**, gratuit commercialement pour les entreprises générant moins de 10 M$ de revenus annuels.',
           '**12 Go de VRAM est le plancher réaliste pour une génération vidéo locale sérieuse.** En dessous, invideo devient l\'option la plus pratique.',
-          '**Les modèles locaux génèrent des clips bruts et silencieux de 5 à 20 secondes, pas des vidéos finies.** Script, voix off, musique, sous-titres et montage sont des outils séparés que vous assemblez vous-même — invideo vise à réunir ces étapes dans un seul workflow hébergé.',
+          '**Les modèles locaux génèrent des clips bruts de 5 à 20 secondes (silencieux, sauf avec LTX-2), pas des vidéos finies.** Script, voix off, musique, sous-titres et montage sont des outils séparés que vous assemblez vous-même — invideo vise à réunir ces étapes dans un seul workflow hébergé.',
           '**Lors de la vérification du 27 novembre 2026, la page officielle de Wan sur GitHub ne montrait aucun dépôt de poids ouverts « Wan 2.7 ».** Alibaba a annoncé [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) en avril 2026 comme modèle disponible sur Alibaba Cloud. Méfiez-vous des pages tierces proposant des « poids Wan 2.7 ».',
         ],
       },
@@ -1544,7 +1544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2 (Alibaba) — qualité solide, Apache 2.0',
         content:
-          'Wan 2.2 est largement utilisé parmi les modèles vidéo ouverts, avec de nombreux dérivés communautaires construits dessus (voir sa page de modèle Hugging Face pour les téléchargements actuels). Il se décline en trois variantes — T2V-A14B et I2V-A14B (mélange d\'experts, 27B de paramètres au total / 14B actifs), plus un TI2V-5B compact qui gère à la fois le texte-vers-vidéo et l\'image-vers-vidéo sur seulement 6–8 Go de VRAM. Le palier 14B nécessite 15 Go (GGUF Q3) à 25 Go (FP8) ; la commande officielle non quantifiée demande 80 Go. Sa licence est Apache 2.0 — véritablement gratuite, usage commercial permissif sans seuil de revenus ni exclusion territoriale (les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent ; consultez la fiche du modèle).\n\n**Vitesse, concrètement :** le [dépôt officiel de Wan 2.2](https://github.com/Wan-Video/Wan2.2) indique que, sans optimisation particulière, le modèle compact TI2V-5B peut générer un clip 720p de 5 secondes en moins de 9 minutes sur un seul GPU grand public. C\'est le chiffre du développeur, que PromptQuorum n\'a pas vérifié, et il ne décrit pas les variantes 14B. Une séquence de 20 secondes suppose de générer 4 clips distincts de 5 secondes, soit moins de 36 minutes de génération brute si chacun prend la durée indiquée, plus le montage manuel pour les raccorder. C\'est un calcul à partir du chiffre par clip, pas un benchmark de 20 secondes mesuré.',
+          'Wan 2.2 est largement utilisé parmi les modèles vidéo ouverts, avec de nombreux dérivés communautaires construits dessus (voir sa page de modèle Hugging Face pour les téléchargements actuels). Il se décline en trois variantes — T2V-A14B et I2V-A14B (mélange d\'experts, 27B de paramètres au total / 14B actifs), plus un TI2V-5B compact qui gère à la fois le texte-vers-vidéo et l\'image-vers-vidéo sur seulement 6–8 Go de VRAM. Le palier 14B nécessite 15 Go (GGUF Q3) à 25 Go (FP8) ; la commande officielle non quantifiée demande 80 Go. Sa licence est Apache 2.0 — véritablement gratuite, usage commercial permissif sans seuil de revenus ni exclusion territoriale (les conditions Apache standard, comme les mentions d\'attribution, s\'appliquent ; consultez la fiche du modèle).\n\n**Vitesse, concrètement :** le [dépôt officiel de Wan 2.2](https://github.com/Wan-Video/Wan2.2) indique que, sans optimisation particulière, le modèle compact TI2V-5B peut générer un clip 720p de 5 secondes en moins de 9 minutes sur un seul GPU grand public. C\'est le chiffre du développeur, que PromptQuorum n\'a pas vérifié, et il ne décrit pas les variantes 14B. D\'après le dépôt, sa commande d\'exemple pour TI2V-5B tourne sur un GPU d\'au moins 24 Go de VRAM (une RTX 4090, par exemple) : n\'attendez pas ce temps sur une carte de 6–8 Go. Une séquence de 20 secondes suppose de générer 4 clips distincts de 5 secondes, soit moins de 36 minutes de génération brute si chacun prend la durée indiquée, plus le montage manuel pour les raccorder. C\'est un calcul à partir du chiffre par clip, pas un benchmark de 20 secondes mesuré.',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 sur GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 sur Hugging Face' },
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: 'Le verrou matériel',
         content: [
-          'La génération vidéo locale est gratuite comme un chiot est gratuit : les poids du modèle ne coûtent rien, mais le GPU est le vrai prix d\'entrée. Évitez complètement le local si votre GPU a moins de 12 Go de VRAM et que vous ne prévoyez pas de mise à niveau — en dessous de ce seuil, seule la variante quantifiée 5B de Wan 2.2 est utilisable, à une qualité d\'entrée de gamme, et une plateforme cloud vous donnera un meilleur résultat, plus vite.',
+          'La génération vidéo locale est gratuite comme un chiot est gratuit : les poids du modèle ne coûtent rien, mais le GPU est le vrai prix d\'entrée. Évitez complètement le local si votre GPU a moins de 12 Go de VRAM et que vous ne prévoyez pas de mise à niveau — en dessous de ce seuil, seule la variante quantifiée 5B de Wan 2.2 est utilisable, à une qualité d\'entrée de gamme, et une plateforme cloud sera probablement la voie la plus simple.',
           'Vous ne savez pas ce que cela signifie pour votre machine ? Ces guides détaillent tout : [Calculateur de VRAM](/fr/local-llms/vram-calculator-local-llm) pour les besoins exacts par modèle, [De combien de VRAM avez-vous besoin ?](/fr/local-llms/how-much-vram-local-llm) pour des tableaux par taille de modèle, [Meilleurs GPU pour l\'IA locale](/fr/local-llms/best-gpus-for-local-llms) et [Meilleurs GPU petit budget](/fr/local-llms/best-budget-gpus-local-llm) pour des choix matériels, et [GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) pour comparer les plateformes. Un avertissement honnête : ces guides utilisent la formule VRAM des LLM (paramètres × bits ÷ 8). Les modèles de diffusion vidéo font aussi varier la VRAM selon la résolution et la durée du clip — considérez leurs chiffres comme un plancher, pas un plafond, pour les charges vidéo.',
         ],
         columns: ['Votre GPU', 'Ce que vous pouvez exécuter'],
@@ -1598,7 +1598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre GPU': '6–8 Go VRAM', 'Ce que vous pouvez exécuter': 'Wan 2.2 TI2V-5B (quantifié) — utilisable, qualité d\'entrée' },
           { 'Votre GPU': '12 Go VRAM', 'Ce que vous pouvez exécuter': 'LTX-Video 0.9.5 — une option pratique à ce niveau' },
           { 'Votre GPU': '16 Go VRAM', 'Ce que vous pouvez exécuter': 'HunyuanVideo 1.5 (si la licence le permet), Wan 2.2 14B en GGUF Q3' },
-          { 'Votre GPU': '24 Go+ VRAM', 'Ce que vous pouvez exécuter': 'Tout : Wan 2.2 14B en haute qualité, LTX-2 quantifié' },
+          { 'Votre GPU': '24 Go+ VRAM', 'Ce que vous pouvez exécuter': 'Les trois : Wan 2.2 14B (quantifié), LTX-2 quantifié, HunyuanVideo 1.5 (si la licence le permet)' },
         ],
         note:
           'Coût approximatif des GPU, d\'après le [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (données d\'annonces eBay États-Unis, ni devis ni offre) : les annonces vendues de RTX 3090 d\'occasion tournent autour de 1 500–1 725 $ (médiane 1 650 $ ; 225 ventes, 13–23 novembre 2026 ; chiffre daté du 2026-11-23). Dans le chiffre daté du 2026-10-15, celles de RTX 4090 d\'occasion étaient à 2 575–3 010 $ (médiane 2 860 $). Les prix en France varient selon les taxes et les frais d\'importation. Les prix des GPU évoluent — vérifiez les tarifs actuels avant d\'acheter plutôt que de vous fier à ces chiffres au-delà de quelques mois.',
@@ -1607,7 +1607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: 'Ce qu\'implique vraiment la génération vidéo locale',
         content:
-          'Avec les modèles locaux, vous n\'installez pas un outil vidéo — vous assemblez un pipeline.\n\n**La configuration de la génération.** ComfyUI fonctionne par nœuds : vous construisez, ou importez et déboguez, un graphe de workflow composé de loaders, samplers et decoders. Attendez-vous à des incompatibilités de versions CUDA, des épinglages PyTorch, et parfois une erreur d\'installation `flash_attn` avant la première image rendue.\n\n**Le prompting.** Les modèles vidéo ont besoin de prompts structurés — type de plan, mouvement de caméra, éclairage, action du sujet — pas de phrases uniques. Il n\'y a ni assistant de prompt intégré ni couche de prompt système ; vous écrivez toute la structure vous-même. Nos guides sur [prompts système vs prompts utilisateur](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) et [prompt engineering pour modèles locaux](/fr/local-llms/prompt-engineering-for-local-models) couvrent des fondamentaux qui s\'appliquent directement au prompting vidéo.\n\n**Tout ce qui entoure le clip.** Les modèles locaux produisent des clips bruts, silencieux (LTX excepté), de 5 à 20 secondes. Script, voix off, musique, images d\'archives, sous-titres et montage sont chacun des outils séparés que vous choisissez, installez et connectez vous-même.',
+          'Avec les modèles locaux, vous n\'installez pas un outil vidéo — vous assemblez un pipeline.\n\n**La configuration de la génération.** ComfyUI fonctionne par nœuds : vous construisez, ou importez et déboguez, un graphe de workflow composé de loaders, samplers et decoders. Attendez-vous à des incompatibilités de versions CUDA, des épinglages PyTorch, et parfois une erreur d\'installation `flash_attn` avant la première image rendue.\n\n**Le prompting.** Les modèles vidéo ont besoin de prompts structurés — type de plan, mouvement de caméra, éclairage, action du sujet — pas de phrases uniques. Un workflow ComfyUI classique n\'a pas de couche de prompt système. Les dépôts de [Wan 2.2](https://github.com/Wan-Video/Wan2.2) et de [HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) proposent une extension ou une réécriture de prompt, mais elle repose sur un modèle de langage séparé ou une API que vous configurez vous-même. Nos guides sur [prompts système vs prompts utilisateur](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) et [prompt engineering pour modèles locaux](/fr/local-llms/prompt-engineering-for-local-models) couvrent des fondamentaux qui s\'appliquent directement au prompting vidéo.\n\n**Tout ce qui entoure le clip.** Les modèles locaux produisent des clips bruts, silencieux (LTX excepté), de 5 à 20 secondes. Script, voix off, musique, images d\'archives, sous-titres et montage sont chacun des outils séparés que vous choisissez, installez et connectez vous-même.',
         promptExamples: [
           { label: 'Faible (une ligne)', text: 'Un chien sur une plage' },
           { label: 'Structuré (ce dont les modèles vidéo ont besoin)', text: 'Golden retriever sprintant le long d\'un rivage humide à l\'heure dorée, plan de suivi bas depuis le côté, faible profondeur de champ, contre-jour chaud, léger ralenti, cinématographique 24 im/s' },
@@ -1646,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre situation': 'Aucun GPU, ou moins de 12 Go de VRAM', 'Recommandation': 'Invideo (cloud) — en dessous de ce seuil, le local reste d\'entrée de gamme' },
           { 'Votre situation': 'Vidéo finie avec voix off souhaitée, pas des clips bruts', 'Recommandation': 'Invideo (cloud) — les modèles locaux n\'assemblent pas une production complète' },
           { 'Votre situation': 'Délai serré, aucune tolérance à la configuration', 'Recommandation': 'Invideo (cloud)' },
-          { 'Votre situation': 'GPU 12 Go+, à l\'aise avec la configuration, veut confidentialité et coût marginal de 0 $', 'Recommandation': 'Local : LTX-Video (12 Go) ou Wan 2.2 (24 Go pour la pleine qualité)' },
+          { 'Votre situation': 'GPU 12 Go+, à l\'aise avec la configuration, veut confidentialité et coût marginal de 0 $', 'Recommandation': 'Local : LTX-Video (12 Go) ou Wan 2.2 (24 Go pour les modèles 14B quantifiés)' },
           { 'Votre situation': 'Dans l\'UE, au Royaume-Uni ou en Corée du Sud', 'Recommandation': 'Local = Wan 2.2 ou LTX-2 uniquement (la licence de HunyuanVideo vous exclut)' },
           { 'Votre situation': 'Besoin d\'automatisation/API à grande échelle sans la construire', 'Recommandation': 'Invideo (cloud, serveur MCP)' },
         ],
@@ -1827,7 +1827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'VRAM 12GB未満 → invideoが現実的な選択です。このクラス以下では、ローカルの選択肢は量子化した入門レベルの出力に限られます。',
           'VRAM 12GB → LTX-Video 0.9.5が、このクラスで実用的なローカル選択肢のひとつです。',
-          'VRAM 16〜24GB以上 → Wan 2.2（最高品質、Apache 2.0 — 収益しきい値や地域による除外のない寛容な商用利用。帰属表示など標準的なApacheの条件は適用されるため、モデルカードを確認）またはLTX-2（速度＋同期音声）。',
+          'VRAM 16〜24GB以上 → Wan 2.2（高品質、Apache 2.0 — 収益しきい値や地域による除外のない寛容な商用利用。帰属表示など標準的なApacheの条件は適用されるため、モデルカードを確認）またはLTX-2（速度＋同期音声）。',
           'EU、英国、韓国にお住まいの場合 → HunyuanVideo 1.5の対象外です。代わりにWan 2.2かLTX-2を使ってください。',
           '生のクリップではなく完成したナレーション付き動画が必要な場合 → ローカルモデルは無音（LTXを除く）の5〜20秒のクリップしか生成できません。invideoはクリップ周辺の作業向けのホスト型ワークフローを提供しています。各プランの内容は料金ページで確認してください。',
         ],
@@ -1859,12 +1859,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2は、寛容なApache 2.0ライセンスで提供されるトップクラスのローカル動画モデルです。** 収益しきい値や地域による除外のない寛容な商用利用が可能です（帰属表示など標準的なApacheの条件は適用されます。モデルカードを確認してください）。',
+          '**Wan 2.2は、寛容なApache 2.0ライセンスで提供される有力なローカル動画モデルです。** 収益しきい値や地域による除外のない寛容な商用利用が可能です（帰属表示など標準的なApacheの条件は適用されます。モデルカードを確認してください）。',
           '**invideoはホスト型の選択肢です。** 無料プランと有料のStarter、Plus、Maxプランがあり、料金ページによるとPlusとMaxではすべてのSeedanceモデルを含む全モデルを利用できます。料金は条件により異なるため、最新のページを確認してください。',
           '**HunyuanVideo 1.5のライセンスは、EU、英国、韓国を明確に除外しています。** モデル本体だけでなく、その出力にも適用されます。これらの地域の読者は代わりにWan 2.2かLTX-2を使ってください。',
           '**LTX-2は速度重視のモデルと位置づけられており、このローカル3モデルの中で唯一、組み込みの同期音声を持ちます。** 年間売上高$10M未満の企業なら商用利用も無料です。',
           '**本格的なローカル動画生成の現実的な最低ラインはVRAM 12GBです。** それ未満では、invideoの方が実用的な選択肢になります。',
-          '**ローカルモデルが生成するのは5〜20秒の無音の生クリップであり、完成した動画ではありません。** 台本、ナレーション、音楽、字幕、編集はそれぞれ別のツールで自分で組み立てる必要があります。invideoは、こうした工程を1つのホスト型ワークフローにまとめることを目指しています。',
+          '**ローカルモデルが生成するのは5〜20秒の生クリップ（LTX-2を除き無音）であり、完成した動画ではありません。** 台本、ナレーション、音楽、字幕、編集はそれぞれ別のツールで自分で組み立てる必要があります。invideoは、こうした工程を1つのホスト型ワークフローにまとめることを目指しています。',
           '**2026年11月27日の確認時点で、Wanの公式GitHubページに「Wan 2.7」のオープンウェイトのリポジトリはありませんでした。** Alibabaは2026年4月に[Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)をAlibaba Cloudで利用できるモデルとして発表しています。「Wan 2.7のウェイト」を提供する第三者のページには注意してください。',
         ],
       },
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2（Alibaba）— 高品質でApache 2.0',
         content:
-          'Wan 2.2はオープンな動画モデルの中で広く使われており、多くのコミュニティ派生版が作られています（最新のダウンロード数はHugging Faceのモデルページをご確認ください）。T2V-A14BとI2V-A14B（Mixture-of-Experts、合計27B／アクティブ14Bパラメータ）に加え、テキストと画像の両方から動画を生成できるコンパクトなTI2V-5Bの3種類が提供されており、TI2V-5Bはわずか6〜8GBのVRAMで動作します。14Bクラスは15GB（GGUF Q3）から25GB（FP8）が必要で、公式の非量子化版は80GBを要求します。ライセンスはApache 2.0で、収益しきい値や地域による除外のない寛容な商用利用が認められた無料モデルです（帰属表示など標準的なApacheの条件は適用されます。モデルカードを確認してください）。\n\n**速度について具体的に：** [Wan 2.2の公式リポジトリ](https://github.com/Wan-Video/Wan2.2)によると、特別な最適化なしで、コンパクトなTI2V-5Bモデルは一般向けGPU1枚で5秒の720pクリップを9分未満で生成できます。これは開発元の数値でPromptQuorumは検証しておらず、14B版を示すものでもありません。20秒のシーケンスには5秒のクリップを4本別々に生成する必要があり、各クリップがこの時間で済めば生の生成時間は36分未満で、さらにつなぎ合わせる手作業の編集が必要です。これはクリップ単位の数値を使った計算で、実測した20秒のベンチマークではありません。',
+          'Wan 2.2はオープンな動画モデルの中で広く使われており、多くのコミュニティ派生版が作られています（最新のダウンロード数はHugging Faceのモデルページをご確認ください）。T2V-A14BとI2V-A14B（Mixture-of-Experts、合計27B／アクティブ14Bパラメータ）に加え、テキストと画像の両方から動画を生成できるコンパクトなTI2V-5Bの3種類が提供されており、TI2V-5Bはわずか6〜8GBのVRAMで動作します。14Bクラスは15GB（GGUF Q3）から25GB（FP8）が必要で、公式の非量子化版は80GBを要求します。ライセンスはApache 2.0で、収益しきい値や地域による除外のない寛容な商用利用が認められた無料モデルです（帰属表示など標準的なApacheの条件は適用されます。モデルカードを確認してください）。\n\n**速度について具体的に：** [Wan 2.2の公式リポジトリ](https://github.com/Wan-Video/Wan2.2)によると、特別な最適化なしで、コンパクトなTI2V-5Bモデルは一般向けGPU1枚で5秒の720pクリップを9分未満で生成できます。これは開発元の数値でPromptQuorumは検証しておらず、14B版を示すものでもありません。同リポジトリによると、TI2V-5Bのサンプルコマンドの動作環境はVRAM 24GB以上のGPU（RTX 4090など）です。6〜8GBのカードで同じ時間は期待しないでください。20秒のシーケンスには5秒のクリップを4本別々に生成する必要があり、各クリップがこの時間で済めば生の生成時間は36分未満で、さらにつなぎ合わせる手作業の編集が必要です。これはクリップ単位の数値を使った計算で、実測した20秒のベンチマークではありません。',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 on GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 on Hugging Face' },
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: 'ハードウェアという関門',
         content: [
-          'ローカル動画生成が「無料」なのは、子犬が「無料」なのと同じ意味です。モデルの重み自体にはコストがかかりませんが、GPUこそが本当の参入コストです。GPUのVRAMが12GB未満で、アップグレードの予定もない場合は、ローカル生成は最初から見送るべきです。このクラス以下で実用になるのは量子化版のWan 2.2 TI2V-5Bのみで、品質もエントリーレベルです。クラウドプラットフォームの方が速く良い結果を得られます。',
+          'ローカル動画生成が「無料」なのは、子犬が「無料」なのと同じ意味です。モデルの重み自体にはコストがかかりませんが、GPUこそが本当の参入コストです。GPUのVRAMが12GB未満で、アップグレードの予定もない場合は、ローカル生成は最初から見送るべきです。このクラス以下で実用になるのは量子化版のWan 2.2 TI2V-5Bのみで、品質もエントリーレベルです。その場合はクラウドプラットフォームの方が手軽な選択肢になりやすいでしょう。',
           '自分のマシンがどのクラスに当たるか分からない場合は、以下のガイドが参考になります。モデルごとの正確な要件は[VRAM Calculator](/ja/local-llms/vram-calculator-local-llm)、モデルサイズ別の一覧表は[How Much VRAM Do You Need?](/ja/local-llms/how-much-vram-local-llm)、ハードウェア選びには[Best GPUs for Local AI](/ja/local-llms/best-gpus-for-local-llms)と[Best Budget GPUs](/ja/local-llms/best-budget-gpus-local-llm)、プラットフォーム比較には[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon)をご覧ください。一つ正直に断っておくと、これらのガイドはLLM用のVRAM計算式（パラメータ数×ビット数÷8）を使っています。動画拡散モデルの場合はVRAM使用量が解像度とクリップ長にも比例して増えるため、これらの数字は動画ワークロードにおいては下限であり上限ではないと考えてください。',
         ],
         columns: ['お使いのGPU', '実行可能なモデル'],
@@ -1950,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'お使いのGPU': 'VRAM 6〜8GB', '実行可能なモデル': 'Wan 2.2 TI2V-5B（量子化）— 実用的、エントリー品質' },
           { 'お使いのGPU': 'VRAM 12GB', '実行可能なモデル': 'LTX-Video 0.9.5 — このクラスで実用的な選択肢のひとつ' },
           { 'お使いのGPU': 'VRAM 16GB', '実行可能なモデル': 'HunyuanVideo 1.5（ライセンス条件が合えば）、Wan 2.2 14B（GGUF Q3）' },
-          { 'お使いのGPU': 'VRAM 24GB以上', '実行可能なモデル': 'すべて対応：高品質のWan 2.2 14B、量子化LTX-2' },
+          { 'お使いのGPU': 'VRAM 24GB以上', '実行可能なモデル': '3モデルすべて：量子化したWan 2.2 14B、量子化LTX-2、HunyuanVideo 1.5（ライセンス条件が合えば）' },
         ],
         note:
           'GPUのおおよその費用（[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)より。eBay米国の出品データであり、見積もりやオファーではありません）：中古RTX 3090の落札実績は約$1,500-1,725です（中央値$1,650、落札225件、2026年11月13〜23日、2026-11-23付）。中古RTX 4090の落札実績は、2026-10-15付の数値では$2,575-3,010（中央値$2,860）でした。日本での価格は税や輸入コストにより異なります。GPU価格は変動が大きいため、数か月以上前のこの数字を鵜呑みにせず、購入前に必ず最新価格を確認してください。',
@@ -1959,7 +1959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: 'ローカル動画生成の運用が実際に求めること',
         content:
-          'ローカルモデルを使うということは、動画ツールを1つインストールするのではなく、パイプライン全体を自分で組み立てるということです。\n\n**生成環境の構築。** ComfyUIはノードベースです。ローダー、サンプラー、デコーダーからなるワークフローグラフを、自分で構築するか、あるいはインポートしてデバッグする必要があります。最初のフレームがレンダリングされるまでに、CUDAバージョンの不一致、PyTorchのバージョン固定、`flash_attn`のインストールエラーなどに遭遇することを覚悟してください。\n\n**プロンプトの作成。** 動画モデルには、ショットタイプ、カメラの動き、ライティング、被写体の動作といった構造化されたプロンプトが必要で、一行だけの指示では不十分です。組み込みのプロンプトヘルパーもシステムプロンプト層もなく、構造全体を自分で書く必要があります。[system prompts vs. user prompts](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)と[prompt engineering for local models](/ja/local-llms/prompt-engineering-for-local-models)のガイドで扱う基本は、そのまま動画プロンプティングにも応用できます。\n\n**クリップの周辺にあるすべて。** ローカルモデルが出力するのは、5〜20秒の無音（LTXを除く）の生クリップです。台本、ナレーション、音楽、ストック映像、字幕、編集は、それぞれ別のツールを自分で選び、インストールし、つなぎ合わせる必要があります。',
+          'ローカルモデルを使うということは、動画ツールを1つインストールするのではなく、パイプライン全体を自分で組み立てるということです。\n\n**生成環境の構築。** ComfyUIはノードベースです。ローダー、サンプラー、デコーダーからなるワークフローグラフを、自分で構築するか、あるいはインポートしてデバッグする必要があります。最初のフレームがレンダリングされるまでに、CUDAバージョンの不一致、PyTorchのバージョン固定、`flash_attn`のインストールエラーなどに遭遇することを覚悟してください。\n\n**プロンプトの作成。** 動画モデルには、ショットタイプ、カメラの動き、ライティング、被写体の動作といった構造化されたプロンプトが必要で、一行だけの指示では不十分です。一般的なComfyUIのワークフローにはシステムプロンプト層がありません。[Wan 2.2](https://github.com/Wan-Video/Wan2.2)と[HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5)の公式リポジトリにはプロンプトの拡張・書き換え機能がありますが、自分で用意する別の言語モデルやAPIが必要です。[system prompts vs. user prompts](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)と[prompt engineering for local models](/ja/local-llms/prompt-engineering-for-local-models)のガイドで扱う基本は、そのまま動画プロンプティングにも応用できます。\n\n**クリップの周辺にあるすべて。** ローカルモデルが出力するのは、5〜20秒の無音（LTXを除く）の生クリップです。台本、ナレーション、音楽、ストック映像、字幕、編集は、それぞれ別のツールを自分で選び、インストールし、つなぎ合わせる必要があります。',
         promptExamples: [
           { label: '弱い例（一行だけ）', text: 'A dog on a beach（浜辺の犬）' },
           { label: '構造化された例（動画モデルに必要なもの）', text: 'Golden retriever sprinting along a wet shoreline at golden hour, low tracking shot following from the side, shallow depth of field, warm backlight, gentle slow motion, cinematic 24fps（黄金色の夕暮れ時、濡れた海岸線を走るゴールデンレトリバー。横から追う低アングルのトラッキングショット、浅い被写界深度、暖色の逆光、緩やかなスローモーション、シネマティックな24fps）' },
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'あなたの状況': 'GPUがない、またはVRAM 12GB未満', '推奨': 'Invideo（クラウド）— このクラス以下のローカルの選択肢は入門レベルです' },
           { 'あなたの状況': '生のクリップではなく、ナレーション付きの完成した動画が欲しい', '推奨': 'Invideo（クラウド）— ローカルモデルは完全な制作物を組み立ててくれません' },
           { 'あなたの状況': '納期優先で、セットアップの手間を一切許容できない', '推奨': 'Invideo（クラウド）' },
-          { 'あなたの状況': 'VRAM 12GB以上のGPUがあり、セットアップに抵抗がなく、プライバシーと限界費用$0を重視する', '推奨': 'ローカル：LTX-Video（12GB）またはWan 2.2（フル品質には24GB）' },
+          { 'あなたの状況': 'VRAM 12GB以上のGPUがあり、セットアップに抵抗がなく、プライバシーと限界費用$0を重視する', '推奨': 'ローカル：LTX-Video（12GB）またはWan 2.2（量子化した14Bモデルには24GB）' },
           { 'あなたの状況': 'EU、英国、韓国在住', '推奨': 'ローカルはWan 2.2かLTX-2のみ（HunyuanVideoのライセンス対象外）' },
           { 'あなたの状況': '自分で構築せずに大規模な自動化・APIが必要', '推奨': 'Invideo（クラウド、MCPサーバー）' },
         ],
@@ -2179,7 +2179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'VRAM 12GB 미만 → invideo가 현실적인 선택입니다. 이 등급 이하에서는 로컬 선택지가 양자화된 입문 수준의 결과물로 제한됩니다.',
           'VRAM 12GB → LTX-Video 0.9.5가 이 등급에서 실용적인 로컬 옵션입니다.',
-          'VRAM 16~24GB 이상 → Wan 2.2(최고 품질, Apache 2.0 — 매출 기준이나 지역 제외 없는 상업적 사용 허용, 귀속 표시 등 Apache 표준 조건 적용, 모델 카드 확인) 또는 LTX-2(속도 + 동기화된 오디오).',
+          'VRAM 16~24GB 이상 → Wan 2.2(우수한 품질, Apache 2.0 — 매출 기준이나 지역 제외 없는 상업적 사용 허용, 귀속 표시 등 Apache 표준 조건 적용, 모델 카드 확인) 또는 LTX-2(속도 + 동기화된 오디오).',
           'EU, 영국, 대한민국 거주 → HunyuanVideo 1.5의 라이선스가 여러분을 제외합니다. 대신 Wan 2.2나 LTX-2를 사용하십시오.',
           '원시 클립이 아닌 완성된 내레이션 비디오가 필요한 경우 → 로컬 모델은 5~20초 길이의 무음(LTX 제외) 클립만 생성합니다. Invideo는 클립 주변 작업을 위한 호스티드 워크플로우를 제공합니다. 플랜별 구성은 요금 페이지에서 확인하십시오.',
         ],
@@ -2211,12 +2211,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2는 관대한 Apache 2.0 라이선스로 제공되는 최상위급 로컬 비디오 모델입니다.** 매출 기준이나 지역 제외 없이 상업적 사용이 허용됩니다(귀속 표시 등 Apache의 표준 조건은 적용되므로 모델 카드를 확인하십시오)',
+          '**Wan 2.2는 관대한 Apache 2.0 라이선스로 제공되는 우수한 로컬 비디오 모델입니다.** 매출 기준이나 지역 제외 없이 상업적 사용이 허용됩니다(귀속 표시 등 Apache의 표준 조건은 적용되므로 모델 카드를 확인하십시오)',
           '**Invideo는 호스티드 방식의 대안입니다.** 무료 플랜과 유료 Starter, Plus, Max 플랜이 있으며, 요금 페이지에 따르면 Plus와 Max는 모든 Seedance 모델을 포함한 전체 모델을 이용할 수 있습니다. 가격은 조건에 따라 다르므로 최신 페이지를 확인하십시오.',
           '**HunyuanVideo 1.5의 라이선스는 EU, 영국, 대한민국을 명시적으로 제외합니다** — 모델 자체와 그 결과물 모두에 적용됩니다. 해당 지역의 독자는 대신 Wan 2.2나 LTX-2를 사용해야 합니다.',
           '**LTX-2는 속도에 중점을 둔 모델로 소개되며, 이 로컬 3종 중 동기화된 오디오를 내장한 유일한 모델입니다.** 연 매출 $10M 미만의 기업에는 상업적으로 무료입니다.',
           '**진지한 로컬 비디오 생성의 현실적인 최저 기준은 VRAM 12GB입니다.** 그 이하에서는 invideo가 더 실용적인 선택이 됩니다.',
-          '**로컬 모델은 완성된 비디오가 아니라 5~20초 길이의 원시 무음 클립을 생성합니다.** 스크립트, 음성, 음악, 자막, 편집은 각각 별도의 도구를 직접 조합해야 합니다 — invideo는 이러한 단계를 하나의 호스티드 워크플로우로 묶는 것을 지향합니다.',
+          '**로컬 모델은 완성된 비디오가 아니라 5~20초 길이의 원시 클립(LTX-2를 제외하면 무음)을 생성합니다.** 스크립트, 음성, 음악, 자막, 편집은 각각 별도의 도구를 직접 조합해야 합니다 — invideo는 이러한 단계를 하나의 호스티드 워크플로우로 묶는 것을 지향합니다.',
           '**2026년 11월 27일 확인 시점에 Wan 공식 GitHub 페이지에는 "Wan 2.7" 오픈 웨이트 저장소가 없었습니다.** Alibaba는 2026년 4월 [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009)를 Alibaba Cloud에서 이용할 수 있는 모델로 발표했습니다. "Wan 2.7 가중치"를 제공한다는 제3자 페이지는 주의하십시오.',
         ],
       },
@@ -2248,7 +2248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2 (Alibaba) — 높은 품질, Apache 2.0',
         content:
-          'Wan 2.2는 오픈 비디오 모델 중 널리 사용되며, 수많은 커뮤니티 파생 모델이 그 위에 구축되었습니다(최신 다운로드 수는 Hugging Face 모델 페이지를 확인하십시오). T2V-A14B와 I2V-A14B(전문가 혼합 구조, 총 27B / 활성 14B 파라미터), 그리고 6~8GB VRAM만으로 텍스트-투-비디오와 이미지-투-비디오를 모두 처리하는 소형 TI2V-5B까지 세 가지 변형으로 출시되었습니다. 14B 등급은 15GB(GGUF Q3)에서 25GB(FP8)까지 필요하며, 공식 비양자화 실행에는 80GB가 요구됩니다. 라이선스는 Apache 2.0으로 진정한 무료이며, 매출 기준이나 지역 제외 없이 상업적 사용이 허용됩니다(귀속 표시 등 Apache의 표준 조건은 적용되므로 모델 카드를 확인하십시오).\n\n**구체적인 속도:** [Wan 2.2 공식 저장소](https://github.com/Wan-Video/Wan2.2)에 따르면, 별도 최적화 없이 경량 TI2V-5B 모델은 일반 소비자용 GPU 한 장으로 5초 길이의 720p 클립을 9분 이내에 생성할 수 있습니다. 이는 개발사의 수치로 PromptQuorum은 검증하지 않았으며, 14B 버전을 설명하지도 않습니다. 20초 시퀀스는 5초 클립 4개를 따로 생성해야 하며, 각 클립이 명시된 시간 안에 끝난다면 원시 생성 시간은 36분 미만이고 이를 이어 붙이는 수작업 편집이 추가됩니다. 이는 클립당 수치로 계산한 값이며 실제로 측정한 20초 벤치마크가 아닙니다.',
+          'Wan 2.2는 오픈 비디오 모델 중 널리 사용되며, 수많은 커뮤니티 파생 모델이 그 위에 구축되었습니다(최신 다운로드 수는 Hugging Face 모델 페이지를 확인하십시오). T2V-A14B와 I2V-A14B(전문가 혼합 구조, 총 27B / 활성 14B 파라미터), 그리고 6~8GB VRAM만으로 텍스트-투-비디오와 이미지-투-비디오를 모두 처리하는 소형 TI2V-5B까지 세 가지 변형으로 출시되었습니다. 14B 등급은 15GB(GGUF Q3)에서 25GB(FP8)까지 필요하며, 공식 비양자화 실행에는 80GB가 요구됩니다. 라이선스는 Apache 2.0으로 진정한 무료이며, 매출 기준이나 지역 제외 없이 상업적 사용이 허용됩니다(귀속 표시 등 Apache의 표준 조건은 적용되므로 모델 카드를 확인하십시오).\n\n**구체적인 속도:** [Wan 2.2 공식 저장소](https://github.com/Wan-Video/Wan2.2)에 따르면, 별도 최적화 없이 경량 TI2V-5B 모델은 일반 소비자용 GPU 한 장으로 5초 길이의 720p 클립을 9분 이내에 생성할 수 있습니다. 이는 개발사의 수치로 PromptQuorum은 검증하지 않았으며, 14B 버전을 설명하지도 않습니다. 저장소에 따르면 TI2V-5B 예시 명령은 VRAM 24GB 이상의 GPU(예: RTX 4090)에서 실행되므로, 6~8GB 카드에서 같은 시간을 기대하지 마십시오. 20초 시퀀스는 5초 클립 4개를 따로 생성해야 하며, 각 클립이 명시된 시간 안에 끝난다면 원시 생성 시간은 36분 미만이고 이를 이어 붙이는 수작업 편집이 추가됩니다. 이는 클립당 수치로 계산한 값이며 실제로 측정한 20초 벤치마크가 아닙니다.',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 on GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 on Hugging Face' },
@@ -2294,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: '하드웨어 관문',
         content: [
-          '로컬 비디오 생성은 강아지가 "공짜"인 것과 같은 의미로 무료입니다. 모델 가중치 자체는 비용이 들지 않지만, GPU가 진짜 입장료입니다. GPU의 VRAM이 12GB 미만이고 업그레이드 계획이 없다면 로컬 생성은 아예 건너뛰십시오 — 이 등급 이하에서는 양자화된 Wan 2.2 TI2V-5B 변형만 입문 수준 품질로 사용할 수 있으며, 클라우드 플랫폼이 더 빠르게 더 나은 결과를 제공할 것입니다.',
+          '로컬 비디오 생성은 강아지가 "공짜"인 것과 같은 의미로 무료입니다. 모델 가중치 자체는 비용이 들지 않지만, GPU가 진짜 입장료입니다. GPU의 VRAM이 12GB 미만이고 업그레이드 계획이 없다면 로컬 생성은 아예 건너뛰십시오 — 이 등급 이하에서는 양자화된 Wan 2.2 TI2V-5B 변형만 입문 수준 품질로 사용할 수 있으며, 이 경우에는 클라우드 플랫폼이 더 쉬운 경로일 가능성이 높습니다.',
           '이 내용이 자신의 컴퓨터에 어떻게 적용되는지 잘 모르시겠습니까? 다음 가이드가 자세히 설명합니다: 모델별 정확한 요구사항은 [VRAM 계산기](/ko/local-llms/vram-calculator-local-llm), 모델 크기별 도표는 [필요한 VRAM은 얼마인가?](/ko/local-llms/how-much-vram-local-llm), 하드웨어 선택은 [로컬 AI를 위한 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms)와 [최고의 예산형 GPU](/ko/local-llms/best-budget-gpus-local-llm), 플랫폼 비교는 [GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)을 참고하십시오. 한 가지 솔직한 유의점: 이 가이드들은 LLM용 VRAM 공식(파라미터 수 × 비트 ÷ 8)을 사용합니다. 비디오 디퓨전 모델은 해상도와 클립 길이에 따라서도 VRAM 사용량이 달라지므로, 이 수치들은 비디오 작업에서는 상한이 아니라 최저 기준으로 받아들이십시오.',
         ],
         columns: ['보유 GPU', '실행 가능한 것'],
@@ -2302,7 +2302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '보유 GPU': 'VRAM 6~8GB', '실행 가능한 것': 'Wan 2.2 TI2V-5B(양자화) — 사용 가능, 입문 수준 품질' },
           { '보유 GPU': 'VRAM 12GB', '실행 가능한 것': 'LTX-Video 0.9.5 — 이 등급에서 실용적인 옵션' },
           { '보유 GPU': 'VRAM 16GB', '실행 가능한 것': 'HunyuanVideo 1.5(라이선스 허용 시), Wan 2.2 14B(GGUF Q3)' },
-          { '보유 GPU': 'VRAM 24GB 이상', '실행 가능한 것': '모든 것 가능: Wan 2.2 14B 고품질, LTX-2 양자화' },
+          { '보유 GPU': 'VRAM 24GB 이상', '실행 가능한 것': '3종 모두: Wan 2.2 14B(양자화), LTX-2 양자화, HunyuanVideo 1.5(라이선스 허용 시)' },
         ],
         note:
           'GPU 대략적인 비용([InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) 기준, eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다): 중고 RTX 3090 낙찰 기록은 약 $1,500~1,725입니다(중앙값 $1,650, 낙찰 225건, 2026년 11월 13~23일, 2026-11-23 기준). 중고 RTX 4090 낙찰 기록은 2026-10-15 기준 수치로 $2,575~3,010(중앙값 $2,860)이었습니다. 한국에서는 가격이 다를 수 있습니다. GPU 가격은 변동하므로, 몇 달이 지난 이 수치를 그대로 믿기보다 구매 전 현재 시세를 확인하십시오.',
@@ -2311,7 +2311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: '로컬 비디오 생성을 실제로 실행한다는 것의 의미',
         content:
-          '로컬 모델을 사용한다는 것은 비디오 도구 하나를 설치하는 것이 아니라 파이프라인 전체를 조립한다는 뜻입니다.\n\n**생성 환경 설정.** ComfyUI는 노드 기반 도구입니다. 로더, 샘플러, 디코더로 이루어진 워크플로우 그래프를 직접 구축하거나, 가져와서 디버깅해야 합니다. 첫 프레임이 렌더링되기 전까지 CUDA 버전 불일치, PyTorch 버전 고정, 이따금 발생하는 `flash_attn` 설치 오류를 각오해야 합니다.\n\n**프롬프트 작성.** 비디오 모델은 한 줄짜리 프롬프트가 아니라 구조화된 프롬프트가 필요합니다 — 샷 종류, 카메라 움직임, 조명, 피사체의 동작 등입니다. 내장된 프롬프트 도우미도, 시스템 프롬프트 레이어도 없습니다. 전체 구조를 직접 작성해야 합니다. [시스템 프롬프트와 사용자 프롬프트의 차이](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)와 [로컬 모델을 위한 프롬프트 엔지니어링](/ko/local-llms/prompt-engineering-for-local-models) 가이드는 비디오 프롬프트 작성에도 그대로 적용되는 기본 원칙을 다룹니다.\n\n**클립 주변의 모든 것.** 로컬 모델은 5~20초 길이의 원시 무음(LTX 제외) 클립을 출력합니다. 스크립트, 음성, 음악, 스톡 영상, 자막, 편집은 각각 선택하고 설치하고 서로 연결해야 하는 별도의 도구입니다.',
+          '로컬 모델을 사용한다는 것은 비디오 도구 하나를 설치하는 것이 아니라 파이프라인 전체를 조립한다는 뜻입니다.\n\n**생성 환경 설정.** ComfyUI는 노드 기반 도구입니다. 로더, 샘플러, 디코더로 이루어진 워크플로우 그래프를 직접 구축하거나, 가져와서 디버깅해야 합니다. 첫 프레임이 렌더링되기 전까지 CUDA 버전 불일치, PyTorch 버전 고정, 이따금 발생하는 `flash_attn` 설치 오류를 각오해야 합니다.\n\n**프롬프트 작성.** 비디오 모델은 한 줄짜리 프롬프트가 아니라 구조화된 프롬프트가 필요합니다 — 샷 종류, 카메라 움직임, 조명, 피사체의 동작 등입니다. 일반적인 ComfyUI 워크플로우에는 시스템 프롬프트 레이어가 없습니다. [Wan 2.2](https://github.com/Wan-Video/Wan2.2)와 [HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) 저장소는 프롬프트 확장 또는 재작성 기능을 제공하지만, 직접 설정해야 하는 별도의 언어 모델이나 API가 필요합니다. [시스템 프롬프트와 사용자 프롬프트의 차이](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)와 [로컬 모델을 위한 프롬프트 엔지니어링](/ko/local-llms/prompt-engineering-for-local-models) 가이드는 비디오 프롬프트 작성에도 그대로 적용되는 기본 원칙을 다룹니다.\n\n**클립 주변의 모든 것.** 로컬 모델은 5~20초 길이의 원시 무음(LTX 제외) 클립을 출력합니다. 스크립트, 음성, 음악, 스톡 영상, 자막, 편집은 각각 선택하고 설치하고 서로 연결해야 하는 별도의 도구입니다.',
         promptExamples: [
           { label: '약한 프롬프트 (한 줄짜리)', text: '해변의 개' },
           { label: '구조화된 프롬프트 (비디오 모델이 필요로 하는 형태)', text: '황금빛 시간대에 젖은 해안선을 질주하는 골든 리트리버, 낮은 위치에서 측면으로 따라가는 트래킹 샷, 얕은 피사계 심도, 따뜻한 역광, 부드러운 슬로우 모션, 시네마틱 24fps' },
@@ -2350,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '나의 상황': 'GPU가 없거나 VRAM 12GB 미만', '추천': 'Invideo(클라우드) — 이 등급 이하의 로컬 선택지는 입문 수준입니다' },
           { '나의 상황': '원시 클립이 아니라 음성이 포함된 완성된 비디오를 원함', '추천': 'Invideo(클라우드) — 로컬 모델은 완전한 제작물을 조립해주지 않습니다' },
           { '나의 상황': '마감이 급하고 설정에 시간을 쓸 여유가 전혀 없음', '추천': 'Invideo(클라우드)' },
-          { '나의 상황': 'VRAM 12GB 이상 GPU 보유, 설정에 익숙함, 프라이버시와 $0 한계비용을 원함', '추천': '로컬: LTX-Video(12GB) 또는 Wan 2.2(고품질을 위해 24GB)' },
+          { '나의 상황': 'VRAM 12GB 이상 GPU 보유, 설정에 익숙함, 프라이버시와 $0 한계비용을 원함', '추천': '로컬: LTX-Video(12GB) 또는 Wan 2.2(양자화한 14B 모델에는 24GB)' },
           { '나의 상황': 'EU, 영국, 대한민국 거주', '추천': '로컬 = Wan 2.2 또는 LTX-2만 가능(HunyuanVideo는 라이선스상 제외됨)' },
           { '나의 상황': '직접 구축하지 않고 규모 있는 자동화/API가 필요함', '추천': 'Invideo(클라우드, MCP 서버)' },
         ],
@@ -2413,7 +2413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac과 Windows에서 이 로컬 모델을 실행하는 것은 무엇이 다른가요?',
-            a: 'ComfyUI는 PyTorch의 MPS 백엔드를 통해 Apple Silicon(M1~M4)에서도 실행되지만. 비슷한 급의 NVIDIA GPU보다 생성이 느리다고 예상하십시오. 통제된 벤치마크가 없으므로 속도 배율은 제시하지 않습니다. 더 실질적인 문제는 소프트웨어 지원입니다. 이 모델들이 의존하는 CUDA 전용 최적화(flash-attention, GGUF/FP8 양자화 도구)는 Mac에서는 성숙도가 훨씬 떨어지므로, 여러 커뮤니티 워크플로우와 설치 가이드가 Windows나 Linux + NVIDIA 카드를 전제로 하고 있어 조정이 필요하거나 문서대로 아예 동작하지 않을 수 있습니다. 한 가지 장점은, Apple Silicon의 통합 메모리 덕분에 동일한 VRAM 용량의 개별 GPU보다 더 큰 모델을 메모리에 담을 수 있다는 점입니다. 속도는 더 느리더라도 말입니다. 로컬 비디오 생성을 위해 하드웨어를 구입하는 것이라면 Windows나 Linux에 NVIDIA를 조합하는 것이 잘 지원되는 경로이며, 이미 보유한 Mac은 실험용으로는 괜찮지만 진지한 처리량을 위한 권장 대상은 아닙니다.',
+            a: 'ComfyUI는 PyTorch의 MPS 백엔드를 통해 Apple Silicon(M1~M4)에서도 실행됩니다. 비슷한 급의 NVIDIA GPU보다 생성이 느리다고 예상하십시오. 통제된 벤치마크가 없으므로 속도 배율은 제시하지 않습니다. 더 실질적인 문제는 소프트웨어 지원입니다. 이 모델들이 의존하는 CUDA 전용 최적화(flash-attention, GGUF/FP8 양자화 도구)는 Mac에서는 성숙도가 훨씬 떨어지므로, 여러 커뮤니티 워크플로우와 설치 가이드가 Windows나 Linux + NVIDIA 카드를 전제로 하고 있어 조정이 필요하거나 문서대로 아예 동작하지 않을 수 있습니다. 한 가지 장점은, Apple Silicon의 통합 메모리 덕분에 동일한 VRAM 용량의 개별 GPU보다 더 큰 모델을 메모리에 담을 수 있다는 점입니다. 속도는 더 느리더라도 말입니다. 로컬 비디오 생성을 위해 하드웨어를 구입하는 것이라면 Windows나 Linux에 NVIDIA를 조합하는 것이 잘 지원되는 경로이며, 이미 보유한 Mac은 실험용으로는 괜찮지만 진지한 처리량을 위한 권장 대상은 아닙니다.',
           },
           {
             q: '여러 로컬 비디오 클립에 걸쳐 같은 캐릭터를 일관되게 유지할 수 있나요?',
@@ -2531,7 +2531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Menos de 12 GB de VRAM → o invideo é a escolha prática; abaixo desse patamar, as opções locais se limitam a resultados quantizados de nível básico.',
           '12 GB de VRAM → LTX-Video 0.9.5, uma opção local prática nesse patamar.',
-          '16–24 GB+ de VRAM → Wan 2.2 (melhor qualidade, Apache 2.0 — uso comercial permissivo sem limite de receita nem exclusão territorial; aplicam-se os termos padrão da Apache, como avisos de atribuição, confira o model card) ou LTX-2 (velocidade + áudio sincronizado).',
+          '16–24 GB+ de VRAM → Wan 2.2 (boa qualidade, Apache 2.0 — uso comercial permissivo sem limite de receita nem exclusão territorial; aplicam-se os termos padrão da Apache, como avisos de atribuição, confira o model card) ou LTX-2 (velocidade + áudio sincronizado).',
           'Na União Europeia, Reino Unido ou Coreia do Sul → a licença do HunyuanVideo 1.5 exclui você; use o Wan 2.2 ou o LTX-2 em vez disso.',
           'Precisa de um vídeo narrado e finalizado, não de um clipe bruto → modelos locais só geram clipes silenciosos (exceto o LTX) de 5–20 segundos; o invideo oferece um fluxo de trabalho hospedado em torno do clipe; veja na página de preços o que cada plano inclui.',
         ],
@@ -2563,12 +2563,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**O Wan 2.2 é um modelo de vídeo local de ponta sob a licença permissiva Apache 2.0.** Uso comercial permissivo sem limite de receita nem exclusão territorial (aplicam-se os termos padrão da Apache, como avisos de atribuição; confira o model card).',
+          '**O Wan 2.2 é um modelo de vídeo local sólido sob a licença permissiva Apache 2.0.** Uso comercial permissivo sem limite de receita nem exclusão territorial (aplicam-se os termos padrão da Apache, como avisos de atribuição; confira o model card).',
           '**O invideo é uma alternativa hospedada** com um plano gratuito e os planos pagos Starter, Plus e Max; a página de preços informa que Plus e Max têm acesso a todos os modelos, incluindo todos os Seedance. Os preços variam — confira a página atual.',
           '**A licença do HunyuanVideo 1.5 exclui explicitamente a União Europeia, o Reino Unido e a Coreia do Sul** — tanto para o modelo quanto para seus resultados. Leitores nessas regiões devem usar o Wan 2.2 ou o LTX-2.',
           '**O LTX-2 é posicionado como um modelo focado em velocidade e é o único deste trio local com áudio sincronizado embutido**, gratuito comercialmente para empresas com receita anual abaixo de $10 milhões.',
           '**12GB de VRAM é o piso realista para geração de vídeo local séria.** Abaixo disso, o invideo se torna a opção mais prática.',
-          '**Modelos locais geram clipes brutos e silenciosos de 5 a 20 segundos, não vídeos finalizados.** Roteiro, locução, música, legendas e edição são ferramentas separadas que você mesmo monta — o invideo busca reunir essas etapas em um único fluxo de trabalho hospedado.',
+          '**Modelos locais geram clipes brutos de 5 a 20 segundos (silenciosos, exceto no LTX-2), não vídeos finalizados.** Roteiro, locução, música, legendas e edição são ferramentas separadas que você mesmo monta — o invideo busca reunir essas etapas em um único fluxo de trabalho hospedado.',
           '**Na verificação de 27 de novembro de 2026, a página oficial do Wan no GitHub não mostrava nenhum repositório com pesos abertos do "Wan 2.7".** A Alibaba anunciou o [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009) em abril de 2026 como modelo disponível na Alibaba Cloud. Tenha cuidado com páginas de terceiros que oferecem "pesos do Wan 2.7".',
         ],
       },
@@ -2600,7 +2600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2 (Alibaba) — qualidade sólida, Apache 2.0',
         content:
-          'O Wan 2.2 é amplamente usado entre os modelos de vídeo abertos, com muitos derivados da comunidade construídos sobre ele (veja a página do modelo no Hugging Face para os downloads atuais). Ele vem em três variantes — T2V-A14B e I2V-A14B (mistura de especialistas, 27B de parâmetros totais / 14B ativos), além de um TI2V-5B compacto que lida com texto-para-vídeo e imagem-para-vídeo com apenas 6–8GB de VRAM. O patamar de 14B precisa de 15GB (GGUF Q3) a 25GB (FP8); o comando oficial não quantizado pede 80GB. Sua licença é Apache 2.0 — genuinamente gratuita, uso comercial permissivo sem limite de receita nem exclusão territorial (aplicam-se os termos padrão da Apache, como avisos de atribuição; confira o model card).\n\n**Velocidade, na prática:** o [repositório oficial do Wan 2.2](https://github.com/Wan-Video/Wan2.2) informa que, sem otimizações específicas, o modelo compacto TI2V-5B consegue gerar um clipe de 5 segundos em 720p em menos de 9 minutos em uma única GPU de consumo. É o número do desenvolvedor, não verificado pela PromptQuorum, e não descreve as variantes 14B. Uma sequência de 20 segundos exige gerar 4 clipes separados de 5 segundos, ou seja, menos de 36 minutos de geração bruta se cada um levar o tempo informado, mais a edição manual para juntá-los. É uma conta a partir do número por clipe, não um benchmark medido de 20 segundos.',
+          'O Wan 2.2 é amplamente usado entre os modelos de vídeo abertos, com muitos derivados da comunidade construídos sobre ele (veja a página do modelo no Hugging Face para os downloads atuais). Ele vem em três variantes — T2V-A14B e I2V-A14B (mistura de especialistas, 27B de parâmetros totais / 14B ativos), além de um TI2V-5B compacto que lida com texto-para-vídeo e imagem-para-vídeo com apenas 6–8GB de VRAM. O patamar de 14B precisa de 15GB (GGUF Q3) a 25GB (FP8); o comando oficial não quantizado pede 80GB. Sua licença é Apache 2.0 — genuinamente gratuita, uso comercial permissivo sem limite de receita nem exclusão territorial (aplicam-se os termos padrão da Apache, como avisos de atribuição; confira o model card).\n\n**Velocidade, na prática:** o [repositório oficial do Wan 2.2](https://github.com/Wan-Video/Wan2.2) informa que, sem otimizações específicas, o modelo compacto TI2V-5B consegue gerar um clipe de 5 segundos em 720p em menos de 9 minutos em uma única GPU de consumo. É o número do desenvolvedor, não verificado pela PromptQuorum, e não descreve as variantes 14B. Segundo o repositório, o comando de exemplo do TI2V-5B roda em uma GPU com pelo menos 24GB de VRAM (por exemplo, uma RTX 4090), então não espere esse tempo em uma placa de 6–8GB. Uma sequência de 20 segundos exige gerar 4 clipes separados de 5 segundos, ou seja, menos de 36 minutos de geração bruta se cada um levar o tempo informado, mais a edição manual para juntá-los. É uma conta a partir do número por clipe, não um benchmark medido de 20 segundos.',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 on GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 on Hugging Face' },
@@ -2646,7 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: 'A Barreira do Hardware',
         content: [
-          'A geração de vídeo local é gratuita do jeito que um filhote de cachorro é gratuito: os pesos do modelo não custam nada, mas a GPU é o verdadeiro preço de entrada. Evite a geração local por completo se sua GPU tem menos de 12GB de VRAM e você não planeja fazer upgrade — abaixo desse patamar apenas a variante quantizada de 5B do Wan 2.2 é utilizável, com qualidade de entrada, e uma plataforma na nuvem vai te dar um resultado melhor mais rápido.',
+          'A geração de vídeo local é gratuita do jeito que um filhote de cachorro é gratuito: os pesos do modelo não custam nada, mas a GPU é o verdadeiro preço de entrada. Evite a geração local por completo se sua GPU tem menos de 12GB de VRAM e você não planeja fazer upgrade — abaixo desse patamar apenas a variante quantizada de 5B do Wan 2.2 é utilizável, com qualidade de entrada, e uma plataforma na nuvem provavelmente é o caminho mais fácil.',
           'Não tem certeza do que isso significa para a sua máquina? Estes guias detalham tudo: [Calculadora de VRAM](/pt/local-llms/vram-calculator-local-llm) para requisitos exatos por modelo, [Quanto de VRAM Você Precisa?](/pt/local-llms/how-much-vram-local-llm) para gráficos entre tamanhos de modelo, [Melhores GPUs para IA Local](/pt/local-llms/best-gpus-for-local-llms) e [Melhores GPUs de Orçamento](/pt/local-llms/best-budget-gpus-local-llm) para escolhas de hardware, e [GPU vs CPU vs Apple Silicon](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon) para comparações de plataforma. Uma ressalva honesta: esses guias usam a fórmula de VRAM para LLMs (parâmetros × bits ÷ 8). Modelos de difusão de vídeo também escalam a VRAM com resolução e duração do clipe, então trate os números deles como um piso, não um teto, para cargas de trabalho de vídeo.',
         ],
         columns: ['Sua GPU', 'O que você consegue rodar'],
@@ -2654,7 +2654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua GPU': '6–8GB VRAM', 'O que você consegue rodar': 'Wan 2.2 TI2V-5B (quantizado) — utilizável, qualidade de entrada' },
           { 'Sua GPU': '12GB VRAM', 'O que você consegue rodar': 'LTX-Video 0.9.5 — uma opção prática nesse patamar' },
           { 'Sua GPU': '16GB VRAM', 'O que você consegue rodar': 'HunyuanVideo 1.5 (se a licença permitir), Wan 2.2 14B em GGUF Q3' },
-          { 'Sua GPU': '24GB+ VRAM', 'O que você consegue rodar': 'Tudo: Wan 2.2 14B em alta qualidade, LTX-2 quantizado' },
+          { 'Sua GPU': '24GB+ VRAM', 'O que você consegue rodar': 'Os três: Wan 2.2 14B (quantizado), LTX-2 quantizado, HunyuanVideo 1.5 (se a licença permitir)' },
         ],
         note:
           'Custo aproximado de GPU, segundo o [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (dados de listagens do eBay EUA, sem ser cotação nem oferta): as listagens vendidas de RTX 3090 usadas ficam em cerca de $1.500–1.725 (mediana $1.650; 225 vendas, 13–23 de novembro de 2026; dado de 2026-11-23). No valor datado de 2026-10-15, as de RTX 4090 usadas estavam em $2.575–3.010 (mediana $2.860). Os preços no Brasil podem variar bastante devido a impostos de importação — verifique o preço atual antes de comprar em vez de confiar nesses números depois de alguns meses.',
@@ -2663,7 +2663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: 'O Que Rodar Geração de Vídeo Local Realmente Envolve',
         content:
-          'Com modelos locais, você não está instalando uma ferramenta de vídeo — está montando um pipeline.\n\n**A configuração da geração.** O ComfyUI é baseado em nós: você constrói, ou importa e depura, um grafo de fluxo de trabalho com carregadores, samplers e decodificadores. Espere incompatibilidades de versão do CUDA, fixações de versão do PyTorch e o ocasional erro de instalação do `flash_attn` antes que seu primeiro frame seja renderizado.\n\n**O prompting.** Modelos de vídeo precisam de prompts estruturados — tipo de plano, movimento de câmera, iluminação, ação do sujeito — não de frases soltas. Não existe um assistente de prompt embutido nem uma camada de system prompt; você mesmo escreve toda a estrutura. Nossos guias sobre [system prompts vs. user prompts](/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) e [engenharia de prompt para modelos locais](/pt/local-llms/prompt-engineering-for-local-models) cobrem fundamentos que se aplicam diretamente ao prompting de vídeo.\n\n**Tudo ao redor do clipe.** Modelos locais geram clipes brutos e silenciosos (exceto o LTX) de 5 a 20 segundos. Roteiro, locução, música, imagens de banco, legendas e edição são ferramentas separadas que você escolhe, instala e conecta sozinho.',
+          'Com modelos locais, você não está instalando uma ferramenta de vídeo — está montando um pipeline.\n\n**A configuração da geração.** O ComfyUI é baseado em nós: você constrói, ou importa e depura, um grafo de fluxo de trabalho com carregadores, samplers e decodificadores. Espere incompatibilidades de versão do CUDA, fixações de versão do PyTorch e o ocasional erro de instalação do `flash_attn` antes que seu primeiro frame seja renderizado.\n\n**O prompting.** Modelos de vídeo precisam de prompts estruturados — tipo de plano, movimento de câmera, iluminação, ação do sujeito — não de frases soltas. Um fluxo de trabalho típico do ComfyUI não tem camada de system prompt. Os repositórios do [Wan 2.2](https://github.com/Wan-Video/Wan2.2) e do [HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) oferecem extensão ou reescrita de prompts, mas isso depende de um modelo de linguagem separado ou de uma API que você mesmo configura. Nossos guias sobre [system prompts vs. user prompts](/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) e [engenharia de prompt para modelos locais](/pt/local-llms/prompt-engineering-for-local-models) cobrem fundamentos que se aplicam diretamente ao prompting de vídeo.\n\n**Tudo ao redor do clipe.** Modelos locais geram clipes brutos e silenciosos (exceto o LTX) de 5 a 20 segundos. Roteiro, locução, música, imagens de banco, legendas e edição são ferramentas separadas que você escolhe, instala e conecta sozinho.',
         promptExamples: [
           { label: 'Fraco (frase solta)', text: 'Um cachorro na praia' },
           { label: 'Estruturado (o que os modelos de vídeo precisam)', text: 'Golden retriever correndo por uma orla molhada durante a hora dourada, plano baixo de acompanhamento pela lateral, profundidade de campo rasa, contraluz quente, câmera lenta suave, 24fps cinematográfico' },
@@ -2702,7 +2702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Sem GPU, ou abaixo de 12GB de VRAM', 'Recomendação': 'Invideo (nuvem) — abaixo desse patamar, as opções locais são básicas' },
           { 'Sua situação': 'Quer um vídeo finalizado com locução, não clipes brutos', 'Recomendação': 'Invideo (nuvem) — modelos locais não montam uma produção completa' },
           { 'Sua situação': 'Guiado por prazo, zero tolerância a configuração', 'Recomendação': 'Invideo (nuvem)' },
-          { 'Sua situação': 'GPU de 12GB+, confortável com configuração, quer privacidade e custo marginal de $0', 'Recomendação': 'Local: LTX-Video (12GB) ou Wan 2.2 (24GB para qualidade máxima)' },
+          { 'Sua situação': 'GPU de 12GB+, confortável com configuração, quer privacidade e custo marginal de $0', 'Recomendação': 'Local: LTX-Video (12GB) ou Wan 2.2 (24GB para os modelos 14B quantizados)' },
           { 'Sua situação': 'Na União Europeia, Reino Unido ou Coreia do Sul', 'Recomendação': 'Local = apenas Wan 2.2 ou LTX-2 (a licença do HunyuanVideo exclui você)' },
           { 'Sua situação': 'Precisa de automação/API em escala sem construir do zero', 'Recomendação': 'Invideo (nuvem, servidor MCP)' },
         ],
@@ -2883,7 +2883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '显存低于 12 GB → invideo 是更实际的选择;这个档位以下,本地方案只能得到量化后的入门级输出。',
           '12 GB 显存 → LTX-Video 0.9.5,这个档位实用的本地选择。',
-          '16–24 GB 以上显存 → Wan 2.2(顶级质量、Apache 2.0——商业用途宽松,无营收门槛、无地区排除;适用 Apache 的标准条款,如署名声明,请查看模型卡)或 LTX-2(速度快 + 同步音频)。',
+          '16–24 GB 以上显存 → Wan 2.2(质量出色、Apache 2.0——商业用途宽松,无营收门槛、无地区排除;适用 Apache 的标准条款,如署名声明,请查看模型卡)或 LTX-2(速度快 + 同步音频)。',
           '身处欧盟、英国或韩国 → HunyuanVideo 1.5 的许可证将你排除在外;改用 Wan 2.2 或 LTX-2。',
           '需要一段带旁白的成品视频,而不是原始片段 → 本地模型只能生成 5–20 秒的无声片段(LTX 除外);invideo 提供围绕片段后续工作的托管工作流;各套餐包含的内容请查看其定价页面。',
         ],
@@ -2915,12 +2915,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Wan 2.2 是采用宽松 Apache 2.0 许可的顶级本地视频模型。** 商业用途宽松,无营收门槛、无地区排除(适用 Apache 的标准条款,如署名声明;请查看模型卡)。',
+          '**Wan 2.2 是采用宽松 Apache 2.0 许可的优秀本地视频模型。** 商业用途宽松,无营收门槛、无地区排除(适用 Apache 的标准条款,如署名声明;请查看模型卡)。',
           '**Invideo 是一个托管型替代方案**,设有免费套餐以及付费的 Starter、Plus 和 Max 套餐;其定价页面称 Plus 和 Max 可使用全部模型,包括所有 Seedance 模型。价格不一——请查看实时页面。',
           '**HunyuanVideo 1.5 的许可证明确排除欧盟、英国和韩国**——模型本身和其输出内容均受限。这些地区的读者应改用 Wan 2.2 或 LTX-2。',
           '**LTX-2 定位为侧重速度的模型,也是这三个本地模型中唯一内置同步音频的**,年营收低于 1000 万美元的公司可免费商用。',
           '**12GB 显存是认真进行本地视频生成的现实底线。** 低于这个数字,invideo 是更实际的选择。',
-          '**本地模型生成的是 5–20 秒的原始无声片段,而不是成品视频。** 脚本、配音、音乐、字幕和剪辑都是需要你自己组装的独立工具——invideo 则致力于把这些步骤整合进一个托管工作流。',
+          '**本地模型生成的是 5–20 秒的原始片段(除 LTX-2 外均无声),而不是成品视频。** 脚本、配音、音乐、字幕和剪辑都是需要你自己组装的独立工具——invideo 则致力于把这些步骤整合进一个托管工作流。',
           '**在 2026 年 11 月 27 日核查时,Wan 官方 GitHub 页面上没有"Wan 2.7"开放权重仓库。** 阿里巴巴于 2026 年 4 月发布了 [Wan2.7-Video](https://www.alibabacloud.com/blog/alibaba-unveils-wan2-7-video_603009),称其可在阿里云上使用。请谨慎对待提供"Wan 2.7 权重"的第三方页面。',
         ],
       },
@@ -2952,7 +2952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wan-2-2',
         title: 'Wan 2.2(阿里巴巴)——质量出色,Apache 2.0',
         content:
-          'Wan 2.2 在开放视频模型中应用广泛,并衍生出许多社区变体(当前下载量请查看其 Hugging Face 模型页面)。它提供三个版本——T2V-A14B 和 I2V-A14B(混合专家架构,总参数 27B / 激活参数 14B),以及一个紧凑的 TI2V-5B,支持文本转视频和图像转视频,最低只需 6–8GB 显存。14B 档位需要 15GB(GGUF Q3)到 25GB(FP8);官方非量化命令要求 80GB。它的许可证是 Apache 2.0——真正免费,商业用途宽松,无营收门槛、无地区排除(适用 Apache 的标准条款,如署名声明;请查看模型卡)。\n\n**具体速度:** [Wan 2.2 官方仓库](https://github.com/Wan-Video/Wan2.2)称,在没有专门优化的情况下,轻量的 TI2V-5B 模型可在单张消费级 GPU 上用不到 9 分钟生成一段 5 秒的 720p 片段。这是开发方的数据,PromptQuorum 未核实,也不代表 14B 版本。20 秒的序列需要分别生成 4 段 5 秒片段,若每段都用时如上,原始生成时间不到 36 分钟,另需手动剪辑拼接。这是基于单段数据的换算,并非实测的 20 秒基准。',
+          'Wan 2.2 在开放视频模型中应用广泛,并衍生出许多社区变体(当前下载量请查看其 Hugging Face 模型页面)。它提供三个版本——T2V-A14B 和 I2V-A14B(混合专家架构,总参数 27B / 激活参数 14B),以及一个紧凑的 TI2V-5B,支持文本转视频和图像转视频,最低只需 6–8GB 显存。14B 档位需要 15GB(GGUF Q3)到 25GB(FP8);官方非量化命令要求 80GB。它的许可证是 Apache 2.0——真正免费,商业用途宽松,无营收门槛、无地区排除(适用 Apache 的标准条款,如署名声明;请查看模型卡)。\n\n**具体速度:** [Wan 2.2 官方仓库](https://github.com/Wan-Video/Wan2.2)称,在没有专门优化的情况下,轻量的 TI2V-5B 模型可在单张消费级 GPU 上用不到 9 分钟生成一段 5 秒的 720p 片段。这是开发方的数据,PromptQuorum 未核实,也不代表 14B 版本。该仓库称其 TI2V-5B 示例命令可在显存至少 24GB 的 GPU(如 RTX 4090)上运行,因此不要指望在 6–8GB 显卡上达到这一速度。20 秒的序列需要分别生成 4 段 5 秒片段,若每段都用时如上,原始生成时间不到 36 分钟,另需手动剪辑拼接。这是基于单段数据的换算,并非实测的 20 秒基准。',
         affiliateLinks: [
           { url: 'https://github.com/Wan-Video/Wan2.2', productName: 'Wan 2.2 on GitHub', productCategory: 'video-model', label: 'Wan 2.2 on GitHub' },
           { url: 'https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B', productName: 'Wan 2.2 on Hugging Face', productCategory: 'video-model', label: 'Wan 2.2 on Hugging Face' },
@@ -2998,7 +2998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-gate',
         title: '硬件门槛',
         content: [
-          '本地视频生成的"免费"就像小狗是"免费"的一样:模型权重不花钱,但 GPU 才是真正的入场费。如果你的 GPU 显存低于 12GB 且不打算升级,就完全跳过本地生成——在这个档位以下只有量化的 Wan 2.2 TI2V-5B 变体可用,且只是入门级质量,云端平台会更快给你更好的输出。',
+          '本地视频生成的"免费"就像小狗是"免费"的一样:模型权重不花钱,但 GPU 才是真正的入场费。如果你的 GPU 显存低于 12GB 且不打算升级,就完全跳过本地生成——在这个档位以下只有量化的 Wan 2.2 TI2V-5B 变体可用,且只是入门级质量,云端平台很可能是更省事的选择。',
           '不确定这些数字对你的机器意味着什么?这些指南能帮你理清:[显存计算器](/zh/local-llms/vram-calculator-local-llm) 提供每个模型的确切要求,[你需要多少显存?](/zh/local-llms/how-much-vram-local-llm) 提供跨模型规模的图表,[本地 AI 最佳 GPU](/zh/local-llms/best-gpus-for-local-llms) 和 [最佳预算 GPU](/zh/local-llms/best-budget-gpus-local-llm) 提供硬件选购建议,[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon) 提供平台比较。一个诚实的提醒:那些指南使用的是大语言模型显存公式(参数量 × 位数 ÷ 8)。视频扩散模型的显存需求还会随分辨率和片段长度变化,所以对视频工作负载而言,把那些数字当作下限而非上限来看待。',
         ],
         columns: ['你的 GPU', '你能运行什么'],
@@ -3006,7 +3006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的 GPU': '6–8GB 显存', '你能运行什么': 'Wan 2.2 TI2V-5B(量化版)——可用,入门质量' },
           { '你的 GPU': '12GB 显存', '你能运行什么': 'LTX-Video 0.9.5——这个档位实用的选择' },
           { '你的 GPU': '16GB 显存', '你能运行什么': 'HunyuanVideo 1.5(许可证允许的情况下)、Wan 2.2 14B 的 GGUF Q3 版本' },
-          { '你的 GPU': '24GB 以上显存', '你能运行什么': '全部选项:高质量的 Wan 2.2 14B、量化版 LTX-2' },
+          { '你的 GPU': '24GB 以上显存', '你能运行什么': '三者均可:量化版 Wan 2.2 14B、量化版 LTX-2、HunyuanVideo 1.5(许可证允许时)' },
         ],
         note:
           'GPU 大致成本,来自 [InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(eBay 美国挂牌数据,并非报价或要约):二手 RTX 3090 成交记录约 $1,500–1,725(中位数 $1,650;225 笔成交,2026 年 11 月 13–23 日;数据日期 2026-11-23)。二手 RTX 4090 成交记录在日期为 2026-10-15 的数据中为 $2,575–3,010(中位数 $2,860)。不同地区的价格可能有差异。GPU 价格会波动——购买前请核实当前价格,不要在几个月后仍相信这些数字。',
@@ -3015,7 +3015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: '运行本地视频生成实际需要做什么',
         content:
-          '使用本地模型,你安装的不是一个视频工具——而是在组装一条流水线。\n\n**生成环境搭建。** ComfyUI 是基于节点的:你需要搭建,或导入并调试,一张由加载器、采样器和解码器组成的工作流图。在渲染出第一帧之前,预计会遇到 CUDA 版本不匹配、PyTorch 版本锁定,以及偶尔出现的 `flash_attn` 安装错误。\n\n**提示词编写。** 视频模型需要结构化提示词——镜头类型、运镜方式、光照、主体动作——而不是一句话。没有内置的提示词助手,也没有系统提示层;完整结构要你自己写。我们关于[系统提示词与用户提示词](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)和[本地模型的提示词工程](/zh/local-llms/prompt-engineering-for-local-models)的指南涵盖的基础知识可以直接迁移到视频提示词编写上。\n\n**片段之外的一切。** 本地模型输出的是 5–20 秒的原始无声片段(LTX 除外)。脚本、配音、音乐、素材片段、字幕和剪辑,每一项都是你需要自己挑选、安装并串联起来的独立工具。',
+          '使用本地模型,你安装的不是一个视频工具——而是在组装一条流水线。\n\n**生成环境搭建。** ComfyUI 是基于节点的:你需要搭建,或导入并调试,一张由加载器、采样器和解码器组成的工作流图。在渲染出第一帧之前,预计会遇到 CUDA 版本不匹配、PyTorch 版本锁定,以及偶尔出现的 `flash_attn` 安装错误。\n\n**提示词编写。** 视频模型需要结构化提示词——镜头类型、运镜方式、光照、主体动作——而不是一句话。常见的 ComfyUI 工作流没有系统提示层。[Wan 2.2](https://github.com/Wan-Video/Wan2.2) 和 [HunyuanVideo 1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) 的代码仓库提供提示词扩写或改写功能,但需要你自行配置单独的语言模型或 API。我们关于[系统提示词与用户提示词](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)和[本地模型的提示词工程](/zh/local-llms/prompt-engineering-for-local-models)的指南涵盖的基础知识可以直接迁移到视频提示词编写上。\n\n**片段之外的一切。** 本地模型输出的是 5–20 秒的原始无声片段(LTX 除外)。脚本、配音、音乐、素材片段、字幕和剪辑,每一项都是你需要自己挑选、安装并串联起来的独立工具。',
         promptExamples: [
           { label: '薄弱(一句话)', text: 'A dog on a beach' },
           { label: '结构化(视频模型需要的)', text: 'Golden retriever sprinting along a wet shoreline at golden hour, low tracking shot following from the side, shallow depth of field, warm backlight, gentle slow motion, cinematic 24fps' },
@@ -3054,7 +3054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的情况': '没有 GPU,或显存低于 12GB', '建议': 'Invideo(云端)——这个档位以下的本地方案只属入门级' },
           { '你的情况': '想要带配音的成品视频,不是原始片段', '建议': 'Invideo(云端)——本地模型无法组装完整的成品' },
           { '你的情况': '截止日期紧迫,零容忍搭建折腾', '建议': 'Invideo(云端)' },
-          { '你的情况': '拥有 12GB 以上显存 GPU,愿意折腾搭建,看重隐私和 0 边际成本', '建议': '本地:LTX-Video(12GB)或 Wan 2.2(24GB 达到完整质量)' },
+          { '你的情况': '拥有 12GB 以上显存 GPU,愿意折腾搭建,看重隐私和 0 边际成本', '建议': '本地:LTX-Video(12GB)或 Wan 2.2(量化版 14B 模型需 24GB)' },
           { '你的情况': '身处欧盟、英国或韩国', '建议': '本地仅限 Wan 2.2 或 LTX-2(HunyuanVideo 的许可证将你排除在外)' },
           { '你的情况': '需要大规模自动化/API 而不想自己搭建', '建议': 'Invideo(云端,MCP 服务器)' },
         ],

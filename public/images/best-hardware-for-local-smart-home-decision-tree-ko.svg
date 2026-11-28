@@ -48,7 +48,7 @@
   <rect x="610" y="248" width="140" height="4" rx="0" fill="#34A853"/>
   <text x="680" y="276" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">RTX 3090 서버</text>
   <text x="680" y="294" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">24GB VRAM</text>
-  <text x="680" y="308" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">로컬 LLM 최대 약 70B</text>
+  <text x="680" y="308" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">70B는 오프로딩 필요</text>
 
   <text x="400" y="345" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">두 가지 질문으로 기기가 결정됩니다: Frigate 카메라 추가 여부와 로컬 LLM 추가 여부입니다.</text>
   <text x="400" y="362" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">네 가지 경로가 Raspberry Pi 5, Ryzen 미니 PC, Intel N100/N150 미니 PC, RTX 3090 서버로 이어집니다.</text>

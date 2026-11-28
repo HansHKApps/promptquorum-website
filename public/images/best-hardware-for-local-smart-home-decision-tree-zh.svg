@@ -48,7 +48,7 @@
   <rect x="610" y="248" width="140" height="4" rx="0" fill="#34A853"/>
   <text x="680" y="276" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">RTX 3090 服务器</text>
   <text x="680" y="294" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">24GB显存</text>
-  <text x="680" y="308" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">本地LLM最高约70B</text>
+  <text x="680" y="308" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">约70B需卸载到内存</text>
 
   <text x="400" y="345" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">两个问题决定主机类型：是否接入Frigate摄像头，是否需要本地LLM。</text>
   <text x="400" y="362" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">四条路径分别指向Raspberry Pi 5、Ryzen迷你主机、Intel N100/N150迷你主机，或RTX 3090服务器。</text>

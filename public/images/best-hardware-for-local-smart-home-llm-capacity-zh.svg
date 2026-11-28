@@ -21,8 +21,8 @@
 
   <text x="230" y="318" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">服务器 + RTX 3090（24GB）</text>
   <rect x="240" y="299" width="480" height="24" fill="#34A853" rx="4"/>
-  <text x="710" y="316" font-family="'SF Mono', Monaco, monospace" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="end">Q4下最高约70B（需卸载）——性价比最佳</text>
+  <text x="710" y="316" font-family="'SF Mono', Monaco, monospace" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="end">Q4下最高约70B（配合卸载）</text>
 
   <text x="400" y="358" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">容量随显存增长：Raspberry Pi 5只能运行极小模型，而二手RTX 3090</text>
-  <text x="400" y="375" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">（24GB显存）视配置借助卸载在Q4下或可达约70B——NAS的容量取决于其搭载的GPU。</text>
+  <text x="400" y="375" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">（24GB显存）视配置而定，配合卸载可在Q4量化下达到约70B——NAS的容量取决于其搭载的GPU。</text>
 <text x="792" y="392" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -42,12 +42,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Total build cost: about $2,680 (US prices).** Two RTX 5060 Ti 16GB (about $800 each, $1,600 combined), Ryzen 7 9700X ($330), 64GB DDR5-6000 ($180), 2TB Gen4 NVMe ($130), B650 ATX board with x8/x8 slots ($180), 850W 80+ Gold PSU ($130), ATX case ($90), air cooler ($40). The GPU price is a rounded reference figure for a new card: the lowest new listing shown on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) was $800 (checked 2026-11-28), and [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) showed an Amazon US card at $829.99 (2026-11-27). Prices are volatile. The other parts are editorial estimates that vary by retailer. At these prices the build does not fit under $2,000: the other parts alone come to about $1,080, which leaves about $920 for two cards.',
+          '**Total build cost: about $2,680 (US prices).** Two RTX 5060 Ti 16GB (about $800 each, $1,600 combined), Ryzen 7 9700X ($330), 64GB DDR5-6000 ($180), 2TB Gen4 NVMe ($130), B650 ATX board with x8/x8 slots ($180), 850W 80+ Gold PSU ($130), ATX case ($90), air cooler ($40). The GPU price is a rounded reference figure for a new card: the lowest new listing shown on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) was $800 (checked 2026-11-28), and [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) showed an Amazon US card at $849.99 (2026-11-27). Prices are volatile. The other parts are editorial estimates that vary by retailer. At these prices the build does not fit under $2,000: the other parts alone come to about $1,080, which leaves about $920 for two cards.',
           '**At the prices listed here, two 16GB GPUs give more VRAM per dollar than one used RTX 3090 24GB.** 32GB combined VRAM for about $1,600 (about $50 per GB) compares with a used RTX 3090 24GB at $1,500-1,725 (about $63-72 per GB; [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), data dated 2026-11-23). The total spend is about the same; the two cards give 8GB more combined VRAM, split across two GPUs. The two figures are not like-for-like: the RTX 5060 Ti figure is a new asking price (gpuprix, 2026-11-28), the RTX 3090 figure comes from used sold listings (InsiderLLM, 2026-11-23). Check current prices before buying.',
           '**A 32B model at Q4 fits; a 70B model at Q4 does not.** A 32B Q4 build is about 20GB and a 70B Q4 build is about 43GB ([Ollama library](https://ollama.com/library/qwen3:32b)). Holding 32B across two cards needs a runtime that splits a model across GPUs, such as llama.cpp or Ollama; speeds are not measured on this build.',
           '**Choose a motherboard that documents x8/x8 PCIe bifurcation,** not just two physical x16 slots. A second slot wired at x4 has half the lanes of x8; how much that slows a split model depends on the runtime and settings and is not measured here.',
           '**Single-GPU use is limited to what fits in 16GB:** models up to about 14B at Q4 run on one RTX 5060 Ti; a 32B model (about 20GB) needs both cards.',
-          '**Avoid:** mismatched GPU pairs (e.g., one 5060 Ti + one 4060 Ti) — tensor-split performance is bounded by the slower card, and mixed GPU generations can add driver or support complications.',
+          '**Avoid:** mismatched GPU pairs (e.g., one 5060 Ti + one 4060 Ti) — tensor-split performance can be limited by the slower card, and mixed GPU generations can add driver or support complications.',
         ],
       },
       'why-dual-gpu': {
@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Why Two GPUs Instead of One Bigger GPU',
         content: [
           '**At this budget, the main single-GPU alternatives are one used RTX 3090 24GB (about $1,500-1,725 in US sold listings of 13-23 November 2026) or a 16GB card such as an RTX 5070 Ti, and a 16GB card cannot hold a 32B Q4 model (about 20GB).** llama.cpp supports splitting a model\'s layers across several GPUs in the same machine, so their combined VRAM acts as one pool for the model weights. Two RTX 5060 Ti 16GB cards give 32GB combined for about the same money as one used RTX 3090 24GB at the prices listed here (about $1,600 against $1,500-1,725) and hold a 32B Q4 model plus context. A 70B Q4 model (about 43GB) still does not fit; it would need layers offloaded to the 64GB of system RAM, which slows generation and is not measured here.',
-          'This only works because both cards are the same model — mismatched VRAM or compute between cards forces the split to bottleneck on the weaker card, and mixed GPU generations can add driver or support complications.',
+          'Two identical cards are the simplest setup. llama.cpp can also split a model across different cards, but a mismatched pair is harder to balance, the smaller or slower card can hold back the result, and mixed GPU generations can add driver or support complications. This page has not tested a mismatched pair.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Two matched 16GB GPUs split via llama.cpp give more combined VRAM per dollar than one used RTX 3090 24GB at the prices listed here (about $1,600 for 32GB versus $1,500-1,725 for 24GB in US sold listings of 13-23 November 2026). Check current prices before buying.' },
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Full Parts List',
-        content: 'Prices are US street prices and vary by region and retailer. The RTX 5060 Ti 16GB price of about $800 each is a rounded reference figure for a new card: the lowest new listing shown on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) was $800 (checked 2026-11-28), and [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) showed an Amazon US card at $829.99 (2026-11-27). Prices are volatile, so check current prices before buying. The other parts are editorial estimates, not re-verified. The board price is a placeholder; boards that document x8/x8 CPU-lane bifurcation can cost more, so the total may be higher. Total: about $2,680.',
+        content: 'Prices are US street prices and vary by region and retailer. The RTX 5060 Ti 16GB price of about $800 each is a rounded reference figure for a new card: the lowest new listing shown on [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) was $800 (checked 2026-11-28), and [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) showed an Amazon US card at $849.99 (2026-11-27). Prices are volatile, so check current prices before buying. The other parts are editorial estimates, not re-verified. The board price is a placeholder; boards that document x8/x8 CPU-lane bifurcation can cost more, so the total may be higher. Total: about $2,680. At $849.99 per card, the total would be about $2,780.',
         columns: ['Component', 'Pick', 'Price', 'Why'],
         rows: [
           { 'Component': 'GPU (x2)', 'Pick': '2x RTX 5060 Ti 16GB', 'Price': '$1,600', 'Why': '32GB combined VRAM via tensor-split — the core purpose of this build' },
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'According to the [Ollama FAQ](https://docs.ollama.com/faq), if a model does not fit entirely on one GPU, Ollama spreads it across all available GPUs without manual configuration, though llama.cpp\'s manual flags give more precise control over the split ratio.',
         ],
         items: [
-          '**Verify both GPUs are detected:** `nvidia-smi` should list both cards with matching driver versions before attempting a split.',
+          '**Verify both GPUs are detected:** `nvidia-smi` should list both cards before you attempt a split.',
           '**Start with an even split:** `--tensor-split 1,1` in llama.cpp is the correct default for two identical cards.',
           '**Watch for PCIe bandwidth saturation:** if generation is unexpectedly slow, confirm the motherboard is actually running x8/x8 and not silently falling back to x4.',
         ],
@@ -120,8 +120,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Upgrade Path',
         content: [
-          'The clearest upgrade from this build is adding a third RTX 5060 Ti 16GB if the motherboard has a third PCIe slot with usable bandwidth, pushing combined VRAM to 48GB, above the ~43GB download size of a 70B Q4 model, though context also needs VRAM and this is untested here.',
-          'A more expensive but simpler upgrade is replacing both RTX 5060 Ti cards with two RTX 5070 Ti 16GB cards later, keeping the same 32GB VRAM ceiling but increasing raw compute and memory bandwidth, which improves tokens/sec without changing what model sizes fit.',
+          'The clearest upgrade from this build is adding a third RTX 5060 Ti 16GB if the motherboard has a third PCIe slot with usable bandwidth, pushing combined VRAM to 48GB, above the ~43GB download size of a 70B Q4 model, though context also needs VRAM and this is untested here. A third card also adds about 180W (NVIDIA rating), so recheck the power supply and case first.',
+          'Another option is replacing both RTX 5060 Ti cards with two RTX 5070 Ti 16GB cards later. The 32GB VRAM ceiling stays the same; the expected gain is speed, which this page has not measured. NVIDIA rates the RTX 5070 Ti at 300W against 180W for the RTX 5060 Ti and lists 750W as required system power for a single RTX 5070 Ti, so do not assume the 850W power supply is enough for two. Check the card maker\'s specification and plan for a larger power supply.',
         ],
       },
       whereToBuy: {
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Common Mistakes at This Budget',
         items: [
           'Buying a motherboard based only on "supports SLI/CrossFire" branding — that marketing term refers to gaming multi-GPU rendering, not PCIe lane allocation for compute workloads, and does not guarantee x8/x8.',
-          'Mixing GPU generations (e.g., one RTX 5060 Ti + one RTX 4060 Ti) to save money — tensor-split performance is bounded by the slower/older card, which can cancel part of the benefit of the newer one.',
+          'Mixing GPU generations (e.g., one RTX 5060 Ti + one RTX 4060 Ti) to save money — tensor-split performance can be limited by the slower/older card, which can cancel part of the benefit of the newer one.',
           'Underestimating PSU headroom — two GPUs drawing near their combined rated TDP simultaneously during a long generation can spike briefly well above 360W; an undersized PSU can cause random shutdowns under load rather than a graceful slowdown. Check the card maker\'s recommended PSU wattage and connector requirements in the card\'s manual. This is general information, not electrical advice; if you are unsure, have a qualified technician check the build and your power circuit.',
           'Assuming double the GPUs means double the tokens/sec — tensor-split adds PCIe transfer overhead between layers, so combined throughput is meaningfully less than 2x a single card\'s speed on models that already fit on one GPU.',
         ],
@@ -186,13 +186,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Can this dual-GPU PC run 70B local LLMs?', a: 'Not fully in VRAM at Q4. A 70B model at Q4_K_M is about 43GB per the Ollama library and the two RTX 5060 Ti cards provide 32GB, so the remaining layers (at least about 11GB) must be offloaded to the 64GB of system RAM. llama.cpp can do this, but generation is slower and it is not measured on this build. A 32B model at Q4 (about 20GB) fits across both cards.' },
           { q: 'Why use two 16GB GPUs instead of one used RTX 3090?', a: 'Two matched 16GB GPUs give more combined VRAM per dollar than one used RTX 3090 24GB at the prices listed here (about $1,600 for 32GB versus $1,500-1,725 for 24GB in US sold listings of 13-23 November 2026), and llama.cpp\'s tensor-split feature lets both cards\' VRAM function as one pool for inference. Check current prices before buying.' },
           { q: 'Does the motherboard matter for a dual-GPU local LLM build?', a: 'Yes. Choose a board that documents x8/x8 PCIe lane allocation across both GPU slots. A second slot wired at x4 has fewer lanes; the effect on speed depends on the runtime and split mode and is not measured here.' },
-          { q: 'Can I mix different GPU models in a dual-GPU build?', a: 'Not recommended. Tensor-split performance is bounded by the slower or older card in the pair, and mixed GPU generations can add driver or support complications. Use two identical GPUs.' },
+          { q: 'Can I mix different GPU models in a dual-GPU build?', a: 'Not recommended. Tensor-split performance can be limited by the slower or older card in the pair, and mixed GPU generations can add driver or support complications. Use two identical GPUs.' },
           { q: 'Is Ollama or llama.cpp better for tensor-split multi-GPU inference?', a: 'Ollama can spread a model across all available GPUs without manual configuration (Ollama FAQ). llama.cpp\'s manual --tensor-split flag gives more precise control over the split ratio, useful if one GPU also drives a display and needs less VRAM reserved.' },
           { q: 'How much does PCIe bandwidth actually affect tensor-split performance?', a: 'It depends on the runtime, split mode, batch size and context length, and this page has not measured it. A x4 slot has half the lanes of x8, so choose x8/x8 where you can and test your own workload.' },
           { q: 'Does doubling the GPUs double the tokens per second?', a: 'No. Tensor-split adds PCIe transfer overhead between layers split across cards, so combined throughput on a model that already fits on one GPU is meaningfully less than 2x that single card\'s speed. The benefit is fitting larger models, not linear speed scaling.' },
           { q: 'What is the total power draw of two RTX 5060 Ti cards?', a: 'Roughly 360W combined at full load (180W rated TDP each), with brief transient spikes above that. An 850W 80+ Gold PSU leaves comfortable headroom for the rest of the system alongside those spikes. Check the PSU connector and wattage requirements in the card\'s manual.' },
           { q: 'Can this build run smaller models on just one GPU?', a: 'Yes. Models that fit in 16GB, roughly up to 14B at Q4 (about 9.3GB), run on a single RTX 5060 Ti and avoid the PCIe overhead of splitting. A 32B Q4 model (about 20GB) does not fit on one 16GB card and needs both.' },
-          { q: 'What is the upgrade path beyond this build?', a: 'Adding a third matched RTX 5060 Ti 16GB (if the motherboard has a third usable PCIe slot) raises combined VRAM to 48GB. Alternatively, replacing both cards with RTX 5070 Ti 16GB units later keeps the same 32GB ceiling but increases compute and memory bandwidth.' },
+          { q: 'What is the upgrade path beyond this build?', a: 'Adding a third matched RTX 5060 Ti 16GB (if the motherboard has a third usable PCIe slot) raises combined VRAM to 48GB. Alternatively, replacing both cards with RTX 5070 Ti 16GB units later keeps the same 32GB ceiling but increases compute and memory bandwidth. Either way, check the power supply first: NVIDIA rates the RTX 5070 Ti at 300W per card against 180W for the RTX 5060 Ti.' },
         ],
       },
       relatedReading: {
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama library: Llama 3.3 70B (43GB, default tag)](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM: NVIDIA GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix: RTX 5060 Ti 16GB US listings, lowest new listing shown $800 (checked 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice: RTX 5060 Ti US prices, 16GB card at $829.99 on Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice: RTX 5060 Ti US prices, 16GB card at $849.99 on Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)', '[NVIDIA RTX 5070 family specifications (RTX 5070 Ti: 300W, 750W required system power)](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -249,10 +249,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Can this dual-GPU PC run 70B local LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not fully in VRAM at Q4. A 70B model at Q4_K_M is about 43GB and the two RTX 5060 Ti cards provide 32GB, so the remaining layers must be offloaded to system RAM, which is slower (not measured here). A 32B model at Q4 (about 20GB) fits.' } },
+        { '@type': 'Question', 'name': 'Can this dual-GPU PC run 70B local LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not fully in VRAM at Q4. A 70B model at Q4_K_M is about 43GB per the Ollama library and the two RTX 5060 Ti cards provide 32GB, so the remaining layers (at least about 11GB) must be offloaded to the 64GB of system RAM. llama.cpp can do this, but generation is slower and it is not measured on this build. A 32B model at Q4 (about 20GB) fits across both cards.' } },
         { '@type': 'Question', 'name': 'Why use two 16GB GPUs instead of one used RTX 3090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Two matched 16GB GPUs give more combined VRAM per dollar than one used RTX 3090 24GB at the prices listed here (about $1,600 for 32GB versus $1,500-1,725 for 24GB in US sold listings of 13-23 November 2026), and llama.cpp\'s tensor-split feature lets both cards\' VRAM function as one pool for inference. Check current prices before buying.' } },
         { '@type': 'Question', 'name': 'Does the motherboard matter for a dual-GPU local LLM build?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Choose a board that documents x8/x8 PCIe lane allocation across both GPU slots. A second slot wired at x4 has fewer lanes; the effect on speed depends on the runtime and split mode and is not measured here.' } },
-        { '@type': 'Question', 'name': 'Can I mix different GPU models in a dual-GPU build?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not recommended. Tensor-split performance is bounded by the slower or older card in the pair, and mixed GPU generations can add driver or support complications.' } },
+        { '@type': 'Question', 'name': 'Can I mix different GPU models in a dual-GPU build?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not recommended. Tensor-split performance can be limited by the slower or older card in the pair, and mixed GPU generations can add driver or support complications. Use two identical GPUs.' } },
         { '@type': 'Question', 'name': 'Does doubling the GPUs double the tokens per second?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Tensor-split adds PCIe transfer overhead between layers split across cards, so combined throughput on a model that already fits on one GPU is meaningfully less than 2x that single card\'s speed. The benefit is fitting larger models, not linear speed scaling.' } },
       ],
     },
@@ -313,12 +313,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Costo total del build: unos $2,680 (precios de EE. UU.).** Dos RTX 5060 Ti 16GB (unos $800 cada una, $1,600 en total), Ryzen 7 9700X ($330), 64GB DDR5-6000 ($180), NVMe Gen4 de 2TB ($130), placa B650 ATX con ranuras x8/x8 ($180), fuente 850W 80+ Gold ($130), caja ATX ($90), disipador de aire ($40). El precio de la GPU es una cifra de referencia redondeada para una tarjeta nueva: la oferta nueva más barata que mostraba [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) era de $800 (consultado el 2026-11-28), y [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) mostraba una tarjeta en Amazon EE. UU. a $829.99 (2026-11-27). Los precios son volátiles. El resto son estimaciones editoriales que varían según la tienda. Con estos precios el build no cabe en menos de $2,000: solo los demás componentes suman unos $1,080, lo que deja unos $920 para dos tarjetas.',
+          '**Costo total del build: unos $2,680 (precios de EE. UU.).** Dos RTX 5060 Ti 16GB (unos $800 cada una, $1,600 en total), Ryzen 7 9700X ($330), 64GB DDR5-6000 ($180), NVMe Gen4 de 2TB ($130), placa B650 ATX con ranuras x8/x8 ($180), fuente 850W 80+ Gold ($130), caja ATX ($90), disipador de aire ($40). El precio de la GPU es una cifra de referencia redondeada para una tarjeta nueva: la oferta nueva más barata que mostraba [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) era de $800 (consultado el 2026-11-28), y [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) mostraba una tarjeta en Amazon EE. UU. a $849.99 (2026-11-27). Los precios son volátiles. El resto son estimaciones editoriales que varían según la tienda. Con estos precios el build no cabe en menos de $2,000: solo los demás componentes suman unos $1,080, lo que deja unos $920 para dos tarjetas.',
           '**Con los precios indicados aquí, dos GPUs de 16GB dan más VRAM por dólar que una RTX 3090 24GB usada.** 32GB de VRAM combinada por unos $1,600 (unos $50 por GB) se comparan con una RTX 3090 24GB usada a $1,500-1,725 (unos $63-72 por GB; [rastreador de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), datos con fecha 2026-11-23). El gasto total es más o menos el mismo; las dos tarjetas dan 8GB más de VRAM combinada, repartida entre dos GPUs. Las dos cifras no son equivalentes: la de la RTX 5060 Ti es un precio de oferta de una tarjeta nueva (gpuprix, 2026-11-28) y la de la RTX 3090 procede de ventas completadas de tarjetas usadas (InsiderLLM, 2026-11-23). Comprueba los precios actuales antes de comprar.',
           '**Un modelo de 32B en Q4 cabe; uno de 70B en Q4 no.** Un 32B en Q4 pesa unos 20GB y un 70B en Q4 unos 43GB ([biblioteca de Ollama](https://ollama.com/library/qwen3:32b)). Repartir un 32B entre dos tarjetas requiere un runtime que divida el modelo entre GPUs, como llama.cpp u Ollama; las velocidades no se han medido en este build.',
           '**Elige una placa base que documente la bifurcación PCIe x8/x8,** no solo dos ranuras físicas x16. Una segunda ranura cableada a x4 tiene la mitad de líneas que x8; cuánto frena un modelo dividido depende del runtime y de los ajustes, y aquí no se ha medido.',
           '**Con una sola GPU solo cabe lo que entra en 16GB:** los modelos de hasta unos 14B en Q4 corren en una RTX 5060 Ti; un modelo de 32B (unos 20GB) necesita ambas tarjetas.',
-          '**Evita:** pares de GPU distintos (por ejemplo, una 5060 Ti + una 4060 Ti) — el rendimiento del tensor-split está limitado por la tarjeta más lenta, y mezclar generaciones de GPU puede añadir complicaciones de drivers o de soporte.',
+          '**Evita:** pares de GPU distintos (por ejemplo, una 5060 Ti + una 4060 Ti) — el rendimiento del tensor-split puede estar limitado por la tarjeta más lenta, y mezclar generaciones de GPU puede añadir complicaciones de drivers o de soporte.',
         ],
       },
       'why-dual-gpu': {
@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Por Qué Dos GPUs en Lugar de Una Más Grande',
         content: [
           '**Con este presupuesto, las principales alternativas de una sola GPU son una RTX 3090 24GB usada (unos $1,500-1,725 en ventas en EE. UU. del 13 al 23 de noviembre de 2026) o una tarjeta de 16GB como la RTX 5070 Ti, y una tarjeta de 16GB no puede alojar un modelo de 32B en Q4 (unos 20GB).** llama.cpp permite repartir las capas de un modelo entre varias GPUs del mismo equipo, de modo que su VRAM combinada actúa como un único conjunto para los pesos del modelo. Dos RTX 5060 Ti 16GB dan 32GB combinados por más o menos el mismo dinero que una RTX 3090 24GB usada con los precios indicados aquí (unos $1,600 frente a $1,500-1,725) y alojan un 32B en Q4 más su contexto. Un modelo de 70B en Q4 (unos 43GB) sigue sin caber; habría que pasar capas a los 64GB de RAM del sistema, lo que ralentiza la generación y no se ha medido aquí.',
-          'Esto solo funciona porque ambas tarjetas son el mismo modelo — VRAM o cómputo desiguales entre tarjetas obligan a que la división quede limitada por la tarjeta más débil, y mezclar generaciones de GPU puede añadir complicaciones de drivers o de soporte.',
+          'Dos tarjetas idénticas son la configuración más sencilla. llama.cpp también puede dividir un modelo entre tarjetas distintas, pero un par desigual es más difícil de equilibrar, la tarjeta más pequeña o lenta puede frenar el resultado y mezclar generaciones de GPU puede añadir complicaciones de drivers o de soporte. Esta página no ha probado un par desigual.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Dos GPUs idénticas de 16GB repartidas con llama.cpp ofrecen más VRAM combinada por dólar que una RTX 3090 24GB usada con los precios indicados aquí (unos $1,600 por 32GB frente a $1,500-1,725 por 24GB en ventas en EE. UU. del 13 al 23 de noviembre de 2026). Comprueba los precios actuales antes de comprar.' },
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Lista de Componentes Completa',
-        content: 'Los precios son precios de mercado de EE. UU. y varían según región y tienda. El precio de unos $800 por RTX 5060 Ti 16GB es una cifra de referencia redondeada para una tarjeta nueva: la oferta nueva más barata que mostraba [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) era de $800 (consultado el 2026-11-28), y [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) mostraba una tarjeta en Amazon EE. UU. a $829.99 (2026-11-27). Los precios son volátiles, así que comprueba los precios actuales antes de comprar. El resto son estimaciones editoriales no reverificadas. El precio de la placa es provisional; las placas que documentan bifurcación x8/x8 de las líneas de la CPU pueden costar más, así que el total podría ser mayor. Total: unos $2,680.',
+        content: 'Los precios son precios de mercado de EE. UU. y varían según región y tienda. El precio de unos $800 por RTX 5060 Ti 16GB es una cifra de referencia redondeada para una tarjeta nueva: la oferta nueva más barata que mostraba [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) era de $800 (consultado el 2026-11-28), y [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) mostraba una tarjeta en Amazon EE. UU. a $849.99 (2026-11-27). Los precios son volátiles, así que comprueba los precios actuales antes de comprar. El resto son estimaciones editoriales no reverificadas. El precio de la placa es provisional; las placas que documentan bifurcación x8/x8 de las líneas de la CPU pueden costar más, así que el total podría ser mayor. Total: unos $2,680. A $849.99 por tarjeta, el total sería de unos $2,780.',
         columns: ['Componente', 'Elección', 'Precio', 'Por qué'],
         rows: [
           { 'Componente': 'GPU (x2)', 'Elección': '2x RTX 5060 Ti 16GB', 'Precio': '$1,600', 'Por qué': '32GB de VRAM combinada vía tensor-split — el propósito central de este build' },
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Según las [preguntas frecuentes de Ollama](https://docs.ollama.com/faq), si un modelo no cabe por completo en una GPU, Ollama lo reparte entre todas las GPUs disponibles sin configuración manual, aunque los flags manuales de llama.cpp dan un control más preciso sobre la proporción de división.',
         ],
         items: [
-          '**Verifica que ambas GPUs sean detectadas:** `nvidia-smi` debería listar ambas tarjetas con versiones de driver coincidentes antes de intentar una división.',
+          '**Verifica que ambas GPUs sean detectadas:** `nvidia-smi` debería listar ambas tarjetas antes de intentar una división.',
           '**Comienza con una división pareja:** `--tensor-split 1,1` en llama.cpp es el valor por defecto correcto para dos tarjetas idénticas.',
           '**Vigila la saturación del ancho de banda PCIe:** si la generación es inesperadamente lenta, confirma que la placa funciona realmente en x8/x8 y no cae silenciosamente a x4.',
         ],
@@ -391,8 +391,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Ruta de Actualización',
         content: [
-          'La mejora más clara de este build es añadir una tercera RTX 5060 Ti 16GB si la placa tiene una tercera ranura PCIe con ancho de banda útil, lo que sube la VRAM combinada a 48GB, por encima de los ~43GB de descarga de un modelo de 70B en Q4, aunque el contexto también necesita VRAM y aquí no se ha probado.',
-          'Una actualización más cara pero más simple es reemplazar ambas tarjetas RTX 5060 Ti por dos RTX 5070 Ti 16GB más adelante, manteniendo el mismo límite de 32GB de VRAM pero aumentando el cómputo bruto y el ancho de banda de memoria, lo que mejora los tokens/s sin cambiar qué tamaños de modelo caben.',
+          'La mejora más clara de este build es añadir una tercera RTX 5060 Ti 16GB si la placa tiene una tercera ranura PCIe con ancho de banda útil, lo que sube la VRAM combinada a 48GB, por encima de los ~43GB de descarga de un modelo de 70B en Q4, aunque el contexto también necesita VRAM y aquí no se ha probado. Una tercera tarjeta añade además unos 180W (cifra de NVIDIA), así que revisa antes la fuente y la caja.',
+          'Otra opción es reemplazar más adelante ambas RTX 5060 Ti por dos RTX 5070 Ti 16GB. El límite de 32GB de VRAM se mantiene; la mejora esperada es de velocidad, que esta página no ha medido. NVIDIA indica 300W para la RTX 5070 Ti frente a 180W para la RTX 5060 Ti y señala 750W de potencia de sistema requerida para una sola RTX 5070 Ti, así que no des por hecho que la fuente de 850W baste para dos. Consulta la especificación del fabricante de la tarjeta y prevé una fuente más potente.',
         ],
       },
       whereToBuy: {
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Errores Comunes con Este Presupuesto',
         items: [
           'Comprar una placa base basándose solo en la marca "soporta SLI/CrossFire" — ese término de marketing se refiere a renderizado multi-GPU para videojuegos, no a la asignación de líneas PCIe para cargas de cómputo, y no garantiza x8/x8.',
-          'Mezclar generaciones de GPU (por ejemplo, una RTX 5060 Ti + una RTX 4060 Ti) para ahorrar dinero — el rendimiento del tensor-split está limitado por la tarjeta más lenta o antigua, lo que puede anular parte del beneficio de la más nueva.',
+          'Mezclar generaciones de GPU (por ejemplo, una RTX 5060 Ti + una RTX 4060 Ti) para ahorrar dinero — el rendimiento del tensor-split puede estar limitado por la tarjeta más lenta o antigua, lo que puede anular parte del beneficio de la más nueva.',
           'Subestimar el margen de la fuente — dos GPUs consumiendo cerca de su TDP combinado nominal simultáneamente durante una generación larga pueden tener picos breves bien por encima de 360W; una fuente subdimensionada puede causar apagones aleatorios bajo carga en lugar de una desaceleración progresiva. Revisa en el manual de la tarjeta la potencia de fuente recomendada por el fabricante y los requisitos de conectores. Esto es información general, no asesoría eléctrica; si tienes dudas, pide a un técnico cualificado que revise el equipo y tu circuito eléctrico.',
           'Asumir que el doble de GPUs significa el doble de tokens/s — el tensor-split añade overhead de transferencia PCIe entre capas, así que el rendimiento combinado es notablemente menor que 2x la velocidad de una sola tarjeta en modelos que ya caben en una sola GPU.',
         ],
@@ -457,13 +457,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Puede esta PC con doble GPU ejecutar LLMs locales de 70B?', a: 'No por completo en VRAM con Q4. Un modelo de 70B en Q4_K_M pesa unos 43GB según la biblioteca de Ollama y las dos RTX 5060 Ti aportan 32GB, así que las capas restantes (al menos unos 11GB) deben pasar a los 64GB de RAM del sistema. llama.cpp puede hacerlo, pero la generación es más lenta y no se ha medido en este build. Un modelo de 32B en Q4 (unos 20GB) sí cabe entre ambas tarjetas.' },
           { q: '¿Por qué usar dos GPUs de 16GB en lugar de una RTX 3090 usada?', a: 'Dos GPUs de 16GB idénticas ofrecen más VRAM combinada por dólar que una RTX 3090 24GB usada con los precios indicados aquí (unos $1,600 por 32GB frente a $1,500-1,725 por 24GB en ventas en EE. UU. del 13 al 23 de noviembre de 2026), y la función tensor-split de llama.cpp permite que la VRAM de ambas tarjetas funcione como un solo grupo para inferencia. Comprueba los precios actuales antes de comprar.' },
           { q: '¿Importa la placa base para un build dual-GPU de LLM local?', a: 'Sí. Elige una placa que documente la asignación de líneas PCIe x8/x8 en ambas ranuras de GPU. Una segunda ranura cableada a x4 tiene menos líneas; el efecto en la velocidad depende del runtime y del modo de división, y aquí no se ha medido.' },
-          { q: '¿Puedo mezclar diferentes modelos de GPU en un build dual-GPU?', a: 'No se recomienda. El rendimiento del tensor-split está limitado por la tarjeta más lenta o antigua del par, y mezclar generaciones de GPU puede añadir complicaciones de drivers o de soporte. Usa dos GPUs idénticas.' },
+          { q: '¿Puedo mezclar diferentes modelos de GPU en un build dual-GPU?', a: 'No se recomienda. El rendimiento del tensor-split puede estar limitado por la tarjeta más lenta o antigua del par, y mezclar generaciones de GPU puede añadir complicaciones de drivers o de soporte. Usa dos GPUs idénticas.' },
           { q: '¿Es mejor Ollama o llama.cpp para inferencia multi-GPU con tensor-split?', a: 'Ollama puede repartir un modelo entre todas las GPUs disponibles sin configuración manual (preguntas frecuentes de Ollama). El flag manual --tensor-split de llama.cpp da un control más preciso sobre la proporción de división, útil si una GPU también maneja un monitor y necesita menos VRAM reservada.' },
           { q: '¿Cuánto afecta realmente el ancho de banda PCIe al rendimiento del tensor-split?', a: 'Depende del runtime, el modo de división, el tamaño de lote y la longitud del contexto, y esta página no lo ha medido. Una ranura x4 tiene la mitad de líneas que una x8, así que elige x8/x8 cuando puedas y prueba tu propia carga de trabajo.' },
           { q: '¿El doble de GPUs duplica los tokens por segundo?', a: 'No. El tensor-split añade overhead de transferencia PCIe entre las capas divididas entre tarjetas, así que el rendimiento combinado en un modelo que ya cabe en una sola GPU es notablemente menor que 2x la velocidad de esa tarjeta sola. El beneficio es alojar modelos más grandes, no un escalado lineal de velocidad.' },
           { q: '¿Cuál es el consumo total de energía de dos tarjetas RTX 5060 Ti?', a: 'Aproximadamente 360W combinados a carga completa (180W de TDP nominal cada una), con picos transitorios breves por encima de eso. Una fuente 850W 80+ Gold deja margen cómodo para el resto del sistema junto a esos picos. Revisa los requisitos de conectores y de potencia de la fuente en el manual de la tarjeta.' },
           { q: '¿Puede este build ejecutar modelos más pequeños con una sola GPU?', a: 'Sí. Los modelos que caben en 16GB, aproximadamente hasta 14B en Q4 (unos 9.3GB), corren en una sola RTX 5060 Ti y evitan la sobrecarga PCIe de dividir. Un modelo de 32B en Q4 (unos 20GB) no cabe en una tarjeta de 16GB y necesita ambas.' },
-          { q: '¿Cuál es la ruta de actualización más allá de este build?', a: 'Añadir una tercera RTX 5060 Ti 16GB idéntica (si la placa base tiene una tercera ranura PCIe utilizable) eleva la VRAM combinada a 48GB. Alternativamente, reemplazar ambas tarjetas por unidades RTX 5070 Ti 16GB más adelante mantiene el mismo límite de 32GB pero aumenta el cómputo y el ancho de banda de memoria.' },
+          { q: '¿Cuál es la ruta de actualización más allá de este build?', a: 'Añadir una tercera RTX 5060 Ti 16GB idéntica (si la placa base tiene una tercera ranura PCIe utilizable) eleva la VRAM combinada a 48GB. Alternativamente, reemplazar ambas tarjetas por unidades RTX 5070 Ti 16GB más adelante mantiene el mismo límite de 32GB pero aumenta el cómputo y el ancho de banda de memoria. En ambos casos, revisa primero la fuente: NVIDIA indica 300W por tarjeta para la RTX 5070 Ti frente a 180W para la RTX 5060 Ti.' },
         ],
       },
       relatedReading: {
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Biblioteca de Ollama: Llama 3.3 70B (43GB, etiqueta por defecto)](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM: rastreador de precios de GPU NVIDIA](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix: ofertas de la RTX 5060 Ti 16GB en EE. UU., oferta nueva más barata mostrada $800 (consultado el 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice: precios de la RTX 5060 Ti en EE. UU., tarjeta de 16GB a $829.99 en Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice: precios de la RTX 5060 Ti en EE. UU., tarjeta de 16GB a $849.99 en Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)', '[NVIDIA: especificaciones de la familia RTX 5070 (RTX 5070 Ti: 300W, 750W de potencia de sistema requerida)](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -520,10 +520,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/es/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': '¿Puede esta PC con doble GPU ejecutar LLMs locales de 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No por completo en VRAM con Q4. Un modelo de 70B en Q4_K_M pesa unos 43GB y las dos RTX 5060 Ti aportan 32GB, así que las capas restantes deben pasar a la RAM del sistema, que es más lenta (no medido aquí). Un modelo de 32B en Q4 (unos 20GB) sí cabe.' } },
+        { '@type': 'Question', 'name': '¿Puede esta PC con doble GPU ejecutar LLMs locales de 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No por completo en VRAM con Q4. Un modelo de 70B en Q4_K_M pesa unos 43GB según la biblioteca de Ollama y las dos RTX 5060 Ti aportan 32GB, así que las capas restantes (al menos unos 11GB) deben pasar a los 64GB de RAM del sistema. llama.cpp puede hacerlo, pero la generación es más lenta y no se ha medido en este build. Un modelo de 32B en Q4 (unos 20GB) sí cabe entre ambas tarjetas.' } },
         { '@type': 'Question', 'name': '¿Por qué usar dos GPUs de 16GB en lugar de una RTX 3090 usada?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Dos GPUs de 16GB idénticas ofrecen más VRAM combinada por dólar que una RTX 3090 24GB usada con los precios indicados aquí (unos $1,600 por 32GB frente a $1,500-1,725 por 24GB en ventas en EE. UU. del 13 al 23 de noviembre de 2026), y la función tensor-split de llama.cpp permite que la VRAM de ambas tarjetas funcione como un solo grupo para inferencia. Comprueba los precios actuales antes de comprar.' } },
         { '@type': 'Question', 'name': '¿Importa la placa base para un build dual-GPU de LLM local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Elige una placa que documente la asignación de líneas PCIe x8/x8 en ambas ranuras de GPU. Una segunda ranura cableada a x4 tiene menos líneas; el efecto en la velocidad depende del runtime y del modo de división, y aquí no se ha medido.' } },
-        { '@type': 'Question', 'name': '¿Puedo mezclar diferentes modelos de GPU en un build dual-GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No se recomienda. El rendimiento del tensor-split está limitado por la tarjeta más lenta o antigua del par, y mezclar generaciones de GPU puede añadir complicaciones de drivers o de soporte.' } },
+        { '@type': 'Question', 'name': '¿Puedo mezclar diferentes modelos de GPU en un build dual-GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No se recomienda. El rendimiento del tensor-split puede estar limitado por la tarjeta más lenta o antigua del par, y mezclar generaciones de GPU puede añadir complicaciones de drivers o de soporte. Usa dos GPUs idénticas.' } },
         { '@type': 'Question', 'name': '¿El doble de GPUs duplica los tokens por segundo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. El tensor-split añade overhead de transferencia PCIe entre las capas divididas entre tarjetas, así que el rendimiento combinado en un modelo que ya cabe en una sola GPU es notablemente menor que 2x la velocidad de esa tarjeta sola. El beneficio es alojar modelos más grandes, no un escalado lineal de velocidad.' } },
       ],
     },
@@ -584,12 +584,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**빌드 총비용: 약 $2,680(미국 가격).** RTX 5060 Ti 16GB 두 장(장당 약 $800, 합계 $1,600), Ryzen 7 9700X($330), 64GB DDR5-6000($180), 2TB Gen4 NVMe($130), x8/x8 슬롯 지원 B650 ATX 보드($180), 850W 80+ Gold 파워($130), ATX 케이스($90), 공랭 쿨러($40). GPU 가격은 새 제품 기준으로 반올림한 당사 기준 수치입니다. [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)에 표시된 새 제품 최저 등재가는 $800(2026-11-28 확인)였고, [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)에는 Amazon 미국의 제품이 $829.99(2026-11-27)로 표시되었습니다. 가격 변동이 큽니다. 나머지 부품은 판매처에 따라 달라지는 편집부 추정치입니다. 이 가격으로는 $2,000 미만에 맞출 수 없습니다. 나머지 부품만 약 $1,080이어서 그래픽카드 두 장에 남는 금액은 약 $920입니다.',
+          '**빌드 총비용: 약 $2,680(미국 가격).** RTX 5060 Ti 16GB 두 장(장당 약 $800, 합계 $1,600), Ryzen 7 9700X($330), 64GB DDR5-6000($180), 2TB Gen4 NVMe($130), x8/x8 슬롯 지원 B650 ATX 보드($180), 850W 80+ Gold 파워($130), ATX 케이스($90), 공랭 쿨러($40). GPU 가격은 새 제품 기준으로 반올림한 당사 기준 수치입니다. [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)에 표시된 새 제품 최저 등재가는 $800(2026-11-28 확인)였고, [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)에는 Amazon 미국의 제품이 $849.99(2026-11-27)로 표시되었습니다. 가격 변동이 큽니다. 나머지 부품은 판매처에 따라 달라지는 편집부 추정치입니다. 이 가격으로는 $2,000 미만에 맞출 수 없습니다. 나머지 부품만 약 $1,080이어서 그래픽카드 두 장에 남는 금액은 약 $920입니다.',
           '**여기에 표시된 가격 기준으로, 16GB GPU 두 장은 중고 RTX 3090 24GB 한 장보다 달러당 VRAM이 많습니다.** 약 $1,600(GB당 약 $50)으로 합산 32GB VRAM을 확보하며, 중고 RTX 3090 24GB는 $1,500-1,725(GB당 약 $63-72, [InsiderLLM 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 2026-11-23 기준 데이터)입니다. 총지출은 비슷하며, 두 장 구성은 합산 VRAM이 8GB 더 많지만 두 GPU에 나뉘어 있습니다. 두 수치는 조건이 같지 않습니다. RTX 5060 Ti 수치는 새 제품의 판매 호가(gpuprix, 2026-11-28)이고, RTX 3090 수치는 중고 거래 완료 내역(InsiderLLM, 2026-11-23)입니다. 구매 전에 최신 가격을 확인하시기 바랍니다.',
           '**Q4 기준 32B 모델은 들어가지만 70B 모델은 들어가지 않습니다.** Q4 기준 32B는 약 20GB, 70B는 약 43GB입니다([Ollama 라이브러리](https://ollama.com/library/qwen3:32b)). 32B를 두 카드에 나누어 올리려면 llama.cpp나 Ollama처럼 모델을 여러 GPU에 분할하는 런타임이 필요합니다. 이 빌드의 속도는 측정하지 않았습니다.',
           '**x8/x8 PCIe 비프케이션을 명시한 메인보드를 고르십시오.** 물리적 x16 슬롯이 두 개 있는 것만으로는 부족합니다. 전기적으로 x4로 배선된 두 번째 슬롯은 레인 수가 x8의 절반입니다. 분할한 모델이 얼마나 느려지는지는 런타임과 설정에 따라 다르며, 이 글에서는 측정하지 않았습니다.',
           '**단일 GPU로는 16GB에 들어가는 모델까지만 가능합니다:** Q4 기준 약 14B까지의 모델은 RTX 5060 Ti 한 장에서 실행되며, 32B 모델(약 20GB)은 두 카드가 모두 필요합니다.',
-          '**피해야 할 것:** GPU 쌍을 불일치시키는 것(예: 5060 Ti 하나 + 4060 Ti 하나) — 텐서 분할 성능은 더 느린 카드에 의해 제한되며, GPU 세대를 섞으면 드라이버나 지원 측면에서 복잡한 문제가 생길 수 있습니다.',
+          '**피해야 할 것:** GPU 쌍을 불일치시키는 것(예: 5060 Ti 하나 + 4060 Ti 하나) — 텐서 분할 성능은 더 느린 카드에 의해 제한될 수 있으며, GPU 세대를 섞으면 드라이버나 지원 측면에서 복잡한 문제가 생길 수 있습니다.',
         ],
       },
       'why-dual-gpu': {
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '왜 더 큰 GPU 하나 대신 GPU 두 개인가',
         content: [
           '**이 예산에서 주요 단일 GPU 대안은 중고 RTX 3090 24GB 한 장(2026년 11월 13-23일 미국 판매 완료가 기준 약 $1,500-1,725) 또는 RTX 5070 Ti 같은 16GB 카드이며, 16GB 카드는 Q4 기준 32B 모델(약 20GB)을 담을 수 없습니다.** llama.cpp는 한 대의 PC에 장착된 여러 GPU에 모델 레이어를 나누는 방식을 지원하므로, 합산 VRAM이 모델 가중치를 위한 하나의 풀처럼 동작합니다. RTX 5060 Ti 16GB 두 장은 여기에 표시된 가격 기준으로 중고 RTX 3090 24GB 한 장과 비슷한 금액(약 $1,600 대 $1,500-1,725)으로 합산 32GB를 제공하며 Q4 기준 32B 모델과 컨텍스트를 담을 수 있습니다. Q4 기준 70B 모델(약 43GB)은 여전히 들어가지 않으며, 64GB 시스템 RAM으로 레이어를 오프로드해야 해 생성 속도가 느려지고 이 글에서는 측정하지 않았습니다.',
-          '이는 두 카드가 동일한 모델이기 때문에 가능한 것입니다 — VRAM이나 연산 성능이 불일치하면 분할이 더 약한 카드에 병목을 일으키며, GPU 세대를 섞으면 드라이버나 지원 측면에서 복잡한 문제가 생길 수 있습니다.',
+          '동일한 카드 두 장이 가장 단순한 구성입니다. llama.cpp는 서로 다른 카드에도 모델을 분할할 수 있지만, 짝이 맞지 않으면 균형을 맞추기 어렵고 용량이 작거나 느린 카드가 전체 결과를 제한할 수 있으며, GPU 세대를 섞으면 드라이버나 지원 측면에서 복잡한 문제가 생길 수 있습니다. 이 페이지에서는 불일치 조합을 시험하지 않았습니다.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '동일한 16GB GPU 두 장을 llama.cpp로 분할하면 여기에 표시된 가격 기준으로 중고 RTX 3090 24GB 한 장보다 달러당 합산 VRAM이 많습니다(32GB 약 $1,600 대 24GB $1,500-1,725, 2026년 11월 13-23일 미국 판매 완료가). 구매 전에 최신 가격을 확인하시기 바랍니다.' },
@@ -607,7 +607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: '전체 부품 목록',
-        content: '가격은 미국 시중 가격이며 지역과 판매처에 따라 달라질 수 있습니다. RTX 5060 Ti 16GB 장당 약 $800는 새 제품 기준으로 반올림한 당사 기준 수치입니다. [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)에 표시된 새 제품 최저 등재가는 $800(2026-11-28 확인)였고, [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)에는 Amazon 미국의 제품이 $829.99(2026-11-27)로 표시되었습니다. 가격 변동이 크므로 구매 전에 최신 가격을 확인하시기 바랍니다. 나머지 부품은 재확인하지 않은 편집부 추정치입니다. 메인보드 가격은 임시 값이며, CPU 레인의 x8/x8 비프케이션을 명시한 보드는 더 비쌀 수 있어 합계가 더 높아질 수 있습니다. 합계: 약 $2,680.',
+        content: '가격은 미국 시중 가격이며 지역과 판매처에 따라 달라질 수 있습니다. RTX 5060 Ti 16GB 장당 약 $800는 새 제품 기준으로 반올림한 당사 기준 수치입니다. [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)에 표시된 새 제품 최저 등재가는 $800(2026-11-28 확인)였고, [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)에는 Amazon 미국의 제품이 $849.99(2026-11-27)로 표시되었습니다. 가격 변동이 크므로 구매 전에 최신 가격을 확인하시기 바랍니다. 나머지 부품은 재확인하지 않은 편집부 추정치입니다. 메인보드 가격은 임시 값이며, CPU 레인의 x8/x8 비프케이션을 명시한 보드는 더 비쌀 수 있어 합계가 더 높아질 수 있습니다. 합계: 약 $2,680. 장당 $849.99라면 합계는 약 $2,780입니다.',
         columns: ['부품', '선택', '가격', '이유'],
         rows: [
           { '부품': 'GPU(x2)', '선택': '2x RTX 5060 Ti 16GB', '가격': '$1,600', '이유': '텐서 분할을 통한 합산 32GB VRAM — 이 빌드의 핵심 목적' },
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama FAQ](https://docs.ollama.com/faq)에 따르면 모델이 GPU 한 장에 완전히 들어가지 않으면 Ollama가 사용 가능한 모든 GPU에 나누어 올리며 별도 설정이 필요 없습니다. 다만 분할 비율을 더 정밀하게 제어하려면 llama.cpp의 수동 플래그가 유용합니다.',
         ],
         items: [
-          '**두 GPU가 모두 인식되는지 확인하시기 바랍니다:** 분할을 시도하기 전에 `nvidia-smi`에 두 카드가 일치하는 드라이버 버전으로 표시되어야 합니다.',
+          '**두 GPU가 모두 인식되는지 확인하시기 바랍니다:** 분할을 시도하기 전에 `nvidia-smi`에 두 카드가 모두 표시되어야 합니다.',
           '**균등 분할로 시작하시기 바랍니다:** 동일한 카드 두 개에는 llama.cpp의 `--tensor-split 1,1`이 올바른 기본값입니다.',
           '**PCIe 대역폭 포화를 확인하십시오:** 생성 속도가 예상보다 느리다면 메인보드가 실제로 x8/x8로 동작하고 있는지, 모르는 사이에 x4로 떨어지지 않았는지 확인하십시오.',
         ],
@@ -662,8 +662,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: '업그레이드 경로',
         content: [
-          '이 빌드의 가장 확실한 업그레이드는 메인보드에 사용 가능한 대역폭의 세 번째 PCIe 슬롯이 있을 경우 세 번째 RTX 5060 Ti 16GB를 추가하는 것입니다. 합산 VRAM이 48GB가 되어 Q4 기준 70B 모델의 다운로드 크기 약 43GB를 넘지만, 컨텍스트에도 VRAM이 필요하며 여기서는 테스트하지 않았습니다.',
-          '더 비싸지만 더 단순한 업그레이드는 나중에 RTX 5060 Ti 카드 두 개를 RTX 5070 Ti 16GB 카드 두 개로 교체하는 것으로, 동일한 32GB VRAM 한계는 유지하면서 원시 연산 성능과 메모리 대역폭을 높여 어떤 모델 크기가 맞는지는 바꾸지 않고 초당 토큰 수를 개선합니다.',
+          '이 빌드의 가장 확실한 업그레이드는 메인보드에 사용 가능한 대역폭의 세 번째 PCIe 슬롯이 있을 경우 세 번째 RTX 5060 Ti 16GB를 추가하는 것입니다. 합산 VRAM이 48GB가 되어 Q4 기준 70B 모델의 다운로드 크기 약 43GB를 넘지만, 컨텍스트에도 VRAM이 필요하며 여기서는 테스트하지 않았습니다. 세 번째 카드는 약 180W(NVIDIA 표기값)를 더하므로, 먼저 파워와 케이스를 다시 확인하십시오.',
+          '또 다른 방법은 나중에 RTX 5060 Ti 두 장을 모두 RTX 5070 Ti 16GB 두 장으로 교체하는 것입니다. VRAM 한계는 32GB로 같으며, 기대되는 이점은 속도이지만 이 페이지에서는 측정하지 않았습니다. NVIDIA 표기 기준 RTX 5070 Ti는 300W(RTX 5060 Ti는 180W)이고, RTX 5070 Ti 한 장만으로도 필요 시스템 전력이 750W로 안내됩니다. 따라서 850W 파워로 두 장이 충분하다고 가정하지 마십시오. 카드 제조사 사양을 확인하고 더 큰 용량의 파워를 계획하십시오.',
         ],
       },
       whereToBuy: {
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '이 예산대에서 흔한 실수',
         items: [
           '"SLI/CrossFire 지원"이라는 브랜딩만 보고 메인보드를 구매하는 것 — 그 마케팅 용어는 게이밍 멀티 GPU 렌더링을 가리킬 뿐 연산 워크로드용 PCIe 레인 할당을 의미하지 않으며, x8/x8을 보장하지 않습니다.',
-          '비용을 아끼려고 GPU 세대를 섞는 것(예: RTX 5060 Ti 하나 + RTX 4060 Ti 하나) — 텐서 분할 성능은 더 느리거나 오래된 카드에 의해 제한되어, 최신 카드의 이점 일부를 상쇄할 수 있습니다.',
+          '비용을 아끼려고 GPU 세대를 섞는 것(예: RTX 5060 Ti 하나 + RTX 4060 Ti 하나) — 텐서 분할 성능은 더 느리거나 오래된 카드에 의해 제한될 수 있어, 최신 카드의 이점 일부를 상쇄할 수 있습니다.',
           'PSU 여유 용량을 과소평가하는 것 — 긴 생성 과정 동안 두 GPU가 동시에 정격 TDP에 근접하게 소비하면 순간적으로 360W를 크게 웃돌 수 있습니다. PSU 용량이 부족하면 부하 상태에서 완만한 속도 저하 대신 무작위 셧다운이 발생할 수 있습니다. 카드 제조사가 권장하는 PSU 용량과 커넥터 요구사항을 카드 매뉴얼에서 확인하시기 바랍니다. 이 내용은 일반 정보이며 전기 관련 조언이 아닙니다. 확실하지 않다면 자격을 갖춘 기술자에게 시스템과 전원 회로를 점검받으십시오.',
           'GPU가 두 배면 초당 토큰 수도 두 배라고 가정하는 것 — 텐서 분할은 레이어 사이에 PCIe 전송 오버헤드를 추가하므로, 이미 GPU 하나에 맞는 모델에서 합산 처리량은 단일 카드 속도의 2배에 의미 있게 못 미칩니다.',
         ],
@@ -728,13 +728,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '이 듀얼 GPU PC로 70B 로컬 LLM을 실행할 수 있습니까?', a: 'Q4에서는 VRAM에 온전히 올릴 수 없습니다. Ollama 라이브러리 기준 70B 모델의 Q4_K_M은 약 43GB이고 RTX 5060 Ti 두 장은 32GB를 제공하므로, 나머지 레이어(최소 약 11GB)는 64GB 시스템 RAM으로 오프로드해야 합니다. llama.cpp로 가능하지만 생성이 더 느려지며 이 빌드에서는 측정하지 않았습니다. Q4 기준 32B 모델(약 20GB)은 두 카드에 나누어 들어갑니다.' },
           { q: '중고 RTX 3090 한 장 대신 16GB GPU 두 개를 사용하는 이유는 무엇입니까?', a: '동일한 16GB GPU 두 개는 여기에 표시된 가격 기준으로 중고 RTX 3090 24GB 한 장보다 달러당 합산 VRAM이 더 많으며(32GB 약 $1,600 대 24GB $1,500-1,725, 2026년 11월 13-23일 미국 판매 완료가), llama.cpp의 텐서 분할 기능은 두 카드의 VRAM이 추론을 위한 하나의 풀처럼 동작하게 합니다. 구매 전에 최신 가격을 확인하시기 바랍니다.' },
           { q: '듀얼 GPU 로컬 LLM 빌드에서 메인보드가 중요합니까?', a: '네. 양쪽 GPU 슬롯의 x8/x8 PCIe 레인 할당을 명시한 보드를 고르십시오. 전기적으로 x4로 배선된 두 번째 슬롯은 레인 수가 적습니다. 속도에 미치는 영향은 런타임과 분할 방식에 따라 다르며, 여기서는 측정하지 않았습니다.' },
-          { q: '듀얼 GPU 빌드에서 서로 다른 GPU 모델을 섞어 사용할 수 있습니까?', a: '권장하지 않습니다. 텐서 분할 성능은 쌍 중 더 느리거나 오래된 카드에 의해 제한되며, GPU 세대를 섞으면 드라이버나 지원 측면에서 복잡한 문제가 생길 수 있습니다. 동일한 GPU 두 개를 사용하시기 바랍니다.' },
+          { q: '듀얼 GPU 빌드에서 서로 다른 GPU 모델을 섞어 사용할 수 있습니까?', a: '권장하지 않습니다. 텐서 분할 성능은 쌍 중 더 느리거나 오래된 카드에 의해 제한될 수 있으며, GPU 세대를 섞으면 드라이버나 지원 측면에서 복잡한 문제가 생길 수 있습니다. 동일한 GPU 두 개를 사용하시기 바랍니다.' },
           { q: '텐서 분할 멀티 GPU 추론에는 Ollama와 llama.cpp 중 무엇이 더 낫습니까?', a: 'Ollama는 수동 설정 없이 모델을 사용 가능한 모든 GPU에 분산할 수 있습니다(Ollama FAQ). llama.cpp의 수동 --tensor-split 플래그는 분할 비율을 더 정밀하게 제어할 수 있어, GPU 하나가 디스플레이 출력도 겸해 VRAM 예약을 줄여야 할 때 유용합니다.' },
           { q: 'PCIe 대역폭이 텐서 분할 성능에 실제로 얼마나 영향을 줍니까?', a: '런타임, 분할 방식, 배치 크기, 컨텍스트 길이에 따라 다르며, 이 페이지에서는 측정하지 않았습니다. x4 슬롯은 레인 수가 x8의 절반이므로, 가능하면 x8/x8 구성을 고르고 실제 작업 부하로 시험하십시오.' },
           { q: 'GPU를 두 배로 늘리면 초당 토큰 수도 두 배가 됩니까?', a: '아닙니다. 텐서 분할은 카드 사이에 나뉜 레이어 간 PCIe 전송 오버헤드를 추가하므로, 이미 GPU 하나에 맞는 모델의 합산 처리량은 그 단일 카드 속도의 2배에 의미 있게 못 미칩니다. 이점은 선형적인 속도 확장이 아니라 더 큰 모델을 수용하는 것입니다.' },
           { q: 'RTX 5060 Ti 두 장의 총 전력 소비량은 얼마입니까?', a: '전체 부하 시 합산 약 360W(카드당 정격 TDP 180W)이며, 순간적으로 그보다 약간 더 높은 스파이크가 발생합니다. 850W 80+ Gold PSU는 이러한 스파이크와 함께 나머지 시스템에 충분한 여유를 남깁니다. 카드 매뉴얼에서 PSU 커넥터와 전력 요구사항을 확인하시기 바랍니다.' },
           { q: '이 빌드로 작은 모델은 GPU 한 장만으로 실행할 수 있습니까?', a: '예. 16GB에 들어가는 모델, 대략 Q4 기준 14B까지(약 9.3GB)는 RTX 5060 Ti 한 장에서 실행되며 분할에 따른 PCIe 오버헤드도 피할 수 있습니다. Q4 기준 32B 모델(약 20GB)은 16GB 카드 한 장에 들어가지 않아 두 장이 필요합니다.' },
-          { q: '이 빌드를 넘어서는 업그레이드 경로는 무엇입니까?', a: '메인보드에 사용 가능한 세 번째 PCIe 슬롯이 있다면 동일한 RTX 5060 Ti 16GB를 하나 더 추가하면 합산 VRAM이 48GB로 늘어납니다. 또는 나중에 두 카드를 모두 RTX 5070 Ti 16GB 유닛으로 교체하면 동일한 32GB 한계를 유지하면서 연산 성능과 메모리 대역폭을 높일 수 있습니다.' },
+          { q: '이 빌드를 넘어서는 업그레이드 경로는 무엇입니까?', a: '메인보드에 사용 가능한 세 번째 PCIe 슬롯이 있다면 동일한 RTX 5060 Ti 16GB를 하나 더 추가하면 합산 VRAM이 48GB로 늘어납니다. 또는 나중에 두 카드를 모두 RTX 5070 Ti 16GB 유닛으로 교체하면 동일한 32GB 한계를 유지하면서 연산 성능과 메모리 대역폭을 높일 수 있습니다. 어느 경우든 먼저 파워를 확인하십시오. NVIDIA 표기 기준 카드당 RTX 5070 Ti는 300W, RTX 5060 Ti는 180W입니다.' },
         ],
       },
       relatedReading: {
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama 라이브러리: Llama 3.3 70B(기본 태그 43GB)](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM: NVIDIA GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix: RTX 5060 Ti 16GB 미국 등재가, 표시된 새 제품 최저가 $800(2026-11-28 확인)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice: RTX 5060 Ti 미국 가격, Amazon의 16GB 제품 $829.99(2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice: RTX 5060 Ti 미국 가격, Amazon의 16GB 제품 $849.99(2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)', '[NVIDIA RTX 5070 제품군 사양(RTX 5070 Ti: 300W, 필요 시스템 전력 750W)](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -791,10 +791,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/ko/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': '이 듀얼 GPU PC로 70B 로컬 LLM을 실행할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4에서는 VRAM에 온전히 올릴 수 없습니다. 70B 모델의 Q4_K_M은 약 43GB이고 RTX 5060 Ti 두 장은 32GB를 제공하므로, 나머지 레이어는 더 느린 시스템 RAM으로 오프로드해야 합니다(여기서는 측정하지 않음). Q4 기준 32B 모델(약 20GB)은 들어갑니다.' } },
+        { '@type': 'Question', 'name': '이 듀얼 GPU PC로 70B 로컬 LLM을 실행할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4에서는 VRAM에 온전히 올릴 수 없습니다. Ollama 라이브러리 기준 70B 모델의 Q4_K_M은 약 43GB이고 RTX 5060 Ti 두 장은 32GB를 제공하므로, 나머지 레이어(최소 약 11GB)는 64GB 시스템 RAM으로 오프로드해야 합니다. llama.cpp로 가능하지만 생성이 더 느려지며 이 빌드에서는 측정하지 않았습니다. Q4 기준 32B 모델(약 20GB)은 두 카드에 나누어 들어갑니다.' } },
         { '@type': 'Question', 'name': '중고 RTX 3090 한 장 대신 16GB GPU 두 개를 사용하는 이유는 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '동일한 16GB GPU 두 개는 여기에 표시된 가격 기준으로 중고 RTX 3090 24GB 한 장보다 달러당 합산 VRAM이 더 많으며(32GB 약 $1,600 대 24GB $1,500-1,725, 2026년 11월 13-23일 미국 판매 완료가), llama.cpp의 텐서 분할 기능은 두 카드의 VRAM이 추론을 위한 하나의 풀처럼 동작하게 합니다. 구매 전에 최신 가격을 확인하시기 바랍니다.' } },
         { '@type': 'Question', 'name': '듀얼 GPU 로컬 LLM 빌드에서 메인보드가 중요합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '네. 양쪽 GPU 슬롯의 x8/x8 PCIe 레인 할당을 명시한 보드를 고르십시오. 전기적으로 x4로 배선된 두 번째 슬롯은 레인 수가 적습니다. 속도에 미치는 영향은 런타임과 분할 방식에 따라 다르며, 여기서는 측정하지 않았습니다.' } },
-        { '@type': 'Question', 'name': '듀얼 GPU 빌드에서 서로 다른 GPU 모델을 섞어 사용할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '권장하지 않습니다. 텐서 분할 성능은 쌍 중 더 느리거나 오래된 카드에 의해 제한되며, GPU 세대를 섞으면 드라이버나 지원 측면에서 복잡한 문제가 생길 수 있습니다.' } },
+        { '@type': 'Question', 'name': '듀얼 GPU 빌드에서 서로 다른 GPU 모델을 섞어 사용할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '권장하지 않습니다. 텐서 분할 성능은 쌍 중 더 느리거나 오래된 카드에 의해 제한될 수 있으며, GPU 세대를 섞으면 드라이버나 지원 측면에서 복잡한 문제가 생길 수 있습니다. 동일한 GPU 두 개를 사용하시기 바랍니다.' } },
         { '@type': 'Question', 'name': 'GPU를 두 배로 늘리면 초당 토큰 수도 두 배가 됩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '아닙니다. 텐서 분할은 카드 사이에 나뉜 레이어 간 PCIe 전송 오버헤드를 추가하므로, 이미 GPU 하나에 맞는 모델의 합산 처리량은 그 단일 카드 속도의 2배에 의미 있게 못 미칩니다. 이점은 선형적인 속도 확장이 아니라 더 큰 모델을 수용하는 것입니다.' } },
       ],
     },
@@ -855,12 +855,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**التكلفة الإجمالية للتجميع: نحو 2,680 دولار (أسعار السوق الأمريكية).** بطاقتان RTX 5060 Ti 16GB (نحو 800 دولار للواحدة، بمجموع 1,600 دولار)، وRyzen 7 9700X (330 دولار)، وDDR5-6000 بسعة 64GB (180 دولار)، وNVMe Gen4 بسعة 2TB (130 دولار)، ولوحة أم B650 ATX بفتحات x8/x8 (180 دولار)، ومزود طاقة 850W من فئة 80+ Gold (130 دولار)، وصندوق ATX (90 دولار)، ومبرّد هوائي (40 دولار). سعر بطاقة GPU رقم مرجعي مقرّب لبطاقة جديدة: أدنى عرض لبطاقة جديدة ظاهر على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) كان 800 دولار (تم التحقق في 2026-11-28)، وعرض [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) بطاقة على Amazon الولايات المتحدة بسعر 829.99 دولاراً (2026-11-27). الأسعار متقلبة. أما بقية القطع فتقديرات تحريرية تختلف حسب المتجر. بهذه الأسعار لا يتسع التجميع في أقل من 2,000 دولار: فبقية القطع وحدها تبلغ نحو 1,080 دولار، ويبقى نحو 920 دولاراً لبطاقتين.',
+          '**التكلفة الإجمالية للتجميع: نحو 2,680 دولار (أسعار السوق الأمريكية).** بطاقتان RTX 5060 Ti 16GB (نحو 800 دولار للواحدة، بمجموع 1,600 دولار)، وRyzen 7 9700X (330 دولار)، وDDR5-6000 بسعة 64GB (180 دولار)، وNVMe Gen4 بسعة 2TB (130 دولار)، ولوحة أم B650 ATX بفتحات x8/x8 (180 دولار)، ومزود طاقة 850W من فئة 80+ Gold (130 دولار)، وصندوق ATX (90 دولار)، ومبرّد هوائي (40 دولار). سعر بطاقة GPU رقم مرجعي مقرّب لبطاقة جديدة: أدنى عرض لبطاقة جديدة ظاهر على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) كان 800 دولار (تم التحقق في 2026-11-28)، وعرض [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) بطاقة على Amazon الولايات المتحدة بسعر 849.99 دولاراً (2026-11-27). الأسعار متقلبة. أما بقية القطع فتقديرات تحريرية تختلف حسب المتجر. بهذه الأسعار لا يتسع التجميع في أقل من 2,000 دولار: فبقية القطع وحدها تبلغ نحو 1,080 دولار، ويبقى نحو 920 دولاراً لبطاقتين.',
           '**بالأسعار المدرجة هنا، تمنح بطاقتان GPU بسعة 16GB ذاكرة VRAM لكل دولار أكثر من بطاقة RTX 3090 24GB مستعملة واحدة.** يقابل 32GB من VRAM المجتمعة بنحو 1,600 دولار (نحو 50 دولاراً لكل GB) بطاقة RTX 3090 24GB مستعملة بسعر 1,500-1,725 دولار (نحو 63-72 دولاراً لكل GB؛ [متتبع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، بيانات مؤرخة في 2026-11-23). الإنفاق الإجمالي متقارب، وتمنح البطاقتان 8GB إضافية من VRAM المجتمعة لكنها موزعة على بطاقتي GPU. والرقمان ليسا من النوع نفسه: رقم RTX 5060 Ti سعر معروض لبطاقة جديدة (gpuprix، 2026-11-28)، أما رقم RTX 3090 فمن مبيعات مكتملة لبطاقات مستعملة (InsiderLLM، 2026-11-23). تحقق من الأسعار الحالية قبل الشراء.',
           '**نموذج 32B بتكميم Q4 يتسع، أما نموذج 70B بتكميم Q4 فلا.** حجم 32B بتكميم Q4 نحو 20GB وحجم 70B نحو 43GB ([مكتبة Ollama](https://ollama.com/library/qwen3:32b)). وتوزيع نموذج 32B على بطاقتين يتطلب بيئة تشغيل تقسّم النموذج بين بطاقات GPU مثل llama.cpp أو Ollama؛ ولم تُقَس السرعات في هذا التجميع.',
           '**اختر لوحة أم توثّق تقسيم PCIe بوضع x8/x8،** ولا يكفي وجود منفذين ماديين بحجم x16. المنفذ الثاني الموصول كهربائياً بوضع x4 له نصف عدد مسارات x8؛ ويعتمد مقدار إبطائه للنموذج المقسَّم على بيئة التشغيل والإعدادات، ولم نقِسه هنا.',
           '**الاعتماد على بطاقة GPU واحدة يقتصر على ما يتسع في 16GB:** النماذج حتى نحو 14B بتكميم Q4 تعمل على بطاقة RTX 5060 Ti واحدة؛ أما نموذج 32B (نحو 20GB) فيحتاج إلى البطاقتين.',
-          '**تجنّب:** أزواج GPU غير المتطابقة (مثل بطاقة 5060 Ti واحدة مع بطاقة 4060 Ti واحدة) — يتحدد أداء تقسيم tensor بالبطاقة الأبطأ، وقد يضيف خلط أجيال GPU تعقيدات في التعريفات أو الدعم.',
+          '**تجنّب:** أزواج GPU غير المتطابقة (مثل بطاقة 5060 Ti واحدة مع بطاقة 4060 Ti واحدة) — قد يتحدد أداء تقسيم tensor بالبطاقة الأبطأ، وقد يضيف خلط أجيال GPU تعقيدات في التعريفات أو الدعم.',
         ],
       },
       'why-dual-gpu': {
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'لماذا بطاقتا GPU بدلاً من بطاقة واحدة أكبر',
         content: [
           '**عند هذه الميزانية، تتمثل البدائل الرئيسية ببطاقة واحدة في RTX 3090 24GB مستعملة (نحو 1,500-1,725 دولار في المبيعات الأمريكية المنفَّذة بين 13 و23 نوفمبر 2026) أو بطاقة 16GB مثل RTX 5070 Ti، ولا تستوعب بطاقة 16GB نموذج 32B بتكميم Q4 (نحو 20GB).** يدعم llama.cpp تقسيم طبقات النموذج على عدة بطاقات GPU في الجهاز نفسه، فتعمل VRAM المجتمعة كمجمّع واحد لأوزان النموذج. وتمنح بطاقتا RTX 5060 Ti 16GB ذاكرة مجتمعة بسعة 32GB بمبلغ يقارب سعر بطاقة RTX 3090 24GB مستعملة واحدة بالأسعار المدرجة هنا (نحو 1,600 دولار مقابل 1,500-1,725 دولار)، وتستوعبان نموذج 32B بتكميم Q4 مع سياقه. أما نموذج 70B بتكميم Q4 (نحو 43GB) فما زال لا يتسع؛ إذ يلزم تفريغ طبقات إلى 64GB من ذاكرة النظام، مما يبطئ التوليد ولم نقِسه هنا.',
-          'يعمل هذا فقط لأن كلتا البطاقتين من الطراز نفسه — تؤدي VRAM أو الحوسبة غير المتطابقة بين البطاقتين إلى تحديد التقسيم بسرعة البطاقة الأضعف، وقد يضيف خلط أجيال GPU تعقيدات في التعريفات أو الدعم.',
+          'البطاقتان المتطابقتان هما الإعداد الأبسط. يستطيع llama.cpp أيضاً تقسيم النموذج بين بطاقات مختلفة، لكن موازنة زوج غير متطابق أصعب، وقد تحدّ البطاقة الأصغر أو الأبطأ من النتيجة، وقد يضيف خلط أجيال GPU تعقيدات في التعريفات أو الدعم. لم تختبر هذه الصفحة زوجاً غير متطابق.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'بطاقتان GPU متطابقتان بسعة 16GB تُقسَّم بينهما الطبقات عبر llama.cpp توفران VRAM مجتمعة لكل دولار أكثر من بطاقة RTX 3090 24GB مستعملة واحدة بالأسعار المدرجة هنا (نحو 1,600 دولار مقابل 32GB، مقارنة بـ 1,500-1,725 دولار مقابل 24GB في المبيعات الأمريكية المنفَّذة بين 13 و23 نوفمبر 2026). تحقق من الأسعار الحالية قبل الشراء.' },
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'قائمة القطع الكاملة',
-        content: 'الأسعار هي أسعار السوق الأمريكية وتختلف حسب المنطقة والمتجر. سعر بطاقة RTX 5060 Ti 16GB البالغ نحو 800 دولار للواحدة رقم مرجعي مقرّب لبطاقة جديدة: أدنى عرض لبطاقة جديدة ظاهر على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) كان 800 دولار (تم التحقق في 2026-11-28)، وعرض [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) بطاقة على Amazon الولايات المتحدة بسعر 829.99 دولاراً (2026-11-27). الأسعار متقلبة، فتحقق من الأسعار الحالية قبل الشراء. أما بقية القطع فتقديرات تحريرية لم يُعَد التحقق منها. سعر اللوحة الأم قيمة مؤقتة؛ فقد تكلف اللوحات التي توثّق تقسيم مسارات المعالج بوضع x8/x8 أكثر، لذا قد يكون الإجمالي أعلى. الإجمالي: نحو 2,680 دولار.',
+        content: 'الأسعار هي أسعار السوق الأمريكية وتختلف حسب المنطقة والمتجر. سعر بطاقة RTX 5060 Ti 16GB البالغ نحو 800 دولار للواحدة رقم مرجعي مقرّب لبطاقة جديدة: أدنى عرض لبطاقة جديدة ظاهر على [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) كان 800 دولار (تم التحقق في 2026-11-28)، وعرض [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) بطاقة على Amazon الولايات المتحدة بسعر 849.99 دولاراً (2026-11-27). الأسعار متقلبة، فتحقق من الأسعار الحالية قبل الشراء. أما بقية القطع فتقديرات تحريرية لم يُعَد التحقق منها. سعر اللوحة الأم قيمة مؤقتة؛ فقد تكلف اللوحات التي توثّق تقسيم مسارات المعالج بوضع x8/x8 أكثر، لذا قد يكون الإجمالي أعلى. الإجمالي: نحو 2,680 دولار. وبسعر 849.99 دولاراً للبطاقة يبلغ الإجمالي نحو 2,780 دولاراً.',
         columns: ['المكوّن', 'الاختيار', 'السعر', 'السبب'],
         rows: [
           { 'المكوّن': 'GPU (×2)', 'الاختيار': 'بطاقتا RTX 5060 Ti 16GB', 'السعر': '$1,600', 'السبب': 'ذاكرة VRAM مجتمعة سعة 32GB عبر تقسيم tensor — الغرض الأساسي من هذا التجميع' },
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'وفق [الأسئلة الشائعة لـ Ollama](https://docs.ollama.com/faq)، إذا لم يتسع النموذج بالكامل في بطاقة GPU واحدة فإن Ollama يوزّعه على جميع بطاقات GPU المتاحة دون إعداد يدوي، رغم أن علامات llama.cpp اليدوية تمنح تحكماً أدق في نسبة التقسيم.',
         ],
         items: [
-          '**تحقق من اكتشاف كلتا البطاقتين:** يجب أن يسرد `nvidia-smi` كلتا البطاقتين بإصدارات تعريف متطابقة قبل محاولة التقسيم.',
+          '**تحقق من اكتشاف كلتا البطاقتين:** يجب أن يسرد `nvidia-smi` كلتا البطاقتين قبل محاولة التقسيم.',
           '**ابدأ بتقسيم متساوٍ:** يُعد `--tensor-split 1,1` في llama.cpp الإعداد الافتراضي الصحيح لبطاقتين متطابقتين.',
           '**راقب تشبّع عرض نطاق PCIe:** إذا كان التوليد بطيئًا على نحو غير متوقع، فتأكد من أن اللوحة الأم تعمل فعلًا بوضع x8/x8 وأنها لا تتراجع بصمت إلى x4.',
         ],
@@ -933,8 +933,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'مسار الترقية',
         content: [
-          'أوضح ترقية لهذا التجميع هي إضافة بطاقة ثالثة RTX 5060 Ti 16GB إذا كانت اللوحة الأم تضم فتحة PCIe ثالثة بعرض نطاق قابل للاستخدام، فترتفع VRAM المجتمعة إلى 48GB، أي أعلى من حجم التنزيل البالغ نحو 43GB لنموذج 70B بتكميم Q4، علمًا أن السياق يحتاج أيضًا إلى VRAM وأن ذلك لم يُختبر هنا.',
-          'ترقية أغلى لكنها أبسط هي استبدال بطاقتي RTX 5060 Ti بعد ذلك ببطاقتي RTX 5070 Ti 16GB، مع الإبقاء على سقف VRAM نفسه عند 32GB لكن مع زيادة الحوسبة الخام وعرض نطاق الذاكرة، مما يحسّن tok/s دون تغيير أحجام النماذج المتناسبة.',
+          'أوضح ترقية لهذا التجميع هي إضافة بطاقة ثالثة RTX 5060 Ti 16GB إذا كانت اللوحة الأم تضم فتحة PCIe ثالثة بعرض نطاق قابل للاستخدام، فترتفع VRAM المجتمعة إلى 48GB، أي أعلى من حجم التنزيل البالغ نحو 43GB لنموذج 70B بتكميم Q4، علمًا أن السياق يحتاج أيضًا إلى VRAM وأن ذلك لم يُختبر هنا. وتضيف البطاقة الثالثة نحو 180W (وفق NVIDIA)، فتحقق أولاً من مزود الطاقة والصندوق.',
+          'ثمة خيار آخر هو استبدال بطاقتي RTX 5060 Ti لاحقاً ببطاقتي RTX 5070 Ti 16GB. يبقى سقف VRAM عند 32GB، والمكسب المتوقع هو السرعة التي لم تقِسها هذه الصفحة. تحدد NVIDIA استهلاك RTX 5070 Ti بـ 300W مقابل 180W لـ RTX 5060 Ti، وتذكر 750W قدرةً مطلوبة للنظام مع بطاقة RTX 5070 Ti واحدة، فلا تفترض أن مزود 850W يكفي لبطاقتين. راجع مواصفات الشركة المصنّعة للبطاقة وخطط لمزود طاقة أكبر.',
         ],
       },
       whereToBuy: {
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأخطاء الشائعة عند هذه الميزانية',
         items: [
           'شراء لوحة أم بناءً على علامة "تدعم SLI/CrossFire" فقط — يشير هذا المصطلح التسويقي إلى تصيير الألعاب متعدد GPU، وليس توزيع مسارات PCIe لأعباء الحوسبة، ولا يضمن وضع x8/x8.',
-          'خلط أجيال GPU (مثل بطاقة RTX 5060 Ti واحدة مع بطاقة RTX 4060 Ti واحدة) لتوفير المال — يتحدد أداء تقسيم tensor بالبطاقة الأبطأ/الأقدم، مما قد يلغي جزءًا من فائدة البطاقة الأحدث.',
+          'خلط أجيال GPU (مثل بطاقة RTX 5060 Ti واحدة مع بطاقة RTX 4060 Ti واحدة) لتوفير المال — قد يتحدد أداء تقسيم tensor بالبطاقة الأبطأ/الأقدم، مما قد يلغي جزءًا من فائدة البطاقة الأحدث.',
           'التقليل من هامش مزود الطاقة — قد تسحب بطاقتا GPU قرب TDP المقدَّر مجتمعاً في آن واحد أثناء توليد طويل بذروة قصيرة تتجاوز 360W بوضوح؛ قد يتسبب مزود طاقة صغير الحجم في إغلاق عشوائي تحت الحمل بدلاً من تباطؤ تدريجي. راجع في دليل البطاقة قدرة مزود الطاقة التي توصي بها الشركة المصنّعة ومتطلبات الموصلات. هذه معلومات عامة وليست نصيحة كهربائية؛ إذا لم تكن متأكدًا فاطلب من فني مؤهل فحص التجميع ودائرتك الكهربائية.',
           'افتراض أن مضاعفة بطاقات GPU تعني مضاعفة tok/s — يضيف تقسيم tensor عبء نقل PCIe بين الطبقات، لذا فإن الإنتاجية المجتمعة أقل بشكل ملموس من ضعف سرعة بطاقة واحدة على نماذج تتناسب بالفعل مع بطاقة واحدة.',
         ],
@@ -1000,13 +1000,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يستطيع هذا الكمبيوتر بكرتي GPU تشغيل نماذج LLM محلية بحجم 70B؟', a: 'ليس بالكامل في VRAM بتكميم Q4. حجم نموذج 70B بتكميم Q4_K_M نحو 43GB وفق مكتبة Ollama، وتوفّر بطاقتا RTX 5060 Ti مجتمعتين 32GB، لذا يجب تفريغ الطبقات المتبقية (11GB على الأقل تقريبًا) إلى 64GB من ذاكرة النظام. يستطيع llama.cpp ذلك، لكن التوليد يصبح أبطأ ولم يُقَس في هذا التجميع. أما نموذج 32B بتكميم Q4 (نحو 20GB) فيتسع على البطاقتين.' },
           { q: 'لماذا استخدام بطاقتي GPU بذاكرة 16GB بدلاً من بطاقة RTX 3090 مستعملة واحدة؟', a: 'توفّر بطاقتا GPU متطابقتان بذاكرة 16GB ذاكرة VRAM مجتمعة أكبر مقابل كل دولار من بطاقة RTX 3090 24GB مستعملة واحدة بالأسعار المدرجة هنا (نحو 1,600 دولار مقابل 32GB، مقارنة بـ 1,500-1,725 دولار مقابل 24GB في المبيعات الأمريكية المنفَّذة بين 13 و23 نوفمبر 2026)، وتتيح ميزة تقسيم tensor في llama.cpp عمل ذاكرة كلتا البطاقتين كتجمّع واحد للاستدلال. تحقق من الأسعار الحالية قبل الشراء.' },
           { q: 'هل تهم اللوحة الأم لتجميع كمبيوتر LLM محلي بثنائي GPU؟', a: 'نعم. اختر لوحة توثّق توزيع مسارات PCIe بوضع x8/x8 على منفذي GPU. المنفذ الثاني الموصول بوضع x4 له مسارات أقل؛ ويعتمد أثر ذلك في السرعة على بيئة التشغيل وطريقة التقسيم، ولم يُقَس هنا.' },
-          { q: 'هل يمكنني خلط طرازات GPU مختلفة في تجميع بثنائي GPU؟', a: 'غير موصى به. يتحدد أداء تقسيم tensor بالبطاقة الأبطأ أو الأقدم في الزوج، وقد يضيف خلط أجيال GPU تعقيدات في التعريفات أو الدعم. استخدم بطاقتي GPU متطابقتين.' },
+          { q: 'هل يمكنني خلط طرازات GPU مختلفة في تجميع بثنائي GPU؟', a: 'غير موصى به. قد يتحدد أداء تقسيم tensor بالبطاقة الأبطأ أو الأقدم في الزوج، وقد يضيف خلط أجيال GPU تعقيدات في التعريفات أو الدعم. استخدم بطاقتي GPU متطابقتين.' },
           { q: 'هل Ollama أم llama.cpp أفضل لاستدلال تقسيم tensor بعدة بطاقات GPU؟', a: 'يستطيع Ollama توزيع النموذج على جميع بطاقات GPU المتاحة دون إعداد يدوي (الأسئلة الشائعة لـ Ollama). تمنح علامة --tensor-split اليدوية في llama.cpp تحكماً أدق في نسبة التقسيم، وهو مفيد إذا كانت إحدى البطاقتين تشغّل أيضاً شاشة عرض وتحتاج VRAM محجوزة أقل.' },
           { q: 'إلى أي مدى يؤثر عرض نطاق PCIe فعلياً على أداء تقسيم tensor؟', a: 'يعتمد ذلك على بيئة التشغيل وطريقة التقسيم وحجم الدفعة وطول السياق، ولم تقِسه هذه الصفحة. منفذ x4 له نصف عدد مسارات x8، فاختر x8/x8 متى أمكن واختبر حِمل عملك.' },
           { q: 'هل مضاعفة بطاقات GPU تضاعف سرعة الرموز في الثانية؟', a: 'لا. يضيف تقسيم tensor عبء نقل PCIe بين الطبقات الموزَّعة عبر البطاقات، لذا فإن الإنتاجية المجتمعة على نموذج يتناسب بالفعل مع بطاقة واحدة أقل بشكل ملموس من ضعف سرعة تلك البطاقة الواحدة. الفائدة هي استيعاب نماذج أكبر، لا مضاعفة السرعة خطياً.' },
           { q: 'ما إجمالي استهلاك الطاقة لبطاقتي RTX 5060 Ti؟', a: 'نحو 360W مجتمعة عند الحمل الكامل (180W TDP مقدَّرة لكل منهما)، مع ذروات عابرة قصيرة تتجاوز ذلك. يترك مزود طاقة 850W بشهادة 80+ Gold هامشاً مريحاً لبقية النظام إلى جانب تلك الذروات. راجع متطلبات موصلات الطاقة والقدرة الكهربائية لمزود الطاقة في دليل البطاقة.' },
           { q: 'هل يستطيع هذا التجميع تشغيل النماذج الأصغر على بطاقة GPU واحدة فقط؟', a: 'نعم. النماذج التي تتسع في 16GB، أي حتى نحو 14B بتكميم Q4 (نحو 9.3GB)، تعمل على بطاقة RTX 5060 Ti واحدة وتتجنب عبء PCIe الناتج عن التقسيم. أما نموذج 32B بتكميم Q4 (نحو 20GB) فلا يتسع في بطاقة 16GB ويحتاج إلى البطاقتين.' },
-          { q: 'ما مسار الترقية بعد هذا التجميع؟', a: 'إضافة بطاقة RTX 5060 Ti 16GB ثالثة متطابقة (إذا كان للوحة الأم منفذ PCIe ثالث قابل للاستخدام) ترفع VRAM المجتمعة إلى 48GB. بدلاً من ذلك، يحافظ استبدال كلتا البطاقتين ببطاقتي RTX 5070 Ti 16GB لاحقاً على سقف 32GB نفسه لكنه يزيد الحوسبة وعرض نطاق الذاكرة.' },
+          { q: 'ما مسار الترقية بعد هذا التجميع؟', a: 'إضافة بطاقة RTX 5060 Ti 16GB ثالثة متطابقة (إذا كان للوحة الأم منفذ PCIe ثالث قابل للاستخدام) ترفع VRAM المجتمعة إلى 48GB. بدلاً من ذلك، يحافظ استبدال كلتا البطاقتين ببطاقتي RTX 5070 Ti 16GB لاحقاً على سقف 32GB نفسه لكنه يزيد الحوسبة وعرض نطاق الذاكرة. وفي الحالتين تحقق أولاً من مزود الطاقة: تحدد NVIDIA استهلاك RTX 5070 Ti بـ 300W للبطاقة مقابل 180W لـ RTX 5060 Ti.' },
         ],
       },
       relatedReading: {
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مكتبة Ollama: Llama 3.3 70B (43GB، الوسم الافتراضي)](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM: متتبع أسعار بطاقات NVIDIA GPU](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix: عروض RTX 5060 Ti 16GB في الولايات المتحدة، أدنى عرض ظاهر لبطاقة جديدة 800 دولار (تم التحقق في 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice: أسعار RTX 5060 Ti في الولايات المتحدة، بطاقة 16GB بسعر 829.99 دولاراً على Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice: أسعار RTX 5060 Ti في الولايات المتحدة، بطاقة 16GB بسعر 849.99 دولاراً على Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)', '[مواصفات عائلة NVIDIA RTX 5070 (بطاقة RTX 5070 Ti: 300W، والقدرة المطلوبة للنظام 750W)](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -1063,10 +1063,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/ar/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'هل يستطيع هذا الكمبيوتر بكرتي GPU تشغيل نماذج LLM محلية بحجم 70B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس بالكامل في VRAM بتكميم Q4. حجم نموذج 70B بتكميم Q4_K_M نحو 43GB وتوفّر بطاقتا RTX 5060 Ti 32GB، لذا يجب تفريغ الطبقات المتبقية إلى ذاكرة النظام الأبطأ (لم يُقَس هنا). أما نموذج 32B بتكميم Q4 (نحو 20GB) فيتسع.' } },
+        { '@type': 'Question', 'name': 'هل يستطيع هذا الكمبيوتر بكرتي GPU تشغيل نماذج LLM محلية بحجم 70B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس بالكامل في VRAM بتكميم Q4. حجم نموذج 70B بتكميم Q4_K_M نحو 43GB وفق مكتبة Ollama، وتوفّر بطاقتا RTX 5060 Ti مجتمعتين 32GB، لذا يجب تفريغ الطبقات المتبقية (11GB على الأقل تقريبًا) إلى 64GB من ذاكرة النظام. يستطيع llama.cpp ذلك، لكن التوليد يصبح أبطأ ولم يُقَس في هذا التجميع. أما نموذج 32B بتكميم Q4 (نحو 20GB) فيتسع على البطاقتين.' } },
         { '@type': 'Question', 'name': 'لماذا استخدام بطاقتي GPU بذاكرة 16GB بدلاً من بطاقة RTX 3090 مستعملة واحدة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'توفّر بطاقتا GPU متطابقتان بذاكرة 16GB ذاكرة VRAM مجتمعة أكبر مقابل كل دولار من بطاقة RTX 3090 24GB مستعملة واحدة بالأسعار المدرجة هنا (نحو 1,600 دولار مقابل 32GB، مقارنة بـ 1,500-1,725 دولار مقابل 24GB في المبيعات الأمريكية المنفَّذة بين 13 و23 نوفمبر 2026)، وتتيح ميزة تقسيم tensor في llama.cpp عمل ذاكرة كلتا البطاقتين كتجمّع واحد للاستدلال. تحقق من الأسعار الحالية قبل الشراء.' } },
         { '@type': 'Question', 'name': 'هل تهم اللوحة الأم لتجميع كمبيوتر LLM محلي بثنائي GPU؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. اختر لوحة توثّق توزيع مسارات PCIe بوضع x8/x8 على منفذي GPU. المنفذ الثاني الموصول بوضع x4 له مسارات أقل؛ ويعتمد أثر ذلك في السرعة على بيئة التشغيل وطريقة التقسيم، ولم يُقَس هنا.' } },
-        { '@type': 'Question', 'name': 'هل يمكنني خلط طرازات GPU مختلفة في تجميع بثنائي GPU؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'غير موصى به. يتحدد أداء تقسيم tensor بالبطاقة الأبطأ أو الأقدم في الزوج، وقد يضيف خلط أجيال GPU تعقيدات في التعريفات أو الدعم.' } },
+        { '@type': 'Question', 'name': 'هل يمكنني خلط طرازات GPU مختلفة في تجميع بثنائي GPU؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'غير موصى به. قد يتحدد أداء تقسيم tensor بالبطاقة الأبطأ أو الأقدم في الزوج، وقد يضيف خلط أجيال GPU تعقيدات في التعريفات أو الدعم. استخدم بطاقتي GPU متطابقتين.' } },
         { '@type': 'Question', 'name': 'هل مضاعفة بطاقات GPU تضاعف سرعة الرموز في الثانية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. يضيف تقسيم tensor عبء نقل PCIe بين الطبقات الموزَّعة عبر البطاقات، لذا فإن الإنتاجية المجتمعة على نموذج يتناسب بالفعل مع بطاقة واحدة أقل بشكل ملموس من ضعف سرعة تلك البطاقة الواحدة. الفائدة هي استيعاب نماذج أكبر، لا مضاعفة السرعة خطياً.' } },
       ],
     },
@@ -1127,12 +1127,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**ビルドの合計費用：約$2,680（米国価格）。** RTX 5060 Ti 16GB×2（1枚約$800、合計$1,600）、Ryzen 7 9700X（$330）、64GB DDR5-6000（$180）、2TB Gen4 NVMe（$130）、x8/x8スロット対応B650 ATXボード（$180）、850W 80+ Gold電源（$130）、ATXケース（$90）、空冷CPUクーラー（$40）。GPU価格は新品の価格を丸めた当サイトの基準値です。[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)に表示された新品の最安掲載は$800（2026-11-28確認）で、[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)ではAmazon米国の製品が$829.99（2026-11-27）と表示されていました。価格は変動します。その他のパーツは編集部の見積もりで、販売店により異なります。この価格では$2,000未満に収まりません。他のパーツだけで約$1,080になり、GPU 2枚に使えるのは約$920です。',
+          '**ビルドの合計費用：約$2,680（米国価格）。** RTX 5060 Ti 16GB×2（1枚約$800、合計$1,600）、Ryzen 7 9700X（$330）、64GB DDR5-6000（$180）、2TB Gen4 NVMe（$130）、x8/x8スロット対応B650 ATXボード（$180）、850W 80+ Gold電源（$130）、ATXケース（$90）、空冷CPUクーラー（$40）。GPU価格は新品の価格を丸めた当サイトの基準値です。[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)に表示された新品の最安掲載は$800（2026-11-28確認）で、[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)ではAmazon米国の製品が$849.99（2026-11-27）と表示されていました。価格は変動します。その他のパーツは編集部の見積もりで、販売店により異なります。この価格では$2,000未満に収まりません。他のパーツだけで約$1,080になり、GPU 2枚に使えるのは約$920です。',
           '**ここに掲載した価格では、16GBのGPU 2枚は中古RTX 3090 24GB 1枚よりドル当たりのVRAMが多くなります。** 合計32GBのVRAMが約$1,600（1GBあたり約$50）で、中古RTX 3090 24GBは$1,500〜1,725（1GBあたり約$63〜72、[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、2026-11-23時点のデータ）です。支出の総額はほぼ同じで、2枚構成は合計VRAMが8GB多くなりますが、2つのGPUに分かれます。2つの数値は同じ条件ではありません。RTX 5060 Tiは新品の販売価格（gpuprix、2026-11-28）、RTX 3090は中古の成約データ（InsiderLLM、2026-11-23）です。購入前に最新の価格を確認してください。',
           '**Q4の32Bモデルは収まりますが、Q4の70Bモデルは収まりません。** Q4の32Bは約20GB、Q4の70Bは約43GBです（[Ollamaライブラリ](https://ollama.com/library/qwen3:32b)）。32Bを2枚のカードに分けて載せるには、llama.cppやOllamaのようにモデルを複数GPUへ分割できるランタイムが必要です。このビルドでは速度を計測していません。',
           '**x8/x8のPCIe分岐を明記したマザーボードを選んでください。** 物理的なx16スロットが2本あるだけでは不十分です。電気的にx4で配線された2本目のスロットは、レーン数がx8の半分です。分割したモデルがどれだけ遅くなるかはランタイムと設定によって異なり、ここでは計測していません。',
           '**シングルGPUで動くのは16GBに収まるモデルまでです。** Q4で約14Bまでのモデルは1枚のRTX 5060 Tiで動作し、32Bモデル（約20GB）には2枚とも必要です。',
-          '**避けるべき：** 異なるGPUの組み合わせ（例：5060 Ti 1枚＋4060 Ti 1枚）— テンソル分割の性能は遅い方のカードに制限され、GPU世代を混在させるとドライバやサポート面で問題が生じることがあります。',
+          '**避けるべき：** 異なるGPUの組み合わせ（例：5060 Ti 1枚＋4060 Ti 1枚）— テンソル分割の性能は遅い方のカードに制限されることがあり、GPU世代を混在させるとドライバやサポート面で問題が生じることがあります。',
         ],
       },
       'why-dual-gpu': {
@@ -1140,7 +1140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'なぜ大きなGPU1枚ではなくGPU2枚を選ぶのか',
         content: [
           '**この予算での主なシングルGPUの選択肢は、中古RTX 3090 24GB（2026年11月13〜23日の米国販売済み価格で約$1,500〜1,725）か、RTX 5070 Tiのような16GBカードで、16GBカードではQ4の32Bモデル（約20GB）を保持できません。** llama.cppは、同じマシン内の複数GPUにモデルのレイヤーを分割することに対応しており、合計VRAMをモデルの重みのための1つのプールとして使えます。RTX 5060 Ti 16GB×2なら、ここに掲載した価格では中古RTX 3090 24GB 1枚とほぼ同じ金額（約$1,600に対して$1,500〜1,725）で合計32GBとなり、Q4の32Bモデルとコンテキストを保持できます。Q4の70Bモデル（約43GB）は依然として収まらず、64GBのシステムRAMへレイヤーをオフロードする必要があり、生成は遅くなります。この点はここでは計測していません。',
-          'これが機能するのは両カードが同一モデルである場合に限られます — VRAMや計算性能が異なるカードの組み合わせは分割が弱い方のカードに律速され、GPU世代を混在させるとドライバやサポート面で問題が生じることがあります。',
+          '同じカード2枚が最も扱いやすい構成です。llama.cppは異なるカードの間でもモデルを分割できますが、不揃いの組み合わせは配分の調整が難しく、容量の小さい方や遅い方のカードが全体の足を引っ張ることがあります。GPU世代を混在させると、ドライバやサポート面で問題が生じることもあります。このページでは不揃いの組み合わせを試していません。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '同じ16GBのGPU 2枚をllama.cppで分割する構成は、ここに掲載した価格では中古RTX 3090 24GB 1枚よりドル当たりの合計VRAMが多くなります（32GBが約$1,600、24GBが$1,500〜1,725）。購入前に最新の価格を確認してください。' },
@@ -1150,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: '完全パーツリスト',
-        content: '価格は米国の実勢価格で、地域や販売店により変動します。RTX 5060 Ti 16GBの1枚約$800は、新品の価格を丸めた当サイトの基準値です。[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)に表示された新品の最安掲載は$800（2026-11-28確認）で、[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)ではAmazon米国の製品が$829.99（2026-11-27）と表示されていました。価格は変動するため、購入前に最新の価格を確認してください。その他のパーツは編集部の見積もりで、再確認はしていません。マザーボードの価格は仮の値で、CPUレーンのx8/x8分岐を明記しているボードはより高価になる場合があり、合計が増える可能性があります。合計：約$2,680。',
+        content: '価格は米国の実勢価格で、地域や販売店により変動します。RTX 5060 Ti 16GBの1枚約$800は、新品の価格を丸めた当サイトの基準値です。[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)に表示された新品の最安掲載は$800（2026-11-28確認）で、[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)ではAmazon米国の製品が$849.99（2026-11-27）と表示されていました。価格は変動するため、購入前に最新の価格を確認してください。その他のパーツは編集部の見積もりで、再確認はしていません。マザーボードの価格は仮の値で、CPUレーンのx8/x8分岐を明記しているボードはより高価になる場合があり、合計が増える可能性があります。合計：約$2,680。1枚$849.99の場合、合計は約$2,780になります。',
         columns: ['パーツ', '選択', '価格', '理由'],
         rows: [
           { 'パーツ': 'GPU（2枚）', '選択': 'RTX 5060 Ti 16GB ×2', '価格': '$1,600', '理由': 'テンソル分割による合計32GB VRAM — このビルドの核心' },
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[OllamaのFAQ](https://docs.ollama.com/faq)によると、モデルが1枚のGPUに完全には収まらない場合、Ollamaは利用可能なすべてのGPUに分散して載せるため、手動設定は不要です。ただし、分割比率をより精密に制御したい場合はllama.cppの手動フラグの方が優れています。',
         ],
         items: [
-          '**両方のGPUが検出されているか確認：** `nvidia-smi`で、分割を試みる前に両方のカードが一致するドライババージョンでリストされているか確認してください。',
+          '**両方のGPUが検出されているか確認：** 分割を試す前に、`nvidia-smi`に両方のカードが表示されることを確認してください。',
           '**均等な分割から始める：** llama.cppの`--tensor-split 1,1`は同一の2枚のカードに対する正しいデフォルトです。',
           '**PCIe帯域の飽和に注意してください。** 生成が想定外に遅い場合は、マザーボードが実際にx8/x8で動作しており、気づかないうちにx4へ落ちていないか確認します。',
         ],
@@ -1205,8 +1205,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'アップグレードパス',
         content: [
-          'このビルドの最も分かりやすいアップグレードは、使える帯域の3本目のPCIeスロットがあるマザーボードで、3枚目のRTX 5060 Ti 16GBを追加することです。合計VRAMは48GBとなり、70BのQ4のダウンロードサイズ約43GBを上回りますが、コンテキストにもVRAMが必要で、ここでは未検証です。',
-          'より高価だがシンプルなアップグレードは、後で両方のRTX 5060 TiカードをRTX 5070 Ti 16GBカード2枚に交換することです。同じ32GBのVRAM上限を維持しながら、生の計算性能とメモリ帯域幅を高め、収まるモデルサイズを変えずにトークン/秒を向上させます。',
+          'このビルドの最も分かりやすいアップグレードは、使える帯域の3本目のPCIeスロットがあるマザーボードで、3枚目のRTX 5060 Ti 16GBを追加することです。合計VRAMは48GBとなり、70BのQ4のダウンロードサイズ約43GBを上回りますが、コンテキストにもVRAMが必要で、ここでは未検証です。3枚目を追加すると約180W（NVIDIAの公称値）増えるため、先に電源とケースを再確認してください。',
+          'もう1つの選択肢は、後でRTX 5060 Tiを2枚ともRTX 5070 Ti 16GB 2枚に交換することです。VRAMの上限は32GBのままです。期待できるのは速度の向上ですが、このページでは計測していません。NVIDIAの公称値はRTX 5070 Tiが300W（RTX 5060 Tiは180W）で、RTX 5070 Ti 1枚でも必要システム電力を750Wとしています。850W電源で2枚が足りるとは考えないでください。カードメーカーの仕様を確認し、より大きな電源を見込んでください。',
         ],
       },
       whereToBuy: {
@@ -1259,7 +1259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'この予算でよくある失敗',
         items: [
           '「SLI/CrossFire対応」というブランディングだけでマザーボードを購入すること — そのマーケティング用語はゲーミング向けマルチGPUレンダリングを指し、計算ワークロード向けのPCIeレーン割り当てとは無関係で、x8/x8を保証しません。',
-          '節約のためにGPU世代を混在させること（例：RTX 5060 Ti 1枚＋RTX 4060 Ti 1枚）— テンソル分割の性能は遅い方／古い方のカードに制限され、新しい方のカードの利点の一部が失われる可能性があります。',
+          '節約のためにGPU世代を混在させること（例：RTX 5060 Ti 1枚＋RTX 4060 Ti 1枚）— テンソル分割の性能は遅い方／古い方のカードに制限されることがあり、新しい方のカードの利点の一部が失われる可能性があります。',
           '電源の余裕を過小評価すること — 長時間の生成中に2枚のGPUが合計定格TDP付近を同時に消費すると、瞬間的に360Wを大きく上回るスパイクが発生することがあります。容量不足の電源は、緩やかな減速ではなくランダムなシャットダウンを引き起こすことがあります。カードのマニュアルで、メーカー推奨の電源容量とコネクタ要件を確認してください。これは一般的な情報であり、電気に関する助言ではありません。不安な場合は、資格を持つ技術者に構成と電源回路を確認してもらってください。',
           'GPUを2倍にすればトークン/秒も2倍になると想定すること — テンソル分割はレイヤー間のPCIe転送オーバーヘッドを追加するため、すでに1枚のGPUに収まるモデルでは、合計スループットは単一カードの速度の2倍を大きく下回ります。',
         ],
@@ -1271,13 +1271,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'このデュアルGPU PCで70BのローカルLLMは動きますか？', a: 'Q4ではVRAMに完全には収まりません。70BモデルのQ4_K_MはOllamaライブラリ記載で約43GBで、RTX 5060 Ti 2枚のVRAMは32GBのため、残りのレイヤー（少なくとも約11GB）は64GBのシステムRAMへオフロードする必要があります。llama.cppで可能ですが生成は遅くなり、このビルドでは計測していません。Q4の32Bモデル（約20GB）は2枚に分けて収まります。' },
           { q: 'なぜ中古RTX 3090 1枚ではなく16GB GPU2枚を使うのですか？', a: 'ここに掲載した価格では、マッチした16GB GPU2枚の方が中古RTX 3090 24GB 1枚より合計VRAM単価に優れており（32GBが約$1,600、24GBが$1,500〜1,725）、llama.cppのテンソル分割機能により両カードのVRAMが1つのプールとして推論に機能します。購入前に最新の価格を確認してください。' },
           { q: 'デュアルGPUのローカルLLMビルドにマザーボードは重要ですか？', a: 'はい。2本のGPUスロットでx8/x8のPCIeレーン割り当てを明記したボードを選んでください。電気的にx4で配線された2本目のスロットはレーン数が少なくなります。速度への影響はランタイムと分割方式によって異なり、ここでは計測していません。' },
-          { q: 'デュアルGPUビルドで異なるGPUモデルを混在させられますか？', a: '推奨されません。テンソル分割の性能はペアの中で遅い方または古い方のカードに制限され、GPU世代を混在させるとドライバやサポート面で問題が生じることがあります。同一のGPUを2枚使ってください。' },
+          { q: 'デュアルGPUビルドで異なるGPUモデルを混在させられますか？', a: '推奨されません。テンソル分割の性能はペアの中で遅い方または古い方のカードに制限されることがあり、GPU世代を混在させるとドライバやサポート面で問題が生じることがあります。同一のGPUを2枚使ってください。' },
           { q: 'テンソル分割マルチGPU推論にはOllamaとllama.cppのどちらが優れていますか？', a: 'Ollamaは手動設定なしで、モデルを利用可能なすべてのGPUに分散できます（Ollama FAQ）。llama.cppの手動`--tensor-split`フラグは分割比率をより精密に制御でき、片方のGPUがディスプレイも駆動していて予約するVRAMを減らしたい場合に有用です。' },
           { q: 'PCIe帯域幅は実際にテンソル分割の性能にどれほど影響しますか？', a: 'ランタイム、分割方式、バッチサイズ、コンテキスト長によって異なり、このページでは計測していません。x4スロットのレーン数はx8の半分なので、可能ならx8/x8を選び、実際の用途で試してください。' },
           { q: 'GPUを2倍にするとトークン毎秒も2倍になりますか？', a: 'いいえ。テンソル分割はカード間で分割されたレイヤー間のPCIe転送オーバーヘッドを追加するため、すでに1枚のGPUに収まるモデルの合計スループットは、その単一カードの速度の2倍を大きく下回ります。利点はモデルを大きくできることであり、線形の速度向上ではありません。' },
           { q: 'RTX 5060 Ti2枚の総消費電力はどれくらいですか？', a: 'フル負荷で合計約360W（定格TDPは各180W）に加え、瞬間的にそれを上回るスパイクがあります。850W 80+ Gold電源は、そうしたスパイクと合わせてシステムの残りの部分にも十分な余裕を残します。カードのマニュアルで電源コネクタと必要ワット数を確認してください。' },
           { q: 'このビルドは小さなモデルをGPU 1枚だけで動かせますか？', a: 'はい。16GBに収まるモデル、およそQ4で14Bまで（約9.3GB）は、RTX 5060 Ti 1枚で動作し、分割に伴うPCIeのオーバーヘッドも避けられます。Q4の32Bモデル（約20GB）は16GBカード1枚には収まらず、2枚とも必要です。' },
-          { q: 'このビルドを超えるアップグレードパスは何ですか？', a: '3本目のマッチしたRTX 5060 Ti 16GBを追加すると（マザーボードに使用可能な3本目のPCIeスロットがある場合）、合計VRAMが48GBに上がります。あるいは、後で両方のカードをRTX 5070 Ti 16GBユニットに交換すると、同じ32GBの上限を維持しながら計算性能とメモリ帯域幅を高められます。' },
+          { q: 'このビルドを超えるアップグレードパスは何ですか？', a: '3本目のマッチしたRTX 5060 Ti 16GBを追加すると（マザーボードに使用可能な3本目のPCIeスロットがある場合）、合計VRAMが48GBに上がります。あるいは、後で両方のカードをRTX 5070 Ti 16GBユニットに交換すると、同じ32GBの上限を維持しながら計算性能とメモリ帯域幅を高められます。どちらの場合も先に電源を確認してください。NVIDIAの公称値は1枚あたりRTX 5070 Tiが300W、RTX 5060 Tiが180Wです。' },
         ],
       },
       relatedReading: {
@@ -1304,7 +1304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollamaライブラリ：Llama 3.3 70B（デフォルトタグで43GB）](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM：NVIDIA GPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix：RTX 5060 Ti 16GBの米国掲載価格、表示された新品最安は$800（2026-11-28確認）](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice：RTX 5060 Tiの米国価格、Amazonの16GB製品が$829.99（2026-11-27）](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice：RTX 5060 Tiの米国価格、Amazonの16GB製品が$849.99（2026-11-27）](https://www.basketprice.com/gpu/rtx-5060-ti)', '[NVIDIA RTX 5070ファミリー仕様（RTX 5070 Ti：300W、必要システム電力750W）](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -1334,10 +1334,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'このデュアルGPU PCで70BのローカルLLMは動きますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4ではVRAMに完全には収まりません。70BモデルのQ4_K_Mは約43GBで、RTX 5060 Ti 2枚のVRAMは32GBのため、残りのレイヤーは低速なシステムRAMへオフロードされます（ここでは未計測）。Q4の32Bモデル（約20GB）は収まります。' } },
+        { '@type': 'Question', 'name': 'このデュアルGPU PCで70BのローカルLLMは動きますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4ではVRAMに完全には収まりません。70BモデルのQ4_K_MはOllamaライブラリ記載で約43GBで、RTX 5060 Ti 2枚のVRAMは32GBのため、残りのレイヤー（少なくとも約11GB）は64GBのシステムRAMへオフロードする必要があります。llama.cppで可能ですが生成は遅くなり、このビルドでは計測していません。Q4の32Bモデル（約20GB）は2枚に分けて収まります。' } },
         { '@type': 'Question', 'name': 'なぜ中古RTX 3090 1枚ではなく16GB GPU2枚を使うのですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ここに掲載した価格では、マッチした16GB GPU2枚の方が中古RTX 3090 24GB 1枚より合計VRAM単価に優れており（32GBが約$1,600、24GBが$1,500〜1,725）、llama.cppのテンソル分割機能により両カードのVRAMが1つのプールとして推論に機能します。購入前に最新の価格を確認してください。' } },
         { '@type': 'Question', 'name': 'デュアルGPUのローカルLLMビルドにマザーボードは重要ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。2本のGPUスロットでx8/x8のPCIeレーン割り当てを明記したボードを選んでください。電気的にx4で配線された2本目のスロットはレーン数が少なくなります。速度への影響はランタイムと分割方式によって異なり、ここでは計測していません。' } },
-        { '@type': 'Question', 'name': 'デュアルGPUビルドで異なるGPUモデルを混在させられますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '推奨されません。テンソル分割の性能はペアの中で遅い方または古い方のカードに制限され、GPU世代を混在させるとドライバやサポート面で問題が生じることがあります。' } },
+        { '@type': 'Question', 'name': 'デュアルGPUビルドで異なるGPUモデルを混在させられますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '推奨されません。テンソル分割の性能はペアの中で遅い方または古い方のカードに制限されることがあり、GPU世代を混在させるとドライバやサポート面で問題が生じることがあります。同一のGPUを2枚使ってください。' } },
         { '@type': 'Question', 'name': 'GPUを2倍にするとトークン毎秒も2倍になりますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。テンソル分割はカード間で分割されたレイヤー間のPCIe転送オーバーヘッドを追加するため、すでに1枚のGPUに収まるモデルの合計スループットは、その単一カードの速度の2倍を大きく下回ります。利点はモデルを大きくできることであり、線形の速度向上ではありません。' } },
       ],
     },
@@ -1398,12 +1398,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Gesamtkosten des Builds: ca. 2.680 $ (US-Preise; in Deutschland vermutlich höher).** Zwei RTX 5060 Ti 16GB (ca. 800 $ pro Karte, zusammen 1.600 $), Ryzen 7 9700X (330 $), 64GB DDR5-6000 (180 $), 2TB Gen4 NVMe (130 $), B650-ATX-Board mit x8/x8-Slots (180 $), 850W-80+-Gold-Netzteil (130 $), ATX-Gehäuse (90 $), Luftkühler (40 $). Der GPU-Preis ist eine gerundete Referenzgröße für eine neue Karte: Das günstigste bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) angezeigte Neuangebot lag bei 800 $ (geprüft am 2026-11-28), und [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) zeigte eine Karte bei Amazon US für 829,99 $ (2026-11-27). Die Preise sind volatil. Die übrigen Teile sind redaktionelle Schätzungen, die je nach Händler variieren. Zu diesen Preisen bleibt der Build nicht unter 2.000 $: Allein die übrigen Teile kosten etwa 1.080 $, sodass rund 920 $ für zwei Karten blieben.',
+          '**Gesamtkosten des Builds: ca. 2.680 $ (US-Preise; in Deutschland vermutlich höher).** Zwei RTX 5060 Ti 16GB (ca. 800 $ pro Karte, zusammen 1.600 $), Ryzen 7 9700X (330 $), 64GB DDR5-6000 (180 $), 2TB Gen4 NVMe (130 $), B650-ATX-Board mit x8/x8-Slots (180 $), 850W-80+-Gold-Netzteil (130 $), ATX-Gehäuse (90 $), Luftkühler (40 $). Der GPU-Preis ist eine gerundete Referenzgröße für eine neue Karte: Das günstigste bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) angezeigte Neuangebot lag bei 800 $ (geprüft am 2026-11-28), und [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) zeigte eine Karte bei Amazon US für 849,99 $ (2026-11-27). Die Preise sind volatil. Die übrigen Teile sind redaktionelle Schätzungen, die je nach Händler variieren. Zu diesen Preisen bleibt der Build nicht unter 2.000 $: Allein die übrigen Teile kosten etwa 1.080 $, sodass rund 920 $ für zwei Karten blieben.',
           '**Zu den hier genannten Preisen liefern zwei 16-GB-GPUs mehr VRAM pro Dollar als eine gebrauchte RTX 3090 24GB.** 32 GB kombinierter VRAM für rund 1.600 $ (rund 50 $ pro GB) stehen einer gebrauchten RTX 3090 24GB für 1.500-1.725 $ (rund 63-72 $ pro GB; [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Stand 2026-11-23) gegenüber. Die Gesamtausgabe ist etwa gleich; die zwei Karten bieten 8 GB mehr kombinierten VRAM, verteilt auf zwei GPUs. Die beiden Werte sind nicht direkt vergleichbar: Der Wert für die RTX 5060 Ti ist ein Angebotspreis für Neuware (gpuprix, 2026-11-28), der Wert für die RTX 3090 stammt aus abgeschlossenen Gebrauchtverkäufen (InsiderLLM, 2026-11-23). Vor dem Kauf aktuelle Preise prüfen.',
           '**Ein 32B-Modell bei Q4 passt, ein 70B-Modell bei Q4 passt nicht.** Ein 32B-Modell bei Q4 umfasst rund 20 GB, ein 70B-Modell bei Q4 rund 43 GB ([Ollama-Bibliothek](https://ollama.com/library/qwen3:32b)). Ein 32B-Modell auf zwei Karten zu verteilen, erfordert eine Laufzeitumgebung, die ein Modell auf mehrere GPUs aufteilt, etwa llama.cpp oder Ollama; Geschwindigkeiten wurden bei diesem Build nicht gemessen.',
           '**Wählen Sie ein Mainboard, das x8/x8-PCIe-Bifurkation dokumentiert;** zwei physische x16-Slots allein genügen nicht. Ein elektrisch nur mit x4 angebundener zweiter Slot hat halb so viele Lanes wie x8; wie stark das ein aufgeteiltes Modell bremst, hängt von Laufzeitumgebung und Einstellungen ab und wurde hier nicht gemessen.',
           '**Mit einer einzelnen GPU läuft nur, was in 16 GB passt:** Modelle bis etwa 14B bei Q4 laufen auf einer RTX 5060 Ti; ein 32B-Modell (rund 20 GB) benötigt beide Karten.',
-          '**Vermeiden:** Nicht identische GPU-Paare (z. B. eine 5060 Ti + eine 4060 Ti) — die Tensor-Split-Leistung wird durch die langsamere Karte begrenzt, und das Mischen von GPU-Generationen kann Treiber- oder Support-Komplikationen mit sich bringen.',
+          '**Vermeiden:** Nicht identische GPU-Paare (z. B. eine 5060 Ti + eine 4060 Ti) — die Tensor-Split-Leistung kann durch die langsamere Karte begrenzt werden, und das Mischen von GPU-Generationen kann Treiber- oder Support-Komplikationen mit sich bringen.',
         ],
       },
       'why-dual-gpu': {
@@ -1411,7 +1411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Warum zwei GPUs statt einer größeren GPU',
         content: [
           '**Bei diesem Budget sind die wichtigsten Single-GPU-Alternativen eine gebrauchte RTX 3090 24GB (ca. 1.500-1.725 $ in verkauften US-Angeboten vom 13.-23. November 2026) oder eine 16-GB-Karte wie die RTX 5070 Ti, und eine 16-GB-Karte kann ein 32B-Modell bei Q4 (rund 20 GB) nicht aufnehmen.** llama.cpp unterstützt es, die Layer eines Modells auf mehrere GPUs im selben Rechner zu verteilen, sodass deren VRAM zusammen wie ein einziger Pool für die Modellgewichte wirkt. Zwei RTX 5060 Ti 16GB ergeben 32 GB kombiniert für etwa dasselbe Geld wie eine gebrauchte RTX 3090 24GB (zu den hier genannten Preisen rund 1.600 $ gegenüber 1.500-1.725 $) und fassen ein 32B-Modell bei Q4 samt Kontext. Ein 70B-Modell bei Q4 (rund 43 GB) passt weiterhin nicht; es müssten Layer in die 64 GB System-RAM ausgelagert werden, was die Generierung verlangsamt und hier nicht gemessen wurde.',
-          'Das funktioniert nur, weil beide Karten baugleich sind — unterschiedlicher VRAM oder unterschiedliche Rechenleistung zwischen den Karten zwingt den Split, sich an der schwächeren Karte zu orientieren, und das Mischen von GPU-Generationen kann Treiber- oder Support-Komplikationen mit sich bringen.',
+          'Zwei baugleiche Karten sind die einfachste Konfiguration. llama.cpp kann ein Modell auch auf unterschiedliche Karten aufteilen, doch ein ungleiches Paar ist schwerer auszubalancieren, die kleinere oder langsamere Karte kann das Ergebnis bremsen, und das Mischen von GPU-Generationen kann Treiber- oder Support-Komplikationen mit sich bringen. Diese Seite hat kein ungleiches Paar getestet.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Zwei baugleiche 16-GB-GPUs, per llama.cpp aufgeteilt, bieten zu den hier genannten Preisen mehr kombinierten VRAM pro Dollar als eine gebrauchte RTX 3090 24GB (ca. 1.600 $ für 32 GB gegenüber 1.500-1.725 $ für 24 GB in verkauften US-Angeboten vom 13.-23. November 2026). Vor dem Kauf aktuelle Preise prüfen.' },
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Vollständige Teileliste',
-        content: 'Die Preise sind US-Straßenpreise und variieren je nach Region und Händler. Der GPU-Preis von ca. 800 $ pro RTX 5060 Ti 16GB ist eine gerundete Referenzgröße für eine neue Karte: Das günstigste bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) angezeigte Neuangebot lag bei 800 $ (geprüft am 2026-11-28), und [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) zeigte eine Karte bei Amazon US für 829,99 $ (2026-11-27). Die Preise sind volatil, daher vor dem Kauf aktuelle Preise prüfen. Die übrigen Teile sind redaktionelle Schätzungen ohne erneute Prüfung. Der Boardpreis ist ein Platzhalter; Boards mit dokumentierter x8/x8-Bifurkation der CPU-Lanes können mehr kosten, die Summe kann daher höher ausfallen. Summe: ca. 2.680 $.',
+        content: 'Die Preise sind US-Straßenpreise und variieren je nach Region und Händler. Der GPU-Preis von ca. 800 $ pro RTX 5060 Ti 16GB ist eine gerundete Referenzgröße für eine neue Karte: Das günstigste bei [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) angezeigte Neuangebot lag bei 800 $ (geprüft am 2026-11-28), und [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) zeigte eine Karte bei Amazon US für 849,99 $ (2026-11-27). Die Preise sind volatil, daher vor dem Kauf aktuelle Preise prüfen. Die übrigen Teile sind redaktionelle Schätzungen ohne erneute Prüfung. Der Boardpreis ist ein Platzhalter; Boards mit dokumentierter x8/x8-Bifurkation der CPU-Lanes können mehr kosten, die Summe kann daher höher ausfallen. Summe: ca. 2.680 $. Bei 849,99 $ pro Karte läge die Summe bei etwa 2.780 $.',
         columns: ['Komponente', 'Wahl', 'Preis', 'Warum'],
         rows: [
           { 'Komponente': 'GPU (×2)', 'Wahl': '2× RTX 5060 Ti 16GB', 'Preis': '1.600 $', 'Warum': '32 GB kombinierter VRAM via Tensor-Split — der Kernzweck dieses Builds' },
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Laut [Ollama-FAQ](https://docs.ollama.com/faq) verteilt Ollama ein Modell, das nicht vollständig auf eine GPU passt, ohne manuelle Konfiguration auf alle verfügbaren GPUs, wobei die manuellen Flags von llama.cpp präzisere Kontrolle über das Split-Verhältnis geben.',
         ],
         items: [
-          '**Beide GPUs auf Erkennung prüfen:** `nvidia-smi` sollte beide Karten mit übereinstimmenden Treiberversionen anzeigen, bevor ein Split versucht wird.',
+          '**Beide GPUs auf Erkennung prüfen:** `nvidia-smi` sollte beide Karten anzeigen, bevor Sie einen Split versuchen.',
           '**Mit einem gleichmäßigen Split starten:** `--tensor-split 1,1` in llama.cpp ist die richtige Standardeinstellung für zwei identische Karten.',
           '**Auf eine Sättigung der PCIe-Bandbreite achten:** Wenn die Generierung unerwartet langsam ist, prüfen Sie, ob das Mainboard tatsächlich mit x8/x8 läuft und nicht unbemerkt auf x4 zurückfällt.',
         ],
@@ -1476,8 +1476,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Aufrüstpfad',
         content: [
-          'Das naheliegendste Upgrade dieses Builds ist eine dritte RTX 5060 Ti 16GB, sofern das Mainboard einen dritten PCIe-Slot mit nutzbarer Bandbreite hat; das hebt den kombinierten VRAM auf 48 GB, über die rund 43 GB Download-Größe eines 70B-Modells bei Q4, wobei auch der Kontext VRAM braucht und dies hier ungetestet ist.',
-          'Ein teureres, aber einfacheres Upgrade ist der spätere Austausch beider RTX-5060-Ti-Karten gegen zwei RTX 5070 Ti 16GB — das behält die 32-GB-VRAM-Obergrenze bei, erhöht aber die reine Rechenleistung und Speicherbandbreite, was die Tokens/Sek. verbessert, ohne zu ändern, welche Modellgrößen passen.',
+          'Das naheliegendste Upgrade dieses Builds ist eine dritte RTX 5060 Ti 16GB, sofern das Mainboard einen dritten PCIe-Slot mit nutzbarer Bandbreite hat; das hebt den kombinierten VRAM auf 48 GB, über die rund 43 GB Download-Größe eines 70B-Modells bei Q4, wobei auch der Kontext VRAM braucht und dies hier ungetestet ist. Eine dritte Karte kommt zudem mit rund 180 W hinzu (NVIDIA-Angabe); prüfen Sie daher zuerst Netzteil und Gehäuse.',
+          'Eine weitere Option ist der spätere Austausch beider RTX 5060 Ti gegen zwei RTX 5070 Ti 16GB. Die Obergrenze von 32 GB VRAM bleibt gleich; erwartet wird mehr Geschwindigkeit, die diese Seite nicht gemessen hat. NVIDIA gibt die RTX 5070 Ti mit 300 W an (RTX 5060 Ti: 180 W) und nennt schon für eine einzelne RTX 5070 Ti 750 W als erforderliche Systemleistung. Gehen Sie also nicht davon aus, dass das 850-W-Netzteil für zwei Karten reicht. Prüfen Sie die Angaben des Kartenherstellers und planen Sie ein stärkeres Netzteil ein.',
         ],
       },
       whereToBuy: {
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufige Fehler bei diesem Budget',
         items: [
           'Ein Mainboard allein wegen „SLI/CrossFire-Unterstützung" auf dem Datenblatt kaufen — dieser Marketing-Begriff bezieht sich auf Gaming-Multi-GPU-Rendering, nicht auf PCIe-Lane-Allokation für Compute-Workloads, und garantiert kein x8/x8.',
-          'GPU-Generationen mischen (z. B. eine RTX 5060 Ti + eine RTX 4060 Ti), um Geld zu sparen — die Tensor-Split-Leistung wird durch die langsamere/ältere Karte begrenzt, was einen Teil des Vorteils der neueren Karte zunichtemachen kann.',
+          'GPU-Generationen mischen (z. B. eine RTX 5060 Ti + eine RTX 4060 Ti), um Geld zu sparen — die Tensor-Split-Leistung kann durch die langsamere/ältere Karte begrenzt werden, was einen Teil des Vorteils der neueren Karte zunichtemachen kann.',
           'Den Netzteil-Spielraum unterschätzen — zwei GPUs, die gleichzeitig nahe ihrer kombinierten TDP ziehen, können während einer langen Generierung kurzzeitig deutlich über 360 W springen; ein zu klein dimensioniertes Netzteil kann unter Last willkürliche Abschaltungen statt einer sanften Verlangsamung verursachen. Die vom Kartenhersteller empfohlene Netzteil-Leistung und die Anschlussanforderungen im Handbuch der Karte prüfen. Dies sind allgemeine Informationen und keine elektrotechnische Beratung; lassen Sie im Zweifel eine qualifizierte Fachkraft den Aufbau und Ihren Stromkreis prüfen.',
           'Annehmen, doppelte GPUs bedeuten doppelte Tokens/Sek. — Tensor-Split fügt PCIe-Transfer-Overhead zwischen den Layern hinzu, daher liegt der kombinierte Durchsatz bei Modellen, die bereits auf eine Karte passen, spürbar unter dem 2-fachen einer einzelnen Karte.',
         ],
@@ -1542,13 +1542,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Kann dieser Dual-GPU-PC lokale 70B-LLMs ausführen?', a: 'Nicht vollständig im VRAM bei Q4. Ein 70B-Modell bei Q4_K_M umfasst laut Ollama-Bibliothek rund 43 GB, und die beiden RTX 5060 Ti liefern 32 GB; die übrigen Layer (mindestens etwa 11 GB) müssen daher in die 64 GB System-RAM ausgelagert werden. llama.cpp kann das, die Generierung ist dann aber langsamer und bei diesem Build nicht gemessen. Ein 32B-Modell bei Q4 (rund 20 GB) passt auf beide Karten.' },
           { q: 'Warum zwei 16-GB-GPUs statt einer gebrauchten RTX 3090?', a: 'Zwei baugleiche 16-GB-GPUs liefern zu den hier genannten Preisen mehr kombinierten VRAM pro Dollar als eine gebrauchte RTX 3090 24GB (ca. 1.600 $ für 32 GB gegenüber 1.500-1.725 $ für 24 GB in verkauften US-Angeboten vom 13.-23. November 2026), und die Tensor-Split-Funktion von llama.cpp lässt den VRAM beider Karten als einen Pool für die Inferenz funktionieren. Vor dem Kauf aktuelle Preise prüfen.' },
           { q: 'Spielt das Mainboard bei einem Dual-GPU-Lokal-LLM-Build eine Rolle?', a: 'Ja. Wählen Sie ein Board, das die x8/x8-PCIe-Lane-Zuteilung für beide GPU-Slots dokumentiert. Ein mit nur x4 angebundener zweiter Slot hat weniger Lanes; die Auswirkung auf die Geschwindigkeit hängt von Laufzeitumgebung und Split-Modus ab und wurde hier nicht gemessen.' },
-          { q: 'Kann ich unterschiedliche GPU-Modelle in einem Dual-GPU-Build mischen?', a: 'Nicht empfohlen. Die Tensor-Split-Leistung wird durch die langsamere oder ältere Karte im Paar begrenzt, und das Mischen von GPU-Generationen kann Treiber- oder Support-Komplikationen mit sich bringen. Zwei identische GPUs verwenden.' },
+          { q: 'Kann ich unterschiedliche GPU-Modelle in einem Dual-GPU-Build mischen?', a: 'Nicht empfohlen. Die Tensor-Split-Leistung kann durch die langsamere oder ältere Karte im Paar begrenzt werden, und das Mischen von GPU-Generationen kann Treiber- oder Support-Komplikationen mit sich bringen. Zwei identische GPUs verwenden.' },
           { q: 'Ist Ollama oder llama.cpp besser für Tensor-Split-Multi-GPU-Inferenz?', a: 'Ollama kann ein Modell ohne manuelle Konfiguration auf alle verfügbaren GPUs verteilen (Ollama-FAQ). Das manuelle --tensor-split-Flag von llama.cpp gibt präzisere Kontrolle über das Split-Verhältnis, nützlich wenn eine GPU zusätzlich ein Display treibt und weniger reservierten VRAM braucht.' },
           { q: 'Wie stark wirkt sich die PCIe-Bandbreite tatsächlich auf die Tensor-Split-Leistung aus?', a: 'Das hängt von Laufzeitumgebung, Split-Modus, Batch-Größe und Kontextlänge ab, und diese Seite hat es nicht gemessen. Ein x4-Slot hat halb so viele Lanes wie x8; wählen Sie daher nach Möglichkeit x8/x8 und testen Sie Ihre eigene Last.' },
           { q: 'Verdoppelt sich die Tokens pro Sekunde mit doppelten GPUs?', a: 'Nein. Tensor-Split fügt PCIe-Transfer-Overhead zwischen den auf die Karten aufgeteilten Layern hinzu, daher liegt der kombinierte Durchsatz bei einem Modell, das bereits auf eine GPU passt, spürbar unter dem 2-fachen der Geschwindigkeit dieser einzelnen Karte. Der Vorteil liegt darin, größere Modelle unterzubringen, nicht in linearer Geschwindigkeitsskalierung.' },
           { q: 'Wie hoch ist die gesamte Leistungsaufnahme zweier RTX-5060-Ti-Karten?', a: 'Etwa 360 W kombiniert bei Volllast (180 W TDP je Karte), mit kurzen Lastspitzen darüber. Ein 850W-80+-Gold-Netzteil lässt komfortablen Spielraum für den Rest des Systems neben diesen Spitzen. Anschlüsse und Leistungsanforderungen des Netzteils im Handbuch der Karte prüfen.' },
           { q: 'Kann dieser Build kleinere Modelle mit nur einer GPU ausführen?', a: 'Ja. Modelle, die in 16 GB passen, grob bis 14B bei Q4 (rund 9,3 GB), laufen auf einer einzelnen RTX 5060 Ti und vermeiden den PCIe-Overhead der Aufteilung. Ein 32B-Modell bei Q4 (rund 20 GB) passt nicht auf eine 16-GB-Karte und benötigt beide.' },
-          { q: 'Wie sieht der Aufrüstpfad über diesen Build hinaus aus?', a: 'Eine dritte baugleiche RTX 5060 Ti 16GB (falls das Mainboard einen dritten nutzbaren PCIe-Slot hat) erhöht den kombinierten VRAM auf 48 GB. Alternativ behält der spätere Austausch beider Karten gegen RTX 5070 Ti 16GB die gleiche 32-GB-Obergrenze bei, erhöht aber Rechenleistung und Speicherbandbreite.' },
+          { q: 'Wie sieht der Aufrüstpfad über diesen Build hinaus aus?', a: 'Eine dritte baugleiche RTX 5060 Ti 16GB (falls das Mainboard einen dritten nutzbaren PCIe-Slot hat) erhöht den kombinierten VRAM auf 48 GB. Alternativ behält der spätere Austausch beider Karten gegen RTX 5070 Ti 16GB die gleiche 32-GB-Obergrenze bei, erhöht aber Rechenleistung und Speicherbandbreite. Prüfen Sie in beiden Fällen zuerst das Netzteil: NVIDIA gibt die RTX 5070 Ti mit 300 W pro Karte an, die RTX 5060 Ti mit 180 W.' },
         ],
       },
       relatedReading: {
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama-Bibliothek: Llama 3.3 70B (43 GB, Standard-Tag)](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM: NVIDIA-GPU-Preis-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix: US-Angebote zur RTX 5060 Ti 16GB, günstigstes angezeigtes Neuangebot 800 $ (geprüft am 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice: US-Preise zur RTX 5060 Ti, 16-GB-Karte für 829,99 $ bei Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice: US-Preise zur RTX 5060 Ti, 16-GB-Karte für 849,99 $ bei Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)', '[NVIDIA: Spezifikationen der RTX-5070-Familie (RTX 5070 Ti: 300 W, 750 W erforderliche Systemleistung)](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -1605,10 +1605,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/de/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Kann dieser Dual-GPU-PC lokale 70B-LLMs ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht vollständig im VRAM bei Q4. Ein 70B-Modell bei Q4_K_M umfasst rund 43 GB, die beiden RTX 5060 Ti liefern 32 GB; die übrigen Layer müssen in den langsameren System-RAM ausgelagert werden (hier nicht gemessen). Ein 32B-Modell bei Q4 (rund 20 GB) passt.' } },
+        { '@type': 'Question', 'name': 'Kann dieser Dual-GPU-PC lokale 70B-LLMs ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht vollständig im VRAM bei Q4. Ein 70B-Modell bei Q4_K_M umfasst laut Ollama-Bibliothek rund 43 GB, und die beiden RTX 5060 Ti liefern 32 GB; die übrigen Layer (mindestens etwa 11 GB) müssen daher in die 64 GB System-RAM ausgelagert werden. llama.cpp kann das, die Generierung ist dann aber langsamer und bei diesem Build nicht gemessen. Ein 32B-Modell bei Q4 (rund 20 GB) passt auf beide Karten.' } },
         { '@type': 'Question', 'name': 'Warum zwei 16-GB-GPUs statt einer gebrauchten RTX 3090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Zwei baugleiche 16-GB-GPUs liefern zu den hier genannten Preisen mehr kombinierten VRAM pro Dollar als eine gebrauchte RTX 3090 24GB (ca. 1.600 $ für 32 GB gegenüber 1.500-1.725 $ für 24 GB in verkauften US-Angeboten vom 13.-23. November 2026), und die Tensor-Split-Funktion von llama.cpp lässt den VRAM beider Karten als einen Pool für die Inferenz funktionieren. Vor dem Kauf aktuelle Preise prüfen.' } },
         { '@type': 'Question', 'name': 'Spielt das Mainboard bei einem Dual-GPU-Lokal-LLM-Build eine Rolle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Wählen Sie ein Board, das die x8/x8-PCIe-Lane-Zuteilung für beide GPU-Slots dokumentiert. Ein mit nur x4 angebundener zweiter Slot hat weniger Lanes; die Auswirkung auf die Geschwindigkeit hängt von Laufzeitumgebung und Split-Modus ab und wurde hier nicht gemessen.' } },
-        { '@type': 'Question', 'name': 'Kann ich unterschiedliche GPU-Modelle in einem Dual-GPU-Build mischen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht empfohlen. Die Tensor-Split-Leistung wird durch die langsamere oder ältere Karte im Paar begrenzt, und das Mischen von GPU-Generationen kann Treiber- oder Support-Komplikationen mit sich bringen.' } },
+        { '@type': 'Question', 'name': 'Kann ich unterschiedliche GPU-Modelle in einem Dual-GPU-Build mischen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht empfohlen. Die Tensor-Split-Leistung kann durch die langsamere oder ältere Karte im Paar begrenzt werden, und das Mischen von GPU-Generationen kann Treiber- oder Support-Komplikationen mit sich bringen. Zwei identische GPUs verwenden.' } },
         { '@type': 'Question', 'name': 'Verdoppelt sich die Tokens pro Sekunde mit doppelten GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Tensor-Split fügt PCIe-Transfer-Overhead zwischen den auf die Karten aufgeteilten Layern hinzu, daher liegt der kombinierte Durchsatz bei einem Modell, das bereits auf eine GPU passt, spürbar unter dem 2-fachen der Geschwindigkeit dieser einzelnen Karte. Der Vorteil liegt darin, größere Modelle unterzubringen, nicht in linearer Geschwindigkeitsskalierung.' } },
       ],
     },
@@ -1669,12 +1669,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Coût total de la configuration : environ $2,680 (prix américains).** Deux RTX 5060 Ti 16 Go (environ $800 pièce, $1,600 au total), Ryzen 7 9700X ($330), 64 Go DDR5-6000 ($180), NVMe Gen4 2 To ($130), carte mère B650 ATX avec slots x8/x8 ($180), alimentation 850W 80+ Gold ($130), boîtier ATX ($90), ventirad ($40). Le prix des GPU est un chiffre de référence arrondi pour une carte neuve : l\'offre neuve la moins chère affichée sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) était de $800 (consulté le 2026-11-28), et [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) affichait une carte sur Amazon États-Unis à $829.99 (2026-11-27). Les prix sont volatils. Les autres composants sont des estimations éditoriales qui varient selon le revendeur. À ces prix, la configuration ne tient pas sous les $2,000 : les autres composants totalisent à eux seuls environ $1,080, ce qui laisse environ $920 pour deux cartes.',
+          '**Coût total de la configuration : environ $2,680 (prix américains).** Deux RTX 5060 Ti 16 Go (environ $800 pièce, $1,600 au total), Ryzen 7 9700X ($330), 64 Go DDR5-6000 ($180), NVMe Gen4 2 To ($130), carte mère B650 ATX avec slots x8/x8 ($180), alimentation 850W 80+ Gold ($130), boîtier ATX ($90), ventirad ($40). Le prix des GPU est un chiffre de référence arrondi pour une carte neuve : l\'offre neuve la moins chère affichée sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) était de $800 (consulté le 2026-11-28), et [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) affichait une carte sur Amazon États-Unis à $849.99 (2026-11-27). Les prix sont volatils. Les autres composants sont des estimations éditoriales qui varient selon le revendeur. À ces prix, la configuration ne tient pas sous les $2,000 : les autres composants totalisent à eux seuls environ $1,080, ce qui laisse environ $920 pour deux cartes.',
           '**Aux prix indiqués ici, deux GPU de 16 Go offrent plus de VRAM par dollar qu\'une RTX 3090 24 Go d\'occasion.** 32 Go de VRAM cumulée pour environ $1,600 (environ $50 par Go), contre une RTX 3090 24 Go d\'occasion à $1,500-1,725 (environ $63-72 par Go ; [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), données datées du 2026-11-23). La dépense totale est à peu près la même ; les deux cartes offrent 8 Go de VRAM cumulée en plus, répartie sur deux GPU. Les deux chiffres ne sont pas de même nature : celui de la RTX 5060 Ti est un prix affiché pour une carte neuve (gpuprix, 2026-11-28), celui de la RTX 3090 vient de ventes d\'occasion conclues (InsiderLLM, 2026-11-23). Vérifiez les prix actuels avant d\'acheter.',
           '**Un modèle 32B en Q4 tient ; un modèle 70B en Q4 ne tient pas.** Un 32B en Q4 pèse environ 20 Go et un 70B en Q4 environ 43 Go ([bibliothèque Ollama](https://ollama.com/library/qwen3:32b)). Répartir un 32B sur deux cartes demande un moteur capable de scinder un modèle entre GPU, comme llama.cpp ou Ollama ; les débits ne sont pas mesurés sur cette configuration.',
           '**Choisissez une carte mère qui documente la bifurcation PCIe x8/x8,** deux slots physiques x16 ne suffisent pas. Un second slot câblé en x4 a deux fois moins de voies qu\'en x8 ; le ralentissement d\'un modèle réparti dépend du moteur et des réglages et n\'est pas mesuré ici.',
           '**Avec une seule GPU, on se limite à ce qui tient dans 16 Go :** les modèles jusqu\'à environ 14B en Q4 tournent sur une RTX 5060 Ti ; un modèle 32B (environ 20 Go) exige les deux cartes.',
-          '**À éviter :** les paires de GPU dépareillées (par ex. une 5060 Ti + une 4060 Ti) — la performance en tensor-split est limitée par la carte la plus lente, et mélanger des générations de GPU peut ajouter des complications de pilotes ou de support.',
+          '**À éviter :** les paires de GPU dépareillées (par ex. une 5060 Ti + une 4060 Ti) — la performance en tensor-split peut être limitée par la carte la plus lente, et mélanger des générations de GPU peut ajouter des complications de pilotes ou de support.',
         ],
       },
       'why-dual-gpu': {
@@ -1682,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pourquoi deux GPU plutôt qu\'un GPU plus gros',
         content: [
           '**À ce budget, les principales alternatives à une seule GPU sont une RTX 3090 24 Go d\'occasion (environ $1,500-1,725 en ventes aux États-Unis du 13 au 23 novembre 2026) ou une carte 16 Go comme la RTX 5070 Ti, et une carte 16 Go ne peut pas loger un modèle 32B en Q4 (environ 20 Go).** llama.cpp permet de répartir les couches d\'un modèle sur plusieurs GPU de la même machine, de sorte que leur VRAM cumulée forme un seul ensemble pour les poids du modèle. Deux RTX 5060 Ti 16 Go offrent 32 Go cumulés pour à peu près le même prix qu\'une RTX 3090 24 Go d\'occasion aux prix indiqués ici (environ $1,600 contre $1,500-1,725) et logent un 32B en Q4 avec son contexte. Un modèle 70B en Q4 (environ 43 Go) ne tient toujours pas : il faudrait déporter des couches dans les 64 Go de RAM système, ce qui ralentit la génération et n\'est pas mesuré ici.',
-          'Cela ne fonctionne que parce que les deux cartes sont du même modèle — une VRAM ou un calcul dépareillés entre les cartes force la répartition à se limiter à la carte la plus faible, et mélanger des générations de GPU peut ajouter des complications de pilotes ou de support.',
+          'Deux cartes identiques constituent la configuration la plus simple. llama.cpp peut aussi répartir un modèle sur des cartes différentes, mais une paire dépareillée est plus difficile à équilibrer, la carte la plus petite ou la plus lente peut freiner le résultat, et mélanger des générations de GPU peut ajouter des complications de pilotes ou de support. Cette page n\'a pas testé de paire dépareillée.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Deux GPU de 16 Go identiques, réparties avec llama.cpp, offrent plus de VRAM cumulée par dollar qu\'une RTX 3090 24 Go d\'occasion aux prix indiqués ici (environ $1,600 pour 32 Go contre $1,500-1,725 pour 24 Go en ventes aux États-Unis du 13 au 23 novembre 2026). Vérifiez les prix actuels avant d\'acheter.' },
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Liste de pièces complète',
-        content: 'Les prix sont des prix courants américains et varient selon la région et le revendeur. Le prix d\'environ $800 par RTX 5060 Ti 16 Go est un chiffre de référence arrondi pour une carte neuve : l\'offre neuve la moins chère affichée sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) était de $800 (consulté le 2026-11-28), et [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) affichait une carte sur Amazon États-Unis à $829.99 (2026-11-27). Les prix sont volatils, vérifiez donc les prix actuels avant d\'acheter. Les autres composants sont des estimations éditoriales non revérifiées. Le prix de la carte mère est provisoire ; les cartes qui documentent la bifurcation x8/x8 des voies CPU peuvent coûter plus, le total peut donc être plus élevé. Total : environ $2,680.',
+        content: 'Les prix sont des prix courants américains et varient selon la région et le revendeur. Le prix d\'environ $800 par RTX 5060 Ti 16 Go est un chiffre de référence arrondi pour une carte neuve : l\'offre neuve la moins chère affichée sur [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) était de $800 (consulté le 2026-11-28), et [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) affichait une carte sur Amazon États-Unis à $849.99 (2026-11-27). Les prix sont volatils, vérifiez donc les prix actuels avant d\'acheter. Les autres composants sont des estimations éditoriales non revérifiées. Le prix de la carte mère est provisoire ; les cartes qui documentent la bifurcation x8/x8 des voies CPU peuvent coûter plus, le total peut donc être plus élevé. Total : environ $2,680. À $849.99 par carte, le total serait d\'environ $2,780.',
         columns: ['Composant', 'Choix', 'Prix', 'Pourquoi'],
         rows: [
           { 'Composant': 'GPU (x2)', 'Choix': '2x RTX 5060 Ti 16 Go', 'Prix': '$1,600', 'Pourquoi': '32 Go de VRAM combinée via tensor-split — l\'objectif central de cette configuration' },
@@ -1738,7 +1738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Selon la [FAQ d\'Ollama](https://docs.ollama.com/faq), si un modèle ne tient pas entièrement sur un seul GPU, Ollama le répartit sur tous les GPU disponibles sans configuration manuelle, bien que les indicateurs manuels de llama.cpp offrent un contrôle plus précis sur le ratio de répartition.',
         ],
         items: [
-          '**Vérifiez que les deux GPU sont détectés :** `nvidia-smi` doit lister les deux cartes avec des versions de pilote correspondantes avant de tenter une répartition.',
+          '**Vérifiez que les deux GPU sont détectés :** `nvidia-smi` doit lister les deux cartes avant de tenter une répartition.',
           '**Commencez par une répartition égale :** `--tensor-split 1,1` dans llama.cpp est le réglage par défaut correct pour deux cartes identiques.',
           '**Surveillez la saturation de la bande passante PCIe :** si la génération est anormalement lente, vérifiez que la carte mère fonctionne réellement en x8/x8 et ne retombe pas silencieusement en x4.',
         ],
@@ -1747,8 +1747,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Voie d\'évolution',
         content: [
-          'La mise à niveau la plus évidente est l\'ajout d\'une troisième RTX 5060 Ti 16 Go si la carte mère dispose d\'un troisième slot PCIe à bande passante utilisable, ce qui porte la VRAM cumulée à 48 Go, au-dessus des ~43 Go de téléchargement d\'un modèle 70B en Q4, même si le contexte consomme aussi de la VRAM et que cela n\'a pas été testé ici.',
-          'Une évolution plus coûteuse mais plus simple consiste à remplacer les deux cartes RTX 5060 Ti par deux cartes RTX 5070 Ti 16 Go plus tard, en gardant le même plafond de 32 Go de VRAM mais en augmentant le calcul brut et la bande passante mémoire, ce qui améliore les tokens/s sans changer les tailles de modèles qui tiennent.',
+          'La mise à niveau la plus évidente est l\'ajout d\'une troisième RTX 5060 Ti 16 Go si la carte mère dispose d\'un troisième slot PCIe à bande passante utilisable, ce qui porte la VRAM cumulée à 48 Go, au-dessus des ~43 Go de téléchargement d\'un modèle 70B en Q4, même si le contexte consomme aussi de la VRAM et que cela n\'a pas été testé ici. Une troisième carte ajoute aussi environ 180W (valeur NVIDIA) : revérifiez d\'abord l\'alimentation et le boîtier.',
+          'Autre option : remplacer plus tard les deux RTX 5060 Ti par deux RTX 5070 Ti 16 Go. Le plafond de 32 Go de VRAM reste le même ; le gain attendu porte sur la vitesse, que cette page n\'a pas mesurée. NVIDIA indique 300W pour la RTX 5070 Ti contre 180W pour la RTX 5060 Ti, et 750W de puissance système requise pour une seule RTX 5070 Ti : ne supposez donc pas que l\'alimentation de 850W suffit pour deux. Consultez la spécification du fabricant de la carte et prévoyez une alimentation plus puissante.',
         ],
       },
       whereToBuy: {
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erreurs courantes à ce budget',
         items: [
           'Acheter une carte mère uniquement sur la base du marketing "supporte SLI/CrossFire" — ce terme marketing fait référence au rendu multi-GPU pour le jeu vidéo, pas à l\'allocation de voies PCIe pour les charges de calcul, et ne garantit pas le x8/x8.',
-          'Mélanger des générations de GPU (par ex. une RTX 5060 Ti + une RTX 4060 Ti) pour économiser de l\'argent — la performance en tensor-split est limitée par la carte la plus lente/ancienne, ce qui peut annuler une partie du bénéfice de la plus récente.',
+          'Mélanger des générations de GPU (par ex. une RTX 5060 Ti + une RTX 4060 Ti) pour économiser de l\'argent — la performance en tensor-split peut être limitée par la carte la plus lente/ancienne, ce qui peut annuler une partie du bénéfice de la plus récente.',
           'Sous-estimer la marge de l\'alimentation — deux GPU consommant près de leur TDP combiné nominal simultanément pendant une longue génération peuvent piquer brièvement bien au-dessus de 360W ; une alimentation sous-dimensionnée peut provoquer des arrêts aléatoires sous charge plutôt qu\'un ralentissement progressif. Vérifiez dans le manuel de la carte la puissance d\'alimentation recommandée par le fabricant et les connecteurs requis. Il s\'agit d\'informations générales et non d\'un conseil électrique ; en cas de doute, faites vérifier la machine et votre circuit par un technicien qualifié.',
           'Supposer que doubler les GPU double les tokens/s — le tensor-split ajoute une surcharge de transfert PCIe entre les couches, donc le débit combiné est nettement inférieur à 2x la vitesse d\'une seule carte sur les modèles qui tiennent déjà sur un seul GPU.',
         ],
@@ -1813,13 +1813,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ce PC à double GPU peut-il exécuter des LLM locaux de 70B ?', a: 'Pas entièrement en VRAM en Q4. Un modèle 70B en Q4_K_M pèse environ 43 Go selon la bibliothèque Ollama et les deux RTX 5060 Ti offrent 32 Go ; les couches restantes (au moins environ 11 Go) doivent donc être déportées dans les 64 Go de RAM système. llama.cpp sait le faire, mais la génération est plus lente et n\'est pas mesurée sur cette configuration. Un modèle 32B en Q4 (environ 20 Go) tient sur les deux cartes.' },
           { q: 'Pourquoi utiliser deux GPU 16 Go plutôt qu\'une RTX 3090 d\'occasion ?', a: 'Deux GPU 16 Go assortis offrent aux prix indiqués ici plus de VRAM combinée par dollar qu\'une RTX 3090 24 Go d\'occasion (environ $1,600 pour 32 Go contre $1,500-1,725 pour 24 Go en ventes aux États-Unis du 13 au 23 novembre 2026), et la fonctionnalité tensor-split de llama.cpp permet à la VRAM des deux cartes de fonctionner comme un seul pool pour l\'inférence. Vérifiez les prix actuels avant d\'acheter.' },
           { q: 'La carte mère compte-t-elle pour une configuration double-GPU pour LLM local ?', a: 'Oui. Choisissez une carte qui documente l\'allocation de voies PCIe x8/x8 sur les deux slots GPU. Un second slot câblé en x4 a moins de voies ; l\'effet sur la vitesse dépend du moteur et du mode de répartition et n\'est pas mesuré ici.' },
-          { q: 'Puis-je mélanger différents modèles de GPU dans une configuration double-GPU ?', a: 'Non recommandé. La performance en tensor-split est limitée par la carte la plus lente ou la plus ancienne de la paire, et mélanger des générations de GPU peut ajouter des complications de pilotes ou de support. Utilisez deux GPU identiques.' },
+          { q: 'Puis-je mélanger différents modèles de GPU dans une configuration double-GPU ?', a: 'Non recommandé. La performance en tensor-split peut être limitée par la carte la plus lente ou la plus ancienne de la paire, et mélanger des générations de GPU peut ajouter des complications de pilotes ou de support. Utilisez deux GPU identiques.' },
           { q: 'Doubler les GPU double-t-il les tokens par seconde ?', a: 'Non. Le tensor-split ajoute une surcharge de transfert PCIe entre les couches réparties sur les cartes, donc le débit combiné sur un modèle qui tient déjà sur un seul GPU est nettement inférieur à 2x la vitesse de cette carte unique. Le bénéfice est de pouvoir faire tourner des modèles plus gros, pas une mise à l\'échelle linéaire de la vitesse.' },
           { q: 'Ollama ou llama.cpp est-il préférable pour l\'inférence multi-GPU en tensor-split ?', a: 'Ollama peut répartir un modèle sur tous les GPU disponibles sans configuration manuelle (FAQ d\'Ollama). L\'indicateur manuel --tensor-split de llama.cpp offre un contrôle plus précis sur le ratio de répartition, utile si un GPU pilote aussi un affichage et a besoin de moins de VRAM réservée.' },
           { q: 'Dans quelle mesure la bande passante PCIe affecte-t-elle réellement la performance en tensor-split ?', a: 'Cela dépend du moteur, du mode de répartition, de la taille de lot et de la longueur du contexte, et cette page ne l\'a pas mesuré. Un slot x4 a deux fois moins de voies qu\'un x8 : choisissez le x8/x8 quand c\'est possible et testez votre propre charge de travail.' },
           { q: 'Quelle est la consommation électrique totale de deux cartes RTX 5060 Ti ?', a: 'Environ 360W combinés à pleine charge (180W de TDP nominal chacune), avec de brefs pics transitoires au-dessus. Une alimentation 850W 80+ Gold laisse une marge confortable pour le reste du système en plus de ces pics. Vérifiez les connecteurs et la puissance requis par la carte dans son manuel.' },
           { q: 'Cette configuration peut-elle exécuter de plus petits modèles sur une seule GPU ?', a: 'Oui. Les modèles qui tiennent dans 16 Go, soit environ jusqu\'à 14B en Q4 (environ 9.3 Go), tournent sur une seule RTX 5060 Ti et évitent la surcharge PCIe de la répartition. Un modèle 32B en Q4 (environ 20 Go) ne tient pas sur une carte de 16 Go et exige les deux.' },
-          { q: 'Quelle est la voie d\'évolution au-delà de cette configuration ?', a: 'Ajouter une troisième RTX 5060 Ti 16 Go assortie (si la carte mère dispose d\'un troisième slot PCIe utilisable) porte la VRAM combinée à 48 Go. Autre option, remplacer les deux cartes par des RTX 5070 Ti 16 Go plus tard conserve le même plafond de 32 Go mais augmente le calcul et la bande passante mémoire.' },
+          { q: 'Quelle est la voie d\'évolution au-delà de cette configuration ?', a: 'Ajouter une troisième RTX 5060 Ti 16 Go assortie (si la carte mère dispose d\'un troisième slot PCIe utilisable) porte la VRAM combinée à 48 Go. Autre option, remplacer les deux cartes par des RTX 5070 Ti 16 Go plus tard conserve le même plafond de 32 Go mais augmente le calcul et la bande passante mémoire. Dans les deux cas, vérifiez d\'abord l\'alimentation : NVIDIA indique 300W par carte pour la RTX 5070 Ti contre 180W pour la RTX 5060 Ti.' },
         ],
       },
       relatedReading: {
@@ -1846,7 +1846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Bibliothèque Ollama : Llama 3.3 70B (43 Go, tag par défaut)](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM : suivi des prix des GPU NVIDIA](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix : offres de la RTX 5060 Ti 16 Go aux États-Unis, offre neuve la moins chère affichée $800 (consulté le 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice : prix de la RTX 5060 Ti aux États-Unis, carte 16 Go à $829.99 sur Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice : prix de la RTX 5060 Ti aux États-Unis, carte 16 Go à $849.99 sur Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)', '[NVIDIA : spécifications de la famille RTX 5070 (RTX 5070 Ti : 300W, 750W de puissance système requise)](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -1876,10 +1876,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Ce PC à double GPU peut-il exécuter des LLM locaux de 70B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pas entièrement en VRAM en Q4. Un modèle 70B en Q4_K_M pèse environ 43 Go et les deux RTX 5060 Ti offrent 32 Go ; les couches restantes doivent être déportées en RAM système, plus lente (non mesuré ici). Un modèle 32B en Q4 (environ 20 Go) tient.' } },
+        { '@type': 'Question', 'name': 'Ce PC à double GPU peut-il exécuter des LLM locaux de 70B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pas entièrement en VRAM en Q4. Un modèle 70B en Q4_K_M pèse environ 43 Go selon la bibliothèque Ollama et les deux RTX 5060 Ti offrent 32 Go ; les couches restantes (au moins environ 11 Go) doivent donc être déportées dans les 64 Go de RAM système. llama.cpp sait le faire, mais la génération est plus lente et n\'est pas mesurée sur cette configuration. Un modèle 32B en Q4 (environ 20 Go) tient sur les deux cartes.' } },
         { '@type': 'Question', 'name': 'Pourquoi utiliser deux GPU 16 Go plutôt qu\'une RTX 3090 d\'occasion ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Deux GPU 16 Go assortis offrent aux prix indiqués ici plus de VRAM combinée par dollar qu\'une RTX 3090 24 Go d\'occasion (environ $1,600 pour 32 Go contre $1,500-1,725 pour 24 Go en ventes aux États-Unis du 13 au 23 novembre 2026), et la fonctionnalité tensor-split de llama.cpp permet à la VRAM des deux cartes de fonctionner comme un seul pool pour l\'inférence. Vérifiez les prix actuels avant d\'acheter.' } },
         { '@type': 'Question', 'name': 'La carte mère compte-t-elle pour une configuration double-GPU pour LLM local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Choisissez une carte qui documente l\'allocation de voies PCIe x8/x8 sur les deux slots GPU. Un second slot câblé en x4 a moins de voies ; l\'effet sur la vitesse dépend du moteur et du mode de répartition et n\'est pas mesuré ici.' } },
-        { '@type': 'Question', 'name': 'Puis-je mélanger différents modèles de GPU dans une configuration double-GPU ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non recommandé. La performance en tensor-split est limitée par la carte la plus lente ou la plus ancienne de la paire, et mélanger des générations de GPU peut ajouter des complications de pilotes ou de support.' } },
+        { '@type': 'Question', 'name': 'Puis-je mélanger différents modèles de GPU dans une configuration double-GPU ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non recommandé. La performance en tensor-split peut être limitée par la carte la plus lente ou la plus ancienne de la paire, et mélanger des générations de GPU peut ajouter des complications de pilotes ou de support. Utilisez deux GPU identiques.' } },
         { '@type': 'Question', 'name': 'Doubler les GPU double-t-il les tokens par seconde ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Le tensor-split ajoute une surcharge de transfert PCIe entre les couches réparties sur les cartes, donc le débit combiné sur un modèle qui tient déjà sur un seul GPU est nettement inférieur à 2x la vitesse de cette carte unique. Le bénéfice est de pouvoir faire tourner des modèles plus gros, pas une mise à l\'échelle linéaire de la vitesse.' } },
       ],
     },
@@ -1940,12 +1940,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**构建总成本：约$2,680（美国价格）。** 两张RTX 5060 Ti 16GB（每张约$800，合计$1,600）、Ryzen 7 9700X（$330）、64GB DDR5-6000（$180）、2TB Gen4 NVMe（$130）、支持x8/x8插槽的B650 ATX主板（$180）、850W 80+金牌电源（$130）、ATX机箱（$90）、风冷散热器（$40）。GPU价格是按新卡取整的参考数字：[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)上显示的最低全新报价为$800（2026-11-28查看），[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)显示美国亚马逊上的一款显卡为$829.99（2026-11-27）。价格波动较大。其余配件为编辑估算，因零售商而异。按这些价格，本构建无法控制在$2,000以内：仅其他配件就约$1,080，留给两张显卡的只有约$920。',
+          '**构建总成本：约$2,680（美国价格）。** 两张RTX 5060 Ti 16GB（每张约$800，合计$1,600）、Ryzen 7 9700X（$330）、64GB DDR5-6000（$180）、2TB Gen4 NVMe（$130）、支持x8/x8插槽的B650 ATX主板（$180）、850W 80+金牌电源（$130）、ATX机箱（$90）、风冷散热器（$40）。GPU价格是按新卡取整的参考数字：[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)上显示的最低全新报价为$800（2026-11-28查看），[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)显示美国亚马逊上的一款显卡为$849.99（2026-11-27）。价格波动较大。其余配件为编辑估算，因零售商而异。按这些价格，本构建无法控制在$2,000以内：仅其他配件就约$1,080，留给两张显卡的只有约$920。',
           '**按此处列出的价格，两张16GB GPU的每美元显存多于一张二手RTX 3090 24GB。** 约$1,600得到合计32GB显存（每GB约$50），而二手RTX 3090 24GB为$1,500-1,725（每GB约$63-72；[InsiderLLM价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，数据日期2026-11-23）。总花费大致相同；双卡方案的合计显存多8GB，但分布在两张GPU上。两个数字并非同一口径：RTX 5060 Ti的数字是新卡挂牌价（gpuprix，2026-11-28），RTX 3090的数字来自二手成交记录（InsiderLLM，2026-11-23）。购买前请核对当前价格。',
           '**Q4的32B模型装得下，Q4的70B模型装不下。** Q4的32B约20GB，Q4的70B约43GB（[Ollama模型库](https://ollama.com/library/qwen3:32b)）。把32B分到两张卡上，需要能在多GPU之间拆分模型的运行时，例如llama.cpp或Ollama；该构建的速度未测量。',
           '**请选择明确标注x8/x8 PCIe通道拆分的主板，**仅有两个物理x16插槽并不够。电气上只接x4的第二插槽，通道数只有x8的一半；它会让拆分后的模型慢多少，取决于运行时和设置，本文未测量。',
           '**单GPU只能运行16GB以内装得下的模型：** Q4下约14B以内的模型可在一张RTX 5060 Ti上运行；32B模型（约20GB）需要两张卡。',
-          '**避免：** 显卡型号不匹配的组合（例如一张5060 Ti + 一张4060 Ti）——tensor-split性能会受限于较慢的那张卡，且混用不同代际显卡可能带来驱动或支持方面的麻烦。',
+          '**避免：** 显卡型号不匹配的组合（例如一张5060 Ti + 一张4060 Ti）——tensor-split性能可能受限于较慢的那张卡，且混用不同代际显卡可能带来驱动或支持方面的麻烦。',
         ],
       },
       'why-dual-gpu': {
@@ -1953,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '为什么选择两张GPU而非一张更大的GPU',
         content: [
           '**在这个预算下，主要的单GPU替代方案是一张二手RTX 3090 24GB（2026年11月13-23日美国成交价约$1,500-1,725）或一张16GB显卡（如RTX 5070 Ti），而16GB显卡装不下Q4的32B模型（约20GB）。** llama.cpp支持把模型的层拆分到同一台机器的多张GPU上，使它们的合计显存成为模型权重的一个整体显存池。两张RTX 5060 Ti 16GB合计32GB，按此处列出的价格，花费与一张二手RTX 3090 24GB大致相同（约$1,600对比$1,500-1,725），可装下Q4的32B模型及其上下文。Q4的70B模型（约43GB）仍然装不下；需要把部分层卸载到64GB系统内存，这会降低生成速度，本文也未测量。',
-          '这之所以可行，是因为两张卡是相同型号——若卡之间显存或算力不匹配，拆分会受限于较弱的那张卡，而混用不同代际显卡还可能带来驱动或支持方面的麻烦。',
+          '两张相同的显卡是最简单的配置。llama.cpp也能在不同的显卡之间拆分模型，但不匹配的组合更难平衡，显存较小或较慢的那张卡可能拖慢整体表现，混用不同代际显卡还可能带来驱动或支持方面的麻烦。本页未测试过不匹配的组合。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '两张相同的16GB GPU通过llama.cpp拆分，按此处列出的价格，比一张二手RTX 3090 24GB提供更多每美元合计显存（32GB约$1,600，对比24GB $1,500-1,725，2026年11月13-23日美国成交价）。购买前请核对当前价格。' },
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: '完整配件清单',
-        content: '价格为美国市场价，因地区和零售商而异。RTX 5060 Ti 16GB每张约$800是按新卡取整的参考数字：[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)上显示的最低全新报价为$800（2026-11-28查看），[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)显示美国亚马逊上的一款显卡为$829.99（2026-11-27）。价格波动较大，购买前请核对当前价格。其余配件为编辑估算，未重新核实。主板价格为占位值；明确支持CPU通道x8/x8拆分的主板可能更贵，因此总价可能更高。合计：约$2,680。',
+        content: '价格为美国市场价，因地区和零售商而异。RTX 5060 Ti 16GB每张约$800是按新卡取整的参考数字：[gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)上显示的最低全新报价为$800（2026-11-28查看），[BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti)显示美国亚马逊上的一款显卡为$849.99（2026-11-27）。价格波动较大，购买前请核对当前价格。其余配件为编辑估算，未重新核实。主板价格为占位值；明确支持CPU通道x8/x8拆分的主板可能更贵，因此总价可能更高。合计：约$2,680。按每张$849.99计算，总价约$2,780。',
         columns: ['配件', '选择', '价格', '原因'],
         rows: [
           { '配件': 'GPU（x2）', '选择': '2x RTX 5060 Ti 16GB', '价格': '$1,600', '原因': '通过tensor-split合计32GB显存——本构建的核心目的' },
@@ -2009,7 +2009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '据[Ollama常见问题](https://docs.ollama.com/faq)，如果模型无法完整放进一张GPU，Ollama会把它分布到所有可用GPU上，无需手动配置，不过llama.cpp的手动参数能对拆分比例进行更精细的控制。',
         ],
         items: [
-          '**确认两张GPU均被检测到：** 尝试拆分前，`nvidia-smi`应列出两张卡且驱动版本一致。',
+          '**确认两张GPU均被检测到：** 尝试拆分前，`nvidia-smi`应列出两张卡。',
           '**从均分开始：** 对于两张相同的显卡，llama.cpp中的`--tensor-split 1,1`是正确的默认设置。',
           '**留意PCIe带宽饱和：** 如果生成速度异常缓慢，请确认主板实际运行在x8/x8，而不是悄悄回落到x4。',
         ],
@@ -2018,8 +2018,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: '升级路径',
         content: [
-          '这套构建最明显的升级是：如果主板有第三个带宽可用的PCIe插槽，就再加一张RTX 5060 Ti 16GB，把合计显存提高到48GB，高于70B的Q4约43GB的下载大小；不过上下文同样需要显存，这里也未测试。',
-          '另一种更昂贵但更简单的升级方式是，日后将两张RTX 5060 Ti显卡替换为两张RTX 5070 Ti 16GB，保持相同的32GB显存上限，但提升原始算力和内存带宽，从而在不改变可运行模型规模的前提下提高每秒Token数。',
+          '这套构建最明显的升级是：如果主板有第三个带宽可用的PCIe插槽，就再加一张RTX 5060 Ti 16GB，把合计显存提高到48GB，高于70B的Q4约43GB的下载大小；不过上下文同样需要显存，这里也未测试。第三张卡还会增加约180W功耗（NVIDIA标称值），请先重新核对电源和机箱。',
+          '另一种方式是日后把两张RTX 5060 Ti换成两张RTX 5070 Ti 16GB。显存上限仍为32GB；预期的提升在速度方面，本页未做测量。NVIDIA标称RTX 5070 Ti功耗为300W（RTX 5060 Ti为180W），并且单张RTX 5070 Ti所需的系统功率就标为750W，因此不要认为850W电源足以带动两张。请核对显卡厂商规格，并预留更换更大功率电源的预算。',
         ],
       },
       whereToBuy: {
@@ -2072,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '该预算下的常见错误',
         items: [
           '仅凭"支持SLI/CrossFire"的宣传标语选购主板——这一营销术语指的是游戏多GPU渲染，而非计算工作负载的PCIe通道分配，并不能保证x8/x8。',
-          '为省钱混用不同代际的GPU（例如一张RTX 5060 Ti + 一张RTX 4060 Ti）——tensor-split性能会受限于较慢/较旧的那张卡，可能抵消新卡带来的部分优势。',
+          '为省钱混用不同代际的GPU（例如一张RTX 5060 Ti + 一张RTX 4060 Ti）——tensor-split性能可能受限于较慢/较旧的那张卡，可能抵消新卡带来的部分优势。',
           '低估电源余量——在长时间生成过程中，两张GPU同时接近其合计额定TDP时，功耗可能短暂大幅超过360W；电源功率不足可能在负载下导致随机关机，而非平稳降速。请在显卡说明书中核对显卡厂商建议的电源功率和接口要求。以上为一般性信息，不构成电气方面的建议；如不确定，请让有资质的技术人员检查整机和供电线路。',
           '误以为GPU数量翻倍就等于每秒Token数翻倍——tensor-split会在各层之间增加PCIe传输开销，因此对于本就能装入单张GPU的模型，合计吞吐量会明显低于单卡速度的2倍。',
         ],
@@ -2084,13 +2084,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '这台双GPU PC能运行70B本地LLM吗？', a: '在Q4下无法完全放进显存。据Ollama模型库，70B模型的Q4_K_M约43GB，而两张RTX 5060 Ti合计32GB，因此其余层（至少约11GB）必须卸载到64GB系统内存。llama.cpp可以做到，但生成速度更慢，且该构建未测量。Q4的32B模型（约20GB）可以拆分放进两张卡。' },
           { q: '为什么使用两张16GB显卡，而不是一张二手RTX 3090？', a: '按此处列出的价格，两张同型16GB显卡提供的每美元合计显存高于一张二手RTX 3090 24GB（32GB约$1,600，对比24GB $1,500-1,725，2026年11月13-23日美国成交价），且llama.cpp的tensor-split功能可让两张卡的显存作为一个整体池用于推理。购买前请核对当前价格。' },
           { q: '主板对双GPU本地LLM构建重要吗？', a: '重要。请选择明确标注两个GPU插槽按x8/x8分配PCIe通道的主板。电气上只接x4的第二插槽通道更少；对速度的影响取决于运行时和拆分方式，本文未测量。' },
-          { q: '双GPU构建中可以混用不同型号的显卡吗？', a: '不建议。Tensor-split性能会受限于两张卡中较慢或较旧的那张，且混用不同代际显卡可能带来驱动或支持方面的麻烦。请使用两张完全相同的显卡。' },
+          { q: '双GPU构建中可以混用不同型号的显卡吗？', a: '不建议。Tensor-split性能可能受限于两张卡中较慢或较旧的那张，且混用不同代际显卡可能带来驱动或支持方面的麻烦。请使用两张完全相同的显卡。' },
           { q: '对于tensor-split多GPU推理，Ollama还是llama.cpp更好？', a: 'Ollama无需手动配置即可将模型分布到所有可用GPU上（Ollama FAQ）。llama.cpp的手动--tensor-split参数能对拆分比例进行更精细的控制，适合其中一张GPU还需驱动显示器、需要预留较少显存的情况。' },
           { q: 'PCIe带宽究竟对tensor-split性能有多大影响？', a: '取决于运行时、拆分方式、批大小和上下文长度，本页未做测量。x4插槽的通道数只有x8的一半，因此条件允许时请选x8/x8，并用你自己的负载测试。' },
           { q: 'GPU数量翻倍会让每秒Token数也翻倍吗？', a: '不会。Tensor-split会在跨卡拆分的各层之间增加PCIe传输开销，因此对于本就能装入单张GPU的模型，合计吞吐量会明显低于单卡速度的2倍。其带来的好处是能容纳更大的模型，而非线性的速度提升。' },
           { q: '两张RTX 5060 Ti显卡的总功耗是多少？', a: '满载时合计约360W（各自额定TDP为180W），并伴有短暂超出该值的瞬时峰值。850W 80+金牌电源在应对这些峰值的同时，仍为系统其余部分留有充裕余量。请在显卡说明书中核对电源接口和功率要求。' },
           { q: '这套构建能只用一张GPU运行较小的模型吗？', a: '可以。16GB以内装得下的模型，大致为Q4下14B以内（约9.3GB），可在单张RTX 5060 Ti上运行，并避免拆分带来的PCIe开销。Q4的32B模型（约20GB）装不进一张16GB显卡，需要两张。' },
-          { q: '超出本构建的升级路径是什么？', a: '加装第三张同型RTX 5060 Ti 16GB（若主板有第三个可用PCIe插槽）可将合计显存提升到48GB。另一种方式是日后将两张卡替换为RTX 5070 Ti 16GB，保持相同的32GB上限，但提升算力和内存带宽。' },
+          { q: '超出本构建的升级路径是什么？', a: '加装第三张同型RTX 5060 Ti 16GB（若主板有第三个可用PCIe插槽）可将合计显存提升到48GB。另一种方式是日后将两张卡替换为RTX 5070 Ti 16GB，保持相同的32GB上限，但提升算力和内存带宽。无论哪种方式，都请先核对电源：NVIDIA标称RTX 5070 Ti每张300W，RTX 5060 Ti为180W。' },
         ],
       },
       relatedReading: {
@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama模型库：Llama 3.3 70B（默认标签43GB）](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM：NVIDIA GPU价格追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix：RTX 5060 Ti 16GB美国报价，显示的最低全新报价$800（2026-11-28查看）](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice：RTX 5060 Ti美国价格，亚马逊16GB显卡$829.99（2026-11-27）](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice：RTX 5060 Ti美国价格，亚马逊16GB显卡$849.99（2026-11-27）](https://www.basketprice.com/gpu/rtx-5060-ti)', '[NVIDIA RTX 5070系列规格（RTX 5070 Ti：300W，所需系统功率750W）](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -2147,10 +2147,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': '这台双GPU PC能运行70B本地LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在Q4下无法完全放进显存。70B模型的Q4_K_M约43GB，两张RTX 5060 Ti合计32GB，其余层必须卸载到更慢的系统内存（此处未测量）。Q4的32B模型（约20GB）装得下。' } },
+        { '@type': 'Question', 'name': '这台双GPU PC能运行70B本地LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在Q4下无法完全放进显存。据Ollama模型库，70B模型的Q4_K_M约43GB，而两张RTX 5060 Ti合计32GB，因此其余层（至少约11GB）必须卸载到64GB系统内存。llama.cpp可以做到，但生成速度更慢，且该构建未测量。Q4的32B模型（约20GB）可以拆分放进两张卡。' } },
         { '@type': 'Question', 'name': '为什么使用两张16GB显卡，而不是一张二手RTX 3090？', 'acceptedAnswer': { '@type': 'Answer', 'text': '按此处列出的价格，两张同型16GB显卡提供的每美元合计显存高于一张二手RTX 3090 24GB（32GB约$1,600，对比24GB $1,500-1,725，2026年11月13-23日美国成交价），且llama.cpp的tensor-split功能可让两张卡的显存作为一个整体池用于推理。购买前请核对当前价格。' } },
         { '@type': 'Question', 'name': '主板对双GPU本地LLM构建重要吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '重要。请选择明确标注两个GPU插槽按x8/x8分配PCIe通道的主板。电气上只接x4的第二插槽通道更少；对速度的影响取决于运行时和拆分方式，本文未测量。' } },
-        { '@type': 'Question', 'name': '双GPU构建中可以混用不同型号的显卡吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不建议。Tensor-split性能会受限于两张卡中较慢或较旧的那张，且混用不同代际显卡可能带来驱动或支持方面的麻烦。' } },
+        { '@type': 'Question', 'name': '双GPU构建中可以混用不同型号的显卡吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不建议。Tensor-split性能可能受限于两张卡中较慢或较旧的那张，且混用不同代际显卡可能带来驱动或支持方面的麻烦。请使用两张完全相同的显卡。' } },
         { '@type': 'Question', 'name': 'GPU数量翻倍会让每秒Token数也翻倍吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不会。Tensor-split会在跨卡拆分的各层之间增加PCIe传输开销，因此对于本就能装入单张GPU的模型，合计吞吐量会明显低于单卡速度的2倍。其带来的好处是能容纳更大的模型，而非线性的速度提升。' } },
       ],
     },
@@ -2211,12 +2211,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Custo total do build: cerca de $2.680 (preços dos EUA).** Duas RTX 5060 Ti 16GB (cerca de $800 cada, $1.600 no total), Ryzen 7 9700X ($330), 64GB DDR5-6000 ($180), NVMe Gen4 de 2TB ($130), placa-mãe B650 ATX com slots x8/x8 ($180), fonte 850W 80+ Gold ($130), gabinete ATX ($90), cooler a ar ($40). O preço da GPU é uma referência arredondada para uma placa nova: a oferta nova mais barata exibida no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) era de $800 (consultado em 2026-11-28), e o [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) mostrava uma placa na Amazon EUA por $829,99 (2026-11-27). Os preços são voláteis. As demais peças são estimativas editoriais que variam por revendedor. Com esses preços, o build não fica abaixo de $2.000: só as demais peças somam cerca de $1.080, sobrando cerca de $920 para duas placas. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+          '**Custo total do build: cerca de $2.680 (preços dos EUA).** Duas RTX 5060 Ti 16GB (cerca de $800 cada, $1.600 no total), Ryzen 7 9700X ($330), 64GB DDR5-6000 ($180), NVMe Gen4 de 2TB ($130), placa-mãe B650 ATX com slots x8/x8 ($180), fonte 850W 80+ Gold ($130), gabinete ATX ($90), cooler a ar ($40). O preço da GPU é uma referência arredondada para uma placa nova: a oferta nova mais barata exibida no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) era de $800 (consultado em 2026-11-28), e o [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) mostrava uma placa na Amazon EUA por $849,99 (2026-11-27). Os preços são voláteis. As demais peças são estimativas editoriais que variam por revendedor. Com esses preços, o build não fica abaixo de $2.000: só as demais peças somam cerca de $1.080, sobrando cerca de $920 para duas placas. Os preços no Brasil podem variar bastante devido a impostos de importação.',
           '**Pelos preços listados aqui, duas GPUs de 16GB dão mais VRAM por dólar do que uma RTX 3090 24GB usada.** 32GB de VRAM combinada por cerca de $1.600 (cerca de $50 por GB) se comparam a uma RTX 3090 24GB usada a $1.500-1.725 (cerca de $63-72 por GB; [rastreador da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), dados de 2026-11-23). O gasto total é praticamente o mesmo; as duas placas dão 8GB a mais de VRAM combinada, dividida entre duas GPUs. Os dois valores não são equivalentes: o da RTX 5060 Ti é um preço anunciado de placa nova (gpuprix, 2026-11-28) e o da RTX 3090 vem de vendas concluídas de placas usadas (InsiderLLM, 2026-11-23). Confira os preços atuais antes de comprar.',
           '**Um modelo de 32B em Q4 cabe; um de 70B em Q4 não.** Um 32B em Q4 tem cerca de 20GB e um 70B em Q4 cerca de 43GB ([biblioteca do Ollama](https://ollama.com/library/qwen3:32b)). Dividir um 32B entre duas placas exige um runtime que reparta o modelo entre GPUs, como llama.cpp ou Ollama; as velocidades não foram medidas neste build.',
           '**Escolha uma placa-mãe que documente a bifurcação PCIe x8/x8,** apenas dois slots físicos x16 não bastam. Um segundo slot ligado em x4 tem metade das lanes de um x8; quanto isso desacelera um modelo dividido depende do runtime e das configurações e não foi medido aqui.',
           '**Com uma única GPU, só cabe o que entra em 16GB:** modelos de até cerca de 14B em Q4 rodam em uma RTX 5060 Ti; um modelo de 32B (cerca de 20GB) precisa das duas placas.',
-          '**Evite:** pares de GPU incompatíveis (por exemplo, uma 5060 Ti + uma 4060 Ti) — o desempenho do tensor-split é limitado pela placa mais lenta, e misturar gerações de GPU pode trazer complicações de driver ou de suporte.',
+          '**Evite:** pares de GPU incompatíveis (por exemplo, uma 5060 Ti + uma 4060 Ti) — o desempenho do tensor-split pode ser limitado pela placa mais lenta, e misturar gerações de GPU pode trazer complicações de driver ou de suporte.',
         ],
       },
       'why-dual-gpu': {
@@ -2224,7 +2224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Por Que Duas GPUs Em Vez de Uma GPU Maior',
         content: [
           '**Com este orçamento, as principais alternativas de GPU única são uma RTX 3090 24GB usada (cerca de $1.500-1.725 em vendas nos EUA de 13 a 23 de novembro de 2026) ou uma placa de 16GB como a RTX 5070 Ti, e uma placa de 16GB não comporta um modelo de 32B em Q4 (cerca de 20GB).** O llama.cpp permite dividir as camadas de um modelo entre várias GPUs da mesma máquina, de modo que a VRAM combinada funciona como um único conjunto para os pesos do modelo. Duas RTX 5060 Ti 16GB dão 32GB combinados por praticamente o mesmo valor de uma RTX 3090 24GB usada pelos preços listados aqui (cerca de $1.600 contra $1.500-1.725) e comportam um 32B em Q4 mais o contexto. Um modelo de 70B em Q4 (cerca de 43GB) continua não cabendo; seria preciso transferir camadas para os 64GB de RAM do sistema, o que deixa a geração mais lenta e não foi medido aqui.',
-          'Isso só funciona porque as duas placas são do mesmo modelo — VRAM ou poder de computação incompatíveis entre as placas força o split a ficar limitado pela placa mais fraca, e misturar gerações de GPU pode trazer complicações de driver ou de suporte.',
+          'Duas placas idênticas são a configuração mais simples. O llama.cpp também consegue dividir um modelo entre placas diferentes, mas um par desigual é mais difícil de equilibrar, a placa menor ou mais lenta pode limitar o resultado, e misturar gerações de GPU pode trazer complicações de driver ou de suporte. Esta página não testou um par desigual.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Duas GPUs idênticas de 16GB divididas via llama.cpp oferecem, pelos preços listados aqui, mais VRAM combinada por dólar do que uma RTX 3090 24GB usada (cerca de $1.600 por 32GB contra $1.500-1.725 por 24GB em vendas nos EUA de 13 a 23 de novembro de 2026). Confira os preços atuais antes de comprar.' },
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Lista Completa de Peças',
-        content: 'Os preços são preços de mercado dos EUA e variam por região e revendedor. O preço de cerca de $800 por RTX 5060 Ti 16GB é uma referência arredondada para uma placa nova: a oferta nova mais barata exibida no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) era de $800 (consultado em 2026-11-28), e o [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) mostrava uma placa na Amazon EUA por $829,99 (2026-11-27). Os preços são voláteis, então confira os preços atuais antes de comprar. As demais peças são estimativas editoriais, sem nova verificação. O preço da placa-mãe é provisório; placas que documentam bifurcação x8/x8 das lanes da CPU podem custar mais, então o total pode ser maior. Total: cerca de $2.680.',
+        content: 'Os preços são preços de mercado dos EUA e variam por região e revendedor. O preço de cerca de $800 por RTX 5060 Ti 16GB é uma referência arredondada para uma placa nova: a oferta nova mais barata exibida no [gpuprix](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb) era de $800 (consultado em 2026-11-28), e o [BasketPrice](https://www.basketprice.com/gpu/rtx-5060-ti) mostrava uma placa na Amazon EUA por $849,99 (2026-11-27). Os preços são voláteis, então confira os preços atuais antes de comprar. As demais peças são estimativas editoriais, sem nova verificação. O preço da placa-mãe é provisório; placas que documentam bifurcação x8/x8 das lanes da CPU podem custar mais, então o total pode ser maior. Total: cerca de $2.680. A $849,99 por placa, o total seria de cerca de $2.780.',
         columns: ['Componente', 'Escolha', 'Preço', 'Por Quê'],
         rows: [
           { 'Componente': 'GPU (x2)', 'Escolha': '2x RTX 5060 Ti 16GB', 'Preço': '$1.600', 'Por Quê': '32GB de VRAM combinada via tensor-split — o propósito central deste build' },
@@ -2280,7 +2280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Segundo o [FAQ do Ollama](https://docs.ollama.com/faq), se um modelo não cabe inteiramente em uma GPU, o Ollama o distribui por todas as GPUs disponíveis sem configuração manual, embora as flags manuais do llama.cpp deem um controle mais preciso sobre a proporção do split.',
         ],
         items: [
-          '**Verifique se ambas as GPUs são detectadas:** o `nvidia-smi` deve listar as duas placas com versões de driver compatíveis antes de tentar um split.',
+          '**Verifique se ambas as GPUs são detectadas:** o `nvidia-smi` deve listar as duas placas antes de tentar um split.',
           '**Comece com uma divisão igual:** `--tensor-split 1,1` no llama.cpp é o padrão correto para duas placas idênticas.',
           '**Fique atento à saturação da largura de banda PCIe:** se a geração estiver inesperadamente lenta, confirme que a placa-mãe realmente opera em x8/x8 e não recua silenciosamente para x4.',
         ],
@@ -2289,8 +2289,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'upgrade-path',
         title: 'Caminho de Upgrade',
         content: [
-          'A melhoria mais clara para este build é adicionar uma terceira RTX 5060 Ti 16GB, se a placa-mãe tiver um terceiro slot PCIe com largura de banda utilizável, elevando a VRAM combinada para 48GB, acima dos ~43GB de download de um modelo de 70B em Q4, embora o contexto também precise de VRAM e isso não tenha sido testado aqui.',
-          'Um upgrade mais caro, porém mais simples, é substituir as duas placas RTX 5060 Ti por duas RTX 5070 Ti 16GB depois, mantendo o mesmo teto de 32GB de VRAM mas aumentando o poder de computação bruto e a largura de banda de memória, o que melhora os tokens/seg sem mudar quais tamanhos de modelo cabem.',
+          'A melhoria mais clara para este build é adicionar uma terceira RTX 5060 Ti 16GB, se a placa-mãe tiver um terceiro slot PCIe com largura de banda utilizável, elevando a VRAM combinada para 48GB, acima dos ~43GB de download de um modelo de 70B em Q4, embora o contexto também precise de VRAM e isso não tenha sido testado aqui. Uma terceira placa também acrescenta cerca de 180W (valor da NVIDIA), então confira antes a fonte e o gabinete.',
+          'Outra opção é substituir depois as duas RTX 5060 Ti por duas RTX 5070 Ti 16GB. O teto de 32GB de VRAM continua o mesmo; o ganho esperado é de velocidade, que esta página não mediu. A NVIDIA indica 300W para a RTX 5070 Ti contra 180W para a RTX 5060 Ti e aponta 750W de potência de sistema exigida para uma única RTX 5070 Ti, então não presuma que a fonte de 850W baste para duas. Confira a especificação do fabricante da placa e planeje uma fonte maior.',
         ],
       },
       whereToBuy: {
@@ -2343,7 +2343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erros Comuns Nesse Orçamento',
         items: [
           'Comprar uma placa-mãe baseando-se apenas no selo "suporta SLI/CrossFire" — esse termo de marketing se refere à renderização multi-GPU para jogos, não à alocação de lanes PCIe para cargas de trabalho de computação, e não garante x8/x8.',
-          'Misturar gerações de GPU (por exemplo, uma RTX 5060 Ti + uma RTX 4060 Ti) para economizar dinheiro — o desempenho do tensor-split é limitado pela placa mais lenta/antiga, o que pode anular parte do benefício da mais nova.',
+          'Misturar gerações de GPU (por exemplo, uma RTX 5060 Ti + uma RTX 4060 Ti) para economizar dinheiro — o desempenho do tensor-split pode ser limitado pela placa mais lenta/antiga, o que pode anular parte do benefício da mais nova.',
           'Subestimar a margem da fonte — duas GPUs consumindo perto do TDP combinado simultaneamente durante uma geração longa podem ter picos breves bem acima de 360W; uma fonte subdimensionada pode causar desligamentos aleatórios sob carga em vez de uma desaceleração suave. Confira no manual da placa a potência de fonte recomendada pelo fabricante e os requisitos de conectores. Estas são informações gerais, não orientação elétrica; em caso de dúvida, peça a um técnico qualificado que confira a montagem e o seu circuito elétrico.',
           'Assumir que o dobro de GPUs significa o dobro de tokens/seg — o tensor-split adiciona sobrecarga de transferência PCIe entre camadas, então o throughput combinado é significativamente menor do que 2x a velocidade de uma única placa em modelos que já cabiam em uma GPU.',
         ],
@@ -2355,13 +2355,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Este PC com GPU dupla consegue rodar LLMs locais de 70B?', a: 'Não totalmente na VRAM em Q4. Um modelo de 70B em Q4_K_M tem cerca de 43GB segundo a biblioteca do Ollama e as duas RTX 5060 Ti fornecem 32GB; as camadas restantes (pelo menos cerca de 11GB) precisam ir para os 64GB de RAM do sistema. O llama.cpp consegue fazer isso, mas a geração fica mais lenta e não foi medida neste build. Um modelo de 32B em Q4 (cerca de 20GB) cabe nas duas placas.' },
           { q: 'Por que usar duas GPUs de 16GB em vez de uma RTX 3090 usada?', a: 'Duas GPUs de 16GB idênticas fornecem, pelos preços listados aqui, mais VRAM combinada por dólar do que uma RTX 3090 24GB usada (cerca de $1.600 por 32GB contra $1.500-1.725 por 24GB em vendas nos EUA de 13 a 23 de novembro de 2026), e o recurso tensor-split do llama.cpp permite que a VRAM de ambas as placas funcione como um único pool para inferência. Confira os preços atuais antes de comprar.' },
           { q: 'A placa-mãe importa para um build dual-GPU de LLM local?', a: 'Sim. Escolha uma placa que documente a alocação de lanes PCIe x8/x8 nos dois slots de GPU. Um segundo slot ligado em x4 tem menos lanes; o efeito na velocidade depende do runtime e do modo de divisão e não foi medido aqui.' },
-          { q: 'Posso misturar modelos diferentes de GPU em um build dual-GPU?', a: 'Não é recomendado. O desempenho do tensor-split é limitado pela placa mais lenta ou mais antiga do par, e misturar gerações de GPU pode trazer complicações de driver ou de suporte. Use duas GPUs idênticas.' },
+          { q: 'Posso misturar modelos diferentes de GPU em um build dual-GPU?', a: 'Não é recomendado. O desempenho do tensor-split pode ser limitado pela placa mais lenta ou mais antiga do par, e misturar gerações de GPU pode trazer complicações de driver ou de suporte. Use duas GPUs idênticas.' },
           { q: 'O Ollama ou o llama.cpp é melhor para inferência multi-GPU com tensor-split?', a: 'O Ollama pode distribuir um modelo por todas as GPUs disponíveis sem configuração manual (FAQ do Ollama). A flag manual --tensor-split do llama.cpp dá um controle mais preciso sobre a proporção do split, útil se uma GPU também estiver conectada a um monitor e precisar de menos VRAM reservada.' },
           { q: 'Quanto a largura de banda PCIe realmente afeta o desempenho do tensor-split?', a: 'Depende do runtime, do modo de divisão, do tamanho do lote e do comprimento do contexto, e esta página não mediu isso. Um slot x4 tem metade das lanes de um x8, então escolha x8/x8 quando puder e teste a sua própria carga de trabalho.' },
           { q: 'Dobrar as GPUs dobra os tokens por segundo?', a: 'Não. O tensor-split adiciona sobrecarga de transferência PCIe entre as camadas divididas entre as placas, então o throughput combinado em um modelo que já cabe em uma GPU é significativamente menor do que 2x a velocidade dessa única placa. O benefício é caber modelos maiores, não escalar a velocidade linearmente.' },
           { q: 'Qual é o consumo total de energia de duas placas RTX 5060 Ti?', a: 'Aproximadamente 360W combinados em carga total (180W de TDP nominal cada), com picos transitórios breves acima disso. Uma fonte 850W 80+ Gold deixa margem confortável para o resto do sistema junto com esses picos. Confira os conectores e a potência exigidos no manual da placa.' },
           { q: 'Este build consegue rodar modelos menores com apenas uma GPU?', a: 'Sim. Modelos que cabem em 16GB, aproximadamente até 14B em Q4 (cerca de 9.3GB), rodam em uma única RTX 5060 Ti e evitam a sobrecarga de PCIe da divisão. Um modelo de 32B em Q4 (cerca de 20GB) não cabe em uma placa de 16GB e precisa das duas.' },
-          { q: 'Qual é o caminho de upgrade além deste build?', a: 'Adicionar uma terceira RTX 5060 Ti 16GB idêntica (se a placa-mãe tiver um terceiro slot PCIe utilizável) eleva a VRAM combinada para 48GB. Alternativamente, substituir as duas placas por unidades RTX 5070 Ti 16GB depois mantém o mesmo teto de 32GB mas aumenta o poder de computação e a largura de banda de memória.' },
+          { q: 'Qual é o caminho de upgrade além deste build?', a: 'Adicionar uma terceira RTX 5060 Ti 16GB idêntica (se a placa-mãe tiver um terceiro slot PCIe utilizável) eleva a VRAM combinada para 48GB. Alternativamente, substituir as duas placas por unidades RTX 5070 Ti 16GB depois mantém o mesmo teto de 32GB mas aumenta o poder de computação e a largura de banda de memória. Em qualquer caso, confira primeiro a fonte: a NVIDIA indica 300W por placa para a RTX 5070 Ti contra 180W para a RTX 5060 Ti.' },
         ],
       },
       relatedReading: {
@@ -2388,7 +2388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Biblioteca do Ollama: Llama 3.3 70B (43GB, tag padrão)](https://ollama.com/library/llama3.3:70b)',
           '[InsiderLLM: rastreador de preços de GPUs NVIDIA](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)',
           '[gpuprix: ofertas da RTX 5060 Ti 16GB nos EUA, oferta nova mais barata exibida $800 (consultado em 2026-11-28)](https://gpuprix.com/us/gpus/geforce-rtx-5060-ti-16gb)',
-          '[BasketPrice: preços da RTX 5060 Ti nos EUA, placa de 16GB por $829,99 na Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)',
+          '[BasketPrice: preços da RTX 5060 Ti nos EUA, placa de 16GB por $849,99 na Amazon (2026-11-27)](https://www.basketprice.com/gpu/rtx-5060-ti)', '[NVIDIA: especificações da família RTX 5070 (RTX 5070 Ti: 300W, 750W de potência de sistema exigida)](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/)',
         ],
       },
     },
@@ -2418,10 +2418,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-pc-build-2000',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Este PC com GPU dupla consegue rodar LLMs locais de 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não totalmente na VRAM em Q4. Um modelo de 70B em Q4_K_M tem cerca de 43GB e as duas RTX 5060 Ti fornecem 32GB; as camadas restantes precisam ir para a RAM do sistema, que é mais lenta (não medido aqui). Um modelo de 32B em Q4 (cerca de 20GB) cabe.' } },
+        { '@type': 'Question', 'name': 'Este PC com GPU dupla consegue rodar LLMs locais de 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não totalmente na VRAM em Q4. Um modelo de 70B em Q4_K_M tem cerca de 43GB segundo a biblioteca do Ollama e as duas RTX 5060 Ti fornecem 32GB; as camadas restantes (pelo menos cerca de 11GB) precisam ir para os 64GB de RAM do sistema. O llama.cpp consegue fazer isso, mas a geração fica mais lenta e não foi medida neste build. Um modelo de 32B em Q4 (cerca de 20GB) cabe nas duas placas.' } },
         { '@type': 'Question', 'name': 'Por que usar duas GPUs de 16GB em vez de uma RTX 3090 usada?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Duas GPUs de 16GB idênticas fornecem, pelos preços listados aqui, mais VRAM combinada por dólar do que uma RTX 3090 24GB usada (cerca de $1.600 por 32GB contra $1.500-1.725 por 24GB em vendas nos EUA de 13 a 23 de novembro de 2026), e o recurso tensor-split do llama.cpp permite que a VRAM de ambas as placas funcione como um único pool para inferência. Confira os preços atuais antes de comprar.' } },
         { '@type': 'Question', 'name': 'A placa-mãe importa para um build dual-GPU de LLM local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. Escolha uma placa que documente a alocação de lanes PCIe x8/x8 nos dois slots de GPU. Um segundo slot ligado em x4 tem menos lanes; o efeito na velocidade depende do runtime e do modo de divisão e não foi medido aqui.' } },
-        { '@type': 'Question', 'name': 'Posso misturar modelos diferentes de GPU em um build dual-GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não é recomendado. O desempenho do tensor-split é limitado pela placa mais lenta ou mais antiga do par, e misturar gerações de GPU pode trazer complicações de driver ou de suporte.' } },
+        { '@type': 'Question', 'name': 'Posso misturar modelos diferentes de GPU em um build dual-GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não é recomendado. O desempenho do tensor-split pode ser limitado pela placa mais lenta ou mais antiga do par, e misturar gerações de GPU pode trazer complicações de driver ou de suporte. Use duas GPUs idênticas.' } },
         { '@type': 'Question', 'name': 'Dobrar as GPUs dobra os tokens por segundo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. O tensor-split adiciona sobrecarga de transferência PCIe entre as camadas divididas entre as placas, então o throughput combinado em um modelo que já cabe em uma GPU é significativamente menor do que 2x a velocidade dessa única placa. O benefício é caber modelos maiores, não escalar a velocidade linearmente.' } },
       ],
     },

@@ -422,11 +422,11 @@ export function CostCalculator() {
   const t = (COPY[lang] ?? COPY['en'])!;
 
   const [hoursPerMonth, setHoursPerMonth] = useState<number>(240);
-  const [cloudRate, setCloudRate] = useState<number>(0.5);
-  const [hardwarePrice, setHardwarePrice] = useState<number>(3200);
+  const [cloudRate, setCloudRate] = useState<number>(0.89);
+  const [hardwarePrice, setHardwarePrice] = useState<number>(3300);
   const [electricityRate, setElectricityRate] = useState<number>(0.17);
   const [powerDrawW, setPowerDrawW] = useState<number>(450);
-  const [resaleValue, setResaleValue] = useState<number>(1400);
+  const [resaleValue, setResaleValue] = useState<number>(0);
   const [ownershipMonths, setOwnershipMonths] = useState<number>(36);
   const [presetKey, setPresetKey] = useState<string>('us');
 
@@ -446,13 +446,11 @@ export function CostCalculator() {
     // Naive break-even: hardware price only, ignoring electricity/resale.
     const naiveBreakEvenHours = cloudRate > 0 ? hardwarePrice / cloudRate : Infinity;
 
-    // Full-TCO break-even: monthly cloud rate vs. monthly local rate (electricity
-    // minus amortized resale credit), solved for months, then converted to hours.
-    const resaleCreditPerMonth = ownershipMonths > 0 ? resaleValue / ownershipMonths : 0;
-    const netLocalMonthlyRate = localElectricityPerMonth - resaleCreditPerMonth;
-    const monthlyDelta = cloudCostPerMonth - netLocalMonthlyRate;
-    const breakEvenMonths = monthlyDelta > 0 ? hardwarePrice / monthlyDelta : Infinity;
-    const breakEvenHours = Number.isFinite(breakEvenMonths) ? breakEvenMonths * hoursPerMonth : Infinity;
+    // Full-TCO break-even, same formula as the article's worked example:
+    // hours = (hardware price - resale value) / (cloud rate - electricity per hour).
+    const hourlySaving = cloudRate - electricityCostPerHour;
+    const breakEvenHours = hourlySaving > 0 ? Math.max(0, hardwarePrice - resaleValue) / hourlySaving : Infinity;
+    const breakEvenMonths = hoursPerMonth > 0 ? breakEvenHours / hoursPerMonth : Infinity;
 
     let recommendation: 'local' | 'cloud' | 'close' = 'close';
     if (totalCloudCost > 0) {

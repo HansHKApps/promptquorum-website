@@ -975,7 +975,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Prompts and files stay on your machine, with no cloud storage — check each app\'s telemetry setting; local processing simplifies GDPR work but does not replace it',
     'LoRA fine-tuning requires 500+ labeled examples and 24 GB+ VRAM (or cloud GPU for training)',
     '[Qwen Local Deployment Guide 2026](/local-llms/qwen-local-deployment-guide-2026) — one-command Ollama setup for Qwen 3.6 27B and Qwen3 8B, plus Coder and VL tiers',
-    '[Best GPU Under $500 for LLM Inference](/local-llms/best-gpu-for-llm-inference-under-500-2026) — Intel Arc B580 12 GB leads; a used RTX 3060 12 GB is the CUDA runner-up',
+    '[Best GPU Under $500 for LLM Inference](/local-llms/best-gpu-for-llm-inference-under-500-2026) — used RTX 3060 12 GB is our editorial pick; Intel Arc B580 12 GB is second (price sources disagree), a used RX 7800 XT third',
     '[DeepSeek vs Qwen: Local Comparison 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — benchmark head-to-head',
     '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU cloud for the Chinese market',
     '[Local LLM Cost Calculator: Build vs Rent 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 3-year ROI calculator',
@@ -989,7 +989,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Prompts und Dateien bleiben auf Ihrem Rechner, ohne Cloud-Speicher — prüfen Sie die Telemetrie-Einstellung jeder App; lokale Verarbeitung erleichtert die DSGVO-Arbeit, ersetzt sie aber nicht',
     'LoRA-Fine-Tuning erfordert 500+ gekennzeichnete Beispiele und 24 GB+ VRAM (oder Cloud-GPU zum Training)',
     '[Qwen lokaler Deployment-Leitfaden 2026](/local-llms/qwen-local-deployment-guide-2026) — Ollama-Setup mit einem Befehl für Qwen 3.6 27B und Qwen3 8B, dazu Coder- und VL-Stufen',
-    '[Bestes GPU unter 500 $ für LLM-Inferenz](/local-llms/best-gpu-for-llm-inference-under-500-2026) — Intel Arc B580 12 GB liegt vorn; eine gebrauchte RTX 3060 12 GB ist die CUDA-Alternative',
+    '[Bestes GPU unter 500 $ für LLM-Inferenz](/local-llms/best-gpu-for-llm-inference-under-500-2026) — eine gebrauchte RTX 3060 12 GB ist unsere redaktionelle Wahl; die Intel Arc B580 12 GB folgt auf Platz 2 (Preisquellen widersprechen sich), eine gebrauchte RX 7800 XT auf Platz 3',
     '[DeepSeek vs Qwen: Lokaler Vergleich 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — Benchmark-Kopf-an-Kopf',
     '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU-Cloud für den chinesischen Markt',
     '[Lokaler LLM-Kostenrechner: Bauen vs. Mieten 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 3-Jahres-ROI-Rechner',
@@ -1003,7 +1003,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Les prompts et fichiers restent sur votre machine, sans stockage cloud — vérifiez le réglage de télémétrie de chaque application ; le traitement local facilite la conformité au RGPD sans la remplacer',
     'Le fine-tuning LoRA nécessite 500+ exemples étiquetés et 24 GB+ VRAM (ou GPU cloud pour l\'entraînement)',
     '[Guide de déploiement local Qwen 2026](/local-llms/qwen-local-deployment-guide-2026) — configuration Ollama en une commande pour Qwen 3.6 27B et Qwen3 8B, avec les niveaux Coder et VL',
-    '[Meilleur GPU à moins de 500 $ pour l\'inférence LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026) — l\'Intel Arc B580 12 GB arrive en tête ; une RTX 3060 12 GB d\'occasion est l\'alternative CUDA',
+    '[Meilleur GPU à moins de 500 $ pour l\'inférence LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026) — une RTX 3060 12 GB d\'occasion est notre choix éditorial ; l\'Intel Arc B580 12 GB est deuxième (les sources de prix se contredisent), une RX 7800 XT d\'occasion troisième',
     '[DeepSeek vs Qwen : comparaison locale 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — benchmark face à face',
     '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU cloud pour le marché chinois',
     '[Calculateur de coût LLM local : Construire vs Louer 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — calculateur ROI sur 3 ans',
@@ -1017,7 +1017,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'プロンプトとファイルはマシン上に残り、クラウドストレージも使いません — 各アプリのテレメトリ設定を確認してください。ローカル処理はGDPR対応を楽にしますが、代わりにはなりません',
     'LoRA微調整には500個以上のラベル付き例とVRAM 24 GB以上が必要です（またはトレーニング用のクラウドGPU）',
     '[Qwenローカルデプロイガイド2026](/local-llms/qwen-local-deployment-guide-2026) — Qwen 3.6 27BとQwen3 8B向けの1コマンドOllamaセットアップ（Coder・VLの各ティアも）',
-    '[LLM推論向け500ドル以下ベストGPU](/local-llms/best-gpu-for-llm-inference-under-500-2026) — Intel Arc B580 12 GBが首位、中古のRTX 3060 12 GBがCUDA派の次点',
+    '[LLM推論向け500ドル以下ベストGPU](/local-llms/best-gpu-for-llm-inference-under-500-2026) — 当サイトの編集部の選択は中古RTX 3060 12 GB。2位はIntel Arc B580 12 GB（価格は情報源で食い違い）、3位は中古RX 7800 XT',
     '[DeepSeek vs Qwen：ローカル比較2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — ベンチマーク対決',
     '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — 中国市場向けGPUクラウド',
     '[ローカルLLMコスト計算機：自作 vs レンタル2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 3年間ROI計算機',
@@ -1031,7 +1031,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     '提示词和文件留在您的机器上，不使用云存储 — 请检查每个应用的遥测设置；本地处理能简化GDPR合规工作，但不能替代合规本身',
     'LoRA微调需要500多个标记示例和24 GB+ VRAM（或用于训练的云GPU）',
     '[Qwen本地部署指南2026](/local-llms/qwen-local-deployment-guide-2026) — Qwen 3.6 27B和Qwen3 8B的一键Ollama设置，另含Coder和VL档位',
-    '[500美元以下最佳LLM推理GPU](/local-llms/best-gpu-for-llm-inference-under-500-2026) — Intel Arc B580 12 GB领先；二手RTX 3060 12 GB是CUDA阵营的次选',
+    '[500美元以下最佳LLM推理GPU](/local-llms/best-gpu-for-llm-inference-under-500-2026) — 编辑首选为二手RTX 3060 12 GB；Intel Arc B580 12 GB排第二（各来源价格不一致），二手RX 7800 XT排第三',
     '[DeepSeek vs Qwen：本地对比2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — 基准测试对决',
     '[阿里云vs腾讯云GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — 中国市场GPU云服务',
     '[本地LLM成本计算器：自建vs租用2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 3年ROI计算器',
@@ -1045,7 +1045,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Tus prompts y archivos permanecen en tu equipo, sin almacenamiento cloud — revisa el ajuste de telemetría de cada aplicación; el procesamiento local facilita el trabajo con el RGPD, pero no lo sustituye',
     'El fine-tuning con LoRA requiere 500+ ejemplos etiquetados y 24 GB+ VRAM (o GPU cloud para entrenamiento)',
     '[Guía de despliegue local de Qwen 2026](/local-llms/qwen-local-deployment-guide-2026) — configuración Ollama en un comando para Qwen 3.6 27B y Qwen3 8B, con niveles Coder y VL',
-    '[Mejor GPU por menos de 500 $ para inferencia LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026) — la Intel Arc B580 de 12 GB lidera; una RTX 3060 de 12 GB de segunda mano es la alternativa CUDA',
+    '[Mejor GPU por menos de 500 $ para inferencia LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026) — una RTX 3060 de 12 GB de segunda mano es nuestra elección editorial; la Intel Arc B580 de 12 GB queda segunda (las fuentes de precios no coinciden) y una RX 7800 XT usada, tercera',
     '[DeepSeek vs Qwen: comparativa local 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — benchmark cara a cara',
     '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU cloud para el mercado chino',
     '[Calculadora de costes LLM local: construir vs alquilar 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — calculadora ROI a 3 años',
@@ -1059,7 +1059,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Seus prompts e arquivos ficam na sua máquina, sem armazenamento na cloud — confira a configuração de telemetria de cada aplicativo; o processamento local facilita o trabalho com a LGPD, mas não o substitui',
     'O fine-tuning com LoRA exige 500+ exemplos rotulados e 24 GB+ VRAM (ou GPU na cloud para treinamento)',
     '[Guia de implantação local do Qwen 2026](/local-llms/qwen-local-deployment-guide-2026) — configuração Ollama em um comando para Qwen 3.6 27B e Qwen3 8B, com os níveis Coder e VL',
-    '[Melhor GPU abaixo de $500 para inferência de LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026) — a Intel Arc B580 de 12 GB lidera; uma RTX 3060 de 12 GB usada é a alternativa CUDA',
+    '[Melhor GPU abaixo de $500 para inferência de LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026) — uma RTX 3060 de 12 GB usada é a nossa escolha editorial; a Intel Arc B580 de 12 GB fica em segundo (as fontes de preço divergem) e uma RX 7800 XT usada, em terceiro',
     '[DeepSeek vs Qwen: comparativo local 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — benchmark frente a frente',
     '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU na cloud para o mercado chinês',
     '[Calculadora de custo de LLM local: construir vs alugar 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — calculadora de ROI de 3 anos',
@@ -1073,7 +1073,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     '프롬프트와 파일은 기기에 남고 클라우드 저장소를 쓰지 않습니다 — 각 앱의 텔레메트리 설정을 확인하세요. 로컬 처리는 GDPR 대응을 쉽게 하지만 이를 대체하지는 않습니다',
     'LoRA 파인튜닝에는 500개 이상의 레이블이 지정된 예제와 24 GB+ VRAM이 필요합니다(또는 학습용 클라우드 GPU)',
     '[Qwen 로컬 배포 가이드 2026](/local-llms/qwen-local-deployment-guide-2026) — Qwen 3.6 27B와 Qwen3 8B용 단일 명령 Ollama 설정(Coder·VL 등급 포함)',
-    '[LLM 추론을 위한 $500 미만 최고의 GPU](/local-llms/best-gpu-for-llm-inference-under-500-2026) — Intel Arc B580 12 GB가 선두, 중고 RTX 3060 12 GB가 CUDA 쪽 차선책',
+    '[LLM 추론을 위한 $500 미만 최고의 GPU](/local-llms/best-gpu-for-llm-inference-under-500-2026) — 편집부 선택은 중고 RTX 3060 12 GB입니다. 2위는 Intel Arc B580 12 GB(가격이 출처마다 다름), 3위는 중고 RX 7800 XT',
     '[DeepSeek vs Qwen: 로컬 비교 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — 벤치마크 직접 비교',
     '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — 중국 시장을 위한 GPU 클라우드',
     '[로컬 LLM 비용 계산기: 구축 vs 임대 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 3년 ROI 계산기',
@@ -1087,7 +1087,7 @@ export const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'تبقى مطالباتك وملفاتك على جهازك دون تخزين سحابي — راجع إعداد التتبّع في كل تطبيق؛ والمعالجة المحلية تُسهّل العمل على ⁨GDPR⁩ لكنها لا تحلّ محله',
     'الضبط الدقيق بـ⁨LoRA⁩ يحتاج 500+ مثال موسوم و⁨24 GB+ VRAM⁩ على الأقل (أو ⁨GPU سحابي⁩ للتدريب)',
     '[دليل نشر ⁨Qwen⁩ المحلي 2026](/local-llms/qwen-local-deployment-guide-2026) — إعداد ⁨Ollama⁩ بأمر واحد لـ⁨Qwen 3.6 27B⁩ و⁨Qwen3 8B⁩، مع مستويي ⁨Coder⁩ و⁨VL⁩',
-    '[أفضل ⁨GPU⁩ بأقل من 500$ لاستدلال ⁨LLM⁩](/local-llms/best-gpu-for-llm-inference-under-500-2026) — يتصدّر ⁨Intel Arc B580⁩ بذاكرة ⁨12 GB⁩، وتأتي ⁨RTX 3060 12 GB⁩ المستعملة بديلًا لمستخدمي ⁨CUDA⁩',
+    '[أفضل ⁨GPU⁩ بأقل من 500$ لاستدلال ⁨LLM⁩](/local-llms/best-gpu-for-llm-inference-under-500-2026) — اختيارنا التحريري هو ⁨RTX 3060 12 GB⁩ المستعملة، تليها ⁨Intel Arc B580 12 GB⁩ (مصادر الأسعار متضاربة)، ثم ⁨RX 7800 XT⁩ المستعملة ثالثةً',
     '[⁨DeepSeek⁩ مقابل ⁨Qwen⁩: مقارنة محلية 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — مقارنة مباشرة بمعايير الأداء',
     '[⁨Alibaba Cloud GPU⁩ مقابل ⁨Tencent Cloud GPU⁩ للذكاء الاصطناعي 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — بطاقات سحابية للسوق الصيني',
     '[حاسبة تكلفة ⁨LLM⁩ المحلي: بناء أم إيجار 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — حاسبة عائد استثمار لـ3 سنوات',
@@ -1194,7 +1194,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'What are the best budget GPUs for local LLMs in 2026?',
-      a: 'According to our budget GPU guide: a used RTX 3060 12 GB (about $270–300) is the cheapest card worth buying, running Qwen3 14B at 9–12 tokens/sec and Qwen3 8B at 16–20 tokens/sec. New alternatives are the RTX 5060 Ti 16 GB (about $570–600) and the Intel Arc B580 12 GB (about $250–290). Prices rose in 2026 because of a memory shortage, so check the guide for current figures. Minimum recommended: 8 GB VRAM for useful 7B inference.'
+      a: 'According to our budget GPU guide: our used pick is the RTX 3060 12 GB, sold for $310–350 (median $330) in eBay US sold listings, 17–26 November 2026. Our new-card pick is the RTX 5060 Ti 16 GB; its price differs by source, from $617.99 to $849.99 in US listings from October and November 2026. These are editorial picks, not benchmark results; check the guide for sources and live prices. For useful 7B inference, plan on at least 8 GB of VRAM.'
     },
   ],
   de: [
@@ -1260,7 +1260,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Was sind die besten Budget-GPUs für lokale LLMs 2026?',
-      a: 'Laut unserem Budget-GPU-Guide: Eine gebrauchte RTX 3060 12 GB (ca. 270–300 $, US-Preise) ist die günstigste empfehlenswerte Karte; sie führt Qwen3 14B mit 9–12 Token/Sek und Qwen3 8B mit 16–20 Token/Sek aus. Neu kommen die RTX 5060 Ti 16 GB (ca. 570–600 $) und die Intel Arc B580 12 GB (ca. 250–290 $) infrage. Die Preise sind 2026 wegen einer Speicherknappheit gestiegen; aktuelle Werte stehen im Guide. Empfohlenes Minimum: 8 GB VRAM für sinnvolle 7B-Inferenz.'
+      a: 'Laut unserem Budget-GPU-Guide ist unsere Gebraucht-Wahl die RTX 3060 12 GB: in abgeschlossenen US-eBay-Verkäufen vom 17. bis 26. November 2026 für 310–350 $ verkauft (Median 330 $). Bei Neukarten wählen wir die RTX 5060 Ti 16 GB; ihr Preis hängt von der Quelle ab, in US-Angeboten von Oktober und November 2026 zwischen 617,99 und 849,99 $. Das sind redaktionelle Einschätzungen, keine Benchmark-Ergebnisse; Quellen und aktuelle Preise stehen im Guide. Für sinnvolle 7B-Inferenz sollten Sie mindestens 8 GB VRAM einplanen.'
     },
   ],
   fr: [
@@ -1318,7 +1318,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Quels sont les meilleurs GPU économiques pour LLMs locaux en 2026 ?',
-      a: 'Selon notre guide des GPU économiques : une RTX 3060 12 Go d\'occasion (environ 270–300 $, prix US) est la carte la moins chère qui vaille l\'achat ; elle exécute Qwen3 14B à 9–12 tokens/sec et Qwen3 8B à 16–20 tokens/sec. Parmi les cartes neuves : la RTX 5060 Ti 16 Go (environ 570–600 $) et l\'Intel Arc B580 12 Go (environ 250–290 $). Les prix ont augmenté en 2026 à cause d\'une pénurie de mémoire ; consultez le guide pour les chiffres actuels. Minimum recommandé : 8 Go de VRAM pour une inférence 7B utile.'
+      a: 'Selon notre guide des GPU économiques, notre choix d\'occasion est la RTX 3060 12 Go, vendue 310–350 $ (médiane 330 $) dans les ventes conclues sur eBay États-Unis du 17 au 26 novembre 2026. Pour le neuf, nous choisissons la RTX 5060 Ti 16 Go ; son prix varie selon la source, de 617,99 $ à 849,99 $ dans les annonces américaines d\'octobre et novembre 2026. Ce sont des choix éditoriaux, pas des résultats de benchmark ; les sources et les prix actuels sont dans le guide. Pour une inférence 7B utile, prévoyez au moins 8 Go de VRAM.'
     },
   ],
   ja: [
@@ -1376,7 +1376,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '2026年ローカルLLM向けのベスト予算GPUは？',
-      a: '当サイトの予算GPUガイドによると、中古のRTX 3060 12 GB（約270〜300ドル、米国価格）が買う価値のある最安のカードで、Qwen3 14Bを9〜12トークン/秒、Qwen3 8Bを16〜20トークン/秒で実行できます。新品ではRTX 5060 Ti 16 GB（約570〜600ドル）とIntel Arc B580 12 GB（約250〜290ドル）が候補です。2026年はメモリ不足で価格が上がっているため、最新の価格はガイドでご確認ください。最低推奨：実用的な7B推論には8 GB VRAM。'
+      a: '当サイトの予算GPUガイドでは、中古の選択はRTX 3060 12 GBです。2026年11月17～26日のeBay米国の成約価格は$310〜350（中央値$330）でした。新品ではRTX 5060 Ti 16 GBを選びます。価格は情報源により異なり、2026年10～11月の米国の掲載では$617.99〜849.99でした。これらは編集上の判断で、ベンチマーク結果ではありません。出典と最新価格はガイドをご確認ください。実用的な7B推論には、少なくとも8 GBのVRAMを見込んでください。'
     },
   ],
   zh: [
@@ -1434,7 +1434,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '2026年本地LLM最佳预算GPU是什么？',
-      a: '根据我们的预算GPU指南：二手RTX 3060 12 GB（约270–300美元，美国价格）是最便宜且值得买的显卡，运行Qwen3 14B约9–12令牌/秒，Qwen3 8B约16–20令牌/秒。新卡可考虑RTX 5060 Ti 16 GB（约570–600美元）和Intel Arc B580 12 GB（约250–290美元）。2026年因内存短缺价格上涨，最新价格请查看指南。最低推荐：8 GB VRAM，用于实用的7B推理。'
+      a: '根据我们的预算GPU指南，二手首选是RTX 3060 12 GB：2026年11月17日至26日eBay美国成交价为$310–350（中位数$330）。全新卡我们选RTX 5060 Ti 16 GB；价格因来源而异，2026年10月至11月的美国挂牌价为$617.99–849.99。这些是编辑判断，并非基准测试结果；来源和实时价格请查看指南。要进行实用的7B推理，建议至少8 GB VRAM。'
     },
   ],
   es: [
@@ -1492,7 +1492,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '¿Cuáles son las mejores GPU económicas para LLMs locales en 2026?',
-      a: 'Según nuestra guía de GPU económicas: una RTX 3060 de 12 GB de segunda mano (unos 270–300 $, precios de EE. UU.) es la tarjeta más barata que merece la pena; ejecuta Qwen3 14B a 9–12 tokens/seg y Qwen3 8B a 16–20 tokens/seg. Entre las nuevas están la RTX 5060 Ti de 16 GB (unos 570–600 $) y la Intel Arc B580 de 12 GB (unos 250–290 $). Los precios subieron en 2026 por una escasez de memoria; consulta la guía para las cifras actuales. Mínimo recomendado: 8 GB de VRAM para inferencia 7B útil.'
+      a: 'Según nuestra guía de GPU económicas, nuestra elección de segunda mano es la RTX 3060 de 12 GB, vendida por $310–350 (mediana $330) en ventas completadas en eBay EE. UU. del 17 al 26 de noviembre de 2026. Entre las nuevas elegimos la RTX 5060 Ti de 16 GB; su precio depende de la fuente, de $617.99 a $849.99 en anuncios de EE. UU. de octubre y noviembre de 2026. Son elecciones editoriales, no resultados de benchmarks; consulta las fuentes y los precios actuales en la guía. Para una inferencia 7B útil, cuenta con al menos 8 GB de VRAM.'
     },
   ],
   pt: [
@@ -1550,7 +1550,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Quais são as melhores GPUs econômicas para LLMs locais em 2026?',
-      a: 'Segundo o nosso guia de GPUs econômicas: uma RTX 3060 de 12 GB usada (cerca de US$ 270–300, preços dos EUA) é a placa mais barata que vale a compra; ela roda o Qwen3 14B a 9–12 tokens/s e o Qwen3 8B a 16–20 tokens/s. Entre as novas estão a RTX 5060 Ti de 16 GB (cerca de US$ 570–600) e a Intel Arc B580 de 12 GB (cerca de US$ 250–290). Os preços subiram em 2026 por causa de uma escassez de memória; veja o guia para os valores atuais. Os preços no Brasil podem variar bastante devido a impostos de importação. Mínimo recomendado: 8 GB de VRAM para inferência 7B útil.'
+      a: 'Segundo o nosso guia de GPUs econômicas, a nossa escolha entre as usadas é a RTX 3060 de 12 GB, vendida por US$ 310–350 (mediana US$ 330) em vendas concluídas no eBay EUA de 17 a 26 de novembro de 2026. Entre as novas, escolhemos a RTX 5060 Ti de 16 GB; o preço varia conforme a fonte, de US$ 617,99 a US$ 849,99 em anúncios dos EUA de outubro e novembro de 2026. São escolhas editoriais, não resultados de benchmark; veja as fontes e os preços atuais no guia. Os preços no Brasil podem variar bastante devido a impostos de importação. Para uma inferência 7B útil, planeje pelo menos 8 GB de VRAM.'
     },
   ],
   ko: [
@@ -1608,7 +1608,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '2026년 로컬 LLM에 적합한 가성비 GPU는 무엇입니까?',
-      a: '당사의 가성비 GPU 가이드에 따르면, 중고 RTX 3060 12 GB(약 $270~300, 미국 가격)가 살 만한 가장 저렴한 카드이며 Qwen3 14B를 9~12 tokens/sec, Qwen3 8B를 16~20 tokens/sec로 실행합니다. 새 제품으로는 RTX 5060 Ti 16 GB(약 $570~600)와 Intel Arc B580 12 GB(약 $250~290)가 있습니다. 2026년에는 메모리 부족으로 가격이 올랐으므로 최신 수치는 가이드를 확인하세요. 최소 권장 사양: 실용적인 7B 추론에는 8 GB VRAM.'
+      a: '당사의 가성비 GPU 가이드에서 중고 선택은 RTX 3060 12 GB입니다. 2026년 11월 17~26일 eBay 미국 낙찰가는 $310~350(중앙값 $330)이었습니다. 신품은 RTX 5060 Ti 16 GB를 선택합니다. 가격은 출처마다 다르며, 2026년 10~11월 미국 매물 기준 $617.99~849.99였습니다. 이는 편집부의 판단이며 벤치마크 결과가 아닙니다. 출처와 최신 가격은 가이드에서 확인하십시오. 실용적인 7B 추론에는 최소 8 GB VRAM을 권합니다.'
     },
   ],
   ar: [
@@ -1666,7 +1666,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'ما أفضل بطاقات ⁨GPU⁩ الاقتصادية للنماذج المحلية في 2026؟',
-      a: 'بحسب دليلنا للبطاقات الاقتصادية: تُعدّ ⁨RTX 3060 12 GB⁩ المستعملة (نحو 270-300$، أسعار الولايات المتحدة) أرخص بطاقة تستحق الشراء؛ فهي تشغّل ⁨Qwen3 14B⁩ بسرعة 9-12 توكن/ثانية و⁨Qwen3 8B⁩ بسرعة 16-20 توكن/ثانية. ومن البطاقات الجديدة ⁨RTX 5060 Ti 16 GB⁩ (نحو 570-600$) و⁨Intel Arc B580 12 GB⁩ (نحو 250-290$). ارتفعت الأسعار في 2026 بسبب نقص الذاكرة، فراجع الدليل لمعرفة الأرقام الحالية. الحد الأدنى الموصى به: ⁨8 GB VRAM⁩ لاستدلال ⁨7B⁩ مفيد.'
+      a: 'بحسب دليلنا للبطاقات الاقتصادية، اختيارنا للمستعمل هو ⁨RTX 3060 12 GB⁩، وقد بيعت بين 310 و350$ (الوسيط 330$) في المبيعات المكتملة على ⁨eBay⁩ الأمريكي من 17 إلى 26 نوفمبر 2026. وللبطاقات الجديدة نختار ⁨RTX 5060 Ti 16 GB⁩؛ ويختلف سعرها بحسب المصدر، بين 617.99$ و849.99$ في العروض الأمريكية لشهري أكتوبر ونوفمبر 2026. هذه اختيارات تحريرية وليست نتائج قياس أداء؛ راجع المصادر والأسعار الحالية في الدليل. ولاستدلال ⁨7B⁩ مفيد، خطّط لذاكرة ⁨8 GB VRAM⁩ على الأقل.'
     },
   ],
 }
