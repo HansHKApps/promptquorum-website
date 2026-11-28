@@ -83,7 +83,7 @@ export default async function ComparePage({ searchParams }: PageProps) {
                     'name': 'Which multi-LLM tool supports local LLMs like Ollama and LM Studio?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'Among the tools reviewed on this page, PromptQuorum is the only one that supports local LLM inference via Ollama and LM Studio, meaning sensitive prompts never leave your machine. Poe, LM Arena, OpenMark, and AiZolo operate as cloud-only services based on their public documentation as of March 2026. Verify each tool\'s current capabilities directly with the vendor before making a decision.',
+                      'text': 'Among the tools reviewed on this page, PromptQuorum is the only one that supports local LLM inference via Ollama and LM Studio, meaning a prompt sent only to local models is processed on your machine; prompts you also send to cloud models go to those providers. Poe, LM Arena, OpenMark, and AiZolo operate as cloud-only services based on their public documentation as of March 2026. Verify each tool\'s current capabilities directly with the vendor before making a decision.',
                     },
                   },
                   {

@@ -70,7 +70,7 @@ export default async function KoComparePage() {
                     'name': 'Ollama나 LM Studio 같은 로컬 LLM을 지원하는 멀티 LLM 도구는 무엇인가요?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'PromptQuorum은 이 페이지에서 Ollama와 LM Studio를 통한 로컬 LLM 추론을 지원하는 유일한 도구입니다. 이는 민감한 프롬프트가 절대 내 기기를 벗어나지 않는다는 것을 의미합니다. Poe, LM Arena, OpenMark, AiZolo는 2026년 3월 공개 문서 기준으로 클라우드 전용 서비스로 운영됩니다. 결정을 내리기 전에 각 도구의 현재 기능을 해당 공급업체에 직접 확인하세요.',
+                      'text': 'PromptQuorum은 이 페이지에서 Ollama와 LM Studio를 통한 로컬 LLM 추론을 지원하는 유일한 도구입니다. 이는 로컬 모델에만 보낸 프롬프트는 내 기기에서 처리되며, 클라우드 모델에도 보낸 프롬프트는 해당 제공업체에 전달된다는 의미입니다. Poe, LM Arena, OpenMark, AiZolo는 2026년 3월 공개 문서 기준으로 클라우드 전용 서비스로 운영됩니다. 결정을 내리기 전에 각 도구의 현재 기능을 해당 공급업체에 직접 확인하세요.',
                     },
                   },
                   {

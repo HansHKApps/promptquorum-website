@@ -70,7 +70,7 @@ export default async function ZhComparePage() {
                     'name': '哪个多 LLM 工具支持 Ollama 和 LM Studio 等本地 LLM？',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'PromptQuorum 是本页面介绍的工具中唯一支持通过 Ollama 和 LM Studio 进行本地 LLM 推理的工具，这意味着您的敏感提示词永远不会离开您的计算机。根据其 2026 年 3 月的公开文档，Poe、LM Arena、OpenMark 和 AiZolo 都是仅限云的服务。在做出决定前，请直接向供应商确认每个工具的当前功能。',
+                      'text': 'PromptQuorum 是本页面介绍的工具中唯一支持通过 Ollama 和 LM Studio 进行本地 LLM 推理的工具，这意味着只发送给本地模型的提示词在您的计算机上处理；同时发送给云端模型的提示词会传给相应的提供商。根据其 2026 年 3 月的公开文档，Poe、LM Arena、OpenMark 和 AiZolo 都是仅限云的服务。在做出决定前，请直接向供应商确认每个工具的当前功能。',
                     },
                   },
                   {
