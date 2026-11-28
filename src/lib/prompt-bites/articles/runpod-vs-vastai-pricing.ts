@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Related Reading',
         items: [
           '[How Much Does Cloud GPU Cost Per Hour?](/prompt-bites/cloud-gpu-cost-per-hour) — work out what your 70B workload will actually cost',
-          '[Cheapest Practical Way to Run a 70B Model Locally](/prompt-bites/cheapest-way-to-run-70b-model-locally) — when buying hardware beats renting',
+          '[Cheapest Ways to Run a 70B Model Locally](/prompt-bites/cheapest-way-to-run-70b-model-locally) — price against speed, plus rental hours that equal each purchase price',
           '[Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — buy-vs-rent decision context',
           '[Best cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) — [RunPod review](/power-local-llm/runpod-review) — [Vast.ai review](/power-local-llm/vast-ai-review)',
           '[Clore.ai review](/power-local-llm/clore-ai-review) — a third marketplace option',
@@ -383,7 +383,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Wie viel kostet eine Cloud-GPU pro Stunde?](/prompt-bites/cloud-gpu-cost-per-hour) — berechnen, was Ihr 70B-Workload tatsächlich kostet',
-          '[Günstigster praktischer Weg, ein 70B-Modell lokal zu betreiben](/prompt-bites/cheapest-way-to-run-70b-model-locally) — wann Hardware-Kauf das Mieten schlägt',
+          '[Günstigste Wege, ein 70B-Modell lokal zu betreiben](/prompt-bites/cheapest-way-to-run-70b-model-locally) — Preis und Tempo sowie die Mietstunden, die dem Kaufpreis entsprechen',
           '[GPU-Kaufberatung für lokale LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — Kontext zur Kauf-vs-Miet-Entscheidung',
           '[beste Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers) — [RunPod-Review](/de/power-local-llm/runpod-review) — [Vast.ai-Review](/de/power-local-llm/vast-ai-review)',
           '[Clore.ai-Review](/de/power-local-llm/clore-ai-review) — eine dritte Marktplatz-Option',
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Combien coûte un GPU cloud par heure ?](/prompt-bites/cloud-gpu-cost-per-hour) — calculez ce que votre charge 70B coûtera réellement',
-          '[Moyen le moins cher de faire tourner un modèle 70B en local](/prompt-bites/cheapest-way-to-run-70b-model-locally) — quand acheter du matériel vaut mieux que louer',
+          '[Les options les moins chères pour un 70B en local](/prompt-bites/cheapest-way-to-run-70b-model-locally) — prix, vitesse et heures de location équivalant au prix d’achat',
           '[Guide d\'achat GPU pour LLM local 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — contexte décision acheter vs louer',
           '[meilleurs fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) — [avis sur RunPod](/fr/power-local-llm/runpod-review) — [avis sur Vast.ai](/fr/power-local-llm/vast-ai-review)',
           '[avis sur Clore.ai](/fr/power-local-llm/clore-ai-review) — une troisième option de place de marché',
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '関連記事',
         items: [
           '[クラウドGPUの時間料金はいくら？](/prompt-bites/cloud-gpu-cost-per-hour) — 70Bワークロードの実際のコストを計算する',
-          '[70Bモデルをローカルで動かす最安の実践的方法](/prompt-bites/cheapest-way-to-run-70b-model-locally) — ハードウェア購入がレンタルに勝つとき',
+          '[70Bモデルをローカルで安く動かす方法](/prompt-bites/cheapest-way-to-run-70b-model-locally) — 価格と速度、購入価格に相当するレンタル時間',
           '[2026年ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 購入対レンタルの判断材料',
           '[おすすめクラウドGPUプロバイダー](/ja/power-local-llm/best-cloud-gpu-providers) — [RunPodレビュー](/ja/power-local-llm/runpod-review) — [Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)',
           '[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review) — 3つ目のマーケットプレイスの選択肢',
@@ -968,7 +968,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '延伸阅读',
         items: [
           '[云GPU每小时多少钱？](/prompt-bites/cloud-gpu-cost-per-hour) — 计算你的70B工作负载实际花费',
-          '[本地运行70B模型的最省钱实用方法](/prompt-bites/cheapest-way-to-run-70b-model-locally) — 何时购买硬件比租用更划算',
+          '[本地运行70B模型的省钱方案](/prompt-bites/cheapest-way-to-run-70b-model-locally) — 价格与速度，以及相当于购买价的租用时长',
           '[2026本地LLM GPU购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 买与租决策背景',
           '[最佳云GPU服务商](/zh/power-local-llm/best-cloud-gpu-providers) — [RunPod评测](/zh/power-local-llm/runpod-review) — [Vast.ai评测](/zh/power-local-llm/vast-ai-review)',
           '[Clore.ai评测](/zh/power-local-llm/clore-ai-review) — 第三种市场型方案',
@@ -1163,7 +1163,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Quanto custa uma GPU na nuvem por hora?](/pt/prompt-bites/cloud-gpu-cost-per-hour) — calcule quanto sua carga 70B vai custar de verdade',
-          '[Forma mais barata e prática de rodar um modelo 70B localmente](/pt/prompt-bites/cheapest-way-to-run-70b-model-locally) — quando comprar hardware vale mais que alugar',
+          '[As formas mais baratas de rodar um 70B localmente](/pt/prompt-bites/cheapest-way-to-run-70b-model-locally) — preço e velocidade, além das horas de aluguel equivalentes ao preço de compra',
           '[Guia de compra de GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — contexto da decisão comprar vs. alugar',
           '[melhores provedores de GPU cloud](/pt/power-local-llm/best-cloud-gpu-providers) — [análise de RunPod](/pt/power-local-llm/runpod-review) — [análise de Vast.ai](/pt/power-local-llm/vast-ai-review)',
           '[análise de Clore.ai](/pt/power-local-llm/clore-ai-review) — uma terceira opção de marketplace',
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[¿Cuánto cuesta un GPU en la nube por hora?](/es/prompt-bites/cloud-gpu-cost-per-hour) — calcula lo que realmente costará tu carga 70B',
-          '[Forma más barata y práctica de ejecutar un modelo 70B en local](/es/prompt-bites/cheapest-way-to-run-70b-model-locally) — cuándo comprar hardware vale más que alquilar',
+          '[Las formas más baratas de ejecutar un 70B en local](/es/prompt-bites/cheapest-way-to-run-70b-model-locally) — precio y velocidad, y las horas de alquiler que equivalen al precio de compra',
           '[Guía de compra de GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — contexto de la decisión comprar vs. alquilar',
           '[mejores proveedores de GPU cloud](/es/power-local-llm/best-cloud-gpu-providers) — [reseña de RunPod](/es/power-local-llm/runpod-review) — [reseña de Vast.ai](/es/power-local-llm/vast-ai-review)',
           '[reseña de Clore.ai](/es/power-local-llm/clore-ai-review) — una tercera opción de marketplace',
@@ -1553,7 +1553,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[كم يكلف GPU في السحابة بالساعة؟](/ar/prompt-bites/cloud-gpu-cost-per-hour) — احسب التكلفة الفعلية لحمل 70B لديك',
-          '[أرخص طريقة عملية لتشغيل نموذج 70B محليًا](/ar/prompt-bites/cheapest-way-to-run-70b-model-locally) — متى يكون شراء الأجهزة أفضل من الإيجار',
+          '[أرخص الطرق لتشغيل نموذج 70B محليًا](/ar/prompt-bites/cheapest-way-to-run-70b-model-locally) — السعر والسرعة، وساعات الاستئجار المعادلة لسعر الشراء',
           '[دليل شراء GPU لنماذج اللغة المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — سياق قرار الشراء مقابل الإيجار',
           '[أفضل مزوّدي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) — [مراجعة RunPod](/ar/power-local-llm/runpod-review) — [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review)',
           '[مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review) — خيار ثالث من الأسواق',
@@ -1755,7 +1755,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '관련 자료',
         items: [
           '[클라우드 GPU 시간당 비용은 얼마입니까?](/ko/prompt-bites/cloud-gpu-cost-per-hour) — 70B 워크로드의 실제 비용을 계산해보십시오',
-          '[70B 모델을 로컬에서 가장 저렴하게 실행하는 실용적인 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally) — 하드웨어 구매가 대여보다 나은 경우',
+          '[70B 모델을 로컬에서 저렴하게 실행하는 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally) — 가격과 속도, 그리고 구매 가격에 해당하는 대여 시간',
           '[2026 로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 구매 대 대여 결정의 맥락',
           '[최고의 클라우드 GPU 제공업체](/ko/power-local-llm/best-cloud-gpu-providers) — [RunPod 리뷰](/ko/power-local-llm/runpod-review) — [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review)',
           '[Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review) — 세 번째 마켓플레이스 선택지',

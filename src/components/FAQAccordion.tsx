@@ -7,11 +7,11 @@ type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   en: [
     // ── Existing ──────────────────────────────────────────────────────────────
-    { question: 'Is PromptQuorum free?', answer: 'Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.' },
+    { question: 'Is PromptQuorum free?', answer: 'Yes. PromptQuorum is free to use. You can bring your own API key or use a local LLM.' },
     { question: 'How does privacy work?', answer: 'You decide where your data goes. Keep everything local with LM Studio or Ollama, or use your own API keys. PromptQuorum is as private as you set it up. Zero telemetry, zero tracking, no data collection — not even anonymous usage stats.' },
     { question: 'Which AI providers are supported?', answer: 'Over 25 AI providers are included: OpenAI (GPT), Anthropic (Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, plus all local providers (Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga, and any OpenAI-compatible endpoint).' },
     { question: 'What platforms does PromptQuorum run on?', answer: 'PromptQuorum is available for macOS, Windows, and Linux (desktop via Electron). A web application is in development, followed by mobile (iOS and Android via Capacitor). It works fully offline with a local LLM.' },
-    { question: 'What makes PromptQuorum different?', answer: 'PromptQuorum covers the full prompt lifecycle in a single browser-based tool: structured writing with 9 frameworks, AI-powered iterative optimization with 8 refinement types, one-click dispatch to 25+ AI services, and 13 Quorum analysis types for consensus scoring — all without any data leaving your device.' },
+    { question: 'What makes PromptQuorum different?', answer: 'PromptQuorum covers the full prompt lifecycle in a single browser-based tool: structured writing with 9 frameworks, AI-powered iterative optimization with 8 refinement types, one-click dispatch to 25+ AI services, and 13 Quorum analysis types for consensus scoring. Prompts you send to cloud AI services go to those providers.' },
     { question: 'Are there any limits?', answer: 'No limits from PromptQuorum. Your usage is only limited by your API keys or local LLM resources.' },
 
     // ── New SEO/GEO questions ─────────────────────────────────────────────────
@@ -41,11 +41,11 @@ const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   ],
 
   de: [
-    { question: 'Ist PromptQuorum kostenlos?', answer: 'Ja. PromptQuorum ist kostenlos nutzbar. Sie können Ihren eigenen API-Schlüssel mitbringen, ein lokales LLM verwenden oder unseren kostenlosen Test-Backend-Dienst zur Prompt-Optimierung ausprobieren.' },
+    { question: 'Ist PromptQuorum kostenlos?', answer: 'Ja. PromptQuorum ist kostenlos nutzbar. Sie können Ihren eigenen API-Schlüssel mitbringen oder ein lokales LLM verwenden.' },
     { question: 'Wie funktioniert der Datenschutz?', answer: 'Sie entscheiden, wohin Ihre Daten gehen. Alles lokal halten mit LM Studio oder Ollama, oder Ihre eigenen API-Schlüssel verwenden. Keine Telemetrie, kein Tracking, keine Datenerfassung — nicht einmal anonyme Nutzungsstatistiken.' },
     { question: 'Welche KI-Anbieter werden unterstützt?', answer: 'Über 25 KI-Anbieter sind enthalten: OpenAI (GPT), Anthropic (Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter sowie alle lokalen Anbieter (Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga und jeder OpenAI-kompatible Endpunkt).' },
     { question: 'Auf welchen Plattformen läuft PromptQuorum?', answer: 'PromptQuorum ist für macOS, Windows und Linux (Desktop via Electron) verfügbar. Eine Webanwendung ist in Entwicklung, gefolgt von mobilen Lösungen (iOS und Android via Capacitor). Vollständig offline mit lokalem LLM nutzbar.' },
-    { question: 'Was macht PromptQuorum besonders?', answer: 'PromptQuorum ist das einzige Tool, das den gesamten Prompt-Lebenszyklus abdeckt: strukturiertes Schreiben mit 9 Frameworks, KI-gestützte iterative Optimierung, Ein-Klick-Dispatch an 25+ KI-Dienste und Multi-Modell-Konsensanalyse — alles ohne dass Daten Ihr Gerät verlassen.' },
+    { question: 'Was macht PromptQuorum besonders?', answer: 'PromptQuorum ist das einzige Tool, das den gesamten Prompt-Lebenszyklus abdeckt: strukturiertes Schreiben mit 9 Frameworks, KI-gestützte iterative Optimierung, Ein-Klick-Dispatch an 25+ KI-Dienste und Multi-Modell-Konsensanalyse. An Cloud-KI-Dienste gesendete Prompts gehen an die jeweiligen Anbieter.' },
     { question: 'Gibt es Nutzungslimits?', answer: 'Keine Limits von PromptQuorum. Ihre Nutzung ist nur durch Ihre API-Schlüssel oder lokale LLM-Ressourcen begrenzt.' },
     { question: 'Was ist Prompt Engineering und warum ist es wichtig?', answer: 'Prompt Engineering ist die Kunst, KI-Eingaben so zu gestalten, dass sie genauere und nützlichere Ergebnisse liefern. Ein gut strukturierter Prompt kann die KI-Ausgabequalität um 25–45% verbessern. PromptQuorum automatisiert dies mit 9 integrierten Frameworks — kein Fachwissen erforderlich.' },
     { question: 'Wie optimiert PromptQuorum meine Prompts?', answer: 'Ihr verbundenes LLM wandelt rohe Framework-Felder in einen präzisen Prompt um. Anschließend verfeinern Sie iterativ mit 8 Ein-Klick-Verfeinerungen: Kürzen, Detail erweitern, In Schritte aufteilen, Vereinfachen, Spezifizität erhöhen, Multi-Experten-Konsultation, Qualitätskontrollen hinzufügen und Benutzerdefinierte Anweisung. Jeder Schritt wird im Versionsverlauf gespeichert.' },
@@ -70,11 +70,11 @@ const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   ],
 
   fr: [
-    { question: 'PromptQuorum est-il gratuit ?', answer: 'Oui. PromptQuorum est gratuit. Vous pouvez apporter votre propre clé API, utiliser un LLM local ou essayer notre service backend gratuit limité pour l\'optimisation de prompts.' },
+    { question: 'PromptQuorum est-il gratuit ?', answer: 'Oui. PromptQuorum est gratuit. Vous pouvez apporter votre propre clé API ou utiliser un LLM local.' },
     { question: 'Comment fonctionne la confidentialité ?', answer: 'Vous décidez où vont vos données. Gardez tout local avec LM Studio ou Ollama, ou utilisez vos propres clés API. Zéro télémétrie, zéro tracking, aucune collecte de données — pas même de statistiques d\'utilisation anonymes.' },
     { question: 'Quels fournisseurs IA sont supportés ?', answer: 'Plus de 25 fournisseurs IA sont inclus : OpenAI (GPT), Anthropic (Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, ainsi que tous les fournisseurs locaux (Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga et tout endpoint compatible OpenAI).' },
     { question: 'Sur quelles plateformes fonctionne PromptQuorum ?', answer: 'PromptQuorum est disponible pour macOS, Windows et Linux (desktop via Electron). Une application web est en cours de développement, suivie d\'applications mobiles (iOS et Android via Capacitor). Fonctionne entièrement hors ligne avec un LLM local.' },
-    { question: 'Qu\'est-ce qui différencie PromptQuorum ?', answer: 'PromptQuorum est le seul outil couvrant l\'intégralité du cycle de vie d\'un prompt : rédaction structurée avec 9 frameworks, optimisation itérative par IA, dispatch en un clic vers 25+ services IA, et analyse de consensus multi-modèles — sans qu\'aucune donnée ne quitte votre appareil.' },
+    { question: 'Qu\'est-ce qui différencie PromptQuorum ?', answer: 'PromptQuorum est le seul outil couvrant l\'intégralité du cycle de vie d\'un prompt : rédaction structurée avec 9 frameworks, optimisation itérative par IA, dispatch en un clic vers 25+ services IA, et analyse de consensus multi-modèles. Les prompts envoyés à des services d\'IA cloud sont transmis à ces fournisseurs.' },
     { question: 'Y a-t-il des limites d\'utilisation ?', answer: 'Aucune limite de la part de PromptQuorum. Votre utilisation est uniquement limitée par vos clés API ou les ressources de votre LLM local.' },
     { question: 'Qu\'est-ce que le prompt engineering et pourquoi est-ce important ?', answer: 'Le prompt engineering consiste à concevoir des entrées pour les modèles IA afin d\'obtenir des résultats plus précis et utiles. Un prompt bien structuré peut améliorer la qualité de sortie IA de 25 à 45 %. PromptQuorum automatise cela avec 9 frameworks intégrés — aucune expertise requise.' },
     { question: 'Comment PromptQuorum optimise-t-il mes prompts ?', answer: 'Votre LLM connecté transforme les champs bruts du framework en un prompt de précision. Vous affinez ensuite avec 8 raffinements en un clic : Rendre concis, Développer les détails, Décomposer en étapes, Simplifier, Augmenter la spécificité, Consultation multi-experts, Ajouter des contrôles qualité et Instruction personnalisée. Chaque étape est sauvegardée dans l\'historique.' },
@@ -99,11 +99,11 @@ const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   ],
 
   ja: [
-    { question: 'PromptQuorumは無料ですか？', answer: 'はい、無料でご利用いただけます。独自のAPIキーを持ち込むか、ローカルLLMを使用するか、テスト用の無料バックエンドサービスをお試しいただけます。' },
+    { question: 'PromptQuorumは無料ですか？', answer: 'はい。PromptQuorumは無料でご利用いただけます。ご自身のAPIキーを持ち込むか、ローカルLLMをご利用いただけます。' },
     { question: 'プライバシーはどう機能しますか？', answer: 'データの行き先はあなたが決めます。LM StudioやOllamaですべてローカルに保つか、独自のAPIキーを使用してください。テレメトリーなし、追跡なし、データ収集なし — 匿名の使用統計さえも収集しません。' },
     { question: 'どのAIプロバイダーがサポートされていますか？', answer: '25以上のAIプロバイダーが含まれています：OpenAI（GPT）、Anthropic（Claude）、Google Gemini、Grok、DeepSeek、Mistral、Cohere、Together AI、Groq、OpenRouter、そすべてのローカルプロバイダー（Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、KoboldCpp、vLLM、oobabooga、およびOpenAI互換エンドポイント）。' },
     { question: 'どのプラットフォームで動きますか？', answer: 'PromptQuorumはmacOS、Windows、Linux（デスクトップ via Electron）で利用可能です。ウェブアプリケーションは開発中で、その後モバイル（iOS・Android via Capacitor）が続きます。ローカルLLMで完全オフライン動作します。' },
-    { question: 'PromptQuorumの何が違うのですか？', answer: 'PromptQuorumはプロンプトの全ライフサイクルをカバーする唯一のツールです：9つのフレームワークによる構造化された作成、AI駆動の反復最適化、25以上のAIサービスへのワンクリック配信、マルチモデルコンセンサス分析 — すべてデータがデバイスから出ることなく実行されます。' },
+    { question: 'PromptQuorumの何が違うのですか？', answer: 'PromptQuorumはプロンプトの全ライフサイクルをカバーする唯一のツールです：9つのフレームワークによる構造化された作成、AI駆動の反復最適化、25以上のAIサービスへのワンクリック配信、マルチモデルコンセンサス分析を備えています。クラウドAIサービスに送信したプロンプトは、各プロバイダーに送られます。' },
     { question: '利用制限はありますか？', answer: 'PromptQuorum側からの制限はありません。利用はAPIキーまたはローカルLLMのリソースにのみ依存します。' },
     { question: 'プロンプトエンジニアリングとは何ですか？なぜ重要なのですか？', answer: 'プロンプトエンジニアリングとは、AIモデルへの入力をより正確で有用な出力が得られるよう設計する実践です。よく構造化されたプロンプトはAI出力品質を25〜45%向上させます。PromptQuorumは9つの組み込みフレームワークでこれを自動化します — 専門知識は不要です。' },
     { question: 'PromptQuorumはどのようにプロンプトを最適化しますか？', answer: '接続されたLLMがフレームワークの生のフィールドを精密なプロンプトに変換します。その後、8つのワンクリック改善（簡潔にする・詳細を拡張・ステップに分解・簡略化・具体性向上・マルチエキスパート相談・品質コントロール追加・カスタム指示）で反復的に改善できます。すべてのステップがバージョン履歴に保存されます。' },
@@ -128,11 +128,11 @@ const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   ],
 
   zh: [
-    { question: 'PromptQuorum 是免费的吗？', answer: '是的，PromptQuorum 免费使用。您可以自带 API 密钥、使用本地 LLM，或试用我们有限的免费后端服务进行提示词优化测试。' },
+    { question: 'PromptQuorum 是免费的吗？', answer: '是的。PromptQuorum 免费使用。您可以使用自己的 API 密钥或本地 LLM。' },
     { question: '隐私如何保障？', answer: '您决定数据的去向。通过 LM Studio 或 Ollama 将所有内容保存在本地，或使用您自己的 API 密钥。零遥测、零追踪、无数据收集——甚至没有匿名使用统计。' },
     { question: '支持哪些 AI 提供商？', answer: '已包含 25+ 个 AI 提供商：OpenAI（GPT）、Anthropic（Claude）、Google Gemini、Grok、DeepSeek、Mistral、Cohere、Together AI、Groq、OpenRouter，以及所有本地提供商（Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、KoboldCpp、vLLM、oobabooga 和任何 OpenAI 兼容端点）。' },
     { question: 'PromptQuorum 支持哪些平台？', answer: 'PromptQuorum 现已支持 macOS、Windows 和 Linux（桌面应用 via Electron）。网页应用正在开发中，随后将推出移动端（iOS 和 Android via Capacitor）。使用本地 LLM 可完全离线运行。' },
-    { question: 'PromptQuorum 有何独特之处？', answer: 'PromptQuorum 是唯一覆盖提示词完整生命周期的工具：使用 9 个框架进行结构化编写、AI 驱动的迭代优化、一键分发到 25+ 个 AI 服务、多模型共识分析——所有这些都无需数据离开您的设备。' },
+    { question: 'PromptQuorum 有何独特之处？', answer: 'PromptQuorum 是唯一覆盖提示词完整生命周期的工具：使用 9 个框架进行结构化编写、AI 驱动的迭代优化、一键分发到 25+ 个 AI 服务、多模型共识分析。发送到云端 AI 服务的提示词会传给相应的提供商。' },
     { question: '有使用限制吗？', answer: 'PromptQuorum 本身没有任何限制。您的使用量仅受 API 密钥或本地 LLM 资源限制。' },
     { question: '什么是提示词工程，为什么重要？', answer: '提示词工程是设计 AI 输入以获得更准确、更有用输出的实践。一个结构良好的提示词可以将 AI 输出质量提高 25-45%。PromptQuorum 通过 9 个内置框架自动化这一过程——无需专业知识。' },
     { question: 'PromptQuorum 如何优化我的提示词？', answer: '您连接的 LLM 将框架的原始字段转化为精准的提示词。然后通过 8 个一键优化功能迭代改进：使其简洁、扩展细节、分解步骤、简化、提高具体性、多专家咨询、添加质量控制和自定义指令。每个步骤都自动保存在版本历史中。' },
@@ -156,11 +156,11 @@ const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
     { question: 'PromptQuorum在哪里开发？', answer: 'PromptQuorum由汉斯·库佩尔独立开发，他位于德国巴登-符腾堡州。该项目没有外部投资者，是作为以隐私为先、用户自主的AI工具开发的。' },
   ],
   es: [
-    { question: '¿Es gratuito PromptQuorum?', answer: 'Sí. PromptQuorum es gratuito. Puedes traer tu propia clave de API, usar un LLM local o probar nuestro servicio backend gratuito limitado para la optimización de prompts.' },
+    { question: '¿Es gratuito PromptQuorum?', answer: 'Sí. PromptQuorum es gratuito. Puedes usar tu propia clave de API o un LLM local.' },
     { question: '¿Cómo funciona la privacidad?', answer: 'Tú decides adónde van tus datos. Mantén todo localmente con LM Studio u Ollama, o usa tus propias claves de API. Cero telemetría, cero rastreo, sin recopilación de datos — ni siquiera estadísticas de uso anónimas.' },
     { question: '¿Qué proveedores de IA son compatibles?', answer: 'Más de 25 proveedores de IA incluidos: OpenAI (GPT), Anthropic (Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, más todos los proveedores locales (Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga y cualquier endpoint compatible con OpenAI).' },
     { question: '¿En qué plataformas funciona PromptQuorum?', answer: 'PromptQuorum está disponible para macOS, Windows y Linux (escritorio via Electron). Una aplicación web está en desarrollo, seguida de aplicaciones móviles (iOS y Android via Capacitor). Funciona completamente sin conexión con un LLM local.' },
-    { question: '¿Qué hace diferente a PromptQuorum?', answer: 'PromptQuorum cubre el ciclo completo del prompt en una sola herramienta basada en el navegador: escritura estructurada con 9 frameworks, optimización iterativa impulsada por IA con 8 tipos de refinamiento, envío con un clic a 25+ servicios de IA y 13 tipos de análisis Quorum para la puntuación de consenso — todo sin que ningún dato salga de tu dispositivo.' },
+    { question: '¿Qué hace diferente a PromptQuorum?', answer: 'PromptQuorum cubre el ciclo completo del prompt en una sola herramienta basada en el navegador: escritura estructurada con 9 frameworks, optimización iterativa impulsada por IA con 8 tipos de refinamiento, envío con un clic a 25+ servicios de IA y 13 tipos de análisis Quorum para la puntuación de consenso. Los prompts que envíes a servicios de IA en la nube llegan a esos proveedores.' },
     { question: '¿Hay algún límite?', answer: 'Ningún límite por parte de PromptQuorum. Tu uso solo está limitado por tus claves de API o recursos de LLM local.' },
     { question: '¿Qué es el prompt engineering y por qué importa?', answer: 'El prompt engineering es la práctica de diseñar entradas para modelos de IA de modo que devuelvan resultados más precisos, útiles y fiables. En pruebas, los prompts estructurados con campos de framework producen puntuaciones de evaluación de LLM un 25–45% más altas en comparación con entradas no estructuradas. PromptQuorum automatiza esto con 9 frameworks integrados — sin necesidad de experiencia previa.' },
     { question: '¿Cómo optimiza PromptQuorum mis prompts?', answer: 'Tu LLM conectado transforma los campos sin procesar del framework en un prompt de precisión. Luego refinas de forma iterativa con 8 refinamientos con un clic: Hacer Conciso, Expandir Detalle, Dividir en Pasos, Simplificar, Aumentar Especificidad, Consulta Multi-Experto, Añadir Controles de Calidad e Instrucción Personalizada. Cada paso se guarda en el historial de versiones para que puedas revertir en cualquier momento.' },
@@ -185,11 +185,11 @@ const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   ],
 
   ar: [
-    { question: 'هل PromptQuorum مجاني؟', answer: 'نعم. PromptQuorum مجاني الاستخدام. يمكنك إحضار مفتاح API الخاص بك، أو استخدام نموذج لغوي محلي، أو تجربة خدمة الواجهة الخلفية المجانية المحدودة لتحسين التعليمات بشكل تجريبي.' },
+    { question: 'هل PromptQuorum مجاني؟', answer: 'نعم. PromptQuorum مجاني الاستخدام. يمكنك استخدام مفتاح API الخاص بك أو نموذج لغوي محلي.' },
     { question: 'كيف تعمل الخصوصية؟', answer: 'أنت من يقرر إلى أين تذهب بياناتك. احتفظ بكل شيء محلياً باستخدام LM Studio أو Ollama، أو استخدم مفاتيح API الخاصة بك. صفر بيانات تشخيصية، صفر تتبع، لا جمع للبيانات — ولا حتى إحصاءات استخدام مجهولة الهوية.' },
     { question: 'ما مزودو الذكاء الاصطناعي المدعومون؟', answer: 'يشمل التطبيق أكثر من 25 مزوداً: OpenAI (GPT)، Anthropic (Claude)، Google Gemini، Grok، DeepSeek، Mistral، Cohere، Together AI، Groq، OpenRouter، إضافةً إلى جميع المزودين المحليين (Ollama، LM Studio، Jan AI، GPT4All، Open WebUI، KoboldCpp، vLLM، oobabooga وأي نقطة نهاية متوافقة مع OpenAI).' },
     { question: 'على أي منصات يعمل PromptQuorum؟', answer: 'يتوفر PromptQuorum لـ macOS و Windows و Linux (سطح المكتب عبر Electron). تطبيق ويب قيد التطوير، يعقبه تطبيقات جوال (iOS و Android عبر Capacitor). يعمل بالكامل دون اتصال بالإنترنت مع نموذج لغوي محلي.' },
-    { question: 'ما الذي يميز PromptQuorum؟', answer: 'PromptQuorum هو الأداة الوحيدة التي تغطي دورة حياة التعليمات بالكامل: كتابة منظمة بـ9 أطر عمل، وتحسين تكراري بالذكاء الاصطناعي بـ8 أنواع من التنقيح، وإرسال بنقرة واحدة إلى أكثر من 25 خدمة ذكاء اصطناعي، وتحليل توافق النماذج المتعددة — كل ذلك دون أن تغادر بياناتك جهازك.' },
+    { question: 'ما الذي يميز PromptQuorum؟', answer: 'PromptQuorum هو الأداة الوحيدة التي تغطي دورة حياة التعليمات بالكامل: كتابة منظمة بـ9 أطر عمل، وتحسين تكراري بالذكاء الاصطناعي بـ8 أنواع من التنقيح، وإرسال بنقرة واحدة إلى أكثر من 25 خدمة ذكاء اصطناعي، وتحليل توافق النماذج المتعددة. وتنتقل التعليمات التي ترسلها إلى خدمات الذكاء الاصطناعي السحابية إلى مزودي تلك الخدمات.' },
     { question: 'هل هناك أي حدود للاستخدام؟', answer: 'لا توجد حدود من جانب PromptQuorum. يقتصر استخدامك على مفاتيح API الخاصة بك أو موارد النموذج اللغوي المحلي فقط.' },
     { question: 'ما هندسة التعليمات ولماذا تهم؟', answer: 'هندسة التعليمات هي ممارسة تصميم مدخلات نماذج الذكاء الاصطناعي للحصول على نتائج أدق وأكثر فائدة. التعليمات المنظمة ذات حقول الإطار تنتج درجات تقييم أعلى بنسبة 25–45% مقارنةً بالمدخلات غير المنظمة. يؤتمت PromptQuorum ذلك بـ9 أطر عمل مدمجة — لا خبرة مسبقة مطلوبة.' },
     { question: 'كيف يحسّن PromptQuorum تعليماتي؟', answer: 'يحوّل النموذج اللغوي المتصل حقول الإطار الخام إلى تعليمة دقيقة. بعد ذلك تنقّح بشكل تكراري بـ8 تنقيحات بنقرة واحدة: الإيجاز، وتوسيع التفاصيل، والتقسيم إلى خطوات، والتبسيط، وزيادة التحديد، والاستشارة متعددة الخبراء، وإضافة ضوابط الجودة، والتعليمة المخصصة. يُحفظ كل خطوة في سجل الإصدارات.' },
@@ -217,11 +217,11 @@ const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   ],
 
   ko: [
-    { question: 'PromptQuorum은 무료인가요?', answer: '네. PromptQuorum은 무료로 사용할 수 있습니다. 자신의 API 키를 가져오거나, 로컬 LLM을 사용하거나, 프롬프트 최적화를 위한 무료 테스트 백엔드 서비스를 이용할 수 있습니다.' },
+    { question: 'PromptQuorum은 무료인가요?', answer: '네. PromptQuorum은 무료로 사용할 수 있습니다. 자신의 API 키를 사용하거나 로컬 LLM을 사용할 수 있습니다.' },
     { question: '개인정보 보호는 어떻게 작동하나요?', answer: '데이터의 행방은 사용자가 결정합니다. LM Studio나 Ollama를 사용해 모든 것을 로컬에 유지하거나, 자신의 API 키를 사용하세요. 제로 텔레메트리, 제로 추적, 데이터 수집 없음 — 익명 사용 통계조차 수집하지 않습니다.' },
     { question: '어떤 AI 제공업체가 지원되나요?', answer: '25개 이상의 AI 제공업체가 포함됩니다: OpenAI(GPT), Anthropic(Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, 그리고 모든 로컬 제공업체(Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga 및 OpenAI 호환 엔드포인트).' },
     { question: 'PromptQuorum은 어떤 플랫폼에서 실행되나요?', answer: 'PromptQuorum은 macOS, Windows, Linux(데스크톱 via Electron)에서 사용 가능합니다. 웹 애플리케이션은 개발 중이며, 그 다음 모바일(iOS 및 Android via Capacitor)이 출시됩니다. 로컬 LLM과 함께 완전히 오프라인으로 작동합니다.' },
-    { question: 'PromptQuorum의 차별점은 무엇인가요?', answer: 'PromptQuorum은 단일 브라우저 기반 도구에서 프롬프트의 전체 생명 주기를 커버합니다: 9개 프레임워크를 활용한 구조화된 작성, AI 기반 반복 최적화(8가지 정제 유형), 25개 이상의 AI 서비스로의 원클릭 전송, 합의 점수 산정을 위한 13가지 Quorum 분석 — 모두 데이터가 기기를 벗어나지 않고 처리됩니다.' },
+    { question: 'PromptQuorum의 차별점은 무엇인가요?', answer: 'PromptQuorum은 단일 브라우저 기반 도구에서 프롬프트의 전체 생명 주기를 커버합니다: 9개 프레임워크를 활용한 구조화된 작성, AI 기반 반복 최적화(8가지 정제 유형), 25개 이상의 AI 서비스로의 원클릭 전송, 합의 점수 산정을 위한 13가지 Quorum 분석을 제공합니다. 클라우드 AI 서비스로 보낸 프롬프트는 해당 제공업체에 전달됩니다.' },
     { question: '사용 제한이 있나요?', answer: 'PromptQuorum 측에서는 어떤 제한도 없습니다. 사용량은 API 키나 로컬 LLM 리소스에 의해서만 제한됩니다.' },
     { question: '프롬프트 엔지니어링이란 무엇이며 왜 중요한가요?', answer: '프롬프트 엔지니어링은 AI 모델에 대한 입력을 설계해 더 정확하고 유용하며 신뢰할 수 있는 출력을 얻는 실천입니다. 테스트에서 프레임워크 필드를 갖춘 구조화된 프롬프트는 구조화되지 않은 입력에 비해 LLM 평가 점수를 25~45% 높입니다. PromptQuorum은 9개의 내장 프레임워크로 이를 자동화합니다 — 전문 지식이 필요 없습니다.' },
     { question: 'PromptQuorum은 어떻게 프롬프트를 최적화하나요?', answer: '연결된 LLM이 프레임워크의 원시 필드를 정밀 프롬프트로 변환합니다. 이후 8가지 원클릭 정제(간결하게 만들기, 세부 사항 확장, 단계로 분해, 단순화, 구체성 높이기, 다중 전문가 상담, 품질 통제 추가, 사용자 정의 지시)로 반복적으로 개선할 수 있습니다. 모든 단계가 버전 기록에 저장되므로 언제든지 되돌릴 수 있습니다.' },

@@ -31988,5 +31988,1280 @@
       "t14": "2026-12-11",
       "t28": "2026-12-25"
     }
+  },
+  {
+    "id": "849e64aa-466a-4014-8bf9-5209998a3c35",
+    "slug": "/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T09:53:36.036Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($320–350 used) runs Qwen3 14B at ~9–12 tok/s (est.). New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.",
+        "new": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($310–350 used) runs Qwen3 14B at ~9–12 tok/s (est.). New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "99d626cc-a5f1-40c9-8a94-4009a3f7c52b",
+    "slug": "/es/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T09:53:36.072Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($320–350 usada) ejecuta Qwen3 14B a ~9–12 tok/s (est.). Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.",
+        "new": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($310–350 usada) ejecuta Qwen3 14B a ~9–12 tok/s (est.). Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "85738084-e69b-4cb0-bf08-1df31a0f1ede",
+    "slug": "/ar/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T09:53:36.108Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (320–350$ مستعملة) تشغّل Qwen3 14B بنحو 9–12 tok/ث (تقدير). الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.",
+        "new": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (310–350$ مستعملة) تشغّل Qwen3 14B بنحو 9–12 tok/ث (تقدير). الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a0d22e7d-9292-4fc7-8db0-8ce8488e6e1a",
+    "slug": "/pt/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T09:53:36.143Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 320–350 usada) roda Qwen3 14B a ~9–12 tok/s (est.). Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.",
+        "new": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 310–350 usada) roda Qwen3 14B a ~9–12 tok/s (est.). Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2fed2f16-8ea5-4204-ba8f-c8b74e62daee",
+    "slug": "/de/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T09:53:36.180Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (320–350 $ gebraucht) betreibt Qwen3 14B mit ca. 9–12 Tok/s (gesch.). Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.",
+        "new": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (310–350 $ gebraucht) betreibt Qwen3 14B mit ca. 9–12 Tok/s (gesch.). Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bddeb0e8-9302-4a07-96e0-2239b153fa8f",
+    "slug": "/fr/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T09:53:36.216Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (320–350 $ d'occasion), Qwen3 14B à ~9–12 tok/s (est.). Neuf : RTX 5060 Ti 16GB. Tableau complet.",
+        "new": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (310–350 $ d'occasion), Qwen3 14B à ~9–12 tok/s (est.). Neuf : RTX 5060 Ti 16GB. Tableau complet."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5086e6cc-2de2-4222-8aa3-ec72a3317de5",
+    "slug": "/ja/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T09:53:36.254Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "ローカルLLMおすすめGPU：RTX 3060 12GB（米国中古価格約$320–350）でQwen3 14B（推定9-12トークン/秒）ほか7種を実行。VRAMと速度の早見表付き。国内価格は価格.comで確認。",
+        "new": "ローカルLLMおすすめGPU：RTX 3060 12GB（米国中古価格約$310–350）でQwen3 14B（推定9-12トークン/秒）ほか7種を実行。VRAMと速度の早見表付き。国内価格は価格.comで確認。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2db87a45-1403-4f11-87db-e7bd920f80c0",
+    "slug": "/zh/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-28T09:53:36.289Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "RTX 3060 12GB（二手约$320–350）可跑7款本地LLM：Qwen3 14B（估算9-12令牌/秒）、Qwen3 8B（估算16-20令牌/秒）等。附VRAM与速度对照表。",
+        "new": "RTX 3060 12GB（二手约$310–350）可跑7款本地LLM：Qwen3 14B（估算9-12令牌/秒）、Qwen3 8B（估算16-20令牌/秒）等。附VRAM与速度对照表。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a116e412-687d-4679-bcd9-6c85aa04390d",
+    "slug": "/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.373Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best GPU under $500 for local LLM inference: Intel Arc B580 12GB first, used RTX 3060 12GB for CUDA. Why the RTX 4060 Ti 16GB no longer fits the budget.",
+        "new": "Our under-$500 pick for local LLMs: Intel Arc B580 12GB for Ollama or llama.cpp, used RTX 3060 12GB for CUDA. Why the 4060 Ti 16GB no longer fits."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "75f48cae-5259-44d2-af27-c98e17c21923",
+    "slug": "/es/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.411Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "La mejor GPU por menos de $500 para LLM local: Intel Arc B580 12GB y, para CUDA, RTX 3060 12GB usada. Por qué la RTX 4060 Ti 16GB sale del presupuesto.",
+        "new": "Nuestra GPU por menos de $500 para LLM local: Arc B580 12GB con Ollama o llama.cpp; RTX 3060 12GB usada para CUDA. Por qué sale la RTX 4060 Ti."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2d86770b-2f90-48bd-929e-d3f39df78cc9",
+    "slug": "/ar/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.448Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "أفضل GPU بأقل من $500 للاستدلال المحلي على LLM: Intel Arc B580 12GB أولاً، وRTX 3060 12GB مستعملة لـ CUDA. وسبب خروج RTX 4060 Ti من الميزانية.",
+        "new": "خيارنا بأقل من $500 لنماذج LLM محلياً: Arc B580 12GB مع Ollama أو llama.cpp، وRTX 3060 12GB مستعملة لـ CUDA. وسبب خروج RTX 4060 Ti."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "65efc023-13fa-4e80-bb7b-fbc9ced4157e",
+    "slug": "/pt/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.484Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "A melhor GPU até US$ 500 para LLM local: Intel Arc B580 12GB em primeiro e RTX 3060 12GB usada para CUDA. Por que a RTX 4060 Ti 16GB saiu do orçamento.",
+        "new": "Nossa GPU até US$ 500 para LLM local: Arc B580 12GB com Ollama ou llama.cpp; RTX 3060 12GB usada para CUDA. Por que a RTX 4060 Ti 16GB saiu."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "637198b3-1baf-4653-86ae-86b486f3683d",
+    "slug": "/de/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.520Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Beste GPU unter 500 $ für lokale LLM-Inferenz: Intel Arc B580 12GB vorn, gebrauchte RTX 3060 12GB für CUDA. Warum die RTX 4060 Ti 16GB nicht mehr passt.",
+        "new": "Unsere GPU-Wahl unter 500 $ für lokale LLMs: Arc B580 12GB für Ollama oder llama.cpp, gebrauchte RTX 3060 12GB für CUDA. Warum die 4060 Ti ausscheidet."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "283e247e-06f3-49c7-a03c-01c27f0953e1",
+    "slug": "/fr/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.555Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Meilleure GPU sous 500 $ pour l'inférence LLM locale : Intel Arc B580 12 Go, RTX 3060 12 Go d'occasion pour CUDA. Pourquoi la RTX 4060 Ti sort du budget.",
+        "new": "Notre GPU sous 500 $ pour LLM local : Arc B580 12 Go avec Ollama ou llama.cpp ; RTX 3060 12 Go d'occasion pour CUDA. Pourquoi la 4060 Ti sort."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "92213485-dd50-4339-9274-b7e194447999",
+    "slug": "/ja/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.591Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "$500以下のローカルLLM推論GPUはIntel Arc B580 12GBが首位、CUDAなら中古RTX 3060 12GB。RTX 4060 Ti 16GBが予算外になった理由も解説します。",
+        "new": "$500以下のローカルLLM向け当サイトの推奨は、Ollamaやllama.cpp中心ならIntel Arc B580 12GB、CUDAが必要なら中古RTX 3060 12GB。4060 Tiが外れた理由も解説。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ef57a464-dbfb-4f26-988b-20b2b5d16c81",
+    "slug": "/zh/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.628Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "500美元以下本地LLM推理最佳GPU：Intel Arc B580 12GB居首，需要CUDA则选二手RTX 3060 12GB。并说明RTX 4060 Ti 16GB为何已超出预算。",
+        "new": "500美元以下本地LLM显卡，本站之选：主要用Ollama或llama.cpp选Intel Arc B580 12GB，需要CUDA选二手RTX 3060 12GB。并说明RTX 4060 Ti为何超出预算。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "df2a7062-dc6f-40d7-8566-a63589b7d48c",
+    "slug": "/ko/local-llms/best-gpu-for-llm-inference-under-500-2026",
+    "date": "2026-11-28T09:53:36.663Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "$500 이하 로컬 LLM 추론 GPU는 Intel Arc B580 12GB가 1순위, CUDA는 중고 RTX 3060 12GB입니다. RTX 4060 Ti 16GB가 빠진 이유도 설명합니다.",
+        "new": "$500 이하 로컬 LLM 추천: Ollama·llama.cpp 중심이면 Arc B580 12GB, CUDA가 필요하면 중고 RTX 3060 12GB. 4060 Ti가 빠진 이유도 설명합니다."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "19c4f6ee-1587-4ada-80fa-541dba4e137e",
+    "slug": "/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:36.841Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Local LLM PC build under $1,000 (about $910): used RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Runs 7B-14B at Q4. Full 2026 parts list, sourced GPU price.",
+        "new": "Local LLM PC build under $1,000 (about $940): used RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Runs 7B-14B at Q4. Full 2026 parts list, sourced GPU price."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bcde3032-d7c2-4f30-ac41-ab37c3fcc11b",
+    "slug": "/es/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:36.878Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Build de PC para LLM local por menos de $1,000 (unos $910): RTX 3060 12GB usada, Ryzen 5 7600, 32GB DDR5. Ejecuta 7B-14B en Q4. Lista de componentes 2026.",
+        "new": "Build de PC para LLM local por menos de $1,000 (unos $940): RTX 3060 12GB usada, Ryzen 5 7600, 32GB DDR5. Ejecuta 7B-14B en Q4. Lista de componentes 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ae894af3-881d-447e-ad7b-f298542fe10a",
+    "slug": "/ko/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:36.915Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "$1,000 미만 로컬 LLM PC 빌드(약 $910): 중고 RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Q4에서 7B-14B 실행. 2026 부품 목록.",
+        "new": "$1,000 미만 로컬 LLM PC 빌드(약 $940): 중고 RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Q4에서 7B-14B 실행. 2026 부품 목록."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ce1a06da-ff35-43e8-ae12-220d9c67c6d1",
+    "slug": "/ar/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:36.950Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "تجميع كمبيوتر LLM محلي بأقل من 1,000 دولار (نحو 910 دولارات): RTX 3060 12GB مستعملة + Ryzen 5 7600 + 32GB DDR5. يشغّل 7B-14B بتكميم Q4. قائمة قطع 2026.",
+        "new": "تجميع كمبيوتر LLM محلي بأقل من 1,000 دولار (نحو 940 دولارات): RTX 3060 12GB مستعملة + Ryzen 5 7600 + 32GB DDR5. يشغّل 7B-14B بتكميم Q4. قائمة قطع 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0a5f5ca6-0e61-471a-9b43-3c45029042c0",
+    "slug": "/zh/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:36.986Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "$1,000以下本地LLM PC构建（约$910）：二手RTX 3060 12GB + Ryzen 5 7600 + 32GB DDR5。Q4下运行7B-14B。2026配件清单。",
+        "new": "$1,000以下本地LLM PC构建（约$940）：二手RTX 3060 12GB + Ryzen 5 7600 + 32GB DDR5。Q4下运行7B-14B。2026配件清单。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "89f1f381-a7ff-4406-8c85-2fb017f3770b",
+    "slug": "/ja/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:37.022Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "$1,000未満のローカルLLM PCビルド（約$910）：中古RTX 3060 12GB + Ryzen 5 7600 + 32GB DDR5。Q4で7B〜14Bを実行。2026年版パーツ一覧。",
+        "new": "$1,000未満のローカルLLM PCビルド（約$940）：中古RTX 3060 12GB + Ryzen 5 7600 + 32GB DDR5。Q4で7B〜14Bを実行。2026年版パーツ一覧。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "87ab2d5b-8aa7-4ddb-8aad-cf7c04273522",
+    "slug": "/de/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:37.057Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Lokaler LLM-PC-Build unter 1.000 $ (ca. 910 $, US-Preise): gebrauchte RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Läuft mit 7B–14B bei Q4. Teileliste 2026.",
+        "new": "Lokaler LLM-PC-Build unter 1.000 $ (ca. 940 $, US-Preise): gebrauchte RTX 3060 12GB, Ryzen 5 7600, 32GB DDR5. Läuft mit 7B–14B bei Q4. Teileliste 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "15ba951a-0ab3-46df-b95d-1c5779a6ded8",
+    "slug": "/fr/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:37.091Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Configuration PC LLM local à moins de $1,000 (environ $910) : RTX 3060 12 Go d'occasion, Ryzen 5 7600, 32 Go DDR5. Modèles 7B-14B en Q4. Liste de pièces 2026.",
+        "new": "Configuration PC LLM local à moins de $1,000 (environ $940) : RTX 3060 12 Go d'occasion, Ryzen 5 7600, 32 Go DDR5. Modèles 7B-14B en Q4. Liste de pièces 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "74f2d1f5-4eb4-4c31-9055-5957459ea29c",
+    "slug": "/pt/local-llms/local-llm-pc-build-1000",
+    "date": "2026-11-28T09:53:37.126Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Build de PC para LLM local por menos de $1.000 (cerca de $910): RTX 3060 12GB usada, Ryzen 5 7600, 32GB DDR5. Roda 7B-14B em Q4. Lista de peças 2026.",
+        "new": "Build de PC para LLM local por menos de $1.000 (cerca de $940): RTX 3060 12GB usada, Ryzen 5 7600, 32GB DDR5. Roda 7B-14B em Q4. Lista de peças 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "85401e37-e3ab-46c9-ae84-e86e89f1b576",
+    "slug": "/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.202Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Dual-GPU Local LLM PC Build (2026): 2x RTX 5060 Ti 16GB, About $2,400",
+        "new": "Dual-GPU Local LLM PC Build (2026): 2x RTX 5060 Ti 16GB, About $2,700"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Dual-GPU Local LLM PC Build (2026): About $2,400, 32GB VRAM",
+        "new": "Dual-GPU Local LLM PC Build (2026): About $2,700, 32GB VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Dual RTX 5060 Ti 16GB local LLM PC build: 32GB VRAM, Ryzen 7 9700X, 64GB DDR5, about $2,440. Fits 32B at Q4; 70B Q4 does not. 2026 parts list.",
+        "new": "Dual RTX 5060 Ti 16GB local LLM PC build: 32GB VRAM, Ryzen 7 9700X, 64GB DDR5, about $2,680. Fits 32B at Q4; 70B Q4 does not. 2026 parts list."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "81fbcd2b-9b77-4caf-a990-34c707ece813",
+    "slug": "/es/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.236Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Build de PC para LLM Local con Doble GPU (2026): 2x RTX 5060 Ti 16GB, Unos $2,400",
+        "new": "Build de PC para LLM Local con Doble GPU (2026): 2x RTX 5060 Ti 16GB, Unos $2,700"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Build de PC para LLM Local con Doble GPU (2026): ~$2,400, 32GB VRAM",
+        "new": "Build de PC para LLM Local con Doble GPU (2026): ~$2,700, 32GB VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Build de PC para LLM local con dos RTX 5060 Ti 16GB: 32GB de VRAM, Ryzen 7 9700X, 64GB DDR5, unos $2,440. Cabe 32B en Q4; 70B en Q4 no. Lista 2026.",
+        "new": "Build de PC para LLM local con dos RTX 5060 Ti 16GB: 32GB de VRAM, Ryzen 7 9700X, 64GB DDR5, unos $2,680. Cabe 32B en Q4; 70B en Q4 no. Lista 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fa76b064-7b23-41bf-9634-f6eb3ed55c1a",
+    "slug": "/ko/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.271Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "듀얼 GPU 로컬 LLM PC 빌드(2026): RTX 5060 Ti 16GB 2장, 약 $2,400",
+        "new": "듀얼 GPU 로컬 LLM PC 빌드(2026): RTX 5060 Ti 16GB 2장, 약 $2,700"
+      },
+      {
+        "field": "seoTitle",
+        "old": "듀얼 GPU 로컬 LLM PC 빌드(2026): 약 $2,400, VRAM 32GB",
+        "new": "듀얼 GPU 로컬 LLM PC 빌드(2026): 약 $2,700, VRAM 32GB"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 5060 Ti 16GB 2장 로컬 LLM PC 빌드: VRAM 32GB, Ryzen 7 9700X, 64GB DDR5, 약 $2,440. 32B Q4는 들어가고 70B Q4는 들어가지 않습니다. 2026 부품 목록.",
+        "new": "RTX 5060 Ti 16GB 2장 로컬 LLM PC 빌드: VRAM 32GB, Ryzen 7 9700X, 64GB DDR5, 약 $2,680. 32B Q4는 들어가고 70B Q4는 들어가지 않습니다. 2026 부품 목록."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d3f2aa89-f188-4ff4-868a-6d17dc9d3156",
+    "slug": "/ar/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.305Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "تجميع كمبيوتر LLM محلي بكرتي GPU (2026): بطاقتان RTX 5060 Ti 16GB بنحو 2,400 دولار",
+        "new": "تجميع كمبيوتر LLM محلي بكرتي GPU (2026): بطاقتان RTX 5060 Ti 16GB بنحو 2,700 دولار"
+      },
+      {
+        "field": "seoTitle",
+        "old": "تجميع كمبيوتر LLM محلي بكرتي GPU (2026): نحو 2,400 دولار و32GB VRAM",
+        "new": "تجميع كمبيوتر LLM محلي بكرتي GPU (2026): نحو 2,700 دولار و32GB VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "تجميع كمبيوتر LLM محلي ببطاقتين RTX 5060 Ti 16GB: ذاكرة 32GB وRyzen 7 9700X وDDR5 بسعة 64GB بنحو 2,440 دولار. نموذج 32B بـ Q4 يتسع و70B لا. قائمة 2026.",
+        "new": "تجميع كمبيوتر LLM محلي ببطاقتين RTX 5060 Ti 16GB: ذاكرة 32GB وRyzen 7 9700X وDDR5 بسعة 64GB بنحو 2,680 دولار. نموذج 32B بـ Q4 يتسع و70B لا. قائمة 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8a30b73e-7f42-4053-b8a8-b086e6093df8",
+    "slug": "/ja/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.339Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "デュアルGPUローカルLLM PCビルド（2026年）：RTX 5060 Ti 16GB×2、約$2,400",
+        "new": "デュアルGPUローカルLLM PCビルド（2026年）：RTX 5060 Ti 16GB×2、約$2,700"
+      },
+      {
+        "field": "seoTitle",
+        "old": "デュアルGPUローカルLLM PCビルド（2026年）：約$2,400・VRAM 32GB",
+        "new": "デュアルGPUローカルLLM PCビルド（2026年）：約$2,700・VRAM 32GB"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RTX 5060 Ti 16GB×2のローカルLLM PCビルド：VRAM 32GB、Ryzen 7 9700X、64GB DDR5、約$2,440。32BのQ4は収まり、70BのQ4は収まりません。2026年パーツリスト。",
+        "new": "RTX 5060 Ti 16GB×2のローカルLLM PCビルド：VRAM 32GB、Ryzen 7 9700X、64GB DDR5、約$2,680。32BのQ4は収まり、70BのQ4は収まりません。2026年パーツリスト。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f177902c-ea6f-4daa-a6b3-0c2686755b51",
+    "slug": "/de/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.374Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Dual-GPU-PC-Build für lokale LLMs (2026): 2x RTX 5060 Ti 16GB, ca. 2.400 $",
+        "new": "Dual-GPU-PC-Build für lokale LLMs (2026): 2x RTX 5060 Ti 16GB, ca. 2.700 $"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Dual-GPU-PC-Build für lokale LLMs (2026): ca. 2.400 $, 32GB VRAM",
+        "new": "Dual-GPU-PC-Build für lokale LLMs (2026): ca. 2.700 $, 32GB VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Lokaler LLM-PC-Build mit zwei RTX 5060 Ti 16GB: 32GB VRAM, Ryzen 7 9700X, 64GB DDR5, ca. 2.440 $. 32B Q4 passt, 70B Q4 nicht. Teileliste 2026.",
+        "new": "Lokaler LLM-PC-Build mit zwei RTX 5060 Ti 16GB: 32GB VRAM, Ryzen 7 9700X, 64GB DDR5, ca. 2.680 $. 32B Q4 passt, 70B Q4 nicht. Teileliste 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0355e69a-2a8e-4ba5-8ec2-3103dd83edd8",
+    "slug": "/fr/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.408Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "PC pour LLM local à double GPU (2026) : 2x RTX 5060 Ti 16 Go, environ $2,400",
+        "new": "PC pour LLM local à double GPU (2026) : 2x RTX 5060 Ti 16 Go, environ $2,700"
+      },
+      {
+        "field": "seoTitle",
+        "old": "PC pour LLM local à double GPU (2026) : ~$2,400, 32 Go de VRAM",
+        "new": "PC pour LLM local à double GPU (2026) : ~$2,700, 32 Go de VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "PC pour LLM local avec deux RTX 5060 Ti 16 Go : 32 Go de VRAM, Ryzen 7 9700X, 64 Go DDR5, environ $2,440. Le 32B en Q4 tient, pas le 70B. Liste 2026.",
+        "new": "PC pour LLM local avec deux RTX 5060 Ti 16 Go : 32 Go de VRAM, Ryzen 7 9700X, 64 Go DDR5, environ $2,680. Le 32B en Q4 tient, pas le 70B. Liste 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "414a0edd-af15-40a1-913b-0bf08804cb14",
+    "slug": "/zh/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.445Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "双GPU本地LLM PC构建（2026）：2张RTX 5060 Ti 16GB，约$2,400",
+        "new": "双GPU本地LLM PC构建（2026）：2张RTX 5060 Ti 16GB，约$2,700"
+      },
+      {
+        "field": "seoTitle",
+        "old": "双GPU本地LLM PC构建（2026）：约$2,400，32GB显存",
+        "new": "双GPU本地LLM PC构建（2026）：约$2,700，32GB显存"
+      },
+      {
+        "field": "metaDescription",
+        "old": "两张RTX 5060 Ti 16GB的本地LLM PC构建：32GB显存、Ryzen 7 9700X、64GB DDR5，约$2,440。32B的Q4装得下，70B的Q4装不下。2026配件清单。",
+        "new": "两张RTX 5060 Ti 16GB的本地LLM PC构建：32GB显存、Ryzen 7 9700X、64GB DDR5，约$2,680。32B的Q4装得下，70B的Q4装不下。2026配件清单。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b0ba3e00-2e36-4173-9a2b-669c3dd01a4d",
+    "slug": "/pt/local-llms/local-llm-pc-build-2000",
+    "date": "2026-11-28T09:53:37.481Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Build de PC para LLM local com GPU dupla (2026): 2x RTX 5060 Ti 16GB, cerca de $2.400",
+        "new": "Build de PC para LLM local com GPU dupla (2026): 2x RTX 5060 Ti 16GB, cerca de $2.700"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Build de PC para LLM local com GPU dupla (2026): ~$2.400, 32GB VRAM",
+        "new": "Build de PC para LLM local com GPU dupla (2026): ~$2.700, 32GB VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Build de PC para LLM local com duas RTX 5060 Ti 16GB: 32GB de VRAM, Ryzen 7 9700X, 64GB DDR5, cerca de $2.440. 32B em Q4 cabe; 70B em Q4 não. Lista 2026.",
+        "new": "Build de PC para LLM local com duas RTX 5060 Ti 16GB: 32GB de VRAM, Ryzen 7 9700X, 64GB DDR5, cerca de $2.680. 32B em Q4 cabe; 70B em Q4 não. Lista 2026."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2fe6546a-e510-40e4-8313-72b4943603a6",
+    "slug": "/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.601Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro costs $20/month. Local setups cost $1,700-3,700 over 5 years incl. power. Llama 3.3 70B at Q4 needs ~43 GB, so two 24 GB GPUs. Full comparison.",
+        "new": "Claude Pro costs $20/month. Local setups cost $1,800-4,050 over 5 years incl. power. Llama 3.3 70B at Q4 needs ~43 GB, so two 24 GB GPUs. Full comparison."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "17c7f16a-3734-44fe-b8d6-220f03397a45",
+    "slug": "/es/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.634Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro cuesta $20/mes; lo local, $1,700-3,700 en 5 años con luz. Llama 3.3 70B en Q4 necesita ~43 GB (dos GPUs de 24 GB). Comparativa completa.",
+        "new": "Claude Pro cuesta $20/mes; lo local, $1,800-4,050 en 5 años con luz. Llama 3.3 70B en Q4 necesita ~43 GB (dos GPUs de 24 GB). Comparativa completa."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4b212036-3f82-4993-ac2e-99aae8bf8700",
+    "slug": "/ar/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.668Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "سعر Claude Pro 20$/شهر؛ والإعداد المحلي 1,700–3,700$ على 5 سنوات. يحتاج Llama 3.3 70B بصيغة Q4 نحو 43 GB: بطاقتا GPU بسعة 24 GB.",
+        "new": "سعر Claude Pro 20$/شهر؛ والإعداد المحلي 1,800–4,050$ على 5 سنوات. يحتاج Llama 3.3 70B بصيغة Q4 نحو 43 GB: بطاقتا GPU بسعة 24 GB."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "41edd344-fc90-43e8-ab3d-79625a752c0a",
+    "slug": "/pt/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.702Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro custa $20/mês; o local custa $1.700-3.700 em 5 anos com energia. Llama 3.3 70B em Q4 exige ~43 GB: duas GPUs de 24 GB. Comparação.",
+        "new": "Claude Pro custa $20/mês; o local custa $1.800-4.050 em 5 anos com energia. Llama 3.3 70B em Q4 exige ~43 GB: duas GPUs de 24 GB. Comparação."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "98972538-012e-4c02-8277-1637c17657e4",
+    "slug": "/de/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.737Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro kostet 20 $/Monat; lokal 1.700–3.700 $ in 5 Jahren inkl. Strom. Llama 3.3 70B braucht in Q4 ca. 43 GB (zwei 24-GB-GPUs). Vergleich.",
+        "new": "Claude Pro kostet 20 $/Monat; lokal 1.800–4.050 $ in 5 Jahren inkl. Strom. Llama 3.3 70B braucht in Q4 ca. 43 GB (zwei 24-GB-GPUs). Vergleich."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a24334f1-dfaa-4bbe-af65-99f8fdb29f3f",
+    "slug": "/fr/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.771Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro coûte 20 $/mois ; en local 1 700–3 700 $ sur 5 ans, électricité incluse. Llama 3.3 70B en Q4 : ~43 Go (deux GPU de 24 Go). Comparatif.",
+        "new": "Claude Pro coûte 20 $/mois ; en local 1 800–4 050 $ sur 5 ans, électricité incluse. Llama 3.3 70B en Q4 : ~43 Go (deux GPU de 24 Go). Comparatif."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "10f6e900-1c49-4cb0-ae54-66d071bb6ad7",
+    "slug": "/ja/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.806Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Proは月$20。ローカル構成は電気代込みで5年$1,700-3,700。Llama 3.3 70BのQ4は約43 GB、24 GBのGPU2枚が必要です。コストを比較します。",
+        "new": "Claude Proは月$20。ローカル構成は電気代込みで5年$1,800-4,050。Llama 3.3 70BのQ4は約43 GB、24 GBのGPU2枚が必要です。コストを比較します。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "27c7a863-0fcb-43a4-b241-644f82addb2c",
+    "slug": "/zh/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.840Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro 每月 $20；本地方案含电费 5 年 $1,700-3,700。Llama 3.3 70B 在 Q4 下约需 43 GB，即两张 24 GB 显卡。完整对比。",
+        "new": "Claude Pro 每月 $20；本地方案含电费 5 年 $1,800-4,050。Llama 3.3 70B 在 Q4 下约需 43 GB，即两张 24 GB 显卡。完整对比。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2145e8fe-f14d-4390-949f-977f2c7a7b0c",
+    "slug": "/ko/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-28T09:53:37.874Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Claude Pro는 월 $20입니다. 로컬 구성은 전기료 포함 5년 $1,700-3,700입니다. Llama 3.3 70B(Q4)는 약 43 GB로 24 GB GPU 2장이 필요합니다.",
+        "new": "Claude Pro는 월 $20입니다. 로컬 구성은 전기료 포함 5년 $1,800-4,050입니다. Llama 3.3 70B(Q4)는 약 43 GB로 24 GB GPU 2장이 필요합니다."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "50bb06b7-997f-4e0a-9a8e-10e96fb7b251",
+    "slug": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.101Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "A used RTX 3090 costs $1,400–$1,550 in 2026; renting one runs from about $0.16/hour. Here is the buy-vs-rent break-even math on 24 GB of VRAM for local LLMs.",
+        "new": "A used RTX 3090 costs $1,500–$1,725 in 2026; renting one runs from about $0.16/hour. Here is the buy-vs-rent break-even math on 24 GB of VRAM for local LLMs."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "73dd1ae6-4254-4cb8-9b38-21a6f434bb54",
+    "slug": "/de/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.135Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Eine gebrauchte RTX 3090 kostet 2026 1.400–1.550 $, Mieten gibt es ab etwa 0,16 $/Stunde. Hier die Kauf-oder-Miete-Break-even-Rechnung für 24 GB VRAM bei lokalen LLMs.",
+        "new": "Eine gebrauchte RTX 3090 kostet 2026 1.500–1.725 $, Mieten gibt es ab etwa 0,16 $/Stunde. Hier die Kauf-oder-Miete-Break-even-Rechnung für 24 GB VRAM bei lokalen LLMs."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "acf16d9a-db6b-42ca-a421-1d8b36eb6347",
+    "slug": "/fr/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.169Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Une RTX 3090 d'occasion coûte 1 400–1 550 $ en 2026 ; la location démarre à environ 0,16 $/heure. Voici le calcul du seuil de rentabilité achat vs location pour 24 Go de VRAM en LLM local.",
+        "new": "Une RTX 3090 d'occasion coûte 1 500–1 725 $ en 2026 ; la location démarre à environ 0,16 $/heure. Voici le calcul du seuil de rentabilité achat vs location pour 24 Go de VRAM en LLM local."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ee9aba8f-c869-40b1-a8de-f7a571998a56",
+    "slug": "/es/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.203Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Una RTX 3090 usada cuesta 1.400–1.550 $ en 2026; alquilarla cuesta desde unos 0,16 $/hora. Aquí el cálculo de punto de equilibrio comprar vs alquilar para 24 GB de VRAM en LLM local.",
+        "new": "Una RTX 3090 usada cuesta 1.500–1.725 $ en 2026; alquilarla cuesta desde unos 0,16 $/hora. Aquí el cálculo de punto de equilibrio comprar vs alquilar para 24 GB de VRAM en LLM local."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2ba932bf-e203-4cce-aeb5-642585453f7b",
+    "slug": "/pt/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.237Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Uma RTX 3090 usada custa US$ 1.400–1.550 em 2026; alugar custa a partir de cerca de US$ 0,16/hora. Veja o cálculo de ponto de equilíbrio entre comprar e alugar 24 GB de VRAM para LLM local.",
+        "new": "Uma RTX 3090 usada custa US$ 1.500–1.725 em 2026; alugar custa a partir de cerca de US$ 0,16/hora. Veja o cálculo de ponto de equilíbrio entre comprar e alugar 24 GB de VRAM para LLM local."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e8620452-9f86-4e9c-8d0d-0448af8f6bd8",
+    "slug": "/ar/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.272Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "تكلف بطاقة RTX 3090 المستعملة 1,400–1,550 $ في 2026؛ استئجارها يبدأ من نحو 0.16 $ في الساعة. إليك حساب نقطة التعادل بين الشراء والاستئجار لـ 24 GB من VRAM لنماذج LLM المحلية.",
+        "new": "تكلف بطاقة RTX 3090 المستعملة 1,500–1,725 $ في 2026؛ استئجارها يبدأ من نحو 0.16 $ في الساعة. إليك حساب نقطة التعادل بين الشراء والاستئجار لـ 24 GB من VRAM لنماذج LLM المحلية."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ba326d28-7b2f-42b2-abac-b34ff539b043",
+    "slug": "/ja/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.306Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "中古のRTX 3090は2026年に1,400〜1,550ドル。レンタルなら1時間約0.16ドルから。ローカルLLM向け24GB VRAMの購入とレンタルの損益分岐点を計算します。",
+        "new": "中古のRTX 3090は2026年に1,500〜1,725ドル。レンタルなら1時間約0.16ドルから。ローカルLLM向け24GB VRAMの購入とレンタルの損益分岐点を計算します。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "581df24e-5410-48e9-892e-8eb1bfb6177e",
+    "slug": "/zh/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.340Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年二手RTX 3090售价1,400–1,550美元；租用价格为每小时约0.16美元起。这是本地LLM所需24GB VRAM的买卖平衡点计算。",
+        "new": "2026年二手RTX 3090售价1,500–1,725美元；租用价格为每小时约0.16美元起。这是本地LLM所需24GB VRAM的买卖平衡点计算。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0498d870-1c7f-4dbc-9b8e-827b6bd885a1",
+    "slug": "/ko/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "date": "2026-11-28T09:53:38.375Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026년 중고 RTX 3090 가격은 1,400–1,550달러이며, 대여는 시간당 약 0.16달러부터 시작합니다. 로컬 LLM용 24GB VRAM의 구매 대 대여 손익분기점을 계산합니다.",
+        "new": "2026년 중고 RTX 3090 가격은 1,500–1,725달러이며, 대여는 시간당 약 0.16달러부터 시작합니다. 로컬 LLM용 24GB VRAM의 구매 대 대여 손익분기점을 계산합니다."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ce0335a8-fe0b-49ca-8caa-4a0b974a05ae",
+    "slug": "/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on",
+    "date": "2026-11-28T09:53:38.497Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "以15–35W超低功耗全天候运行Ollama的迷你PC推荐：铭凡UM890 Pro（AMD 890M集显）、AOOSTAR GEM12（双DDR5）、倍控SER8（Ryzen 7 8845HS）。详细规格对比、实测功耗与购买链接，轻松搭建24小时本地AI服务器。",
+        "new": "以15–35W超低功耗全天候运行Ollama的迷你PC推荐：铭凡UM890 Pro（Radeon 780M核显）、AOOSTAR GEM12（双DDR5）、倍控SER8（Ryzen 7 8745HS）。规格对比、功耗信息与购买链接，轻松搭建24小时本地AI服务器。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bb5ed1d6-356e-4cca-b0c9-f92eccb9ba48",
+    "slug": "/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on",
+    "date": "2026-11-28T09:53:38.533Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "15–35W 초저전력으로 Ollama를 24시간 운영하는 미니 PC 추천: Minisforum UM890 Pro (AMD 890M 내장 그래픽), AOOSTAR GEM12, Beelink SER8. 사양 비교, 실측 전력 소비 및 구매 링크.",
+        "new": "15–35W 초저전력으로 Ollama를 24시간 운영하는 미니 PC 추천: Minisforum UM890 Pro (Radeon 780M 내장 그래픽), AOOSTAR GEM12, Beelink SER8. 사양 비교, 전력 소비 정보 및 구매 링크."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bf699910-9a49-4d02-a126-608270171dbd",
+    "slug": "/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.605Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Cheapest Practical Way to Run a 70B Model Locally in 2026",
+        "new": "Cheapest Ways to Run a 70B Model Locally in 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Cheapest Practical Way to Run 70B Locally 2026",
+        "new": "Run 70B Q4 Locally: Cheapest Options in 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "The cheapest practical way to run a 70B model locally is a used dual RTX 3090 (~48GB VRAM) or the new $1,699 M5 Pro Mac mini (64GB). Check current prices — used GPU pricing varies widely.",
+        "new": "70B Q4 cost vs speed: two used Tesla P40 cards about $570 (slow), a 64 GB mini PC $2,199.99, two used RTX 3090 cards $3,000–3,450 (faster)."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "deadd2fe-bbbf-4989-9281-c20f20007d0b",
+    "slug": "/de/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.649Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Günstigster praktikabler Weg, ein 70B-Modell lokal zu betreiben 2026",
+        "new": "Günstigste Wege, 2026 ein 70B-Modell lokal zu betreiben"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Günstigster praktikabler Weg für 70B lokal 2026",
+        "new": "70B Q4 lokal: die günstigsten Optionen 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Der günstigste praktikable Weg, ein 70B-Modell lokal zu betreiben, ist eine gebrauchte Dual-RTX-3090 (~48 GB VRAM) oder der neue Mac mini mit M5 Pro (64 GB, ab 1.699 $). Aktuelle Preise prüfen — gebrauchte GPUs schwanken stark.",
+        "new": "70B Q4: zwei gebrauchte Tesla P40 ca. 570 $ (langsam), ein 64-GB-Mini-PC 2.199,99 $, zwei gebrauchte RTX 3090 3.000–3.450 $ (schneller)."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4645d647-2ae6-4bca-b6be-1fdfd5f72449",
+    "slug": "/fr/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.685Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Moyen le moins cher et pratique de faire tourner un modèle 70B localement en 2026",
+        "new": "Les options les moins chères pour un modèle 70B en local en 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Configuration 70B locale la moins chère et pratique 2026",
+        "new": "70B Q4 en local : les options les moins chères 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Le moyen le moins cher et pratique de faire tourner un modèle 70B localement est un dual RTX 3090 d'occasion (~48 Go de VRAM) ou le nouveau Mac mini M5 Pro (64 Go, à partir de 1 699 $). Vérifiez les prix actuels.",
+        "new": "70B Q4 : deux Tesla P40 d'occasion env. 570 $ (lent), un mini PC 64 Go à 2 199,99 $, deux RTX 3090 d'occasion 3 000–3 450 $ (plus rapide)."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7c03c095-decb-43d5-aace-cc5653523674",
+    "slug": "/ja/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.720Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "2026年版 70Bモデルをローカルで動かす最も安い実用的な方法",
+        "new": "70Bモデルをローカルで安く動かす方法 2026年版"
+      },
+      {
+        "field": "seoTitle",
+        "old": "2026年版 70Bをローカルで動かす最安の実用構成",
+        "new": "70B Q4をローカルで：安い選択肢 2026年版"
+      },
+      {
+        "field": "metaDescription",
+        "old": "70Bモデルをローカルで動かす最も安い実用的な方法は、中古のデュアルRTX 3090（約48GB VRAM）、または新しいM5 Pro Mac mini（64GB、1,699ドルから）です。現在の価格を確認してください。",
+        "new": "70B Q4の費用と速度。中古Tesla P40 2枚は約570ドル（低速）、64GBミニPCは2,199.99ドル、中古RTX 3090 2枚は3,000〜3,450ドル（高速）。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8a2c7159-a76d-4dae-8cff-d0cce81c7d39",
+    "slug": "/es/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.756Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Forma más barata y práctica de ejecutar un modelo 70B en local en 2026",
+        "new": "Las formas más baratas de ejecutar un modelo 70B en local en 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Configuración local 70B más barata y práctica 2026",
+        "new": "70B Q4 en local: las opciones más baratas 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "La forma más barata y práctica de ejecutar un modelo 70B en local es una dual RTX 3090 de segunda mano (~48 GB de VRAM) o el nuevo Mac mini M5 Pro (64 GB, desde 1.699 $). Consulta los precios actuales.",
+        "new": "70B Q4: dos Tesla P40 usadas unos 570 $ (lento), un mini PC de 64 GB por 2.199,99 $, dos RTX 3090 usadas 3.000–3.450 $ (más rápido)."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8a3510fd-306e-41b1-8b48-6944336d618e",
+    "slug": "/zh/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.792Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "2026年本地运行70B模型最便宜的实用方案",
+        "new": "2026年本地运行70B模型的省钱方案"
+      },
+      {
+        "field": "seoTitle",
+        "old": "2026年本地运行70B最便宜的实用配置",
+        "new": "本地运行70B Q4：2026年省钱方案"
+      },
+      {
+        "field": "metaDescription",
+        "old": "在本地运行70B模型最便宜的实用方案是二手双RTX 3090（约48GB显存），或全新的M5 Pro版Mac mini（64GB，起售价1,699美元）。请查看当前价格。",
+        "new": "70B Q4成本与速度：两张二手Tesla P40约570美元（慢），64GB迷你主机2,199.99美元，两张二手RTX 3090需3,000–3,450美元（更快）。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "83bac8cc-8d64-4862-bb6c-1ab1ebd608e0",
+    "slug": "/pt/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.828Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Forma Mais Barata e Prática de Rodar um Modelo 70B Localmente em 2026",
+        "new": "As formas mais baratas de rodar um modelo 70B localmente em 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Configuração Local 70B Mais Barata e Prática 2026",
+        "new": "70B Q4 local: as opções mais baratas em 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "A forma mais barata e prática de rodar um modelo 70B localmente é uma dupla de RTX 3090 usadas (~48GB de VRAM) ou o novo Mac mini M5 Pro (64GB, a partir de US$ 1.699). Confira os preços atuais.",
+        "new": "70B Q4: duas Tesla P40 usadas cerca de US$ 570 (lento), um mini PC de 64 GB por US$ 2.199,99, duas RTX 3090 usadas US$ 3.000–3.450 (mais rápido)."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "776a5c0b-49b3-466c-a3da-96cec4677162",
+    "slug": "/ar/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.863Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "أرخص طريقة عملية لتشغيل نموذج 70B محليًا في 2026",
+        "new": "أرخص الطرق لتشغيل نموذج 70B محليًا في 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "أرخص إعداد عملي لتشغيل 70B محليًا 2026",
+        "new": "تشغيل 70B Q4 محليًا: أرخص الخيارات 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "أرخص طريقة عملية لتشغيل نموذج 70B محليًا هي بطاقتا RTX 3090 مستعملتان (~48 جيجابايت VRAM)، أو جهاز Mac mini الجديد بمعالج M5 Pro (64 جيجابايت، بسعر يبدأ من 1,699 دولارًا). تحقق من الأسعار الحالية.",
+        "new": "70B Q4: بطاقتا Tesla P40 مستعملتان نحو 570 دولارًا (بطيء)، وحاسوب مصغّر 64 جيجابايت بـ2,199.99 دولارًا، وبطاقتا RTX 3090 بـ3,000–3,450 (أسرع)."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9549d7a3-aaba-48a3-868d-d5c52e816d8a",
+    "slug": "/ko/prompt-bites/cheapest-way-to-run-70b-model-locally",
+    "date": "2026-11-28T09:53:38.900Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "2026년 70B 모델을 가장 저렴하고 실용적으로 로컬에서 실행하는 방법",
+        "new": "2026년 70B 모델을 로컬에서 저렴하게 실행하는 방법"
+      },
+      {
+        "field": "seoTitle",
+        "old": "2026년 가장 저렴하고 실용적인 70B 로컬 구성",
+        "new": "70B Q4 로컬 실행: 2026년 저렴한 선택지"
+      },
+      {
+        "field": "metaDescription",
+        "old": "70B 모델을 로컬에서 실행하는 가장 저렴하고 실용적인 방법은 중고 RTX 3090 2장(약 48GB VRAM) 구성이거나 신형 M5 Pro Mac mini(64GB, 1,699달러부터)입니다. 현재 가격을 확인하십시오.",
+        "new": "70B Q4 비용과 속도: 중고 Tesla P40 2장 약 570달러(느림), 64GB 미니 PC 2,199.99달러, 중고 RTX 3090 2장 3,000~3,450달러(더 빠름)."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5cee8b74-5ab9-4850-9ac1-a132c478c978",
+    "slug": "/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:38.989Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "A 70B model at Q4_K_M needs ~40 GB VRAM. Options: dual RTX 3090 (48 GB), M5 Max 128 GB unified memory, or cloud GPU. Quick answer from PromptQuorum.",
+        "new": "A 70B model at Q4_K_M is a 43 GB download, so plan about 48 GB. Options: two used RTX 3090s ($3,000–3,450, cards only), a 64 GB+ Mac or cloud."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f3457feb-c8a7-4165-bfa7-077742118e66",
+    "slug": "/de/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:39.025Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Ein 70B-Modell bei Q4_K_M benötigt ~40 GB VRAM. Dual RTX 3090, M5 Max 128 GB oder Cloud-GPU sind die Optionen. Schnelle Antwort von PromptQuorum.",
+        "new": "Ein 70B-Modell in Q4_K_M ist ein 43-GB-Download: etwa 48 GB einplanen. Zwei gebrauchte RTX 3090 (3.000–3.450 USD), ein Mac ab 64 GB oder Cloud."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d51e4b08-63e8-4557-bc8a-528041212f8e",
+    "slug": "/fr/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:39.062Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Un modèle 70B en Q4_K_M nécessite ~40 Go de VRAM. Options : dual RTX 3090 (48 Go), M5 Max 128 Go ou GPU cloud. Réponse rapide par PromptQuorum.",
+        "new": "Un 70B en Q4_K_M pèse 43 Go à télécharger : prévoyez environ 48 Go. Deux RTX 3090 d'occasion (3 000–3 450 $), un Mac 64 Go+ ou le cloud."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e67a2483-679c-492c-b8e6-f119bb9ada63",
+    "slug": "/ja/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:39.102Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_Mの70Bモデルには約40 GBのVRAMが必要です。デュアルRTX 3090（48 GB）、M5 Max 128 GB統合メモリ、またはクラウドGPUが選択肢です。PromptQuorumの解説。",
+        "new": "70BモデルのQ4_K_M版は43GBのダウンロードで、約48GBが目安です。中古RTX 3090 2枚（カードのみ$3,000–3,450）、64GB以上のMac、クラウドGPUを比較します。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9acff178-b986-4aa6-9870-80400dd44e03",
+    "slug": "/zh/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:39.139Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M量化的70B模型需要约40 GB显存。选项：双RTX 3090（48 GB）、M5 Max 128 GB统一内存或云端GPU。PromptQuorum快速解答。",
+        "new": "70B模型的Q4_K_M版本下载体积为43GB，建议按约48GB规划。对比两张二手RTX 3090（仅显卡$3,000–3,450）、64GB以上的Mac与云端GPU。"
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c47268b0-6821-4bd2-b1ca-7e41b1bd16ba",
+    "slug": "/pt/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:39.181Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Um modelo 70B em Q4_K_M precisa de ~40 GB de VRAM. Opções: dois RTX 3090 (48 GB), M5 Max com 128 GB de memória unificada ou GPU na nuvem. Resposta rápida do PromptQuorum.",
+        "new": "Um 70B em Q4_K_M é um download de 43 GB: planeje cerca de 48 GB. Duas RTX 3090 usadas ($3.000–3.450, só placas), um Mac de 64 GB+ ou a nuvem."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "85af13a7-c536-4dd0-ae6a-24ed0c501fb8",
+    "slug": "/es/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:39.217Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Un modelo 70B en Q4_K_M necesita ~40 GB de VRAM. Opciones: dual RTX 3090 (48 GB), M5 Max con 128 GB unificados o GPU cloud. Respuesta rápida de PromptQuorum.",
+        "new": "Un 70B en Q4_K_M es una descarga de 43 GB: cuenta con unos 48 GB. Dos RTX 3090 usadas ($3.000–3.450, solo tarjetas), un Mac de 64 GB+ o la nube."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8b56276f-0c1a-466b-a1f3-1aadf219bd29",
+    "slug": "/ar/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:39.252Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "نموذج ⁨70B⁩ بـ ⁨Q4⁩_⁨K⁩_⁨M⁩ يحتاج ~⁨40 GB VRAM⁩. الخيارات: ⁨RTX 3090⁩ مزدوجة (⁨48 GB⁩) أو ⁨M5 Max 128 GB⁩ ذاكرة موحدة أو ⁨GPU⁩ سحابية بـ $⁨0.50⁩/ساعة.",
+        "new": "نموذج 70B بصيغة Q4_K_M تنزيل بحجم 43 جيجابايت، فخطّط لنحو 48. قارن بين بطاقتي RTX 3090 مستعملتين ($3,000–3,450) وMac بذاكرة 64+ والسحابة."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9590cc80-5f44-44b1-b2e8-dd9b40d8d89b",
+    "slug": "/ko/prompt-bites/vram-for-70b-model",
+    "date": "2026-11-28T09:53:39.287Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M 방식의 70B 모델은 약 40 GB의 VRAM이 필요합니다. 옵션: 듀얼 RTX 3090(48 GB), M5 Max 128 GB 통합 메모리, 또는 클라우드 GPU. PromptQuorum의 빠른 답변.",
+        "new": "70B 모델의 Q4_K_M 다운로드는 43GB이므로 약 48GB가 필요합니다. 중고 RTX 3090 2장(카드만 $3,000–3,450), 64GB 이상 Mac, 클라우드를 비교합니다."
+      }
+    ],
+    "reason": "Price and claim correction 2026-11-28 (GPU prices, 70B route, unsupported claims). Baseline not recorded.",
+    "baseline": null,
+    "deployedAt": null
   }
 ]

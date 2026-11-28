@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Regenerate the 9 localized hero images for local-llm-pc-build-1000 (used RTX 3060 12GB build, ~$910).
+// Regenerate the 9 localized hero images for local-llm-pc-build-1000 (used RTX 3060 12GB build, ~$940).
 // Old heroes showed a stale RTX 5060 Ti 16GB / ~$1,010 build. Sparse Discover poster: title + 3 short lines.
 // Needs the dev server: npx next dev --webpack --port 3091
 import fs from 'fs'
@@ -22,15 +22,15 @@ const TITLE = {
   ar: 'تجميع كمبيوتر ⁨LLM⁩ محلي بأقل من ⁨1,000⁩ دولار مع ⁨GPU⁩ مستعملة (2026)',
 }
 const HIGHLIGHTS = {
-  en: ['About $910 with a used RTX 3060 12GB', 'Runs 7B-14B models at Q4', '32B does not fit in 12GB'],
-  de: ['Ca. 910 $ mit gebrauchter RTX 3060 12GB', 'Führt 7B-14B-Modelle bei Q4 aus', '32B passt nicht in 12 GB'],
-  fr: ["Environ $910 avec une RTX 3060 12 Go d'occasion", 'Modèles 7B-14B en Q4', 'Le 32B ne tient pas dans 12 Go'],
-  es: ['Unos $910 con una RTX 3060 12GB usada', 'Modelos de 7B a 14B en Q4', '32B no cabe en 12GB'],
-  pt: ['Cerca de $910 com RTX 3060 12GB usada', 'Modelos de 7B a 14B em Q4', '32B não cabe em 12GB'],
-  ja: ['中古RTX3060 12GBで約$910', '7B〜14BモデルをQ4で実行', '32Bは12GBに収まりません'],
-  zh: ['二手RTX3060 12GB约$910', 'Q4下运行7B-14B模型', '32B无法放入12GB'],
-  ko: ['중고 3060 12GB 약 $910', '7B~14B 모델을 Q4에서 실행', '32B는 12GB에 들어가지 않음'],
-  ar: ['نحو ⁨910⁩ دولارات مع ⁨RTX 3060 12GB⁩ مستعملة', 'يشغّل ⁨7B-14B⁩ بتكميم ⁨Q4⁩', '⁨32B⁩ لا يتسع في ⁨12GB⁩'],
+  en: ['About $940 with a used RTX 3060 12GB', 'Runs 7B-14B models at Q4', '32B does not fit in 12GB'],
+  de: ['Ca. 940 $ mit gebrauchter RTX 3060 12GB', 'Führt 7B-14B-Modelle bei Q4 aus', '32B passt nicht in 12 GB'],
+  fr: ["Environ $940 avec une RTX 3060 12 Go d'occasion", 'Modèles 7B-14B en Q4', 'Le 32B ne tient pas dans 12 Go'],
+  es: ['Unos $940 con una RTX 3060 12GB usada', 'Modelos de 7B a 14B en Q4', '32B no cabe en 12GB'],
+  pt: ['Cerca de $940 com RTX 3060 12GB usada', 'Modelos de 7B a 14B em Q4', '32B não cabe em 12GB'],
+  ja: ['中古RTX3060 12GBで約$940', '7B〜14BモデルをQ4で実行', '32Bは12GBに収まりません'],
+  zh: ['二手RTX3060 12GB约$940', 'Q4下运行7B-14B模型', '32B无法放入12GB'],
+  ko: ['중고 3060 12GB 약 $940', '7B~14B 모델을 Q4에서 실행', '32B는 12GB에 들어가지 않음'],
+  ar: ['نحو ⁨940⁩ دولارات مع ⁨RTX 3060 12GB⁩ مستعملة', 'يشغّل ⁨7B-14B⁩ بتكميم ⁨Q4⁩', '⁨32B⁩ لا يتسع في ⁨12GB⁩'],
 }
 const FOOTER = {
   en: 'Local LLM Guide', de: 'Leitfaden Lokale LLMs', fr: 'Guide LLM locaux',

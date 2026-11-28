@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your GPU': '24GB+ VRAM', 'What you can run': 'Everything: Wan 2.2 14B at high quality, LTX-2 quantized' },
         ],
         note:
-          'Rough GPU cost, from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15; US eBay listing data, not a quote or offer): used RTX 3090 sold listings are about $1,400–1,550 and used RTX 4090 sold listings $2,575–3,010 (median $2,860). The tracker has since raised its used RTX 3090 figure to $1,500–1,725 (median $1,650; 225 sold listings, 13–23 November 2026). GPU prices move — verify current pricing before buying rather than trusting these figures past a few months.',
+          'Rough GPU cost, from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (US eBay listing data, not a quote or offer): used RTX 3090 sold listings are about $1,500–1,725 (median $1,650; 225 sold listings, 13–23 November 2026; dated 2026-11-23). Used RTX 4090 sold listings were $2,575–3,010 (median $2,860) in the figure dated 2026-10-15. GPU prices move — verify current pricing before buying rather than trusting these figures past a few months.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'معالج الرسومات لديك': '24GB+ VRAM', 'ما يمكنك تشغيله': 'كل شيء: Wan 2.2 14B بجودة عالية، LTX-2 مُكمَّم' },
         ],
         note:
-          'تكلفة تقريبية لبطاقات الرسومات، من [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15؛ بيانات قوائم eBay الأمريكية، وليست عرض سعر): قوائم بيع RTX 3090 المستعملة نحو 1,400–1,550$ وقوائم بيع RTX 4090 المستعملة 2,575–3,010$ (الوسيط 2,860$). وقد رفع المتتبّع لاحقًا رقم RTX 3090 المستعملة إلى 1,500–1,725$ (الوسيط 1,650$؛ 225 عملية بيع، 13–23 نوفمبر 2026). أسعار بلدك قد تختلف حسب الضرائب والرسوم الجمركية. أسعار معالجات الرسومات متغيرة — تحقق من الأسعار الحالية قبل الشراء بدلًا من الاعتماد على هذه الأرقام بعد مرور أشهر قليلة.',
+          'تكلفة تقريبية لبطاقات الرسومات، من [متتبّع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (بيانات قوائم eBay الأمريكية، وليست عرض سعر): قوائم بيع RTX 3090 المستعملة نحو 1,500–1,725$ (الوسيط 1,650$؛ 225 عملية بيع، 13–23 نوفمبر 2026؛ بتاريخ 2026-11-23). أما قوائم بيع RTX 4090 المستعملة فكانت 2,575–3,010$ (الوسيط 2,860$) في الرقم المؤرَّخ في 2026-10-15. أسعار بلدك قد تختلف حسب الضرائب والرسوم الجمركية. أسعار معالجات الرسومات متغيرة — تحقق من الأسعار الحالية قبل الشراء بدلًا من الاعتماد على هذه الأرقام بعد مرور أشهر قليلة.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre GPU': '24 GB+ VRAM', 'Was Sie ausführen können': 'Alles: Wan 2.2 14B in hoher Qualität, LTX-2 quantisiert' },
         ],
         note:
-          'Grobe GPU-Kosten laut [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15; US-eBay-Angebotsdaten, kein Preisangebot): Gebrauchte RTX 3090 wurden zuletzt für etwa 1.400–1.550 $ verkauft, gebrauchte RTX 4090 für 2.575–3.010 $ (Median 2.860 $). Inzwischen hat der Tracker seinen Wert für gebrauchte RTX 3090 auf 1.500–1.725 $ angehoben (Median 1.650 $; 225 Verkäufe, 13.–23. November 2026). Preise in Deutschland weichen wegen Steuern und Importkosten ab. GPU-Preise bewegen sich – prüfen Sie die aktuelle Preislage, statt sich über mehr als ein paar Monate hinweg auf diese Zahlen zu verlassen.',
+          'Grobe GPU-Kosten laut [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (US-eBay-Angebotsdaten, kein Preisangebot): Gebrauchte RTX 3090 wurden für etwa 1.500–1.725 $ verkauft (Median 1.650 $; 225 Verkäufe, 13.–23. November 2026; Stand 2026-11-23). Für gebrauchte RTX 4090 nannte der Wert mit Stand 2026-10-15 Verkäufe für 2.575–3.010 $ (Median 2.860 $). Preise in Deutschland weichen wegen Steuern und Importkosten ab. GPU-Preise bewegen sich – prüfen Sie die aktuelle Preislage, statt sich über mehr als ein paar Monate hinweg auf diese Zahlen zu verlassen.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu GPU': '24GB+ VRAM', 'Qué puedes correr': 'Todo: Wan 2.2 14B en alta calidad, LTX-2 cuantizado' },
         ],
         note:
-          'Costo aproximado de GPU, según el [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15; datos de listados de eBay EE. UU., no una cotización ni una oferta): los listados vendidos de RTX 3090 usadas rondan los $1,400–1,550 y los de RTX 4090 usadas $2,575–3,010 (mediana $2,860). Desde entonces, el rastreador ha subido su cifra para la RTX 3090 usada a $1,500–1,725 (mediana $1,650; 225 ventas, 13–23 de noviembre de 2026). Los precios de GPU varían — verifica el precio actual antes de comprar en lugar de confiar en estas cifras pasados unos meses. Los precios en tu país pueden variar según impuestos locales.',
+          'Costo aproximado de GPU, según el [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (datos de listados de eBay EE. UU., no una cotización ni una oferta): los listados vendidos de RTX 3090 usadas rondan los $1,500–1,725 (mediana $1,650; 225 ventas, 13–23 de noviembre de 2026; con fecha 2026-11-23). En la cifra con fecha 2026-10-15, los de RTX 4090 usadas estaban en $2,575–3,010 (mediana $2,860). Los precios de GPU varían — verifica el precio actual antes de comprar en lugar de confiar en estas cifras pasados unos meses. Los precios en tu país pueden variar según impuestos locales.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1601,7 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre GPU': '24 Go+ VRAM', 'Ce que vous pouvez exécuter': 'Tout : Wan 2.2 14B en haute qualité, LTX-2 quantifié' },
         ],
         note:
-          'Coût approximatif des GPU, d\'après le [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15 ; données d\'annonces eBay États-Unis, ni devis ni offre) : les annonces vendues de RTX 3090 d\'occasion tournent autour de 1 400–1 550 $ et celles de RTX 4090 d\'occasion 2 575–3 010 $ (médiane 2 860 $). Le suivi a depuis relevé son chiffre pour la RTX 3090 d\'occasion à 1 500–1 725 $ (médiane 1 650 $ ; 225 ventes, 13–23 novembre 2026). Les prix en France varient selon les taxes et les frais d\'importation. Les prix des GPU évoluent — vérifiez les tarifs actuels avant d\'acheter plutôt que de vous fier à ces chiffres au-delà de quelques mois.',
+          'Coût approximatif des GPU, d\'après le [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (données d\'annonces eBay États-Unis, ni devis ni offre) : les annonces vendues de RTX 3090 d\'occasion tournent autour de 1 500–1 725 $ (médiane 1 650 $ ; 225 ventes, 13–23 novembre 2026 ; chiffre daté du 2026-11-23). Dans le chiffre daté du 2026-10-15, celles de RTX 4090 d\'occasion étaient à 2 575–3 010 $ (médiane 2 860 $). Les prix en France varient selon les taxes et les frais d\'importation. Les prix des GPU évoluent — vérifiez les tarifs actuels avant d\'acheter plutôt que de vous fier à ces chiffres au-delà de quelques mois.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1953,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'お使いのGPU': 'VRAM 24GB以上', '実行可能なモデル': 'すべて対応：高品質のWan 2.2 14B、量子化LTX-2' },
         ],
         note:
-          'GPUのおおよその費用（[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)より。情報源の更新日は2026-10-15、eBay米国の出品データであり、見積もりやオファーではありません）：中古RTX 3090の落札実績は約$1,400-1,550、中古RTX 4090の落札実績は$2,575-3,010（中央値$2,860）です。その後、同トラッカーは中古RTX 3090の数値を$1,500-1,725に引き上げています（中央値$1,650、落札225件、2026年11月13〜23日）。日本での価格は税や輸入コストにより異なります。GPU価格は変動が大きいため、数か月以上前のこの数字を鵜呑みにせず、購入前に必ず最新価格を確認してください。',
+          'GPUのおおよその費用（[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)より。eBay米国の出品データであり、見積もりやオファーではありません）：中古RTX 3090の落札実績は約$1,500-1,725です（中央値$1,650、落札225件、2026年11月13〜23日、2026-11-23付）。中古RTX 4090の落札実績は、2026-10-15付の数値では$2,575-3,010（中央値$2,860）でした。日本での価格は税や輸入コストにより異なります。GPU価格は変動が大きいため、数か月以上前のこの数字を鵜呑みにせず、購入前に必ず最新価格を確認してください。',
       },
       diyReality: {
         id: 'diy-reality',
@@ -2305,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '보유 GPU': 'VRAM 24GB 이상', '실행 가능한 것': '모든 것 가능: Wan 2.2 14B 고품질, LTX-2 양자화' },
         ],
         note:
-          'GPU 대략적인 비용([InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) 기준, 출처 갱신일 2026-10-15, eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다): 중고 RTX 3090 낙찰 기록은 약 $1,400~1,550, 중고 RTX 4090 낙찰 기록은 $2,575~3,010(중앙값 $2,860)입니다. 이후 이 트래커는 중고 RTX 3090 수치를 $1,500~1,725로 올렸습니다(중앙값 $1,650, 낙찰 225건, 2026년 11월 13~23일). 한국에서는 가격이 다를 수 있습니다. GPU 가격은 변동하므로, 몇 달이 지난 이 수치를 그대로 믿기보다 구매 전 현재 시세를 확인하십시오.',
+          'GPU 대략적인 비용([InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) 기준, eBay 미국 목록 데이터이며 견적이나 제안이 아닙니다): 중고 RTX 3090 낙찰 기록은 약 $1,500~1,725입니다(중앙값 $1,650, 낙찰 225건, 2026년 11월 13~23일, 2026-11-23 기준). 중고 RTX 4090 낙찰 기록은 2026-10-15 기준 수치로 $2,575~3,010(중앙값 $2,860)이었습니다. 한국에서는 가격이 다를 수 있습니다. GPU 가격은 변동하므로, 몇 달이 지난 이 수치를 그대로 믿기보다 구매 전 현재 시세를 확인하십시오.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -2657,7 +2657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua GPU': '24GB+ VRAM', 'O que você consegue rodar': 'Tudo: Wan 2.2 14B em alta qualidade, LTX-2 quantizado' },
         ],
         note:
-          'Custo aproximado de GPU, segundo o [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15; dados de listagens do eBay EUA, sem ser cotação nem oferta): as listagens vendidas de RTX 3090 usadas ficam em cerca de $1.400–1.550 e as de RTX 4090 usadas em $2.575–3.010 (mediana $2.860). Desde então, o monitor elevou o valor da RTX 3090 usada para $1.500–1.725 (mediana $1.650; 225 vendas, 13–23 de novembro de 2026). Os preços no Brasil podem variar bastante devido a impostos de importação — verifique o preço atual antes de comprar em vez de confiar nesses números depois de alguns meses.',
+          'Custo aproximado de GPU, segundo o [monitor de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (dados de listagens do eBay EUA, sem ser cotação nem oferta): as listagens vendidas de RTX 3090 usadas ficam em cerca de $1.500–1.725 (mediana $1.650; 225 vendas, 13–23 de novembro de 2026; dado de 2026-11-23). No valor datado de 2026-10-15, as de RTX 4090 usadas estavam em $2.575–3.010 (mediana $2.860). Os preços no Brasil podem variar bastante devido a impostos de importação — verifique o preço atual antes de comprar em vez de confiar nesses números depois de alguns meses.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -3009,7 +3009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的 GPU': '24GB 以上显存', '你能运行什么': '全部选项:高质量的 Wan 2.2 14B、量化版 LTX-2' },
         ],
         note:
-          'GPU 大致成本,来自 [InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(来源更新于 2026-10-15;eBay 美国挂牌数据,并非报价或要约):二手 RTX 3090 成交记录约 $1,400–1,550,二手 RTX 4090 成交记录 $2,575–3,010(中位数 $2,860)。此后该追踪页已将二手 RTX 3090 的数据上调至 $1,500–1,725(中位数 $1,650;225 笔成交,2026 年 11 月 13–23 日)。不同地区的价格可能有差异。GPU 价格会波动——购买前请核实当前价格,不要在几个月后仍相信这些数字。',
+          'GPU 大致成本,来自 [InsiderLLM GPU 价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(eBay 美国挂牌数据,并非报价或要约):二手 RTX 3090 成交记录约 $1,500–1,725(中位数 $1,650;225 笔成交,2026 年 11 月 13–23 日;数据日期 2026-11-23)。二手 RTX 4090 成交记录在日期为 2026-10-15 的数据中为 $2,575–3,010(中位数 $2,860)。不同地区的价格可能有差异。GPU 价格会波动——购买前请核实当前价格,不要在几个月后仍相信这些数字。',
       },
       diyReality: {
         id: 'diy-reality',

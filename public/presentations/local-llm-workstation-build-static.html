@@ -105,7 +105,7 @@
       {
         type: "title",
         h1: "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
-        subtitle: "A local LLM workstation for 70B models needs about 48 GB of GPU memory: Llama 3.3 70B is 43 GB at Q4, so one 24 GB card cannot hold it and two can. In InsiderLLM tracker listings dated 2026-10-15, two used RTX 3090 cards cost about $2,800–3,100.",
+        subtitle: "A local LLM workstation for 70B models needs about 48 GB of GPU memory: Llama 3.3 70B is 43 GB at Q4, so one 24 GB card cannot hold it and two can. In InsiderLLM tracker listings dated 2026-11-23, two used RTX 3090 cards cost about $3,000–3,450.",
         link: "https://www.promptquorum.com/local-llms/local-llm-workstation-build"
       },
       {
@@ -113,7 +113,7 @@
         h2: "TLDR",
         items: [
           "VRAM target: Llama 3.3 70B at Q4 is a 43 GB download, so plan for 48 GB of GPU memory (two 24 GB cards) and expect about 5 GB left for context.",
-          "GPUs: two used RTX 3090 (about $1,400–1,550 each) are the lowest-priced 48 GB route in the tracked data; two used RTX 4090 cost about $2,575–3,010 each; two new RTX 5090 (about $4,500–4,700 each) give 64 GB.",
+          "GPUs: two used RTX 3090 (about $1,500–1,725 each) are the lowest-priced 48 GB route in the tracked data; two used RTX 4090 cost about $2,575–3,010 each; two new RTX 5090 (about $4,500–4,700 each) give 64 GB.",
           "NVLink: NVIDIA lists no NVLink on the RTX 4090 and RTX 5090; the RTX 3090 supports a bridge. llama.cpp, Ollama and vLLM split a model across GPUs over PCIe without it."
         ]
       },
@@ -169,7 +169,7 @@
       {
         type: "table",
         h2: "Dual-GPU Parts List With Sourced Prices",
-        intro: "GPUs and CPU alone start near $4,300: two used RTX 3090 ($2,800–3,100) plus a Threadripper 9960X ($1,499 at AMD's launch price), before motherboard, memory, PSU, cooling, storage and case.",
+        intro: "GPUs and CPU alone start near $4,500: two used RTX 3090 ($3,000–3,450) plus a Threadripper 9960X ($1,499 at AMD's launch price), before motherboard, memory, PSU, cooling, storage and case.",
         columns: [
           "Component",
           "Pick",
@@ -180,7 +180,7 @@
           {
             Component: "GPUs",
             Pick: "2× used RTX 3090 24 GB",
-            Price: "$2,800–3,100",
+            Price: "$3,000–3,450",
             Why: "48 GB pool; NVLink bridge supported"
           },
           {
@@ -234,7 +234,7 @@
           {
             Component: "Floor (GPU + CPU)",
             Pick: "Dual 3090 + 9960X",
-            Price: "$4,299–4,599",
+            Price: "$4,499–4,949",
             Why: "Before the five untracked lines"
           }
         ]
@@ -266,7 +266,7 @@
           {
             Setup: "2× RTX 3090 (used)",
             VRAM: "48 GB",
-            "GPU price": "$2,800–3,100",
+            "GPU price": "$3,000–3,450",
             "Rated power": "700 W",
             NVLink: "Bridge supported"
           },
@@ -379,7 +379,7 @@
           },
           {
             q: "How much does a local LLM workstation cost in 2026?",
-            a: "GPUs and CPU alone start near $4,300: two used RTX 3090 at $2,800–3,100 combined (tracker listings of 2026-10-15) plus a Threadripper 9960X at $1,499 (AMD launch price). Two used RTX 4090 raise the GPU line to about $5,150–6,020. Motherboard, registered DDR5, PSU, cooling, storage and case come on top, and memory prices in particular were rising in 2026, so price the full list at current listings."
+            a: "GPUs and CPU alone start near $4,500: two used RTX 3090 at $3,000–3,450 combined (tracker listings of 2026-11-23) plus a Threadripper 9960X at $1,499 (AMD launch price). Two used RTX 4090 raise the GPU line to about $5,150–6,020. Motherboard, registered DDR5, PSU, cooling, storage and case come on top, and memory prices in particular were rising in 2026, so price the full list at current listings."
           }
         ]
       },
@@ -406,7 +406,7 @@
       {
         type: "title",
         h1: "PC für lokale LLM bauen (2026): GPUs, RAM, Netzteil und Kosten für 70B-Modelle",
-        subtitle: "Eine lokale LLM-Workstation für 70B-Modelle braucht rund 48 GB GPU-Speicher: Llama 3.3 70B ist bei Q4 43 GB groß, eine 24-GB-Karte nimmt es nicht auf, zwei Karten schon. In Tracker-Angeboten von InsiderLLM vom 2026-10-15 kosten zwei gebrauchte RTX 3090 etwa $2,800–3,100.",
+        subtitle: "Eine lokale LLM-Workstation für 70B-Modelle braucht rund 48 GB GPU-Speicher: Llama 3.3 70B ist bei Q4 43 GB groß, eine 24-GB-Karte nimmt es nicht auf, zwei Karten schon. In Tracker-Angeboten von InsiderLLM vom 2026-11-23 kosten zwei gebrauchte RTX 3090 etwa $3,000–3,450.",
         link: "https://www.promptquorum.com/de/local-llms/local-llm-workstation-build"
       },
       {
@@ -414,7 +414,7 @@
         h2: "Zusammenfassung",
         items: [
           "VRAM-Ziel: Llama 3.3 70B bei Q4 ist ein Download von 43 GB. Planen Sie daher 48 GB GPU-Speicher ein (zwei 24-GB-Karten) und rechnen Sie mit etwa 5 GB Rest für den Kontext.",
-          "GPUs: Zwei gebrauchte RTX 3090 (je etwa $1,400–1,550) sind in den erfassten Daten der günstigste Weg zu 48 GB; zwei gebrauchte RTX 4090 kosten je etwa $2,575–3,010; zwei neue RTX 5090 (je etwa $4,500–4,700) bieten 64 GB.",
+          "GPUs: Zwei gebrauchte RTX 3090 (je etwa $1,500–1,725) sind in den erfassten Daten der günstigste Weg zu 48 GB; zwei gebrauchte RTX 4090 kosten je etwa $2,575–3,010; zwei neue RTX 5090 (je etwa $4,500–4,700) bieten 64 GB.",
           "NVLink: NVIDIA führt bei der RTX 4090 und der RTX 5090 kein NVLink auf; die RTX 3090 unterstützt eine Brücke. llama.cpp, Ollama und vLLM verteilen ein Modell auch ohne NVLink über PCIe auf mehrere GPUs."
         ]
       },
@@ -470,7 +470,7 @@
       {
         type: "table",
         h2: "Teileliste für zwei GPUs mit belegten Preisen",
-        intro: "GPUs und CPU allein beginnen bei etwa $4,300: zwei gebrauchte RTX 3090 ($2,800–3,100) plus ein Threadripper 9960X ($1,499 zum Einführungspreis von AMD), noch ohne Mainboard, Speicher, Netzteil, Kühlung, Datenspeicher und Gehäuse.",
+        intro: "GPUs und CPU allein beginnen bei etwa $4,500: zwei gebrauchte RTX 3090 ($3,000–3,450) plus ein Threadripper 9960X ($1,499 zum Einführungspreis von AMD), noch ohne Mainboard, Speicher, Netzteil, Kühlung, Datenspeicher und Gehäuse.",
         columns: [
           "Komponente",
           "Auswahl",
@@ -481,7 +481,7 @@
           {
             Komponente: "GPUs",
             Auswahl: "2× RTX 3090 24 GB (gebraucht)",
-            Preis: "$2,800–3,100",
+            Preis: "$3,000–3,450",
             "Begründung": "48-GB-Pool; NVLink-Brücke unterstützt"
           },
           {
@@ -535,7 +535,7 @@
           {
             Komponente: "Untergrenze (GPU + CPU)",
             Auswahl: "Dual 3090 + 9960X",
-            Preis: "$4,299–4,599",
+            Preis: "$4,499–4,949",
             "Begründung": "Vor den fünf nicht erfassten Positionen"
           }
         ]
@@ -567,7 +567,7 @@
           {
             Aufbau: "2× RTX 3090 (gebraucht)",
             VRAM: "48 GB",
-            "GPU-Preis": "$2,800–3,100",
+            "GPU-Preis": "$3,000–3,450",
             Nennleistung: "700 W",
             NVLink: "Brücke unterstützt"
           },
@@ -680,7 +680,7 @@
           },
           {
             q: "Was kostet ein PC für lokale LLM im Jahr 2026?",
-            a: "GPUs und CPU allein beginnen bei etwa $4,300: zwei gebrauchte RTX 3090 für zusammen $2,800–3,100 (Tracker-Angebote vom 2026-10-15) plus ein Threadripper 9960X für $1,499 (Einführungspreis von AMD). Zwei gebrauchte RTX 4090 heben den GPU-Posten auf etwa $5,150–6,020. Mainboard, registrierter DDR5, Netzteil, Kühlung, Datenspeicher und Gehäuse kommen hinzu, und besonders die Speicherpreise stiegen 2026; kalkulieren Sie die vollständige Liste daher mit aktuellen Angeboten."
+            a: "GPUs und CPU allein beginnen bei etwa $4,500: zwei gebrauchte RTX 3090 für zusammen $3,000–3,450 (Tracker-Angebote vom 2026-11-23) plus ein Threadripper 9960X für $1,499 (Einführungspreis von AMD). Zwei gebrauchte RTX 4090 heben den GPU-Posten auf etwa $5,150–6,020. Mainboard, registrierter DDR5, Netzteil, Kühlung, Datenspeicher und Gehäuse kommen hinzu, und besonders die Speicherpreise stiegen 2026; kalkulieren Sie die vollständige Liste daher mit aktuellen Angeboten."
           }
         ]
       },
@@ -707,7 +707,7 @@
       {
         type: "title",
         h1: "Station de travail LLM local (2026) : GPU, RAM, alimentation et coûts pour modèles 70B",
-        subtitle: "Une station de travail LLM local pour modèles 70B demande environ 48 GB de mémoire GPU : Llama 3.3 70B pèse 43 GB en Q4, une carte de 24 GB ne suffit pas, deux oui. Selon le suivi d'InsiderLLM au 2026-10-15, deux RTX 3090 d'occasion coûtent environ $2,800–3,100.",
+        subtitle: "Une station de travail LLM local pour modèles 70B demande environ 48 GB de mémoire GPU : Llama 3.3 70B pèse 43 GB en Q4, une carte de 24 GB ne suffit pas, deux oui. Selon le suivi d'InsiderLLM au 2026-11-23, deux RTX 3090 d'occasion coûtent environ $3,000–3,450.",
         link: "https://www.promptquorum.com/fr/local-llms/local-llm-workstation-build"
       },
       {
@@ -715,7 +715,7 @@
         h2: "Points clés",
         items: [
           "VRAM visée : Llama 3.3 70B en Q4 pèse 43 GB au téléchargement ; prévoyez 48 GB de mémoire GPU (deux cartes de 24 GB) et comptez sur environ 5 GB restants pour le contexte.",
-          "GPU : deux RTX 3090 d'occasion (environ $1,400–1,550 pièce) sont la voie à 48 GB la moins chère dans les données suivies ; deux RTX 4090 d'occasion coûtent environ $2,575–3,010 pièce ; deux RTX 5090 neuves (environ $4,500–4,700 pièce) donnent 64 GB.",
+          "GPU : deux RTX 3090 d'occasion (environ $1,500–1,725 pièce) sont la voie à 48 GB la moins chère dans les données suivies ; deux RTX 4090 d'occasion coûtent environ $2,575–3,010 pièce ; deux RTX 5090 neuves (environ $4,500–4,700 pièce) donnent 64 GB.",
           "NVLink : NVIDIA ne mentionne aucun NVLink sur la RTX 4090 ni sur la RTX 5090 ; la RTX 3090 accepte un pont. llama.cpp, Ollama et vLLM répartissent un modèle sur plusieurs GPU via PCIe, sans pont."
         ]
       },
@@ -771,7 +771,7 @@
       {
         type: "table",
         h2: "Liste de pièces double GPU avec prix sourcés",
-        intro: "Les GPU et le processeur seuls démarrent près de $4,300 : deux RTX 3090 d'occasion ($2,800–3,100) plus un Threadripper 9960X ($1,499 au prix de lancement d'AMD), avant carte mère, mémoire, alimentation, refroidissement, stockage et boîtier.",
+        intro: "Les GPU et le processeur seuls démarrent près de $4,500 : deux RTX 3090 d'occasion ($3,000–3,450) plus un Threadripper 9960X ($1,499 au prix de lancement d'AMD), avant carte mère, mémoire, alimentation, refroidissement, stockage et boîtier.",
         columns: [
           "Composant",
           "Choix",
@@ -782,7 +782,7 @@
           {
             Composant: "GPU",
             Choix: "2× RTX 3090 24 GB d'occasion",
-            Prix: "$2,800–3,100",
+            Prix: "$3,000–3,450",
             Pourquoi: "Pool de 48 GB ; pont NVLink pris en charge"
           },
           {
@@ -836,7 +836,7 @@
           {
             Composant: "Plancher (GPU + CPU)",
             Choix: "Double 3090 + 9960X",
-            Prix: "$4,299–4,599",
+            Prix: "$4,499–4,949",
             Pourquoi: "Avant les cinq lignes non suivies"
           }
         ]
@@ -868,7 +868,7 @@
           {
             Configuration: "2× RTX 3090 (occasion)",
             VRAM: "48 GB",
-            "Prix GPU": "$2,800–3,100",
+            "Prix GPU": "$3,000–3,450",
             "Puissance nominale": "700 W",
             NVLink: "Pont pris en charge"
           },
@@ -981,7 +981,7 @@
           },
           {
             q: "Combien coûte une station de travail LLM local en 2026 ?",
-            a: "Les GPU et le processeur seuls démarrent près de $4,300 : deux RTX 3090 d'occasion à $2,800–3,100 au total (annonces relevées le 2026-10-15) plus un Threadripper 9960X à $1,499 (prix de lancement d'AMD). Deux RTX 4090 d'occasion portent la ligne GPU à environ $5,150–6,020. Carte mère, DDR5 registered, alimentation, refroidissement, stockage et boîtier s'y ajoutent, et les prix de la mémoire en particulier montaient en 2026 : chiffrez donc la liste complète d'après les annonces actuelles."
+            a: "Les GPU et le processeur seuls démarrent près de $4,500 : deux RTX 3090 d'occasion à $3,000–3,450 au total (annonces relevées le 2026-11-23) plus un Threadripper 9960X à $1,499 (prix de lancement d'AMD). Deux RTX 4090 d'occasion portent la ligne GPU à environ $5,150–6,020. Carte mère, DDR5 registered, alimentation, refroidissement, stockage et boîtier s'y ajoutent, et les prix de la mémoire en particulier montaient en 2026 : chiffrez donc la liste complète d'après les annonces actuelles."
           }
         ]
       },
@@ -1008,7 +1008,7 @@
       {
         type: "title",
         h1: "ローカルLLMワークステーションの自作ガイド（2026年）：70Bモデル向けGPU・RAM・電源・費用",
-        subtitle: "70Bモデル向けのローカルLLMワークステーションには、約48 GBのGPUメモリが必要です。Llama 3.3 70BのQ4版は43 GBあるため、24 GBのカード1枚では載らず、2枚なら載ります。InsiderLLMのトラッカーの2026-10-15付の掲載価格（米国の販売済み出品）では、中古RTX 3090を2枚で約$2,800–3,100です。",
+        subtitle: "70Bモデル向けのローカルLLMワークステーションには、約48 GBのGPUメモリが必要です。Llama 3.3 70BのQ4版は43 GBあるため、24 GBのカード1枚では載らず、2枚なら載ります。InsiderLLMのトラッカーの2026-11-23付の掲載価格（米国の販売済み出品）では、中古RTX 3090を2枚で約$3,000–3,450です。",
         link: "https://www.promptquorum.com/ja/local-llms/local-llm-workstation-build"
       },
       {
@@ -1016,7 +1016,7 @@
         h2: "重要ポイント",
         items: [
           "VRAMの目標：Llama 3.3 70BのQ4版は43 GBのダウンロードです。GPUメモリは48 GB（24 GBカード2枚）を見込み、コンテキスト用に残るのは約5 GBです。",
-          "GPU：追跡データで最も安く48 GBを確保できるのは中古RTX 3090の2枚構成（1枚あたり約$1,400–1,550）です。中古RTX 4090は1枚あたり約$2,575–3,010、新品RTX 5090の2枚構成（1枚あたり約$4,500–4,700）なら64 GBになります。",
+          "GPU：追跡データで最も安く48 GBを確保できるのは中古RTX 3090の2枚構成（1枚あたり約$1,500–1,725）です。中古RTX 4090は1枚あたり約$2,575–3,010、新品RTX 5090の2枚構成（1枚あたり約$4,500–4,700）なら64 GBになります。",
           "NVLink：NVIDIAはRTX 4090とRTX 5090にNVLinkを記載していません。RTX 3090はブリッジに対応します。llama.cpp、Ollama、vLLMはNVLinkなしでもPCIe経由でモデルを複数GPUに分割できます。"
         ]
       },
@@ -1072,7 +1072,7 @@
       {
         type: "table",
         h2: "出典付き価格で見るデュアルGPUのパーツ構成",
-        intro: "GPUとCPUだけで$4,300前後から始まります。中古RTX 3090を2枚（$2,800–3,100）とThreadripper 9960X（AMD発表時の価格で$1,499）の合計で、マザーボード、メモリ、電源、冷却、ストレージ、ケースは別です。",
+        intro: "GPUとCPUだけで$4,500前後から始まります。中古RTX 3090を2枚（$3,000–3,450）とThreadripper 9960X（AMD発表時の価格で$1,499）の合計で、マザーボード、メモリ、電源、冷却、ストレージ、ケースは別です。",
         columns: [
           "パーツ",
           "選択肢",
@@ -1083,7 +1083,7 @@
           {
             "パーツ": "GPU",
             "選択肢": "中古RTX 3090 24 GB×2",
-            "価格": "$2,800–3,100",
+            "価格": "$3,000–3,450",
             "理由": "48 GBのプール。NVLinkブリッジ対応"
           },
           {
@@ -1137,7 +1137,7 @@
           {
             "パーツ": "最低ライン（GPU＋CPU）",
             "選択肢": "3090を2枚＋9960X",
-            "価格": "$4,299–4,599",
+            "価格": "$4,499–4,949",
             "理由": "追跡していない5項目を除いた金額"
           }
         ]
@@ -1169,7 +1169,7 @@
           {
             "構成": "RTX 3090×2（中古）",
             VRAM: "48 GB",
-            "GPU価格": "$2,800–3,100",
+            "GPU価格": "$3,000–3,450",
             "定格電力": "700 W",
             NVLink: "ブリッジ対応"
           },
@@ -1282,7 +1282,7 @@
           },
           {
             q: "ローカルLLM用ワークステーションの費用は2026年でいくらですか？",
-            a: "GPUとCPUだけで$4,300前後から始まります。中古RTX 3090を2枚で合計$2,800–3,100（2026-10-15のトラッカー掲載価格）に、Threadripper 9960Xが$1,499（AMD発表時の価格）です。中古RTX 4090を2枚にすると、GPUの項目は約$5,150–6,020になります。これに加えてマザーボード、RDIMMのDDR5、電源、冷却、ストレージ、ケースの費用がかかり、特にメモリ価格は2026年に上昇していたため、全パーツを最新の出品価格で見積もってください。"
+            a: "GPUとCPUだけで$4,500前後から始まります。中古RTX 3090を2枚で合計$3,000–3,450（2026-11-23のトラッカー掲載価格）に、Threadripper 9960Xが$1,499（AMD発表時の価格）です。中古RTX 4090を2枚にすると、GPUの項目は約$5,150–6,020になります。これに加えてマザーボード、RDIMMのDDR5、電源、冷却、ストレージ、ケースの費用がかかり、特にメモリ価格は2026年に上昇していたため、全パーツを最新の出品価格で見積もってください。"
           }
         ]
       },
@@ -1309,7 +1309,7 @@
       {
         type: "title",
         h1: "本地LLM工作站装机指南（2026）：70B模型所需的GPU、内存、电源与成本",
-        subtitle: "运行70B模型的本地LLM工作站需要约48 GB显存：Llama 3.3 70B的Q4版本下载体积为43 GB，一张24 GB显卡装不下，两张可以。根据InsiderLLM 2026-10-15的行情追踪列表（美国已成交列表），两张二手RTX 3090约$2,800–3,100。",
+        subtitle: "运行70B模型的本地LLM工作站需要约48 GB显存：Llama 3.3 70B的Q4版本下载体积为43 GB，一张24 GB显卡装不下，两张可以。根据InsiderLLM 2026-11-23的行情追踪列表（美国已成交列表），两张二手RTX 3090约$3,000–3,450。",
         link: "https://www.promptquorum.com/zh/local-llms/local-llm-workstation-build"
       },
       {
@@ -1317,7 +1317,7 @@
         h2: "核心要点",
         items: [
           "显存目标：Llama 3.3 70B的Q4版本是43 GB的下载文件，因此应规划48 GB显存（两张24 GB显卡），上下文大约只剩5 GB可用。",
-          "GPU：在追踪数据中，两张二手RTX 3090（每张约$1,400–1,550）是达到48 GB的最低价方案；两张二手RTX 4090每张约$2,575–3,010；两张全新RTX 5090（每张约$4,500–4,700）可达64 GB。",
+          "GPU：在追踪数据中，两张二手RTX 3090（每张约$1,500–1,725）是达到48 GB的最低价方案；两张二手RTX 4090每张约$2,575–3,010；两张全新RTX 5090（每张约$4,500–4,700）可达64 GB。",
           "NVLink：NVIDIA官网未列出RTX 4090和RTX 5090的NVLink支持；RTX 3090支持桥接器。llama.cpp、Ollama和vLLM无需NVLink，即可通过PCIe把模型拆分到多张GPU上。"
         ]
       },
@@ -1373,7 +1373,7 @@
       {
         type: "table",
         h2: "双GPU配件清单与有来源的价格",
-        intro: "仅GPU加CPU就接近$4,300：两张二手RTX 3090（$2,800–3,100）加一颗Threadripper 9960X（AMD发布价$1,499），这还没算主板、内存、电源、散热、存储和机箱。",
+        intro: "仅GPU加CPU就接近$4,500：两张二手RTX 3090（$3,000–3,450）加一颗Threadripper 9960X（AMD发布价$1,499），这还没算主板、内存、电源、散热、存储和机箱。",
         columns: [
           "配件",
           "选择",
@@ -1384,7 +1384,7 @@
           {
             "配件": "GPU",
             "选择": "2× 二手RTX 3090 24 GB",
-            "价格": "$2,800–3,100",
+            "价格": "$3,000–3,450",
             "理由": "48 GB显存池；支持NVLink桥接器"
           },
           {
@@ -1438,7 +1438,7 @@
           {
             "配件": "底价（GPU + CPU）",
             "选择": "双3090 + 9960X",
-            "价格": "$4,299–4,599",
+            "价格": "$4,499–4,949",
             "理由": "尚未计入五项未追踪的配件"
           }
         ]
@@ -1470,7 +1470,7 @@
           {
             "配置": "2× RTX 3090（二手）",
             "显存": "48 GB",
-            "GPU价格": "$2,800–3,100",
+            "GPU价格": "$3,000–3,450",
             "额定功率": "700 W",
             NVLink: "支持桥接器"
           },
@@ -1583,7 +1583,7 @@
           },
           {
             q: "2026年组一台本地LLM工作站要花多少钱？",
-            a: "仅GPU加CPU就接近$4,300：两张二手RTX 3090合计$2,800–3,100（2026-10-15的行情列表），加一颗$1,499的Threadripper 9960X（AMD发布价）。换成两张二手RTX 4090，GPU这一项升至约$5,150–6,020。主板、registered DDR5、电源、散热、存储和机箱还要另算，尤其是内存价格在2026年一直在上涨，所以请按当前行情给完整清单估价。"
+            a: "仅GPU加CPU就接近$4,500：两张二手RTX 3090合计$3,000–3,450（2026-11-23的行情列表），加一颗$1,499的Threadripper 9960X（AMD发布价）。换成两张二手RTX 4090，GPU这一项升至约$5,150–6,020。主板、registered DDR5、电源、散热、存储和机箱还要另算，尤其是内存价格在2026年一直在上涨，所以请按当前行情给完整清单估价。"
           }
         ]
       },
@@ -1610,7 +1610,7 @@
       {
         type: "title",
         h1: "Estación de trabajo para LLM local (2026): GPU, RAM, PSU y costos para modelos de 70B",
-        subtitle: "Una estación de trabajo para LLM local de 70B necesita unos 48 GB de memoria de GPU: Llama 3.3 70B pesa 43 GB en Q4; una tarjeta de 24 GB no basta, dos sí. Según el tracker de InsiderLLM (2026-10-15), dos RTX 3090 usadas cuestan unos $2,800–3,100.",
+        subtitle: "Una estación de trabajo para LLM local de 70B necesita unos 48 GB de memoria de GPU: Llama 3.3 70B pesa 43 GB en Q4; una tarjeta de 24 GB no basta, dos sí. Según el tracker de InsiderLLM (2026-11-23), dos RTX 3090 usadas cuestan unos $3,000–3,450.",
         link: "https://www.promptquorum.com/es/local-llms/local-llm-workstation-build"
       },
       {
@@ -1618,7 +1618,7 @@
         h2: "Puntos clave",
         items: [
           "Objetivo de VRAM: Llama 3.3 70B en Q4 es una descarga de 43 GB, así que planea 48 GB de memoria de GPU (dos tarjetas de 24 GB) y cuenta con unos 5 GB libres para el contexto.",
-          "GPU: dos RTX 3090 usadas (unos $1,400–1,550 cada una) son la vía de 48 GB más barata en los datos del tracker; dos RTX 4090 usadas cuestan unos $2,575–3,010 cada una; dos RTX 5090 nuevas (unos $4,500–4,700 cada una) dan 64 GB.",
+          "GPU: dos RTX 3090 usadas (unos $1,500–1,725 cada una) son la vía de 48 GB más barata en los datos del tracker; dos RTX 4090 usadas cuestan unos $2,575–3,010 cada una; dos RTX 5090 nuevas (unos $4,500–4,700 cada una) dan 64 GB.",
           "NVLink: NVIDIA no lista NVLink en la RTX 4090 ni en la RTX 5090; la RTX 3090 admite un puente. llama.cpp, Ollama y vLLM reparten un modelo entre varias GPU por PCIe sin necesitarlo."
         ]
       },
@@ -1674,7 +1674,7 @@
       {
         type: "table",
         h2: "Lista de piezas con dos GPU y precios con fuente",
-        intro: "Solo las GPU y la CPU parten cerca de $4,300: dos RTX 3090 usadas ($2,800–3,100) más un Threadripper 9960X ($1,499 al precio de lanzamiento de AMD), antes de placa base, memoria, PSU, refrigeración, almacenamiento y gabinete.",
+        intro: "Solo las GPU y la CPU parten cerca de $4,500: dos RTX 3090 usadas ($3,000–3,450) más un Threadripper 9960X ($1,499 al precio de lanzamiento de AMD), antes de placa base, memoria, PSU, refrigeración, almacenamiento y gabinete.",
         columns: [
           "Componente",
           "Elección",
@@ -1685,7 +1685,7 @@
           {
             Componente: "GPU",
             "Elección": "2× RTX 3090 usadas de 24 GB",
-            Precio: "$2,800–3,100",
+            Precio: "$3,000–3,450",
             Motivo: "Pool de 48 GB; admite puente NVLink"
           },
           {
@@ -1739,7 +1739,7 @@
           {
             Componente: "Piso (GPU + CPU)",
             "Elección": "Dos 3090 + 9960X",
-            Precio: "$4,299–4,599",
+            Precio: "$4,499–4,949",
             Motivo: "Antes de las cinco líneas sin rastrear"
           }
         ]
@@ -1771,7 +1771,7 @@
           {
             "Configuración": "2× RTX 3090 (usadas)",
             VRAM: "48 GB",
-            "Precio de GPU": "$2,800–3,100",
+            "Precio de GPU": "$3,000–3,450",
             "Potencia nominal": "700 W",
             NVLink: "Admite puente"
           },
@@ -1884,7 +1884,7 @@
           },
           {
             q: "¿Cuánto cuesta una estación de trabajo para LLM local en 2026?",
-            a: "Solo las GPU y la CPU parten cerca de $4,300: dos RTX 3090 usadas a $2,800–3,100 en conjunto (listados del tracker del 2026-10-15) más un Threadripper 9960X a $1,499 (precio de lanzamiento de AMD). Dos RTX 4090 usadas elevan la línea de GPU a unos $5,150–6,020. La placa base, la DDR5 registrada, la PSU, la refrigeración, el almacenamiento y el gabinete se suman aparte, y los precios de la memoria en particular estaban subiendo en 2026, así que calcula la lista completa con los listados actuales."
+            a: "Solo las GPU y la CPU parten cerca de $4,500: dos RTX 3090 usadas a $3,000–3,450 en conjunto (listados del tracker del 2026-11-23) más un Threadripper 9960X a $1,499 (precio de lanzamiento de AMD). Dos RTX 4090 usadas elevan la línea de GPU a unos $5,150–6,020. La placa base, la DDR5 registrada, la PSU, la refrigeración, el almacenamiento y el gabinete se suman aparte, y los precios de la memoria en particular estaban subiendo en 2026, así que calcula la lista completa con los listados actuales."
           }
         ]
       },
@@ -1911,7 +1911,7 @@
       {
         type: "title",
         h1: "Estação de trabalho para LLM local (2026): GPUs, RAM, fonte e custos para modelos 70B",
-        subtitle: "Uma estação de trabalho de LLM local para 70B precisa de uns 48 GB de memória de GPU: o Llama 3.3 70B tem 43 GB em Q4; uma placa de 24 GB não basta, duas sim. Segundo a InsiderLLM (2026-10-15), duas RTX 3090 usadas custam cerca de $2,800–3,100.",
+        subtitle: "Uma estação de trabalho de LLM local para 70B precisa de uns 48 GB de memória de GPU: o Llama 3.3 70B tem 43 GB em Q4; uma placa de 24 GB não basta, duas sim. Segundo a InsiderLLM (2026-11-23), duas RTX 3090 usadas custam cerca de $3,000–3,450.",
         link: "https://www.promptquorum.com/pt/local-llms/local-llm-workstation-build"
       },
       {
@@ -1919,7 +1919,7 @@
         h2: "Pontos principais",
         items: [
           "Meta de VRAM: o Llama 3.3 70B em Q4 é um download de 43 GB, então planeje 48 GB de memória de GPU (duas placas de 24 GB) e espere sobrar cerca de 5 GB para o contexto.",
-          "GPUs: duas RTX 3090 usadas (cerca de $1,400–1,550 cada) são o caminho de 48 GB mais barato nos dados rastreados; duas RTX 4090 usadas custam cerca de $2,575–3,010 cada; duas RTX 5090 novas (cerca de $4,500–4,700 cada) dão 64 GB.",
+          "GPUs: duas RTX 3090 usadas (cerca de $1,500–1,725 cada) são o caminho de 48 GB mais barato nos dados rastreados; duas RTX 4090 usadas custam cerca de $2,575–3,010 cada; duas RTX 5090 novas (cerca de $4,500–4,700 cada) dão 64 GB.",
           "NVLink: a NVIDIA não lista NVLink na RTX 4090 nem na RTX 5090; a RTX 3090 aceita uma ponte. llama.cpp, Ollama e vLLM dividem um modelo entre GPUs via PCIe sem ela."
         ]
       },
@@ -1975,7 +1975,7 @@
       {
         type: "table",
         h2: "Lista de peças com duas GPUs e preços com fonte",
-        intro: "Só as GPUs e a CPU já começam perto de $4,300: duas RTX 3090 usadas ($2,800–3,100) mais um Threadripper 9960X ($1,499 no preço de lançamento da AMD), antes de placa-mãe, memória, fonte, refrigeração, armazenamento e gabinete.",
+        intro: "Só as GPUs e a CPU já começam perto de $4,500: duas RTX 3090 usadas ($3,000–3,450) mais um Threadripper 9960X ($1,499 no preço de lançamento da AMD), antes de placa-mãe, memória, fonte, refrigeração, armazenamento e gabinete.",
         columns: [
           "Componente",
           "Escolha",
@@ -1986,7 +1986,7 @@
           {
             Componente: "GPUs",
             Escolha: "2× RTX 3090 24 GB usadas",
-            "Preço": "$2,800–3,100",
+            "Preço": "$3,000–3,450",
             "Por quê": "Pool de 48 GB; ponte NVLink suportada"
           },
           {
@@ -2040,7 +2040,7 @@
           {
             Componente: "Piso (GPU + CPU)",
             Escolha: "Duas 3090 + 9960X",
-            "Preço": "$4,299–4,599",
+            "Preço": "$4,499–4,949",
             "Por quê": "Antes das cinco linhas sem rastreamento"
           }
         ]
@@ -2072,7 +2072,7 @@
           {
             "Configuração": "2× RTX 3090 (usadas)",
             VRAM: "48 GB",
-            "Preço das GPUs": "$2,800–3,100",
+            "Preço das GPUs": "$3,000–3,450",
             "Potência nominal": "700 W",
             NVLink: "Ponte suportada"
           },
@@ -2185,7 +2185,7 @@
           },
           {
             q: "Quanto custa uma estação de trabalho para LLM local em 2026?",
-            a: "Só as GPUs e a CPU já começam perto de $4,300: duas RTX 3090 usadas a $2,800–3,100 no total (anúncios de rastreador de 2026-10-15) mais um Threadripper 9960X a $1,499 (preço de lançamento da AMD). Duas RTX 4090 usadas elevam a linha das GPUs para cerca de $5,150–6,020. Placa-mãe, DDR5 registrada, fonte, refrigeração, armazenamento e gabinete vêm por cima, e os preços de memória em particular estavam subindo em 2026, então calcule a lista completa com os anúncios atuais."
+            a: "Só as GPUs e a CPU já começam perto de $4,500: duas RTX 3090 usadas a $3,000–3,450 no total (anúncios de rastreador de 2026-11-23) mais um Threadripper 9960X a $1,499 (preço de lançamento da AMD). Duas RTX 4090 usadas elevam a linha das GPUs para cerca de $5,150–6,020. Placa-mãe, DDR5 registrada, fonte, refrigeração, armazenamento e gabinete vêm por cima, e os preços de memória em particular estavam subindo em 2026, então calcule a lista completa com os anúncios atuais."
           }
         ]
       },
@@ -2212,7 +2212,7 @@
       {
         type: "title",
         h1: "تجميع محطة عمل لنماذج LLM محلية (2026): بطاقات GPU وذاكرة RAM ومزود الطاقة والتكلفة لنماذج 70B",
-        subtitle: "تحتاج محطة عمل لنماذج LLM محلية بحجم 70B إلى نحو 48 GB من ذاكرة GPU: حجم Llama 3.3 70B بتكميم Q4 هو 43 GB، فلا تتسع له بطاقة واحدة بسعة 24 GB وتتسع له بطاقتان. في قوائم متتبّع InsiderLLM المؤرخة 2026-10-15 تكلفة بطاقتي RTX 3090 مستعملتين نحو $2,800–3,100.",
+        subtitle: "تحتاج محطة عمل لنماذج LLM محلية بحجم 70B إلى نحو 48 GB من ذاكرة GPU: حجم Llama 3.3 70B بتكميم Q4 هو 43 GB، فلا تتسع له بطاقة واحدة بسعة 24 GB وتتسع له بطاقتان. في قوائم متتبّع InsiderLLM المؤرخة 2026-11-23 تكلفة بطاقتي RTX 3090 مستعملتين نحو $3,000–3,450.",
         link: "https://www.promptquorum.com/ar/local-llms/local-llm-workstation-build"
       },
       {
@@ -2220,7 +2220,7 @@
         h2: "النقاط الرئيسية",
         items: [
           "هدف VRAM: نموذج Llama 3.3 70B بتكميم Q4 هو تنزيل بحجم 43 GB، لذا خطّط لـ 48 GB من ذاكرة GPU (بطاقتان بسعة 24 GB لكل منهما) وتوقّع بقاء نحو 5 GB للسياق.",
-          "بطاقات GPU: بطاقتا RTX 3090 مستعملتان (نحو $1,400–1,550 للواحدة) هما أقل طريق سعرًا إلى 48 GB في البيانات المتتبَّعة؛ وتكلفة بطاقتي RTX 4090 مستعملتين نحو $2,575–3,010 للواحدة؛ وبطاقتا RTX 5090 جديدتان (نحو $4,500–4,700 للواحدة) تعطيان 64 GB.",
+          "بطاقات GPU: بطاقتا RTX 3090 مستعملتان (نحو $1,500–1,725 للواحدة) هما أقل طريق سعرًا إلى 48 GB في البيانات المتتبَّعة؛ وتكلفة بطاقتي RTX 4090 مستعملتين نحو $2,575–3,010 للواحدة؛ وبطاقتا RTX 5090 جديدتان (نحو $4,500–4,700 للواحدة) تعطيان 64 GB.",
           "NVLink: لا تذكر NVIDIA وجود NVLink في RTX 4090 وRTX 5090؛ أما RTX 3090 فتدعم جسرًا. تقسّم llama.cpp وOllama وvLLM النموذج على بطاقات GPU عبر PCIe من دونه."
         ]
       },
@@ -2276,7 +2276,7 @@
       {
         type: "table",
         h2: "قائمة قطع ببطاقتي رسوميات مع أسعار موثقة",
-        intro: "تبدأ البطاقات والمعالج وحدهما قرب $4,300: بطاقتا RTX 3090 مستعملتان ($2,800–3,100) إضافة إلى Threadripper 9960X ($1,499 بسعر الإطلاق لدى AMD)، قبل اللوحة الأم والذاكرة ومزود الطاقة والتبريد والتخزين والهيكل.",
+        intro: "تبدأ البطاقات والمعالج وحدهما قرب $4,500: بطاقتا RTX 3090 مستعملتان ($3,000–3,450) إضافة إلى Threadripper 9960X ($1,499 بسعر الإطلاق لدى AMD)، قبل اللوحة الأم والذاكرة ومزود الطاقة والتبريد والتخزين والهيكل.",
         columns: [
           "المكوّن",
           "الاختيار",
@@ -2287,7 +2287,7 @@
           {
             "المكوّن": "بطاقات GPU",
             "الاختيار": "2× RTX 3090 بسعة 24 GB (مستعملة)",
-            "السعر": "$2,800–3,100",
+            "السعر": "$3,000–3,450",
             "السبب": "مجمّع بسعة 48 GB؛ جسر NVLink مدعوم"
           },
           {
@@ -2341,7 +2341,7 @@
           {
             "المكوّن": "الحد الأدنى (GPU + معالج)",
             "الاختيار": "RTX 3090 مزدوجة + 9960X",
-            "السعر": "$4,299–4,599",
+            "السعر": "$4,499–4,949",
             "السبب": "قبل الأسطر الخمسة غير المتتبَّعة"
           }
         ]
@@ -2373,7 +2373,7 @@
           {
             "التكوين": "2× RTX 3090 (مستعملة)",
             VRAM: "48 GB",
-            "سعر GPU": "$2,800–3,100",
+            "سعر GPU": "$3,000–3,450",
             "القدرة المقدّرة": "700 W",
             NVLink: "الجسر مدعوم"
           },
@@ -2486,7 +2486,7 @@
           },
           {
             q: "كم تبلغ تكلفة محطة عمل لنماذج LLM محلية في 2026؟",
-            a: "تبدأ البطاقات والمعالج وحدهما قرب $4,300: بطاقتا RTX 3090 مستعملتان بمجموع $2,800–3,100 (قوائم المتتبّع بتاريخ 2026-10-15) إضافة إلى Threadripper 9960X بسعر $1,499 (سعر الإطلاق لدى AMD). وترفع بطاقتا RTX 4090 مستعملتان بند GPU إلى نحو $5,150–6,020. وتأتي اللوحة الأم وذاكرة DDR5 المسجّلة ومزود الطاقة والتبريد والتخزين والهيكل فوق ذلك، كما كانت أسعار الذاكرة خاصةً ترتفع في 2026، لذا احسب القائمة كاملة بحسب القوائم الحالية."
+            a: "تبدأ البطاقات والمعالج وحدهما قرب $4,500: بطاقتا RTX 3090 مستعملتان بمجموع $3,000–3,450 (قوائم المتتبّع بتاريخ 2026-11-23) إضافة إلى Threadripper 9960X بسعر $1,499 (سعر الإطلاق لدى AMD). وترفع بطاقتا RTX 4090 مستعملتان بند GPU إلى نحو $5,150–6,020. وتأتي اللوحة الأم وذاكرة DDR5 المسجّلة ومزود الطاقة والتبريد والتخزين والهيكل فوق ذلك، كما كانت أسعار الذاكرة خاصةً ترتفع في 2026، لذا احسب القائمة كاملة بحسب القوائم الحالية."
           }
         ]
       },
@@ -2513,7 +2513,7 @@
       {
         type: "title",
         h1: "로컬 LLM 워크스테이션 구축 (2026): 70B 모델용 GPU, RAM, PSU, 비용",
-        subtitle: "70B 모델용 로컬 LLM 워크스테이션에는 약 48 GB의 GPU 메모리가 필요합니다. Llama 3.3 70B의 Q4 다운로드 크기가 43 GB이므로 24 GB 카드 한 장으로는 올릴 수 없고, 두 장이면 가능합니다. 2026-10-15자 InsiderLLM 트래커 매물(미국 판매 완료 기준)으로 보면 중고 RTX 3090 두 장은 약 $2,800–3,100입니다.",
+        subtitle: "70B 모델용 로컬 LLM 워크스테이션에는 약 48 GB의 GPU 메모리가 필요합니다. Llama 3.3 70B의 Q4 다운로드 크기가 43 GB이므로 24 GB 카드 한 장으로는 올릴 수 없고, 두 장이면 가능합니다. 2026-11-23자 InsiderLLM 트래커 매물(미국 판매 완료 기준)으로 보면 중고 RTX 3090 두 장은 약 $3,000–3,450입니다.",
         link: "https://www.promptquorum.com/ko/local-llms/local-llm-workstation-build"
       },
       {
@@ -2521,7 +2521,7 @@
         h2: "핵심 내용",
         items: [
           "VRAM 목표: Q4의 Llama 3.3 70B는 43 GB 다운로드이므로 48 GB의 GPU 메모리(24 GB 카드 두 장)를 계획하시고, 컨텍스트에 쓸 여유는 약 5 GB로 예상하십시오.",
-          "GPU: 추적된 데이터에서는 중고 RTX 3090 두 장(장당 약 $1,400–1,550)이 가장 저렴한 48 GB 구성입니다. 중고 RTX 4090 두 장은 장당 약 $2,575–3,010이고, 신품 RTX 5090 두 장(장당 약 $4,500–4,700)은 64 GB를 제공합니다.",
+          "GPU: 추적된 데이터에서는 중고 RTX 3090 두 장(장당 약 $1,500–1,725)이 가장 저렴한 48 GB 구성입니다. 중고 RTX 4090 두 장은 장당 약 $2,575–3,010이고, 신품 RTX 5090 두 장(장당 약 $4,500–4,700)은 64 GB를 제공합니다.",
           "NVLink: NVIDIA는 RTX 4090과 RTX 5090에 NVLink를 명시하지 않으며, RTX 3090은 브리지를 지원합니다. llama.cpp, Ollama, vLLM은 NVLink 없이도 PCIe로 모델을 여러 GPU에 나눕니다."
         ]
       },
@@ -2577,7 +2577,7 @@
       {
         type: "table",
         h2: "출처가 있는 가격의 듀얼 GPU 부품 목록",
-        intro: "GPU와 CPU만으로도 $4,300 근처에서 시작합니다. 중고 RTX 3090 두 장($2,800–3,100)과 Threadripper 9960X(AMD 출시가 $1,499)를 합한 금액이며, 메인보드, 메모리, PSU, 쿨링, 스토리지, 케이스는 제외한 값입니다.",
+        intro: "GPU와 CPU만으로도 $4,500 근처에서 시작합니다. 중고 RTX 3090 두 장($3,000–3,450)과 Threadripper 9960X(AMD 출시가 $1,499)를 합한 금액이며, 메인보드, 메모리, PSU, 쿨링, 스토리지, 케이스는 제외한 값입니다.",
         columns: [
           "부품",
           "선택",
@@ -2588,7 +2588,7 @@
           {
             "부품": "GPU",
             "선택": "중고 RTX 3090 24 GB 2장",
-            "가격": "$2,800–3,100",
+            "가격": "$3,000–3,450",
             "이유": "48 GB 메모리 풀, NVLink 브리지 지원"
           },
           {
@@ -2642,7 +2642,7 @@
           {
             "부품": "최소 합계 (GPU + CPU)",
             "선택": "3090 2장 + 9960X",
-            "가격": "$4,299–4,599",
+            "가격": "$4,499–4,949",
             "이유": "추적되지 않은 다섯 항목 제외"
           }
         ]
@@ -2674,7 +2674,7 @@
           {
             "구성": "RTX 3090 2장 (중고)",
             VRAM: "48 GB",
-            "GPU 가격": "$2,800–3,100",
+            "GPU 가격": "$3,000–3,450",
             "정격 전력": "700 W",
             NVLink: "브리지 지원"
           },
@@ -2787,7 +2787,7 @@
           },
           {
             q: "2026년에 로컬 LLM 워크스테이션 구축 비용은 얼마입니까?",
-            a: "GPU와 CPU만으로 $4,300 근처에서 시작합니다. 중고 RTX 3090 두 장이 합계 $2,800–3,100(2026-10-15자 트래커 매물)이고 Threadripper 9960X가 $1,499(AMD 출시가)입니다. 중고 RTX 4090 두 장이면 GPU 항목이 약 $5,150–6,020으로 올라갑니다. 메인보드, 레지스터드 DDR5, PSU, 쿨링, 스토리지, 케이스는 별도이며 특히 메모리 가격이 2026년에 오르는 추세였으므로, 전체 목록은 현재 매물 가격으로 계산하십시오."
+            a: "GPU와 CPU만으로 $4,500 근처에서 시작합니다. 중고 RTX 3090 두 장이 합계 $3,000–3,450(2026-11-23자 트래커 매물)이고 Threadripper 9960X가 $1,499(AMD 출시가)입니다. 중고 RTX 4090 두 장이면 GPU 항목이 약 $5,150–6,020으로 올라갑니다. 메인보드, 레지스터드 DDR5, PSU, 쿨링, 스토리지, 케이스는 별도이며 특히 메모리 가격이 2026년에 오르는 추세였으므로, 전체 목록은 현재 매물 가격으로 계산하십시오."
           }
         ]
       },

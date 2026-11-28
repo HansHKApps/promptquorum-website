@@ -166,7 +166,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: 'Best for: developers & power users',
     pqTags: ['Beta · July 2026', 'promptquorum.com', 'API keys required', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum is the only tool among those reviewed that combines simultaneous prompt dispatch with automated consensus scoring.** You write one prompt, select your models — GPT, Claude, Gemini, Mistral Large, and locally-running models — and PromptQuorum dispatches to all of them in parallel. The Quorum Verdict then analyses where the models agree, where they diverge, and what those patterns mean for the reliability of the answer.',
-    pqPara2: 'The defining feature is local LLM support. Via Ollama and LM Studio integration, PromptQuorum includes locally-running models — LLaMA 3.1 7B requires 8 GB RAM; 13B requires 16 GB — in the dispatch, so sensitive prompts never leave your machine. For legal professionals, healthcare workers, financial analysts, and developers working with proprietary code, this is not optional.',
+    pqPara2: 'The defining feature is local LLM support. Via Ollama and LM Studio integration, PromptQuorum includes locally-running models — LLaMA 3.1 7B requires 8 GB RAM; 13B requires 16 GB — in the dispatch. A prompt sent only to local models is processed on your machine; prompts you also send to cloud models go to those providers. For legal professionals, healthcare workers, financial analysts, and developers working with proprietary code, this is not optional.',
     pqPara3: 'PromptQuorum requires users to bring their own API keys from OpenAI, Anthropic, Google, and Mistral. This keeps data under your control, costs transparent, and usage tied to your own commercial terms with each provider.',
     pqH3: 'Who should use PromptQuorum?',
     pqH3Para: 'PromptQuorum is designed for developers evaluating which model to integrate into a production pipeline, researchers who need cross-model validation of findings, and professionals whose work involves confidential information that cannot be sent to third-party cloud servers.',
@@ -220,7 +220,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: 'Which multi-LLM tool supports local LLMs like Ollama and LM Studio?',
-        a: 'PromptQuorum is the only tool reviewed that supports local LLM inference via Ollama and LM Studio. Running models locally — LLaMA 3.1 7B needs 8 GB RAM, 13B needs 16 GB — means sensitive prompts never leave your machine. Poe, LM Arena, OpenMark, and AiZolo operate as cloud-only services based on their public documentation as of March 2026. Verify each tool\'s current capabilities directly with the vendor.',
+        a: 'PromptQuorum is the only tool reviewed that supports local LLM inference via Ollama and LM Studio. Running models locally — LLaMA 3.1 7B needs 8 GB RAM, 13B needs 16 GB — means a prompt sent only to local models is processed on your machine; prompts you also send to cloud models go to those providers. Poe, LM Arena, OpenMark, and AiZolo operate as cloud-only services based on their public documentation as of March 2026. Verify each tool\'s current capabilities directly with the vendor.',
       },
       {
         q: 'What is consensus scoring in the context of multi-LLM tools?',
@@ -311,7 +311,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: 'Beste Wahl für: Entwickler & Power-User',
     pqTags: ['Beta · July 2026', 'promptquorum.com', 'API-Keys erforderlich', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum ist das einzige Tool unter den hier geprüften, das simultanes Prompt-Dispatching mit automatischem Konsens-Scoring kombiniert.** Du schreibst einen Prompt, wählst deine Modelle — GPT, Claude, Gemini, Mistral Large und lokal laufende Modelle — und PromptQuorum dispatcht an alle parallel. Das Quorum Verdict analysiert dann, wo die Modelle übereinstimmen, wo sie divergieren und was diese Muster für die Verlässlichkeit der Antwort bedeuten.',
-    pqPara2: 'Das entscheidende Feature ist die lokale LLM-Unterstützung. Über Ollama- und LM Studio-Integration bindet PromptQuorum lokal laufende Modelle ein — LLaMA 3.1 7B benötigt 8 GB RAM, 13B 16 GB — sodass sensible Prompts das Gerät nie verlassen. Für Juristen, Mediziner, Finanzanalysten und Entwickler mit proprietärem Code ist das keine Option, sondern Pflicht.',
+    pqPara2: 'Das entscheidende Feature ist die lokale LLM-Unterstützung. Über Ollama- und LM Studio-Integration bindet PromptQuorum lokal laufende Modelle ein — LLaMA 3.1 7B benötigt 8 GB RAM, 13B 16 GB. Ein nur an lokale Modelle gesendeter Prompt wird auf Ihrem Gerät verarbeitet; Prompts, die Sie zusätzlich an Cloud-Modelle senden, gehen an die jeweiligen Anbieter. Für Juristen, Mediziner, Finanzanalysten und Entwickler mit proprietärem Code ist das keine Option, sondern Pflicht.',
     pqPara3: 'PromptQuorum erfordert eigene API-Keys von OpenAI, Anthropic, Google und Mistral. Das hält Daten unter deiner Kontrolle, Kosten transparent und die Nutzung an deine eigenen Vertragskonditionen mit jedem Anbieter gebunden.',
     pqH3: 'Für wen ist PromptQuorum geeignet?',
     pqH3Para: 'PromptQuorum richtet sich an Entwickler, die bewerten, welches Modell in eine Produktionspipeline integriert werden soll, Forscher, die eine modellübergreifende Validierung von Ergebnissen benötigen, und Fachleute, deren Arbeit vertrauliche Informationen umfasst, die nicht an Drittserver übermittelt werden dürfen.',
@@ -365,7 +365,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: 'Welches Multi-LLM-Tool unterstützt lokale LLMs wie Ollama und LM Studio?',
-        a: 'PromptQuorum ist das einzige hier geprüfte Tool, das lokale LLM-Inferenz über Ollama und LM Studio unterstützt. Lokal laufende Modelle — LLaMA 3.1 7B benötigt 8 GB RAM, 13B 16 GB — bedeutet, dass sensible Prompts das Gerät nie verlassen. Poe, LM Arena, OpenMark und AiZolo operieren laut ihrer öffentlichen Dokumentation als Cloud-Only-Dienste (Stand März 2026). Aktuelle Funktionen direkt beim Anbieter prüfen.',
+        a: 'PromptQuorum ist das einzige hier geprüfte Tool, das lokale LLM-Inferenz über Ollama und LM Studio unterstützt. Lokal laufende Modelle — LLaMA 3.1 7B benötigt 8 GB RAM, 13B 16 GB — bedeutet: Ein nur an lokale Modelle gesendeter Prompt wird auf Ihrem Gerät verarbeitet; Prompts, die Sie zusätzlich an Cloud-Modelle senden, gehen an die jeweiligen Anbieter. Poe, LM Arena, OpenMark und AiZolo operieren laut ihrer öffentlichen Dokumentation als Cloud-Only-Dienste (Stand März 2026). Aktuelle Funktionen direkt beim Anbieter prüfen.',
       },
       {
         q: 'Was ist Konsens-Scoring im Kontext von Multi-LLM-Tools?',
@@ -456,7 +456,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: 'Idéal pour : développeurs et power users',
     pqTags: ['Bêta · avril 2026', 'promptquorum.com', 'Clés API requises', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum est le seul outil parmi ceux examinés qui combine le dispatch simultané de prompts avec le scoring de consensus automatisé.** Vous rédigez un prompt, sélectionnez vos modèles — GPT, Claude, Gemini, Mistral Large et des modèles locaux — et PromptQuorum dispatche vers tous en parallèle. Le Quorum Verdict analyse ensuite où les modèles s\'accordent, où ils divergent et ce que ces schémas signifient pour la fiabilité de la réponse.',
-    pqPara2: 'La fonctionnalité distinctive est le support LLM local. Via l\'intégration Ollama et LM Studio, PromptQuorum intègre des modèles fonctionnant localement — LLaMA 3.1 7B nécessite 8 Go de RAM, 13B nécessite 16 Go — de sorte que les prompts sensibles ne quittent jamais votre machine. Pour les professionnels juridiques, les soignants, les analystes financiers et les développeurs travaillant avec du code propriétaire, c\'est indispensable.',
+    pqPara2: 'La fonctionnalité distinctive est le support LLM local. Via l\'intégration Ollama et LM Studio, PromptQuorum intègre des modèles fonctionnant localement — LLaMA 3.1 7B nécessite 8 Go de RAM, 13B nécessite 16 Go. Un prompt envoyé uniquement à des modèles locaux est traité sur votre machine ; les prompts envoyés aussi à des modèles cloud sont transmis à ces fournisseurs. Pour les professionnels juridiques, les soignants, les analystes financiers et les développeurs travaillant avec du code propriétaire, c\'est indispensable.',
     pqPara3: 'PromptQuorum exige que les utilisateurs apportent leurs propres clés API d\'OpenAI, Anthropic, Google et Mistral. Cela maintient vos données sous votre contrôle, les coûts transparents et l\'utilisation liée à vos propres conditions commerciales avec chaque fournisseur.',
     pqH3: 'Qui devrait utiliser PromptQuorum ?',
     pqH3Para: 'PromptQuorum est conçu pour les développeurs évaluant quel modèle intégrer dans un pipeline de production, les chercheurs qui ont besoin d\'une validation croisée de leurs résultats et les professionnels dont le travail implique des informations confidentielles qui ne peuvent pas être envoyées à des serveurs tiers.',
@@ -510,7 +510,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: 'Quel outil multi-LLM prend en charge les LLM locaux comme Ollama et LM Studio ?',
-        a: 'PromptQuorum est le seul outil examiné qui prend en charge l\'inférence LLM locale via Ollama et LM Studio. Les modèles fonctionnant localement — LLaMA 3.1 7B nécessite 8 Go de RAM, 13B nécessite 16 Go — signifient que les prompts sensibles ne quittent jamais votre machine. Poe, LM Arena, OpenMark et AiZolo fonctionnent comme des services cloud uniquement selon leur documentation publique de mars 2026. Vérifiez les capacités actuelles directement auprès du fournisseur.',
+        a: 'PromptQuorum est le seul outil examiné qui prend en charge l\'inférence LLM locale via Ollama et LM Studio. Les modèles fonctionnant localement — LLaMA 3.1 7B nécessite 8 Go de RAM, 13B nécessite 16 Go — signifient qu\'un prompt envoyé uniquement à des modèles locaux est traité sur votre machine ; les prompts envoyés aussi à des modèles cloud sont transmis à ces fournisseurs. Poe, LM Arena, OpenMark et AiZolo fonctionnent comme des services cloud uniquement selon leur documentation publique de mars 2026. Vérifiez les capacités actuelles directement auprès du fournisseur.',
       },
       {
         q: 'Qu\'est-ce que le scoring de consensus dans le contexte des outils multi-LLM ?',
@@ -601,7 +601,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: '最適：開発者＆パワーユーザー',
     pqTags: ['ベータ · 2026年4月', 'promptquorum.com', 'APIキー必須', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorumは、同時プロンプトディスパッチと自動コンセンサススコアリングを組み合わせた、レビューされたツールの中で唯一のツールです。** プロンプトを入力し、モデルを選択（GPT、Claude、Gemini、Mistral Large、ローカル実行モデル）すると、PromptQuorumがすべてに並列ディスパッチします。その後、Quorum Verdictがモデルが同意する箇所、相違する箇所、およびそれらのパターンが回答の信頼性にとって何を意味するかを分析します。',
-    pqPara2: 'ローカルLLMサポートが決定的な機能です。OllamaとLM Studioの統合により、PromptQuorumはローカルで実行されるモデル（LLaMA 3.1 7Bは8GB RAM、13Bは16GB必要）をディスパッチに含めるため、機密プロンプトがマシンから離れることはありません。法律専門家、医療従事者、金融アナリスト、独自コードを扱う開発者にとって、これは選択肢ではなく必須要件です。',
+    pqPara2: 'ローカルLLMサポートが決定的な機能です。OllamaとLM Studioの統合により、PromptQuorumはローカルで実行されるモデル（LLaMA 3.1 7Bは8GB RAM、13Bは16GB必要）をディスパッチに含めます。ローカルモデルだけに送信したプロンプトはお使いのマシンで処理されますが、クラウドモデルにも送信したプロンプトは各プロバイダーに送られます。法律専門家、医療従事者、金融アナリスト、独自コードを扱う開発者にとって、これは選択肢ではなく必須要件です。',
     pqPara3: 'PromptQuorumはOpenAI、Anthropic、Google、Mistralの独自APIキーを持ち込む必要があります。これにより、データはあなたの管理下に置かれ、コストは透明で、使用は各プロバイダーとの独自の商業条件に結び付けられます。',
     pqH3: 'PromptQuorumを使うべきユーザーは？',
     pqH3Para: 'PromptQuorumは、本番パイプラインに統合するモデルを評価する開発者、調査結果のクロスモデル検証が必要な研究者、サードパーティサーバーに送信できない機密情報を扱う専門家向けに設計されています。',
@@ -655,7 +655,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: 'OllamaやLM StudioのようなローカルモデルをサポートするマルチLLMツールはどれですか？',
-        a: 'PromptQuorumは、OllamaとLM Studio経由でローカルLLM推論をサポートする、レビューされた唯一のツールです。ローカル実行モデル（LLaMA 3.1 7Bは8GB RAM、13Bは16GB必要）は機密プロンプトがマシンから離れないことを意味します。Poe、LM Arena、OpenMark、AiZoloは2026年3月の公開ドキュメントによるとクラウドのみのサービスとして運営されています。各ツールの現在の機能はベンダーに直接確認してください。',
+        a: 'PromptQuorumは、OllamaとLM Studio経由でローカルLLM推論をサポートする、レビューされた唯一のツールです。ローカル実行モデル（LLaMA 3.1 7Bは8GB RAM、13Bは16GB必要）の場合、ローカルモデルだけに送信したプロンプトはお使いのマシンで処理されますが、クラウドモデルにも送信したプロンプトは各プロバイダーに送られます。Poe、LM Arena、OpenMark、AiZoloは2026年3月の公開ドキュメントによるとクラウドのみのサービスとして運営されています。各ツールの現在の機能はベンダーに直接確認してください。',
       },
       {
         q: 'マルチLLMツールにおけるコンセンサススコアリングとは何ですか？',
@@ -746,7 +746,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: '最适合：开发者和高级用户',
     pqTags: ['测试版 · 2026年4月', 'promptquorum.com', '需要API密钥', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum是所审查工具中唯一将同时提示分发与自动共识评分相结合的工具。** 您编写一个提示，选择模型——GPT、Claude、Gemini、Mistral Large和本地运行的模型——PromptQuorum并行分发给所有模型。然后Quorum Verdict分析模型在哪里同意、在哪里分歧，以及这些模式对答案可靠性意味着什么。',
-    pqPara2: '决定性功能是本地LLM支持。通过Ollama和LM Studio集成，PromptQuorum在分发中包含本地运行的模型——LLaMA 3.1 7B需要8GB RAM，13B需要16GB——因此敏感提示永远不会离开您的机器。对于法律专业人员、医疗工作者、金融分析师和使用专有代码的开发者来说，这不是可选项，而是必需项。',
+    pqPara2: '决定性功能是本地LLM支持。通过Ollama和LM Studio集成，PromptQuorum在分发中包含本地运行的模型——LLaMA 3.1 7B需要8GB RAM，13B需要16GB——只发送给本地模型的提示词在您的机器上处理；同时发送给云端模型的提示词会传给相应的提供商。对于法律专业人员、医疗工作者、金融分析师和使用专有代码的开发者来说，这不是可选项，而是必需项。',
     pqPara3: 'PromptQuorum要求用户携带来自OpenAI、Anthropic、Google和Mistral的自己的API密钥。这使您的数据处于您的控制之下，成本透明，使用与您与每个提供商的商业条款绑定。',
     pqH3: '谁应该使用PromptQuorum？',
     pqH3Para: 'PromptQuorum专为以下用户设计：评估将哪个模型集成到生产流水线的开发者、需要跨模型验证研究结果的研究人员，以及工作涉及无法发送到第三方服务器的机密信息的专业人员。',
@@ -800,7 +800,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: '哪款多LLM工具支持Ollama和LM Studio等本地模型？',
-        a: 'PromptQuorum是审查的唯一通过Ollama和LM Studio支持本地LLM推理的工具。本地运行的模型——LLaMA 3.1 7B需要8GB RAM，13B需要16GB——意味着敏感提示永远不会离开您的机器。根据2026年3月的公开文档，Poe、LM Arena、OpenMark和AiZolo作为仅云服务运营。请直接向供应商核实每款工具的当前功能。',
+        a: 'PromptQuorum是审查的唯一通过Ollama和LM Studio支持本地LLM推理的工具。本地运行的模型——LLaMA 3.1 7B需要8GB RAM，13B需要16GB——意味着只发送给本地模型的提示词在您的机器上处理；同时发送给云端模型的提示词会传给相应的提供商。根据2026年3月的公开文档，Poe、LM Arena、OpenMark和AiZolo作为仅云服务运营。请直接向供应商核实每款工具的当前功能。',
       },
       {
         q: '多LLM工具中的共识评分是什么？',
@@ -890,7 +890,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: 'Ideal para: desarrolladores y usuarios avanzados',
     pqTags: ['Beta · Julio 2026', 'promptquorum.com', 'Claves API requeridas', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum es la única herramienta entre las revisadas que combina el envío simultáneo de prompts con la puntuación de consenso automatizada.** Escribes un prompt, seleccionas tus modelos — GPT, Claude, Gemini, Mistral Large y modelos que se ejecutan localmente — y PromptQuorum los envía a todos en paralelo. El Quorum Verdict analiza entonces dónde los modelos coinciden, dónde divergen y qué significan esos patrones para la fiabilidad de la respuesta.',
-    pqPara2: 'La característica definitoria es el soporte de LLM local. A través de la integración con Ollama y LM Studio, PromptQuorum incluye modelos que se ejecutan localmente — LLaMA 3.1 7B requiere 8 GB de RAM; 13B requiere 16 GB — en el envío, por lo que los prompts sensibles nunca salen de tu máquina. Para profesionales del derecho, trabajadores sanitarios, analistas financieros y desarrolladores que trabajan con código propietario, esto no es opcional.',
+    pqPara2: 'La característica definitoria es el soporte de LLM local. A través de la integración con Ollama y LM Studio, PromptQuorum incluye modelos que se ejecutan localmente — LLaMA 3.1 7B requiere 8 GB de RAM; 13B requiere 16 GB — en el envío. Un prompt enviado solo a modelos locales se procesa en tu máquina; los prompts que envíes también a modelos en la nube llegan a esos proveedores. Para profesionales del derecho, trabajadores sanitarios, analistas financieros y desarrolladores que trabajan con código propietario, esto no es opcional.',
     pqPara3: 'PromptQuorum requiere que los usuarios traigan sus propias claves de API de OpenAI, Anthropic, Google y Mistral. Esto mantiene los datos bajo tu control, los costes transparentes y el uso vinculado a tus propios términos comerciales con cada proveedor.',
     pqH3: '¿Quién debería usar PromptQuorum?',
     pqH3Para: 'PromptQuorum está diseñado para desarrolladores que evalúan qué modelo integrar en un pipeline de producción, investigadores que necesitan validación cruzada de hallazgos entre modelos y profesionales cuyo trabajo involucra información confidencial que no puede enviarse a servidores en la nube de terceros.',
@@ -944,7 +944,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: '¿Qué herramienta multi-LLM admite LLMs locales como Ollama y LM Studio?',
-        a: 'PromptQuorum es la única herramienta revisada que admite inferencia de LLM local a través de Ollama y LM Studio. Ejecutar modelos localmente — LLaMA 3.1 7B necesita 8 GB de RAM, 13B necesita 16 GB — significa que los prompts sensibles nunca salen de tu máquina. Poe, LM Arena, OpenMark y AiZolo operan como servicios exclusivamente en la nube según su documentación pública a partir de marzo de 2026.',
+        a: 'PromptQuorum es la única herramienta revisada que admite inferencia de LLM local a través de Ollama y LM Studio. Ejecutar modelos localmente — LLaMA 3.1 7B necesita 8 GB de RAM, 13B necesita 16 GB — significa que un prompt enviado solo a modelos locales se procesa en tu máquina; los prompts que envíes también a modelos en la nube llegan a esos proveedores. Poe, LM Arena, OpenMark y AiZolo operan como servicios exclusivamente en la nube según su documentación pública a partir de marzo de 2026.',
       },
       {
         q: '¿Qué es la puntuación de consenso en el contexto de las herramientas multi-LLM?',
@@ -1033,7 +1033,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: 'Ideal para: desenvolvedores e usuários avançados', // VERIFY
     pqTags: ['Beta · Julho de 2026', 'promptquorum.com', 'Chaves API necessárias', 'Ollama + LM Studio'], // VERIFY
     pqPara1: '**O PromptQuorum é a única ferramenta entre as analisadas que combina o envio simultâneo de prompts com a pontuação de consenso automatizada.** Você escreve um prompt, seleciona seus modelos — GPT, Claude, Gemini, Mistral Large e modelos que rodam localmente — e o PromptQuorum os envia a todos em paralelo. O Quorum Verdict então analisa onde os modelos concordam, onde divergem e o que esses padrões significam para a confiabilidade da resposta.', // VERIFY
-    pqPara2: 'O recurso definidor é o suporte a LLM local. Por meio da integração com Ollama e LM Studio, o PromptQuorum inclui modelos que rodam localmente — o LLaMA 3.1 7B requer 8 GB de RAM; o 13B requer 16 GB — no envio, de modo que prompts sensíveis nunca saem da sua máquina. Para profissionais do direito, profissionais de saúde, analistas financeiros e desenvolvedores que trabalham com código proprietário, isso não é opcional.', // VERIFY
+    pqPara2: 'O recurso definidor é o suporte a LLM local. Por meio da integração com Ollama e LM Studio, o PromptQuorum inclui modelos que rodam localmente — o LLaMA 3.1 7B requer 8 GB de RAM; o 13B requer 16 GB — no envio. Um prompt enviado apenas a modelos locais é processado na sua máquina; os prompts que você também envia a modelos na nuvem vão para esses provedores. Para profissionais do direito, profissionais de saúde, analistas financeiros e desenvolvedores que trabalham com código proprietário, isso não é opcional.', // VERIFY
     pqPara3: 'O PromptQuorum exige que os usuários tragam suas próprias chaves de API da OpenAI, Anthropic, Google e Mistral. Isso mantém os dados sob seu controle, os custos transparentes e o uso vinculado aos seus próprios termos comerciais com cada fornecedor.', // VERIFY
     pqH3: 'Quem deveria usar o PromptQuorum?', // VERIFY
     pqH3Para: 'O PromptQuorum foi projetado para desenvolvedores que avaliam qual modelo integrar a um pipeline de produção, pesquisadores que precisam de validação cruzada de descobertas entre modelos e profissionais cujo trabalho envolve informações confidenciais que não podem ser enviadas a servidores na nuvem de terceiros.', // VERIFY
@@ -1087,7 +1087,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: 'Qual ferramenta multi-LLM suporta LLMs locais como Ollama e LM Studio?', // VERIFY
-        a: 'O PromptQuorum é a única ferramenta analisada que suporta inferência de LLM local por meio de Ollama e LM Studio. Rodar modelos localmente — o LLaMA 3.1 7B precisa de 8 GB de RAM, o 13B precisa de 16 GB — significa que prompts sensíveis nunca saem da sua máquina. Poe, LM Arena, OpenMark e AiZolo operam como serviços exclusivamente na nuvem segundo sua documentação pública a partir de março de 2026.', // VERIFY
+        a: 'O PromptQuorum é a única ferramenta analisada que suporta inferência de LLM local por meio de Ollama e LM Studio. Rodar modelos localmente — o LLaMA 3.1 7B precisa de 8 GB de RAM, o 13B precisa de 16 GB — significa que um prompt enviado apenas a modelos locais é processado na sua máquina; os prompts que você também envia a modelos na nuvem vão para esses provedores. Poe, LM Arena, OpenMark e AiZolo operam como serviços exclusivamente na nuvem segundo sua documentação pública a partir de março de 2026.', // VERIFY
       },
       {
         q: 'O que é a pontuação de consenso no contexto das ferramentas multi-LLM?', // VERIFY
@@ -1177,7 +1177,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: '최적 대상: 개발자 및 파워 유저',
     pqTags: ['베타 · 2026년 7월', 'promptquorum.com', 'API 키 필요', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum은 검토된 도구 중 프롬프트 동시 전송과 자동 합의 점수를 결합한 유일한 도구입니다.** 프롬프트를 작성하고 모델을 선택하면 — GPT, Claude, Gemini, Mistral Large 및 로컬에서 실행 중인 모델 — PromptQuorum이 모두에 병렬로 전송합니다. 그런 다음 Quorum Verdict가 모델들이 어디서 일치하는지, 어디서 다른지, 그리고 그 패턴이 응답 신뢰성에 무엇을 의미하는지 분석합니다.',
-    pqPara2: '결정적 기능은 로컬 LLM 지원입니다. Ollama 및 LM Studio 통합을 통해 PromptQuorum은 로컬에서 실행 중인 모델(LLaMA 3.1 7B는 8GB RAM 필요, 13B는 16GB 필요)을 전송에 포함시켜 민감한 프롬프트가 절대 내 기기를 벗어나지 않습니다. 법률 전문가, 의료 종사자, 금융 분석가, 독점 코드를 다루는 개발자에게 이는 선택이 아닌 필수입니다.',
+    pqPara2: '결정적 기능은 로컬 LLM 지원입니다. Ollama 및 LM Studio 통합을 통해 PromptQuorum은 로컬에서 실행 중인 모델(LLaMA 3.1 7B는 8GB RAM 필요, 13B는 16GB 필요)을 전송에 포함시킵니다. 로컬 모델에만 보낸 프롬프트는 내 기기에서 처리되며, 클라우드 모델에도 보낸 프롬프트는 해당 제공업체에 전달됩니다. 법률 전문가, 의료 종사자, 금융 분석가, 독점 코드를 다루는 개발자에게 이는 선택이 아닌 필수입니다.',
     pqPara3: 'PromptQuorum은 사용자가 OpenAI, Anthropic, Google, Mistral의 자체 API 키를 가져오도록 요구합니다. 이를 통해 데이터가 자신의 통제 하에 있고, 비용이 투명하게 유지되며, 사용이 각 공급업체와의 자체 상업적 조건에 연결됩니다.',
     pqH3: 'PromptQuorum을 사용해야 하는 사람은 누구인가요?',
     pqH3Para: 'PromptQuorum은 프로덕션 파이프라인에 통합할 모델을 평가하는 개발자, 모델 간 결과를 교차 검증해야 하는 연구자, 제3자 클라우드 서버로 전송할 수 없는 기밀 정보를 다루는 전문가를 위해 설계되었습니다.',
@@ -1231,7 +1231,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: 'Ollama나 LM Studio 같은 로컬 LLM을 지원하는 멀티 LLM 도구는 무엇인가요?',
-        a: 'PromptQuorum은 분석된 도구 중 Ollama와 LM Studio를 통한 로컬 LLM 추론을 지원하는 유일한 도구입니다. 로컬에서 모델을 실행하면(LLaMA 3.1 7B는 8GB RAM, 13B는 16GB RAM 필요) 민감한 프롬프트가 절대 내 기기를 벗어나지 않습니다. Poe, LM Arena, OpenMark, AiZolo는 2026년 3월 공개 문서 기준으로 클라우드 전용 서비스로 운영됩니다. 결정을 내리기 전에 각 도구의 현재 기능을 해당 공급업체에 직접 확인하세요.',
+        a: 'PromptQuorum은 분석된 도구 중 Ollama와 LM Studio를 통한 로컬 LLM 추론을 지원하는 유일한 도구입니다. 로컬에서 모델을 실행하면(LLaMA 3.1 7B는 8GB RAM, 13B는 16GB RAM 필요) 로컬 모델에만 보낸 프롬프트는 내 기기에서 처리되며, 클라우드 모델에도 보낸 프롬프트는 해당 제공업체에 전달됩니다. Poe, LM Arena, OpenMark, AiZolo는 2026년 3월 공개 문서 기준으로 클라우드 전용 서비스로 운영됩니다. 결정을 내리기 전에 각 도구의 현재 기능을 해당 공급업체에 직접 확인하세요.',
       },
       {
         q: '멀티 LLM 도구 맥락에서 합의 점수란 무엇인가요?',
@@ -1321,7 +1321,7 @@ const content: Partial<Record<Lang, CompareText>> = {
     pqBestFor: 'الأفضل لـ: المطورين والمستخدمين المتقدمين',
     pqTags: ['بيتا · يوليو 2026', 'promptquorum.com', 'مفاتيح API مطلوبة', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum هو الأداة الوحيدة بين المُراجَعة التي تجمع بين الإرسال المتزامن للطلبات وتقييم التوافق الآلي.** تكتب طلبًا، تختار نماذجك — GPT وClaude وGemini وMistral Large والنماذج المحلية — ويُرسل PromptQuorum إلى الجميع بالتوازي. يحلّل Quorum Verdict بعد ذلك أين تتفق النماذج، وأين تختلف، وما الذي تعنيه هذه الأنماط لموثوقية الإجابة.',
-    pqPara2: 'الميزة المحورية هي دعم LLM المحلي. من خلال التكامل مع Ollama وLM Studio، يُدرج PromptQuorum النماذج التي تعمل محليًا — يحتاج LLaMA 3.1 7B إلى 8 غيغابايت RAM، و13B إلى 16 غيغابايت — في عملية الإرسال، لذا لا تغادر الطلبات الحساسة جهازك أبدًا. بالنسبة للمحامين والعاملين في الرعاية الصحية والمحللين الماليين والمطورين العاملين على كود خاص، هذا ليس خيارًا بل ضرورة.',
+    pqPara2: 'الميزة المحورية هي دعم LLM المحلي. من خلال التكامل مع Ollama وLM Studio، يُدرج PromptQuorum النماذج التي تعمل محليًا — يحتاج LLaMA 3.1 7B إلى 8 غيغابايت RAM، و13B إلى 16 غيغابايت — في عملية الإرسال. تُعالَج الطلبات المرسلة إلى النماذج المحلية فقط على جهازك، أما الطلبات التي ترسلها أيضًا إلى النماذج السحابية فتنتقل إلى مزودي تلك الخدمات. بالنسبة للمحامين والعاملين في الرعاية الصحية والمحللين الماليين والمطورين العاملين على كود خاص، هذا ليس خيارًا بل ضرورة.',
     pqPara3: 'يشترط PromptQuorum على المستخدمين إحضار مفاتيح API الخاصة بهم من OpenAI وAnthropic وGoogle وMistral. يُبقي هذا البيانات تحت سيطرتك، والتكاليف شفافة، والاستخدام مرتبطًا بشروطك التجارية مع كل مزوّد.',
     pqH3: 'من يجب أن يستخدم PromptQuorum؟',
     pqH3Para: 'صُمِّم PromptQuorum للمطورين الذين يقيّمون النموذج المراد دمجه في خط إنتاج، والباحثين الذين يحتاجون إلى التحقق المتقاطع من النتائج عبر النماذج، والمهنيين الذين يتعاملون مع معلومات سرية لا يمكن إرسالها إلى خوادم سحابية خارجية.',
@@ -1375,7 +1375,7 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
       {
         q: 'أي أداة متعددة النماذج تدعم نماذج LLM المحلية مثل Ollama وLM Studio؟',
-        a: 'PromptQuorum هو الأداة الوحيدة المُراجَعة التي تدعم الاستدلال المحلي عبر Ollama وLM Studio. تشغيل النماذج محليًا — LLaMA 3.1 7B يحتاج 8 غيغابايت RAM، و13B يحتاج 16 غيغابايت — يعني أن الطلبات الحساسة لا تغادر جهازك أبدًا. يعمل Poe وLM Arena وOpenMark وAiZolo كخدمات سحابية حصرًا وفق وثائقهم العامة في مارس 2026.',
+        a: 'PromptQuorum هو الأداة الوحيدة المُراجَعة التي تدعم الاستدلال المحلي عبر Ollama وLM Studio. تشغيل النماذج محليًا — LLaMA 3.1 7B يحتاج 8 غيغابايت RAM، و13B يحتاج 16 غيغابايت — يعني أن الطلبات المرسلة إلى النماذج المحلية فقط تُعالَج على جهازك، أما الطلبات التي ترسلها أيضًا إلى النماذج السحابية فتنتقل إلى مزودي تلك الخدمات. يعمل Poe وLM Arena وOpenMark وAiZolo كخدمات سحابية حصرًا وفق وثائقهم العامة في مارس 2026.',
       },
       {
         q: 'ما تقييم التوافق في سياق أدوات LLM المتعددة؟',

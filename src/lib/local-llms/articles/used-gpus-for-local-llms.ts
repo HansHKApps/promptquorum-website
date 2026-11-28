@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: '**Older used GPUs sell below their launch prices (InsiderLLM tracker: RTX 3080 10GB $280-350, RTX 3060 12GB about $300), but the RTX 3090 and RTX 4090 now sell near or above MSRP in US listings.** The used market is generally well-stocked with ex-mining and ex-gaming cards. Buying used can make sense for a first rig or an upgrade; mining cards are riskier unless you can test on-site. Prices below are US-market estimates and change quickly.',
       metaDescription: 'Used GPUs for local LLMs: RTX 3060, 3080, 3090 and 4090 price ranges, where to buy, mining-card risks and how to test a card before you pay.',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**Older used GPUs sell below their launch prices (InsiderLLM tracker: RTX 3080 10GB $280-350, RTX 3060 12GB about $300), but the RTX 3090 and RTX 4090 now sell near or above MSRP in US listings. Test any used card before buying, especially ex-mining cards.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '8 min',
@@ -59,20 +59,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**RTX 3060 12GB** (InsiderLLM tracker: about $300, range $200-400): Large volume on the used market, so many listings to compare. Test VRAM before buying.',
             '**RTX 3080 10GB** (InsiderLLM tracker: $280-350): Popular gaming card. 10GB is usable for smaller models but limits larger ones. Test before buying.',
             '**RTX 4090 24GB** (per the InsiderLLM tracker, US eBay sold listings: $2,575-3,010): Premium pricing, above MSRP. High resale volume gives many listings to compare. Check condition like any used card.',
-            '**RTX 3090 24GB** (per the InsiderLLM tracker, US eBay sold listings: about $1,400-1,550): High-end and expensive. Prices rose sharply through 2026 and recent sold listings are well above $1,000. Check condition like any used card.',
+            '**RTX 3090 24GB** (per the InsiderLLM tracker, US eBay sold listings: about $1,500-1,725): High-end and expensive. Prices rose sharply through 2026 and recent sold listings are well above $1,000. Check condition like any used card.',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: 'How Much Should You Pay for Used GPUs?',
           content: [
-            '**Benchmark: Retail MSRP vs.** used market. Figures come from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (page updated 2026-10-15). The RTX 3090 and RTX 4090 figures are US eBay sold listings, excluding shipping; the tracker does not state a method for its RTX 3060 and RTX 3080 figures. US prices only; not offers or guarantees.',
+            '**Benchmark: Retail MSRP vs.** used market. Figures come from the [InsiderLLM GPU price tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/). The RTX 3090 figure, dated 2026-11-23, comes from US eBay sold listings. The RTX 4090, RTX 3080 and RTX 3060 figures are as we read them in the 2026-10-15 version of the page: the RTX 4090 figure is US eBay sold listings, excluding shipping, and that version stated no method for the RTX 3060 and RTX 3080 figures. US prices only; not offers or guarantees.',
           ],
           items: [
             'RTX 3060 12GB: MSRP $329 → used about $300, range $200-400 (InsiderLLM tracker; about 9% below MSRP at $300)',
             'RTX 3080 10GB: MSRP $699 → used $280-350 (InsiderLLM tracker; roughly 50-60% below MSRP)',
             'RTX 4090 24GB: MSRP $1,599 → used sold listings $2,575-3,010 (median $2,860), above MSRP; new listings $2,000-3,000',
-            'RTX 3090 24GB: used sold listings about $1,400-1,550',
+            'RTX 3090 24GB: used sold listings $1,500-1,725 (median $1,650; 225 sold listings, 13-23 November 2026)',
           ],
         },
         'mining-vs-gaming': {
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Should I buy a used RTX 4070 or RTX 3080?', a: 'The InsiderLLM tracker lists the RTX 3080 10GB at $280-350 used and gives no RTX 4070 price, so compare current listings for both. The RTX 4070 is a newer generation with 2 GB more VRAM; check benchmarks for your model size.' },
             { q: 'Can I return a used GPU on eBay if it fails after 1 month?', a: 'Return policies depend on the seller and listing. Many offer a limited return window; after it closes you are generally on your own unless a manufacturer warranty applies. Check before buying.' },
             { q: 'Is it worth paying extra for a GPU with return protection?', a: 'Often yes. A return window can protect you from a total loss if the card fails after purchase; compare the premium against the card\'s price.' },
-            { q: 'Should I buy a used RTX 3090 or RTX 4090?', a: 'A used RTX 3090 if budget matters. Observed US eBay sold listings, excluding shipping, are about $1,400-1,550 for a used RTX 3090 versus $2,575-3,010 for a used RTX 4090 (InsiderLLM tracker, source updated 2026-10-15). Both have 24 GB. In developer-reported llama.cpp 7B tests (CUDA scoreboard, discussion #15013) the RTX 4090 generates 186.2 tok/s versus 158.2 for the RTX 3090 and processes prompts more than twice as fast (11,993 versus 5,175 tok/s). Buy the RTX 4090 mainly if you need that prompt speed and can afford the premium. Prices are volatile; check live listings.' },
+            { q: 'Should I buy a used RTX 3090 or RTX 4090?', a: 'A used RTX 3090 if budget matters. Per the InsiderLLM tracker, observed US eBay sold listings are $1,500-1,725 for a used RTX 3090 (figure dated 2026-11-23) versus $2,575-3,010, excluding shipping, for a used RTX 4090 (2026-10-15 version of the page). Both have 24 GB. In developer-reported llama.cpp 7B tests (CUDA scoreboard, discussion #15013) the RTX 4090 generates 186.2 tok/s versus 158.2 for the RTX 3090 and processes prompts more than twice as fast (11,993 versus 5,175 tok/s). Buy the RTX 4090 mainly if you need that prompt speed and can afford the premium. Prices are volatile; check live listings.' },
           ],
         },
         'relatedReading': {
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'Sources',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- US eBay sold-listing prices for RTX 3090 and RTX 4090 (updated 2026-10-15).',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- US eBay sold-listing prices: RTX 3090 (figure dated 2026-11-23) and RTX 4090 (2026-10-15 version of the page).',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- user-submitted Llama 2 7B Q4_0 results.',
             'Documentation of the GPU memory-test tool you choose (confirm it supports your card)',
             'GPU-Z specification database for thermal and clock speed baselines',
@@ -159,7 +159,7 @@ schema: {
         'description': 'Used GPUs for local LLMs: RTX 3060, 3080, 3090 and 4090 price ranges, where to buy, mining-card risks and how to test a card before you pay.',
         'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -233,7 +233,7 @@ schema: {
             'name': 'Should I buy a used RTX 3090 or RTX 4090?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A used RTX 3090 if budget matters. Observed US eBay sold listings, excluding shipping, are about $1,400-1,550 for a used RTX 3090 versus $2,575-3,010 for a used RTX 4090 (InsiderLLM tracker, source updated 2026-10-15). Both have 24 GB. In developer-reported llama.cpp 7B tests (CUDA scoreboard, discussion #15013) the RTX 4090 generates 186.2 tok/s versus 158.2 for the RTX 3090 and processes prompts more than twice as fast (11,993 versus 5,175 tok/s). Buy the RTX 4090 mainly if you need that prompt speed and can afford the premium. Prices are volatile; check live listings.'
+              'text': 'A used RTX 3090 if budget matters. Per the InsiderLLM tracker, observed US eBay sold listings are $1,500-1,725 for a used RTX 3090 (figure dated 2026-11-23) versus $2,575-3,010, excluding shipping, for a used RTX 4090 (2026-10-15 version of the page). Both have 24 GB. In developer-reported llama.cpp 7B tests (CUDA scoreboard, discussion #15013) the RTX 4090 generates 186.2 tok/s versus 158.2 for the RTX 3090 and processes prompts more than twice as fast (11,993 versus 5,175 tok/s). Buy the RTX 4090 mainly if you need that prompt speed and can afford the premium. Prices are volatile; check live listings.'
             }
           },
         ],
@@ -244,7 +244,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms',
         'name': 'Used GPUs for Local LLMs: Cost Comparison & Reliability Notes',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: 'Cost Comparison: RTX 3060 (about $300 used, InsiderLLM tracker) vs RTX 3080 ($280-350, InsiderLLM tracker) vs RTX 3090 (about $1,400-1,550 observed used) vs RTX 4090 (about $2,575-3,010 observed used).' },
+          { '@type': 'ListItem', position: 1, name: 'Cost Comparison: RTX 3060 (about $300 used, InsiderLLM tracker) vs RTX 3080 ($280-350, InsiderLLM tracker) vs RTX 3090 (about $1,500-1,725 observed used) vs RTX 4090 (about $2,575-3,010 observed used).' },
           { '@type': 'ListItem', position: 2, name: 'Reliability Notes: RTX 3060 12GB and RTX 3080 10GB have high resale volume. Mining cards can have more VRAM wear; test before buying.' },
           { '@type': 'ListItem', position: 3, name: 'Used GPU Models to Consider: RTX 3060 12GB (budget entry), RTX 3080 10GB (mid-range), RTX 4090 24GB (premium, above MSRP).' },
         ],
@@ -260,7 +260,7 @@ schema: {
       intro: '**Las GPUs de segunda mano más antiguas se venden por debajo de su precio de lanzamiento (rastreador de InsiderLLM: RTX 3080 10GB $280-350, RTX 3060 12GB unos $300), pero la RTX 3090 y la RTX 4090 se venden ahora cerca o por encima del MSRP en los listados de EE. UU.** El mercado de segunda mano suele estar bien surtido de tarjetas ex-minería y ex-gaming. Comprar de segunda mano puede tener sentido para tu primer equipo o al actualizar; las tarjetas de minería son más arriesgadas a menos que puedas probarlas in situ. Los precios son estimaciones del mercado de EE. UU. y cambian con rapidez.',
       metaDescription: 'GPUs de segunda mano para LLMs locales: rangos de precio de RTX 3060, 3080, 3090 y 4090, dónde comprar, riesgos de las tarjetas de minería y cómo probarlas.',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**Las GPUs de segunda mano más antiguas se venden por debajo del precio de lanzamiento (rastreador de InsiderLLM: RTX 3080 10GB $280-350, RTX 3060 12GB unos $300), pero la RTX 3090 y la RTX 4090 se venden ahora cerca o por encima del MSRP en los listados de EE. UU. Prueba cualquier tarjeta usada antes de comprar, sobre todo las ex-minería.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo de LLMs locales',
       readTime: '8 min de lectura',
@@ -301,20 +301,20 @@ schema: {
             '**RTX 3060 12GB** (rastreador de InsiderLLM: unos $300, rango $200-400): Gran volumen en el mercado de segunda mano, con muchos listados para comparar. Prueba la VRAM antes de comprar.',
             '**RTX 3080 10GB** (rastreador de InsiderLLM: $280-350): Tarjeta gaming popular. 10GB es usable con modelos pequeños, pero limita los más grandes. Pruébala antes de comprar.',
             '**RTX 4090 24GB** (según el rastreador de InsiderLLM, listados vendidos en eBay EE. UU.: $2,575-3,010): Precio premium, por encima del MSRP. El alto volumen de reventa da muchos listados para comparar. Revisa su estado como en cualquier tarjeta de segunda mano.',
-            '**RTX 3090 24GB** (según el rastreador de InsiderLLM, listados vendidos en eBay EE. UU.: unos $1,400-1,550): Alta gama y cara. Los precios subieron con fuerza durante 2026 y los listados vendidos recientes superan con claridad los $1,000. Revisa su estado como en cualquier tarjeta de segunda mano.',
+            '**RTX 3090 24GB** (según el rastreador de InsiderLLM, listados vendidos en eBay EE. UU.: unos $1,500-1,725): Alta gama y cara. Los precios subieron con fuerza durante 2026 y los listados vendidos recientes superan con claridad los $1,000. Revisa su estado como en cualquier tarjeta de segunda mano.',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: '¿Cuánto deberías pagar por una GPU de segunda mano?',
           content: [
-            '**Referencia: MSRP de venta al por menor vs.** mercado de segunda mano. Las cifras proceden del [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (página actualizada el 2026-10-15). Las de la RTX 3090 y la RTX 4090 son listados vendidos en eBay EE. UU., sin gastos de envío; el rastreador no indica el método de sus cifras de la RTX 3060 y la RTX 3080. Solo precios de EE. UU. en USD; en tu país pueden variar según impuestos locales; no son ofertas ni garantías.',
+            '**Referencia: MSRP de venta al por menor vs.** mercado de segunda mano. Las cifras proceden del [rastreador de precios de GPU de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/). La cifra de la RTX 3090, con fecha 2026-11-23, procede de listados vendidos en eBay EE. UU. Las cifras de la RTX 4090, la RTX 3080 y la RTX 3060 son las que leímos en la versión de la página del 2026-10-15: la de la RTX 4090 corresponde a listados vendidos en eBay EE. UU., sin gastos de envío, y esa versión no indicaba el método de las cifras de la RTX 3060 y la RTX 3080. Solo precios de EE. UU. en USD; en tu país pueden variar según impuestos locales; no son ofertas ni garantías.',
           ],
           items: [
             'RTX 3060 12GB: MSRP $329 → segunda mano unos $300, rango $200-400 (rastreador de InsiderLLM; cerca de un 9% por debajo del MSRP a $300)',
             'RTX 3080 10GB: MSRP $699 → segunda mano $280-350 (rastreador de InsiderLLM; entre un 50% y un 60% por debajo del MSRP)',
             'RTX 4090 24GB: MSRP $1,599 → segunda mano (listados vendidos) $2,575-3,010, mediana $2,860, por encima del MSRP; listados nuevos $2,000-3,000',
-            'RTX 3090 24GB: segunda mano (listados vendidos) unos $1,400-1,550',
+            'RTX 3090 24GB: segunda mano (listados vendidos) $1,500-1,725 (mediana $1,650; 225 listados vendidos, del 13 al 23 de noviembre de 2026)',
           ],
         },
         'mining-vs-gaming': {
@@ -369,7 +369,7 @@ schema: {
             { q: '¿Debería comprar una RTX 4070 o una RTX 3080 de segunda mano?', a: 'El rastreador de InsiderLLM indica $280-350 para una RTX 3080 10GB de segunda mano y no publica precio de la RTX 4070, así que compara los listados actuales de ambas. La RTX 4070 es una generación más reciente con 2 GB más de VRAM; revisa los benchmarks para el tamaño de tu modelo.' },
             { q: '¿Puedo devolver una GPU de segunda mano en eBay si falla al mes?', a: 'Depende de la política del vendedor y del listado. Muchos ofrecen un plazo de devolución limitado; cuando termina, generalmente estás por tu cuenta salvo que aplique una garantía del fabricante. Compruébalo antes de comprar.' },
             { q: '¿Vale la pena pagar un extra por una GPU con protección de devolución?', a: 'A menudo sí. Un plazo de devolución puede protegerte de una pérdida total si la tarjeta falla después de la compra; compara la prima con el precio de la tarjeta.' },
-            { q: '¿Debería comprar una RTX 3090 o una RTX 4090 de segunda mano?', a: 'Una RTX 3090 de segunda mano si el presupuesto importa. En los listados vendidos observados en eBay EE. UU., sin gastos de envío, cuesta unos $1,400-1,550, frente a $2,575-3,010 de una RTX 4090 de segunda mano (rastreador de InsiderLLM, fuente actualizada el 2026-10-15). Ambas tienen 24 GB. En las pruebas de 7B de llama.cpp reportadas por desarrolladores (tabla CUDA, discusión #15013) la RTX 4090 genera 186.2 tok/s frente a 158.2 de la RTX 3090 y procesa prompts más del doble de rápido (11,993 frente a 5,175 tok/s). Compra la RTX 4090 sobre todo si necesitas esa velocidad con prompts largos y puedes pagar la diferencia. Los precios son volátiles; revisa los listados actuales.' },
+            { q: '¿Debería comprar una RTX 3090 o una RTX 4090 de segunda mano?', a: 'Una RTX 3090 de segunda mano si el presupuesto importa. Según el rastreador de InsiderLLM, en los listados vendidos observados en eBay EE. UU. cuesta $1,500-1,725 (cifra con fecha 2026-11-23), frente a $2,575-3,010, sin gastos de envío, de una RTX 4090 de segunda mano (versión de la página del 2026-10-15). Ambas tienen 24 GB. En las pruebas de 7B de llama.cpp reportadas por desarrolladores (tabla CUDA, discusión #15013) la RTX 4090 genera 186.2 tok/s frente a 158.2 de la RTX 3090 y procesa prompts más del doble de rápido (11,993 frente a 5,175 tok/s). Compra la RTX 4090 sobre todo si necesitas esa velocidad con prompts largos y puedes pagar la diferencia. Los precios son volátiles; revisa los listados actuales.' },
           ],
         },
         'relatedReading': {
@@ -387,7 +387,7 @@ schema: {
           id: 'sources',
           title: 'Fuentes',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- precios de listados vendidos en eBay EE. UU. de la RTX 3090 y la RTX 4090 (actualizado el 2026-10-15).',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- precios de listados vendidos en eBay EE. UU.: RTX 3090 (cifra con fecha 2026-11-23) y RTX 4090 (versión de la página del 2026-10-15).',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- resultados de Llama 2 7B Q4_0 enviados por usuarios.',
             'Documentación de la herramienta de prueba de memoria de GPU que elijas (confirma que admite tu tarjeta)',
             'Base de datos de especificaciones GPU-Z para valores de referencia térmicos y de velocidad de reloj',
@@ -401,7 +401,7 @@ schema: {
         'description': 'GPUs de segunda mano para LLMs locales: rangos de precio de RTX 3060, 3080, 3090 y 4090, dónde comprar, riesgos de las tarjetas de minería y cómo probarlas.',
         'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -455,7 +455,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '¿Debería comprar una RTX 3090 o una RTX 4090 de segunda mano?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Una RTX 3090 de segunda mano si el presupuesto importa. En los listados vendidos observados en eBay EE. UU., sin gastos de envío, cuesta unos $1,400-1,550, frente a $2,575-3,010 de una RTX 4090 de segunda mano (rastreador de InsiderLLM, fuente actualizada el 2026-10-15). Ambas tienen 24 GB. En las pruebas de 7B de llama.cpp reportadas por desarrolladores (tabla CUDA, discusión #15013) la RTX 4090 genera 186.2 tok/s frente a 158.2 de la RTX 3090 y procesa prompts más del doble de rápido (11,993 frente a 5,175 tok/s). Compra la RTX 4090 sobre todo si necesitas esa velocidad con prompts largos y puedes pagar la diferencia. Los precios son volátiles; revisa los listados actuales.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Una RTX 3090 de segunda mano si el presupuesto importa. Según el rastreador de InsiderLLM, en los listados vendidos observados en eBay EE. UU. cuesta $1,500-1,725 (cifra con fecha 2026-11-23), frente a $2,575-3,010, sin gastos de envío, de una RTX 4090 de segunda mano (versión de la página del 2026-10-15). Ambas tienen 24 GB. En las pruebas de 7B de llama.cpp reportadas por desarrolladores (tabla CUDA, discusión #15013) la RTX 4090 genera 186.2 tok/s frente a 158.2 de la RTX 3090 y procesa prompts más del doble de rápido (11,993 frente a 5,175 tok/s). Compra la RTX 4090 sobre todo si necesitas esa velocidad con prompts largos y puedes pagar la diferencia. Los precios son volátiles; revisa los listados actuales.' }
           },
         ],
       },
@@ -465,7 +465,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
         'name': 'GPUs de segunda mano para LLMs locales: Comparativa de costes y notas de fiabilidad',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: 'Comparativa de costes: RTX 3060 (unos $300 de segunda mano, rastreador de InsiderLLM) vs RTX 3080 ($280-350, rastreador de InsiderLLM) vs RTX 3090 (unos $1,400-1,550 observados de segunda mano) vs RTX 4090 (unos $2,575-3,010 observados de segunda mano).' },
+          { '@type': 'ListItem', position: 1, name: 'Comparativa de costes: RTX 3060 (unos $300 de segunda mano, rastreador de InsiderLLM) vs RTX 3080 ($280-350, rastreador de InsiderLLM) vs RTX 3090 (unos $1,500-1,725 observados de segunda mano) vs RTX 4090 (unos $2,575-3,010 observados de segunda mano).' },
           { '@type': 'ListItem', position: 2, name: 'Notas de fiabilidad: la RTX 3060 12GB y la RTX 3080 10GB tienen alto volumen de reventa. Las tarjetas de minería pueden tener más desgaste de VRAM; pruébalas antes de comprar.' },
           { '@type': 'ListItem', position: 3, name: 'Modelos de GPU de segunda mano a considerar: RTX 3060 12GB (entrada económica), RTX 3080 10GB (gama media), RTX 4090 24GB (premium, por encima del MSRP).' },
         ],
@@ -481,7 +481,7 @@ schema: {
       intro: '**وحدات GPU المستعملة الأقدم تُباع بأقل من سعر إطلاقها (متتبع InsiderLLM: RTX 3080 10GB بين $280 و$350، وRTX 3060 12GB نحو $300)، لكن RTX 3090 وRTX 4090 تُباعان الآن قرب سعر MSRP أو فوقه في قوائم السوق الأمريكي.** السوق المستعمل عادةً ما يكون مليئًا ببطاقات سابقة للتعدين وسابقة للألعاب. الشراء المستعمل قد يكون منطقيًا لأول جهاز لك أو عند الترقية؛ بطاقات التعدين أكثر مخاطرة ما لم تستطع اختبارها في الموقع. الأسعار أدناه تقديرات للسوق الأمريكي وتتغير بسرعة.',
       metaDescription: '⁨GPU⁩ مستعملة لنماذج ⁨LLM⁩ المحلية: نطاقات أسعار ⁨RTX 3060⁩ و⁨3080⁩ و⁨3090⁩ و⁨4090⁩، وأين تشتري، ومخاطر بطاقات التعدين، وكيف تختبر البطاقة قبل الدفع.',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**وحدات GPU المستعملة الأقدم تُباع بأقل من سعر إطلاقها (متتبع InsiderLLM: RTX 3080 10GB بين $280 و$350، وRTX 3060 12GB نحو $300)، لكن RTX 3090 وRTX 4090 تُباعان الآن قرب سعر MSRP أو فوقه في قوائم السوق الأمريكي. اختبر أي بطاقة مستعملة قبل الشراء، خصوصًا بطاقات التعدين السابقة.**',
       audience: 'المطورون المُلمّون بـ Ollama أو LM Studio الذين يحسّنون سير عمل نماذج LLM المحلية',
       readTime: '8 دقائق قراءة',
@@ -522,20 +522,20 @@ schema: {
             '**RTX 3060 12GB** (متتبع InsiderLLM: نحو $300، النطاق $200-400): حجم كبير في السوق المستعمل، أي قوائم كثيرة للمقارنة. اختبر VRAM قبل الشراء.',
             '**RTX 3080 10GB** (متتبع InsiderLLM: $280-350): بطاقة ألعاب شائعة. 10GB قابلة للاستخدام مع النماذج الأصغر لكنها تحدّ من النماذج الأكبر. اختبرها قبل الشراء.',
             '**RTX 4090 24GB** (وفق متتبع InsiderLLM، قوائم بيع eBay الأمريكي: $2,575-3,010): سعر متميز، أعلى من MSRP. حجم إعادة البيع الكبير يوفّر قوائم كثيرة للمقارنة. افحص حالتها كما تفعل مع أي بطاقة مستعملة.',
-            '**RTX 3090 24GB** (وفق متتبع InsiderLLM، قوائم بيع eBay الأمريكي: نحو $1,400-1,550): فئة عليا وباهظة. ارتفعت الأسعار بشدة خلال 2026 وقوائم البيع الأخيرة أعلى بوضوح من $1,000. افحص حالتها كما تفعل مع أي بطاقة مستعملة.',
+            '**RTX 3090 24GB** (وفق متتبع InsiderLLM، قوائم بيع eBay الأمريكي: نحو $1,500-1,725): فئة عليا وباهظة. ارتفعت الأسعار بشدة خلال 2026 وقوائم البيع الأخيرة أعلى بوضوح من $1,000. افحص حالتها كما تفعل مع أي بطاقة مستعملة.',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: 'كم يجب أن تدفع مقابل GPU مستعملة؟',
           content: [
-            '**مرجع: سعر التجزئة الرسمي (MSRP) مقابل** السوق المستعمل. الأرقام من [متتبع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (الصفحة محدّثة في 2026-10-15). أرقام RTX 3090 وRTX 4090 قوائم بيع على eBay الأمريكي دون الشحن؛ ولا يذكر المتتبع منهجية أرقام RTX 3060 وRTX 3080. أسعار السوق الأمريكي بالدولار فقط؛ قد تختلف الأسعار في بلدك بسبب الضرائب والرسوم؛ وهي ليست عروضًا ولا ضمانات.',
+            '**مرجع: سعر التجزئة الرسمي (MSRP) مقابل** السوق المستعمل. الأرقام من [متتبع أسعار GPU لدى InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/). رقم RTX 3090، بتاريخ 2026-11-23، مأخوذ من قوائم بيع على eBay الأمريكي. أما أرقام RTX 4090 وRTX 3080 وRTX 3060 فهي كما قرأناها في نسخة الصفحة المؤرخة 2026-10-15: رقم RTX 4090 من قوائم بيع على eBay الأمريكي دون الشحن، ولم تذكر تلك النسخة منهجية أرقام RTX 3060 وRTX 3080. أسعار السوق الأمريكي بالدولار فقط؛ قد تختلف الأسعار في بلدك بسبب الضرائب والرسوم؛ وهي ليست عروضًا ولا ضمانات.',
           ],
           items: [
             'RTX 3060 12GB: MSRP $329 ← مستعملة نحو $300، والنطاق $200-400 (متتبع InsiderLLM؛ أقل من MSRP بنحو 9% عند $300)',
             'RTX 3080 10GB: MSRP $699 ← مستعملة $280-350 (متتبع InsiderLLM؛ أقل من MSRP بنحو 50-60%)',
             'RTX 4090 24GB: MSRP $1,599 ← مستعملة (قوائم بيع) $2,575-3,010 والوسيط $2,860، أعلى من MSRP؛ القوائم الجديدة $2,000-3,000',
-            'RTX 3090 24GB: مستعملة (قوائم بيع) نحو $1,400-1,550',
+            'RTX 3090 24GB: مستعملة (قوائم بيع) $1,500-1,725 (الوسيط $1,650؛ 225 قائمة بيع، 13-23 نوفمبر 2026)',
           ],
         },
         'mining-vs-gaming': {
@@ -590,7 +590,7 @@ schema: {
             { q: 'هل أشتري RTX 4070 أم RTX 3080 مستعملة؟', a: 'يذكر متتبع InsiderLLM سعر RTX 3080 10GB المستعملة بين $280 و$350 ولا يورد سعرًا لـ RTX 4070، لذا قارن القوائم الحالية لكليهما. RTX 4070 جيل أحدث بذاكرة VRAM أكبر بمقدار 2 GB؛ راجع اختبارات الأداء لحجم النموذج الذي تستخدمه.' },
             { q: 'هل يمكنني إرجاع GPU مستعملة على eBay إذا فشلت بعد شهر؟', a: 'يعتمد على سياسة البائع والقائمة. يقدّم كثيرون مهلة إرجاع محدودة؛ بعد انتهائها تكون عادةً على مسؤوليتك ما لم تنطبق ضمانة الشركة المصنّعة. تحقق قبل الشراء.' },
             { q: 'هل يستحق دفع مبلغ إضافي مقابل GPU بحماية إرجاع؟', a: 'غالبًا نعم. قد تحميك مهلة الإرجاع من خسارة كاملة إذا فشلت البطاقة بعد الشراء؛ قارن العلاوة بسعر البطاقة.' },
-            { q: 'هل أشتري RTX 3090 أم RTX 4090 مستعملة؟', a: 'RTX 3090 مستعملة إذا كانت الميزانية مهمة. في قوائم البيع المرصودة على eBay الأمريكي (دون الشحن) تبلغ نحو $1,400-1,550 مقابل $2,575-3,010 لـ RTX 4090 مستعملة (متتبع InsiderLLM، المصدر محدّث في 2026-10-15). كلتاهما بسعة 24 GB. في اختبارات 7B على llama.cpp التي أبلغ عنها مطورون (جدول CUDA، النقاش #15013) تولّد RTX 4090 ما يعادل 186.2 tok/s مقابل 158.2 لـ RTX 3090، وتعالج المطالبات بأكثر من ضعف السرعة (11,993 مقابل 5,175 tok/s). اشترِ RTX 4090 أساسًا إذا احتجت هذه السرعة مع المطالبات الطويلة وكنت قادرًا على دفع الفارق. الأسعار متقلبة؛ راجع القوائم الحالية.' },
+            { q: 'هل أشتري RTX 3090 أم RTX 4090 مستعملة؟', a: 'RTX 3090 مستعملة إذا كانت الميزانية مهمة. وفق متتبع InsiderLLM، تبلغ في قوائم البيع المرصودة على eBay الأمريكي $1,500-1,725 (رقم بتاريخ 2026-11-23) مقابل $2,575-3,010 دون الشحن لـ RTX 4090 مستعملة (نسخة الصفحة المؤرخة 2026-10-15). كلتاهما بسعة 24 GB. في اختبارات 7B على llama.cpp التي أبلغ عنها مطورون (جدول CUDA، النقاش #15013) تولّد RTX 4090 ما يعادل 186.2 tok/s مقابل 158.2 لـ RTX 3090، وتعالج المطالبات بأكثر من ضعف السرعة (11,993 مقابل 5,175 tok/s). اشترِ RTX 4090 أساسًا إذا احتجت هذه السرعة مع المطالبات الطويلة وكنت قادرًا على دفع الفارق. الأسعار متقلبة؛ راجع القوائم الحالية.' },
           ],
         },
         'relatedReading': {
@@ -608,7 +608,7 @@ schema: {
           id: 'sources',
           title: 'المصادر',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- أسعار قوائم البيع على eBay الأمريكي لـ RTX 3090 وRTX 4090 (محدّث في 2026-10-15).',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- أسعار قوائم البيع على eBay الأمريكي: RTX 3090 (رقم بتاريخ 2026-11-23) وRTX 4090 (نسخة الصفحة المؤرخة 2026-10-15).',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- نتائج Llama 2 7B Q4_0 المرسلة من المستخدمين.',
             'وثائق أداة اختبار ذاكرة GPU التي تختارها (تأكد من أنها تدعم بطاقتك)',
             'قاعدة بيانات مواصفات GPU-Z للقيم المرجعية للحرارة وسرعة الساعة',
@@ -622,7 +622,7 @@ schema: {
         'description': 'GPU مستعملة لنماذج LLM المحلية: نطاقات أسعار RTX 3060 و3080 و3090 و4090، وأين تشتري، ومخاطر بطاقات التعدين، وكيف تختبر البطاقة قبل الدفع.',
         'url': 'https://www.promptquorum.com/ar/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
@@ -678,7 +678,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'هل أشتري RTX 3090 أم RTX 4090 مستعملة؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 3090 مستعملة إذا كانت الميزانية مهمة. في قوائم البيع المرصودة على eBay الأمريكي (دون الشحن) تبلغ نحو $1,400-1,550 مقابل $2,575-3,010 لـ RTX 4090 مستعملة (متتبع InsiderLLM، المصدر محدّث في 2026-10-15). كلتاهما بسعة 24 GB. في اختبارات 7B على llama.cpp التي أبلغ عنها مطورون (جدول CUDA، النقاش #15013) تولّد RTX 4090 ما يعادل 186.2 tok/s مقابل 158.2 لـ RTX 3090، وتعالج المطالبات بأكثر من ضعف السرعة (11,993 مقابل 5,175 tok/s). اشترِ RTX 4090 أساسًا إذا احتجت هذه السرعة مع المطالبات الطويلة وكنت قادرًا على دفع الفارق. الأسعار متقلبة؛ راجع القوائم الحالية.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 3090 مستعملة إذا كانت الميزانية مهمة. وفق متتبع InsiderLLM، تبلغ في قوائم البيع المرصودة على eBay الأمريكي $1,500-1,725 (رقم بتاريخ 2026-11-23) مقابل $2,575-3,010 دون الشحن لـ RTX 4090 مستعملة (نسخة الصفحة المؤرخة 2026-10-15). كلتاهما بسعة 24 GB. في اختبارات 7B على llama.cpp التي أبلغ عنها مطورون (جدول CUDA، النقاش #15013) تولّد RTX 4090 ما يعادل 186.2 tok/s مقابل 158.2 لـ RTX 3090، وتعالج المطالبات بأكثر من ضعف السرعة (11,993 مقابل 5,175 tok/s). اشترِ RTX 4090 أساسًا إذا احتجت هذه السرعة مع المطالبات الطويلة وكنت قادرًا على دفع الفارق. الأسعار متقلبة؛ راجع القوائم الحالية.' }
           },
         ],
       },
@@ -688,7 +688,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/used-gpus-for-local-llms',
         'name': 'وحدات GPU المستعملة لنماذج LLM المحلية: مقارنة التكلفة وملاحظات الموثوقية',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: 'مقارنة التكلفة: RTX 3060 (نحو $300 مستعملة، متتبع InsiderLLM) مقابل RTX 3080 ($280-350، متتبع InsiderLLM) مقابل RTX 3090 (نحو $1,400-1,550 مرصودة مستعملة) مقابل RTX 4090 (نحو $2,575-3,010 مرصودة مستعملة).' },
+          { '@type': 'ListItem', position: 1, name: 'مقارنة التكلفة: RTX 3060 (نحو $300 مستعملة، متتبع InsiderLLM) مقابل RTX 3080 ($280-350، متتبع InsiderLLM) مقابل RTX 3090 (نحو $1,500-1,725 مرصودة مستعملة) مقابل RTX 4090 (نحو $2,575-3,010 مرصودة مستعملة).' },
           { '@type': 'ListItem', position: 2, name: 'ملاحظات الموثوقية: RTX 3060 12GB وRTX 3080 10GB لهما حجم إعادة بيع كبير. بطاقات التعدين قد تعاني تآكلًا أكبر في VRAM؛ اختبرها قبل الشراء.' },
           { '@type': 'ListItem', position: 3, name: 'طُرز GPU مستعملة تستحق النظر: RTX 3060 12GB (بداية اقتصادية)، RTX 3080 10GB (فئة متوسطة)، RTX 4090 24GB (متميزة، أعلى من MSRP).' },
         ],
@@ -704,7 +704,7 @@ schema: {
       intro: '**GPUs usadas mais antigas são vendidas abaixo do preço de lançamento (rastreador da InsiderLLM: RTX 3080 10GB US$ 280-350, RTX 3060 12GB cerca de US$ 300), mas a RTX 3090 e a RTX 4090 agora são vendidas perto do MSRP ou acima dele nas listagens dos EUA.** O mercado de usados costuma estar bem abastecido de placas ex-mineração e ex-gaming. Comprar usado pode fazer sentido para seu primeiro setup ou ao atualizar; placas de mineração são mais arriscadas a menos que você possa testá-las in loco. Os preços abaixo são estimativas do mercado dos EUA e mudam rápido.',
       metaDescription: 'GPUs usadas para LLMs locais: faixas de preço da RTX 3060, 3080, 3090 e 4090, onde comprar, riscos das placas de mineração e como testar antes de pagar.',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**GPUs usadas mais antigas são vendidas abaixo do preço de lançamento (rastreador da InsiderLLM: RTX 3080 10GB US$ 280-350, RTX 3060 12GB cerca de US$ 300), mas a RTX 3090 e a RTX 4090 agora são vendidas perto do MSRP ou acima dele nas listagens dos EUA. Teste qualquer placa usada antes de comprar, principalmente as ex-mineração.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho de LLMs locais',
       readTime: '8 min de leitura',
@@ -745,20 +745,20 @@ schema: {
             '**RTX 3060 12GB** (rastreador da InsiderLLM: cerca de US$ 300, faixa US$ 200-400): Grande volume no mercado de usados, com muitos anúncios para comparar. Teste a VRAM antes de comprar.',
             '**RTX 3080 10GB** (rastreador da InsiderLLM: US$ 280-350): Placa de gaming popular. 10GB é utilizável com modelos menores, mas limita os maiores. Teste antes de comprar.',
             '**RTX 4090 24GB** (segundo o rastreador da InsiderLLM, listagens vendidas no eBay EUA: US$ 2.575-3.010): Preço premium, acima do MSRP. O alto volume de revenda dá muitos anúncios para comparar. Verifique o estado como em qualquer placa usada.',
-            '**RTX 3090 24GB** (segundo o rastreador da InsiderLLM, listagens vendidas no eBay EUA: cerca de US$ 1.400-1.550): Topo de linha e cara. Os preços subiram bastante ao longo de 2026 e as listagens vendidas recentes ficam bem acima de US$ 1.000. Verifique o estado como em qualquer placa usada.',
+            '**RTX 3090 24GB** (segundo o rastreador da InsiderLLM, listagens vendidas no eBay EUA: cerca de US$ 1.500-1.725): Topo de linha e cara. Os preços subiram bastante ao longo de 2026 e as listagens vendidas recentes ficam bem acima de US$ 1.000. Verifique o estado como em qualquer placa usada.',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: 'Quanto pagar por GPUs usadas?',
           content: [
-            '**Referência: MSRP de varejo vs.** mercado de usados. Os valores vêm do [rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (página atualizada em 2026-10-15). Os da RTX 3090 e da RTX 4090 são listagens vendidas no eBay EUA, sem frete; o rastreador não informa o método dos valores da RTX 3060 e da RTX 3080. Apenas preços dos EUA, em dólares; os preços no Brasil podem variar bastante devido a impostos de importação; não são ofertas nem garantias.',
+            '**Referência: MSRP de varejo vs.** mercado de usados. Os valores vêm do [rastreador de preços de GPU da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/). O valor da RTX 3090, com data de 2026-11-23, vem de listagens vendidas no eBay EUA. Os valores da RTX 4090, da RTX 3080 e da RTX 3060 são os que lemos na versão da página de 2026-10-15: o da RTX 4090 são listagens vendidas no eBay EUA, sem frete, e essa versão não informava o método dos valores da RTX 3060 e da RTX 3080. Apenas preços dos EUA, em dólares; os preços no Brasil podem variar bastante devido a impostos de importação; não são ofertas nem garantias.',
           ],
           items: [
             'RTX 3060 12GB: MSRP US$ 329 → usada cerca de US$ 300, faixa US$ 200-400 (rastreador da InsiderLLM; cerca de 9% abaixo do MSRP a US$ 300)',
             'RTX 3080 10GB: MSRP US$ 699 → usada US$ 280-350 (rastreador da InsiderLLM; cerca de 50-60% abaixo do MSRP)',
             'RTX 4090 24GB: MSRP US$ 1.599 → usada (listagens vendidas) US$ 2.575-3.010, mediana US$ 2.860, acima do MSRP; listagens novas US$ 2.000-3.000',
-            'RTX 3090 24GB: usada (listagens vendidas) cerca de US$ 1.400-1.550',
+            'RTX 3090 24GB: usada (listagens vendidas) US$ 1.500-1.725 (mediana US$ 1.650; 225 listagens vendidas, de 13 a 23 de novembro de 2026)',
           ],
         },
         'mining-vs-gaming': {
@@ -813,7 +813,7 @@ schema: {
             { q: 'Devo comprar uma RTX 4070 ou RTX 3080 usada?', a: 'O rastreador da InsiderLLM lista a RTX 3080 10GB usada a US$ 280-350 e não informa preço da RTX 4070, então compare os anúncios atuais das duas. A RTX 4070 é uma geração mais recente com 2 GB a mais de VRAM; confira benchmarks para o tamanho do seu modelo.' },
             { q: 'Posso devolver uma GPU usada no eBay se ela falhar após 1 mês?', a: 'Depende da política do vendedor e do anúncio. Muitos oferecem um prazo de devolução limitado; depois dele, você geralmente fica por sua conta, a menos que haja garantia do fabricante. Confira antes de comprar.' },
             { q: 'Vale a pena pagar um extra por uma GPU com proteção de devolução?', a: 'Muitas vezes sim. Um prazo de devolução pode protegê-lo de uma perda total se a placa falhar após a compra; compare o custo extra com o preço da placa.' },
-            { q: 'Devo comprar uma RTX 3090 ou RTX 4090 usada?', a: 'Uma RTX 3090 usada, se o orçamento importa. Nas listagens vendidas observadas no eBay EUA (sem frete) ela custa cerca de US$ 1.400-1.550, contra US$ 2.575-3.010 de uma RTX 4090 usada (rastreador da InsiderLLM, fonte atualizada em 2026-10-15). Ambas têm 24 GB. Nos testes 7B do llama.cpp reportados por desenvolvedores (placar CUDA, discussão #15013) a RTX 4090 gera 186.2 tok/s contra 158.2 da RTX 3090 e processa prompts mais de duas vezes mais rápido (11.993 contra 5.175 tok/s). Compre a RTX 4090 principalmente se precisar dessa velocidade com prompts longos e puder pagar a diferença. Os preços são voláteis; confira as listagens atuais.' },
+            { q: 'Devo comprar uma RTX 3090 ou RTX 4090 usada?', a: 'Uma RTX 3090 usada, se o orçamento importa. Segundo o rastreador da InsiderLLM, nas listagens vendidas observadas no eBay EUA ela custa US$ 1.500-1.725 (valor com data de 2026-11-23), contra US$ 2.575-3.010, sem frete, de uma RTX 4090 usada (versão da página de 2026-10-15). Ambas têm 24 GB. Nos testes 7B do llama.cpp reportados por desenvolvedores (placar CUDA, discussão #15013) a RTX 4090 gera 186.2 tok/s contra 158.2 da RTX 3090 e processa prompts mais de duas vezes mais rápido (11.993 contra 5.175 tok/s). Compre a RTX 4090 principalmente se precisar dessa velocidade com prompts longos e puder pagar a diferença. Os preços são voláteis; confira as listagens atuais.' },
           ],
         },
         'relatedReading': {
@@ -831,7 +831,7 @@ schema: {
           id: 'sources',
           title: 'Fontes',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- preços de listagens vendidas no eBay EUA da RTX 3090 e da RTX 4090 (atualizado em 2026-10-15).',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- preços de listagens vendidas no eBay EUA: RTX 3090 (valor com data de 2026-11-23) e RTX 4090 (versão da página de 2026-10-15).',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- resultados de Llama 2 7B Q4_0 enviados por usuários.',
             'Documentação da ferramenta de teste de memória de GPU escolhida (confirme que ela é compatível com a sua placa)',
             'Banco de dados de especificações GPU-Z para valores de referência térmicos e de velocidade de clock',
@@ -846,7 +846,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/used-gpus-for-local-llms',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
-        dateModified: '2026-11-22',
+        dateModified: '2026-11-27',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -896,7 +896,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Devo comprar uma RTX 3090 ou RTX 4090 usada?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Uma RTX 3090 usada, se o orçamento importa. Nas listagens vendidas observadas no eBay EUA (sem frete) ela custa cerca de US$ 1.400-1.550, contra US$ 2.575-3.010 de uma RTX 4090 usada (rastreador da InsiderLLM, fonte atualizada em 2026-10-15). Ambas têm 24 GB. Nos testes 7B do llama.cpp reportados por desenvolvedores (placar CUDA, discussão #15013) a RTX 4090 gera 186.2 tok/s contra 158.2 da RTX 3090 e processa prompts mais de duas vezes mais rápido (11.993 contra 5.175 tok/s). Compre a RTX 4090 principalmente se precisar dessa velocidade com prompts longos e puder pagar a diferença. Os preços são voláteis; confira as listagens atuais.' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Uma RTX 3090 usada, se o orçamento importa. Segundo o rastreador da InsiderLLM, nas listagens vendidas observadas no eBay EUA ela custa US$ 1.500-1.725 (valor com data de 2026-11-23), contra US$ 2.575-3.010, sem frete, de uma RTX 4090 usada (versão da página de 2026-10-15). Ambas têm 24 GB. Nos testes 7B do llama.cpp reportados por desenvolvedores (placar CUDA, discussão #15013) a RTX 4090 gera 186.2 tok/s contra 158.2 da RTX 3090 e processa prompts mais de duas vezes mais rápido (11.993 contra 5.175 tok/s). Compre a RTX 4090 principalmente se precisar dessa velocidade com prompts longos e puder pagar a diferença. Os preços são voláteis; confira as listagens atuais.' }
           },
         ],
       },
@@ -906,7 +906,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/used-gpus-for-local-llms',
         name: 'GPUs usadas para LLMs locais: Comparação de custos e notas de confiabilidade',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Comparação de custos: RTX 3060 (cerca de US$ 300 usada, rastreador da InsiderLLM) vs RTX 3080 (US$ 280-350, rastreador da InsiderLLM) vs RTX 3090 (cerca de US$ 1.400-1.550 observados, usada) vs RTX 4090 (cerca de US$ 2.575-3.010 observados, usada).' },
+          { '@type': 'ListItem', position: 1, name: 'Comparação de custos: RTX 3060 (cerca de US$ 300 usada, rastreador da InsiderLLM) vs RTX 3080 (US$ 280-350, rastreador da InsiderLLM) vs RTX 3090 (cerca de US$ 1.500-1.725 observados, usada) vs RTX 4090 (cerca de US$ 2.575-3.010 observados, usada).' },
           { '@type': 'ListItem', position: 2, name: 'Notas de confiabilidade: RTX 3060 12GB e RTX 3080 10GB têm alto volume de revenda. Placas de mineração podem ter mais desgaste de VRAM; teste antes de comprar.' },
           { '@type': 'ListItem', position: 3, name: 'Modelos de GPU usada a considerar: RTX 3060 12GB (entrada econômica), RTX 3080 10GB (faixa intermediária), RTX 4090 24GB (premium, acima do MSRP).' },
         ],
@@ -922,7 +922,7 @@ schema: {
       intro: '**Ältere gebrauchte GPUs werden unter ihrem Einführungspreis verkauft (InsiderLLM-Tracker: RTX 3080 10GB 280-350 $, RTX 3060 12GB ca. 300 $), die RTX 3090 und die RTX 4090 liegen in US-Angeboten inzwischen aber nahe an oder über der UVP.** Der Gebrauchtmarkt ist in der Regel gut mit Ex-Mining- und Ex-Gaming-Karten versorgt. Der Kauf gebrauchter Hardware kann für Ihr erstes System oder beim Aufrüsten sinnvoll sein; Mining-Karten sind riskanter, es sei denn, Sie können vor Ort testen. Die Preise unten sind Schätzungen für den US-Markt und ändern sich schnell.',
       metaDescription: 'Gebrauchte GPUs für lokale LLMs: Preisbereiche für RTX 3060, 3080, 3090 und 4090, wo kaufen, Risiken bei Mining-Karten und wie Sie eine Karte vor dem Kauf testen.',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**Ältere gebrauchte GPUs werden unter ihrem Einführungspreis verkauft (InsiderLLM-Tracker: RTX 3080 10GB 280-350 $, RTX 3060 12GB ca. 300 $), die RTX 3090 und die RTX 4090 liegen in US-Angeboten inzwischen aber nahe an oder über der UVP. Testen Sie jede gebrauchte Karte vor dem Kauf, besonders Ex-Mining-Karten.**',
       audience: 'Entwickler, die mit Ollama oder LM Studio lokale LLM-Workflows optimieren',
       readTime: '8 Min. Lesezeit',
@@ -963,20 +963,20 @@ schema: {
             '**RTX 3060 12GB** (InsiderLLM-Tracker: ca. 300 $, Spanne 200-400 $): Großes Angebot auf dem Gebrauchtmarkt, viele Inserate zum Vergleichen. VRAM vor dem Kauf testen.',
             '**RTX 3080 10GB** (InsiderLLM-Tracker: 280-350 $): Beliebte Gaming-Karte. 10GB sind für kleinere Modelle nutzbar, begrenzen aber größere. Vor dem Kauf testen.',
             '**RTX 4090 24GB** (laut InsiderLLM-Tracker, US-eBay-Verkaufsangebote: 2.575-3.010 $): Premium-Preise, über der UVP. Das hohe Wiederverkaufsvolumen liefert viele Inserate zum Vergleichen. Zustand wie bei jeder Gebrauchtkarte prüfen.',
-            '**RTX 3090 24GB** (laut InsiderLLM-Tracker, US-eBay-Verkaufsangebote: ca. 1.400-1.550 $): High-End und teuer. Die Preise sind 2026 stark gestiegen, und aktuelle Verkaufsangebote liegen deutlich über 1.000 $. Zustand wie bei jeder Gebrauchtkarte prüfen.',
+            '**RTX 3090 24GB** (laut InsiderLLM-Tracker, US-eBay-Verkaufsangebote: ca. 1.500-1.725 $): High-End und teuer. Die Preise sind 2026 stark gestiegen, und aktuelle Verkaufsangebote liegen deutlich über 1.000 $. Zustand wie bei jeder Gebrauchtkarte prüfen.',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: 'Wie viel sollten Sie für gebrauchte GPUs bezahlen?',
           content: [
-            '**Vergleich: Retail-UVP vs.** Gebrauchtmarkt. Die Werte stammen aus dem [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Seite aktualisiert am 2026-10-15). Die Werte für RTX 3090 und RTX 4090 sind US-eBay-Verkaufsangebote ohne Versand; für die Werte der RTX 3060 und RTX 3080 nennt der Tracker keine Methode. Nur US-Preise in US-Dollar, in Deutschland können sie abweichen; keine Angebote und keine Garantien.',
+            '**Vergleich: Retail-UVP vs.** Gebrauchtmarkt. Die Werte stammen aus dem [GPU-Preis-Tracker von InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/). Der Wert für die RTX 3090 (Stand 2026-11-23) stammt aus US-eBay-Verkaufsangeboten. Die Werte für RTX 4090, RTX 3080 und RTX 3060 entsprechen dem Seitenstand vom 2026-10-15, wie wir ihn gelesen haben: Der RTX-4090-Wert beruht auf US-eBay-Verkaufsangeboten ohne Versand; für die Werte der RTX 3060 und RTX 3080 nannte diese Fassung keine Methode. Nur US-Preise in US-Dollar, in Deutschland können sie abweichen; keine Angebote und keine Garantien.',
           ],
           items: [
             'RTX 3060 12GB: UVP 329 $ → gebraucht etwa 300 $, Spanne 200-400 $ (InsiderLLM-Tracker; ca. 9 % unter der UVP bei 300 $)',
             'RTX 3080 10GB: UVP 699 $ → gebraucht 280-350 $ (InsiderLLM-Tracker; ca. 50-60 % unter der UVP)',
             'RTX 4090 24GB: UVP 1.599 $ → gebraucht (Verkaufsangebote) 2.575-3.010 $, Median 2.860 $, über der UVP; Neuware-Angebote 2.000-3.000 $',
-            'RTX 3090 24GB: gebraucht (Verkaufsangebote) ca. 1.400-1.550 $',
+            'RTX 3090 24GB: gebraucht (Verkaufsangebote) 1.500-1.725 $ (Median 1.650 $; 225 Verkaufsangebote, 13.-23. November 2026)',
           ],
         },
         'mining-vs-gaming': {
@@ -1031,7 +1031,7 @@ schema: {
             { q: 'Sollte ich eine gebrauchte RTX 4070 oder RTX 3080 kaufen?', a: 'Der InsiderLLM-Tracker nennt für die RTX 3080 10GB gebraucht 280-350 $ und führt keinen Preis für die RTX 4070, vergleichen Sie daher aktuelle Angebote beider Karten. Die RTX 4070 ist eine neuere Generation mit 2 GB mehr VRAM; prüfen Sie Benchmarks für Ihre Modellgröße.' },
             { q: 'Kann ich eine gebrauchte GPU auf eBay zurückgeben, wenn sie nach 1 Monat ausfällt?', a: 'Das hängt von der Richtlinie des Verkäufers und des Angebots ab. Viele bieten ein begrenztes Rückgabefenster; danach sind Sie in der Regel auf sich allein gestellt, sofern keine Herstellergarantie greift. Vor dem Kauf prüfen.' },
             { q: 'Lohnt es sich, für eine GPU mit Rückgabeschutz einen Aufpreis zu zahlen?', a: 'Oft ja. Ein Rückgabefenster kann Sie vor einem Totalverlust schützen, wenn die Karte nach dem Kauf ausfällt; vergleichen Sie den Aufpreis mit dem Preis der Karte.' },
-            { q: 'Sollte ich eine gebrauchte RTX 3090 oder RTX 4090 kaufen?', a: 'Eine gebrauchte RTX 3090, wenn das Budget zählt. In beobachteten US-eBay-Verkaufsangeboten (ohne Versand) kostet sie ca. 1.400-1.550 $, eine gebrauchte RTX 4090 dagegen 2.575-3.010 $ (InsiderLLM-Tracker, Quelle aktualisiert am 2026-10-15). Beide haben 24 GB. In von Entwicklern gemeldeten llama.cpp-7B-Tests (CUDA-Scoreboard, Diskussion #15013) erzeugt die RTX 4090 186,2 Tok/s gegenüber 158,2 bei der RTX 3090 und verarbeitet Prompts mehr als doppelt so schnell (11.993 gegenüber 5.175 Tok/s). Kaufen Sie die RTX 4090 vor allem, wenn Sie diese Prompt-Geschwindigkeit brauchen und den Aufpreis tragen können. Die Preise schwanken; prüfen Sie aktuelle Angebote.' },
+            { q: 'Sollte ich eine gebrauchte RTX 3090 oder RTX 4090 kaufen?', a: 'Eine gebrauchte RTX 3090, wenn das Budget zählt. Laut InsiderLLM-Tracker kostet sie in beobachteten US-eBay-Verkaufsangeboten 1.500-1.725 $ (Stand 2026-11-23), eine gebrauchte RTX 4090 dagegen 2.575-3.010 $ ohne Versand (Seitenstand 2026-10-15). Beide haben 24 GB. In von Entwicklern gemeldeten llama.cpp-7B-Tests (CUDA-Scoreboard, Diskussion #15013) erzeugt die RTX 4090 186,2 Tok/s gegenüber 158,2 bei der RTX 3090 und verarbeitet Prompts mehr als doppelt so schnell (11.993 gegenüber 5.175 Tok/s). Kaufen Sie die RTX 4090 vor allem, wenn Sie diese Prompt-Geschwindigkeit brauchen und den Aufpreis tragen können. Die Preise schwanken; prüfen Sie aktuelle Angebote.' },
           ],
         },
         'relatedReading': {
@@ -1049,7 +1049,7 @@ schema: {
           id: 'sources',
           title: 'Quellen',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- US-eBay-Verkaufspreise für RTX 3090 und RTX 4090 (aktualisiert am 2026-10-15).',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- US-eBay-Verkaufspreise: RTX 3090 (Stand 2026-11-23) und RTX 4090 (Seitenstand 2026-10-15).',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- von Nutzern eingereichte Ergebnisse für Llama 2 7B Q4_0.',
             'Dokumentation des gewählten GPU-Speichertest-Tools (Kompatibilität mit Ihrer Karte prüfen)',
             'GPU-Z-Spezifikationsdatenbank für thermische und Taktfrequenz-Baselines',
@@ -1063,7 +1063,7 @@ schema: {
         'description': 'Gebrauchte GPUs für lokale LLMs: Preisbereiche für RTX 3060, 3080, 3090 und 4090, wo kaufen, Risiken bei Mining-Karten und wie Sie eine Karte vor dem Kauf testen.',
         'url': 'https://www.promptquorum.com/de/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1117,7 +1117,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Sollte ich eine gebrauchte RTX 3090 oder RTX 4090 kaufen?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Eine gebrauchte RTX 3090, wenn das Budget zählt. In beobachteten US-eBay-Verkaufsangeboten (ohne Versand) kostet sie ca. 1.400-1.550 $, eine gebrauchte RTX 4090 dagegen 2.575-3.010 $ (InsiderLLM-Tracker, Quelle aktualisiert am 2026-10-15). Beide haben 24 GB. In von Entwicklern gemeldeten llama.cpp-7B-Tests (CUDA-Scoreboard, Diskussion #15013) erzeugt die RTX 4090 186,2 Tok/s gegenüber 158,2 bei der RTX 3090 und verarbeitet Prompts mehr als doppelt so schnell (11.993 gegenüber 5.175 Tok/s). Kaufen Sie die RTX 4090 vor allem, wenn Sie diese Prompt-Geschwindigkeit brauchen und den Aufpreis tragen können. Die Preise schwanken; prüfen Sie aktuelle Angebote.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Eine gebrauchte RTX 3090, wenn das Budget zählt. Laut InsiderLLM-Tracker kostet sie in beobachteten US-eBay-Verkaufsangeboten 1.500-1.725 $ (Stand 2026-11-23), eine gebrauchte RTX 4090 dagegen 2.575-3.010 $ ohne Versand (Seitenstand 2026-10-15). Beide haben 24 GB. In von Entwicklern gemeldeten llama.cpp-7B-Tests (CUDA-Scoreboard, Diskussion #15013) erzeugt die RTX 4090 186,2 Tok/s gegenüber 158,2 bei der RTX 3090 und verarbeitet Prompts mehr als doppelt so schnell (11.993 gegenüber 5.175 Tok/s). Kaufen Sie die RTX 4090 vor allem, wenn Sie diese Prompt-Geschwindigkeit brauchen und den Aufpreis tragen können. Die Preise schwanken; prüfen Sie aktuelle Angebote.' }
           },
         ],
       },
@@ -1127,7 +1127,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/used-gpus-for-local-llms',
         'name': 'Gebrauchte GPUs für lokale LLMs: Kostenvergleich & Hinweise zur Zuverlässigkeit',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: 'Kostenvergleich: RTX 3060 (ca. 300 $ gebraucht, InsiderLLM-Tracker) vs RTX 3080 (280-350 $, InsiderLLM-Tracker) vs RTX 3090 (ca. 1.400-1.550 $ beobachtet, gebraucht) vs RTX 4090 (ca. 2.575-3.010 $ beobachtet, gebraucht).' },
+          { '@type': 'ListItem', position: 1, name: 'Kostenvergleich: RTX 3060 (ca. 300 $ gebraucht, InsiderLLM-Tracker) vs RTX 3080 (280-350 $, InsiderLLM-Tracker) vs RTX 3090 (ca. 1.500-1.725 $ beobachtet, gebraucht) vs RTX 4090 (ca. 2.575-3.010 $ beobachtet, gebraucht).' },
           { '@type': 'ListItem', position: 2, name: 'Hinweise zur Zuverlässigkeit: RTX 3060 12GB und RTX 3080 10GB haben ein hohes Wiederverkaufsvolumen. Mining-Karten können mehr VRAM-Verschleiß haben; vor dem Kauf testen.' },
           { '@type': 'ListItem', position: 3, name: 'Gebrauchte GPU-Modelle zur Auswahl: RTX 3060 12GB (günstiger Einstieg), RTX 3080 10GB (Mittelklasse), RTX 4090 24GB (Premium, über der UVP).' },
         ],
@@ -1143,7 +1143,7 @@ schema: {
       intro: '**Les GPU d\'occasion plus anciens se vendent en dessous de leur prix de lancement (suivi d\'InsiderLLM : RTX 3080 10GB 280-350 $, RTX 3060 12GB environ 300 $), mais la RTX 3090 et la RTX 4090 se vendent désormais près du PDSF ou au-dessus dans les annonces américaines.** Le marché de l\'occasion est généralement bien approvisionné en cartes ex-mining et ex-gaming. L\'achat d\'occasion peut avoir du sens pour votre premier système ou lors d\'une mise à niveau ; les cartes minières sont plus risquées sauf si vous pouvez tester sur site. Les prix ci-dessous sont des estimations pour le marché américain et changent rapidement.',
       metaDescription: 'GPU d\'occasion pour LLM locaux : fourchettes de prix des RTX 3060, 3080, 3090 et 4090, où acheter, risques des cartes de minage et comment tester avant de payer.',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**Les GPU d\'occasion plus anciens se vendent en dessous de leur prix de lancement (suivi d\'InsiderLLM : RTX 3080 10GB 280-350 $, RTX 3060 12GB environ 300 $), mais la RTX 3090 et la RTX 4090 se vendent désormais près du PDSF ou au-dessus dans les annonces américaines. Testez toute carte d\'occasion avant d\'acheter, surtout les cartes ex-mining.**',
       audience: 'Développeurs familiers avec Ollama ou LM Studio optimisant les workflows LLM locaux',
       readTime: '8 min de lecture',
@@ -1184,20 +1184,20 @@ schema: {
             '**RTX 3060 12GB** (suivi d\'InsiderLLM : environ 300 $, fourchette 200-400 $) : Gros volume sur le marché d\'occasion, donc beaucoup d\'annonces à comparer. Testez le VRAM avant d\'acheter.',
             '**RTX 3080 10GB** (suivi d\'InsiderLLM : 280-350 $) : Carte gaming populaire. 10GB sont utilisables pour les petits modèles mais limitent les plus grands. Testez avant d\'acheter.',
             '**RTX 4090 24GB** (selon le suivi d\'InsiderLLM, annonces vendues sur eBay États-Unis : 2 575-3 010 $) : Prix premium, au-dessus du PDSF. Le volume de revente élevé donne beaucoup d\'annonces à comparer. Vérifiez l\'état comme pour toute carte d\'occasion.',
-            '**RTX 3090 24GB** (selon le suivi d\'InsiderLLM, annonces vendues sur eBay États-Unis : environ 1 400-1 550 $) : Haut de gamme et chère. Les prix ont fortement augmenté en 2026 et les annonces vendues récentes sont nettement au-dessus de 1 000 $. Vérifiez l\'état comme pour toute carte d\'occasion.',
+            '**RTX 3090 24GB** (selon le suivi d\'InsiderLLM, annonces vendues sur eBay États-Unis : environ 1 500-1 725 $) : Haut de gamme et chère. Les prix ont fortement augmenté en 2026 et les annonces vendues récentes sont nettement au-dessus de 1 000 $. Vérifiez l\'état comme pour toute carte d\'occasion.',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: 'Combien devriez-vous payer pour les GPU utilisées ?',
           content: [
-            '**Comparaison : PDSF retail vs.** marché occasion. Les valeurs proviennent du [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (page mise à jour le 2026-10-15). Celles de la RTX 3090 et de la RTX 4090 sont des annonces vendues sur eBay États-Unis, hors livraison ; le suivi n\'indique pas sa méthode pour la RTX 3060 et la RTX 3080. Prix américains uniquement, en dollars, ils peuvent différer en France ; ce ne sont ni des offres ni des garanties.',
+            '**Comparaison : PDSF retail vs.** marché occasion. Les valeurs proviennent du [suivi des prix des GPU d\'InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/). La valeur de la RTX 3090, datée du 2026-11-23, provient d\'annonces vendues sur eBay États-Unis. Les valeurs des RTX 4090, RTX 3080 et RTX 3060 sont celles que nous avons lues dans la version de la page du 2026-10-15 : celle de la RTX 4090 correspond à des annonces vendues sur eBay États-Unis, hors livraison, et cette version n\'indiquait pas de méthode pour la RTX 3060 et la RTX 3080. Prix américains uniquement, en dollars, ils peuvent différer en France ; ce ne sont ni des offres ni des garanties.',
           ],
           items: [
             'RTX 3060 12GB : PDSF 329 $ → occasion environ 300 $, fourchette 200-400 $ (suivi d\'InsiderLLM ; environ 9 % sous le PDSF à 300 $)',
             'RTX 3080 10GB : PDSF 699 $ → occasion 280-350 $ (suivi d\'InsiderLLM ; environ 50-60 % sous le PDSF)',
             'RTX 4090 24GB : PDSF 1 599 $ → occasion (annonces vendues) 2 575-3 010 $, médiane 2 860 $, au-dessus du PDSF ; annonces neuves 2 000-3 000 $',
-            'RTX 3090 24GB : occasion (annonces vendues) environ 1 400-1 550 $',
+            'RTX 3090 24GB : occasion (annonces vendues) 1 500-1 725 $ (médiane 1 650 $ ; 225 annonces vendues, 13-23 novembre 2026)',
           ],
         },
         'mining-vs-gaming': {
@@ -1252,7 +1252,7 @@ schema: {
             { q: 'Devrais-je acheter une RTX 4070 ou RTX 3080 utilisée ?', a: 'Le suivi d\'InsiderLLM indique 280-350 $ pour une RTX 3080 10GB d\'occasion et ne donne pas de prix pour la RTX 4070 ; comparez donc les annonces actuelles des deux. La RTX 4070 est une génération plus récente avec 2 Go de VRAM en plus ; consultez les benchmarks pour la taille de votre modèle.' },
             { q: 'Puis-je retourner une GPU utilisée sur eBay si elle échoue après 1 mois ?', a: 'Cela dépend de la politique du vendeur et de l\'annonce. Beaucoup proposent un délai de retour limité ; une fois celui-ci écoulé, vous êtes généralement seul, sauf garantie constructeur. Vérifiez avant d\'acheter.' },
             { q: 'Vaut-il la peine de payer un supplément pour une GPU avec protection retour ?', a: 'Souvent oui. Un délai de retour peut vous protéger d\'une perte totale si la carte tombe en panne après l\'achat ; comparez le supplément au prix de la carte.' },
-            { q: 'Devrais-je acheter RTX 3090 ou RTX 4090 utilisée ?', a: 'Une RTX 3090 d\'occasion si le budget compte. Dans les annonces vendues observées sur eBay États-Unis (hors livraison), elle coûte environ 1 400-1 550 $, contre 2 575-3 010 $ pour une RTX 4090 d\'occasion (suivi InsiderLLM, source mise à jour le 2026-10-15). Les deux ont 24 Go. Dans les tests llama.cpp 7B rapportés par des développeurs (tableau CUDA, discussion #15013), la RTX 4090 génère 186.2 tok/s contre 158.2 pour la RTX 3090 et traite les prompts plus de deux fois plus vite (11 993 contre 5 175 tok/s). Choisissez la RTX 4090 surtout si vous avez besoin de cette vitesse sur de longs prompts et pouvez payer l\'écart. Les prix sont volatils ; consultez les annonces actuelles.' },
+            { q: 'Devrais-je acheter RTX 3090 ou RTX 4090 utilisée ?', a: 'Une RTX 3090 d\'occasion si le budget compte. Selon le suivi InsiderLLM, dans les annonces vendues observées sur eBay États-Unis, elle coûte 1 500-1 725 $ (donnée datée du 2026-11-23), contre 2 575-3 010 $, hors livraison, pour une RTX 4090 d\'occasion (version de la page du 2026-10-15). Les deux ont 24 Go. Dans les tests llama.cpp 7B rapportés par des développeurs (tableau CUDA, discussion #15013), la RTX 4090 génère 186.2 tok/s contre 158.2 pour la RTX 3090 et traite les prompts plus de deux fois plus vite (11 993 contre 5 175 tok/s). Choisissez la RTX 4090 surtout si vous avez besoin de cette vitesse sur de longs prompts et pouvez payer l\'écart. Les prix sont volatils ; consultez les annonces actuelles.' },
           ],
         },
         'relatedReading': {
@@ -1270,7 +1270,7 @@ schema: {
           id: 'sources',
           title: 'Sources',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- prix des annonces vendues sur eBay États-Unis pour RTX 3090 et RTX 4090 (mis à jour le 2026-10-15).',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- prix des annonces vendues sur eBay États-Unis : RTX 3090 (donnée datée du 2026-11-23) et RTX 4090 (version de la page du 2026-10-15).',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- résultats Llama 2 7B Q4_0 soumis par des utilisateurs.',
             'Documentation de l\'outil de test mémoire GPU choisi (vérifiez qu\'il prend en charge votre carte)',
             'Base données spécifications GPU-Z pour baselines thermiques et fréquence horloge',
@@ -1284,7 +1284,7 @@ schema: {
         'description': 'GPU d\'occasion pour LLM locaux : fourchettes de prix des RTX 3060, 3080, 3090 et 4090, où acheter, risques des cartes de minage et comment tester avant de payer.',
         'url': 'https://www.promptquorum.com/fr/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1338,7 +1338,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Devrais-je acheter RTX 3090 ou RTX 4090 utilisée ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Une RTX 3090 d\'occasion si le budget compte. Dans les annonces vendues observées sur eBay États-Unis (hors livraison), elle coûte environ 1 400-1 550 $, contre 2 575-3 010 $ pour une RTX 4090 d\'occasion (suivi InsiderLLM, source mise à jour le 2026-10-15). Les deux ont 24 Go. Dans les tests llama.cpp 7B rapportés par des développeurs (tableau CUDA, discussion #15013), la RTX 4090 génère 186.2 tok/s contre 158.2 pour la RTX 3090 et traite les prompts plus de deux fois plus vite (11 993 contre 5 175 tok/s). Choisissez la RTX 4090 surtout si vous avez besoin de cette vitesse sur de longs prompts et pouvez payer l\'écart. Les prix sont volatils ; consultez les annonces actuelles.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Une RTX 3090 d\'occasion si le budget compte. Selon le suivi InsiderLLM, dans les annonces vendues observées sur eBay États-Unis, elle coûte 1 500-1 725 $ (donnée datée du 2026-11-23), contre 2 575-3 010 $, hors livraison, pour une RTX 4090 d\'occasion (version de la page du 2026-10-15). Les deux ont 24 Go. Dans les tests llama.cpp 7B rapportés par des développeurs (tableau CUDA, discussion #15013), la RTX 4090 génère 186.2 tok/s contre 158.2 pour la RTX 3090 et traite les prompts plus de deux fois plus vite (11 993 contre 5 175 tok/s). Choisissez la RTX 4090 surtout si vous avez besoin de cette vitesse sur de longs prompts et pouvez payer l\'écart. Les prix sont volatils ; consultez les annonces actuelles.' }
           },
         ],
       },
@@ -1348,7 +1348,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/used-gpus-for-local-llms',
         'name': 'GPU d\'occasion pour LLMs locaux : Comparaison des coûts et notes de fiabilité',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: 'Comparaison des coûts : RTX 3060 (environ 300 $ d\'occasion, suivi d\'InsiderLLM) vs RTX 3080 (280-350 $, suivi d\'InsiderLLM) vs RTX 3090 (environ 1 400-1 550 $ observés, occasion) vs RTX 4090 (environ 2 575-3 010 $ observés, occasion).' },
+          { '@type': 'ListItem', position: 1, name: 'Comparaison des coûts : RTX 3060 (environ 300 $ d\'occasion, suivi d\'InsiderLLM) vs RTX 3080 (280-350 $, suivi d\'InsiderLLM) vs RTX 3090 (environ 1 500-1 725 $ observés, occasion) vs RTX 4090 (environ 2 575-3 010 $ observés, occasion).' },
           { '@type': 'ListItem', position: 2, name: 'Notes de fiabilité : RTX 3060 12GB et RTX 3080 10GB ont un volume de revente élevé. Les cartes minières peuvent présenter plus d\'usure du VRAM ; testez avant d\'acheter.' },
           { '@type': 'ListItem', position: 3, name: 'Modèles de GPU d\'occasion à envisager : RTX 3060 12GB (entrée économique), RTX 3080 10GB (milieu de gamme), RTX 4090 24GB (premium, au-dessus du PDSF).' },
         ],
@@ -1364,7 +1364,7 @@ schema: {
       intro: '**古めの中古GPUは発売価格を下回る価格で売られていますが（InsiderLLMトラッカー：RTX 3080 10GBは$280-350、RTX 3060 12GBは約$300）、RTX 3090とRTX 4090は米国の出品で現在MSRP付近かそれ以上で取引されています。** 中古市場には元マイニングおよび元ゲーミングのカードが豊富に流通しています。初めての構築やアップグレードでは中古購入が合理的な場合もありますが、マイニングカードは現地でテストできない限りリスクが高くなります。以下の価格は米国市場の目安で、すぐに変動します。',
       metaDescription: 'ローカルLLM向け中古GPU：RTX 3060、3080、3090、4090の価格帯（米国市場の目安）、購入先、マイニングカードのリスク、購入前のテスト方法を解説します。',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**古めの中古GPUは発売価格を下回る価格で売られていますが（InsiderLLMトラッカー：RTX 3080 10GBは$280-350、RTX 3060 12GBは約$300）、RTX 3090とRTX 4090は米国の出品で現在MSRP付近かそれ以上で取引されています。中古カードは、特に元マイニングカードの場合、購入前に必ずテストしてください。**',
       audience: 'OllamaまたはLM Studioに精通し、ローカルLLMワークフローを最適化する開発者',
       readTime: '8分で読める',
@@ -1405,20 +1405,20 @@ schema: {
             '**RTX 3060 12GB**（InsiderLLMトラッカー：約$300、範囲$200-400）：中古市場で取引量が多く、比較できる出品が豊富です。購入前にVRAMをテストしてください。',
             '**RTX 3080 10GB**（InsiderLLMトラッカー：$280-350）：人気のゲーミングカード。10GBは小さめのモデルには使えますが、大きなモデルには制約があります。購入前にテストしてください。',
             '**RTX 4090 24GB**（InsiderLLMトラッカーによるeBay米国の落札実績：$2,575-3,010）：プレミアム価格でMSRPを上回ります。再販売量が多く比較できる出品が豊富です。他の中古カードと同様に状態を確認してください。',
-            '**RTX 3090 24GB**（InsiderLLMトラッカーによるeBay米国の落札実績：約$1,400-1,550）：ハイエンドで高価です。2026年を通じて価格が大きく上昇し、直近の落札実績は$1,000を大きく上回っています。他の中古カードと同様に状態を確認してください。',
+            '**RTX 3090 24GB**（InsiderLLMトラッカーによるeBay米国の落札実績：約$1,500-1,725）：ハイエンドで高価です。2026年を通じて価格が大きく上昇し、直近の落札実績は$1,000を大きく上回っています。他の中古カードと同様に状態を確認してください。',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: '中古GPUにいくら払うべきですか？',
           content: [
-            '**ベンチマーク：小売MSRP vs.** 中古市場。数値は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（ページ更新日：2026-10-15）によるものです。RTX 3090とRTX 4090はeBay米国の落札実績（送料別）で、RTX 3060とRTX 3080の算出方法はトラッカーに記載されていません。米国の価格（米ドル）のみで、日本では異なる場合があります。オファーや保証ではありません。',
+            '**ベンチマーク：小売MSRP vs.** 中古市場。数値は[InsiderLLMのGPU価格トラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)によるものです。RTX 3090の数値（2026-11-23付）はeBay米国の落札実績です。RTX 4090、RTX 3080、RTX 3060の数値は、2026-10-15版のページで当サイトが確認したものです。RTX 4090はeBay米国の落札実績（送料別）で、RTX 3060とRTX 3080の算出方法は同版に記載されていませんでした。米国の価格（米ドル）のみで、日本では異なる場合があります。オファーや保証ではありません。',
           ],
           items: [
             'RTX 3060 12GB：MSRP $329 → 中古 約$300、範囲$200-400（InsiderLLMトラッカー、$300ならMSRPより約9%安い）',
             'RTX 3080 10GB：MSRP $699 → 中古 $280-350（InsiderLLMトラッカー、MSRPより約50-60%安い）',
             'RTX 4090 24GB：MSRP $1,599 → 中古（落札実績）$2,575-3,010、中央値$2,860、MSRPを上回る。新品の出品は$2,000-3,000',
-            'RTX 3090 24GB：中古（落札実績）約$1,400-1,550',
+            'RTX 3090 24GB：中古（落札実績）$1,500-1,725（中央値$1,650、落札225件、2026年11月13～23日）',
           ],
         },
         'mining-vs-gaming': {
@@ -1473,7 +1473,7 @@ schema: {
             { q: '中古RTX 4070またはRTX 3080を購入すべきですか？', a: 'InsiderLLMトラッカーは中古RTX 3080 10GBを$280-350としており、RTX 4070の価格は掲載していません。両方の最新の出品を比較してください。RTX 4070は新しい世代でVRAMが2 GB多いので、使用するモデルサイズに合わせてベンチマークを確認してください。' },
             { q: '1ヶ月後に失敗した場合、eBayで中古GPUを返品できますか？', a: '売り手と出品によって異なります。多くは限られた返品期間を設けており、期間終了後は製造元の保証が適用されない限り自己責任になるのが一般的です。購入前に確認してください。' },
             { q: '返品保護付きGPUに追加料金を払う価値はありますか？', a: '多くの場合はい。返品期間があれば、購入後にカードが故障しても全損を避けられます。追加料金をカードの価格と比較してください。' },
-            { q: '中古RTX 3090またはRTX 4090を購入すべきですか？', a: '予算が重要なら中古のRTX 3090です。eBay米国の落札実績の観測値（送料別）では中古RTX 3090が約$1,400-1,550、中古RTX 4090が$2,575-3,010です（InsiderLLMトラッカー、情報源の更新日：2026-10-15）。どちらも24 GBです。開発者が報告したllama.cppの7Bテスト（CUDAスコアボード、ディスカッション#15013）では、RTX 4090の生成速度は186.2 tok/s、RTX 3090は158.2 tok/sで、プロンプト処理は2倍以上速い結果です（11,993対5,175 tok/s）。長いプロンプトでその速度が必要で、差額を負担できる場合にRTX 4090を選んでください。価格は変動するため、最新の出品を確認してください。' },
+            { q: '中古RTX 3090またはRTX 4090を購入すべきですか？', a: '予算が重要なら中古のRTX 3090です。InsiderLLMトラッカーによるeBay米国の落札実績の観測値では、中古RTX 3090が$1,500-1,725（2026-11-23付の数値）、中古RTX 4090が送料別で$2,575-3,010です（2026-10-15版のページ）。どちらも24 GBです。開発者が報告したllama.cppの7Bテスト（CUDAスコアボード、ディスカッション#15013）では、RTX 4090の生成速度は186.2 tok/s、RTX 3090は158.2 tok/sで、プロンプト処理は2倍以上速い結果です（11,993対5,175 tok/s）。長いプロンプトでその速度が必要で、差額を負担できる場合にRTX 4090を選んでください。価格は変動するため、最新の出品を確認してください。' },
           ],
         },
         'relatedReading': {
@@ -1491,7 +1491,7 @@ schema: {
           id: 'sources',
           title: 'ソース',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- RTX 3090とRTX 4090のeBay米国落札価格（2026-10-15更新）。',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- eBay米国落札価格：RTX 3090（2026-11-23付の数値）、RTX 4090（2026-10-15版のページ）。',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- ユーザー投稿のLlama 2 7B Q4_0結果。',
             '選択したGPUメモリテストツールのドキュメント（お使いのカードに対応しているか確認してください）',
             '熱およびクロック速度ベースライン用GPU-Z仕様データベース',
@@ -1505,7 +1505,7 @@ schema: {
         'description': 'ローカルLLM向け中古GPU：RTX 3060、3080、3090、4090の価格帯（米国市場の目安）、購入先、マイニングカードのリスク、購入前のテスト方法を解説します。',
         'url': 'https://www.promptquorum.com/ja/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1559,7 +1559,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '中古RTX 3090またはRTX 4090を購入すべきですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '予算が重要なら中古のRTX 3090です。eBay米国の落札実績の観測値（送料別）では中古RTX 3090が約$1,400-1,550、中古RTX 4090が$2,575-3,010です（InsiderLLMトラッカー、情報源の更新日：2026-10-15）。どちらも24 GBです。開発者が報告したllama.cppの7Bテスト（CUDAスコアボード、ディスカッション#15013）では、RTX 4090の生成速度は186.2 tok/s、RTX 3090は158.2 tok/sで、プロンプト処理は2倍以上速い結果です（11,993対5,175 tok/s）。長いプロンプトでその速度が必要で、差額を負担できる場合にRTX 4090を選んでください。価格は変動するため、最新の出品を確認してください。' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': '予算が重要なら中古のRTX 3090です。InsiderLLMトラッカーによるeBay米国の落札実績の観測値では、中古RTX 3090が$1,500-1,725（2026-11-23付の数値）、中古RTX 4090が送料別で$2,575-3,010です（2026-10-15版のページ）。どちらも24 GBです。開発者が報告したllama.cppの7Bテスト（CUDAスコアボード、ディスカッション#15013）では、RTX 4090の生成速度は186.2 tok/s、RTX 3090は158.2 tok/sで、プロンプト処理は2倍以上速い結果です（11,993対5,175 tok/s）。長いプロンプトでその速度が必要で、差額を負担できる場合にRTX 4090を選んでください。価格は変動するため、最新の出品を確認してください。' }
           },
         ],
       },
@@ -1569,7 +1569,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ja/local-llms/used-gpus-for-local-llms',
         'name': 'ローカルLLM向け中古GPU：コスト比較＆信頼性メモ',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: 'コスト比較：RTX 3060（中古 約$300、InsiderLLMトラッカー）vs RTX 3080（$280-350、InsiderLLMトラッカー）vs RTX 3090（観測値で約$1,400-1,550、中古）vs RTX 4090（観測値で約$2,575-3,010、中古）。' },
+          { '@type': 'ListItem', position: 1, name: 'コスト比較：RTX 3060（中古 約$300、InsiderLLMトラッカー）vs RTX 3080（$280-350、InsiderLLMトラッカー）vs RTX 3090（観測値で約$1,500-1,725、中古）vs RTX 4090（観測値で約$2,575-3,010、中古）。' },
           { '@type': 'ListItem', position: 2, name: '信頼性メモ：RTX 3060 12GBおよびRTX 3080 10GBは再販売量が多い。マイニングカードはVRAMの消耗が大きい可能性があるため、購入前にテストしてください。' },
           { '@type': 'ListItem', position: 3, name: '検討したい中古GPUモデル：RTX 3060 12GB（低予算の入門）、RTX 3080 10GB（ミドルクラス）、RTX 4090 24GB（プレミアム、MSRP超え）。' },
         ],
@@ -1585,7 +1585,7 @@ schema: {
       intro: '**较旧的二手GPU成交价低于发售价（InsiderLLM追踪页：RTX 3080 10GB为$280-350，RTX 3060 12GB约$300），但RTX 3090和RTX 4090目前在美国挂牌中已接近或高于MSRP。** 二手市场通常有大量前采矿和前游戏的卡。购买二手对于首次组装或升级可能有意义；除非可以现场测试，采矿卡风险更高。以下价格为美国市场估算，变化很快。',
       metaDescription: '本地LLM二手GPU选购：RTX 3060、3080、3090、4090价格区间（美国市场参考）、购买渠道、矿卡风险，以及付款前如何测试显卡。',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '**较旧的二手GPU成交价低于发售价（InsiderLLM追踪页：RTX 3080 10GB为$280-350，RTX 3060 12GB约$300），但RTX 3090和RTX 4090目前在美国挂牌中已接近或高于MSRP。购买前请测试任何二手卡，尤其是前采矿卡。**',
       audience: '熟悉Ollama或LM Studio优化本地LLM工作流的开发者',
       readTime: '阅读约8分钟',
@@ -1626,20 +1626,20 @@ schema: {
             '**RTX 3060 12GB**（InsiderLLM追踪页：约$300，区间$200-400）：二手市场交易量大，可比较的挂牌很多。购买前请测试显存。',
             '**RTX 3080 10GB**（InsiderLLM追踪页：$280-350）：热门游戏卡。10GB可用于较小模型，但对较大模型有限制。购买前请测试。',
             '**RTX 4090 24GB**（InsiderLLM追踪页的eBay美国成交记录：$2,575-3,010）：高端定价，高于MSRP。转售量大，可比较的挂牌很多。像对待任何二手卡一样检查其状况。',
-            '**RTX 3090 24GB**（InsiderLLM追踪页的eBay美国成交记录：约$1,400-1,550）：高端且昂贵。价格在2026年大幅上涨，近期成交记录明显高于$1,000。像对待任何二手卡一样检查其状况。',
+            '**RTX 3090 24GB**（InsiderLLM追踪页的eBay美国成交记录：约$1,500-1,725）：高端且昂贵。价格在2026年大幅上涨，近期成交记录明显高于$1,000。像对待任何二手卡一样检查其状况。',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: '二手GPU应该花多少钱？',
           content: [
-            '**基准：零售MSRP vs.** 二手市场。数字来自[InsiderLLM GPU价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（页面更新于2026-10-15）。RTX 3090和RTX 4090为eBay美国成交记录（不含运费）；该追踪页未说明RTX 3060和RTX 3080数字的方法。仅为美国价格（美元），不同地区可能有差异；并非报价或保证。',
+            '**基准：零售MSRP vs.** 二手市场。数字来自[InsiderLLM GPU价格追踪页](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)。RTX 3090的数字（日期2026-11-23）来自eBay美国成交记录。RTX 4090、RTX 3080和RTX 3060的数字是我们从该页面2026-10-15版本中读取的：RTX 4090为eBay美国成交记录（不含运费），该版本未说明RTX 3060和RTX 3080数字的方法。仅为美国价格（美元），不同地区可能有差异；并非报价或保证。',
           ],
           items: [
             'RTX 3060 12GB：MSRP $329 → 二手约$300，区间$200-400（InsiderLLM追踪页；$300时约比MSRP低9%）',
             'RTX 3080 10GB：MSRP $699 → 二手$280-350（InsiderLLM追踪页；约比MSRP低50-60%）',
             'RTX 4090 24GB：MSRP $1,599 → 二手（成交记录）$2,575-3,010，中位数$2,860，高于MSRP；全新挂牌$2,000-3,000',
-            'RTX 3090 24GB：二手（成交记录）约$1,400-1,550',
+            'RTX 3090 24GB：二手（成交记录）$1,500-1,725（中位数$1,650；225条成交记录，2026年11月13日至23日）',
           ],
         },
         'mining-vs-gaming': {
@@ -1694,7 +1694,7 @@ schema: {
             { q: '我应该购买二手RTX 4070还是RTX 3080？', a: 'InsiderLLM追踪页列出的二手RTX 3080 10GB为$280-350，未给出RTX 4070的价格，因此请比较两者的当前挂牌。RTX 4070是较新一代，显存多2 GB；请根据您的模型大小查看基准测试。' },
             { q: '如果1个月后故障，我可以在eBay上退货二手GPU吗？', a: '取决于卖家和商品的政策。许多提供有限的退货期；期限结束后，除非适用制造商保修，否则通常需要自行承担。购买前请确认。' },
             { q: '为带退货保护的GPU多付一笔费用值得吗？', a: '通常值得。退货期可以在卡购买后故障时避免全部损失；请将额外费用与卡的价格比较。' },
-            { q: '我应该购买二手RTX 3090还是RTX 4090？', a: '预算有限时选二手RTX 3090。在eBay美国成交记录观测值（不含运费）中，二手RTX 3090约$1,400-1,550，二手RTX 4090为$2,575-3,010（InsiderLLM追踪页，来源更新于2026-10-15）。两者都是24 GB。在开发者报告的llama.cpp 7B测试中（CUDA成绩表，讨论#15013），RTX 4090生成速度为186.2 tok/s，RTX 3090为158.2 tok/s，提示词处理速度超过两倍（11,993对5,175 tok/s）。主要在需要长提示词速度且能承担差价时再选RTX 4090。价格波动较大，请查看当前挂牌。' },
+            { q: '我应该购买二手RTX 3090还是RTX 4090？', a: '预算有限时选二手RTX 3090。据InsiderLLM追踪页的eBay美国成交记录观测值，二手RTX 3090为$1,500-1,725（数据日期2026-11-23），二手RTX 4090为$2,575-3,010（不含运费，页面2026-10-15版本）。两者都是24 GB。在开发者报告的llama.cpp 7B测试中（CUDA成绩表，讨论#15013），RTX 4090生成速度为186.2 tok/s，RTX 3090为158.2 tok/s，提示词处理速度超过两倍（11,993对5,175 tok/s）。主要在需要长提示词速度且能承担差价时再选RTX 4090。价格波动较大，请查看当前挂牌。' },
           ],
         },
         'relatedReading': {
@@ -1712,7 +1712,7 @@ schema: {
           id: 'sources',
           title: '来源',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- RTX 3090和RTX 4090的eBay美国成交价格（2026-10-15更新）。',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- eBay美国成交价格：RTX 3090（数据日期2026-11-23）、RTX 4090（页面2026-10-15版本）。',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- 用户提交的Llama 2 7B Q4_0结果。',
             '所选GPU内存测试工具的文档（请确认其支持您的显卡）',
             'GPU-Z规格数据库用于热和时钟速度基准',
@@ -1726,7 +1726,7 @@ schema: {
         'description': '本地LLM二手GPU选购：RTX 3060、3080、3090、4090价格区间（美国市场参考）、购买渠道、矿卡风险，以及付款前如何测试显卡。',
         'url': 'https://www.promptquorum.com/zh/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-22',
+        'dateModified': '2026-11-27',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1780,7 +1780,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '我应该购买二手RTX 3090还是RTX 4090？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '预算有限时选二手RTX 3090。在eBay美国成交记录观测值（不含运费）中，二手RTX 3090约$1,400-1,550，二手RTX 4090为$2,575-3,010（InsiderLLM追踪页，来源更新于2026-10-15）。两者都是24 GB。在开发者报告的llama.cpp 7B测试中（CUDA成绩表，讨论#15013），RTX 4090生成速度为186.2 tok/s，RTX 3090为158.2 tok/s，提示词处理速度超过两倍（11,993对5,175 tok/s）。主要在需要长提示词速度且能承担差价时再选RTX 4090。价格波动较大，请查看当前挂牌。' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': '预算有限时选二手RTX 3090。据InsiderLLM追踪页的eBay美国成交记录观测值，二手RTX 3090为$1,500-1,725（数据日期2026-11-23），二手RTX 4090为$2,575-3,010（不含运费，页面2026-10-15版本）。两者都是24 GB。在开发者报告的llama.cpp 7B测试中（CUDA成绩表，讨论#15013），RTX 4090生成速度为186.2 tok/s，RTX 3090为158.2 tok/s，提示词处理速度超过两倍（11,993对5,175 tok/s）。主要在需要长提示词速度且能承担差价时再选RTX 4090。价格波动较大，请查看当前挂牌。' }
           },
         ],
       },
@@ -1790,7 +1790,7 @@ schema: {
         'url': 'https://www.promptquorum.com/zh/local-llms/used-gpus-for-local-llms',
         'name': '本地LLM二手GPU：成本比较和可靠性说明',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: '成本比较：RTX 3060（二手约$300，InsiderLLM追踪页）vs RTX 3080（$280-350，InsiderLLM追踪页）vs RTX 3090（观测值约$1,400-1,550，二手）vs RTX 4090（观测值约$2,575-3,010，二手）。' },
+          { '@type': 'ListItem', position: 1, name: '成本比较：RTX 3060（二手约$300，InsiderLLM追踪页）vs RTX 3080（$280-350，InsiderLLM追踪页）vs RTX 3090（观测值约$1,500-1,725，二手）vs RTX 4090（观测值约$2,575-3,010，二手）。' },
           { '@type': 'ListItem', position: 2, name: '可靠性说明：RTX 3060 12GB和RTX 3080 10GB转售量大。矿卡的显存损耗可能更大；购买前请测试。' },
           { '@type': 'ListItem', position: 3, name: '值得考虑的二手GPU型号：RTX 3060 12GB（低预算入门），RTX 3080 10GB（中端），RTX 4090 24GB（高端，高于MSRP）。' },
         ],
@@ -1806,7 +1806,7 @@ schema: {
       intro: '**구형 중고 GPU는 출시가보다 낮은 가격에 거래되지만(InsiderLLM 트래커: RTX 3080 10GB는 $280~350, RTX 3060 12GB는 약 $300), RTX 3090과 RTX 4090은 현재 미국 매물에서 MSRP 근처이거나 그 이상에 거래됩니다.** 중고 시장에는 일반적으로 채굴용 및 게이밍용 카드가 풍부하게 공급되고 있습니다. 첫 번째 장비 구성이나 업그레이드 시 중고 구매는 합리적일 수 있습니다. 단, 채굴용 카드는 현장에서 직접 테스트할 수 없다면 더 위험합니다. 아래 가격은 미국 시장 추정치이며 빠르게 변동합니다.',
       metaDescription: '로컬 LLM용 중고 GPU: RTX 3060, 3080, 3090, 4090 가격대(미국 시장 기준), 구매처, 채굴용 카드 리스크, 구매 전 테스트 방법을 정리했습니다.',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-22',
+      dateModified: '2026-11-27',
       leadAnswerBlock: '구형 중고 GPU는 출시가보다 낮은 가격에 거래되지만(InsiderLLM 트래커: RTX 3080 10GB는 $280~350, RTX 3060 12GB는 약 $300), RTX 3090과 RTX 4090은 현재 미국 매물에서 MSRP 근처이거나 그 이상에 거래됩니다. 구매 전에는 모든 중고 카드를, 특히 채굴용이었던 카드를 반드시 테스트하십시오.',
       audience: 'Ollama 또는 LM Studio를 활용하여 로컬 LLM 워크플로우를 최적화하는 개발자',
       readTime: '8분',
@@ -1847,20 +1847,20 @@ schema: {
             '**RTX 3060 12GB** (InsiderLLM 트래커: 약 $300, 범위 $200~400): 중고 시장 거래량이 많아 비교할 매물이 풍부합니다. 구매 전 VRAM을 테스트하십시오.',
             '**RTX 3080 10GB** (InsiderLLM 트래커: $280~350): 인기 있는 게이밍 카드입니다. 10GB는 작은 모델에는 쓸 만하지만 큰 모델에는 제약이 있습니다. 구매 전 테스트하십시오.',
             '**RTX 4090 24GB** (InsiderLLM 트래커의 eBay 미국 낙찰 기록: $2,575~3,010): 프리미엄 가격으로 MSRP보다 높습니다. 중고 거래량이 많아 비교할 매물이 풍부합니다. 다른 중고 카드와 마찬가지로 상태를 확인하십시오.',
-            '**RTX 3090 24GB** (InsiderLLM 트래커의 eBay 미국 낙찰 기록: 약 $1,400~1,550): 고사양이며 가격이 높습니다. 2026년 내내 가격이 크게 올랐고 최근 낙찰 기록은 $1,000를 크게 웃돕니다. 다른 중고 카드와 마찬가지로 상태를 확인하십시오.',
+            '**RTX 3090 24GB** (InsiderLLM 트래커의 eBay 미국 낙찰 기록: 약 $1,500~1,725): 고사양이며 가격이 높습니다. 2026년 내내 가격이 크게 올랐고 최근 낙찰 기록은 $1,000를 크게 웃돕니다. 다른 중고 카드와 마찬가지로 상태를 확인하십시오.',
           ],
         },
         'pricing': {
           id: 'pricing',
           title: '중고 GPU 적정 가격은 얼마인가?',
           content: [
-            '**기준: 소비자 권장 소매가(MSRP) 대비** 중고 시장 가격. 수치는 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(페이지 갱신일 2026-10-15)에서 가져왔습니다. RTX 3090과 RTX 4090은 eBay 미국 낙찰 기록(배송비 제외)이며, 트래커는 RTX 3060과 RTX 3080 수치의 산출 방법을 밝히지 않습니다. 미국 가격(달러) 기준이며 한국에서는 다를 수 있습니다. 제안이나 보증이 아닙니다.',
+            '**기준: 소비자 권장 소매가(MSRP) 대비** 중고 시장 가격. 수치는 [InsiderLLM GPU 가격 트래커](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)에서 가져왔습니다. RTX 3090 수치(2026-11-23 기준)는 eBay 미국 낙찰 기록입니다. RTX 4090, RTX 3080, RTX 3060 수치는 당사가 2026-10-15 버전 페이지에서 확인한 값입니다. RTX 4090은 eBay 미국 낙찰 기록(배송비 제외)이며, 해당 버전은 RTX 3060과 RTX 3080 수치의 산출 방법을 밝히지 않았습니다. 미국 가격(달러) 기준이며 한국에서는 다를 수 있습니다. 제안이나 보증이 아닙니다.',
           ],
           items: [
             'RTX 3060 12GB: MSRP $329 → 중고 약 $300, 범위 $200~400 (InsiderLLM 트래커, $300 기준 MSRP보다 약 9% 낮음)',
             'RTX 3080 10GB: MSRP $699 → 중고 $280~350 (InsiderLLM 트래커, MSRP보다 약 50~60% 낮음)',
             'RTX 4090 24GB: MSRP $1,599 → 중고(낙찰 기록) $2,575~3,010, 중앙값 $2,860, MSRP보다 높음, 신품 매물 $2,000~3,000',
-            'RTX 3090 24GB: 중고(낙찰 기록) 약 $1,400~1,550',
+            'RTX 3090 24GB: 중고(낙찰 기록) $1,500~1,725(중앙값 $1,650, 낙찰 225건, 2026년 11월 13~23일)',
           ],
         },
         'mining-vs-gaming': {
@@ -1915,7 +1915,7 @@ schema: {
             { q: '중고 RTX 4070과 RTX 3080 중 무엇을 선택해야 하나요?', a: 'InsiderLLM 트래커는 중고 RTX 3080 10GB를 $280~350으로 제시하며 RTX 4070 가격은 제공하지 않으므로 두 제품의 최신 매물을 비교하십시오. RTX 4070은 더 새로운 세대로 VRAM이 2 GB 더 많습니다. 사용할 모델 크기에 맞춰 벤치마크를 확인하십시오.' },
             { q: 'eBay에서 구매한 중고 GPU를 1개월 후 불량으로 반품할 수 있나요?', a: '판매자와 매물 정책에 따라 다릅니다. 많은 판매자가 제한된 반품 기간을 두며, 기간이 지나면 제조사 보증이 적용되지 않는 한 대체로 스스로 감수해야 합니다. 구매 전 확인하십시오.' },
             { q: '반품 보호가 있는 GPU에 추가 비용을 지불할 가치가 있나요?', a: '대체로 그렇습니다. 반품 기간이 있으면 구매 후 카드가 고장 나도 전액 손실을 피할 수 있습니다. 추가 비용을 카드 가격과 비교하십시오.' },
-            { q: '중고 RTX 3090과 RTX 4090 중 무엇을 선택해야 하나요?', a: '예산이 중요하다면 중고 RTX 3090을 선택하십시오. eBay 미국 낙찰 기록 관측값(배송비 제외)으로 중고 RTX 3090은 약 $1,400~1,550, 중고 RTX 4090은 $2,575~3,010입니다(InsiderLLM 트래커, 출처 갱신일 2026-10-15). 두 제품 모두 24 GB입니다. 개발자가 보고한 llama.cpp 7B 테스트(CUDA 스코어보드, 토론 #15013)에서 RTX 4090은 186.2 tok/s, RTX 3090은 158.2 tok/s를 생성하고 프롬프트 처리는 두 배 이상 빠릅니다(11,993 대 5,175 tok/s). 긴 프롬프트에서 그 속도가 필요하고 차액을 감당할 수 있을 때 RTX 4090을 선택하십시오. 가격은 변동이 크므로 최신 매물을 확인하십시오.' },
+            { q: '중고 RTX 3090과 RTX 4090 중 무엇을 선택해야 하나요?', a: '예산이 중요하다면 중고 RTX 3090을 선택하십시오. InsiderLLM 트래커의 eBay 미국 낙찰 기록 관측값으로 중고 RTX 3090은 $1,500~1,725(2026-11-23 기준 수치), 중고 RTX 4090은 배송비 제외 $2,575~3,010입니다(2026-10-15 버전 페이지). 두 제품 모두 24 GB입니다. 개발자가 보고한 llama.cpp 7B 테스트(CUDA 스코어보드, 토론 #15013)에서 RTX 4090은 186.2 tok/s, RTX 3090은 158.2 tok/s를 생성하고 프롬프트 처리는 두 배 이상 빠릅니다(11,993 대 5,175 tok/s). 긴 프롬프트에서 그 속도가 필요하고 차액을 감당할 수 있을 때 RTX 4090을 선택하십시오. 가격은 변동이 크므로 최신 매물을 확인하십시오.' },
           ],
         },
         'relatedReading': {
@@ -1933,7 +1933,7 @@ schema: {
           id: 'sources',
           title: '출처',
           items: [
-            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- RTX 3090과 RTX 4090의 eBay 미국 낙찰 가격(2026-10-15 갱신).',
+            '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) -- eBay 미국 낙찰 가격: RTX 3090(2026-11-23 기준 수치), RTX 4090(2026-10-15 버전 페이지).',
             '[llama.cpp discussion #15013: Performance on NVIDIA CUDA](https://github.com/ggml-org/llama.cpp/discussions/15013) -- 사용자가 제출한 Llama 2 7B Q4_0 결과.',
             '선택한 GPU 메모리 테스트 도구의 문서(사용 중인 카드를 지원하는지 확인하십시오)',
             '열 특성 및 클럭 속도 기준선을 위한 GPU-Z 사양 데이터베이스',
@@ -1946,7 +1946,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ko/local-llms/used-gpus-for-local-llms',
         'name': '로컬 LLM용 중고 GPU: 비용 비교 및 신뢰성 참고',
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: '비용 비교: 중고 RTX 3060(약 $300, InsiderLLM 트래커) vs RTX 3080($280~350, InsiderLLM 트래커) vs RTX 3090(관측값 약 $1,400~1,550, 중고) vs RTX 4090(관측값 약 $2,575~3,010, 중고).' },
+          { '@type': 'ListItem', position: 1, name: '비용 비교: 중고 RTX 3060(약 $300, InsiderLLM 트래커) vs RTX 3080($280~350, InsiderLLM 트래커) vs RTX 3090(관측값 약 $1,500~1,725, 중고) vs RTX 4090(관측값 약 $2,575~3,010, 중고).' },
           { '@type': 'ListItem', position: 2, name: '신뢰성 참고: RTX 3060 12GB와 RTX 3080 10GB는 재판매 물량이 많습니다. 채굴용 카드는 VRAM 마모가 더 클 수 있으므로 구매 전 테스트하십시오.' },
           { '@type': 'ListItem', position: 3, name: '고려할 만한 중고 GPU 모델: RTX 3060 12GB(저예산 입문용), RTX 3080 10GB(중급), RTX 4090 24GB(프리미엄, MSRP 초과).' },
         ],
