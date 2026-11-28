@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -37345,6 +37345,474 @@
       "t14": "2026-12-12",
       "t28": "2026-12-26"
     }
+  },
+  {
+    "id": "3525fb5a-8d1f-46bd-862b-4a30f4524e43",
+    "slug": "/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:36.877Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12GB: Best GPU Under $300 for Local LLMs (2026)",
+        "new": "RTX 3060 12GB for Local LLMs: Is It Still Under $300? (2026)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12GB for Local LLM 2026: Best GPU Under $300",
+        "new": "RTX 3060 12GB for Local LLMs: Under $300 in 2026?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Used RTX 3060 12GB now runs $350+ (2026 memory shortage) — still the top 12GB pick for local LLMs. See today's price and the real under-$300 option.",
+        "new": "A used RTX 3060 12GB sold for $310–350 in the US, above $300. Under that line we dated a new 10GB Arc B570. See price sources and which models fit."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 4.8,
+      "impressions": 4933,
+      "clicks": 15,
+      "ctr": 0.003040745996351105,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d9c16df3-ba33-4ba1-8275-a4f6fd98ab74",
+    "slug": "/de/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:36.912Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12GB: Beste GPU unter 300 € für lokale LLMs (2026)",
+        "new": "RTX 3060 12GB für lokale LLMs: noch unter 300 $? (2026)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12GB für lokale LLMs 2026: Beste GPU unter 300 €",
+        "new": "RTX 3060 12GB für lokale LLMs: unter 300 $ in 2026?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Gebrauchte RTX 3060 12GB kostet jetzt deutlich mehr (Speicherknappheit 2026) — weiterhin die beste 12-GB-Wahl für lokale LLMs. Aktuellen Preis und die echte 300-€-Alternative ansehen.",
+        "new": "Gebraucht wurde die RTX 3060 12GB in den USA für 310–350 $ verkauft. Unter 300 $ fanden wir datiert die neue Arc B570 10GB. Mit Preisquellen."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 7.07,
+      "impressions": 388,
+      "clicks": 3,
+      "ctr": 0.007731958762886598,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8d9c4e0b-9aa6-47e4-a2a6-35d64a2d94d7",
+    "slug": "/fr/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:36.946Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12 Go : meilleure GPU à moins de 300 € pour les LLM locaux (2026)",
+        "new": "RTX 3060 12 Go pour LLM locaux : encore sous 300 $ ? (2026)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12 Go pour LLM local 2026 : meilleure GPU sous 300 €",
+        "new": "RTX 3060 12 Go et LLM local : sous 300 $ en 2026 ?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "La RTX 3060 12 Go d'occasion coûte désormais bien plus (pénurie de mémoire 2026) — toujours la meilleure GPU 12 Go pour LLM locaux. Voir le prix actuel et la vraie alternative sous 300 €.",
+        "new": "D’occasion, la RTX 3060 12 Go s’est vendue 310–350 $ aux États-Unis. Sous 300 $, nous datons l’Arc B570 10 Go neuve. Prix sourcés et modèles compatibles."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 5.55,
+      "impressions": 368,
+      "clicks": 6,
+      "ctr": 0.016304347826086956,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "73ce666b-4bea-4785-b2cf-fadae1eaaabf",
+    "slug": "/ja/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:36.980Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12GB：300ドル以下でローカルLLMに最適なGPUは（2026年版）",
+        "new": "RTX 3060 12GBでローカルLLM：今も300ドル以下で買えるのか（2026年版）"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12GBでローカルLLM 2026：300ドル以下最良GPU",
+        "new": "RTX 3060 12GBでローカルLLM：300ドル以下？2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "中古RTX 3060 12GBは2026年のメモリ不足で価格が上昇——それでもローカルLLM向け12GB最良GPUです。現在の価格と本当に300ドル以下で買える選択肢を確認してください。",
+        "new": "中古RTX 3060 12GBの米国成約価格は310〜350ドルで300ドル超。300ドル以下では新品Arc B570 10GBを日付付きで確認しました。価格の出典と動くモデルを紹介します。"
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 7.61,
+      "impressions": 637,
+      "clicks": 17,
+      "ctr": 0.026687598116169546,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "108c41e4-f46b-4fbe-8e86-bc7a7daa0a14",
+    "slug": "/zh/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:37.013Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12GB：300美元以下本地LLM最佳GPU（2026年）",
+        "new": "RTX 3060 12GB跑本地LLM：还能在300美元以内买到吗？（2026年）"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12GB本地LLM 2026：300美元以下最佳GPU",
+        "new": "RTX 3060 12GB本地LLM：2026年还低于300美元吗？"
+      },
+      {
+        "field": "metaDescription",
+        "old": "二手RTX 3060 12GB因2026年显存短缺价格大涨——仍是本地LLM最佳12GB显卡。查看当前价格，以及真正300美元以下的替代方案。",
+        "new": "二手RTX 3060 12GB在美国的成交价为310–350美元，已超过300美元。300美元以内，我们查到有日期记录的是全新Arc B570 10GB。附价格来源与可运行的模型规模。"
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 6.11,
+      "impressions": 988,
+      "clicks": 7,
+      "ctr": 0.00708502024291498,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "73002c72-7c2a-40ec-9e27-08f66fc69636",
+    "slug": "/es/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:37.047Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12GB: ¿mejor GPU por menos de 300 $ para LLMs locales (2026)",
+        "new": "RTX 3060 12GB para LLM locales: ¿sigue bajo $300? (2026)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12GB para LLM local 2026: mejor GPU bajo 300 $",
+        "new": "RTX 3060 12GB para LLM local: ¿bajo $300 en 2026?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "La RTX 3060 12GB de segunda mano ahora cuesta mucho más (escasez de memoria 2026) — sigue siendo la mejor GPU de 12 GB para LLMs locales. Ve el precio actual y la alternativa real bajo 300 $.",
+        "new": "La RTX 3060 12GB usada se vendió a $310–350 en EE. UU. Por debajo de $300 fechamos la Arc B570 10GB nueva. Consulta fuentes de precio y modelos."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 8.67,
+      "impressions": 128,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "be98fe85-bb60-4f52-b3fa-145922d2a20f",
+    "slug": "/pt/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:37.081Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12GB: Melhor GPU Abaixo de US$ 300 para LLMs Locais (2026)",
+        "new": "RTX 3060 12GB para LLMs locais: ainda abaixo de US$ 300? (2026)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12GB para LLM Local 2026: Melhor GPU Abaixo de US$ 300",
+        "new": "RTX 3060 12GB para LLM local: abaixo de US$ 300?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "A RTX 3060 12GB usada agora custa muito mais (escassez de memória 2026) — ainda a melhor GPU de 12GB para LLMs locais. Veja o preço atual e a alternativa real abaixo de US$ 300.",
+        "new": "A RTX 3060 12GB usada foi vendida por US$ 310–350 nos EUA. Abaixo de US$ 300, datamos a Arc B570 10GB nova. Veja fontes de preço e quais modelos cabem."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 6.91,
+      "impressions": 316,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1e6158a6-2f13-4d34-8a2a-c2bbc726b3ff",
+    "slug": "/ar/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:37.114Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12GB: أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية (2026)",
+        "new": "RTX 3060 12GB للنماذج المحلية: هل ما زالت تحت 300 دولار؟ (2026)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12GB للنماذج اللغوية المحلية 2026: الأفضل بأقل من 300 دولار",
+        "new": "RTX 3060 12GB للنماذج المحلية: أقل من 300$ في 2026؟"
+      },
+      {
+        "field": "metaDescription",
+        "old": "أصبحت بطاقة RTX 3060 12GB المستعملة أغلى بكثير (نقص الذاكرة 2026) — لكنها تبقى أفضل بطاقة 12 جيجابايت للنماذج اللغوية المحلية. تحقق من السعر الحالي والبديل الحقيقي بأقل من 300 دولار.",
+        "new": "بيعت RTX 3060 12GB المستعملة بين 310 و350 دولارًا في أمريكا. وتحت 300 دولار وثّقنا بطاقة Arc B570 10GB الجديدة. اطلع على مصادر الأسعار والنماذج المناسبة."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 7,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "16c49bec-ac46-477c-b6df-2a1ba443885d",
+    "slug": "/ko/prompt-bites/best-gpu-under-300-local-llm",
+    "date": "2026-11-28T15:49:37.148Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RTX 3060 12GB: 로컬 LLM용 300달러 이하 최고의 GPU는（2026년）",
+        "new": "RTX 3060 12GB 로컬 LLM: 아직 300달러 이하입니까? (2026년)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "RTX 3060 12GB 로컬 LLM 2026: 300달러 이하 최고의 GPU",
+        "new": "RTX 3060 12GB 로컬 LLM: 2026년에도 300달러 이하?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "중고 RTX 3060 12GB는 2026년 메모리 부족으로 가격이 크게 올랐습니다 — 그래도 로컬 LLM용 최고의 12GB GPU입니다. 현재 가격과 실제 300달러 이하 대안을 확인하십시오.",
+        "new": "중고 RTX 3060 12GB의 미국 실거래가는 310~350달러로 300달러를 넘습니다. 300달러 이하에서는 신품 Arc B570 10GB를 날짜와 함께 확인했습니다. 가격 출처와 실행 가능한 모델을 정리합니다."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 6.07,
+      "impressions": 374,
+      "clicks": 9,
+      "ctr": 0.02406417112299465,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ef7991ce-2d4b-4a14-b610-c3bd54ca6423",
+    "slug": "/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.181Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Intel Arc B580 12GB is the best Intel Arc GPU for local LLMs — current prices, setup reality (IPEX-LLM vs native Ollama), and how it compares to an RTX 3060 12GB.",
+        "new": "Our Intel Arc pick for local LLMs is the B580 12GB, but we found no current price under $300. See Arc B570 and A770 prices and the software setup."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 5.67,
+      "impressions": 16807,
+      "clicks": 154,
+      "ctr": 0.009162848812994586,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "69391b0a-5627-4c25-9583-e5f49d5f7bc5",
+    "slug": "/ar/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.214Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "بطاقة Intel Arc B580 12GB هي أفضل بطاقة Intel Arc لتشغيل LLM محليًا — الأسعار الحالية، وواقع الإعداد (IPEX-LLM مقابل Ollama الأصلي)، ومقارنتها بـ RTX 3060 12GB.",
+        "new": "اختيارنا من Intel Arc للنماذج المحلية هو B580 12GB، لكن لم نجد له سعرًا حاليًا تحت 300 دولار. أسعار B570 وA770 وإعداد البرمجيات."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 6.48,
+      "impressions": 21,
+      "clicks": 1,
+      "ctr": 0.047619047619047616,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7a07387b-cbe4-4f2f-9fae-5ed6f79838e3",
+    "slug": "/de/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.248Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Intel Arc B580 12GB ist die beste Intel-Arc-GPU für lokale LLMs — aktuelle Preise, Einrichtungsaufwand (IPEX-LLM vs. natives Ollama) und Vergleich zur RTX 3060 12GB.",
+        "new": "Unsere Intel-Arc-Wahl für lokale LLMs ist die B580 12GB, doch aktuell fanden wir keinen Preis unter 300 $. Arc-B570- und A770-Preise plus Software."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 4.44,
+      "impressions": 1596,
+      "clicks": 48,
+      "ctr": 0.03007518796992481,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f4e433b8-934c-4353-b567-70ea656058d4",
+    "slug": "/es/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.281Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "La Intel Arc B580 12GB es la mejor GPU Intel Arc para LLMs locales — precios actuales, realidad de configuración (IPEX-LLM vs Ollama nativo) y comparación con la RTX 3060 12GB.",
+        "new": "Nuestra Intel Arc para LLM locales es la B580 12GB, pero no hallamos precio actual bajo $300. Precios de la Arc B570 y A770, y configuración del software."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 5.45,
+      "impressions": 605,
+      "clicks": 7,
+      "ctr": 0.011570247933884297,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "84e074c1-e1ec-498e-96e7-fe277a5978b3",
+    "slug": "/fr/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.315Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "L'Intel Arc B580 12 Go est le meilleur GPU Intel Arc pour les LLM locaux — prix actuels, réalité de l'installation (IPEX-LLM vs Ollama natif) et comparaison avec la RTX 3060 12 Go.",
+        "new": "Notre choix Intel Arc pour les LLM locaux est la B580 12 Go, mais aucun prix actuel sous 300 $. Prix des Arc B570 et A770, et configuration logicielle."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 5.1,
+      "impressions": 461,
+      "clicks": 9,
+      "ctr": 0.019522776572668113,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3517c609-3836-4745-848c-94b4d9b491ca",
+    "slug": "/ja/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.348Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Intel Arc B580 12GBはローカルLLMに最適なIntel Arc GPUです — 現行価格、セットアップの実態(IPEX-LLM vs Ollamaネイティブ)、RTX 3060 12GBとの比較。",
+        "new": "ローカルLLM向けのIntel Arcは当サイトではB580 12GBを選びますが、現在300ドル未満の価格は未確認です。B570・A770の価格とOllama、llama.cppの設定を解説します。"
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 6.85,
+      "impressions": 1317,
+      "clicks": 55,
+      "ctr": 0.04176157934700076,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "cc4c0f1a-bea7-4609-83fb-a9d933a64f26",
+    "slug": "/ko/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.382Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Intel Arc B580 12GB가 로컬 LLM에 최적의 Intel Arc GPU입니다 — 현재 가격, 설정 실태(IPEX-LLM vs 네이티브 Ollama), RTX 3060 12GB와의 비교.",
+        "new": "로컬 LLM용 Intel Arc는 B580 12GB를 고르지만, 현재 300달러 미만 가격은 확인하지 못했습니다. Arc B570·A770 가격과 소프트웨어 설정을 정리합니다."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 6.08,
+      "impressions": 355,
+      "clicks": 24,
+      "ctr": 0.0676056338028169,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "034961f1-7f41-4bac-be2c-bed8a6fdb0ea",
+    "slug": "/pt/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.416Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "A Intel Arc B580 12GB é a melhor GPU Intel Arc para LLMs locais — preços atuais, realidade da configuração (IPEX-LLM vs Ollama nativo) e comparação com a RTX 3060 12GB.",
+        "new": "Nossa Intel Arc para LLMs locais é a B580 12GB, mas não achamos preço atual abaixo de US$ 300. Preços da Arc B570 e A770 e a configuração do software."
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 6.58,
+      "impressions": 476,
+      "clicks": 5,
+      "ctr": 0.01050420168067227,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c8f21500-486e-4cac-abea-e4d86ed7c728",
+    "slug": "/zh/prompt-bites/best-intel-arc-gpu-local-llm",
+    "date": "2026-11-28T15:49:37.450Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Intel Arc B580 12GB 是本地 LLM 的最佳 Intel Arc GPU——查看当前价格、真实的配置体验（IPEX-LLM 对比原生 Ollama），以及与 RTX 3060 12GB 的对比。",
+        "new": "跑本地LLM的Intel Arc我们选B580 12GB，但当前没查到低于300美元的价格。附Arc B570、A770价格，以及Ollama和llama.cpp的软件配置要点。"
+      }
+    ],
+    "reason": "Old GPU prices replaced with dated ones; under-300 retitled (no checked 12GB card under $300).",
+    "baseline": {
+      "position": 6.05,
+      "impressions": 897,
+      "clicks": 10,
+      "ctr": 0.011148272017837236,
+      "period": "90d 2026-08-30 to 2026-11-27"
+    },
+    "deployedAt": null
   },
   {
     "id": "83a50aca-aea9-4cca-b20c-778f95203bb2",

@@ -1462,7 +1462,7 @@
       "images": []
     },
     "multi-gpu-local-llms": {
-      "dateModified": "2026-11-22",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1926,7 +1926,7 @@
       ]
     },
     "rtx-5090-vs-rtx-4090-local-llm": {
-      "dateModified": "2026-11-15",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -1944,7 +1944,7 @@
       "images": [
         {
           "url": "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-en.webp",
-          "title": "RTX 5090 vs RTX 4090 Speed -- Real-world LLM inference"
+          "title": "RTX 5090 vs RTX 4090 speed -- developer-reported llama.cpp 7B test"
         },
         {
           "url": "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-en.webp",
@@ -16428,7 +16428,7 @@
       "images": []
     },
     "bestGpuUnder300LocalLlm": {
-      "dateModified": "2026-11-19",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -17112,7 +17112,7 @@
       "images": []
     },
     "bestIntelArcGpuLocalLlm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-28",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
