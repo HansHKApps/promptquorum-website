@@ -1048,6 +1048,7 @@ const HUB_THEMES: Array<{
       'agent-zero-review',
       'myagents-review',
       'orca-review',
+      'valo-review',
       'taskweaver-review',
       'dspy-review',
       'camel-review',

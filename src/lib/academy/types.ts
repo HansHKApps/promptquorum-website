@@ -138,6 +138,17 @@ export interface Lesson {
   quiz?: Question[]
 }
 
+/** One finished AI answer from the tutor or a section's magic wand, kept so it can be reread. Stays in this browser. */
+export interface SavedAnswer {
+  source: 'tutor' | 'wand'
+  /** wand only: the lesson section the answer belongs to */
+  sectionIndex?: number
+  question: string
+  answer: string
+  sources?: { title: string; url: string; web?: boolean }[]
+  at: string
+}
+
 export interface Programme {
   id: string
   createdAt: string
@@ -162,6 +173,8 @@ export interface Programme {
   freeWish?: string
   /** the learner's own notes per lesson section (magic wand), key `<lesson id>:<section index>`; stays in this browser */
   notes?: Record<string, string>
+  /** saved AI answers by lesson id, for rereading; absent in programmes stored before they were saved */
+  aiAnswers?: Record<string, SavedAnswer[]>
   progress: {
     currentLesson: number
     lessonStatus: Record<string, 'todo' | 'viewed' | 'done'>

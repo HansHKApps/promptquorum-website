@@ -11,6 +11,7 @@ import { ReadAloud } from '@/components/ReadAloud'
 import { Markdown } from '@/components/askhans/markdown'
 import { ACADEMY_CONTACT_EMAIL, ACADEMY_TUTOR_OK_DAYS, ACADEMY_TUTOR_OK_KEY } from '@/lib/academy/config'
 import { cleanTutorText, splitTutorStream, tutorCost, TUTOR_CAP_LESSON, TUTOR_CAP_PROGRAMME, type TutorSource, type TutorTrigger } from '@/lib/academy/tutor'
+import { addSavedAnswer } from '@/lib/academy/progress'
 import type { Programme } from '@/lib/academy/types'
 import { Content } from './Content'
 import { shareCopyFor } from './copy/share'
@@ -165,7 +166,12 @@ export function TutorPanel({
           const part = splitTutorStream(text)
           setTurns((prev) => prev.map((x, i) => (i === prev.length - 1 ? { ...x, content: part.text, sources: part.sources } : x)))
         }
-        if (!splitTutorStream(text).text.trim() || text.includes('\u0000')) throw new Error('tutor')
+        const answered = splitTutorStream(text)
+        if (!answered.text.trim() || text.includes('\u0000')) throw new Error('tutor')
+        // Only a complete answer is kept for rereading, and only in the program it was asked in.
+        const about = s.why?.prompt ?? s.whyOpen?.prompt
+        const saved = { source: 'tutor' as const, question: about ? `${shown} ${about}` : shown, answer: answered.text, sources: answered.sources, at: new Date().toISOString() }
+        update((st) => (st.programme?.id === programme.id ? { ...st, programme: addSavedAnswer(st.programme, lessonKey, saved) } : st))
       } catch {
         setTurns((prev) => prev.slice(0, -2))
         setError(t.error)
@@ -173,7 +179,7 @@ export function TutorPanel({
         setBusy(false)
       }
     },
-    [busy, locked, used, usedHere, t, turns, update, lessonKey, programme.language, programme.subject, programme.objectives, lessonTitle, lessonText],
+    [busy, locked, used, usedHere, t, turns, update, lessonKey, programme.id, programme.language, programme.subject, programme.objectives, lessonTitle, lessonText],
   )
 
   // A trigger from outside (rephrase button, selected text, chip): open the panel and run it once.

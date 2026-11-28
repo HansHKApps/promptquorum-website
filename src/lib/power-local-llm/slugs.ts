@@ -707,6 +707,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'humla-review':                             'humla-review',
   'llmfit-review':                            'llmfit-review',
   'orca-review':                              'orca-review',
+  'valo-review':                              'valo-review',
   'reactive-resume-review':                   'reactive-resume-review',
   't3-code-review':                           't3-code-review',
   'paperclip-review':                         'paperclip-review',

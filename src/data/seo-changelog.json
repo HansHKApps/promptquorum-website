@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -31812,7 +31812,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "3276b875-563b-4366-9326-92b31a8e1135",
@@ -31827,7 +31831,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "d5f71151-b74d-4eec-b51c-b22a61e6294d",
@@ -31842,7 +31850,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "eecd8b4f-0439-449d-96ec-e5b1b509cb55",
@@ -31857,7 +31869,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "55c6dc81-dcb8-4599-b26a-b50980b7670f",
@@ -31872,7 +31888,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "7ab68089-85b5-406a-9e53-bd849cffa21d",
@@ -31887,7 +31907,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "0cf35129-f613-4b00-9e0f-ec2ca2eb4d0f",
@@ -31902,7 +31926,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "e3cfe3fb-8cf2-43bf-b35c-74a8af6230a2",
@@ -31917,7 +31945,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "7fb34148-61a0-4e4a-81b1-1065e880f86c",
@@ -31932,7 +31964,11 @@
     ],
     "reason": "Risk gate: removed an unsupported test claim or guarantee from the meta description. Baseline not recorded: Search Console unavailable when logged.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   },
   {
     "id": "1b5c5071-ba90-4b61-a3ca-b485ac12188b",
@@ -31947,6 +31983,10 @@
     ],
     "reason": "Risk gate: replaced a mastery promise with reading time.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-27",
+    "measure": {
+      "t14": "2026-12-11",
+      "t28": "2026-12-25"
+    }
   }
 ]

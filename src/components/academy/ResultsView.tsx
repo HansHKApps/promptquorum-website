@@ -10,11 +10,10 @@ import { getCabinetFlag, putFile } from '@/lib/academy/cabinet'
 import { documentationModel } from '@/lib/academy/documentation'
 import { sha256Hex } from '@/lib/academy/hash'
 import { isSiteLang, languageDisplayName } from '@/lib/academy/language'
-import { correctIndexOf, countingFinal, PASS_MARK, programmeScore } from '@/lib/academy/scoring'
+import { countingFinal, PASS_MARK, programmeScore } from '@/lib/academy/scoring'
 import type { AcademyLang, Programme } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
-import { AiBadge } from './AiBadge'
-import { creditLabel } from './credit'
+import { QuizReview } from './QuizReview'
 import { formatPoints } from '@/lib/academy/format-points'
 import { Content } from './Content'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
@@ -431,65 +430,10 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
         </button>
       </div>
 
-      {final.openQuestions && (
+      {(final.openQuestions || final.questions) && (
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="cursor-pointer font-medium text-gray-900">{tx.reviewAnswers}</summary>
-          <Content lang={programme.language}>
-            <ol className="mt-3 space-y-4">
-              {final.openQuestions.map((q, i) => (
-                <li key={q.id} className="space-y-1 text-sm">
-                  <p className="font-medium text-gray-900">
-                    {i + 1}. {q.prompt}
-                  </p>
-                  <p className="text-gray-800">
-                    {tx.yourAnswer}: {final.openAnswers?.[q.id] || '–'}
-                  </p>
-                  <p className={q.reveal && q.reveal.credit >= 1 ? 'text-green-800' : q.reveal && q.reveal.credit > 0 ? 'text-amber-800' : 'text-red-800'}>
-                    {creditLabel(tx, q.reveal?.credit ?? 0)}
-                  </p>
-                  {q.reveal && (
-                    <p className="text-gray-600">
-                      {tx.modelAnswerLabel}: {q.reveal.modelAnswer} <AiBadge text={tx.aiLabel} />
-                    </p>
-                  )}
-                </li>
-              ))}
-            </ol>
-          </Content>
-        </details>
-      )}
-
-      {final.questions && (
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="cursor-pointer font-medium text-gray-900">{tx.reviewAnswers}</summary>
-          <Content lang={programme.language}>
-          <ol className="mt-3 space-y-4">
-            {final.questions.map((q, i) => {
-              const a = final.answers[q.id]
-              const correctIndex = correctIndexOf(q)
-              const right = a === correctIndex
-              const explanation = 'reveal' in q ? q.reveal?.explanationCorrect : (q as { explanationCorrect?: string }).explanationCorrect
-              return (
-                <li key={q.id} className="space-y-1 text-sm">
-                  <p className="font-medium text-gray-900">
-                    {i + 1}. {q.prompt}
-                  </p>
-                  <p className={right ? 'text-green-800' : 'text-red-800'}>
-                    {tx.yourAnswer}: {a !== undefined && a >= 0 ? q.options[a] : '–'} {right ? '✓' : '✗'}
-                  </p>
-                  {!right && (
-                    <p className="text-gray-800">
-                      {tx.correctAnswer}: {correctIndex !== undefined ? q.options[correctIndex] : '–'}
-                    </p>
-                  )}
-                  <p className="text-gray-600">
-                    {explanation} <AiBadge text={tx.aiLabel} />
-                  </p>
-                </li>
-              )
-            })}
-          </ol>
-          </Content>
+          <QuizReview tx={tx} result={final} language={programme.language} />
         </details>
       )}
 

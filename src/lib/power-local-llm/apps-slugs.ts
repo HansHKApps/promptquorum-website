@@ -347,6 +347,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'humla':                                  'humla',
   'llmfit':                                 'llmfit',
   'orca':                                   'orca',
+  'valo':                                   'valo',
   'reactive-resume':                        'reactive-resume',
   'paperclip':                              'paperclip',
   'next-ai-draw-io':                        'next-ai-draw-io',

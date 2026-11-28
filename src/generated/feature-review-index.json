@@ -1469,6 +1469,11 @@
     "urlSlug": "orca-review",
     "url": "/power-local-llm/orca-review"
   },
+  "valo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "valo-review",
+    "url": "/power-local-llm/valo-review"
+  },
   "reactive-resume": {
     "cluster": "power-local-llm",
     "urlSlug": "reactive-resume-review",
