@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -37375,7 +37375,11 @@
       "ctr": 0.003040745996351105,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "d9c16df3-ba33-4ba1-8275-a4f6fd98ab74",
@@ -37406,7 +37410,11 @@
       "ctr": 0.007731958762886598,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "8d9c4e0b-9aa6-47e4-a2a6-35d64a2d94d7",
@@ -37437,7 +37445,11 @@
       "ctr": 0.016304347826086956,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "73ce666b-4bea-4785-b2cf-fadae1eaaabf",
@@ -37468,7 +37480,11 @@
       "ctr": 0.026687598116169546,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "108c41e4-f46b-4fbe-8e86-bc7a7daa0a14",
@@ -37499,7 +37515,11 @@
       "ctr": 0.00708502024291498,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "73002c72-7c2a-40ec-9e27-08f66fc69636",
@@ -37530,7 +37550,11 @@
       "ctr": 0,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "be98fe85-bb60-4f52-b3fa-145922d2a20f",
@@ -37561,7 +37585,11 @@
       "ctr": 0,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "1e6158a6-2f13-4d34-8a2a-c2bbc726b3ff",
@@ -37592,7 +37620,11 @@
       "ctr": 0,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "16c49bec-ac46-477c-b6df-2a1ba443885d",
@@ -37623,7 +37655,11 @@
       "ctr": 0.02406417112299465,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ef7991ce-2d4b-4a14-b610-c3bd54ca6423",
@@ -37644,7 +37680,11 @@
       "ctr": 0.009162848812994586,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "69391b0a-5627-4c25-9583-e5f49d5f7bc5",
@@ -37665,7 +37705,11 @@
       "ctr": 0.047619047619047616,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "7a07387b-cbe4-4f2f-9fae-5ed6f79838e3",
@@ -37686,7 +37730,11 @@
       "ctr": 0.03007518796992481,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f4e433b8-934c-4353-b567-70ea656058d4",
@@ -37707,7 +37755,11 @@
       "ctr": 0.011570247933884297,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "84e074c1-e1ec-498e-96e7-fe277a5978b3",
@@ -37728,7 +37780,11 @@
       "ctr": 0.019522776572668113,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "3517c609-3836-4745-848c-94b4d9b491ca",
@@ -37749,7 +37805,11 @@
       "ctr": 0.04176157934700076,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "cc4c0f1a-bea7-4609-83fb-a9d933a64f26",
@@ -37770,7 +37830,11 @@
       "ctr": 0.0676056338028169,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "034961f1-7f41-4bac-be2c-bed8a6fdb0ea",
@@ -37791,7 +37855,11 @@
       "ctr": 0.01050420168067227,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "c8f21500-486e-4cac-abea-e4d86ed7c728",
@@ -37812,7 +37880,11 @@
       "ctr": 0.011148272017837236,
       "period": "90d 2026-08-30 to 2026-11-27"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "83a50aca-aea9-4cca-b20c-778f95203bb2",
@@ -37827,7 +37899,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "4308b0e6-2cbe-4f97-81e3-05dc330e21f9",
@@ -37842,7 +37918,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "7875c9dc-7899-41eb-b8f8-b6c77d82fc57",
@@ -37857,7 +37937,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "b3cfe927-6405-45ea-b1c9-0109ecc08670",
@@ -37872,7 +37956,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "98d8bb46-451c-4bea-ac9c-030b3b488d03",
@@ -37887,7 +37975,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "1ebb0c6d-8843-4e33-ac17-62b02b90f200",
@@ -37902,7 +37994,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "550d0a7c-2ad7-4de7-8085-cf0c7712ca0d",
@@ -37917,7 +38013,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "fdefdc92-f5c8-437e-a058-66612202b969",
@@ -37932,7 +38032,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "8e707a73-cd0c-498f-83a0-96c78cba9f58",
@@ -37947,7 +38051,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "d733e5ac-4ab2-4063-b0a3-f3e7367c2ab0",
@@ -37962,7 +38070,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "503d31e1-2da2-442d-b86c-4633213d244f",
@@ -37977,7 +38089,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e31cd875-a28d-4188-91e5-fbb1f66f61de",
@@ -37992,7 +38108,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "4cea6dce-2bf1-404b-b942-725b32343568",
@@ -38007,7 +38127,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "6d0d2cb4-7ef1-4445-ade3-e44be627595d",
@@ -38022,7 +38146,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "013f34df-bce3-4b59-b0a3-1b09479203cd",
@@ -38037,7 +38165,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "71f4d27d-4dad-4c90-924d-1af49210e4a3",
@@ -38052,7 +38184,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "55467e03-6d33-4c66-b488-bc0a9963465b",
@@ -38067,7 +38203,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "1de1d3d9-80a0-4064-a168-fcc927b6c500",
@@ -38082,7 +38222,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "8fa042f2-ecc7-48ed-b01f-280f1ac312dd",
@@ -38102,7 +38246,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "60180711-6fc4-46b4-979a-3cfc218651d0",
@@ -38122,7 +38270,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "3070a07b-dbee-455b-81cc-af60e55a5342",
@@ -38142,7 +38294,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "cd6e5aeb-1386-4415-9e9f-e3cc47dc5639",
@@ -38162,7 +38318,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a9318448-7d0e-4fe2-be4b-15ae04ea21ef",
@@ -38182,7 +38342,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "b3b75d05-95d3-4301-8a04-807c70bc0e05",
@@ -38202,7 +38366,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "eef422cc-042d-441a-8c36-3fab1550a36e",
@@ -38222,7 +38390,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "0239aa76-f052-440a-88eb-f1e6c90bbb39",
@@ -38242,7 +38414,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "c1d1f2b0-f81f-461c-bd06-b9bfc7da0887",
@@ -38267,7 +38443,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a80efb7c-c7da-46a1-8af4-b07e2a97fe2c",
@@ -38292,7 +38472,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "fb7e5c03-07e7-46f2-9430-2b899021950e",
@@ -38317,7 +38501,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "041a525f-6800-4eae-ab9c-554d2ba604f0",
@@ -38342,7 +38530,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "0d1ea9d7-7e5a-4c40-918f-5b8c78ad63a5",
@@ -38367,7 +38559,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "7f540a21-e25e-4c56-9d77-05334efc7a48",
@@ -38392,7 +38588,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "7635becf-890c-4509-868b-31e329c8aac0",
@@ -38417,7 +38617,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e832faa8-bd80-4544-a5c0-73fa44766fd1",
@@ -38442,7 +38646,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "048589d5-12f3-4ff6-b511-e33c6c122c7f",
@@ -38467,7 +38675,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "14378480-6497-4b2e-a422-894bd4333506",
@@ -38492,7 +38704,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "77b5035e-a1e0-45d8-9ffe-73563f18bf1a",
@@ -38517,7 +38733,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "28d4b6be-ac85-4e73-bf17-75eab2340b84",
@@ -38542,7 +38762,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e3e203a1-6152-49e6-b17d-aaaa5def4c98",
@@ -38567,7 +38791,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "31646288-805c-461f-94c7-ddab275d93e3",
@@ -38592,7 +38820,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a182e800-7b58-475c-a789-ac22eb897b7f",
@@ -38617,7 +38849,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "57007c1c-25db-4236-a82a-dad350bcc8cb",
@@ -38642,7 +38878,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e930903b-cf8b-4997-bdd0-35939d022d00",
@@ -38667,7 +38907,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a73fb56f-1b43-4c82-ae8d-6316899bf845",
@@ -38692,7 +38936,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "c233e4a7-726a-4b80-96bc-a64e58aa8ed5",
@@ -38717,7 +38965,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e02c5d15-cb60-4620-b3f6-31386882546c",
@@ -38742,7 +38994,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "b68fa287-2734-46c0-a8e6-a139cd7884ba",
@@ -38767,7 +39023,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "ccbb0bb4-861c-4d1e-a9cd-5b292e6a18bf",
@@ -38792,7 +39052,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "e1fffe20-108e-4797-ab7e-f6b5d7bd1761",
@@ -38817,7 +39081,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "da1a8e4a-724b-4380-bf28-a7adc2fa24fc",
@@ -38842,7 +39110,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "2cc2e96c-bb94-40ae-bcab-9c916714bac0",
@@ -38867,7 +39139,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "b24e9a7d-50ae-47a0-b897-d323904db86b",
@@ -38892,7 +39168,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "36a4a7a2-22bb-4960-bb77-77d308263324",
@@ -38917,7 +39197,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "3b58a988-a826-45c9-a17c-63816f1a8cf3",
@@ -38932,7 +39216,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "a904d75e-1d76-4b3d-9d43-d550b43665b0",
@@ -38947,7 +39235,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "9cbe520b-22c1-443f-9dbe-5feb2a4d1077",
@@ -38962,7 +39254,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "d02e58b0-5d71-4b8a-ae09-77a5199b45f5",
@@ -38977,7 +39273,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "36a97bb2-fc6c-4b7a-8541-712ad28580d5",
@@ -38992,7 +39292,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "b7a80e45-ef42-4e1c-92b1-cc29043f38af",
@@ -39007,7 +39311,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "9b8cdced-2dcf-4f79-b286-83a5188ac7d2",
@@ -39022,7 +39330,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "f98f1f60-40b7-4e0b-8b1f-007d0bfc6d74",
@@ -39037,7 +39349,11 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   },
   {
     "id": "0624a7f8-dde0-42bf-afaf-fdfe1793e40b",
@@ -39052,6 +39368,10 @@
     ],
     "reason": "Held-pages correction 2026-11-28 (false and legally risky claims). Baseline not recorded.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-28",
+    "measure": {
+      "t14": "2026-12-12",
+      "t28": "2026-12-26"
+    }
   }
 ]
