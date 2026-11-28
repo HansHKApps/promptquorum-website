@@ -8,9 +8,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-en.webp',
     title: 'Best GPU Under $1,000 for Local LLM Inference?',
     seoTitle: 'Our Pick for a GPU Under $1,000 for Local LLMs 2026 | Prompt Bites',
-    metaDescription: 'Our pick for local LLMs under $1,000: RTX 5070 Ti 16 GB (~$750-900). A used RTX 4090 is listed at ~$2,575-3,010 per the InsiderLLM tracker (2026-10-15); the used 24 GB RTX 4090 and 3090 no longer fit the budget.',
+    metaDescription: 'Our pick for local LLMs under $1,000: RTX 5070 Ti 16 GB (~$750-900). Used 24 GB RTX 3090 and 4090 cards sit far above that budget in US sold prices.',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Our pick for local LLMs under $1,000 is the NVIDIA RTX 5070 Ti 16 GB (~$750-900, sporadic stock, per the <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM tracker</a>; figure dated 2026-10-15) — the fastest NVIDIA card we found that fits under $1,000 in the InsiderLLM price tracker.</strong> It reaches 176.85 tok/s on Llama 2 7B Q4_0 in <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">user-submitted llama.cpp results</a>, and its 16 GB of VRAM covers models up to roughly 14B-16B at Q4. A used RTX 4090 24 GB, the previous pick on this page, is listed at about $2,575-3,010 (InsiderLLM tracker; its undated table says $2,900-3,100), and a used RTX 3090 24 GB at about $1,500-1,725 (InsiderLLM data dated 2026-11-23), so the used RTX 4090 and RTX 3090 24 GB listed in the tracker no longer fit under $1,000. The new AMD RX 7900 XTX 24 GB, listed at about $900-1,000 in the same tracker, is one 24 GB alternative near the budget; other vendors\' 24 GB cards exist that the tracker does not cover.',
+    leadAnswerBlock: '<strong>Our pick for local LLMs under $1,000 is the NVIDIA RTX 5070 Ti 16 GB (~$750-900, sporadic stock, per the <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM tracker</a>; price undated; page updated 2026-11-27) — the fastest NVIDIA card we found that fits under $1,000 in the InsiderLLM price tracker.</strong> It reaches 176.85 tok/s on Llama 2 7B Q4_0 in <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">user-submitted llama.cpp results</a>, and its 16 GB of VRAM covers models up to roughly 14B-16B at Q4. A used RTX 4090 24 GB, the previous pick on this page, is listed at about $2,575-3,010 (InsiderLLM tracker, October 2026 sold listings; its undated table says $2,900-3,100), and used RTX 3090 24 GB cards sold for $1,500-1,725 on US eBay (median $1,650; 225 sales, 13-23 November 2026, excluding shipping; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM used GPU guide</a>), so the used RTX 4090 and RTX 3090 24 GB prices cited here do not fit under $1,000. The new AMD RX 7900 XTX 24 GB, listed at about $900-1,000 in the same tracker, is one 24 GB alternative near the budget; other vendors\' 24 GB cards exist that the tracker does not cover.',
     toc: [
       { label: 'Our pick: NVIDIA RTX 5070 Ti 16 GB', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16 GB vs Used RTX 3090 24 GB', anchor: '#comparison' },
@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'RTX 5070 Ti reaches 176.85 tok/s on Llama 2 7B Q4_0 in user-submitted llama.cpp results, ahead of the used RTX 3090 at 158.2.',
           'A 70B model needs roughly 40 GB at Q4 — no single card under $1,000 holds one; a 24 GB card can only run a 70B model with very aggressive quantization (IQ2-class) or partial offload to system RAM, which noticeably reduces output quality and speed.',
-          'A used RTX 3090 24 GB (~$1,500-1,725, InsiderLLM data dated 2026-11-23) is the cheaper of the two used NVIDIA 24 GB cards listed in the tracker (24 GB VRAM for 32B models), but it sits above $1,000; the new AMD RX 7900 XTX 24 GB (~$900-1,000, InsiderLLM tracker) is one 24 GB alternative near the budget; other vendors\' 24 GB cards exist that the tracker does not cover.',
+          'A used RTX 3090 24 GB (US eBay sales of $1,500-1,725, 13-23 November 2026, per InsiderLLM) has 24 GB of VRAM for 32B models, but even the low end of that range is $500 above this budget; the new AMD RX 7900 XTX 24 GB (~$900-1,000, InsiderLLM tracker) is one 24 GB alternative near the budget; other vendors\' 24 GB cards exist that the tracker does not cover.',
         ],
         updatedDate: '2026-11',
       },
@@ -45,9 +45,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Our pick: RTX 5070 Ti 16 GB at ~$750-900, sporadic stock (InsiderLLM tracker; figure dated 2026-10-15) — a fast 16 GB card under $1,000, runs models up to roughly 14B-16B at Q4',
-          'A used RTX 4090 no longer fits this budget: the tracker lists ~$2,575-3,010 for used sold listings (2026-10-15) and ~$2,900-3,100 in its older undated table',
-          'For 24 GB VRAM and 32B models, a used RTX 3090 costs ~$1,500-1,725 (InsiderLLM, 2026-11-23) — above $1,000',
+          'Our pick: RTX 5070 Ti 16 GB at ~$750-900, sporadic stock (InsiderLLM tracker; price undated; page updated 2026-11-27) — a fast 16 GB card under $1,000, runs models up to roughly 14B-16B at Q4',
+          'A used RTX 4090 no longer fits this budget: the tracker lists ~$2,575-3,010 for used sold listings (October 2026) and ~$2,900-3,100 in its older undated table',
+          'For 24 GB VRAM and 32B models, used RTX 3090 cards sold for $1,500-1,725 (InsiderLLM, US eBay, 13-23 November 2026) — above $1,000',
           'A 70B model needs ~40 GB at Q4 — more than any single card in this budget offers',
         ],
       },
@@ -55,9 +55,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Our pick: NVIDIA RTX 5070 Ti 16 GB',
         content: [
-          '<strong>Our pick for local LLMs under $1,000 is the NVIDIA RTX 5070 Ti 16 GB: it is the fastest NVIDIA card we found that fits under $1,000 in the InsiderLLM price tracker.</strong> It combines 16 GB of VRAM, enough for models up to roughly 14B-16B at Q4 quantization, with high speed at a price that still fits under $1,000. It is listed at about $750-900 with sporadic stock (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM tracker</a>; figure dated 2026-10-15) and reaches 176.85 tok/s on Llama 2 7B Q4_0 in <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">user-submitted llama.cpp results</a>.',
-          'According to <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIA\'s announcement</a>, the RTX 5070 Ti has 896 GB/s of memory bandwidth. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIA\'s specifications</a> list a 256-bit memory interface for it, versus <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128-bit for the RTX 4060 Ti 16 GB</a> covered in the sub-$600 tier. For single-user text generation, memory bandwidth is usually the main limit once a model fits in VRAM, which helps explain why the 5070 Ti is faster than a 4060 Ti or 3060 in the linked llama.cpp results (token generation on Llama 2 7B Q4_0: 4060 Ti 63.86 and 3060 75.57 tok/s vs 176.85 tok/s for the 5070 Ti), not just newer.',
-          'If you need 24 GB for 32B models, the budget has to move. A used RTX 3090 24 GB costs about $1,500-1,725 (median $1,650 across 225 sold listings, 13-23 November 2026; InsiderLLM data dated 2026-11-23). A used RTX 4090 24 GB is listed at about $2,575-3,010 (InsiderLLM figure dated 2026-10-15; its undated table says $2,900-3,100). Earlier versions of this guide recommended a used 4090 at ~$900-1,100; that price no longer matches the market.',
+          '<strong>Our pick for local LLMs under $1,000 is the NVIDIA RTX 5070 Ti 16 GB: it is the fastest NVIDIA card we found that fits under $1,000 in the InsiderLLM price tracker.</strong> It combines 16 GB of VRAM, enough for models up to roughly 14B-16B at Q4 quantization, with high speed at a price that still fits under $1,000. It is listed at about $750-900 with sporadic stock (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM tracker</a>; price undated; page updated 2026-11-27) and reaches 176.85 tok/s on Llama 2 7B Q4_0 in <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">user-submitted llama.cpp results</a>.',
+          'According to <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIA\'s announcement</a>, the RTX 5070 Ti has 896 GB/s of memory bandwidth. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIA\'s specifications</a> list a 256-bit memory interface for it, versus <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128-bit for the RTX 4060 Ti 16 GB</a> covered in the sub-$600 tier. For single-user text generation, memory bandwidth is usually the main limit once a model fits in VRAM, which helps explain why the 5070 Ti is faster than a 4060 Ti or 3060 in the linked llama.cpp results (token generation on Llama 2 7B Q4_0: 4060 Ti (8 GB) 63.86 and 3060 75.57 tok/s vs 176.85 tok/s for the 5070 Ti), not just newer.',
+          'If you need 24 GB for 32B models, the budget has to move. Used RTX 3090 24 GB cards sold for $1,500-1,725 on US eBay (median $1,650; 225 sales, 13-23 November 2026, excluding shipping; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM used GPU guide</a>). These are past sales, not current offers. A used RTX 4090 24 GB is listed at about $2,575-3,010 (InsiderLLM, 216 eBay sold listings, October 2026; its undated table says $2,900-3,100). Earlier versions of this guide recommended a used 4090 at ~$900-1,100; that price no longer matches the market.',
         ],
         affiliateLinks: [
           {
@@ -87,8 +87,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16 GB vs Used RTX 3090 24 GB',
         content: [
-          'The choice comes down to budget versus VRAM tier. The RTX 5070 Ti 16 GB (~$750-900) fits under $1,000 and is faster on Llama 2 7B Q4_0 (176.85 vs 158.2 tok/s, user-submitted llama.cpp results); the used RTX 3090 24 GB (~$1,500-1,725, median $1,650; InsiderLLM data dated 2026-11-23; page-level note: eBay US sold listings) is above the budget but brings the 24 GB of VRAM that 32B models need.',
-          'Buy the 5070 Ti if you mainly run 7B-14B models and want to stay under $1,000. Buy the used 3090 only if your workload includes 32B models like Qwen 32B or DeepSeek-distilled variants and you can stretch the budget. A used 4090 (~$2,575-3,010) adds speed (186.2 tok/s) but not more VRAM than the 3090.',
+          'The choice comes down to budget versus VRAM tier. The RTX 5070 Ti 16 GB (~$750-900) fits under $1,000 and is faster on Llama 2 7B Q4_0 (176.85 vs 158.2 tok/s, user-submitted llama.cpp results); the used RTX 3090 24 GB ($1,500-1,725 in US eBay sales, 13-23 November 2026, excluding shipping; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM used GPU guide</a>) is at least $500 above the budget but brings the 24 GB of VRAM that 32B models need.',
+          'Buy the 5070 Ti if you mainly run 7B-14B models and want to stay under $1,000. A used 3090 is not an under-$1,000 option; consider it only if your workload includes 32B models like Qwen 32B or DeepSeek-distilled variants and you can raise your budget to at least $1,500. A used 4090 (~$2,575-3,010) adds speed (186.2 tok/s) but not more VRAM than the 3090.',
         ],
       },
       faq: {
@@ -130,9 +130,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ar.webp',
     title: 'أفضل GPU بأقل من 1,000 دولار لتشغيل LLM محلي؟',
     seoTitle: 'اختيارنا لـ GPU بأقل من 1,000 دولار لـ LLM المحلي 2026 | Prompt Bites',
-    metaDescription: 'اختيارنا لـ LLM محلي بأقل من 1,000 دولار: RTX 5070 Ti 16 GB (~750-900 دولار). RTX 4090 المستعملة مدرجة بنحو 2,575-3,010 دولار وفق متتبع InsiderLLM (2026-10-15)؛ وRTX 4090 وRTX 3090 المستعملتان بسعة 24 GB خارج الميزانية.',
+    metaDescription: 'اختيارنا لـ LLM محلي بأقل من 1,000 دولار: RTX 5070 Ti 16 GB (~750-900 دولار). وتتجاوز RTX 3090 وRTX 4090 المستعملتان (24 GB) هذه الميزانية بكثير وفق أسعار البيع في أمريكا.',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>اختيارنا لتشغيل LLM محليًا بأقل من 1,000 دولار هو NVIDIA RTX 5070 Ti 16 GB (~750-900 دولار، مخزون متقطع، وفق <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">متتبع InsiderLLM</a>؛ رقم مؤرَّخ في 2026-10-15) — فهي أسرع بطاقة NVIDIA وجدناها ضمن 1,000 دولار في متتبع أسعار InsiderLLM.</strong> تصل إلى 176.85 tok/s على Llama 2 7B Q4_0 في <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">نتائج llama.cpp المقدَّمة من المستخدمين</a>، وذاكرتها البالغة 16 GB VRAM تغطي نماذج حتى حوالي 14B-16B بدقة Q4. أما RTX 4090 24 GB المستعملة، وهي الاختيار السابق في هذه الصفحة، فهي مدرجة بحوالي 2,575-3,010 دولار (متتبع InsiderLLM؛ جدوله غير المؤرَّخ يذكر 2,900-3,100 دولار)، وRTX 3090 24 GB المستعملة بحوالي 1,500-1,725 دولار (بيانات InsiderLLM بتاريخ 2026-11-23)، لذا لم تعد RTX 4090 وRTX 3090 المستعملتان بسعة 24 GB المدرجتان في المتتبع ضمن حدود 1,000 دولار. أما AMD RX 7900 XTX 24 GB الجديدة فمدرجة في المتتبع نفسه بحوالي 900-1,000 دولار، وهي أحد البدائل بسعة 24 GB القريبة من الميزانية؛ وتوجد بطاقات 24 GB لدى شركات أخرى لا يغطيها المتتبع.',
+    leadAnswerBlock: '<strong>اختيارنا لتشغيل LLM محليًا بأقل من 1,000 دولار هو NVIDIA RTX 5070 Ti 16 GB (~750-900 دولار، مخزون متقطع، وفق <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">متتبع InsiderLLM</a>؛ سعر غير مؤرَّخ؛ حُدِّثت الصفحة في 2026-11-27) — فهي أسرع بطاقة NVIDIA وجدناها ضمن 1,000 دولار في متتبع أسعار InsiderLLM.</strong> تصل إلى 176.85 tok/s على Llama 2 7B Q4_0 في <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">نتائج llama.cpp المقدَّمة من المستخدمين</a>، وذاكرتها البالغة 16 GB VRAM تغطي نماذج حتى حوالي 14B-16B بدقة Q4. أما RTX 4090 24 GB المستعملة، وهي الاختيار السابق في هذه الصفحة، فهي مدرجة بحوالي 2,575-3,010 دولار (متتبع InsiderLLM، مبيعات أكتوبر 2026؛ جدوله غير المؤرَّخ يذكر 2,900-3,100 دولار)، أما بطاقات RTX 3090 24 GB المستعملة فقد بيعت على eBay الأمريكي بسعر 1,500-1,725 دولاراً (الوسيط 1,650 دولاراً؛ 225 عملية بيع، 13-23 نوفمبر 2026، دون الشحن؛ <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">دليل InsiderLLM للبطاقات المستعملة</a>)، لذا فإن أسعار RTX 4090 وRTX 3090 المستعملتين بسعة 24 GB المذكورة هنا لا تقع ضمن 1,000 دولار. أما AMD RX 7900 XTX 24 GB الجديدة فمدرجة في المتتبع نفسه بحوالي 900-1,000 دولار، وهي أحد البدائل بسعة 24 GB القريبة من الميزانية؛ وتوجد بطاقات 24 GB لدى شركات أخرى لا يغطيها المتتبع.',
     toc: [
       { label: 'اختيارنا: NVIDIA RTX 5070 Ti 16 GB', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16 GB مقابل RTX 3090 24 GB مستعملة', anchor: '#comparison' },
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'بطاقة RTX 5070 Ti تصل إلى 176.85 tok/s على Llama 2 7B Q4_0 في نتائج llama.cpp المقدَّمة من المستخدمين، متقدمةً على RTX 3090 المستعملة (158.2).',
           'نموذج 70B يحتاج تقريبًا 40 GB بدقة Q4 — لا تستوعبه أي بطاقة واحدة بأقل من 1,000 دولار؛ وحتى بطاقة 24 GB لا يمكنها تشغيل نموذج 70B إلا بتكميم عدواني جدًا (من فئة IQ2) أو بتفريغ جزئي إلى ذاكرة النظام RAM، ما يقلل بشكل ملحوظ من جودة المخرجات والسرعة.',
-          'بطاقة RTX 3090 24 GB مستعملة (~1,500-1,725 دولار، بيانات InsiderLLM بتاريخ 2026-11-23) هي الأرخص بين بطاقتي NVIDIA المستعملتين بسعة 24 GB المدرجتين في المتتبع (24 GB VRAM لنماذج 32B)، لكنها تتجاوز 1,000 دولار؛ وبطاقة AMD RX 7900 XTX 24 GB الجديدة (~900-1,000 دولار، متتبع InsiderLLM) هي أحد البدائل بسعة 24 GB القريبة من الميزانية؛ وتوجد بطاقات 24 GB لدى شركات أخرى لا يغطيها المتتبع.',
+          'بطاقة RTX 3090 24 GB المستعملة (مبيعات eBay الأمريكي 1,500-1,725 دولاراً، 13-23 نوفمبر 2026، وفق InsiderLLM) توفر 24 GB من VRAM لنماذج 32B، لكن حتى الحد الأدنى لهذا النطاق يزيد 500 دولار على هذه الميزانية؛ وبطاقة AMD RX 7900 XTX 24 GB الجديدة (~900-1,000 دولار، متتبع InsiderLLM) هي أحد البدائل بسعة 24 GB القريبة من الميزانية؛ وتوجد بطاقات 24 GB لدى شركات أخرى لا يغطيها المتتبع.',
         ],
         updatedDate: '2026-11',
       },
@@ -167,9 +167,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'اختيارنا: RTX 5070 Ti 16 GB بسعر ~750-900 دولار، مخزون متقطع (متتبع InsiderLLM؛ رقم مؤرَّخ في 2026-10-15) — بطاقة 16 GB سريعة بأقل من 1,000 دولار، تشغّل نماذج حتى حوالي 14B-16B بدقة Q4',
-          'RTX 4090 مستعملة لم تعد ضمن هذه الميزانية: يدرج المتتبع ~2,575-3,010 دولار لإعلانات المستعمل المباعة (2026-10-15) و~2,900-3,100 دولار في جدوله الأقدم غير المؤرَّخ',
-          'للحصول على 24 GB VRAM لنماذج 32B، تكلّف RTX 3090 مستعملة ~1,500-1,725 دولار (InsiderLLM، 2026-11-23) — فوق 1,000 دولار',
+          'اختيارنا: RTX 5070 Ti 16 GB بسعر ~750-900 دولار، مخزون متقطع (متتبع InsiderLLM؛ سعر غير مؤرَّخ؛ حُدِّثت الصفحة في 2026-11-27) — بطاقة 16 GB سريعة بأقل من 1,000 دولار، تشغّل نماذج حتى حوالي 14B-16B بدقة Q4',
+          'RTX 4090 مستعملة لم تعد ضمن هذه الميزانية: يدرج المتتبع ~2,575-3,010 دولار لإعلانات المستعمل المباعة (أكتوبر 2026) و~2,900-3,100 دولار في جدوله الأقدم غير المؤرَّخ',
+          'للحصول على 24 GB VRAM لنماذج 32B، بيعت بطاقات RTX 3090 المستعملة بسعر 1,500-1,725 دولاراً (InsiderLLM، eBay الأمريكي، 13-23 نوفمبر 2026) — فوق 1,000 دولار',
           'نموذج 70B يحتاج ~40 GB بدقة Q4 — أكثر مما تقدمه أي بطاقة واحدة في هذه الميزانية',
         ],
       },
@@ -177,9 +177,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'اختيارنا: NVIDIA RTX 5070 Ti 16 GB',
         content: [
-          '<strong>اختيارنا لتشغيل LLM محليًا بأقل من 1,000 دولار هو بطاقة NVIDIA RTX 5070 Ti 16 GB: هي أسرع بطاقة NVIDIA وجدناها ضمن 1,000 دولار في متتبع أسعار InsiderLLM.</strong> تجمع بين 16 GB من VRAM، الكافية لنماذج حتى حوالي 14B-16B بتكميم Q4، وسرعة عالية بسعر لا يزال دون 1,000 دولار. تُدرج بسعر يقارب 750-900 دولار مع مخزون متقطع (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">متتبع InsiderLLM</a>؛ رقم مؤرَّخ في 2026-10-15)، وتصل إلى 176.85 tok/s على Llama 2 7B Q4_0 في <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">نتائج llama.cpp المقدَّمة من المستخدمين</a>.',
-          'وفق <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">إعلان NVIDIA</a>، يبلغ عرض النطاق الترددي للذاكرة في RTX 5070 Ti ما مقداره 896 GB/s. وتُدرج <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">مواصفات NVIDIA</a> واجهة ذاكرة بعرض 256 بت لها، مقابل <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 بت لبطاقة RTX 4060 Ti 16 GB</a> المشمولة في الفئة دون 600 دولار. في توليد النصوص لمستخدم واحد، يكون عرض النطاق الترددي للذاكرة عادةً العامل المحدِّد الرئيسي بمجرد أن يستوعب النموذج في VRAM، وهذا يساعد على تفسير سبب كون 5070 Ti أسرع من 4060 Ti أو 3060 في نتائج llama.cpp المرتبطة (توليد الرموز على Llama 2 7B Q4_0: 4060 Ti بسرعة 63.86 وRTX 3060 بسرعة 75.57 مقابل 176.85 tok/s لبطاقة 5070 Ti)، وليست أحدث فحسب.',
-          'إذا كنت تحتاج إلى 24 GB لنماذج 32B، فعليك رفع الميزانية. تكلّف RTX 3090 24 GB المستعملة حوالي 1,500-1,725 دولار (الوسيط 1,650 دولار عبر 225 إعلانًا مباعًا بين 13 و23 نوفمبر 2026؛ بيانات InsiderLLM بتاريخ 2026-11-23). أما RTX 4090 24 GB المستعملة فمدرجة بحوالي 2,575-3,010 دولار (رقم InsiderLLM مؤرَّخ في 2026-10-15؛ وجدوله غير المؤرَّخ يذكر 2,900-3,100 دولار). أوصت الإصدارات السابقة من هذا الدليل بـ 4090 مستعملة بحوالي 900-1,100 دولار؛ هذا السعر لم يعد يطابق السوق.',
+          '<strong>اختيارنا لتشغيل LLM محليًا بأقل من 1,000 دولار هو بطاقة NVIDIA RTX 5070 Ti 16 GB: هي أسرع بطاقة NVIDIA وجدناها ضمن 1,000 دولار في متتبع أسعار InsiderLLM.</strong> تجمع بين 16 GB من VRAM، الكافية لنماذج حتى حوالي 14B-16B بتكميم Q4، وسرعة عالية بسعر لا يزال دون 1,000 دولار. تُدرج بسعر يقارب 750-900 دولار مع مخزون متقطع (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">متتبع InsiderLLM</a>؛ سعر غير مؤرَّخ؛ حُدِّثت الصفحة في 2026-11-27)، وتصل إلى 176.85 tok/s على Llama 2 7B Q4_0 في <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">نتائج llama.cpp المقدَّمة من المستخدمين</a>.',
+          'وفق <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">إعلان NVIDIA</a>، يبلغ عرض النطاق الترددي للذاكرة في RTX 5070 Ti ما مقداره 896 GB/s. وتُدرج <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">مواصفات NVIDIA</a> واجهة ذاكرة بعرض 256 بت لها، مقابل <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 بت لبطاقة RTX 4060 Ti 16 GB</a> المشمولة في الفئة دون 600 دولار. في توليد النصوص لمستخدم واحد، يكون عرض النطاق الترددي للذاكرة عادةً العامل المحدِّد الرئيسي بمجرد أن يستوعب النموذج في VRAM، وهذا يساعد على تفسير سبب كون 5070 Ti أسرع من 4060 Ti أو 3060 في نتائج llama.cpp المرتبطة (توليد الرموز على Llama 2 7B Q4_0: 4060 Ti (8 GB) بسرعة 63.86 وRTX 3060 بسرعة 75.57 مقابل 176.85 tok/s لبطاقة 5070 Ti)، وليست أحدث فحسب.',
+          'إذا كنت تحتاج إلى 24 GB لنماذج 32B، فعليك رفع الميزانية. بيعت بطاقات RTX 3090 24 GB المستعملة على eBay الأمريكي بسعر 1,500-1,725 دولاراً (الوسيط 1,650 دولاراً؛ 225 عملية بيع، 13-23 نوفمبر 2026، دون الشحن؛ <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">دليل InsiderLLM للبطاقات المستعملة</a>). وهذه مبيعات سابقة وليست عروضاً حالية. أما RTX 4090 24 GB المستعملة فمدرجة بحوالي 2,575-3,010 دولار (InsiderLLM، 216 إعلاناً مباعاً على eBay، أكتوبر 2026؛ وجدوله غير المؤرَّخ يذكر 2,900-3,100 دولار). أوصت الإصدارات السابقة من هذا الدليل بـ 4090 مستعملة بحوالي 900-1,100 دولار؛ هذا السعر لم يعد يطابق السوق.',
         ],
         affiliateLinks: [
           {
@@ -209,8 +209,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16 GB مقابل RTX 3090 24 GB مستعملة',
         content: [
-          'يعتمد الاختيار على الميزانية مقابل فئة VRAM. بطاقة RTX 5070 Ti 16 GB (~750-900 دولار) تقع ضمن 1,000 دولار وهي أسرع على Llama 2 7B Q4_0 (176.85 مقابل 158.2 tok/s، نتائج llama.cpp المقدَّمة من المستخدمين)؛ أما RTX 3090 24 GB المستعملة (~1,500-1,725 دولار، الوسيط 1,650 دولار؛ بيانات InsiderLLM بتاريخ 2026-11-23؛ ملاحظة على مستوى الصفحة: إعلانات eBay الأمريكية المباعة) فتتجاوز الميزانية لكنها توفر 24 GB من VRAM التي تحتاجها نماذج 32B.',
-          'اشترِ 5070 Ti إذا كنت تشغّل بشكل أساسي نماذج 7B-14B وتريد البقاء ضمن 1,000 دولار. اشترِ 3090 المستعملة فقط إذا كان عملك يتضمن نماذج 32B مثل Qwen 32B أو المتغيرات المقطّرة من DeepSeek وكان بإمكانك توسيع الميزانية. أما 4090 المستعملة (~2,575-3,010 دولار) فتضيف سرعة (186.2 tok/s) لكن ليس مزيدًا من VRAM عن 3090.',
+          'يعتمد الاختيار على الميزانية مقابل فئة VRAM. بطاقة RTX 5070 Ti 16 GB (~750-900 دولار) تقع ضمن 1,000 دولار وهي أسرع على Llama 2 7B Q4_0 (176.85 مقابل 158.2 tok/s، نتائج llama.cpp المقدَّمة من المستخدمين)؛ أما RTX 3090 24 GB المستعملة (1,500-1,725 دولاراً في مبيعات eBay الأمريكي، 13-23 نوفمبر 2026، دون الشحن؛ <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">دليل InsiderLLM للبطاقات المستعملة</a>) فتتجاوز الميزانية بما لا يقل عن 500 دولار لكنها توفر 24 GB من VRAM التي تحتاجها نماذج 32B.',
+          'اشترِ 5070 Ti إذا كنت تشغّل بشكل أساسي نماذج 7B-14B وتريد البقاء ضمن 1,000 دولار. بطاقة 3090 المستعملة ليست خياراً بأقل من 1,000 دولار؛ فكّر فيها فقط إذا كان عملك يتضمن نماذج 32B مثل Qwen 32B أو المتغيرات المقطّرة من DeepSeek وكان بإمكانك رفع ميزانيتك إلى 1,500 دولار على الأقل. أما 4090 المستعملة (~2,575-3,010 دولار) فتضيف سرعة (186.2 tok/s) لكن ليس مزيدًا من VRAM عن 3090.',
         ],
       },
       faq: {
@@ -252,9 +252,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-de.webp',
     title: 'Die beste GPU unter 1.000 $ für lokale LLM-Inferenz?',
     seoTitle: 'Unsere Wahl: GPU unter 1.000 $ für lokale LLMs 2026 | Prompt Bites',
-    metaDescription: 'Unsere Wahl für lokale LLMs unter 1.000 $: RTX 5070 Ti 16 GB (~750-900 $). Gebrauchte RTX 4090 laut InsiderLLM-Tracker ~2.575-3.010 $ (2026-10-15); gebrauchte 24-GB-RTX-4090/3090 sprengen das Budget.',
+    metaDescription: 'Unsere Wahl für lokale LLMs unter 1.000 $: RTX 5070 Ti 16 GB (~750-900 $). Gebrauchte RTX 3090 und 4090 mit 24 GB liegen bei US-Verkaufspreisen weit darüber.',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Unsere Empfehlung für lokale LLMs unter 1.000 $ ist die NVIDIA RTX 5070 Ti 16 GB (~750-900 $, sporadisch lieferbar, laut <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM-Tracker</a>; Angabe mit Stand 2026-10-15) — die schnellste NVIDIA-Karte, die wir gefunden haben und die unter 1.000 $ passt, im InsiderLLM-Preis-Tracker.</strong> Sie erreicht in <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">nutzereingereichten llama.cpp-Ergebnissen</a> 176,85 tok/s bei Llama 2 7B Q4_0, und ihre 16 GB VRAM decken Modelle bis etwa 14B-16B bei Q4 ab. Eine gebrauchte RTX 4090 24 GB, die frühere Empfehlung dieser Seite, wird inzwischen mit etwa 2.575-3.010 $ gelistet (InsiderLLM-Tracker; die undatierte Tabelle nennt 2.900-3.100 $), eine gebrauchte RTX 3090 24 GB mit etwa 1.500-1.725 $ (InsiderLLM-Daten vom 2026-11-23) — die im Tracker gelisteten gebrauchten RTX 4090 und RTX 3090 mit 24 GB passen also nicht mehr unter 1.000 $. Die neue AMD RX 7900 XTX 24 GB wird im selben Tracker mit etwa 900-1.000 $ gelistet und ist eine 24-GB-Alternative nahe am Budget; andere Hersteller bieten weitere 24-GB-Karten, die der Tracker nicht abdeckt.',
+    leadAnswerBlock: '<strong>Unsere Empfehlung für lokale LLMs unter 1.000 $ ist die NVIDIA RTX 5070 Ti 16 GB (~750-900 $, sporadisch lieferbar, laut <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM-Tracker</a>; Preisangabe ohne Datum; Seite aktualisiert am 27.11.2026) — die schnellste NVIDIA-Karte, die wir gefunden haben und die unter 1.000 $ passt, im InsiderLLM-Preis-Tracker.</strong> Sie erreicht in <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">nutzereingereichten llama.cpp-Ergebnissen</a> 176,85 tok/s bei Llama 2 7B Q4_0, und ihre 16 GB VRAM decken Modelle bis etwa 14B-16B bei Q4 ab. Eine gebrauchte RTX 4090 24 GB, die frühere Empfehlung dieser Seite, wird inzwischen mit etwa 2.575-3.010 $ gelistet (InsiderLLM-Tracker, Verkäufe im Oktober 2026; die undatierte Tabelle nennt 2.900-3.100 $), gebrauchte RTX 3090 24 GB wurden auf eBay in den USA für 1.500-1.725 $ verkauft (Median 1.650 $; 225 Verkäufe, 13.-23.11.2026, ohne Versand; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM-Ratgeber zum Gebrauchtkauf</a>) — die hier genannten Preise gebrauchter RTX 4090 und RTX 3090 mit 24 GB passen also nicht unter 1.000 $. Die neue AMD RX 7900 XTX 24 GB wird im selben Tracker mit etwa 900-1.000 $ gelistet und ist eine 24-GB-Alternative nahe am Budget; andere Hersteller bieten weitere 24-GB-Karten, die der Tracker nicht abdeckt.',
     toc: [
       { label: 'Unsere Wahl: NVIDIA RTX 5070 Ti 16 GB', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16 GB vs. gebrauchte RTX 3090 24 GB', anchor: '#comparison' },
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Die RTX 5070 Ti erreicht in nutzereingereichten llama.cpp-Ergebnissen 176,85 tok/s bei Llama 2 7B Q4_0 und liegt damit vor der gebrauchten RTX 3090 mit 158,2.',
           'Ein 70B-Modell benötigt rund 40 GB bei Q4 — keine einzelne Karte unter 1.000 $ fasst eines; selbst eine 24-GB-Karte kann ein 70B-Modell nur mit sehr aggressiver Quantisierung (IQ2-Klasse) oder mit teilweisem Auslagern in den Arbeitsspeicher betreiben, was Ausgabequalität und Geschwindigkeit spürbar mindert.',
-          'Eine gebrauchte RTX 3090 24 GB (~1.500-1.725 $, InsiderLLM-Daten vom 2026-11-23) ist die günstigere der beiden im Tracker gelisteten gebrauchten NVIDIA-24-GB-Karten (24 GB VRAM für 32B-Modelle), liegt aber über 1.000 $; die neue AMD RX 7900 XTX 24 GB (~900-1.000 $, InsiderLLM-Tracker) ist eine 24-GB-Alternative nahe am Budget; andere Hersteller bieten weitere 24-GB-Karten, die der Tracker nicht abdeckt.',
+          'Eine gebrauchte RTX 3090 24 GB (US-Verkaufspreise auf eBay 1.500-1.725 $, 13.-23.11.2026, laut InsiderLLM) bietet 24 GB VRAM für 32B-Modelle, doch schon das untere Ende der Spanne liegt 500 $ über diesem Budget; die neue AMD RX 7900 XTX 24 GB (~900-1.000 $, InsiderLLM-Tracker) ist eine 24-GB-Alternative nahe am Budget; andere Hersteller bieten weitere 24-GB-Karten, die der Tracker nicht abdeckt.',
         ],
         updatedDate: '2026-11',
       },
@@ -289,9 +289,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Unsere Wahl: RTX 5070 Ti 16 GB für ~750-900 $, sporadisch lieferbar (InsiderLLM-Tracker; Angabe mit Stand 2026-10-15) — schnelle 16-GB-Karte unter 1.000 $, läuft Modelle bis etwa 14B-16B bei Q4',
-          'Eine gebrauchte RTX 4090 passt nicht mehr ins Budget: Der Tracker nennt ~2.575-3.010 $ für verkaufte Gebrauchtangebote (2026-10-15) und ~2.900-3.100 $ in seiner älteren, undatierten Tabelle',
-          'Für 24 GB VRAM und 32B-Modelle kostet eine gebrauchte RTX 3090 ~1.500-1.725 $ (InsiderLLM, 2026-11-23) — über 1.000 $',
+          'Unsere Wahl: RTX 5070 Ti 16 GB für ~750-900 $, sporadisch lieferbar (InsiderLLM-Tracker; Preisangabe ohne Datum; Seite aktualisiert am 27.11.2026) — schnelle 16-GB-Karte unter 1.000 $, läuft Modelle bis etwa 14B-16B bei Q4',
+          'Eine gebrauchte RTX 4090 passt nicht mehr ins Budget: Der Tracker nennt ~2.575-3.010 $ für verkaufte Gebrauchtangebote (Oktober 2026) und ~2.900-3.100 $ in seiner älteren, undatierten Tabelle',
+          'Für 24 GB VRAM und 32B-Modelle wurden gebrauchte RTX 3090 für 1.500-1.725 $ verkauft (InsiderLLM, eBay USA, 13.-23.11.2026) — über 1.000 $',
           'Ein 70B-Modell benötigt ~40 GB bei Q4 — mehr, als jede einzelne Karte in diesem Budget bietet',
         ],
       },
@@ -299,9 +299,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Unsere Wahl: NVIDIA RTX 5070 Ti 16 GB',
         content: [
-          '<strong>Unsere Empfehlung für lokale LLMs unter 1.000 $ ist die NVIDIA RTX 5070 Ti 16 GB: Sie ist die schnellste NVIDIA-Karte, die wir gefunden haben und die unter 1.000 $ passt, im InsiderLLM-Preis-Tracker.</strong> Sie verbindet 16 GB VRAM, genug für Modelle bis etwa 14B-16B bei Q4-Quantisierung, mit hoher Geschwindigkeit zu einem Preis, der noch unter 1.000 $ liegt. Sie wird für etwa 750-900 $ gelistet, bei sporadischer Verfügbarkeit (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM-Tracker</a>; Angabe mit Stand 2026-10-15), und erreicht in <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">nutzereingereichten llama.cpp-Ergebnissen</a> 176,85 tok/s bei Llama 2 7B Q4_0.',
-          'Laut <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIAs Ankündigung</a> hat die RTX 5070 Ti eine Speicherbandbreite von 896 GB/s. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIAs Spezifikationen</a> nennen für sie eine 256-Bit-Speicherschnittstelle, gegenüber <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 Bit bei der RTX 4060 Ti 16 GB</a> aus der Preisklasse unter 600 $. Bei Textgenerierung für einen einzelnen Nutzer ist die Speicherbandbreite meist die wichtigste Grenze, sobald ein Modell in den VRAM passt — das erklärt mit, warum die 5070 Ti in den verlinkten llama.cpp-Ergebnissen schneller ist als eine 4060 Ti oder 3060 (Token-Generierung bei Llama 2 7B Q4_0: 4060 Ti 63,86 und 3060 75,57 gegenüber 176,85 tok/s bei der 5070 Ti), nicht nur neuer.',
-          'Wer 24 GB für 32B-Modelle braucht, muss das Budget erhöhen. Eine gebrauchte RTX 3090 24 GB kostet etwa 1.500-1.725 $ (Median 1.650 $ aus 225 verkauften Angeboten, 13.-23. November 2026; InsiderLLM-Daten vom 2026-11-23). Eine gebrauchte RTX 4090 24 GB wird mit etwa 2.575-3.010 $ gelistet (InsiderLLM-Angabe mit Stand 2026-10-15; die undatierte Tabelle nennt 2.900-3.100 $). Frühere Fassungen dieses Ratgebers empfahlen eine gebrauchte 4090 für ~900-1.100 $; dieser Preis entspricht nicht mehr dem Markt.',
+          '<strong>Unsere Empfehlung für lokale LLMs unter 1.000 $ ist die NVIDIA RTX 5070 Ti 16 GB: Sie ist die schnellste NVIDIA-Karte, die wir gefunden haben und die unter 1.000 $ passt, im InsiderLLM-Preis-Tracker.</strong> Sie verbindet 16 GB VRAM, genug für Modelle bis etwa 14B-16B bei Q4-Quantisierung, mit hoher Geschwindigkeit zu einem Preis, der noch unter 1.000 $ liegt. Sie wird für etwa 750-900 $ gelistet, bei sporadischer Verfügbarkeit (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM-Tracker</a>; Preisangabe ohne Datum; Seite aktualisiert am 27.11.2026), und erreicht in <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">nutzereingereichten llama.cpp-Ergebnissen</a> 176,85 tok/s bei Llama 2 7B Q4_0.',
+          'Laut <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIAs Ankündigung</a> hat die RTX 5070 Ti eine Speicherbandbreite von 896 GB/s. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIAs Spezifikationen</a> nennen für sie eine 256-Bit-Speicherschnittstelle, gegenüber <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 Bit bei der RTX 4060 Ti 16 GB</a> aus der Preisklasse unter 600 $. Bei Textgenerierung für einen einzelnen Nutzer ist die Speicherbandbreite meist die wichtigste Grenze, sobald ein Modell in den VRAM passt — das erklärt mit, warum die 5070 Ti in den verlinkten llama.cpp-Ergebnissen schneller ist als eine 4060 Ti oder 3060 (Token-Generierung bei Llama 2 7B Q4_0: 4060 Ti (8 GB) 63,86 und 3060 75,57 gegenüber 176,85 tok/s bei der 5070 Ti), nicht nur neuer.',
+          'Wer 24 GB für 32B-Modelle braucht, muss das Budget erhöhen. Gebrauchte RTX 3090 24 GB wurden auf eBay in den USA für 1.500-1.725 $ verkauft (Median 1.650 $; 225 Verkäufe, 13.-23.11.2026, ohne Versand; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM-Ratgeber zum Gebrauchtkauf</a>). Das sind abgeschlossene Verkäufe, keine aktuellen Angebote. Eine gebrauchte RTX 4090 24 GB wird mit etwa 2.575-3.010 $ gelistet (InsiderLLM, 216 verkaufte eBay-Angebote, Oktober 2026; die undatierte Tabelle nennt 2.900-3.100 $). Frühere Fassungen dieses Ratgebers empfahlen eine gebrauchte 4090 für ~900-1.100 $; dieser Preis entspricht nicht mehr dem Markt.',
         ],
         affiliateLinks: [
           {
@@ -331,8 +331,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16 GB vs. gebrauchte RTX 3090 24 GB',
         content: [
-          'Die Wahl läuft auf Budget gegen VRAM-Stufe hinaus. Die RTX 5070 Ti 16 GB (~750-900 $) passt unter 1.000 $ und ist bei Llama 2 7B Q4_0 schneller (176,85 vs. 158,2 tok/s, nutzereingereichte llama.cpp-Ergebnisse); die gebrauchte RTX 3090 24 GB (~1.500-1.725 $, Median 1.650 $; InsiderLLM-Daten vom 2026-11-23; Hinweis auf Seitenebene: verkaufte eBay-US-Angebote) liegt über dem Budget, bringt aber die 24 GB VRAM mit, die 32B-Modelle brauchen.',
-          'Kaufen Sie die 5070 Ti, wenn Sie hauptsächlich 7B-14B-Modelle betreiben und unter 1.000 $ bleiben wollen. Kaufen Sie die gebrauchte 3090 nur, wenn Ihr Workload 32B-Modelle wie Qwen 32B oder DeepSeek-destillierte Varianten umfasst und Sie das Budget strecken können. Eine gebrauchte 4090 (~2.575-3.010 $) bringt mehr Tempo (186,2 tok/s), aber nicht mehr VRAM als die 3090.',
+          'Die Wahl läuft auf Budget gegen VRAM-Stufe hinaus. Die RTX 5070 Ti 16 GB (~750-900 $) passt unter 1.000 $ und ist bei Llama 2 7B Q4_0 schneller (176,85 vs. 158,2 tok/s, nutzereingereichte llama.cpp-Ergebnisse); die gebrauchte RTX 3090 24 GB (US-Verkäufe auf eBay für 1.500-1.725 $, 13.-23.11.2026, ohne Versand; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM-Ratgeber zum Gebrauchtkauf</a>) liegt mindestens 500 $ über dem Budget, bringt aber die 24 GB VRAM mit, die 32B-Modelle brauchen.',
+          'Kaufen Sie die 5070 Ti, wenn Sie hauptsächlich 7B-14B-Modelle betreiben und unter 1.000 $ bleiben wollen. Eine gebrauchte 3090 ist keine Option unter 1.000 $; ziehen Sie sie nur in Betracht, wenn Ihr Workload 32B-Modelle wie Qwen 32B oder DeepSeek-destillierte Varianten umfasst und Sie Ihr Budget auf mindestens 1.500 $ erhöhen können. Eine gebrauchte 4090 (~2.575-3.010 $) bringt mehr Tempo (186,2 tok/s), aber nicht mehr VRAM als die 3090.',
         ],
       },
       faq: {
@@ -374,9 +374,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-es.webp',
     title: '¿Cuál es la mejor GPU por menos de $1,000 para inferencia de LLM local?',
     seoTitle: 'Nuestra Elección: GPU por Menos de $1,000 para LLM Local 2026 | Prompt Bites',
-    metaDescription: 'Nuestra elección para LLMs locales por menos de $1,000: RTX 5070 Ti 16 GB (~$750-900). Una RTX 4090 usada figura en ~$2,575-3,010 según InsiderLLM (2026-10-15); las 4090 y 3090 usadas de 24 GB ya no caben.',
+    metaDescription: 'Nuestra elección para LLMs locales por menos de $1,000: RTX 5070 Ti 16 GB (~$750-900). Las 3090 y 4090 usadas de 24 GB quedan muy por encima según precios de venta en EE. UU.',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Nuestra elección para LLMs locales por menos de $1,000 es la NVIDIA RTX 5070 Ti 16 GB (~$750-900, stock esporádico, según el <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">rastreador de InsiderLLM</a>; cifra con fecha 2026-10-15): es la tarjeta NVIDIA más rápida que encontramos que cabe por debajo de $1,000 en el rastreador de precios de InsiderLLM.</strong> Alcanza 176.85 tok/s en Llama 2 7B Q4_0 en los <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">resultados de llama.cpp enviados por usuarios</a>, y sus 16 GB de VRAM cubren modelos de hasta aproximadamente 14B-16B en Q4. Una RTX 4090 24 GB usada, la elección anterior de esta página, figura ahora por unos $2,575-3,010 (rastreador de InsiderLLM; su tabla sin fecha indica $2,900-3,100), y una RTX 3090 24 GB usada por unos $1,500-1,725 (datos de InsiderLLM del 2026-11-23), así que la RTX 4090 y la RTX 3090 de 24 GB usadas que figuran en el rastreador ya no caben por debajo de $1,000. La AMD RX 7900 XTX 24 GB nueva figura en el mismo rastreador por unos $900-1,000 y es una alternativa de 24 GB cercana al presupuesto; otros fabricantes ofrecen más tarjetas de 24 GB que el rastreador no cubre.',
+    leadAnswerBlock: '<strong>Nuestra elección para LLMs locales por menos de $1,000 es la NVIDIA RTX 5070 Ti 16 GB (~$750-900, stock esporádico, según el <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">rastreador de InsiderLLM</a>; precio sin fecha; página actualizada el 2026-11-27): es la tarjeta NVIDIA más rápida que encontramos que cabe por debajo de $1,000 en el rastreador de precios de InsiderLLM.</strong> Alcanza 176.85 tok/s en Llama 2 7B Q4_0 en los <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">resultados de llama.cpp enviados por usuarios</a>, y sus 16 GB de VRAM cubren modelos de hasta aproximadamente 14B-16B en Q4. Una RTX 4090 24 GB usada, la elección anterior de esta página, figura ahora por unos $2,575-3,010 (rastreador de InsiderLLM, ventas de octubre de 2026; su tabla sin fecha indica $2,900-3,100), y las RTX 3090 24 GB usadas se vendieron por $1,500-1,725 en eBay EE. UU. (mediana de $1,650; 225 ventas, 13-23 de noviembre de 2026, sin envío; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guía de GPUs usadas de InsiderLLM</a>), así que los precios citados aquí para la RTX 4090 y la RTX 3090 de 24 GB usadas no caben por debajo de $1,000. La AMD RX 7900 XTX 24 GB nueva figura en el mismo rastreador por unos $900-1,000 y es una alternativa de 24 GB cercana al presupuesto; otros fabricantes ofrecen más tarjetas de 24 GB que el rastreador no cubre.',
     toc: [
       { label: 'Nuestra elección: NVIDIA RTX 5070 Ti 16 GB', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16 GB vs RTX 3090 24 GB Usada', anchor: '#comparison' },
@@ -401,7 +401,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'La RTX 5070 Ti alcanza 176.85 tok/s en Llama 2 7B Q4_0 en los resultados de llama.cpp enviados por usuarios, por delante de la RTX 3090 usada con 158.2.',
           'Un modelo de 70B necesita aproximadamente 40 GB en Q4 — ninguna tarjeta individual por debajo de $1,000 aloja uno; incluso una de 24 GB solo puede ejecutar un modelo de 70B con una cuantización muy agresiva (clase IQ2) o con descarga parcial a la RAM del sistema, lo que reduce notablemente la calidad de salida y la velocidad.',
-          'Una RTX 3090 24 GB usada (~$1,500-1,725, datos de InsiderLLM del 2026-11-23) es la más barata de las dos NVIDIA usadas de 24 GB que figuran en el rastreador (24 GB de VRAM para modelos de 32B), pero queda por encima de $1,000; la AMD RX 7900 XTX 24 GB nueva (~$900-1,000, rastreador de InsiderLLM) es una alternativa de 24 GB cercana al presupuesto; otros fabricantes ofrecen más tarjetas de 24 GB que el rastreador no cubre.',
+          'Una RTX 3090 24 GB usada (ventas en eBay EE. UU. de $1,500-1,725, 13-23 de noviembre de 2026, según InsiderLLM) tiene 24 GB de VRAM para modelos de 32B, pero incluso el extremo bajo del rango supera en $500 este presupuesto; la AMD RX 7900 XTX 24 GB nueva (~$900-1,000, rastreador de InsiderLLM) es una alternativa de 24 GB cercana al presupuesto; otros fabricantes ofrecen más tarjetas de 24 GB que el rastreador no cubre.',
         ],
         updatedDate: '2026-11',
       },
@@ -411,9 +411,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Nuestra elección: RTX 5070 Ti 16 GB a ~$750-900, stock esporádico (rastreador de InsiderLLM; cifra con fecha 2026-10-15) — una tarjeta rápida de 16 GB por debajo de $1,000, ejecuta modelos de hasta aproximadamente 14B-16B en Q4',
-          'Una RTX 4090 usada ya no cabe en este presupuesto: el rastreador indica ~$2,575-3,010 para anuncios usados vendidos (2026-10-15) y ~$2,900-3,100 en su tabla anterior sin fecha',
-          'Para 24 GB de VRAM y modelos de 32B, una RTX 3090 usada cuesta ~$1,500-1,725 (InsiderLLM, 2026-11-23) — por encima de $1,000',
+          'Nuestra elección: RTX 5070 Ti 16 GB a ~$750-900, stock esporádico (rastreador de InsiderLLM; precio sin fecha; página actualizada el 2026-11-27) — una tarjeta rápida de 16 GB por debajo de $1,000, ejecuta modelos de hasta aproximadamente 14B-16B en Q4',
+          'Una RTX 4090 usada ya no cabe en este presupuesto: el rastreador indica ~$2,575-3,010 para anuncios usados vendidos (octubre de 2026) y ~$2,900-3,100 en su tabla anterior sin fecha',
+          'Para 24 GB de VRAM y modelos de 32B, las RTX 3090 usadas se vendieron por $1,500-1,725 (InsiderLLM, eBay EE. UU., 13-23 de noviembre de 2026) — por encima de $1,000',
           'Un modelo de 70B necesita ~40 GB en Q4 — más de lo que ofrece cualquier tarjeta individual de este presupuesto',
         ],
       },
@@ -421,9 +421,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Nuestra elección: NVIDIA RTX 5070 Ti 16 GB',
         content: [
-          '<strong>Nuestra elección para LLMs locales por menos de $1,000 es la NVIDIA RTX 5070 Ti 16 GB: es la tarjeta NVIDIA más rápida que encontramos que cabe por debajo de $1,000 en el rastreador de precios de InsiderLLM.</strong> Combina 16 GB de VRAM, suficientes para modelos de hasta aproximadamente 14B-16B con cuantización Q4, con alta velocidad a un precio que aún cabe por debajo de $1,000. Aparece listada a unos $750-900 con stock esporádico (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">rastreador de InsiderLLM</a>; cifra con fecha 2026-10-15) y alcanza 176.85 tok/s en Llama 2 7B Q4_0 en los <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">resultados de llama.cpp enviados por usuarios</a>.',
-          'Según <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">el anuncio de NVIDIA</a>, la RTX 5070 Ti tiene 896 GB/s de ancho de banda de memoria. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">Las especificaciones de NVIDIA</a> indican una interfaz de memoria de 256 bits, frente a <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 bits en la RTX 4060 Ti 16 GB</a> del nivel por debajo de $600. Para la generación de texto de un solo usuario, el ancho de banda de memoria suele ser el límite principal una vez que el modelo cabe en la VRAM, lo que ayuda a explicar por qué la 5070 Ti es más rápida que una 4060 Ti o una 3060 en los resultados de llama.cpp enlazados (generación de tokens en Llama 2 7B Q4_0: 4060 Ti 63.86 y 3060 75.57 frente a 176.85 tok/s de la 5070 Ti), no solo más nueva.',
-          'Si necesitas 24 GB para modelos de 32B, el presupuesto tiene que subir. Una RTX 3090 24 GB usada cuesta unos $1,500-1,725 (mediana de $1,650 en 225 anuncios vendidos, del 13 al 23 de noviembre de 2026; datos de InsiderLLM del 2026-11-23). Una RTX 4090 24 GB usada figura por unos $2,575-3,010 (cifra de InsiderLLM con fecha 2026-10-15; su tabla sin fecha indica $2,900-3,100). Versiones anteriores de esta guía recomendaban una 4090 usada a ~$900-1,100; ese precio ya no coincide con el mercado.',
+          '<strong>Nuestra elección para LLMs locales por menos de $1,000 es la NVIDIA RTX 5070 Ti 16 GB: es la tarjeta NVIDIA más rápida que encontramos que cabe por debajo de $1,000 en el rastreador de precios de InsiderLLM.</strong> Combina 16 GB de VRAM, suficientes para modelos de hasta aproximadamente 14B-16B con cuantización Q4, con alta velocidad a un precio que aún cabe por debajo de $1,000. Aparece listada a unos $750-900 con stock esporádico (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">rastreador de InsiderLLM</a>; precio sin fecha; página actualizada el 2026-11-27) y alcanza 176.85 tok/s en Llama 2 7B Q4_0 en los <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">resultados de llama.cpp enviados por usuarios</a>.',
+          'Según <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">el anuncio de NVIDIA</a>, la RTX 5070 Ti tiene 896 GB/s de ancho de banda de memoria. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">Las especificaciones de NVIDIA</a> indican una interfaz de memoria de 256 bits, frente a <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 bits en la RTX 4060 Ti 16 GB</a> del nivel por debajo de $600. Para la generación de texto de un solo usuario, el ancho de banda de memoria suele ser el límite principal una vez que el modelo cabe en la VRAM, lo que ayuda a explicar por qué la 5070 Ti es más rápida que una 4060 Ti o una 3060 en los resultados de llama.cpp enlazados (generación de tokens en Llama 2 7B Q4_0: 4060 Ti (8 GB) 63.86 y 3060 75.57 frente a 176.85 tok/s de la 5070 Ti), no solo más nueva.',
+          'Si necesitas 24 GB para modelos de 32B, el presupuesto tiene que subir. Las RTX 3090 24 GB usadas se vendieron por $1,500-1,725 en eBay EE. UU. (mediana de $1,650; 225 ventas, 13-23 de noviembre de 2026, sin envío; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guía de GPUs usadas de InsiderLLM</a>). Son ventas pasadas, no ofertas actuales. Una RTX 4090 24 GB usada figura por unos $2,575-3,010 (InsiderLLM, 216 anuncios vendidos en eBay, octubre de 2026; su tabla sin fecha indica $2,900-3,100). Versiones anteriores de esta guía recomendaban una 4090 usada a ~$900-1,100; ese precio ya no coincide con el mercado.',
         ],
         affiliateLinks: [
           {
@@ -453,8 +453,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16 GB vs RTX 3090 24 GB Usada',
         content: [
-          'La elección se reduce a presupuesto frente a nivel de VRAM. La RTX 5070 Ti 16 GB (~$750-900) cabe por debajo de $1,000 y es más rápida en Llama 2 7B Q4_0 (176.85 frente a 158.2 tok/s, resultados de llama.cpp enviados por usuarios); la RTX 3090 24 GB usada (~$1,500-1,725, mediana de $1,650; datos de InsiderLLM del 2026-11-23; nota a nivel de página: anuncios vendidos en eBay EE. UU.) supera el presupuesto pero aporta los 24 GB de VRAM que necesitan los modelos de 32B.',
-          'Compra la 5070 Ti si principalmente ejecutas modelos de 7B-14B y quieres mantenerte por debajo de $1,000. Compra la 3090 usada solo si tu carga de trabajo incluye modelos de 32B como Qwen 32B o variantes destiladas de DeepSeek y puedes estirar el presupuesto. Una 4090 usada (~$2,575-3,010) añade velocidad (186.2 tok/s) pero no más VRAM que la 3090.',
+          'La elección se reduce a presupuesto frente a nivel de VRAM. La RTX 5070 Ti 16 GB (~$750-900) cabe por debajo de $1,000 y es más rápida en Llama 2 7B Q4_0 (176.85 frente a 158.2 tok/s, resultados de llama.cpp enviados por usuarios); la RTX 3090 24 GB usada ($1,500-1,725 en ventas de eBay EE. UU., 13-23 de noviembre de 2026, sin envío; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guía de GPUs usadas de InsiderLLM</a>) supera el presupuesto en al menos $500 pero aporta los 24 GB de VRAM que necesitan los modelos de 32B.',
+          'Compra la 5070 Ti si principalmente ejecutas modelos de 7B-14B y quieres mantenerte por debajo de $1,000. Una 3090 usada no es una opción por debajo de $1,000; valórala solo si tu carga de trabajo incluye modelos de 32B como Qwen 32B o variantes destiladas de DeepSeek y puedes subir el presupuesto al menos hasta $1,500. Una 4090 usada (~$2,575-3,010) añade velocidad (186.2 tok/s) pero no más VRAM que la 3090.',
         ],
       },
       faq: {
@@ -496,9 +496,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-fr.webp',
     title: 'Meilleur GPU à moins de 1 000 $ pour l\'inférence LLM locale ?',
     seoTitle: 'Notre choix de GPU sous 1 000 $ pour LLM local 2026',
-    metaDescription: 'Notre choix de GPU pour LLM locaux à moins de 1 000 $ : RTX 5070 Ti 16 Go (~750-900 $). Une RTX 4090 d\'occasion est listée à ~2 575-3 010 $ (suivi InsiderLLM, 2026-10-15) ; les 4090 et 3090 de 24 Go d\'occasion sortent du budget.',
+    metaDescription: 'Notre choix de GPU pour LLM locaux à moins de 1 000 $ : RTX 5070 Ti 16 Go (~750-900 $). Les 3090 et 4090 de 24 Go d\'occasion se vendent bien au-dessus aux États-Unis.',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Notre choix pour les LLM locaux à moins de 1 000 $ est la RTX 5070 Ti 16 Go NVIDIA (~750-900 $, stock sporadique, selon le <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">suivi InsiderLLM</a> ; chiffre daté du 2026-10-15) : c\'est la carte NVIDIA la plus rapide que nous ayons trouvée sous 1 000 $ dans le suivi de prix InsiderLLM.</strong> Elle atteint 176,85 tok/s sur Llama 2 7B Q4_0 dans les <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">résultats llama.cpp soumis par les utilisateurs</a>, et ses 16 Go de VRAM couvrent les modèles jusqu\'à environ 14B-16B en Q4. Une RTX 4090 24 Go d\'occasion, l\'ancien choix de cette page, est listée à environ 2 575-3 010 $ (suivi InsiderLLM ; son tableau non daté indique 2 900-3 100 $), et une RTX 3090 24 Go d\'occasion à environ 1 500-1 725 $ (données InsiderLLM du 2026-11-23) : les RTX 4090 et RTX 3090 de 24 Go d\'occasion listées dans le suivi ne rentrent donc plus sous 1 000 $. La RX 7900 XTX 24 Go d\'AMD, neuve, est listée dans le même suivi à environ 900-1 000 $ et constitue une alternative de 24 Go proche du budget ; d\'autres fabricants proposent d\'autres cartes de 24 Go que le suivi ne couvre pas.',
+    leadAnswerBlock: '<strong>Notre choix pour les LLM locaux à moins de 1 000 $ est la RTX 5070 Ti 16 Go NVIDIA (~750-900 $, stock sporadique, selon le <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">suivi InsiderLLM</a> ; prix non daté ; page mise à jour le 2026-11-27) : c\'est la carte NVIDIA la plus rapide que nous ayons trouvée sous 1 000 $ dans le suivi de prix InsiderLLM.</strong> Elle atteint 176,85 tok/s sur Llama 2 7B Q4_0 dans les <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">résultats llama.cpp soumis par les utilisateurs</a>, et ses 16 Go de VRAM couvrent les modèles jusqu\'à environ 14B-16B en Q4. Une RTX 4090 24 Go d\'occasion, l\'ancien choix de cette page, est listée à environ 2 575-3 010 $ (suivi InsiderLLM, ventes d\'octobre 2026 ; son tableau non daté indique 2 900-3 100 $), et des RTX 3090 24 Go d\'occasion se sont vendues 1 500-1 725 $ sur eBay aux États-Unis (médiane 1 650 $ ; 225 ventes, 13-23 novembre 2026, hors frais de port ; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guide InsiderLLM des GPU d\'occasion</a>) : les prix cités ici pour les RTX 4090 et RTX 3090 de 24 Go d\'occasion ne rentrent donc pas sous 1 000 $. La RX 7900 XTX 24 Go d\'AMD, neuve, est listée dans le même suivi à environ 900-1 000 $ et constitue une alternative de 24 Go proche du budget ; d\'autres fabricants proposent d\'autres cartes de 24 Go que le suivi ne couvre pas.',
     toc: [
       { label: 'Notre choix : RTX 5070 Ti 16 Go NVIDIA', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16 Go vs RTX 3090 24 Go d\'occasion', anchor: '#comparison' },
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'La RTX 5070 Ti atteint 176,85 tok/s sur Llama 2 7B Q4_0 dans les résultats llama.cpp soumis par les utilisateurs, devant la RTX 3090 d\'occasion à 158,2.',
           'Un modèle 70B nécessite environ 40 Go en Q4 — aucune carte seule sous 1 000 $ n\'en loge un ; même une carte de 24 Go ne peut exécuter un modèle 70B qu\'avec une quantification très agressive (classe IQ2) ou un déchargement partiel vers la RAM système, ce qui réduit sensiblement la qualité de sortie et la vitesse.',
-          'Une RTX 3090 24 Go d\'occasion (~1 500-1 725 $, données InsiderLLM du 2026-11-23) est la moins chère des deux NVIDIA d\'occasion de 24 Go listées dans le suivi (24 Go de VRAM pour les modèles 32B), mais elle dépasse 1 000 $ ; la RX 7900 XTX 24 Go d\'AMD, neuve (~900-1 000 $, suivi InsiderLLM), est une alternative de 24 Go proche du budget ; d\'autres fabricants proposent d\'autres cartes de 24 Go que le suivi ne couvre pas.',
+          'Une RTX 3090 24 Go d\'occasion (ventes eBay aux États-Unis à 1 500-1 725 $, 13-23 novembre 2026, selon InsiderLLM) offre 24 Go de VRAM pour les modèles 32B, mais même le bas de cette fourchette dépasse ce budget de 500 $ ; la RX 7900 XTX 24 Go d\'AMD, neuve (~900-1 000 $, suivi InsiderLLM), est une alternative de 24 Go proche du budget ; d\'autres fabricants proposent d\'autres cartes de 24 Go que le suivi ne couvre pas.',
         ],
         updatedDate: '2026-11',
       },
@@ -533,9 +533,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Notre choix : RTX 5070 Ti 16 Go à ~750-900 $, stock sporadique (suivi InsiderLLM ; chiffre daté du 2026-10-15) — une carte 16 Go rapide sous 1 000 $, qui fait tourner les modèles jusqu\'à environ 14B-16B en Q4',
-          'Une RTX 4090 d\'occasion ne rentre plus dans ce budget : le suivi indique ~2 575-3 010 $ pour les annonces d\'occasion vendues (2026-10-15) et ~2 900-3 100 $ dans son ancien tableau non daté',
-          'Pour 24 Go de VRAM et des modèles 32B, une RTX 3090 d\'occasion coûte ~1 500-1 725 $ (InsiderLLM, 2026-11-23) — au-dessus de 1 000 $',
+          'Notre choix : RTX 5070 Ti 16 Go à ~750-900 $, stock sporadique (suivi InsiderLLM ; prix non daté ; page mise à jour le 2026-11-27) — une carte 16 Go rapide sous 1 000 $, qui fait tourner les modèles jusqu\'à environ 14B-16B en Q4',
+          'Une RTX 4090 d\'occasion ne rentre plus dans ce budget : le suivi indique ~2 575-3 010 $ pour les annonces d\'occasion vendues (octobre 2026) et ~2 900-3 100 $ dans son ancien tableau non daté',
+          'Pour 24 Go de VRAM et des modèles 32B, des RTX 3090 d\'occasion se sont vendues 1 500-1 725 $ (InsiderLLM, eBay États-Unis, 13-23 novembre 2026) — au-dessus de 1 000 $',
           'Un modèle 70B nécessite ~40 Go en Q4 — plus que n\'offre n\'importe quelle carte seule de ce budget',
         ],
       },
@@ -543,9 +543,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Notre choix : RTX 5070 Ti 16 Go NVIDIA',
         content: [
-          '<strong>Notre choix pour les LLM locaux à moins de 1 000 $ est la RTX 5070 Ti 16 Go NVIDIA : c\'est la carte NVIDIA la plus rapide que nous ayons trouvée sous 1 000 $ dans le suivi de prix InsiderLLM.</strong> Elle associe 16 Go de VRAM, suffisants pour des modèles jusqu\'à environ 14B-16B en quantification Q4, à une grande vitesse, pour un prix qui reste sous 1 000 $. Elle est listée à environ 750-900 $ avec un stock sporadique (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">suivi InsiderLLM</a> ; chiffre daté du 2026-10-15) et atteint 176,85 tok/s sur Llama 2 7B Q4_0 dans les <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">résultats llama.cpp soumis par les utilisateurs</a>.',
-          'Selon <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">l\'annonce de NVIDIA</a>, la RTX 5070 Ti offre une bande passante mémoire de 896 Go/s. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">Les spécifications de NVIDIA</a> indiquent une interface mémoire de 256 bits, contre <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 bits pour la RTX 4060 Ti 16 Go</a> du palier sous 600 $. Pour la génération de texte mono-utilisateur, la bande passante mémoire est généralement la principale limite dès qu\'un modèle tient en VRAM, ce qui aide à expliquer pourquoi la 5070 Ti est plus rapide qu\'une 4060 Ti ou une 3060 dans les résultats llama.cpp liés (génération de tokens sur Llama 2 7B Q4_0 : 4060 Ti 63,86 et 3060 75,57 contre 176,85 tok/s pour la 5070 Ti), et pas seulement plus récente.',
-          'Si vous avez besoin de 24 Go pour les modèles 32B, le budget doit augmenter. Une RTX 3090 24 Go d\'occasion coûte environ 1 500-1 725 $ (médiane de 1 650 $ sur 225 annonces vendues, du 13 au 23 novembre 2026 ; données InsiderLLM du 2026-11-23). Une RTX 4090 24 Go d\'occasion est listée à environ 2 575-3 010 $ (chiffre InsiderLLM daté du 2026-10-15 ; son tableau non daté indique 2 900-3 100 $). Les versions précédentes de ce guide recommandaient une 4090 d\'occasion à ~900-1 100 $ ; ce prix ne correspond plus au marché.',
+          '<strong>Notre choix pour les LLM locaux à moins de 1 000 $ est la RTX 5070 Ti 16 Go NVIDIA : c\'est la carte NVIDIA la plus rapide que nous ayons trouvée sous 1 000 $ dans le suivi de prix InsiderLLM.</strong> Elle associe 16 Go de VRAM, suffisants pour des modèles jusqu\'à environ 14B-16B en quantification Q4, à une grande vitesse, pour un prix qui reste sous 1 000 $. Elle est listée à environ 750-900 $ avec un stock sporadique (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">suivi InsiderLLM</a> ; prix non daté ; page mise à jour le 2026-11-27) et atteint 176,85 tok/s sur Llama 2 7B Q4_0 dans les <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">résultats llama.cpp soumis par les utilisateurs</a>.',
+          'Selon <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">l\'annonce de NVIDIA</a>, la RTX 5070 Ti offre une bande passante mémoire de 896 Go/s. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">Les spécifications de NVIDIA</a> indiquent une interface mémoire de 256 bits, contre <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 bits pour la RTX 4060 Ti 16 Go</a> du palier sous 600 $. Pour la génération de texte mono-utilisateur, la bande passante mémoire est généralement la principale limite dès qu\'un modèle tient en VRAM, ce qui aide à expliquer pourquoi la 5070 Ti est plus rapide qu\'une 4060 Ti ou une 3060 dans les résultats llama.cpp liés (génération de tokens sur Llama 2 7B Q4_0 : 4060 Ti (8 Go) 63,86 et 3060 75,57 contre 176,85 tok/s pour la 5070 Ti), et pas seulement plus récente.',
+          'Si vous avez besoin de 24 Go pour les modèles 32B, le budget doit augmenter. Des RTX 3090 24 Go d\'occasion se sont vendues 1 500-1 725 $ sur eBay aux États-Unis (médiane 1 650 $ ; 225 ventes, 13-23 novembre 2026, hors frais de port ; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guide InsiderLLM des GPU d\'occasion</a>). Ce sont des ventes passées, pas des offres actuelles. Une RTX 4090 24 Go d\'occasion est listée à environ 2 575-3 010 $ (InsiderLLM, 216 annonces eBay vendues, octobre 2026 ; son tableau non daté indique 2 900-3 100 $). Les versions précédentes de ce guide recommandaient une 4090 d\'occasion à ~900-1 100 $ ; ce prix ne correspond plus au marché.',
         ],
         affiliateLinks: [
           {
@@ -575,8 +575,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16 Go vs RTX 3090 24 Go d\'occasion',
         content: [
-          'Le choix se résume au budget contre le palier de VRAM. La RTX 5070 Ti 16 Go (~750-900 $) rentre sous 1 000 $ et est plus rapide sur Llama 2 7B Q4_0 (176,85 contre 158,2 tok/s, résultats llama.cpp soumis par les utilisateurs) ; la RTX 3090 24 Go d\'occasion (~1 500-1 725 $, médiane de 1 650 $ ; données InsiderLLM du 2026-11-23 ; note au niveau de la page : annonces eBay US vendues) dépasse le budget mais apporte les 24 Go de VRAM dont les modèles 32B ont besoin.',
-          'Achetez la 5070 Ti si vous exécutez surtout des modèles 7B-14B et souhaitez rester sous 1 000 $. N\'achetez la 3090 d\'occasion que si votre charge de travail inclut des modèles 32B comme Qwen 32B ou des variantes distillées de DeepSeek et que vous pouvez étirer le budget. Une 4090 d\'occasion (~2 575-3 010 $) apporte plus de vitesse (186,2 tok/s) mais pas plus de VRAM que la 3090.',
+          'Le choix se résume au budget contre le palier de VRAM. La RTX 5070 Ti 16 Go (~750-900 $) rentre sous 1 000 $ et est plus rapide sur Llama 2 7B Q4_0 (176,85 contre 158,2 tok/s, résultats llama.cpp soumis par les utilisateurs) ; la RTX 3090 24 Go d\'occasion (1 500-1 725 $ en ventes eBay aux États-Unis, 13-23 novembre 2026, hors frais de port ; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guide InsiderLLM des GPU d\'occasion</a>) dépasse le budget d\'au moins 500 $ mais apporte les 24 Go de VRAM dont les modèles 32B ont besoin.',
+          'Achetez la 5070 Ti si vous exécutez surtout des modèles 7B-14B et souhaitez rester sous 1 000 $. Une 3090 d\'occasion n\'est pas une option sous 1 000 $ ; ne l\'envisagez que si votre charge de travail inclut des modèles 32B comme Qwen 32B ou des variantes distillées de DeepSeek et que vous pouvez porter votre budget à au moins 1 500 $. Une 4090 d\'occasion (~2 575-3 010 $) apporte plus de vitesse (186,2 tok/s) mais pas plus de VRAM que la 3090.',
         ],
       },
       faq: {
@@ -618,9 +618,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ja.webp',
     title: 'ローカルLLM推論に最適な1,000ドル以下のGPUは?',
     seoTitle: '2026年版 ローカルLLM向け1,000ドル以下GPUの推奨 | Prompt Bites',
-    metaDescription: 'ローカルLLM向け1,000ドル以下の推奨GPUはRTX 5070 Ti 16GB(約750-900ドル)。中古RTX 4090はInsiderLLMトラッカーで約2,575-3,010ドル(2026-10-15)、中古の24GB RTX 4090と3090は予算外です。',
+    metaDescription: 'ローカルLLM向け1,000ドル以下の推奨GPUはRTX 5070 Ti 16GB(約750-900ドル)。中古の24GB RTX 3090と4090は、米国の落札価格では予算を大きく超えます。',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>ローカルLLM向け1,000ドル以下での当サイトの推奨はNVIDIA RTX 5070 Ti 16GB(約750-900ドル、在庫は断続的、<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLMトラッカー</a>。数値は 2026-10-15 時点)です。これは、InsiderLLM価格トラッカーで見つけた、1,000ドル以内に収まる最速のNVIDIAカードです。</strong><a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">ユーザー投稿のllama.cpp結果</a>ではLlama 2 7B Q4_0で176.85 tok/sに達し、16GBのVRAMでQ4の14B-16B程度までのモデルをカバーします。本ページの以前の推奨だった中古RTX 4090 24GBは約2,575-3,010ドルと掲載(InsiderLLMトラッカー。日付のない表では約2,900-3,100ドルです)、中古RTX 3090 24GBも約1,500-1,725ドル(2026-11-23付のInsiderLLMデータ)で、トラッカーに掲載された中古のRTX 4090と3090(24GB)はもう1,000ドル以下に収まりません。同じトラッカーで新品のAMD RX 7900 XTX 24GBは約900-1,000ドルと掲載されており、予算に近い24GB代替の1つです。トラッカーが扱っていない他社の24GBカードもあります。',
+    leadAnswerBlock: '<strong>ローカルLLM向け1,000ドル以下での当サイトの推奨はNVIDIA RTX 5070 Ti 16GB(約750-900ドル、在庫は断続的、<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLMトラッカー</a>。価格の日付は未記載、ページ更新は2026-11-27)です。これは、InsiderLLM価格トラッカーで見つけた、1,000ドル以内に収まる最速のNVIDIAカードです。</strong><a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">ユーザー投稿のllama.cpp結果</a>ではLlama 2 7B Q4_0で176.85 tok/sに達し、16GBのVRAMでQ4の14B-16B程度までのモデルをカバーします。本ページの以前の推奨だった中古RTX 4090 24GBは約2,575-3,010ドルと掲載(InsiderLLMトラッカー、2026年10月の落札データ。日付のない表では約2,900-3,100ドルです)、中古RTX 3090 24GBの米国eBayでの落札価格は1,500-1,725ドル(中央値1,650ドル、225件、2026年11月13-23日、送料別、<a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM中古GPUガイド</a>)で、ここに挙げた中古RTX 4090と3090(24GB)の価格は1,000ドル以下に収まりません。同じトラッカーで新品のAMD RX 7900 XTX 24GBは約900-1,000ドルと掲載されており、予算に近い24GB代替の1つです。トラッカーが扱っていない他社の24GBカードもあります。',
     toc: [
       { label: '当サイトの推奨: NVIDIA RTX 5070 Ti 16GB', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16GB vs 中古RTX 3090 24GB', anchor: '#comparison' },
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'RTX 5070 Tiはユーザー投稿のllama.cpp結果でLlama 2 7B Q4_0において176.85 tok/sに達し、中古RTX 3090の158.2を上回ります。',
           '70Bモデルには約40GBが必要で、1,000ドル以下の単一カードには収まりません。24GBカードでも70Bモデルを動かせるのは、非常に積極的な量子化(IQ2クラス)かシステムRAMへの部分オフロードを使う場合に限られ、出力品質と速度が目に見えて低下します。',
-          '中古RTX 3090 24GB(約1,500-1,725ドル、2026-11-23付のInsiderLLMデータ)は32Bモデル向けに24GB VRAMを得られる、トラッカー掲載の中古NVIDIA 24GBカード2枚のうち安い方ですが、1,000ドルを超えます。新品のAMD RX 7900 XTX 24GB(約900-1,000ドル、InsiderLLMトラッカー)が、予算に近い24GB代替の1つです。トラッカーが扱っていない他社の24GBカードもあります。',
+          '中古RTX 3090 24GB(米国eBayの落札価格1,500-1,725ドル、2026年11月13-23日、InsiderLLM調べ)は32Bモデル向けの24GB VRAMを備えますが、価格帯の下限でもこの予算を500ドル上回ります。新品のAMD RX 7900 XTX 24GB(約900-1,000ドル、InsiderLLMトラッカー)が、予算に近い24GB代替の1つです。トラッカーが扱っていない他社の24GBカードもあります。',
         ],
         updatedDate: '2026-11',
       },
@@ -655,9 +655,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '当サイトの推奨: RTX 5070 Ti 16GB、約750-900ドル、在庫は断続的(InsiderLLMトラッカー。数値は 2026-10-15 時点) — 1,000ドル以下の高速な16GBカードで、Q4の14B-16B程度までのモデルを動作',
-          '中古RTX 4090はもうこの予算に収まりません。トラッカーは売却済み中古の出品で約2,575-3,010ドル(2026-10-15)、日付のない以前の表では約2,900-3,100ドルとしています',
-          '24GB VRAMと32Bモデルが必要なら、中古RTX 3090は約1,500-1,725ドル(InsiderLLM、2026-11-23) — 1,000ドルを超えます',
+          '当サイトの推奨: RTX 5070 Ti 16GB、約750-900ドル、在庫は断続的(InsiderLLMトラッカー。価格の日付は未記載、ページ更新は2026-11-27) — 1,000ドル以下の高速な16GBカードで、Q4の14B-16B程度までのモデルを動作',
+          '中古RTX 4090はもうこの予算に収まりません。トラッカーは売却済み中古の出品で約2,575-3,010ドル(2026年10月)、日付のない以前の表では約2,900-3,100ドルとしています',
+          '24GB VRAMと32Bモデルが必要なら、中古RTX 3090の落札価格は1,500-1,725ドル(InsiderLLM、米国eBay、2026年11月13-23日) — 1,000ドルを超えます',
           '70BモデルにはQ4で約40GBが必要 — この予算のどの単一カードよりも大きい容量です',
         ],
       },
@@ -665,9 +665,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: '当サイトの推奨: NVIDIA RTX 5070 Ti 16GB',
         content: [
-          '<strong>ローカルLLM向け1,000ドル以下での当サイトの推奨はNVIDIA RTX 5070 Ti 16GBです。これは、InsiderLLM価格トラッカーで見つけた、1,000ドル以内に収まる最速のNVIDIAカードです。</strong>Q4量子化で14B-16B程度までのモデルに十分な16GBのVRAMと高速性を、1,000ドル以下に収まる価格で兼ね備えています。約750-900ドルで掲載されており在庫は断続的です(<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLMトラッカー</a>。数値は 2026-10-15 時点)。<a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">ユーザー投稿のllama.cpp結果</a>ではLlama 2 7B Q4_0で176.85 tok/sに達します。',
-          '<a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIAの発表</a>によると、RTX 5070 Tiのメモリ帯域幅は896 GB/sです。<a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIAの仕様</a>では256ビットのメモリインターフェースとされ、600ドル以下の層で扱った<a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">RTX 4060 Ti 16GBの128ビット</a>を上回ります。単一ユーザーのテキスト生成では、モデルがVRAMに収まった後はメモリ帯域幅が主な制約になることが多く、これが、リンク先のllama.cpp結果(Llama 2 7B Q4_0のトークン生成:4060 Ti 63.86、3060 75.57 tok/sに対し5070 Tiは176.85 tok/s)で5070 Tiが4060 Tiや3060より高速な理由の説明の一助になります。単に新しいだけではありません。',
-          '32Bモデル向けに24GBが必要なら、予算を引き上げる必要があります。中古RTX 3090 24GBは約1,500-1,725ドルです(2026年11月13-23日の売却済み出品225件の中央値は1,650ドル。2026-11-23付のInsiderLLMデータ)。中古RTX 4090 24GBは約2,575-3,010ドルと掲載されています(InsiderLLMの2026-10-15時点の数値。日付のない表では約2,900-3,100ドルです)。このガイドの以前の版は中古4090を約900-1,100ドルで推奨していましたが、この価格は現在の市場と一致しません。',
+          '<strong>ローカルLLM向け1,000ドル以下での当サイトの推奨はNVIDIA RTX 5070 Ti 16GBです。これは、InsiderLLM価格トラッカーで見つけた、1,000ドル以内に収まる最速のNVIDIAカードです。</strong>Q4量子化で14B-16B程度までのモデルに十分な16GBのVRAMと高速性を、1,000ドル以下に収まる価格で兼ね備えています。約750-900ドルで掲載されており在庫は断続的です(<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLMトラッカー</a>。価格の日付は未記載、ページ更新は2026-11-27)。<a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">ユーザー投稿のllama.cpp結果</a>ではLlama 2 7B Q4_0で176.85 tok/sに達します。',
+          '<a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIAの発表</a>によると、RTX 5070 Tiのメモリ帯域幅は896 GB/sです。<a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIAの仕様</a>では256ビットのメモリインターフェースとされ、600ドル以下の層で扱った<a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">RTX 4060 Ti 16GBの128ビット</a>を上回ります。単一ユーザーのテキスト生成では、モデルがVRAMに収まった後はメモリ帯域幅が主な制約になることが多く、これが、リンク先のllama.cpp結果(Llama 2 7B Q4_0のトークン生成:4060 Ti(8GB)63.86、3060 75.57 tok/sに対し5070 Tiは176.85 tok/s)で5070 Tiが4060 Tiや3060より高速な理由の説明の一助になります。単に新しいだけではありません。',
+          '32Bモデル向けに24GBが必要なら、予算を引き上げる必要があります。中古RTX 3090 24GBの米国eBayでの落札価格は1,500-1,725ドルでした(中央値1,650ドル、225件、2026年11月13-23日、送料別、<a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM中古GPUガイド</a>)。これは過去の成約価格であり、現在の販売価格ではありません。中古RTX 4090 24GBは約2,575-3,010ドルと掲載されています(InsiderLLM調べ、2026年10月のeBay落札216件。日付のない表では約2,900-3,100ドルです)。このガイドの以前の版は中古4090を約900-1,100ドルで推奨していましたが、この価格は現在の市場と一致しません。',
         ],
         affiliateLinks: [
           {
@@ -697,8 +697,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16GB vs 中古RTX 3090 24GB',
         content: [
-          '選択は予算とVRAM層のトレードオフです。RTX 5070 Ti 16GB(約750-900ドル)は1,000ドル以下に収まり、Llama 2 7B Q4_0でも高速です(176.85対158.2 tok/s、ユーザー投稿のllama.cpp結果)。中古RTX 3090 24GB(約1,500-1,725ドル、中央値1,650ドル。2026-11-23付のInsiderLLMデータ。ページ全体の注記:eBay米国の売却済み出品)は予算を超えますが、32Bモデルに必要な24GBのVRAMを備えています。',
-          '主に7B-14Bモデルを動かし、1,000ドル以下に抑えたいなら5070 Tiを購入してください。ワークロードにQwen 32BやDeepSeek蒸留版などの32Bモデルが含まれ、予算を広げられる場合に限って中古3090を選んでください。中古4090(約2,575-3,010ドル)は速度(186.2 tok/s)を加えますが、3090以上のVRAMは得られません。',
+          '選択は予算とVRAM層のトレードオフです。RTX 5070 Ti 16GB(約750-900ドル)は1,000ドル以下に収まり、Llama 2 7B Q4_0でも高速です(176.85対158.2 tok/s、ユーザー投稿のllama.cpp結果)。中古RTX 3090 24GB(米国eBayの落札価格1,500-1,725ドル、2026年11月13-23日、送料別、<a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM中古GPUガイド</a>)は予算を500ドル以上超えますが、32Bモデルに必要な24GBのVRAMを備えています。',
+          '主に7B-14Bモデルを動かし、1,000ドル以下に抑えたいなら5070 Tiを購入してください。中古3090は1,000ドル以下の選択肢ではありません。ワークロードにQwen 32BやDeepSeek蒸留版などの32Bモデルが含まれ、予算を少なくとも1,500ドルまで引き上げられる場合に限って検討してください。中古4090(約2,575-3,010ドル)は速度(186.2 tok/s)を加えますが、3090以上のVRAMは得られません。',
         ],
       },
       faq: {
@@ -740,9 +740,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ko.webp',
     title: '로컬 LLM 추론에 1,000달러 이하 최적의 GPU는?',
     seoTitle: '1,000달러 이하 로컬 LLM용 GPU 추천 2026',
-    metaDescription: '로컬 LLM용 1,000달러 이하 추천 GPU: RTX 5070 Ti 16GB(약 750-900달러). 중고 RTX 4090은 InsiderLLM 트래커에 약 2,575-3,010달러로 실려 있으며(2026-10-15), 중고 24GB RTX 4090과 3090은 예산 밖입니다.',
+    metaDescription: '로컬 LLM용 1,000달러 이하 추천 GPU: RTX 5070 Ti 16GB(약 750-900달러). 미국 판매가 기준으로 중고 24GB RTX 3090과 4090은 예산을 크게 넘습니다.',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>로컬 LLM을 위한 1,000달러 이하 저희의 추천은 NVIDIA RTX 5070 Ti 16GB(약 750-900달러, 재고 불규칙, <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM 트래커</a> 기준, 2026-10-15 기준 수치)입니다. InsiderLLM 가격 트래커에서 1,000달러 이하에 들어오는 것으로 찾은 가장 빠른 NVIDIA 카드입니다.</strong> <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">사용자 제출 llama.cpp 결과</a>에서 Llama 2 7B Q4_0 기준 176.85 tok/s에 도달하며, 16GB VRAM은 Q4에서 약 14B-16B 이내의 모델을 처리합니다. 이 페이지의 이전 추천이었던 중고 RTX 4090 24GB는 현재 약 2,575-3,010달러로 실려 있고(InsiderLLM 트래커의 날짜 없는 표에는 약 2,900-3,100달러로 실려 있습니다), 중고 RTX 3090 24GB는 약 1,500-1,725달러(2026-11-23자 InsiderLLM 데이터)로 실려 있으므로, 트래커에 실린 중고 RTX 4090과 RTX 3090 24GB는 더 이상 1,000달러 이하에 들어오지 않습니다. 같은 트래커에 신품 AMD RX 7900 XTX 24GB는 약 900-1,000달러로 실려 있으며, 예산에 가까운 24GB 대안 중 하나입니다. 트래커가 다루지 않는 다른 제조사의 24GB 카드도 있습니다.',
+    leadAnswerBlock: '<strong>로컬 LLM을 위한 1,000달러 이하 저희의 추천은 NVIDIA RTX 5070 Ti 16GB(약 750-900달러, 재고 불규칙, <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM 트래커</a> 기준, 가격 날짜 미표기, 페이지 업데이트 2026-11-27)입니다. InsiderLLM 가격 트래커에서 1,000달러 이하에 들어오는 것으로 찾은 가장 빠른 NVIDIA 카드입니다.</strong> <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">사용자 제출 llama.cpp 결과</a>에서 Llama 2 7B Q4_0 기준 176.85 tok/s에 도달하며, 16GB VRAM은 Q4에서 약 14B-16B 이내의 모델을 처리합니다. 이 페이지의 이전 추천이었던 중고 RTX 4090 24GB는 현재 약 2,575-3,010달러로 실려 있고(InsiderLLM 트래커, 2026년 10월 판매 완료 데이터. 날짜 없는 표에는 약 2,900-3,100달러로 실려 있습니다), 중고 RTX 3090 24GB는 미국 eBay에서 1,500-1,725달러에 판매되었으므로(중앙값 1,650달러, 225건, 2026년 11월 13-23일, 배송비 제외, <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM 중고 GPU 가이드</a>), 여기에 인용한 중고 RTX 4090과 RTX 3090 24GB 가격은 1,000달러 이하에 들어오지 않습니다. 같은 트래커에 신품 AMD RX 7900 XTX 24GB는 약 900-1,000달러로 실려 있으며, 예산에 가까운 24GB 대안 중 하나입니다. 트래커가 다루지 않는 다른 제조사의 24GB 카드도 있습니다.',
     toc: [
       { label: '저희의 추천: NVIDIA RTX 5070 Ti 16GB', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16GB 대 중고 RTX 3090 24GB', anchor: '#comparison' },
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'RTX 5070 Ti는 사용자 제출 llama.cpp 결과에서 Llama 2 7B Q4_0 기준 176.85 tok/s에 도달하며, 중고 RTX 3090의 158.2보다 앞섭니다.',
           '70B 모델은 Q4에서 약 40GB가 필요합니다 — 1,000달러 이하의 단일 카드로는 수용할 수 없으며, 24GB 카드도 매우 공격적인 양자화(IQ2 계열)나 시스템 RAM으로의 부분 오프로드를 사용해야만 70B 모델을 실행할 수 있어 출력 품질과 속도가 눈에 띄게 저하됩니다.',
-          '중고 RTX 3090 24GB(약 1,500-1,725달러, 2026-11-23자 InsiderLLM 데이터)는 트래커에 실린 중고 NVIDIA 24GB 카드 2종 중 저렴한 쪽(32B 모델용 24GB VRAM)이지만 1,000달러를 넘습니다. 신품 AMD RX 7900 XTX 24GB(약 900-1,000달러, InsiderLLM 트래커)가 예산에 가까운 24GB 대안 중 하나입니다. 트래커가 다루지 않는 다른 제조사의 24GB 카드도 있습니다.',
+          '중고 RTX 3090 24GB(미국 eBay 판매가 1,500-1,725달러, 2026년 11월 13-23일, InsiderLLM 기준)는 32B 모델용 24GB VRAM을 갖췄지만, 가격대의 하단조차 이 예산보다 500달러 높습니다. 신품 AMD RX 7900 XTX 24GB(약 900-1,000달러, InsiderLLM 트래커)가 예산에 가까운 24GB 대안 중 하나입니다. 트래커가 다루지 않는 다른 제조사의 24GB 카드도 있습니다.',
         ],
         updatedDate: '2026-11',
       },
@@ -777,9 +777,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '저희의 추천: RTX 5070 Ti 16GB, 약 750-900달러, 재고 불규칙(InsiderLLM 트래커, 2026-10-15 기준 수치) — 1,000달러 이하의 빠른 16GB 카드로 Q4에서 약 14B-16B 이내의 모델을 구동합니다',
-          '중고 RTX 4090은 더 이상 이 예산에 맞지 않습니다: 트래커는 판매 완료된 중고 매물을 약 2,575-3,010달러(2026-10-15), 날짜가 없는 이전 표에서는 약 2,900-3,100달러로 싣고 있습니다',
-          '24GB VRAM과 32B 모델이 필요하다면 중고 RTX 3090이 약 1,500-1,725달러(InsiderLLM, 2026-11-23) — 1,000달러를 넘습니다',
+          '저희의 추천: RTX 5070 Ti 16GB, 약 750-900달러, 재고 불규칙(InsiderLLM 트래커, 가격 날짜 미표기, 페이지 업데이트 2026-11-27) — 1,000달러 이하의 빠른 16GB 카드로 Q4에서 약 14B-16B 이내의 모델을 구동합니다',
+          '중고 RTX 4090은 더 이상 이 예산에 맞지 않습니다: 트래커는 판매 완료된 중고 매물을 약 2,575-3,010달러(2026년 10월), 날짜가 없는 이전 표에서는 약 2,900-3,100달러로 싣고 있습니다',
+          '24GB VRAM과 32B 모델이 필요하다면 중고 RTX 3090은 1,500-1,725달러에 판매되었습니다(InsiderLLM, 미국 eBay, 2026년 11월 13-23일) — 1,000달러를 넘습니다',
           '70B 모델은 Q4에서 약 40GB가 필요합니다 — 이 예산의 어떤 단일 카드가 제공하는 용량보다도 큽니다',
         ],
       },
@@ -787,9 +787,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: '저희의 추천: NVIDIA RTX 5070 Ti 16GB',
         content: [
-          '<strong>로컬 LLM을 위한 1,000달러 이하 저희의 추천은 NVIDIA RTX 5070 Ti 16GB입니다. InsiderLLM 가격 트래커에서 1,000달러 이하에 들어오는 것으로 찾은 가장 빠른 NVIDIA 카드입니다.</strong> Q4 양자화에서 약 14B-16B 이내의 모델에 충분한 16GB VRAM과 높은 속도를 1,000달러 이하의 가격에 함께 갖추고 있습니다. 약 750-900달러에 등록되어 있으며 재고는 불규칙합니다(<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM 트래커</a>, 2026-10-15 기준 수치). <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">사용자 제출 llama.cpp 결과</a>에서 Llama 2 7B Q4_0 기준 176.85 tok/s에 도달합니다.',
-          '<a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIA 발표</a>에 따르면 RTX 5070 Ti의 메모리 대역폭은 896GB/s입니다. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIA 사양</a>에는 256비트 메모리 인터페이스로 표기되어 있으며, 600달러 이하 등급에서 다룬 <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">RTX 4060 Ti 16GB의 128비트</a>보다 넓습니다. 단일 사용자 텍스트 생성에서는 모델이 VRAM에 들어간 뒤 메모리 대역폭이 주된 한계가 되는 경우가 많으며, 이것이 링크된 llama.cpp 결과(Llama 2 7B Q4_0 토큰 생성: 4060 Ti 63.86, 3060 75.57 tok/s, 5070 Ti는 176.85 tok/s)에서 5070 Ti가 4060 Ti나 3060보다 빠른 이유를 설명하는 데 도움이 되며, 단순히 더 최신이어서가 아닙니다.',
-          '32B 모델을 위해 24GB가 필요하다면 예산을 늘려야 합니다. 중고 RTX 3090 24GB는 약 1,500-1,725달러입니다(2026년 11월 13-23일 판매 완료 매물 225건의 중앙값 1,650달러, 2026-11-23자 InsiderLLM 데이터). 중고 RTX 4090 24GB는 약 2,575-3,010달러로 실려 있습니다(InsiderLLM의 2026-10-15 기준 수치이며, 날짜 없는 표에는 약 2,900-3,100달러로 실려 있습니다). 이 가이드의 이전 버전은 중고 4090을 약 900-1,100달러로 추천했지만, 이 가격은 더 이상 시장과 맞지 않습니다.',
+          '<strong>로컬 LLM을 위한 1,000달러 이하 저희의 추천은 NVIDIA RTX 5070 Ti 16GB입니다. InsiderLLM 가격 트래커에서 1,000달러 이하에 들어오는 것으로 찾은 가장 빠른 NVIDIA 카드입니다.</strong> Q4 양자화에서 약 14B-16B 이내의 모델에 충분한 16GB VRAM과 높은 속도를 1,000달러 이하의 가격에 함께 갖추고 있습니다. 약 750-900달러에 등록되어 있으며 재고는 불규칙합니다(<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM 트래커</a>, 가격 날짜 미표기, 페이지 업데이트 2026-11-27). <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">사용자 제출 llama.cpp 결과</a>에서 Llama 2 7B Q4_0 기준 176.85 tok/s에 도달합니다.',
+          '<a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIA 발표</a>에 따르면 RTX 5070 Ti의 메모리 대역폭은 896GB/s입니다. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIA 사양</a>에는 256비트 메모리 인터페이스로 표기되어 있으며, 600달러 이하 등급에서 다룬 <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">RTX 4060 Ti 16GB의 128비트</a>보다 넓습니다. 단일 사용자 텍스트 생성에서는 모델이 VRAM에 들어간 뒤 메모리 대역폭이 주된 한계가 되는 경우가 많으며, 이것이 링크된 llama.cpp 결과(Llama 2 7B Q4_0 토큰 생성: 4060 Ti(8GB) 63.86, 3060 75.57 tok/s, 5070 Ti는 176.85 tok/s)에서 5070 Ti가 4060 Ti나 3060보다 빠른 이유를 설명하는 데 도움이 되며, 단순히 더 최신이어서가 아닙니다.',
+          '32B 모델을 위해 24GB가 필요하다면 예산을 늘려야 합니다. 중고 RTX 3090 24GB는 미국 eBay에서 1,500-1,725달러에 판매되었습니다(중앙값 1,650달러, 225건, 2026년 11월 13-23일, 배송비 제외, <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM 중고 GPU 가이드</a>). 이는 과거 거래가이며 현재 판매 가격이 아닙니다. 중고 RTX 4090 24GB는 약 2,575-3,010달러로 실려 있습니다(InsiderLLM, 2026년 10월 eBay 판매 완료 216건. 날짜 없는 표에는 약 2,900-3,100달러로 실려 있습니다). 이 가이드의 이전 버전은 중고 4090을 약 900-1,100달러로 추천했지만, 이 가격은 더 이상 시장과 맞지 않습니다.',
         ],
         affiliateLinks: [
           {
@@ -819,8 +819,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16GB 대 중고 RTX 3090 24GB',
         content: [
-          '선택은 예산과 VRAM 등급의 문제로 귀결됩니다. RTX 5070 Ti 16GB(약 750-900달러)는 1,000달러 이하에 들어오며 Llama 2 7B Q4_0에서도 더 빠릅니다(176.85 대 158.2 tok/s, 사용자 제출 llama.cpp 결과). 중고 RTX 3090 24GB(약 1,500-1,725달러, 중앙값 1,650달러, 2026-11-23자 InsiderLLM 데이터, 페이지 전체 주석: eBay 미국 판매 완료 매물)는 예산을 넘지만 32B 모델에 필요한 24GB VRAM을 제공합니다.',
-          '주로 7B-14B 모델을 구동하며 1,000달러 이하를 유지하려면 5070 Ti를 구매하십시오. 작업에 Qwen 32B나 DeepSeek 증류 변형 같은 32B 모델이 포함되고 예산을 늘릴 수 있을 때만 중고 3090을 구매하십시오. 중고 4090(약 2,575-3,010달러)은 속도(186.2 tok/s)를 더하지만 3090보다 VRAM이 더 많지는 않습니다.',
+          '선택은 예산과 VRAM 등급의 문제로 귀결됩니다. RTX 5070 Ti 16GB(약 750-900달러)는 1,000달러 이하에 들어오며 Llama 2 7B Q4_0에서도 더 빠릅니다(176.85 대 158.2 tok/s, 사용자 제출 llama.cpp 결과). 중고 RTX 3090 24GB(미국 eBay 판매가 1,500-1,725달러, 2026년 11월 13-23일, 배송비 제외, <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM 중고 GPU 가이드</a>)는 예산을 500달러 이상 넘지만 32B 모델에 필요한 24GB VRAM을 제공합니다.',
+          '주로 7B-14B 모델을 구동하며 1,000달러 이하를 유지하려면 5070 Ti를 구매하십시오. 중고 3090은 1,000달러 이하의 선택지가 아닙니다. 작업에 Qwen 32B나 DeepSeek 증류 변형 같은 32B 모델이 포함되고 예산을 최소 1,500달러까지 늘릴 수 있을 때만 고려하십시오. 중고 4090(약 2,575-3,010달러)은 속도(186.2 tok/s)를 더하지만 3090보다 VRAM이 더 많지는 않습니다.',
         ],
       },
       faq: {
@@ -862,9 +862,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-pt.webp',
     title: 'Qual a Melhor GPU Abaixo de US$ 1.000 para Inferência de LLM Local?',
     seoTitle: 'Nossa Escolha de GPU Abaixo de US$ 1.000 para LLM Local 2026',
-    metaDescription: 'Nossa escolha para LLMs locais abaixo de US$ 1.000: RTX 5070 Ti 16 GB (~US$ 750-900). Uma RTX 4090 usada aparece a ~US$ 2.575-3.010 no rastreador do InsiderLLM (2026-10-15); as 4090 e 3090 usadas de 24 GB saem do orçamento.',
+    metaDescription: 'Nossa escolha para LLMs locais abaixo de US$ 1.000: RTX 5070 Ti 16 GB (~US$ 750-900). As 3090 e 4090 usadas de 24 GB ficam muito acima nos preços de venda dos EUA.',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -875,7 +875,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Nossa escolha para LLMs locais abaixo de US$ 1.000 é a NVIDIA RTX 5070 Ti 16 GB (~US$ 750-900, estoque esporádico, segundo o <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">rastreador do InsiderLLM</a>; número datado de 2026-10-15): é a placa NVIDIA mais rápida que encontramos que cabe abaixo de US$ 1.000 no rastreador de preços do InsiderLLM.</strong> Ela atinge 176,85 tok/s no Llama 2 7B Q4_0 nos <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">resultados do llama.cpp enviados por usuários</a>, e seus 16 GB de VRAM cobrem modelos de até cerca de 14B-16B em Q4. Uma RTX 4090 24 GB usada, a escolha anterior desta página, aparece hoje por cerca de US$ 2.575-3.010 (rastreador do InsiderLLM; a tabela sem data indica US$ 2.900-3.100), e uma RTX 3090 24 GB usada por cerca de US$ 1.500-1.725 (dados do InsiderLLM de 2026-11-23), então a RTX 4090 e a RTX 3090 de 24 GB usadas listadas no rastreador já não cabem abaixo de US$ 1.000. A AMD RX 7900 XTX 24 GB nova aparece no mesmo rastreador por cerca de US$ 900-1.000 e é uma alternativa de 24 GB perto do orçamento; outros fabricantes têm mais placas de 24 GB que o rastreador não cobre.',
+    leadAnswerBlock: '<strong>Nossa escolha para LLMs locais abaixo de US$ 1.000 é a NVIDIA RTX 5070 Ti 16 GB (~US$ 750-900, estoque esporádico, segundo o <a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">rastreador do InsiderLLM</a>; preço sem data; página atualizada em 2026-11-27): é a placa NVIDIA mais rápida que encontramos que cabe abaixo de US$ 1.000 no rastreador de preços do InsiderLLM.</strong> Ela atinge 176,85 tok/s no Llama 2 7B Q4_0 nos <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">resultados do llama.cpp enviados por usuários</a>, e seus 16 GB de VRAM cobrem modelos de até cerca de 14B-16B em Q4. Uma RTX 4090 24 GB usada, a escolha anterior desta página, aparece hoje por cerca de US$ 2.575-3.010 (rastreador do InsiderLLM, vendas de outubro de 2026; a tabela sem data indica US$ 2.900-3.100), e placas RTX 3090 24 GB usadas foram vendidas por US$ 1.500-1.725 no eBay dos EUA (mediana de US$ 1.650; 225 vendas, 13-23 de novembro de 2026, sem frete; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guia de GPUs usadas da InsiderLLM</a>), então os preços citados aqui para a RTX 4090 e a RTX 3090 de 24 GB usadas não cabem abaixo de US$ 1.000. A AMD RX 7900 XTX 24 GB nova aparece no mesmo rastreador por cerca de US$ 900-1.000 e é uma alternativa de 24 GB perto do orçamento; outros fabricantes têm mais placas de 24 GB que o rastreador não cobre.',
     toc: [
       { label: 'Nossa escolha: NVIDIA RTX 5070 Ti 16 GB', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16 GB vs RTX 3090 24 GB Usada', anchor: '#comparison' },
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'A RTX 5070 Ti atinge 176,85 tok/s no Llama 2 7B Q4_0 nos resultados do llama.cpp enviados por usuários, à frente da RTX 3090 usada com 158,2.',
           'Um modelo de 70B precisa de aproximadamente 40 GB em Q4 — nenhuma placa única abaixo de US$ 1.000 comporta um; mesmo uma de 24 GB só consegue rodar um modelo de 70B com quantização muito agressiva (classe IQ2) ou com offload parcial para a RAM do sistema, o que reduz visivelmente a qualidade da saída e a velocidade.',
-          'Uma RTX 3090 24 GB usada (~US$ 1.500-1.725, dados do InsiderLLM de 2026-11-23) é a mais barata das duas NVIDIA usadas de 24 GB listadas no rastreador (24 GB de VRAM para modelos de 32B), mas fica acima de US$ 1.000; a AMD RX 7900 XTX 24 GB nova (~US$ 900-1.000, rastreador do InsiderLLM) é uma alternativa de 24 GB perto do orçamento; outros fabricantes têm mais placas de 24 GB que o rastreador não cobre.',
+          'Uma RTX 3090 24 GB usada (vendas no eBay dos EUA por US$ 1.500-1.725, 13-23 de novembro de 2026, segundo a InsiderLLM) tem 24 GB de VRAM para modelos de 32B, mas até o piso dessa faixa fica US$ 500 acima deste orçamento; a AMD RX 7900 XTX 24 GB nova (~US$ 900-1.000, rastreador do InsiderLLM) é uma alternativa de 24 GB perto do orçamento; outros fabricantes têm mais placas de 24 GB que o rastreador não cobre.',
         ],
         updatedDate: '2026-11',
       },
@@ -899,9 +899,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Nossa escolha: RTX 5070 Ti 16 GB por ~US$ 750-900, estoque esporádico (rastreador do InsiderLLM; número datado de 2026-10-15) — uma placa rápida de 16 GB abaixo de US$ 1.000, roda modelos de até cerca de 14B-16B em Q4',
-          'Uma RTX 4090 usada não cabe mais neste orçamento: o rastreador indica ~US$ 2.575-3.010 para anúncios de usadas vendidas (2026-10-15) e ~US$ 2.900-3.100 em sua tabela anterior sem data',
-          'Para 24 GB de VRAM e modelos de 32B, uma RTX 3090 usada custa ~US$ 1.500-1.725 (InsiderLLM, 2026-11-23) — acima de US$ 1.000',
+          'Nossa escolha: RTX 5070 Ti 16 GB por ~US$ 750-900, estoque esporádico (rastreador do InsiderLLM; preço sem data; página atualizada em 2026-11-27) — uma placa rápida de 16 GB abaixo de US$ 1.000, roda modelos de até cerca de 14B-16B em Q4',
+          'Uma RTX 4090 usada não cabe mais neste orçamento: o rastreador indica ~US$ 2.575-3.010 para anúncios de usadas vendidas (outubro de 2026) e ~US$ 2.900-3.100 em sua tabela anterior sem data',
+          'Para 24 GB de VRAM e modelos de 32B, placas RTX 3090 usadas foram vendidas por US$ 1.500-1.725 (InsiderLLM, eBay dos EUA, 13-23 de novembro de 2026) — acima de US$ 1.000',
           'Um modelo de 70B precisa de ~40 GB em Q4 — mais do que qualquer placa única deste orçamento oferece',
         ],
       },
@@ -909,9 +909,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Nossa escolha: NVIDIA RTX 5070 Ti 16 GB',
         content: [
-          '<strong>Nossa escolha para LLMs locais abaixo de US$ 1.000 é a NVIDIA RTX 5070 Ti 16 GB: é a placa NVIDIA mais rápida que encontramos que cabe abaixo de US$ 1.000 no rastreador de preços do InsiderLLM.</strong> Ela combina 16 GB de VRAM, suficientes para modelos de até cerca de 14B-16B em quantização Q4, com alta velocidade a um preço que ainda cabe abaixo de US$ 1.000. Está listada por cerca de US$ 750-900 com estoque esporádico (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">rastreador do InsiderLLM</a>; número datado de 2026-10-15) e atinge 176,85 tok/s no Llama 2 7B Q4_0 nos <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">resultados do llama.cpp enviados por usuários</a>.',
-          'Segundo <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">o anúncio da NVIDIA</a>, a RTX 5070 Ti tem 896 GB/s de largura de banda de memória. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">As especificações da NVIDIA</a> indicam uma interface de memória de 256 bits, contra <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 bits na RTX 4060 Ti 16 GB</a> da faixa abaixo de US$ 600. Para geração de texto com um único usuário, a largura de banda de memória costuma ser o principal limite quando o modelo já cabe na VRAM, o que ajuda a explicar por que a 5070 Ti é mais rápida do que uma 4060 Ti ou 3060 nos resultados do llama.cpp vinculados (geração de tokens no Llama 2 7B Q4_0: 4060 Ti 63,86 e 3060 75,57 contra 176,85 tok/s da 5070 Ti), não apenas mais nova.',
-          'Se você precisa de 24 GB para modelos de 32B, o orçamento precisa subir. Uma RTX 3090 24 GB usada custa cerca de US$ 1.500-1.725 (mediana de US$ 1.650 em 225 anúncios vendidos, de 13 a 23 de novembro de 2026; dados do InsiderLLM de 2026-11-23). Uma RTX 4090 24 GB usada aparece por cerca de US$ 2.575-3.010 (número do InsiderLLM datado de 2026-10-15; a tabela sem data indica US$ 2.900-3.100). Versões anteriores deste guia recomendavam uma 4090 usada a ~US$ 900-1.100; esse preço já não corresponde ao mercado.',
+          '<strong>Nossa escolha para LLMs locais abaixo de US$ 1.000 é a NVIDIA RTX 5070 Ti 16 GB: é a placa NVIDIA mais rápida que encontramos que cabe abaixo de US$ 1.000 no rastreador de preços do InsiderLLM.</strong> Ela combina 16 GB de VRAM, suficientes para modelos de até cerca de 14B-16B em quantização Q4, com alta velocidade a um preço que ainda cabe abaixo de US$ 1.000. Está listada por cerca de US$ 750-900 com estoque esporádico (<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">rastreador do InsiderLLM</a>; preço sem data; página atualizada em 2026-11-27) e atinge 176,85 tok/s no Llama 2 7B Q4_0 nos <a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">resultados do llama.cpp enviados por usuários</a>.',
+          'Segundo <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">o anúncio da NVIDIA</a>, a RTX 5070 Ti tem 896 GB/s de largura de banda de memória. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">As especificações da NVIDIA</a> indicam uma interface de memória de 256 bits, contra <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">128 bits na RTX 4060 Ti 16 GB</a> da faixa abaixo de US$ 600. Para geração de texto com um único usuário, a largura de banda de memória costuma ser o principal limite quando o modelo já cabe na VRAM, o que ajuda a explicar por que a 5070 Ti é mais rápida do que uma 4060 Ti ou 3060 nos resultados do llama.cpp vinculados (geração de tokens no Llama 2 7B Q4_0: 4060 Ti (8 GB) 63,86 e 3060 75,57 contra 176,85 tok/s da 5070 Ti), não apenas mais nova.',
+          'Se você precisa de 24 GB para modelos de 32B, o orçamento precisa subir. Placas RTX 3090 24 GB usadas foram vendidas por US$ 1.500-1.725 no eBay dos EUA (mediana de US$ 1.650; 225 vendas, 13-23 de novembro de 2026, sem frete; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guia de GPUs usadas da InsiderLLM</a>). São vendas passadas, não ofertas atuais. Uma RTX 4090 24 GB usada aparece por cerca de US$ 2.575-3.010 (InsiderLLM, 216 anúncios vendidos no eBay, outubro de 2026; a tabela sem data indica US$ 2.900-3.100). Versões anteriores deste guia recomendavam uma 4090 usada a ~US$ 900-1.100; esse preço já não corresponde ao mercado.',
         ],
         affiliateLinks: [
           {
@@ -941,8 +941,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16 GB vs RTX 3090 24 GB Usada',
         content: [
-          'A escolha se resume a orçamento versus faixa de VRAM. A RTX 5070 Ti 16 GB (~US$ 750-900) cabe abaixo de US$ 1.000 e é mais rápida no Llama 2 7B Q4_0 (176,85 contra 158,2 tok/s, resultados do llama.cpp enviados por usuários); a RTX 3090 24 GB usada (~US$ 1.500-1.725, mediana de US$ 1.650; dados do InsiderLLM de 2026-11-23; nota em nível de página: anúncios vendidos no eBay dos EUA) fica acima do orçamento, mas traz os 24 GB de VRAM que os modelos de 32B exigem.',
-          'Compre a 5070 Ti se você roda principalmente modelos de 7B-14B e quer ficar abaixo de US$ 1.000. Compre a 3090 usada apenas se sua carga de trabalho inclui modelos de 32B como o Qwen 32B ou variantes destiladas do DeepSeek e você pode esticar o orçamento. Uma 4090 usada (~US$ 2.575-3.010) acrescenta velocidade (186,2 tok/s), mas não mais VRAM do que a 3090.',
+          'A escolha se resume a orçamento versus faixa de VRAM. A RTX 5070 Ti 16 GB (~US$ 750-900) cabe abaixo de US$ 1.000 e é mais rápida no Llama 2 7B Q4_0 (176,85 contra 158,2 tok/s, resultados do llama.cpp enviados por usuários); a RTX 3090 24 GB usada (US$ 1.500-1.725 em vendas no eBay dos EUA, 13-23 de novembro de 2026, sem frete; <a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">guia de GPUs usadas da InsiderLLM</a>) fica pelo menos US$ 500 acima do orçamento, mas traz os 24 GB de VRAM que os modelos de 32B exigem.',
+          'Compre a 5070 Ti se você roda principalmente modelos de 7B-14B e quer ficar abaixo de US$ 1.000. Uma 3090 usada não é uma opção abaixo de US$ 1.000; considere-a apenas se sua carga de trabalho inclui modelos de 32B como o Qwen 32B ou variantes destiladas do DeepSeek e você pode aumentar o orçamento para pelo menos US$ 1.500. Uma 4090 usada (~US$ 2.575-3.010) acrescenta velocidade (186,2 tok/s), mas não mais VRAM do que a 3090.',
         ],
       },
       faq: {
@@ -984,9 +984,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-zh.webp',
     title: '1000 美元以下运行本地 LLM 的最佳 GPU 是什么？',
     seoTitle: '我们的推荐：1000 美元以下本地 LLM 的 GPU 2026 | Prompt Bites',
-    metaDescription: '1000 美元以下本地 LLM 推荐 GPU：RTX 5070 Ti 16 GB（约 750-900 美元）。二手 RTX 4090 在 InsiderLLM 追踪中约 2575-3010 美元（2026-10-15），二手 24 GB RTX 4090 和 3090 已超出预算。',
+    metaDescription: '1000 美元以下本地 LLM 推荐 GPU：RTX 5070 Ti 16 GB（约 750-900 美元）。按美国成交价，二手 24 GB RTX 3090 和 4090 远超这一预算。',
     publishDate: '2026-07-14',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     current_models_mentioned: [],
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
     siblingBites: ['best-gpu-under-600-local-llm', 'best-rtx-4090-setup-70b-models'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>1000 美元以下运行本地 LLM，我们的推荐是 NVIDIA RTX 5070 Ti 16 GB（约 750-900 美元，库存时有时无，来源：<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM 追踪</a>；数据日期 2026-10-15）：它是我们在 InsiderLLM 价格追踪中找到的、1000 美元以内最快的 NVIDIA 显卡。</strong> 在<a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">用户提交的 llama.cpp 结果</a>中，它在 Llama 2 7B Q4_0 上达到 176.85 tok/s，16 GB 显存可在 Q4 下覆盖约 14B-16B 以内的模型。本页此前推荐的二手 RTX 4090 24 GB 约 2575-3010 美元（InsiderLLM 追踪；其未标日期的表格为 2900-3100 美元），二手 RTX 3090 24 GB 约 1500-1725 美元（InsiderLLM 数据日期 2026-11-23），因此该追踪所列的二手 RTX 4090 和 RTX 3090 24 GB 已不再落在 1000 美元以内。同一追踪中全新 AMD RX 7900 XTX 24 GB 约 900-1000 美元，是预算附近的 24 GB 替代品之一；其他厂商还有该追踪未覆盖的 24 GB 显卡。',
+    leadAnswerBlock: '<strong>1000 美元以下运行本地 LLM，我们的推荐是 NVIDIA RTX 5070 Ti 16 GB（约 750-900 美元，库存时有时无，来源：<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM 追踪</a>；该价格未标日期；页面更新于 2026-11-27）：它是我们在 InsiderLLM 价格追踪中找到的、1000 美元以内最快的 NVIDIA 显卡。</strong> 在<a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">用户提交的 llama.cpp 结果</a>中，它在 Llama 2 7B Q4_0 上达到 176.85 tok/s，16 GB 显存可在 Q4 下覆盖约 14B-16B 以内的模型。本页此前推荐的二手 RTX 4090 24 GB 约 2575-3010 美元（InsiderLLM 追踪，2026 年 10 月成交数据；其未标日期的表格为 2900-3100 美元），二手 RTX 3090 24 GB 在美国 eBay 的成交价为 1500-1725 美元（中位数 1650 美元；225 笔，2026 年 11 月 13-23 日，不含运费；<a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM 二手显卡指南</a>），因此这里引用的二手 RTX 4090 和 RTX 3090 24 GB 价格均不在 1000 美元以内。同一追踪中全新 AMD RX 7900 XTX 24 GB 约 900-1000 美元，是预算附近的 24 GB 替代品之一；其他厂商还有该追踪未覆盖的 24 GB 显卡。',
     toc: [
       { label: '我们的推荐：NVIDIA RTX 5070 Ti 16 GB', anchor: '#best-pick' },
       { label: 'RTX 5070 Ti 16 GB 对比二手 RTX 3090 24 GB', anchor: '#comparison' },
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '在用户提交的 llama.cpp 结果中，RTX 5070 Ti 在 Llama 2 7B Q4_0 上达到 176.85 tok/s，高于二手 RTX 3090 的 158.2。',
           '70B 模型在 Q4 下大约需要 40 GB——1000 美元以下没有任何单张显卡能装下；即使 24 GB 显卡，也只能通过非常激进的量化（IQ2 级别）或将部分权重卸载到系统内存来运行 70B 模型，输出质量和速度都会明显下降。',
-          '二手 RTX 3090 24 GB（约 1500-1725 美元，InsiderLLM 数据日期 2026-11-23）是该追踪所列两款二手 NVIDIA 24 GB 显卡中较便宜的一款（可为 32B 模型提供 24 GB 显存），但已超过 1000 美元；全新 AMD RX 7900 XTX 24 GB（约 900-1000 美元，InsiderLLM 追踪）是预算附近的 24 GB 替代品之一；其他厂商还有该追踪未覆盖的 24 GB 显卡。',
+          '二手 RTX 3090 24 GB（美国 eBay 成交价 1500-1725 美元，2026 年 11 月 13-23 日，数据来自 InsiderLLM）可为 32B 模型提供 24 GB 显存，但即便是价格区间的下限也比本预算高 500 美元；全新 AMD RX 7900 XTX 24 GB（约 900-1000 美元，InsiderLLM 追踪）是预算附近的 24 GB 替代品之一；其他厂商还有该追踪未覆盖的 24 GB 显卡。',
         ],
         updatedDate: '2026-11',
       },
@@ -1021,9 +1021,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '我们的推荐：RTX 5070 Ti 16 GB，约 750-900 美元，库存时有时无（InsiderLLM 追踪；数据日期 2026-10-15）——1000 美元以下速度很快的 16 GB 显卡，可在 Q4 下运行约 14B-16B 以内的模型',
-          '二手 RTX 4090 已不再符合这一预算：该追踪列出的已成交二手挂牌价约 2575-3010 美元（2026-10-15），其较早、未标日期的表格为约 2900-3100 美元',
-          '若需要 24 GB 显存来运行 32B 模型，二手 RTX 3090 约 1500-1725 美元（InsiderLLM，2026-11-23）——超过 1000 美元',
+          '我们的推荐：RTX 5070 Ti 16 GB，约 750-900 美元，库存时有时无（InsiderLLM 追踪；该价格未标日期；页面更新于 2026-11-27）——1000 美元以下速度很快的 16 GB 显卡，可在 Q4 下运行约 14B-16B 以内的模型',
+          '二手 RTX 4090 已不再符合这一预算：该追踪列出的已成交二手挂牌价约 2575-3010 美元（2026 年 10 月），其较早、未标日期的表格为约 2900-3100 美元',
+          '若需要 24 GB 显存来运行 32B 模型，二手 RTX 3090 的成交价为 1500-1725 美元（InsiderLLM，美国 eBay，2026 年 11 月 13-23 日）——超过 1000 美元',
           '70B 模型在 Q4 下约需 40 GB——超出这一预算内任何单张显卡的容量',
         ],
       },
@@ -1031,9 +1031,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: '我们的推荐：NVIDIA RTX 5070 Ti 16 GB',
         content: [
-          '<strong>1000 美元以下运行本地 LLM，我们推荐 NVIDIA RTX 5070 Ti 16 GB：它是我们在 InsiderLLM 价格追踪中找到的、1000 美元以内最快的 NVIDIA 显卡。</strong>它在仍低于 1000 美元的价格上，兼具足以在 Q4 量化下运行约 14B-16B 以内模型的 16 GB 显存和很高的速度。它的挂牌价约 750-900 美元，库存时有时无（<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM 追踪</a>；数据日期 2026-10-15），在<a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">用户提交的 llama.cpp 结果</a>中于 Llama 2 7B Q4_0 上达到 176.85 tok/s。',
-          '根据 <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIA 的发布说明</a>，RTX 5070 Ti 的显存带宽为 896 GB/s。<a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIA 的规格页</a>列出其显存位宽为 256 位，而 600 美元以下档位的 <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">RTX 4060 Ti 16 GB 为 128 位</a>。对于单用户文本生成，模型装入显存后，显存带宽通常是主要瓶颈，这有助于解释为何在所链接的 llama.cpp 结果中（Llama 2 7B Q4_0 的 token 生成：4060 Ti 63.86、3060 75.57 tok/s，对比 5070 Ti 的 176.85 tok/s），5070 Ti 比 4060 Ti 或 3060 更快，而不只是因为更新。',
-          '如果需要 24 GB 显存来运行 32B 模型，预算就必须提高。二手 RTX 3090 24 GB 约 1500-1725 美元（2026 年 11 月 13-23 日 225 条已成交挂牌的中位数为 1650 美元；InsiderLLM 数据日期 2026-11-23）。二手 RTX 4090 24 GB 约 2575-3010 美元（InsiderLLM 数据日期 2026-10-15；其未标日期的表格为 2900-3100 美元）。本指南的早期版本曾推荐约 900-1100 美元的二手 4090；这一价格已与当前市场不符。',
+          '<strong>1000 美元以下运行本地 LLM，我们推荐 NVIDIA RTX 5070 Ti 16 GB：它是我们在 InsiderLLM 价格追踪中找到的、1000 美元以内最快的 NVIDIA 显卡。</strong>它在仍低于 1000 美元的价格上，兼具足以在 Q4 量化下运行约 14B-16B 以内模型的 16 GB 显存和很高的速度。它的挂牌价约 750-900 美元，库存时有时无（<a href="https://insiderllm.com/guides/nvidia-gpu-prices-rising/" class="text-primary hover:underline">InsiderLLM 追踪</a>；该价格未标日期；页面更新于 2026-11-27），在<a href="https://github.com/ggml-org/llama.cpp/discussions/15013" class="text-primary hover:underline">用户提交的 llama.cpp 结果</a>中于 Llama 2 7B Q4_0 上达到 176.85 tok/s。',
+          '根据 <a href="https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/" class="text-primary hover:underline">NVIDIA 的发布说明</a>，RTX 5070 Ti 的显存带宽为 896 GB/s。<a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/" class="text-primary hover:underline">NVIDIA 的规格页</a>列出其显存位宽为 256 位，而 600 美元以下档位的 <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/" class="text-primary hover:underline">RTX 4060 Ti 16 GB 为 128 位</a>。对于单用户文本生成，模型装入显存后，显存带宽通常是主要瓶颈，这有助于解释为何在所链接的 llama.cpp 结果中（Llama 2 7B Q4_0 的 token 生成：4060 Ti（8 GB）63.86、3060 75.57 tok/s，对比 5070 Ti 的 176.85 tok/s），5070 Ti 比 4060 Ti 或 3060 更快，而不只是因为更新。',
+          '如果需要 24 GB 显存来运行 32B 模型，预算就必须提高。二手 RTX 3090 24 GB 在美国 eBay 的成交价为 1500-1725 美元（中位数 1650 美元；225 笔，2026 年 11 月 13-23 日，不含运费；<a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM 二手显卡指南</a>）。这是过去的成交价，并非当前报价。二手 RTX 4090 24 GB 约 2575-3010 美元（InsiderLLM，2026 年 10 月 216 条 eBay 成交记录；其未标日期的表格为 2900-3100 美元）。本指南的早期版本曾推荐约 900-1100 美元的二手 4090；这一价格已与当前市场不符。',
         ],
         affiliateLinks: [
           {
@@ -1063,8 +1063,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'RTX 5070 Ti 16 GB 对比二手 RTX 3090 24 GB',
         content: [
-          '选择关键在于预算与显存档位。RTX 5070 Ti 16 GB（约 750-900 美元）低于 1000 美元，且在 Llama 2 7B Q4_0 上更快（176.85 对 158.2 tok/s，用户提交的 llama.cpp 结果）；二手 RTX 3090 24 GB（约 1500-1725 美元，中位数 1650 美元；InsiderLLM 数据日期 2026-11-23；页面级说明：eBay 美国已成交挂牌价）超出预算，但具备 32B 模型所需的 24 GB 显存。',
-          '如果主要运行 7B-14B 模型并想把预算控制在 1000 美元以下，选择 5070 Ti。只有当你的工作负载包含 Qwen 32B 或 DeepSeek 蒸馏变体等 32B 模型，并且能放宽预算时，才选择二手 3090。二手 4090（约 2575-3010 美元）能提升速度（186.2 tok/s），但显存并不比 3090 更多。',
+          '选择关键在于预算与显存档位。RTX 5070 Ti 16 GB（约 750-900 美元）低于 1000 美元，且在 Llama 2 7B Q4_0 上更快（176.85 对 158.2 tok/s，用户提交的 llama.cpp 结果）；二手 RTX 3090 24 GB（美国 eBay 成交价 1500-1725 美元，2026 年 11 月 13-23 日，不含运费；<a href="https://insiderllm.com/guides/used-gpu-buying-guide-local-ai/" class="text-primary hover:underline">InsiderLLM 二手显卡指南</a>）比预算至少高 500 美元，但具备 32B 模型所需的 24 GB 显存。',
+          '如果主要运行 7B-14B 模型并想把预算控制在 1000 美元以下，选择 5070 Ti。二手 3090 并不是 1000 美元以内的选项；只有当你的工作负载包含 Qwen 32B 或 DeepSeek 蒸馏变体等 32B 模型，并且能把预算提高到至少 1500 美元时，才考虑它。二手 4090（约 2575-3010 美元）能提升速度（186.2 tok/s），但显存并不比 3090 更多。',
         ],
       },
       faq: {

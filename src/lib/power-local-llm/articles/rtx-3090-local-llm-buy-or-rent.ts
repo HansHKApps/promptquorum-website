@@ -35,7 +35,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'The RTX 3090 is one of the lowest-priced ways to get 24 GB of VRAM on a CUDA-capable NVIDIA card under your own desk, and renting the same card in the cloud costs cents per hour. This guide works out where the line between those two options actually falls.',
     metaDescription: 'A used RTX 3090 costs $1,500–$1,725 in 2026; renting one runs from about $0.16/hour. Here is the buy-vs-rent break-even math on 24 GB of VRAM for local LLMs.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '13 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers and small teams deciding between buying a used 24 GB GPU and renting cloud GPU time for local LLM inference',
@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Buy a used RTX 3090 if you will run it more than about eight hours a day, every day, or if your data cannot leave your building. Rent one otherwise.** At $1,500–$1,725 used (InsiderLLM tracker, 2026-11-23) against rentals from $0.16 per hour in the cloud, the card only pays for itself under sustained load — and in 2026 it costs more than it did in March, which pushes the break-even further out.',
+    leadAnswerBlock: '**Buy a used RTX 3090 on cost grounds only if you will keep using it longer than it takes to break even: at eight hours a day, that is about 3 years against a $0.25/hour median rental and about 6.4 years against a $0.16 listing. Data that cannot leave your building is a separate reason to buy. Otherwise rent.** The card costs $1,500–$1,725 used (InsiderLLM tracker, 2026-11-23). The periods assume a $1,500 card, about $0.08 per hour of electricity and no resale; at the $1,650 median they are about 10% longer. The card also costs more than it did in March, which pushes break-even further out.',
 
     quickAnswerTop: {
       en: {
@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Break-even against a $0.25/hr median rental at 2 hours a day is roughly 12 years — at 8 hours a day it is about 3',
           'Buy for privacy, latency, always-on agents and constant fine-tuning; rent for bursts and experiments',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?',
       description: 'Break-even analysis between buying a used NVIDIA RTX 3090 and renting the same GPU from cloud providers for local LLM inference, with 2026 pricing.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -141,11 +141,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: 'Decide in 30 Seconds',
-        content: 'Both paths give you the same GPU and the same 24 GB of VRAM. The only real question is how many hours you will actually use it, and whether your data is allowed to leave your network.',
+        content: 'Both paths give you the same GPU and the same 24 GB of VRAM. The main questions are how many hours a day, and for how many years, you will actually use it, and whether your data is allowed to leave your network.',
         decisionBlock: {
           title: 'Buy a used RTX 3090, or rent one?',
           localIf: [
-            'You will use it more than about 8 hours a day, consistently',
+            'You will keep using it past break-even: at 8 hours a day, about 3 years vs a $0.25/hour rental, 6.4 vs $0.16',
             'Your organisation\'s policy or contract does not allow your data to be uploaded to a third party — health, legal, client or regulated work',
             'You want an always-on agent, home assistant or overnight batch job',
             'You are fine-tuning or embedding regularly, not occasionally',
@@ -160,18 +160,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Under 2 hours a day → rent, and revisit in six months',
-            '8+ hours a day, every day → buy, the card pays back in roughly 3–6.4 years against rentals of $0.16–$0.25 per hour',
+            '8 hours a day → break-even in about 3 years vs $0.25/hour and 6.4 vs $0.16; buy on cost only if you will use it longer',
             'Any data you cannot upload → buy, cost is not the deciding factor',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'A used RTX 3090 is worth buying for local LLMs when you will run it more than about eight hours a day, every day, or your data cannot be uploaded; otherwise renting the same card from $0.16 per hour is cheaper.',
+            text: 'On cost alone, a used RTX 3090 is worth buying only if you will use it longer than break-even: at eight hours a day, about 3 years against a $0.25/hour rental and 6.4 years against $0.16. Data that cannot be uploaded is a separate reason to buy.',
           },
           {
             type: 'plain-terms',
-            text: 'Owning the card is like buying a car; renting is like taking taxis. Taxis are cheaper until you start driving every day — and unlike taxi fares, a card you own can be sold later, which may offset part of the purchase price, though resale is not guaranteed.',
+            text: 'Owning the card is like buying a car; renting is like taking taxis. Taxis stay cheaper unless you drive a lot for years — and unlike taxi fares, a card you own can be sold later, which may offset part of the purchase price, though resale is not guaranteed.',
           },
         ],
       },
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The honest caveat: these cards are about six years old, many of them ex-mining or ex-gaming, sold without warranty by strangers. The failure modes are known and checkable, so the risk is manageable — but it is real, and it is the reason to buy from a seller with returns rather than the cheapest listing you can find.',
         ],
         items: [
-          'Ask for a photo of the card running a load test with temperatures visible — memory junction temperature above roughly 100 °C under load points at dried-out thermal pads.',
+          'Ask for a photo of the card running a load test with temperatures visible — memory junction temperature above roughly 100 °C under load can point to dried-out thermal pads.',
           'GDDR6X on this card runs hot by design; a seller who has replaced the thermal pads is a good sign, not a red flag.',
           'Confirm it is the 24 GB RTX 3090 and not an RTX 3080 — the listing title is not proof, ask for a GPU-Z screenshot.',
           'Prefer a platform with buyer protection and returns. The $50 you save on a no-returns listing is not worth the risk on a card about six years old.',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Against a median $0.25/hour rental, a $1,500 card takes roughly 8,800 GPU-hours to pay for itself — about 3 years at eight hours a day, or 12 years at two.** That is the number that should decide the purchase.',
           'The calculation subtracts what the card costs you to run. At 450 W at the wall and a recent US residential average of $0.18/kWh, local inference costs about $0.08 per hour in electricity, so you are not comparing $1,500 against $0.25/hour — you are comparing it against the roughly $0.17/hour you save.',
-          'Assumptions: $1,500 card (the low end of the tracker\'s range; at the $1,650 median every period is about 10% longer), 450 W system draw, $0.18/kWh. Substitute your own electricity rate — it moves the answer more than anything else in the table, and in markets above $0.30/kWh the buy case largely disappears.',
+          'Assumptions: $1,500 card (the low end of the tracker\'s range; at the $1,650 median every period is about 10% longer), 450 W system draw, $0.18/kWh. Substitute your own electricity rate — it moves the answer more than anything else in the table, and above $0.30/kWh the buy case weakens sharply: at $0.30/kWh, break-even at eight hours a day is about 4.5 years against the $0.25 rental and about 20 years against $0.16.',
         ],
         columns: ['Usage', 'vs $0.16/h', 'vs $0.25/h', 'vs $0.50/h'],
         rows: [
@@ -377,12 +377,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Reader: 'Weekend hobbyist',
             Verdict: 'Rent',
-            Why: 'A few hours a week against a $1,500 outlay is decades from break-even. Rent for a year, and if you find yourself renting daily, buy then — you will also know exactly which card you need.',
+            Why: 'A few hours a week against a $1,500 outlay is decades from break-even. Rent for a year, and if you find yourself renting for many hours every day, check the break-even table and decide then — you will also know exactly which card you need.',
           },
           {
             Reader: 'Daily heavy user',
             Verdict: 'Buy',
-            Why: 'At eight or more hours a day the card pays back in roughly 3 to 6.4 years against rentals of $0.16–$0.25 per hour, and resale may offset part of the rest, though it is not guaranteed. The bigger win is behavioural: an owned GPU has no meter running, so you stop rationing experiments.',
+            Why: 'At eight hours a day the card breaks even in about 3 years against a $0.25/hour rental and 6.4 against $0.16, so buying pays off only if that usage lasts longer. Resale may offset part of the cost, though it is not guaranteed. The bigger win is behavioural: an owned GPU has no meter running, so you stop rationing experiments.',
           },
           {
             Reader: 'Small team or startup',
@@ -407,9 +407,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: 'Skip the RTX 3090 If',
         content: [
-          '**Skip it if your models fit in 16 GB.** If you are running 7B and 14B models at 4-bit and never touching anything larger, a cheaper current-generation 16 GB card is quieter, draws far less power and comes with a warranty. Paying the 24 GB premium for headroom you never use is an easy mistake to make on this purchase.',
-          'Skip it too if you are buying to train rather than to run inference. Fine-tuning anything substantial on a single 24 GB card means aggressive quantization and long waits; renting a larger card for a few hours is both faster and cheaper.',
-          'And skip it if your electricity is expensive. At $0.30/kWh or above, the running cost alone approaches the cheaper cloud rates, and the case for owning the card mostly evaporates.',
+          '**Skip it if your models fit in 16 GB.** If you are running 7B and 14B models at 4-bit and never touching anything larger, a cheaper current-generation 16 GB card typically draws less power and, bought new, comes with a warranty. Paying the 24 GB premium for headroom you never use is an easy mistake to make on this purchase.',
+          'Skip it too if you are buying to train rather than to run inference. Fine-tuning anything substantial on a single 24 GB card means aggressive quantization and long waits; renting a larger card for a few hours is often faster and can be cheaper.',
+          'And skip it if your electricity is expensive. At $0.30/kWh or above, the running cost alone approaches the cheaper cloud rates, and the case for owning the card weakens sharply: at $0.30/kWh and eight hours a day, a $1,500 card needs about 4.5 years to break even against a $0.25 rental and about 20 years against $0.16.',
         ],
       },
 
@@ -417,8 +417,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Our Verdict',
         content: [
-          '**Buy a used RTX 3090 if you will use it more than about eight hours a day, every day, or if your data cannot leave your building — it is still one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card. Rent one if your usage is occasional, bursty or you are still finding out whether local inference suits your workload. If you are unsure which you are, rent first.**',
-          'For frequent local LLM use and privacy: buy. For occasional experimentation: rent. For uncertain or changing usage: rent first, and revisit the decision in six months once you know your actual hours. For anyone specifically chasing inexpensive 24 GB VRAM, a good-condition used RTX 3090 remains compelling in 2026 — the memory-shortage price increase has not changed that, only pushed the break-even further out. For a new purchase where efficiency, warranty and current-generation features matter more than upfront price, compare against a [current-generation card](/power-local-llm/best-gpu-buying-guide-local-llm-2026) instead.',
+          '**Buy a used RTX 3090 on cost grounds only if you will use it longer than it takes to break even — at eight hours a day, about 3 years against a $0.25/hour rental and 6.4 years against $0.16 — or buy it if your data cannot leave your building. It is still one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card. Rent one if your usage is occasional, bursty or you are still finding out whether local inference suits your workload. If you are unsure which you are, rent first.**',
+          'For heavy use that will outlast break-even, or data you cannot upload: buy. For occasional experimentation: rent. For uncertain or changing usage: rent first, and revisit the decision in six months once you know your actual hours. For anyone specifically chasing inexpensive 24 GB VRAM, a good-condition used RTX 3090 remains compelling in 2026 — the memory-shortage price increase has not changed that, only pushed the break-even further out. For a new purchase where efficiency, warranty and current-generation features matter more than upfront price, compare against a [current-generation card](/power-local-llm/best-gpu-buying-guide-local-llm-2026) instead.',
           'Bottom line: the RTX 3090\'s advantage is 24 GB of VRAM at used-market prices. Its costs are age, high power draw, heat, noise and the lack of a warranty. Neither side of that trade-off has changed in 2026 — only the purchase price has, and it moved against buying.',
           'Readers who are not ready to buy a used card can [rent a cloud GPU instead](/power-local-llm/best-cloud-gpu-providers); the [Vast.ai review](/power-local-llm/vast-ai-review) and the [Clore.ai review](/power-local-llm/clore-ai-review) cover two GPU marketplaces where cards are rented by the hour.',
         ],
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is the RTX 3090 still worth buying in 2026?',
-            a: 'For sustained local inference, yes — it remains one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card at $1,500–$1,725 used. For light or occasional use, no: renting the same GPU from $0.16 per hour is cheaper for years. The deciding factor is hours of actual use per week, not the specification.',
+            a: 'For sustained local inference, it can be — it remains one of the lowest-priced ways to get 24 GB on a CUDA-capable NVIDIA card at $1,500–$1,725 used. At eight hours a day, break-even is about 3 years against a $0.25/hour rental and 6.4 years against $0.16. For light or occasional use, no: renting the same GPU from $0.16 per hour is cheaper for years. The deciding factors are your real daily hours and how long you will keep using the card, not the specification.',
           },
           {
             q: 'Is the RTX 3090 good for Ollama?',
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is it safe to buy a used mining GPU?',
-            a: 'Usually, with checks. Mining cards reportedly ran at constant moderate load, which is said to be gentler than the thermal cycling of gaming, but they often need new thermal pads. Ask for a load-test photo showing memory junction temperature, buy from a seller offering returns, and treat any listing without both as a card you cannot verify.',
+            a: 'It can be, if you check the card first. Mining history alone does not tell you what condition a card is in, and thermal pads may need replacing. Ask for a load-test photo showing memory junction temperature, buy from a seller offering returns, and treat any listing without both as a card you cannot verify.',
           },
           {
             q: 'What power supply does an RTX 3090 need?',
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   de: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Die RTX 3090 ist einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte unter dem eigenen Schreibtisch — dieselbe Karte in der Cloud zu mieten kostet nur Cent pro Stunde. Dieser Leitfaden zeigt, wo die Grenze zwischen beiden Optionen tatsächlich verläuft.',
     metaDescription: 'Eine gebrauchte RTX 3090 kostet 2026 1.500–1.725 $, Mieten gibt es ab etwa 0,16 $/Stunde. Hier die Kauf-oder-Miete-Break-even-Rechnung für 24 GB VRAM bei lokalen LLMs.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '13 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und kleine Teams, die zwischen dem Kauf einer gebrauchten 24-GB-GPU und dem Mieten von Cloud-GPU-Zeit für lokale LLM-Inferenz entscheiden müssen',
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Kaufen Sie eine gebrauchte RTX 3090, wenn Sie sie mehr als etwa acht Stunden täglich, jeden Tag, nutzen — oder wenn Ihre Daten das Gebäude nicht verlassen dürfen. Andernfalls mieten Sie.** Bei 1.500–1.725 $ gebraucht (InsiderLLM-Tracker, 2026-11-23) gegen Miete ab 0,16 $ pro Stunde in der Cloud rechnet sich die Karte nur bei dauerhafter Auslastung — und 2026 kostet sie mehr als im März, was den Break-even weiter nach hinten verschiebt.',
+    leadAnswerBlock: '**Kaufen Sie eine gebrauchte RTX 3090 aus Kostengründen nur dann, wenn Sie sie länger nutzen, als der Break-even dauert: Bei acht Stunden täglich sind das rund 3 Jahre gegenüber einer Median-Miete von 0,25 $/Stunde und rund 6,4 Jahre gegenüber einem Angebot für 0,16 $. Daten, die Ihr Gebäude nicht verlassen dürfen, sind ein eigener Kaufgrund. Andernfalls mieten Sie.** Gebraucht kostet die Karte 1.500–1.725 $ (InsiderLLM-Tracker, 2026-11-23). Die Zeiträume setzen eine 1.500-$-Karte, etwa 0,08 $ Strom pro Stunde und keinen Wiederverkauf voraus; beim Median von 1.650 $ sind sie etwa 10 % länger. Zudem kostet die Karte mehr als im März, was den Break-even weiter nach hinten verschiebt.',
 
     quickAnswerTop: {
       de: {
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Break-even gegen eine Median-Miete von 0,25 $/h bei 2 Stunden täglich liegt bei rund 12 Jahren — bei 8 Stunden täglich bei etwa 3',
           'Kaufen für Datenschutz, Latenz, dauerhaft laufende Agenten und ständiges Fine-Tuning; mieten für Spitzenlast und Experimente',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 für lokale LLMs 2026: Kaufen oder mieten?',
       description: 'Break-even-Analyse zwischen dem Kauf einer gebrauchten NVIDIA RTX 3090 und dem Mieten derselben GPU bei Cloud-Anbietern für lokale LLM-Inferenz, mit Preisen von 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -608,11 +608,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: 'Entscheidung in 30 Sekunden',
-        content: 'Beide Wege liefern dieselbe GPU und dieselben 24 GB VRAM. Die eigentliche Frage ist, wie viele Stunden Sie sie tatsächlich nutzen werden — und ob Ihre Daten das Netzwerk verlassen dürfen.',
+        content: 'Beide Wege liefern dieselbe GPU und dieselben 24 GB VRAM. Die wichtigsten Fragen sind, wie viele Stunden täglich und wie viele Jahre Sie sie tatsächlich nutzen werden — und ob Ihre Daten das Netzwerk verlassen dürfen.',
         decisionBlock: {
           title: 'Gebrauchte RTX 3090 kaufen oder mieten?',
           localIf: [
-            'Sie nutzen sie durchgehend mehr als etwa 8 Stunden täglich',
+            'Sie nutzen sie über den Break-even hinaus: bei 8 Stunden täglich rund 3 Jahre gegenüber 0,25 $/h Miete, 6,4 gegenüber 0,16 $',
             'Die Richtlinien oder Verträge Ihrer Organisation erlauben das Hochladen Ihrer Daten zu einem Dritten nicht — Gesundheits-, Rechts-, Kunden- oder regulierte Daten',
             'Sie wollen einen dauerhaft laufenden Agenten, Home-Assistant oder nächtliche Batch-Jobs',
             'Sie fine-tunen oder embedden regelmäßig, nicht nur gelegentlich',
@@ -627,18 +627,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Unter 2 Stunden täglich → mieten, in sechs Monaten neu bewerten',
-            '8+ Stunden täglich, jeden Tag → kaufen, die Karte zahlt sich gegenüber Mieten von 0,16–0,25 $ pro Stunde in etwa 3–6,4 Jahren aus',
+            '8 Stunden täglich → Break-even nach rund 3 Jahren gegenüber 0,25 $/h und 6,4 gegenüber 0,16 $; aus Kostengründen nur bei längerer Nutzung kaufen',
             'Jegliche Daten, die Sie nicht hochladen dürfen → kaufen, Kosten sind nicht entscheidend',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Eine gebrauchte RTX 3090 lohnt sich für lokale LLMs, wenn Sie sie mehr als etwa acht Stunden täglich, jeden Tag, nutzen oder Ihre Daten nicht hochgeladen werden dürfen; andernfalls ist das Mieten derselben Karte ab 0,16 $ pro Stunde günstiger.',
+            text: 'Rein nach Kosten lohnt sich eine gebrauchte RTX 3090 nur, wenn Sie sie länger nutzen, als der Break-even dauert: bei acht Stunden täglich rund 3 Jahre gegenüber einer Miete von 0,25 $ pro Stunde und 6,4 Jahre gegenüber 0,16 $. Daten, die nicht hochgeladen werden dürfen, sind ein eigener Kaufgrund.',
           },
           {
             type: 'plain-terms',
-            text: 'Die Karte zu besitzen ist wie ein Auto zu kaufen; mieten ist wie Taxifahren. Taxis sind günstiger, bis man täglich fährt — und anders als Taxifahrten lässt sich eine eigene Karte später verkaufen, was einen Teil des Kaufpreises ausgleichen kann, ohne Garantie.',
+            text: 'Die Karte zu besitzen ist wie ein Auto zu kaufen; mieten ist wie Taxifahren. Taxis bleiben günstiger, solange man nicht über Jahre hinweg viel fährt — und anders als Taxifahrten lässt sich eine eigene Karte später verkaufen, was einen Teil des Kaufpreises ausgleichen kann, ohne Garantie.',
           },
         ],
       },
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der ehrliche Vorbehalt: Das sind etwa sechs Jahre alte Karten, viele davon ex-Mining oder ex-Gaming, ohne Garantie von Privatverkäufern verkauft. Die Fehlerbilder sind bekannt und prüfbar, das Risiko also beherrschbar — aber real, und genau deshalb sollte man bei einem Verkäufer mit Rückgaberecht kaufen statt beim billigsten Angebot.',
         ],
         items: [
-          'Bitten Sie um ein Foto der Karte während eines Lasttests mit sichtbaren Temperaturen — eine Speicher-Junction-Temperatur über etwa 100 °C unter Last deutet auf ausgetrocknete Thermal-Pads hin.',
+          'Bitten Sie um ein Foto der Karte während eines Lasttests mit sichtbaren Temperaturen — eine Speicher-Junction-Temperatur über etwa 100 °C unter Last kann auf ausgetrocknete Thermal-Pads hindeuten.',
           'GDDR6X wird bei dieser Karte konstruktionsbedingt heiß; ein Verkäufer, der die Thermal-Pads bereits erneuert hat, ist ein gutes Zeichen, kein Warnsignal.',
           'Bestätigen Sie, dass es sich um die 24-GB-RTX-3090 handelt und nicht um eine RTX 3080 — der Titel des Angebots ist kein Beweis, fragen Sie nach einem GPU-Z-Screenshot.',
           'Bevorzugen Sie eine Plattform mit Käuferschutz und Rückgaberecht. Die 50 $, die Sie bei einem Angebot ohne Rückgabe sparen, sind das Risiko bei einer etwa sechs Jahre alten Karte nicht wert.',
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Gegen eine Median-Miete von 0,25 $/Stunde braucht eine 1.500-$-Karte rund 8.800 GPU-Stunden, um sich zu amortisieren — etwa 3 Jahre bei acht Stunden täglich oder 12 Jahre bei zwei.** Das ist die Zahl, die den Kauf entscheiden sollte.',
           'Die Rechnung zieht ab, was der Betrieb der Karte kostet. Bei 450 W am Netzteil und einem jüngsten US-Wohnstrom-Durchschnitt von 0,18 $/kWh kostet lokale Inferenz etwa 0,08 $ pro Stunde an Strom — Sie vergleichen also nicht 1.500 $ gegen 0,25 $/Stunde, sondern gegen die rund 0,17 $/Stunde, die Sie tatsächlich sparen.',
-          'Annahmen: 1.500-$-Karte (unteres Ende der Tracker-Spanne; beim Median von 1.650 $ ist jeder Zeitraum etwa 10 % länger), 450 W Systemverbrauch, 0,18 $/kWh. Setzen Sie Ihren eigenen Strompreis ein — er verändert das Ergebnis stärker als alles andere in der Tabelle, und in Märkten über 0,30 $/kWh verschwindet das Kaufargument weitgehend.',
+          'Annahmen: 1.500-$-Karte (unteres Ende der Tracker-Spanne; beim Median von 1.650 $ ist jeder Zeitraum etwa 10 % länger), 450 W Systemverbrauch, 0,18 $/kWh. Setzen Sie Ihren eigenen Strompreis ein — er verändert das Ergebnis stärker als alles andere in der Tabelle, und über 0,30 $/kWh wird das Kaufargument deutlich schwächer: Bei 0,30 $/kWh liegt der Break-even bei acht Stunden täglich bei rund 4,5 Jahren gegenüber 0,25 $ Miete und bei rund 20 Jahren gegenüber 0,16 $.',
         ],
         columns: ['Nutzung', 'vs 0,16 $/h', 'vs 0,25 $/h', 'vs 0,50 $/h'],
         rows: [
@@ -844,12 +844,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Leser: 'Wochenend-Hobbyist',
             Urteil: 'Mieten',
-            Warum: 'Ein paar Stunden pro Woche gegen 1.500 $ Ausgaben sind Jahrzehnte vom Break-even entfernt. Mieten Sie ein Jahr — wenn Sie sich dabei ertappen, täglich zu mieten, kaufen Sie dann, und wissen bereits genau, welche Karte Sie brauchen.',
+            Warum: 'Ein paar Stunden pro Woche gegen 1.500 $ Ausgaben sind Jahrzehnte vom Break-even entfernt. Mieten Sie ein Jahr — wenn Sie feststellen, dass Sie täglich viele Stunden mieten, prüfen Sie dann die Break-even-Tabelle und entscheiden Sie — dann wissen Sie auch genau, welche Karte Sie brauchen.',
           },
           {
             Leser: 'Täglicher Vielnutzer',
             Urteil: 'Kaufen',
-            Warum: 'Bei acht oder mehr Stunden täglich amortisiert sich die Karte gegenüber Mieten von 0,16–0,25 $ pro Stunde in etwa 3 bis 6,4 Jahren, und der Wiederverkauf kann einen Teil des Rests ausgleichen, ist aber nicht garantiert. Der größere Gewinn ist verhaltensbezogen: Eine eigene GPU hat keinen laufenden Zähler, man hört auf, Experimente zu rationieren.',
+            Warum: 'Bei acht Stunden täglich ist der Break-even gegenüber 0,25 $/h Miete nach rund 3 Jahren erreicht, gegenüber 0,16 $ nach 6,4 Jahren; der Kauf lohnt sich also nur, wenn diese Nutzung länger anhält. Der Wiederverkauf kann einen Teil der Kosten ausgleichen, ist aber nicht garantiert. Der größere Gewinn ist verhaltensbezogen: Eine eigene GPU hat keinen laufenden Zähler, man hört auf, Experimente zu rationieren.',
           },
           {
             Leser: 'Kleines Team oder Startup',
@@ -874,9 +874,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: 'Verzichten Sie auf die RTX 3090, wenn',
         content: [
-          '**Verzichten Sie darauf, wenn Ihre Modelle in 16 GB passen.** Wenn Sie 7B- und 14B-Modelle bei 4-Bit fahren und nie etwas Größeres anfassen, ist eine günstigere aktuelle 16-GB-Karte leiser, zieht deutlich weniger Strom und kommt mit Garantie. Den 24-GB-Aufpreis für Spielraum zu zahlen, den man nie nutzt, ist bei diesem Kauf ein leicht gemachter Fehler.',
-          'Verzichten Sie auch darauf, wenn Sie zum Trainieren statt zum Inferenzieren kaufen. Substanzielles Fine-Tuning auf einer einzelnen 24-GB-Karte bedeutet aggressive Quantisierung und lange Wartezeiten; eine größere Karte für ein paar Stunden zu mieten ist sowohl schneller als auch günstiger.',
-          'Und verzichten Sie darauf, wenn Ihr Strom teuer ist. Ab 0,30 $/kWh nähern sich die reinen Betriebskosten den günstigeren Cloud-Preisen an, und das Argument fürs Besitzen verschwindet weitgehend.',
+          '**Verzichten Sie darauf, wenn Ihre Modelle in 16 GB passen.** Wenn Sie 7B- und 14B-Modelle bei 4-Bit fahren und nie etwas Größeres anfassen, zieht eine günstigere aktuelle 16-GB-Karte in der Regel weniger Strom und kommt als Neuware mit Garantie. Den 24-GB-Aufpreis für Spielraum zu zahlen, den man nie nutzt, ist bei diesem Kauf ein leicht gemachter Fehler.',
+          'Verzichten Sie auch darauf, wenn Sie zum Trainieren statt zum Inferenzieren kaufen. Substanzielles Fine-Tuning auf einer einzelnen 24-GB-Karte bedeutet aggressive Quantisierung und lange Wartezeiten; eine größere Karte für ein paar Stunden zu mieten ist oft schneller und kann günstiger sein.',
+          'Und verzichten Sie darauf, wenn Ihr Strom teuer ist. Ab 0,30 $/kWh nähern sich die reinen Betriebskosten den günstigeren Cloud-Preisen an, und das Argument fürs Besitzen wird deutlich schwächer: Bei 0,30 $/kWh und acht Stunden täglich braucht eine 1.500-$-Karte rund 4,5 Jahre bis zum Break-even gegenüber 0,25 $ Miete und rund 20 Jahre gegenüber 0,16 $.',
         ],
       },
 
@@ -884,8 +884,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Unser Fazit',
         content: [
-          '**Kaufen Sie eine gebrauchte RTX 3090, wenn Sie sie mehr als etwa acht Stunden täglich, jeden Tag, nutzen — oder wenn Ihre Daten das Gebäude nicht verlassen dürfen: Sie ist immer noch einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte. Mieten Sie, wenn Ihre Nutzung gelegentlich oder stoßweise ist oder Sie noch herausfinden, ob lokale Inferenz zu Ihrer Arbeitslast passt. Sind Sie unsicher, mieten Sie zuerst.**',
-          'Für häufige lokale LLM-Nutzung und Datenschutz: kaufen. Für gelegentliches Experimentieren: mieten. Bei unsicherer oder sich verändernder Nutzung: erst mieten und die Entscheidung in sechs Monaten neu bewerten, sobald Sie Ihre tatsächlichen Stunden kennen. Für alle, die speziell günstiges 24-GB-VRAM suchen, bleibt eine gebrauchte RTX 3090 in gutem Zustand 2026 überzeugend — der Preisanstieg durch die Speicherknappheit hat daran nichts geändert, nur den Break-even weiter hinausgeschoben. Für einen Neukauf, bei dem Effizienz, Garantie und aktuelle Funktionen wichtiger sind als der Anschaffungspreis, vergleichen Sie stattdessen mit einer [aktuellen Karte](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
+          '**Kaufen Sie eine gebrauchte RTX 3090 aus Kostengründen nur, wenn Sie sie länger nutzen, als der Break-even dauert — bei acht Stunden täglich rund 3 Jahre gegenüber 0,25 $/h Miete und 6,4 Jahre gegenüber 0,16 $ — oder wenn Ihre Daten das Gebäude nicht verlassen dürfen. Sie ist immer noch einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte. Mieten Sie, wenn Ihre Nutzung gelegentlich oder stoßweise ist oder Sie noch herausfinden, ob lokale Inferenz zu Ihrer Arbeitslast passt. Sind Sie unsicher, mieten Sie zuerst.**',
+          'Für intensive Nutzung über den Break-even hinaus oder für Daten, die nicht hochgeladen werden dürfen: kaufen. Für gelegentliches Experimentieren: mieten. Bei unsicherer oder sich verändernder Nutzung: erst mieten und die Entscheidung in sechs Monaten neu bewerten, sobald Sie Ihre tatsächlichen Stunden kennen. Für alle, die speziell günstiges 24-GB-VRAM suchen, bleibt eine gebrauchte RTX 3090 in gutem Zustand 2026 überzeugend — der Preisanstieg durch die Speicherknappheit hat daran nichts geändert, nur den Break-even weiter hinausgeschoben. Für einen Neukauf, bei dem Effizienz, Garantie und aktuelle Funktionen wichtiger sind als der Anschaffungspreis, vergleichen Sie stattdessen mit einer [aktuellen Karte](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
           'Fazit: Der Vorteil der RTX 3090 sind 24 GB VRAM zu Gebrauchtmarktpreisen. Ihre Kosten sind Alter, hoher Stromverbrauch, Wärme, Lautstärke und fehlende Garantie. Keine Seite dieses Trade-offs hat sich 2026 geändert — nur der Kaufpreis, und der hat sich gegen den Kauf entwickelt.',
           'Wer noch keine gebrauchte Karte kaufen möchte, kann [stattdessen eine Cloud-GPU mieten](/de/power-local-llm/best-cloud-gpu-providers); die [Vast.ai-Bewertung](/de/power-local-llm/vast-ai-review) und die [Clore.ai-Bewertung](/de/power-local-llm/clore-ai-review) stellen zwei GPU-Marktplätze vor, auf denen Karten stundenweise gemietet werden.',
         ],
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Lohnt sich die RTX 3090 2026 noch als Kauf?',
-            a: 'Für dauerhafte lokale Inferenz ja — sie bleibt gebraucht einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte bei 1.500–1.725 $. Bei geringer oder gelegentlicher Nutzung nein: Dieselbe GPU ab 0,16 $ pro Stunde zu mieten ist über Jahre günstiger. Entscheidend sind die tatsächlichen Nutzungsstunden pro Woche, nicht die Spezifikation.',
+            a: 'Für dauerhafte lokale Inferenz kann sie es sein — sie bleibt gebraucht bei 1.500–1.725 $ einer der günstigsten Wege zu 24 GB auf einer CUDA-fähigen NVIDIA-Karte. Bei acht Stunden täglich liegt der Break-even bei rund 3 Jahren gegenüber 0,25 $/h Miete und bei 6,4 Jahren gegenüber 0,16 $. Bei geringer oder gelegentlicher Nutzung nein: Dieselbe GPU ab 0,16 $ pro Stunde zu mieten ist über Jahre günstiger. Entscheidend sind Ihre tatsächlichen täglichen Stunden und wie lange Sie die Karte nutzen, nicht die Spezifikation.',
           },
           {
             q: 'Ist die RTX 3090 gut für Ollama?',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist der Kauf einer gebrauchten Mining-GPU sicher?',
-            a: 'Meist ja, mit Prüfung. Mining-Karten liefen Berichten zufolge unter konstant moderater Last, was angeblich schonender ist als das thermische Zyklen beim Gaming, brauchen aber oft neue Thermal-Pads. Fragen Sie nach einem Lasttest-Foto mit sichtbarer Speicher-Junction-Temperatur, kaufen Sie bei einem Verkäufer mit Rückgaberecht, und behandeln Sie jedes Angebot ohne beides als nicht überprüfbar.',
+            a: 'Das kann sie sein, wenn Sie die Karte vorher prüfen. Die Mining-Vergangenheit allein sagt nichts über den Zustand aus, und die Thermal-Pads müssen möglicherweise erneuert werden. Fragen Sie nach einem Lasttest-Foto mit sichtbarer Speicher-Junction-Temperatur, kaufen Sie bei einem Verkäufer mit Rückgaberecht, und behandeln Sie jedes Angebot ohne beides als nicht überprüfbar.',
           },
           {
             q: 'Welches Netzteil braucht eine RTX 3090?',
@@ -969,7 +969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   fr: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -983,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'La RTX 3090 est l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA, chez soi, et louer cette même carte dans le cloud coûte quelques centimes par heure. Ce guide détermine où se situe réellement la limite entre ces deux options.',
     metaDescription: 'Une RTX 3090 d\'occasion coûte 1 500–1 725 $ en 2026 ; la location démarre à environ 0,16 $/heure. Voici le calcul du seuil de rentabilité achat vs location pour 24 Go de VRAM en LLM local.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '13 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs et petites équipes hésitant entre acheter un GPU 24 Go d\'occasion et louer du temps GPU cloud pour l\'inférence LLM locale',
@@ -1000,7 +1000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Achetez une RTX 3090 d\'occasion si vous comptez l\'utiliser plus de huit heures par jour environ, tous les jours, ou si vos données ne peuvent pas quitter vos locaux. Louez-en une sinon.** À 1 500–1 725 $ d\'occasion (suivi InsiderLLM, 2026-11-23) contre une location à partir de 0,16 $ de l\'heure dans le cloud, la carte ne se rentabilise qu\'en usage soutenu — et en 2026 elle coûte plus cher qu\'en mars, ce qui repousse le seuil de rentabilité plus loin.',
+    leadAnswerBlock: '**Pour une raison de coût, n\'achetez une RTX 3090 d\'occasion que si vous comptez l\'utiliser plus longtemps que le délai de rentabilité : à huit heures par jour, environ 3 ans face à une location médiane à 0,25 $/heure et environ 6,4 ans face à une offre à 0,16 $. Des données qui ne peuvent pas quitter vos locaux sont une raison distincte d\'acheter. Sinon, louez.** La carte coûte 1 500–1 725 $ d\'occasion (suivi InsiderLLM, 2026-11-23). Ces durées supposent une carte à 1 500 $, environ 0,08 $ d\'électricité par heure et aucune revente ; à la médiane de 1 650 $, elles sont environ 10 % plus longues. La carte coûte aussi plus cher qu\'en mars, ce qui repousse le seuil de rentabilité.',
 
     quickAnswerTop: {
       fr: {
@@ -1013,7 +1013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le seuil de rentabilité face à une location médiane à 0,25 $/h à raison de 2 h/jour est d\'environ 12 ans — à 8 h/jour, environ 3',
           'Achetez pour la confidentialité, la latence, les agents actifs en permanence et le fine-tuning régulier ; louez pour les pics d\'usage et les expérimentations',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 pour LLM local en 2026 : acheter ou louer ?',
       description: 'Analyse du seuil de rentabilité entre acheter une NVIDIA RTX 3090 d\'occasion et louer le même GPU chez des fournisseurs cloud pour l\'inférence LLM locale, avec les prix 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1075,11 +1075,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: 'Décidez en 30 secondes',
-        content: 'Les deux options offrent le même GPU et les mêmes 24 Go de VRAM. La seule vraie question est le nombre d\'heures que vous utiliserez réellement, et si vos données peuvent quitter votre réseau.',
+        content: 'Les deux options offrent le même GPU et les mêmes 24 Go de VRAM. Les principales questions sont le nombre d\'heures par jour et le nombre d\'années pendant lesquelles vous l\'utiliserez réellement, et si vos données peuvent quitter votre réseau.',
         decisionBlock: {
           title: 'Acheter une RTX 3090 d\'occasion, ou en louer une ?',
           localIf: [
-            'Vous l\'utiliserez plus de 8 heures par jour environ, de façon régulière',
+            'Vous l\'utiliserez au-delà du seuil : à 8 h/jour, environ 3 ans face à une location à 0,25 $/h, 6,4 face à 0,16 $',
             'La politique ou le contrat de votre organisation n\'autorise pas l\'envoi de vos données à un tiers — santé, juridique, client ou secteur réglementé',
             'Vous voulez un agent actif en permanence, un assistant domestique ou des tâches nocturnes',
             'Vous faites du fine-tuning ou de l\'embedding régulièrement, pas occasionnellement',
@@ -1094,18 +1094,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Moins de 2 h/jour → louez, et réévaluez dans six mois',
-            '8 h/jour ou plus, tous les jours → achetez, la carte se rentabilise en 3 à 6,4 ans environ face à des locations de 0,16 à 0,25 $ de l\'heure',
+            '8 h/jour → rentabilité en environ 3 ans face à 0,25 $/h et 6,4 face à 0,16 $ ; pour le coût, n\'achetez que si vous l\'utiliserez plus longtemps',
             'Toute donnée que vous ne pouvez pas téléverser → achetez, le coût n\'est pas le facteur décisif',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Une RTX 3090 d\'occasion vaut l\'achat pour les LLM locaux si vous l\'utiliserez plus de huit heures par jour environ, tous les jours, ou si vos données ne peuvent pas être téléversées ; sinon, louer la même carte à partir de 0,16 $ de l\'heure est plus économique.',
+            text: 'Sur le seul critère du coût, une RTX 3090 d\'occasion ne vaut l\'achat que si vous l\'utilisez plus longtemps que le délai de rentabilité : à huit heures par jour, environ 3 ans face à une location à 0,25 $ de l\'heure et 6,4 ans face à 0,16 $. Des données qui ne peuvent pas être téléversées sont une raison distincte d\'acheter.',
           },
           {
             type: 'plain-terms',
-            text: 'Posséder la carte, c\'est comme acheter une voiture ; louer, c\'est comme prendre des taxis. Les taxis sont moins chers jusqu\'à ce qu\'on roule tous les jours — et contrairement aux courses de taxi, une carte qu\'on possède peut être revendue, ce qui peut compenser une partie du prix d\'achat, sans garantie.',
+            text: 'Posséder la carte, c\'est comme acheter une voiture ; louer, c\'est comme prendre des taxis. Les taxis restent moins chers, sauf si l\'on roule beaucoup pendant des années — et contrairement aux courses de taxi, une carte qu\'on possède peut être revendue, ce qui peut compenser une partie du prix d\'achat, sans garantie.',
           },
         ],
       },
@@ -1176,7 +1176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La réserve honnête : ce sont des cartes vieilles d\'environ six ans, souvent issues du minage ou du gaming, vendues sans garantie par des particuliers. Les modes de défaillance sont connus et vérifiables, le risque est donc gérable — mais il est réel, et c\'est pourquoi il vaut mieux acheter chez un vendeur qui accepte les retours plutôt que sur l\'annonce la moins chère trouvée.',
         ],
         items: [
-          'Demandez une photo de la carte pendant un test de charge avec les températures visibles — une température de jonction mémoire au-delà d\'environ 100 °C sous charge indique des pads thermiques desséchés.',
+          'Demandez une photo de la carte pendant un test de charge avec les températures visibles — une température de jonction mémoire au-delà d\'environ 100 °C sous charge peut indiquer des pads thermiques desséchés.',
           'Le GDDR6X de cette carte chauffe fort par conception ; un vendeur qui a remplacé les pads thermiques est bon signe, pas un signal d\'alerte.',
           'Confirmez qu\'il s\'agit bien de la RTX 3090 24 Go et non d\'une RTX 3080 — le titre de l\'annonce n\'est pas une preuve, demandez une capture d\'écran GPU-Z.',
           'Préférez une plateforme avec protection acheteur et retours possibles. Les 50 $ économisés sur une annonce sans retour ne valent pas le risque sur une carte vieille d\'environ six ans.',
@@ -1285,7 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Face à une location médiane à 0,25 $/heure, une carte à 1 500 $ met environ 8 800 heures GPU à se rentabiliser — environ 3 ans à huit heures par jour, ou 12 ans à deux heures.** C\'est le chiffre qui devrait guider l\'achat.',
           'Le calcul déduit ce que coûte l\'exploitation de la carte. À 450 W à la prise et à une moyenne résidentielle US récente de 0,18 $/kWh, l\'inférence locale coûte environ 0,08 $ de l\'heure en électricité — vous ne comparez donc pas 1 500 $ à 0,25 $/heure, mais aux environ 0,17 $/heure que vous économisez réellement.',
-          'Hypothèses : carte à 1 500 $ (bas de la fourchette du suivi ; à la médiane de 1 650 $, chaque durée est environ 10 % plus longue), consommation système de 450 W, 0,18 $/kWh. Substituez votre propre tarif d\'électricité — il fait bouger le résultat plus que tout autre paramètre du tableau, et sur les marchés au-delà de 0,30 $/kWh, l\'argument de l\'achat disparaît largement.',
+          'Hypothèses : carte à 1 500 $ (bas de la fourchette du suivi ; à la médiane de 1 650 $, chaque durée est environ 10 % plus longue), consommation système de 450 W, 0,18 $/kWh. Substituez votre propre tarif d\'électricité — il fait bouger le résultat plus que tout autre paramètre du tableau, et au-delà de 0,30 $/kWh, l\'argument de l\'achat s\'affaiblit nettement : à 0,30 $/kWh et huit heures par jour, la rentabilité arrive après environ 4,5 ans face à la location à 0,25 $ et environ 20 ans face à 0,16 $.',
         ],
         columns: ['Usage', 'vs 0,16 $/h', 'vs 0,25 $/h', 'vs 0,50 $/h'],
         rows: [
@@ -1311,12 +1311,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Profil: 'Amateur du week-end',
             Verdict: 'Louer',
-            Pourquoi: 'Quelques heures par semaine contre une dépense de 1 500 $, c\'est à des décennies du seuil de rentabilité. Louez pendant un an, et si vous vous surprenez à louer quotidiennement, achetez alors — vous saurez aussi exactement quelle carte il vous faut.',
+            Pourquoi: 'Quelques heures par semaine contre une dépense de 1 500 $, c\'est à des décennies du seuil de rentabilité. Louez pendant un an, et si vous constatez que vous louez de nombreuses heures chaque jour, consultez alors le tableau de rentabilité et décidez — vous saurez aussi exactement quelle carte il vous faut.',
           },
           {
             Profil: 'Utilisateur intensif quotidien',
             Verdict: 'Acheter',
-            Pourquoi: 'À huit heures par jour ou plus, la carte se rentabilise en 3 à 6,4 ans environ face à des locations de 0,16 à 0,25 $ de l\'heure, et la revente peut compenser une partie du reste, sans garantie. Le vrai gain est comportemental : un GPU possédé n\'a pas de compteur qui tourne, on arrête de rationner ses expérimentations.',
+            Pourquoi: 'À huit heures par jour, la carte se rentabilise en environ 3 ans face à une location à 0,25 $/h et en 6,4 ans face à 0,16 $ ; l\'achat n\'est donc gagnant que si cet usage dure plus longtemps. La revente peut compenser une partie du coût, sans garantie. Le vrai gain est comportemental : un GPU possédé n\'a pas de compteur qui tourne, on arrête de rationner ses expérimentations.',
           },
           {
             Profil: 'Petite équipe ou startup',
@@ -1341,9 +1341,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: 'Évitez la RTX 3090 si',
         content: [
-          '**Évitez-la si vos modèles tiennent en 16 Go.** Si vous faites tourner des modèles 7B et 14B en 4 bits sans jamais toucher à plus gros, une carte 16 Go actuelle moins chère est plus silencieuse, consomme bien moins et bénéficie d\'une garantie. Payer le surcoût des 24 Go pour une marge jamais utilisée est une erreur facile à commettre sur cet achat.',
-          'Évitez-la aussi si vous achetez pour entraîner plutôt que pour faire de l\'inférence. Un fine-tuning substantiel sur une seule carte 24 Go implique une quantification agressive et de longues attentes ; louer une carte plus grosse pour quelques heures est à la fois plus rapide et moins cher.',
-          'Et évitez-la si votre électricité est chère. À 0,30 $/kWh ou plus, le seul coût d\'exploitation se rapproche des tarifs cloud les moins chers, et l\'argument de la possession s\'efface largement.',
+          '**Évitez-la si vos modèles tiennent en 16 Go.** Si vous faites tourner des modèles 7B et 14B en 4 bits sans jamais toucher à plus gros, une carte 16 Go actuelle moins chère consomme généralement moins et, achetée neuve, bénéficie d\'une garantie. Payer le surcoût des 24 Go pour une marge jamais utilisée est une erreur facile à commettre sur cet achat.',
+          'Évitez-la aussi si vous achetez pour entraîner plutôt que pour faire de l\'inférence. Un fine-tuning substantiel sur une seule carte 24 Go implique une quantification agressive et de longues attentes ; louer une carte plus grosse pour quelques heures est souvent plus rapide et peut être moins cher.',
+          'Et évitez-la si votre électricité est chère. À 0,30 $/kWh ou plus, le seul coût d\'exploitation se rapproche des tarifs cloud les moins chers, et l\'argument de la possession s\'affaiblit nettement : à 0,30 $/kWh et huit heures par jour, une carte à 1 500 $ met environ 4,5 ans à se rentabiliser face à une location à 0,25 $ et environ 20 ans face à 0,16 $.',
         ],
       },
 
@@ -1351,8 +1351,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Notre verdict',
         content: [
-          '**Achetez une RTX 3090 d\'occasion si vous l\'utiliserez plus de huit heures par jour environ, tous les jours, ou si vos données ne peuvent pas quitter vos locaux — c\'est toujours l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA. Louez-en une si votre usage est occasionnel, irrégulier, ou si vous cherchez encore à savoir si l\'inférence locale convient à votre charge de travail. En cas de doute, louez d\'abord.**',
-          'Pour un usage LLM local fréquent et la confidentialité : achetez. Pour une expérimentation occasionnelle : louez. En cas d\'usage incertain ou changeant : louez d\'abord, et réévaluez la décision dans six mois une fois vos heures réelles connues. Pour quiconque cherche spécifiquement de la VRAM 24 Go à bas prix, une RTX 3090 d\'occasion en bon état reste convaincante en 2026 — la hausse de prix due à la pénurie de mémoire n\'a rien changé à cela, elle a seulement repoussé le seuil de rentabilité. Pour un achat neuf où l\'efficacité, la garantie et les fonctionnalités actuelles comptent plus que le prix initial, comparez plutôt avec une [carte actuelle](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
+          '**Pour une raison de coût, n\'achetez une RTX 3090 d\'occasion que si vous l\'utiliserez plus longtemps que le délai de rentabilité — à huit heures par jour, environ 3 ans face à une location à 0,25 $/h et 6,4 ans face à 0,16 $ — ou achetez-la si vos données ne peuvent pas quitter vos locaux. C\'est toujours l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA. Louez-en une si votre usage est occasionnel, irrégulier, ou si vous cherchez encore à savoir si l\'inférence locale convient à votre charge de travail. En cas de doute, louez d\'abord.**',
+          'Pour un usage intensif qui dépassera le seuil de rentabilité, ou des données que vous ne pouvez pas téléverser : achetez. Pour une expérimentation occasionnelle : louez. En cas d\'usage incertain ou changeant : louez d\'abord, et réévaluez la décision dans six mois une fois vos heures réelles connues. Pour quiconque cherche spécifiquement de la VRAM 24 Go à bas prix, une RTX 3090 d\'occasion en bon état reste convaincante en 2026 — la hausse de prix due à la pénurie de mémoire n\'a rien changé à cela, elle a seulement repoussé le seuil de rentabilité. Pour un achat neuf où l\'efficacité, la garantie et les fonctionnalités actuelles comptent plus que le prix initial, comparez plutôt avec une [carte actuelle](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
           'En résumé : l\'avantage de la RTX 3090 est ses 24 Go de VRAM à prix de marché d\'occasion. Ses coûts sont l\'âge, la forte consommation, la chaleur, le bruit et l\'absence de garantie. Aucun des deux côtés de cet arbitrage n\'a changé en 2026 — seul le prix d\'achat a bougé, et dans le sens défavorable à l\'achat.',
           'Les lecteurs qui ne sont pas prêts à acheter une carte d\'occasion peuvent [louer un GPU cloud à la place](/fr/power-local-llm/best-cloud-gpu-providers) ; l\'[avis sur Vast.ai](/fr/power-local-llm/vast-ai-review) et l\'[avis sur Clore.ai](/fr/power-local-llm/clore-ai-review) présentent deux places de marché de GPU où les cartes se louent à l\'heure.',
         ],
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'La RTX 3090 vaut-elle encore l\'achat en 2026 ?',
-            a: 'Pour une inférence locale soutenue, oui — elle reste l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA, à 1 500–1 725 $ d\'occasion. Pour un usage léger ou occasionnel, non : louer le même GPU à partir de 0,16 $ de l\'heure est moins cher pendant des années. Le facteur décisif est le nombre d\'heures d\'usage réel par semaine, pas la fiche technique.',
+            a: 'Pour une inférence locale soutenue, elle peut l\'être — elle reste l\'un des moyens les moins coûteux d\'obtenir 24 Go sur une carte NVIDIA compatible CUDA, à 1 500–1 725 $ d\'occasion. À huit heures par jour, la rentabilité arrive après environ 3 ans face à une location à 0,25 $/h et 6,4 ans face à 0,16 $. Pour un usage léger ou occasionnel, non : louer le même GPU à partir de 0,16 $ de l\'heure est moins cher pendant des années. Les facteurs décisifs sont vos heures réelles par jour et la durée pendant laquelle vous garderez la carte en service, pas la fiche technique.',
           },
           {
             q: 'La RTX 3090 est-elle adaptée à Ollama ?',
@@ -1392,7 +1392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Est-il prudent d\'acheter un GPU de minage d\'occasion ?',
-            a: 'Généralement oui, avec vérifications. Les cartes de minage tourneraient, selon certains témoignages, sous charge modérée constante, ce qui serait plus doux que les cycles thermiques du gaming, mais nécessitent souvent de nouveaux pads thermiques. Demandez une photo de test de charge montrant la température de jonction mémoire, achetez chez un vendeur proposant des retours, et considérez toute annonce sans les deux comme invérifiable.',
+            a: 'Elle peut l\'être, si vous vérifiez d\'abord la carte. Le seul passé de minage ne dit rien de son état, et les pads thermiques peuvent être à remplacer. Demandez une photo de test de charge montrant la température de jonction mémoire, achetez chez un vendeur proposant des retours, et considérez toute annonce sans les deux comme invérifiable.',
           },
           {
             q: 'De quelle alimentation a besoin une RTX 3090 ?',
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   es: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -1450,7 +1450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'La RTX 3090 es una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA en tu propio equipo, y alquilar la misma tarjeta en la nube cuesta céntimos por hora. Esta guía calcula dónde está realmente el límite entre ambas opciones.',
     metaDescription: 'Una RTX 3090 usada cuesta 1.500–1.725 $ en 2026; alquilarla cuesta desde unos 0,16 $/hora. Aquí el cálculo de punto de equilibrio comprar vs alquilar para 24 GB de VRAM en LLM local.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '13 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores y equipos pequeños que deciden entre comprar una GPU usada de 24 GB o alquilar tiempo de GPU en la nube para inferencia de LLM local',
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Compra una RTX 3090 usada si vas a usarla más de unas ocho horas al día, todos los días, o si tus datos no pueden salir de tu edificio. Alquila en cualquier otro caso.** A 1.500–1.725 $ usada (rastreador de InsiderLLM, 2026-11-23) frente a un alquiler desde 0,16 $ por hora en la nube, la tarjeta solo se amortiza con uso sostenido — y en 2026 cuesta más que en marzo, lo que aleja el punto de equilibrio.',
+    leadAnswerBlock: '**Por costes, compra una RTX 3090 usada solo si vas a usarla más tiempo del que tarda en amortizarse: con ocho horas al día, unos 3 años frente a un alquiler mediano de 0,25 $/hora y unos 6,4 años frente a una oferta de 0,16 $. Que tus datos no puedan salir de tu edificio es un motivo aparte para comprar. En los demás casos, alquila.** Usada, la tarjeta cuesta 1.500–1.725 $ (rastreador de InsiderLLM, 2026-11-23). Estos plazos suponen una tarjeta de 1.500 $, unos 0,08 $ de electricidad por hora y ninguna reventa; con la mediana de 1.650 $ son un 10 % más largos aproximadamente. Además, cuesta más que en marzo, lo que aleja el punto de equilibrio.',
 
     quickAnswerTop: {
       es: {
@@ -1480,7 +1480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El punto de equilibrio frente a un alquiler mediano de 0,25 $/h con 2 horas al día es de unos 12 años — con 8 horas al día, unos 3',
           'Compra para privacidad, latencia, agentes activos permanentemente y ajuste fino constante; alquila para picos de uso y experimentos',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 para LLM local en 2026: ¿comprar o alquilar?',
       description: 'Análisis de punto de equilibrio entre comprar una NVIDIA RTX 3090 usada y alquilar la misma GPU en proveedores de nube para inferencia de LLM local, con precios de 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1542,11 +1542,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: 'Decide en 30 segundos',
-        content: 'Ambos caminos dan la misma GPU y los mismos 24 GB de VRAM. La única pregunta real es cuántas horas la usarás realmente, y si tus datos pueden salir de tu red.',
+        content: 'Ambos caminos dan la misma GPU y los mismos 24 GB de VRAM. Las preguntas principales son cuántas horas al día y durante cuántos años la usarás realmente, y si tus datos pueden salir de tu red.',
         decisionBlock: {
           title: '¿Comprar una RTX 3090 usada o alquilar una?',
           localIf: [
-            'La usarás más de unas 8 horas al día, de forma constante',
+            'La usarás más allá del equilibrio: a 8 h/día, unos 3 años frente a un alquiler de 0,25 $/h y 6,4 frente a 0,16 $',
             'La política o el contrato de tu organización no permite subir tus datos a un tercero — salud, legal, cliente o trabajo regulado',
             'Quieres un agente activo permanentemente, un asistente doméstico o trabajos por lotes nocturnos',
             'Haces ajuste fino o embeddings con regularidad, no ocasionalmente',
@@ -1561,18 +1561,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Menos de 2 horas al día → alquila, y revísalo en seis meses',
-            '8+ horas al día, todos los días → compra, la tarjeta se amortiza en unos 3 a 6,4 años frente a alquileres de 0,16–0,25 $ por hora',
+            '8 horas al día → equilibrio en unos 3 años frente a 0,25 $/h y 6,4 frente a 0,16 $; por costes, compra solo si la usarás más tiempo',
             'Cualquier dato que no puedas subir → compra, el coste no es el factor decisivo',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Una RTX 3090 usada vale la pena para LLM local si vas a usarla más de unas ocho horas al día, todos los días, o tus datos no pueden subirse; de lo contrario, alquilar la misma tarjeta desde 0,16 $ por hora es más barato.',
+            text: 'Solo por costes, una RTX 3090 usada vale la pena únicamente si la usas más tiempo del que tarda en amortizarse: con ocho horas al día, unos 3 años frente a un alquiler de 0,25 $ por hora y 6,4 años frente a 0,16 $. Tener datos que no pueden subirse es un motivo aparte para comprar.',
           },
           {
             type: 'plain-terms',
-            text: 'Tener la tarjeta es como comprar un coche; alquilar es como tomar taxis. Los taxis son más baratos hasta que conduces todos los días — y, a diferencia de las tarifas de taxi, una tarjeta propia se puede vender después, lo que puede compensar parte del precio de compra, sin garantía.',
+            text: 'Tener la tarjeta es como comprar un coche; alquilar es como tomar taxis. Los taxis siguen siendo más baratos salvo que conduzcas mucho durante años — y, a diferencia de las tarifas de taxi, una tarjeta propia se puede vender después, lo que puede compensar parte del precio de compra, sin garantía.',
           },
         ],
       },
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La advertencia honesta: son tarjetas de unos seis años, muchas ex-minería o ex-gaming, vendidas sin garantía por particulares. Los modos de fallo son conocidos y verificables, así que el riesgo es manejable — pero es real, y por eso conviene comprar a un vendedor con devoluciones en lugar del anuncio más barato que encuentres.',
         ],
         items: [
-          'Pide una foto de la tarjeta durante una prueba de carga con las temperaturas visibles — una temperatura de unión de memoria por encima de unos 100 °C bajo carga indica pads térmicos resecos.',
+          'Pide una foto de la tarjeta durante una prueba de carga con las temperaturas visibles — una temperatura de unión de memoria por encima de unos 100 °C bajo carga puede indicar pads térmicos resecos.',
           'El GDDR6X de esta tarjeta se calienta mucho por diseño; un vendedor que ha reemplazado los pads térmicos es buena señal, no una alerta.',
           'Confirma que es la RTX 3090 de 24 GB y no una RTX 3080 — el título del anuncio no es prueba, pide una captura de GPU-Z.',
           'Prefiere una plataforma con protección al comprador y devoluciones. Los 50 $ que ahorras en un anuncio sin devoluciones no compensan el riesgo en una tarjeta de unos seis años.',
@@ -1752,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Frente a un alquiler mediano de 0,25 $/hora, una tarjeta de 1.500 $ tarda unas 8.800 horas de GPU en amortizarse — unos 3 años con ocho horas al día, o 12 años con dos.** Esa es la cifra que debería decidir la compra.',
           'El cálculo resta lo que cuesta operar la tarjeta. A 450 W en el enchufe y una media residencial reciente de EE. UU. de 0,18 $/kWh, la inferencia local cuesta unos 0,08 $ por hora en electricidad, así que no estás comparando 1.500 $ contra 0,25 $/hora, sino contra los aproximadamente 0,17 $/hora que realmente ahorras.',
-          'Supuestos: tarjeta de 1.500 $ (extremo bajo del rango del rastreador; con la mediana de 1.650 $ cada plazo es un 10 % más largo aproximadamente), consumo del sistema de 450 W, 0,18 $/kWh. Sustituye tu propia tarifa eléctrica — mueve el resultado más que cualquier otra cosa en la tabla, y en mercados por encima de 0,30 $/kWh el argumento de comprar prácticamente desaparece.',
+          'Supuestos: tarjeta de 1.500 $ (extremo bajo del rango del rastreador; con la mediana de 1.650 $ cada plazo es un 10 % más largo aproximadamente), consumo del sistema de 450 W, 0,18 $/kWh. Sustituye tu propia tarifa eléctrica — mueve el resultado más que cualquier otra cosa en la tabla, y por encima de 0,30 $/kWh el argumento de comprar se debilita mucho: a 0,30 $/kWh y ocho horas al día, el punto de equilibrio llega a los 4,5 años aproximadamente frente al alquiler de 0,25 $ y a unos 20 años frente a 0,16 $.',
         ],
         columns: ['Uso', 'vs 0,16 $/h', 'vs 0,25 $/h', 'vs 0,50 $/h'],
         rows: [
@@ -1778,12 +1778,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Lector: 'Aficionado de fin de semana',
             Veredicto: 'Alquilar',
-            'Por qué': 'Unas horas a la semana frente a un desembolso de 1.500 $ están a décadas del punto de equilibrio. Alquila durante un año, y si te encuentras alquilando a diario, compra entonces — también sabrás exactamente qué tarjeta necesitas.',
+            'Por qué': 'Unas horas a la semana frente a un desembolso de 1.500 $ están a décadas del punto de equilibrio. Alquila durante un año, y si ves que alquilas muchas horas cada día, consulta entonces la tabla de equilibrio y decide — también sabrás exactamente qué tarjeta necesitas.',
           },
           {
             Lector: 'Usuario intensivo diario',
             Veredicto: 'Comprar',
-            'Por qué': 'Con ocho o más horas al día la tarjeta se amortiza en unos 3 a 6,4 años frente a alquileres de 0,16–0,25 $ por hora, y la reventa puede compensar parte del resto, aunque no está garantizada. La mayor ganancia es de comportamiento: una GPU propia no tiene contador corriendo, así que dejas de racionar experimentos.',
+            'Por qué': 'Con ocho horas al día la tarjeta se amortiza en unos 3 años frente a un alquiler de 0,25 $/h y en 6,4 frente a 0,16 $, así que comprar solo compensa si ese uso dura más. La reventa puede compensar parte del coste, aunque no está garantizada. La mayor ganancia es de comportamiento: una GPU propia no tiene contador corriendo, así que dejas de racionar experimentos.',
           },
           {
             Lector: 'Equipo pequeño o startup',
@@ -1808,9 +1808,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: 'Evita la RTX 3090 si',
         content: [
-          '**Evítala si tus modelos caben en 16 GB.** Si ejecutas modelos 7B y 14B en 4 bits y nunca tocas nada más grande, una tarjeta actual de 16 GB más barata es más silenciosa, consume mucho menos y tiene garantía. Pagar el sobreprecio de los 24 GB por un margen que nunca usas es un error fácil de cometer en esta compra.',
-          'Evítala también si compras para entrenar en lugar de para inferencia. Un ajuste fino sustancial en una sola tarjeta de 24 GB implica cuantización agresiva y esperas largas; alquilar una tarjeta más grande por unas horas es a la vez más rápido y más barato.',
-          'Y evítala si tu electricidad es cara. A 0,30 $/kWh o más, el coste de operación por sí solo se acerca a las tarifas de nube más baratas, y el argumento de tener la tarjeta prácticamente desaparece.',
+          '**Evítala si tus modelos caben en 16 GB.** Si ejecutas modelos 7B y 14B en 4 bits y nunca tocas nada más grande, una tarjeta actual de 16 GB más barata suele consumir menos y, comprada nueva, tiene garantía. Pagar el sobreprecio de los 24 GB por un margen que nunca usas es un error fácil de cometer en esta compra.',
+          'Evítala también si compras para entrenar en lugar de para inferencia. Un ajuste fino sustancial en una sola tarjeta de 24 GB implica cuantización agresiva y esperas largas; alquilar una tarjeta más grande por unas horas suele ser más rápido y puede ser más barato.',
+          'Y evítala si tu electricidad es cara. A 0,30 $/kWh o más, el coste de operación por sí solo se acerca a las tarifas de nube más baratas, y el argumento de tener la tarjeta se debilita mucho: a 0,30 $/kWh y ocho horas al día, una tarjeta de 1.500 $ tarda unos 4,5 años en amortizarse frente a un alquiler de 0,25 $ y unos 20 años frente a 0,16 $.',
         ],
       },
 
@@ -1818,8 +1818,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Nuestro veredicto',
         content: [
-          '**Compra una RTX 3090 usada si vas a usarla más de unas ocho horas al día, todos los días, o si tus datos no pueden salir de tu edificio — sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA. Alquila una si tu uso es ocasional, irregular, o todavía estás averiguando si la inferencia local le conviene a tu carga de trabajo. Si tienes dudas, alquila primero.**',
-          'Para uso frecuente de LLM local y privacidad: compra. Para experimentación ocasional: alquila. Para uso incierto o cambiante: alquila primero, y revisa la decisión en seis meses cuando conozcas tus horas reales. Para quien busque específicamente VRAM de 24 GB barata, una RTX 3090 usada en buen estado sigue siendo convincente en 2026 — el aumento de precio por la escasez de memoria no ha cambiado eso, solo ha alejado el punto de equilibrio. Para una compra nueva donde la eficiencia, la garantía y las funciones actuales importan más que el precio inicial, compara en su lugar con una [tarjeta actual](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
+          '**Por costes, compra una RTX 3090 usada solo si vas a usarla más tiempo del que tarda en amortizarse — con ocho horas al día, unos 3 años frente a un alquiler de 0,25 $/h y 6,4 años frente a 0,16 $ — o cómprala si tus datos no pueden salir de tu edificio. Sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA. Alquila una si tu uso es ocasional, irregular, o todavía estás averiguando si la inferencia local le conviene a tu carga de trabajo. Si tienes dudas, alquila primero.**',
+          'Para un uso intensivo que supere el punto de equilibrio, o datos que no puedes subir: compra. Para experimentación ocasional: alquila. Para uso incierto o cambiante: alquila primero, y revisa la decisión en seis meses cuando conozcas tus horas reales. Para quien busque específicamente VRAM de 24 GB barata, una RTX 3090 usada en buen estado sigue siendo convincente en 2026 — el aumento de precio por la escasez de memoria no ha cambiado eso, solo ha alejado el punto de equilibrio. Para una compra nueva donde la eficiencia, la garantía y las funciones actuales importan más que el precio inicial, compara en su lugar con una [tarjeta actual](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
           'En resumen: la ventaja de la RTX 3090 son 24 GB de VRAM a precios de mercado usado. Sus costes son la antigüedad, el alto consumo, el calor, el ruido y la falta de garantía. Ningún lado de ese compromiso ha cambiado en 2026 — solo el precio de compra, y se movió en contra de comprar.',
           'Quienes aún no estén listos para comprar una tarjeta usada pueden [alquilar una GPU en la nube en su lugar](/es/power-local-llm/best-cloud-gpu-providers); la [reseña de Vast.ai](/es/power-local-llm/vast-ai-review) y la [reseña de Clore.ai](/es/power-local-llm/clore-ai-review) cubren dos mercados de GPU donde las tarjetas se alquilan por horas.',
         ],
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Aún vale la pena comprar la RTX 3090 en 2026?',
-            a: 'Para inferencia local sostenida, sí — sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA, a 1.500–1.725 $ usada. Para uso ligero u ocasional, no: alquilar la misma GPU desde 0,16 $ por hora es más barato durante años. El factor decisivo son las horas de uso real por semana, no la ficha técnica.',
+            a: 'Para inferencia local sostenida, puede valerla — sigue siendo una de las formas más baratas de conseguir 24 GB en una tarjeta NVIDIA compatible con CUDA, a 1.500–1.725 $ usada. Con ocho horas al día, el punto de equilibrio llega a los 3 años aproximadamente frente a un alquiler de 0,25 $/h y a los 6,4 frente a 0,16 $. Para uso ligero u ocasional, no: alquilar la misma GPU desde 0,16 $ por hora es más barato durante años. Lo decisivo son tus horas reales al día y cuánto tiempo seguirás usando la tarjeta, no la ficha técnica.',
           },
           {
             q: '¿Es buena la RTX 3090 para Ollama?',
@@ -1859,7 +1859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es seguro comprar una GPU de minería usada?',
-            a: 'Generalmente sí, con comprobaciones. Según se informa, las tarjetas de minería funcionaban con carga moderada constante, algo que se considera más suave que los ciclos térmicos del gaming, pero suelen necesitar pads térmicos nuevos. Pide una foto de prueba de carga que muestre la temperatura de unión de memoria, compra a un vendedor que ofrezca devoluciones, y trata cualquier anuncio sin ambas cosas como imposible de verificar.',
+            a: 'Puede serlo, si antes revisas la tarjeta. El pasado de minería por sí solo no indica en qué estado está, y puede que haya que cambiar los pads térmicos. Pide una foto de prueba de carga que muestre la temperatura de unión de memoria, compra a un vendedor que ofrezca devoluciones, y trata cualquier anuncio sin ambas cosas como imposible de verificar.',
           },
           {
             q: '¿Qué fuente de alimentación necesita una RTX 3090?',
@@ -1903,7 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   pt: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -1917,7 +1917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'A RTX 3090 é uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA na sua própria máquina, e alugar a mesma placa na nuvem custa centavos por hora. Este guia calcula onde realmente fica a fronteira entre as duas opções.',
     metaDescription: 'Uma RTX 3090 usada custa US$ 1.500–1.725 em 2026; alugar custa a partir de cerca de US$ 0,16/hora. Veja o cálculo de ponto de equilíbrio entre comprar e alugar 24 GB de VRAM para LLM local.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '13 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e pequenas equipes decidindo entre comprar uma GPU usada de 24 GB e alugar tempo de GPU na nuvem para inferência de LLM local',
@@ -1934,7 +1934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Compre uma RTX 3090 usada se você for usá-la mais de cerca de oito horas por dia, todos os dias, ou se seus dados não puderem sair do seu prédio. Alugue nos demais casos.** A US$ 1.500–1.725 usada (rastreador da InsiderLLM, 2026-11-23) contra aluguel a partir de US$ 0,16 por hora na nuvem, a placa só se paga com uso sustentado — e em 2026 ela custa mais do que em março, o que empurra o ponto de equilíbrio mais adiante.',
+    leadAnswerBlock: '**Por custo, compre uma RTX 3090 usada somente se for usá-la por mais tempo do que ela leva para se pagar: com oito horas por dia, cerca de 3 anos contra um aluguel mediano de US$ 0,25/hora e cerca de 6,4 anos contra uma oferta de US$ 0,16. Dados que não podem sair do seu prédio são um motivo à parte para comprar. Nos demais casos, alugue.** A placa usada custa US$ 1.500–1.725 (rastreador da InsiderLLM, 2026-11-23). Esses prazos consideram uma placa de US$ 1.500, cerca de US$ 0,08 de energia por hora e nenhuma revenda; na mediana de US$ 1.650 ficam cerca de 10% mais longos. Além disso, ela custa mais do que em março, o que empurra o ponto de equilíbrio para mais adiante.',
 
     quickAnswerTop: {
       pt: {
@@ -1947,7 +1947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O ponto de equilíbrio contra um aluguel mediano de US$ 0,25/h com 2 horas por dia é de cerca de 12 anos — com 8 horas por dia, cerca de 3',
           'Compre para privacidade, latência, agentes sempre ativos e ajuste fino constante; alugue para picos de uso e experimentos',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RTX 3090 para LLM local em 2026: comprar ou alugar?',
       description: 'Análise de ponto de equilíbrio entre comprar uma NVIDIA RTX 3090 usada e alugar a mesma GPU em provedores de nuvem para inferência de LLM local, com preços de 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2009,11 +2009,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: 'Decida em 30 segundos',
-        content: 'Os dois caminhos dão a mesma GPU e os mesmos 24 GB de VRAM. A única pergunta real é quantas horas você vai realmente usá-la, e se seus dados podem sair da sua rede.',
+        content: 'Os dois caminhos dão a mesma GPU e os mesmos 24 GB de VRAM. As principais perguntas são quantas horas por dia e por quantos anos você vai realmente usá-la, e se seus dados podem sair da sua rede.',
         decisionBlock: {
           title: 'Comprar uma RTX 3090 usada ou alugar uma?',
           localIf: [
-            'Você vai usá-la mais de cerca de 8 horas por dia, de forma constante',
+            'Vai usá-la além do equilíbrio: a 8 h/dia, uns 3 anos contra aluguel de US$ 0,25/h e 6,4 contra US$ 0,16',
             'A política ou o contrato da sua organização não permite enviar seus dados a um terceiro — saúde, jurídico, cliente ou trabalho regulado',
             'Você quer um agente sempre ativo, um assistente doméstico ou tarefas em lote durante a noite',
             'Você faz ajuste fino ou embeddings regularmente, não ocasionalmente',
@@ -2028,18 +2028,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'Menos de 2 horas por dia → alugue, e reavalie em seis meses',
-            '8+ horas por dia, todos os dias → compre, a placa se paga em cerca de 3 a 6,4 anos em comparação com aluguéis de US$ 0,16–0,25 por hora',
+            '8 horas por dia → equilíbrio em cerca de 3 anos contra US$ 0,25/h e 6,4 contra US$ 0,16; por custo, compre só se for usar por mais tempo',
             'Qualquer dado que você não possa enviar para fora → compre, o custo não é o fator decisivo',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Uma RTX 3090 usada vale a compra para LLM local se você for usá-la mais de cerca de oito horas por dia, todos os dias, ou seus dados não puderem ser enviados para fora; caso contrário, alugar a mesma placa a partir de US$ 0,16 por hora é mais barato.',
+            text: 'Só pelo custo, uma RTX 3090 usada vale a compra apenas se você for usá-la por mais tempo do que ela leva para se pagar: com oito horas por dia, cerca de 3 anos contra um aluguel de US$ 0,25 por hora e 6,4 anos contra US$ 0,16. Dados que não podem ser enviados para fora são um motivo à parte para comprar.',
           },
           {
             type: 'plain-terms',
-            text: 'Ter a placa é como comprar um carro; alugar é como pegar táxis. Táxis são mais baratos até você rodar todos os dias — e, ao contrário das corridas de táxi, uma placa própria pode ser revendida depois, o que pode compensar parte do preço de compra, sem garantia.',
+            text: 'Ter a placa é como comprar um carro; alugar é como pegar táxis. Táxis continuam mais baratos, a não ser que você rode muito por anos — e, ao contrário das corridas de táxi, uma placa própria pode ser revendida depois, o que pode compensar parte do preço de compra, sem garantia.',
           },
         ],
       },
@@ -2110,7 +2110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A ressalva honesta: são placas de cerca de seis anos, muitas ex-mineração ou ex-gaming, vendidas sem garantia por particulares. Os modos de falha são conhecidos e verificáveis, então o risco é administrável — mas é real, e por isso vale comprar de um vendedor com política de devolução em vez do anúncio mais barato que você encontrar.',
         ],
         items: [
-          'Peça uma foto da placa durante um teste de carga com as temperaturas visíveis — temperatura de junção de memória acima de cerca de 100 °C sob carga indica pads térmicos ressecados.',
+          'Peça uma foto da placa durante um teste de carga com as temperaturas visíveis — temperatura de junção de memória acima de cerca de 100 °C sob carga pode indicar pads térmicos ressecados.',
           'O GDDR6X desta placa esquenta bastante por projeto; um vendedor que já trocou os pads térmicos é um bom sinal, não um alerta.',
           'Confirme que é a RTX 3090 de 24 GB e não uma RTX 3080 — o título do anúncio não é prova, peça um print do GPU-Z.',
           'Prefira uma plataforma com proteção ao comprador e devoluções. Os US$ 50 que você economiza num anúncio sem devolução não valem o risco numa placa de cerca de seis anos.',
@@ -2219,7 +2219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Contra um aluguel mediano de US$ 0,25/hora, uma placa de US$ 1.500 leva cerca de 8.800 horas de GPU para se pagar — cerca de 3 anos com oito horas por dia, ou 12 anos com duas.** Esse é o número que deveria decidir a compra.',
           'O cálculo subtrai o que custa operar a placa. A 450 W na tomada e em uma média residencial recente dos EUA de US$ 0,18/kWh, a inferência local custa cerca de US$ 0,08 por hora em eletricidade, então você não está comparando US$ 1.500 contra US$ 0,25/hora, mas contra os cerca de US$ 0,17/hora que realmente economiza.',
-          'Premissas: placa de US$ 1.500 (limite inferior da faixa do rastreador; na mediana de US$ 1.650 cada prazo fica cerca de 10% mais longo), consumo do sistema de 450 W, US$ 0,18/kWh. Substitua pela sua própria tarifa de energia — ela move o resultado mais do que qualquer outra coisa na tabela, e em mercados acima de US$ 0,30/kWh o argumento de comprar praticamente desaparece.',
+          'Premissas: placa de US$ 1.500 (limite inferior da faixa do rastreador; na mediana de US$ 1.650 cada prazo fica cerca de 10% mais longo), consumo do sistema de 450 W, US$ 0,18/kWh. Substitua pela sua própria tarifa de energia — ela move o resultado mais do que qualquer outra coisa na tabela, e acima de US$ 0,30/kWh o argumento de comprar enfraquece muito: a US$ 0,30/kWh e oito horas por dia, o ponto de equilíbrio fica em cerca de 4,5 anos contra o aluguel de US$ 0,25 e em cerca de 20 anos contra US$ 0,16.',
         ],
         columns: ['Uso', 'vs US$ 0,16/h', 'vs US$ 0,25/h', 'vs US$ 0,50/h'],
         rows: [
@@ -2245,12 +2245,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Leitor: 'Hobbysta de fim de semana',
             Veredito: 'Alugar',
-            'Por quê': 'Algumas horas por semana contra um gasto de US$ 1.500 estão a décadas do ponto de equilíbrio. Alugue por um ano, e se você perceber que está alugando todo dia, compre então — você também vai saber exatamente qual placa precisa.',
+            'Por quê': 'Algumas horas por semana contra um gasto de US$ 1.500 estão a décadas do ponto de equilíbrio. Alugue por um ano, e se perceber que está alugando muitas horas todos os dias, consulte então a tabela de equilíbrio e decida — você também vai saber exatamente de qual placa precisa.',
           },
           {
             Leitor: 'Usuário intenso diário',
             Veredito: 'Comprar',
-            'Por quê': 'Com oito horas ou mais por dia, a placa se paga em cerca de 3 a 6,4 anos em comparação com aluguéis de US$ 0,16–0,25 por hora, e a revenda pode compensar parte do resto, embora não seja garantida. O maior ganho é comportamental: uma GPU própria não tem contador rodando, então você para de racionar experimentos.',
+            'Por quê': 'Com oito horas por dia, a placa se paga em cerca de 3 anos contra um aluguel de US$ 0,25/h e em 6,4 contra US$ 0,16, então comprar só compensa se esse uso durar mais. A revenda pode compensar parte do custo, embora não seja garantida. O maior ganho é comportamental: uma GPU própria não tem contador rodando, então você para de racionar experimentos.',
           },
           {
             Leitor: 'Time pequeno ou startup',
@@ -2275,9 +2275,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: 'Pule a RTX 3090 se',
         content: [
-          '**Pule se seus modelos cabem em 16 GB.** Se você roda modelos 7B e 14B em 4 bits e nunca toca em nada maior, uma placa atual de 16 GB mais barata é mais silenciosa, consome bem menos energia e vem com garantia. Pagar o acréscimo dos 24 GB por uma folga que você nunca usa é um erro fácil de cometer nessa compra.',
-          'Pule também se você está comprando para treinar em vez de para inferência. Um ajuste fino substancial numa única placa de 24 GB significa quantização agressiva e longas esperas; alugar uma placa maior por algumas horas é ao mesmo tempo mais rápido e mais barato.',
-          'E pule se sua eletricidade é cara. A US$ 0,30/kWh ou mais, só o custo de operação já se aproxima das tarifas mais baratas da nuvem, e o argumento de possuir a placa praticamente desaparece.',
+          '**Pule se seus modelos cabem em 16 GB.** Se você roda modelos 7B e 14B em 4 bits e nunca toca em nada maior, uma placa atual de 16 GB mais barata costuma consumir menos energia e, comprada nova, vem com garantia. Pagar o acréscimo dos 24 GB por uma folga que você nunca usa é um erro fácil de cometer nessa compra.',
+          'Pule também se você está comprando para treinar em vez de para inferência. Um ajuste fino substancial numa única placa de 24 GB significa quantização agressiva e longas esperas; alugar uma placa maior por algumas horas costuma ser mais rápido e pode sair mais barato.',
+          'E pule se sua eletricidade é cara. A US$ 0,30/kWh ou mais, só o custo de operação já se aproxima das tarifas mais baratas da nuvem, e o argumento de possuir a placa enfraquece muito: a US$ 0,30/kWh e oito horas por dia, uma placa de US$ 1.500 leva cerca de 4,5 anos para se pagar contra um aluguel de US$ 0,25 e cerca de 20 anos contra US$ 0,16.',
         ],
       },
 
@@ -2285,8 +2285,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Nosso veredito',
         content: [
-          '**Compre uma RTX 3090 usada se for usá-la mais de cerca de oito horas por dia, todos os dias, ou se seus dados não puderem sair do seu prédio — ainda é uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA. Alugue uma se seu uso for ocasional, irregular, ou você ainda estiver descobrindo se a inferência local combina com sua carga de trabalho. Na dúvida, alugue primeiro.**',
-          'Para uso frequente de LLM local e privacidade: compre. Para experimentação ocasional: alugue. Para uso incerto ou em mudança: alugue primeiro, e reavalie a decisão em seis meses, quando conhecer suas horas reais. Para quem busca especificamente VRAM de 24 GB barata, uma RTX 3090 usada em bom estado continua atraente em 2026 — o aumento de preço pela escassez de memória não mudou isso, só empurrou o ponto de equilíbrio mais adiante. Para uma compra nova em que eficiência, garantia e recursos atuais importam mais que o preço inicial, compare em vez disso com uma [placa atual](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
+          '**Por custo, compre uma RTX 3090 usada somente se for usá-la por mais tempo do que ela leva para se pagar — com oito horas por dia, cerca de 3 anos contra um aluguel de US$ 0,25/h e 6,4 anos contra US$ 0,16 — ou compre se seus dados não puderem sair do seu prédio. Ela ainda é uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA. Alugue uma se seu uso for ocasional, irregular, ou você ainda estiver descobrindo se a inferência local combina com sua carga de trabalho. Na dúvida, alugue primeiro.**',
+          'Para uso intenso que vá além do ponto de equilíbrio, ou dados que você não pode enviar: compre. Para experimentação ocasional: alugue. Para uso incerto ou em mudança: alugue primeiro, e reavalie a decisão em seis meses, quando conhecer suas horas reais. Para quem busca especificamente VRAM de 24 GB barata, uma RTX 3090 usada em bom estado continua atraente em 2026 — o aumento de preço pela escassez de memória não mudou isso, só empurrou o ponto de equilíbrio mais adiante. Para uma compra nova em que eficiência, garantia e recursos atuais importam mais que o preço inicial, compare em vez disso com uma [placa atual](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
           'Resumindo: a vantagem da RTX 3090 são 24 GB de VRAM a preços de mercado usado. Seus custos são idade, alto consumo de energia, calor, ruído e falta de garantia. Nenhum dos dois lados dessa troca mudou em 2026 — só o preço de compra mudou, e foi contra a compra.',
           'Quem ainda não está pronto para comprar uma placa usada pode [alugar uma GPU na nuvem em vez disso](/pt/power-local-llm/best-cloud-gpu-providers); a [análise da Vast.ai](/pt/power-local-llm/vast-ai-review) e a [análise da Clore.ai](/pt/power-local-llm/clore-ai-review) cobrem dois marketplaces de GPU em que as placas são alugadas por hora.',
         ],
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'A RTX 3090 ainda vale a pena comprar em 2026?',
-            a: 'Para inferência local sustentada, sim — continua sendo uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA, a US$ 1.500–1.725 usada. Para uso leve ou ocasional, não: alugar a mesma GPU a partir de US$ 0,16 por hora é mais barato por anos. O fator decisivo são as horas de uso real por semana, não a ficha técnica.',
+            a: 'Para inferência local sustentada, pode valer — continua sendo uma das formas mais baratas de ter 24 GB em uma placa NVIDIA compatível com CUDA, a US$ 1.500–1.725 usada. Com oito horas por dia, o ponto de equilíbrio fica em cerca de 3 anos contra um aluguel de US$ 0,25/h e em 6,4 anos contra US$ 0,16. Para uso leve ou ocasional, não: alugar a mesma GPU a partir de US$ 0,16 por hora é mais barato por anos. O que decide são suas horas reais por dia e por quanto tempo você vai continuar usando a placa, não a ficha técnica.',
           },
           {
             q: 'A RTX 3090 é boa para Ollama?',
@@ -2326,7 +2326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'É seguro comprar uma GPU de mineração usada?',
-            a: 'Geralmente sim, com checagens. Placas de mineração, segundo relatos, rodavam com carga moderada constante, o que se diz ser mais suave que os ciclos térmicos do gaming, mas costumam precisar de pads térmicos novos. Peça uma foto do teste de carga mostrando a temperatura de junção de memória, compre de um vendedor que ofereça devolução, e trate qualquer anúncio sem os dois como uma placa que você não consegue verificar.',
+            a: 'Pode ser, se você conferir a placa antes. O histórico de mineração, por si só, não diz em que estado ela está, e os pads térmicos podem precisar de troca. Peça uma foto do teste de carga mostrando a temperatura de junção de memória, compre de um vendedor que ofereça devolução, e trate qualquer anúncio sem os dois como uma placa que você não consegue verificar.',
           },
           {
             q: 'Que fonte de alimentação a RTX 3090 precisa?',
@@ -2370,7 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ar: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -2384,7 +2384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'بطاقة RTX 3090 هي إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA تحت مكتبك، واستئجار البطاقة نفسها عبر السحابة يكلف سنتات قليلة في الساعة. يوضح هذا الدليل أين يقع الخط الفاصل فعليًا بين هذين الخيارين.',
     metaDescription: 'تكلف بطاقة RTX 3090 المستعملة 1,500–1,725 $ في 2026؛ استئجارها يبدأ من نحو 0.16 $ في الساعة. إليك حساب نقطة التعادل بين الشراء والاستئجار لـ 24 GB من VRAM لنماذج LLM المحلية.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '13 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون والفرق الصغيرة الذين يقررون بين شراء وحدة معالجة رسومية مستعملة بسعة 24 GB واستئجار وقت GPU سحابي لاستدلال LLM محلي',
@@ -2401,7 +2401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**اشترِ بطاقة RTX 3090 مستعملة إذا كنت ستستخدمها أكثر من نحو ثماني ساعات يوميًا، كل يوم، أو إذا كانت بياناتك لا يمكنها مغادرة مبناك. استأجر خلاف ذلك.** بسعر 1,500–1,725 $ مستعملة (متتبّع InsiderLLM، 2026-11-23) مقابل استئجار يبدأ من 0.16 $ في الساعة عبر السحابة، لا تُجدي البطاقة اقتصاديًا إلا مع الاستخدام المستمر — وفي 2026 أصبحت أغلى مما كانت عليه في مارس، ما يدفع نقطة التعادل إلى وقت أبعد.',
+    leadAnswerBlock: '**لأسباب تتعلق بالتكلفة، اشترِ بطاقة RTX 3090 مستعملة فقط إذا كنت ستستخدمها مدة أطول من مدة بلوغ نقطة التعادل: عند ثماني ساعات يوميًا نحو 3 أعوام مقارنةً بإيجار وسيط قدره 0.25 $ في الساعة، ونحو 6.4 أعوام مقارنةً بعرض بسعر 0.16 $. أما البيانات التي لا يمكنها مغادرة مبناك فسبب مستقل للشراء. وفيما عدا ذلك، استأجر.** سعر البطاقة المستعملة 1,500–1,725 $ (متتبّع InsiderLLM، 2026-11-23). تفترض هذه المدد بطاقة بـ 1,500 $ ونحو 0.08 $ كهرباء في الساعة ودون إعادة بيع؛ وعند الوسيط 1,650 $ تطول بنحو 10%. كما أصبحت البطاقة أغلى مما كانت عليه في مارس، ما يؤخر نقطة التعادل أكثر.',
 
     quickAnswerTop: {
       ar: {
@@ -2414,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'نقطة التعادل مقابل استئجار بالسعر الوسيط 0.25 $/ساعة عند ساعتين يوميًا تبلغ نحو 12 عامًا — وعند 8 ساعات يوميًا نحو 3 أعوام',
           'اشترِ من أجل الخصوصية، وزمن الاستجابة، والوكلاء الدائمي التشغيل، والضبط الدقيق المستمر؛ استأجر من أجل الاستخدام المتقطع والتجارب',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -2424,7 +2424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'بطاقة RTX 3090 لتشغيل نماذج LLM محليًا في 2026: هل تشتري أم تستأجر؟',
       description: 'تحليل نقطة التعادل بين شراء بطاقة NVIDIA RTX 3090 مستعملة واستئجار نفس الـ GPU من مزوّدي السحابة لاستدلال LLM المحلي، مع أسعار 2026.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -2475,11 +2475,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: 'قرر خلال 30 ثانية',
-        content: 'كلا المسارين يمنحانك نفس الـ GPU ونفس 24 GB من VRAM. السؤال الحقيقي الوحيد هو عدد الساعات التي ستستخدمها فعليًا، وهل يمكن لبياناتك مغادرة شبكتك.',
+        content: 'كلا المسارين يمنحانك نفس الـ GPU ونفس 24 GB من VRAM. السؤالان الأساسيان هما: كم ساعة يوميًا ولكم عامًا ستستخدمها فعليًا، وهل يمكن لبياناتك مغادرة شبكتك.',
         decisionBlock: {
           title: 'هل تشتري بطاقة RTX 3090 مستعملة أم تستأجر واحدة؟',
           localIf: [
-            'ستستخدمها أكثر من نحو 8 ساعات يوميًا، وباستمرار',
+            'ستستخدمها بعد نقطة التعادل: عند 8 ساعات يوميًا نحو 3 أعوام مقابل إيجار 0.25 $/س، و6.4 مقابل 0.16 $',
             'سياسة مؤسستك أو عقدها لا يسمح برفع بياناتك إلى طرف ثالث — عمل صحي أو قانوني أو خاص بالعملاء أو منظم',
             'تريد وكيلًا دائمي التشغيل، أو مساعدًا منزليًا، أو مهام دفعية ليلية',
             'تقوم بالضبط الدقيق أو التضمين بانتظام، لا بشكل عرضي',
@@ -2494,18 +2494,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             'أقل من ساعتين يوميًا ← استأجر، وأعد التقييم بعد ستة أشهر',
-            '8+ ساعات يوميًا، كل يوم ← اشترِ، البطاقة تُسدد تكلفتها خلال نحو 3–6.4 سنوات مقارنةً بإيجار بين 0.16 و0.25 $ في الساعة',
+            '8 ساعات يوميًا ← التعادل بعد نحو 3 أعوام مقابل 0.25 $/س و6.4 مقابل 0.16 $؛ من حيث التكلفة لا تشترِ إلا إذا طال استخدامك أكثر',
             'أي بيانات لا يمكنك رفعها ← اشترِ، التكلفة ليست العامل الحاسم',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'تستحق بطاقة RTX 3090 المستعملة الشراء لتشغيل نماذج LLM محليًا عندما ستستخدمها أكثر من نحو ثماني ساعات يوميًا، كل يوم، أو عندما لا يمكن رفع بياناتك؛ وإلا فاستئجار نفس البطاقة بدءًا من 0.16 $ في الساعة أرخص.',
+            text: 'من حيث التكلفة وحدها، لا تستحق بطاقة RTX 3090 المستعملة الشراء إلا إذا استخدمتها مدة أطول من مدة التعادل: عند ثماني ساعات يوميًا نحو 3 أعوام مقابل إيجار 0.25 $ في الساعة، و6.4 أعوام مقابل 0.16 $. أما البيانات التي لا يمكن رفعها فسبب مستقل للشراء.',
           },
           {
             type: 'plain-terms',
-            text: 'امتلاك البطاقة أشبه بشراء سيارة؛ الاستئجار أشبه بركوب سيارات الأجرة. سيارات الأجرة أرخص إلى أن تبدأ بالقيادة يوميًا — وخلافًا لأجرة سيارات الأجرة، يمكن بيع البطاقة المملوكة لاحقًا، ما قد يعوّض جزءًا من سعر الشراء، دون ضمان.',
+            text: 'امتلاك البطاقة أشبه بشراء سيارة؛ الاستئجار أشبه بركوب سيارات الأجرة. وتبقى سيارات الأجرة أرخص ما لم تكن تقود كثيرًا على مدى سنوات — وخلافًا لأجرة سيارات الأجرة، يمكن بيع البطاقة المملوكة لاحقًا، ما قد يعوّض جزءًا من سعر الشراء، دون ضمان.',
           },
         ],
       },
@@ -2576,7 +2576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التحفظ الصادق: هذه بطاقات عمرها نحو ست سنوات، كثير منها سبق استخدامها في التعدين أو الألعاب، وتُباع دون ضمان من أفراد. أنماط الأعطال معروفة وقابلة للفحص، لذا فإن المخاطرة قابلة للإدارة — لكنها حقيقية، ولهذا يجدر الشراء من بائع يقبل الإرجاع بدلًا من أرخص إعلان تجده.',
         ],
         items: [
-          'اطلب صورة للبطاقة أثناء اختبار حمل مع إظهار درجات الحرارة — درجة حرارة وصلة الذاكرة فوق نحو 100 °C تحت الحمل تشير إلى وسائد حرارية جافة.',
+          'اطلب صورة للبطاقة أثناء اختبار حمل مع إظهار درجات الحرارة — درجة حرارة وصلة الذاكرة فوق نحو 100 °C تحت الحمل قد تشير إلى وسائد حرارية جافة.',
           'ذاكرة GDDR6X في هذه البطاقة ترتفع حرارتها بطبيعة التصميم؛ البائع الذي استبدل الوسائد الحرارية إشارة جيدة، لا علامة تحذير.',
           'تأكد أنها بطاقة RTX 3090 بسعة 24 GB وليست RTX 3080 — عنوان الإعلان ليس دليلًا، اطلب لقطة شاشة من GPU-Z.',
           'فضّل منصة توفر حماية للمشتري وإمكانية إرجاع. الـ 50 $ التي توفرها في إعلان بلا إرجاع لا تستحق المخاطرة في بطاقة عمرها نحو ست سنوات.',
@@ -2685,7 +2685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**مقارنة باستئجار بالسعر الوسيط 0.25 $/ساعة، تحتاج بطاقة بـ 1,500 $ نحو 8,800 ساعة GPU لتسترد تكلفتها — نحو 3 أعوام عند ثماني ساعات يوميًا، أو 12 عامًا عند ساعتين.** هذا هو الرقم الذي ينبغي أن يحسم قرار الشراء.',
           'يخصم الحساب ما تكلفه تشغيل البطاقة. عند 450 W من المقبس ومتوسط حديث للاستخدام السكني في الولايات المتحدة يبلغ 0.18 $/kWh، يكلف الاستدلال المحلي نحو 0.08 $ في الساعة كهرباءً، لذا فأنت لا تقارن 1,500 $ بـ 0.25 $/ساعة، بل بما توفره فعليًا، أي نحو 0.17 $/ساعة.',
-          'الافتراضات: بطاقة بـ 1,500 $ (الحد الأدنى لنطاق المتتبّع؛ وعند الوسيط 1,650 $ تطول كل مدة بنحو 10%)، استهلاك نظام 450 W، 0.18 $/kWh. استبدل سعر الكهرباء لديك — فهو يغيّر النتيجة أكثر من أي عامل آخر في الجدول، وفي الأسواق التي تتجاوز 0.30 $/kWh تتلاشى حجة الشراء إلى حد كبير.',
+          'الافتراضات: بطاقة بـ 1,500 $ (الحد الأدنى لنطاق المتتبّع؛ وعند الوسيط 1,650 $ تطول كل مدة بنحو 10%)، استهلاك نظام 450 W، 0.18 $/kWh. استبدل سعر الكهرباء لديك — فهو يغيّر النتيجة أكثر من أي عامل آخر في الجدول، وفوق 0.30 $/kWh تضعف حجة الشراء كثيرًا: فعند 0.30 $/kWh وثماني ساعات يوميًا يبلغ التعادل نحو 4.5 أعوام مقابل إيجار 0.25 $ ونحو 20 عامًا مقابل 0.16 $.',
         ],
         columns: ['الاستخدام', 'مقابل 0.16 $/س', 'مقابل 0.25 $/س', 'مقابل 0.50 $/س'],
         rows: [
@@ -2711,12 +2711,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             القارئ: 'هاوٍ في عطلة نهاية الأسبوع',
             الحكم: 'استأجر',
-            السبب: 'بضع ساعات أسبوعيًا مقابل إنفاق 1,500 $ تبعدك عقودًا عن نقطة التعادل. استأجر لمدة عام، وإذا وجدت نفسك تستأجر يوميًا فاشترِ حينها — وستعرف أيضًا بالضبط أي بطاقة تحتاجها.',
+            السبب: 'بضع ساعات أسبوعيًا مقابل إنفاق 1,500 $ تبعدك عقودًا عن نقطة التعادل. استأجر لمدة عام، وإذا وجدت نفسك تستأجر ساعات طويلة كل يوم فراجع حينها جدول التعادل ثم قرر — وستعرف أيضًا بالضبط أي بطاقة تحتاجها.',
           },
           {
             القارئ: 'مستخدم مكثف يوميًا',
             الحكم: 'اشترِ',
-            السبب: 'عند ثماني ساعات أو أكثر يوميًا، تسترد البطاقة تكلفتها خلال 3 إلى 6.4 سنوات تقريبًا مقارنةً بإيجار بين 0.16 و0.25 $ في الساعة، وقد تعوّض إعادة البيع جزءًا من الباقي، لكنها غير مضمونة. المكسب الأكبر سلوكي: الـ GPU المملوك لا يحمل عدّادًا يعمل، فتتوقف عن ترشيد تجاربك.',
+            السبب: 'عند ثماني ساعات يوميًا تسترد البطاقة تكلفتها خلال نحو 3 أعوام مقابل إيجار 0.25 $ في الساعة و6.4 أعوام مقابل 0.16 $، لذا لا يكون الشراء مجديًا إلا إذا استمر هذا الاستخدام مدة أطول. وقد تعوّض إعادة البيع جزءًا من التكلفة، لكنها غير مضمونة. المكسب الأكبر سلوكي: الـ GPU المملوك لا يحمل عدّادًا يعمل، فتتوقف عن ترشيد تجاربك.',
           },
           {
             القارئ: 'فريق صغير أو شركة ناشئة',
@@ -2741,9 +2741,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: 'تجاوز RTX 3090 إذا',
         content: [
-          '**تجاوزها إذا كانت نماذجك تسع في 16 GB.** إذا كنت تشغّل نماذج 7B و14B بتكميم 4-bit ولا تلمس أبدًا أي شيء أكبر، فإن بطاقة حديثة أرخص بسعة 16 GB أكثر هدوءًا وتستهلك طاقة أقل بكثير وتأتي بضمان. دفع علاوة الـ 24 GB مقابل هامش لن تستخدمه أبدًا هو خطأ سهل الوقوع فيه في هذا الشراء.',
-          'تجاوزها أيضًا إذا كنت تشتري للتدريب لا للاستدلال. الضبط الدقيق الجوهري على بطاقة واحدة بسعة 24 GB يعني تكميمًا شديدًا وانتظارًا طويلًا؛ استئجار بطاقة أكبر لبضع ساعات أسرع وأرخص في آن واحد.',
-          'وتجاوزها إذا كانت كهرباؤك باهظة. عند 0.30 $/kWh أو أكثر، تقترب تكلفة التشغيل وحدها من أرخص أسعار السحابة، وتتلاشى حجة الامتلاك إلى حد كبير.',
+          '**تجاوزها إذا كانت نماذجك تسع في 16 GB.** إذا كنت تشغّل نماذج 7B و14B بتكميم 4-bit ولا تلمس أبدًا أي شيء أكبر، فإن بطاقة حديثة أرخص بسعة 16 GB تستهلك عادةً طاقة أقل، وتأتي بضمان عند شرائها جديدة. دفع علاوة الـ 24 GB مقابل هامش لن تستخدمه أبدًا هو خطأ سهل الوقوع فيه في هذا الشراء.',
+          'تجاوزها أيضًا إذا كنت تشتري للتدريب لا للاستدلال. الضبط الدقيق الجوهري على بطاقة واحدة بسعة 24 GB يعني تكميمًا شديدًا وانتظارًا طويلًا؛ استئجار بطاقة أكبر لبضع ساعات أسرع في الغالب وقد يكون أرخص.',
+          'وتجاوزها إذا كانت كهرباؤك باهظة. عند 0.30 $/kWh أو أكثر، تقترب تكلفة التشغيل وحدها من أرخص أسعار السحابة، وتضعف حجة الامتلاك كثيرًا: فعند 0.30 $/kWh وثماني ساعات يوميًا تحتاج بطاقة بـ 1,500 $ نحو 4.5 أعوام لبلوغ التعادل مقابل إيجار 0.25 $ ونحو 20 عامًا مقابل 0.16 $.',
         ],
       },
 
@@ -2751,8 +2751,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'حكمنا',
         content: [
-          '**اشترِ بطاقة RTX 3090 مستعملة إذا كنت ستستخدمها أكثر من نحو ثماني ساعات يوميًا، كل يوم، أو إذا كانت بياناتك لا يمكنها مغادرة مبناك — فهي ما تزال إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA. استأجر واحدة إذا كان استخدامك عرضيًا أو متقطعًا، أو ما زلت تكتشف إن كان الاستدلال المحلي يناسب عبء عملك. إذا لم تكن متأكدًا، استأجر أولًا.**',
-          'للاستخدام المتكرر لنماذج LLM المحلية والخصوصية: اشترِ. للتجريب العرضي: استأجر. للاستخدام غير المؤكد أو المتغير: استأجر أولًا، وأعد تقييم القرار بعد ستة أشهر عندما تعرف ساعاتك الفعلية. لمن يبحث تحديدًا عن VRAM رخيصة بسعة 24 GB، تبقى بطاقة RTX 3090 المستعملة بحالة جيدة مغرية في 2026 — ارتفاع السعر بسبب نقص الذاكرة لم يغيّر ذلك، بل دفع نقطة التعادل إلى وقت أبعد فقط. لشراء جديد حيث تكون الكفاءة والضمان والميزات الحديثة أهم من السعر الأولي، قارن بدلًا من ذلك مع [بطاقة حديثة](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
+          '**لأسباب تتعلق بالتكلفة، اشترِ بطاقة RTX 3090 مستعملة فقط إذا كنت ستستخدمها مدة أطول من مدة التعادل — عند ثماني ساعات يوميًا نحو 3 أعوام مقابل إيجار 0.25 $/س و6.4 أعوام مقابل 0.16 $ — أو اشترِها إذا كانت بياناتك لا يمكنها مغادرة مبناك. فهي ما تزال إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA. استأجر واحدة إذا كان استخدامك عرضيًا أو متقطعًا، أو ما زلت تكتشف إن كان الاستدلال المحلي يناسب عبء عملك. إذا لم تكن متأكدًا، استأجر أولًا.**',
+          'للاستخدام المكثف الذي سيتجاوز نقطة التعادل، أو لبيانات لا يمكنك رفعها: اشترِ. للتجريب العرضي: استأجر. للاستخدام غير المؤكد أو المتغير: استأجر أولًا، وأعد تقييم القرار بعد ستة أشهر عندما تعرف ساعاتك الفعلية. لمن يبحث تحديدًا عن VRAM رخيصة بسعة 24 GB، تبقى بطاقة RTX 3090 المستعملة بحالة جيدة مغرية في 2026 — ارتفاع السعر بسبب نقص الذاكرة لم يغيّر ذلك، بل دفع نقطة التعادل إلى وقت أبعد فقط. لشراء جديد حيث تكون الكفاءة والضمان والميزات الحديثة أهم من السعر الأولي، قارن بدلًا من ذلك مع [بطاقة حديثة](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
           'الخلاصة: ميزة RTX 3090 هي 24 GB من VRAM بأسعار السوق المستعملة. تكاليفها هي العمر، والاستهلاك العالي للطاقة، والحرارة، والضجيج، وغياب الضمان. لم يتغير أي جانب من هذه المفاضلة في 2026 — تغيّر سعر الشراء فقط، وتحرك في غير صالح الشراء.',
           'يمكن للقراء غير المستعدين بعد لشراء بطاقة مستعملة أن [يستأجروا وحدة معالجة رسومات سحابية بدلاً من ذلك](/ar/power-local-llm/best-cloud-gpu-providers)؛ وتغطي [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review) و[مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review) سوقين لوحدات معالجة الرسومات تُؤجَّر فيهما البطاقات بالساعة.',
         ],
@@ -2764,7 +2764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل ما زالت RTX 3090 تستحق الشراء في 2026؟',
-            a: 'للاستدلال المحلي المستمر، نعم — تبقى إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA عند 1,500–1,725 $ مستعملة. للاستخدام الخفيف أو العرضي، لا: استئجار نفس الـ GPU بدءًا من 0.16 $ في الساعة أرخص لسنوات. العامل الحاسم هو ساعات الاستخدام الفعلي أسبوعيًا، لا المواصفات.',
+            a: 'للاستدلال المحلي المستمر، قد تستحق — تبقى إحدى أرخص الطرق للحصول على 24 GB على بطاقة NVIDIA تدعم CUDA عند 1,500–1,725 $ مستعملة. عند ثماني ساعات يوميًا يبلغ التعادل نحو 3 أعوام مقابل إيجار 0.25 $/س و6.4 أعوام مقابل 0.16 $. للاستخدام الخفيف أو العرضي، لا: استئجار نفس الـ GPU بدءًا من 0.16 $ في الساعة أرخص لسنوات. العامل الحاسم هو ساعات استخدامك الفعلية يوميًا ومدة استمرارك في استخدام البطاقة، لا المواصفات.',
           },
           {
             q: 'هل RTX 3090 جيدة لـ Ollama؟',
@@ -2792,7 +2792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل شراء GPU تعدين مستعملة آمن؟',
-            a: 'عادةً نعم، مع الفحص. يُقال إن بطاقات التعدين عملت تحت حمل معتدل ثابت، وهو يُعتقد أنه أخف وطأة من دورات الحرارة في الألعاب، لكنها غالبًا ما تحتاج وسائد حرارية جديدة. اطلب صورة اختبار حمل تُظهر درجة حرارة وصلة الذاكرة، واشترِ من بائع يقدّم إمكانية الإرجاع، وتعامل مع أي إعلان يفتقر إلى الاثنين كبطاقة لا يمكن التحقق منها.',
+            a: 'قد يكون آمنًا إذا فحصت البطاقة أولًا. فاستخدامها السابق في التعدين لا يدل وحده على حالتها، وقد تحتاج الوسائد الحرارية إلى استبدال. اطلب صورة اختبار حمل تُظهر درجة حرارة وصلة الذاكرة، واشترِ من بائع يقدّم إمكانية الإرجاع، وتعامل مع أي إعلان يفتقر إلى الاثنين كبطاقة لا يمكن التحقق منها.',
           },
           {
             q: 'ما مزود الطاقة الذي تحتاجه RTX 3090؟',
@@ -2836,7 +2836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ja: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -2850,7 +2850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'RTX 3090は、CUDA対応のNVIDIAカードで24GBのVRAMを自宅のデスクの下に置ける、最も安価な方法のひとつです。同じカードをクラウドでレンタルすると1時間あたり数セントで済みます。このガイドでは、両者の境界線が実際どこにあるのかを計算します。',
     metaDescription: '中古のRTX 3090は2026年に1,500〜1,725ドル。レンタルなら1時間約0.16ドルから。ローカルLLM向け24GB VRAMの購入とレンタルの損益分岐点を計算します。',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '13分で読める',
     educationalLevel: 'Intermediate',
     audience: '中古の24GB GPUを購入するか、ローカルLLM推論のためにクラウドGPU時間をレンタルするかを検討する開発者や小規模チーム',
@@ -2867,7 +2867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**1日約8時間以上、毎日使う予定がある、またはデータを建物の外に出せない場合は、中古のRTX 3090を購入してください。それ以外はレンタルが向いています。** 中古1,500〜1,725ドル（InsiderLLMトラッカー、2026-11-23）に対しクラウドのレンタルは1時間0.16ドルからなので、継続的に使い続けて初めて元が取れます。しかも2026年は3月より値上がりしており、損益分岐点は遠のいています。',
+    leadAnswerBlock: '**コスト面で中古のRTX 3090を購入するのは、損益分岐点に達する期間より長く使う場合に限ってください。1日8時間利用なら、1時間0.25ドルの中央値レンタル比で約3年、0.16ドルの出品比で約6.4年です。データを建物の外に出せないことは、それとは別の購入理由になります。それ以外はレンタルが向いています。** 中古価格は1,500〜1,725ドルです（InsiderLLMトラッカー、2026-11-23）。この期間は1,500ドルのカード、電気代約0.08ドル/時、転売なしを前提としており、中央値の1,650ドルでは約10%長くなります。また3月より値上がりしているため、損益分岐点は遠のいています。',
 
     quickAnswerTop: {
       ja: {
@@ -2880,7 +2880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '1時間0.25ドルの中央値レンタルに対する損益分岐点は、1日2時間利用で約12年、1日8時間利用で約3年',
           'プライバシー、レイテンシ、常時稼働エージェント、継続的なファインチューニングには購入を。突発的な利用や実験にはレンタルを',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -2890,7 +2890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'ローカルLLM向けRTX 3090（2026年）：購入かレンタルか',
       description: 'ローカルLLM推論のために中古のNVIDIA RTX 3090を購入する場合と、クラウドプロバイダーで同じGPUをレンタルする場合の損益分岐点分析。2026年の価格を反映。',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -2941,11 +2941,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: '30秒で決める',
-        content: 'どちらの道でも同じGPU、同じ24GBのVRAMが手に入ります。本当に重要な問いは、実際に何時間使うか、そしてデータをネットワークの外に出せるかどうかです。',
+        content: 'どちらの道でも同じGPU、同じ24GBのVRAMが手に入ります。主な問いは、実際に1日何時間・何年使うか、そしてデータをネットワークの外に出せるかどうかです。',
         decisionBlock: {
           title: '中古のRTX 3090を購入するか、レンタルするか',
           localIf: [
-            '継続的に1日約8時間以上使う',
+            '損益分岐点を超えて使い続ける。1日8時間なら0.25ドル/hのレンタル比で約3年、0.16ドル比で約6.4年',
             '組織の方針や契約によりデータを第三者にアップロードできない — 医療、法務、顧客関連、規制業務',
             '常時稼働エージェント、ホームアシスタント、夜間バッチ処理が必要',
             'ファインチューニングやエンベディングを定期的に行う（たまにではなく）',
@@ -2960,18 +2960,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             '1日2時間未満 → レンタルし、半年後に再検討',
-            '毎日8時間以上 → 購入。1時間0.16〜0.25ドルのレンタルと比べて約3〜6.4年で元が取れる',
+            '1日8時間 → 0.25ドル/h比で約3年、0.16ドル比で約6.4年で損益分岐。コスト目的ならそれ以上使う場合のみ購入',
             'アップロードできないデータがある → 購入。コストは決め手ではない',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '1日約8時間以上、毎日使う予定がある、またはデータをアップロードできない場合、ローカルLLM向けに中古のRTX 3090を購入する価値があります。それ以外は同じカードを1時間0.16ドルからレンタルする方が安く済みます。',
+            text: 'コストだけで考えると、中古のRTX 3090を買う価値があるのは損益分岐点より長く使う場合だけです。1日8時間利用なら、1時間0.25ドルのレンタル比で約3年、0.16ドル比で約6.4年です。データをアップロードできないことは、別の購入理由になります。',
           },
           {
             type: 'plain-terms',
-            text: 'カードを所有するのは車を買うようなもの、レンタルはタクシーに乗るようなものです。毎日乗るようになるまではタクシーの方が安いですが、タクシー代と違い、所有するカードは後から売却でき、購入価格の一部を回収できる可能性があります（保証はありません）。',
+            text: 'カードを所有するのは車を買うようなもの、レンタルはタクシーに乗るようなものです。何年もたくさん乗るのでなければタクシーの方が安いままですが、タクシー代と違い、所有するカードは後から売却でき、購入価格の一部を回収できる可能性があります（保証はありません）。',
           },
         ],
       },
@@ -3042,7 +3042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '正直な留意点として、これらは約6年前のカードであり、多くはマイニングやゲーミングの中古であり、個人から保証なしで販売されます。故障モードは既知で確認可能なのでリスクは管理できますが、実在するリスクです。だからこそ、最安値の出品より返品を受け付ける販売者から買う方がよいのです。',
         ],
         items: [
-          '負荷テスト中の温度が見える写真を要求してください。負荷時にメモリジャンクション温度が約100°Cを超える場合は、サーマルパッドの乾燥を示唆します。',
+          '負荷テスト中の温度が見える写真を要求してください。負荷時にメモリジャンクション温度が約100°Cを超える場合は、サーマルパッドが乾燥している可能性があります。',
           'このカードのGDDR6Xは設計上高温になりやすいものです。サーマルパッドを交換済みの販売者は好材料であり、警戒すべきサインではありません。',
           '24GBのRTX 3090であり、RTX 3080ではないことを確認してください。出品タイトルは証拠にならないため、GPU-Zのスクリーンショットを求めましょう。',
           '買い手保護と返品制度があるプラットフォームを選んでください。返品不可の出品で浮く50ドルは、約6年前のカードのリスクに見合いません。',
@@ -3151,7 +3151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**1時間0.25ドルの中央値レンタルと比較すると、1,500ドルのカードは元を取るのに約8,800 GPU時間かかります。1日8時間利用で約3年、1日2時間利用で約12年です。** これは購入を決めるべき数字です。',
           'この計算はカードの運用コストを差し引いています。コンセント側450W、最近の米国住宅用平均0.18ドル/kWhでは、ローカル推論の電気代は1時間約0.08ドルです。つまり1,500ドルと1時間0.25ドルを比較しているのではなく、実際に節約できる約1時間0.17ドルと比較しているのです。',
-          '前提条件: 1,500ドルのカード（トラッカーの価格帯の下限。中央値の1,650ドルではどの期間も約10%長くなります）、システム消費450W、0.18ドル/kWh。自分の電気料金に置き換えてください。表の中で他のどの要素よりも結果を左右し、0.30ドル/kWhを超える市場では購入の根拠はほぼ消えます。',
+          '前提条件: 1,500ドルのカード（トラッカーの価格帯の下限。中央値の1,650ドルではどの期間も約10%長くなります）、システム消費450W、0.18ドル/kWh。自分の電気料金に置き換えてください。表の中で他のどの要素よりも結果を左右し、0.30ドル/kWhを超えると購入の根拠は大きく弱まります。0.30ドル/kWhで1日8時間の場合、損益分岐点は0.25ドルのレンタル比で約4.5年、0.16ドル比で約20年です。',
         ],
         columns: ['利用時間', 'vs 0.16ドル/h', 'vs 0.25ドル/h', 'vs 0.50ドル/h'],
         rows: [
@@ -3177,12 +3177,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '読者タイプ': '週末だけの趣味利用者',
             結論: 'レンタル',
-            理由: '週に数時間の利用に1,500ドルの支出は、損益分岐点から数十年離れています。まず1年レンタルし、毎日レンタルしていると気づいたらその時に購入しましょう。その頃には必要なカードも正確にわかっているはずです。',
+            理由: '週に数時間の利用に1,500ドルの支出は、損益分岐点から数十年離れています。まず1年レンタルし、毎日長時間レンタルしていると気づいたら、その時点で損益分岐の表を確認して判断しましょう。その頃には必要なカードも正確にわかっているはずです。',
           },
           {
             '読者タイプ': '毎日ヘビーに使うユーザー',
             結論: '購入',
-            理由: '1日8時間以上なら、1時間0.16〜0.25ドルのレンタルと比べて約3〜6.4年で元が取れ、転売で残りの一部を回収できる可能性もありますが、保証はありません。より大きな利点は行動面です。所有するGPUには稼働中のメーターがないため、実験を節約する必要がなくなります。',
+            理由: '1日8時間利用なら、1時間0.25ドルのレンタル比で約3年、0.16ドル比で約6.4年で損益分岐に達します。そのため購入が得になるのは、その利用がそれより長く続く場合だけです。転売で費用の一部を回収できる可能性はありますが、保証はありません。より大きな利点は行動面です。所有するGPUには稼働中のメーターがないため、実験を節約する必要がなくなります。',
           },
           {
             '読者タイプ': '小規模チームやスタートアップ',
@@ -3207,9 +3207,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: 'こんな場合はRTX 3090を避ける',
         content: [
-          '**モデルが16GBに収まるなら避けてください。** 4bitの7Bや14Bモデルを使い、それより大きなものに触れないのであれば、より安い現行世代の16GBカードの方が静かで消費電力もはるかに少なく、保証も付きます。使わない余裕のために24GBの上乗せ費用を払うのは、この購入で起こしやすい失敗です。',
-          '推論ではなく学習用に購入するなら、それも避けてください。24GB単体カードでの本格的なファインチューニングは積極的な量子化と長い待ち時間を意味します。数時間だけ大きなカードをレンタルする方が速く、かつ安く済みます。',
-          '電気代が高い場合も避けてください。0.30ドル/kWh以上では、運用コストだけで安いクラウド料金に近づき、所有の根拠はほぼ消えます。',
+          '**モデルが16GBに収まるなら避けてください。** 4bitの7Bや14Bモデルを使い、それより大きなものに触れないのであれば、より安い現行世代の16GBカードは一般に消費電力が少なく、新品で買えば保証も付きます。使わない余裕のために24GBの上乗せ費用を払うのは、この購入で起こしやすい失敗です。',
+          '推論ではなく学習用に購入するなら、それも避けてください。24GB単体カードでの本格的なファインチューニングは積極的な量子化と長い待ち時間を意味します。数時間だけ大きなカードをレンタルする方が速いことが多く、安く済む場合もあります。',
+          '電気代が高い場合も避けてください。0.30ドル/kWh以上では、運用コストだけで安いクラウド料金に近づき、所有の根拠は大きく弱まります。0.30ドル/kWhで1日8時間の場合、1,500ドルのカードの損益分岐点は0.25ドルのレンタル比で約4.5年、0.16ドル比で約20年です。',
         ],
       },
 
@@ -3217,8 +3217,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content: [
-          '**1日約8時間以上、毎日使う予定がある、またはデータを建物の外に出せない場合は、中古のRTX 3090を購入してください。CUDA対応のNVIDIAカードで24GBのVRAMを手に入れる、最も安価な方法のひとつであることは変わりません。利用が単発的・突発的な場合、またはローカル推論が自分のワークロードに合うかまだ検討中の場合はレンタルしてください。迷ったらまずレンタルしましょう。**',
-          '頻繁なローカルLLM利用とプライバシーには購入を。時々の実験にはレンタルを。不確かな、または変化する利用状況には、まずレンタルし、実際の利用時間がわかった半年後に判断を見直してください。特に安価な24GB VRAMを求める人にとって、状態の良い中古RTX 3090は2026年も依然として魅力的な選択です。メモリ不足による値上がりはその点を変えず、損益分岐点を先送りしただけです。効率、保証、現行世代の機能が初期価格より重要な新規購入なら、代わりに[現行世代のカード](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)と比較してください。',
+          '**コスト面で中古のRTX 3090を購入するのは、損益分岐点より長く使う場合（1日8時間なら0.25ドル/hのレンタル比で約3年、0.16ドル比で約6.4年）に限ってください。データを建物の外に出せない場合も購入が選択肢です。CUDA対応のNVIDIAカードで24GBのVRAMを手に入れる、最も安価な方法のひとつであることは変わりません。利用が単発的・突発的な場合、またはローカル推論が自分のワークロードに合うかまだ検討中の場合はレンタルしてください。迷ったらまずレンタルしましょう。**',
+          '損益分岐点を超えて続くヘビーな利用や、アップロードできないデータがある場合は購入を。時々の実験にはレンタルを。不確かな、または変化する利用状況には、まずレンタルし、実際の利用時間がわかった半年後に判断を見直してください。特に安価な24GB VRAMを求める人にとって、状態の良い中古RTX 3090は2026年も依然として魅力的な選択です。メモリ不足による値上がりはその点を変えず、損益分岐点を先送りしただけです。効率、保証、現行世代の機能が初期価格より重要な新規購入なら、代わりに[現行世代のカード](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)と比較してください。',
           '結論として、RTX 3090の強みは中古市場価格での24GBのVRAMです。コストは経年、高い消費電力、発熱、騒音、保証の欠如です。このトレードオフのどちらの側も2026年に変わっていません。変わったのは購入価格だけで、それは購入に不利な方向に動きました。',
           '中古カードの購入にまだ踏み切れない方は、[代わりにクラウドGPUを借りる](/ja/power-local-llm/best-cloud-gpu-providers)こともできます。[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)と[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)では、カードを時間単位で借りられる2つのGPUマーケットプレイスを紹介しています。',
         ],
@@ -3230,7 +3230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年にRTX 3090はまだ買う価値がありますか？',
-            a: '継続的なローカル推論なら、はい。1,500〜1,725ドルの中古で、依然としてCUDA対応のNVIDIAカードで24GBを手に入れる最も安価な方法のひとつです。軽度や一時的な用途なら、いいえ。同じGPUを1時間0.16ドルからレンタルする方が何年も安く済みます。決め手はスペックではなく、週あたりの実際の利用時間です。',
+            a: '継続的なローカル推論なら、価値がある場合があります。1,500〜1,725ドルの中古で、依然としてCUDA対応のNVIDIAカードで24GBを手に入れる最も安価な方法のひとつです。1日8時間利用の損益分岐点は、1時間0.25ドルのレンタル比で約3年、0.16ドル比で約6.4年です。軽度や一時的な用途なら、いいえ。同じGPUを1時間0.16ドルからレンタルする方が何年も安く済みます。決め手はスペックではなく、1日の実際の利用時間と、そのカードを使い続ける期間です。',
           },
           {
             q: 'RTX 3090はOllamaに向いていますか？',
@@ -3302,7 +3302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   zh: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -3316,7 +3316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'RTX 3090是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一，而在云端租用同款显卡每小时只需几美分。本指南计算出这两个选项之间的真实分界线在哪里。',
     metaDescription: '2026年二手RTX 3090售价1,500–1,725美元；租用价格为每小时约0.16美元起。这是本地LLM所需24GB VRAM的买卖平衡点计算。',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '阅读约13分钟',
     educationalLevel: 'Intermediate',
     audience: '在购买二手24GB GPU和租用云端GPU时间以进行本地LLM推理之间做决定的开发者与小团队',
@@ -3333,7 +3333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**如果你每天使用超过约八小时、天天如此，或者数据不能离开你的场所，就购买一块二手RTX 3090；否则就租用。** 二手价格1,500–1,725美元（InsiderLLM追踪数据，2026-11-23），对比云端每小时0.16美元起的租金，这张卡只有在持续高负载使用下才能回本——而2026年它比3月更贵，这把回本点推得更远。',
+    leadAnswerBlock: '**从成本角度看，只有当你的使用时间会长于回本所需时间时，才应购买二手RTX 3090：按每天8小时计算，相对每小时0.25美元的中位数租金约需3年，相对0.16美元的报价约需6.4年。数据不能离开你的场所是另一个独立的购买理由。其他情况请租用。** 二手价格为1,500–1,725美元（InsiderLLM追踪数据，2026-11-23）。上述时间假设显卡价格1,500美元、电费约每小时0.08美元且不计转售；按中位数1,650美元计算约长10%。而且它比3月更贵，使回本点更远。',
 
     quickAnswerTop: {
       zh: {
@@ -3346,7 +3346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '相对0.25美元/小时的中位数租用，每天2小时使用的回本时间约12年——每天8小时约3年',
           '为隐私、延迟、常驻代理和持续微调而购买；为突发需求和实验而租用',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -3356,7 +3356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年本地LLM用RTX 3090：买还是租？',
       description: '针对本地LLM推理，购买二手NVIDIA RTX 3090与在云服务商处租用同款GPU之间的回本点分析，包含2026年价格。',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3407,11 +3407,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: '30秒做决定',
-        content: '两条路径给你的都是同一块GPU和同样的24GB VRAM。真正的问题只有一个：你实际会用多少小时，以及数据是否能离开你的网络。',
+        content: '两条路径给你的都是同一块GPU和同样的24GB VRAM。主要问题是：你实际每天会用多少小时、会用多少年，以及数据是否能离开你的网络。',
         decisionBlock: {
           title: '购买二手RTX 3090，还是租一块？',
           localIf: [
-            '你会持续地每天使用超过约8小时',
+            '使用期会超过回本点：每天8小时，相对0.25美元/h租金约3年，相对0.16美元约6.4年',
             '贵组织的政策或合同不允许将数据上传给第三方——医疗、法律、客户或受监管业务',
             '你想要常驻代理、家庭助手或夜间批处理任务',
             '你会定期而非偶尔进行微调或嵌入操作',
@@ -3426,18 +3426,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             '每天少于2小时→租用，六个月后重新评估',
-            '每天8小时以上，天天如此→购买，与每小时0.16–0.25美元的租用相比，大约3到6.4年回本',
+            '每天8小时→相对0.25美元/h约3年回本，相对0.16美元约6.4年；仅从成本看，只有用得更久才值得买',
             '任何不能上传的数据→购买，成本不是决定因素',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '如果你每天使用二手RTX 3090超过约八小时、天天如此，或者数据无法上传，购买它值得；否则以每小时0.16美元起租用同款卡更划算。',
+            text: '仅从成本看，只有当使用时间长于回本时间时，二手RTX 3090才值得买：按每天8小时计算，相对每小时0.25美元的租金约需3年，相对0.16美元约需6.4年。数据无法上传则是另一个独立的购买理由。',
           },
           {
             type: 'plain-terms',
-            text: '拥有这张卡就像买车；租用就像打车。打车更便宜，直到你每天都要用车——而与打车费不同,自己拥有的显卡之后可以转售,这可能抵消一部分购买价格,但并无保证。',
+            text: '拥有这张卡就像买车；租用就像打车。除非多年里经常大量用车，否则打车仍然更便宜——而与打车费不同,自己拥有的显卡之后可以转售,这可能抵消一部分购买价格,但并无保证。',
           },
         ],
       },
@@ -3617,7 +3617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**相对每小时0.25美元的中位数租金,一张1,500美元的显卡大约需要8,800个GPU小时才能回本——按每天8小时计算约需3年,按每天2小时计算约需12年。** 这是应该用来决定购买与否的数字。',
           '这个计算扣除了运行这张卡的成本。以墙上功耗450W和近期美国住宅电价均值0.18美元/kWh计算,本地推理的电费约为每小时0.08美元,所以你比较的不是1,500美元对0.25美元/小时,而是1,500美元对你实际节省的约0.17美元/小时。',
-          '前提假设：1,500美元的显卡（追踪价格区间的下限；按中位数1,650美元计算，各回本时间约长10%）、系统功耗450W、电价0.18美元/kWh。请代入你自己的电价——它比表中任何其他因素都更能左右结果,在电价高于0.30美元/kWh的市场,购买的理由基本上就消失了。',
+          '前提假设：1,500美元的显卡（追踪价格区间的下限；按中位数1,650美元计算，各回本时间约长10%）、系统功耗450W、电价0.18美元/kWh。请代入你自己的电价——它比表中任何其他因素都更能左右结果,电价高于0.30美元/kWh时,购买的理由会大幅减弱：按0.30美元/kWh、每天8小时计算,相对0.25美元的租金约需4.5年回本,相对0.16美元约需20年。',
         ],
         columns: ['使用量', '对比0.16美元/h', '对比0.25美元/h', '对比0.50美元/h'],
         rows: [
@@ -3643,12 +3643,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             读者类型: '周末爱好者',
             结论: '租用',
-            原因: '每周几小时的使用相对1,500美元的支出,离回本点还差几十年。先租一年,如果发现自己天天在租,那时再买——你也会清楚自己到底需要哪张卡。',
+            原因: '每周几小时的使用相对1,500美元的支出,离回本点还差几十年。先租一年,如果发现自己每天都要租很多个小时,那时对照回本表再做决定——你也会清楚自己到底需要哪张卡。',
           },
           {
             读者类型: '每日重度用户',
             结论: '购买',
-            原因: '每天八小时以上,与每小时0.16–0.25美元的租用相比,这张卡大约3到6.4年就能回本,转售可能抵消剩余成本的一部分,但并无保证。更大的收益是行为层面的：自有的GPU没有计时器在跑,你就不再需要节制实验。',
+            原因: '按每天8小时计算,相对每小时0.25美元的租金约3年回本,相对0.16美元约6.4年,因此只有当这样的使用持续得更久时,购买才划算。转售可能抵消部分成本,但并无保证。更大的收益是行为层面的：自有的GPU没有计时器在跑,你就不再需要节制实验。',
           },
           {
             读者类型: '小团队或初创公司',
@@ -3673,9 +3673,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: '在这些情况下应跳过RTX 3090',
         content: [
-          '**如果你的模型能装进16GB,就跳过它。** 如果你运行的是4-bit的7B和14B模型,从不触碰更大的模型,一张更便宜的当代16GB显卡更安静、功耗低得多,还带保修。为你永远用不到的余量支付24GB的溢价,是这笔购买中很容易犯的错误。',
-          '如果你是为训练而非推理购买,也应跳过。在单张24GB显卡上进行实质性微调意味着激进的量化和漫长的等待；租用几小时更大的显卡,既更快也更便宜。',
-          '如果你的电价昂贵,也应跳过。在0.30美元/kWh及以上,仅运行成本就接近更便宜的云端费率,拥有这张卡的理由基本消失。',
+          '**如果你的模型能装进16GB,就跳过它。** 如果你运行的是4-bit的7B和14B模型,从不触碰更大的模型,一张更便宜的当代16GB显卡通常功耗更低，全新购买还带保修。为你永远用不到的余量支付24GB的溢价,是这笔购买中很容易犯的错误。',
+          '如果你是为训练而非推理购买,也应跳过。在单张24GB显卡上进行实质性微调意味着激进的量化和漫长的等待；租用几小时更大的显卡,通常更快,也可能更便宜。',
+          '如果你的电价昂贵,也应跳过。在0.30美元/kWh及以上,仅运行成本就接近更便宜的云端费率,拥有这张卡的理由会大幅减弱：按0.30美元/kWh、每天8小时计算,1,500美元的显卡相对0.25美元的租金约需4.5年回本,相对0.16美元约需20年。',
         ],
       },
 
@@ -3683,8 +3683,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '我们的结论',
         content: [
-          '**如果你每天使用超过约八小时、天天如此,或者数据不能离开你的场所,就购买一块二手RTX 3090——它仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一。如果你的使用是偶尔的、突发式的,或者你还在判断本地推理是否适合你的工作负载,就选择租用。如果不确定,先租用。**',
-          '对于频繁的本地LLM使用和隐私需求：购买。对于偶尔的实验：租用。对于不确定或变化中的使用：先租用,等六个月后了解了实际使用时长再重新评估。对于专门寻求便宜24GB VRAM的人来说,一块状态良好的二手RTX 3090在2026年依然有吸引力——内存短缺导致的价格上涨并没有改变这一点,只是把回本点推得更远。如果是新购买,而效率、保修和当代功能比初始价格更重要,可以改为对比[当代显卡](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026)。',
+          '**从成本角度看,只有当使用时间长于回本时间时才应购买二手RTX 3090（按每天8小时计算,相对0.25美元/h租金约3年,相对0.16美元约6.4年）；如果数据不能离开你的场所,也可以购买。它仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一。如果你的使用是偶尔的、突发式的,或者你还在判断本地推理是否适合你的工作负载,就选择租用。如果不确定,先租用。**',
+          '对于会超过回本点的高强度使用,或无法上传的数据：购买。对于偶尔的实验：租用。对于不确定或变化中的使用：先租用,等六个月后了解了实际使用时长再重新评估。对于专门寻求便宜24GB VRAM的人来说,一块状态良好的二手RTX 3090在2026年依然有吸引力——内存短缺导致的价格上涨并没有改变这一点,只是把回本点推得更远。如果是新购买,而效率、保修和当代功能比初始价格更重要,可以改为对比[当代显卡](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026)。',
           '总结：RTX 3090的优势是以二手市场价格获得24GB VRAM。它的成本是使用年限、高功耗、发热、噪音以及没有保修。这场权衡的两端在2026年都没有改变——唯一变化的是购买价格,而且是朝着不利于购买的方向变化的。',
           '尚未准备购买二手显卡的读者可以[改为租用云GPU](/zh/power-local-llm/best-cloud-gpu-providers);[Vast.ai评测](/zh/power-local-llm/vast-ai-review)和[Clore.ai评测](/zh/power-local-llm/clore-ai-review)介绍了两个可按小时租用显卡的GPU市场。',
         ],
@@ -3696,7 +3696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年RTX 3090还值得购买吗？',
-            a: '对于持续的本地推理来说,值得——它仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一,二手售价1,500–1,725美元。对于轻度或偶尔使用来说,不值得：以每小时0.16美元起租用同款GPU,多年内都更便宜。决定因素是每周实际使用的小时数,而不是规格本身。',
+            a: '对于持续的本地推理来说,可能值得——它仍是在支持CUDA的NVIDIA显卡上获得24GB的最低价方式之一,二手售价1,500–1,725美元。按每天8小时计算,相对每小时0.25美元的租金约3年回本,相对0.16美元约6.4年。对于轻度或偶尔使用来说,不值得：以每小时0.16美元起租用同款GPU,多年内都更便宜。决定因素是你每天的实际使用小时数以及你会持续使用这张卡多久,而不是规格本身。',
           },
           {
             q: 'RTX 3090适合用于Ollama吗？',
@@ -3724,7 +3724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '购买二手矿卡安全吗？',
-            a: '经过检查通常是安全的。据报道矿卡在恒定的中等负载下运行,据说比游戏的热循环更温和,但往往需要更换新的散热垫。要求提供显示显存结点温度的负载测试照片,向提供退货的卖家购买,并将同时缺少这两项的listing视为无法验证的显卡。',
+            a: '如果先检查显卡,可以考虑购买。仅凭挖矿经历无法判断显卡状况,散热垫可能需要更换。要求提供显示显存结点温度的负载测试照片,向提供退货的卖家购买,并将同时缺少这两项的商品信息视为无法验证的显卡。',
           },
           {
             q: 'RTX 3090需要多大功率的电源？',
@@ -3768,7 +3768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ko: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-03',
+    next_refresh_due: '2026-12-27',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
@@ -3782,7 +3782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'RTX 3090은 CUDA를 지원하는 NVIDIA 카드로 24GB VRAM을 자신의 책상 아래에 두는 가장 저렴한 방법 중 하나이며, 클라우드에서 같은 카드를 대여하면 시간당 몇 센트면 충분합니다. 이 가이드는 두 선택지 사이의 경계가 실제로 어디에 있는지 계산합니다.',
     metaDescription: '2026년 중고 RTX 3090 가격은 1,500–1,725달러이며, 대여는 시간당 약 0.16달러부터 시작합니다. 로컬 LLM용 24GB VRAM의 구매 대 대여 손익분기점을 계산합니다.',
     publishDate: '2026-09-01',
-    dateModified: '2026-11-27',
+    dateModified: '2026-11-28',
     readTime: '13분 읽기',
     educationalLevel: 'Intermediate',
     audience: '중고 24GB GPU 구매와 로컬 LLM 추론을 위한 클라우드 GPU 시간 대여 사이에서 결정을 내려야 하는 개발자 및 소규모 팀',
@@ -3799,7 +3799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**하루 약 8시간 이상, 매일 사용할 예정이거나, 데이터가 건물 밖으로 나갈 수 없다면 중고 RTX 3090을 구매하십시오. 그렇지 않다면 대여하십시오.** 중고 1,500–1,725달러(InsiderLLM 트래커, 2026-11-23) 대 시간당 0.16달러부터 시작하는 클라우드 대여를 비교하면, 이 카드는 지속적인 부하에서만 본전을 뽑을 수 있습니다. 게다가 2026년에는 3월보다 가격이 올라 손익분기점이 더 멀어졌습니다.',
+    leadAnswerBlock: '**비용 면에서는 손익분기점에 도달하는 기간보다 오래 사용할 경우에만 중고 RTX 3090을 구매하십시오. 하루 8시간 기준으로 시간당 0.25달러의 중앙값 대여 대비 약 3년, 0.16달러 매물 대비 약 6.4년입니다. 데이터가 건물 밖으로 나갈 수 없다는 것은 별도의 구매 이유입니다. 그 밖의 경우에는 대여하십시오.** 중고 가격은 1,500–1,725달러입니다(InsiderLLM 트래커, 2026-11-23). 이 기간은 1,500달러 카드, 시간당 약 0.08달러의 전기료, 재판매 없음을 가정하며, 중앙값 1,650달러에서는 약 10% 길어집니다. 또한 3월보다 가격이 올라 손익분기점이 더 멀어졌습니다.',
 
     quickAnswerTop: {
       ko: {
@@ -3812,7 +3812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '시간당 0.25달러 중앙값 대여 대비 하루 2시간 사용 시 손익분기점은 약 12년, 하루 8시간이면 약 3년',
           '개인정보 보호, 지연 시간, 상시 실행 에이전트, 지속적인 파인튜닝을 위해서는 구매하고, 일시적 사용과 실험을 위해서는 대여하십시오',
         ],
-        updatedDate: '2026-11-27',
+        updatedDate: '2026-11-28',
       },
     },
 
@@ -3822,7 +3822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 로컬 LLM용 RTX 3090: 구매해야 할까, 대여해야 할까',
       description: '로컬 LLM 추론을 위해 중고 NVIDIA RTX 3090을 구매하는 경우와 클라우드 공급업체에서 같은 GPU를 대여하는 경우의 손익분기점 분석, 2026년 가격 기준.',
       datePublished: '2026-09-01',
-      dateModified: '2026-11-27',
+      dateModified: '2026-11-28',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3873,11 +3873,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decideFast: {
         id: 'decide-fast',
         title: '30초 만에 결정하기',
-        content: '두 경로 모두 같은 GPU와 같은 24GB VRAM을 제공합니다. 실제 질문은 오직 실제로 몇 시간을 사용할 것인지, 그리고 데이터가 네트워크를 벗어날 수 있는지입니다.',
+        content: '두 경로 모두 같은 GPU와 같은 24GB VRAM을 제공합니다. 핵심 질문은 실제로 하루 몇 시간씩 몇 년 동안 사용할 것인지, 그리고 데이터가 네트워크를 벗어날 수 있는지입니다.',
         decisionBlock: {
           title: '중고 RTX 3090을 구매할까, 대여할까?',
           localIf: [
-            '꾸준히 하루 약 8시간 이상 사용할 예정입니다',
+            '손익분기점 이후까지 사용합니다: 하루 8시간이면 0.25달러/h 대여 대비 약 3년, 0.16달러 대비 약 6.4년',
             '조직의 정책이나 계약상 데이터를 제3자에게 업로드할 수 없습니다 — 의료, 법률, 고객 또는 규제 대상 업무',
             '상시 실행 에이전트, 홈 어시스턴트, 야간 배치 작업이 필요합니다',
             '파인튜닝이나 임베딩을 가끔이 아니라 정기적으로 수행합니다',
@@ -3892,18 +3892,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           quick: [
             '하루 2시간 미만 → 대여하고 6개월 후 재검토',
-            '매일 8시간 이상 → 구매, 시간당 0.16–0.25달러 대여 대비 약 3~6.4년 안에 카드가 본전을 뽑습니다',
+            '하루 8시간 → 0.25달러/h 대비 약 3년, 0.16달러 대비 약 6.4년에 손익분기. 비용 목적이면 더 오래 쓸 때만 구매',
             '업로드할 수 없는 데이터가 있다면 → 구매, 비용이 결정 요인이 아닙니다',
           ],
         },
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '하루 약 8시간 이상, 매일 사용하거나 데이터를 업로드할 수 없다면 로컬 LLM용 중고 RTX 3090 구매가 가치 있습니다. 그렇지 않다면 같은 카드를 시간당 0.16달러부터 대여하는 것이 더 저렴합니다.',
+            text: '비용만 따지면, 중고 RTX 3090은 손익분기점보다 오래 사용할 때에만 구매할 가치가 있습니다. 하루 8시간 기준으로 시간당 0.25달러 대여 대비 약 3년, 0.16달러 대비 약 6.4년입니다. 데이터를 업로드할 수 없다는 것은 별도의 구매 이유입니다.',
           },
           {
             type: 'plain-terms',
-            text: '카드를 소유하는 것은 자동차를 사는 것과 같고, 대여는 택시를 타는 것과 같습니다. 매일 운전하기 전까지는 택시가 더 저렴하지만, 택시 요금과 달리 소유한 카드는 나중에 되팔 수 있어 구매 가격의 일부를 만회할 수 있지만, 보장되지는 않습니다.',
+            text: '카드를 소유하는 것은 자동차를 사는 것과 같고, 대여는 택시를 타는 것과 같습니다. 여러 해 동안 많이 타지 않는 한 택시가 계속 더 저렴하지만, 택시 요금과 달리 소유한 카드는 나중에 되팔 수 있어 구매 가격의 일부를 만회할 수 있지만, 보장되지는 않습니다.',
           },
         ],
       },
@@ -4083,7 +4083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**시간당 0.25달러의 중앙값 대여와 비교하면, 1,500달러 카드는 본전을 뽑는 데 약 8,800 GPU 시간이 필요합니다 — 하루 8시간이면 약 3년, 하루 2시간이면 약 12년입니다.** 이것이 구매를 결정해야 할 수치입니다.',
           '이 계산은 카드를 운영하는 비용을 차감합니다. 콘센트 기준 450W와 최근 미국 주거용 평균 0.18달러/kWh를 적용하면, 로컬 추론은 전기료로 시간당 약 0.08달러가 듭니다. 따라서 1,500달러와 시간당 0.25달러를 비교하는 것이 아니라, 실제로 절약되는 시간당 약 0.17달러와 비교하는 것입니다.',
-          '가정: 1,500달러 카드(트래커 가격대의 하단. 중앙값 1,650달러에서는 모든 기간이 약 10% 길어집니다), 시스템 소비전력 450W, 0.18달러/kWh. 본인의 전기 요금으로 대체해 보십시오 — 표의 다른 어떤 요소보다 결과를 크게 좌우하며, 0.30달러/kWh를 넘는 시장에서는 구매 논거가 대체로 사라집니다.',
+          '가정: 1,500달러 카드(트래커 가격대의 하단. 중앙값 1,650달러에서는 모든 기간이 약 10% 길어집니다), 시스템 소비전력 450W, 0.18달러/kWh. 본인의 전기 요금으로 대체해 보십시오 — 표의 다른 어떤 요소보다 결과를 크게 좌우하며, 0.30달러/kWh를 넘으면 구매 논거가 크게 약해집니다. 0.30달러/kWh, 하루 8시간이면 손익분기점은 0.25달러 대여 대비 약 4.5년, 0.16달러 대비 약 20년입니다.',
         ],
         columns: ['사용량', '0.16달러/h 대비', '0.25달러/h 대비', '0.50달러/h 대비'],
         rows: [
@@ -4109,12 +4109,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '독자 유형': '주말 취미 사용자',
             결론: '대여',
-            이유: '주당 몇 시간의 사용은 1,500달러 지출과 비교하면 손익분기점에서 수십 년 떨어져 있습니다. 1년간 대여해 보고, 매일 대여하고 있다는 것을 깨달으면 그때 구매하십시오 — 그때쯤이면 어떤 카드가 필요한지도 정확히 알게 될 것입니다.',
+            이유: '주당 몇 시간의 사용은 1,500달러 지출과 비교하면 손익분기점에서 수십 년 떨어져 있습니다. 1년간 대여해 보고, 매일 여러 시간씩 대여하고 있다는 것을 알게 되면 그때 손익분기 표를 확인하고 결정하십시오 — 그때쯤이면 어떤 카드가 필요한지도 정확히 알게 될 것입니다.',
           },
           {
             '독자 유형': '매일 사용하는 헤비 유저',
             결론: '구매',
-            이유: '하루 8시간 이상이면 카드는 시간당 0.16–0.25달러 대여 대비 약 3~6.4년 안에 본전을 뽑고, 재판매가 나머지 비용의 일부를 만회해 줄 수 있지만 보장되지는 않습니다. 더 큰 이득은 행동적인 측면입니다: 소유한 GPU에는 돌아가는 계량기가 없으므로 실험을 아낄 필요가 없어집니다.',
+            이유: '하루 8시간이면 시간당 0.25달러 대여 대비 약 3년, 0.16달러 대비 약 6.4년에 손익분기점에 도달하므로, 그 사용이 더 오래 이어질 때에만 구매가 이득입니다. 재판매가 비용의 일부를 만회해 줄 수 있지만 보장되지는 않습니다. 더 큰 이득은 행동적인 측면입니다: 소유한 GPU에는 돌아가는 계량기가 없으므로 실험을 아끼지 않게 됩니다.',
           },
           {
             '독자 유형': '소규모 팀 또는 스타트업',
@@ -4139,9 +4139,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'skip-this-if',
         title: '다음의 경우 RTX 3090을 건너뛰십시오',
         content: [
-          '**모델이 16GB에 들어간다면 건너뛰십시오.** 4비트로 7B와 14B 모델을 실행하며 그보다 큰 모델은 전혀 다루지 않는다면, 더 저렴한 최신 16GB 카드가 더 조용하고 전력 소비가 훨씬 적으며 보증도 딸려 옵니다. 절대 쓰지 않을 여유를 위해 24GB의 프리미엄을 지불하는 것은 이 구매에서 하기 쉬운 실수입니다.',
-          '추론이 아니라 학습을 위해 구매하는 경우에도 건너뛰십시오. 단일 24GB 카드에서의 상당한 규모의 파인튜닝은 공격적인 양자화와 긴 대기 시간을 의미합니다; 몇 시간 동안 더 큰 카드를 대여하는 편이 더 빠르고 더 저렴합니다.',
-          '전기료가 비싼 경우에도 건너뛰십시오. 0.30달러/kWh 이상에서는 운영 비용만으로도 더 저렴한 클라우드 요금에 근접하며, 소유의 논거가 대체로 사라집니다.',
+          '**모델이 16GB에 들어간다면 건너뛰십시오.** 4비트로 7B와 14B 모델을 실행하며 그보다 큰 모델은 전혀 다루지 않는다면, 더 저렴한 최신 16GB 카드는 일반적으로 전력 소비가 더 적고, 새 제품으로 사면 보증도 제공됩니다. 절대 쓰지 않을 여유를 위해 24GB의 프리미엄을 지불하는 것은 이 구매에서 하기 쉬운 실수입니다.',
+          '추론이 아니라 학습을 위해 구매하는 경우에도 건너뛰십시오. 단일 24GB 카드에서의 상당한 규모의 파인튜닝은 공격적인 양자화와 긴 대기 시간을 의미합니다; 몇 시간 동안 더 큰 카드를 대여하는 편이 대체로 더 빠르고 더 저렴할 수 있습니다.',
+          '전기료가 비싼 경우에도 건너뛰십시오. 0.30달러/kWh 이상에서는 운영 비용만으로도 더 저렴한 클라우드 요금에 근접하며, 소유의 논거가 크게 약해집니다. 0.30달러/kWh, 하루 8시간이면 1,500달러 카드의 손익분기점은 0.25달러 대여 대비 약 4.5년, 0.16달러 대비 약 20년입니다.',
         ],
       },
 
@@ -4149,8 +4149,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content: [
-          '**하루 약 8시간 이상, 매일 사용할 예정이거나 데이터가 건물 밖으로 나갈 수 없다면 중고 RTX 3090을 구매하십시오 — 여전히 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나입니다. 사용이 일시적이거나 불규칙하거나, 로컬 추론이 워크로드에 맞는지 아직 파악 중이라면 대여하십시오. 확신이 서지 않는다면 먼저 대여하십시오.**',
-          '빈번한 로컬 LLM 사용과 개인정보 보호를 위해서는 구매하십시오. 가끔의 실험을 위해서는 대여하십시오. 불확실하거나 변화하는 사용 패턴이라면 먼저 대여하고, 실제 사용 시간을 알게 되는 6개월 후에 결정을 재검토하십시오. 저렴한 24GB VRAM을 구체적으로 찾는 사람에게는 상태 좋은 중고 RTX 3090이 2026년에도 여전히 매력적입니다 — 메모리 부족으로 인한 가격 상승이 이를 바꾸지는 않았고, 단지 손익분기점을 더 멀리 밀어냈을 뿐입니다. 효율성, 보증, 최신 기능이 초기 가격보다 중요한 신규 구매라면 대신 [최신 카드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)와 비교해 보십시오.',
+          '**비용 면에서는 손익분기점보다 오래 사용할 경우(하루 8시간이면 0.25달러/h 대여 대비 약 3년, 0.16달러 대비 약 6.4년)에만 중고 RTX 3090을 구매하십시오. 데이터가 건물 밖으로 나갈 수 없는 경우에도 구매를 선택할 수 있습니다. 이 카드는 여전히 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나입니다. 사용이 일시적이거나 불규칙하거나, 로컬 추론이 워크로드에 맞는지 아직 파악 중이라면 대여하십시오. 확신이 서지 않는다면 먼저 대여하십시오.**',
+          '손익분기점을 넘길 만큼의 집중적인 사용이나 업로드할 수 없는 데이터가 있다면 구매하십시오. 가끔의 실험을 위해서는 대여하십시오. 불확실하거나 변화하는 사용 패턴이라면 먼저 대여하고, 실제 사용 시간을 알게 되는 6개월 후에 결정을 재검토하십시오. 저렴한 24GB VRAM을 구체적으로 찾는 사람에게는 상태 좋은 중고 RTX 3090이 2026년에도 여전히 매력적입니다 — 메모리 부족으로 인한 가격 상승이 이를 바꾸지는 않았고, 단지 손익분기점을 더 멀리 밀어냈을 뿐입니다. 효율성, 보증, 최신 기능이 초기 가격보다 중요한 신규 구매라면 대신 [최신 카드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)와 비교해 보십시오.',
           '요약하면: RTX 3090의 강점은 중고 시장 가격의 24GB VRAM입니다. 비용은 노후화, 높은 전력 소비, 발열, 소음, 보증 부재입니다. 이 트레이드오프의 어느 쪽도 2026년에 바뀌지 않았습니다 — 바뀐 것은 구매 가격뿐이며, 그마저도 구매에 불리한 방향으로 움직였습니다.',
           '중고 카드 구매가 아직 부담스러운 독자는 [대신 클라우드 GPU를 임대](/ko/power-local-llm/best-cloud-gpu-providers)할 수 있으며, [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review)와 [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)에서는 카드를 시간 단위로 대여하는 두 GPU 마켓플레이스를 다룹니다.',
         ],
@@ -4162,7 +4162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026년에도 RTX 3090은 구매할 가치가 있습니까?',
-            a: '지속적인 로컬 추론이라면 그렇습니다 — 여전히 중고 1,500–1,725달러로 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나입니다. 가볍거나 일시적인 사용이라면 아닙니다: 같은 GPU를 시간당 0.16달러부터 대여하는 것이 수년간 더 저렴합니다. 결정 요인은 사양이 아니라 주당 실제 사용 시간입니다.',
+            a: '지속적인 로컬 추론이라면 가치가 있을 수 있습니다 — 여전히 중고 1,500–1,725달러로 CUDA를 지원하는 NVIDIA 카드로 24GB를 확보하는 가장 저렴한 방법 중 하나입니다. 하루 8시간 기준 손익분기점은 시간당 0.25달러 대여 대비 약 3년, 0.16달러 대비 약 6.4년입니다. 가볍거나 일시적인 사용이라면 아닙니다: 같은 GPU를 시간당 0.16달러부터 대여하는 것이 수년간 더 저렴합니다. 결정 요인은 사양이 아니라 하루 실제 사용 시간과 카드를 계속 사용할 기간입니다.',
           },
           {
             q: 'RTX 3090은 Ollama에 적합합니까?',
@@ -4190,7 +4190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '중고 채굴용 GPU를 구매해도 안전합니까?',
-            a: '점검을 거치면 대체로 안전합니다. 채굴용 카드는 일정하고 중간 정도의 부하에서 작동했다고 알려져 있으며, 이는 게이밍의 열 순환보다 완만하다고 하지만 새로운 서멀 패드가 필요한 경우가 많습니다. 메모리 접합 온도가 보이는 부하 테스트 사진을 요청하고, 반품이 가능한 판매자에게서 구매하며, 둘 다 없는 매물은 확인할 수 없는 카드로 취급하십시오.',
+            a: '카드를 먼저 점검하면 구매할 수 있습니다. 채굴 이력만으로는 카드 상태를 알 수 없으며 서멀 패드를 교체해야 할 수도 있습니다. 메모리 접합 온도가 보이는 부하 테스트 사진을 요청하고, 반품이 가능한 판매자에게서 구매하며, 둘 다 없는 매물은 확인할 수 없는 카드로 취급하십시오.',
           },
           {
             q: 'RTX 3090에는 어떤 전원 공급장치가 필요합니까?',

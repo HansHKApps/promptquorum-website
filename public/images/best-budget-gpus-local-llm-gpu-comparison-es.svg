@@ -28,7 +28,7 @@
 <text x="372" y="389" font-size="20" font-weight="600" fill="#1C1B1F" direction="ltr" text-anchor="start">~$350</text>
 <text x="568" y="375" font-size="16" font-weight="400" fill="#49454F" direction="ltr" text-anchor="start">BuySellRAM, oferta mínima</text>
 <text x="568" y="399" font-size="16" font-weight="400" fill="#49454F" direction="ltr" text-anchor="start">2026-10-11</text>
-<text x="800" y="389" font-size="17" font-weight="600" fill="#4F378B" direction="ltr" text-anchor="start">Más rápida (est.), menos VRAM</text>
+<text x="800" y="389" font-size="17" font-weight="600" fill="#4F378B" direction="ltr" text-anchor="start">Solo 8 GB de VRAM</text>
 <line x1="32" y1="342" x2="1168" y2="342" stroke="#EFEAF4" stroke-width="1"/>
 <text x="44" y="465" font-size="20" font-weight="700" fill="#1C1B1F" direction="ltr" text-anchor="start">RTX 4070 Super</text>
 <text x="270" y="465" font-size="19" font-weight="400" fill="#1C1B1F" direction="ltr" text-anchor="start">12 GB</text>
