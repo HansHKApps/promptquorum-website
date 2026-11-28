@@ -972,6 +972,12 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Self-hosted font files. Their names contain a content hash, so they can be cached for good
+        // (overrides the catch-all `/:path*` Cache-Control above — last matching rule wins).
+        source: '/fonts/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
         // The desktop app fetches this on launch to check for newer versions.
         // Must be public, CORS-open for the Electron client, and short-cached
         // so version bumps propagate within minutes (overrides the catch-all

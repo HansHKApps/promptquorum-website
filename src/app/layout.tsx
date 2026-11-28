@@ -1,37 +1,27 @@
 import type { Metadata } from 'next'
 import { authorPerson, authorRef } from '@/lib/author'
 import { Suspense } from 'react'
-import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic } from 'next/font/google'
+import '../fonts/site-fonts.css'
 import './globals.css'
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: 'variable',
-  variable: '--font-plus-jakarta-sans',
-  display: 'swap',
-})
+// Fonts are self-hosted (src/fonts/, public/fonts/): never use next/font/google here, it downloads
+// from Google during every build and breaks builds on a slow connection.
+// These are the three Latin/Arabic files that are preloaded on every page.
+const PRELOAD_FONTS = [
+  '/fonts/plus-jakarta-sans-fba5a26ea33df6a3.woff2',
+  '/fonts/jetbrains-mono-051742360c26797e.woff2',
+  '/fonts/noto-sans-arabic-3fd1b3eda9c5392f.woff2',
+]
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-jetbrains-mono',
-  display: 'swap',
-})
-
-const notoSansArabic = Noto_Sans_Arabic({
-  subsets: ['arabic'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-arabic',
-  display: 'swap',
-})
 // Noto Sans KR (--font-korean) moved to src/app/ko/layout.tsx: the loader call
 // (and the CSS payload it generates — hundreds of @font-face rules, since the
 // Hangul glyph set is bundled regardless of subset) is scoped to the /ko route
 // instead of shipping in the shared global CSS bundle for all 9 locales. See
-// src/app/ko/layout.tsx for the loader call and the `.font-korean-scope`
+// src/app/ko/layout.tsx for the stylesheet import and the `.font-korean-scope`
 // wrapper, and globals.css for the matching selector.
 
 import Script from 'next/script'
+import { preload } from 'react-dom'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { Footer } from '@/components/Footer'
@@ -130,8 +120,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // React's preload() emits each hint once; a <link rel="preload"> in <head> ended up twice in the page.
+  for (const href of PRELOAD_FONTS) preload(href, { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' })
+
   return (
-    <html lang="en" dir="ltr" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable}`} suppressHydrationWarning>
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#6750A4" />
 

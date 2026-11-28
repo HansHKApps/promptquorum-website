@@ -98,8 +98,7 @@ cmd_start() {
 
     Work only in $dir. Never cd to $REPO.
     Use port $port for dev/start.
-    Dev server: npx next dev --webpack --port $port
-      (npm run dev is broken - Turbopack cannot resolve next/font/google)
+    Dev server: npm run dev -- --port $port
     Tests:      npx next start --port $port, then point Playwright at it.
 
   When it is done:  scripts/session.sh finish $slug

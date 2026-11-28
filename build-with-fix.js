@@ -26,11 +26,8 @@ function runBuild(extraArgs = []) {
     // worker does inherit. Bumped to 6144 (build machine has 8GB) since the
     // page-generation worker is the only heavy process running at this point.
     const nextBin = require.resolve('next/dist/bin/next')
-    // PQ_BUNDLER=webpack: local/session builds only (Vercel keeps Turbopack). Turbopack's Rust font
-    // fetcher has a short connect timeout and downloads ~80 Noto Sans KR slices; on a slow link every
-    // slice times out and the build dies with hundreds of "Module not found:
-    // @vercel/turbopack-next/internal/font/google/font" errors. The webpack font loader has no timeout
-    // outside dev, so it survives the same network.
+    // PQ_BUNDLER=webpack: optional, local/session builds only (Vercel keeps Turbopack). It was the
+    // workaround for Google Font download timeouts; fonts are now self-hosted (src/fonts/).
     const bundlerArgs = process.env.PQ_BUNDLER === 'webpack' ? ['--webpack'] : []
     const child = spawn(
       process.execPath,

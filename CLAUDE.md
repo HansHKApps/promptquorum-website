@@ -167,7 +167,8 @@ scripts/session.sh drop <task-name>    # abandon (branch archived, recoverable)
 
 - Work only in your own directory. Never `cd` to the main repo.
 - Use the port `start` gave you — every session gets a distinct one.
-- Dev server: `npx next dev --webpack --port <yours>`. **`npm run dev` is broken** — Turbopack cannot resolve `next/font/google` and every route 500s.
+- Dev server: `npm run dev -- --port <yours>` (works again since fonts are self-hosted).
+- **Fonts are self-hosted** (`src/fonts/`, `public/fonts/`). Never use `next/font/google`: it downloads from Google during every build and broke builds and `npm run dev`.
 - Build via `scripts/with-build-lock.sh npm run build`, never bare `npm run build`. Worktrees isolate git, not RAM: each build takes a ~4 GB heap, so the lock caps concurrent builds (default 2) and the rest queue instead of swapping.
 - Test against a production build (`npx next start --port <yours>`), not the dev server — Playwright against dev is flaky and ~7x slower.
 - Never use bare `git stash` / `git stash pop`; the stash stack is shared across worktrees.
