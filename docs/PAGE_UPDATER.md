@@ -1,5 +1,7 @@
 # PAGE_UPDATER.md — Full-Depth Content Refresh Protocol
 
+> **UPDATE FREEZE until 2027-01-15 (owner rule 2026-11-28, HARD).** Do not run this protocol on existing pages before then. After that: only in a window the owner starts (mid-January, mid-May, mid-September). Full rule, allowed exceptions, cost limit and the number-only check: `CLAUDE.md` § UPDATE FREEZE. It overrides every timing rule below.
+
 ## Purpose
 
 This file governs how content pages are updated. It exists because of a proven failure mode: Claude Code updates the top of a page (lead paragraph, Quick Answer, Key Takeaways) and leaves the rest stale. This produces pages that contradict themselves — "Model X is best" at the top, "use Model Y" in the comparison tables. Google reads the whole page. Users read the whole page. Half-updated pages perform worse than consistently outdated ones, because the internal contradiction signals low editorial quality to both readers and search engines.
@@ -53,7 +55,7 @@ These are fields in the EN block of the article object (illustrative values — 
 
 ```ts
 freshness_tier: 'monthly',
-next_refresh_due: '2026-06-05',        // content/facts — monthly (every 30 days)
+next_refresh_due: '2027-01-15',        // content/facts — next update window (every 4 months)
 last_full_refresh: '2026-05-05',
 next_seo_review_due: '2026-07-01',     // title/meta/intent — QUARTERLY (Jul 1 / Oct 1 / Jan 1 / Apr 1)
 last_seo_review: '2026-04-01',
@@ -62,16 +64,16 @@ current_benchmarks_used: ['<benchmark>', '<benchmark>'],        // e.g. SWE-benc
 current_hardware_mentioned: ['<gpu>', '<gpu>', '<apple-silicon>'],
 ```
 
-### Two Cadences: Monthly Facts vs. Quarterly SEO Review
+### Two Review Types: Facts and SEO (both only in the four-month update windows)
 
-A `monthly` page has **two independent update cadences**. Do not conflate them.
+A `monthly` page has **two review types**. Do not conflate them. Since 2026-11-28 both run only in the update windows (every four months); the tier name `monthly` no longer means a 30-day cycle.
 
 | Cadence | Field | Frequency | Scope |
 |---------|-------|-----------|-------|
-| **Content / facts** | `next_refresh_due` | Every 30 days | Models, benchmarks, VRAM, ollama commands, ranking order, prices, speed tables — everything in the Type A–E checklists |
-| **SEO review** | `next_seo_review_due` | **Quarterly** — fixed calendar anchors **Jul 1 / Oct 1 / Jan 1 / Apr 1** | Title tag, meta description, OG/Twitter description, H2 intent-alignment to top GSC queries, structural ordering |
+| **Content / facts** | `next_refresh_due` | Every 4 months (update windows) | Models, benchmarks, VRAM, ollama commands, ranking order, prices, speed tables — everything in the Type A–E checklists |
+| **SEO review** | `next_seo_review_due` | Every 4 months, in the same update window | Title tag, meta description, OG/Twitter description, H2 intent-alignment to top GSC queries, structural ordering |
 
-**Why two cadences:** Facts go stale monthly — leaving them stale makes the page *wrong*. Title/meta tags are different: every change forces Google to re-crawl and re-evaluate, and the SERP needs weeks to settle a new title. Changing titles monthly creates ranking volatility and destroys any clean read on whether a change helped CTR. A quarter accumulates enough CTR/position data to judge. So title/meta tuning is **scheduled quarterly, not monthly**.
+**Why two types:** Dated facts age but stay readable until the next window; false, unsafe or legally risky statements are fixed when found. Title/meta tags are different: every change forces Google to re-crawl and re-evaluate, and the SERP needs weeks to settle a new title. Changing titles monthly creates ranking volatility and destroys any clean read on whether a change helped CTR. A quarter accumulates enough CTR/position data to judge. So title/meta tuning is **scheduled quarterly, not monthly**.
 
 **Rules:**
 - The monthly content refresh is **facts-only**. It does **not** rewrite the title/meta/descriptions.
@@ -575,7 +577,9 @@ A common mistake: a page starts as a workflow article (evergreen) and gains spec
 
 ## Monthly Refresh Workflow (for `monthly` tier pages)
 
-### Week 1 of Each Month
+> Superseded schedule (2026-11-28): run this only inside an update window (mid-January, mid-May, mid-September), never monthly.
+
+### Start of an update window
 
 1. Run freshness audit: identify all pages with `next_refresh_due` in current month
 2. For each page, check: have new models/tools/benchmarks been released since `last_full_refresh`?

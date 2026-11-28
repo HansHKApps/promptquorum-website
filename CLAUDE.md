@@ -1,5 +1,23 @@
 # CLAUDE.md — PromptQuorum Website
 
+## UPDATE FREEZE until 2027-01-15 (owner rule, 2026-11-28, HARD — overrides every other rule on update timing)
+
+**Why:** update rounds used 30-40% of the owner's weekly token budget.
+
+**Blocked until 2027-01-15, not before:** price sweeps; content or fact refresh rounds; `/updater` / page-updater runs on existing pages; monthly, semi-annual, annual and quarterly SEO refreshes; cross-page consistency rounds; bulk meta/CTR rewrites; re-checks of already published pages; any batch or multi-agent job doing one of these. A passed `next_refresh_due` / `next_seo_review_due`, a reminder, a memory note, an open-items list or a finding from an earlier run is NOT a reason to start. Do not offer or start these; if asked indirectly, say they are frozen. List new findings in one line for the January round.
+
+**Update windows after the freeze:** from the middle of January 2027 (2027-01-15), then every four months (mid-May, mid-September). A window is not automatic: the owner starts it.
+
+**Window rules:** one session only; one shared, dated price list used by all pages; exact prices stay on a few main price pages and other pages link there (build this during the January round); differences between clearly dated prices wait for the next window.
+
+**Still allowed during the freeze:** new articles, app-directory entries and features the owner asks for; fixing a specific statement that is false, unsafe or legally risky once it is known (that statement and what directly repeats it on that page only — no sweep, no related pages); fixing a broken build, page or site; read-only measurement (`seo:measure`). New pages keep all normal gates.
+
+**Override:** only the owner, in their own words in the current conversation, naming the work (for example "override the freeze and update X"). A general "finish all" or "fix everything" is not an override.
+
+**Cost limit (always, also after the freeze):** before using more than one agent, state a token estimate and wait for the owner's OK. Only one session works on a given set of pages.
+
+**Lighter check for number-only edits:** when an edit changes only numbers, prices or dates (no new or reworded claims), check the changed lines in every locale, the matching totals and any conclusion or ranking that depends on them, and report it as "number-only check" (not as a risk-checker PASS). No full re-run. If a conclusion, ranking or wording changes, or for any new or rewritten text, the full risk-checker gate applies as before.
+
 ## MANDATORY: Read Before Any Content Work
 
 Before writing or editing any user-facing text on this website, read and apply the full GEO writing guidelines:
@@ -12,7 +30,7 @@ Before writing or editing any user-facing text on this website, read and apply t
 
 **Risk gate (mandatory):** every new article and every page-updater run must pass the `risk-checker` skill (`/risk-checker <article file>`) before commit — GEO Rule 35b and `docs/PAGE_UPDATER.md` Step 5.7. `BLOCK` never ships. Site-wide triage: `npm run risk:scan`.
 
-**Risk gate must be RUN, not imitated (owner rule, 2026-11-03, HARD):** the gate is only passed by actually invoking the `risk-checker` skill on the final file (Skill tool, skill `risk-checker`, argument = the article path; subagents too) and pasting its gate line (`PASS`/`REVIEW`/`BLOCK`, score, counts) into the Update Report. A hand-applied rubric, a grep pass or `npm run risk:scan` alone does NOT count and must never be reported as the risk gate. If the skill cannot be invoked, the run is INCOMPLETE: say so, do not write "PASS (manual)", and do not commit/ship the article as finished. Any later edit to an article's text (including a layout trim) re-opens the gate for that file.
+**Risk gate must be RUN, not imitated (owner rule, 2026-11-03, HARD; only exception: the number-only check in UPDATE FREEZE above):** the gate is only passed by actually invoking the `risk-checker` skill on the final file (Skill tool, skill `risk-checker`, argument = the article path; subagents too) and pasting its gate line (`PASS`/`REVIEW`/`BLOCK`, score, counts) into the Update Report. A hand-applied rubric, a grep pass or `npm run risk:scan` alone does NOT count and must never be reported as the risk gate. If the skill cannot be invoked, the run is INCOMPLETE: say so, do not write "PASS (manual)", and do not commit/ship the article as finished. Any later edit to an article's text (including a layout trim) re-opens the gate for that file.
 
 **Batch runs:** see `docs/PAGE_UPDATER.md` §Batch and Delegated Refresh Runs and §Lessons Learned Log.
 
